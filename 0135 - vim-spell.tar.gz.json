@@ -1,0 +1,138 @@
+{
+  "script_id": "135",
+  "name": "vim-spell.tar.gz",
+  "summary": "Another spell-checker plugin",
+  "script_type": "utility",
+  "description": "VIM-Spell is a spell-checker plugin for VIM based on Ispell or Aspell.\n\nThis plugin can parse a file and look for misspellings, highlight them, jump from one to another, choose the language, add new words to the dictionary, ignore some, and so on. \n\nThe main feature is probably the split window used to propose alternatives for a misspelling and to correct it. To give an idea, here is a little screenshot :\n    http://hermitte.free.fr/vim/ressources/VS-capture.gif\n\nMore over, in order to speed up the processing, the calls to ispell/aspell are regrouped. All the alternatives for every misspelling in the current document are cached in a local file. Then, obtaining the alternatives for a given misspelling is an instantaneous operation.\n\nFor more information, you can take a look at the help file archived in the\ntarball or look at :\n    http://hermitte.free.fr/vim/ressources/vimfiles/doc/VS_help.html\nRem.: the site is quite slow.\n\nThe latest version have been tested with VIM 6.1 under a PC/WindowsXP/cmd.exe and PC/WindowsXP/Cygwin-bash.\n\nChangelog available at:\n http://hermitte.free.fr/vim/ressources/vimfiles/macros/vim-spell/ChangeLog\nBTW, you may find a more up-to-date version of the plugin at:\n http://hermitte.free.fr/vim/ressources/\nNote: the latest versions are no longer compatible with Vim 5.x.\n",
+  "install_details": "Uncompress the tarball archive into one of your paths from 'runtimepath'.\n\nThen, load lhVimSpell.vim from the ftplugin you want or drop the file into your plugins folder. Check the documentation for more explanations.\n\nIn order to work correctly, several things are required:\n- aspell or ispell : external spell-checkers ; required,\n- sort : *NIX external text tools -- be sure, they have priority over DOS tools ; optional since version 0.5,\n- a.vim, an old version is joined in the archive ; \n  http://vim.sf.net/scripts/script.php?script_id=31 ,\n  the latest is of no use for my plugin;\n- Triggers.vim http://vim.sourceforge.net/scripts/script.php?script_id=48 (optional since version 0.2b),\n\nN.B.: if you want to hack the plugin, you should download the \"developper version\"\n    http://hermitte.free.fr/vim/ressources/vimfiles/macros/vim-spell-dev.tar.gz\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1716",
+      "filename": "vim-spell.tar.gz",
+      "script_version": "0.5",
+      "date": "2003-02-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Many changes, fixes, ... Now definitively working on MsWindows boxes; cf Changelog for more details"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1039",
+      "filename": "vim-spell.tar.gz",
+      "script_version": "0.3c",
+      "date": "2002-07-22",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Bug fixes : (*) words can be added directly into local dictionary ; (*) mappings will works for several buffers (used to be a problem when calling vim with for instance 'vim *.tex')."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1025",
+      "filename": "vim-spell.tar.gz",
+      "script_version": "0.3b",
+      "date": "2002-07-18",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "No more error message when there is no misspelling. The syntax highlighting rules have been extended to support HTML files and some others filetypes ; the rules for TeX files have been enhanced."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=986",
+      "filename": "vim-spell.tar.gz",
+      "script_version": "0.3",
+      "date": "2002-07-03",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "The plugin has been simplified. The number of files has been reduced to 3 ; it should be easier to install. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=976",
+      "filename": "vim-spell.tar.gz",
+      "script_version": "0.2d",
+      "date": "2002-07-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "The capitalization problem with the archive has been fixed. + some minor changes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=636",
+      "filename": "vim-spell.tar.gz",
+      "script_version": "0.2c",
+      "date": "2002-02-25",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "The list of words to be ignored is no more reset after every parsing. A dependency has been \"eased\". Some bugs fixed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=583",
+      "filename": "vim-spell.tar.gz",
+      "script_version": "0.2b",
+      "date": "2002-02-13",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "There is no important improvments in this version. Only the dependancies have been reduced (help.vim is no more required, while triggers.vim has become optional)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=517",
+      "filename": "vim-spell.tar.gz",
+      "script_version": "0.2",
+      "date": "2002-01-29",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Some bugs have been fixed (accentuated characters can be inserted into personal dictionaries, ...); the color highlighting scheme with LaTeX is now correct; the dependancies have been reduced for VIM 6."
+    }
+  ]
+}

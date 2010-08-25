@@ -1,0 +1,42 @@
+{
+  "script_id": "82",
+  "name": "AppendComment.vim",
+  "summary": "Append comment at end of line",
+  "script_type": "utility",
+  "description": "One thing I liked in Emacs is the ability to insert comments\nat the end of line using <M-;>. \nThis script tries to achieve the same for Vim.\nIf there's already a comment, it's aligned.\n\nMaybe, your language is supported. \nIf not, it's easy to add new ones.\n\nThis script was inspired by Meikel Brandmeyers EnhCommentify.vim: vimscript#23",
+  "install_details": "Put it in your ~/.vim/plugin",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=174",
+      "filename": "AppendComment.vim",
+      "script_version": "0.02",
+      "date": "2001-09-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "223",
+        "user_name": "johannes",
+        "first_name": "Johannes",
+        "last_name": "Tanzler",
+        "email": "johannes.tanzler at aon.at",
+        "homepage": "http://www.unet.univie.ac.at/~a9925098/"
+      },
+      "release_notes": "Bugfixing\nIf line is empty, the comment is\ninserted according to current\nindentation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=164",
+      "filename": "AppendComment.vim",
+      "script_version": "0.01",
+      "date": "2001-09-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "223",
+        "user_name": "johannes",
+        "first_name": "Johannes",
+        "last_name": "Tanzler",
+        "email": "johannes.tanzler at aon.at",
+        "homepage": "http://www.unet.univie.ac.at/~a9925098/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

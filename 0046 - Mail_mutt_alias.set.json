@@ -1,0 +1,90 @@
+{
+  "script_id": "46",
+  "name": "Mail_mutt_alias.set",
+  "summary": "Extract an e-mail address from the mutt aliases file.",
+  "script_type": "utility",
+  "description": "This script permit to insert an alias from the mutt aliases file while editing an\ne-mail within vim.\n\nSince the version 2.0, we can hit <tab> (in INSERT-mode) within an address \nfield (To:, Cc:, Bcc:, Reply-To) to expand an alias. \nIf several contacts match the to-be-expanded pattern, a menu is proposed in a \nsplitted window in order to choose the addresses. \n\nDependencies :\nv2.x+ : a.vim                http://vim.sourceforge.net/scripts/script.php?script_id=31\n          Actually, you should download an old version of a.vim that still exports its functions\n\nv2.2+ : words_tools.vim http://vim.sourceforge.net/scripts/script.php?script_id=143\n\n\nN.B.: The command (:Ca) and the macro (,Ca) have been abandonned since version 2.3.",
+  "install_details": "Update the path to your mutt aliases file, and put the file anywhere you want -- N.B.: $$/ftplugin/mail/ is certainly the best place you could find.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=968",
+      "filename": "Mail_mutt_alias_set.vim",
+      "script_version": "2.3",
+      "date": "2002-07-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Some minor enhancements and several bugs fixed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=345",
+      "filename": "Mail_mutt_alias.set",
+      "script_version": "2.2",
+      "date": "2001-11-13",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Many bugs have been corrected, now the script runs under VIM 5.6-Solaris. A tagging feature has been added in order to select several e-mail addresses in the list. And <tab> can now expand aliases/names expressed as regular expressions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=219",
+      "filename": "Mail_mutt_alias.set",
+      "script_version": "2.1",
+      "date": "2001-10-01",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Correction of some regexps + definition of a syntax highlighting scheme for the menu."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=214",
+      "filename": "Mail_mutt_alias.set",
+      "script_version": "2.0",
+      "date": "2001-10-01",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Fix some problems when several aliases match a pattern through a menu to choose from.\nMap tabulation as an expand character for aliases ; only within the address lines of e-messages headers."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=65",
+      "filename": "Mail_mutt_alias.set",
+      "script_version": "1.0",
+      "date": "2001-07-27",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

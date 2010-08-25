@@ -1,0 +1,58 @@
+{
+  "script_id": "131",
+  "name": "spellcheck.vim",
+  "summary": "spell checker  for vim",
+  "script_type": "utility",
+  "description": "This script enables spell checking capabilities known from text \nprocessors:\n\n*SpellCheck: highlights all misspelled words\n*Propose: checks word under cursor - giving proposals for correcting\n*AddToDictionary: adds word under cursor to dictionary\n*SpchkNxt: jumps to next error\n*SpchkPrv: jumps to previous error\n*SetLanguageTag: which language to use (uk_UK | de_DE ...)\n*SpellAutoEnable: enables automatic higlighting of misspelled words\n  (this is done via CursorHold)\n*SpellAutoDisable: disables automatic check\n\nproblems:\n-syntax highlighting does not work correctly in every syntax-mode\n solution: set syntax=off and then do the spellcheck\n-to add a word to the list of known words, the skript has to know \n which private dictionary aspell is using (something like \n $HOME/.aspell.xxx.pws where xxx depends on the language tag)\n the current relation is: \n   uk_UK|us_US -> english (.aspell.english.pws)\n   de_DE -> de (.aspell.de.pws)\n to add entries or change existing ones, there is a little adjustment table.\n",
+  "install_details": "*you need aspell (plus dictionary ofcourse)\n*you need a ruby interpreter enabled\n*$LANG should be defined (echo $LANG on CLI prompt)\n\nSimply move the skript to your plugin directory. ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=980",
+      "filename": "spell.zip",
+      "script_version": "2.1",
+      "date": "2002-07-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "255",
+        "user_name": "matthias",
+        "first_name": "matthias",
+        "last_name": "veit",
+        "email": "matthias_veit at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "After a replacement of a misspelled word jump to the next error (tend to be usefule while in correction mode). \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=975",
+      "filename": "spell.zip",
+      "script_version": "2.0",
+      "date": "2002-07-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "255",
+        "user_name": "matthias",
+        "first_name": "matthias",
+        "last_name": "veit",
+        "email": "matthias_veit at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "replacement of misspelled words via proposals (thanks to Patrick Sundberg), \nthe language to check can be selected via SetLanguageTag (which takes the\ncommon language tags like uk_UK, de_DE etc) - default is taken from $LANG"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=313",
+      "filename": "spellcheck.vim",
+      "script_version": "1.0",
+      "date": "2001-11-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "255",
+        "user_name": "matthias",
+        "first_name": "matthias",
+        "last_name": "veit",
+        "email": "matthias_veit at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

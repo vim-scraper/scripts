@@ -1,0 +1,474 @@
+{
+  "script_id": "162",
+  "name": "auctex.vim",
+  "summary": "macros for latex",
+  "script_type": "ftplugin",
+  "description": "This is a large collection of Latex macros, with inspiration\nfrom the emacs package \"auctex\", among other places.  \nRead the file for details;  I have written many comments.  \n\nBy popular demand, here is a more extensive description of\nthe key bindings:\nhttp://www.math.rochester.edu/people/faculty/cmlr/Latex/auctex-vim-keybindings\n\nThere is also Vim-LaTeX,\nhttp://vim-latex.sourceforge.net \nIt is a more extensive package, developed by a group, and I have \ncontributed most of my ideas to this project.  You might prefer \nmy script if you like something smaller, with parts that are (mostly) \nindependent and easy to modify.\n\nBriefly,\n\nIn normal mode, F1 - F4 will insert latex templates, unless they are\nalready there in the file.  You have to provide these templates yourself.\n\nIn insert mode, F1 - F5 will insert environments such as \\begin{..} \\end{..}.\n\nS-F1 through S-F5 will alter existing environments.\n\n(), $$, [], \\[\\], {}, \\{\\}, && are inserted in matching pairs.\n\nOutside of a math environment, tab does word completion, \nor gives a tab if the previous character is a space or \na line beginning.  Within a math environment, \ntab moves you between parentheses or to the end of the \nenvironment.\n\nMany Latex commands are bound to the ` key.  (This comes from auctex).\nFor instance, \\alpha is bound to `a, and \\infty is bound to `8.\n\\frac{}{} is bound to `/  .\n\nMenu items allow you to change or delete matching pairs of brackets,\nas well as insert \\left..\\right automatically.  \n\nNow pressing <Insert> twice will also allow modification of brackets, according \nto a menu that appears at the bottom.\n\nIn normal mode, K runs latex, takes you to the position of the first error (if any),\nand displays the error message with highlighting.\n\nTo get \\mathbf{R}, type r<Insert>b.  To get \\mathcal{R}, type r<Insert>c. \n<Insert>s produces \\sqrt{}.\n\nSome macros are polymorphic.  For instance, when preceded by bracket, \n<Insert>l will insert \\left..\\right around the brackets.  Otherwise it \nwill insert \\label{} and position the cursor in between the {}.\nLikewise, <Insert>c will produce \\cite{} when preceded by a blank or at \nthe beginning of the line;  but, for example, b<Insert>b will produce \\mathbf{B}.\n\nThere are \"smart quotes\".  That is, typing \" will produce a `` if there is\na space before the \", and will produce '' otherwise.\n\nYou can embrace the visual region with () by typing `(.  This works \nfor other kinds of parentheses, too, as well as $$ and &&.\n\nLong lines are automatically split up to keep $..$ (math expressions)\non the same line.\n\nThere are several abbreviations, such as \\b for \\bigskip.\n\nYou can add your own macros, the macro key is ;\n\nInspired by LaTeX-Suite, the tab key has some new uses.  Inside \\ref{}, it opens \na subwindow with the reference keys.  Pressing enter will insert that reference.  \nDitto for \\cite{}, the subwindow will show either your bibitem entries (if any) or \nyour bibtex file.  Pressing enter within the bibtex reference will insert the proper \ncitation key.",
+  "install_details": "Put the file in the directory ~/.Vim, and include the following line in your .vimrc file:\n\nautocmd Filetype tex source ~/.Vim/auctex.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13443",
+      "filename": "auctex.vim",
+      "script_version": "2.2.6",
+      "date": "2010-07-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug for changing environments with <S-F5>."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13062",
+      "filename": "auctex.vim",
+      "script_version": "2.2.5",
+      "date": "2010-05-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Some further cleanup"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13058",
+      "filename": "auctex.vim",
+      "script_version": "2.2.4",
+      "date": "2010-05-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Slight improvement of the double insert macro of 2.2.3.  Removed corresponding <Tab> key bindings."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13056",
+      "filename": "auctex.vim",
+      "script_version": "2.2.3",
+      "date": "2010-05-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Pressing <Insert> twice now changes brackets in various ways, according to a menu that appears at the bottom."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13021",
+      "filename": "auctex.vim",
+      "script_version": "2.2.2",
+      "date": "2010-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug in changing environments (perhaps due to changes in vim scripting)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10437",
+      "filename": "auctex.vim",
+      "script_version": "2.2.1",
+      "date": "2009-04-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed small bug when searching for \"bibliography\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8380",
+      "filename": "auctex.vim",
+      "script_version": "2.2",
+      "date": "2008-03-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Some bug fixes, especially in breaking lines."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8270",
+      "filename": "auctex.vim",
+      "script_version": "2.1.4",
+      "date": "2008-02-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Various features are faster and better.  For example, ending the line in a period now splits the line if it is too long."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8237",
+      "filename": "auctex.vim",
+      "script_version": "2.1.3",
+      "date": "2008-02-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Speeded up the macro where \"..\" results in \"\\ldots\" or \"\\cdots\", or just \"\\dots\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8188",
+      "filename": "auctex.vim",
+      "script_version": "2.1.2",
+      "date": "2008-01-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Suppressed search highlighting that came on in one of the macros, and made another small fix."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8106",
+      "filename": "auctex.vim",
+      "script_version": "2.1.1",
+      "date": "2007-12-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Another improvement to \\ref and \\cite macros, in line with the Reftex emacs package."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7944",
+      "filename": "auctex.vim",
+      "script_version": "2.1",
+      "date": "2007-11-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved citation lookup.  Now pressing tab while in \\cite{} will split the window and either view your bibitem entries (if any) or load your bibtex file.  Then you can go to the entry you want, press Enter, and the citation will be copied into \\cite{}.  This was inspired by reftex, an emacs package."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7795",
+      "filename": "auctex.vim",
+      "script_version": "2.0011",
+      "date": "2007-10-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Yet another small improvement in the tab map."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7747",
+      "filename": "auctex.vim",
+      "script_version": "2.0010",
+      "date": "2007-10-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Made a small improvement in the tab key map."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7627",
+      "filename": "auctex.vim",
+      "script_version": "2.0009",
+      "date": "2007-09-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "One small change.  To change an environment, type S-F1 through S-F5.  This replaces the control key, which is used for other things in KDE.  Otherwise, there seems to be no reason to change the script, please send suggestions if you think otherwise."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3291",
+      "filename": "auctex.vim",
+      "script_version": "2.0008",
+      "date": "2004-07-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Inspired by LaTeX-Suite, the tab key has some new uses.  Inside \\ref{}, it opens a subwindow with the reference keys.  Pressing enter will insert that reference.\nDitto for \\cite{}.  Pressing enter within the bibtex reference will insert the proper \ncitation key."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2843",
+      "filename": "auctex.vim",
+      "script_version": "2.0007",
+      "date": "2004-03-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug involving changes of environment.  (Control-F5)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2141",
+      "filename": "auctex.vim",
+      "script_version": "2.0006",
+      "date": "2003-07-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "The tab key now does word completion \noutside of a math environment, or \nproduces a tab at the beginning of the \nline or if the previous character is a \nspace.  Within a math environment, it takes you to the next set of \nparentheses, or to the end of the \nenvironment.  Other small fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1533",
+      "filename": "auctex.vim",
+      "script_version": "2.0005",
+      "date": "2002-12-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed the last bug in this version\n(I hope)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1522",
+      "filename": "auctex.vim",
+      "script_version": "2.0004",
+      "date": "2002-12-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Now running latex automatically\ntakes you to the error (if any).\nAlso, corrected a bug."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1395",
+      "filename": "auctex.vim",
+      "script_version": "2.0003",
+      "date": "2002-11-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug in the automatic line\nbreaking.  Also, the script is now\neasier to read and customize."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1342",
+      "filename": "auctex.vim",
+      "script_version": "2.0002",
+      "date": "2002-10-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1332",
+      "filename": "auctex.vim",
+      "script_version": "2.0001",
+      "date": "2002-10-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Used the \"mapleader\" variable to make\nit easier to customize some macros."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1279",
+      "filename": "auctex.vim",
+      "script_version": "2.0",
+      "date": "2002-10-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "auctex.vim is now compatible with both\nlatex and amslatex.  See the file for \ndetails.  This mostly affects the function keys, which are used to enter the most common environments."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1183",
+      "filename": "auctex.vim",
+      "script_version": "1.6.1",
+      "date": "2002-09-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for the ampersand macro\nin the tabular environment.  Suggested\nby Johannes Ranke."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1052",
+      "filename": "auctex.vim",
+      "script_version": "1.6",
+      "date": "2002-07-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Extensive code clean-up, with many \nsuggestions by Peppe Guldberg.  Various \nimprovements and fixes.  Some emacs \nbindings included for convenience.  \nVi purists can delete these!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=943",
+      "filename": "auctex.vim",
+      "script_version": "1.5",
+      "date": "2002-06-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed the <F5> macro for the entering\nenvironments (thanks to Peppe Guldberg and Torsten Wolf).  Improved the macros\nfor modifying brackets.  A few other \nsmall changes, too."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=416",
+      "filename": "auctex.vim",
+      "script_version": "1.01",
+      "date": "2001-12-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Corrected a bug in the bracket macros."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=395",
+      "filename": "auctex.vim",
+      "script_version": "1.0",
+      "date": "2001-12-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

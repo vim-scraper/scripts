@@ -1,0 +1,186 @@
+{
+  "script_id": "69",
+  "name": "project.tar.gz",
+  "summary": "Organize/Navigate projects of files (like IDE/buffer explorer)",
+  "script_type": "utility",
+  "description": "You can use this plugin's basic functionality to set up a list of\nfrequently-accessed files for easy navigation. The list of files\nwill be displayed in a window on the left side of the Vim\nwindow, and you can press <Return> or double-click on\nfilenames in the list to open the files. This is similar to how\nsome IDEs I've used work. I find this easier to use than\nhaving to navigate a directory hierarchy with the file-explorer.\nIt also obviates the need for a buffer explorer because you\nhave your list of files on the left of the Vim Window.\n\n\nBut there's much, much more . . . .\n\nYou can also instruct the Plugin to change to a directory and\nto run scripts when you select a file. These scripts can, for\nexample, modify the environment to include compilers in\n$PATH. This makes it very easy to use quickfix with multiple\nprojects that use different environments. I give examples in\nthe documentation.\n\nOther features include:\n\to Loading/Unloading all the files in a Project (\\l, \\L, \\w, and \\W)\n\to Grepping all the files in a Project (\\g and \\G)\n\to Running a user-specified script on a file (can be used\n\t  to launch an external program on the file) (\\1 through \\9)\n\to Running a user-specified script on all the files in a Project\n\t  (\\f1-\\f9 and \\F1-\\F9)\n\to Also works with the netrw plugin using directory\n\t  names like ftp://remotehost\n             (Good for webpage maintenance.)\n\to Support for custom mappings for version control\n\t  integration (example of perforce in the documentation).\n\to I also give an example in the documentation on how to \n\t  set up a custom launcher based on extension. The\n\t  example launches *.jpg files in a viewer. I have also set\n\t  up viewers for PDF (acroread) and HTML files (mozilla)\n\t  for my own use.\n\nThis plugin is known to work on Linux, Solaris, and Windows.\nI cannot test it on Windows, though, so please let me know if\nyou run into any problems. If you use it on other platforms,\nlet me know.\n\n(Let me know if you need a .zip file)\n",
+  "install_details": "Decompress and untar in your ~/.vim directory (or\nequivalent).  Inside Vim, enter this:\n   :helptags ~/.vim/doc\n(or equivalent directory)\n(Enter \":help add-global-plugin\" to determine the directory to\nuntar it into.)\n\nThen enter\n  :help project\nfor information\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6273",
+      "filename": "project-1.4.1.tar.gz",
+      "script_version": "1.4.1",
+      "date": "2006-10-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "182",
+        "user_name": "Aric",
+        "first_name": "Aric",
+        "last_name": "Blumer",
+        "email": "aricvim at suddenlink.net",
+        "homepage": ""
+      },
+      "release_notes": "- Bug fixes\n- Optional use of vimgrep instead of grep\n- Line numbers in the project window\n- Window not bound to left side (experimental)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5600",
+      "filename": "project-1.4.tar.gz",
+      "script_version": "1.4",
+      "date": "2006-04-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "182",
+        "user_name": "Aric",
+        "first_name": "Aric",
+        "last_name": "Blumer",
+        "email": "aricvim at suddenlink.net",
+        "homepage": ""
+      },
+      "release_notes": "After about 2.5 years here is a slightly updated version.\n\n-Updated to support 7.0.  The previous version works in 7.0, but there was an annoying redraw when you move into/out of the project window.\n-Also, 7.0 treats modelines a little bit differently than 6.x. Version 7.0 re-evaluates window-local modelines if you hide and show the project window, and this messes up folds if you have a foldlevel in your project file's modelines.  Modelines are now turned off after the project file is first loaded.\n-Added \\S (Split-load all files at the cursor level) contributed by A. Harrison.\n-Bug fix with misuse of winnr() when winbufnr() should have been used."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1338",
+      "filename": "project-1.3.tar.gz",
+      "script_version": "1.3",
+      "date": "2002-10-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "182",
+        "user_name": "Aric",
+        "first_name": "Aric",
+        "last_name": "Blumer",
+        "email": "aricvim at suddenlink.net",
+        "homepage": ""
+      },
+      "release_notes": "-Bug Fixes (thanks Xiangjiang Ma)\n-Completed suite of % expansions in proj_run\n-Added mapping to toggle Project Window open/closed.\n-Added <F5> mapping equivalent to \\R"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1266",
+      "filename": "project-1.2.1.tar.gz",
+      "script_version": "1.2.1",
+      "date": "2002-10-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "182",
+        "user_name": "Aric",
+        "first_name": "Aric",
+        "last_name": "Blumer",
+        "email": "aricvim at suddenlink.net",
+        "homepage": ""
+      },
+      "release_notes": "--Identical to 1.2 but fixed functionality with netrw"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1262",
+      "filename": "project-1.2.tar.gz",
+      "script_version": "1.2",
+      "date": "2002-09-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "182",
+        "user_name": "Aric",
+        "first_name": "Aric",
+        "last_name": "Blumer",
+        "email": "aricvim at suddenlink.net",
+        "homepage": ""
+      },
+      "release_notes": "-Environment variables now expanded in paths.\n-Added 'b' flag to use the browse() function. (Off for Windows--it can't browse for directories.)\n-Added keep pragma to keep lines when refreshing.\n-Small tweaks.\n-Doc: example of using perforce with the plugin.\n-Doc: example of adding custom launchers.\n-Can't test on Windows, please let me know of problems."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=741",
+      "filename": "project-1.1.tar.gz",
+      "script_version": "1.1",
+      "date": "2002-04-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "182",
+        "user_name": "Aric",
+        "first_name": "Aric",
+        "last_name": "Blumer",
+        "email": "aricvim at suddenlink.net",
+        "homepage": ""
+      },
+      "release_notes": "Now accepts spaces in directories. Some bug fixes, too. Added Project_GetFname() for user scripts."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=385",
+      "filename": "project.tar.gz",
+      "script_version": "1.0",
+      "date": "2001-11-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "182",
+        "user_name": "Aric",
+        "first_name": "Aric",
+        "last_name": "Blumer",
+        "email": "aricvim at suddenlink.net",
+        "homepage": ""
+      },
+      "release_notes": "Some Bugfixes, improvements in performance. Added recursive create, explore, filenames with spaces, etc."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=285",
+      "filename": "project.tar.gz",
+      "script_version": "1.0pre4",
+      "date": "2001-10-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "182",
+        "user_name": "Aric",
+        "first_name": "Aric",
+        "last_name": "Blumer",
+        "email": "aricvim at suddenlink.net",
+        "homepage": ""
+      },
+      "release_notes": "Last pre before 1.0, so please test!\n- Added project grep, project load, project wipe\n- Can run commands on all files in a project.\n- Now supports netrw plugin"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=254",
+      "filename": "project.tar.gz",
+      "script_version": "1.0pre3",
+      "date": "2001-10-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "182",
+        "user_name": "Aric",
+        "first_name": "Aric",
+        "last_name": "Blumer",
+        "email": "aricvim at suddenlink.net",
+        "homepage": ""
+      },
+      "release_notes": "Added flags for sorting of filenames.\nAdded mappings to run external program or Vim script on a file.\nFixed a small bug (\"internal error\")."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=236",
+      "filename": "project.tar.gz",
+      "script_version": "1.0pre2",
+      "date": "2001-10-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "182",
+        "user_name": "Aric",
+        "first_name": "Aric",
+        "last_name": "Blumer",
+        "email": "aricvim at suddenlink.net",
+        "homepage": ""
+      },
+      "release_notes": "Fixed absolute path detection for Win32. (Thanks Lawrence!) Fixed small documentation error."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=233",
+      "filename": "project.tar.gz",
+      "script_version": "1.0pre1",
+      "date": "2001-10-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "182",
+        "user_name": "Aric",
+        "first_name": "Aric",
+        "last_name": "Blumer",
+        "email": "aricvim at suddenlink.net",
+        "homepage": ""
+      },
+      "release_notes": "Several new features, most notably: Paths can now be relative in subprojects. Subprojects inherit parameters from parent. New in= and out= directives to run Vim scripts to modify the environment. Added T flag. Added per-fold flags. CTRL-W_o keeps Project Window visible. etc."
+    }
+  ]
+}

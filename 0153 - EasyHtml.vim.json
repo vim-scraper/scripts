@@ -1,0 +1,138 @@
+{
+  "script_id": "153",
+  "name": "EasyHtml.vim",
+  "summary": "Allows to add attributs/values/CSSProperties to HTML tags/attributs very easily.",
+  "script_type": "utility",
+  "description": "With EasyHtml, you no longer need to look for tags attributes, attributes values or CSS properties values while editing HTML files. EasyHtml let you select the right attribute or value by showing you an attributes/values list for the tag/attribute/CSS property under the cursor.\n\nMove the text cursor on the tag, attribute, or CSS property word then :\n\n- Press <F2> key to display attributes for the tag before/under the cursor\n- Press <F3> key to display values for the attribute before/under the cursor\n- Press <F4> ket to display values for the CSS Property befor/under the cursor\n\nIn the EasyHtml buffer, use :\n\n       - h,j,k,l or <Left>,<Down>,<Up>,<Right> keys to change selected item.\n       - <PageUp>/<PageDown> or <C-F>,<C-B> keys to scroll list one page downward/forward.\n       - <Home> or <C-Home> to select the first item.\n       - <End> or <C-End> to select the last item.\n       - <ENTER> to add selected item WITHOUT exiting from items list.\n       - <S-ENTER> to add selected item AND exit from items list.\n       - q or <ESC> to exit without adding selected item.\n\nDeprecated attributes as declared by W3C are red highlighted, while right attributes are blue highlighted.\n\nSet g:easyHtmlSplitRight variable to 0 or 1 to open items list at left or right of current window. By default, use splitright setting.\n\nSet g:eh_singlequote variable to 0 (default) or 1 to use double or single quote when adding attributes (For example id=\"\" or id='')\n\nSet g:eh_incsearch variable to 0 (default) or 1 to dis- or en-able incremental list search. This feature allows to select an item by typing its beginning. When this is enable, 'q', 'h', 'j', 'k' and 'l' keys aren't used to exit from list and to move highlighting. Use 'Q', '<Left>', '<Down>', '<Up>' and '<Right>' instead.\n\nSet g:eh_atfirstplace to 0 (default) or 1 to indicate if attributes must be added at the end or at the beginning of the tag.\n\n+ Useful mappings :\n  . d<F2> : delete tag before/under cursor\n  . d<F3> : delete attribute before/under cursor\n",
+  "install_details": "Put this file in your plugin directory.\nRequires liblist.vim and genutils.vim scripts.\nDownload them at\n  http://vim.sourceforge.net/scripts/script.php?script_id=166\nand\n  http://vim.sourceforge.net/scripts/script.php?script_id=197\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=705",
+      "filename": "EasyHtml.vim",
+      "script_version": "0.5.1",
+      "date": "2002-03-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "355",
+        "user_name": "gbaerts",
+        "first_name": "Gontran",
+        "last_name": "BAERTS",
+        "email": "gbcreation at free.fr",
+        "homepage": ""
+      },
+      "release_notes": "- No longer use of the modifiable option."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=691",
+      "filename": "EasyHtml.vim",
+      "script_version": "0.5",
+      "date": "2002-03-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "355",
+        "user_name": "gbaerts",
+        "first_name": "Gontran",
+        "last_name": "BAERTS",
+        "email": "gbcreation at free.fr",
+        "homepage": ""
+      },
+      "release_notes": "- Now use liblist.vim script to handle lists and genutils.vim script to handle windows (Thanks to Hari Krishna Dara for this script).\nDownload them at\n  http://vim.sourceforge.net/scripts/script.php?script_id=166\nand\n  http://vim.sourceforge.net/scripts/script.php?script_id=197\nMake script smaller.\n- Mapping changed !\n  <F2> displays tag attributes\n  <F3> displays attributes values\n  <F4> displays CSS Properties values\n  <ENTER> no longer close list after item addition. Use <S-ENTER> to add and exit from list.\n- More user friendly : you no longer need to move cursor exactly on the keyword. Cursor may stay on '=', ':' or '\"' signs just after keyword while hitting <F2>, <F3> or <F4> keys.\nFor example,\n. Tags : <img\n  Hitting <F2> key works while cursor is at '<' sign.\n. Attributes : style=\"\"\n  Hitting <F3> key works while cursor is at '=' or '\"' signs.\n. CSS properties : background-color:;\n  Hitting <F4> key works while cursor is at ':' or ';' signs.\n- New g:eh_atfirstplace variable. See Usage section above.\n- Fix modifiable setting again\n- Fix syntax error for the \"frame\" attribute of <table> tag which causes \"border\" attribute to not been seen in attributes list.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=405",
+      "filename": "EasyHtml.vim",
+      "script_version": "0.4.1",
+      "date": "2001-12-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "355",
+        "user_name": "gbaerts",
+        "first_name": "Gontran",
+        "last_name": "BAERTS",
+        "email": "gbcreation at free.fr",
+        "homepage": ""
+      },
+      "release_notes": "- Fix infinite loop to find window when easyhtml buffer is hidden. Thanks to Jonathon Merz who pointed out the bug and send me the patch.\n'The drawback to this fix is that it will reinitialize all the buffer\nmappings and such for the EasyHtml buffer every time the buffer is opened but\nis not in a window already', he says. Hari Krishna Dara has made a great script named bufNwinUtils.vim which contains useful functions to handle buffers and windows. It will allow me to avoid the drawback. I'm interesting to use his script with mine, but it requires to load entire bufNwinUtils.vim for only  two or three functions used. What do you think about that ? give me feedback, thanks."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=392",
+      "filename": "EasyHtml.vim",
+      "script_version": "0.4",
+      "date": "2001-12-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "355",
+        "user_name": "gbaerts",
+        "first_name": "Gontran",
+        "last_name": "BAERTS",
+        "email": "gbcreation at free.fr",
+        "homepage": ""
+      },
+      "release_notes": "- Added values for the \"style\" attribute (CSS2 properties)\n- Added values for CSS2 properties\n- <PageUp> and <PageDown> are now usable to move highlight through the list\n- When adding a value for an attribute, current attribute value (if exists) is replaced by the selected one, except for \"style\" attribute for which values are append\n- Set g:eh_singlequote variable to 0 or 1 to use double or single quote when adding attributes (For example id=\"\" or id='')"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=383",
+      "filename": "EasyHtml.vim",
+      "script_version": "0.3",
+      "date": "2001-11-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "355",
+        "user_name": "gbaerts",
+        "first_name": "Gontran",
+        "last_name": "BAERTS",
+        "email": "gbcreation at free.fr",
+        "homepage": ""
+      },
+      "release_notes": "- Attributes list updated\n- Don't display attributes list for closing tags\n- Now, display values list when hitting <F3> with cursor on attribute word (for some attributes only)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=378",
+      "filename": "EasyHtml.vim",
+      "script_version": "0.2.1",
+      "date": "2001-11-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "355",
+        "user_name": "gbaerts",
+        "first_name": "Gontran",
+        "last_name": "BAERTS",
+        "email": "gbcreation at free.fr",
+        "homepage": ""
+      },
+      "release_notes": "- Fix global modifiable setting instead of local"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=377",
+      "filename": "EasyHtml.vim",
+      "script_version": "0.2",
+      "date": "2001-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "355",
+        "user_name": "gbaerts",
+        "first_name": "Gontran",
+        "last_name": "BAERTS",
+        "email": "gbcreation at free.fr",
+        "homepage": ""
+      },
+      "release_notes": "- Attributs list is now alphabetically sorted\n- Hitting <F3> allows to display attributs list in Insert mode too\n- Allows to select an attribut by incremental search :-)\nFor example, with <body> tag, typing \"onk\" (normal mode) in the attributs list buffer automatically select \"onkeydown\" attribut. Use backspace (<BS>) to remove characters. This behavior is enable by setting g:eh_incsearch variable to 1. Warning : when incremental attribut search is on, 'q', 'h', 'j', 'k' and 'l' keys aren't used to exit from list and to move highlighting. Use 'Q', '<Left>', '<Down>', '<Up>' and '<Right>' instead.\n- Check for attributs list already opened, and reuse it"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=363",
+      "filename": "EasyHtml.vim",
+      "script_version": "0.1",
+      "date": "2001-11-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "355",
+        "user_name": "gbaerts",
+        "first_name": "Gontran",
+        "last_name": "BAERTS",
+        "email": "gbcreation at free.fr",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

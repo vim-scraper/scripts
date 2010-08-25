@@ -1,0 +1,58 @@
+{
+  "script_id": "13",
+  "name": "closetag.vim",
+  "summary": "Functions and mappings to close open HTML/XML tags",
+  "script_type": "utility",
+  "description": "This script eases redundant typing when writing html or xml files (even if you're very good with ctrl-p and ctrl-n  :).  Hitting ctrl-_ will initiate a search for the most recent open tag above that is not closed in the intervening space and then insert the matching close tag at the cursor.  In normal mode, the close tag is inserted one character after cursor rather than at it, as if a<C-_> had been used.  This allows putting close tags at the ends of lines while in normal mode, but disallows inserting them in the first column.\n                                                                              \nFor HTML, a configurable list of tags are ignored in the matching process.  By default, the following tags will not be matched and thus not closed automatically: Area, Base, Br, DD, DT, HR, Img, Input, LI, Link, Meta, P, and Param.\n                                                                              \nFor XML, all tags must have a closing match or be terminated by />, as in <empty-element/>.  These empty element tags are ignored for matching.\n                                                                              \nComments are not currently handled very well, so commenting out HTML in certain ways may cause a \"tag mismatch\" message and no completion.  ie, having '<!-- a href=\"blah\">link!</a -->' between the cursor and the most recent open tag above doesn't work.  Well matched tags in comments don't cause a problem.\n",
+  "install_details": "To use, place this file in your standard vim scripts directory, and source it while editing the file you wish to close tags in.  If the filetype is not set or the file is some sort of template with embedded HTML, you may get HTML style tag matching by first setting the closetag_html_style global variable.  Otherwise, the default is XML style tag matching.\n                                                                              \nExample:\n  :let g:closetag_html_style=1\n  :source ~/.vim/scripts/closetag.vim\n                                                                              \nFor greater convenience, load this script in an autocommand:\n  :au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim\n                                                                              \nAlso, set noignorecase for html files or edit b:unaryTagsStack to match your capitalization style.  You may set this variable before or after loading the script, or simply change the file itself.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4318",
+      "filename": "closetag.vim",
+      "script_version": "0.9.1",
+      "date": "2005-05-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "43",
+        "user_name": "diffusor",
+        "first_name": "Steven",
+        "last_name": "Mueller",
+        "email": "diffusor at ugcs.caltech.edu",
+        "homepage": ""
+      },
+      "release_notes": "Bugfix release: Changed function names to be script-local to avoid conflicts with other scripts' stack implementations.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=18",
+      "filename": "closetag.vim",
+      "script_version": "0.9",
+      "date": "2001-06-08",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "43",
+        "user_name": "diffusor",
+        "first_name": "Steven",
+        "last_name": "Mueller",
+        "email": "diffusor at ugcs.caltech.edu",
+        "homepage": ""
+      },
+      "release_notes": "Added synID()-based comment awareness:\nComment checking is now handled by vim's internal syntax checking.  Closing tags outside comments only matches non-commented tags.  Closing tags in comments matches only tags within comments, skipping blocks of normal code (wee!).  Can be really slow if syn sync minlines is large.  Set the b:closetag_disable_synID variable to disable comment contexts if it's too slow.\n\nNormal mode closetag now uses <C-R> in insert mode rather than p in normal mode:  Tag closing no longer clobbers the unnamed register, and (for vim 6.0) Doesn't modify the undo buffer when no change was made.  Made closetag_html_style variable buffer-local.  Improved documentation (hopefully).\n\nConfiguration Variables rundown:\n- b:unaryTagsStack            Buffer local string containing a whitespace seperated list of element names that should be ignored while finding matching closetags.  Checking is done according to the current setting of the ignorecase option.\n- b:closetag_html_style       Define this (as with let b:closetag_html_style=1) and source the script again to set the unaryTagsStack to its default value for html.\n- b:closetag_disable_synID    Define this to disable comment checking if tag closing is too slow.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15",
+      "filename": "closetag.vim",
+      "script_version": "0.8",
+      "date": "2001-06-05",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "43",
+        "user_name": "diffusor",
+        "first_name": "Steven",
+        "last_name": "Mueller",
+        "email": "diffusor at ugcs.caltech.edu",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

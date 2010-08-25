@@ -1,0 +1,138 @@
+{
+  "script_id": "88",
+  "name": "vimtips.zip",
+  "summary": "Display a helpful tip the first time you start Vim each day.",
+  "script_type": "utility",
+  "description": "     Whenever you start Vim (but no more than daily) the script will open a\nhelp window with a Vim tip. You must download the tips separately, from\nhttp://vim.sourceforge.net/tips/tip_download.php\n\n    After installation, you can get the next tip with\n\n:TipOfTheDay\n\n(usual abbreviation rules apply) or go to the top of the tips file with\n\n:help vimtips.txt",
+  "install_details": "1. Unpack totd.zip into a directory in your |runtimepath|.  For most users,\nthis typically means ~/.vim or $HOME/vimfiles or $VIM/vimfiles .  This will\ncreate files\n\tplugin/totd.vim\t(the plugin)\n\tdoc/totd.txt\t(the docs)\n\tplugin/vimtips/vimtips.txt\t(skeleton tips file)\n\n2a. The easiest thing may be to restart vim, either right now or whenever you\nget around to it.  Then totd.vim will automatically run |:helptags|, edit the\ntags file, and open the skeleton vimtips file.\n\n2b. If you want to finish the installation right now, without restarting vim,\nsimply source the totd.vim file and get a tip:\n\n\t:source path/to/totd.vim\n\t:TipOfTheDay\n\n3. The totd.vim plugin will open the skeleton vimtips file in a help window.\nFollow the URL there to download a real vimtips file.\n\n4. As with any plugin that comes with documentation, you should run\n\n\t:helptags path/to/doc\n\nso that you can read the documentation with\n\n\t:help totd\n\t:help Tip",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5969",
+      "filename": "vimtips.zip",
+      "script_version": "2.2.2",
+      "date": "2006-07-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "I applied a patch from Bill McCarthy:  set the 'linebreak' option in the help window in case there are tips with long lines, and add :silent when updating the line number."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5526",
+      "filename": "vimtips.zip",
+      "script_version": "2.2.1",
+      "date": "2006-04-06",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "No new functionality:  I just updated the URL for getting a tips archive."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1452",
+      "filename": "vimtips.zip",
+      "script_version": "2.2",
+      "date": "2002-11-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "     I changed the way that the script edits files.  Installation should be slightly smoother, and in rare cases opening the tips should be better.\n     In previous versions, I accidentally included a moderately large, very old, tips file instead of a skeleton vimtips.txt.  This version contains a small skeleton file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1439",
+      "filename": "vimtips.zip",
+      "script_version": "2.1.1",
+      "date": "2002-11-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "I fixed a tiny, silly bug that probably would never cause a problem anyway.  (OK, if \"vimtips.txs\" is in your tags file, the binary search would screw up.)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1436",
+      "filename": "vimtips.zip",
+      "script_version": "2.1",
+      "date": "2002-11-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Do not run :helptags automatically.  The user should install the docs (totd.txt) himself.  The tag for vimtips.txt is still inserted automatically.\nReason:  as long as this is the only script that automatically edits the tags file, there is no problem, but what if someone else tries the same trick?  Each script runs :helptags, wiping out the other's customization, ..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1434",
+      "filename": "vimtips.zip",
+      "script_version": "2.0",
+      "date": "2002-11-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "This is almost a total rewrite.  Installation is simpler, start-up is faster,\nand I added a command\n\n:TipOfTheDay\n\n(or :Tip if that does not conflict with anything else, thanks to usual\nabbreviation rules) to get a tip on demand."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=177",
+      "filename": "vimtips.zip",
+      "script_version": "1.1",
+      "date": "2001-09-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Bug fix:  Be more graceful if :helptag has not yet been used.  (See the\ninstallation intructions!)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=176",
+      "filename": "vimtips.zip",
+      "script_version": "1.0",
+      "date": "2001-09-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

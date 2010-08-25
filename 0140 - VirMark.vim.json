@@ -1,0 +1,26 @@
+{
+  "script_id": "140",
+  "name": "VirMark.vim",
+  "summary": "Ability to create virtual marks.",
+  "script_type": "utility",
+  "description": "Based on some advice given by Benji Fisher on utilizing a buffer local variable to store the current position.  It becomes a virtual mark as it doesn't take up one of the normal vim 'marks' a-zA-Z, instead it uses a variable.  They are local to a buffer, just like normal marks.  Useful for scripts that need to keep position, but don't want to change the user's mark setting.",
+  "install_details": "Put in your plugin directory.  Can be used either from a Script or the command line.  Two user commands SetMark and GoMark.  Argument is just like normal mark  command a a-z character.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=328",
+      "filename": "VirMark.vim",
+      "script_version": "1.1",
+      "date": "2001-11-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "42",
+        "user_name": "pottsdl",
+        "first_name": "Douglas",
+        "last_name": "Potts",
+        "email": "pottsdl at gmail.com",
+        "homepage": "http://drbitz.blogspot.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

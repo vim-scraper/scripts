@@ -1,0 +1,58 @@
+{
+  "script_id": "122",
+  "name": "Astronaut",
+  "summary": "DrChip's colorscheme: looks the same for vim and gvim (dark background)",
+  "script_type": "color scheme",
+  "description": "IF YOU DON'T CARE ABOUT VIM AND GVIM USING THE SAME COLORS, THIS COLORSCHEME IS NOT FOR YOU!!!  (guess I'm tired of those who complain about the use of only 8 colors...)\n\nThis colorscheme is a dark-background style colorscheme with the advantage that it works with console/terminal vim in the same way that it works with GUI vim.  Thus it is restricted to using just the basic eight colors that many xterms are limited to.\n\nThe <astronaut.vim> file gives you my dark background preferred colorscheme.  If you'd like to see a preview, check out\n   \n http://mysite.verizon.net/astronaut/vim/colors/colorscheme.html\n    \nwhich has a small picture of yacc code being highlighted by <astronaut.vim>.\n          \nAs of version 2 of the astronaut colorscheme, <astronaut.vim> supports some options which help console vims display properly.  There's a help file (doc/astronaut.txt) which you can enable by typing in a vim\n                     \n    :helptags ~/.vim/doc/\n                         \n(correct the path as needed).  The options include:\n                                \n  let astronaut_bold=1      : use the bold modifier for term, cterm, and gui\n\n  let astronaut_dark=1      : dark colors used (otherwise some terminals\n                              make everything bold, which can be all one\n                              color)\n\n  let astronaut_underline=1 : assume that underlining works on your terminal\n                              Otherwise some groups will have dark-magenta\n                              background highlighting.\n\nFor example, on my old Sgi workstation, I've found that the Irix o/s needs let astronaut_dark=1 even though its only an 8-color terminal.  Otherwise most everything shows up as yellow.\n",
+  "install_details": "1. Put <astronaut.tar.gz> into your \n      Unix:  .vim/\n      Win:    _vimfiles\\\n   directory\n\n2. Decompress:  gunzip astronaut.tar.gz\n\n3. Extract:  tar -oxvf astronaut.tar\n\n2. Put any options you want before a\n     colors astronaut\n   line into your <.vimrc>.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5298",
+      "filename": "astronaut.tar.gz",
+      "script_version": "7",
+      "date": "2006-02-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Astronaut, the first colorscheme to support gvim and vim with the same color set, now supports the new TabLine, TabLineSel, and TabLineFill highlighting groups (don't worry -- astronaut.vim will continue to work with vim6.x)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3411",
+      "filename": "astronaut.tar.gz",
+      "script_version": "6",
+      "date": "2004-09-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": " * g:astronaut_italic supported, allowing italicized fonts to be used for some gui colorization\n * GetLatestVimScripts semi-automatic updating and installing now supported\n * Improved default option value handling\n * Some small changes to some of the highlighting\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2359",
+      "filename": "astronaut.vim",
+      "script_version": "5",
+      "date": "2003-09-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Three colorscheme modifiers are available to help you get the astronaut.vim colorscheme working on your terminal...\nastronaut_bold=1: term, cterm, and gui receive bold modifier\nastronaut_dark=1: dark colors used (otherwise some terminals make everything bold, which can be all one color)\nastronaut_underline=1 : assume that underlining works on your terminal.  Otherwise some groups will have dark-magenta background highlighting.\n"
+    }
+  ]
+}

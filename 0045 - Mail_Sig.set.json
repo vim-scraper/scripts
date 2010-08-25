@@ -1,0 +1,58 @@
+{
+  "script_id": "45",
+  "name": "Mail_Sig.set",
+  "summary": "Erase signatures at the end of your replies",
+  "script_type": "utility",
+  "description": "This file defines an alternative to the macro :\n\n                          map ,kqs G?^> *-- $dG \n\n\nIt comes as a command. This time, VIM won't complains about not found ^> *-- $ pattern. BTW, It also deletes all the empty lines (quoted or not) just above the signature to delete.\n\nOlder versions (for VIM 5.7) of the file define the function Erase_Sig(). \nThe latest version (for VIM 6.x) defines the command :EraseSignature. \n\nIt can also delete up to two signatures -- some mailing lists add another dashes-delimited\nsignature. And it keeps our signature that may be automatically inserted by some MUAs \nlike Mutt.\n\n\nSince v1.4: the operator-pending mode mapping '--' is defined. Hitting d--, c-- or y--\nwill delete, change or yank lines until our own signature (if present) or the end of the file.\n",
+  "install_details": "Drop the file wherever you want ; {rtp}/ftplugin/mail beeing, IMO, the best place. \n\nAnd uncomment the call to the command at the end of the file if you don't want the \noperation to be automatic ; you may want define a mapping (like ,kqs for instance) \nthat will invoke :EraseSignature.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=982",
+      "filename": "Mail_Sig_set.vim",
+      "script_version": "1.4",
+      "date": "2002-07-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "New operator-pending mode mapping : --. It matches lines until our own signature or the end of the file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=969",
+      "filename": "Mail_Sig_set.vim",
+      "script_version": "1.3",
+      "date": "2002-07-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Now, the script can erase up to two previous signatures (inserted by some mailing lists), and more important, it doesn't delete our signature when automatically inserted by the MUA. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=64",
+      "filename": "Mail_Sig.set",
+      "script_version": "1.2",
+      "date": "2001-07-27",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

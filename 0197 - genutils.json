@@ -1,0 +1,538 @@
+{
+  "script_id": "197",
+  "name": "genutils",
+  "summary": "General utility functions",
+  "script_type": "utility",
+  "description": "The new version requires Vim 7.0 and it employs the new autoload mechanism. If you have plugins that use both the new version and previous non-autoloaded version, then see the installation instructions for both to coexist.\n\nThis script provides functions that are mostly useful to script developers, but some of the functions can be easily converted to good utilities.\n\nSee script header for documented public functions with help and usage information along with the function prototypes.\n\nThis script provides many useful utility functions for buffers, windows and other misc things. I needed a place to share all the misc. utility functions so I renamed bufNwinUtils.vim and started adding these additional functions. I intend to create/collect many more useful functions and add to this script.\n\n- Read the \"Documentation With Function Prototypes\" section below.\n- Misc. window/buffer related functions, genutils#NumberOfWindows(),\n  genutils#FindBufferForName(), genutils#MoveCursorToWindow(),\n  genutils#MoveCurLineToWinLine(), genutils#SetupScratchBuffer(),\n  genutils#MapAppendCascaded()\n- Save/Restore all the window height/width settings to be restored later.\n- Save/Restore position in the buffer to be restored later. Works like the\n  built-in marks feature, but has more to it.\n- genutils#AddNotifyWindowClose() to get notifications *after* a window\n  with the specified buffer has been closed or the buffer is unloaded. The\n  built-in autocommands can only notify you *before* the window is closed.\n  You can use this with the Save/Restore window settings feature to\n  restore the dimensions of existing windows, after your window is closed\n  (just like how Vim does while closing help windows). See selectbuf.vim\n  or perforce.vim for examples.\n  There is also a test function called RunNotifyWindowCloseTest() that\n  demos the usage (you need to uncomment RunNotifyWindowCloseTest and\n  NotifyWindowCloseF functions).\n- genutils#ShowLinesWithSyntax() function to echo lines with syntax coloring.\n- genutils#ShiftWordInSpace(), genutils#CenterWordInSpace() and\n  genutils#AlignWordWithWordInPreviousLine() utility functions to move\n  words in the space without changing the width of the field. A\n  genutils#GetSpacer() function to return a spacer of specified width.\n- Binary search function genutils#BinSearchList() for sorted lists, to\n  find the index after which a given item can be inserted to keep the list\n  in sorted order. You can also use these functions to just search for\n  boundaries.\n  There are also a couple of functions genutils#BinSearchForInsert() and\n  genutils#BinSearchForInsert2() to find the location for a newline to be\n  inserted in an already sorted buffer or arbitrary data.\n  There are also a few comparison functions that can be used with sort() or\n  the above functions.\n- ExecMap function has now been separated as a plugin called execmap.vim.\n- New genutils#CommonPath() function to extract the common part of two\n  paths, and genutils#RelPathFromFile() and genutils#RelPathFromDir() to\n  find relative paths (useful HTML href's). A side effect is the\n  genutils#CommonString() function to find the common string of two\n  strings.\n- genutils#UnEscape() and genutils#DeEscape() functions to reverse and\n  genutils#Escape() to compliment what built-in escape() does. There is\n  also an genutils#EscapeCommand() function to escape external command\n  strings.\n- Utility functions genutils#CurLineHasSign() and genutils#ClearAllSigns()\n  to fill in the gaps left by Vim.\n- genutils#GetVimCmdOutput() function to capture the output of Vim built-in\n  commands, in a safe manner.\n- genutils#OptClearBuffer() function to clear the contents and undo\n  history of the current buffer in an optimal manner. Ideal to be used\n  when plugins need to refresh their windows and don't care about\n  preserving the current contents (which is the most usual case).\n- genutils#GetPreviewWinnr() function.\n- Functions to have persistent data, genutils#PutPersistentVar() and\n  genutils#GetPersistentVar(). You don't need to worry about saving in\n  files and reading them back. To disable, set g:genutilsNoPersist in your\n  vimrc.\n- A function to emulate the default Vim behavior for |timestamp| changes.\n  It also provides hooks to get call backs before and after handling the\n  default FileChangedShell autocommand (effectively splitting it into a\n  Pre and a Post event). Suggested usage is to use\n  genutils#AddToFCShellPre() and either install a default event handling\n  mechanism for all files by calling genutils#DefFCShellInstall() or\n  create your own autocommand on a matching pattern to call\n  genutils#DefFileChangedShell() function. Most useful for the source\n  control plugins to conditionally reload a file, while being able to\n  default to the Vim's standard behavior of asking the user. See\n  perforce.vim for usage examples.\n- Utility function genutils#ExtractFuncListing() that is useful to to\n  create snippets (see breakpts.vim, ntservices.vim and ntprocesses.vim\n  for interesting ideas on how to use this function).\n                                                                                   \nFunction Prototypes:\n    The types in prototypes of the functions mimic Java.\n    This is just a full list for a quick reference, see\n      \"Documentation With Function Prototypes\" for more information on the\n      functions.\n                                                                                   \nvoid    genutils#DebugShowArgs(...)\nString  genutils#ExtractFuncListing(String funcName, String hLines, String tLines)\nint     genutils#NumberOfWindows()\nint     genutils#FindBufferForName(String fileName)\nString  genutils#GetBufNameForAu(String bufName)\nvoid    genutils#MoveCursorToWindow(int winno)\nvoid    genutils#MoveCurLineToWinLine(int winLine)\nvoid    genutils#CloseWindow(int winnr, boolean force)\nvoid    genutils#MarkActiveWindow()\nvoid    genutils#RestoreActiveWindow()\nvoid    genutils#IsOnlyVerticalWindow()\nvoid    genutils#IsOnlyHorizontalWindow()\nint     genutils#GetNextWinnrInStack(char dir)\nint     genutils#GetLastWinnrInStack(char dir)\nvoid    genutils#MoveCursorToNextInWinStack(char dir)\nvoid    genutils#MoveCursorToLastInWinStack(char dir)\nvoid    genutils#OpenWinNoEa(String openWinCmd)\nvoid    genutils#CloseWinNoEa(int winnr, boolean force)\nvoid    genutils#SetupScratchBuffer()\nvoid    genutils#CleanDiffOptions()\nboolean genutils#ArrayVarExists(String varName, int index)\nvoid    genutils#MapAppendCascaded(String lhs, String rhs, String mapMode)\nvoid    genutils#SaveWindowSettings()\nvoid    genutils#RestoreWindowSettings()\nvoid    genutils#ResetWindowSettings()\nvoid    genutils#SaveWindowSettings2(String id, boolean overwrite)\nvoid    genutils#RestoreWindowSettings2(String id)\nvoid    genutils#ResetWindowSettings2(String id)\nvoid    genutils#SaveVisualSelection(String id)\nvoid    genutils#RestoreVisualSelection(String id)\nvoid    genutils#SaveSoftPosition(String id)\nvoid    genutils#RestoreSoftPosition(String id)\nvoid    genutils#ResetSoftPosition(String id)\nvoid    genutils#SaveHardPosition(String id)\nvoid    genutils#RestoreHardPosition(String id)\nvoid    genutils#ResetHardPosition(String id)\nint     genutils#GetLinePosition(String id)\nint     genutils#GetColPosition(String id)\nboolean genutils#IsPositionSet(String id)\nString  genutils#CleanupFileName(String fileName)\nString  genutils#CleanupFileName2(String fileName, String win32ProtectedChars)\nboolean genutils#OnMS()\nboolean genutils#PathIsAbsolute(String path)\nboolean genutils#PathIsFileNameOnly(String path)\nvoid    genutils#AddNotifyWindowClose(String windowTitle, String functionName)\nvoid    genutils#RemoveNotifyWindowClose(String windowTitle)\nvoid    genutils#CheckWindowClose()\nvoid    genutils#ShowLinesWithSyntax() range\nvoid    genutils#ShiftWordInSpace(int direction)\nvoid    genutils#CenterWordInSpace()\nint     genutils#BinSearchList(List list, int start, int end, Object item,\n                           [Funcref|String] cmp, int direction)\nint     genutils#BinSearchForInsert(int start, int end, String line,\n                           String cmp, int direction)\nint     genutils#BinSearchForInsert2(int start, int end, line, String cmp,\n                            int direction, String accessor, String context)\nString  genutils#CommonPath(String path1, String path2)\nString  genutils#CommonString(String str1, String str2)\nString  genutils#RelPathFromFile(String srcFile, String tgtFile)\nString  genutils#RelPathFromDir(String srcDir, String tgtFile)\nString  genutils#Roman2Decimal(String str)\nString  genutils#Escape(String str, String chars)\nString  genutils#UnEscape(String str, String chars)\nString  genutils#DeEscape(String str)\nString  genutils#CrUnProtectedCharsPattern(String chars)\nString  genutils#EscapeCommand(String cmd, List/String args, List/String pipe)\nint     genutils#GetShellEnvType()\nString  genutils#ExpandStr(String str)\nString  genutils#QuoteStr(String str)\nboolean genutils#CurLineHasSign()\nvoid    genutils#ClearAllSigns()\nString  genutils#UserFileComplete(String ArgLead, String CmdLine,\n               String CursorPos, String smartSlash, String searchPath)\nString  genutils#UserFileComplete2(String ArgLead, String CmdLine,\n               String CursorPos, [Map params])\nString  genutils#UserDirComplete2(String ArgLead, String CmdLine,\n               String CursorPos, [Map params])\nString  genutils#UserFileExpand(String fileArgs)\nString  genutils#GetVimCmdOutput(String cmd)\nvoid    genutils#OptClearBuffer()\nint     genutils#GetPreviewWinnr()\nvoid    genutils#PutPersistentVar(String pluginName, String persistentVar,\n               String value)\nvoid    genutils#GetPersistentVar(String pluginName, String persistentVar,\n               String default)\nvoid    genutils#AddToFCShellPre(String funcName)\nvoid    genutils#RemoveFromFCShellPre(String funcName)\nvoid    genutils#DefFCShellInstall()\nvoid    genutils#DefFCShellUninstall()\nboolean genutils#DefFileChangedShell()\nvoid    genutils#SilentSubstitute(String pat, String cmd)\nvoid    genutils#SilentDelete(String pat)\nvoid    genutils#SilentDelete(String range, String pat)\nString  genutils#GetSpacer(int width)\nString  genutils#PromptForElement(List array,\n    \t   [String defaultValue | int defaultIndex], String msg,\n    \t   String skip, boolean useDialog, int nCols)\nint     genutils#GetSelectedIndex()\n\nDeprecations:\n  - UserFileComplete() is now deprecated, use UserFileComplete2().\n  - CleanDiffOptions() is deprecated as Vim now has the :diffoff command.\n  - MakeArgumentString, MakeArgumentList and CreateArgString are deprecated.\n    Vim7 now includes call() function to receive and pass argument lists\n    around.\n  - The g:makeArgumentString and g:makeArgumentList are obsolete and are\n    deprecated, please use MakeArgumentString() and MakeArgumentList()\n    instead.\n  - FindWindowForBuffer() function is now deprecated, as the corresponding\n    Vim bugs are fixed. Use the below expr instead:\n      bufwinnr(genutils#FindBufferForName(fileName))\n  - QSort(), QSort2(), BinInsertSort() and BinInsertSort2() functions are\n    now deprecated in favor of sort() function.\n\n\n\n\nSearch_key_words: genutils variable arguments window buffer windows buffers preview save restore cursor position notify close echo syntax shift sort library typing error errors scriptid clean reset diff eatchar align word words space file filename binary search multvals Hari Krishna Dara",
+  "install_details": "Expand in your runtime (vimfiles/.vim directory).\n\nPlace the following in your vimrc if you find them useful:\n\n- Add the following commands to create simple sort commands.\n    command! -nargs=0 -range=% SortByLength <line1>,<line2>call QSort(\n        \\ 'CmpByLineLengthNname', 1)\n    command! -nargs=0 -range=% RSortByLength <line1>,<line2>call QSort(\n        \\ 'CmpByLineLengthNname', -1)\n    command! -nargs=0 -range=% SortJavaImports <line1>,<line2>call QSort(\n        \\ 'CmpJavaImports', 1)\n                                                                           \n- You might like the following mappings to adjust spacing:\n    nnoremap <silent> <C-Space> :call ShiftWordInSpace(1)<CR>\n    nnoremap <silent> <C-BS> :call ShiftWordInSpace(-1)<CR>\n    nnoremap <silent> \\cw :call CenterWordInSpace()<CR>\n    nnoremap <silent> \\va :call AlignWordWithWordInPreviousLine()<CR>\n                                                                           \n- The :find command is very useful to search for a file in path, but it\n  doesn't support file completion. Add the following command in your vimrc\n  to add this functionality:\n      command! -nargs=1 -bang -complete=customlist,genutils#UserFileComplete2\n            \\ FindInPath :find<bang> <args>\n                                                                           \n- If you are running commands that generate multiple pages of output, you\n  might find it useful to redirect the output to a new buffer. Put the\n  following command in your vimrc:\n    command! -nargs=* -complete=command Redir\n          \\ :new | put! =GetVimCmdOutput('<args>') | setl bufhidden=wipe |\n          \\ setl nomodified\n\n\nFor version prior to 2.0:\nDrop it in the plugin directory or source it from vimrc.\nAlso install multvals.vim: vimscript #171\n\nSpecial instructions for the coexistence of autoload (version since 2.0) and non-autoload (prior to 2.0) versions of genutils:\n- Install the latest version of genutils first. Overwriting all existing\n  files.\n- Open the plugin/genutils.vim file and note the value set to\n  loaded_genutils variable.\n- Install the older version of genutils (non autoload version) in to\n  plugin directory, overwriting the existing file.\n- Open the plugin/genutils.vim again and change the value of\n  loaded_genutils variable to the value you noted before and save it.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11399",
+      "filename": "genutils-2.5.zip",
+      "script_version": "2.5",
+      "date": "2009-09-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Re-uploading the zip file with the correct name.\n- Improved genutils#CleanupFileName() to expand \"~\" and environment\n  variables. It also works more reliably now.\n- More user friendly version of genutils#UserFileComplete() function\n  added as genutils#UserFileComplete2(). It can now be used directly as\n  the custom or customlist function in commands (so saves trouble for\n  users, as no wrapper needs be written), and also offer various\n  customizations via passing params.\n- New function genutils#UserDirComplete2(), which is a customization on\n  top of genutils#UserFileComplete2() for the sake of restricting the\n  completions to directories only.\n- Minor improvements in genutils#PathIsAbsolute() and\n  genutils#GetVimCmdOutput() "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7231",
+      "filename": "genutils-2.4.zip",
+      "script_version": "2.4",
+      "date": "2007-06-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Fixed some corner cases in RelPathFromDir()/RelPathFromFile().\n- Made the default comparators sort() function friendly.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6138",
+      "filename": "genutils-2.3.zip",
+      "script_version": "2.3",
+      "date": "2006-09-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- SilentSubstitute() and SilentDelete() should preserve cursor position.\n- CleanupFileName() should also remove any leading or trailing\n  whitespace.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6121",
+      "filename": "genutils-2.2.zip",
+      "script_version": "2.2",
+      "date": "2006-08-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- EscapeCommand() now supports Lists as arguments.\n- CrUnProtectedCharsPattern() now accepts an optional \"capture\"\n  argument.\n- Renamed PromptForElement2 to PromptForElement. It was a typo.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6053",
+      "filename": "genutils-2.1.zip",
+      "script_version": "2.1",
+      "date": "2006-08-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Fixed a typo in AddNotifyWindowClose() in the previous release.\n- Added BinSearchList() function. \n(uploading again to correct the Vim compatibility information, sorry to bump up)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5853",
+      "filename": "genutils-2.0.zip",
+      "script_version": "2.0",
+      "date": "2006-06-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "genutils 2.0 release for Vim7.0.\nThis release is not backwards compatible with previous genutils or Vim\nversions, so download this version only when a plugin explicitly\ndepends on this version. If you want to use plugins that use both the\nold and new version of genutils, then you need to follow the below\nprocedure so that both can co-exist:\n- Install the latest version of genutils first. Overwriting all existing\n  files.\n- Open the plugin/genutils.vim file and note the value set to\n  loaded_genutils variable.\n- Install the older version of genutils (non autoload version) in to\n  plugin directory, overwriting the existing file.\n- Open the plugin/genutils.vim again and change the value of\n  loaded_genutils variable to the value you noted before and save it.\n\nThis version has the following changes:\n- No longer depends on multvals plugin. Inherits some useful functions\n  from multvals to make way for it to be retired (in favor of Vim7\n  arrays). New functions are:\n  CrUnProtectedCharsPattern\n  PromptForElement/GetSelectedIndex\n- Fix for Save/RestoreHardPosition() not working right when there are\n  wrapped lines in the window.\n- Dropped the AddToFCShell and RemoveFromFCShell functions as these\n  can't be implemented in Vim7 because of new restrictions on\n  FileChangedShell autocommand. Use AddToFcShellPre and\n  RemoveFromFCShellPre functions instead.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5663",
+      "filename": "genutils.vim",
+      "script_version": "1.20",
+      "date": "2006-05-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Release 1.20 for fixing an issue with my previous release. Thanks to\nNiels, Delphin and Craig for reporting the problem. If you downloaded the latest selectbuf, please download this version of genutils.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5658",
+      "filename": "genutils.vim",
+      "script_version": "1.19",
+      "date": "2006-05-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Now Vim7 compatible, no functionality change."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4033",
+      "filename": "genutils.vim",
+      "script_version": "1.18",
+      "date": "2005-03-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- New functions OpenWinNoEa() and CloseWinNoEa() which open and close\n  windows with minimal side effects (such as minimizing the impact on\n  the current window sizes, restoring the cursor to the original window\n  and even restoring the current-previous-window). This is a good\n  alternative to using the existing Save/RestoreWindowSettings()\n  method.\n- GetShellEnvType() is now public. Useful in conjunction with the\n  EscapeCommand() function.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3583",
+      "filename": "genutils.vim",
+      "script_version": "1.17",
+      "date": "2004-10-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Minor corrections to the FindBufferForName() function to work well\n  with filenames containing backslashes (see doc)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3565",
+      "filename": "genutils.vim",
+      "script_version": "1.16",
+      "date": "2004-10-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Fast BinInsertSort() based on the BISort() by Peit Delport's.\n- Slightly improved QSort().\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3559",
+      "filename": "genutils.vim",
+      "script_version": "1.15",
+      "date": "2004-10-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New functions:\n- CloseWindow()\n- MarkActiveWindow()\n- RestoreActiveWindow()\nNew overloaded function for:\n- SilentDelete()\n\n- Fixed IsOnlyVerticalWindow() and IsOnlyHorizontalWindow() to use\n  MarkActiveWindow() and RestoreActiveWindow() to avoid corrupting the\n  \"previous-window\".\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3317",
+      "filename": "genutils.vim",
+      "script_version": "1.14",
+      "date": "2004-08-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- New functions: GetNextWinnrInStack, GetLastWinnrInStack, MoveCursorToNextInWinStack, MoveCursorToLastInWinStack based on Dr. Chip's WinStackMv() function.\n- New functions: SaveVisualSelection, RestoreVisualSelection.\n- FIxed a possible issue with my earlier change. You can't add to 'eventignore'  if its current value is \"all\".\n- Some improvement to RestoreWindowSettings(). It is still not working perfectly. Actually, there are no commands available in Vim to accurately resize windows in all circumstances.\n- Save/Restore functions for cursor positions now create marks in the buffer context. This means, you can use the same name to create marks in different buffers, without overwriting each other. This is how Vim works for lowercase marks anyway.\n- Misc. other improvements/bugfixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3211",
+      "filename": "genutils.vim",
+      "script_version": "1.13",
+      "date": "2004-07-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Now requires Vim 6.3\n\n- More documentation. I now added a section with all the supported functions at one place so it is easy to lookup.\n- New function GetBufNameForAU().\n- New functions to help write custom completion functions, UserFileComplete() and UserFileExpand()\n- Some clarifications on EscapeCommand().\n- Improved CleanFileName() to work with Windows UNC paths."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3148",
+      "filename": "genutils.vim",
+      "script_version": "1.12",
+      "date": "2004-06-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- New function EscapeCommand() extracted from my perforce.vim plugin. This\n  makes it simpler for plugins to execute external commands passing\n  arguments literally.\n- New functions IsOnlyHorizontalWindow(), IsOnlyVerticalWindow(),\n  QuoteStr(), SilentSubstitute(), SilentDelete()\n- More documentation on GetPreviewWinnr(), DefFileChangedShell(),\n  MakeArgumentString(), MakeArgumentList(), UnEscape(), GetSpacer()\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2890",
+      "filename": "genutils.vim",
+      "script_version": "1.11",
+      "date": "2004-03-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Most important change is a lot of documentation with function prototypes. Now it is not necessary to look into the code to see the help and usage information. I also documented a lot of functions that lacked documentation earlier.\n- A few minor fixes to bugs/inconsistencies and other improvements in Escape(), RestoreSoftPosition, Notify window close related functionality. Also added a patch from Bram for persistence related funcationality."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2608",
+      "filename": "genutils.vim",
+      "script_version": "1.10",
+      "date": "2003-12-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Fixed bugs in the RelPathFromFile and RelPathFromDir functions.\n- The g:loaded_genutils variable now contains the version number for dependency checking (see \":help v:version\" for format). If your plugin depends on genutils.vim, it is now easy and safe to check if the user has at least the minimum base version."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2436",
+      "filename": "genutils.vim",
+      "script_version": "1.9",
+      "date": "2003-10-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Misc. functions added: GetSpacer, GetPreviewWinnr, ExtractFuncListing, UnEscape, GetLine/ColPosition. Removed undocumented IsPreviewWindowOpen function. See description for more details."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2276",
+      "filename": "genutils.vim",
+      "script_version": "1.8",
+      "date": "2003-08-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "When disabling persistence feature using g:genutilsNoPersist, it is possible for the plugins that depend on it to fail. Fixed it."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2263",
+      "filename": "genutils.vim",
+      "script_version": "1.7",
+      "date": "2003-08-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Misc. changes, see script for more details.\n- The scriptlets g:makeArgumentString g:makeArgumentList have been replaced with new function MakeArgumentString() and MakeArgumentList() and the usage now is more concise. The old usage is now deprecated.\n- New functions Escape(), GetVimCmdOutput() and OptClearBuffer()\n- New utility functions for signs, CurLineHasSign() and ClearAllSigns().\n- Fixed bugs in FindWindowForName().\n- The FindWindowForBuffer() function is now redundant and is deprecated, use bufwinnr(FindBufferForName(fileName)) for the same purpose.\n- Some improvements for Vim6.2, but it should still work with Vim6.0.\n- Fixed a few bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1959",
+      "filename": "genutils.vim",
+      "script_version": "1.6",
+      "date": "2003-05-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor fixes/updates. Fixed a bug in restoring line position with respect to window. Users of FileChangedShell functionality provided by the plugin (and thus the perforce plugin), should download this version only if the 6.1.220 patch is installed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1878",
+      "filename": "genutils.vim",
+      "script_version": "1.5",
+      "date": "2003-03-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "My earlier version was using :normal instead of :normal! command, so user's mapping will interfere with it. If you have downloaded 1.4 earlier, please download it again. Thanks to David Rennalls for reporting the problem."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1845",
+      "filename": "genutils.vim",
+      "script_version": "1.4",
+      "date": "2003-03-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Some bugfixes and improvements.\n- New UnEscape() which is more close to escape() than the old DeEscape().\n- ExecMap() is separated as a new plugin. That is the better place for it as it is not really useful as a library function.\n- The sort compare methods were made public as they are very useful in writing new compares.\n- Some update on doc.\n- Now CreateArgString() can be used with an arbitrary pattern.\n- Fixed some bugs in MoveCurLineToWinLine(). It works better now.\n- Added a functions to handle FileChangedShell autocommand and emulate the default vim behavior."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1530",
+      "filename": "genutils.vim",
+      "script_version": "1.3",
+      "date": "2002-12-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "GPLed it for the use by Cream project. See http://cream.sf.net for information on Cream for Vim."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1491",
+      "filename": "genutils.vim",
+      "script_version": "1.2",
+      "date": "2002-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Generalized Quick sort function. The sort routine is no longer tied to the\n  buffer contents (multvals.vim uses this function to sort arrays).\n- A binary search function that can be used to incrementally update sorted\n  buffer contents (like buffer lists, tag lists etc), and a generalized variant\n  of this function which is no tied to the buffer contents.\n- A new comparator to sort Java imports first by name and then by their length.\n  This groups the imports from the same package pretty well together.\n- Minor fixes in FindWindowForBuffer() and FindBufferForWindow()\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1121",
+      "filename": "genutils.vim",
+      "script_version": "1.1",
+      "date": "2002-08-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New functions \n  - CenterWordInSpace(), useful if you use Align.vim and want to center the text horizontally in the boxes.\n  - Improved ShiftWordInSpace().\n  - New collection from list, CommonPath() with minor improvements. Added RelPathFromFile() and RelPathFromDir() functions.\n  - New persistence functions, PutPersistenceVar() and GetPersistenceVar() functions to save and retrieve your script variables across vim sessions without stepping on another script's name space.\n  -- Minor fixes in CleanupFileName() function."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=791",
+      "filename": "genutils.vim",
+      "script_version": "1.0.24",
+      "date": "2002-04-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New function, AlignWordWithWordInPreviousLine(). Improved ExecMap(), it is now much more useful. Added new scriptlet, g:makeArgumentList and its companion function, CreateArgString()."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=731",
+      "filename": "genutils.vim",
+      "script_version": "1.0.20",
+      "date": "2002-03-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a typo in ResetWindowSettings(). Update the previous version to fix an error while quitting selectbuf or perforce help window."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=718",
+      "filename": "genutils.vim",
+      "script_version": "1.0.19",
+      "date": "2002-03-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor changes. Fixed FindWindowForBuffer and other functions to take care of the extra backslashes in the filenames protecting the spaces etc. Save/RestoreWindowSettings functions now have a variant that takes in a key. This key can be used to call these function from multiple scripts at the same time without overwriting each other's settings. Some new functions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=666",
+      "filename": "genutils.vim",
+      "script_version": "1.0.15",
+      "date": "2002-03-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Fixed minor issues with makeArgumentString.\n- New functions to do quick sort on the current window contents. A command to sort lines by their length.\n- A Basic help/description is added at the start of the script."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=643",
+      "filename": "genutils.vim",
+      "script_version": "1.0.11",
+      "date": "2002-02-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New utility to pass variable number of arugments to other functions. Ex usage:\n   fu! s:IF(...)\n     exec g:makeArgumentString\n     exec \"call Impl(\" . argumentString . \")\"\n   endfu\n\nNew OnMS() function to check for any windoze OS. New utility ShiftWordInSpace() and SetupScratchBuffer() functions. Add the following mappings to move words in the white space:\n\nnoremap <silent> <C-Space> :call ShiftWordInSpace(1)<CR>\nnoremap <silent> <C-BS> :call ShiftWordInSpace(-1)<CR>\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=549",
+      "filename": "genutils.vim",
+      "script_version": "1.0.8",
+      "date": "2002-02-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved the save/restore position to even save/restore the line position in the window. Take a look at the set of Save/Restore/ResetSoft/HardPosition() functions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=526",
+      "filename": "genutils.vim",
+      "script_version": "1.0.7",
+      "date": "2002-02-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

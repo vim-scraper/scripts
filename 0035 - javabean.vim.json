@@ -1,0 +1,26 @@
+{
+  "script_id": "35",
+  "name": "javabean.vim",
+  "summary": "Adds property getters and setters",
+  "script_type": "utility",
+  "description": "Given a number of Java properties in a basic format, this will generate the getters and setters for them; for example, given:\n\nString myString\nint myInt\n\nyou will get:\n\nprotected String m_myString;\nprotected int m_myInt;\n\npublic void setMyString( String val )\n{\n  m_myString = val;\n}\n\npublic String getMyString()\n{\n  return m_myString;\n}\n\npublic void setMyInt( int val )\n{\n  m_myInt = val;\n}\n\npublic int getMyInt()\n{\n  return m_myInt;\n}\n\n",
+  "install_details": "Just pop it into your plugin directory.  Can set g:javabean_scope or b:javabean_scope if \\\\&#039protected\\\\&#039 isn\\\\&#039t what you use.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=51",
+      "filename": "javabean.vim",
+      "script_version": "1.0",
+      "date": "2001-07-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "136",
+  "name": "ada.vim",
+  "summary": "Ada language default plugin",
+  "script_type": "ftplugin",
+  "description": "Perform Ada specific completion & tagging.\n\nProvides mapping overrides for tag jumping that figure out the current Ada object and tag jump to that, not the 'simple' vim word.\n\nSimilarly allows <Ctrl-N> matching of full-length ada entities from tags.\n\nExports 'AdaWord()' function to return full name of Ada entity under the cursor (or at given line/column), stripping whitespace/newlines as necessary.\n\nSee also Ada indent script, vimscript #137.\n\n",
+  "install_details": "Replace delivered $VIMRUNTIME/ftplugin/ada.vim with newer version.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=323",
+      "filename": "ada.vim",
+      "script_version": "1.7",
+      "date": "2001-11-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "363",
+        "user_name": "FNX",
+        "first_name": "Neil",
+        "last_name": "Bird",
+        "email": "neil at fnxweb.com",
+        "homepage": "http://www.fnxweb.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

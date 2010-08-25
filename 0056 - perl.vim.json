@@ -1,0 +1,42 @@
+{
+  "script_id": "56",
+  "name": "perl.vim",
+  "summary": "Perl compiler script",
+  "script_type": "utility",
+  "description": "This is compiler script that runs perl -Wc and parses all error and warnings. For more information how to use compilers in VIM read help.\n\nThis version has workaround with redirecting stderr on windows platform so it can run either on unixes or windows.\n\nEnjoy. Lukas",
+  "install_details": "Just put in the $VIMRUNTIME/compiler directory and run :make.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=91",
+      "filename": "perl.vim",
+      "script_version": "1.1",
+      "date": "2001-08-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "132",
+        "user_name": "lzap",
+        "first_name": "Lukas",
+        "last_name": "Zapletal",
+        "email": "Lukas.Zapletal at seznam.cz",
+        "homepage": ""
+      },
+      "release_notes": "I made a mistake so the script didn`t manage errors ending ', near \"...\"' correctly. Now it is fixed.\n\nI know VIM 6.0 has tools/efm_perl.pl - but this is not working under Windows and it is slower (because perl is called twice)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=87",
+      "filename": "perl.vim",
+      "script_version": "1.0",
+      "date": "2001-08-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "132",
+        "user_name": "lzap",
+        "first_name": "Lukas",
+        "last_name": "Zapletal",
+        "email": "Lukas.Zapletal at seznam.cz",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

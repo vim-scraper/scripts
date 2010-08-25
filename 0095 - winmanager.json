@@ -1,0 +1,74 @@
+{
+  "script_id": "95",
+  "name": "winmanager",
+  "summary": "A windows style IDE for Vim 6.0",
+  "script_type": "utility",
+  "description": "winmanager: A classical windows type environment for vim6.0 \n\nSnapshot                 : http://robotics.eecs.berkeley.edu/~srinath/vim/snapshot2.JPG \nDetailed Instructions : http://robotics.eecs.berkeley.edu/~srinath/vim/winmanager.htm \nUpates                    : http://robotics.eecs.berkeley.edu/~srinath/vim/winmanager-2.0.htm \n\nwinmanager is a plugin which implements a classical windows type IDE in Vim-6.0. Basically, you have the directory tree\nand the buffer list as 2 windows which stay on the left and the editing is done in a seperate area on the left. People\nhave already made excellent File and Buffer explorers seperately and I thought that it might be a cool idea to combine\nthem both.  winmanager.vim combines the standard File Explorer which ships with Vim6.0 and a Buffer Explorer written by\nJeff Lanzarotta into one package.  It has the following features: \n\n1. the buffer listing is dynamic: i.e as you keep changing windows, editing new files, etc, the buffer list changes\ndynamically. the window also resizes dynamically, i.e it tries to occupy the minimum possible space to display all the\ncurrently listed windows. also, only the filename (i.e without path) is displayed in this window. however, the full path\nname is echoed on the command line as one moves around. \n\n2. the file explorer window doesn't actually edit a directory. Its a new empty file with modifiable off, etc. so that it\ndoesnt eat up buffer numbers as you roam around the directory tree. I found the original behaviour slightly annoying...\nAlso, I didnt find a way to change drives i.e go from c:/ to h:/ in the original explorer.vim. therefore i have added a\ntiny new mapping 'C' which changes the currently displayed directory to pwd. \n\nThanks! \n\n",
+  "install_details": "For version >= 2.0\n=============\n1. copy the file to your $HOME/.vim or $HOME\\vimfiles directory\n\n2. unzip it (its a zip file) at that location. this should create the files\n   - plugin/\n       winmanager.vim\n       winfileexplorer.vim\n       wintagexplorer.vim\n   - doc/\n       winmanager.txt\n\n   IMPORTANT NOTE:\n   \n   i  . This version of winmanager ONLY works if you have the latest version\n        bufexplorer.vim. (vimscript #42).\n        The idea is that winmanager will no longer contain a duplicate copy\n        of bufexplorer.vim. This reduces script bloat, makes updates easier\n        and in genral makes the world a better place.\n   \n3. vim -c \"helptags ~/.vim/doc\" -c \"q\"  (unix)\n   or\n   vim -c \"helptags ~/vimfiles/doc\" -c \"q\"  (windows)\n   (this step should install winmanager.txt as a local help file on your\n   system. if this doesnt work, see \":he add-local-help\" to see how to do\n   it).\n\nYou will also need to change the mappings you might have used with\nwinmanager-1.x to\n\n    map <c-w><c-f> :FirstExplorerWindow<cr>\n    map <c-w><c-b> :BottomExplorerWindow<cr>\n    map <c-w><c-t> :WMToggle<cr>\n\nand the variable name g:bufExplorerWidth has been changed to\ng:winManagerWidth just to be more consistent.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=754",
+      "filename": "winmanager.zip",
+      "script_version": "2.3",
+      "date": "2002-04-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "247",
+        "user_name": "srinath.avadhanula",
+        "first_name": "Srinath",
+        "last_name": "Avadhanula",
+        "email": "srinath at fastmail.fm",
+        "homepage": "http://robotics.eecs.berkeley.edu/~srinath/index.html"
+      },
+      "release_notes": "Sorry, but I just found out that I had uploaded a week old version last time which didnt have any of the promised new features, namely favorite dirs, improved wintagexplorer etc. Its a huge surprise that I didnt get flooded with complaints! oh well.. also fixed a few minor bugs with both winmanager.vim and wintagexplorer.vim, so this is not a completely wasted upload.\n\nPlease see release notes for version 2.2 for changes.\nOnce again, you need vimscript #42 (bufexplorer.vim) for this to work."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=740",
+      "filename": "winmanager.zip",
+      "script_version": "2.2",
+      "date": "2002-04-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "247",
+        "user_name": "srinath.avadhanula",
+        "first_name": "Srinath",
+        "last_name": "Avadhanula",
+        "email": "srinath at fastmail.fm",
+        "homepage": "http://robotics.eecs.berkeley.edu/~srinath/index.html"
+      },
+      "release_notes": "New Features:\n1. The file explorer now has a favorite directories option. The list of\n   favourite directories is shown above the current listing with '+'\n   signs prefixed to each fav dir. In order to change to a favorite\n   directory, you just go to that dir and press <enter>. Set g:favDirs\n   in your ~/.vimrc to use set a default list of favorite directories.\n   This is a new-line seperated list of directories. For example:\n        let g:favDirs = \n            &#039e:/srinath/testing/vim/vimfiles/plugin/'.\"\\n\".\n            &#039e:/srinath/testing/vim/vimfiles/ftplugin/'.\"\\n\".\n            &#039e:/srinath/testing/vim/vimfiles/compiler/'\n   After startup, you can use 'f' to add the currently displayed\n   directory to the favourites.\n   NOTE: Use full path names. Use a trailing back-slash is safe.\n   NOTE: Use double quotes to enter a new-line.\n   NOTE: By default, $HOME is always included in the list. Do *not*\n         include it in g:favDirs.\n\n2. wintagexplorer.vim now has a feature where it saves its display in a\n   file .vimtagsdisplay in the tags directory. This speeds up display\n   next time you use wintagexplorer. useful if you work with large tags\n   files.\n   Put\n      let g:saveTagsDisplay = 0\n   in your ~/.vimrc to disable this feature.\n\n3. There are a couple of more functions which winmanager exposes.\n   1. WinManagerGetLastEditedFile(n)\n      returns the n^th last file being edited.\n   2. IsWinManagerVisible()\n      returns 1 or 0 depending on whether explorer windows are visible.\n   These functions are internally necessary for adding on\n   FlistTree.vim to winmanager.vim. This is a new addon to winmanager\n   based on Dr. Charles E. Campbell's flisttree utility which\n   graphically shows the function dependency within C files.\n   FlistTree.vim is expected to be released shortly.\n\nug Fixes:\n1. When a file is chosen from the bufexplorer list and its not currently\n   visible, then the cursor jumps back to the first row.\n\n2. Sometimes the <C-N> and <C-p> mappings would be lost, when an\n   explorer didnt display properly.\n\n3. Several bugs in wintagexplorer.vim have been resolved.\n   (Thanks to Madoka Machitani and Mike Williams for valuable help).\n   wintagexplorer.vim is also more intelligent about remembering its\n   display.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=587",
+      "filename": "winmanager.zip",
+      "script_version": "2.1",
+      "date": "2002-02-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "247",
+        "user_name": "srinath.avadhanula",
+        "first_name": "Srinath",
+        "last_name": "Avadhanula",
+        "email": "srinath at fastmail.fm",
+        "homepage": "http://robotics.eecs.berkeley.edu/~srinath/index.html"
+      },
+      "release_notes": "    1. worked on improving the speed of wintagexplorer.vim \n       (the latest version is almost 3 times faster than the previous\n       version and faster for larger files).\n    2. removed some bugs from wintagexplorer.vim where the mappings would\n       dissapear because of caching.\n    3. fixed some important documentation bugs (thanks to Madoka\n       Machitani.)\n    4. also used an augroup for the autocommands used in winmanager to\n       better handle cases where the autcommands are deleted. (thanks to\n       Madoka again)\n    5. made fileexplorer.vim not screw up the search history. this was\n       caused because of ^\"= getting into the search history.\n       (thanks to Jeff Lanzarotta and Xiangjiang Ma).\n\n     NOTE: I frequently get asked the following question:\n     Q. From version 2.0, the command :GotoBufExplorerWindow does not work.\n        Whats wrong?\n     A. Starting from 2.0, the commands have been changed as follows:\n                 old                           new\n           GotoFileExplorerWindow  -----> FirstExplorerWindow\n           GotoBufExplorerWindow   -----> BottomExplorerWindow\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=495",
+      "filename": "winmanager.zip",
+      "script_version": "2.0",
+      "date": "2002-01-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "247",
+        "user_name": "srinath.avadhanula",
+        "first_name": "Srinath",
+        "last_name": "Avadhanula",
+        "email": "srinath at fastmail.fm",
+        "homepage": "http://robotics.eecs.berkeley.edu/~srinath/index.html"
+      },
+      "release_notes": "This is a major revision of winmanager with lots of new features, improved\nstability, etc.\n\nIMPORTANT: you need to download and install the latest version of\nbufexplorer (vimscript #42) to make this version of winmanager work.\n\n1. One of the major new features of this version is (hopefully, touch wood,\netc) its stability. It has undergone extensive QA by Xiangjiang Ma (and\nother users of the 2.0 beta version have also been using it for a couple of\nweeks and have reported a few bugs). A big thanks to him (and others) for\nall the valuable help. Infact a lot of the new features and the\nimplementation methods owe their style/origin to his ideas.\n\n2. This version of winmanager no longer ships with a duplicate of\nbufexplorer.vim. This has many advantages such as a reduction in script\nbloat and in general promotes the idea of modularity. The latest version of\nbufexplorer.vim (see above) provides hooks so that winmanager can\ncommunicate with it. (thanks to Jeff Lanzarotta for making the necessary\nchanges).\n\n3. Becuase of some new features of bufexplorer.vim, winmanager is able to\noffer better dynamic behavior. For example, when you open up winmanager\nwhen your editing only a single buffer, bufexplorer will not be shown. As\nsoon as at least 2 buffers are opened, bufexplorer is automatically opened.\n\n4. This version provides an easy way to customize the window layout of\nwinmanager using non-default values of the global variable,\ng:winManagerWindowLayout. (see \":he winmanager-customizing\" for details).\n\n5. This version also provides a way to use winmanager.vim to \"edit\"\ndirectories instead of the standard exploerer.vim. To do this, you will\nneed to disable the standard explorer.vim (either by renaming it to\nexplorer.txt or putting \":let loaded_explorer = 1\" in your .vimrc). You\nthen need to put\n   :let g:defaultExplorer = 0 \nin your .vimrc to let winmanager know that its supposed to take over. \n\n6. I have tried to set-up a framework wherby it is very easy to add other\nIDE type plugins to winmanager. By this I mean that a plugin author\ncould, with the minimum of effort make a plugin which can be integrated\ninto winmanager. \n\n7. For the purpose of demonstrating the first feature, in this new version,\nwinmanager also ships with another lightweight plugin called\ntagsexplorer.vim. This is an elementary plugin which shows the tags in the\npresent directory in a fancy manner and offers some simple ways of\nnavigating between them.\nTo see this in action [File List] window and press CTRL-N. \n"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "124",
+  "name": "quickhigh.tgz",
+  "summary": "Highlight quickfix erros",
+  "script_type": "utility",
+  "description": "This is a plugin for highlighting quickfix errors.It provides mappings for manualy adding the highlights and commands to automatically add the highlights.It has the ability to work with both the :make and :grep commands.It also has the ability to distinguish between warning and error compiler messages.  Please see the documenation for configuration (help quickhigh.txt after installation).",
+  "install_details": "cd ~/.vimgzip -dc ~/dl/quickhigh.tgz | tar -xf -vim -c \":helptags ~/.vim/doc\" -c :q",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=440",
+      "filename": "quickhigh.tgz",
+      "script_version": "1.15",
+      "date": "2002-01-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "271",
+        "user_name": "bmedley",
+        "first_name": "brian",
+        "last_name": "medley",
+        "email": "bpm-vim at 4321.tv",
+        "homepage": ""
+      },
+      "release_notes": "Fixup for when there is col information in the line output."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=337",
+      "filename": "quickhigh.tgz",
+      "script_version": "1.14",
+      "date": "2001-11-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "271",
+        "user_name": "bmedley",
+        "first_name": "brian",
+        "last_name": "medley",
+        "email": "bpm-vim at 4321.tv",
+        "homepage": ""
+      },
+      "release_notes": "Modify to work better if ':' is part of a filename.Update to perl embedded file layout suggested by Benoit."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=308",
+      "filename": "quickhigh.tgz",
+      "script_version": "1.12",
+      "date": "2001-10-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "271",
+        "user_name": "bmedley",
+        "first_name": "brian",
+        "last_name": "medley",
+        "email": "bpm-vim at 4321.tv",
+        "homepage": ""
+      },
+      "release_notes": "let users define their own signsadded perl code for speedmore error checkingmisc bugs fixed"
+    }
+  ]
+}

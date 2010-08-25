@@ -1,0 +1,42 @@
+{
+  "script_id": "10",
+  "name": "fortune.vim",
+  "summary": "put a signature file at end of e-mail (BRAM)",
+  "script_type": "utility",
+  "description": "This macro will add a signature (from\n~/.fortunes) to the end of a file.\n(preferably an e-mail) This script\nwas copied from a macro from:\nhttp://www.moolenaar.net which was\nmade by Bram Moolenaar.  I changed it\nso it would stick on the sig then\nquit.",
+  "install_details": "just put this at the end of your .vimrc:\n\n     $ cat fortune.vim >> ~/.vimrc\n\nor source it from your .vimrc:\n\n     $ cat fortune.vim | tail\n\n        ...\n        source fortune.vim\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=142",
+      "filename": "fortune.vim",
+      "script_version": "1.5",
+      "date": "2001-08-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "176",
+        "user_name": "Vonlia",
+        "first_name": "adam",
+        "last_name": "seyfarth",
+        "email": "adam.seyfarth at home.com",
+        "homepage": ""
+      },
+      "release_notes": "much much better in general, moved to a function...\nadded rotating, to make sure not to offend people :-)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11",
+      "filename": "fortune.vim",
+      "script_version": "0.5",
+      "date": "2001-06-04",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "32",
+        "user_name": "fortuno",
+        "first_name": "adam",
+        "last_name": "seyfarth",
+        "email": "adam at netdoor.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

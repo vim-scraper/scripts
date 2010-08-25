@@ -1,0 +1,330 @@
+{
+  "script_id": "184",
+  "name": "vtreeexplorer",
+  "summary": "tree based file explorer - the original",
+  "script_type": "utility",
+  "description": "Creates a tree based file explorer within vim.\n\nThis is like the directory explorer plugin that ships with vim, but instead of presenting just one directory at a time, this plugin present portions of the filesystem hierarch in a tree view.  This type of view should be familiar from modern graphical file managers.  This explorer persents navigation, exploration, and opening of files only -  unlike the standard directory explorer that allow you to delete and rename files.   This a handy tool for becoming familiar with source trees.\n\n\nFeature summary:\n- directories are foldable (fold markers are highlighted invisible)\n- directories and links are syntax highlighted\n- open a file in a new window\n- mappings for naviagation (keyboard and mouse) - goto parent, change dir, go up, cd to home, refesh, etc\n- lazy loading of directory structure - one directory at a time.  Recursive expansion also available.\n\nCaveats:\nMay not work well for obscure systems - unix and windows work well.  Please send bugs or patches.\n\nThis is a reimplementation of the treeexplorerer (see http://vim.sourceforge.net/scripts/script.php?script_id=183 ) that doesn't require perl or the tree command - it's pure vim.\n\nScott",
+  "install_details": "1. un-gzip, untar in your $HOME/.vim, $VIMRUNTIME, or equivalent directories.  Or un-gzip and un-tar and source the vtreeexplorer.vim file to test.\n\n2. you can add the help to your help index with :helptags ~/.vim/doc (if you put the files there).\n\n :VTreeExplore\n   or\n :VSTreeExplore\n\nquick help is at top of window\n\nSee vtreeexplorer.txt of :help vtreeexplorer (if you did :helptags above) for more detailed help.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8097",
+      "filename": "vtreeexplorer-1.28.tar.gz",
+      "script_version": "1.28",
+      "date": "2007-12-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added 'O' command which replaces explorer window with editing of file when activated on file in tree - idea from Brian Doyle."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7928",
+      "filename": "vtreeexplorer-1.27.tar.gz",
+      "script_version": "1.27",
+      "date": "2007-11-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add feature where files and directories matching global variable g:treeExplHidePattern will be not shown.  Can be updated at anytime.  Hiding toggled with the existing mechanism. Thanks to Vaclav Kulakovsky for the idea and patch."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7927",
+      "filename": "vtreeexplorer-1.26.tar.gz",
+      "script_version": "1.26",
+      "date": "2007-11-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix for bug that occurs when opening a file after splitting the vtree window. Thanks to genelisp/isaac"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7926",
+      "filename": "vtreeexplorer-1.25.tar.gz",
+      "script_version": "1.25",
+      "date": "2007-11-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for tabs with the 'e' shortcut - thanks to Krzysztof Ko&#347;ciuszkiewicz"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6086",
+      "filename": "vtreeexplorer-1.24.tar.gz",
+      "script_version": "1.24",
+      "date": "2006-08-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Don't clobber yank register, fixes for vim 7, misc fixes.  Thanks to A. Kruize, D. Mayle, M. Grentel"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4709",
+      "filename": "vtreeexplorer-1.23.tar.gz",
+      "script_version": "1.23",
+      "date": "2005-10-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixes for functionality on windows."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4705",
+      "filename": "vtreeexplorer-1.22.tar.gz",
+      "script_version": "1.22",
+      "date": "2005-10-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- bug fix for vim6 - thanks to Steve Hall\n- avoid register clobbering - thanks to Bindu Wavell"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4704",
+      "filename": "vtreeexplorer-1.21.tar.gz",
+      "script_version": "1.21",
+      "date": "2005-10-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- more compact default layout (width of tree layout is customizable)\n- updated contact info"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3740",
+      "filename": "vtreeexplorer-1.20.tar.gz",
+      "script_version": "1.20",
+      "date": "2004-12-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Auto-loading for TreeExplorer buffer type - useful if you save and restore a session with the explorer in it. Updated email address."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1672",
+      "filename": "vtreeexplorer-1.19.tar.gz",
+      "script_version": "1.19",
+      "date": "2003-01-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix for filenames that contain '#' - thanks to Klaus Fabritius."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1223",
+      "filename": "vtreeexplorer.tar.gz",
+      "script_version": "1.16",
+      "date": "2002-09-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor fix when opening modified buffer that is  already open in more than 1 window - Yegappan Lakshman"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1043",
+      "filename": "vtreeexplorer.tar.gz",
+      "script_version": "1.15",
+      "date": "2002-07-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Syntax bug - must have hit  'J' instead of 'j' at some point."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1041",
+      "filename": "vtreeexplorer.tar.gz",
+      "script_version": "1.14",
+      "date": "2002-07-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add mapping for mouse button on tree - like 'open' (thanks to Douglas Potts)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=604",
+      "filename": "vtreeexplorer.tar.gz",
+      "script_version": "1.13",
+      "date": "2002-02-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bugfix for VSTreeExplore - thanks to Benoit Cerrina\nAdded help documenation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=493",
+      "filename": "vtreeexplorer.vim",
+      "script_version": "1.10",
+      "date": "2002-01-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added directory sorting and D mapping to toggle between 3 modes. Highlighting change for links. Support for opening more than one tree explorer at once.  Code cleanups and factoring."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=489",
+      "filename": "vtreeexplorer.vim",
+      "script_version": "1.9",
+      "date": "2002-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added ~ to chars escaped in file names. Suppressed message output. Handle when top dir is of the form C:\\ for dos/win systems."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=488",
+      "filename": "vtreeexplorer.vim",
+      "script_version": "1.8",
+      "date": "2002-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed recursive expand from E to X mapping. Added E mapping to open regular file explorer on cursor dir.  Added :CD command to switch to direcotry (useful maybe to CD: D: on windows?) - still some escaping bugs on that one.  Fixed bug for dirs/files that start with tree parts. Better escaping of file/dir names. Other minor fixes and clean ups."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=486",
+      "filename": "vtreeexplorer.vim",
+      "script_version": "1.7",
+      "date": "2002-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added command to refresh cursor dir.  Added command to recursively expand subdirs of cursor dir (caution: this could take a long time for big subdir trees).  Changed the hidded files toggle to refresh current dir after. Fixes for windows. Other minor fixes. Using CVS version numbers now, sorry for the jump."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=481",
+      "filename": "vtreeexplorer.vim",
+      "script_version": "1.01",
+      "date": "2002-01-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed problem with esaping dir names with spaces - still some issues with using it in windows."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=480",
+      "filename": "vtreeexplorer.vim",
+      "script_version": "1.0",
+      "date": "2002-01-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

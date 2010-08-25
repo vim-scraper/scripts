@@ -1,0 +1,42 @@
+{
+  "script_id": "85",
+  "name": "Mkcolorscheme.vim",
+  "summary": "Help write colorscheme files from existing settings",
+  "script_type": "utility",
+  "description": "This is a simple script to help turn your existing highlight settings into a vim colorscheme file.",
+  "install_details": "1. drop into your plugin directory\n2. set up your colorscheme they way you want\n3. :Mkcolorscheme [scheme-name]  (If you don't supply a scheme-name you will be prompted for one)\n4. review and save to colors/<name>.vim\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=748",
+      "filename": "Mkcolorscheme.vim",
+      "script_version": "0.06",
+      "date": "2002-04-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "230",
+        "user_name": "travishume",
+        "first_name": "Travis",
+        "last_name": "Hume",
+        "email": "travis at usermail.com",
+        "homepage": ""
+      },
+      "release_notes": "New command signature\n     Mkcolorscheme[!] [scheme-name]\n\nIf invoked with a ! then the generated colorscheme file is automatically written to ~/.vim/colors/<scheme-name>.vim if possible.  Only works with has(\"unix\") for now, feel free to fix this.\n\nThe included :command is no longer commented out and properly invokes the Mkcolorscheme() function with the <bang> syntax."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=728",
+      "filename": "Mkcolorscheme.vim",
+      "script_version": "0.05",
+      "date": "2002-03-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "230",
+        "user_name": "travishume",
+        "first_name": "Travis",
+        "last_name": "Hume",
+        "email": "travis at usermail.com",
+        "homepage": ""
+      },
+      "release_notes": "No functionality changes.  Just some documentation, including some very helpful :commands to help with modifying or creating colorschemes."
+    }
+  ]
+}

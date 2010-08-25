@@ -1,0 +1,234 @@
+{
+  "script_id": "30",
+  "name": "python.vim",
+  "summary": "A set of menus/shortcuts to work with Python files",
+  "script_type": "utility",
+  "description": "Written by Mikael Berthe.\n\nThis script can be useful when editing Python scripts. It provides the following menus:\n- Select a block of lines with the same indentation\n- Select a function\n- Select a class\n- Go to previous/next class/function\n- Go to the beginning/end of a block\n- Comment/uncomment the selection\n- Jump to the last/next line with the same indent\n- Shift a block (left/right)\n- Creates list of classes and functions for easy code navigation\nVersion 1.8+ requires Vim 7, earlier versions require Vim 6",
+  "install_details": "Copy to the $VIMFILES/ftplugin directory.  For more information, please read the beginning of the script...",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9196",
+      "filename": "python_fn.vim",
+      "script_version": "1.13",
+      "date": "2008-08-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10626",
+        "user_name": "jvfranklin",
+        "first_name": "Jon",
+        "last_name": "Franklin",
+        "email": "jvfranklin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix for bug that prevented multi-line class and function definitions from showing up in the IM-Python menu.  Patch provided by Branden Rolston."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8704",
+      "filename": "python_fn.vim",
+      "script_version": "1.12",
+      "date": "2008-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10626",
+        "user_name": "jvfranklin",
+        "first_name": "Jon",
+        "last_name": "Franklin",
+        "email": "jvfranklin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* Changed to ftplugin and renamed to avoid collision with vim's ftplugin/python.vim. Patch provided by Christopher Lambacher\n* Fixed error opening python buffer with no classes or functions.  Patch provided by Chris Farrow\n* Removed duplicate ]f key\n*Fixed block manipulation bugs due to collision on ]], [[ mappings. See menu for new mappings"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6481",
+      "filename": "python.vim",
+      "script_version": "1.11",
+      "date": "2006-11-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10626",
+        "user_name": "jvfranklin",
+        "first_name": "Jon",
+        "last_name": "Franklin",
+        "email": "jvfranklin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add shortcuts for all remaining menu options."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6390",
+      "filename": "python.vim",
+      "script_version": "1.10",
+      "date": "2006-11-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10626",
+        "user_name": "jvfranklin",
+        "first_name": "Jon",
+        "last_name": "Franklin",
+        "email": "jvfranklin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add shortcuts for commenting/uncommenting selections."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6103",
+      "filename": "python.vim",
+      "script_version": "1.9",
+      "date": "2006-08-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10626",
+        "user_name": "jvfranklin",
+        "first_name": "Jon",
+        "last_name": "Franklin",
+        "email": "jvfranklin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug in IM-Python menu where function and class names beginning with \"_\" were not included."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6079",
+      "filename": "python.vim",
+      "script_version": "1.8",
+      "date": "2006-08-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "76",
+        "user_name": "mikael",
+        "first_name": "Mikael",
+        "last_name": "Berthe",
+        "email": "bmikael at lists.lilotux.net",
+        "homepage": ""
+      },
+      "release_notes": "Applied a patch from Jon Franklin: IM-Python menu improvements.\nUpdated copyright and email address."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2187",
+      "filename": "python.vim",
+      "script_version": "1.7",
+      "date": "2003-07-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "76",
+        "user_name": "mikael",
+        "first_name": "Mikael",
+        "last_name": "Berthe",
+        "email": "bmikael at lists.lilotux.net",
+        "homepage": ""
+      },
+      "release_notes": "Use <Down> instead of 'j', so it should work when j is mapped."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2071",
+      "filename": "python.vim",
+      "script_version": "1.6",
+      "date": "2003-06-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "76",
+        "user_name": "mikael",
+        "first_name": "Mikael",
+        "last_name": "Berthe",
+        "email": "bmikael at lists.lilotux.net",
+        "homepage": ""
+      },
+      "release_notes": "Works better with folding... Many thanks to Guy L. Oliver!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1637",
+      "filename": "python.vim",
+      "script_version": "1.5",
+      "date": "2003-01-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "76",
+        "user_name": "mikael",
+        "first_name": "Mikael",
+        "last_name": "Berthe",
+        "email": "bmikael at lists.lilotux.net",
+        "homepage": ""
+      },
+      "release_notes": "Same as 1.4, I just fixed a typo in the comments and my e-mail address..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=155",
+      "filename": "python.vim",
+      "script_version": "1.4",
+      "date": "2001-09-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "76",
+        "user_name": "mikael",
+        "first_name": "Mikael",
+        "last_name": "Berthe",
+        "email": "bmikael at lists.lilotux.net",
+        "homepage": ""
+      },
+      "release_notes": "Entry for Adam's IM-Python menu update in the main script menu; some other minor changes..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=128",
+      "filename": "python.vim",
+      "script_version": "1.3",
+      "date": "2001-08-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "176",
+        "user_name": "Vonlia",
+        "first_name": "adam",
+        "last_name": "seyfarth",
+        "email": "adam.seyfarth at home.com",
+        "homepage": ""
+      },
+      "release_notes": "I've added an IM-Python menu that holds the class definitions and function definitions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=42",
+      "filename": "python.vim",
+      "script_version": "1.1",
+      "date": "2001-07-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "76",
+        "user_name": "mikael",
+        "first_name": "Mikael",
+        "last_name": "Berthe",
+        "email": "bmikael at lists.lilotux.net",
+        "homepage": ""
+      },
+      "release_notes": "* Changed the name of the global variable\n* Added a new variable; one can choose not to select trailing comments"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=41",
+      "filename": "python.vim",
+      "script_version": "1.0",
+      "date": "2001-07-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "76",
+        "user_name": "mikael",
+        "first_name": "Mikael",
+        "last_name": "Berthe",
+        "email": "bmikael at lists.lilotux.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=40",
+      "filename": "python.vim",
+      "script_version": "1.0",
+      "date": "2001-07-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "76",
+        "user_name": "mikael",
+        "first_name": "Mikael",
+        "last_name": "Berthe",
+        "email": "bmikael at lists.lilotux.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

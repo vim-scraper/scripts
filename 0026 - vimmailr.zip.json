@@ -1,0 +1,58 @@
+{
+  "script_id": "26",
+  "name": "vimmailr.zip",
+  "summary": "Send (MAPI) mail from vim",
+  "script_type": "utility",
+  "description": "This script and dll (source included) allows you to send email from within vim (via MAPI). Supports To, CC, pulling in a signature file, and adding a file attachment. Win32, obviously. Tested on Win2k only so far.\n\nEnjoy!",
+  "install_details": "See vimmailr.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=372",
+      "filename": "vimmailr.zip",
+      "script_version": "1.3",
+      "date": "2001-11-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "72",
+        "user_name": "Ward",
+        "first_name": "Ward",
+        "last_name": "Fuller",
+        "email": "rw.fuller at verizon.net",
+        "homepage": ""
+      },
+      "release_notes": "- Bullet proofed the parsing code in the DLL (again).\n- Now works with vim6 (but still not a plugin - you must source it).\n- Added the _vmm command. An even quicker way to send a message\n  entirely from the vim command line.\n- Added the _vmf command. A quick way of sending a file entirely\n  from the vim command line.\n- Includes mailit.cpp - a simple test app you can use to test the\n  dll outside of vim. Could be used to send messages in a batch file.\n- Changed the _mmh command to _vmh (for vim mailer header) to be\n  more consistent with the other commands in the script.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=83",
+      "filename": "vimmailr.zip",
+      "script_version": "1.2",
+      "date": "2001-08-06",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "72",
+        "user_name": "Ward",
+        "first_name": "Ward",
+        "last_name": "Fuller",
+        "email": "rw.fuller at verizon.net",
+        "homepage": ""
+      },
+      "release_notes": "Added support for bcc and multiple file attachments. Fix for lines ending in 0x0A not being handled properly. I've been told this does not work in 6.0 and that it should be a \"plugin\". Till I make the leap to 6.0 and figure out what that means, anyone wishing to lend a hand on the conversion is most welcome to do so :)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=34",
+      "filename": "vimmailr.zip",
+      "script_version": "1.1",
+      "date": "2001-06-28",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "72",
+        "user_name": "Ward",
+        "first_name": "Ward",
+        "last_name": "Fuller",
+        "email": "rw.fuller at verizon.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

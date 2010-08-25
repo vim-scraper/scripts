@@ -1,0 +1,42 @@
+{
+  "script_id": "9",
+  "name": "buffoptions.vim",
+  "summary": "Per-buffer options/menus/maps",
+  "script_type": "utility",
+  "description": "BuffOptions.vim - Per-buffer options and mappings\nIntroduction:\nSome of Vim's options are set per-buffer, but not all. This extension allows you to set any options and also mappings for a particular buffer or filetype.\n\nThe idea is that you push options onto a stack (the old values are in fact what are pushed) with PushOption( ... ) and then restore the values with RestoreOptions(). \n\nAn extension to the filetypes allow easy use of these macros for a specific filetype. The autocommands filetypeEnter and filetypeLeave have been added.\n\nBase Commands:\nPushOption( option1|map1|menu1|abbrev1, value1, ...) - Push any number option/value pairs where: \noptionn is a vim 'option' name. \nmapn is a map of the form '{n|v|o|i|c}map <lhs>' defining what kind of map is being defined (mandatory with multiple allowed) \nabbrevn is an insert mode abbreviation - the abbreviation is set by push and deleted by RestoreOptions() (as it is not possible to silently check for original abbreviations). \nmenun is a menu setting of the form '{a|n|v|o|i|c}menu <lhs>' defining where the menu is available. <lhs> can include the position of the menu (eg '100.100 Tools.Test') \nvaluen is the value or mapping to set. \nRestoreOptions() - Restore all options to their previous value \nautocomd User filetypeEnter - Called on 'BufEnter' of a file of filetype. \nautocomd User filetypeLeave - Called on 'BufLeave' of a file of filetype. \nReadFileTypeMap(types, filename) - Source filename with per-buffer map/menu options defaulting to the specified list offiletypes. Lines of the form: \n\" FileTypes: cpp\nExample:\n\naug specialEdit\nau!\nau User sgmlEnter call PushOptions(\"keywordprg\",\"/bin/htmlkey\")\nau User cEnter call PushOptions(\"breakat\",\". )&|\",  \"complete\",\".,k/usr/dict,]\",  \"nmap <c-enter>\",\"<esc>o\")\nau User cEnter call PushOptions(\"amenu 10.100 Tools.Compile\\\\ C\",\":make<cr>\" )\n\nau User sgmlLeave,cLeave  call RestoreOptions()\naug END\n\n\nPer File mappings\nThis is not really recommended, as it gives the document virus a foot in... so be warned.\n\nGetOptionsFromFile(comment) is a little trick to allow mappings defined for a particular file within the file. The lines recognized are of the form:\n\n<comment>vimexe: <arguments>\n\nwhere the arguments are the same as for PushOption. And Comment is passed as an argument.\n\nDespite the given example, I would recomend that you map a key to parse the options from a file initially.\n\nNote that the options are cached, so once read, you would have to unlet b:VIMEXE to be able to get it to reparse.\n\n\naug MyOpts\nau!\nau User vimEnter call GetOptionsFromFile('\"')\nau User vimLeave call RestoreOptions() \naug END\n\nMappings from filetype files\nFor when you have a file that is used for the mappings for a particular filetype.\nAll lines in the file except those starting with map and menu will get executed. Any maps/menus will get inserted into a BuffOption() for the specified filetype \n\nCommands:\nFTExe(Filetypes, command) - Have mapping/menu command executed as a per-buffer option for the specified (comma separated) filetypes \nReadFileTypeMap(filetypes,filename) - Sets all map/menu entries existing in filename to be specific to the filetypes specified and executes all other lines. Comment lines of the form: \n\"FileTypes: cpp,c,rc,idl\n\nwill cause the following maps/menus to be for the specified filetypes. A blank filetype string causes the maps/menus to be executed immediately.\n\nThis implementation requires the existance of buffoptions_mac.vim in the same directory as buffoptions.vim\nThe source code for that is in an if 0 block at the bottom of buffoptions.vim\n\n:SO filename - Call ReadFileTypeMap with blank original filetypes. \nExample:\nlet filename =$home.'/vim/txtsettings.vim'\ncall ReadFileTypeMap('txt',filename)\nSO ~/vim/txtsettings.vim\n",
+  "install_details": "Need to create buffoptions_mac.vim - the source is included inside buffoptions.vim.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=17",
+      "filename": "buffoptions.vim",
+      "script_version": "2.1",
+      "date": "2001-06-07",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Allow sourced scripts to have <buffer> tags and <SID>  so that scripts can behave as file-type plugins for vim 6 as well as buffoptions SOURCE scripts for 5.6 and above.\nNote that the buffoptions_mac.vim will need to be recreated (extract it from the bottom of the file)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10",
+      "filename": "buffoptions.vim",
+      "script_version": "2.0",
+      "date": "2001-06-04",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

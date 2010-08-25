@@ -1,0 +1,74 @@
+{
+  "script_id": "167",
+  "name": "perforce.vim",
+  "summary": "Perforce source control features",
+  "script_type": "utility",
+  "description": "Perforce is a source control system from http://www.perforce.com\n\nFeatures:\n- menu and keyboard shortcuts to open (checkout), revert, and sync files.\n- prompts to open a file for editing when you attempt to change a checked-in file.\n- perforce status displayed on the ruler.\n- tested on Windows operating systems only.\n\nThis plugin provides a relatively few commonly used commands. If you are looking for the ability to carry out many perforce commands from within vim, you may wish to look at  Hari Krishna Dara's plugin (script 240)  at http://vim.sourceforge.net/scripts/script.php?script_id=240.",
+  "install_details": "Place in your vimfiles\\plugin directory.\nSet p4editor=vim -c PerforceLaunch for use as p4 forms editor.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7283",
+      "filename": "perforce.vim",
+      "script_version": "0.5",
+      "date": "2007-06-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "416",
+        "user_name": "TomSlee",
+        "first_name": "Tom",
+        "last_name": "Slee",
+        "email": "no_spam_tslee at ianywhere.com",
+        "homepage": ""
+      },
+      "release_notes": "Extensive enhancements by Suresh Srinivasan:\n\nAdded a set of changelist commands ('&#039 indicates the leader character):\n \n    \\v - Show list of versions of the file.\n    \\u - Show unified diff of the file.\n    \\z - Show diff between specific versions of the file.\n    \\p - Show depot version of file.\n    \\a - Show depot version of file with annotations (revision# for each line).\n    \\x - Mark file for delete.\n \n    \\C - Create new changelist.\n    \\D - Show diff of all files in a changelist.\n    \\F - Show list of files in a changelist.\n    \\L - Show list of pending changelists.\n    \\X - Delete a changelist.\n    \\S - Submit current changelist.\n    \\I - Show changelist info.\n \n    \\h - Show Help message.\n    \\l - Login into perforce.\n    \\\\ - Show general perforce info (license, location, etc.).\n \nStatus line message now includes the changelist number."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2325",
+      "filename": "perforce.vim",
+      "script_version": "0.4",
+      "date": "2003-09-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "416",
+        "user_name": "TomSlee",
+        "first_name": "Tom",
+        "last_name": "Slee",
+        "email": "no_spam_tslee at ianywhere.com",
+        "homepage": ""
+      },
+      "release_notes": "Useful enhancements made by Terrance Cohen:\n\n- Added P4DiffFile() option\n- \"[Not in p4]\" appears on ruler instead of \"0\"\n- Added defaults to confirmation dialogs so user can just hit enter or \nescape... no need to find a hotkey. Revert defaults to 'No', others \ndefault to 'Yes'.\n- Changed icons in confirmation dialogs to question\n- Rephrased confirmation texts to make them easier to parse quickly"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=475",
+      "filename": "perforce.vim",
+      "script_version": "0.3",
+      "date": "2002-01-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "416",
+        "user_name": "TomSlee",
+        "first_name": "Tom",
+        "last_name": "Slee",
+        "email": "no_spam_tslee at ianywhere.com",
+        "homepage": ""
+      },
+      "release_notes": "- fixed bug where cursor position within a line was not always maintained across p4 operations on the file.\n- sped up \"p4 edit\" operation -- it now uses two shell commands instead of three."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=422",
+      "filename": "perforce.vim",
+      "script_version": "0.2",
+      "date": "2001-12-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "416",
+        "user_name": "TomSlee",
+        "first_name": "Tom",
+        "last_name": "Slee",
+        "email": "no_spam_tslee at ianywhere.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

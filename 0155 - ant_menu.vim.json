@@ -1,0 +1,346 @@
+{
+  "script_id": "155",
+  "name": "ant_menu.vim",
+  "summary": "plugin for ant",
+  "script_type": "utility",
+  "description": "A simple script that provides a pull-down menu and keyboard shortcuts for calling ant, a java build \nutility.  By default, ant.vim assumes that the build.xml file is in the current directory.  The user can \nset the build file in another directory by selecting the \"Set build file\" option or by using \",s\" in \ncommand mode. \n\nGlobal options can be set in your .vimrc file.      For example:\n\nlet g:buildFile = 'foo.xml'\nlet g:antOption = '-debug'\nlet g:logFile = 'foo.log'\n\nIf you are on a windows box and you cannot see compilation errors in your quickfix window,\ntry setting the shellpipe to \"2>\" in your _vimrc.",
+  "install_details": "For vim 6, just drop ant_menu.vim into your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10729",
+      "filename": "ant_menu.vim",
+      "script_version": "0.5.7.1",
+      "date": "2009-06-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "*Moved ANT menu under Plugin\n*Updated to toggle menu options upon load"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10723",
+      "filename": "ant_menu.vim",
+      "script_version": "0.5.7",
+      "date": "2009-06-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "Selected options will now be marked with an '*' in the ant menu."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10642",
+      "filename": "ant_menu.vim",
+      "script_version": "0.5.6",
+      "date": "2009-05-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "Bug fix for default buffer problems that occurs when the user switches between buffers.\nThanks to David Fishburn for the fix."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6445",
+      "filename": "ant_menu.vim",
+      "script_version": "0.5.5",
+      "date": "2006-11-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "Amit Jain's cleaner output changes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2956",
+      "filename": "ant_menu.vim",
+      "script_version": "0.5.4",
+      "date": "2004-04-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "*Changed name to ant_menu.vim to avoid confusion with the numerous other ant.vim's.\n*Includes Derek Pomery's code to dynamically load build.xml upon buffer switch.\n*Includes David's <dakATdotech.com > code to specify a target on find."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2634",
+      "filename": "ant.vim",
+      "script_version": "0.5.3",
+      "date": "2003-12-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "*Merged in javac 1.4 code for GetProbFile() from 'Michael Scheper <ant.vim@michaelscheper.com>'\n*added code for kjc (only works with -emacs)\n*clean up"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2592",
+      "filename": "ant.vim",
+      "script_version": "0.5.2",
+      "date": "2003-12-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "*Incorporated Phil McCarthy's fix that starts ant -find from the file's current directory.\n*Incorporated bug fix from Michael Scheper."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1785",
+      "filename": "ant.vim",
+      "script_version": "0.5.1",
+      "date": "2003-03-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "*merged in Jou Wei Huang's fix for multiline targets\n*fixed bug that prevented '-find' from working when another option is set"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1643",
+      "filename": "ant.vim",
+      "script_version": "0.5",
+      "date": "2003-01-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "*Incorporated David Fishburn's quickfix code.\n*Minor tweaks to target menu functionality.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1389",
+      "filename": "ant.vim",
+      "script_version": "0.4.3",
+      "date": "2002-11-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "*target menu fix for multi-line targets and\n  target lines in which \"name\" is not the\n  first attribute (thanks to Ronny Wilms for \n  the fix)\n*,g should have better support for jikes\n  (thanks to Mark Healy for the code)\n*,g will open a new gvim only if the file is\n  in an existing buffer"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1112",
+      "filename": "ant.vim",
+      "script_version": "0.4.2",
+      "date": "2002-08-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "*',g' now spawns new gvim window\n  (thanks to Nathan for the suggestion)\n*cleaned up target menu code\n*added ',t' binding for selecting build\n targets (thanks goes out to Anton Straka\n for the code snippet)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=448",
+      "filename": "ant.vim",
+      "script_version": "0.4.1",
+      "date": "2002-01-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "updated to allow multiple ant options"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=441",
+      "filename": "ant.vim",
+      "script_version": "0.4",
+      "date": "2002-01-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "Added ',g' keyboard shortcut.  When in the ant error buffer, this\nwill attempt to parse out the file in error and open it in a new\nbuffer with the cursor at the line flagged in error.  The user must\nexecute the shortcut at the line that identifies the file in error."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=423",
+      "filename": "ant.vim",
+      "script_version": "0.31",
+      "date": "2001-12-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "Added new options to specify a log file.  Once this has\nbeen done, ant output will be piped to the log file.  You\nmust select the 'no log file' option to return  to dumping\nthe output to a buffer.  Alsoadded menu option for \n'-projecthelp'."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=412",
+      "filename": "ant.vim",
+      "script_version": "0.3",
+      "date": "2001-12-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "Fixed bug in which ant.vim chokes on periods in target \nnames (thanks to Keith Corwin for pointing it out).\nAdded descriptions of keyboard shortcuts in comments.\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=401",
+      "filename": "ant.vim",
+      "script_version": "0.21",
+      "date": "2001-12-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "ant.vim now builds the target entry on startup if a build.xml exists in the current\ndirectory.  The user can now set options seperate from the build, hopefully this\nwill provide greater flexibility (as well as one less step to the build option :-)).\nIf you forget which option is set, \"ANT->Set Option->Show Current\" will display\nthe current option."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=396",
+      "filename": "ant.vim",
+      "script_version": "0.2",
+      "date": "2001-12-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "ant.vim will now add a 'Target' menu when the user manually sets the location of \nthe build file with ',s' or by selecting the build option.  So, for example, selecting\nANT->Target->clean from the menu will execute 'ant clean.'  I'm not all that confident \nin my regex skills, so I can't guarantee that it will work in all (or even most!) circumstances.  \nAny help or bug reports will be appreciated."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=376",
+      "filename": "ant.vim",
+      "script_version": "0.13",
+      "date": "2001-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "Fixed problem with find option.  Added keyboard shortcut for 'ant -find'."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=370",
+      "filename": "ant.vim",
+      "script_version": "0.12",
+      "date": "2001-11-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "*Rearranged the menu selections\n*Added quiet build\n*Added keyboard shortcuts for \"default build\" and \"build.xml set\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=366",
+      "filename": "ant.vim",
+      "script_version": "0.11",
+      "date": "2001-11-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "Added test for the existence of build.xml."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=365",
+      "filename": "ant.vim",
+      "script_version": "0.1",
+      "date": "2001-11-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "378",
+        "user_name": "captshadg",
+        "first_name": "Shad",
+        "last_name": "Gregory",
+        "email": "captshadg at gmail.com",
+        "homepage": "http://shadgregory.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

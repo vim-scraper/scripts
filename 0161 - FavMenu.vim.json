@@ -1,0 +1,106 @@
+{
+  "script_id": "161",
+  "name": "FavMenu.vim",
+  "summary": "A new menu, like IE's Favourites, or Netscape's Bookmark",
+  "script_type": "utility",
+  "description": "Adds a new menu to vim\nYou can add your favourite files (and dirs) into it, and open them later by clicking on the corresponding menu item.\nThe file list is persistent, data is stored in a file, which is the value of the $FAVOURITES\nThis variable should hold the name of your favourites files with full path.\nSo it must look like \"~/.vim_favourites\" or 'c:\\program files\\vim\\_favourites'.\n",
+  "install_details": "Drop it into your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=672",
+      "filename": "FavMenu.vim",
+      "script_version": "0.32",
+      "date": "2002-03-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added Hungarian translation"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=538",
+      "filename": "FavMenu.vim",
+      "script_version": "0.3",
+      "date": "2002-02-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New features:\n* Limited path size (set PATHSIZELIMIT)\n* It closes the file even when 'hidden' is set\n* Synchronize if +clientserver is available"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=521",
+      "filename": "FavMenu.vim",
+      "script_version": "0.22",
+      "date": "2002-01-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* Nice fallbacks to the vars.\n* fav_menu is renamed to OPEN_FUNC Sorry for the inconvinience.\n* Menu shortcuts"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=474",
+      "filename": "FavMenu.vim",
+      "script_version": "0.21",
+      "date": "2002-01-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=454",
+      "filename": "FavMenu.vim",
+      "script_version": "0.2",
+      "date": "2002-01-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* Fixed bug, which caused same files to hide each other\n* Your favourite files must be located at $FAVOURITES\n* You can Edit the favourites. Menus will updated, when you save\n* When you click on the menu, it invokes the fav_fun function\n* You can choose cascade delete menu by defining fav_cascade_del (at startup!)\n* You can add directories to your favourites. Thanks to the_intellectual_person <arun_kumar_ks@hotmail.com>, who gave me a patch for this"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=394",
+      "filename": "FavMenu.vim",
+      "script_version": "0.1",
+      "date": "2001-12-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

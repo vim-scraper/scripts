@@ -1,0 +1,170 @@
+{
+  "script_id": "189",
+  "name": "renumber.vim",
+  "summary": "Egads! It's *another* renumber utility :-)",
+  "script_type": "utility",
+  "description": "This would seem to be very similar in function to Inc (vimscript #156) - I put it here mainly for posterity.\n\nThe main differences are that it will honour preceeding zeros (without assuming octal ... plus, 0 in hex numbers are honoured: \"0x0001\"), and it will 'tidy up' misaligned numbers, to a degree (only right-aligns ATM). It uses the location of the first number to determine the alignment location.\n\nYou may now renumber starting at the /bottom/ of a block with the 'r' (reverse) option.  Note that you still have a default increment of +1, so to renumber a block ending at '10' you need to change the last number in the file to \"10\", make your selection and \"Renumber r s-1\".\n\nRenumber will also renumber days & months (e.g., Jan,Feb.Mar, etc.).  To renumber days, use the 'd' argument - for months, it's 'm'.\n\nUse by selecting the block of text (visually, linewise or blockwise, etc.), then issuing:\n\n:'<,'>Renumber\n\n.. or some other range indicator.\n\nRenumber will search the selection for a number (left -> right), and use that (hence use blockwise selection (<Ctrl-V>) to specify a column).  It will only edit numbers it finds in subsequent lines that have approximately the same position within each line.\n\nYou may pass in any arguments in any order:\n\na  - consider whole of line when searching for next number (even blockwise).\nd - renumber with day names\nm - renumber with month names\nr - reverse block order: start renumbering from bottom of block upwards\nsN  - [no space] use increment N (may be negative).\n\nEg.,\n\n:'<,'>Renumber a\n:'<,'>Renumber s4\n:'<,'>Renumber a s-2\n:'<,'>Renumber m s3\n:'<,'>Renumber r s-1\n\n\nTodo - add a left-justify option (probably '-').\n",
+  "install_details": "Put into a vim plugin directory somewhere.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4430",
+      "filename": "renumber.vim",
+      "script_version": "1.16",
+      "date": "2005-07-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "363",
+        "user_name": "FNX",
+        "first_name": "Neil",
+        "last_name": "Bird",
+        "email": "neil at fnxweb.com",
+        "homepage": "http://www.fnxweb.com/"
+      },
+      "release_notes": "A number of padding-related bug-fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2952",
+      "filename": "renumber.vim",
+      "script_version": "1.13",
+      "date": "2004-04-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "363",
+        "user_name": "FNX",
+        "first_name": "Neil",
+        "last_name": "Bird",
+        "email": "neil at fnxweb.com",
+        "homepage": "http://www.fnxweb.com/"
+      },
+      "release_notes": "Fix bug when visual selection doesn't cover start of initial number (e.g., '456' of \"123456\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2949",
+      "filename": "renumber.vim",
+      "script_version": "1.12",
+      "date": "2004-04-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "363",
+        "user_name": "FNX",
+        "first_name": "Neil",
+        "last_name": "Bird",
+        "email": "neil at fnxweb.com",
+        "homepage": "http://www.fnxweb.com/"
+      },
+      "release_notes": "Add support for renumbering hex values (0x1, 0x001, etc.).\nSome more 'nasty' stuff, as vim can't convert dec->hex, so, unfortunately, this will only work with a perl-capable vim (you won't get any errors without perl, it just won't cope with it, as it didn't before).\nYou get a free global 'Dec2Hex' function, though :-)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2539",
+      "filename": "renumber.vim",
+      "script_version": "1.11",
+      "date": "2003-12-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "363",
+        "user_name": "FNX",
+        "first_name": "Neil",
+        "last_name": "Bird",
+        "email": "neil at fnxweb.com",
+        "homepage": "http://www.fnxweb.com/"
+      },
+      "release_notes": "Fixed bug - now correctly skips lines with no matching nos. to renumber\nAlso hopefully copes with lines containing mixtures of tabs/spaces, which cause havoc with visual-block column numbers.\nI'm doing some quite dodgy stuff to fix that, so please let me know if it misbehaves."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2007",
+      "filename": "renumber.vim",
+      "script_version": "1.10",
+      "date": "2003-05-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "363",
+        "user_name": "FNX",
+        "first_name": "Neil",
+        "last_name": "Bird",
+        "email": "neil at fnxweb.com",
+        "homepage": "http://www.fnxweb.com/"
+      },
+      "release_notes": "- Wasn't matching preceeding '-'s as part of a number to replace.\n- Added r[everse] option, to start renumbering from the end of the block."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1880",
+      "filename": "renumber.vim",
+      "script_version": "1.9",
+      "date": "2003-03-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "363",
+        "user_name": "FNX",
+        "first_name": "Neil",
+        "last_name": "Bird",
+        "email": "neil at fnxweb.com",
+        "homepage": "http://www.fnxweb.com/"
+      },
+      "release_notes": "Bug fix arg. parsing for negative renumbering (John Sumsion)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1860",
+      "filename": "renumber.vim",
+      "script_version": "1.8",
+      "date": "2003-03-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "363",
+        "user_name": "FNX",
+        "first_name": "Neil",
+        "last_name": "Bird",
+        "email": "neil at fnxweb.com",
+        "homepage": "http://www.fnxweb.com/"
+      },
+      "release_notes": "Bugfix the month/day stuff, plus a little speed optimisation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1855",
+      "filename": "renumber.vim",
+      "script_version": "1.7",
+      "date": "2003-03-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "363",
+        "user_name": "FNX",
+        "first_name": "Neil",
+        "last_name": "Bird",
+        "email": "neil at fnxweb.com",
+        "homepage": "http://www.fnxweb.com/"
+      },
+      "release_notes": "Add 'renumber' of days-of-week and months-of-year (English only)!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=675",
+      "filename": "renumber.vim",
+      "script_version": "1.4",
+      "date": "2002-03-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "363",
+        "user_name": "FNX",
+        "first_name": "Neil",
+        "last_name": "Bird",
+        "email": "neil at fnxweb.com",
+        "homepage": "http://www.fnxweb.com/"
+      },
+      "release_notes": "Use col() instead of virtcol(), thus letting it work on lines containing <Tabs>!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=506",
+      "filename": "renumber.vim",
+      "script_version": "1.3",
+      "date": "2002-01-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "363",
+        "user_name": "FNX",
+        "first_name": "Neil",
+        "last_name": "Bird",
+        "email": "neil at fnxweb.com",
+        "homepage": "http://www.fnxweb.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

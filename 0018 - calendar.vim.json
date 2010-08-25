@@ -1,0 +1,26 @@
+{
+  "script_id": "18",
+  "name": "calendar.vim",
+  "summary": "Open a calendar in a read-only buffer for viewing.",
+  "script_type": "utility",
+  "description": "Requires the Unix command program 'cal' or its equivalent.  Really only provides a way of pulling up a calendar into a buffer in Vim.  The script opens a buffer if one doesn't exist.  The buffer is set up to be readonly and not modified (or modifiable if 6.0 or better).  Should work for both 5.7 and 6.0x.\n\nUsage is:  Cal 2001   | \" for current year calendar\n              Cal 4 2001 | \" for April of 2001 month  calendar",
+  "install_details": "Copy to directory of your choice, make sure the 'cal' is in your path, and source it from your .vimrc.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=23",
+      "filename": "calendar.vim",
+      "script_version": "1.0",
+      "date": "2001-06-11",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "42",
+        "user_name": "pottsdl",
+        "first_name": "Douglas",
+        "last_name": "Potts",
+        "email": "pottsdl at gmail.com",
+        "homepage": "http://drbitz.blogspot.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

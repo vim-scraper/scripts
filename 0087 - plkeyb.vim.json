@@ -1,0 +1,26 @@
+{
+  "script_id": "87",
+  "name": "plkeyb.vim",
+  "summary": "Polish dead-key keyboard emulation",
+  "script_type": "utility",
+  "description": "Polish letters in iso-8859-2 encoding. \nPress \"~\" (tilde), then [ACELNOSZXacelnoszx] to insert polish equiv.\nNEW :\n'keymap' version. Unzip the file in your $VIMRUNTIME/keymap or $HOME/.vim/keymap directory.\nYou'll be able to select the new 'polish' keymap from Edit/Keymap menu.\nActivate with Edit/Keymap/polish or :set keymap=polish.\n",
+  "install_details": "copy this into your ~/.vim/keymap directory  (or use system-wide keymap dir).\nOf course you'll have to set the proper screen font (supporting iso8859-2 or UTF-8 encoding)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2022",
+      "filename": "polish_keymap.zip",
+      "script_version": "2.10",
+      "date": "2003-05-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "239",
+        "user_name": "rms",
+        "first_name": "Rafal",
+        "last_name": "Sulejman",
+        "email": "rms at poczta.onet.pl",
+        "homepage": ""
+      },
+      "release_notes": "Hopefully a bit better version. I can edit (ON MY SYSTEM -- YMMV -- pls report) utf-8 and iso-8859-2 files now. Check your *encodings..."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "54",
+  "name": "ConvertBase.vim",
+  "summary": "Convert to/from various numeric bases",
+  "script_type": "utility",
+  "description": "This script is basically just three functions:\n  ConvertToBase(int, base)\n  ConvertFromBase(str, base)\n  ConvertBases(str, base1, base2)\n\nAnd two example functions that are commented out.\n\nThe following mappings may also be useful:\n\" Translate the character under the cursor to a decimal value:\nnmap <M-a>d i<C-R>=char2nr(getline(line(\".\"))[col(\".\") - 1])<CR><ESC>lx\n\" ... hexadecimal value:\nnmap <M-a>h ix<C-R>=ConvertToBase(char2nr(getline(line(\".\"))[col(\".\") - 1]),16)<CR><ESC>lx\n\" ... octal value:\nnmap <M-a>o i<C-R>=ConvertToBase(char2nr(getline(line(\".\"))[col(\".\") - 1]),8)<CR><ESC>lx",
+  "install_details": "Source the script or place it in your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=84",
+      "filename": "ConvertBase.vim",
+      "script_version": "1.0",
+      "date": "2001-08-06",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

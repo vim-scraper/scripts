@@ -1,0 +1,74 @@
+{
+  "script_id": "194",
+  "name": "MRU",
+  "summary": "Most recently used files in your file menu",
+  "script_type": "utility",
+  "description": "It stores data in the file called $MRU.\nSee also vimscript#161\n\nHint: If you want a lightweight solution, you can use marks 0..9",
+  "install_details": "When $MRU is not set, it will store data in you $HOME dir on unix, and in $VIM dir on windows. You can customize what to do with the file with defining OPEN_FUNC variable. The number of items can be changed by defining MRU_num. (default is 4).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4144",
+      "filename": "MRU.vim",
+      "script_version": "0.32",
+      "date": "2005-04-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed filename escaping (Thx to Fritz Mehner for the patch)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=673",
+      "filename": "MRU.vim",
+      "script_version": "0.31",
+      "date": "2002-03-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Shutup clienserver stuff"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=537",
+      "filename": "MRU.vim",
+      "script_version": "0.3",
+      "date": "2002-02-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Most recently used files in your file menu\nNew features: * Limited path size (set PATHSIZELIMIT) * It closes the file even when 'hidden' is set * Synchronize if +clientserver is available"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=520",
+      "filename": "MRU.vim",
+      "script_version": "0.2",
+      "date": "2002-01-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

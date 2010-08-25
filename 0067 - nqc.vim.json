@@ -1,0 +1,154 @@
+{
+  "script_id": "67",
+  "name": "nqc.vim",
+  "summary": "NQC programming support (for the LEGO MINDSTORMS RCX-Controller)",
+  "script_type": "utility",
+  "description": "gvim-menus for NQC (Not Quite C),  Version 2.3r1  (and newer).\nNQC is a C-like language for programmimg the LEGO MINDSTORMS RCX-Controller.\nThese menus turn gvim into an IDE for the RCX-programming:\n - insertion of NQC statements, function calls, comments, RCX constants\n - download programs and firmware to RCX\n - upload the datalog from RCX\n - erase programs and datalogs in RCX\n\n\nHere are some screen shots : http://lug.fh-swf.de/vim/vim-nqc/screenshots-en.html",
+  "install_details": "Copy the zip archive  nqcvim.zip to $HOME/.vim/ and run \n      unzip nqcvim.zip \nIf you have already an older version of this plugin and you have modified the \ntemplate files you may want to save your templates first or copy the files from the \narchive by hand. See also the file README.nqc within the zip file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3739",
+      "filename": "nqcvim.zip",
+      "script_version": "3.1",
+      "date": "2004-12-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Aligned line end comments for consecutive lines.+ Uncomment more than one block at once.+ The dialog windows (GUI) have been replaced by more flexible command line inputs.+ Online documentation improved."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2633",
+      "filename": "nqcvim.zip",
+      "script_version": "3.0",
+      "date": "2003-12-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": " + Only one NQC root menu entry in the gVim root menu. + A marked region can be surrounded by a for-, if, if-else, while-,   do-while-statement (with indentation). + 3 block comments are now read as templates or skeletons from files + The NQC root menu can be changed or disabled. + All hotkeys are only defined for NQC files (file type plugin added). + Install script added. + Customization improved. + Documentation improved (help file added)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1942",
+      "filename": "nqc.vim",
+      "script_version": "2.0",
+      "date": "2003-04-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ indentation: multiline inserts and code snippets will be indented after insertion.+ Most menu entries are now also active in normal mode.+ Code cleanup: register z no longer used. Most function calls are silent now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1701",
+      "filename": "nqc.vim",
+      "script_version": "1.9",
+      "date": "2003-02-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- maintain your own code snippets in a separate directory- additional for- and if-statements- new hotkey (save, open file, save buffer and compile)- analyse datalog with GNUPLOT  + upload datalog in a separate buffer  + show x- or x-y-plot   + configure plot (type: impulses, lines, lines+points, points, steps)  + set plot title  + save plot (Postscript) or print plot- make hardcopy of buffer or of a highlighted part (Postscript)- show settings (target, serial port, firmware, hotkeys) "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=529",
+      "filename": "nqc.vim",
+      "script_version": "1.6.3",
+      "date": "2002-02-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- menus can now be toggled (look for an entry in the Tools menu)- additional NQC-statements:  break unti continue start"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=160",
+      "filename": "nqc.vim",
+      "script_version": "1.5",
+      "date": "2001-09-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- API for NQC Vers. 2.3r1 complete\n- configurability improved\n- minor bugfixes and improvements\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=150",
+      "filename": "nqc.vim",
+      "script_version": "1.4",
+      "date": "2001-09-04",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "support for RCX, RCX2, CyberMaster, Scout"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=147",
+      "filename": "nqc.vim",
+      "script_version": "1.3.1",
+      "date": "2001-09-03",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "bug fix:\n- datalog upload\n "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=124",
+      "filename": "nqc.vim",
+      "script_version": "1.3",
+      "date": "2001-08-21",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

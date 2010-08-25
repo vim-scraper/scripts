@@ -1,0 +1,26 @@
+{
+  "script_id": "181",
+  "name": "prt_mgr.zip",
+  "summary": "VIM Print Manager providing N-up and manual duplex printing.",
+  "script_type": "utility",
+  "description": "This plugin extends the flexibility of printing from VIM using PSUtils - http://www.tardis.ed.ac.uk/~ajcd/psutils/. The plugin supports:\n\no N-up printing,\no Manual duplex printing (feeding printed pages back into the printer to print the reverse sides)\no Reverse page order printing.\no Print to file.\n\nThere are also VIM functions to allow the Print Manager to be called from other scripts, as well as being hooked to the :hardcopy command using the printexpr option.\n\nSee included help file for details on setting up and using the Print Manager plugin.\n\nNOTE: This replaces the dup_prt.zip Duplex Printing plugin - if you had previously installed this plugin then please remove this from your runtime directories.",
+  "install_details": "Unzip the file into your local VIM runtime directory, restart VIM, and run helptags on your local doc directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2686",
+      "filename": "prt_mgr.zip",
+      "script_version": "2.2",
+      "date": "2004-01-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "443",
+        "user_name": "mrdubya",
+        "first_name": "Mike",
+        "last_name": "Williams",
+        "email": "mrw at eandem.co.uk",
+        "homepage": "http://www.eandem.co.uk/mrw/"
+      },
+      "release_notes": "Fix bug when doing Nup printing to A or B series paper sizes (other than default of A4)."
+    }
+  ]
+}

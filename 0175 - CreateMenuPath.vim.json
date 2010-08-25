@@ -1,0 +1,106 @@
+{
+  "script_id": "175",
+  "name": "CreateMenuPath.vim",
+  "summary": "Create a menu that mirrors a directory tree",
+  "script_type": "utility",
+  "description": "This file provides a function to create a menu that mirrors a directory tree.\n\nUsage:\nCreateMenuPath({path} [, {menu name} [, {menu priority} [, {filename ignore pattern1} [, {filename ignore pattern2} ...]]]])\n\nExamples:\n:call CreateMenuPath('~')   \" Creates a menu of your home directory.\n\n:call CreateMenuPath('~/public_html', 'Files.Web\\ Page', '600.100', '\\c.\\(gif\\|jpe\\=g\\|png\\|ico\\|bmp\\|tiff\\=\\)$')  \" Files.Web Page menu, priority 600.100, ignoring some image files.\n\nA default filename ignore pattern is provided which ignores a number of image, audio and archive files, but it's incomplete.\n\nThe global variable \"CMP_Recurse_Limit\" can be set to specify the maximum sub-directory depth to scan.  Set it to 0 (the default) for infinite recursion.  Set it to 1 to scan only the specified directory.\n",
+  "install_details": "Either :source it or put it in your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8713",
+      "filename": "CreateMenuPath.vim",
+      "script_version": "2.0",
+      "date": "2008-05-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "Update for Vim7:\n  - Allow more than one ignore pattern argument\n  - Looping over the found files is simpler"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=685",
+      "filename": "CreateMenuPath.vim",
+      "script_version": "1.5",
+      "date": "2002-03-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Don't add a / or \\ before the glob pattern if it's already there. (Fixes that a path of 'c:&#039 wouldn't work.)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=508",
+      "filename": "CreateMenuPath.vim",
+      "script_version": "1.4",
+      "date": "2002-01-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "CMP_Recurse_Limit global variable added."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=496",
+      "filename": "CreateMenuPath.vim",
+      "script_version": "1.3",
+      "date": "2002-01-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Use a dummy menu item to prevent a torn off menu from disappearing. (Does not work in the PopUp menu.)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=459",
+      "filename": "CreateMenuPath.vim",
+      "script_version": "1.2",
+      "date": "2002-01-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Rescan menu item didn't work.\n- Escape some characters in CD Here menu item.\n- Create a ...More menu when the number of menu items exceeds 30, and add shortcut keys."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=453",
+      "filename": "CreateMenuPath.vim",
+      "script_version": "1.1",
+      "date": "2002-01-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Two menu items added:  \"CD Here\" and \"Rescan\"\n- Clear the menu out before building it.  (Marcin Juszkiewicz)"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "script_id": "21",
+  "name": "info.vim",
+  "summary": "GNU info documentation browser.",
+  "script_type": "utility",
+  "description": "requires vim 6.x and GNU info. adds new command `Info': without arguments it displays \"directory\" node, with single argument displays this file (eg `:Info libc'). with two arguments, first specifies file and second node to display (eg `:Info libc POSIX\\ Threads' -- note space escaping). within browser, press h key to see available key shortcuts.",
+  "install_details": "copy it into ~/.vim/plugin/, then restart vim (or do :runtime info.vim).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1516",
+      "filename": "info.vim",
+      "script_version": "1.7",
+      "date": "2002-11-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "55",
+        "user_name": "rnd",
+        "first_name": "Slavik",
+        "last_name": "Gorbanyov",
+        "email": "rnd at web-drive.ru",
+        "homepage": ""
+      },
+      "release_notes": "added varios workarounds for win32 environment.\nfixed multiline cross-references matching."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1410",
+      "filename": "info.vim",
+      "script_version": "1.6",
+      "date": "2002-11-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "55",
+        "user_name": "rnd",
+        "first_name": "Slavik",
+        "last_name": "Gorbanyov",
+        "email": "rnd at web-drive.ru",
+        "homepage": ""
+      },
+      "release_notes": "script now properly follows hyperlinks split across two lines."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=701",
+      "filename": "info.vim",
+      "script_version": "1.5",
+      "date": "2002-03-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "55",
+        "user_name": "rnd",
+        "first_name": "Slavik",
+        "last_name": "Gorbanyov",
+        "email": "rnd at web-drive.ru",
+        "homepage": ""
+      },
+      "release_notes": "fixed issue with c-shell and stderr redirection. global search still does not work properly, sorry."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=26",
+      "filename": "info.vim",
+      "script_version": "1.2",
+      "date": "2001-06-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "55",
+        "user_name": "rnd",
+        "first_name": "Slavik",
+        "last_name": "Gorbanyov",
+        "email": "rnd at web-drive.ru",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

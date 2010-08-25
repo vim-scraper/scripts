@@ -1,0 +1,154 @@
+{
+  "script_id": "152",
+  "name": "ShowMarks",
+  "summary": "Visually shows the location of marks.",
+  "script_type": "utility",
+  "description": "ShowMarks provides a visual representation of the location marks.\nMarks are useful for jumping back and forth between interesting points in a buffer, but can be hard to keep track of without any way to see where you have placed them.  ShowMarks hopefully makes life easier by placing a sign in the leftmost column of the buffer.  The sign indicates the label of the mark and its location.\nIt can be toggled on and off and individual marks can be hidden(effectively removing them).\n\nBy default the following keymappings are defined:\n   \\mt : Toggles ShowMarks on and off.\n   \\mh : Hides an individual mark.\n   \\ma : Hides all marks in the current buffer.\n   \\mm : Places the next available mark.\n\nShowMarks requires that Vim is compiled with the +signs feature.\n",
+  "install_details": "Simply unzip showmarks.zip into you $HOME/.vim or $HOME\\vimfiles folder.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3342",
+      "filename": "showmarks.vim",
+      "script_version": "2.2",
+      "date": "2004-08-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "386",
+        "user_name": "Trandor",
+        "first_name": "Anthony",
+        "last_name": "Kruize",
+        "email": "akruize at netspace.net.au",
+        "homepage": ""
+      },
+      "release_notes": "Fixed the highlighting of the A-Z marks when 'ignorecase' is on.(Mike Kelly)  Showmarks now triggers immediately when entering a buffer for the first time.(Mikolaj Machowski) Added support for highlighting the entire line a mark is placed on.  Now uses HelpExtractor to install the help file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2800",
+      "filename": "showmarks.zip",
+      "script_version": "2.1",
+      "date": "2004-03-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "386",
+        "user_name": "Trandor",
+        "first_name": "Anthony",
+        "last_name": "Kruize",
+        "email": "akruize at netspace.net.au",
+        "homepage": ""
+      },
+      "release_notes": "Marks are now shown with an order of precedence and can be highlighted a different colour when multiple marks are placed on the same line. Included marks can now be specified per buffer. Thanks to Gary Holloway for these changes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2220",
+      "filename": "showmarks.zip",
+      "script_version": "2.0",
+      "date": "2003-08-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "386",
+        "user_name": "Trandor",
+        "first_name": "Anthony",
+        "last_name": "Kruize",
+        "email": "akruize at netspace.net.au",
+        "homepage": ""
+      },
+      "release_notes": "This version adds support for all other marks, enhanced customization of how marks are displayed and a few bug fixes.  Special thanks to everyone who contributed to this release."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1020",
+      "filename": "showmarks.zip",
+      "script_version": "1.5",
+      "date": "2002-07-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "386",
+        "user_name": "Trandor",
+        "first_name": "Anthony",
+        "last_name": "Kruize",
+        "email": "akruize at netspace.net.au",
+        "homepage": ""
+      },
+      "release_notes": "Added the ability to customize how the marks are displayed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=894",
+      "filename": "showmarks.zip",
+      "script_version": "1.4",
+      "date": "2002-05-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "386",
+        "user_name": "Trandor",
+        "first_name": "Anthony",
+        "last_name": "Kruize",
+        "email": "akruize at netspace.net.au",
+        "homepage": ""
+      },
+      "release_notes": "This version has support for placing the next available mark, support for hiding all marks in the current buffer, marks on line 1 are no longer shown, and includes a help file.\nIt is now packaged as a Zip archive."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=881",
+      "filename": "showmarks.vim",
+      "script_version": "1.3",
+      "date": "2002-05-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "386",
+        "user_name": "Trandor",
+        "first_name": "Anthony",
+        "last_name": "Kruize",
+        "email": "akruize at netspace.net.au",
+        "homepage": ""
+      },
+      "release_notes": "Fixed toggling ShowMarks not responding immediately. Added user commands for toggling/hiding marks. Added ability to disable ShowMarks by default."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=655",
+      "filename": "showmarks.vim",
+      "script_version": "1.2",
+      "date": "2002-03-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "386",
+        "user_name": "Trandor",
+        "first_name": "Anthony",
+        "last_name": "Kruize",
+        "email": "akruize at netspace.net.au",
+        "homepage": ""
+      },
+      "release_notes": "Added the ability to define which marks are shown/ignored, added a check to make sure Vim has signs support, and removed some debugging code I accidently left in."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=559",
+      "filename": "showmarks.vim",
+      "script_version": "1.1",
+      "date": "2002-02-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "386",
+        "user_name": "Trandor",
+        "first_name": "Anthony",
+        "last_name": "Kruize",
+        "email": "akruize at netspace.net.au",
+        "homepage": ""
+      },
+      "release_notes": "Added support for the A-Z marks and fixed the sign staying placed if the line it is on was deleted."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=361",
+      "filename": "showmarks.vim",
+      "script_version": "1.0",
+      "date": "2001-11-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "386",
+        "user_name": "Trandor",
+        "first_name": "Anthony",
+        "last_name": "Kruize",
+        "email": "akruize at netspace.net.au",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

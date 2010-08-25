@@ -1,0 +1,58 @@
+{
+  "script_id": "38",
+  "name": "dbhelper.tgz",
+  "summary": "Helper for Writing DocBook Documents",
+  "script_type": "utility",
+  "description": "This script is an adaption of Dan York's (dyork at lodestar2.com) VIMRC file that acts as a helper in making docbook documents.  This script uses abbreviations in the form of \",<chracter>\" to trigger automatic insertion of docbook tags.  I have added a few new abbreviations to the original exhaustive list from Dan York's original list.  I have further extended it to add compilation of the document from within VIM itself to generate the output in your most favourite format by using VIM's inbuilt \"make\" facility.    Please send your inputs and comments to vivekv at users.sourceforge.net\t",
+  "install_details": "Copy dbhelper.vim to the directory where you store all your VIM scripts.  Then in the .vimrc file, include the line source <directory>/dbhelper.vim.  Then edit the file mkrtf.ksh and edit the line which invokes openjade, configuring it to compile according to your preferences and your system paths.  Thats it!  \nIn VIM, type :make to compile.  VIM will automatically highlight errors in the document after compilation.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=110",
+      "filename": "dbhelper.tgz",
+      "script_version": "0.2",
+      "date": "2001-08-16",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "91",
+        "user_name": "vivekv",
+        "first_name": "vivek",
+        "last_name": "Venugopalan",
+        "email": "vivekv at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Uploaded the proper file.  Last version was bogus.  Sorry"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=55",
+      "filename": "dbhelper.tgz",
+      "script_version": "0.1",
+      "date": "2001-07-22",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "91",
+        "user_name": "vivekv",
+        "first_name": "vivek",
+        "last_name": "Venugopalan",
+        "email": "vivekv at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for Article and FAQs"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=54",
+      "filename": "dbhelper.tgz",
+      "script_version": "0.0",
+      "date": "2001-07-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "91",
+        "user_name": "vivekv",
+        "first_name": "vivek",
+        "last_name": "Venugopalan",
+        "email": "vivekv at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

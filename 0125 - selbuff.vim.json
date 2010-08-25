@@ -1,0 +1,42 @@
+{
+  "script_id": "125",
+  "name": "selbuff.vim",
+  "summary": "Another buffer select script",
+  "script_type": "utility",
+  "description": "selbuff.vim is an easy way to select a buffer, very similar to bufexplorer.  It works by creating a window (n < (&lines/2) ? n : (&lines/2)) lines high listing all buffers (except the selection temp buffer) at the bottom of the vim frame.  Moving the cursor to a line and pressing <CR> shows the selected buffer in the window you were in when you pressed <Leader>bl. Moving the cursor to a line and pressing 'd' delete's the buffer.  Moving the cursor to a line and pressing 'w' will write the file.  Pressing 'q' within the select buffer window closes the window.",
+  "install_details": "Just put the script in your plugin directory.  Read the script for usage information.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=297",
+      "filename": "selbuff.vim",
+      "script_version": "1.6",
+      "date": "2001-10-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "327",
+        "user_name": "tcosgrov",
+        "first_name": "Todd",
+        "last_name": "Cosgrove",
+        "email": "todd at spinarooz.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed the 'w' functionality that I broke when making changes for vim60.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=286",
+      "filename": "selbuff.vim",
+      "script_version": "1.5",
+      "date": "2001-10-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "327",
+        "user_name": "tcosgrov",
+        "first_name": "Todd",
+        "last_name": "Cosgrove",
+        "email": "todd at spinarooz.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

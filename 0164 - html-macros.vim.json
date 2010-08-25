@@ -1,0 +1,74 @@
+{
+  "script_id": "164",
+  "name": "html-macros.vim",
+  "summary": "macros for html",
+  "script_type": "utility",
+  "description": "Here are some macros for html.\n\nIn normal mode, the function key F1 will insert an html skeleton.\nIn insert mode, F1 will complete the previous uncompleted tag.\nTyping \"<\" will result in a pair \"<>\", with the cursor in between.\nThere are a number of macros beginning with \";\".  For instance,\n;1 will result in <h1></h1>, with the cursor in the middle.\nTyping ;1 in visual mode will embrace the region with the tags <h1></h1>.",
+  "install_details": "Put it in an ftplugin directory in your runtime path, \nor add the following line to your .vimrc file.\n\nautocmd Filetype html source ~/.Vim/html-macros.vim\n\nwith the appropriate directories.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1294",
+      "filename": "html-macros.vim",
+      "script_version": "1.0",
+      "date": "2002-10-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1133",
+        "user_name": "standera",
+        "first_name": "Miroslav",
+        "last_name": "tandera",
+        "email": "standera at clnet.cz",
+        "homepage": ""
+      },
+      "release_notes": "a"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1291",
+      "filename": "html.vim",
+      "script_version": "1.1",
+      "date": "2002-10-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed problems with indentation"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=434",
+      "filename": "html-macros.vim",
+      "script_version": "1.0",
+      "date": "2001-12-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed the name, so it doesn't conflict\nwith the html.vim syntax file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=398",
+      "filename": "html-macros.vim",
+      "script_version": "1.0",
+      "date": "2001-12-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "325",
+        "user_name": "mueller",
+        "first_name": "Carl",
+        "last_name": "Mueller",
+        "email": "vim at carlm.e4ward.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

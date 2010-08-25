@@ -1,0 +1,330 @@
+{
+  "script_id": "100",
+  "name": "TagsBase.zip",
+  "summary": "Creates a menu of tags (functions, fields...) keep track of the current function",
+  "script_type": "utility",
+  "description": "Tags Base started as the merge and enhancements of the scripts:\n *TagsMenu (http://members.home.net/jayglanville/tagsmenu/TagsMenu.html) script\n \t\t    Jay Dickon Glanville  dickon@nortelnetworks.com\n\n *ctags.vim (http://vim.sourceforge.net/scripts/script.php?script_id=12) script\n \t\t\tAlexey Marinichev   lyosha@lyosha.2y.net\n see |TagsBase-Credits|\nIt now is a complete rewrite of those scripts plus additional functionality in embedded\nperl as well as some of the original vim code which is used to provide the same functionality\nwhen you are unlucky enough not to have access to the +perl or +perl/dyn feature in\nyour vim build.\n\nTags Base automatically uses |ctags| to generate a |tag| file for the currently\nedited file, refreshes it if the file is newer than the tags file and uses it\nto provide a set of advanced feature to vim.\n\nBeware that this means that some tag files are left behind on your computer,\n\tthey may end up in the same directory as your files or in a temporary\n\tdirectory depending on the rights of the file directory. You can specify the\n\tprefixe and suffix used to compute those temporary files.  There is also\n                some options to cleanup those file, the default being of only cleaning up\n                the temp directory.\n\nRight now the feature provided are:\n    *Detection of the currently edited tag and its type and presentation of this information in the\n     title bar. Most of the time when editing a C/C++/java... file this means you have on the \n     title bar the name of the current function.     *Creation of a menu of tags in the file this \n     contains things such as method, function, class... the type of tags supported depends on \n     the current language and on the implementation of the |ctags| program\n\n    TagsBase manipulates all tags supported by |ctags|. (For the full list of\n    supported tags and attributes, see \"http://ctags.sourceforge.net/&quot;\n\n\nAdditional description can be found in the included help file. This script requires a version 5.0 of ctags.\n\nThis script has also been used by me as a test bed for embedding perl in vim scripts specifically for\nperformance reasons since parsing a large set of tags can take a fair amount of time.\nFor this reason you'll find a couple fo files (TagsBase.pl and VIM.pm) which I use in the development\nprocess, to find out about this see vimtip #140",
+  "install_details": "download the zip file, uncompress it in your runtimepath and run :helptags DirectoryWhereYouUncompressed/doc",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=382",
+      "filename": "TagsBase.zip",
+      "script_version": "0.9.2",
+      "date": "2001-11-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "corrected several bugs when the file path contains some spaces\ncorrected a bug with the TagsWindow"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=340",
+      "filename": "TagsBase.zip",
+      "script_version": "0.9.1",
+      "date": "2001-11-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "corrected a bug in the current tag lookup when perl is not available"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=336",
+      "filename": "TagsBase.zip",
+      "script_version": "0.9",
+      "date": "2001-11-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "added the TagsWindow command to visualize tags in a buffer. \nadded a menu entry to opent the Tags Buffer.\nadded a toc to the help.\ncorrected the NT ACL bug."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=305",
+      "filename": "TagsBase.zip",
+      "script_version": "0.8.3",
+      "date": "2001-10-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "greatly enhanced the win32 cascading menus (when perl is available)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=294",
+      "filename": "TagsBase.zip",
+      "script_version": "0.8.2",
+      "date": "2001-10-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "bugfix removed some stray timing statements from the perl scripts"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=293",
+      "filename": "TagsBase.zip",
+      "script_version": "0.8.1",
+      "date": "2001-10-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "small correction for bug resulting in error message:\nUncaught exception from user code:\n^ICan't call method \"Type\" on unblessed reference at perl/TagsBase.vim line 376.\n\n^ITagsBase::GetTagType(391) called at (eval 14) line 1\n^Ieval 'TagsBase::GetTagType 391\n;' called at (eval 14) line 0\nUncaught exception from user code:\n^ICan't call method \"Name\" on unblessed reference at perl/TagsBase.vim line 389.\n\n^ITagsBase::GetTagName(391) called at (eval 15) line 1\n^Ieval 'TagsBase::GetTagName 391\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=291",
+      "filename": "TagsBase.zip",
+      "script_version": "0.8",
+      "date": "2001-10-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "Greatly improved the speed when perl is available.  Now almost everything happens in\nthe perl interpreter.   Speed improvement example: on a file with 5408 tags: \n645 second --> 72 second.  Limited the number of menu items to\nconfigurable size both for time reasons and because gtk doesn't like menus which are\nlonger than the screen.\nAdded the TagsBase.pl and VIM.pm file to the distribution, those are not needed for \nrunning the scripts but are usefull for debuging the perl parts."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=258",
+      "filename": "TagsBase.zip",
+      "script_version": "0.7.1",
+      "date": "2001-10-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": " \"Corrected some bugs regarding the situation when perl is not builtin.\n  Corrected a bug when there is only one tag in the file repeated tag generation would interpret it as being overloaded."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=255",
+      "filename": "TagsBase.zip",
+      "script_version": "0.7",
+      "date": "2001-10-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "Corrected some bugs regarding paths with spaces. \nreplaced the script local function s:GetTagName by a global function TagsBase_GetTagName. \nModified the doc to suggest using this function for displaying the tag name someplace else than the title bar.\nCorrected a bug regarding the cleanup code and editing read only files."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=242",
+      "filename": "TagsBase.zip",
+      "script_version": "0.6.1",
+      "date": "2001-10-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "Uses the BufEnter autocmd to refresh the menu, this makes the menu work with split windows.\nKeeps the menu generating command in a buffer variable to avoid the extra work of reparsing if it is not needed.  \nUses the perl interpreter if available to speed up the tags parsing."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=228",
+      "filename": "TagsBase.zip",
+      "script_version": "0.6",
+      "date": "2001-10-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "avoids opening a buffer on the tags file, optionnally destroy the created tags files,  \nchanged the name of the g:CatProg variable to g:TagsBase_CatProg.\nSee :help TagsBase for a descriptions of the new options\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=226",
+      "filename": "TagsBase.zip",
+      "script_version": "0.5.3",
+      "date": "2001-10-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "added new options to select the name of the tags\nfiles. Removed the html files. Changed the      \nlicense to public domain added the              \n|TagsBase-ChangeLog| and the |TagsBase-Credits| \nsection to the help. Added a warning about the  \nexistence of the tags files\"                    \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=224",
+      "filename": "TagsBase.zip",
+      "script_version": "0.5.2",
+      "date": "2001-10-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "bug fixes in the sorting of the lines array"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=222",
+      "filename": "TagsBase.zip",
+      "script_version": "0.5.1",
+      "date": "2001-10-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "bug correction\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=221",
+      "filename": "TagsBase.zip",
+      "script_version": "0.5",
+      "date": "2001-10-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "I'm having a problem with the vim online interface, the version 0.5 script is a zip file not a vim file.\nOnce you download it it should be renamed as TagsBase.zip and unpacked in your runtimepath.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=220",
+      "filename": "TagsBase.zip",
+      "script_version": "0.5",
+      "date": "2001-10-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "Added help, made customization easier, packaged into a zip file.\nTo install unpack in a directory in your runtimepath (see :help runtimepath) and run\n:helptags $dirUnpacked/doc\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=217",
+      "filename": "TagsBase.zip",
+      "script_version": "0.4",
+      "date": "2001-10-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "reorganized and commented the script, support for the builtin tags stack, support for ordered tag file generation, some bugs corrected."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=210",
+      "filename": "TagsBase.zip",
+      "script_version": "0.3",
+      "date": "2001-10-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "added a menu entry to toggle on and off the title string functionality"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=209",
+      "filename": "TagsBase.zip",
+      "script_version": "0.2",
+      "date": "2001-10-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "Corrected dependency on a $TMP variable\ncorrected bug when on an ms system the shell used was a unix type shell, this generated problems due to the shell misinterpreting the '&#039 in a path.\nIf you find any other bugs, please report it by mail to me (benoit.cerrina@writeme.com"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=208",
+      "filename": "TagsBase.zip",
+      "script_version": "0.1",
+      "date": "2001-09-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

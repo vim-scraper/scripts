@@ -1,0 +1,106 @@
+{
+  "script_id": "97",
+  "name": "sqlplus.vim",
+  "summary": "Execute SQL queries and commands from within VIM (using Oracle's SQL*Plus)",
+  "script_type": "utility",
+  "description": "Jamis Buck no longer maintains this script. Dani Rey is the new maintainer. Alas, the vim.org system is not configured to allow project owners to change, and the vim.org maintainers are silent when help requests are sent, so we're doing this the hard way.\n\nIf you want to use sqlplus.vim, please go grab Dani Rey's version, here:\n\n  http://www.vim.org/scripts/script.php?script_id=2821\n\nEnjoy!",
+  "install_details": "THE SCRIPTS BELOW ARE OLD AND UNMAINTAINED.\n\nGo grab Dani Rey's newer, actively maintained version, here:\n\n  http://www.vim.org/scripts/script.php?script_id=2821",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=304",
+      "filename": "sqlplus.vim",
+      "script_version": "1.2.3",
+      "date": "2001-10-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "261",
+        "user_name": "minam",
+        "first_name": "Jamis",
+        "last_name": "Buck",
+        "email": "jamis at jamisbuck.org",
+        "homepage": "http://weblog.jamisbuck.org"
+      },
+      "release_notes": "Now works under Windows!  (Thanks to Matt Kunze for his work in that area)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=301",
+      "filename": "sqlplus.vim",
+      "script_version": "1.2.2",
+      "date": "2001-10-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "261",
+        "user_name": "minam",
+        "first_name": "Jamis",
+        "last_name": "Buck",
+        "email": "jamis at jamisbuck.org",
+        "homepage": "http://weblog.jamisbuck.org"
+      },
+      "release_notes": "Added \"cabbrev\" abbreviations so that :Select, :Update, :DB, and :SQL can be typed all lowercase."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=232",
+      "filename": "sqlplus.vim",
+      "script_version": "1.2.1",
+      "date": "2001-10-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "261",
+        "user_name": "minam",
+        "first_name": "Jamis",
+        "last_name": "Buck",
+        "email": "jamis at jamisbuck.org",
+        "homepage": "http://weblog.jamisbuck.org"
+      },
+      "release_notes": "Fixed bug where multiline queries would fail if any lines after the first did not begin with whitespace."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=225",
+      "filename": "sqlplus.vim",
+      "script_version": "1.2",
+      "date": "2001-10-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "261",
+        "user_name": "minam",
+        "first_name": "Jamis",
+        "last_name": "Buck",
+        "email": "jamis at jamisbuck.org",
+        "homepage": "http://weblog.jamisbuck.org"
+      },
+      "release_notes": "added support for executing update and delete statements under cursor, fixed broken AE_execQueryUnderCursor, added :Update and :Delete commands, added :SQL command, added \\s* commands for quicker access to SQL commands, made variables global so they can be set in vimrc\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=204",
+      "filename": "sqlplus.vim",
+      "script_version": "0.1.1",
+      "date": "2001-09-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "261",
+        "user_name": "minam",
+        "first_name": "Jamis",
+        "last_name": "Buck",
+        "email": "jamis at jamisbuck.org",
+        "homepage": "http://weblog.jamisbuck.org"
+      },
+      "release_notes": "Added SQL*Plus commands to ensure that data is not truncated or wrapped, and that headers are not shown but once."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=203",
+      "filename": "sqlplus.vim",
+      "script_version": "0.1",
+      "date": "2001-09-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "261",
+        "user_name": "minam",
+        "first_name": "Jamis",
+        "last_name": "Buck",
+        "email": "jamis at jamisbuck.org",
+        "homepage": "http://weblog.jamisbuck.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

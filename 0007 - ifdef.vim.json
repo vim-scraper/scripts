@@ -1,0 +1,106 @@
+{
+  "script_id": "7",
+  "name": "ifdef.vim",
+  "summary": "#ifdef highlighting in c/c++/idl",
+  "script_type": "syntax",
+  "description": "Provides highlighting for  #ifdef  #ifndef  #else  #endif  blocks, with the ability to mark a symbol as defined or undefined.\nHandles nesting of #ifdefs (and #if) as well, but does not handle  #if defined().\n\nSupports vim_ifdef:  modelines and .defines (_defines for win16/win32s) files to specify defined/undefined symbols.",
+  "install_details": "Call from a syntax file after c.vim/cpp.vim/idl.vim\n\nWith later vims, this can be done by appending .ifdef to your syntax. \neg with a modeline   vim: syntax=c.ifdef",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3305",
+      "filename": "ifdef.vim",
+      "script_version": "3.0",
+      "date": "2004-08-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "- Renamed everything to be more clear, and reversed some of the includegroups from exclude groups - make use of ALL in groups. This seems to have fixed most bugs, but may have reintroduced some as well, however doing it this way round should prevent most interaction with other scripts.- Actually clear the cPreCondit highlight gtoup as we are taking it over.  Ditto cCppOut (#if 0) handling"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2706",
+      "filename": "ifdef.vim",
+      "script_version": "2.3",
+      "date": "2004-02-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "- Clean up some of the comments\n- Add comments for hilighting groups.\n- Ignore whitespace in .defines files. (TODO: Credit person who suggested this!)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2694",
+      "filename": "ifdef.vim",
+      "script_version": "2.2",
+      "date": "2004-01-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "- Add support for idl files.\n- Suggestions from ??? (let me know if this was you)\n    - Check for &#039shell&#039 type and &#039shellslash&#039\n    - Don&#039t use has(\\\"windows\\\")\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1594",
+      "filename": "ifdef.vim",
+      "script_version": "2.1",
+      "date": "2003-01-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Minor bugfixes (use :p modifier in getting directory)\n- suggestions from Erik R.  \nDocumentation updates"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1588",
+      "filename": "ifdef.vim",
+      "script_version": "2.0",
+      "date": "2002-12-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "- Added loading of ifdefs\n  - via ifdef modelines\n  - via .defines files\n- Added missing highlight link.. relinked ifdefed out comments to Debug\n- Conditional loading of functions\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1562",
+      "filename": "ifdef.vim",
+      "script_version": "1.3",
+      "date": "2002-12-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Fix up some group names so colours get picked up."
+    }
+  ]
+}

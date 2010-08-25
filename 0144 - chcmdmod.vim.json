@@ -1,0 +1,58 @@
+{
+  "script_id": "144",
+  "name": "chcmdmod.vim",
+  "summary": "Misc. commands for search and colon mode",
+  "script_type": "utility",
+  "description": "This script evolved from a mistake that I used to sometimes make. To start a search, instead of using \"/\", I would sometimes start with \":\" and after typing some text realize I am in the wrong mode, so I wrote this plugin to be able to switch between modes without loosing the text that you already typed, but I added more features to it later.\n\n- When you are in one of the :, / or ? modes, switch to a different mode\n  by typing ^X/ or ^X: or ^X?.\n- While searching you can press ^S to find the next hit, without needing to\n  first press <Enter> followed by n or N. You need to have 'incsearch'\n  option turned on for this to work. You can mix this with the ^X/ and ^X?\n  to reverse the search without needing to press enter and start over.\n- While searching using 'incsearch', you can use ^Xw to complete the\n  current word (or ^XW for WORD), <S-Right> to fetch one extra character\n  from the end of current match position (or <S-Left> from the beginning).\n\n\n\n\nSearch_key_words: command chcmdmod change search Hari Krishna Dara",
+  "install_details": "Source this file from your .vimrc or just drop it in your plugin directory.\n\nFor versions prior to 2.0:\nRequires curcmdmode.vim(1.0) (vimscript #745).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5665",
+      "filename": "chcmdmod.vim",
+      "script_version": "2.0",
+      "date": "2006-05-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Release 2.0 for Vim7. A lot of it is rewritten to use the new Vim7\nfeatures and it is much cleaner and safer now (thanks to the new\ngetcmdtype() function). Also, it no longer depends on any other plugins.\nNow includes commands to retrieve characters from the search location.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=567",
+      "filename": "chcmdmod.vim",
+      "script_version": "1.0.3",
+      "date": "2002-02-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added an experimental emacs-like feature. Vim already has a nice feature called 'incsearch' which is pretty useful. I have added a ^S command to the search prompt to take you to next search without having to press Enter and type n command. This is how you use it:\n\n- open a file and make sure you have 'incsearch' on.\n- start typing a search pattern, say /public\n- without pressing Enter, Type ^S. You can see that you are taken to the next hit. Keep going.\n- when you want to do a reverse search, just type ^X? and observe that you are now in ? prompt.\n- you can start typing ^S again to go to the previous hits.\n- when you want the cursor to move to a hit, just press enter as you would normally.\n- if you want to cancel the search you can do so, but the original cursor position is restored only if you use ^U or Esc.\n\nAlso cleaned up the script a lot and fixed some misc. bugs. But before you start using the script, please be advised that it maps the ? / and : keys in normal mode. It tried to preserve your existing mapping for these keys (I have the / and ? mapped to turn on hlsearch and it continues to work even with the script), but I can't gaurantee that it will always work, so try the script and if you don't face any problems, you can start using it regularly. If you face any problems, please report it to me and I will try to solve it.\n\nPlease send in your comments."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=348",
+      "filename": "chcmdmod.vim",
+      "script_version": "1.0",
+      "date": "2001-11-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

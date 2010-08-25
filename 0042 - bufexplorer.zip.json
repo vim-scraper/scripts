@@ -1,0 +1,922 @@
+{
+  "script_id": "42",
+  "name": "bufexplorer.zip",
+  "summary": "Buffer Explorer / Browser",
+  "script_type": "utility",
+  "description": "With bufexplorer, you can quickly and easily switch between buffers by using the one of the default public interfaces:\n\n  '\\be' (normal open)  or\n  '\\bs' (force horizontal split open)  or\n  '\\bv' (force vertical split open)\n\nOnce the bufexplorer window is open you can use the normal movement keys (hjkl) to move around and then use <Enter> or <Left-Mouse-Click> to select the buffer you would like to open. If you would like to have the selected buffer opened in a new tab, simply press either <Shift-Enter> or 't'. Please note that when opening a buffer in a tab, that if the buffer is already in another tab, bufexplorer can switch to that tab automatically for you if you would like. More about that in the supplied VIM help.\n\nBufexplorer also offers various options including:\n- Display the list of buffers in various sort orders including:\n    - Most Recently Used (MRU) which is the default\n    - Buffer number\n    - File name\n    - File extension\n    - Full file path name\n- Delete buffer from list \n\nFor more about options, sort orders, configuration options, etc. please see the supplied VIM help.",
+  "install_details": "Simply unzip bufexplorer.zip into a directory in your 'runtimepath', usually ~/.vim or c:\\vimfiles, and restart Vim. This zip file contains plugin\\bufexplorer.vim, and doc\\bufexplorer.txt.  See ':help add-local-help' on how to add bufexplorer.txt to vim's help system.\n\nNOTE: Version 7.0.12 and above will ONLY work with 7.0 and above of Vim.\nNOTE NOTE NOTE: If you have a version prior to 7.1.2 that contains an autoload\\bufexplorer.vim file, please REMOVE the autoload\\bufexlorer.vim AND the plugin\\bufexplorer.vim files before installing a new version.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12904",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.2.7",
+      "date": "2010-04-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "This is my first attempt to fix the \"cache\" issue where buffer information has changed but the cache/display does not reflect those changes. More work still needs to be done. More or less the cache has been disabled."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12363",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.2.6",
+      "date": "2010-02-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Michael Henry for pointing out that I totally forgot to update the inline help to reflect the previous change to the 'd' and 'D' keys. Opps!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12354",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.2.5",
+      "date": "2010-02-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Philip Morant suggested switching the command (bwipe) associated with the 'd' key with the command (bdelete) associated with the 'D' key. This made sense since the 'd' key is more likely to be used compared to the 'D' key."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12104",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.2.4",
+      "date": "2010-01-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Fix: I did not implement the patch provided by Godefroid Chapelle correctly. I missed one line which happened to be the most important one :)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11905",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.2.3",
+      "date": "2009-12-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Hopefully I have not let anyone or anything out :)\n- Enhancements:\n    * Thanks to David Fishburn for helping me out with a much needed\n       code overhaul as well as some awesome performance enhancements.\n       He also reworked the handling of tabs.\n    * Thanks to Vladimir Dobriakov for making the suggestions on\n       enhancing the documentation to include a better explaination of\n       what is contained in the main bufexplorer window.\n    * Thanks to Yuriy Ershov for added code that when the bufexplorer\n       window is opened, the cursor is now positioned at the line with the\n       active buffer (useful in non-MRU sort modes).\n    * Yuriy also added the abiltiy to cycle through the sort fields in\n       reverse order.\n- Fixes:\n    * Thanks to Michael Henry for supplying a patch that allows\n       bufexplorer to be opened even when there is one buffer or less.\n    * Thanks to Godefroid Chapelle for supplying a patch that fixed\n       MRU sort order after loading a session."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9524",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.2.2",
+      "date": "2008-11-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to David L. Dight for spotting and fixing an issue when using ctrl^. bufexplorer would incorrectly handle the previous buffer so that when ctrl^ was pressed the incorrect file was opened.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9220",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.2.1",
+      "date": "2008-09-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "7.2.1  - Fix: * Thanks to Dimitar for spotting and fixing a feature that was inadvertently left out of the previous version. The feature was when bufexplorer was used together with WinManager, you could use the tab key to open a buffer in a split window."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9128",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.2.0",
+      "date": "2008-08-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "- Enhancements:\n  * For all those missing the \\bs and \\bv commands, these have now returned. Thanks to Phil O'Connell for asking for the return of these missing features and helping test out this version.\n- Fixes:\n  * Fixed problem with the bufExplorerFindActive code not working correctly.\n  * Fixed an incompatibility between bufexplorer and netrw that caused buffers to be incorrectly removed from the MRU list."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8079",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.1.7",
+      "date": "2007-12-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "TaCahiroy fixed several issues related to opening a buffer in a tab.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8015",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.1.6",
+      "date": "2007-12-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Fixes:\n  * Removed ff=unix from modeline in bufexplorer.txt. Found by Bill McCarthy."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8008",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.1.5",
+      "date": "2007-11-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Fixed: Could not open unnamed buffers. Fixed by TaCahiroy."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7953",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.1.4",
+      "date": "2007-11-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Fixes:\n  * Sometimes when a file's path has 'white space' in it, extra buffers would be created containing each piece of the path. i.e: opening c:\\document and settings\\test.txt would create a buffer named \"and\" and a buffer named \"Documents\". This was reported and fixed by TaCa Yoss. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7946",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.1.3",
+      "date": "2007-11-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Added code to allow only one instance of the plugin to run at a time. Thanks Dennis Hostetler."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7893",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.1.2",
+      "date": "2007-11-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "This is a MAJOR update.\n* Added handling of tabs. (Dave Larson)\n* Removed \\bs and \\bv commands because these are easier for the user to create horizontal and vertical windows. (Dave Larson)\n* Fixed jumplist issue spotted by JiangJun.\n* Went back to using just a plugin file, instead of both an autoload and plugin file. The splitting of the file caused issues with other plugins. So if you have a prior version of bufexplorer that has an autoload file, please remove autoload\\bufexplorer and plugin\\bufexplorer before installing this new version.\n* Fixed E493 error spotted by Thomas Arendsen Hein.\n* Minor cosmetic changes.\n* Minor help file changes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7406",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.17",
+      "date": "2007-07-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Fixed issue with 'drop' command. Various enhancements and improvements. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7032",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.15",
+      "date": "2007-04-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Mark Smithfield for suggesting bufexplorer needed to handle the ':args' command.\nFixed issue reported by Liu Jiaping on non Windows systems, which was\n  ...\nOpen file1, open file2, modify file1, open bufexplorer, you get the following error:\n--------8<--------\nError detected while processing function\n<SNR>14_StartBufExplorer..<SNR>14_SplitOpen:\nline    4:\nE37: No write since last change (add ! to override)\n--------8<--------\n\nBut the worse thing is, when I want to save the current buffer and type ':w', I get another error message:\n\n--------8<--------\nE382: Cannot write, 'buftype' option is set \n--------8<--------"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6897",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.14",
+      "date": "2007-03-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Randall Hansen for removing the requirement of terminal versions to be recompiled with 'gui' support so the 'drop' command would work. The 'drop' command is really not needed in terminal versions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6773",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.13",
+      "date": "2007-02-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Fixed Winmanager integration. Thanks to Dave Eggum for another major update. Most notable changes are, improved speed and code clean up. Please see the bufexplorer help for a full list of changes and updates."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6484",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.12",
+      "date": "2006-11-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "MAJOR Update. Please Note that this version will ONLY run with Vim version 7.0 or greater.\n\nDave Eggum has made some 'significant' updates to this latest version:\n  - Added BufExplorerGetAltBuf() global function to be used in the users rulerformat.\n  - Added g:bufExplorerSplitRight option.\n  - Added g:bufExplorerShowRelativePath option with mapping.\n  - Added current line highlighting.\n  - The split type can now be changed whether bufexplorer is opened in split mode or not.\n  - Various major and minor bug fixes and speed improvements.\n  - Sort by extension.\n  Other improvements/changes:\n  - Changed the help key from '?' to <F1> to be more 'standard'.\n  - Fixed splitting of vertical bufexplorer window."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5409",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.11",
+      "date": "2006-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Fixed a couple of highlighting bugs, reported by David Eggum. He also changed passive voice to active on a couple of warning messages."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5353",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.10",
+      "date": "2006-03-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Fixed bug report by Xiangjiang Ma. If the 'ssl' option is set, the slash character used when displaying the path was incorrect. Thanks Xiangjiang!\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5337",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.9",
+      "date": "2006-02-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Martin Grenfell found and eliminated an annoying bug in the bufexplorer/winmanager integration. The bug was were an annoying message would be displayed when a window was split or a new file was opened in a new window. Thanks Martin!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4993",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.8",
+      "date": "2006-01-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Mike Li for catching a bug in the WinManager integration. The bug was related to the incorrect displaying of the buffer explorer's window title."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4904",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.7",
+      "date": "2005-12-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Jeremy Cowgar for adding a new enhancement. This enhancement allows the user to press 'S', that is capital S, which will open the buffer under the cursor in a newly created split window."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4775",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.6",
+      "date": "2005-11-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Larry Zhang for finding a bug in the \"split\" buffer code. If you force set g:bufExplorerSplitType='v' in your vimrc, and if you tried to do a \\bs to split the bufexplorer window, it would always split horizontal, not vertical. He also found that I had a typeo in that the variable g:bufExplorerSplitVertSize was all lower case in the documentation which was incorrect."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4680",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.5",
+      "date": "2005-10-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Mun Johl for pointing out a bug that if a buffer was modified, the '+' was not showing up correctly."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4645",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.4",
+      "date": "2005-10-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Fixed a problem discovered first by Xiangjiang Ma. Well since I've been using vim 7.0 and not 6.3, I started using a function (getftype) that is not in 6.3. So for backward compatibility, I conditionaly use this function now.  Thus, the g:bufExplorerShowDirectories feature is only available when using vim 7.0 and above."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4636",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.3",
+      "date": "2005-09-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Erwin Waterlander for finding a problem when the last buffer was deleted. This issue got me to rewrite the buffer display logic (which I've wanted to do for sometime now).\nAlso great thanks to Dave Eggum for coming up with idea for g:bufExplorerShowDirectories. Directories usually show up in the list from using a command like \":e .\", this controls how those are displayed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4072",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.2",
+      "date": "2005-03-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Thomas Arendsen Hein for finding a problem when a user has the default help turned off and then brought up the explorer. An E493 would be displayed.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3994",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.1",
+      "date": "2005-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Erwin Waterlander for finding a couple problems. The first problem allowed a modified buffer to be deleted.  Opps! The second problem occured when several files were opened, BufExplorer was started, the current buffer was deleted using the 'd' option, and then BufExplorer was exited. The deleted buffer was still visible while it is not in the buffers list. Opps again!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3932",
+      "filename": "bufexplorer.zip",
+      "script_version": "7.0.0",
+      "date": "2005-02-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Shankar R. for suggesting to add the ability to set the fixed width (g:bufExplorerSplitVertSize) of a new window when opening bufexplorer vertically and fixed height (g:bufExplorerSplitHorzSize) of a new window when opening bufexplorer horizontally. By default, the windows are normally split to use half the existing width or height."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3262",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.3.0",
+      "date": "2004-07-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Added keepjumps so that the jumps list would not get clutered with bufexplorer related stuff."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2937",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.2.3",
+      "date": "2004-04-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Jay Logan for finding  a bug in the vertical split postion of the code. When selecting that the window was to be split vertically by doing a '\\bv', from then on, all splits, i.e. '\\bs', were split vertically, even though g:bufExplorerSplitType was not set to 'v'."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2652",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.2.2",
+      "date": "2004-01-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Patrik Modesto for adding a small improvement. For some reason his bufexplorer window was always showing up folded. He added 'setlocal nofoldenable' and it was fixed. If you are having the same problem, this version is for you...\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2383",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.2.1",
+      "date": "2003-10-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks goes out to Takashi Matsuo for added the 'fullPath' sorting logic and option."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2075",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.2.0",
+      "date": "2003-06-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks goes out to Simon Johann-Günter for spotting and fixing a problem in that the last search pattern is overriden by the search pattern for blank lines."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1968",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.1.6",
+      "date": "2003-05-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Artem Chuprina for finding a pesky bug that has been around for sometime now. The <esc> key mapping was causing the buffer explored to close prematurely when vim was run in an xterm. The <esc> key mapping is now removed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1948",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.1.5",
+      "date": "2003-04-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Khorev Sergey. Added option to show default help or not."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1822",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.1.4",
+      "date": "2003-03-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks goes out to Valery Kondakoff for suggesting the addition of setlocal nonumber and foldcolumn=0. This allows for line numbering and folding to be turned off temporarily while in the explorer."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1799",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.1.3",
+      "date": "2003-03-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Added the ability to force the newly split window to be temporarily vertical, which was suggested by Thomas Glanzmann. Added folding. Did some code cleanup."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1376",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.1.2",
+      "date": "2002-11-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Now pressing the <esc> key will quit, just like 'q'. Added folds to hide winmanager configuration. If anyone had the 'C' option in their cpoptions they would receive a E10 error on startup of BufExplorer. cpo is now saved, updated and restored. Thanks to Charles E Campbell, Jr. Attempted to make sure there can only be one BufExplorer window open at a time."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=724",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.1.1",
+      "date": "2002-03-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Brian D. Goodwin for adding toupper to FileNameCmp. This way buffers sorted by name will be in the correct order regardless of case.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=684",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.16",
+      "date": "2002-03-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Andre Pang for the original patch/idea to get bufexplorer to work in insertmode/modeless mode (evim). Added Initialize and Cleanup autocommands to handle commands that need to be performed when starting or leaving bufexplorer.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=617",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.15",
+      "date": "2002-02-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Srinath Avadhanulax added a patch for winmanager.vim."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=614",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.14",
+      "date": "2002-02-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Fix a yew more bug that I thought I already had fixed. Thanks to Eric Bloodworth for adding 'Open Mode/Edit in Place'. Added vertical splitting."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=553",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.13",
+      "date": "2002-02-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Charles E Campbell, Jr. for pointing out some embarrassing typos that I had in the documentation. I guess I need to run the spell checker more :o)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=543",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.12",
+      "date": "2002-02-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Madoka Machitani, for the tip on adding the augroup command around the MRUList autocommands."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=513",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.11",
+      "date": "2002-01-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Fixed bug report by Xiangjiang Ma. '\"=' was being added to the search history which messed up hlsearch.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=472",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.10",
+      "date": "2002-01-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Added the necessary hooks so that the winmanager.vim script could more easily integrate with this script. Now the winmanager.vim script should not have to have it's own version of bufexplorer.vim.\nTried to improve performance.\nRemember to look at 'help: add-local-help' on how to add the help file into the vim help system."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=427",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.9",
+      "date": "2001-12-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Now you can sort the buffer list by most recently used (MRU). Please note that this is now a .zip file. Please unzip in your vimfiles, ~/.vim or whatever directory you store your vim stuff in. This file contains \\plugin\\bufexplorer.vim and \\doc\\bufexplorer.txt. To add the nifty help to vim look under ':help add-local-help' for more information."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=393",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.8",
+      "date": "2001-12-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Was not resetting the showcmd command correctly.\nAdded nifty help file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=360",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.7",
+      "date": "2001-11-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Brett Carlane for some great enhancements. Some are added, some are not, yet. Added highlighting of current and alternate filenames. Added spliting of path/filename toggle. Reworked ShowBuffers(). Changed my email address.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=154",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.6",
+      "date": "2001-09-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Fixed problem with the SortListing() function failing when there was only one buffer to display.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=93",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.5",
+      "date": "2001-08-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Fixed problems reported by David Pascoe, in that you where unable to hit 'd' on a buffer that belonged to a files that nolonger existed and that the 'yank' buffer was being overridden by the help text when the bufexplorer was opened."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=77",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.4",
+      "date": "2001-07-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Thanks to Charles Campbell for making this plugin more plugin *compliant*, adding default keymappings of <Leader>be and <Leader>bs as well as fixing the 'w:sortDirLabel not being defined' bug.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=72",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.3",
+      "date": "2001-07-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Added ability to sort buffers by 'buffer number' or 'name' in forward and reverse order."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=60",
+      "filename": "bufexplorer.zip",
+      "script_version": "6.0.2",
+      "date": "2001-07-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "97",
+        "user_name": "jefflanzarotta",
+        "first_name": "jeff",
+        "last_name": "lanzarotta",
+        "email": "delux256-vim at yahoo dot com",
+        "homepage": "http://lanzarotta.tripod.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

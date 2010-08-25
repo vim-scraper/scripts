@@ -1,0 +1,218 @@
+{
+  "script_id": "72",
+  "name": "foo.vim",
+  "summary": "examples of Vim functions (and a few commands, etc.)",
+  "script_type": "utility",
+  "description": "This file is a collection of Vim functions I have written, many of them in\nresponse to questions posted on the vim users' list.  They are all reasonably\nshort, so I hope they will be good examples if you are trying to learn how to\nwrite your own Vim functions.  You may even find some of the functions\nuseful, such as the :Range command and the Mark(), Common(), Count(),\nGetModelines(), VarTab(), and SmartBS() functions.",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4837",
+      "filename": "foo.vim",
+      "script_version": "2.1.1",
+      "date": "2005-11-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "improved \"text object\" :vmap's for i\", i', a\", a' (will be obsolete in vim 7) and some tweaks to the comments"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2657",
+      "filename": "foo.vim",
+      "script_version": "2.1",
+      "date": "2004-01-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "New functions:\n\nGCD():  an example of recursion\nRepeatString():  Generate \"ababababababababab\"\nInvertString():  by Preben \"Peppe\" Guldberg\nMyMarks():  save file positions to a file and read them\nFooSID():  expose the script ID so you can call script-local functions"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2116",
+      "filename": "foo.vim",
+      "script_version": "2.0.3",
+      "date": "2003-06-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "I changed :map to :imap for the VarTab() function."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2061",
+      "filename": "foo.vim",
+      "script_version": "2.0.2",
+      "date": "2003-06-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Oops, I uploaded the wrong file!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2060",
+      "filename": "matchit.vim",
+      "script_version": "2.0.2",
+      "date": "2003-06-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "improvements to the EditFun command and function"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1433",
+      "filename": "foo.vim",
+      "script_version": "2.0.1",
+      "date": "2002-11-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Oops:  make sure script variables are defined before used."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1422",
+      "filename": "foo.vim",
+      "script_version": "2.0",
+      "date": "2002-11-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "I added a user configuration section, as discussed on the vim-dev\nmailing list.  With the defaults, most :imap's are not defined, so it\nis safer to include this in your plugin directory, if you like using any\nof the commands or functions it defines.  Like the rest of the file,\nthe configuration section is meant as an example to be followed.\nThe user should copy this section to a separate file, foo.vimrc .\n\nI also added functions to save script-local variables in the script\nfile, so they are made persistent."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1083",
+      "filename": "foo.vim",
+      "script_version": "1.4",
+      "date": "2002-08-06",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Just a format change:  This version has unix-style line endings, and I\nupdated the modelines to keep it that way."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1078",
+      "filename": "foo.vim",
+      "script_version": "1.4",
+      "date": "2002-08-04",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "I added Common(str1, str2), which returns the initial matching part (if any)\nof two input strings.\nI also added TWIN() (The Weather Is Nice):  an example of how to prompt\nthe user for input and add some text based on that input."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=738",
+      "filename": "foo.vim",
+      "script_version": "1.3",
+      "date": "2002-03-31",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "I added the :Iabbr command, which allows you to define abbreviations like\n\n:Iabbr foo foo()<Left>\n\nthat can be triggered by a space without inserting that space.  Several contributors to the vim users' list suggested improvements to this command."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=409",
+      "filename": "foo.vim",
+      "script_version": "1.2",
+      "date": "2001-12-06",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "I added a table of contents, with a one-line description of the purpose\nand a one-line description of the techniques used by each example.\nI also trimmed a few of the less interesting examples and made a\ncouple of corrections, added a few comments, etc."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=369",
+      "filename": "foo.vim",
+      "script_version": "1.1",
+      "date": "2001-11-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "I improved the GetModelines() function.\nMaybe something else is new, too..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=139",
+      "filename": "foo.vim",
+      "script_version": "1.0",
+      "date": "2001-08-28",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

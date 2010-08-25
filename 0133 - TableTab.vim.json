@@ -1,0 +1,26 @@
+{
+  "script_id": "133",
+  "name": "TableTab.vim",
+  "summary": "global plugin for variable-width tab stops",
+  "script_type": "utility",
+  "description": "When active, TableTab.vim remaps the <Tab> key in insert mode, to\nthe function, which adjusts the tab stops according to the previous\nline.  If this line matches /^\\s*[_=*\\-]\\+ *$/  (it is only of ===,\n--- etc.) the line before is checked.\n\nShould be useful for editing tables.\n",
+  "install_details": "Just drop TableTab.vim into your plugin directory or source it from your vimrc.\nAfter sourcing, <Leader><Tab> will toggle between tab stops\nlookup and a normal function of the <Tab> key.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=315",
+      "filename": "TableTab.vim",
+      "script_version": "0.1",
+      "date": "2001-11-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "358",
+        "user_name": "pavol",
+        "first_name": "Pavol",
+        "last_name": "Juhas",
+        "email": "juhas at seas.upenn.edu",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

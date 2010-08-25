@@ -1,0 +1,26 @@
+{
+  "script_id": "94",
+  "name": "express.vim",
+  "summary": "syntax file for Step21 express schema",
+  "script_type": "syntax",
+  "description": "this is a syntax file for coloring the data structure description language EXPRESS as defined in the STEP (Standard for the Exchgange of Product Model) standard formarly\nISO-10303.  Express is describe in the part 11 of this standard",
+  "install_details": "just drop it in a syntax directory in your runtime path\nyou'll also need to add \n\t  au! BufRead,BufNewFile *.express\tsetfiletype express\nto the filetype detect augroup",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=190",
+      "filename": "express.vim",
+      "script_version": "1.0",
+      "date": "2001-09-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "157",
+  "name": "autoload_cscope.vim",
+  "summary": "Script that will search for and load cscope.out databases automatically",
+  "script_type": "utility",
+  "description": "This plugin will automatically load cscope.out databases into vim when you open a C file. (headers included)\n\nIt does a search starting at the directory that the file is in, and checking the parent directories until it find the cscope.out file.  The idea being that you can start editing a source file deep in a project dir, and it will find the correct cscope database a couple dirs up.\n\nThis version also creates some macros and a menu that can be useful.  If you don't like them, you can set g:autocscope_menus to 0 and they won't load.\n\n",
+  "install_details": "Just drop it into your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=516",
+      "filename": "autoload_cscope.vim",
+      "script_version": "0.3",
+      "date": "2002-01-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "402",
+        "user_name": "tadpol",
+        "first_name": "michael",
+        "last_name": "tilstra",
+        "email": "tadpol at tadpol.org",
+        "homepage": "http://tadpol.org"
+      },
+      "release_notes": "fixed the issue where it wasn't always finding the right place to start looking.\nusnig the nifty fnamemodify() function saves a lot of crude I was trying to do by hand."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=471",
+      "filename": "autoload_cscope.vim",
+      "script_version": "0.2",
+      "date": "2002-01-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "402",
+        "user_name": "tadpol",
+        "first_name": "michael",
+        "last_name": "tilstra",
+        "email": "tadpol at tadpol.org",
+        "homepage": "http://tadpol.org"
+      },
+      "release_notes": "fixed up the Cycle_csdb function a bit.  still has a few little bugs.  but they don't seem to be life threatening.  (scan the file for FIXME to see them)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=387",
+      "filename": "autoload_cscope.vim",
+      "script_version": "0.1",
+      "date": "2001-11-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "402",
+        "user_name": "tadpol",
+        "first_name": "michael",
+        "last_name": "tilstra",
+        "email": "tadpol at tadpol.org",
+        "homepage": "http://tadpol.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

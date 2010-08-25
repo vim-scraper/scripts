@@ -1,0 +1,74 @@
+{
+  "script_id": "48",
+  "name": "Triggers.vim",
+  "summary": "Helps to toggle definitions (maps, sets, abbr)",
+  "script_type": "utility",
+  "description": "This big file defines functions that help to toggle the definitions of many things -- like mappings, settings \nor abbreviations. The very simple application is to map (/ unmap) a macro when we hit (/rehit) the trigger. \nA much more useful application is to map all the definitions from a function when hitting the trigger and \nunload them on a second hit and reload on a third, etc..\n\nFor examples of use, cf. the header part of the file, or  <http://hermitte.free.fr/vim/general.php >.\n",
+  "install_details": "Copy the file wherever you want, but {rtp}macros or {rtp/plugin are fine places.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1007",
+      "filename": "trigger.tar.gz",
+      "script_version": "1.05",
+      "date": "2002-07-10",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "The placement of the memorized undo files has changed to suit VIM6\nsystems, and older ones where we can't write files into $VIMRUNTIME.\nThe creation of the undo files is smoother ; vim should not insult us\nanymore."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=582",
+      "filename": "triggers.tar.gz",
+      "script_version": "1.04",
+      "date": "2002-02-13",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Bufferized maps and abbreviations (<buffer> for VIM6) are now valid and correctly handled.\nAnd the two files required are now part of the archive."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=215",
+      "filename": "Triggers.vim",
+      "script_version": "1.03",
+      "date": "2001-10-01",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Fix a little synchronisation problem between files thanks to an external script attached to the tarball archive."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=67",
+      "filename": "Triggers.vim",
+      "script_version": "1.02",
+      "date": "2001-07-27",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

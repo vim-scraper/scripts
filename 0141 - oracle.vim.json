@@ -1,0 +1,74 @@
+{
+  "script_id": "141",
+  "name": "oracle.vim",
+  "summary": "Oracle SQL*Plus IDE",
+  "script_type": "utility",
+  "description": "Description:\nThis file contains functions/menus/commands/abbreviations to make Vim an\nOracle SQL*Plus IDE.\nHere are the main highlights of this script:\n\n- SqlMake(): lets you open any stored procedure and compile from within vim.\n\t Will display and optionally highlight the errors, navigate\n\t thru errors in the quickfix mode.\n\t\n- Adds a SQL*Plus menu\n\n- SqlPlus(): lets you start an external SQL*Plus, execute the whole file\n\t contents in SQL*Plus and return the results back in the same\n\t buffer, or select a portion of the buffer, execute it and\n\t display the results in a new buffer.\n\n- GetSource(): get the stored procedure code from the database\n\n- Abbreviations: lot of abbreviations to make coding in PL/SQL a breeze,\n\t all accessible thru menu as well\n\nMappings:\n\n  <Leader>c\tSelect Database dialog\n  <Leader>C\tGet column names for the tablename under cursor\n  <Leader>F\tStored procedure code from DB for the function/procedure name\n  \t\tunder cursor\n  <Leader>i\tFind Invalid Objects\n  CTRL+S \t\tStart SQL*Plus window (external)\n  <Leader>r\tExecute current file in SQL*Plus window (external)\n  <Leader>s\tExecute current file in SQL*Plus and get the result to same\n  \t\tbuffer\n  <Leader>s\tExecute current selection in SQL*Plus and get the result to a\n  \t\tnew window\n\n  Following mappings from ftplugin sql.vim\n  <C-D>\t\tDescribe the object under cursor\n  <LocalLeader>d\tmake a dbms_output.put_line statement for word/selection\n  \t\tbelow current line\n  <LocalLeader>D\tmake a dbms_output.put_line statement for word/selection\n  \t\tabove current line\n\n\nOptional files:\n  sql.vim\t- sql filetype plugin load to your ftplugin folders. This file is\n  \t\t  needed for Abbreviations and some mappings\n\nNote:\n\tI have tested this only under gvim6.0 on Win2000 and Oracle 8.1.5. I do\n\tnot have any other platform to test these.\n\nScreen Shots:\nhttp://www.geocities.com/rajesh_kallingal/vim/vimsql01.jpg\nhttp://www.geocities.com/rajesh_kallingal/vim/vimsql02.jpg\nIf the above links don't work try this one.\nhttp://www.geocities.com/rajesh_kallingal/vim",
+  "install_details": "Just drop it this file in your plugin folder/directory.\n\nIf you are downloading 6.0.3 or prior version, to get some of the additional features you have to download the ftplugin sql.vim (http://vim.sourceforge.net/scripts/script.php?script_id=142) and put that\nin the ftplugin folder/directory. This script is included in the zip file from 6.0.4 onwards\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=554",
+      "filename": "oracle.zip",
+      "script_version": "6.0.4",
+      "date": "2002-02-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "374",
+        "user_name": "kkrajesh",
+        "first_name": "Rajesh",
+        "last_name": "Kallingal",
+        "email": "RajeshKallingal at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Changes:\n- Added online help (oracle.txt)\n- Save and retrieve connection info between sessions\n- created new function GetColumn() to handle inserting column names for the table.\n- redefined most of the connection variables.\n\nNow its a zip file with online document as well as the ftplugin sql.vim (script# 141)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=463",
+      "filename": "oracle.vim",
+      "script_version": "6.0.3",
+      "date": "2002-01-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "374",
+        "user_name": "kkrajesh",
+        "first_name": "Rajesh",
+        "last_name": "Kallingal",
+        "email": "RajeshKallingal at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Added DescribeObject function to fix the Ctrl+D mapping issue in sql.vim ftplugin"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=375",
+      "filename": "oracle.vim",
+      "script_version": "6.0.2",
+      "date": "2001-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "374",
+        "user_name": "kkrajesh",
+        "first_name": "Rajesh",
+        "last_name": "Kallingal",
+        "email": "RajeshKallingal at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed the error highlighting method to use +signs if available"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=338",
+      "filename": "oracle.vim",
+      "script_version": "6.0.1",
+      "date": "2001-11-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "374",
+        "user_name": "kkrajesh",
+        "first_name": "Rajesh",
+        "last_name": "Kallingal",
+        "email": "RajeshKallingal at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

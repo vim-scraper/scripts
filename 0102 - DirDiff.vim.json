@@ -1,0 +1,122 @@
+{
+  "script_id": "102",
+  "name": "DirDiff.vim",
+  "summary": "A plugin to diff and merge two directories recursively.",
+  "script_type": "utility",
+  "description": "This is a utility that performs a recursive diff on two directories and generate a diff \"window\".  Based on that window you can perform various diff operations such as opening two files in Vim's diff mode, copy the file or directory recursively to the other, or remove the directory tree from the source directory.",
+  "install_details": "  Put this file in your ~/.vim/plugin\n\n  Doing the following will generate a diff window.\n\n      :DirDiff <A:Src Directory> <B:Src Directory>\n  e.g.\n      :DirDiff ../something/dir1 /usr/bin/somethingelse/dir2\n\n  The following commands can be used inside the diff window:\n  'Enter','o' - Diff open: open the diff file(s) where your cursor is at\n  's' - Synchronize the current diff.  You can also select\n        a range (through visual) and press 's' to synchronize differences\n        across a range.\n\n        - There are 6 Options you can choose when you hit 's':\n          1. A -> B\n             Copy A to overwrite B\n             If A's file actually points to a directory, it'll copy it to B\n             recursively.\n          2. B -> A\n             Copy B to overwrite A\n             If B's file actually points to a directory, it'll copy it to A\n             recursively.\n          3. Always A\n             For the rest of the items that you've selected,\n             synchronize like (1).\n          4. Always B\n             For the rest of the items that you've selected,\n             synchronize like (2).\n          5. Skip\n             Skip this diff entry.\n          6. Cancel\n             Quit the loop and exit.\n\n  'u' - Diff update: update the diff window\n  'x' - Sets the exclude pattern, separated by ','\n  'i' - Sets the ignore pattern, separated by ','\n  'a' - Sets additional arguments for diff, eg. -w to ignore white space,\n        etc.\n  'q' - Quit DirDiff\n   \n  The following comamnds can be used in the Vim diff mode\n  \\dg - Diff get: maps to :diffget<CR>\n  \\dp - Diff put: maps to :diffput<CR>\n  \\dj - Diff next: (think j for down) \n  \\dk - Diff previous: (think k for up)\n\n  You can set the following DirDiff variables.  You can add the following\n  \"let\" lines in your .vimrc file.\n\n  Sets default exclude pattern:\n      let g:DirDiffExcludes = \"CVS,*.class,*.exe,.*.swp\"\n\n  Sets default ignore pattern:\n      let g:DirDiffIgnore = \"Id:,Revision:,Date:\"\n\n  If DirDiffSort is set to 1, sorts the diff lines.\n      let g:DirDiffSort = 1\n\n  Sets the diff window (bottom window) height (rows)\n      let g:DirDiffWindowSize = 14\n\n  Ignore case during diff\n      let g:DirDiffIgnoreCase = 0\n\n  Dynamically figure out the diff text.  If you are using and i18n version\n  of diff, this will try to get the specific diff text during runtime.  It's\n  turned off by default.  If you are always targetting a specific version of\n  diff, you can turn this off and set the DirDiffText* variables\n  accordingly.\n      let g:DirDiffDynamicDiffText = 0\n\n  String used for the English equivalent \"Files \"\n      let g:DirDiffTextFiles = \"Files \"\n\n  String used for the English equivalent \" and \"\n      let g:DirDiffTextAnd = \" and \"\n\n  String used for the English equivalent \" differ\")\n      let g:DirDiffTextDiffer = \" differ\"\n\n  String used for the English equivalent \"Only in \")\n      let g:DirDiffTextOnlyIn = \"Only in \"\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13435",
+      "filename": "DirDiff.vim",
+      "script_version": "1.1.3",
+      "date": "2010-07-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "275",
+        "user_name": "wlee",
+        "first_name": "William",
+        "last_name": "Lee",
+        "email": "wl1012 at yahoo.com",
+        "homepage": "http://wlee.net"
+      },
+      "release_notes": "Added Wu WeiWei patch for making DirDiff work for Chinese diff."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9375",
+      "filename": "DirDiff.vim",
+      "script_version": "1.1.2",
+      "date": "2008-10-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "275",
+        "user_name": "wlee",
+        "first_name": "William",
+        "last_name": "Lee",
+        "email": "wl1012 at yahoo.com",
+        "homepage": "http://wlee.net"
+      },
+      "release_notes": "The last version was a bad release.  This contains the right patch instead."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9364",
+      "filename": "DirDiff.vim",
+      "script_version": "1.1.1",
+      "date": "2008-10-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "275",
+        "user_name": "wlee",
+        "first_name": "William",
+        "last_name": "Lee",
+        "email": "wl1012 at yahoo.com",
+        "homepage": "http://wlee.net"
+      },
+      "release_notes": "Note that this version requires vim 7.2.  This fixed a bug where spaces in the filename is not handled correctly."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5306",
+      "filename": "DirDiff.vim",
+      "script_version": "1.1.0",
+      "date": "2006-02-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "275",
+        "user_name": "wlee",
+        "first_name": "William",
+        "last_name": "Lee",
+        "email": "wl1012 at yahoo.com",
+        "homepage": "http://wlee.net"
+      },
+      "release_notes": "Added support for non-English version of diff.  Thanks to Florian Delizy.  Release under a FreeBSD-like license.  "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2440",
+      "filename": "DirDiff.vim",
+      "script_version": "1.0.2",
+      "date": "2003-10-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "275",
+        "user_name": "wlee",
+        "first_name": "William",
+        "last_name": "Lee",
+        "email": "wl1012 at yahoo.com",
+        "homepage": "http://wlee.net"
+      },
+      "release_notes": "Fixed a small bug in the quit routine."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2432",
+      "filename": "DirDiff.vim",
+      "script_version": "1.0.1",
+      "date": "2003-10-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "275",
+        "user_name": "wlee",
+        "first_name": "William",
+        "last_name": "Lee",
+        "email": "wl1012 at yahoo.com",
+        "homepage": "http://wlee.net"
+      },
+      "release_notes": "Fixed a reported path separator problem in W2K."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=322",
+      "filename": "DirDiff.vim",
+      "script_version": "1.0",
+      "date": "2001-11-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "275",
+        "user_name": "wlee",
+        "first_name": "William",
+        "last_name": "Lee",
+        "email": "wl1012 at yahoo.com",
+        "homepage": "http://wlee.net"
+      },
+      "release_notes": "Latest stable version.  Fixed a bug where error message may appear if you set the nowrapscan option.  Add a quit option to close the diff windows."
+    }
+  ]
+}

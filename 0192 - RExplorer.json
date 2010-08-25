@@ -1,0 +1,42 @@
+{
+  "script_id": "192",
+  "name": "RExplorer",
+  "summary": "Tree explorer with color",
+  "script_type": "utility",
+  "description": "This is an attempt to implement a tree explorer purely using vim 6.0 language. I have tried it on a unix and windows system and runs without any problem. Not sure about the behaviour in a different OS.\n\nIn the current version, the explorer window opens always on the left hand side.\n-Arun\n\nAscii snapshot:\n----------------------\n[+] /\n[-] /home/user\n | [+] install\n | [+] mail\n | [+] misc\n | [+] src\n | [+] tmp\n |  |- README.txt\n |  |- hello.c  \n |",
+  "install_details": "1. unzip the files \n    in unix, gzip -dc RExplorer.tgz |tar vxf -\n    in win, use winzip or equivalent\n2. store the files RExplorer.vim and RECfg.txt in the same directory.\n3. source RExplorer.vim in a gvim session\n4. Be sure to read RECfg.txt for your customizations (for file associations and initial trees)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6426",
+      "filename": "RExplorer.tgz",
+      "script_version": "1.05",
+      "date": "2006-11-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "421",
+        "user_name": "aeasi",
+        "first_name": "Arun",
+        "last_name": "Easi",
+        "email": "arunke at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Enabled for vim7"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=512",
+      "filename": "RExplorer.tgz",
+      "script_version": "1.00",
+      "date": "2002-01-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "421",
+        "user_name": "aeasi",
+        "first_name": "Arun",
+        "last_name": "Easi",
+        "email": "arunke at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

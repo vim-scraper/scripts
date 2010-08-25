@@ -1,0 +1,202 @@
+{
+  "script_id": "120",
+  "name": "Decho",
+  "summary": "Vim script internal debugger (output in separate window, tab, or remote vim)",
+  "script_type": "utility",
+  "description": "The Decho.vim plugin provides debugging messages in a separate window.  One puts\n\n    Decho \"some message here\"\n-or-\n    call Decho(\"another message\")\n\nand Decho will split the screen with a five line debugging window on the bottom of the display where the messages will appear.  Allows one to inspect multiple error messages with the usual vim editing commands!\n\nTo better support the debugging of scripts, Decho.vim also provides:\n\n    call Dfunc(\"YourFunctionName([arg1<\".a:arg1.\"> arg2<\".a:arg2.\">])\")\n    call Dret(\"YourFunctionName [returnvalue]\")\n\nThese two functions use Decho(), but also provide function tracking.  The .vim/syntax/Decho.vim provides special highlighting for the DBG buffer, too.  See the example below!\n\nOne may redirect the output of arbitrary vim commands to the DBG buffer with the following function:\n\n    call Dredir(\"command\")\n\nFor example, consider\n\n\tcall Dredir(\"ls\")\n\nDecho.vim makes it easy to turn debugging on and off in your scripts:\n\n    Turning Debugging On:\n        vim yourscript.vim\n        :DechoOn\n        :wq\n\n    Turning Debugging Off:\n        vim yourscript.vim\n        :DechoOff\n        :wq\n\nSome plugins use events such as WinEnter and others attempt to control window layout.  Decho supports these plugins with four methods to avoid disturbing the display:\n\n\tDechoMsgOn  -- subsequent debugging output uses :echomsg\n\tDechoRemOn  -- subsequent debugging output goes to a remote gvim which DechoRemOn will set up itself\n        DechoTabOn  -- subsequent debugging output goes to a separate debugging tab/window\n\tDechoVarOn  -- subsequent debugging output goes to a variable (default value: g:dechovar)\n\nWith any of these enabled, subsequent Dfunc, Dret, Decho, and Dredir output will be directed as indicated.\n\n ---------------------------------------------------------------------\nExample:\n\n    LocalBrowse(dirname<.>) {\n    |NetGetcwd() {\n    ||return NetGetcwd /home/cec/.vim/VIMSCRIPT/ }\n    |dirname</home>\n    |Perform directory listing...\n    |bufnr(dirname</home>)=1\n    |dirnamenr=1 dirname</home> pre-exists\n    |changed directory to</home>\n    |buffer already exists, but needs listing (buf#1)\n    |Setting up local browser maps\n    |NetGetcwd() {\n    ||return NetGetcwd /home/cec/.vim/VIMSCRIPT/ }\n    |NetGetcwd() {\n    ||return NetGetcwd /home/cec/.vim/VIMSCRIPT/ }\n    |NetGetcwd() {\n    ||return NetGetcwd /home/cec/.vim/VIMSCRIPT/ }\n    |NetGetcwd() {\n    ||return NetGetcwd /home/cec/.vim/VIMSCRIPT/ }\n    |NetGetcwd() {\n    ||return NetGetcwd /home/cec/.vim/VIMSCRIPT/ }\n    |NetGetcwd() {\n    ||return NetGetcwd /home/cec/.vim/VIMSCRIPT/ }\n    |set up banner\n    |directories will be sorted by name\n    |LocalBrowseList(dirname</home>) {\n    |(elided for brevity)\n    ||return LocalBrowseList }\n    |SetSort() bannercnt=8 {\n    |(elided for brevity)\n    ||return SetSort }\n    |NetSort() {\n    ||return NetSort }\n    |return LocalBrowse : file</home> }\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#DECHO)",
+  "install_details": "1. vim Decho.vba.gz\n    :so %\n    :q\n\n2. This will create the following files:\n  plugin/Decho.vim\n  plugin/cecutil.vim\n  syntax/Decho.vim\n  doc/Decho.txt\n\n(you may want the latest vimball handling script for this: vimscript#1502)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9388",
+      "filename": "Decho.vba.gz",
+      "script_version": "20",
+      "date": "2008-10-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* DechoSep() can now be externally called (and :Dsep  makes it easy to use).  Creates an easy-to-find separator in the debugging output.\n* bug fixes (Cyan, Magenta highlighting; improved DechoTab's tab search, unwanted DechoRemOn staircasing)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7092",
+      "filename": "Decho.vba.gz",
+      "script_version": "19",
+      "date": "2007-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Various bugfixes and improvements...\nDredir now takes optional strings first instead of last.\nThe :Decho and :Dredir commands now take <args> instead of <q-args>, which allows them to act more like the function calls do.\nDechoRemOn's remote vim no longer will have formatoptions' a or t suboptions set even if the user has specified something like fo+=at in his/her .vimrc.\nIf the user interposes a new tab (or deletes the \"Decho Tab\"), Decho finds the \"Decho Tab\" tab or creates a new one when called.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6144",
+      "filename": "Decho.vba.gz",
+      "script_version": "18",
+      "date": "2006-09-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Decho now handles list arguments, works around ignorecase setting, and no longer uses bt=nofile (makes it easier to save)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5374",
+      "filename": "Decho.tar.gz",
+      "script_version": "17",
+      "date": "2006-03-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "The \"Decho Tab\" buffer now is syntax highlighted, plus bugfixes.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5333",
+      "filename": "Decho.tar.gz",
+      "script_version": "16",
+      "date": "2006-02-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "For vim 7.0 users: DechoTabOn/Off changed to reflect changes in vim 7.0's :tab, :tabn, :tabnew commands.  (Decho still works fine for vim 6.0, BTW)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5297",
+      "filename": "Decho.tar.gz",
+      "script_version": "15",
+      "date": "2006-02-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Decho now supports use of vim7.0aa's \"tab\" feature -- with :DechoTabOn, subsequent debugging output goes to its own tab."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5225",
+      "filename": "Decho.tar.gz",
+      "script_version": "14",
+      "date": "2006-02-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Decho has a new pair of commands: DechoRemOn and DechoRemOff.  With these, debugging output can be sent to a remote gvim.  Really helps with debugging plugins that use events and control window layout.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4796",
+      "filename": "Decho.tar.gz",
+      "script_version": "12",
+      "date": "2005-11-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* DechoOn/Off now also turns on/off DechoVarOn/Off\n* DechoMsgOn and DechoMsgOff installed; debugging messages will use the |echomsg| command.\n* DechoVarOn and DechoVarOff installed; debugging messages will be appended to the variable specified by g:dechovarname, which by default is \"g:dechovar\".  These two commands toggle the variable \"g:dechovar_enabled\".\n* Now includes a GetLatestVimScripts line for cecutil.vim\n* Decho now does \"runtime plugin/cecutil.vim\" if that plugin hasn't been loaded yet.  It will also try the AsNeeded subdirectory if g:loaded_asneeded exists.\n* with DechoMsgOn, Decho(\"doesn't\") now works\n* Dredir() now accepts multiple arguments (cmd and output)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3297",
+      "filename": "Decho.tar.bz2",
+      "script_version": "10",
+      "date": "2004-08-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* New function: call Dredir(\"command\") will redirect the command's output to the DBG buffer.\n* Decho now uses keepjumps to avoid altering the jumplist table (requires vim6.3)\n* Decho's appending to the DBG buffer no longer flags it as modified.\n* One may have Decho ignore BufEnter events if g:decho_bufenter exists.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3102",
+      "filename": "Decho.tar.bz2",
+      "script_version": "8",
+      "date": "2004-06-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Decho now has :Dhide and :Dshow commands for toggling the visibility of the DBG buffer\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3092",
+      "filename": "Decho.tar.bz2",
+      "script_version": "7",
+      "date": "2004-06-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "With g:decho_hide=1, Decho will keep its DBG buffer hidden, thereby allowing window-manipulating scripts their natural behavior.  Use :ls! to see the DBG buffer, and you may use :b [nmbr] to see it.\nIn additon, Decho's DBG window's is silently created, and Dfunc/Decho/Dret will always resize the DBG window to the number of lines specified by g:decho_winheight.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3012",
+      "filename": "Decho.tar.bz2",
+      "script_version": "6",
+      "date": "2004-05-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Now, along with Decho(), is\n  Dfunc(\"funcname(...)\") -- for tracking entry to function funcname\n  Dret(\"funcname ...\") -- for tracking return from function funcname\nIncludes special syntax highlighting for Dfunc/Decho/Dret files, too.\n"
+    }
+  ]
+}

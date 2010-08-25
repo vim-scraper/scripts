@@ -1,0 +1,106 @@
+{
+  "script_id": "172",
+  "name": "TeTrIs.vim",
+  "summary": "A tetris game in pure vim",
+  "script_type": "game",
+  "description": "A funny way to get used to VIM's h k l and <Space> key.\nThe first (I hope) interactive game inside pure VIM!\nIt's a work-in-progress version.\n\nTodo:\n- better random\n- better timing\n- shorter code\n\nIf you like games, also see Sokoban vimscript#211!",
+  "install_details": "Source it! Press :source TeTrIs.vim<Enter>\n\nTo start the game, press <Leader>te.\n(If you don't know what is <Leader>, you should press \\te, and type :help Leader<Enter> to learn about what the heck leader is)\nControls:\nh: left\nl: right\nj: down\ni,k: rotate\n<Space>: drop\n<Esc> or q: quit\n(if you have more or other keys, which help you to learn VIM, please send me the mail)\np: pause game To restore, press <Leader>te in any window!\n\n*** Save everything, before you begin to play ***",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=650",
+      "filename": "tetris.vim",
+      "script_version": "0.52fix",
+      "date": "2002-02-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "norm -> norm! to protect from M$-win's remappings"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=619",
+      "filename": "tetris.vim",
+      "script_version": "0.52",
+      "date": "2002-02-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Fixed massive slowdown when key pressed.\nFix up window positioning when ending and showing highscore."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=613",
+      "filename": "TeTrIs.vim",
+      "script_version": "0.51",
+      "date": "2002-02-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New timing, bug fixes, Name is stored in script-variable."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=589",
+      "filename": "TeTrIs.vim",
+      "script_version": "0.5",
+      "date": "2002-02-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New mode, top10, better colors, improved rotation, new timing, speedup, animations"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=552",
+      "filename": "TeTrIs.vim",
+      "script_version": "0.4",
+      "date": "2002-02-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Colour, speeds, extra keys, the missing piece. Lotsa stuff.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=444",
+      "filename": "TeTrIs.vim",
+      "script_version": "0.1",
+      "date": "2002-01-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "299",
+        "user_name": "kgergely",
+        "first_name": "Gergely",
+        "last_name": "Kontra",
+        "email": "pihentagy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

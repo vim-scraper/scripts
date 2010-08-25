@@ -1,0 +1,106 @@
+{
+  "script_id": "96",
+  "name": "methods.vim",
+  "summary": "java, c++ menu classbrowser",
+  "script_type": "utility",
+  "description": "This little script offers an Class- and Sessionmenue for all languages\nctags understand (java,c++,c,eiffel,fortran). \n - ClassMembers: all attributes/methods of actual class\n - SessionClasses: all Classes in the current session\nBy clicking on the entries, vim jumps to the specified location.The menue is updated via autocommands.",
+  "install_details": "You NEED a ruby-interpreter compiled to vim, because this is a ruby script.\nAlso ctags is needed. \nJust put methods.vim into your vim-plugin directory - thats it.\n ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=563",
+      "filename": "methods.zip",
+      "script_version": "1.13",
+      "date": "2002-02-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "255",
+        "user_name": "matthias",
+        "first_name": "matthias",
+        "last_name": "veit",
+        "email": "matthias_veit at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "-check for valid environment\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=540",
+      "filename": "vimmethods.zip",
+      "script_version": "1.13",
+      "date": "2002-02-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "255",
+        "user_name": "matthias",
+        "first_name": "matthias",
+        "last_name": "veit",
+        "email": "matthias_veit at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "Complete redraw of this script. Featuring:\n-menudrawing works correctly:\n now it is possible to tearOff the ClassMenue and jump from\n buffer to buffer, while the open menu is updated dynamically.\n-all properties are dynamically changeable\n-extension points added: multiple parsers and sorters featured\n-ctags runs in filter mode\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=447",
+      "filename": "methods.zip",
+      "script_version": "1.11",
+      "date": "2002-01-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "255",
+        "user_name": "matthias",
+        "first_name": "matthias",
+        "last_name": "veit",
+        "email": "matthias_veit at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "-fixed the filenameexpansion failure\n-buffer deletion now works correctly\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=331",
+      "filename": "methods.vim",
+      "script_version": "1.10",
+      "date": "2001-11-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "255",
+        "user_name": "matthias",
+        "first_name": "matthias",
+        "last_name": "veit",
+        "email": "matthias_veit at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "-fixed the \"new file\" problem (use only valid files)\n-using currentfile instead of <afile> can make trouble (fixed)\n  "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=316",
+      "filename": "methods.vim",
+      "script_version": "1.9.1",
+      "date": "2001-11-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "255",
+        "user_name": "matthias",
+        "first_name": "matthias",
+        "last_name": "veit",
+        "email": "matthias_veit at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "-changed autocommands behaviour (try to read tags for every file type)\n-changed visibility and names of functions for better readability"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=312",
+      "filename": "methods.vim",
+      "script_version": "1.9",
+      "date": "2001-11-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "255",
+        "user_name": "matthias",
+        "first_name": "matthias",
+        "last_name": "veit",
+        "email": "matthias_veit at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "-display method-name in statusline\n-multisessions enabled\n-attributes are shown in submenu"
+    }
+  ]
+}

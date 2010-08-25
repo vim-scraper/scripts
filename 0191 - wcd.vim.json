@@ -1,0 +1,74 @@
+{
+  "script_id": "191",
+  "name": "wcd.vim",
+  "summary": "Wherever Change Directory in vim",
+  "script_type": "utility",
+  "description": "wcd.vim plugin adds the :Wcd command, which allows to quickly\naccess any directory - same way as with wcd under the shell.\nwcd.vim requires wcd.exe to be installed on your system.\n\nFor more information on wcd, see:\n  http://www.xs4all.nl/~waterlan/\n",
+  "install_details": "Just drop the file into your plugin directory.  If Wcd does\nnot work right away to your satisfaction, try to adjust the\nSettings section.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2550",
+      "filename": "wcd.vim",
+      "script_version": "1.13",
+      "date": "2003-12-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "358",
+        "user_name": "pavol",
+        "first_name": "Pavol",
+        "last_name": "Juhas",
+        "email": "juhas at seas.upenn.edu",
+        "homepage": ""
+      },
+      "release_notes": "Small fixes, wcd should work better with unix gvim.  Settings can now be adjusted via global variables in .vimrc."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=688",
+      "filename": "wcd.vim",
+      "script_version": "1.10",
+      "date": "2002-03-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "358",
+        "user_name": "pavol",
+        "first_name": "Pavol",
+        "last_name": "Juhas",
+        "email": "juhas at seas.upenn.edu",
+        "homepage": ""
+      },
+      "release_notes": "New: OS sensitive defaults.  Now it should work under *nix\ngvim.  Added settings for easier setup."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=670",
+      "filename": "wcd.vim",
+      "script_version": "1.02",
+      "date": "2002-03-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "358",
+        "user_name": "pavol",
+        "first_name": "Pavol",
+        "last_name": "Juhas",
+        "email": "juhas at seas.upenn.edu",
+        "homepage": ""
+      },
+      "release_notes": "now executed through :silent !wcd.exe\n:Wcd -g mydir should work nicely"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=509",
+      "filename": "wcd.vim",
+      "script_version": "1",
+      "date": "2002-01-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "358",
+        "user_name": "pavol",
+        "first_name": "Pavol",
+        "last_name": "Juhas",
+        "email": "juhas at seas.upenn.edu",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

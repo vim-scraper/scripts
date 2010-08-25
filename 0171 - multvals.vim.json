@@ -1,0 +1,314 @@
+{
+  "script_id": "171",
+  "name": "multvals.vim",
+  "summary": "Array library that uses patterns as separators",
+  "script_type": "utility",
+  "description": "The new version requires Vim 6.3.\n\nThis is an array library useful for script developers.\n\nI started off from the lightWeightArray.vim script as a basis and created this\nmore complete script to call it an array. You can now manipulate the Vim's\nmulti-valued variables or create your own using this script. This makes it easy\nfor you to support variables having multiple values and familiar for the users\nof your script.\n\nSee file header for function prototypes.\n\n- An array is nothing but a string of multiple values separated by a\n  pattern.  The simplest example being Vim's multi-value variables such as\n  tags. You can use the MvAddElement() function to create an array.\n  However, there is nothing special about this function, you can as well\n  make up the string by simply concatinating elements with the chosen\n  pattern as a separator.\n- The separator can be any regular expression (which means that if you\n  want to use regex metacharacters in a non-regex pattern, then you need\n  to protect the metacharacters with backslashes). However, if a regular\n  expression is used as a separtor, you need to pass in a second separator,\n  which is a plain string that guarantees to match the separator regular\n  expression, as an additional argument (which was not the case with\n  earlier versions). When the array needs to be modified (which is\n  internally done by some of the reader functions also) this sample\n  separator is used to preserve the integrity of the array.\n- If you for example want to go over the words in a sentence, then an easy\n  way would be to treat the sentence as an array with '\\s\\+' as a\n  separator pattern. Be sure not to have zero-width expressions in the\n  pattern as these would otherwise confuse the plugin.\n- Suggested usage to go over the elements is to use the iterater functions\n  as shows in the below example\n  Ex Usage:\n    \" The below pattern avoids protected comma's from getting treated as\n    \"   separators.\n    call MvIterCreate(&tags, '\\\\\\@<!\\(\\\\\\\\\\)*\\zs,', 'Tags', ',')\n    while MvIterHasNext('Tags')\n      call input('Next element: ' . MvIterNext('Tags'))\n    endwhile\n    call MvIterDestroy('Tags')\n                                                                            \nALMOST ALL OPERATIONS TAKE THE ARRAY AND THE SEPARATOR AS THE FIRST TWO\n  ARGUMENTS.\nAll element-indexes start from 0 (like in C++ or Java).\nAll string-indexes start from 0 (as it is for Vim built-in functions).\n\n\n\nPlease let me know of any bugs and problems that you face.\n\n\nSearch_key_words: array arrays multvals sort multiple values multivals Hari Krishna Dara",
+  "install_details": "Source it from your .vimrc or just drop it in your plugin directory. \nSince version 2.1.1, you require Vim 6.0, for older versions you require Vim 5.6.\n\nSort functionality from version 2.4 requires genutils.vim: vimscript #197",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3582",
+      "filename": "multvals.vim",
+      "script_version": "3.10",
+      "date": "2004-10-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- New MvBISortElements() that uses the faster BinInsertSort2() function\n  from genutils.vim plugin.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3566",
+      "filename": "multvals.vim",
+      "script_version": "3.9",
+      "date": "2004-10-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- MvIterPeek made public. This was left private by accident."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3482",
+      "filename": "multvals.vim",
+      "script_version": "3.8",
+      "date": "2004-09-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bugs in the *StrIndex* functions, such that when the element is\nnot found, they always return the contracted -1 (instead of any -ve\nvalue). This will fix problems with a number of other functions that\ndepend on them (such as MvPushToFront reported by Thomas Link).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3147",
+      "filename": "multvals.vim",
+      "script_version": "3.6",
+      "date": "2004-06-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Maintenance release.\n- Work-around for a bug in MvNumberOfElements().\n- New utility function MvCrUnProtectedCharsPattern()\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2852",
+      "filename": "multvals.vim",
+      "script_version": "3.5",
+      "date": "2004-03-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "CAUTION: This version potentially introduces an incompatibility with that of\nolder versions because of the below change. If your plugin depended on this\nundocumented behavior you will have to update your plugin immediately to work\nwith the new plugin. Even if you didn't know about behavior, it is still better\nto check if your plugin accidentally depended on this. If you need further\nclarifications, please email me with your questions and I will try to answer.\n\n- Now the plugin ignores the 'ignorecase' and 'smartcase' settings, so the\n  results are more consistent. This I think is the right thing to do for a\n  library.\n- Also added a new function MvIterPeek.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2607",
+      "filename": "multvals.vim",
+      "script_version": "3.4",
+      "date": "2003-12-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- The plugin was not working correctly when there are *'s in the array.\n- New function MvRemovePatternAll\n- g:loaded_multvals now contains the version number for dependency cheking.\n  (see \":help v:version\" for format)\n- Added prototypes for the functions in the header as per the suggestion\n  of Naveen Chandra."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2262",
+      "filename": "multvals.vim",
+      "script_version": "3.3",
+      "date": "2003-08-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor changes, added a new function MvElementLike and improved MvPromptForElement by adding a new companion function MvGetSelectedIndex, to be used when the array can contain empty elements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2063",
+      "filename": "multvals.vim",
+      "script_version": "3.2",
+      "date": "2003-06-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New function MvNumSearchNext. See the function header for details.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1873",
+      "filename": "multvals.vim",
+      "script_version": "3.1",
+      "date": "2003-03-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor changes. Now the MvCreateIter() also accepts sample separator as the last argument when a regular expression is used as a separator. This is consistent with the rest of the functions and makes it easy to iterate over settings like 'tags'.\n\ncall MvIterCreate(&tags, \"\\\\\\@<!\\(\\\\\\\\\\)*\\zs,\", \"Tags\", ',')\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1582",
+      "filename": "multvals.vim",
+      "script_version": "3.0",
+      "date": "2002-12-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- All functions can now be used with regular expressions as separators. Most of the functions now accept an optional extra argument as the last argument, which needs to be a plain separator as a sample that matches the regular expression of the separator. If the separator is not a regular expressions, this can be ignored, making it backwardly compatible change.\n- Added new functions MvRemovePattern, MvStrIndexOfPattern, MvStrIndexAfterPattern, MvIndexOfPattern, MvContainsPattern.\n- Fixed a bug in the new implementation of MvPromptForElement. This function now accepts only element index as selection. This makes it cleaner to implement and also makes it possible to have even numbers as values in the array.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1532",
+      "filename": "multvals.vim",
+      "script_version": "2.5",
+      "date": "2002-12-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Just removed some debug echomsg which I forgot to remove. Sorry about it. I also added some more information on how to use MvQSortElements() method."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1492",
+      "filename": "multvals.vim",
+      "script_version": "2.4",
+      "date": "2002-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- New functions MvQSortElements() and MvSwapElementsAt(). Requires genutils.vim\n  for sorting support.\n- Worked-around a bug in vim that effects MvElementAt() for last element in a\n  large array. \n- A variant of MvPromptForElement to specify the number of columns that you\n  want the elements to be formatted in. The formatting is very nice now.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=939",
+      "filename": "multvals.vim",
+      "script_version": "2.3",
+      "date": "2002-06-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "GPL'ed it mainly for the use by Creme project (http://cream.sf.net). Added MvRemoveElementAll and MvReplaceElementAt, contributed by Steve Hall <digitect at mindspring.com>"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=642",
+      "filename": "multvals.vim",
+      "script_version": "2.1.2",
+      "date": "2002-02-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "More robust iterator, now checks for maximum count. Reimplemented it to use the ElementAt() function and removed NextElement and NextIndex() functions that are not needed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=575",
+      "filename": "multvals.vim",
+      "script_version": "2.1.1",
+      "date": "2002-02-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New functions MvRotateLeftAt() and MvRotateRight() to be used by the PushPop.vim script."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=571",
+      "filename": "multvals.vim",
+      "script_version": "2.1.1",
+      "date": "2002-02-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Enhanced the script to accept any regular expression as a separator pattern, but it works only for read-only operations. Now you can treat the following as an array:\n\naxxbxxxxcxdxxxxxe\n\nand access a, b, c, d and e as array elements.\n\nNow the element is escaped before using in the matches, so you shouldn't have any problem using any random strings to store in to the array.\n\nAlso the script is now made as a plugin, so it works only 6.0"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=525",
+      "filename": "multvals.vim",
+      "script_version": "2.0.5",
+      "date": "2002-02-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bugs in MvStrIndexOfElement(), MvIterHasNext() and MvCmpByPosition(). Now I have been using the script for quite some time and fixed all the bugs that I discovered. It should be quite robust and usable now. I have used the functions from here in selectbuf.vim for implementing MRU listing and also in the remcmd.vim for list selection, so check these scripts for a good usage. Also see the end of the script for test code that gives example usage of the script."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=467",
+      "filename": "multvals.vim",
+      "script_version": "2.0.4",
+      "date": "2002-01-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Lots of new functions are added and they are documented well. Now the script has functions to access the elements by element index, just like a real array. Much more usable as an array than previously it was.\n\n However, it is incompatible with the previous version for the following reasons:\n   - Prefixed all the global functions with \"Mv\" to avoid global name\n       conflicts.\n   - The order of arguments for MvIterCreate has been changed for the sake of\n       consistency.\n\nHere is a list of all the functions:\n       MvAddElement\n       MvInsertElementAt\n       MvRemoveElement\n       MvRemoveElementAt\n       MvNumberOfElements\n       MvStrIndexOfElement\n       MvStrIndexOfElementAt\n       MvIndexOfElement\n       MvContainsElement\n       MvElementAt\n       MvLastElement\n       MvPushToFront\n       MvPushToFrontElementAt\n       MvPullToBack\n       MvPullToBackElementAt\n       MvIterCreate\n       MvIterDestroy\n       MvIterHasNext\n       MvIterNext\n       MvCmpByPosition\n       MvPromptForElement\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=443",
+      "filename": "multvals.vim",
+      "script_version": "2.0.2",
+      "date": "2002-01-02",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

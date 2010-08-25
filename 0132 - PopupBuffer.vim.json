@@ -1,0 +1,58 @@
+{
+  "script_id": "132",
+  "name": "PopupBuffer.vim",
+  "summary": "Vim global plugin for selecting buffer from PopUp menu",
+  "script_type": "utility",
+  "description": "This script is an adaptation of the default list buffer menu from menu.vim file. With mousefocus on and horizontally splited windows, it's very difficult to select an other buffer for the bottom window from the Buffer menu :). With the PopupBuffer script, right-click on the bottom window and select an other buffer from the Buffers submenu.",
+  "install_details": "Requires to launch Vim with GUI mode. Put setmousemodel=popup or set mousemodel=popup_setpos to your .vimrc file. Copy this script to your ~/.vim/plugin directory, et voilà !",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=347",
+      "filename": "PopupBuffer.vim",
+      "script_version": "1.1.1",
+      "date": "2001-11-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "355",
+        "user_name": "gbaerts",
+        "first_name": "Gontran",
+        "last_name": "BAERTS",
+        "email": "gbcreation at free.fr",
+        "homepage": ""
+      },
+      "release_notes": "- Fix stupid bug in PBAdd() function. Directories were added to popup buffers menu and never removed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=343",
+      "filename": "PopupBuffer.vim",
+      "script_version": "1.1",
+      "date": "2001-11-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "355",
+        "user_name": "gbaerts",
+        "first_name": "Gontran",
+        "last_name": "BAERTS",
+        "email": "gbcreation at free.fr",
+        "homepage": ""
+      },
+      "release_notes": "Vim global plugin for selecting buffer from PopUp menu.\nUpdates in version 1.1 :\n- Allow to control the menu item format with popupBufferPattern global variable. Use %F for full file path, %f for file name, %p for file path, and %n for buffer number.\nFor example:\nlet g:popupBufferPattern = \"Select %f (%n) from %p directory\"\n- Fix unremoved deleted buffers from menu\n- Improve addition of new item to menu. Don't add all buffers each time.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=314",
+      "filename": "PopupBuffer.vim",
+      "script_version": "1.0",
+      "date": "2001-11-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "355",
+        "user_name": "gbaerts",
+        "first_name": "Gontran",
+        "last_name": "BAERTS",
+        "email": "gbcreation at free.fr",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

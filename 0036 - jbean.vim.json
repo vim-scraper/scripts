@@ -1,0 +1,26 @@
+{
+  "script_id": "36",
+  "name": "jbean.vim",
+  "summary": "Completion of Get/Set method",
+  "script_type": "utility",
+  "description": "This is result of this script.\nIf you modified _vimrc, you'll get this with ALT-B.\n\n///////////////////////////////////////////////////////////////////////////////////////////////\n\nprivate String name;\n\npublic String getName()\n{\nreturn this.name;\n}\npublic void setName(String name)\n{\nthis.name = name;\n}",
+  "install_details": "put this in macros directory. and modify _vimrc to load this command\n\nin _vimrc\n\nautocmd FileType java source $VIM/macros/jbean.vim\nautocmd FileType java map <M-b> :call MakeBeanFramework()<CR>",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=52",
+      "filename": "jbean.vim",
+      "script_version": "0.1",
+      "date": "2001-07-18",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "86",
+        "user_name": "blartum",
+        "first_name": "sunghyun",
+        "last_name": "kim",
+        "email": "blartum at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

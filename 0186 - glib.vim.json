@@ -1,0 +1,26 @@
+{
+  "script_id": "186",
+  "name": "glib.vim",
+  "summary": "syntax highlighting for additional glib types",
+  "script_type": "syntax",
+  "description": "This syntax file, written by my friend Jason Thomas, adds to your existing C syntax file many of the extra types and so forth given to you by the excellent glib library from http://www.gtk.org/\n\nIt is believed to be complete (at least for 1.2.x), though feel free to submit patches if you find something missing.\n",
+  "install_details": "*** General Vim ***\n  - Add to your ~/.vim/syntax directory and\n    :set syntax=glib\n    when you want it.\n\n*** Utilising Vim6 ***\n - add to your ~/.vim/after/syntax/ directory and rename it \"c.vim\".  \n - edit the script, comment out all the lines before the \n\n   \" Now setup the glib specific stuff\n\n    comment (the ones to do with clearing out syntax items in vim5 and 6), and\n    also comment out the second-last line of the file (the let b:current_syntax .. line).\n    All that should be left is the \"syn\" related commands in-between.\n - Load your favourite C or C++ file to get the glib highlighting automagically!\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=485",
+      "filename": "glib.vim",
+      "script_version": "0.1",
+      "date": "2002-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "457",
+        "user_name": "matty",
+        "first_name": "Matthew",
+        "last_name": "Hawkins",
+        "email": "matt at mh.dropbear.id.au",
+        "homepage": "http://mh.dropbear.id.au/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "16",
+  "name": "compiler.tar.gz",
+  "summary": "[Defunct] Part of functionality for Vim 6.0",
+  "script_type": "utility",
+  "description": "After a discussion of ways of setting the correct error format for various compilers on vim-dev, I threw together this script to allow you to do:\n:Compiler bcc55\n\nand have the errorformat for compiler be setup.  Currently it replaces the default errorformat, but is easily changed to be appended to the current value of errorformat.  Uses the :runtime command to search for a filename (this case, bcc55.vim) in a 'compiler' directory under one of the runtime directories.  Commonly, ~/.vim/compiler.",
+  "install_details": "Drop compiler.vim into your plugin directory.  Create a subdirectory compiler/ under one of the directories in your runtimepath, and copy the bcc55.vim script that is in this archive.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=28",
+      "filename": "compiler.tar.gz",
+      "script_version": "0.2",
+      "date": "2001-06-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "42",
+        "user_name": "pottsdl",
+        "first_name": "Douglas",
+        "last_name": "Potts",
+        "email": "pottsdl at gmail.com",
+        "homepage": "http://drbitz.blogspot.com/"
+      },
+      "release_notes": "Removed functions and user command (as of Vim 6.0aj :compiler command is included in the distribution), and updated the all of the compiler .vim files to fit the accepted format."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=20",
+      "filename": "compiler.tar.gz",
+      "script_version": "0.1",
+      "date": "2001-06-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "42",
+        "user_name": "pottsdl",
+        "first_name": "Douglas",
+        "last_name": "Potts",
+        "email": "pottsdl at gmail.com",
+        "homepage": "http://drbitz.blogspot.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

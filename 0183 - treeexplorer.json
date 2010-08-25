@@ -1,0 +1,26 @@
+{
+  "script_id": "183",
+  "name": "treeexplorer",
+  "summary": "uses perl and tree to create a tree file explorer",
+  "script_type": "utility",
+  "description": "IMPORTANT: See UPDATES below - this script is now an orphan\n\nUses perl and the unix tree command (available on linux, or find sources on freshmeat.net) to create a tree based explorer for your directory structure.   Features:\n\n- directories are foldable\n- different filetypes are highlighed\n- open a file in a new window\n- mappings for naviagation,\n- lazy loading of directory structure\n\nCaveats:\nProbably doesn't work right for non-unix systems, I'm working on this, but help is welcome\n\nUPDATES: \n- I have reimplemented this script using only vim.  The new implementation can be found at http://vim.sourceforge.net/scripts/script.php?script_id=184 - vimtreeexplorer.vim.  That approach is faster as well as requiring no external programs.  I have now abandoned the original implementation because the new implementation can do recursive expansion if you want it to.\n\n\n\nScott",
+  "install_details": "Instructions:\n- make sure you have perl\n- make sure you have 'tree' command\n- download, gunzip, untar package\n- make vimtreeexpl.pl executable, put in your path (e.g. $HOME/bin)\n- put treeexpl.vim in your plugin dir (e.g. $HOME/.vim/plugin)\n\n:TreeExplore\n\nor\n\n:STreeExplore\n\nhelp at top of screen",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=478",
+      "filename": "treeexplorer.tar.gz",
+      "script_version": "1.0",
+      "date": "2002-01-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

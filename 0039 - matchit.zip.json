@@ -1,0 +1,170 @@
+{
+  "script_id": "39",
+  "name": "matchit.zip",
+  "summary": "extended % matching for HTML, LaTeX, and many other languages",
+  "script_type": "utility",
+  "description": "The matchit.vim script allows you to configure % to match more than just\nsingle characters.  You can match words and even regular expressions.\nAlso, matching treats strings and comments (as recognized by the\nsyntax highlighting mechanism) intelligently.\nThe default ftplugins include settings for several languages:\nAda, ASP with VBS, Csh, DTD, Essbase, Fortran, HTML, JSP\n(same as HTML), LaTeX, Lua, Pascal, SGML, Shell, Tcsh, Vim, XML.\n(I no longer keep track, so there may be others.)\nThe documentation (included in the zip file) explains how to configure\nthe script for a new language and how to modify the defaults.\n\nSince vim 6.0, matchit.vim has been included in the standard vim distribution,\nunder the macros/ directory; the version here may be more recent.\n",
+  "install_details": "Vim 5.x:  Make sure to download the correct version (1.0).  Add a line like\n\n:source path/to/matchit.vim\n\nto your vimrc file.  More details are in matchit.html (included).\n\nVim 6.x, 7.x:  Download the most recent version.\nUnpack the zip file in your personal vim directory (e.g. ~/.vim on *NIX):\nthis will put matchit.vim in your plugin/ directory and put matchit.txt into\nyour doc/ directory.  Then do\n\n:helptags ~/.vim/doc\n\nto rebuild the tags file.  For details, read\n\n:help add-local-help\n\nMake sure you have a line like\n\n:filetype plugin on\n\nin your vimrc file.  This enables filetype plugins, many of which tell\nmatchit.vim which matching pairs to use.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8196",
+      "filename": "matchit.zip",
+      "script_version": "1.13.2",
+      "date": "2008-01-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Another bug fix:  either 1.13 or 1.13.1 broke the behavior of finding a matching construct that starts after the cursor."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7637",
+      "filename": "matchit.zip",
+      "script_version": "1.13.1",
+      "date": "2007-09-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "bug fix"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7582",
+      "filename": "matchit.zip",
+      "script_version": "1.13",
+      "date": "2007-08-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "The script uses its own logic, instead of the default % behavior, if the match comes from the 'matchpairs' option rather than from the b:match_words variable.  This implies that you can get the matchit behavior for strings and comments just by loading the script; you need not define b:match_words at all."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6332",
+      "filename": "matchit.zip",
+      "script_version": "1.12",
+      "date": "2006-10-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "I fixed a bug in the [% and ]% motions:  if b:match_words contained escaped colons or commas ('\\:' or '\\,') then they would be treated incorrectly."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5705",
+      "filename": "matchit.zip",
+      "script_version": "1.11",
+      "date": "2006-05-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "improved support for multi-byte characters (thanks to Yuheng Xie)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5330",
+      "filename": "matchit.zip",
+      "script_version": "1.10",
+      "date": "2006-02-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Allow escaped commas and colons to be included in matching patterns.\nExample:  to match \"foo:\" with \"foo,\" and \"bar,\" with \"bar:\", try\n:let b:match_words = 'foo\\::foo\\,,bar\\,:bar\\:'"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3026",
+      "filename": "matchit.zip",
+      "script_version": "1.9",
+      "date": "2004-05-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "improved fix for the [% bug (see previous version comment)\nAvoid screen jumps when 'nowrap' is set (reported by Charles Campbell)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3015",
+      "filename": "matchit.zip",
+      "script_version": "1.8",
+      "date": "2004-05-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Bug fix for [% and ]% (Dany St-Amant)\nMinor change in :vmap for a%\nUpdated documentation\n\nThis version should be included with the standard distribution of vim 6.3 (in $VIMRUNTIME/macros)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1197",
+      "filename": "matchit.zip",
+      "script_version": "1.7",
+      "date": "2002-09-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "This version of matchit.vim requires vim 6.x (maybe 6.1 or later).\nThis may be more recent than the version in the standard vim\ndistribution, under $VIMRUNTIME/macros/matchit.vim .\nThe zip file contains matchit.vim (the script) and matchit.txt\n(the documentation)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=56",
+      "filename": "matchit.zip",
+      "script_version": "1.0",
+      "date": "2001-07-23",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

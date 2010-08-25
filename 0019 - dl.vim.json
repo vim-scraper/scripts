@@ -1,0 +1,26 @@
+{
+  "script_id": "19",
+  "name": "dl.vim",
+  "summary": "converts file links to GetRight GRX files",
+  "script_type": "utility",
+  "description": "Use this script when you have a www page with the list of downloadable \nlinks and want to download all/some of them using GetRight.\n\nThe script assumes that you have a file, each line of which containing a link(s)\nto file you want to download. Such file may be produced, for examle, if You open \nsome html file and issue a command : \n\n:gl /href=\".*zip\"/ . write! >> files.grx\n:e files.grx\n\nWhen loaded, the script loads and maps following functions :\n1. UnHref() - which removes everything except URLs themselves, and puts every URL on a single line\n2. Ability to set the destination directory\n3. MakeList() - Function that converts pure URLs to GetRight acceptable information - before invoking it,\neach line should contain pure single URL.\n",
+  "install_details": "Load the script using :so command, then use mapped functions. If you forgot the mappings,\nreload the script again, it shows brief description on loading.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=24",
+      "filename": "dl.vim",
+      "script_version": "1.0",
+      "date": "2001-06-12",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "52",
+        "user_name": "alexj",
+        "first_name": "Alex",
+        "last_name": "Jakushev",
+        "email": "Alex.Jakushev at gmail.com",
+        "homepage": "http://alex.jakushev.googlepages.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}
