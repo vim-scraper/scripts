@@ -1,0 +1,170 @@
+{
+  "script_id": "5",
+  "name": "DoxyGen Syntax",
+  "summary": "DoxyGen Highlighting on top of c/c++/java",
+  "script_type": "syntax",
+  "description": "This Script has been moved into Vim7.\n\n:set syntax=cpp.doxygen\n\nProvides DoxyGen Highlighting on top of c/c++/idl/java.[160][160]DoxyGen is close to JavaDoc that it should be fine for JavaDoc as well.[160][160]It supports most of the keywords in DoxyGen in one way or another.\n\nThere may be some problems where doxygen tags need to be included in exclusion groups of the c/c++/java/idl files.\n\nAt the moment, it uses non-conventional colours, which I think is good, as it differentiates it from the source-code.[160][160]Please let me know if your opinion differs, especially if you have a set of standard defaults that would be appropriate.\n",
+  "install_details": "Needs to be sourced after the language files.\n To detect *.doxygen files as being doxygen, make the file\n ---------8[60]----------- .vim\\ftdetect\\doxygen.vim -----------\n[160][160]au BufNewFile,BufRead *.doxygen setfiletype doxygen\n ------------------------------------------------------------\n There are a few ways to add doxygen syntax hilighting to c,cpp,idl files,\n 1: create files .vim/syntax/c.vim[160][160].vim/syntax/cpp.vim .vim/syntax/ which\n load the original syntax before loading doxygen.vim syntax hilighting.\n[160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160][160] \n 2: Before :syntax on in your _vimrc, put\n let mysyntaxfile='[60]some_path[62]/doxygen_load.vim'\n and then create the following file.\n -----------8[60]--------- [60]some_path[62]/doxygen_load.vim --------\n au! Syntax {cpp,c,idl}\n au Syntax {cpp,c,idl} runtime syntax/doxygen.vim\n ------------------------------------------------------------",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4884",
+      "filename": "doxygen.zip",
+      "script_version": "1.15",
+      "date": "2005-12-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "1.  Words like `Class#Member' is highlighted together as a link in my\n    version.\n2.  I used `doxygenHyperLink' instead of `doxygenHttpLink' and\n    highlighted http, https, and ftp protocols.\n3.  I added the missing `doxygenSpecialArgumentWord' to make `\\a' (not\n    the word after) appear the same way as `\\c'.\n4.  I made some adjustments in font choosing on non-Windows platforms.\n5.  The `Last Change' date is not updated in your file.\n6.  There are some trailing spaces in your file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4702",
+      "filename": "doxygen.zip",
+      "script_version": "1.14",
+      "date": "2005-10-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Fixed up[160][160]\\c words ending in )[160][160](Wu Yongwei)\n - With auto-brief //![60] followed by /** shouldn't supress the auto-brief in[160][160] the /**. (Reported by Markus Trenkwalder)\n - Allow numbers in @link linkwords (Reporeted by Wu Yongwei)\n- Don't treat # preceded by a word-end as a Hash-special (Reported by Wu Yongwei)\n- include # (@c #include) in the small-specials allowed chars. (Wu[160][160]Yongwei)\n - Highlight http[s] links (Wu Yongwei)\n - Various (Wu Yongwei)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3802",
+      "filename": "doxygen.zip",
+      "script_version": "1.12",
+      "date": "2005-01-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "- Fixed up ending of brief lines with respect to line @ commands and[160][160]end-comment. Not ending a brief no longer produces an error-comment.\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3797",
+      "filename": "doxygen.zip",
+      "script_version": "1.11",
+      "date": "2005-01-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "[160][160] - Allow doxygen comments inside brackets (Suggested by Zygmunt Krynicki)\n[160][160] - Restore correct font selection (Wu Yongwei)\n[160][160] - Don't end brief when encountering ? or ! as this isn't what happens with doxygen.\n[160][160] - Make punctuation an option.\n[160][160] - Make short words end with a , eg \\c word,[160][160](Wu Yongwei)\n1.11\n[160][160] - Thanks to Joseph Barker for pointing out that I had a syntax error in[160][160]1.10\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3751",
+      "filename": "doxygen.zip",
+      "script_version": "1.9",
+      "date": "2005-01-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Thanks to Toby Allsopp for this version:\n - Allow javadoc style auto-brief to be disabled\n - Move various definitions from single to multiline definitions \nAlso added the .txt help file.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3695",
+      "filename": "doxygen.vim",
+      "script_version": "1.8",
+      "date": "2004-12-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": " - Fix up some regions not marked as contained (code, verbatim, dot being highlighted outside of the doxygen region) (Toby Allsopp) - Only mark recognised HTML tags (Suggested by Mike Anderson)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3336",
+      "filename": "doxygen.vim",
+      "script_version": "1.7",
+      "date": "2004-08-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "[160][160]- Ignore Errors when loading from idl.\n[160][160]- Try and match # and \\c &c support to match what really happens. (Reported by Wu Yongwei)\n[160][160]- Don't go into doxygen mode for /**/\n[160][160]- Fix up syncing of brief after a \\def or similar line - character\n[160][160][160][160]immediately following a leading asterisk were being hilighted long.\n[160][160]- Try and work out a better default font for \\c\n[160][160]- add support for \\code \\endcode \\verbatim \\endverbatim (no contained elements) (suggested Yongwei)\n[160][160]- add contained support for dot (\\dot \\enddot)\n[160][160]- support html [60]!-- --[62] comments.\n[160][160]- support for params inside \\c \\ref brackets (can contain spaces?).\n[160][160]- highlight closing */ as error when found inside \\code, \\verbatim sections as well as \\c, \\ref sections with\n[160][160][160][160]unmatched brackets. \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3312",
+      "filename": "doxygen.vim",
+      "script_version": "1.6",
+      "date": "2004-08-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": " - Fix up # support.\n - Highlight \\\\endlink properly.\n - Don't mark */ as an error where there is no brief, or @{ is used.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3306",
+      "filename": "doxygen.vim",
+      "script_version": "1.5",
+      "date": "2004-08-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "- Make sure @c \\c and friends are equivalent for the start of a brief section.- Allow @c \\c and friends to cross lines. (Caveat, they can't be hard up[160][160]against a continuation '*' - it just gets tooo difficult).- Highlight a missing \\endlink as an error.- Fix multiline description without a '*' "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3295",
+      "filename": "doxygen.vim",
+      "script_version": "1.4",
+      "date": "2004-08-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "- Patches from Wu Yongwei\n[160][160]* Include '-' in inline \\c \\e maching.\n[160][160]* \\see, \\return are multiline desc.\n[160][160]* \\throw can now handle std::alloc (colons were confusing it)\n- Fixed support for [60]a href=[62] links.\n- Reported by Wu Yongwei\n[160][160]* Handle [in,out] in \\param.\n[160][160]* Handle non-terminating . in a brief description (eg A.B)\n[160][160]* allow leading asterix inside HTML marks.\n[160][160]* Fix up [60]a[62] link hilighting when interupted by new-lines and comment\n[160][160]continuations.\n[160][160]* Handle the case where \\c \\ref etc are used at the beginning of a 'brief'\n[160][160]line.\n- Fixed termination of multiline at start of new command.\n- Include John McGehee's instructions.\n"
+    }
+  ]
+}

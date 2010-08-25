@@ -1,0 +1,122 @@
+{
+  "script_id": "4",
+  "name": "ToggleCommentify.vim",
+  "summary": "comment lines in a program",
+  "script_type": "utility",
+  "description": "This is a (very) simple script to comment lines in a program. Currently supported languages are C, C++, the vim scripting language, python, and ox. Given the simplicity of the program it very easy to add support for new languages. The comments in the file should provide sufficient information on how to proceed.\n\n ",
+  "install_details": "You can put the functions in the attachment directly into your .vimrc or in a separate file to be sourced. If you choose for the latter option add a statement such as ...\n\nexecute \"source ~/vim/myVimFiles/ToggleCommentify.vim\"\n\n... to your .vimrc file\n\nTo call the functions add the following mappings in your .vimrc. \n \nmap <M-c>\t:call ToggleCommentify()<CR>j\nimap <M-c>\t<ESC>:call ToggleCommentify()<CR>j\n\nThe nice thing about these mapping is that you don't have to select a visual block to comment ... just keep the ALT-key pressed down and tap on 'c' as often as you need.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1408",
+      "filename": "FeralToggleCommentify.vim",
+      "script_version": "1.53",
+      "date": "2002-11-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "818",
+        "user_name": "FeralOfFireTop",
+        "first_name": "Robert",
+        "last_name": "KellyIV",
+        "email": "feral at eclecticwizard.com",
+        "homepage": ""
+      },
+      "release_notes": "Incorperated Bernhard Wagner's 12-Nov-2002 v1.52 xml changes\nWill make default mappings to <M-c> only if no map to <Plug>FtcTC and <M-c> is unused.\nMerged DLAC with this; DLAC = duplicate line and comment, simple mappings that are handy to use to save and comment a line before you mangle it. However this mangles mark z -- <Plug>FtcDlacNormal and <Plug>FtcDlacVisual; default is <S-C-c>\nBugfix:\tmismatched <Plug> names; This is <Plug>FtcTc (not FbmTc)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1404",
+      "filename": "FeralToggleCommentify.vim",
+      "script_version": "1.52",
+      "date": "2002-11-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1235",
+        "user_name": "vimp",
+        "first_name": "Bernhard",
+        "last_name": "Wagner",
+        "email": "vimp reside",
+        "homepage": ""
+      },
+      "release_notes": "Added XML file type"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1380",
+      "filename": "FeralToggleCommentify.vim",
+      "script_version": "1.51",
+      "date": "2002-11-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "818",
+        "user_name": "FeralOfFireTop",
+        "first_name": "Robert",
+        "last_name": "KellyIV",
+        "email": "feral at eclecticwizard.com",
+        "homepage": ""
+      },
+      "release_notes": "*Hacked in eol comments and added html's <!-- --> comments.\n* saves cursor position\n* bugfix for + comment.\n* See file comments for more details."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1033",
+      "filename": "FeralToggleCommentify.vim",
+      "script_version": "1.3",
+      "date": "2002-07-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "818",
+        "user_name": "FeralOfFireTop",
+        "first_name": "Robert",
+        "last_name": "KellyIV",
+        "email": "feral at eclecticwizard.com",
+        "homepage": ""
+      },
+      "release_notes": "Added :TC, :UC, :CC to toggle, uncomment and comment. Ranges suported as is specifying the comment symbol. Previous maping of <M-c> preserved (still toggles the comment)\nI've made a mess but it but works quite nicely near as I can tell :) Please see the comments at the head of the file. If my changes meet your aproval I sugest renaming the file back to ToggleCommentify.vim -- only renamed it to avoid colisions and confusion. I was unable to reach Vincent via email so making my changes public here; Hope they are helpful!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=22",
+      "filename": "ToggleCommentify.vim",
+      "script_version": "1.2",
+      "date": "2001-06-09",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "9",
+        "user_name": "Vincent",
+        "first_name": "Vincent",
+        "last_name": "Nijs",
+        "email": "Vincent.Nijs at econ.kuleuven.ac.be",
+        "homepage": ""
+      },
+      "release_notes": "Resolved problems with comments."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12",
+      "filename": "ToggleCommentify.vim",
+      "script_version": "1.1",
+      "date": "2001-06-05",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "9",
+        "user_name": "Vincent",
+        "first_name": "Vincent",
+        "last_name": "Nijs",
+        "email": "Vincent.Nijs at econ.kuleuven.ac.be",
+        "homepage": ""
+      },
+      "release_notes": "This version no longer uses 's:' (i.e., script-variables) as they are not supported in vim5.7 or vim5.8. Thanks to Rex Posadas for pointing this out to me.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5",
+      "filename": "ToggleCommentify.vim",
+      "script_version": "1.0",
+      "date": "2001-05-29",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "9",
+        "user_name": "Vincent",
+        "first_name": "Vincent",
+        "last_name": "Nijs",
+        "email": "Vincent.Nijs at econ.kuleuven.ac.be",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}
