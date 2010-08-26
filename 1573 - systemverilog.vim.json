@@ -1,0 +1,26 @@
+{
+  "script_id": "1573",
+  "name": "systemverilog.vim",
+  "summary": "SystemVerilog syntax highlighting",
+  "script_type": "syntax",
+  "description": "Since there didn't seem to be a SystemVerilog syntax file yet for Vim, I wrote this.\nIt's based on the existing Verilog mode from Vim 6.3.\nAll language keywords are defined, as are most builtin method/task/function names.",
+  "install_details": "Put it in your runtime directory as per normal syntax files.\nI use the following ~/.vim/filetype.vim to make it recognise any *.sv file as systemVerilog.\n\naugroup filetypedetect\nau BufNewFile,BufRead *.sv      setf systemverilog\naugroup END\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5834",
+      "filename": "systemverilog.vim",
+      "script_version": "0.1",
+      "date": "2006-06-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10289",
+        "user_name": "stephenh",
+        "first_name": "Stephen",
+        "last_name": "Hobbs",
+        "email": "stephenh at cadence.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

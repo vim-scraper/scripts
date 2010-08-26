@@ -1,0 +1,74 @@
+{
+  "script_id": "2794",
+  "name": "phpErrorMarker",
+  "summary": "Mark syntax errors in php file",
+  "script_type": "ftplugin",
+  "description": "phpErrorMarker set makeprg et errroformat automaticaly for php file.\nA call to :make launch php syntax checking and set sign (:h sign for more informations) if there are any errors in file.\nSome variables may be interesting :\ng:phpErrorMarker#autowrite : if true, file will be automaticaly write before syntax checking, default is \"0\".\ng:phpErrorMarker#php : path to php binary, default is \"php\".\ng:phpErrorMarker#textError : sign used for error, default is \"><\".\ng:phpErrorMarker#textWarning : sign used for warning, default is \"--\".\ng:phpErrorMarker#automake : if true, make is automaticaly done after a write command like \":w\", default is \"0\".\n g:phpErrorMarker#openQuickfix : if true, quickfix window will be automaticaly opened after \":make\".\nSet these variables in your .vimrc to override default values, like that :\n\nlet g:phpErrorMarker#autowrite = 1\n\nPlease, report any bug to phpErrorMarker.vim[..at..]mageekbox.net. ",
+  "install_details": "Download vimball, open it with vim, and do :so %. \nCreate or open a php file, and do :make.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11488",
+      "filename": "phpErrorMarker.vba",
+      "script_version": "0.0.4",
+      "date": "2009-10-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16679",
+        "user_name": "fch",
+        "first_name": "Frederic",
+        "last_name": "Hardy",
+        "email": "frederic.hardy at mageekbox.net",
+        "homepage": "http://blog.mageekbox.net"
+      },
+      "release_notes": "Add a call to <C-L> after autowrite to remove a screen bug in vim."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11448",
+      "filename": "phpErrorMarker.vba",
+      "script_version": "0.0.3",
+      "date": "2009-09-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16679",
+        "user_name": "fch",
+        "first_name": "Frederic",
+        "last_name": "Hardy",
+        "email": "frederic.hardy at mageekbox.net",
+        "homepage": "http://blog.mageekbox.net"
+      },
+      "release_notes": "Remove bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11433",
+      "filename": "phpErrorMarker.vba",
+      "script_version": "0.0.2",
+      "date": "2009-09-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16679",
+        "user_name": "fch",
+        "first_name": "Frederic",
+        "last_name": "Hardy",
+        "email": "frederic.hardy at mageekbox.net",
+        "homepage": "http://blog.mageekbox.net"
+      },
+      "release_notes": "Add GLVS.\nAdd g:phpErrorMarker#openQuickfix variable, default is \"1\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11432",
+      "filename": "phpErrorMarker.vba",
+      "script_version": "0.0.1",
+      "date": "2009-09-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16679",
+        "user_name": "fch",
+        "first_name": "Frederic",
+        "last_name": "Hardy",
+        "email": "frederic.hardy at mageekbox.net",
+        "homepage": "http://blog.mageekbox.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

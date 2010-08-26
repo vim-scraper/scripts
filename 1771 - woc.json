@@ -1,0 +1,58 @@
+{
+  "script_id": "1771",
+  "name": "woc",
+  "summary": "A vim WoC browser. It enables hyperlinks for sources and ASCII texts.",
+  "script_type": "utility",
+  "description": "This is the WoC client for Vim.\nIf you don't know what WoC is, read http://dev.dyne.org/wiki/Woc .\n\nShort description:\nThis plugin permits to use \"hypertags\", i.e. tags pointing to remote files. \nIt also supports cscope and ctags, thus you can use hyper-cscope commands which will bring you to remote locations.\n\nGeneral description:\nWocvim is a WoC client for Vim. WoC is a protocol which enables the use of hyperlinks in plain ASCII texts. \nThe links can point to local or remote locations. The protocol is specifically designed to support source code, but it can\nbe used in any text. For source code, it's also possible to use ad-hoc tag generators like cscope and ctags.\n\n\nwoc-vim: http://www.freaknet.org/alpt/src/utils/woc/readme",
+  "install_details": "Download the latest woc-vim tarball from:\nhttp://www.freaknet.org/alpt/src/utils/woc/tarball/\n\nThen just use ./install.sh   \nor simply execute the following commands:\n                            \n        cp wocdownloader ~/.vim/woc/\n        cp woc.vim ~/.vim/plugin/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6680",
+      "filename": "woc-1.2.tar.bz2",
+      "script_version": "1.2",
+      "date": "2007-01-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11649",
+        "user_name": "alpt",
+        "first_name": "AlpT",
+        "last_name": "Aliptah",
+        "email": "alpt at freaknet.org",
+        "homepage": "http://freaknet.org/alpt"
+      },
+      "release_notes": "Fixed a ``wocdownloader'' bug.\n\nAdded the g:woc_global_index option. It specifies to always load a global\nindex.woc file.\n\nPython syntax highlighting\n\nWhen WOCClearCache() is called automatically by WOC, only the last used cache\nis cleaned. If, instead, it is called by the :WocClearCache user command, the\nwhole cache/ dir is removed.\n\nAdded the g:woc_mappings option, to let the user define more easily its own\nmappings."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6662",
+      "filename": "woc-1.1.tar.bz2",
+      "script_version": "1.1",
+      "date": "2007-01-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11649",
+        "user_name": "alpt",
+        "first_name": "AlpT",
+        "last_name": "Aliptah",
+        "email": "alpt at freaknet.org",
+        "homepage": "http://freaknet.org/alpt"
+      },
+      "release_notes": "A little bit of documentation added.\nRead the README ;)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6637",
+      "filename": "woc-1.0.tar.bz2",
+      "script_version": "1.0",
+      "date": "2007-01-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11649",
+        "user_name": "alpt",
+        "first_name": "AlpT",
+        "last_name": "Aliptah",
+        "email": "alpt at freaknet.org",
+        "homepage": "http://freaknet.org/alpt"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

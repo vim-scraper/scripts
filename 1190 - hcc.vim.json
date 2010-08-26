@@ -1,0 +1,26 @@
+{
+  "script_id": "1190",
+  "name": "hcc.vim",
+  "summary": "Syntax for Handel-C",
+  "script_type": "syntax",
+  "description": "Syntax file for the Handel-C language. Extends the standard C syntax file with the special types and statements found in Handel-C. ",
+  "install_details": "Place hcc.vam in .vim/syntax or the Windows equivalent. \n\nTo auto-detect handel-c files based on extensions .hcc and .hch write the following (or add the relevant parts) to .vim/filetype.vim\n\nif exists(\"did_load_filetypes\")\nfinish\nendif\naugroup filetypedetect\nau! BufRead,BufNewFile *.hcc setfiletype hcc\nau! BufRead,BufNewFile *.hch setfiletype hcc\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3803",
+      "filename": "hcc.vim",
+      "script_version": "1.0",
+      "date": "2005-01-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6785",
+        "user_name": "akfidjeland",
+        "first_name": "Andreas",
+        "last_name": "Fidjeland",
+        "email": "akf at doc.ic.ac.uk",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

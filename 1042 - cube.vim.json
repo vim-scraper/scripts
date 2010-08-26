@@ -1,0 +1,42 @@
+{
+  "script_id": "1042",
+  "name": "cube.vim",
+  "summary": "Cube engine script syntax file",
+  "script_type": "syntax",
+  "description": "This is a syntax file for Cube Engine cfg files. It applies to autoexec.cfg, package.cfg and any other file which uses Cube script.\n\nMore info about Cube Engine here: http://cube.sourceforge.net/\n\nThis is my first syntax file. Maybe it isn't the best, but it works very well.\n\nFeatures:\n - Support for keyboard keys names only after \"bind\" command. (MOUSE1, MOUSE2,... is also supported)\n - Support for entities names only after \"newent\" and \"clearents\" commands.\n - Support for all cube commands of version 2004_05_22, except \"keymap\" (which you should not use, according to docs).\n - Recognizes special aliases \"level_trigger_xx\" and \"nextmap_xx\".\n\nI don't know if it will work on Vim 5.",
+  "install_details": "Put the file on ~/.vim/syntax/ directory. Then, when opening some Cube cfg file, type:\n:set syntax=cube\n\nYou can also put this line at top or bottom of your Cube cfg file:\n// vim: set syntax=cube\nThis will make vim automatically apply the Cube syntax.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4146",
+      "filename": "cube.vim",
+      "script_version": "1.1",
+      "date": "2005-04-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5641",
+        "user_name": "CrazyTerabyte",
+        "first_name": "Denilson",
+        "last_name": "Sá",
+        "email": "denilsonsa at gmail.com",
+        "homepage": "http://denilsonsa.selfip.org/~denilson/"
+      },
+      "release_notes": "Added a few missing keywords. Just that."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3263",
+      "filename": "cube.vim",
+      "script_version": "1.0",
+      "date": "2004-07-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5641",
+        "user_name": "CrazyTerabyte",
+        "first_name": "Denilson",
+        "last_name": "Sá",
+        "email": "denilsonsa at gmail.com",
+        "homepage": "http://denilsonsa.selfip.org/~denilson/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

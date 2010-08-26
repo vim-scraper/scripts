@@ -1,0 +1,74 @@
+{
+  "script_id": "1751",
+  "name": "tGpg",
+  "summary": "Yet another plugin for encrypting files with gpg",
+  "script_type": "utility",
+  "description": "This plugin currently can do the following:\n    - encrypt symmetrically\n    - encrypt asymmetrically\n    - clearsign buffer contents\n\nI couldn't get any of the existing gpg plugins to work properly (windows \nGvim & cygwin gpg) and do all the things I wanted it to do, so I wrote \nthis one. The main purpose is to perform symmetric encryption (the \ndefault) but it's flexible enough to do also clearsign and asymmetric \nencryption. Depending on your version of gpg, this script could also \nbe used as some kind of password safe.\n\nYou can set g:tgpgMode or b:tgpgMode to 'encrypt' for switching to \nasymmetric encryption as default. You can also control the use of \nsymmetric and asymmetric encryption by setting set \ng:tgpgPattern_symmetric and g:tgpgPattern_encrypt.\n\nThis plugin passes the passphrase on the command line to the gpg \nprogramm. So, it could be possible that somebody makes the passphrase \nshow up in some command log. Under some circumstances it could also be \npossible that some info (eg the recipients) is logged in your viminfo \nfile. If you clearsign a message, the plain text will be written to \ndisk. Ie, if you clearsign a gpg encrypted message, the text will \ntemporarily be written to disk as plain text -- please keep in mind the \nvast range of possible consequences.\n\nThis plugin uses the (Buf|File)(Read|Write)Cmd autocommand events to \nwrite/read the file. I'm not sure how this works out with other plugins \nusing these events.\n\nAs I don't like typing passphrases, this plugin caches all the \npassphrases entered in a script local variable. This means that \npassphrases are likely to be written to the swapfile, from where \nsomebody somehow could possibly do something ... Set g:tgpgCachePW to 1 \n(buffer-wise caching only) or 0 (no caching) to change this.\n\nThis plugin was tested with Windows GVim & cygwin gpg 1.4.5 (using bash \nas shell) as well as linux vim & gpg 1.4.5. It's possible that the use \nof a pure Windows version of gpg or cmd.exe as shell doesn't work. \n(Please report problems.)\n\nIf you get a message telling you about gpg command line options instead \nof the decrypted file, please check the value of g:tgpgShellQuote.\n\nIf writing fails, it's possible that you end up with a corrupted or \nempty file. That's why we make backups by default. Set g:tgpgBackup \nto 0 to change this.\n",
+  "install_details": "Copy to ~/.vim/plugin/ or similar.\n\nThis plugin currently is somewhat experimental. Don't blame me if you end up with a file you can't decrypt anymore.\n\nYou might also want to try vimscript#661 if you don't like this plugin.\n\n\nAlso available via git\nhttp://github.com/tomtom/tgpg_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8120",
+      "filename": "tgpg.vba.gz",
+      "script_version": "0.4",
+      "date": "2008-01-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "/bb- Reset cached passwords after g:tgpg_timeout seconds without access\n- If g:tgpg_gpg_md5_sum is set, check gpg's checksum via \ng:tgpg_gpg_md5_check before doing anything.\n- The gpg program must be configured via g:tgpg_gpg_cmd.\n- Make sure certain options (e.g., verbosefile, verbose) are set to \npredefined values during read/write, see g:tgpg_options.\n- Reset registers when unloading the buffer (this should prevent \ninformation copied to the clipboard to be written to the viminfo file; \nas it may have unintended consequences, you can turn it off by setting \ng:tgpg_registers to '')\n- randomized replacement tables for encryption\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7234",
+      "filename": "tGpg.vim",
+      "script_version": "0.3",
+      "date": "2007-06-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Changed command template syntax\n- The user is now queried for information only as required by the command template\n- Changed default value of g:tgpgTempSuffix\n- Removed recipients from the clearsign template\n- Make sure we're in the right buffer\n- Enable buffer local command line options (eg b:tgpgWrite_symmetric_*_options)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6574",
+      "filename": "tGpg.vim",
+      "script_version": "0.2",
+      "date": "2007-01-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Made the cache a script local variable.\n- Let user retype passwords when writing a file with a new or changed passphrase.\n- Display a warning if the size of the output file is 0 & revert to old file.\n- Keep the original when writing.\n- Run BufRead autocommands on filename root after reading the buffer.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6571",
+      "filename": "tGpg.vim",
+      "script_version": "0.1",
+      "date": "2007-01-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

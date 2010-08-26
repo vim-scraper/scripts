@@ -1,0 +1,42 @@
+{
+  "script_id": "1128",
+  "name": "synmark.vim",
+  "summary": "Highlight text at a fixed location",
+  "script_type": "utility",
+  "description": "This plugin provides commands for highlighting text at a fixed position. This works by dropping \"marks\" for the start and end of a region to be highlighted. It is mainly of use for other plugins, which display some externally provided text, and need to highlight some externally prescribed portions of it.",
+  "install_details": "Standard. The archive includes the plugin, synmark.vim, to be placed in some 'plugin' directory, and a help file, synmark.txt, which goes into a parallel 'doc' directory. Then, :helptags should be run for that directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3647",
+      "filename": "synmark-0.2.tar.gz",
+      "script_version": "0.2",
+      "date": "2004-11-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "1. Prevent errors when marking a region end without marking its start2. Changed the package directory structure for easier installation"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3624",
+      "filename": "synmark-0.1.tar.gz",
+      "script_version": "0.1",
+      "date": "2004-11-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

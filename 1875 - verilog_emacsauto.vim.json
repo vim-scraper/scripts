@@ -1,0 +1,74 @@
+{
+  "script_id": "1875",
+  "name": "verilog_emacsauto.vim",
+  "summary": "verilog filetype plugin to enable emacs verilog-mode autos",
+  "script_type": "ftplugin",
+  "description": "Two emacs verilog-mode functions are mapped.\n\\a expands all the verilog-mode autos (similar to C-c C-a in emacs).\n\\d collapses all the verilog-mode autos (similar to C-c C-d in emacs).\n\nPreviously if I wanted to update verilog-mode autos, I would\n   save and quit vim\n   fire up emacs\n   do the auto commands\n   save and close emacs\n   fire up vim.\nAnd in doing so, I would lose all the edit history in vim.\nWith this I can just type \\a and keep all the previous edit history for undos.\n\nThis is my first attempt at writing a vim plugin. Code should be simple enough for an average Verilog user to take and fix/enhance according to needs. Doing :he plugin, :he write-plugin, or :he plugin-details should reveal how simple this really is.",
+  "install_details": "Download this script and put it in your ~/.vim/ftplugin/ directory, creating the directories if necessary.\n\nYou need to get the verilog-mode.el file from the http://www.verilog.com/verilog-mode.html site.\nYou can follow the installation instruction there, but to use it with this script all you need to do is place the uncompressed file in your ~/elisp directory. You can also place the file in other locations as long as you change the path to the file in this script.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7578",
+      "filename": "verilog_emacsauto.vim",
+      "script_version": "0.4",
+      "date": "2007-08-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12295",
+        "user_name": "stradi2",
+        "first_name": "Seong",
+        "last_name": "Kang",
+        "email": "stradi2 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "moved setlocals outside of loaded check so it works properly when opening multiple files"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7045",
+      "filename": "verilog_emacsauto.vim",
+      "script_version": "0.3",
+      "date": "2007-04-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12295",
+        "user_name": "stradi2",
+        "first_name": "Seong",
+        "last_name": "Kang",
+        "email": "stradi2 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Made emacs stderr output to show to help debugging any problems.\nMade removal of temporary file standard."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7033",
+      "filename": "verilog_emacsauto.vim",
+      "script_version": "0.2",
+      "date": "2007-04-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12295",
+        "user_name": "stradi2",
+        "first_name": "Seong",
+        "last_name": "Kang",
+        "email": "stradi2 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added folding of emacs autos. I.e. 'zo' and 'zc' can be used to open and close folds.\nDo :he fold for more about foldings"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7031",
+      "filename": "verilog_emacsauto.vim",
+      "script_version": "0.1",
+      "date": "2007-04-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12295",
+        "user_name": "stradi2",
+        "first_name": "Seong",
+        "last_name": "Kang",
+        "email": "stradi2 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "787",
+  "name": "qt2vimsyntax",
+  "summary": "syntax definition for Trolltech Qt library (C++)",
+  "script_type": "syntax",
+  "description": "A perl script that creates syntax definition for Trolltech' Qt library (http://www.trolltech.com) by scanning all qt includes and gaining class names. Assumes $QTDIR environment is set; if not, /usr/lib/qt is scanned. ",
+  "install_details": "This is not a ready-to-install syntax file, you have to generate one with this script:\n./qt2vimsyntax > ~/.vim/after/syntax/c.vim\nThis will create it for your qt installation (qt header files required!) and place it in your personal vim directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2403",
+      "filename": "qt2vimsyntax",
+      "script_version": "1.1",
+      "date": "2003-10-15",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "3560",
+        "user_name": "yogin",
+        "first_name": "Pawel",
+        "last_name": "Stolowski",
+        "email": "pawel.stolowski at wp.pl",
+        "homepage": "http://linux.bydg.org/~yogin"
+      },
+      "release_notes": "Fixed small typo in regexp matching that caused many basic classes to be missed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2385",
+      "filename": "qt2vimsyntax",
+      "script_version": "1.0",
+      "date": "2003-10-11",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "3560",
+        "user_name": "yogin",
+        "first_name": "Pawel",
+        "last_name": "Stolowski",
+        "email": "pawel.stolowski at wp.pl",
+        "homepage": "http://linux.bydg.org/~yogin"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

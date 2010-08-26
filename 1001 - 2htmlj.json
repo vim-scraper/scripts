@@ -1,0 +1,42 @@
+{
+  "script_id": "1001",
+  "name": "2htmlj",
+  "summary": "Slightly modified 2html.vim script for use with javadoc",
+  "script_type": "syntax",
+  "description": "I have modified the great 2html.vim script contained in the distribution for use with javadoc documents. My changes may be of use to others as well.\n\nSpecific purpose: when creating Java API Documents with the -linksource option, the documents include copies of source code but (glaring omission) the html source pages are not syntax-highlighted.\n\nMy changes to the 2html.vim script allow the resulting html documents to be exchanged with those in the src-html folder thus creating syntax-highlighted html pages in the API documentation.\n\nThe key addition is the \"id\" attribute at the beginning of each code line so that every line of code can be reached like this: Hello.html#line.15.\n\nWhat was: <span class=\"lnr\"> 11</span>\nis now: <span id=\"line.11\" class=\"lnr\"> 11</span>\n\nI also added the options of short_name and short_title so that Hello.java becomes Hello.html not Hello.java.html and that the html document title is the name of the source file.\n\nPlease see my comments in the script.\n\nNote: I tried hard not to break anything in the existing script. I would appreciate any feedback. Thanks.",
+  "install_details": "You must place this file in the Vim syntax folder (on my Mac, it's at: /Applications/vim/Vim.app/runtime/syntax). You may rename it as 2html.vim and replace the existing script if you wish (please save the original if you do).\n\nTo use the javadoc functionality (with script saved as 2html.vim):\n:let javadoc = 1\n:runtime! syntax/2html.vim \n\nTo hide line numbers but still have the id references to line numbers:\n:let javadoc_no_lnr = 1\n:runtime! syntax/2html.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3089",
+      "filename": "2htmlj.vim",
+      "script_version": "1.1",
+      "date": "2004-06-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5272",
+        "user_name": "chasshoo",
+        "first_name": "Charles",
+        "last_name": "Shooshan",
+        "email": "chasshoo at snet.net",
+        "homepage": ""
+      },
+      "release_notes": "Minor change so Windows GUI will leave path off html short_title. Line 206 of code changed from: let s:source_file = expand(\"%\") to: let s:source_file = expand(\"%:t\") ."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3078",
+      "filename": "2htmlj.vim",
+      "script_version": "1.0",
+      "date": "2004-05-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5272",
+        "user_name": "chasshoo",
+        "first_name": "Charles",
+        "last_name": "Shooshan",
+        "email": "chasshoo at snet.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

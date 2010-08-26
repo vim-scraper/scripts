@@ -1,0 +1,58 @@
+{
+  "script_id": "1849",
+  "name": "AutoClose",
+  "summary": "Inserts matching bracket, paren, brace or quote",
+  "script_type": "utility",
+  "description": "There are very simple ways to insert a closing brace by setting up a few mappings. The problem with all these approaches is that they break undo, history or both. This script is my sixth attempt at correcting this problem and the first one that has worked in all scenarios.\n\nUsing this script, typing ``(`` will result in (|), where | is the cursor position and the double backticks are just marking input. Typing a ``)`` will move the cursor outside the parens. This moving outside works even in nested scenarios. Typing ``if(my_array['key`` results in if(my_array['key|']) and ``)`` gets you if(my_array['key'])|.\n\nThe paired characters are: [, (, {, \", '\n\nIf you like this script, you should also check out surround.vim",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10873",
+      "filename": "autoclose.vim",
+      "script_version": "1.2",
+      "date": "2009-06-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9561",
+        "user_name": "grayrest",
+        "first_name": "Karl",
+        "last_name": "Guertin",
+        "email": "grayrest+vim at gmail.com",
+        "homepage": "http://gr.ayre.st"
+      },
+      "release_notes": "Fixed all known bugs (finally). Typing a closing character will now consistently jump out of a match at all times."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7700",
+      "filename": "autoclose.vim",
+      "script_version": "1.1.2",
+      "date": "2007-09-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9561",
+        "user_name": "grayrest",
+        "first_name": "Karl",
+        "last_name": "Guertin",
+        "email": "grayrest+vim at gmail.com",
+        "homepage": "http://gr.ayre.st"
+      },
+      "release_notes": "Fixes a rather nasty bug that sometimes deletes closing chars on the same line. Add double brace auto-indent. 1.1.2 contains fixes for a mapping typo and auto-indent edge case."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6940",
+      "filename": "autoclose.vim",
+      "script_version": "1.0.1",
+      "date": "2007-04-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9561",
+        "user_name": "grayrest",
+        "first_name": "Karl",
+        "last_name": "Guertin",
+        "email": "grayrest+vim at gmail.com",
+        "homepage": "http://gr.ayre.st"
+      },
+      "release_notes": "Knew I shouldn't have uploaded the first version as 1.0"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "2784",
+  "name": "template-init.vim",
+  "summary": "provide more flexiable template",
+  "script_type": "utility",
+  "description": "template-init.vim let you to leave place holders in your template , then you can press <tab> key to jump to next placeholder (in insert mode)\n\nthe placeholder could be in vimscript , so that you can generate content by vim function or vim command , even in perl or ruby.\n\nlet g:skeleton_path = expand('~/.vim/skeleton')\nlet g:skeleton_placeholder_key = '<Tab>'\n\n to setup template:\n   au BufNewFile *.t   :call InitTemplate('template.t')\n   au BufNewFile *.pl  :call InitTemplate('')\n\n to setup placeholder:\n   {{!perl:  print q|test|}}\n   {{!vim: expand('%')}}\n   {{:normal ggyp}}\n   {{place holder}}\n\ngithub:  http://github.com/c9s/template-init.vim\n",
+  "install_details": "$ make install ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11370",
+      "filename": "template-init.tar.gz",
+      "script_version": "1.1",
+      "date": "2009-09-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13514",
+        "user_name": "c9s",
+        "first_name": "Yo-An",
+        "last_name": "Lin",
+        "email": "cornelius.howl at gmail.com",
+        "homepage": "http://c9s.blogspot.com"
+      },
+      "release_notes": "new version vim plugin"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11360",
+      "filename": "template-init.tar.gz",
+      "script_version": "0.1",
+      "date": "2009-09-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13514",
+        "user_name": "c9s",
+        "first_name": "Yo-An",
+        "last_name": "Lin",
+        "email": "cornelius.howl at gmail.com",
+        "homepage": "http://c9s.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

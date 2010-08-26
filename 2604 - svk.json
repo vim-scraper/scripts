@@ -1,0 +1,26 @@
+{
+  "script_id": "2604",
+  "name": "svk",
+  "summary": "syntax and a couple of useful commands for svk commit files",
+  "script_type": "utility",
+  "description": "Package includes syntax file for svk commit file and  two functions for adding files that are not under source control to commit (and vice-versa)",
+  "install_details": "- Copy the svk.tar.gz to $HOME/.vim/ and run\n    tar xvfz svk.tar.gz \n\n- Make sure filetype plugin is ON by issuing :filetype command and if it's off put following line in the beginning of .vimrc: \n    filetype plugin on\n\n- Enable autodetection of svk commit files by adding following  \n    au BufNewFile,BufRead svk-commit*.tmp   setf svk",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10366",
+      "filename": "svk.tar.gz",
+      "script_version": "0.1",
+      "date": "2009-04-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4435",
+        "user_name": "gonzo",
+        "first_name": "Oleksandr",
+        "last_name": "Tymoshenko",
+        "email": "gonzo at univ.kiev.ua",
+        "homepage": "http://www.gonzo.kiev.ua"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

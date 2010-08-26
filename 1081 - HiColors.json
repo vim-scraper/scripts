@@ -1,0 +1,106 @@
+{
+  "script_id": "1081",
+  "name": "HiColors",
+  "summary": "Colorscheme display and editor",
+  "script_type": "syntax",
+  "description": "You'll get to see your colornames' colors and edit your colorscheme with the hicolors ftplugin/syntax/help files.  Leftclick on any colorname and you'll bring up the help page on that colorname (if any).\n\nTo see an example, click on\n\n\thttp://mysite.verizon.net/astronaut/vim/colors/hicolors.html\n\nto see hicolors displaying the astronaut colorscheme (vimscript#122) color selections for the various highlighting groups.\n\nThis script is auto-installable via GetLatestVimScripts, too (vimscript#642).\n\nUse it with vimscript#625 (colorscheme sampler) to see what highlighting groups are supported and what the colors will be.\n\nBring up the colorscheme editor on each color by right-clicking on the color's name.  Use the mouse's left button to click and drag on the colorbars to select and change colors.  It works with both the gui and those console vims which support the mouse!  You can then write the colorscheme (you'll be prompted for a filename), cancel the change, or indicate that the change is done for that colorname.\n\n----------------------------------------------------------------------------------------\nUSAGE\n\n    :help hicolors\n    <leftmouse>    on a colorname to bring up help on that colorname\n    <rightmouse>   on a colorname to bring up the colorscheme editor for that color\n      <leftmouse>  click&drag on any colorbar to change the color for that colorname\n      <leftmouse>  to select WriteColorscheme, Cancel, or Done\n\n----------------------------------------------------------------------------------------\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#HICOLORS)\n",
+  "install_details": "hicolors is now distributed as a vimball!  (see :help vimball)\n\nvim hicolors.vba.gz\n:so %\n:q\n\nFor windows users who aren't using a cygwin/gcc compiled vim:\nvim -u NONE -N syntax\\hicolors.vim\n:set ff=dos\n:wq\nvim -u NONE -N doc\\hicolors.txt\n:set ff=dos\n:wq\nvim -u NONE -N ftplugin\\hicolors.vim\n:set ff=dos\n:wq",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5642",
+      "filename": "hicolors.vba.gz",
+      "script_version": "8",
+      "date": "2006-05-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* Vim 7.0's new colors are all included!\n* When one changes the colorscheme, all colors that should be \"Ignore\"d now are so linked; these colors aren't specified by the current colorscheme.\n\nTo use:  :help hicolors\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5345",
+      "filename": "hicolors.tar.gz",
+      "script_version": "7",
+      "date": "2006-03-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "The colorscheme editor in hicolors.vim now supports editing colorschemes for 256-color xterms."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4787",
+      "filename": "hicolors.tar.gz",
+      "script_version": "6",
+      "date": "2005-11-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "1) + - < > keyboard interface installed (intended for use when mouse support is lacking)\n2) a help file, hicolorshelp.txt, included (:he hicolors-usage)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4162",
+      "filename": "hicolors.tar.gz",
+      "script_version": "5",
+      "date": "2005-04-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Bug fix: now handles highlighting groups that are defined without explicit colorization (ie. something with just gui=reverse, for example)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3564",
+      "filename": "hicolors.tar.gz",
+      "script_version": "4",
+      "date": "2004-10-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Hicolors: now has a super colorscheme editor with a rightmouse click!  And, it still provides its special colorized list of your colorscheme's colornames via help, plus links to any more help with a leftmouse click.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3418",
+      "filename": "hicolors.tar.gz",
+      "script_version": "3",
+      "date": "2004-09-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Now includes script-id for GetLatestVimScripts semi-automatic updating and installation\n"
+    }
+  ]
+}

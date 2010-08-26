@@ -1,0 +1,186 @@
+{
+  "script_id": "1018",
+  "name": "potwiki.vim",
+  "summary": "Maintain a Wiki of plain text files",
+  "script_type": "utility",
+  "description": "If you like to keep notes in plain text files you might like this script.\npotwiki provides functions and mappings for conveniently maintaining \na Wiki of text files with vim.\n\nThe Wiki is a collection of text files in a single directory. These files\ncan contain hyper links to each other in the form of WikiWords.\n\nA WikiWord is a word which starts with an upper case letter and contains\nat least one lower case letter and another upper case letter in this\norder -- it's in 'camel case', e.g.\n\n  ThisIsAWikiWord\n\nSuch a WikiWord links to a file of exactly the same name in your\nWiki directory.\n\nWhen opening a Wiki file potwiki scans your Wiki directory to find\nwhich WikiWords are valid links. WikiWords without a corresponding\nfile are highlighted as errors (otherwise it doesn't matter).\n\nAfter installing the plugin see :help potwiki for further documentation.\n\n   The default mappings are defined as follow (By default, <Leader> stands\n   for '\\&#039. See |Leader| for more info) :\n\n   <Leader>ww   - open the Wiki HomePage\n   <Leader>wi   - open the Wiki index\n   <Leader>wf   - follow a WikiWord (can be used in any buffer!)\n   <Leader>we   - edit a Wiki file\n\n   The following mappings are present when editing a Wiki file:\n\n   <Leader><Leader> - close the file\n   <CR>             - follow the WikiWord under the cursor\n   <Tab>            - move to the next WikiWord\n   <BS>             - move to the previous WikiWord\n   <Leader>wr       - reload WikiWords\n",
+  "install_details": "Just drop potwiki.vim in your plugin directory (usually ~/.vim/plugin).\n\npotwiki automatically installs its documentation the next time you start vim.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9316",
+      "filename": "potwiki.vim",
+      "script_version": "1.25",
+      "date": "2008-10-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5424",
+        "user_name": "etwist",
+        "first_name": "Edwin",
+        "last_name": "Steiner",
+        "email": "edwin.steiner at gmx.net",
+        "homepage": ""
+      },
+      "release_notes": "Allow appending a configurable suffix to the names of WikiFiles.\n(contributed by Anders Carling)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6200",
+      "filename": "potwiki.vim",
+      "script_version": "1.24",
+      "date": "2006-09-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5424",
+        "user_name": "etwist",
+        "first_name": "Edwin",
+        "last_name": "Steiner",
+        "email": "edwin.steiner at gmx.net",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug causing \"E121: Undefined variable: g:potwiki_dir\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6189",
+      "filename": "potwiki.vim",
+      "script_version": "1.23",
+      "date": "2006-09-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5424",
+        "user_name": "etwist",
+        "first_name": "Edwin",
+        "last_name": "Steiner",
+        "email": "edwin.steiner at gmx.net",
+        "homepage": ""
+      },
+      "release_notes": "Fixed regressions from 1.21, non-silent opening of WikiPages."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5822",
+      "filename": "potwiki.vim",
+      "script_version": "1.22",
+      "date": "2006-06-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5424",
+        "user_name": "etwist",
+        "first_name": "Edwin",
+        "last_name": "Steiner",
+        "email": "edwin.steiner at gmx.net",
+        "homepage": ""
+      },
+      "release_notes": "Work-around for a bug in vim 7 <buffer> maps."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4012",
+      "filename": "potwiki.vim",
+      "script_version": "1.21",
+      "date": "2005-03-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5424",
+        "user_name": "etwist",
+        "first_name": "Edwin",
+        "last_name": "Steiner",
+        "email": "edwin.steiner at gmx.net",
+        "homepage": ""
+      },
+      "release_notes": "autowrite when doing \\ww, \\wi, \\we, \\wf, ..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3898",
+      "filename": "potwiki.vim",
+      "script_version": "1.20",
+      "date": "2005-02-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5424",
+        "user_name": "etwist",
+        "first_name": "Edwin",
+        "last_name": "Steiner",
+        "email": "edwin.steiner at gmx.net",
+        "homepage": ""
+      },
+      "release_notes": "Better potwiki-autowrite: write file only if changed, also autowritewhen following another WikiWord with <CR>.Put the following in your .vimrc to use autowrite:    let potwiki_autowrite=1"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3256",
+      "filename": "potwiki.vim",
+      "script_version": "1.19",
+      "date": "2004-07-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5424",
+        "user_name": "etwist",
+        "first_name": "Edwin",
+        "last_name": "Steiner",
+        "email": "edwin.steiner at gmx.net",
+        "homepage": ""
+      },
+      "release_notes": "Better interaction with :syntax on | enable | off.If you want to use these commands put the line 'call PotwikiSyntax()' in a file called~/.vim/syntax/potwiki.vim (You can also add customizations after this line.)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3252",
+      "filename": "potwiki.vim",
+      "script_version": "1.16",
+      "date": "2004-07-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5424",
+        "user_name": "etwist",
+        "first_name": "Edwin",
+        "last_name": "Steiner",
+        "email": "edwin.steiner at gmx.net",
+        "homepage": ""
+      },
+      "release_notes": "fix navigation if more than one WikiWord is on a line (contributed by Michael Fitz)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3219",
+      "filename": "potwiki.vim",
+      "script_version": "1.15",
+      "date": "2004-07-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5424",
+        "user_name": "etwist",
+        "first_name": "Edwin",
+        "last_name": "Steiner",
+        "email": "edwin.steiner at gmx.net",
+        "homepage": ""
+      },
+      "release_notes": "fixed disappearing colors, work with hls set, better error handling,use 'potwiki' filetype and syntax, removed umlauts from defaults(avoids problems with UTF-8 locales)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3191",
+      "filename": "potwiki.vim",
+      "script_version": "1.11",
+      "date": "2004-06-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5424",
+        "user_name": "etwist",
+        "first_name": "Edwin",
+        "last_name": "Steiner",
+        "email": "edwin.steiner at gmx.net",
+        "homepage": ""
+      },
+      "release_notes": "work correctly when ignorecase is set,added option: potwiki_ignore"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3164",
+      "filename": "potwiki.vim",
+      "script_version": "1.4",
+      "date": "2004-06-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5424",
+        "user_name": "etwist",
+        "first_name": "Edwin",
+        "last_name": "Steiner",
+        "email": "edwin.steiner at gmx.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

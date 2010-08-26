@@ -1,0 +1,26 @@
+{
+  "script_id": "742",
+  "name": "SwapHeader",
+  "summary": "This script allows to switch between source and header files.",
+  "script_type": "utility",
+  "description": "This script allows to switch between source and header files.",
+  "install_details": "Copy swapheader.vim to your plugins directory. To switch between source \n and header files type ':call SwapHeaderFile(0)' or press <C-F6> if you like open file in same window, if you like open file in vertically split window type  ':call SwapHeaderFile(1)' or <C-S-F6>.\n\nGlobal Configuration Variables:\n    defaultHeaderExtension : Sets header extension, by default '\\\\.h'.\n    defaultSourceExtension : Sets source extension, by default '\\\\.cpp'.\n    enableSwapHeaderMap : If it's equal to 1, keymapping for <C-F6> and <C-S-F6> is enabled, otherwise it's disabled, by default 1.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2255",
+      "filename": "swapheader.vim",
+      "script_version": "1.0.0",
+      "date": "2003-08-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3186",
+        "user_name": "Evgeny",
+        "first_name": "Evgeny",
+        "last_name": "Podjachev",
+        "email": "evgeny_podjachev at mail.ru",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

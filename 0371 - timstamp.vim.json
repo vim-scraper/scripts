@@ -1,0 +1,106 @@
+{
+  "script_id": "371",
+  "name": "timstamp.vim",
+  "summary": "Global plugin for automated time stamping",
+  "script_type": "utility",
+  "description": "Content of the help document:\n\n*timstamp.txt*  Global plugin for automated time stamping - v0.95\n\nThe timstamp general plugin provides automated time-stamping functionality.\n\n1. General\t\t    |timstamp_general|\n2. Specification format\t    |timstamp_specformat|\n3. Default specs\t    |timstamp_default_specs|\n4. Control variables\t    |timstamp_control|\n\n==============================================================================\n\n1. General\t\t\t\t\t\t*timstamp_general*\n\nWhenever a file is written, this plugin will look for 'Time-stamp lines'\namongst the first and last lines of the file to be written. If any of these\nlines contain e.g. ' Time stamp:' or 'Last change:', the plugin will update\nthese lines before writing the file.\n\nThe plugin is fully controlled by the user. It does provide two standard\n'Time-stamp line' specifications as well as their replacement spec. The user\ncan add additional values as well as remove the default values.\n\nThe plugin and its documentation file can be installed as described under\n|add-global-plugin| and |add-local-help|. Do not forget to run |:helptags|.\n\n==============================================================================\n\n2. Specification format\t\t\t\t\t*timstamp_specformat*\n\nThe specification format for a time-stamp line consists of the {pat} and {sub}\nparts required to build the desired substitute command. These {pat} and {sub} \nparts must be separated by a \"!\" character.\n\nAn examplespec may clarify this: \"( Last changed:\\).*$!\\1 %Y %b %d\".\nThe {pat} part instructs the plugin to look for any line that ends on\n' Last changed: ...'.\n\nThe {sub} part is passed on to |strftime()|, which (at least at the time I am\nwriting this) translates \"%Y %b %d\" into \"2002 Aug 11\". Of course, these would\nbe the values at the time of the plugin execution, which is the moment before\nwriting the file. Any % tokens known by your version of |strftime()| can be \nused.\n    \nAdditionally, some # tokens have been defined by the plugin. These are\nreplaced by their corresponding value after |strftime()| processing and \nbefore performing the actual substitutions:\n\n    #f\tfilename    |timstamp_filename|\n    #h  hostname    |timstamp_hostname|\n    #H  Hostname    |timstamp_Hostname|\n    #n  username    |timstamp_username|\n    #u  userid\t    |timstamp_userid|\n\n#f  filename\t\t\t\t\t\t*timstamp_filename*\n\n    The #f token is replaced by the filename of the current buffer. This is a\n    name without any path components.\n\n#h  hostname\t\t\t\t\t\t*timstamp_hostname*\n\n    The #h token is replaced by the hostname of the current vim process. \n   \n    The user can specify the desired value with the glabal variable\n    g:timstamp_hostname. If that variable does not exist, the value of the\n    $HOSTNAME environment variable will be used. If there is no $HOSTNAME, the\n    output of the hostname() function is used. However, only the last word\n    returned by that function is preserved. The platform type of qualifier\n    (e.g. PC) is not kept.\n\n#H  Hostname\t\t\t\t\t\t*timstamp_Hostname*\n\n    The #H token is also replaced by the hostname. However, the platform\n    qualifier is not removed.\n\n#n  username\t\t\t\t\t\t*timstamp_username*\n\n    The #n token will be replaced by the user name. This will be obtained from\n    the g:timstamp_username variable if it exists. Otherwise, it is\n    initialised from the $USERNAME environment variable.    \n\n#u  userid\t\t\t\t\t\t*timstamp_userid*\n\n    The #u token will be replaced by the userid. This will be obtained from\n    the g:timstamp_userid variable if it exists. Otherwise, it is\n    initialised from the $LOGNAME environment variable. \n    \n==============================================================================\n\n3. Default specs\t\t\t\t    *timstamp_default_specs*\n\nThe plugin defines two default specs, which can be overwritten by the user:\n\n    Last Change Spec   |timstamp_last_change_spec|\n    Time Stamp spec    |timstamp_time_stamp_spec|\n    \n3.1. Last Change Spec\t\t\t\t*timstamp_last_change_spec*\n\t\n    The last change spec has following default value:\n\n    '\\( Last \\?\\(changed\\?\\|modified\\):\\).*$!\\1 %Y %b %d' \n\t\n    which can be overruled by providing a different value in the \n    g:timstamp_1 variable.\n\n    The {pat} part is '\\( Last \\?\\(changed\\?\\|modified\\):\\).*$'. This will \n    process lines containing ' Last changed', ' Last modified' or its \n    variations.\n\n    The {sub} part is '\\1 %Y %b %d'. This will preserve the ' Last ...:' \n    string and replace the remainder with the current 4 digit year, \n    the short month name and the day of month. \n\n    This file contains a 'Last Change' line at |timstamp_examples|.\n\t\n3.2. Time Stamp spec\t\t\t\t    *timstamp_time_stamp_spec*\n\n    The time stamp spec is a bit more complex:\n\n\t'\\( Time[- ]\\?stamp:\\).*$!\\1 <#f %a %Y/%m/%d %H:%M:%S #u #h>'\n\n    and can be overruled by defining the global g:timstamp_2 variable.\n\n    The {pat} part is shorter: '\\( Time[- ]\\?stamp: \\)<.*>$'. It will trigger \n    on lines containing ' Time-stamp', ' Time stamp' or ' Timestamp'\n    immediately followed by a ':'.\n\n    The {sub} part is '\\1 <#f %a %Y/%m/%d %H:%M:%S #u #h>'. This will \n    preserve the ' Time...:' string, and replace the remainder of the line \n    with e.g. ' <timstamp.txt Sun 2002/08/11 13:03:01 guivho BTM4BZ>'. Please\n    refer to the |timstamp_specformat| above for the # tokens.\n\n    This file contains a 'Time stamp' line at |timstamp_examples|.\n\n==============================================================================\n\n4. Control variables\t\t\t\t\t*timstamp_control*\n\nThe plugin can be fully controlled by the user. Each of the internal variables\nthat control the operation, can be overruled by providing a corresponding\nglobal value.\n\n    g:timstamp_1, \n    g:timstamp_2, \n    g:timstamp_...\t    |timstamp_specs|\n    g:timstamp_automask\t    |timstamp_automask|\n    g:timstamp_hostname\t    |timstamp_hostname|\n    g:timstamp_Hostname\t    |timstamp_Hostname|\n    g:timstamp_ignorecase   |timstamp_ignorecase|\n    g:timstamp_language\t    |timstamp_language|\n    g:timstamp_modelines    |timstamp_modelines|\n    g:timstamp_userid\t    |timstamp_userid|\n    g:timstamp_username\t    |timstamp_username|\n\n4.1. g:timstamp_1, g:timstamp_2, g:timstamp_...\t\t    *timstamp_specs*\n\nThe |timstamp_default_specs| section has described the two default specs\nprovided by the plugin. If the user is happy with those two specs, no entry is\nrequired in the .vimrc file.\n\nHowever the user may overrule these default values by defining a g:timstamp_1\nand / or a g:timstamp_2 variable, e.g:\n\n    :let g:timstamp_1='\\( Last change:\\).*$!\\1 %A %Y %b %d'\n    \nif the user would always want to include the day of the week as in\n\n    ' Last Change: Wednesday 2002 Aug 14'  \n\nThe user can add additional specs, e.g. a g:timstamp_3 etc... :\n\n    :let g:timstamp_3='\\( Last messed up at:\\).*$\\1 %Y %b %d'\n\nfor those files that are still in early development? :-)\n    \n\nNote that the first empty or not existing spec will terminate processing.\n\nIf e.g. a g:timstamp_3 has been defined, but g:timstamp_2 has been set to \"\" \nprocessing will not continue beyond g:timstamp_2. On the other hand, if the\nfirst two specs are non empty (either while they have not been overruled, or \nas they have been replaced by a non empty value), processing will continue \nwith g:timstamp_3, g:timstamp_4, g:timstamp_5 ... as long as each consecutive \nvariable exists and has a non empty value.\n\n4.2. g:timstamp_automask\t\t\t\t*timstamp_automask*\n\nBy default, the plugin installs an \"autocommand BufWrite\" for all files. So it\nuses '*' as {pat} (cfr |:autocmd|). The user can overrule this behaviour by\ndefining g:timstamp_automask with the desired value, e.g.:\n\n    :let g:timstamp_automask = \"*.html\"\n>\nto limit timestamping to html files.\n\n4.3. g:timstamp_hostname\t\t\t    Cfr |timstamp_hostname|.\n\n4.4. g:timstamp_Hostname\t\t\t    Cfr |timstamp_Hostname|.\n\n4.5. g:timstamp_ignorecase\t\t\t\t*timstamp_ignorecase*\n\nThe plugin ignores case when performing the eventual substitution. \nSo ' lAsT cHanGe:' is as valid as ' Last Change:'. The user can prevent this\nby defining global variable g:timstamp_ignorecase to an empty value: <\n\n    :let g:timstamp_ignorecase = \"\"\n>\n\n4.6. g:timstamp_language\t\t\t\t*timstamp_language*\n\nThe plugin assumes that one usually wants english timestamps. By default it\nexecutes a ':language time en' to achieve this. The user can specify a\ndifferent language to be used by means of the g:timstamp_language variable.\n\n\n4.7. g:timstamp_modelines\t\t\t\t*timstamp_modelines*\n\nThe plugin uses the value of the |'modelines'| option to define the number of\nhead or tail lines to be taken into account. The user can specify a different\nvalue by means of the g:timstamp_modelines variable. \n\nThis can even be set to '$' if all file lines have to be taken into account.\nBe aware that this would change any line that matches any of your\n|timspec_specs|. This may be more than you would expect.\n\n4.8. g:timstamp_userid\t\t\t\t    Cfr |timstamp_userid|\n\n4.9. g:timstamp_username\t\t\t    Cfr |timstamp_username|\n\n==============================================================================\n\n\t\t\t\t\t\t\t*timstamp_examples*\n Version: 0.95\n Last change: 2003 Feb 13\n Timestamp: <timstamp.txt Thu 2003/02/13 22:58:16  MSDOG>\n Maintainer: Guido Van Hoecke <Guido@VanHoecke.org>\n vim:tw=78:sw=4:ts=8:ft=help:norl:\n",
+  "install_details": "The plugin and its documentation file can be installed as described under |add-global-plugin| and |add-local-help|. Do not forget to run |:helptags|.\n\nNote: the 'detailed description' above is a copy of the accompanying timstamp.txt help file. \n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1730",
+      "filename": "timstamp.zip",
+      "script_version": "0.95",
+      "date": "2003-02-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "928",
+        "user_name": "guivho",
+        "first_name": "Guido",
+        "last_name": "Van Hoecke",
+        "email": "guido at vanhoecke.org",
+        "homepage": ""
+      },
+      "release_notes": "1) Replaced s:filename() by call to builtin fnamemodify()\n2) Added license statement\n3) Now processes g:timstamp_3 etc by copying them into \n    s:timestamp_3 at the beginning of the script\n    (Thanks to Norihiko Murase)\n4) Fixed two documentation typos (Thanks to Norihiko Murase)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1129",
+      "filename": "timstamp.zip",
+      "script_version": "0.94",
+      "date": "2002-08-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "928",
+        "user_name": "guivho",
+        "first_name": "Guido",
+        "last_name": "Van Hoecke",
+        "email": "guido at vanhoecke.org",
+        "homepage": ""
+      },
+      "release_notes": "1) Added a missing 'let' in an assignment statement. (reported by Luis Jure)\n2) Added additional warning in the help file about  '$' value for g:timstamp_modelines.  \nCfr :h timstamp_modelines\n3) Corrected s:filename() to also work with dos slashes. (thanks to Richard Bair)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1125",
+      "filename": "timstamp.zip",
+      "script_version": "0.93",
+      "date": "2002-08-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "928",
+        "user_name": "guivho",
+        "first_name": "Guido",
+        "last_name": "Van Hoecke",
+        "email": "guido at vanhoecke.org",
+        "homepage": ""
+      },
+      "release_notes": "Now only presents the %token part of the spec to strftime(): this seems to provide correct results, even when using %Z to add the timezone followed by '>'\nThe helpfile has been extended with some example specs.\n(error and help reported/requested by Adrian Nagle)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1111",
+      "filename": "timstamp.zip",
+      "script_version": "0.92",
+      "date": "2002-08-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "928",
+        "user_name": "guivho",
+        "first_name": "Guido",
+        "last_name": "Van Hoecke",
+        "email": "guido at vanhoecke.org",
+        "homepage": ""
+      },
+      "release_notes": "Now uses the line(\"$\") function to test for short files and limits the modifications to the specified nr of modelines rather than that number plus one extra line (Thanks to Piet Delport and Rimon Barr)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1110",
+      "filename": "timstamp.zip",
+      "script_version": "0.91",
+      "date": "2002-08-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "928",
+        "user_name": "guivho",
+        "first_name": "Guido",
+        "last_name": "Van Hoecke",
+        "email": "guido at vanhoecke.org",
+        "homepage": ""
+      },
+      "release_notes": "version 0.91 now preserves the cursor location, is silent! about language setting, and does no longer choke on short files \n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1109",
+      "filename": "timstamp.zip",
+      "script_version": "0.9",
+      "date": "2002-08-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "928",
+        "user_name": "guivho",
+        "first_name": "Guido",
+        "last_name": "Van Hoecke",
+        "email": "guido at vanhoecke.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "284",
+  "name": "unilatex.vim",
+  "summary": "display LaTeX symbols as unicode while editing",
+  "script_type": "ftplugin",
+  "description": "Vim supports unicode since version 6. This means it's possible to display many mathmatical symbols in vim. Writing LaTeX texts can now be much easier. To display unicode symbols while editing LaTeX documents, I've written a plugin for vim.\n\nScreenshot:\nhttp://www.fenk.wau.nl/~oever/software/vim/\n\nWhat does the plugin do?\n\n- Convert all symbols like \\alpha to the unicode symbol &alpha; when reading a LaTeX file.\n- Convert these commands when typing them.\n- Convert the unicode symbols back to LaTeX when saving the document.",
+  "install_details": "You can download it an save it in ~/.vim/ftplugin/tex/ to use it. \nFiletype plugin must be turned on. Just add the next line to your .vimrc or .gvimrc file:\n    filetype plugin on\nThe encoding must be set to utf-8:\n    set encoding=utf-8\n\nAlso, you must use gvim with a font that support unicode. Just add something like this to your file .gvimrc:\n    set guifont=-misc-fixed-medium-r-normal-*-*-120-*-*-c-*-iso10646-1\nAlternatively, you can use vim in a unicode terminal.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1000",
+      "filename": "unilatex.vim",
+      "script_version": "1.2",
+      "date": "2002-07-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "638",
+        "user_name": "oever",
+        "first_name": "Jos",
+        "last_name": "van den Oever",
+        "email": "oever at fenk.wau.nl",
+        "homepage": "http://www.vandenoever.info/"
+      },
+      "release_notes": "The code \\int (222B) was associated with the symbol for \\vee (2228). This has been fixed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=821",
+      "filename": "unilatex.vim",
+      "script_version": "1.1",
+      "date": "2002-04-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "638",
+        "user_name": "oever",
+        "first_name": "Jos",
+        "last_name": "van den Oever",
+        "email": "oever at fenk.wau.nl",
+        "homepage": "http://www.vandenoever.info/"
+      },
+      "release_notes": "The cursur position is stored. This means that saving a file does not move the cursor to the position of the last replacement."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=820",
+      "filename": "unilatex.vim",
+      "script_version": "1.0",
+      "date": "2002-04-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "638",
+        "user_name": "oever",
+        "first_name": "Jos",
+        "last_name": "van den Oever",
+        "email": "oever at fenk.wau.nl",
+        "homepage": "http://www.vandenoever.info/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

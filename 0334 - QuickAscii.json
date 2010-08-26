@@ -1,0 +1,42 @@
+{
+  "script_id": "334",
+  "name": "QuickAscii",
+  "summary": "Quick adding of characters not on your keyboard.",
+  "script_type": "utility",
+  "description": "Yet another ASCII table plugin :). I often need to insert some high-ASCII character that my keymap doesn't allow to write and none of the *ASCII plugins I saw was so easy and quick to use, so I wrote my own. It's my first plugin for VIM and I welcome any bug reports, ideas and suggestions.\n\nSince version 2.0 it has ability to use any number of intervals to display and  to use any file for character input. UTF8 is supported as well.",
+  "install_details": "Just put this file (qascii.vim) into your plugin directory or put it anywhere and source it (replace {YOUR-PATH} with real path, of course :)\n:source {YOUR-PATH}/qascii.vim\n\nIt's highly recommended to create a mapping afterwards (see Usage in comments of script itself).\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1448",
+      "filename": "qascii.vim",
+      "script_version": "2.0",
+      "date": "2002-11-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "772",
+        "user_name": "pvx",
+        "first_name": "Peter",
+        "last_name": "Valach",
+        "email": "pvx_vim at pv2c.sk",
+        "homepage": ""
+      },
+      "release_notes": "- Any file can be used as input (new function).\n- Any number of intervals can now be used (in the old function :).\n- Lots of internal changes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=999",
+      "filename": "qascii.vim",
+      "script_version": "1.0",
+      "date": "2002-07-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "772",
+        "user_name": "pvx",
+        "first_name": "Peter",
+        "last_name": "Valach",
+        "email": "pvx_vim at pv2c.sk",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

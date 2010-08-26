@@ -1,0 +1,26 @@
+{
+  "script_id": "602",
+  "name": "vimbadword.sh",
+  "summary": "outputs the first misspelled word on the status line",
+  "script_type": "utility",
+  "description": "This script merely outputs the first misspelled word in the current file on the status line.\n\nIt needs aspell but should work with any speller that can output a (unsorted) list of badwords.",
+  "install_details": "Move vimspell.sh to somewhere in your PATH\nAdd something like this\n  map <F7> :so `vimbadword.sh %`<CR>\n  to your vimrc",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1851",
+      "filename": "vimbadword.sh",
+      "script_version": "0.1",
+      "date": "2003-03-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1894",
+        "user_name": "thsutton",
+        "first_name": "Thomas",
+        "last_name": "Sutton",
+        "email": "thsutton at utas.edu.au",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

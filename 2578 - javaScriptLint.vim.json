@@ -1,0 +1,42 @@
+{
+  "script_id": "2578",
+  "name": "javaScriptLint.vim",
+  "summary": "Displays JavaScript Lint warnings in the quickfix error window",
+  "script_type": "utility",
+  "description": "** also available on github: http://github.com/joestelmach/javaScriptLint.vim **\n\njavascriptLint.vim allows the JavaScript Lint (jsl) program from http://www.javascriptlint.com to be tightly integrated with Vim.  The contents of a javascript file will be passed through the jsl program after the file's buffer is saved.  Any lint warnings will be placed in the quickfix error window.  ",
+  "install_details": "JavaScript Lint must be installed on your system for this plugin to work properly.  This page http://www.javascriptlint.com/docs/index.html should get you started.  Once the jsl program is installed, just drop the javaScriptLint.vim file into your ~/.vim/plugin directory and you're ready to rock.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10540",
+      "filename": "javaScriptLint.vim",
+      "script_version": "0.2",
+      "date": "2009-05-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16857",
+        "user_name": "joestelmach",
+        "first_name": "Joe",
+        "last_name": "Stelmach",
+        "email": "joe at zenbe.com",
+        "homepage": ""
+      },
+      "release_notes": "* Explicitly specifying the errorformat (Thanks Jonathan del Strother)\n* Ability to disable the highlight color using \"unlet jslint_highlight_color\" (Thanks Gregory Mullegger)\n* Fixed bug that would close an unrelated quickfix window when saving."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10158",
+      "filename": "javaScriptLint.vim",
+      "script_version": "0.1",
+      "date": "2009-03-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16857",
+        "user_name": "joestelmach",
+        "first_name": "Joe",
+        "last_name": "Stelmach",
+        "email": "joe at zenbe.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

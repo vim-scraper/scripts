@@ -1,0 +1,26 @@
+{
+  "script_id": "3013",
+  "name": "tcommand",
+  "summary": "Select and execute a command or menu item from a list",
+  "script_type": "utility",
+  "description": "VIM plugins are cool but with time you forget about even useful \ncommands. This plugin provides a command (|:TCommand|) that lets you \nselect a command or menu item from a list (you can optionally display \nhelp on the currently hightlighted command) and then run it from the \ncommand line. It thus provides an alternative to the built-in \ncommand-line completion.\n",
+  "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0, \nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n\nThis script requires tlib (vimscript #1863) to be installed.\n\nAlso available via git: http://github.com/tomtom/tcommand_vim\n\n\nPost-Install~\n\nSuggested maps (to be set in your |vimrc| file): >\n\n    noremap <Leader>: :TCommand<cr>\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12616",
+      "filename": "tcommand.vba",
+      "script_version": "0.1",
+      "date": "2010-03-13",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

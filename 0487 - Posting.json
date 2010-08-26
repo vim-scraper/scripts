@@ -1,0 +1,58 @@
+{
+  "script_id": "487",
+  "name": "Posting",
+  "summary": "Mappings primarily intended to ease preparing of USENET/eMail articles",
+  "script_type": "utility",
+  "description": "\"Posting\" provides a few mappings I once messed around with in order to ease preparing USENET/email articles with GVim.",
+  "install_details": ":source posting.vim\n:Post 72\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2009",
+      "filename": "posting.vim",
+      "script_version": "1.2",
+      "date": "2003-05-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1247",
+        "user_name": "thisiskafka",
+        "first_name": "Tim",
+        "last_name": "Allen",
+        "email": "firstlight at redneck.gacracker.org",
+        "homepage": ""
+      },
+      "release_notes": "- Added highlighting support (Vim's own syntax file mail.vim no longer necessary now - take a look at *posting-highlighting*...)\n- Scan mode: added commands 'k' (step up), 'd' (delete visually selected area), 'c' (chron.-check to the end), digit (take out to the end) (see also comments to shortcut <C-Space>), slightly improved stepping mechanism\n- \"Take out\": Added new feature (see description to shortcut \"tt\")\n- Improved attribution handling (attributions may span over up to 4 lines now and may contain empty lines as well)\n- Added shortcuts \",u\" to undo \":Post\" and \",s\" to save message as draft (see comments)\n- Modified \",r\" (Visual/Normal mode) and \"r\" (Scan mode) to take indent from second line instead of first (Use this to reformat quotations with embedded lists.)\n- 'autoindent' works with format_flowed set to 1 too now (Sorry for inconveniences!)\n- Box section: New shape (see *posting-sections*)\n- Various minor enhancements/fixups\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1901",
+      "filename": "posting.vim",
+      "script_version": "1.1",
+      "date": "2003-04-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1247",
+        "user_name": "thisiskafka",
+        "first_name": "Tim",
+        "last_name": "Allen",
+        "email": "firstlight at redneck.gacracker.org",
+        "homepage": ""
+      },
+      "release_notes": "- Added RFC 2646 support (see comment to parameter 'format_flowed' (Settings folder))\n- Added support for Vim's inbuilt client-server facility (command \"Post!\", see also *posting-invocation*)\n- Added Scan mode feature to ease reformatting of quoted text with tables, lists or the like inside (see also comment to shortcut <C-Space>)\n- Added shortcut \",r\" for manual reformatting (see also comment under *posting-commands*)\n- Added shortcuts <Up>, <Down>, <Home>, <End> to enable navigating with line-wrap turned on (formatoption \"t\" turned off now per default, use line-wrap instead (resp. \"Split\" which turns it on automatically)) \n- Modified \"Paste\" to protect indented structures (tab's are replaced with spaces)\n- Modified quoting-markup-correction slightly to keep indented structures readable\n- Modified \"Undo\" to make it restore the initial state\n- \"Jump\" (shortcut <Space>) more intelligent now (narrowed raster)\n- Box sections with new shape now (flowed-friendly)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1797",
+      "filename": "posting.vim",
+      "script_version": "1.0",
+      "date": "2003-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1247",
+        "user_name": "thisiskafka",
+        "first_name": "Tim",
+        "last_name": "Allen",
+        "email": "firstlight at redneck.gacracker.org",
+        "homepage": ""
+      },
+      "release_notes": "- Modified \"Format\" and \"final-format\" to recognize numbered lists (see also comment to shortcut \"ff\")\n- Added shortcut \",a\" to slot in attribution lines\n- Added shortcut \",p\" to help fixing up \"Plenking\" (i. e. space between word and punctuation mark)\n- Attribution lines: Added shortcuts <M-C-LeftMouse> (manual reformatting/undo-mechanism) and <M-RightMouse> (cutting)\n- \"Take out\": changed meaning slightly (<C-t><C-t> reformats whole paragraph only in case that count is given; tables, lists etc. thus remain untouched), code partially rewritten (content check, improved performance)\n- Added centering support (box-directive \"/c\" and shortcut \",c\")\n- Modified code for quoting-markup-check (improved performance, covered special cases)\n- Added shortcuts <Space> and <M-Space> to step through most recent reply text (see also comments to <S-Space> and <C-Space>)"
+    }
+  ]
+}

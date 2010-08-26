@@ -1,0 +1,26 @@
+{
+  "script_id": "1992",
+  "name": "triangle.vim",
+  "summary": "Syntax highlighting for triangle source files",
+  "script_type": "syntax",
+  "description": "A basic syntax highlighting script for the triangle language from the book \"Programming Language Processors in Java\".",
+  "install_details": "Just as with other syntax files: Copy this to .vim/syntax/triangle.vim and add something like\n\nif has(\"autocmd\")\n  au BufNewFile,BufRead *.tri set syntax=triangle\nendif\n\nto your .vimrc .",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7500",
+      "filename": "triangle.vim",
+      "script_version": "1.0",
+      "date": "2007-08-15",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "12927",
+        "user_name": "nico",
+        "first_name": "Nicolas",
+        "last_name": "Weber",
+        "email": "nicolasweberNOSPAM at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

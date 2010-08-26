@@ -1,0 +1,26 @@
+{
+  "script_id": "2963",
+  "name": "line number yank",
+  "summary": "yank lines with line number",
+  "script_type": "utility",
+  "description": "The script is used for yank lines with their line number.\nYou can yank lines for specific range with their line number by key map \\ny\nFor example, the text from line 9 to 12 is like the follow:\n\nline9\nline10\nline11\nline12\n\nif you specified text from line 9 to line 12 under visual mode, press `\\ny'. Then if you press `p', it would paste:\n\n  9  line9\n 10  line10\n 11  line11\n 12  line12\n\nIf the line number is larger than 999, the format would not that tidy.",
+  "install_details": "Just simply copy lnyank.vim into you plugin directory($HOME/.vim/plugin for unix)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12320",
+      "filename": "lnyank.vim",
+      "script_version": "0.1",
+      "date": "2010-02-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18987",
+        "user_name": "Bukn",
+        "first_name": "Zhang",
+        "last_name": "Huicong",
+        "email": "zhcfreesea at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

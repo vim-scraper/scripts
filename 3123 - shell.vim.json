@@ -1,0 +1,138 @@
+{
+  "script_id": "3123",
+  "name": "shell.vim",
+  "summary": "Improved integration between Vim and its environment (fullscreen, open URL, etc)",
+  "script_type": "utility",
+  "description": "This plug-in aims to improve the integration between Vim and its environment by providing functions to switch to full-screen (see the screenshots at http://peterodding.com/code/vim/shell/screenshots), open URLs in the user's default web browser and execute external commands in the background without opening a command prompt window. A DLL is included to perform these things on Windows, while on UNIX external commands are used.\n\nFor more information about the plug-in please refer to its homepage or the project page on GitHub:\n\n  http://peterodding.com/code/vim/shell\n  http://github.com/xolox/vim-shell\n\nIf you have questions, bug reports, suggestions, etc. the author can be contacted at peter@peterodding.com. If you like this plug-in please vote for it below!\n\nALTERNATIVES\nAfter publishing this plug-in I found that vimscript #687 and vimscript #2596 also implement full-screen on Windows using a similar approach. I prefer the effect of my plug-in because it seems to hide window decorations more effectively. Also note that my plug-in was developed independently of the other two.",
+  "install_details": "Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is \"~/.vim\" on UNIX and \"%USERPROFILE%\\vimfiles\" on Windows), restart Vim and execute the command \":helptags ~/.vim/doc\" (use \":helptags ~\\vimfiles\\doc\" instead on Windows). Now try it out:\n\n  Press <F11> or execute :Fullscreen to switch to full-screen mode and back;\n\n  Press <F6> or execute :Open to open files, directories, URLs and e-mail addresses using their associated default programs. By default the filename/URL/etc. under the text cursor is used, but you can also give an argument to the :Open command, for example:\n\n    :Open $VIMRUNTIME\n    :Open http://www.vim.org/scripts/script.php?script_id=3123",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13582",
+      "filename": "shell.zip",
+      "script_version": "0.7.2",
+      "date": "2010-08-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Bug fix for E33: No previous substitute regular expression:\nhttp://github.com/xolox/vim-shell/commit/8ab66c465f5f7e29cc7677b2d54012f0fe762576\n\nThe packages for version 0.7 and 0.7.1 below should have included the \"shell.dll\" dynamic link library but I failed to include it. This has been fixed now. Sorry about that!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13532",
+      "filename": "shell.zip",
+      "script_version": "0.7.1",
+      "date": "2010-08-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Enable passing stdin to xolox#shell#execute():\nhttp://github.com/xolox/vim-shell/commit/fc16d5c0e72d8ba4112d239f211cc0576640aaa3"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13529",
+      "filename": "shell.zip",
+      "script_version": "0.7",
+      "date": "2010-08-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": " Full-screen mode now hides Vim's menu/toolbar/tabline by default. This makes it useful even when the actual full-screen state of Vim's GUI window can't be changed because the DLL/wmctrl is unavailable.\n\n Full-screen mode should now work in most graphical terminal emulators like xterm and gnome-terminal (though <F11> won't work in the latter).\n\n Included user friendly :Open and :Fullscreen commands plus default key mappings so the plug-in is more useful out of the box.\n\n The xolox#shell#execute() function now returns the output of the shell command if it was executed in synchronous mode (this enables integration with my easytags.vim plug-in).\n\n I've merged my unreleased `hyperlink.vim' plug-in into `shell.vim' which improves the openurl() functionality and includes automatic highlighting for URLs and e-mail addresses in comments and strings.\n\nAll from http://github.com/xolox/vim-shell/commit/2f6414109fa52b20c1a86faff215fe1329ba6eb8"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13183",
+      "filename": "shell.zip",
+      "script_version": "0.6.1",
+      "date": "2010-06-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Bug fix: Updated instructions to match new execute() implementation. Sorry about that!\nhttp://github.com/xolox/vim-shell/commit/2cc68db470c974acbc4c43ea001536c1106ae0e2"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13182",
+      "filename": "shell.zip",
+      "script_version": "0.6",
+      "date": "2010-06-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "* Improved test instructions for execute()\n  http://github.com/xolox/vim-shell/commit/50453066d1d211cfa6e426b78f3e503e3f46c82e\n\n* Better DLL detection, synchronous command execution\n  http://github.com/xolox/vim-shell/commit/82f6cb0f013480f994438d44b6cf98ae136569c0\n\n* Improved README, added screenshots, fixed typo\n  http://github.com/xolox/vim-shell/commit/364ceee3040e77f0a3fb8b4b657aac612f6dbcc4"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13179",
+      "filename": "shell.zip",
+      "script_version": "0.5.2",
+      "date": "2010-06-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Bug fix for execute() implementation in DLL\nhttp://github.com/xolox/vim-shell/commit/c46f8e522f53283528f1dc9ab58cc6eb0a9c5507"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13176",
+      "filename": "shell.zip",
+      "script_version": "0.5.1",
+      "date": "2010-06-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Fixed typo in NMAKE makefile and references to Vim scripts page."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13175",
+      "filename": "shell.zip",
+      "script_version": "0.5",
+      "date": "2010-06-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

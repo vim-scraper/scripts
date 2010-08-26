@@ -1,0 +1,106 @@
+{
+  "script_id": "953",
+  "name": "multiselect",
+  "summary": "Create multiple selections and operate",
+  "script_type": "utility",
+  "description": "This plugin extends the Vim's visual mode functionality by allowing you to\nselect non-contiguous regions and execute commands on them. It makes it really\neasy to select multiple regions using mouse, as you can use Ctrl+Mouse\ncombination just like in MS Word. There are a number of operations to very\neasily manipulate selections such as modifying the regions\n(add/delete/inverte/clear), hiding, refreshing, saving and restoring etc. You\ncan execute both normal and :ex mode commands in one shot on all the regions.\nThe selections are also local to the buffer, so you can have separate selectins\nfor each buffer.\n\nUsage:\n\nOnce installed, the features are available in all the buffers. To create\nselection regions you can use mouse or keyboard.\n    - To use mouse, hold Ctrl key and make a visual selection using the\n      LeftMouse button just like you normally do. Once the mouse button is\n      released, the selection gets automatically added as a new selection\n      region. If you are selecting only one line, you can release the mouse\n      button without having to drag.\n    - To use keyboard, make a visual selection using |visual-mode| commands or\n      mouse and press <Enter> to create a new region out of it. The <Enter> (or\n      <CR>) key is mapped only if it is not already mapped in visual mode. The\n      cursor is placed in the direction of the selection such that it is easier\n      to continue moving the cursor for making further selections.\n    - To clear part or the whole of a region from selection, repeat the\n      same exact procedure over that region. You can however mix mouse and\n      keyboard usage. The procedure is equivalent to running the |:MSInvert|\n      command as describe in |multiselect-commands|.\n    - Once you repeat the procedure to create all the regions that you need to\n      act on, use one of the |:MSExecCmd| or |:MSExecNormalCmd| (or one of their\n      equivalent maps) to execute commands on them. Ex:\n        - Delete all the lines in the current selections >\n            MSExecCmd d\n        - Convert all the characters in the current selections to upper case. >\n            MSExecNormalCmd gU\n    - Use |:MSClear| (or its map) to clear the selection.\n\n\nWith the support of multiselect in other plugins, it becomes very useful. E.g., you can execute perfoce commands such as submitting files (using vimscript#240) on a group of selected files, using the multiselect support in selectbuf plugin (vimscript #107). It is possible to extend netrw plugin to support operations on multiple files too.\n\n\n\n\nSearch_key_words: multiselect multiple selection select selections mouse hari_vim Hari Krishna Dara",
+  "install_details": "Requires:  genutils (vimscript#197)\n- Extract the zip archives in to your runtime directory (.vim or vimfiles\n  under your HOME directory).\n- Start a new instance or go to an existing instance of vim.\n- Execute:\n    :helpt <your runtime directory>/doc\n  This should generate the help tags for the selectbuf plugin help.\n- Type :help multiselect to read the help and finish configuration.\n\nFor version older than 2.0, you need to download the non-autoload versions of genutils and multvals (vimscript#171) plugins.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6162",
+      "filename": "multiselect-2.2.zip",
+      "script_version": "2.2",
+      "date": "2006-09-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed public API to not autoload script. It doesn't make sense for\npublic API to load the script if it is not already loaded. This will\nalso cause problems when the plugin is disabled, but other plugins try\nto use it. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6141",
+      "filename": "multiselect-2.0.zip",
+      "script_version": "2.0",
+      "date": "2006-09-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- All the functionality has been rewritten to take advantage of new Vim7\n  features such as Lists. The programmatic API is not backwards compatible.\n- The plugin is now autoloaded, so it will not be (auto)loaded until you execute\n  the first mapping/command. This will help improve the startup time of your Vim\n  session.\n- Misc. bug fixes have been fixed in the ares of |:MSInvert| and |:MSAdd|.\n- The g:multiselTmpMark is no longer required. The plugin now\n  uses getpos() and setpos() to avoid overwriting any user marks.\n- New setting |g:multiselQuickSelAdds|.\n- New commands |:MSMatchAddByDiffHlGroup| and |:MSVMatchAddByDiffHlGroup| to\n  select regions in a |vimdiff| window. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4040",
+      "filename": "multiselect.vim",
+      "script_version": "1.3",
+      "date": "2005-03-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- New commands MSMatchAddBySynGroup and MSVMatchAddBySynGroup to select\n  lines automatically by their syntax group in a given range. Useful to\n  select all lines in comments (or more specifically perl pod) etc. and\n  do operations such as running a spell check on them.\n- New global function MSAddSelectionsByExpr() for creating new commands\n  such as MSMatchAddBySynGroup and MSMatchAdd by the user.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3584",
+      "filename": "multiselect.vim",
+      "script_version": "1.2",
+      "date": "2004-10-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- MSInvert command now works better."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3568",
+      "filename": "multiselect.vim",
+      "script_version": "1.1",
+      "date": "2004-10-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Full support for mouse in making multiple selections. Works pretty\n  much like in MS word.\n- Improved behavior for MSInvert.\n\nGet the latest multvals.vim and genutils.vim plugins."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2911",
+      "filename": "multiselect.vim",
+      "script_version": "1.0",
+      "date": "2004-04-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

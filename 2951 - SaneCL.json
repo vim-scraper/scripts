@@ -1,0 +1,186 @@
+{
+  "script_id": "2951",
+  "name": "SaneCL",
+  "summary": "Quickly indents Common Lisp code and is 100% VimScript",
+  "script_type": "indent",
+  "description": "Bug reports or comments welcome! Email: oconnore@gmail.com\n----------------\n\nParsing is done using a per character tokenizer. Two stacks are used to simulate a recursive parse.\n\nMappings:\n<Tab> indents lines (or ranges in visual mode)\n<C-\\> indents the toplevel form. Or whatever is at 150[(.\n\nTo indent an entire file, do 1GVG<Tab>. This may take a while for a large file.\n\nCommands:\n:CLLoadLispwords refreshes the lisp word file\n:CLIndentForm indents the toplevel form\n:CLIndentRange indents a range\n:CLIndentLine indents a line\n:CLSetWord <word> <number> sets a lispword\n\nCustomizable variables:\nString :: g:CL_lispwords_file defaults to ~/lispwords.\nBoolean :: g:CL_aggressive_literals defaults to 1\nBoolean :: g:CL_retab_on_open defaults to 1\nInteger :: g:CL_auto_zero_limit defaults to 25\nList <String> :: g:CL_loop_keywords lists all known loop keywords\nList <String> :: g:CL_flets lists forms to be handled similar to flet\nList < List < String, Integer > > :: g:CL_auto_prefixes lists all regexp base lisp numbers.\n\nAdd <<let g:VARIABLE = VALUE >> to your ~/.vimrc to change this. For Boolean variables, 1 is true and 0 is false.\n\nLisp words are stored 1 per line as such:\n<symbol> <lisp #>\n\nAggressive literals means that forms such as (:hello world), ('got milk) and (&optional var1 var2) are treated as literals. The first character of the first symbol (if it is a symbol) are tested to match [&':].\n\nWhile indenting, auto prefixes iterates over each string-integer pair. If the string matches the parent (for example \"def\" matches \"defclass\", and \"^[abc].*$\" matches \"chair\"), then the associated lisp word number is used for indentation. The first match wins.\nI default to: [[\"with-\",1], [\"def\",2], [\"make-\",1], [\"map\",1]]\n\nAuto zero limit was added to preserve screen real estate for long lispy symbol names. If a symbol in your program looks like \"variable-that-holds-an-integer-and-is-used-for-counting\", you may appreciate this setting. Any parent string longer than the limit will be handled as a lisp number zero. By default, this is 25 characters.\n\nMy lispwords file is available at: http://paste.lisp.org/display/97882\nIt is not complete, but might be a useful starting point.\n\nThe indentation behavior was based on a description at http://evalwhen.com/scmindent/index.html.",
+  "install_details": "Save to ~/.vim/ftplugins/lisp.vim, or configure a custom command in your .vimrc such as:\nautocommand! BufRead *.lisp source <file_location>\n\nProvide an empty lispwords file, or you will see an error on the first run.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12848",
+      "filename": "lisp.vim",
+      "script_version": "2.0",
+      "date": "2010-04-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18936",
+        "user_name": "oconnore",
+        "first_name": "Eric",
+        "last_name": "O'Connor",
+        "email": "oconnore at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor change - break the auto prefix loop correctly."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12845",
+      "filename": "lisp.vim",
+      "script_version": "1.9",
+      "date": "2010-04-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18936",
+        "user_name": "oconnore",
+        "first_name": "Eric",
+        "last_name": "O'Connor",
+        "email": "oconnore at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fixes, and prefix based form handling."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12654",
+      "filename": "lisp.vim",
+      "script_version": "1.8",
+      "date": "2010-03-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18936",
+        "user_name": "oconnore",
+        "first_name": "Eric",
+        "last_name": "O'Connor",
+        "email": "oconnore at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Proper comment handling. Added g:CL_define_keywords to handle multi-line variable lists."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12324",
+      "filename": "lisp.vim",
+      "script_version": "1.7",
+      "date": "2010-02-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18936",
+        "user_name": "oconnore",
+        "first_name": "Eric",
+        "last_name": "O'Connor",
+        "email": "oconnore at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Macrolets, flets, labels."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12322",
+      "filename": "lisp.vim",
+      "script_version": "1.6",
+      "date": "2010-02-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18936",
+        "user_name": "oconnore",
+        "first_name": "Eric",
+        "last_name": "O'Connor",
+        "email": "oconnore at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Loop form handling."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12321",
+      "filename": "lisp.vim",
+      "script_version": "1.5",
+      "date": "2010-02-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18936",
+        "user_name": "oconnore",
+        "first_name": "Eric",
+        "last_name": "O'Connor",
+        "email": "oconnore at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "+ Simple vector's gave parentheses error because they weren't handled within the sharp-sign state\n+ Screen stability bugs\n+ Improved plug-in hygiene (b:undo_ftplugin)\n+ Added an option [g:CL_aggressive_literals] to detect all forms beginning in [&:'].* as literals. Default: true\n+ Default re-tabs a new lisp file. Turn off with g:CL_retab_on_open = 0\n+ Changed the g:lispwords_file variable to g:CL_lispwords_file to avoid confusion.\n+ Removed unused code"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12299",
+      "filename": "lisp.vim",
+      "script_version": "1.4",
+      "date": "2010-02-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18936",
+        "user_name": "oconnore",
+        "first_name": "Eric",
+        "last_name": "O'Connor",
+        "email": "oconnore at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "More bug fixes regarding expandtab handling. It may be beneficial to issue :retab! if you transition from expanded tabs to hard tabs.\nNew lines are now auto indented properly."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12260",
+      "filename": "lisp.vim",
+      "script_version": "1.3",
+      "date": "2010-02-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18936",
+        "user_name": "oconnore",
+        "first_name": "Eric",
+        "last_name": "O'Connor",
+        "email": "oconnore at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed the algorithm slightly so it jives better with <noexpandtab>.\nMinor bug fixes:\nA multi-line s-exp or string on the first line of it's parent will now indent correctly."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12259",
+      "filename": "lisp.vim",
+      "script_version": "1.2",
+      "date": "2010-02-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18936",
+        "user_name": "oconnore",
+        "first_name": "Eric",
+        "last_name": "O'Connor",
+        "email": "oconnore at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Persistent lisp words - saves on quit.\n<CLSetWord defun 2> sets a lisp word."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12256",
+      "filename": "lisp.vim",
+      "script_version": "1.1",
+      "date": "2010-01-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18936",
+        "user_name": "oconnore",
+        "first_name": "Eric",
+        "last_name": "O'Connor",
+        "email": "oconnore at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Oops! Sorry to the ... 8 people that have downloaded so far.\nFixed 2 bugs:\n1. When reducing indentation, the script attempted to jump to a negative column, causing the cursor to jump.\n2. With <noexpandtab>, the indentation counted tabs as a single space. Corrected by adding (&tabstop-1) * the number of leading tabs to the indentation\n\nLet me know if you find anything else wrong with it: <oconnore@gmail.com>"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12247",
+      "filename": "lisp.vim",
+      "script_version": "1.0",
+      "date": "2010-01-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18936",
+        "user_name": "oconnore",
+        "first_name": "Eric",
+        "last_name": "O'Connor",
+        "email": "oconnore at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

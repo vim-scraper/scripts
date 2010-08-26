@@ -1,0 +1,122 @@
+{
+  "script_id": "352",
+  "name": "multipleRanges.vim",
+  "summary": "Selecting different ranges of lines",
+  "script_type": "utility",
+  "description": "This script lets you choose multiple non-consecutive ranges and then execute commands on them all at the same time.  Just visually select a range of lines and hit the mapping sequence.  Repeat until all the ranges have been selected (they will be highlighted).  Then, execute the script-defined command Rangecommand with the actual command (and arguments) as arguments to Rangecommand and it'll do it.  The ranges will remain selected until you execute the reset mapping allowing you to execute more commands on the ranges.\n\nNOTE:  VERSION 1.2 AND ABOVE DEPEND ON MY getVar.vim vimscript#353 AND variableSort.vim vimscript#354.  Sorry I neglected to mention that before.",
+  "install_details": "Pop it into the plugin directory.  Read the usage comments in the plugin for, well, usage directions.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1150",
+      "filename": "multipleRanges.vim",
+      "script_version": "1.7",
+      "date": "2002-08-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a new command (Rangecommandnormal) which allows for a normal-mode command to be executed on the ranges. Also added mappings to quickly enter the Rangecommand and Rangecommandnormal command-lines. Added error-checking in case there are no ranges currently selected when the commands are executed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1058",
+      "filename": "multipleRanges.vim",
+      "script_version": "1.65",
+      "date": "2002-07-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Removed the unique keyword from the internal script mappings as Vikas Agnihotri pointed out that this was causing a problem with potential reloading of the script while not adding anything to the ease of use."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1055",
+      "filename": "multipleRanges.vim",
+      "script_version": "1.6",
+      "date": "2002-07-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added  support for  user-defined highlights for  the ranges  (GUI only; will do cterm if asked)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1051",
+      "filename": "multipleRanges.vim",
+      "script_version": "1.5",
+      "date": "2002-07-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Depends on getVar.vim vimscript 353 and variableSort.vim vimscript 354.  Added the ability to invert range.  Ranges are now on a per-buffer basis instead of a per-window (was causing problems where a new buffer in the same window would act up)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1048",
+      "filename": "multipleRanges.vim",
+      "script_version": "1.2",
+      "date": "2002-07-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Cleans  up better once  a set of ranges  is cleared (the  variables are unlet).\nAdded  an  option (buffer  or  global  variable called  'consolidateRanges') which,  if  set  to 1,  will  cause  Rangecommand  to  first sort  and  then consolidate  overlapping ranges  into a  single range  before executing  the command. The ranges will remain consolidated once the command is done."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1047",
+      "filename": "multipleRanges.vim",
+      "script_version": "1.1",
+      "date": "2002-07-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a new command to show the current list of ranges (ugly output), made the script more plugin-like and updated usage comments slightly."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1046",
+      "filename": "multipleRanges.vim",
+      "script_version": "1.0",
+      "date": "2002-07-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

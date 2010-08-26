@@ -1,0 +1,74 @@
+{
+  "script_id": "341",
+  "name": "pf.vim",
+  "summary": "OpenBSD pf.conf (packet filter configuration)",
+  "script_type": "syntax",
+  "description": "Syntax file for OpenBSD's packet-filter (pf) configuration file: pf.conf.\n\nPreview \"screenshot\" here: http://www.sentia.org/downloads/pf.conf.html\n",
+  "install_details": "Drop it in your syntax directory.  Type ':setf pf'.\n\nOr make vim autodetect it by having this in ~/.vim/filetypes.vim:\naugroup filetypedetect\nau BufNewFile,BufRead pf.conf   setf pf\nau BufNewFile,BufRead pf.conf.* setf pf\naugroup END\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1762",
+      "filename": "pf.vim",
+      "script_version": "1.3",
+      "date": "2003-02-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "788",
+        "user_name": "camield",
+        "first_name": "Camiel",
+        "last_name": "Dobbelaar",
+        "email": "cd at sentia.nl",
+        "homepage": ""
+      },
+      "release_notes": "- altq and table statements\n- shorthands: 10/8, 172.16/12\n- folding (use ###> for sections and ##> for subsections)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1399",
+      "filename": "pf.vim",
+      "script_version": "1.2",
+      "date": "2002-11-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "788",
+        "user_name": "camield",
+        "first_name": "Camiel",
+        "last_name": "Dobbelaar",
+        "email": "cd at sentia.nl",
+        "homepage": ""
+      },
+      "release_notes": "Remove highlighting of erroneous {, it is too error-prone."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1371",
+      "filename": "pf.vim",
+      "script_version": "1.1",
+      "date": "2002-11-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "788",
+        "user_name": "camield",
+        "first_name": "Camiel",
+        "last_name": "Dobbelaar",
+        "email": "cd at sentia.nl",
+        "homepage": ""
+      },
+      "release_notes": "Supports IPv6 now.  Plus most-well-known services.  Strings can now be single quoted too.  Improved matching of assignment."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1015",
+      "filename": "pf.vim",
+      "script_version": "1.0",
+      "date": "2002-07-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "788",
+        "user_name": "camield",
+        "first_name": "Camiel",
+        "last_name": "Dobbelaar",
+        "email": "cd at sentia.nl",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

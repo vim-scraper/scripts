@@ -1,0 +1,42 @@
+{
+  "script_id": "3193",
+  "name": "v4daemon",
+  "summary": "Send vim buffer lines to your background daemon (i.e. netcat)",
+  "script_type": "utility",
+  "description": "This script eases sending lines to the ahead-started daemon. I needed and tested it for creating a test server with netcat and send the pre-recorded sentences to the clients:\n\n:V4dStart nc -l -p 10010\n\nStarts netcat listening on port 10010. Then you start a client somewhere.\nFrom the buffer you are working:\n\n[Select by v,V,ctrl-v] :V4dSendLine\n[Select by v] :V4dSendWord\n\nSends the line(s) you are on/selected to the daemon (and pushed to clients in my case).\n\n:V4dStop\n\n(-:njoy!\n",
+  "install_details": "Untar v4daemon into $HOME/.vim\nA helper program will be extracted in .vim/v4d_sendcmd.sh. Change the path if you want to:\n\nlet g:v4d_sendcmd_directory = \"somewhere\"\n\nTodo: - show output from the background process\n          - use other utilities (sh, python) as daemon if it is possible\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13600",
+      "filename": "v4daemon.tar.gz",
+      "script_version": "0.2",
+      "date": "2010-08-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19900",
+        "user_name": "udslk",
+        "first_name": "umit",
+        "last_name": "kablan",
+        "email": "umitkablan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Removed V4dSendVisual. Now V4dSendLine is enough.\nAdded V4dSendWord for visual character-wide selection."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13523",
+      "filename": "v4daemon.tar.gz",
+      "script_version": "0.1",
+      "date": "2010-08-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19900",
+        "user_name": "udslk",
+        "first_name": "umit",
+        "last_name": "kablan",
+        "email": "umitkablan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

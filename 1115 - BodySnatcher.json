@@ -1,0 +1,42 @@
+{
+  "script_id": "1115",
+  "name": "BodySnatcher",
+  "summary": "Generate CSS from HTML doc BODY attribs - updates Web docs quickly. Perl req'd.",
+  "script_type": "utility",
+  "description": "if ! has('perl')\n    move along, nothing to see here ;-)\nendif\n\nThis plugin does a search of lines of a .html document and parses the statement of the <body> attributes. In modern times we prefer to use CSS to control presentational aspects of Web pages like text color, background, and link color.  When designing a site from scratch we'd plan that ahead of time. When updating a handful of pages that were not originally authored with CSS in mind, a script like this saves time by pulling out the expected HTML attributes and converting them to CSS declarations.\n\nUpdate 13:07(TZ=EDT) - 28.Oct.2004 -\n   My thanks to the dozen or so people who have downloaded version 1.3, and please update to\nto version 1.4. Important bugs are fixed in this new release.\n\nFor more info and an md5 sum to check against, see this tool's home page at\nhttp://intrepid.perlmonk.org/VIMtools/BSn/index.html",
+  "install_details": "Place the script somewhere in a \"plugin/\" directory in VIMRUNTIME, such as\n       ~/.vim/plugin\n ... the plugin does a mapping    <mapleader>))\n ... change this if you wish.\n\nNOTE: An external Perl module (not part of core Perl distribution) is required: Text::Balanced (see http://search.cpan.org/src/DCONWAY/  for latest version).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3581",
+      "filename": "BodySnatcher.vim",
+      "script_version": "1.4",
+      "date": "2004-10-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "723",
+        "user_name": "perlspinr",
+        "first_name": "Sören",
+        "last_name": "Andersen",
+        "email": "somian08 at gmail.com",
+        "homepage": "http://intrepid.perlmonk.org"
+      },
+      "release_notes": "Many bugs fixed.\n   - Does the right thing when there is just a plain <body> tag\n   - Also make no changes if the <body> tag contains a STYLE= attribute\n   - Broken handling of body declaration that is spread over multiple lines is fixed"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3580",
+      "filename": "BodySnatcher.vim",
+      "script_version": "1.3",
+      "date": "2004-10-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "723",
+        "user_name": "perlspinr",
+        "first_name": "Sören",
+        "last_name": "Andersen",
+        "email": "somian08 at gmail.com",
+        "homepage": "http://intrepid.perlmonk.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

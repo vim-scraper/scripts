@@ -1,0 +1,42 @@
+{
+  "script_id": "1302",
+  "name": "maximize.dll",
+  "summary": "Maximizing plugin for Win32 gVim",
+  "script_type": "utility",
+  "description": "Maximizes gVim window on startup.\n\n\nReason:\n\n\"simalt ~x\" does not work in a Russian Win2000, although it did in WinME, with corresponding Russian letter instead of \"x\". Everything always works fullscreen on my computer, and Vim is the core part of my work, so I maximized its window by hands each time, and searched for an automated solution.\n\n\nDetails:\n\nThis can be done by a DLL, which must be called with libcallnr() function:\n\n    call libcallnr('maximize', 'Maximize', 1)\n\nIt takes one numeric parameter: 1 means maximize the window and 0 restores it back. It returns 1 on success, 0 on fault.\n\n\nZIP archive is 4.4 Kb.\nSource inside.",
+  "install_details": "Put maximize.vim and maximize.dll in $VIM\\vimfiles\\plugin\n\nFor Cream, you will also have to write:\n    let g:CREAM_WINPOS=0\nin your cream-conf.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7804",
+      "filename": "maximize.zip",
+      "script_version": "1.1a",
+      "date": "2007-10-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7775",
+        "user_name": "kAtremer",
+        "first_name": "kAtremer",
+        "last_name": "",
+        "email": "katremer at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "- tidied up the files\n- made maximize.vim for installation as a plugin (mainly to support Cream)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4364",
+      "filename": "maximize.zip",
+      "script_version": "1.0",
+      "date": "2005-06-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7775",
+        "user_name": "kAtremer",
+        "first_name": "kAtremer",
+        "last_name": "",
+        "email": "katremer at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

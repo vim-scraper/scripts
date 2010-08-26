@@ -1,0 +1,42 @@
+{
+  "script_id": "842",
+  "name": "increment.vim",
+  "summary": "Subsitute a pattern with incremented values",
+  "script_type": "utility",
+  "description": "This is a handy plugin that makes easy replacing your favorite pattern (\"@\" by default) with a sequence of incremented values using the \"Inc\" command.\n\nExamples:\n\nIf you have a file that only contains the following lines:\n\n   This is line @\n   This is line @\n   This is line @\n   This is line @\n\nBy typing \":1,4Inc\", you obtain:\n\n   This is line 0\n   This is line 1\n   This is line 2\n   This is line 3\n\nBetter yet...  With \":Inc i11 s4 pblah\",\n\n   This is a list: [blah, blah, blah, blah, blah, blah, blah]\n\nbecomes\n\n   This is a list: [4, 15, 26, 37, 48, 59, 70]\n\nYou can also repeat the same value several times.  Consider:\n\n   case\n      addr@: begin value@ = offset@+incr@; end\n      addr@: begin value@ = offset@+incr@; end\n      addr@: begin value@ = offset@+incr@; end\n   end\n\nAfter \":%Inc r4\", you obtain:\n\n   case\n      addr0: begin value0 = offset0+incr0; end\n      addr1: begin value1 = offset1+incr1; end\n      addr2: begin value2 = offset2+incr2; end\n   end\n\nI have just added support for bases and right alignment.  You just have to specify the width of your alignment:\n\n   `define MEM_ADD0 @\n   `define MEM_ADD1 @\n   `define MEM_ADD2 @\n   `define MEM_ADD3 @\n\nbecomes, after running \":%Inc w3 i128 f0\":\n\n   `define MEM_ADD0 000\n   `define MEM_ADD1 128\n   `define MEM_ADD2 256\n   `define MEM_ADD3 384\n\nor, after running \":%Inc w3 i128 f0 h\":\n\n   `define MEM_ADD0 000\n   `define MEM_ADD1 080\n   `define MEM_ADD2 100\n   `define MEM_ADD3 180\n\nMany thanks to Stanislas Sitar (vimscript #145), Ely Schoenfeld (vimscript #1199), Charles E Campbell's (vimtip #150, vimscript #670) and Neil Bird (vimscript #189).\n\nNote: I need to merge with Ely's version, and to update the documentation.  Sorry if this causes any inconvenience in the meantime.\n\nHappy Vimming!",
+  "install_details": "Download \"increment.tar.gz\" and put it in your user \".vim\" or \"vimfiles\" directory.  For *nix, type:\n\ngunzip -c increment.tar.gz | tar xvf -\n\nThis will populate a \"doc\" directory with an \"increment.txt\" file, and a \"plugin\" directory with an \"increment.vim\" file.\n\nFor other operating systems, I'm sorry: I don't use them...  I believe \"gzip\" should know how to deal with that file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7541",
+      "filename": "increment.vim",
+      "script_version": "1.1",
+      "date": "2007-08-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3777",
+        "user_name": "wnatter",
+        "first_name": "William",
+        "last_name": "Natter",
+        "email": "natter at magma.ca",
+        "homepage": ""
+      },
+      "release_notes": "Added support for hexadecimal and octal bases, and for right-alignment"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2542",
+      "filename": "increment.tar.gz",
+      "script_version": "1.0",
+      "date": "2003-12-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3777",
+        "user_name": "wnatter",
+        "first_name": "William",
+        "last_name": "Natter",
+        "email": "natter at magma.ca",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

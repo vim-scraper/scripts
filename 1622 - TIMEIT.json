@@ -1,0 +1,42 @@
+{
+  "script_id": "1622",
+  "name": "TIMEIT",
+  "summary": "Time execution of vim command(s) with subsecond resolution",
+  "script_type": "utility",
+  "description": "\" Time execution of vim command(s) with subsecond resolution,\n\" For example:\n\"      :TIM sleep 100m\n\" prnits\n\"      Execution took   0.100301 sec.\n\" With counter, TIMEIT times that many repetitions of the command:\n\"      :10TIM sleep 100m\n\" prints:\n\"      10 repetitions took   1.039352 sec.\n\" You can use sequence of |-separated commands under TIM:\n\"      :10TIM syntax off | syntax on\n\" This will time ten repetitions of (syntax off | syntax on)\n\" sequence, not 10 repetitions of \"syntax off\" followed by\n\" one untimes \"syntax on\".\n",
+  "install_details": "Download the script from the link below and \ncopy it into your ~/.vim/plugin directory.\nCreate this directory if it does not yet exist.\nRestart vim. That's it. \n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7793",
+      "filename": "TimeIt.vim",
+      "script_version": "071014",
+      "date": "2007-10-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2342",
+        "user_name": "lerner",
+        "first_name": "Yakov",
+        "last_name": "Lerner",
+        "email": "jilerner at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "With contributions from Andy Wokula. Checksum 105516337"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6004",
+      "filename": "TimeIt.vim",
+      "script_version": "20060729",
+      "date": "2006-07-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2342",
+        "user_name": "lerner",
+        "first_name": "Yakov",
+        "last_name": "Lerner",
+        "email": "jilerner at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "3203",
+  "name": "mantip",
+  "summary": "quick tip from synopsis section in man pages for words",
+  "script_type": "utility",
+  "description": "with default key binding enabled, move the cursor over a word, for example strcmp and press <leader>d\nthis will put the following line in the status line:\n\nSTRCMP(3) 1/2: int strcmp(const char *s1, const char *s2);\n(STCMP(3) - man page, 1/2 - first line of two lines)\n\npressing <leader>d again will show the next decelration:\n\nSTRCMP(3) 2/2: int strncmp(const char *s1, const char *s2, size_t n);\n\n<leader>D show the previous one, the list is cyclic\n\nuse <leader>1..9 to man specific sections\n\nsee code for more details\n",
+  "install_details": "just put under ~/.vim/plugin\nto enable default key bindings put\nlet g:mantip_bindkeys=1\nin your ~/.vimrc\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13587",
+      "filename": "mantip.vim",
+      "script_version": "0.1",
+      "date": "2010-08-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "20508",
+        "user_name": "TheRagingTowel",
+        "first_name": "Itay",
+        "last_name": "Donenhirsch",
+        "email": "itay at bazoo.org",
+        "homepage": "http://itay.bazoo.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

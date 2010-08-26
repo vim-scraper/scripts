@@ -1,0 +1,122 @@
+{
+  "script_id": "246",
+  "name": "Buffer Menus",
+  "summary": "Add menus for the current buffer only.",
+  "script_type": "utility",
+  "description": "Adds menus for the current buffer.   When you leave the buffer, they get removed, and when you go back in, they are added again.\nIt cannot be used effectively to replace a menu as it is not possible to find out what the mapping used to be (as for map commands), and therefore not possible to restore it (*sigh*)\n\nThis is taken from my 'buffoptions' script, and should be useful in enabling menus to be added to ftplugin scripts.\n\nNOTE: When adding to ftplugin scripts make VERY sure that the menus only get added ONCE (reinclude protection is good here).\n\nTODO: (Please email me to add to this list)\n- Allow 'Unmenu' of individual menus\n\n\nUsage -\n:Bmenu[!] [\"<silent>\"] [\"<unmenu>\"|\"<disable>\"] [<modes>] [<priority>] <Menuname> <Mapping>\n \t\tAdd menus to different modes for the current buffer.  (Bang is used to\n        specify 'noremenu')\n:B[ivacn]menu[!][\"<silent>\"] [\"<unmenu>\"|\"<disable>\"]  [<priority>] <Menuname> <Mapping>\n\t    Add menu for one mode (or 'a' for all modes) for the current buffer.\n      (Bang is used to specify 'noremenu')\n\nB[ivacn]noremenu [\"<silent>\"] [\"<unmenu>\"|\"<disable>\"] [<modes>] [<priority>] <Menuname> <Mapping>\n      Adds a 'norecursive' menu.\n\nThe above commands accept '<silent>' as a flag to do a silent mapping.\nThey also allow <SID> (providing you have done the \"exe FindBufferSID()\"\nat the beginning of the script), and will expand <leader> and <localleader>\nin menu names.\n\nIf g:buffermenu_use_disable is set to 1 then all buffermenus use\nenable/disable to update the menus.  Otherwise, they will use menu/unmenu.\nTo override for one menu only, use <unmenu> or <disable>\n\n\n:Bunmenuall\n      Remove all menus for the current buffer\n\nBufferOneShot( <ident> )\n \t\tUse this to make sure Bmenus only get added ONCE per buffer.\n \t\teg:\n \t\tif BufferOneShot('MyProgram')\n \t\t\tBmenu 10.20 Test.Test iHello<esc>\n \t\tendif\n \t\tA buffer local-variable called b:buffer_oneshot_MyProgram will be\n \t\tcreated (just in case you want to unlet it when testing).\n\nexe FindBufferSID() \n\t\t:exe the result of this function when using <SID> in menu commands so that the correct\n\t\tfunction gets called.\n\n",
+  "install_details": "This should be used as a general plugin - dump it into the plugin directory.\n\n(Without the s: and <SID> it should work for 5.6, 5.7 as well, sourced from your vimrc )",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=779",
+      "filename": "buffermenu.vim",
+      "script_version": "1.9",
+      "date": "2002-04-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Added noremenu mappings and <silent> support (thanks Luc).  \nUpdated the documentation. \nMade provision for using <SID> in a mapping  - careful you'll need to read the docs on this one.\nAdded a global option to use menu enable menu disable instead of unmenu.\nAdded <unmenu> and <disable> options to specify explicitly whether to disable or unmenu the mapping.\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=753",
+      "filename": "buffermenu.vim",
+      "script_version": "1.6",
+      "date": "2002-04-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Fix up a bug where spaces are used in the mapping part were causing an error to be reported.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=749",
+      "filename": "buffermenu.vim",
+      "script_version": "1.5",
+      "date": "2002-04-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "For some reason when pressing ctrl+^  I was getting two buffer unloads - this was causing menus to be undone twice and lots of errors.  I have now fixed it to make sure it only undoes the menus once.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=747",
+      "filename": "buffermenu.vim",
+      "script_version": "1.3",
+      "date": "2002-04-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Allow menus with spaces to work.\nEcho errors using echoerr so that they are reported properly"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=704",
+      "filename": "buffermenu.vim",
+      "script_version": "1.2",
+      "date": "2002-03-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Don't add menus to the buffer-list that produce an error when first adding."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=703",
+      "filename": "buffermenu.vim",
+      "script_version": "1.1",
+      "date": "2002-03-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Enhancements:\n- <maplocalleader> and <mapleader> now get expanded when adding - this means you can do: \n    Bamenu Test.Test<tab><maplocalleader>aa <maplocalleader>aa\n  And get a menu with the 'help' showing the actual localleader/leader\n\nBugfixes:\n- Bamenu Bcmenu Bnmenu  now pass the correct parameters and won't give an error\n- Bunmenuall now works."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=683",
+      "filename": "buffermenu.vim",
+      "script_version": "1.0",
+      "date": "2002-03-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "3122",
+  "name": "PySuite",
+  "summary": "A collection of python vim scripts",
+  "script_type": "utility",
+  "description": "You need vim compiled with python to use these! To test if your vim includes python, use this command:  :python print 'hi'. If you get an error, you don't have python. \n\nIncluded scripts are:\n\n- vimp3 - music player for vim (scores, random mode taking scores into account, multiple playlists per file, option to pause between tracks; note: other scripts will work in win/linux, this one is only for linux)\n- outliner similar to TVO\n- todo list manager\n- project manager (load/unload by dir/project, make an outline of python files, etc)\n- calendar that supports adding notes to dates\n- plugin to track expenses and balances\n- sortable table with fields separated by 2+ spaces\n- resize - set a list of main vim window sizes and use two shortcuts to resize -/+\n- helpgrep - enter a few words and use :helpgrep cmd to search for them in any order\n- pystripdoc - make a copy of buffer with stripped out python docstrings and comments\n- pyfolddoc - fold python docstrings and comments\n- aligncode - align code by '=' or '#' chars\n\nFor a more detailed description, see home page: http://lightbird.net/pysuite/.",
+  "install_details": "Unzip in ~/.vim/ ; cd to pysuite and look at the docs, then cp -r ftplugin/ plugin/ python/ syntax/ ~/.vim/  if you need all scripts; if you want only a few scripts, copy pysuite.vim to .vim/plugin/ and the scripts you want to respective dirs under ~/.vim/ .\n\nNot tested on windows but most will probably work fine and the rest - with minor adjustments.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13247",
+      "filename": "pysuite-0.3.0.tar.gz",
+      "script_version": "0.3.0",
+      "date": "2010-06-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "333",
+        "user_name": "rainy",
+        "first_name": "A",
+        "last_name": "K",
+        "email": "ak at lightbird.net",
+        "homepage": ""
+      },
+      "release_notes": "Added vimp3 script. Fixed some performance issues with the suite, added reverse sorting to scripts that have sortable tables, fixed a bug in cal with insertion of new entries after existing entries."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13173",
+      "filename": "pysuite-0.2.6.tar.gz",
+      "script_version": "0.2.6",
+      "date": "2010-06-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "333",
+        "user_name": "rainy",
+        "first_name": "A",
+        "last_name": "K",
+        "email": "ak at lightbird.net",
+        "homepage": ""
+      },
+      "release_notes": "A number of serious bugs fixed: missing potl script, old pysuite.vim (broke opening files in vimject and probably other things)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13171",
+      "filename": "pysuite-0.2.5.tar.gz",
+      "script_version": "0.2.5",
+      "date": "2010-06-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "333",
+        "user_name": "rainy",
+        "first_name": "A",
+        "last_name": "K",
+        "email": "ak at lightbird.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

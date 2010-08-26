@@ -1,0 +1,282 @@
+{
+  "script_id": "2441",
+  "name": "pyflakes.vim",
+  "summary": "PyFlakes on-the-fly Python code checking",
+  "script_type": "ftplugin",
+  "description": "IMPORTANT: Your vim must have Python 2.5, at least. Enter \":python import sys; print sys.version\" to see which version you have.\n\nFor Windows builds with Python 2.6 support, see here: http://symbolsystem.com/vim/\n\npyflakes-vim highlights common Python errors like misspelling a variable name on the fly. It also warns about unused imports, redefined functions, etc.\n\nThis plugin is fast enough that it registers itself with vim hooks for leaving insert mode and saving a buffer, so that the warnings are always up to date. See pyflakes.vim if you want to change this behavior.\n\nNOTES:\n * an improved pyflakes module is INCLUDED with this plugin, so you don't need to install it separately\n * quickfix entries are created for each error, so you can use commands like :cc to jump to errors.\n * this plugin uses the SpellBad highlight to show errors. if you'd like to change the color or style of this highlight, you can do something like this in your .vimrc:\n\n      if has(\"gui_running\") \n          highlight SpellBad term=underline gui=undercurl guisp=Orange \n      endif \n\nTo stay up on development, you can watch the public repos at\n\nhttp://github.com/kevinw/pyflakes-vim\nhttp://github.com/kevinw/pyflakes\n\nKNOWN ISSUES\n\n- The highlighting for syntax errors is often way off, and results in no other errors being detected.\n- In Python 2.5, typing a with statement before you have from __future__ import with results in a vim error\n",
+  "install_details": "1. Make sure your vimrc has \"filetype plugin indent on\" so that pyflake-vim's ftplugin files are loaded automatically when you open a Python buffer.\n2. Drop extracted files in ~/.vim/ftplugin/python.\n3. That's it!\n\nSee the README for more info.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13378",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "2.0",
+      "date": "2010-07-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Add quickfix support! Thanks Phui Hock.\n\nYou can now use quickfix commands like :cc to jump to errors.\n\nhttp://github.com/kevinw/pyflakes-vim/commit/64ebcffe3de49fe34ca12b11292b792dc323709f"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13300",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.64",
+      "date": "2010-07-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Do not decode source code encoding line and the lines preceed it, if found.\n\nThanks phuihock.\n\nhttp://github.com/kevinw/pyflakes-vim/commit/1dffdbe91034f7a2bb6a16efe43d9bd9a466d11a"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13229",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.63",
+      "date": "2010-06-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Don't warn about duplicate functions with property decorators @prop.setter and @prop.deleter."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13208",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.62",
+      "date": "2010-06-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Minor 2.5 compatibility fix."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13200",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.61",
+      "date": "2010-06-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Don't miss class decorators when walking the AST."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12763",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.60",
+      "date": "2010-04-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Show a clear error message if vim was compiled without Python, or with a version of Python older than 2.5.\n\nhttp://github.com/kevinw/pyflakes-vim/commit/5eaf3bc1d7508da2994657c4f77458f4064d26e2"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12555",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.59",
+      "date": "2010-03-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Minor fix for an exception when opening files.\n\nhttp://github.com/kevinw/pyflakes-vim/commit/783b3aa3de1fddb082f0810300bac5a831a97941"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12009",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.58",
+      "date": "2010-01-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Fix for 1.57 file encoding exception."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11978",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.57",
+      "date": "2009-12-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Fixes http://github.com/kevinw/pyflakes-vim/issues/#issue/7 and http://github.com/kevinw/pyflakes-vim/issues/#issue/8\n\nFiles in unusual encodings should open correctly now.\nFiles ending with a trailing comment and no newline should also compile correctly now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11524",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.56",
+      "date": "2009-10-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "http://github.com/kevinw/pyflakes-vim/commit/f12c0881f83964e35b2d3ad2299d111cec53dd9f\n\nFixes http://github.com/kevinw/pyflakes/issues#issue/1\n\nApparently CursorMoved can get called early, before RunPyflakes has run. \nIf this happens, just return.\n\nThanks EnTeQuAk."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11396",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.55",
+      "date": "2009-09-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "http://github.com/kevinw/pyflakes-vim/commit/083bc2e65649a9cf10a7c1bcd22151a4083ddeb7\n\nHighlight the whole line for SyntaxErrors."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10971",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.5",
+      "date": "2009-07-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "http://github.com/kevinw/pyflakes-vim/commit/b8f2f366b1322a5ffefede30ddb3339102d2f28c\n\nIgnore stderr during ast.parse, since it will otherwise show as VIM error \nmessages. Thanks Denis Bilenko.\n\nEventually we should parse some of the warnings. For example:\n\n  foo.py:33: Warning: 'as' will become a reserved keyword in Python 2.6\n\nThis could become a visible warning."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10551",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.4",
+      "date": "2009-05-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "http://github.com/kevinw/pyflakes-vim/commit/6ec1fbbce32876e315b370409ca55c97d232d125\n\nRestrict dd, dw, etc mappings to the local Python buffer."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10434",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.3",
+      "date": "2009-04-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Some fixes based on suggestions from Brandon Low:\n\n - changed highlight call from hard coding a curly underline to linking with the \"SpellBad\" style. This is more friendly vim on terminals. If you'd like the old brighter orange undercurl from previous versions, add the following to your .vimrc:\n\n    if has(\"gui_running\")\n        highlight SpellBad term=underline gui=undercurl guisp=Orange\n    endif\n\n - added the :PyflakesUpdate command (runs pyflakes and updates the message area)\n - hooked dd, dw, u, and <C-R> to also call :PyflakesUpdate so common text operations will invoke PyFlakes\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10193",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.2",
+      "date": "2009-03-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "- Include compatibility fixes for Python 2.6's _ast changes in visit_FunctionDef and for visit_ExceptHandler. Thanks Herve Cauwelier. \n- Include pyflakes.scripts in the \"packages\" option for setup. Thanks Herve Cauwelier. \n- Fix for names incorrectly marked undefined in nested list comprehensions. \n- Add \"__builtins__\" to the list of predefined names. \n- Bind names for *args and **kwargs in functions and lambdas. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9528",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.1",
+      "date": "2008-11-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Updated pyflakes/checker.py to fix AST fixes from http://github.com/kevinw/pyflakes/commit/bdc1acde85df3bf0a8f5ef1ec26e9121667c9d0a"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9503",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "1.0",
+      "date": "2008-11-15",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

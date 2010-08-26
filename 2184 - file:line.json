@@ -1,0 +1,74 @@
+{
+  "script_id": "2184",
+  "name": "file:line",
+  "summary": "Allows you to open file:line and it does the right thing :-)",
+  "script_type": "utility",
+  "description": "When you open a file:line, for instance when coping and pasting from an error from your compiler vim tries to open a file with a colon in its name. With this little script in your plugins folder if the stuff after the colon is a number and a file exists with the name especified before the colon vim will open this file and take you to the line you wished in the first place.",
+  "install_details": "Just copy the file into your plugins path ($HOME/.vim/plugin under unixes).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9148",
+      "filename": "file:line.vim",
+      "script_version": "0.4",
+      "date": "2008-08-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14021",
+        "user_name": "bogado",
+        "first_name": "Victor",
+        "last_name": "Bogado da Silva Lins",
+        "email": "victor at bogado.net",
+        "homepage": ""
+      },
+      "release_notes": "Closes the buffer for the nonexistent file \"file:line\" after it opens the correct file. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8433",
+      "filename": "file:line.vim",
+      "script_version": "0.3",
+      "date": "2008-03-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14021",
+        "user_name": "bogado",
+        "first_name": "Victor",
+        "last_name": "Bogado da Silva Lins",
+        "email": "victor at bogado.net",
+        "homepage": ""
+      },
+      "release_notes": "Opens eventual folds on the desired lines. Changes made by Rodolfo Borges (user barrett9h)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8417",
+      "filename": "file:line.vim",
+      "script_version": "0.2",
+      "date": "2008-03-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14021",
+        "user_name": "bogado",
+        "first_name": "Victor",
+        "last_name": "Bogado da Silva Lins",
+        "email": "victor at bogado.net",
+        "homepage": ""
+      },
+      "release_notes": "This version uses a simpler way to open the desired file and also uses the \"nested\" option so the loaded file can be correctly detected by vim."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8413",
+      "filename": "file:line.vim",
+      "script_version": "0.1",
+      "date": "2008-03-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14021",
+        "user_name": "bogado",
+        "first_name": "Victor",
+        "last_name": "Bogado da Silva Lins",
+        "email": "victor at bogado.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

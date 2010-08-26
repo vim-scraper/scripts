@@ -1,0 +1,42 @@
+{
+  "script_id": "1378",
+  "name": "cfengine log file highlighting",
+  "summary": "Syntax highlighting for cfagent/cfengine log files",
+  "script_type": "syntax",
+  "description": "Very early release and very buggy and incomplete, but it does work suitably enough that reading logfiles is no longer so difficult.  Currently highlights schedule changes, editfiles blocks, and when things \"change\" on the system (like when files get copied).  As I learn more about how to write syntax files, this should improve somewhat.",
+  "install_details": "Standard syntax script -- just stick in ~/.vim/syntax, and do :set syntax=cfengine-log to highlight stuff.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4669",
+      "filename": "cfengine-log.vim",
+      "script_version": "0.2",
+      "date": "2005-10-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8524",
+        "user_name": "skaven",
+        "first_name": "Paul",
+        "last_name": "Krizak",
+        "email": "paul.krizak at amd.com",
+        "homepage": ""
+      },
+      "release_notes": "Better color-coding for editfiles stuff, better consistency on color codes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4668",
+      "filename": "cfengine-log.vim",
+      "script_version": "0.1",
+      "date": "2005-10-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8524",
+        "user_name": "skaven",
+        "first_name": "Paul",
+        "last_name": "Krizak",
+        "email": "paul.krizak at amd.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "2690",
+  "name": "kaltex.vim",
+  "summary": "A colder colorscheme...",
+  "script_type": "color scheme",
+  "description": "Same as the kalt.vim colorscheme, except that this one\nuses bold, italics and underlined font styles for syntax\nhighlighting.",
+  "install_details": "Just put it into your ~/.vim/colors\n\nand try it out inside GVIM/VIM with the command:\n\n:color kaltex",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10922",
+      "filename": "kaltex.vim",
+      "script_version": "1.1",
+      "date": "2009-07-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17538",
+        "user_name": "drachenkiraa",
+        "first_name": "drachen",
+        "last_name": "kiraa",
+        "email": "drachenkiraa at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "FIX: Cursor disappeared when moving it in a Comment. This ONLY\n  happened on one terminal (gnome-terminal). Now the Comment ctermfg\n  color is DarkGreen for all 8 color Xterms. But you'll still get the\n  original color (DarkGray) if your terminal supports more colors\n  (when you force it by setting 't_Co' to 16 or more).\nChanged 'Cursor', 'CursorLine', 'CursorColumn' colors to\n  DarkBlue instead of the ugly Green.\nChanged SpellRare guifg color from Magenta to DarkMagenta.\nChanged IncSearch guifg color from LighMagenta to Green.\nChanged PreCondit guifg color to a darker yellow color.\nSet ctermfg and guifg options of 'Search' and 'IncSearch' to the\n  background color.\nMade 'Character' guifg color more brighter.\nChanged 'Special' guifg color from Blue to a nice Red color.\nChanged 'PmenuSel' and 'Todo' gui option to bold."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10897",
+      "filename": "kaltex.vim",
+      "script_version": "1.0",
+      "date": "2009-06-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17538",
+        "user_name": "drachenkiraa",
+        "first_name": "drachen",
+        "last_name": "kiraa",
+        "email": "drachenkiraa at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

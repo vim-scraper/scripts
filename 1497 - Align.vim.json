@@ -1,0 +1,26 @@
+{
+  "script_id": "1497",
+  "name": "Align.vim",
+  "summary": "Map keys ')' and ']' to perform automatic formatting of parentheses content",
+  "script_type": "utility",
+  "description": "  Map keys ')' and ']' to perform automatic formatting of parentheses content, i. e., insert spaces in all proper positions.\n   Currently spaces are inserted:\n   a)After and before '(', ')', '[', ']', '+', '-', '*', '/', '%', '=', '&', '|', '^'\n   b)After and before '==', '+=', '-=', '*=', '%=', '/=', '|=', '&=', '!=','^=', '<<', '>>', '>=', '<=', '&&', '||' (and never in the middle!)\n   c)Only after (and not before) ',', '++', '--'\n\n   If syntax highlighting is enabled, script correctly handles string literals, i.e, do not change their content.\n\n   If you have nested parentheses, their content will not be formatted. It is implied that the source is edited continuously, so content of each pair of pare\n   ntheses is formatted after closing parenthesis is printed.\n\n   Bugs:\n   a) Unary '*', '&' and '-' are not handled correctly(i. e., spaces are inserted before and after no matter of context)\n   b) Final position of cursor is not always proper\n",
+  "install_details": "Copy file into $VIMRUNTIME/plugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5451",
+      "filename": "Align.vim",
+      "script_version": "0.15",
+      "date": "2006-03-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5896",
+        "user_name": "do_",
+        "first_name": "Michael",
+        "last_name": "Gnezdov",
+        "email": "brmglt at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug caused script do not work in 6.4 version of Vim.\n\nNow works on versions 6.4 -- 7.0a (others have not been tested yet)"
+    }
+  ]
+}

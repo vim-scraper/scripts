@@ -1,0 +1,122 @@
+{
+  "script_id": "909",
+  "name": "unicodeswitch.vim",
+  "summary": " Vim file plugin for editing files with unicode codes.",
+  "script_type": "ftplugin",
+  "description": "Vim file plugin for editing files with unicode codes.\n\nIt changes all of the codes to the accented characters for viewing, and turns all accented characters into the code when writing.\n\ne.g. it changes \\u00E9 to é when viewing, and puts \\u00E9 when writing (java-style encoding). Set g:ucs_encode_java (in your .vimrc file)\n\nBy default, it works for all the accented characters in the Unicode Latin-1 supplement, but you can quickly change it for your needs.\n\nYou can also set it to work with html encoding (&#nnn;). Set g:ucs_encode_html (in your .vimrc file)\n\nYou can also set it to convert accented characters to octal encoding ( \\340 ). Set g:ucs_encode_octal in your\n.vimrc file\n\n\nIf you want to turn the switching on and off for reading and/or writing, you can easily do so by commenting out the autocmd lines.  e.g. if you comment out the BufWrite autocmds, then you can read in \\u00aa style and write out the utf encoding.  Or, you could swap the BufRead and BufWrite commands, and do the opposite transformation.\n\nfor help with the accented characters, see :help digraph\n\ncopied/mangled from vimscript #284, which does it for TeX codes\n",
+  "install_details": "Usage: put in your $VIMDIR/plugin directory, set one of the variables\n  either \n let g:ucs_encode_java = 1 \nor \n let g:ucs_encode_html = 1 \nor\n let g:ucs_encode_octal = 1\nin your .vimrc file\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7160",
+      "filename": "unicodeswitch.vim",
+      "script_version": "1.7",
+      "date": "2007-05-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "added octal ( \\233 )switch, fixed up the html switch"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3084",
+      "filename": "unicodeswitch.vim",
+      "script_version": "1.6",
+      "date": "2004-06-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "bugfix: correct the hex char match variable to only match up to 4 chars."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2985",
+      "filename": "unicodeswitch.vim",
+      "script_version": "1.5",
+      "date": "2004-04-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "fix for higher numbered chars (above \\u00ff)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2763",
+      "filename": "unicodeswitch.vim",
+      "script_version": "1.4",
+      "date": "2004-02-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Same as 1.3, but with unix line endings"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2760",
+      "filename": "unicodeswitch.vim",
+      "script_version": "1.3",
+      "date": "2004-02-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "added html-style encoding (&#nnn;) and made the script more modular"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2745",
+      "filename": "unicodeswitch.vim",
+      "script_version": "1.2",
+      "date": "2004-02-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "fix write error, oops."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2743",
+      "filename": "unicodeswitch.vim",
+      "script_version": "1.1",
+      "date": "2004-02-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

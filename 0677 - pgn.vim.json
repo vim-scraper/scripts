@@ -1,0 +1,26 @@
+{
+  "script_id": "677",
+  "name": "pgn.vim",
+  "summary": "Provides syntax highlighting for .pgn (chess) files",
+  "script_type": "syntax",
+  "description": "PGN, or Portable Game Notation, is the standard format for recording chess games.  All chess software that I've used can read .pgn files, most can write .pgn files.  I like to edit the files in Vim, but I couldn't find a syntax file for .pgn.  So I wrote this one.  It's quite simple, and the first syntax file I've ever written for Vim, so it may not be complete.  But it does make it easier to read / edit the games.",
+  "install_details": "Put the file in your $VIMRUNTIME/syntax/ directory.\nThen in your $VIMRUNTIME/filetype.vim file, add this line:\n\nau BufNewFile,BufRead *.pgn    setf pgn",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2077",
+      "filename": "pgn.vim",
+      "script_version": "1.0",
+      "date": "2003-06-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2607",
+        "user_name": "cford",
+        "first_name": "Charles",
+        "last_name": "Ford",
+        "email": "ford.charles at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

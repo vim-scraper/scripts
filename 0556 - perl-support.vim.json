@@ -1,0 +1,826 @@
+{
+  "script_id": "556",
+  "name": "perl-support.vim",
+  "summary": "Perl IDE -- Write and run Perl-scripts using menus and hotkeys.",
+  "script_type": "utility",
+  "description": "- insert various types of comments\n- insert complete but empty statements (e.g. 'if {} else {}' )\n- insert often used code snippets (e.g. declarations, the opening of files, .. )\n- insert the names of file tests, character classes, special Perl-variables and POSIX-signals\n- read, write, maintain your own code snippets in a separate   directory\n- run scripts or run syntax check from within the editor\n- show compilation erros in a quickfix window; navigate with hotkeys \n- read perldoc for functions and modules \n- run perltidy / run the profiler SmallProf\n- test / explain regular expressions (needs Vim with Perl interface)\n\nHere are some screen shots :   http://lug.fh-swf.de/vim/vim-perl/screenshots-en.html\n\nThe help file online :   http://lug.fh-swf.de/vim/vim-doc/perlsupport.html\n\nThe key mappings of this plugin (PDF) :  http://lug.fh-swf.de/vim/vim-perl/perl-hot-keys.pdf\n\nThe installation explained: http://www.thegeekstuff.com article\n\"Make Vim as Your Perl-IDE Using perl-support Plugin\"\n(http://www.thegeekstuff.com/2009/01/make-vim-as-your-perl-ide-using-perl-supportvim-plugin)\n\nDocumentation \n--------------------------------------------------------\nThis plugin comes with a help file (perlsupport.txt). Read it with   \n \n  :h perlsupport \n\n** PLEASE READ THE DOCUMENTATION **\n\nEditing actions differ for different modes!  \nThere are  a lot of  features which can be configured or customized to match your needs.\n\n\nMAILING LIST\n--------------------------------------------------------\nYou can subscribe to the vim-plugins-list mailing list to post your questions or\nsuggestions for improvement or to report bugs.  The list will also be used to\nannounce new releases ( c.vim / bash-support / perl-support / doxygen-support ).\nVisit the following page for subscribing to the mailing list:\n     \n  http://lug.fh-swf.de/cgi-bin/mailman/listinfo/vim-plugins-list\n\nThe vim-plugins-list list is very low on traffic.\n\n___________________\nThank you for rating perl-support ! ",
+  "install_details": "Copy the zip archive  perl-support.zip to $HOME/.vim/ or $VIM/vimfiles \n(on the Windows platforms) and run\n      unzip perl-support.zip\nIf you have already an older version of perl-support and you have modified the\ntemplate files you may want to save your templates first or copy the files from the \narchive by hand. See also the README file within the zip file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13075",
+      "filename": "perl-support.zip",
+      "script_version": "4.8",
+      "date": "2010-05-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- Hotkeys \\$x, \\@x and \\%x renamed (to avoid conflicts when writing references).\n- Bugfix, Regex-Tester: colouring matches shows an error message in a few cases."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12819",
+      "filename": "perl-support.zip",
+      "script_version": "4.7.1",
+      "date": "2010-04-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- Bugfixes: insertion of Posix classes from the menu not working properly.\n- Bugfixes, Regex Tester: accented characters can be used.\n- Bugfixes, Regex Tester: embedded Perl code can be used.\n- Bugfixes: local installation looks like a system-wide installation in seldom cases."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12539",
+      "filename": "perl-support.zip",
+      "script_version": "4.7",
+      "date": "2010-03-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- Run make (+arguments) from the 'Run' menu; 2 additional hotkeys.\n- Bugfix (Windows): syntax check does not catch error message if a closing\n  brace is missing (thanks to Dave DelGreco for fixing this bug).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12177",
+      "filename": "perl-support.zip",
+      "script_version": "4.6.1",
+      "date": "2010-01-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- Bugfix (Vim, not gVim): screen isn't refreshing properly when using syntax\n  check and a few other commands (thanks to Iain Arnell)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11969",
+      "filename": "perl-support.zip",
+      "script_version": "4.6",
+      "date": "2009-12-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- The profilers Devel::SmallProf and Devel::NYTProf can now be used under Windows.\n- New profiler menu.\n- New hotkeys for calling podchecker and the pod2xxx converter.\n- Pathnames can contain blanks.\n- Template completion: behavior of Ctrl-j improved.\n- Template system: new attributes 'indent', 'noindent'\n- Comment alignment improved.\n- Bugfix (Windows). snippet directory unreachable.\n- Minor improvements.\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11480",
+      "filename": "perl-support.zip",
+      "script_version": "4.5",
+      "date": "2009-10-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- Profiler NYTProf: menu item and ex-command to start a html-viewer.\n- New conversion: Pod to Pdf (if Pod::Pdf is installed).\n- Perltidy,  v-mode: can be used in non-perl files (for embedded Perl).\n- Bugfix: hotkey \\ifu not working.\n- Bugfix: running and starting the debugger causes error if working directory is not\n  the directory of the current file.\n- Bugfix: missing variable Perl_TimestampFormat.\n- Minor improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10934",
+      "filename": "perl-support.zip",
+      "script_version": "4.4",
+      "date": "2009-07-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- Hotkeys are shown in the menus.\n- Four hotkeys renamed.\n- Hardcopy (run menu) can print any buffer.\n- Bugfix (Windows only): syntax check for files with pathnames containing blanks not working.\n- Minor improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10678",
+      "filename": "perl-support.zip",
+      "script_version": "4.3",
+      "date": "2009-05-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ File browser for code snippets and templates choosable (2 global variables).\n+ Comments menu: adjustment of end-of-line comments further improved.\n+ Bugfix: Error message when opening files and Perl::Tags is not installed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10560",
+      "filename": "perl-support.zip",
+      "script_version": "4.2",
+      "date": "2009-05-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Regex Analyser extended: check several regular expressions against several targets.\n+ Regex Analyser extended: regular expressions with  match-time code evaluation possible.\n+ Regex Analyser extended: g-modifier allowed; all matches will be shown.\n+ Regex Analyser extended: qr/.../ can be picked up.\n+ Comments menu: adjustment of end-of-line comments improved.\n+ Statements menu: else block (key mapping \\se).\n+ Regex menu: new special variables (Perl 5.10)\n+ Templates: handling of <SPLIT> improved.\n+ Bugfix: Perl::Tags integration not working.\n+ Minor improvements and bugfixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10403",
+      "filename": "perl-support.zip",
+      "script_version": "4.1.1",
+      "date": "2009-04-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Bugfix (Windows only): templates will be loaded twice, generating a long list \n  of error messages.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10227",
+      "filename": "perl-support.zip",
+      "script_version": "4.1",
+      "date": "2009-03-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Additional plugin-tags (jump targets in templates): <+text+>, <-text->.\n+ Additional mapping Ctrl-j : jump to these new targets.\n+ Template-file: additional macro |STYLE| and IF-ENDIF-construct to easily\n  choose between sets of templates.\n+ SmallProf integration completely rewritten: hotspot report, report sortable.\n+ FastProf and NYTProf integration.\n+ Command completion for the command CriticSeverity.\n+ Minor improvements and bugfixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9813",
+      "filename": "perl-support.zip",
+      "script_version": "4.0.2",
+      "date": "2009-01-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Bugfix: 3 global variables without effect (format for date, time, year)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9746",
+      "filename": "perl-support.zip",
+      "script_version": "4.0.1",
+      "date": "2009-01-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Bugfix: Error message in some functions that issue a prompt."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9701",
+      "filename": "perl-support.zip",
+      "script_version": "4.0",
+      "date": "2008-12-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Completely new template system. Most menu items now user definable.\n+ Plugin split into autoloadable modules (makes Vim startup faster).\n+ Submenus for perlcritic severity and verbosity.\nIn consequence there are some obsolete files and global variables, and some new\nfiles and hotkeys."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9578",
+      "filename": "perl-support.zip",
+      "script_version": "3.9.1",
+      "date": "2008-11-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Bugfix: idiom 'open input file' not usable (thanks to Marcus Aßhauer for\n  spotting and fixing it)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9554",
+      "filename": "perl-support.zip",
+      "script_version": "3.9",
+      "date": "2008-11-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ New item in menu Statements: elsif (shortcut \\sei)\n- Map leader for hotkeys now user definable: new global variable g:BASH_MapLeader\n+ Specification of command line arguments (Run->cmd. line arg.): filename completion active."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8855",
+      "filename": "perl-support.zip",
+      "script_version": "3.8.1",
+      "date": "2008-06-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Bugfix:  In insert mode and in non-empty lines.hotkeys beginning like references (e.g. \\$ ) are now inactive."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8726",
+      "filename": "perl-support.zip",
+      "script_version": "3.8",
+      "date": "2008-05-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ New regular expression testing tool.\n+ 'code->comment' and 'comment->code'  are replaced by a toggle: 'toggle comment'\n+ 'explain regex' can use flags now.\n+ 'run->settings'  shows the  Perl interface version.\n+ Superfluous control characters for mode switching (menus, hotkeys) removed. Caused beeps.\n+ Some minor improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8112",
+      "filename": "perl-support.zip",
+      "script_version": "3.7",
+      "date": "2008-01-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Regex analyser YAPE::Regex::Explain integrated (optional).\n+ Bugfix: use correct pathnames under Cygwin.\n+ Bugfix: always use the right perl executable to list the installed Perl modules.\n+ Minor changes due to ctags, version 5.7.\n+ Global variable g:Perl_PerlTags is no longer needed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7432",
+      "filename": "perl-support.zip",
+      "script_version": "3.6.3",
+      "date": "2007-07-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Changes to allow a system-wide installation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7288",
+      "filename": "perl-support.zip",
+      "script_version": "3.6.2",
+      "date": "2007-06-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Snippets can now be managed in the console mode.\n+ Three new key mappings for snippets.\n+ Bugfix: quitting the module list buffer no longer terminates the editor.\n+ Documentation: section about optional dependencies added."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7247",
+      "filename": "perl-support.zip",
+      "script_version": "3.6.1",
+      "date": "2007-06-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Support for Perl::Tags added (see the help file)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7178",
+      "filename": "perl-support.zip",
+      "script_version": "3.6",
+      "date": "2007-05-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ New command enables the alignment of line end comments (menu item, hotkey). \n+ Idioms hotkeys renamed (better to remember).\n+ Lot of new mappings for the insert mode.\n+ The code for opening files or pipes can surround a marked area (v-mode).\n+ Script pmdesc3 removes POD markup sequences now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6743",
+      "filename": "perl-support.zip",
+      "script_version": "3.4",
+      "date": "2007-02-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Adaption for 'perlcritic', version 1.03 . Interface improved.\n+ Three new Ex commands to control 'perlcritic'.\n+ Subdirectories rearranged.\n+ Escaping special characters in filenames reworked (Unix,Windows)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6570",
+      "filename": "perl-support.zip",
+      "script_version": "3.3",
+      "date": "2007-01-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ One new and two improved mappings (\\cs, \\co, \\cc). \n+ All command mappings can be switched off by a global variable.\n+ Bugfix: empty new file after removing the header template can't be closed.\n+ Bugfix [Windows]: perlcritic messages are sometimes garbled (Thanks to Igor Prischepoff).\n+ Bugfix : Tools entry missing when root menu not shown from the start.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6524",
+      "filename": "perl-support.zip",
+      "script_version": "3.2.2",
+      "date": "2006-12-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Bugfix: wrong position when building regular expressions in visual mode at  the end of a line.\n+ Bugfix [cygwin]: unnecessary error message when starting vim not gvim).\n+ Perl keyword help (S-F1) improved.\n+ Insertion and substitution from the menus protected against  non-plugin mappings.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6107",
+      "filename": "perl-support.zip",
+      "script_version": "3.2.1",
+      "date": "2006-08-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Better adaption for 'perlcritic', version 0.19 .\n+ Bugfix: key mappings \\cb and \\cn are working now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6023",
+      "filename": "perl-support.zip",
+      "script_version": "3.2",
+      "date": "2006-08-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ New command and menu entry for commenting/uncommenting larger blocks of code.\n+ Some POD statements now have a visual mode.\n+ Setting the column for the start of line-end comments improved.\n+ Mac OS X : circumvent a Vim bug which caused a crash when loading plugin version 3.1.\n+ File syntax/perl.vim removed (but see help in perlsupport.txt)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5724",
+      "filename": "perl-support.zip",
+      "script_version": "3.1",
+      "date": "2006-05-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Adaption for 'perlcritic', version 0.16 .\n+ Bugfix: The profiler now gets the command line arguments of the script.\n+ Minor bugfixes and improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5578",
+      "filename": "perl-support.zip",
+      "script_version": "3.0",
+      "date": "2006-04-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Adaption for Vim 7.\n+ The hotkeys F9 and \\rd now also starts the debugger (perl -d ..) if vim is running  without GUI.\n+ Debugger starts correctly for scripts with command line arguments (Windows only).\n+ Minor improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5525",
+      "filename": "perl-support.zip",
+      "script_version": "2.9.2",
+      "date": "2006-04-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Adaption for 'perlcritic', version 0.15 .\n+ New template file for POD documentation files.\n+ Minor bugs fixed and improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5339",
+      "filename": "perl-support.zip",
+      "script_version": "2.9.1",
+      "date": "2006-02-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ New menu entry for setting perl command line switches (Thanks to Adam MacKinnon).\n+ For files with extension 't' (Perl test files) the filetype is set to 'perl'. This\n  allows syntax checking, reading help, and checking with perlcritic.\n+ There is a new comment template file 'perl-test-header' which will be\n  inserted at the beginning of a new test file (extension 't').\n+ Comment after some POD directives removed (podchecker showed errors)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5014",
+      "filename": "perl-support.zip",
+      "script_version": "2.9",
+      "date": "2006-01-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ perlcritic integrated. Runs like a compiler. Opens a quickfix error window.<br>\n+ Help menu entry added (plugin help).\n+ A hardcopy shows date and time in the header line.\n+ open file/pipe idioms according to Conway's \"Perl Best Practices\".\n+ POSIX class [:blank:] added.\n+ Bugfix: Wrong cursor positon in hash idiom.\n+ Plugin can be used with autocompletion for (, [, and { ."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4801",
+      "filename": "perl-support.zip",
+      "script_version": "2.8.2",
+      "date": "2005-11-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Bugfix: Starting perltidy called a wrong function."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4774",
+      "filename": "perl-support.zip",
+      "script_version": "2.8.1",
+      "date": "2005-11-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Bugfix: Some key mappings not working/not properly working (Thanks to Edward Wijaya).\n+ Bugfix: Unnecessary message 'Made file executable' removed (Thanks to Edward Wijaya).\n+ Bugfix: Wrong quoting for script arguments fixed; Windows only (Thanks to Norin Raad)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4721",
+      "filename": "perl-support.zip",
+      "script_version": "2.8",
+      "date": "2005-11-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Podchecker integrated. Runs like a compiler. Opens a quickfix error window.\n+ Script will be made executable before running it (e.g. after a \"Save As...\").\n+ Many blanks in 2 POD templates removes which garbled the resulting documents (bugfix).\n+ Message now visible if SmallProf is not runable (bugfix)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4684",
+      "filename": "perl-support.zip",
+      "script_version": "2.7",
+      "date": "2005-10-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ POD: \\\"invisible POD\\\" added (as suggested in Conway&#039s book \\\"Perl Best Practices\\\").<br>\n+ POD: sequence insertion improved; &#039<E>&#039 added; &#039=for&#039 added.<br>\n+ <S-F1> (read perldoc) now works only for filetype &#039perl&#039 .<br>\n+ Some idioms improved (e.g. opening files, subroutine stub).<br>\n+ Added &#039:&#039 to the keyword characters; recognizes tokens like &#039Net::Cmd&#039 as one keyword.<br>\n+ Perltidy integration made safer.<br>\n+ Starting an xterm was not possible with some installations (bugfix)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4405",
+      "filename": "perl-support.zip",
+      "script_version": "2.6",
+      "date": "2005-07-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ blocks: opening brace no longer on a new line (adjustable for backward compatibility).\n+ Vim (without GUI): new key mappings: all entries in the run menu do have mappings now.\n+ Vim (without GUI): perldoc can be read with hotkeys \\h and \\rp .\n+ Vim (without GUI): perldoc displays docs using plain text converter.+ output into buffer: cursor goes to top of file.\n+ trailing ^M in perldoc window will be removed (UNIX/Linux).\n+ output into buffer: cursor goes to top of file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4178",
+      "filename": "perl-support.zip",
+      "script_version": "2.5",
+      "date": "2005-04-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Windows support. Most features are now available under Windows.\n+ Spaces in path and file names are now possible (Windows and UNIX).\n+ Reading documentation with perldoc improved.\n+ Minor bugs fixed and improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3948",
+      "filename": "perl-support.zip",
+      "script_version": "2.4.1",
+      "date": "2005-03-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Run the profiler SmallProf from the menu; save different results with time stamps. \n+ Line end comments start in a fixed column now (can be set from the menu).\n+ Recommended settings for ctags corrected (Thanks to William McKee).\n+ Perl module list generator pmdesc3 again slightly improved."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3696",
+      "filename": "perl-support.zip",
+      "script_version": "2.4",
+      "date": "2004-12-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ One of three debuggers can be started with the hotkey F9.+ Complete file or marked area can be reformatted with perltidy. + Run a perl-script:   (1) The script can be run from the command line.  (2) The output can be directed into a window with name \"Perl-Output\".   (3) The script can be run in an xterm (adjustable).+ The new hotkey Shift-F9 and the menu entry \"cmd. line arg.\" set command line  arguments for the current buffer.+ A code snippet with the file name extension \"ni\" or \"noindent\" will not be  indented on insertion.+ Bug fixed (POD->Text)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3608",
+      "filename": "perl-support.zip",
+      "script_version": "2.3.2",
+      "date": "2004-11-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Perl module list generator pmdesc3 improved (no double entries, no control\n   characters in version numbers, handles DOS-teminated files correctly).\n+ Looking up help with Shift-F1 now works also in the perldoc help buffer.\n+ Running a Perl-script now opens a window with name \"Perl-Output\" to display\n  the script output. The buffer and its content will disappear when closing\n  the window. \n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3544",
+      "filename": "perl-support.zip",
+      "script_version": "2.3",
+      "date": "2004-10-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ There is now at most one help window/buffer.+ There is now at most one Perl module list window/buffer.+ The perldoc help will now search in FAQs too;    search order :  modules - functions - FAQs. + Template files and snippet files are no longer kept in the list of alternate files.+ A bug fixed in the Perl module list generator pmdesc3."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3519",
+      "filename": "perl-support.zip",
+      "script_version": "2.2",
+      "date": "2004-10-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Better adaption to the Windows plattforms (default directories, running scripts).\n+ Templates are more consistent now.\n+ 'Line End Comments' ignores blank lines in a marked block."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3185",
+      "filename": "perl-support.zip",
+      "script_version": "2.1",
+      "date": "2004-06-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Installation simplified. + The generation of the module list is a magnitude faster.+ The version of a module is now shown in the module list. + The perl documentation (pod::perl*) appears in the module list.+ The dialog windows (GUI) have been replaced by more flexible command line inputs.+ User will now be asked before a snippet file will be overwritten.+ The undocumented and unnecessary hot key F12 has been removed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3017",
+      "filename": "perl-support.zip",
+      "script_version": "2.0",
+      "date": "2004-05-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ New menu for regex-construction.\n+ New menu with POD commands.\n+ A list of all installed Perl modules can be built and read in. \n  The documentation for a module can be opened from this list.\n+ Extension to ctags + taglist shows POD table of content and enables navigation.\n+ Append aligned comments to all lines of a marked block.\n+ The root menu can be removed.\n+ Documentation improved.\n+ Bug fix (template file handling).\n+ Install script improved."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2202",
+      "filename": "perl-support.zip",
+      "script_version": "1.9.2",
+      "date": "2003-08-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Only one entry in the gVim root menu.+ All hotkeys are only defined for Perl files.+ Install script added.+ Customization improved. + Documentation improved."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2149",
+      "filename": "perl-support.zip",
+      "script_version": "1.9",
+      "date": "2003-07-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ 58 key mappings for Vim without GUI.  See perl-hot-keys.pdf  (reference card).+ A marked region can be surrounded by a for-, if-, do-while- , until-, ...   statements (with indentation).+ The Perl special variables have been added to the file word.list  for dictionary completion.+ Vim doc added (file perlsupport.txt)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2030",
+      "filename": "perl-support.zip",
+      "script_version": "1.8",
+      "date": "2003-05-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "Tag substitution rewritten (Some characters in a substitution text for a tag   prevented the tag from being substituted)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1944",
+      "filename": "perl-support.zip",
+      "script_version": "1.7",
+      "date": "2003-04-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ Block comments are now read as templates or skeletons from files:      frame Comment,  function description,  file header+ These templates can contain tags like |FILENAME|, |AUTHOR| etc. which are replaced  after reading.+ indentation: multiline inserts and code snippets will be indented after insertion.+ Most menu entries are now also active in normal mode.+ Reading the templates is done in one function which can be called in an autocmd.+ Code cleanup: register z no longer used. Most function calls are silent now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1702",
+      "filename": "perl-support.vim",
+      "script_version": "1.6",
+      "date": "2003-02-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

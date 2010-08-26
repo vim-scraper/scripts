@@ -1,0 +1,26 @@
+{
+  "script_id": "2458",
+  "name": "unibox",
+  "summary": "Draws boxes in different line styles and in all languages",
+  "script_type": "utility",
+  "description": "The script draws line boxes in styles in various languages.\n\nYou can get all kinds of lines supported in your local system.  For Chinese, Japanese, and Korean (CJK), the program will be fully featured with various pre-defined lines.  Other encoding will have degraded lines.  For example, if you have not 3-dot line in your system, a solid line will be used.  In the worst case, characters (+,-,|) will be applied.\n\nIn case a visual selection cover an existing box, there are 2 modes for processing the intersection, unite mode and overwrite mode.  In unite mode, lines are joined at intersections. This is why the script is call unibox..\n\nKey mappings:\n\n    <leader>du    uses it after you change you encoding\n    <leader>d     the default draw mode, same as <leader>d1\n    <leader>d1    draws with thin lines\n    <leader>d2     with bold lines\n    <leader>d3     with 3-dot thin lines\n    <leader>d4     with 4-dot thin lines\n    <leader>d5     with double lines\n    <leader>d6     with 3-dot bold lines\n    <leader>dr     sam as <leader>dr1\n    <leader>dr1    with round corners and thin lines\n    <leader>dr3    with round corners and 3-dot thin lines\n    <leader>dr4    with round corners and 4-dot thin lines\n    <leader>d8     with round corners and 4-dot bold lines\n    <leader>dc    clear the box\n\n    <leader>dd    The followings correspond the above but in a overwrite mode\n    <leader>dd1   \n    <leader>dd2   \n    <leader>dd3   \n    <leader>dd4   \n    <leader>dd5   \n    <leader>dd6   \n    <leader>ddr   \n    <leader>ddr1  \n    <leader>ddr3  \n    <leader>ddr4  \n    <leader>dd8   \n    <leader>ddC  \n\nTips:\n\n1.Try the following if you encounter wierd lines:\n        set ambiwith=single\n  or   set ambiwith=double\n\n2.To change the encoding, use\n        set enc=...\n  and type\n        <leader>du\n  to reset the drawing system.\n",
+  "install_details": "Copy the file to your favorite directory and source it when you need it.\nFor example, in vim, use command:\n:so unibox.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9570",
+      "filename": "unibox.vim",
+      "script_version": "1.0",
+      "date": "2008-11-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15053",
+        "user_name": "Garrison",
+        "first_name": "Garrison",
+        "last_name": "Yu",
+        "email": "GarrisonZxYu at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "documents added"
+    }
+  ]
+}

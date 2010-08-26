@@ -1,0 +1,42 @@
+{
+  "script_id": "3216",
+  "name": "Replay.vim",
+  "summary": "Record and Replay your editing Session",
+  "script_type": "utility",
+  "description": "Feedback is welcome. Please rate this plugin, if you like it.\n\nThis is probably a little bit a silly plugin, but may be this is of use for someone.\n\nUse :StartRecording \"tag\" to start recording from the current change on and save it under the name \"tag\"\nUse :StopRecording \"tag\" to let the Recording for \"tag\" end at this change.\nUse :Replay \"tag\" to Replay your changes.\n\nYou can usually leave tagname out and Replay.vim will record your changes under the name \"Default\".\nSee :h Replay.txt to read the help\n\nThis Plugin is also available at github: http://github.com/chrisbra/Replay",
+  "install_details": "as usual. Open the file in vim, and source it (:so %)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13662",
+      "filename": "Replay-0.2.vba",
+      "script_version": "0.2",
+      "date": "2010-08-24",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "-enabled |GLVS|-small bugfixes-changed default playback rate to 200ms-make sure start is after stop"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13658",
+      "filename": "Replay-0.1.vba",
+      "script_version": "0.1",
+      "date": "2010-08-23",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

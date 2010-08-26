@@ -1,0 +1,122 @@
+{
+  "script_id": "1817",
+  "name": "buffers_search_and_replace",
+  "summary": "Simple but powerful buffer(s) search & replace tool",
+  "script_type": "utility",
+  "description": "    The \"Buffers Search & Replace\" plugin is a simple but powerful buffer(s)\nsearch & replace tool. Search results can be set in the 'delete' category and replacement\ncan be performed on the remaining or deleted search results.\n\nPlease report any bugs or feature requests.\n\nAvailable commands :\n------------------------------\n    :Bs <search_regex>\n    :<range> Bsc <search_regex>\n\nThe 'Bs' command is searching in all the buffers and 'Bsc' only in the current buffer.\n\n    :Bsf <buffer_name_filter_regex> <search_regex>\n    :Bse <buffer_name_exclusion_regex> <search_regex>\n\nThe 'Bsf' command is searching in all the buffers whose name match <buffer_name_filter_regex> and\n'Bse' in all buffers whose name doesn't match <buffer_name_exclusion_regex>.\n\nDefault key mappings in the buffer with the results :\n---------------------------------------------------------------------\n  \"Space\"  : moves the cursor on the first result of the next buffer\n  \"Enter or Control-j\"   : shows or jumps to the result under the cursor\n  \"J\"  : enables or disables jumping on the buffer when pressing Enter or Control-j\n  \"A\"  : enables or disables auto-showing the context of the results when pressing j or k\n  \"d\" : deletes the current range search result (default: current line)\n           (the deleted search results are showed at the bottom of the buffer)\n  \"D\" : definitely deletes the current range search result (default: current line)\n  \"Q\"  : enables or disables auto-quitting the buffer results when jumping\n  \"O\"  : toggles between showing options or showing results\n  \"r\"  : replace action on the non-deleted searched results\n  \"R\"  : replace action on the deleted searched results\n  \"u\"  : replaces this search with a newer one (with the same keyword)\n  \"i\"  : enables or disables the search match highlighting on the buffer with the results\n  \"I\"  : enables or disables the search match highlighting on the other buffers (not the buffer with the results)\n  \"x\"  : enables or disables quite-full-screen\n  \"q\"  : deletes the buffer with the results\n  \"?\"  : toggles between showing help or showing results\n\nScreenshot : http://ioalex.net/buffers_search_and_replace/screenshot.png\nSmall demo video (ogg theora) : http://ioalex.net/buffers_search_and_replace/demo.ogv\n\nFor more information, contact me or read the more complete documentation at the start of the plugin file.",
+  "install_details": "    Installation :\n\nDownload the file \"buffers_search.vim\" and put it into the plugins\ndirectory; on a unix-like system, the user plugin directory could be\n\"~/.vim/plugin\".\n\n    Optional configuration :\n\nVariables that you can modify :\n         *the variables take the possible values 0 or 1 (0 is disabled, 1 is enabled)\n   -g:Bs_stay_on_buffer_results_when_entering_result : if to jump on\n    the result or not when pressing enter (option \"J\") (default is 1)\n   -g:Bs_auto_jump : if to auto-show the result or not when moving\n    with j and k (option \"A\") (default is 1)\n   -g:Bs_toggle_quit_enter : if you want to quit the buffer with the\n    search results when jumping (option \"Q\") (default is 0)\n   -g:Bs_results_buffer_match : if you want to have syntax highlight\n    on the search string in the buffer with the results (option \"i\")\n    (default is 1)\n   -g:Bs_buffers_match : if you want to have syntax highlight on the\n    search string in other buffers (option \"I\") (default is 1)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10356",
+      "filename": "buffers_search_and_replace.vim",
+      "script_version": "0.5.2",
+      "date": "2009-04-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11919",
+        "user_name": "io_alex_2007",
+        "first_name": "Alexandru Ionut",
+        "last_name": "Munteanu",
+        "email": "io_fx at yahoo.fr",
+        "homepage": "http://ioalex.net"
+      },
+      "release_notes": "- added option to set range when searching through current buffer (:<range> Bsc <search_regex>)\n- <range> must be &#039<,&#039> for searching in visual selection\n- fixed the &#039u&#039 event to update with the current search type\n- added a top line showing the type of the search\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10191",
+      "filename": "buffers_search_and_replace.vim",
+      "script_version": "0.5.1",
+      "date": "2009-03-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11919",
+        "user_name": "io_alex_2007",
+        "first_name": "Alexandru Ionut",
+        "last_name": "Munteanu",
+        "email": "io_fx at yahoo.fr",
+        "homepage": "http://ioalex.net"
+      },
+      "release_notes": "-added command to search and exclude some buffers from the search :\n     :Bse <buffer_name_exclusion_regex> <search_regex>\n-added searching on custom buffers (buffer name filtering) command :\n     :Bsf <buffer_name_filter_regex> <search_regex>\n*thank you Vasilii Pascal :)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10157",
+      "filename": "buffers_search_and_replace.vim",
+      "script_version": "0.5",
+      "date": "2009-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11919",
+        "user_name": "io_alex_2007",
+        "first_name": "Alexandru Ionut",
+        "last_name": "Munteanu",
+        "email": "io_fx at yahoo.fr",
+        "homepage": "http://ioalex.net"
+      },
+      "release_notes": "Optimised 'd' action, in order not to refresh the buffer each time.\nWarning ! 'r' option for refreshing the screen has been replaced with the 'replace' action !\nAction 'D', 'r' and 'R' added :\n\"D\"  : definitely deletes the current range search result (default: current line),\n\"r\"  : replace action on the non-deleted searched results\n\"R\"  : replace action on the deleted searched results\nChanged name to buffers_search_and_replace.vim"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10136",
+      "filename": "buffers_search.vim",
+      "script_version": "0.4",
+      "date": "2009-03-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11919",
+        "user_name": "io_alex_2007",
+        "first_name": "Alexandru Ionut",
+        "last_name": "Munteanu",
+        "email": "io_fx at yahoo.fr",
+        "homepage": "http://ioalex.net"
+      },
+      "release_notes": "-option 'd' implemented :\n            \"d\"  : deletes the current range search result (default: current line)\n                   the deleted search results are showed at the bottom of\n                   the buffer; deleting a deleted search results will\n                   set it again as search result\n-added the ':Bsc <search_string>' command for searching only in the current buffer"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6856",
+      "filename": "buffers_search.vim",
+      "script_version": "0.3",
+      "date": "2007-03-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11919",
+        "user_name": "io_alex_2007",
+        "first_name": "Alexandru Ionut",
+        "last_name": "Munteanu",
+        "email": "io_fx at yahoo.fr",
+        "homepage": "http://ioalex.net"
+      },
+      "release_notes": "-changed some internals to follow Jimmy advices (like using buffer numbers \ninstead of buffer names to support unnamed buffers); thanks!\n-options J,A,Q,O,r,u,i,I,x,? implemented (see docs)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6849",
+      "filename": "buffers_search.vim",
+      "script_version": "0.2",
+      "date": "2007-03-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11919",
+        "user_name": "io_alex_2007",
+        "first_name": "Alexandru Ionut",
+        "last_name": "Munteanu",
+        "email": "io_fx at yahoo.fr",
+        "homepage": "http://ioalex.net"
+      },
+      "release_notes": "Fixed an important bug : the search did not returned all the matches\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6847",
+      "filename": "buffers_search.vim",
+      "script_version": "0.1",
+      "date": "2007-03-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11919",
+        "user_name": "io_alex_2007",
+        "first_name": "Alexandru Ionut",
+        "last_name": "Munteanu",
+        "email": "io_fx at yahoo.fr",
+        "homepage": "http://ioalex.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

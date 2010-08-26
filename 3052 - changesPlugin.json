@@ -1,0 +1,138 @@
+{
+  "script_id": "3052",
+  "name": "changesPlugin",
+  "summary": "indicate changes of a buffer",
+  "script_type": "utility",
+  "description": "PLEASE RATE THIS PLUGIN, IF YOU LIKE IT!\n\nFor a screenshot of the plugin see http://www.256bit.org/~chrisbra/changes.png\n\nFollow this plugin at github:\nhttp://github.com/chrisbra/changesPlugin\n\n1. Functionality\n\nThis plugin was written to help visualize which lines have been changes since\nediting started for a file. The plugin was inspired by so called changed-bars,\navailable at other editors, such as Embarcadero C++ Builder (there it is\ncalled Change Bars, see:\nhttp://edn.embarcadero.com/article/33453#6PersonalDeveloperProductivity)\nor Visual Studio where it is called indicator margin (see\nhttp://blog.eveningcreek.com/?p=151).\n\nChangesPlugin.vim uses the |diff|-feature of vim and compares the actual\nbuffer with it's saved state. In order to highlight the indicator signs at the\nfirst column, its using |signs|. For newly added lines, the first column will\nbe displayed with a leading '+' and highlighted using the DiffAdd highlighting\n(see |hl-DiffAdd|), deleted lines will be indicated by a '-' with a\nDiffDelete highlighting (see |hl-DiffDelete|) and modified lines will be\ndisplayed using '*' and a DiffChange highlighting (see |hl-DiffChange|).\n\nThis means, that in order to use this plugin you need a vim, that was built\nwith |+signs|-support and |+diff|-support and you also need an executable diff\ncommand. If neither of these conditions are met, changePlugin.vim will issue a\nwarning and abort.\n\n\t\t\t\t\t\t\t *:EnableChanges*\nBy default the plugin is not enabled. To enable it enter >\n    :EnableChanges\nWhen you run this command, changesPlugin.vim diffs the current file agains\nits saved file on disk and displays the changes in the first column.\n\n\t\t\t\t\t\t\t*:DisableChanges*\nIf you want to disable the plugin, enter >\n    :DisableChanges\n\n==============================================================================\n\t\t\t\t\t\t\t*changesPlugin-Config*\n2. Configuring changesPlugin.vim\n\nThere are basically four different configuration options available.\n\n2.1 Highlighte the whole line\nBy default, changesPlugin.vim will only indicate a change in the first column.\nSetting g:changes_hl_lines to 1 will highlight the whole line. By default this\nvariable is unset (which is the same as setting it to 0).\nIf you'd like to have this, set this variable in your |.vimrc| >\n    :let g:changes_hl_lines=1\n\n2.2 Auto-refresh the changes\nBy default changesPlugin.vim will not automatically update the view. You can\nhowever configure it to do so. This will use an |CursorHold| autocommand to\nupdate the indicator signs after |'updatetime'| seconds in Normal mode when\nno key is pressed. To enable this feature, put this in your |.vimrc| >\n    let g:changes_autocmd=1\n\n2.3 Show what the indicator signs mean.\nBy default, whenever you run |:EnableChanges|, changesVim will print a short\nstatus message, what each sign means. If you don't want this, put this in your\n|.vimrc| >\n    :let g:changes_verbose=0\n\n2.4 Specify different colors.\nchangesVim uses the highlighting used for |diff| mode to indicate the change\nin a buffer. This is consistent, since when you're already used to |vimdiff|\nyou'll probably also know the highlighting. If for any reason you do not like\nthe colors, you have to define your own highlighting items.\nIf for example you want the DiffAdd highlighting to be displayed like White on\na Blue background, you can define it as follows in your |.vimrc| >\n\n    :hi DiffAdd term=bold ctermbg=4 guibg=DarkBlue\n\nIn the same way, you can change DiffDelete for indicating deleted lines and\nDiffChange for indicating modified lines. You can also specify your favorite\nhighlighting colors using your own build |colorscheme|.\n\n==============================================================================\n3. changesPlugin History\t\t\t\t*changesPlugin-history*\n    0.2: Apr 11, 2010:\tAdded Documentation\n\t\t\tcreated an autoload version\n    0.1: Apr 10, 2010:\tFirst working version",
+  "install_details": "This plugin comes as vimball, which makes it really easy to install it into the right place.\n1) Edit changes.vba with your vim (:e changes.vim)\n2) From within vim, simply source the file using\n:so %\n3) Restart vim to autoload the plugin and the documentation\n:q\n4) Read the help at :h changesPlugin.txt\n\nSee also the help available for vimballs at :h vimball-intro",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12942",
+      "filename": "changes-0.11.vba",
+      "script_version": "0.11",
+      "date": "2010-05-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "BF: Document, that |InsertLeave| autocommand is used as autocommand\nBF: generate the help file with 'et' set, so that the README at github looks prettier\nBF: When staying in diff mode, don't reset 'fdm' and apply syntax coloring to scratch buffer\nBF: the check for the diff executable does not work as expected (Reported by Sergey Khorev), additionally outputting the Warnings did not work in that case"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12913",
+      "filename": "changes.vba",
+      "script_version": "0.10",
+      "date": "2010-04-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Fixed Issue 1 from github (http://github.com/chrisbra/changesPlugin/issues/1/find)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12895",
+      "filename": "changes.vba",
+      "script_version": "0.9",
+      "date": "2010-04-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "0.9: Apr 24, 2010:  \nNF: You can now use different VCS Systems for each buffer you are using.\nNF: Stay in diff mode\nBF: Fix the display of deleted signs\nBF: Undefining old signs, so that changing g:changes_hl_lines works\nBF: Some more error handling.\nNF: Show an overview for changed lines in location-list (|:CL|)\nNF: Show what each sign means using |:CC|\n\n0.8: Apr 22, 2010:  NF: Renamed the helpfile, to make it more obvious, that it refers to a plugin\nNF: Outputting name of checked file, if checking against VCS\nBF: Don't check for empty files.\nBF: Reworked the Message function\nBF: Don't try to place signs, if there are no differences (unreleased, VCS successfully tested with git, hg, svn, cvs, bzr)\n0.7: Apr 19, 2010:  \nNF: Check against a file in a VCS (unreleased, first working version, needs to be checked for each VCS)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12826",
+      "filename": "changes.vba",
+      "script_version": "0.6",
+      "date": "2010-04-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "BF: also take care of DiffText from diff-mode (see :h hl-DiffText)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12820",
+      "filename": "changes.vba",
+      "script_version": "0.5",
+      "date": "2010-04-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "BF: error when trying to access b:diffhl in the scratch buffer. This should be fixed now (thanks Jeet Sukumaran!)\nBF: Use the correct highlighting groups (thanks Jeet Sukumaran!)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12815",
+      "filename": "changes.vba",
+      "script_version": "0.4",
+      "date": "2010-04-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "NF: |ToggleChangesView| \nNF: The autocommand checks, if the buffer has been modified, since the last time.\nBF: Do not mess with signs, that have not been placed by changesPlugin.vim\nBF: CleanUp was seriously messed up (sorry, I must have been asleep, when writing that)\nBF: Take care of 'foldcolumn' setting, which would be overwritten by the signs-column"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12814",
+      "filename": "changes.vba",
+      "script_version": "0.3",
+      "date": "2010-04-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "BF: redraw, so that the diff window will not be displayed\nNF: enabled GLVS (see |GLVS|)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12810",
+      "filename": "changes.vba",
+      "script_version": "0.2",
+      "date": "2010-04-11",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

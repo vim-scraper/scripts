@@ -1,0 +1,58 @@
+{
+  "script_id": "1204",
+  "name": "oo",
+  "summary": "Java code commpletion",
+  "script_type": "utility",
+  "description": "This plugin is used for Java code completion. It's depends on ctags , \nvim which +ruby future is enabled.\nFor generate tags :\n         ctags --fileds=+ai   .....\nFor  generate tags Index file:\n         :ruby generateIndex(\"/usr/java/jdk/src/tags\",2)\nThe second parameter which value is 2  is recommand.\n\nOnce you vim version is 7.00aa \n         :set cfu=OocompleteFun\nYou can use <CTRL>-x<CTRL>-u for this samle:\n        String str=\"\";\n        str.to\n                ^<CTRL>-X<CTRL>-U\nFor c++ user:\n         SomeClass * abc;\n         abc->So\n                        ^<CTRL>-X<CTRL>-U\nBoth java and c++\n         Abc::So\n                        ^<CTRL>-X<CTRL>-U\nThen toByteArray, toUpperCase...  would be selectable.\n\nvim version is 6.xx\n         :Oofun String to\nFirst parameter is name of the class , the second is the function name ( partly)\nThen toByteArray, toUpperCase...  would be show in command window.\n\nOne command is added, It's used to check variable type\n         :Ootype varname\n\nTODO list :\n         ctags's support for jdk1.5 , something incorrectly. like ,java.util.Vector\n         Advanced varible define selector. Something lik normal command gd\n\n         The last, my poor document  and my poor English, \n\n",
+  "install_details": "tar -xzf oocomplete.tgz -C$VIMFILES\n\nVIMFILES is your vim script dir , for Mandrake10.1  is\n        /usr/share/vim/vimfiles\n\nFor windows: may be\n        d:\\vim\\vimfiles",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3863",
+      "filename": "oocomplete.tgz",
+      "script_version": "1.00.2",
+      "date": "2005-02-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "More effective for Java and c++ .\nVariable type search is improved."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3862",
+      "filename": "oocomplete.tgz",
+      "script_version": "1.00.1",
+      "date": "2005-02-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Simply support for c++"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3859",
+      "filename": "oocomplete.tgz",
+      "script_version": "1.0",
+      "date": "2005-02-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

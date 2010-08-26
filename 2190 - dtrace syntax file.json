@@ -1,0 +1,90 @@
+{
+  "script_id": "2190",
+  "name": "dtrace syntax file",
+  "summary": "This provides excessive highlighting of dtrace script files",
+  "script_type": "syntax",
+  "description": "This file provides excessive syntax highlighting for files written in the D language that's used with dtrace. A description of the D file format can be found at http://docs.sun.com/app/docs/doc/817-6223.\n\nVersion 1.5 of this script is included in the official vim7.2 distribution.",
+  "install_details": "Copy dtrace.vim to ~/.vim/syntax/ (on Unix or Mac OS X) or to .../vimfiles/syntax on windows.\n\nVim usually associates .d files with the D programming language by Digital Mars. To override this, add something like\n\n      autocmd BufNewFile,BufRead *.d setf dtrace\n\nto your ~/.vimrc or to ~/.vim/ftdetect/dtrace.vim (you probably have to create the latter).\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8509",
+      "filename": "dtrace.vim",
+      "script_version": "1.4",
+      "date": "2008-03-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12927",
+        "user_name": "nico",
+        "first_name": "Nicolas",
+        "last_name": "Weber",
+        "email": "nicolasweberNOSPAM at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "Minor improvements, require at least vim 5.8 (the script upload form only has 5.7 and 6.0 as options, so this does officially require vim 6.0 now)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8478",
+      "filename": "dtrace.vim",
+      "script_version": "1.3",
+      "date": "2008-03-21",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "12927",
+        "user_name": "nico",
+        "first_name": "Nicolas",
+        "last_name": "Weber",
+        "email": "nicolasweberNOSPAM at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "Added highlighting for BEGIN, END, ERROR probe descriptions; improved probe and predicate highlighting; added `rawbytes` to recognized #pragma options.\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8473",
+      "filename": "dtrace.vim",
+      "script_version": "1.2",
+      "date": "2008-03-20",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "12927",
+        "user_name": "nico",
+        "first_name": "Nicolas",
+        "last_name": "Weber",
+        "email": "nicolasweberNOSPAM at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "Highlight `#!/usr/sbin/dtrace -s` if present; improved probe description and predicate highlighting."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8468",
+      "filename": "dtrace.vim",
+      "script_version": "1.1",
+      "date": "2008-03-19",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "12927",
+        "user_name": "nico",
+        "first_name": "Nicolas",
+        "last_name": "Weber",
+        "email": "nicolasweberNOSPAM at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "Added highlighting for valid #pragma D options"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8456",
+      "filename": "dtrace.vim",
+      "script_version": "1.0",
+      "date": "2008-03-16",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "12927",
+        "user_name": "nico",
+        "first_name": "Nicolas",
+        "last_name": "Weber",
+        "email": "nicolasweberNOSPAM at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

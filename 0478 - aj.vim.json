@@ -1,0 +1,26 @@
+{
+  "script_id": "478",
+  "name": "aj.vim",
+  "summary": "Syntax highlighting for AsepctJ source files",
+  "script_type": "syntax",
+  "description": "This is my first attempt to create a syntax file :).\nI am working with AspectJ lateley and decided to create a syntax file for the language.\nFor now, highliting takes care of all AspectJ keywords.\n\nAll AspectJ code should be inside a file with extension .aj\n\nTo learn more about AspectJ: http://aspectj.org",
+  "install_details": "Place this file into your <HOME>/.vim/syntax\n\nYou can then enable syntax highliting manually \n: set syntax=aj.vim\n\nOr for automatic file detection add the following to your filetype.vim:\n\" AspectJ\nau BufNewFile,BufRead *.aj,     setf aj\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1393",
+      "filename": "aj.vim",
+      "script_version": "0.1",
+      "date": "2002-11-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1199",
+        "user_name": "skotthe",
+        "first_name": "Therapon",
+        "last_name": "Skotiniotis",
+        "email": "skotthe at ccs.neu.edu",
+        "homepage": "http://www.ccs.neu.edu/home/skotthe"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

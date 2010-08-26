@@ -1,0 +1,26 @@
+{
+  "script_id": "1528",
+  "name": "comments.vim",
+  "summary": "To Comment/Un-Comment single/multiple lines of code for different source files",
+  "script_type": "utility",
+  "description": "Global Plugin to comment and un-comment lines in different source files in both normal and visual <Shift-V> mode\nusage:\nctrl-c to comment a single line\nctrl-x to un-comment a single line\nshift-v and select multiple lines, then ctrl-c to comment the selected multiple lines\nshift-v and select multiple lines, then ctrl-x to un-comment the selected multiple lines\nsupports: c, c++, java, php[2345], proc, css, html, htm, xml, xhtml, vim, vimrc, sql, sh, ksh, csh, perl, tex, fortran, ml, caml, ocaml, vhdl, haskel and normal files",
+  "install_details": "For VIM 6 and higher -                                                                                  \nStick this file in your ~/.vim/plugin directory or in some other &#039plugin&#039 directory that is in your runtime path                                \nFor VIM 5 -                                                                                  \nStick this file somewhere and &#039source <path>/comments.vim&#039 it from your ~/.vimrc file",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9801",
+      "filename": "comments.vim",
+      "script_version": "2.12",
+      "date": "2009-01-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9938",
+        "user_name": "jasanand",
+        "first_name": "Jasmeet Singh",
+        "last_name": "Anand",
+        "email": "jasanand at hotmail.com",
+        "homepage": "http://www.whynotsolutions.com"
+      },
+      "release_notes": "fix for haskel files as provided by Jean-Marie"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "script_id": "1754",
+  "name": "TTrCodeAssistor",
+  "summary": "Accelerate your inputing during coding,with auto-complete the function prototype",
+  "script_type": "utility",
+  "description": "I make it as easy as possible and make a lot of action for you to accelerate \nyour inputing coding , accoding to the habit of a coder . So i make a lot of \nexpand 'key' word to append the content with hot key <c-cr> , and move to the\ndifferent area just by <tab> . So ,try and  enjoy it ! I am sure you will love it!\n\nI add the function that let the ( can  complete the function prototype when you input \nyour coding  which make you not have to remeber the sequence of the function arguments.\n\nAdd the menu item which let you can  control whether this plugin can start or stop.\nAnd of course you can let it start automatically by add this to your vimrc:\nlet g:TTrCodeAssistor_AutoStart=1\n\nusage :\n<c-cr> to expand the 'key' word ( you can change it to you habit )\n<tab> to move forward and <s-tab> to move backward between the 'labels'\n(         key to compete the function prototype automantically.\n)         automatically move or input itself accoding to the content\n<bs>   use as normal but will remove the ) when its front char is (\n\nRecently ,  i will just add some useful function without map them to some key\nJust to expand the function of this plugin , so you can map it according to  your taste. :-)\n1. TTrcodeAssistor_ToggleComments\n                  nnoremap <F7> :call TTrCodeAssistor_ToggleComments()<CR>\n                  vnoremap <F7> :call TTrCodeAssistor_ToggleComments()<CR>\n\n\nNote : \n       the function prototype completing must use the exuberant ctags to\n       make the tag files which you should add to vim by :set ctags+=/your/file\n       and You have to add the arguments  --fields=+S after all your arguments\n       while making the tag files with 'ctags'\n       ex : Make the tags for all the  files of current directory including the subdirectory\n             ctags -R --c-types=+p --fields=+S *\n\n'key' word table can be seen in the file.\n\nJust have a try.",
+  "install_details": "put it into .vim/plugin/ and then enjoy it ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7265",
+      "filename": "TTrCodeAssistor.vim",
+      "script_version": "3.4",
+      "date": "2007-06-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11323",
+        "user_name": "winterTTr",
+        "first_name": "Wang",
+        "last_name": "Dong",
+        "email": "winterTTr.vim at gmail.com",
+        "homepage": "http://winterTTr.spaces.live.com"
+      },
+      "release_notes": "-- Add function TTrCodeAssistor_ToggleComment to add or\n   remove comments of the current line or v selected area.\nYou can map it to a key like this :\n    nnoremap <F7> :call TTrCodeAssistor_ToggleComments()<CR>\n    vnoremap <F7> :call TTrCodeAssistor_ToggleComments()<CR>\n\nI think you can under stand the TTrCodeAssistor_Templates , so , you can expand it when you need.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6661",
+      "filename": "TTrCodeAssistor.vim",
+      "script_version": "3.3",
+      "date": "2007-01-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11323",
+        "user_name": "winterTTr",
+        "first_name": "Wang",
+        "last_name": "Dong",
+        "email": "winterTTr.vim at gmail.com",
+        "homepage": "http://winterTTr.spaces.live.com"
+      },
+      "release_notes": "-- Modify the code to match the function name exactly\n-- Let the menu to display rightly\n-- Add the function for <bs> to make it delete the redundant ) while the ) is close to (\n-- little bug fixed\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6644",
+      "filename": "TTrCodeAssistor.vim",
+      "script_version": "3.2.1",
+      "date": "2007-01-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11323",
+        "user_name": "winterTTr",
+        "first_name": "Wang",
+        "last_name": "Dong",
+        "email": "winterTTr.vim at gmail.com",
+        "homepage": "http://winterTTr.spaces.live.com"
+      },
+      "release_notes": "remove the confirm info used to debug"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6627",
+      "filename": "TTrCodeAssistor.vim",
+      "script_version": "3.2",
+      "date": "2007-01-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11323",
+        "user_name": "winterTTr",
+        "first_name": "Wang",
+        "last_name": "Dong",
+        "email": "winterTTr.vim at gmail.com",
+        "homepage": "http://winterTTr.spaces.live.com"
+      },
+      "release_notes": "-- Add the Menu for this plugin which let the user can                   \n   start or stop all the functions.\n-- Add TTrCodeAssistor_AutoStart variable which can let\n   this plugin start automaticlly.\n-- Fix the problem about the Function name which is followed\n   by its owner ,such as , the member function of a class."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6618",
+      "filename": "TTrCodeAssistor.vim",
+      "script_version": "3.1",
+      "date": "2007-01-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11323",
+        "user_name": "winterTTr",
+        "first_name": "Wang",
+        "last_name": "Dong",
+        "email": "winterTTr.vim at gmail.com",
+        "homepage": "http://winterTTr.spaces.live.com"
+      },
+      "release_notes": "-- Add the function for key ')' , make it intelligent on whether to insert himself or just more to the next ')'\n-- Remove the <end> label from the function prototype completation , which is replace by the function of key ' )'"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6615",
+      "filename": "TTrCodeAssistor.vim",
+      "script_version": "3.0",
+      "date": "2007-01-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11323",
+        "user_name": "winterTTr",
+        "first_name": "Wang",
+        "last_name": "Dong",
+        "email": "winterTTr.vim at gmail.com",
+        "homepage": "http://winterTTr.spaces.live.com"
+      },
+      "release_notes": "-- Add the expand \"main\"\n-- Make the key '(' to have the ability to complete the function prototype according to you tag files\n\nEnjoy it yourself.!! ;o)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6591",
+      "filename": "TTrCodeAssistor.vim",
+      "script_version": "2.0",
+      "date": "2007-01-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11323",
+        "user_name": "winterTTr",
+        "first_name": "Wang",
+        "last_name": "Dong",
+        "email": "winterTTr.vim at gmail.com",
+        "homepage": "http://winterTTr.spaces.live.com"
+      },
+      "release_notes": " Modify the main process to make it clear. Add sulotion to the <for> to replace the += 1 or += -1 to += and -- . Add new expand word while modifying some expands to make it more convenient."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6581",
+      "filename": "TTrCodeAssistor.vim",
+      "script_version": "1.0",
+      "date": "2007-01-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11323",
+        "user_name": "winterTTr",
+        "first_name": "Wang",
+        "last_name": "Dong",
+        "email": "winterTTr.vim at gmail.com",
+        "homepage": "http://winterTTr.spaces.live.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

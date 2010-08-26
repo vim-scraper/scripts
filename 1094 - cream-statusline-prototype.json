@@ -1,0 +1,42 @@
+{
+  "script_id": "1094",
+  "name": "cream-statusline-prototype",
+  "summary": "Display current function prototype in statusline",
+  "script_type": "utility",
+  "description": "\nToggles the display of the current function prototype on the statusline with key <F8>. This is a basic illustration of how to write code to accomplish this...feel free to embellish!\n\n\nUSAGE\n\nBy default, the <F8> key will toggle the display of the current prototype in the statusline. The prototype is recalculated each time it is toggled ON.\n\n\nThis is one of many custom utilities and functions for gVim from the Cream project (http://cream.sourceforge.net), a configuration of Vim for those of us familiar with Apple and Windows software.\n\n",
+  "install_details": "\nThis script is dependant on:\n\n* Exhuberant ctags (http://ctags.sf.net)\n* taglist.vim (http://vim.sourceforge.net/scripts/script.php?script_id=273, alternate: http://www.geocities.com/yegappan/taglist)\n\nJust install exuberant ctags and drop both taglist.vim and this file into your plugins directory. Then (re)start Vim and use key <F8> to toggle the prototype on and off.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3508",
+      "filename": "cream-statusline-prototype.vim",
+      "script_version": "1.01",
+      "date": "2004-09-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "* Improved restoration of existing statusline by escaping pipe/bar and space chars.\n* Silenced errors when searching for tags file and it doesn't exist.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3505",
+      "filename": "cream-statusline-prototype.vim",
+      "script_version": "1.0",
+      "date": "2004-09-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

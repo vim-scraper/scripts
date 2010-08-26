@@ -1,0 +1,42 @@
+{
+  "script_id": "528",
+  "name": "mh",
+  "summary": "display MSDN help.",
+  "script_type": "utility",
+  "description": "display MSDN help in GVIM.",
+  "install_details": " usage\n 1. copy mh.exe to PATH directory\n 2. insert to _vimrc\n\tcom  -nargs=1 H !start mh <args>\n\tmap K :!start mh <cword> <CR> \n 3. run mh.exe and click &#039File&#039 button.\n 4. select MSDN html help file\n ex)\n  Visual C++ 6.0: msdnvs98.col\n  MSDN: msdn120.col \n  eMbedded Visual C++ 4.0: EVC4HELP.CHM\n  Platform Builder 4.1: wcelib40.chm\n\n press K under the keyword. \n or\n :h keyword \n mh.exe will display the keyword DOCUMENT.\n\n mh.exe is not support .Net MSDN.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1631",
+      "filename": "MH.exe",
+      "script_version": "1.0",
+      "date": "2003-01-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1368",
+        "user_name": "sysapi",
+        "first_name": "donghyuk",
+        "last_name": "kim",
+        "email": "systemapi at hanmail.net",
+        "homepage": ""
+      },
+      "release_notes": "click '?' button"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1629",
+      "filename": "MH.exe",
+      "script_version": "1.0",
+      "date": "2003-01-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1368",
+        "user_name": "sysapi",
+        "first_name": "donghyuk",
+        "last_name": "kim",
+        "email": "systemapi at hanmail.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

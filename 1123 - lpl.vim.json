@@ -1,0 +1,26 @@
+{
+  "script_id": "1123",
+  "name": "lpl.vim",
+  "summary": "Syntax file for LPL (Linear/Logical Programming Language)",
+  "script_type": "syntax",
+  "description": "A syntax highlighting file for LPL (Linear/Logical Programming Language)\n\n\"LPL contains a powerful modelling language and a complete modelling environment and it is possible to specify complex mathematical models in a concise way.\" \nhttp://www.virtual-optima.com/en/products.html",
+  "install_details": "Copy lpl.vim to your $VIMRUNTIME/syntax/ directory.\nAdd the following to $VIMRUNTIME/filetype.vim:\n\n\" LPL\nau BufNewFile,BufRead *.lpl     setf lpl\n\nThis file has DOS line endings. If you want to use the script on a Unix machine, open the file with vim, :set ff=unix and save.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3610",
+      "filename": "lpl.vim",
+      "script_version": "1.0",
+      "date": "2004-11-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5885",
+        "user_name": "rbonvall",
+        "first_name": "Roberto",
+        "last_name": "Bonvallet",
+        "email": "rbonvall at alumnos.inf.utfsm.cl",
+        "homepage": "http://www.alumnos.inf.utfsm.cl/~rbonvall"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

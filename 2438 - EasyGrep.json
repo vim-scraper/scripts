@@ -1,0 +1,186 @@
+{
+  "script_id": "2438",
+  "name": "EasyGrep",
+  "summary": "Fast and Easy Find and Replace Across Multiple Files",
+  "script_type": "utility",
+  "description": "EasyGrep makes using vimgrep easier.  When using EasyGrep, searching for a word is as easy as typing <leader>vv (v v, not double-u) over the word for which you want to search.  This search can also be accomplished with the :Grep command.\n\nEasyGrep provides three modes in which you can do your searches:\n  All - all files will be searched  (default)\n  Buffers - all files currently open in vim will be searched\n  TrackExt - all files that match the extension of the currently opened file will be searched.  Additionally, this extension can be mapped to a user defined set of extensions that will also be searched (see EasyGrepFileAssociations).\n    For example: when test.cpp is open, files that match any one of *.cpp *.hpp *.cxx *.hxx *.cc *.c *.h will be searched when a search is initiated.\n\nSetting options is easy, simply type <leader>vo or :GrepOptions.  EasyGrep provides a great set of defaults but can also be configured to start up just how you like it; see the script for these options.  Most vimgrep (and grepprg) options are supported.  \n\nFor a screencast of the script in action go here: http://downloads.veryspeedy.net/vim/EasyGrep.gif\n\nFull keymappings and commands:\n\n\n    <Leader>vv  - Grep for the word under the cursor, match all occurences,\n                  like |gstar|\n    <Leader>vV  - Grep for the word under the cursor, match whole word, like \n                  |star|\n    <Leader>va  - Like vv, but add to existing list\n    <Leader>vA  - Like vV, but add to existing list\n\n    <Leader>vr  - Perform a global search search on the word under the cursor\n                  and prompt for a pattern with which to replace it.\n\nIn addition to grepping the word under the cursor, text may be visually\nselected and these mappings may be used analogously to as they are used above.\nVisual selections will automatically be escaped so as not to confuse the\nselection with a regular expression.\n\n    Each of the above commands will search files according to settings\n    controlled by:\n\n    <Leader>vo  - Select the files to search in and set grep options\n\n    :Grep [arg]\n        Search for the specified arg, like <Leader>vv.  When an ! is added,\n        search like <Leader>vV\n\n    :GrepAdd [arg]\n        Search for the specified arg, add to existing file list, as in\n        <Leader>va.  When an ! is added, search like <Leader>vA\n\n    :Replace [target] [replacement]\n        Perform a global search and replace.  The function searches\n        the same set of files a grep for the desired target and opens a dialog to\n        confirm replacement.\n    \n    :ReplaceUndo\n        Undoes the last :Replace operation.  Does not stack successive\n        searches; only the last replace may be undone.  This function may not\n        work well when edits are made between a call to Replace and a call to\n        ReplaceUndo.\n\n    :GrepOptions [arg]\n        Open a window to set grep options.",
+  "install_details": "Copy EasyGrep.vim and EasyGrepFileAssociations to your plugin directory; copy EasyGrep.txt to your doc directory.  Run helptags on your doc directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11717",
+      "filename": "EasyGrep.zip",
+      "script_version": ".96",
+      "date": "2009-11-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15016",
+        "user_name": "danprice",
+        "first_name": "Daniel",
+        "last_name": "Price",
+        "email": "vim at danprice.fastmail.net",
+        "homepage": ""
+      },
+      "release_notes": "Feature: Expanded upon the list of file associations \nFeature: Expanded searches to the current buffer's directory in addition to the current working directory \nFeature: Added command line arguments to :Grep and :Replace for recursive searches and case sensitivity \nFeature: Added toggle for window replace mode \nFeature: Added toggle for showing file associations list in options explorer \nBugfix: Case insensitivity would fail in replacing some patterns"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10265",
+      "filename": "EasyGrep.zip",
+      "script_version": "0.951",
+      "date": "2009-03-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15016",
+        "user_name": "danprice",
+        "first_name": "Daniel",
+        "last_name": "Price",
+        "email": "vim at danprice.fastmail.net",
+        "homepage": ""
+      },
+      "release_notes": "Update to 0.95: Fixed an error in calling ReplaceCurrentWord identified by Eric Ho.\n\nFeature: Added search and replace on visual selections. \nFeature: Improved Grepping for items that can be interpreted as regular expressions.  Selections are assumed to be literal, whereas explicit commands are assumed to be regular expressions. \nFeature: Removed option g:EasyGrepNoDirectMappings in favor of g:EasyGrepOptionPrefix, which allows the option prefix to be changed. \nBugfix:  The tracked extension would sometimes fail to be updated when switching between buffers \nDocumentation: Split the documentation into its own file; greatly expanded upon its contents. \nChange: Activating a mode that is already activated will no longer deactivate it. \nChange: GrepOptions no longer accepts an argument; use user mode instead. \nChange: Clarified mapping names; custom mappings will need to be reset."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9869",
+      "filename": "EasyGrep.zip",
+      "script_version": "0.9",
+      "date": "2009-01-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15016",
+        "user_name": "danprice",
+        "first_name": "Daniel",
+        "last_name": "Price",
+        "email": "vim at danprice.fastmail.net",
+        "homepage": ""
+      },
+      "release_notes": "Feature: Added forward slash delineated pattern to the Replace command\ne.g. :Replace /target/replacement/\nthat allows more complicated replacements; you can now work with\npatterns that have spaces in them.\nBugfix: If cursorline is off at the start of a replace, now ensuring that cursorline is turned off for all buffers, and not just the last one\nBugfix: fixed an issue with an extra tab being opened during a replacement"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9800",
+      "filename": "EasyGrep.zip",
+      "script_version": "0.8",
+      "date": "2009-01-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15016",
+        "user_name": "danprice",
+        "first_name": "Daniel",
+        "last_name": "Price",
+        "email": "vim at danprice.fastmail.net",
+        "homepage": ""
+      },
+      "release_notes": "Implemented case sensitivity that is independent of ignorecase; thanks to Doro Wu for contributing to this functionality\nChanged shortcut key for hidden files from 'i' to 'h'"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9724",
+      "filename": "EasyGrep.zip",
+      "script_version": "0.7",
+      "date": "2008-12-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15016",
+        "user_name": "danprice",
+        "first_name": "Daniel",
+        "last_name": "Price",
+        "email": "vim at danprice.fastmail.net",
+        "homepage": ""
+      },
+      "release_notes": "Expanded search of EasyGrepFileAssociations list to every component of 'runtimepath'.  This solves a starting message for those who placed EasyGrepFileAssociations in a location other than the first location in 'runtimepath'."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9639",
+      "filename": "EasyGrep.zip",
+      "script_version": "0.6",
+      "date": "2008-12-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15016",
+        "user_name": "danprice",
+        "first_name": "Daniel",
+        "last_name": "Price",
+        "email": "vim at danprice.fastmail.net",
+        "homepage": ""
+      },
+      "release_notes": "Fixed paths with spaces in them\nFolds will now be disabled where replacements are to be made\nFixed an error with checking for extra warnings\nBetter highlighting while replacing\nRecursive mode can no longer be activated when Buffers mode is activated"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9552",
+      "filename": "EasyGrep.zip",
+      "script_version": "0.5",
+      "date": "2008-11-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15016",
+        "user_name": "danprice",
+        "first_name": "Daniel",
+        "last_name": "Price",
+        "email": "vim at danprice.fastmail.net",
+        "homepage": ""
+      },
+      "release_notes": "Fixed an issue with tracking the file extension where sometimes the desired extension wouldn't be registered.\nBetter reporting when no files match.\nNow warning when searching from a working directory that doesn't match the current file's directory.\nAdded g:EasyGrepExtraWarnings option."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9534",
+      "filename": "EasyGrep.zip",
+      "script_version": "0.4",
+      "date": "2008-11-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15016",
+        "user_name": "danprice",
+        "first_name": "Daniel",
+        "last_name": "Price",
+        "email": "vim at danprice.fastmail.net",
+        "homepage": ""
+      },
+      "release_notes": "Improved Replace and ReplaceUndo\nAdded two configurable modes for how the windows operate when doing a global replace.\nFixed an issue with linked filetypes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9520",
+      "filename": "EasyGrep.zip",
+      "script_version": "0.3",
+      "date": "2008-11-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15016",
+        "user_name": "danprice",
+        "first_name": "Daniel",
+        "last_name": "Price",
+        "email": "vim at danprice.fastmail.net",
+        "homepage": ""
+      },
+      "release_notes": "Added experimental :Replace and :ReplaceUndo commands; keymapped <leader>vr for :Replace\nImproved response when no matches"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9509",
+      "filename": "EasyGrep.zip",
+      "script_version": "0.2",
+      "date": "2008-11-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15016",
+        "user_name": "danprice",
+        "first_name": "Daniel",
+        "last_name": "Price",
+        "email": "vim at danprice.fastmail.net",
+        "homepage": ""
+      },
+      "release_notes": "Added option to toggle showing fewer or more options; showing fewer options by default.\nAdded option '?' to print the current configuration and save it to a register.\nNow creating direct mapping by default; see g:EasyGrepNoDirectMappings to turn this off.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9493",
+      "filename": "EasyGrep.zip",
+      "script_version": "0.1",
+      "date": "2008-11-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15016",
+        "user_name": "danprice",
+        "first_name": "Daniel",
+        "last_name": "Price",
+        "email": "vim at danprice.fastmail.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

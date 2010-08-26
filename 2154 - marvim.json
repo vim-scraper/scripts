@@ -1,0 +1,74 @@
+{
+  "script_id": "2154",
+  "name": "marvim",
+  "summary": "Macro Persistent Storage and Shareable Repository for VIM",
+  "script_type": "utility",
+  "description": "MARVIM - MAcro Repository for VIM\n\n\"Give your most complex macros a name and store it for future recall and use\"\n\nProblem statement(s): \n-------------------------------\n   * Can not remember those complex VIM macro sequences you use frequently?\n   * Wish you could save those macros beyond your immediate session? \n   * Wish you could share your VIM macros with each other?\n   * Why not templates as well in the same script?\n\nFeatures\n------------\n    * Recording of VIM macros into persistent storage for future use\n    * Auto-complete based recursive search and load of stored VIM macros\n    * Visually select and save templates into persistent storage\n    * Macro namespaces, to permit organization of macros \n    * Support for a default namespace based on filetype\n    * Supports a shared macro repository for a team on a shared directory\n    * Macro menu items in GVIM version for all main actions\n\nHotkeys \n-----------\n<F2>            - Find and execute a macro or insert template from repository\nVisual <F2> - Replays last macro for each line selected\n<F3>             - Save default macro register by name to the macro repository \nVisual <F3>  - Save selection as template by name to the macro repository \n<Tab>            - On the Macro command line for cycling through autocomplete\n<Control>+D - On the Macro command line for listing autocomplete options\n\nUsage:\n----------\no Store a new macro to the repository\n\n1)  record macro as usual into q register \n    (i.e. qq..<macro keystrokes>..q)\n2)  press save macro key <F3> (default) in normal mode\n3)  enter the macro name when prompted after the prefix \n    (a prefix will be provided based on the filetype)\n4)  macro is now store in the repository\n\no Save template into repository\n\n1)  select area you want to save in visual mode\n2)  press the macro save button <F3> (default) in visual mode\n3)  enter the template name when prompted\n    (a prefix will be provided based on the filetype)\n4)  template is now saved in repository\n\no Recall macro/template through a search\n\n1)  press the macro find key <F2> (default) in normal mode\n2)  enter a search string when prompted \n    (a prefix will be put by default, which can be deleted)\n3)  press <Tab> or <Control-D> to auto-complete until you find the macro\n4)  macro is now run and also loaded for further use into the q register\n\no Replay last loaded macro on multiple lines for each line\n\n1)  select the area you want the macro to run on in visual mode\n2)  press the macro find key <F3> (default) in visual mode\n3)  macro in q register is replayed for every line\n\nBugs, Patches, Help and Suggestions\n-----------------------------------------------------\nIf you have some feedback, find any bugs or need some help, please send\nand email to chamindra [at] gmail.com and put the word marvim in the\nsubject line. \n\nFurther information\n--------------------------\nRead the README file or goto http://chamindra.googlepages.com/marvim\n\n",
+  "install_details": "* Download Marvim to your VIM plugin ($VIMRUNTIME/plugin) directory \n  or source it explicitly. Below is an example if you place it in \n  the home directory\n\n  source $HOME/marvim.vim \n\n* Start vim and this will automatically create the base marvim macro \n  repository in your home directory. Based on the OS it will be \n  located as follows:\n\n  UNIX      ~/.marvim  \n  WINDOWS   C:\\Document and Settings\\Username\\marvim \n\n* (optional) Copy predefined macro/template directories into the base \n  marvin macro directory. Marvim uses recursive directory search so \n  you can nest the directories as you wish.\n\n* (optional) change the default hotkeys as given above\n\nChanging the default hotkeys, repository and macro register\n-----------------------------------------------------------------------------------\nOptionally place the following lines in your vimrc before the location \nyou source the marvim.vim script (don't worry about location if \nthe script is in the vim plugin directory). \n\n  \" to change the macro storage location use the following \n  let marvim_store = '/usr/local/share/projectX/marvim' \n  let marvim_find_key = '<Space>' \" change find key from <F2> to 'space'\n  let marvim_store_key = 'ms'     \" change store key from <F3> to 'ms'\n  let marvim_register = 'c'       \" change used register from 'q' to 'c'\n  let marvim_prefix = 0           \" disable default syntax based prefix\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9289",
+      "filename": "marvim.tar.gz",
+      "script_version": "0.4",
+      "date": "2008-09-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13883",
+        "user_name": "chamindra",
+        "first_name": "Chamindra",
+        "last_name": "de Silva",
+        "email": "chamindra at opensource.lk",
+        "homepage": "http://chamindra.googlepages.com"
+      },
+      "release_notes": "Change Log\n-----------------\n- Now supports auto-completion based recursive search for macros on the command  line\n- Use <Tab> and <Ctrl-D> to search for macros in command line as usual in VIM\n- The default name space is taken from the file type on the command line ( e.g. php:)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9258",
+      "filename": "marvim.tar.gz",
+      "script_version": "0.3",
+      "date": "2008-09-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13883",
+        "user_name": "chamindra",
+        "first_name": "Chamindra",
+        "last_name": "de Silva",
+        "email": "chamindra at opensource.lk",
+        "homepage": "http://chamindra.googlepages.com"
+      },
+      "release_notes": "Changelog - v0.3 Beta\n=================\n- New namespace features for macro that map to macro sub-directories\n- Supported the creation of macros and templates in a namespace\n- Creates namespace directories if they do not exist\n- Added the ability to point to a different macro store\n- The above permits a shared macro/template repository within a team\n- Refactored code to make macro and template saving a function\n- Fixed bug on windows listing of macros without whole path name\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8282",
+      "filename": "marvim.tar.gz",
+      "script_version": "0.2",
+      "date": "2008-02-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13883",
+        "user_name": "chamindra",
+        "first_name": "Chamindra",
+        "last_name": "de Silva",
+        "email": "chamindra at opensource.lk",
+        "homepage": "http://chamindra.googlepages.com"
+      },
+      "release_notes": "Change Log\n---------------\nv0.2\n- Made script windows compatible\n- Makes the macro home directory if it does not exist\n- Recursively looks up base repository subdirectories for macros\n- Creates a macro menu for the GUI versions\n- Changed defauly macro input register to q\n- Made it easy to define configuration details in vimrc\n- Abstracted hotkeys so that they can be defined in the vimrc easily\n- Fixed the breaking on spaces in directory paths\n- Changed template extension to mvt for ease\n- Changed naming conventions to avoid namespace conflict "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8269",
+      "filename": "marvim.tar.gz",
+      "script_version": "0.1",
+      "date": "2008-02-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13883",
+        "user_name": "chamindra",
+        "first_name": "Chamindra",
+        "last_name": "de Silva",
+        "email": "chamindra at opensource.lk",
+        "homepage": "http://chamindra.googlepages.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

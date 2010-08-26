@@ -1,0 +1,58 @@
+{
+  "script_id": "1599",
+  "name": "highlight.vim",
+  "summary": "Highlight lines or patterns of interest in different colors",
+  "script_type": "utility",
+  "description": "   Line mode\n     <C-h><C-h>   Highlight current line \n     <C-h><C-a>   Advance color for next line highlight\n     <C-h><C-r>   Clear last line highlight\n\n   Pattern mode\n     <C-h><C-w>   Highlight word under cursor (whole word match)\n     <C-h><C-l>   Highlight all lines having word under cursor (whole word match)\n     <C-h><C-f>   Highlight word under cursor (partial word match)\n     <C-h><C-k>   Highlight all lines having word under cursor (partial word match)\n     <C-h><C-s>   Highlight last search pattern\n     <C-h><C-d>   Clear last pattern highlight \n     <C-h><C-n>   Clear all highlights\n\n   All above commands work in both normal & insert modes.\n   <C-h><C-h> also works in visual mode. (Select desired lines & hit <C-h><C-h>)\n\n",
+  "install_details": "Copy highlight.vim to your .vim/plugin directory\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11761",
+      "filename": "highlight.vim",
+      "script_version": "1.4",
+      "date": "2009-11-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10357",
+        "user_name": "amitsethi",
+        "first_name": "Amit",
+        "last_name": "Sethi",
+        "email": "amitrajsethi at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed Pattern modes. These are now as follows - \n\n\"   Pattern mode\n\"     <C-h><C-w>   Highlight word under cursor (whole word match)\n\"     <C-h><C-l>   Highlight all lines having word under cursor (whole word match)\n\"     <C-h><C-f>   Highlight word under cursor (partial word match)\n\"     <C-h><C-k>   Highlight all lines having word under cursor (partial word match)\n\"     <C-h><C-s>   Highlight last search pattern\n\"     <C-h><C-d>   Clear last pattern highlight\n\"\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5997",
+      "filename": "highlight.vim",
+      "script_version": "1.1",
+      "date": "2006-07-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10357",
+        "user_name": "amitsethi",
+        "first_name": "Amit",
+        "last_name": "Sethi",
+        "email": "amitrajsethi at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Modified implementation of word highlight to override comments, etc."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5918",
+      "filename": "highlight.vim",
+      "script_version": "1.0",
+      "date": "2006-07-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10357",
+        "user_name": "amitsethi",
+        "first_name": "Amit",
+        "last_name": "Sethi",
+        "email": "amitrajsethi at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "621",
+  "name": "Conflict2Diff",
+  "summary": "Turns a CVS conflict file into a threeway diff",
+  "script_type": "utility",
+  "description": "This plugin splits a CVS conflict file into three diff windows.  The 2 conflicting versions of the file are put on the left and right.  The central window contains the file, with each conflicting area replaced by \"=======\".  Buffer specific mappings are set up to make the merging simple:\n\n<Ctrl-Down> Move to the next conflict\n<Ctrl-Up> Move to the previous conflict\n<Ctrl-Left> Use the text from the lefthand file for this conflicting area\n<Ctrl-Right> Use the text from the righthand file for this conflicting area\n<Ctrl-q> Finish by closing the left and righthand windows, turning off diff and removing the mappings\n",
+  "install_details": "Unpack the files somewhere that vim can find them.  You'll need to run the :helptags command to install the documentation.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3209",
+      "filename": "conf2dif.zip",
+      "script_version": "1.1",
+      "date": "2004-07-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1607",
+        "user_name": "chrisrimmer",
+        "first_name": "Chris",
+        "last_name": "Rimmer",
+        "email": "chris at nominet.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Changed so that moving up and down with <Ctrl+Up> and <Ctrl+Down> also centres the cursor vertically on the screen."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1917",
+      "filename": "conf2dif.zip",
+      "script_version": "1.0",
+      "date": "2003-04-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1607",
+        "user_name": "chrisrimmer",
+        "first_name": "Chris",
+        "last_name": "Rimmer",
+        "email": "chris at nominet.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

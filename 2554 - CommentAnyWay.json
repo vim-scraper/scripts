@@ -1,0 +1,42 @@
+{
+  "script_id": "2554",
+  "name": "CommentAnyWay",
+  "summary": "THIS IS BUGGY DO NOT USE THIS",
+  "script_type": "utility",
+  "description": "this explanation is only about mappings and its action.\nif you get interested in this script and you want to know more,\ndetailed explanation is written in its script.\n\n\n\nMAPPING:\n\n  In normal mode:\n    If you typed digits string([1-9]) before typing these mappings,\n    behave like in visual mode.\n    so you want to see when you gave digits string, see \"In visual mode\".\n\n    gcc\n        if default. this is the same as |gct|.\n    gcI\n        add one-line comment to the beginning of line.\n    gci\n        add one-line comment to the beginning of non-space string(\\S).\n    gca\n        add one-line comment to the end of line.\n    gcu{type}\n        type is one of 'c I i a'.\n        remove one-line comment.\n    gcw\n        add one-line comment to wrap the line.\n    gct\n        toggle comment/uncomment.\n    gcv{wrap}{action}\n        add various comment.\n    gco\n        jump(o) before add comment.\n    gcO\n        jump(O) before add comment.\n    gcmm\n        add multi-comment.\n    gcmi\n        add if statement.\n    gcmw\n        add while statement.\n    gcmf\n        add for statement.\n    gcms\n        add switch statement.\n    gcmd\n        add do ~ while statement.\n    gcmt\n        add try ~ catch statement.\n\n\n  In visual mode:\n\n    gcc\n        if default. this is the same as |gct|.\n    gcI\n        add one-line comment to the beginning of line.\n    gci\n        add one-line comment to the beginning of non-space string(\\S).\n    gca\n        add one-line comment to the end of line.\n    gcu{type}\n        type is one of 'I i a w'.\n        remove one-line comment.\n    gcw\n        add one-line comment to wrap the line.\n    gct\n        toggle comment/uncomment.\n    gcv{string}\n        add various comments.\n    gcmm\n        add multi-comment.\n    gcmi\n        add if statement.\n    gcmw\n        add while statement.\n    gcmf\n        add for statement.\n    gcms\n        add switch statement.\n    gcmd\n        add do ~ while statement.\n    gcmt\n        add try ~ catch statement.\n\n    And these are default mappings.\n    you can define all mappings what you want.\n\n\n\nEXAMPLES:\n\n    If global variables are all default value...\n    \n    |gcI|\n      before:\n          '   testtesttest'\n      after:\n          '#    testtesttest'\n    \n    |gci|\n      before:\n          '   <- inserted here'\n      after:\n          '   # <- inserted here'\n    \n    |gca|\n      before:\n          'aaaaaaa'\n      after:\n          'aaaaaaa    # '\n    \n    |gcw|\n      before:\n          'aaaaaaa'\n      after:\n          '/* aaaaaaa */'\n    \n    |gcv|\n      before:\n          '   some code here'\n      after:\n          you type 'gcv', and '// XXX:<CR>i'\n          '   // XXX: some code here'\n    \n    |gco|\n      before:\n          '   func1();'\n      after:\n          you type 'gco', and 'func2();'\n          '   func1()'\n          '   // func2();'\n    \n    |gcO|\n      before:\n          '   func1();'\n      after:\n          you type 'gcO', and 'call func1()'\n          '   // call func1()'\n          '   func1();'\n    \n    multiline mappings(gcm*) insert the comments or the statements.\n    \n    global variables change detailed behavior.\n    and all these mappings are also available in visual mode.\n",
+  "install_details": "Just move it into ~/.vim/plugin",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10088",
+      "filename": "CommentAnyWay.vim",
+      "script_version": "1.0.1",
+      "date": "2009-03-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "Fix bug that CommentAnyWay.Base.GetIndent() can't get proper indent num."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10030",
+      "filename": "CommentAnyWay.vim",
+      "script_version": "1.0.0",
+      "date": "2009-02-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

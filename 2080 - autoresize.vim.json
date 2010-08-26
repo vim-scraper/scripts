@@ -1,0 +1,26 @@
+{
+  "script_id": "2080",
+  "name": "autoresize.vim",
+  "summary": "Automatically Resizing Splitted Current Window Size Larger.",
+  "script_type": "utility",
+  "description": "Overview\n--------\nThis plugin updates vim splitted window size automatically large.\nCurrent window size will be large, and the other window size will be\nsmall.\n\nInstallation\n------------\n1. Copy the autoresize.vim script to the $HOME/.vim/plugin or\n   the $HOME/vimfiles/plugin. Refer to the ':help add-plugin',\n   ':help add-global-plugin' and ':help runtimepath' topics for\n   more details about Vim plugins.\n2. Restart Vim.\n\nUsage\n-----\n1. Split vim window, and so current window height or width is automatically\n   updated with large value. \n2. You move cursor to the other window from one, the other window size is\n   automatically updated.\n3. If you check this script,\n   split vim window with \":split\" or \":vsplit\",\n   and push <C-W><C-W><C-W><C-W><C-W><C-W>....\n\nConfiguration\n-------------\n1. Minimum window size.\n   Script use \"g:AUTORESIZE_ANOTHER_WINDOW_HEIGHT\" variables when you split window\n   horizontally.  If you split window vertically then, script use\n   \"g:AUTORESIZE_ANOTHER_WINDOW_WIDTH\" variables.\n   These variables are used as the other window size parameter. (not a current)\n\n   example.\n       :let g:AUTORESIZE_ANOTHER_WINDOW_HEIGHT = 5\n       :let g:AUTORESIZE_ANOTHER_WINDOW_WIDTH = 12\n\n2. Disable script defined autocommands.\n   Script add 1 autocommand to your vim environment.\n   If you want make this autocommand disable,\n   set \"g:AUTORESIZE_AUTOCMD_DISABLE\" variables to \"1\".\n\n   example.\n       :let g:AUTORESIZE_AUTOCMD_DISABLE = 1\n\n3. Run autocommand in specific filetype.\n   If you use this script only in some filetype, add this autocommand to your vimrc.\n\n   example.\n       :let g:AUTORESIZE_AUTOCMD_DISABLE = 1\n       :autocmd WinEnter *.txt :AutoWindowResize\n\n4. Run script on your action\n   If you run this script with some your action (for example, push F4),\n   add this configuration to your vimrc.\n\n   example.\n       :let g:AUTORESIZE_AUTOCMD_DISABLE = 1\n       :nmap <F4> :AutoWindowResize<CR>\n\nLimitation\n----------\n1. This script will run only on 2 window. Vim run on 3 splitted window,\n   on 4 splitted window, or on 1 window then, this script is not running.\n",
+  "install_details": "Copy autoresize.vim to your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8001",
+      "filename": "autoresize.vim",
+      "script_version": "0.7",
+      "date": "2007-11-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9013",
+        "user_name": "advweb",
+        "first_name": "omi",
+        "last_name": "taku",
+        "email": "mail at nanasi.jp",
+        "homepage": "http://nanasi.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

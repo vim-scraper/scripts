@@ -1,0 +1,42 @@
+{
+  "script_id": "1309",
+  "name": "java_fold",
+  "summary": "Folding expression for Java",
+  "script_type": "utility",
+  "description": "This script uses the expr fold-method to create folds for java source code.  Folds are created for methods, variables and nested classes with a javadoc comment (that is, at any line inside a class that starts with /**).  The fold will show a count of the number of lines contained in it and the first line of the variable or method declaration.\n\nThe fold level for each fold is equal to the indentation divided by the value of the 'shiftwidth' option, so make sure that 'shiftwidth' is set to the right value for your code.\n\nCaveats:\n- this doesn't work if you don't indent your code (properly) or if you don't use javadoc comments\n- the folds are \"greedy\": they start at a javadoc comment and run upto the next javadoc comment (they don't pay attention to syntax)\n- you can't see the javadoc comments in the folds",
+  "install_details": "Either save the script in a file and source that file whenever you want to use the folding, or save it in your ftplugin directory (for example, ~/.vim/ftplugin) and it should load every time you edit java code.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4426",
+      "filename": "java_fold.vim",
+      "script_version": "1.1",
+      "date": "2005-07-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1319",
+        "user_name": "wiersma",
+        "first_name": "Jorrit",
+        "last_name": "Wiersma",
+        "email": "wiersma at astro.uu.nl",
+        "homepage": "http://www.astro.uu.nl/~wiersma"
+      },
+      "release_notes": "Added line counts to the fold text (contributed by Robert Ames)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4380",
+      "filename": "java_fold.vim",
+      "script_version": "1.0",
+      "date": "2005-06-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1319",
+        "user_name": "wiersma",
+        "first_name": "Jorrit",
+        "last_name": "Wiersma",
+        "email": "wiersma at astro.uu.nl",
+        "homepage": "http://www.astro.uu.nl/~wiersma"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

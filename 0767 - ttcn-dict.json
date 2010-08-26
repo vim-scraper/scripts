@@ -1,0 +1,26 @@
+{
+  "script_id": "767",
+  "name": "ttcn-dict",
+  "summary": "TTCN-3 dictionary (keyword completion) file",
+  "script_type": "utility",
+  "description": "This package provides keyword completion for TTCN-3.\n\nIn insert mode you hit ctrl-x ctrl-k to get suggestions of keywords that could complete the currently typed word.\n\nNote: ctrl-x ctrl-k is the Vim built-in method for dictionary completion; check out vimtip #91 and vimtip #102 for cool stuff and adjustments you can make!\n",
+  "install_details": "1. Drop the file in some directory (e.g. ~/.vim/dicts).\n2. Download the TTCN ftplugin (vimscript #793).\n3. If necessary, adjust the path to the dict file in the ftplugin.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2397",
+      "filename": "ttcn.dict",
+      "script_version": "0.3.1",
+      "date": "2003-10-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3210",
+        "user_name": "Ticktack",
+        "first_name": "Stefan",
+        "last_name": "Karlsson",
+        "email": "sssstefan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "The previous version of this utility contained both the dictionary file and a ftplugin. However, I decided to split them and the ftplugin is now a separate script."
+    }
+  ]
+}

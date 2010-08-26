@@ -1,0 +1,42 @@
+{
+  "script_id": "1046",
+  "name": "monday",
+  "summary": "Lets you use ctrl-a and ctrl-x on names of months and weekdays",
+  "script_type": "utility",
+  "description": "Monday.vim extends the normal-mode commands <ctrl-a> and <ctrl-x> so that they can be applied to the names of months and weekdays. For example, if you are standing on the word \"July\" and presses <ctrl-a>, the word is replaced by \"August\".\n\nThe script tries to preserve the case of the letters, and can handle the following three variants:\n\n(1) All lower-case (\"july\" becomes \"august\").\n(2) All upper-case (\"JULY\" becomes \"AUGUST\").\n(3) First letter upper-case, the rest lower-case (\"July\" becomes \"August\").\n\nTodo:\n\nOnly English is supported; although it's easy to add any word pairs you want, the script cannot yet handle words that have two or more possible successors/predecessors.  For example, the 4th month is called \"April\" in both English and Swedish, but its successor is called \"May\" and \"Maj\", respectively. So, if you add the Swedish months and then try to increment the word \"April\", the script won't be able to figure out which word (\"May\" or \"Maj\")  it should be replaced with.\n",
+  "install_details": "Just drop the script in your local plugin directory (e.g. ~/.vim/plugin).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4249",
+      "filename": "monday.vim",
+      "script_version": "0.3",
+      "date": "2005-05-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3210",
+        "user_name": "Ticktack",
+        "first_name": "Stefan",
+        "last_name": "Karlsson",
+        "email": "sssstefan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for 1st, 2nd, 3rd, etc. (idea by Chris Ottrey). Also fixed some bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3406",
+      "filename": "monday.vim",
+      "script_version": "0.2",
+      "date": "2004-09-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3210",
+        "user_name": "Ticktack",
+        "first_name": "Stefan",
+        "last_name": "Karlsson",
+        "email": "sssstefan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Corrected a problem related to the 'ignorecase' option (all changed words became lower-case). Thanks to Anton Berezin  for pointing this out and for providing a patch."
+    }
+  ]
+}

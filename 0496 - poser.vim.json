@@ -1,0 +1,154 @@
+{
+  "script_id": "496",
+  "name": "poser.vim",
+  "summary": "A syntax file for Poser 3-D library and scene files and WaveFront OBJects",
+  "script_type": "syntax",
+  "description": "This is a syntax file for use with CuriousLabs' Poser Library and Scene files, cr2, pp2, pz2, pz3, hr2, lt2, cm2, fc2 and hd2. Version 1.05 also supports Wavefront OBJect files due to added support for customGeom.",
+  "install_details": "Just add this to your gvim syntax folder. You can then activate it with :cal SetSyn(\"poser\")\n\nYou can also edit $VIMRUNTIME/menu.vim to add it to the syntax menu, down in the P section most likely, and add a SynAu command for it in $VIMRUNTIME/syntax/synload.vim. You may also want to edit $VIMRUNTIME/filetype.vim to set it to automatically load with cr2, pp2, pz2, pz3, hr2, lt2, cm2, fc2, and hd2 files. Depending on how much programming you don't do and how much manual editing of Wavefront OBJect files you do do, you could also add .obj in there.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1476",
+      "filename": "poser.vim",
+      "script_version": "1.09",
+      "date": "2002-11-25",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1261",
+        "user_name": "Dodger",
+        "first_name": "Sean",
+        "last_name": "Cannon",
+        "email": "dodger at dodger.org",
+        "homepage": "http://www.dodger.org"
+      },
+      "release_notes": "conformingTarget keyword (poser) added *sigh*"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1475",
+      "filename": "poser.vim",
+      "script_version": "1.08",
+      "date": "2002-11-25",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1261",
+        "user_name": "Dodger",
+        "first_name": "Sean",
+        "last_name": "Cannon",
+        "email": "dodger at dodger.org",
+        "homepage": "http://www.dodger.org"
+      },
+      "release_notes": "I'd missed the 's' OBJect keyword."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1474",
+      "filename": "poser.vim",
+      "script_version": "1.07",
+      "date": "2002-11-25",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1261",
+        "user_name": "Dodger",
+        "first_name": "Sean",
+        "last_name": "Cannon",
+        "email": "dodger at dodger.org",
+        "homepage": "http://www.dodger.org"
+      },
+      "release_notes": "...and the mtllib OBJect keyword..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1473",
+      "filename": "poser.vim",
+      "script_version": "1.06",
+      "date": "2002-11-25",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1261",
+        "user_name": "Dodger",
+        "first_name": "Sean",
+        "last_name": "Cannon",
+        "email": "dodger at dodger.org",
+        "homepage": "http://www.dodger.org"
+      },
+      "release_notes": "What the hell. Since I'm supporting Wavefront OBJects, I added the WaveFront OBJect comment highlighting."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1472",
+      "filename": "poser.vim",
+      "script_version": "1.05",
+      "date": "2002-11-25",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1261",
+        "user_name": "Dodger",
+        "first_name": "Sean",
+        "last_name": "Cannon",
+        "email": "dodger at dodger.org",
+        "homepage": "http://www.dodger.org"
+      },
+      "release_notes": "Added support for customGeom (can't believe Imissed that)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1471",
+      "filename": "poser.vim",
+      "script_version": "1.04",
+      "date": "2002-11-25",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1261",
+        "user_name": "Dodger",
+        "first_name": "Sean",
+        "last_name": "Cannon",
+        "email": "dodger at dodger.org",
+        "homepage": "http://www.dodger.org"
+      },
+      "release_notes": "Added missed *Bulge functions"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1470",
+      "filename": "poser.vim",
+      "script_version": "1.03",
+      "date": "2002-11-25",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1261",
+        "user_name": "Dodger",
+        "first_name": "Sean",
+        "last_name": "Cannon",
+        "email": "dodger at dodger.org",
+        "homepage": "http://www.dodger.org"
+      },
+      "release_notes": "Small cleanups, fixed MT stuff, changed constructor (addChild, weld, valueOpDeltaAdd, sphereMatsRaw) style to bold green since they don't have {}"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1468",
+      "filename": "poser.vim",
+      "script_version": "1.02",
+      "date": "2002-11-25",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1261",
+        "user_name": "Dodger",
+        "first_name": "Sean",
+        "last_name": "Cannon",
+        "email": "dodger at dodger.org",
+        "homepage": "http://www.dodger.org"
+      },
+      "release_notes": "Added NULL constant, corrected -e exponents."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1464",
+      "filename": "poser.vim",
+      "script_version": "1.0",
+      "date": "2002-11-25",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1261",
+        "user_name": "Dodger",
+        "first_name": "Sean",
+        "last_name": "Cannon",
+        "email": "dodger at dodger.org",
+        "homepage": "http://www.dodger.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

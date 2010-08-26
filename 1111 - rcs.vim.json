@@ -1,0 +1,170 @@
+{
+  "script_id": "1111",
+  "name": "rcs.vim",
+  "summary": "Automatically handle RCS files",
+  "script_type": "utility",
+  "description": "This is a set of autocommands, commands, and a menu to help you handle RCS controlled files.\n\nIf you try to modify a readonly file that has a RCS/<file>,v counterpart you will be asked if you want to check the file out for modification, and when you unload the buffer you'll be prompted if you want to check the file back in, and allowed to enter a log message.\n\nMost of the commands have corresponding menu items, which should be fairly self-explanatory.\n\nDetails are in the auto-generated help file, see \":help rcs.txt\".",
+  "install_details": "Place rcs.vim in your plugin directory.  See \":help 'runtimepath'\".  If the help file isn't automatically generated, try doing \":RCSUpdateHelp ~/.vim/doc\".",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13110",
+      "filename": "rcs.vim",
+      "script_version": "0.15.2",
+      "date": "2010-06-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Suggestions by Jon Peatfield for the checkout routine:\n  + Prompt the user on checkout if there were \"unlocked\" changes\n  + Check for a lock by another user\n- A few minor changes and fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12897",
+      "filename": "rcs.vim",
+      "script_version": "0.14",
+      "date": "2010-04-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Detect RCS's ,v files in the file's cwd as well (Jon Peatfield)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9168",
+      "filename": "rcs.vim",
+      "script_version": "0.13.1",
+      "date": "2008-08-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Fix error when g:rcs_plugin_* isn't set (Sven Bischof)\n- Prompt the user when the file is unwritten and :RCSci is used (Sven Bischof)\n- Sometimes the help file wasn't being generated--try a different method (Sven Bischof)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8807",
+      "filename": "rcs.vim",
+      "script_version": "0.12",
+      "date": "2008-06-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Try to safely escape shell commands"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8760",
+      "filename": "rcs.vim",
+      "script_version": "0.11.1",
+      "date": "2008-06-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Use matchadd() instead of :2match -- less likelihood of a \"collision\" with another plugin\n- Make entering the log messages easier\n- Don't go into diff mode if a diff is already open in Vim\n- Allow diffing of two consecutive revisions from the log view\n- misc. minor changes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8619",
+      "filename": "rcs.vim",
+      "script_version": "0.10",
+      "date": "2008-04-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Abandoned Vim 6 support\n- Allow editing of individual revision log messages from the log display\n- Auto-install a help file if possible"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8534",
+      "filename": "rcs.vim",
+      "script_version": "0.4",
+      "date": "2008-04-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Open the folds where the cursor is located when the file is checked out on the FileChangedRO event\n- Internal documentation added\n- Code clean up"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6101",
+      "filename": "rcs.vim",
+      "script_version": "0.3",
+      "date": "2006-08-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Preserve the cursor position when reloading the file. (Mical Ward)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5538",
+      "filename": "rcs.vim",
+      "script_version": "0.2",
+      "date": "2006-04-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Minor changes to make it compatible with Vim 7."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3569",
+      "filename": "rcs.vim",
+      "script_version": "0.1",
+      "date": "2004-10-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

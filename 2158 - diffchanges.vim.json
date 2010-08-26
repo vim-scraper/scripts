@@ -1,0 +1,154 @@
+{
+  "script_id": "2158",
+  "name": "diffchanges.vim",
+  "summary": "Show changes made to current buffer since the last save",
+  "script_type": "utility",
+  "description": "Show changes made to current buffer since the last save. This plugin is based from an example in the Hacking Vim book. The differences are that this functionality is in the form of a plugin, is a bit more robust, and can be toggled.\n\nCOMMANDS\nDiffChangesDiffToggle -- toggles the side-by-side diff view\nDiffChangesPatchToggle -- toggles the patch view\n\nMAPPINGS (<leader> is set to '\\&#039, by default)\n<leader>dcd -- DiffChangesDiffToggle\n<leader>dcp -- DiffChangesPatchToggle\n\nYou can override the default mappings by creating mappings like this:\n\nnmap <F6> <Plug>DiffChangesDiffToggle\nnmap <F7> <Plug>DiffChangesPatchToggle\n\nOPTIONS\ng:diffchanges_patch_cmd -- The command that's used to generate the patch (default: 'diff -u').",
+  "install_details": "Place script in ~/.vim/plugin and start vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11831",
+      "filename": "diffchanges.vim",
+      "script_version": "0.2.6",
+      "date": "2009-11-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Fixed problem with diff mode where diff was not started on the first line."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11830",
+      "filename": "diffchanges.vim",
+      "script_version": "0.2.6",
+      "date": "2009-11-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Fixed problem with diff mode where diff was not started on the first line."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8429",
+      "filename": "diffchanges.vim",
+      "script_version": "0.2.5",
+      "date": "2008-03-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Improved some of the error checking and fixed a few regressions from the previous upload."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8426",
+      "filename": "diffchanges.vim",
+      "script_version": "0.2.4",
+      "date": "2008-03-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Added a check to make sure the script only loads in Vim 7 (Thanks to Scott Urban)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8371",
+      "filename": "diffchanges.vim",
+      "script_version": "0.2.3",
+      "date": "2008-02-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Made it easier to :source the plugin after it has already been loaded."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8369",
+      "filename": "diffchanges.vim",
+      "script_version": "0.2.2",
+      "date": "2008-02-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Bug fixes and a few enhancements (Thanks to Ben Armston)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8337",
+      "filename": "diffchanges.vim",
+      "script_version": "0.2.1",
+      "date": "2008-02-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Added another mode for viewing a patch of the changes made since last save"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8331",
+      "filename": "diffchanges.vim",
+      "script_version": "0.2",
+      "date": "2008-02-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Made functions, variables, and mappings \"script-friendly\". Thanks #vim!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8294",
+      "filename": "diffchanges.vim",
+      "script_version": "0.1",
+      "date": "2008-02-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

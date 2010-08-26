@@ -1,0 +1,122 @@
+{
+  "script_id": "204",
+  "name": "vimconfig",
+  "summary": "Vim 6.3 configuration files: vimrc, ftplugins, plugins",
+  "script_type": "utility",
+  "description": "Vim 6.3 configuration files.\n\nThis package include vimrc file, filetype plugins (mail, perl, TeX) and some plugins from another projects.\n\nUseful functions (e.g. for folding, autoreload of ~/.vimrc ...)\n\nThe LATEST version of project can be downloaded from:\n\nhttp://platon.sk/projects/vimconfig/\n\n\nYou can submit bugs, feature requests etc. at\nhttp://platon.sk/projects/vimconfig/\n",
+  "install_details": "SAVE this file AS vimconfig-1.10.tar.gz\nExtract files from an archive:\n\ntar xvzf vimconfig-1.10.tar.gz\n\nCreate symlinks:  -- simply type 'make install'\n\ncd vimconfig-1.10\nmake install\n\nEnjoy! :-)\n\nMakefile included - you may use it for creating your own distribution.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4189",
+      "filename": "vimconfig-1.11.tar.gz",
+      "script_version": "1.11",
+      "date": "2005-04-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "486",
+        "user_name": "rajo",
+        "first_name": "&#317;ubomír",
+        "last_name": "Host",
+        "email": "rajo AT platon.sk",
+        "homepage": "http://rajo.platon.sk/index/en/vim"
+      },
+      "release_notes": "Added support for UTF-8 diacritics input method."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3988",
+      "filename": "vimconfig-1.10.tar.gz",
+      "script_version": "1.10",
+      "date": "2005-03-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "486",
+        "user_name": "rajo",
+        "first_name": "&#317;ubomír",
+        "last_name": "Host",
+        "email": "rajo AT platon.sk",
+        "homepage": "http://rajo.platon.sk/index/en/vim"
+      },
+      "release_notes": "* New features in templating system:\n        - load templates from upper directory\n        - autogenerate Java package name\n* Added templates for Perl, PHP, Java, Lisp, TeX, XML, C, H, Template-Toolkit\n* Added filetype plugins Template-Toolkit (http://template-toolkit.org)\n* Added database client for ViM (beta version)\n* Documentation update\n* Diacritics input method can be changed more friendly\n* Added windows-1250 and \"HTML unicode\" mappings\n* Added autocommads for GnuPG (http://gnupg.org)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1919",
+      "filename": "vimconfig-1.8.tar.gz",
+      "script_version": "1.8",
+      "date": "2003-04-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "486",
+        "user_name": "rajo",
+        "first_name": "&#317;ubomír",
+        "last_name": "Host",
+        "email": "rajo AT platon.sk",
+        "homepage": "http://rajo.platon.sk/index/en/vim"
+      },
+      "release_notes": "Fixed many many bugs. Added many features. Added script for update Vim6.1 sources."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1092",
+      "filename": "vimconfig-1.7.tar.gz",
+      "script_version": "1.7",
+      "date": "2002-08-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "486",
+        "user_name": "rajo",
+        "first_name": "&#317;ubomír",
+        "last_name": "Host",
+        "email": "rajo AT platon.sk",
+        "homepage": "http://rajo.platon.sk/index/en/vim"
+      },
+      "release_notes": "* Fixed some misbehaviours.\n* Added many files (ftplugins: html, sgml, vim; indent: php, tex; plugins: impas, increment, syntaxFolds; documentation)\n* Other undocumented changes :-)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=634",
+      "filename": "vimconfig-1.6.tar.gz",
+      "script_version": "1.6",
+      "date": "2002-02-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "486",
+        "user_name": "rajo",
+        "first_name": "&#317;ubomír",
+        "last_name": "Host",
+        "email": "rajo AT platon.sk",
+        "homepage": "http://rajo.platon.sk/index/en/vim"
+      },
+      "release_notes": "Improvements in function LastMod() - update date/time on line which contain g:autolastmodtext=\"^\\([ <Tab>]*Last modified: \\)\".\nVariable g:autolastmodtext is regular expression.\nAdded autocommands for *.php *.php3 files - call function AutoLastMod() when writing file.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=631",
+      "filename": "vimconfig-1.5.tar.gz",
+      "script_version": "1.5",
+      "date": "2002-02-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "486",
+        "user_name": "rajo",
+        "first_name": "&#317;ubomír",
+        "last_name": "Host",
+        "email": "rajo AT platon.sk",
+        "homepage": "http://rajo.platon.sk/index/en/vim"
+      },
+      "release_notes": "Patched little bug in Makefiil(es)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=608",
+      "filename": "vimconfig-1.4.tar.gz",
+      "script_version": "1.4",
+      "date": "2002-02-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "486",
+        "user_name": "rajo",
+        "first_name": "&#317;ubomír",
+        "last_name": "Host",
+        "email": "rajo AT platon.sk",
+        "homepage": "http://rajo.platon.sk/index/en/vim"
+      },
+      "release_notes": "Patched function SmartBS()"
+    }
+  ]
+}

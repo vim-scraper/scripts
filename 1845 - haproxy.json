@@ -1,0 +1,26 @@
+{
+  "script_id": "1845",
+  "name": "haproxy",
+  "summary": "syntax for haproxy",
+  "script_type": "syntax",
+  "description": "HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications. It is particularly suited for web sites crawling under very high loads while needing persistence or Layer7 processing.\n\nFor more details, see http://haproxy.1wt.eu/.",
+  "install_details": "Copy the haproxy.vim file to $HOME/.vim/syntax/ and add the following to your vimrc:\nau BufRead,BufNewFile haproxy* set ft=haproxy\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6924",
+      "filename": "haproxy.vim",
+      "script_version": "0.3",
+      "date": "2007-03-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7475",
+        "user_name": "NoNo",
+        "first_name": "Bruno",
+        "last_name": "Michel",
+        "email": "brmichel at free.fr",
+        "homepage": "http://blog.menfin.info"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

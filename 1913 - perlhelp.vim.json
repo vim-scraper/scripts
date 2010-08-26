@@ -1,0 +1,106 @@
+{
+  "script_id": "1913",
+  "name": "perlhelp.vim",
+  "summary": "Interface to perldoc",
+  "script_type": "utility",
+  "description": "A plugin that provides quick and easy access to perldoc. The perldoc text is displayed in a new window. This window is reused for resulting lookups if left open. When looking up a module filetype is set to perl so it is correctly highlighted, if syntax highlighting is turned on.\n\nFunctions:\nThe functions can accept an argument for the topic to lookup. If no argument is supplied they will prompt for the topic.\nPerlFAQ - Lookup a regular expression using perldoc -q.\nPerlHelp - Lookup a topic using perldoc.\nPerlFunc - Lookup a function using perldoc -f.\nPerlMod - Lookup a module using perldoc -m.\nPerlVar - Lookup a Perl builtin variable in the perlvar page.\n\nKey Mappings:\n<Leader>ph - Lookup the selected text in visual mode or the word under the cursor in normal mode using perldoc.\n<Leader>PH - Prompt for a topic to lookup using perldoc.\n<Leader>pf - Lookup the selected text in visual mode or the word under the cursor in normal mode using perldoc -f.\n<Leader>PF - Prompt for a function to lookup using perldoc -f.\n<Leader>pm - Lookup the selected text in visual mode or the word under the cursor in normal mode using perldoc -m.\n<Leader>PM - Prompt for a module to display using perldoc -m.\n<Leader>pq - Lookup the selected text in visual mode or the word under the cursor in normal mode using perldoc -q.\n<Leader>PQ - Prompt for a regular expression to lookup using perldoc -q.\n<Leader>pv - Lookup the selected text in visual mode or the word under the cursor in normal mode in the perlvar page.\n<Leader>PV - Prompt for a Perl builtin variable and look it up in the perlvar page.\n\nThe <Leader> key is normally '\\&#039. Thus to lookup the word under the cursor type '\\ph'.\n\nTip:\nAdding the following to your vimrc file will make POD documentation in Perl modules easier to read:\nlet perl_include_pod=1\n\nIf you find any problems or have any suggestions please feel free to email me at LoranceStinson+perlhelp AT gmail DOT com.\n\nAlso available at http://lorance.freeshell.org/perlhelp/",
+  "install_details": "Unzip the file in your .vim directory.\n\nUpdate your help tags to install the help text. \":helptags ~/.vim/doc/\" should do it",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7304",
+      "filename": "perlhelp.zip",
+      "script_version": "1.5",
+      "date": "2007-06-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12535",
+        "user_name": "lorance",
+        "first_name": "Lorance",
+        "last_name": "Stinson",
+        "email": "LoranceStinson at gmail.com",
+        "homepage": "http://lorance.freeshell.org/"
+      },
+      "release_notes": "*Added lookup of Perl builtin variables via \\pv and PerlVar.\n*Now loads default topics when no topic is provided."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7290",
+      "filename": "perlhelp.zip",
+      "script_version": "1.4",
+      "date": "2007-06-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12535",
+        "user_name": "lorance",
+        "first_name": "Lorance",
+        "last_name": "Stinson",
+        "email": "LoranceStinson at gmail.com",
+        "homepage": "http://lorance.freeshell.org/"
+      },
+      "release_notes": "When lookup up a function strip everything up to, and including, '->'.  This will make methods be looked up instead of the object the method is called from."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7250",
+      "filename": "perlhelp.zip",
+      "script_version": "1.3",
+      "date": "2007-06-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12535",
+        "user_name": "lorance",
+        "first_name": "Lorance",
+        "last_name": "Stinson",
+        "email": "LoranceStinson at gmail.com",
+        "homepage": "http://lorance.freeshell.org/"
+      },
+      "release_notes": "* Enhanced the handling of module and general help topic lookup.\n* Set the file type to man when looking up general perl help topics."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7245",
+      "filename": "perlhelp.zip",
+      "script_version": "1.2",
+      "date": "2007-06-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12535",
+        "user_name": "lorance",
+        "first_name": "Lorance",
+        "last_name": "Stinson",
+        "email": "LoranceStinson at gmail.com",
+        "homepage": "http://lorance.freeshell.org/"
+      },
+      "release_notes": "Removed 'setlocal iskeyword+=:' and used <cWORD> and a substitution as suggested by Erik Falor."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7241",
+      "filename": "perlhelp.zip",
+      "script_version": "1.1",
+      "date": "2007-06-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12535",
+        "user_name": "lorance",
+        "first_name": "Lorance",
+        "last_name": "Stinson",
+        "email": "LoranceStinson at gmail.com",
+        "homepage": "http://lorance.freeshell.org/"
+      },
+      "release_notes": "Added 'setlocal iskeyword+=:' to account for :'s in module names."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7202",
+      "filename": "perlhelp.zip",
+      "script_version": "1.0",
+      "date": "2007-06-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12535",
+        "user_name": "lorance",
+        "first_name": "Lorance",
+        "last_name": "Stinson",
+        "email": "LoranceStinson at gmail.com",
+        "homepage": "http://lorance.freeshell.org/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "1418",
+  "name": "avs.vim",
+  "summary": "syntax for avisynth script files (.avs)",
+  "script_type": "syntax",
+  "description": "This is a syntax file for avisynth http://www.avisynth.org a powerful tool for video post-production. It provides almost unlimited ways of editing and processing videos. AviSynth works as a frameserver, providing instant editing without the need for temporary files.\n\nThis syntax file attempts to add all of the avisynth filters to the syntax list, as well as comments, strings, and nubmers.  This helps make long avs scripts easier to read. \n\nI tried to include all of the third-party filters in this release, but there are A LOT of them!  Shoot me an email with a list of filters that you would like added to the syntax file and I will release a new version with an update. There are always new filters coming out.  ",
+  "install_details": "Windows:  drop into C:\\Program Files\\Vim\\vimfiles\\syntax\nUNIX:         drop into ~/.vim/syntax\nadd this line to your ~/.vimrc:\n   au BufNewFile,BufRead *.avs set syntax=avs",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4863",
+      "filename": "avs.vim",
+      "script_version": "0.7.2",
+      "date": "2005-12-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8228",
+        "user_name": "Randall311",
+        "first_name": "Justin",
+        "last_name": "Randall",
+        "email": "jrrandall at gmail.com",
+        "homepage": "http://justin.sharewith.us"
+      },
+      "release_notes": "Added syntax support for the BlendBob() function"
+    }
+  ]
+}

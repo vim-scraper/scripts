@@ -1,0 +1,170 @@
+{
+  "script_id": "2068",
+  "name": "yate",
+  "summary": "This plugin makes search in tags more convenient.",
+  "script_type": "utility",
+  "description": "This plugin makes search in tags more convenient. It holds query and search result in one buffer for faster jump to desired tag.\n\nUsage:\nCommand :YATE toggles visibility of search buffer.\nParameter g:YATE_window_height sets height of search buffer. Default = 15\nParameter g:YATE_strip_long_paths enables(1)/disables(0) cutting of long file paths. Default = 1.\nParameter g:YATE_enable_real_time_search enables(1)/disables(0) as-you-type search. Default = 1.\nParameter g:YATE_min_symbols_to_search sets search string length threshold after which as-you-type search will start. Default = 4.\nParameter g:YATE_max_matches_to_show sets the maximum number of matches to display. If it's negative than all lines will be shown. Default = -1.\nParameter g:YATE_history_size sets the maximum number of stored search queries in history. Default = 10.\n\nTo get list of matching tags set cursor on string containing expression\nto search (in YATE buffer) then press <Tab> or <Enter>, never mind if \nyou are in normal or insert mode.\n\nTo open tag location set cursor on string with desired tag and\npress <Enter> or double click left mouse button on this string, \nnever mind if you are in normal or insert mode.\n\nTo open tag in new tab press <Ctrl-Enter>, in new horizontal\nsplitted buffer <Shift-Enter>, in new vertical splitted buffer <Ctrl-Shift-Enter>.\n\nTo get queries history press <Ctrl-H> in insert or normal mode in\nsearch string. Autocompletion using history also works by <Ctrl-X><Ctrl-U>.",
+  "install_details": "Just drop this file in your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10698",
+      "filename": "yate.vim",
+      "script_version": "1.2.2",
+      "date": "2009-05-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13412",
+        "user_name": "pevgeny",
+        "first_name": "Evgeny",
+        "last_name": "Podjachev",
+        "email": "evgeny.podjachev at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed cleaning of search string in some cases."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10502",
+      "filename": "yate.vim",
+      "script_version": "1.2.1",
+      "date": "2009-05-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13412",
+        "user_name": "pevgeny",
+        "first_name": "Evgeny",
+        "last_name": "Podjachev",
+        "email": "evgeny.podjachev at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "History menu (<C-H>) also works in normal mode."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10346",
+      "filename": "yate.vim",
+      "script_version": "1.2.0",
+      "date": "2009-04-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13412",
+        "user_name": "pevgeny",
+        "first_name": "Evgeny",
+        "last_name": "Podjachev",
+        "email": "evgeny.podjachev at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added history of search queries."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9815",
+      "filename": "yate.vim",
+      "script_version": "1.1.1",
+      "date": "2009-01-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13412",
+        "user_name": "pevgeny",
+        "first_name": "Evgeny",
+        "last_name": "Podjachev",
+        "email": "evgeny.podjachev at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Slightly optimized search results output.\nFixed resizing of YATE window when vim is resized."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9248",
+      "filename": "yate.vim",
+      "script_version": "1.1.0",
+      "date": "2008-09-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13412",
+        "user_name": "pevgeny",
+        "first_name": "Evgeny",
+        "last_name": "Podjachev",
+        "email": "evgeny.podjachev at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixes in as-you-type search to improve its usability and fix some bugs.\nAdded highlight of line with cursor.\nAdded parameter g:YATE_max_matches_to_show defining the maximum number of matches to display.\nSearch results were protected from editing."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8467",
+      "filename": "yate.vim",
+      "script_version": "1.0.1",
+      "date": "2008-03-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13412",
+        "user_name": "pevgeny",
+        "first_name": "Evgeny",
+        "last_name": "Podjachev",
+        "email": "evgeny.podjachev at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed serious bug which caused the impossibility of inputing characters nowhere but at the and of the search string.\nAdd support of GetLatestVimScripts."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8378",
+      "filename": "yate.vim",
+      "script_version": "1.0.0",
+      "date": "2008-03-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13412",
+        "user_name": "pevgeny",
+        "first_name": "Evgeny",
+        "last_name": "Podjachev",
+        "email": "evgeny.podjachev at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added automatic search after input of any character (so called as-you-type search).\nLong file paths may be cut to fit line width.\nFixed bug preventing jump by tags containing ~ (e.g. c++ destructors).\nFixed bug preventing jump by tags in files with mixed line ends (Win/Unix)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8082",
+      "filename": "yate.vim",
+      "script_version": "0.9.2",
+      "date": "2007-12-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13412",
+        "user_name": "pevgeny",
+        "first_name": "Evgeny",
+        "last_name": "Podjachev",
+        "email": "evgeny.podjachev at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Attempt to search empty string doesn't produce error.\nReplacement of modified buffer works correct.\nClose YATE buffer externally (by :q, ZZ etc.) dosn't break its visibility toggle.\nFixed bug leading to failure to open to tag containing square brackets."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8004",
+      "filename": "yate.vim",
+      "script_version": "0.9.1",
+      "date": "2007-11-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13412",
+        "user_name": "pevgeny",
+        "first_name": "Evgeny",
+        "last_name": "Podjachev",
+        "email": "evgeny.podjachev at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Search string isn't cleared if there are no matched tags.\nBug fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7930",
+      "filename": "yate.vim",
+      "script_version": "0.9",
+      "date": "2007-11-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13412",
+        "user_name": "pevgeny",
+        "first_name": "Evgeny",
+        "last_name": "Podjachev",
+        "email": "evgeny.podjachev at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

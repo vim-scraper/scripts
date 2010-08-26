@@ -1,0 +1,74 @@
+{
+  "script_id": "1435",
+  "name": "HiMtchBrkt",
+  "summary": "Highlights matching bracket in normal mode",
+  "script_type": "utility",
+  "description": "The HiMtchBrkt plugin attempts to highlight the matching bracket as you move your cursor in normal mode.  Bracket include\n\n    (){}[]  (actually the |'matchpairs'| option is used)\n\nand the matching one is highlighted when the cursor is moved on top of the bracket.  It does so by making a fair number of maps that intercept the requested motion, perform the requested motion, then also call the HiMatchBracket() function which does the work to highlight any matching bracket.  Basically it does a \"%\" to find the matching bracket (if any) and then constructs and executes an appropriate \":match\" command.\n\nAs of version 10, such overloaded motions include:\n\n    ,  E   F)  k      <down>         \n    ;  f(  F[  l      <end>          \n    $  f)  F]  w      <home>         \n    %  f[  F{  <c-b>  <left>         \n    0  f]  F}  <c-d>  <leftmouse>    \n    b  f{  h   <c-f>  <right>        \n    B  f}  j   <c-u>  <up>           \n    e  F(              \n\nVersion 12 supports overloading of 0, too (if you have vim6.2 and patch 405 or later).\n\nBecause vim is rich with commands that can move the cursor, the script also uses the CursorHold event (see |cursorhold| and |'updatetime'|) to highlight matching brackets after the cursor is left still for awhile.\n\nTo start HiMtchBrkt mode you have several choices:\n\n    (put in your .vimrc)  let g:HiMtchBrktOn= 1    (vim will always start up in HiMtchBrkt mode)\n    command: :HMBstart\n    map:     \\[i\n\nTo stop HiMtchBrkt mode:\n\n    command: :HMBstop\n    map:     \\[s\n\nWhen you start HiMtchBrkt, any user maps associated with HiMtchBrkt maps are saved; when you stop HiMtchBrkt, those maps are restored.\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#HIMTCHBRKT)\n",
+  "install_details": "* place into your .vim/plugin or vimfiles\\plugin directory\n* gunzip HiMtchBrkt.vim.gz\n\nWill automatically install help when you next bring up vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5338",
+      "filename": "HiMtchBrkt.tar.gz",
+      "script_version": "22",
+      "date": "2006-02-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "HiMtchBrkt is faster (under vim v7) with the ability to restrict searches to only that which is currently visible.  Several bugfixes, too.  (works with both vim v6.0 and v7.0) \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5188",
+      "filename": "HiMtchBrkt.tar.gz",
+      "script_version": "21",
+      "date": "2006-02-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "If you have vim v7.0 (with snapshot#195 or later), HiMtchBrkt will now take advantage of the new CursorMoved and CursorMovedI events.  More reliable, no need to overload motions with maps, and quicker.\nHiMtchBrkt's new :HMBsurround command triggers display of containing brackets\nHiMtchBrkt now comes with menus for gvim which show on/off choices for HMBsurround\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5134",
+      "filename": "HiMtchBrkt.tar.gz",
+      "script_version": "20",
+      "date": "2006-02-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* :HMBstart or setting g:HiMtchBrktOn=1 in your .vimrc will have HiMtchBrkt start as enabled.\n* Messages no longer cleared with vim7.0aa snapshot #185 or later.\n* :HMBsurround will cause surrounding brackets to be highlighted\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4990",
+      "filename": "HiMtchBrkt.tar.gz",
+      "script_version": "19",
+      "date": "2006-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "HiMtchBrkt now appends its maps to any pre-existing maps.  The the help on \"Installing HiMtchBrkt\" tells you how to get it to start up automatically, if you wish; that way, HiMtchBrkt will work well with matchit and other plugins.  CusorHold timeout is now 2 seconds, implementing a tradeoff between seeing messages and getting CursorHold to call HiMtchBracket().  CursorHold on an empty buffer no longer calls HiMtchBracket().  Finally, various unwanted motions have been worked around (tnx to Mun Johl and Gary Johnson for testing & pointing things out).\n"
+    }
+  ]
+}

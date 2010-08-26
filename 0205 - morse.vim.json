@@ -1,0 +1,26 @@
+{
+  "script_id": "205",
+  "name": "morse.vim",
+  "summary": "Script for writing morse code in vim",
+  "script_type": "utility",
+  "description": "When we relax on trips in the country, we probably value script for communication in morse code (notebook and vim are necessary, of course :) What is in the vim's window, we can blink by flash-lamp :)\n\nAfter sourcing morse.vim, type <F5> to start 'morse' in normal or insert mode and type <F5> again to stop it. (This is default map, remaping this keystroke is on lines 33-34) \n\nFeature 1:\nIs possible switch on some 'special' characters like ,;/?.: 'to morse'. If you want this feature, please, uncomment  line \"let g:var_morse_ext = 1\"\n\nFeature 2:\nMaybe is good (?) to treble spaces between words for better reading;  If you want this, please, uncomment line \"let g:var_morse_3spc = 1\"\n\nEnjoy",
+  "install_details": "Just put this file into your $VIMRUNTIME/plugin/ directory, or source it directly by command \":so ./path/to/file/morse.vim\"",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=560",
+      "filename": "morse.vim",
+      "script_version": "1.0",
+      "date": "2002-02-05",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "485",
+        "user_name": "brz",
+        "first_name": "jiri",
+        "last_name": "brezina",
+        "email": "brz at centrum.cz",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

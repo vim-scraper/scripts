@@ -1,0 +1,106 @@
+{
+  "script_id": "363",
+  "name": "cream-showinvisibles",
+  "summary": "Toggle view of invisible tabs, returns, trailing spaces",
+  "script_type": "utility",
+  "description": "\nToggle view of invisible characters such as tabs, trailing spaces and hard returns. The script includes intuitive presets for these characters, a global environmental variable (g:LIST) that is retained and initialized across sessions if you use a viminfo, and a familiar (to some of us) keyboard shortcut mapping to F4.\n\nThis configuration includes characters as nice looking as your specific setup will allow, determined by hardware, operating system and Vim version. (Vim version 6.1.469 supports multi-byte characters, used with UTF-8 encoding.)\n\nThis is one of the many custom utilities and functions for gVim from the Cream project (http://cream.sourceforge.net), a configuration of Vim for those of us familiar with Apple and Windows software. \n\n",
+  "install_details": "\nJust drop this file into your plugins directory and start Vim. Then use F4 to toggle invisibles!\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2847",
+      "filename": "cream-showinvisibles.vim",
+      "script_version": "3.01",
+      "date": "2004-03-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "Fixed typos in trail multi-byte test and extends definitions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2845",
+      "filename": "cream-showinvisibles.vim",
+      "script_version": "3.0",
+      "date": "2004-03-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "Characters are now selected by their display printability, not encoding. Better looking extended range chars are tried first, the 128 7-bit ASCII set last."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2593",
+      "filename": "cream-showinvisibles.vim",
+      "script_version": "2.1",
+      "date": "2003-12-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "o Enabled utf-8 chars for Vim v6.2+.    \no Added mappings, autocmds for non-Cream.    \no Renamed functions.    \n(See ChangeLog within file.)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1925",
+      "filename": "cream-showinvisibles.vim",
+      "script_version": "2.0",
+      "date": "2003-04-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "New multi-byte sets now available, contingent upon Vim version 6.1.469 and above. Multi-byte characters have also been abstracted to decimal values so the current editing session doesn't affect them.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1077",
+      "filename": "cream-showinvisibles.vim",
+      "script_version": "1.1",
+      "date": "2002-08-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "New normal mode mapping and slightly saner visual and insert mode mappings.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1075",
+      "filename": "cream-showinvisibles.vim",
+      "script_version": "1.0",
+      "date": "2002-08-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

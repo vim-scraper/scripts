@@ -1,0 +1,42 @@
+{
+  "script_id": "1380",
+  "name": "cHeaderFinder",
+  "summary": "Finds header required by C functions.",
+  "script_type": "utility",
+  "description": "This script can find the header or list of headers requires by a particular C function. It uses man pages, chapters 2 and 3. If not found there, it uses the tags file in combination with the a.vim plugin.\nAll that without spoiling the jumplist!!!\n\nUnder suggested settings:\n\\f: gets all the headers required by the function under the cursor and puts them in the default register, so you can go to the top of the C source and 'p' them.\n\\a: goes to the header of the function under the cursor. It's usually where it *should* be documented.\n",
+  "install_details": "This script requires a.vim (http://www.vim.org/scripts/script.php?script_id=31).\n\nJust put the cHeaderFinder.vim in the plugin directory. Help is autoinstalled at the first run.\n\nIt does not bind any key by default. The recommended binds should be pasted in ~/.vimrc:\nnnoremap <leader>f :call CHeaderFinder_HeadersFromFuncUnderCursor()<CR>\nnnoremap <leader>a :call CHeaderFinder_GotoHeaderFromFuncUnderCursor()<CR>\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7242",
+      "filename": "cHeaderUtils.vim",
+      "script_version": "1.3",
+      "date": "2007-06-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "New function that uses tags to perform '[i' much faster.\nnnoremap <leader>[i :call CHeaderUtils_PrototypeFromFuncUnderCursor()<CR>\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4675",
+      "filename": "cHeaderFinder.vim",
+      "script_version": "1.2",
+      "date": "2005-10-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

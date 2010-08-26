@@ -1,0 +1,26 @@
+{
+  "script_id": "345",
+  "name": "lcscheck.vim",
+  "summary": "check 'listchars' for valid eol byte for utf-8. (Not needed for Vim 6.2)",
+  "script_type": "utility",
+  "description": "Under utf-8, characters 128 and over become multi-byte. Therefore, under  Vim 6.1 or earlier, they should not be used for the option values in 'listchars'. This script takes care of the \"eol:\" sub-option, the only one which gave me problems. If you use characters >= 128 for other sub-options, similar scripts can easily be written (based on this one) to take care of them.\n\nThis script has intentionally been abundantly commented to make it understandable.\n\nSee vimtip#246 for a related tip.",
+  "install_details": "Paste or source this script text immediately before switching over to unicode, inside the statement\n\nif has(\"multi_byte\")\n\nif you use it, but otherwise before setting 'tenc' 'enc' 'fencs' etc. to the values used for Unicode editing.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1029",
+      "filename": "lcscheck.vim",
+      "script_version": "1.0",
+      "date": "2002-07-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "579",
+        "user_name": "tonymec",
+        "first_name": "Antoine",
+        "last_name": "Mechelynck",
+        "email": "antoine.mechelynck at skynet.be",
+        "homepage": "http://users.skynet.be/antoine.mechelynck/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

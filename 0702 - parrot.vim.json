@@ -1,0 +1,42 @@
+{
+  "script_id": "702",
+  "name": "parrot.vim",
+  "summary": "Syntax file for Parrot Assembly code",
+  "script_type": "syntax",
+  "description": "Simple syntax-matching for Parrot v 0.10  Assembly code.",
+  "install_details": "Copy to your ~/.vim/syntax or wherever you keep local syntax description files.\n\nYou might want to add the following to your .vimrc:\n\n  autocmd BufEnter,BufRead,BufNewFile *.pasm setfiletype parrot\n\nThat's it.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2148",
+      "filename": "parrot.vim",
+      "script_version": "0.2",
+      "date": "2003-07-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1255",
+        "user_name": "kharris",
+        "first_name": "Kevin",
+        "last_name": "Harris",
+        "email": "kharris at satlug.org",
+        "homepage": "http://www.satlug.org/~kharris"
+      },
+      "release_notes": "Fixed ParrotString so that it works as expected. Removed some comments."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2142",
+      "filename": "parrot.vim",
+      "script_version": "0.10",
+      "date": "2003-07-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1255",
+        "user_name": "kharris",
+        "first_name": "Kevin",
+        "last_name": "Harris",
+        "email": "kharris at satlug.org",
+        "homepage": "http://www.satlug.org/~kharris"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

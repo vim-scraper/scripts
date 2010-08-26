@@ -1,0 +1,42 @@
+{
+  "script_id": "1605",
+  "name": "gsl.vim",
+  "summary": "Syntax file for gsl templates",
+  "script_type": "syntax",
+  "description": "gsl.vim provides syntax highlighting for GSL templates; more information about GSL can be found on iMatix's site, http://www.imatix.com/products .",
+  "install_details": "Copy the gsl.vim file into your ~/.vim/syntax/ directory, and add the following to your ~/.vimrc file (usually inside the \"augroup filedetect\" block):\n\nau! BufRead,BufNewFile *.gsl  setfiletype gsl\n\nFor details about adding syntax highlighting support for new file types, read the help at  |:h mysyntaxfile<CR>| and |:h new-filetype<CR>| .\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6241",
+      "filename": "gsl.vim",
+      "script_version": "0.2",
+      "date": "2006-09-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9871",
+        "user_name": "roadrunner",
+        "first_name": "Ronald",
+        "last_name": "Tschalär",
+        "email": "ronald at innovation.ch",
+        "homepage": ""
+      },
+      "release_notes": "Added support for script mode; fixed function highlighting; added other .for keywords."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5945",
+      "filename": "gsl.vim",
+      "script_version": "0.1",
+      "date": "2006-07-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9871",
+        "user_name": "roadrunner",
+        "first_name": "Ronald",
+        "last_name": "Tschalär",
+        "email": "ronald at innovation.ch",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

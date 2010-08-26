@@ -1,0 +1,106 @@
+{
+  "script_id": "1440",
+  "name": "winmanager",
+  "summary": "A windows style IDE for Vim",
+  "script_type": "utility",
+  "description": "This plugin is a minor bug-fix version of vimscript #95.\n\nI sent the patches to the author of winmanager last September but I've received no reply till now.  I assume that he doesn't maintain this script any more.  So I decide to upload my patched version as a new entry.\n\nOne new feature of this plugin is called \"start\".  When you are browsing files with winfileexplorer, just place your cursor onto a file and press \"S\" (shift-s), Vim will open the file with the application associated with the file type. So you are able to launch a media player to enjoy the music without opening an extra konqueror or nautilus.\n\nAnother new feature of this plugin is \"toggle show hidden files/directories\".  By default, this plugin doesn't show files/directories prefixed with dot \".\".  You can toggle show/hide hidden files/directories by pressing \"x\" in the file explorer window.  You can override this default setting by putting \"let g:explShowHiddenFiles = 1\" in your \"~/.vimrc\" to make it show hidden files/directories by default.",
+  "install_details": "1. This plugin is compressed in VimBall format. So you may need to install the latest version of vimscript #1502 first.\n\n2. Then the just download this Vimball, opening it in Vim and typing this command followed by an enter in your Vim:\n\n:so %\n\n3. For Windows users, \"start\" is already installed in your system so just skip this step; for Linux users, create a symbolic link named \"start\" in one of your $PATH directory, pointing to \"~/.vim/plugin/start.kde\" or \"~/.vim/plugin/start.gnome\", depending to your desktop environment (other desktop environments are not supported yet); for Mac users, \"start\" feature is unavailable yet.\n\n4. Install vimscript #42. If you don't want to use that plugin, just add this line in your .vimrc to disable the integration of bufexplorer.vim:\n\nlet g:winManagerWindowLayout = \"FileExplorer\"\n\n5. Enjoy and happy Vimming!",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11032",
+      "filename": "winmanager.vba.bz2",
+      "script_version": "2.35",
+      "date": "2009-07-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8648",
+        "user_name": "edyfox",
+        "first_name": "Edward",
+        "last_name": "Fox",
+        "email": "edyfox at gmail.com",
+        "homepage": "http://edyfox.codecarver.org"
+      },
+      "release_notes": "Implemented the \"toggle show hidden files/directories\" feature."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7151",
+      "filename": "winmanager.vba.gz",
+      "script_version": "2.34",
+      "date": "2007-05-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8648",
+        "user_name": "edyfox",
+        "first_name": "Edward",
+        "last_name": "Fox",
+        "email": "edyfox at gmail.com",
+        "homepage": "http://edyfox.codecarver.org"
+      },
+      "release_notes": "1. If \"g:netrw_browsex_viewer\" is set, when press \"S\" in the file explorer the plugin will open the file with the specified browser instead of \"start\" command. So it's not possible to symbolically link \"start.kde\" or \"start.gnome\" into one of your PATH directories.\n\n2. Try to pack the plugin into a vba ball. So the user can install the plugin by simply open it in Vim and run \":so %\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6022",
+      "filename": "winmanager.tar.bz2",
+      "script_version": "2.33-p",
+      "date": "2006-08-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8648",
+        "user_name": "edyfox",
+        "first_name": "Edward",
+        "last_name": "Fox",
+        "email": "edyfox at gmail.com",
+        "homepage": "http://edyfox.codecarver.org"
+      },
+      "release_notes": "Minor bug fix: when 'foldmethod' is set as 'indent', refreshing wintagexplorer will throws out many error messages."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5329",
+      "filename": "winmanager.tar.bz2",
+      "script_version": "2.33",
+      "date": "2006-02-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8648",
+        "user_name": "edyfox",
+        "first_name": "Edward",
+        "last_name": "Fox",
+        "email": "edyfox at gmail.com",
+        "homepage": "http://edyfox.codecarver.org"
+      },
+      "release_notes": "Fixed the bug that the plugin can't open the files which contain spaces in their filenames."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4954",
+      "filename": "winmanager.tar.bz2",
+      "script_version": "2.32",
+      "date": "2006-01-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8648",
+        "user_name": "edyfox",
+        "first_name": "Edward",
+        "last_name": "Fox",
+        "email": "edyfox at gmail.com",
+        "homepage": "http://edyfox.codecarver.org"
+      },
+      "release_notes": "Merge the changes from Hari Krishna Dara and re-release a new pack."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4945",
+      "filename": "winmanager.tar.bz2",
+      "script_version": "2.31",
+      "date": "2006-01-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8648",
+        "user_name": "edyfox",
+        "first_name": "Edward",
+        "last_name": "Fox",
+        "email": "edyfox at gmail.com",
+        "homepage": "http://edyfox.codecarver.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

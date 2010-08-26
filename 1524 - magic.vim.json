@@ -1,0 +1,26 @@
+{
+  "script_id": "1524",
+  "name": "magic.vim",
+  "summary": "Syntax highlighting for file's magic",
+  "script_type": "syntax",
+  "description": "This script provides syntax highlighting for magic definitions of the file utility.  The highlighting is strict, everything non-matching is marked as an error (please report problems).",
+  "install_details": "The recommended file type autocommand is\n\nau BufRead,BufNewFile magic,**/Magdir/* setf magic",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5590",
+      "filename": "magic.vim",
+      "script_version": "20060423",
+      "date": "2006-04-23",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

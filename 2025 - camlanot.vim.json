@@ -1,0 +1,26 @@
+{
+  "script_id": "2025",
+  "name": "camlanot.vim",
+  "summary": "Ocaml support for type annotation files, included support for ocamlbuild",
+  "script_type": "ftplugin",
+  "description": "(22/09/07 This should be soon added to the official ocaml ftplugin)\n\nOcaml support for annot file is already implemented in the official Ocaml ftplugin and in ocaml.annot.pl (script_id=1197).\n\nBut this script adds the following:\n\n   - no need for python support (neither perl or anything else : only vim code inside)\n     + plus: more portable\n     + minus: no more lazy parsing, it looks very fast however\n     \n   - ocamlbuild support, ie.\n     + the plugin finds the _build directory and looks for the \n       corresponding file inside;\n     + if the user decides to change the name of the _build directory thanks\n       to the '-build-dir' option of ocamlbuild, the plugin will manage to find it out;\n     + if ocamlbuild is not used, the usual behaviour holds; ie. the .annot\n       file should be in the same directory as the source file;\n     + for vim plugin programmers:\n       the variable 'b:_build_dir' contains the inferred path to the build \n       directory, even if this one is not named '_build'.\n\n Bonus:\n   - latin1 accents are handled\n   - lists are handled, even on multiple lines, you don't need the visual mode\n     (the cursor must be on the first bracket)\n   - parenthesized expressions, arrays, and structures (ie. '(...)', '[|...|]',\n     and '{...}') are handled the same way\n\nUsage:\n   - press <LocalLeader>t to display the type of expression under cursor\n   - don't forget to compile with -dtypes option (or -cflags -dtypes if you're using ocamlbuild)\n\n\n",
+  "install_details": "We'll assume your personal vim directory is \"~/.vim/\".\n\n- Copy the plugin in \"~/.vim/after/ftplugin/\"\n- If it does not already exist, add a file \"~/.vim/after/ftplugin/ocaml.vim\".\n- At the end of this file, add the following line :\nsource camlanot.vim\n- It's done.\n\nVersion note: should work with Vim 6.0, but not tested.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7702",
+      "filename": "camlanot.vim",
+      "script_version": "0.9",
+      "date": "2007-09-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13128",
+        "user_name": "Vincent Aravantinos",
+        "first_name": "Vincent",
+        "last_name": "Aravantinos",
+        "email": "vincent.aravantinos at gmail.com",
+        "homepage": "http://membres-lig.imag.fr/aravantinos"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

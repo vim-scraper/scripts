@@ -1,0 +1,90 @@
+{
+  "script_id": "2324",
+  "name": "TextFormat",
+  "summary": "Quickly align and format paragraphs and text areas: left, right, justify, center",
+  "script_type": "utility",
+  "description": "This plugin provides commands and key mappings to quickly align and format text. Text can be easily reformatted and aligned to either left or right margin or justified to both margins or centered. The text formatting commands provided by this plugin are a bit more automatic and more intelligent than those integrated to Vim. Together they make more powerful command set for formatting text.\n\nManual is included, just type\n\n    :help textformat.txt\n\nDefault keymappings:\n\n    \\al     Left-align and reformat\n    \\ar     Right-align\n    \\aj     Left-right justify and reformat\n    \\ac     Center lines\n\nThe prefix key is actually <Leader> key. It's backlash by default but it is configurable.\n",
+  "install_details": "The plugin uses Vimball plugin archive format (vimscript#1502). To install the package, load the file to Vim and run command\n\n    :source %\n\nTo remove the plugin, type\n\n    :RmVimball textformat",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9247",
+      "filename": "textformat.vba",
+      "script_version": "2.1",
+      "date": "2008-09-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14890",
+        "user_name": "DtW",
+        "first_name": "Teemu",
+        "last_name": "Likonen",
+        "email": "tlikonen at iki.fi",
+        "homepage": ""
+      },
+      "release_notes": "Minor internal cleanup"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9100",
+      "filename": "textformat.vba",
+      "script_version": "2.0",
+      "date": "2008-08-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14890",
+        "user_name": "DtW",
+        "first_name": "Teemu",
+        "last_name": "Likonen",
+        "email": "tlikonen at iki.fi",
+        "homepage": ""
+      },
+      "release_notes": "* \\al and \\aj now reformat text also in visual mode.\n* \\al and \\aj honor \"w\" in 'formatoptions' and detect paragraph boundaries accordingly.\n* :AlignLeft, :AlignJustify, \\al and \\aj recognize several paragraphs within the range and detect indent for each paragraph separately.\n* Add logic to load the plugin script only once.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9069",
+      "filename": "textformat.vba",
+      "script_version": "1.1",
+      "date": "2008-08-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14890",
+        "user_name": "DtW",
+        "first_name": "Teemu",
+        "last_name": "Likonen",
+        "email": "tlikonen at iki.fi",
+        "homepage": ""
+      },
+      "release_notes": "-- Keep cursor position more accurately when formatting a paragraph with \\al and \\aj.\n-- When 'joinspaces' is set insert two spaces after .?! punctuation with left-right justify. This is now similar to other commands.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9068",
+      "filename": "textformat.vba",
+      "script_version": "1.0",
+      "date": "2008-08-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14890",
+        "user_name": "DtW",
+        "first_name": "Teemu",
+        "last_name": "Likonen",
+        "email": "tlikonen at iki.fi",
+        "homepage": ""
+      },
+      "release_notes": "-- All the commands now follow user's 'expandtab' setting and print leading whitespaces accordingly. Now this works just like :left, :right and :center commands. -- The left-aligned last line in justified paragraph did not honor 'joinspaces'. Fixed.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9063",
+      "filename": "textformat.vba",
+      "script_version": "0.9",
+      "date": "2008-08-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14890",
+        "user_name": "DtW",
+        "first_name": "Teemu",
+        "last_name": "Likonen",
+        "email": "tlikonen at iki.fi",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

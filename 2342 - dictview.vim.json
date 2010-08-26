@@ -1,0 +1,26 @@
+{
+  "script_id": "2342",
+  "name": "dictview.vim",
+  "summary": "print the contents of a variable",
+  "script_type": "utility",
+  "description": "Print the contents of a variable (or any expression), useful for lists and dictionaries.\n\nAdds the command\n    :DictView {expr}\n\nExamples:\n:let mylist = [\"foo\",\"bar\"]\n:DictView mylist\n* [\n    'foo'\n    'bar'\n* ]\n:DictView {1: mylist}\n* {\n*   1:\n    [\n      'foo'\n      'bar'\n    ]\n* }\n\nCustom variables:\ng:dictview_shiftwidth (default 2)\ng:dictview_maxlevel (default 10)\n\nGlobal functions:\nfunc! DictView_PrintList(value, ...)\nfunc! DictView_Print(value)\n\n2009 Nov 21 also check out: PrettyPrint  vimscript #2860, it is much better",
+  "install_details": "copy to plugin folder (e.g. ~\\vimfiles\\plugin)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9124",
+      "filename": "dictview.vim",
+      "script_version": "0.1",
+      "date": "2008-08-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

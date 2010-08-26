@@ -1,0 +1,58 @@
+{
+  "script_id": "1220",
+  "name": "OpenGLSL",
+  "summary": "OpenGL Shading Language syntax script",
+  "script_type": "syntax",
+  "description": "A syntax script for builtin functions, uniform variables, constants and types for the OpenGL Shading Language V1.1 (http://www.opengl.org/documentation/oglsl.html)\n",
+  "install_details": "drop gls.vim into your ~/.vim/syntax/ directory and add something like:\n\n     autocmd BufNewFile,BufRead *.vp,*.fp,*.vert,*.frag,*.shd,*.gls set filetype=gls cindent comments=sr:/*,mbl:*,ex:*/,://\n\nto your .vimrc\n\nAlternatively install into the $VIMRUNTIME/syntax/ directory and add the above rule to $VIMRUNTIME/filetype.vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3921",
+      "filename": "gls.vim",
+      "script_version": "0.12",
+      "date": "2005-02-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7019",
+        "user_name": "ajbutcher",
+        "first_name": "Adam",
+        "last_name": "Butcher",
+        "email": "adam at jessamine.co.uk",
+        "homepage": ""
+      },
+      "release_notes": "Removed arrayof operator bug and suggested more reasonable file extensions.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3919",
+      "filename": "gls.vim",
+      "script_version": "0.11",
+      "date": "2005-02-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7019",
+        "user_name": "ajbutcher",
+        "first_name": "Adam",
+        "last_name": "Butcher",
+        "email": "adam at jessamine.co.uk",
+        "homepage": ""
+      },
+      "release_notes": "Added components rgba and stpq."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3918",
+      "filename": "gls.vim",
+      "script_version": "0.1",
+      "date": "2005-02-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7019",
+        "user_name": "ajbutcher",
+        "first_name": "Adam",
+        "last_name": "Butcher",
+        "email": "adam at jessamine.co.uk",
+        "homepage": ""
+      },
+      "release_notes": "Fixed typo gl_vertex."
+    }
+  ]
+}

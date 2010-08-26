@@ -1,0 +1,26 @@
+{
+  "script_id": "585",
+  "name": "todolist.vim",
+  "summary": "Creates list of TODO, FIXME, BUG comments",
+  "script_type": "utility",
+  "description": "This is my first vim script and there are plenty of bugs.  If you can help out, please do.\n\nThis script is a plugin to be used with the winmanager plugin (see vimscript #95).  The script searches all your buffers for TODO, FIXME, NOTE, BUG, XXX comments found in your code and presents them in a list.  You can sort the list by type, file, line number, date, or by the text of the todo.  You can also customize the columns in the todo list.\n\nCommands:\n=========\n\n<cr> : open todo under cursor\np : [p]review todo under cursor\nC-w z : close preview window\nx : zoom todo list window\ns : cycle [s]ort field\nc : toggle preview on [C]ursorHold\ny : toggle s[y]ntax\nr : [r]everse sort\n? : toggle help\n",
+  "install_details": "0) Install the winmanager plugin\n1) copy the todolist.vim script to your .vim/plugin directory\n2) Add the string \"TodoList\" to your g:winManagerWindowLayout variable, eg:\n    let g:winManagerWindowLayout = 'TodoList,FileExplorer|BufExplorer'\n3) (Re)start vim and run :WMToggle",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1816",
+      "filename": "todolist.vim",
+      "script_version": "0.0alpha",
+      "date": "2003-03-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1817",
+        "user_name": "kkrouse",
+        "first_name": "kevin",
+        "last_name": "krouse",
+        "email": "kkrouse at bea.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

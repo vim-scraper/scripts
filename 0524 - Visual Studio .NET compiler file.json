@@ -1,0 +1,74 @@
+{
+  "script_id": "524",
+  "name": "Visual Studio .NET compiler file",
+  "summary": "Compiler file for visual studio .NET devenv",
+  "script_type": "utility",
+  "description": "I use big Visual Studio .NET projects at work.  With .NET microsoft no longer supports exported project make files so nmake is dead for my purpoeses and I have to call devenv ( like so set makeprg=devenv\\ project.vcproj\\ -build\\ debug). \n\nThe errorformat of devenv is a bit different from the old vc6 build tool, so here's a script with the error format in.\n\nThis could actually get more elaborate, a buildproject script that took a project name as a parameter and build the apropiate  set makeprg= command and executes it could be done, but I'm in a hurry.",
+  "install_details": "Copy it to vim's compilers directory. Make sure you invoke devenv.com and not devenv.exe -- the latter seems to crash when invoked from the command line.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1618",
+      "filename": "msvsnet.vim",
+      "script_version": "1.2",
+      "date": "2003-01-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1355",
+        "user_name": "johnfredcee",
+        "first_name": "John",
+        "last_name": "Connors",
+        "email": "jconnors at yagc.ndo.co.uk",
+        "homepage": "http://badbyteblues.blogspot.com"
+      },
+      "release_notes": "Added %t to pick up error/warning type."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1616",
+      "filename": "msvsnet.vim",
+      "script_version": "1.1",
+      "date": "2003-01-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1355",
+        "user_name": "johnfredcee",
+        "first_name": "John",
+        "last_name": "Connors",
+        "email": "jconnors at yagc.ndo.co.uk",
+        "homepage": "http://badbyteblues.blogspot.com"
+      },
+      "release_notes": "Simplified, changed '*; '#' to fit errorformat wildcard rules"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1612",
+      "filename": "msvsnet.vim",
+      "script_version": "1.01",
+      "date": "2003-01-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1355",
+        "user_name": "johnfredcee",
+        "first_name": "John",
+        "last_name": "Connors",
+        "email": "jconnors at yagc.ndo.co.uk",
+        "homepage": "http://badbyteblues.blogspot.com"
+      },
+      "release_notes": "Minor typo"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1611",
+      "filename": "msvsnet.vim",
+      "script_version": "1.0",
+      "date": "2003-01-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1355",
+        "user_name": "johnfredcee",
+        "first_name": "John",
+        "last_name": "Connors",
+        "email": "jconnors at yagc.ndo.co.uk",
+        "homepage": "http://badbyteblues.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

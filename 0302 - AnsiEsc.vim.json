@@ -1,0 +1,90 @@
+{
+  "script_id": "302",
+  "name": "AnsiEsc.vim",
+  "summary": "ansi escape sequences concealed, but highlighted as specified (conceal)",
+  "script_type": "syntax",
+  "description": "Files with ANSI escape sequences look good when dumped onto a terminal that accepts them, but have been a distracting clutter when edited via vim.  The AnsiEsc.vim file, when sourced, will conceal Ansi escape sequences but will cause subsequent text to be colored as the escape sequence specifies when used with Vince Negri's conceal patch.  AnsiEsc.vim v3 or later uses the conceal patch to accomplish this.\n\nWithout that conceal patch, the best that can be done is to suppress Ansi escape sequences with \"Ignore\" highlighting.  AnsiEsc.vim v2 does that.\n\n------------------------------\nVIM Developer's Corner:\n------------------------------\n\n   \nVince Negri's \"conceal\" patch to vim6.3 and vim7.0 allows one to suppress strings within a line; ie. in-line folding! This feature is ideal for Ansi escape sequence handling.  Starting with AnsiEsc's version 3 the <AnsiEsc.vim> script makes use of that new capability to display Ansi-sequence containing files.  The Ansi escape sequences themselves are concealed (except for the line where the cursor is), but they have their desired colorizing effect.  Note that you must have Vim7.0 with the +conceal option for the latest <AnsiEsc.vim> (v8) to work.  Apply Vince Negri's patch to the Vim 7.0 source code and compile Vim for \"huge\" features.  Once you've done that, simply source the <AnsiEsc.vim> file in when you want to see Ansi-escape sequenced text in Vim.\n\n    ----------------------------------\n    Typical Compiling Directions:\n    ----------------------------------\nTo use the AnsiEsc v2, just source it in when you wish to; your vim version needs +syntax, which is fairly common.\n\nTo use the conceal-mode AnsiEsc (those with versions >= 3), you'll need to have a Vim that has been patched with Vince Negri's concealownsyntax patch; the version will show both +syntax and +conceal.\n\nTypical compiling directions:\n\n        * cd ..wherever../vim70/\n        * browse http://sites.google.com/site/vincenegri/ for the conceal/ownsyntax patch\n        * patch -p0 < conceal-ownsyntax.diff\n        * make distclean\n        * configure --with-features=huge\n        * make\n        * make install\n\n\n(also see: vimtip#1308)\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#ANSIESC)\n",
+  "install_details": "Just source the file in whenever you wish to observe an approximation of what the ansi-escape sequenced file will look like.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13236",
+      "filename": "AnsiEsc.vba.gz",
+      "script_version": "11",
+      "date": "2010-06-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "supports several escape sequences such as <esc>[m , <esc>[2J, and <esc>[H."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12795",
+      "filename": "AnsiEsc.vba.gz",
+      "script_version": "10",
+      "date": "2010-04-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "AnsiEsc has 1 and 2 Ansi escape code sequences supported by fixed syntax highlighting rules; it now also builds custom syntax highlighting to support 3 and 4 Ansi Escape code sequences based on your current document.  So  \\e[48;5;16m will now cause correct highlighting to follow, for example.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10244",
+      "filename": "AnsiEsc.vba.gz",
+      "script_version": "9",
+      "date": "2009-03-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* AnsiEsc comes in plugin + autoload format: faster vim startup, and AnsiEsc only when you want it.\n* Now provides a :AnsiEsc command totoggle ANSI escape sequence processing.\n\nWorks with Vince Negri's conceal patch (if your vim supports VN's conceal, then the ansi-escape sequences are suppressed except on the line you're editing)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6072",
+      "filename": "AnsiEsc.vba.gz",
+      "script_version": "8",
+      "date": "2006-08-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Uses vim7.0's undercurl as a substitute for blinking (which Vim doesn't support), contains a small helpfile, and contains directions for getting Vince Negri's conceal patch for vim 7.0."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3653",
+      "filename": "AnsiEsc_v2.vim",
+      "script_version": "2",
+      "date": "2004-11-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "I mistakenly removed AnsiEsc v2 (which is the version which doesn't use Vince Negri's conceal).  This update restores it!\n"
+    }
+  ]
+}

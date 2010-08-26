@@ -1,0 +1,42 @@
+{
+  "script_id": "2992",
+  "name": "SaveSigns",
+  "summary": "Save and Restore your Signs",
+  "script_type": "utility",
+  "description": "This plugin was written to allow you to save your |signs| easily. Signs can be\nused to specific highlight certains rows in a buffer. This might be useful\nwhen using a debugger or display a |mark|. Note however, that this works only\nwhen the signs feature has been compiled into your vim.\n\nIf you have defined signs in your file, you might want to save these signs to\nbe able to reload these signs later on (e.g. with a |Session|). Therefore this\nplugin defines the |:SaveSigns| command, which will store all defined signs in\na file in such a way that reloading that file will restore all defined signs.\n\nWhen saving Signs, the plugin creates a Vim Script, that can be read in using\n|:source| It will save Sign Definitions (see |:sign-define|), Sign placements\n(see |:sign-place|) and the Sign hilighting (see |hl-SignColumn|).\n\nSince signs are usually associated with a buffer or a file, sourcing this file\nusing |:source| will only restore those signs whose buffers are loaded in that\nvim session. Note: All Signs that were defined before reloading this file will\nbe lost.\n\n2.1 :SaveSigns\t\t\t\t\t\t\t*:SaveSigns*\n\n:SaveSigns\t\tStore all currently defined signs in a temporary file.\n\t\t\tThis file will be opened in a new split window and you\n\t\t\tcan edit it further. Note: This file won't be saved.\n\t\t\tYou need to explicitly save it.\n\n:SaveSigns[!] {name}\tStore all currently defined signs in a file called\n\t\t\t{name}. If this file exists, it won't be used a new\n\t\t\ttemporary file will be created. Use ! to force storing\n\t\t\tthe info in that file. This will however erase the\n\t\t\tfile {name}. So use with caution.\n\nKeywords: Signs, Save, Restore",
+  "install_details": "Load file in your vim and simply source it from within vim.\n:so %\n\nThis should install the plugin. For the documentation take a look at :h savesigns.txt\n\nSee :h vimball-intro for details on installing vimball plugins.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12497",
+      "filename": "SaveSigns.vba",
+      "script_version": "0.3",
+      "date": "2010-02-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Enabled GLVS (see :h GLVS)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12496",
+      "filename": "SaveSigns.vba",
+      "script_version": "0.2",
+      "date": "2010-02-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

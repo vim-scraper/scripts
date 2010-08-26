@@ -1,0 +1,26 @@
+{
+  "script_id": "220",
+  "name": "mkview.vim",
+  "summary": "implementation of mkview without requiring a view file",
+  "script_type": "utility",
+  "description": "This module provides functions which emulate the |mkview| function of vim\nwithout requiring the creation of |view-file|s. This is useful when you\nhave an explorer type window with some arbitrary level of folding which\nneeds to be remembered. This module is therefore of interest to script\nwriters and not to the casual vim user.\n\nSynopsis:\n\n1. let viewInfo = MkView()\n   This returns a formatted string viewInfo (see file for the format) which\n   contains the minimal information needed to\n   . Restore manually folds. Restore manually opened and closed folds.\n     (this is the behavior of |mkview| when 'viewoptions' contains\n     \"folds\".\n   . Restore the cursor row and column position.\n   The file is allowed to have arbitrarily nested folds.\n   If there is prior information about the folds, then the following\n   variants described below can be used.\n\n2. let viewInfo  = MkViewNoFolds()\n   When it is known that there are no folds in the file, then use this\n   function. It will contain just the information needed to restore the\n   cursor row and column positions.\n\n3. let viewInfo = MkViewNoNestedFolds()\n   When it is known apriori that there are no folds with |foldlevel|\n   greater than 1, i.e, there are no nested folds, then use this function\n   which takes advantage of the fact to be faster than MkView(). Nested\n   folds, if they exist will be silently ignored if this function is used.\n\n4. call LoadView(viewInfo)\n   This function restores the fold state of the file as described in\n   MkView(). It eliminates the folds already in the file before restoring\n   the original fold state so that additional nestedness is not introduced.\n",
+  "install_details": "drop in your ~/.vim/plugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=605",
+      "filename": "mkview.vim",
+      "script_version": "1.0",
+      "date": "2002-02-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "247",
+        "user_name": "srinath.avadhanula",
+        "first_name": "Srinath",
+        "last_name": "Avadhanula",
+        "email": "srinath at fastmail.fm",
+        "homepage": "http://robotics.eecs.berkeley.edu/~srinath/index.html"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

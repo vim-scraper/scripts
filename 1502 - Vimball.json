@@ -1,0 +1,154 @@
+{
+  "script_id": "1502",
+  "name": "Vimball",
+  "summary": "vim-based archiver: builds, extracts, and previews",
+  "script_type": "utility",
+  "description": "                                            [VIM VERSION 7.1 or 7.2 REQUIRED]\n\nThe vimball plugin facilitates creating, extracting , and listing the contents of \"vimball\" archives (*.vba).  Vimball also records the files extracted with it and can remove them.\n\nCREATING A VIMBALL\n\nVimball can create a \"vimball\" archive (*.vba) with the following command:\n\n   :[range]MkVimball[!] filename\n\nAs an example:\n\n    plugin/something.vim\n    doc/something.txt\n    :%MkVimball something\n\nwill create a \"vimball.vba\" archive.  Each line in the range processed by the MkVimball command simply describes where in the usual vim directory tree various files are.  I am now also providing a C source program that creates vimballs; see http://mysite.verizon.net/astronaut/src/index.html#MKVIMBALL .\n \nEXTRACTING FROM A VIMBALL\n\nUsers of a vimball archive simply need to\n\n    :vim something.vba\n    :so %\n\nand the contents of the vimball will be extracted and placed into the proper directories, no matter where the user opened up the vimball.  Furthermore, the helptags command will be automatically and transparently used to make any doc/*.txt files' contents available by the Vim help system.\n\nPREVIEWING A VIMBALL\n\nInstead of immediately sourcing a vimball to extract its contents, one may use\n\n    :VimballList\n\nto preview the contents of the vimball archive.\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#VIMBALL)\n",
+  "install_details": "For vim 7.0, otherwise skip to step 2:\n1. Remove all vestiges of any older version of vimball.  Typically, that means:\n    cd /usr/local/share/vim/vim70\n    rm plugin/vimball*.vim\n    rm autoload/vimball*.vim\n\n   Under Windows, the vim70 install point may vary.\n\n2. I've decided that the vimball plugin itself should not expect that vimball is available to extract it.\n    Hence, it is now being distributed as vimball.tar.gz.  To unravel that:\n   * change directory to the directory holding the plugin/ and autoload/ directories where you want to install vimball.\n      It is probably best to install the new vimball in the distribution directory.\n   * gunzip vimball.tar.gz\n   * tar -oxvf vimball.tar\n   * (unix) chmod a+r autoload/vimball.vim doc/pi_vimball.txt plugin/vimballPlugin.vim\n\nVersion 26 and later use fnameescape() for security reasons -- which in turn requires vim 7.1 with patch 299.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11981",
+      "filename": "vimball.tar.gz",
+      "script_version": "30",
+      "date": "2009-12-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "RmVimball supports filenames that would otherwise be considered to have \"magic\" characters (ie. Abc[1].vba)\nMkVimball allows slashes in the filename\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8743",
+      "filename": "vimball.tar.gz",
+      "script_version": "26",
+      "date": "2008-05-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "For those users who don't yet have any plugins, vimball will now create a .vim (vimfiles) directory as necessary.\nBugfix: (tnx Bill McCarthy) vimball wasn't updating files plugin/ to AsNeeded/ properly\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8515",
+      "filename": "vimball.tar.gz",
+      "script_version": "25",
+      "date": "2008-04-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* changed vimball#Vimball() to recognize doc/*.??x as help files, too.\n* g:vimball_path_escape used by s:Path() to prevent certain characters from causing trouble\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7078",
+      "filename": "vimball.tar.gz",
+      "script_version": "22",
+      "date": "2007-05-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "uses setlocal instead of set during BufEnter"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6578",
+      "filename": "vimball.tar.gz",
+      "script_version": "21",
+      "date": "2007-01-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "bugfix release"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6120",
+      "filename": "vimball.tar.gz",
+      "script_version": "18",
+      "date": "2006-08-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Vimballs now use folding to more easily display their contents when opened.\nWindows: \\s are changed to /s (bugfix)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5883",
+      "filename": "vimball.vba.gz",
+      "script_version": "16",
+      "date": "2006-06-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* RmVimball implemented - allows one to remove files installed via a vimball\n* A. Mechylynk's idea to allow users to specify installation root paths implemented for UseVimball, MkVimball, and RmVimball (optional path argument)\n* (sssh -- bugfixes, too)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5828",
+      "filename": "vimball.tar.gz",
+      "script_version": "15",
+      "date": "2006-06-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "bugfixes!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5771",
+      "filename": "vimball.vba.gz",
+      "script_version": "14",
+      "date": "2006-05-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Bugfix release:\n* exists(\"&acd\") used to determine if the acd option exists\n* the |'acd'| option is not always defined\n* VimballList would create missing subdirectories that the vimball specified were needed.  Fixed.\n* moved all setting saving/restoration to a pair of functions.  Included some more settings in them which frequently cause trouble.\n* various changes to support the Windows prediliction for backslashes and spaces in file and directory names.\n"
+    }
+  ]
+}

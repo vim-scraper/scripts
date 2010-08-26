@@ -1,0 +1,122 @@
+{
+  "script_id": "219",
+  "name": "bccalc.vim",
+  "summary": "evaluate equations within vim",
+  "script_type": "utility",
+  "description": "This scirpt calculates equations using the program 'bc' (found on most linux systems, available for most systems).  Visually select the equation you want to calculate, then hit ;bc - if the selection ends with an '=' sign, the answer will be appended after the equal, otherwise, the answer is echoed as a message. Equations can span multiple lines, and the full bc syntax is probably supported.  Additionally, sin (), cos (), etc, are transformed into the names used by bc (s () c (), etc).\n\nThis script was first entered as a tip, but someone pointed out that functions are hard to use when posted as tips, so this makes it easier to download and use.\n\nHere are some example lines:\n\n2 * sqrt (2) =\n\n3 * (2 - 1) + 4.0 ^ 6 =\n\n4 / 3 =\n\n3 +\n   4 -\n      2 * (1 / (3 + 2)) =\n\ndefine rad (x) {\n  return (x / 180) * 4 * atan (1)\n}\ncos (rad (45)) =\n\nibase = 2; obase = 2;\n0100 * 0101 = \n\nSelect each of these in turn (continguous non-blank lines, and hit ;bc for each), and this is what you get:\n2 * sqrt (2) = 2.82842712474619009760\n\n3 * (2 - 1) + 4.0 ^ 6 = 4099.000000\n\n4 / 3 = 1.33333333333333333333\n\n3 +\n   4 -\n      2 * (1 / (3 + 2)) = 6.60000000000000000000\n\ndefine rad (x) {\n  return (x / 180) * 4 * atan (1)\n}\ncos (rad (45)) = .70710678118654752440 \n\nibase = 2; obase = 2;\n0100 * 0101 = 10100\n\nChaining is now allowed:\n\nstart with this\n\n2 + 3 = \n;bc\n2 + 3 = 5\nadd some more stuff:\n2 + 3 = 5 * 2 = \n;bc\n2  + 3 = 5 * 2 = 10",
+  "install_details": "Download, place in plugin directory, or copy and paste function and mapping into your vimrc.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4706",
+      "filename": "bccalc.vim",
+      "script_version": "1.8",
+      "date": "2005-10-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Change to allow chaining of equations, 3 + 4 = <7> - 4 = <3> - see summary"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2971",
+      "filename": "bccalc.vim",
+      "script_version": "1.7",
+      "date": "2004-04-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Typo\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2968",
+      "filename": "bccalc.vim",
+      "script_version": "1.6",
+      "date": "2004-04-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixes for sin, cos, etc, function substitutions, thanks to C. Campbell.\nFixes for multiple substitutions.\nFix for :Calculate command"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2967",
+      "filename": "bccalc.vim",
+      "script_version": "1.5",
+      "date": "2004-04-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a normal mode mapping for equation on lines by themselves - visual mode mapping can be tedious.  Added a command version, you can do\n:Calculate 2 + 5 / 2 + 4\nand 8 will be echoed"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=606",
+      "filename": "bccalc.vim",
+      "script_version": "1.2",
+      "date": "2002-02-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "added bccalc_preload global variable - allows specifying file(s) with functions/variables to load  before doing calculations"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=597",
+      "filename": "bccalc.vim",
+      "script_version": "1.1",
+      "date": "2002-02-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added \"&\", \"<\", \">\", and \"|\" to escape characters that mess up when passed to shell."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=596",
+      "filename": "bccalc.vim",
+      "script_version": "1.0",
+      "date": "2002-02-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

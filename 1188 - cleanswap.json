@@ -1,0 +1,42 @@
+{
+  "script_id": "1188",
+  "name": "cleanswap",
+  "summary": "capture useful text from, and delete, all the vim swap files in ~/.vim/swap",
+  "script_type": "utility",
+  "description": "This is a super-simple bash script for cleaning up my ~/.vim/swap directory.  I have vim put all its swap files there (set directory=~/.vim/swap) so I can find them in one place.\n\nWhen I run this script, it recovers using each swap file and compares the results against the current version of the file.  If there is no difference, the swap file is automatically deleted. If there are differences, vimdiff is launched so I can recover any changes saved only in the swap file.  When the script is don running, all my swap files are gone.\n\nWarning: This script has only been tested on Linux, and that only a couple times. It may accidentally delete any file on your system.  If you have any other vim sessions running, I assume bad things will happen if you also run this script.  Use at your own risk!",
+  "install_details": "Copy this to some directory in your PATH.  Run it.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6265",
+      "filename": "cleanswap",
+      "script_version": "0.1",
+      "date": "2006-10-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19",
+        "user_name": "chouser",
+        "first_name": "Chris",
+        "last_name": "Houser",
+        "email": "chouser at users.sourceforge.net",
+        "homepage": ""
+      },
+      "release_notes": "Improvements in stability, bug fixes... you know, that sort of thing."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3789",
+      "filename": "cleanswap",
+      "script_version": "0.0",
+      "date": "2005-01-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19",
+        "user_name": "chouser",
+        "first_name": "Chris",
+        "last_name": "Houser",
+        "email": "chouser at users.sourceforge.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

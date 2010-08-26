@@ -1,0 +1,58 @@
+{
+  "script_id": "2087",
+  "name": "refactor",
+  "summary": "C/C++ refactoring tool",
+  "script_type": "utility",
+  "description": "This plugin contains some basic refactoring commands for C/C++.\nFor the complexity of C++, instead of really parse the source code, I used \nregular expression matches. But it works well as I tested. \n\nNOTE: It doesn't work for old style parameter declaratoins! And I admit that it may mess up your code sometime if you occasionally forget the rules. Thanks for the kind man who point out this.\n\n\nThe refactor commands and their default key map currently are:\n\t1. <A-r>e \tExtract method\n\t2. <A-r>p \tlocal variable to Parameter\n\t3. <A-r>r \t Rename local variable\n\t4. <A-r>d \tDelete parameter\n\t5. <A-r>o \treOrder parameters\n\t6. <A-r>c \tintroduce Constant\n\nBiDongliang \tbidongliang_2000@126.com 2007/12/4",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8029",
+      "filename": "refactor.vim",
+      "script_version": "1.03",
+      "date": "2007-12-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13541",
+        "user_name": "bidongliang",
+        "first_name": "bi",
+        "last_name": "dongliang",
+        "email": "bidongliang_2000 at 126.com",
+        "homepage": ""
+      },
+      "release_notes": "Updated some messages to help using more easy."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8023",
+      "filename": "refactor.vim",
+      "script_version": "1.02",
+      "date": "2007-12-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13541",
+        "user_name": "bidongliang",
+        "first_name": "bi",
+        "last_name": "dongliang",
+        "email": "bidongliang_2000 at 126.com",
+        "homepage": ""
+      },
+      "release_notes": "Parse error of variable defination with initialization."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8021",
+      "filename": "refactor.vim",
+      "script_version": "1.01",
+      "date": "2007-12-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13541",
+        "user_name": "bidongliang",
+        "first_name": "bi",
+        "last_name": "dongliang",
+        "email": "bidongliang_2000 at 126.com",
+        "homepage": ""
+      },
+      "release_notes": "Add word boundary to some patterns. (\\<\\>)"
+    }
+  ]
+}

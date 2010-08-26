@@ -1,0 +1,42 @@
+{
+  "script_id": "1493",
+  "name": "Sudoku Solver",
+  "summary": "Plugin for solving Sudoku puzzles",
+  "script_type": "game",
+  "description": "Sudoku solver plugin\n\nImportant: Vim 7.0 or later required.\n\nSudoku is a puzzle where you have to fill all the blank spaces with digits from 1 to 9 such that no row, column, or 3x3 block of cells have any digits repeated. This plugin holds a Vim script that solves Sudoku puzzles by exhaustive search.\n\nEnter the puzzle into a buffer like this:\n\n    8xx 69x xx2\n    91x xxx xxx\n    5xx xx8 xx7\n\n    xxx 2x9 xx6\n    xxx 8xx xx3\n    2xx 3x4 xxx\n\n    3xx 78x xx9\n    xxx xxx xx5\n    4xx x5x x28\n\nThe numbers represent supplied digits 1 to 9 in the puzzle. Use any other character to represent blank spaces.\n\nThen visually select the puzzle and invoke the macro binding ,s\n",
+  "install_details": "Drop it into the plugin directory.\nNote: Vim 7.0 or later required.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8699",
+      "filename": "sudoku.vim",
+      "script_version": "1.1",
+      "date": "2008-05-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8120",
+        "user_name": "pcheah",
+        "first_name": "Po Shan",
+        "last_name": "Cheah",
+        "email": "morton at mortonfox.com",
+        "homepage": "http://mortonfox.livejournal.com"
+      },
+      "release_notes": "Modified script to display results in a new window split. Improved the status and error messages. Added some checking for obvious problems in the puzzle."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5422",
+      "filename": "sudoku.vim",
+      "script_version": "1.0",
+      "date": "2006-03-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8120",
+        "user_name": "pcheah",
+        "first_name": "Po Shan",
+        "last_name": "Cheah",
+        "email": "morton at mortonfox.com",
+        "homepage": "http://mortonfox.livejournal.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

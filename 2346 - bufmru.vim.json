@@ -1,0 +1,122 @@
+{
+  "script_id": "2346",
+  "name": "bufmru.vim",
+  "summary": "switch to a most recently used buffer quickly",
+  "script_type": "utility",
+  "description": "Switch between MRU buffers from the current session. Like CTRL-^, but reach\nmore buffers (and maintain only one global list, not one list per window).\n\nUsage:\n\n  Press  <Space>  to show the most recently used buffer and enter Bufmru mode.\n\n  In Bufmru mode:\n  Press  f  or  b  (forward/backward) to reach more MRU buffers.\n  Press  e  or  <Enter>  to accept the current choice.\n  Press  q  or  <Esc>  to quit the mode and to go back to the start buffer\n  Press  y  to copy a file name\n\nConfiguration:\n  :let g:bufmru_switchkey = \"<Space>\"\n      (checked once) Key to enter Bufmru mode.\n\n  :let g:bufmru_confclose = 0\n      (always) Use :confirm (1) when abandoning a modified buffer.\n      Otherwise (0, default) you'll get an error message, unless 'hidden'\n      is set.\n\n  :let g:bufmru_bnrs = []\n      (always) The internal stack of buffer numbers.  Normally, you'll\n      leave this alone, but you can manually add or remove buffer numbers\n      or initialize the list.  Don't worry about wrong numbers.\n\n  :let g:bufmru_read_nummarks = 0\n      (once) Put the number mark '0 ... '9 buffers in g:bufmru_bnrs.  This adds\n      buffers to the buffer list!\n\nwildmenu version only:\n\n  g:bufmru_wildmenu   (dictionary, initially not defined)\n      (always) Instance of autoload/wildmenu.vim to show buffer names in a\n      wildmenu-like list.  If not defined, bufmru tries to load the autoload\n      script.  If that fails the value becomes empty ({}) -- and bufmru\n      quite unusable.\n\n  :let g:bufmru_wilditems = \"bufnr,shortpath\"\n      (always) How to display entries in the \"wildmenu\":\n      \"bufnr\"         with prepended buffer number\n      \"shortpath\"     with pathshorten() applied to the bufname()\n      There is no error message for wrong items.\n\nsplashbufs version only:\n\n  :let g:bufmru_lazy_filetype = 0\n      (checked always) If 1, do lazy filetype detection when going through\n      the buffers with f and b.  Not used if 'hidden' is set.\n\n\nspecial buffer: 'buftype' not empty or 'previewwindow' set\n\nRelated:\nhttp://vim.wikia.com/wiki/Easier_buffer_switching\nhttp://groups.google.com/group/vim_use/msg/adb4f35772ecbcbe\n\nAnother MRU buffers script!  But it requires Ruby (that I haven't installed):\nLustyJuggler Vimscript #2050\n\nCreated after a mailing list request from a Visual Studio user ;-)\n",
+  "install_details": "bufmru 2.x\n        wildmenu version.  Buffers are shown in a wildmenu like list in the\n        cmdline area.\n        Unpack the archive into ~\\vimfiles or a similar folder from your\n        'runtimepath'.  Files in the archive:\n            plugin/bufmru.vim\n            autoload/anwolib.vim\n            autoload/wildmenu.vim\n            doc/bufmru.txt\n\nbufmru 3.x\n        splashbufs version.  It is just the plugin file without external\n        dependencies.  Buffers are switched instantly like with CTRL-^; but\n        switching is meant to be a preview as long as Bufmru is active.\n        Copy bufmru.vim to ~\\vimfiles\\plugin or a similar plugin folder.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10574",
+      "filename": "bufmru.vim",
+      "script_version": "3.3",
+      "date": "2009-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "splashbufs only version, option g:splashbufs gone\nsimilar to v2.7, but no change of 'timeoutlen' for Bufmru mode\nNF: variable g:bufmru_lazy_filetype"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10572",
+      "filename": "bufmru_2.7.zip",
+      "script_version": "2.7",
+      "date": "2009-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "wildmenu only version, option g:splashbufs gone\nBF: 'fileformat' of wildmenu.vim and anwolib.vim set to unix !\nBF: now works better with 'lazyredraw' set\nBF: g:bufmru_limit=0 now means unlimited (0 makes no sense otherwise)\nNF: variable g:bufmru_wilditems to customize wildmenu entries\nNF: 'timeoutlen' of Bufmru Mode set to 60000 ms"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10122",
+      "filename": "bufmru_2.0.zip",
+      "script_version": "2.0",
+      "date": "2009-03-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "like 1.0 but includes a help file and uses autoload/wildmenu.vim to show buffer names in a wildmenu like list"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10121",
+      "filename": "bufmru.vim",
+      "script_version": "1.0",
+      "date": "2009-03-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "New Variables: g:bufmru_splashbufs\nChanged Variables: g:bufmru_confclose, g:bufmru_nummarks renamed to g:bufmru_read_nummarks\nAdded Keys: y  !  f\nChanged Keys: <Space> replaced with  f  in Bufmru mode\nNew Functions: Bufmru_Read_Nummarks()\nBehaviour:\n* no more cycling: going forward/backward stops at either end of the MRU list\n* Valid buffer number: now also 'buflisted' required\nBug fixes ...\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9194",
+      "filename": "bufmru.vim",
+      "script_version": "0.3",
+      "date": "2008-08-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "now truncates too long buffer names\nadded g:bufmru_nummarks"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9153",
+      "filename": "bufmru.vim",
+      "script_version": "0.2",
+      "date": "2008-08-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "some config added, keys added, some obvious bugs fixed. recommended update"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9140",
+      "filename": "bufmru.vim",
+      "script_version": "0.1",
+      "date": "2008-08-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

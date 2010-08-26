@@ -1,0 +1,378 @@
+{
+  "script_id": "1120",
+  "name": "PHP-correct-Indenting",
+  "summary": "A new indent script for php with many improvements never seen before",
+  "script_type": "indent",
+  "description": "(The version 1.23 of this script is already included in VIM 7)\n\nFeatures:\n- Indent \"perfectly\" PHP code.\n- Comment or non-PHP code doesn't break the algorithm.\n- Non-PHP code, multiline /**/ comments and \"Here Document\" content remain unchanged.\n- HTML <Script.*> tags are indented as PHP and like if their content was part of the surrounding PHP code.\n- Fast optimized indenting, the script knows when it's indenting large blocks and skips some unnecessary tests...\n- Support folding (folds don't break the indenting)\n- Auto-formatting for comments (using the Vim option formatoptions=qroc).\n- Indent correctly complex \"non bracketted blocks\" (like in language C):\n\n    Example: (start of line spaces are replaced by ____)\n<?php\nif (!isset($History_lst_sel)) \n____if (!isset($History_lst_sel)) \n________if (!isset($History_lst_sel)) {\n____________$History_lst_sel=0;\n________} else\n____________$foo=\"truc\";\n____else\n_______$bla= \"foo\";\n$command_hist = TRUE;\n?>\n\n- Direct indenting, the text is indented as you type it.\n- switch/case are indented correctly.\n- Script source code well commented.\n- Bug free as far as I know :)\n\nA more complete example of its capabilities:\n\n<?php\nif ($foo=\"thing\") // as you see an opened bracket isn't needed to indent correctly :)\n____if (foo(\"something\"))\n____{\n________somethingelse(\"blabla\");\n?>\n\n\n<html>\n<head>\n<title>SOME HTML CODE</title>\n<?\n________echo \"Something here\";\n?>\n________<script type=\"text/javascript\">\n________// Note the indentation of the script as if part of PHP\n\n________var truc=0;\n________if (truc) {\n____________nothing();\n________}\n\n________</script>\n\n</head>\n<body>\n\n<b>some closing and oppenning bracket here } } {\nnothing to indent here :)\n</b>\n\n</body>\n</html>\n\n\n<?\n________Somethingelse(true);\n____}\n\nif (foo)\n____/* a useless comment here\n____with useless code:\n____if (broken code) {\n___________________blabla();\n____*/\n____if (testHereDocument()) {\n\n\n________echo <<<HEREDOC\nHere is an Here Document style\necho, very useful.\nThe following code isn't indented\nif (test)\nwhile (foo) {\nnothing();\n}\nHEREDOC;\n\n____}\n\nbye();\n?>\n\nThat's all folks!\n\nThis script can also be found there: (with colorful examples)\nhttp://www.2072productions.com/?to=phpindent.txt\n\nThere is also a newsletter where you can subscribe at:\nhttp://www.2072productions.com/?to=php-indent-for-vim-newsletter.php\n(only about new releases of this script)\n\nEnjoy :)\n",
+  "install_details": "Just make sure the name of the file is php.vim and copy it under your vimfiles/indent folder.\nPHP syntax coloring must be turned on.\n\nAvailable options:\n\nlet PHP_autoformatcomment = 0 (default is 1)\nTo disable autoformating of comment by default.\nIf set to 0, this script will let the 'formatoptions' setting intact.\n\nlet PHP_default_indenting = # of sw (default is 0)\n# of sw will be added to the indent of each line of PHP code (non PHP code isn't affected).\n\nlet PHP_removeCRwhenUnix = 1\nWill make the script automatically remove CR at end of lines (by default this option is unset), NOTE that you MUST remove CR when the fileformat is UNIX else the indentation won't be correct...\n\nlet PHP_BracesAtCodeLevel = 1\nWill indent the '{' and '}' at the same level than the code they contain.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13433",
+      "filename": "php.vim",
+      "script_version": "1.33",
+      "date": "2010-07-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- Rewrote Switch(){case:default:} handling from scratch in a simpler more logical and infallible way.\n- Added a new option: PHP_outdentphpescape to indent PHP tags as the surrounding code."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9543",
+      "filename": "php.vim",
+      "script_version": "1.30",
+      "date": "2008-11-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- Fixed empty case/default identation again :/\n- The ResetOptions() function will be called each time the ftplugin calls this script, previously it was executed on BufWinEnter and Syntax events."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9400",
+      "filename": "php.vim",
+      "script_version": "1.29",
+      "date": "2008-10-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "Fixed php file detection for ResetOptions() used for comments formatting. It now uses the same tests as filetype.vim. ResetOptions() will be correctly called for *.phtml, *.ctp and *.inc files."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8779",
+      "filename": "php.vim",
+      "script_version": "1.28",
+      "date": "2008-06-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- Added support for NOWDOC tags ($foo = <<<'bar')\n- New option: PHP_vintage_case_default_indent (default off)\n- End HEREDOC delimiters were not considered as such if they were not followed by a ';'.\n- if a \"case\" was preceded by another \"case\" on the previous line, the second \"case\" was indented incorrectly.\n- '/*' character sequences found on a line starting by a '#' were not dismissed by the indenting algorithm and could cause indentation problem in some cases.\n- Fix some indentation errors on multi line conditions and multi line statements.\n- Fix when array indenting is broken and a closing ');' is placed at the start of the line, following lines will be indented correctly.\n- Minor fixes and optimizations."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6783",
+      "filename": "php.vim",
+      "script_version": "1.24",
+      "date": "2007-02-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- Added compatibility with the latest version of php.vim syntax file by Peter Hodge (http://www.vim.org/scripts/script.php?script_id=1571)\nThis fixes wrong indentation and ultra-slow indenting on large php files...\n- fixed spelling in comments\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4975",
+      "filename": "php.vim",
+      "script_version": "1.23",
+      "date": "2006-01-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- <script> html tags are now correctly indented the same way their content is.\n- <?.*?> (on a single line) php declarations are now always considered as non-php code and let untouched."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4964",
+      "filename": "php.vim",
+      "script_version": "1.22",
+      "date": "2006-01-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- PHPDoc comments are now indented according to the surrounding code.\n- This is also true for '/* */' multi-line comments when the second line begins by a '*'.\n- Single line '/* */' comments are also indented."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4952",
+      "filename": "php.vim",
+      "script_version": "1.21",
+      "date": "2006-01-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- 'try' and 'catch' were not registered as block starters so the '{' after a 'try' or 'catch' could be wrongly indented... \n(thanks to Gert Muller for finding this issue)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4791",
+      "filename": "php.vim",
+      "script_version": "1.20",
+      "date": "2005-11-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- Line beginning by a single or double quote followed by a space would cause problems... this was related to the bug correction of version 1.10 - Thanks to David F. for finding this (he was lucky). \n- Changed the way this script set the 'formatoptions' setting, now it uses '-=' and '+=' \n- New option: PHP_autoformatcomment (defaults to 1), if set to 0 the 'formatoptions' setting will not be altered. \n- When PHP_autoformatcomment is not 0, the 'comments' setting is set to the type of comments that PHP supports."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4776",
+      "filename": "php.vim",
+      "script_version": "1.19",
+      "date": "2005-11-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- Indentation of '*/' delimiter of '/**/' won't be broken by strings or '//' comments containing the \"/*\" character sequence.\n- I Forgot to register 'interface' and 'abstract' as block starters so the '{' after them could be wrongly indented..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4590",
+      "filename": "php.vim",
+      "script_version": "1.181",
+      "date": "2005-09-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- I Forgot to register 'class' as a block starter so the '{' after a 'class' could be wrongly indented..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4587",
+      "filename": "php.vim",
+      "script_version": "1.18",
+      "date": "2005-09-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- No more problem with Vim 6.3 and UTF-8.\n- Opening braces \"{\" are always indented according to their block starter."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4411",
+      "filename": "php.vim",
+      "script_version": "1.17",
+      "date": "2005-07-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- Now starting and ending '*' of multiline '/* */' comments are aligned on the '*' of the '/*' comment starter.\n- Some code improvements that make indentation faster.\n- Now following parts of split lines are indented:\n    Instead of:\n\t$foo=\n\t\"foo\"\n\t.\"foo\";\n\n    You have:\n\t$foo=\n\t    \"foo\"\n\t   .\"foo\";\n\n- If a \"case : break;\" was declared on a single line, the following \"case\" was not indented correctly.\n- If a </script> html tag was preceded by a \"?>\" it wasn't indented.\n- Some other minor corrections and improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4387",
+      "filename": "php.vim",
+      "script_version": "1.15",
+      "date": "2005-06-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- Corrected some problems with the indentation of multiline \"array()\" declarations.\n- Added auto-formatting for comments (using the Vim option formatoptions=qroc).\n- Added the script option PHP_BracesAtCodeLevel to indent the '{' and '}' at the same level than the code they contain.\n- Some code cleaning and typo corrections (Thanks to Emanuele Giaquinta for his patches)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4330",
+      "filename": "php.vim",
+      "script_version": "1.12",
+      "date": "2005-05-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- The bug involving searchpair() and utf-8 encoding in Vim 6.3 will not make this script to hang but you'll have to be careful to not write '/* */' comments with other '/*' inside the comments else the indentation won't be correct.\nNOTE: This is true only if you are using utf-8 and vim 6.3."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4291",
+      "filename": "php.vim",
+      "script_version": "1.11",
+      "date": "2005-05-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "If the \"case\" of a \"switch\" wasn't alone on its line and if the \"switch\" was at col 0 (or at default indenting) the lines following the \"case\" were not indented."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3893",
+      "filename": "php.vim",
+      "script_version": "1.10",
+      "date": "2005-02-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "Lines beginning by a single or double quote were not indented in some cases."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3838",
+      "filename": "php.vim",
+      "script_version": "1.09",
+      "date": "2005-02-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "The javaScript code was not always directly indented when typing."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3754",
+      "filename": "php.vim",
+      "script_version": "1.08",
+      "date": "2005-01-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- End comment tags '*/' are indented like start tags '/*'.\n- When typing a multiline comment, '}' are indented according to other commented '{'.\n- Added a new option 'PHP_removeCRwhenUnix' to automatically remove CR at end of lines when the file format is Unix.\n- Changed the file format of this very file to Unix.\n- This version seems to correct several issues some people had with 1.07."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3732",
+      "filename": "php.vim",
+      "script_version": "1.07",
+      "date": "2004-12-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- Added support for \"Here document\" tags: \n-   HereDoc end tag are indented properly. \n-   HereDoc content remain unchanged. \n- All the code that is outside PHP delimiter remains unchanged. \n- New feature: The content of <script.*> html tag is considered as PHP and indented according to the surrounding PHP code. \n- \"else if\" are detected as \"elseif\". \n- Multiline /**/ are indented when the user type it but remain unchanged when indenting from their beginning. \n- Fixed indenting of // and # comments. \n- php_sync_method option is set to 0 (fromstart). This is required for complex php script else the indent may fail. \n- Files with non PHP code at the beginning could alter the indent of the following PHP code. \n- Other minor improvments and corrections."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3714",
+      "filename": "php.vim",
+      "script_version": "1.06",
+      "date": "2004-12-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "- Switch block were no longer indented correctly...\n- Added an option to use a default indenting instead of 0.\n- A problem with ^\\s*);\\= lines where ending a non '{}' structure.\n- Changed script local variable to be buffer local variable instead.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3710",
+      "filename": "php.vim",
+      "script_version": "1.05",
+      "date": "2004-12-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "Lines containing \"<?php.* ?>\" and \"?> .*<?php\" (start and end tag on the same line) are no longer indented at col 1 but as normal code."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3595",
+      "filename": "php.vim",
+      "script_version": "1.0",
+      "date": "2004-11-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5986",
+        "user_name": "john.wellesz",
+        "first_name": "John",
+        "last_name": "Wellesz",
+        "email": "john.wellesz at teaser.fr",
+        "homepage": "http://www.2072productions.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "1360",
+  "name": "HP-41 syntax file",
+  "summary": "Syntax highlighting for HP-41 calculator programs",
+  "script_type": "syntax",
+  "description": "The HP-41 syntax highlighting goes well with the HP-41 file type plugin to facilitate easy writing of HP-41 programs in VIM.\n\nThere is a matching file type plugin here:\nhttp://vim.sourceforge.net/scripts/edit_script.php?script_id=1361",
+  "install_details": "Drop the hp41.vim syntax file into your .vim/syntax/ directory and register the file globally or add to your .vimrc file:\n\nautocmd BufRead,BufNewFile *.41 :source ~/.vim/syntax/hp41.vim\n\nThen all files with the .41 extesion will be highlighted appropriately.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4876",
+      "filename": "hp41.vim",
+      "script_version": "0.4",
+      "date": "2005-12-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Changed syntax for alpha from a single quote (') to alpha being enclosed in double quotes (\") to conform to the new ftplugin file that makes it easier to genereate .RAW files."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4625",
+      "filename": "hp41.vim",
+      "script_version": "0.2",
+      "date": "2005-09-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Added correct syntax highlighting for alpha labels."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4601",
+      "filename": "hp41.vim",
+      "script_version": "0.1",
+      "date": "2005-09-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

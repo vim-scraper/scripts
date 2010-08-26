@@ -1,0 +1,106 @@
+{
+  "script_id": "2304",
+  "name": "vimdb.vim",
+  "summary": "Vim plugin to simulate a simple database Table",
+  "script_type": "utility",
+  "description": "Unfortunatly nobody likes this script; it would be kind of you to let me know why.\n\nThis plugin is useful to store information in a database-like design.\nWhilst opening a *.vimdb file, autocommands will be applied and open two windows. The left window gives a view on the table, the right window shows the record, the cursor is currently over (of course, after heaving created a new *.vimdb file, there will only be two empty windows shown). The first line of the table will become the header, which shows the names of the columns. For full instructions see readme, to have an idea, how a database will look like: look at example database shipped with the package.\n\nNote:\n1.) With the new improved (since version 0.5) TAB key mapping, editing the database will become a pleasure ;). \n2.) Cleared many bugs to make script a bit more compatible to Vim movement/delete commands (cw, dw, D, C),\n     which might be useful editing records (But still the mighty TAB key dwarfs them all;).\n3.) Im through with bug removal, but there is still one, you should know: The table needs at least two columns to let the TAB key\n     work\n\nBe Warned:\nThe development of the script has advanced, but  i would still not recommend to store important data to a *.vimdb file.\n\n\nQuestions/Suggestions/Bug reports?\nJust compose a mail! (I dont promise to do anything but to be pleased to receive your mail. But just have a try) \nbenjaminschnitzler_at_gmail_dot_com",
+  "install_details": "- copy script into ~/.vim/plugins\n- create and edit a *.vimdb file",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8992",
+      "filename": "vimdb.tar",
+      "script_version": "1.0",
+      "date": "2008-07-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14795",
+        "user_name": "bo",
+        "first_name": "Benjamin",
+        "last_name": "Schnitzler",
+        "email": "benjaminschnitzler at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- cleared out many many bugs (see readme)\n- pushed the version to 1.0"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8987",
+      "filename": "vimdb.tar",
+      "script_version": "0.5",
+      "date": "2008-07-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14795",
+        "user_name": "bo",
+        "first_name": "Benjamin",
+        "last_name": "Schnitzler",
+        "email": "benjaminschnitzler at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- cleared out no bugs this time\n- improved feature (see readme)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8986",
+      "filename": "vimdb.tar",
+      "script_version": "0.4",
+      "date": "2008-07-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14795",
+        "user_name": "bo",
+        "first_name": "Benjamin",
+        "last_name": "Schnitzler",
+        "email": "benjaminschnitzler at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- cleared out some minor bugs (and maybe created new ones ;)\n- added new feature (see readme)\n- inserted an example database into the package"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8985",
+      "filename": "vimdb.tar",
+      "script_version": "0.3",
+      "date": "2008-07-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14795",
+        "user_name": "bo",
+        "first_name": "Benjamin",
+        "last_name": "Schnitzler",
+        "email": "benjaminschnitzler at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- corrected some minor bugs\n- added new feature (s. readme)\n- rewrote broken readme"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8984",
+      "filename": "vimdb.vim.tar",
+      "script_version": "0.2",
+      "date": "2008-07-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14795",
+        "user_name": "bo",
+        "first_name": "Benjamin",
+        "last_name": "Schnitzler",
+        "email": "benjaminschnitzler at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added README file and new features (see readme)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8980",
+      "filename": "vimdb.vim",
+      "script_version": "0.1",
+      "date": "2008-07-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14795",
+        "user_name": "bo",
+        "first_name": "Benjamin",
+        "last_name": "Schnitzler",
+        "email": "benjaminschnitzler at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

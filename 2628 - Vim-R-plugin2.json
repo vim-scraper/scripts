@@ -1,0 +1,346 @@
+{
+  "script_id": "2628",
+  "name": "Vim-R-plugin2",
+  "summary": "Plugin to work with R",
+  "script_type": "ftplugin",
+  "description": "This filetype plugin uses screen to communicate with R, but the communication does not work on Microsoft Windows. The new functions are similar to what you can find in Tinn-R and ess mode of emacs. Johannes Ranke's plugin was the starting point to the development of the plugin.\n\nMAIN FEATURES:\n\nAll platforms:\n\n  * Improved syntax highlighting for R syntax.\n  * Smart indentation for R syntax.\n  * Omni completion for objects loaded with R --vanilla command.\n\nUnix (Linux, OS X and others):\n\n  * Integrated communication with R (ability to send code to R).\n  * Omni completion (auto-completion) for all R objects.\n  * Ability to update the list of objects for omni completion and syntax\n    highlighting to include all R packages loaded by the user.\n\n\nScreenshot and Debian package: http://sites.google.com/site/jalvesaq/vimrplugin\n\n\nUSE: Please, read the plugin's documentation.\n\nFILES:\n   autoload/rcomplete.vim\n   bitmaps/r-close.xpm\n   bitmaps/r-control-clear.png\n   bitmaps/r-control-clearall.png\n   bitmaps/r-control-listspace.png\n   bitmaps/r-send-block.png\n   bitmaps/r-send-file.png\n   bitmaps/r-send-function.png\n   bitmaps/r-send-line.png\n   bitmaps/r-send-paragraph.png\n   bitmaps/r-send-selection.png\n   bitmaps/r-start.xpm\n   bitmaps/ricon.png\n   bitmaps/ricon.xbm\n   doc/r-plugin.txt\n   ftdetect/r.vim\n   ftplugin/r.vim\n   ftplugin/rhelp.vim\n   ftplugin/rnoweb.vim\n   indent/r.vim\n   r-plugin/build_omni_list.R\n   r-plugin/etags2ctags.R\n   r-plugin/functions.vim\n   r-plugin/omnilist\n   r-plugin/rpager.sh\n   r-plugin/specialfuns.R\n   syntax/r.vim\n   syntax/rout.vim\n",
+  "install_details": "Install screen and R.\n\nYou need at least the following options in your ~/.vimrc.\n\nset nocompatible\nsyntax enable\nfiletype plugin on\nfiletype indent on\n\nCreate your ~/.vim directory if you do not have it yet:\n\n   mkdir -p ~/.vim\n\nMake a backup of your ~/.vim directory because existing files will be replaced in the next step.\n\nUncompress the tarball:\n\n   unzip vim-r-plugin2-*.zip -d ~/.vim\n\nStart Vim and build the tags file for the documentation:\n\n   :helptags ~/.vim/doc\n\nUpdate the list of objects for omni completion and syntax highlight (see the help for :RUpdateObjList for details).\n\nRead the plugin's documentation to learn how to use and customize it (\":h vim-r-plugin.txt\").\n\nNote: The above instructions were tested on Linux and may be slightly different on other operating systems.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13672",
+      "filename": "vim-r-plugin2-100825.zip",
+      "script_version": "100825",
+      "date": "2010-08-25",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Minor improvements in syntax highlighting.\n* New option: vimrplugin_buildwait.\n* New option: vimrplugin_r_path (thanks to Asis Hallab)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13467",
+      "filename": "vim-r-plugin2-100803.zip",
+      "script_version": "100803",
+      "date": "2010-08-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Fixed bug in .Rsource name making in some systems."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13452",
+      "filename": "vim-r-plugin2-100801.zip",
+      "script_version": "100801",
+      "date": "2010-08-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Dropped options vimrplugin_hstart and vimrplugin_browser_time.\n* If ~/.vim/r-plugin/functions.vim is not found, try to copy it from  /usr/share/vim/addons/r-plugin/functions.vim.\n* Minor bug fixes.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13444",
+      "filename": "vim-r-plugin2-100730.zip",
+      "script_version": "100730",
+      "date": "2010-07-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Added menu item and key binding for run \"R CMD BATCH\" and open the resulting \".Rout\" file.\n * Fixed bug when more than one Vim instance used the same file to send multiple lines of code to R (thanks to Bart for reporting the bug)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13423",
+      "filename": "vim-r-plugin2-100728.zip",
+      "script_version": "100728",
+      "date": "2010-07-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Adapted the code to build a Debian package."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13353",
+      "filename": "vim-r-plugin2-100719.zip",
+      "script_version": "100719",
+      "date": "2010-07-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Renamed the directory \"tools\" and some files.\n* Added options vimrplugin_listmethods and vimrplugin_specialplot.\n* Improved syntax highlight of R batch output (.Rout files).\n* No longer uses the external programs grep, awk and sed to build the additional syntax file containing the list of functions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13317",
+      "filename": "vim-r-plugin2-100710.tar.gz",
+      "script_version": "100710",
+      "date": "2010-07-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Fixed :RUpdateObjList bug when list had length 0."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13306",
+      "filename": "vim-r-plugin2-100707.tar.gz",
+      "script_version": "100707",
+      "date": "2010-07-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": " * Fixed 'E329: No menu \"R\"' when more than one file were loaded simultaneously by calling vim with either -p or -o parameters. Thanks to Peng Yu for reporting the bug.\n * Correctly recognize a newly created file with extension \".R\" as an R script file.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13040",
+      "filename": "vim-r-plugin2-100521.tar.gz",
+      "script_version": "100521",
+      "date": "2010-05-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Replaced \"-t\" with \"--title\" to make xfce4-terminal work again."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12991",
+      "filename": "vim-r-plugin2-100512.tar.gz",
+      "script_version": "100512",
+      "date": "2010-05-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Thanks to Tortonesi Mauro who wrote a patch to make the plugin work with pathogen.vim.\n* Added simple syntax hightlight for .Rout files.\n* Increased the time limit of RUpdateObjList to two minutes.\n* Improvement in the syntax highlight based on code written by Zhuojun Chen.\n* Thanks to Scott Kostyshak who helped to improve the documentation.\n* Iago Mosqueira suggested that the plugin should be able to run one R process for each Vim instance, and his suggestion was implemented with the option g:vimrplugin_by_vim_instance.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11943",
+      "filename": "vim-r-plugin2-091223.tar.gz",
+      "script_version": "091223",
+      "date": "2009-12-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Changes in omni completion: now using two tags files, one for .GlobalEnv and other for all other environments. The command :RUpdateObjList must be used to update the list of objects that are not in .Globalenv. Arguments of functions are displayed in a scratch window.\n* Syntax highlight for R functions. The command :RUpdateObjList must be used to update the list of functions to be highlighted."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11535",
+      "filename": "vim-r-plugin2-091016.tar.gz",
+      "script_version": "091016",
+      "date": "2009-10-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* The plugin now can run together with screen.vim, thanks to Eric Van Dewoestine, the author of screen.vim, who added script integration to screen.vim.\n* Andy Choens has made many improvements on the documentation.\n* Added the possibility of custom key binding creation to call any R function with the word under cursor as argument.\n* The key bindings related with Sweave are activated even if the file type is not rnoweb.\n* Replaced <Leader> with <LocalLeader> in the key bindings.\n* Added \"Send Paragraph\" commands."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11484",
+      "filename": "vim-r-plugin2-091004.tar.gz",
+      "script_version": "091004",
+      "date": "2009-10-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* José Cláudio Faria has began to work in the project as co-author.\n* Some ideas from Tinn-R project were ported to the plugin.\n* The main menu has new items and the toolbar new icons.\n* Documentation improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11283",
+      "filename": "vim-r-plugin2-090828.tar.gz",
+      "script_version": "090828",
+      "date": "2009-08-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": " * Faster startup.\n * Better support for Rnoweb files: the cursor goes to '^<<' if the sent line is '^@$'."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11178",
+      "filename": "vim-r-plugin2-090811.tar.gz",
+      "script_version": "090811",
+      "date": "2009-08-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": " * Now use screen instead of funnel.pl. The bugs and limitations related with funnel.pl are solved.\n * Deleted key binding for R-devel.\n * Automatically detect available terminal emulators and choose one of them.\n * By default, no longer calls help.start() the first time that <C-H> is pressed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11169",
+      "filename": "vim-r-plugin2-090810.tar.gz",
+      "script_version": "090810",
+      "date": "2009-08-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": " * Added R icons for some terminal emulators.\n * Removed the script open-gvim-here. You may use Vim's option autochdir.\n * Added option g:vimrplugin_term.\n * Improved indentation script.\n * Changed key binding from <S-Enter>, which doesn't work in any terminal, to <M-Enter>, which at least works in xterm."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10799",
+      "filename": "vim-r-plugin2-090610.tar.gz",
+      "script_version": "090610",
+      "date": "2009-06-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "The options expandtab, shiftwidth and tabstop are no longer set by the plugin. Better word detection before calling R's help(). Fixed bug in underscore replacement. Fixed small bug in code indentation. Added scipt rpager.sh. Added two new plugin options: no underscore replacement and fixed name for the pipe file instead of random one."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10672",
+      "filename": "vim-r-plugin2-090523.tar.gz",
+      "script_version": "090523",
+      "date": "2009-05-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Key bindings now are customizable.\n* Default key binding for calling R's args() changed to <S-F1>.\n* New R script rargs.R gives better results for generic functions than R's args() called directly."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10637",
+      "filename": "vim-r-plugin2-090519.tar.gz",
+      "script_version": "090519",
+      "date": "2009-05-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Don't send large blocks of code to R to avoid xterm freezing.\n* Automatically call help.start() after <C-H> is pressed for the first time, and wait 4 seconds for the browser start before calling R's help(). These features are customizable.\n* Fixed tags file script."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10612",
+      "filename": "vim-r-plugin2-090516.tar.gz",
+      "script_version": "090516",
+      "date": "2009-05-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Added documentation.\n* Added ability to send function to R, revert the automatic convertion of \"_\" into \"<-\" and call R's help().\n* Added archive with some files to ease desktop integration, if desired.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10562",
+      "filename": "vim-r-plugin2-090507.tar.gz",
+      "script_version": "090507",
+      "date": "2009-05-08",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

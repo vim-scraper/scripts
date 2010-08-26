@@ -1,0 +1,58 @@
+{
+  "script_id": "301",
+  "name": "xmledit",
+  "summary": "A filetype plugin to help edit XML, HTML, and SGML documents",
+  "script_type": "ftplugin",
+  "description": "This script provides some convenience when editing XML (and some SGML including\nHTML) formated documents. It allows you to jump to the beginning or end of the\ntag block your cursor is in. '%' will jump between '<' and '>' within the tag\nyour cursor is in. When in insert mode and you finish a tag (pressing '>') the\ntag will be completed. If you press '>' twice it will complete the tag and\nplace the cursor in the middle of the tags on it's own line.\n\nFor the latest development snapshot visit\n    http://github.com/sukima/xmledit/\n\nPlease fork this project. We need help making this better.",
+  "install_details": "This new version has the documentation coupled with the script. You only need one file xml.vim.\n\nPlace this file in your ftplugin directory (i.e. '~/.vim/ftplugin/xml.vim) Type :help ftplugins for more information on installation.\n\nThe documentation will install automatically the first time the plugin is ran. *NOTE* the first time the plugin is ran is NOT the first time VIM is ran. Because this is a file plugin you have to open an XML document to execute the script. So open a new test.xml file at first.\n\nThe html.vim script that came with the old tarball is now in the documentation as an example. to use it just copy/paste it into the file html.vim. See :help xml-plugin-html after the documentation installs.\n\nChangeLog and older versions availiable on request.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13387",
+      "filename": "xmledit-1.9.1.vba",
+      "script_version": "1.9.1",
+      "date": "2010-07-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "667",
+        "user_name": "ktohg",
+        "first_name": "Devin",
+        "last_name": "Weaver",
+        "email": "devin at tritarget.com",
+        "homepage": "http://tritarget.com/"
+      },
+      "release_notes": "Adds a global disable switch\n\nUpdated to vimball packaging (compatible with pathogeon)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10362",
+      "filename": "xml.vim",
+      "script_version": "1.84",
+      "date": "2009-04-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "667",
+        "user_name": "ktohg",
+        "first_name": "Devin",
+        "last_name": "Weaver",
+        "email": "devin at tritarget.com",
+        "homepage": "http://tritarget.com/"
+      },
+      "release_notes": "Latest development build after move to Git repository. No new features."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4280",
+      "filename": "xml.vim",
+      "script_version": "1.29",
+      "date": "2005-05-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "667",
+        "user_name": "ktohg",
+        "first_name": "Devin",
+        "last_name": "Weaver",
+        "email": "devin at tritarget.com",
+        "homepage": "http://tritarget.com/"
+      },
+      "release_notes": "Fixed some documentation. Added <a> tag to html example.\nAdded Visual select tag mapping. Cosmetics"
+    }
+  ]
+}

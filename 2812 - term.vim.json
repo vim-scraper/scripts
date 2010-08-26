@@ -1,0 +1,26 @@
+{
+  "script_id": "2812",
+  "name": "term.vim",
+  "summary": "Terminal library",
+  "script_type": "game",
+  "description": "Terminal library for Unix CUI terminal.\n\nExample:\n  \" Display current time at bottom of screen.\n  \" move cursor\n  call term#position(&lines, 1)\n  \" fg=blue bg=red\n  call term#attr(0, 34, 41)\n  \" print text\n  call term#text(strftime(\"%c\"))\n  \" reset attribute\n  call term#attr()\n  \" output\n  call term#out()\n\nTry :call term#demo()\n",
+  "install_details": "Put file in your autoload directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11530",
+      "filename": "term.vim",
+      "script_version": "0.1",
+      "date": "2009-10-15",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "11226",
+        "user_name": "yukihiro",
+        "first_name": "Yukihiro",
+        "last_name": "Nakadaira",
+        "email": "yukihiro.nakadaira at gmail.com",
+        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

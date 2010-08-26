@@ -1,0 +1,74 @@
+{
+  "script_id": "1518",
+  "name": "ClassTree",
+  "summary": "Display class/interface hierarchy",
+  "script_type": "utility",
+  "description": "Define command \"CTree\" to display hierarchy of classes/interfaces defined\n\nYou must build tag file using Exuberant Ctags with option \"--fields=+i\"\n\nWorks for C#. Should work for Java and any other single-inheritance OO language.",
+  "install_details": "Drop CTree.vim into your favorite plugin directory or source the script from your .vimrc file",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5657",
+      "filename": "CTree.vim",
+      "script_version": "1.1.2",
+      "date": "2006-05-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9859",
+        "user_name": "yanbiao_zhao@yahoo.com",
+        "first_name": "Yanbiao",
+        "last_name": "Zhao",
+        "email": "yanbiao_zhao at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Clear the code to use taglist() instead of using command \"tselect\"\n\n2. Fix bug in detecting tag file changes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5639",
+      "filename": "CTree.vim",
+      "script_version": "1.1.1",
+      "date": "2006-05-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9859",
+        "user_name": "yanbiao_zhao@yahoo.com",
+        "first_name": "Yanbiao",
+        "last_name": "Zhao",
+        "email": "yanbiao_zhao at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Add command \"CTag\". It will jump to class/interface definition matching the tag\n\n2. Detect the changes to tag setting and tag files. If they are changed, type information will be reloaed automatically. Command \"CTreeReset\" is not necessary any more and removed.\n\n3. Add short cuts to command \"CTree\" and \"CTag\". They are commented out in the script. Uncomment them if you want."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5567",
+      "filename": "CTree.vim",
+      "script_version": "1.1",
+      "date": "2006-04-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9859",
+        "user_name": "yanbiao_zhao@yahoo.com",
+        "first_name": "Yanbiao",
+        "last_name": "Zhao",
+        "email": "yanbiao_zhao at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Add command \"CTreeReset\" to clear the cached tag information\n\nWill get parent of interface if it has only one parent.\n\nAdd prompt information when load tag information and display total number of entries in cache"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5557",
+      "filename": "CTree.vim",
+      "script_version": "1.0",
+      "date": "2006-04-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9859",
+        "user_name": "yanbiao_zhao@yahoo.com",
+        "first_name": "Yanbiao",
+        "last_name": "Zhao",
+        "email": "yanbiao_zhao at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

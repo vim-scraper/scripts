@@ -1,0 +1,106 @@
+{
+  "script_id": "1553",
+  "name": "autoproto.vim",
+  "summary": "Auto display function parameter in preview",
+  "script_type": "utility",
+  "description": "The \"autoproto\" plugin displays the function parameter/prototypes\nin the preview window if you type a left parenthesis behind a function name.\nWith this plugin it is not necessary to memorize large parameter lists.\nYou do not need to leave insert mode. Typing is almost not affected. ",
+  "install_details": "* Drop autoproto.vim into your plugin directory. \n\n* The script need a tag file to work:\n   - for your project: \":!ctags -R .\" (or use the gvim button)\n   - for library functions: \n     run: \"ctags -R -f ~/.vim/systags --c-kinds=+p /usr/include /usr/local/include\"\n     put  \"set tags+=~/.vim/systags\" in your .vimrc file.\n\n* Open some *.c file and write for example: \"XCreateWindow (\"\n   (or \"XCreateWindow(\").\n   If the tag exist it will be shown in the preview window.\n   Note: only *.c files are supported ! The file must exist.   ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5846",
+      "filename": "autoproto.vim",
+      "script_version": "0.06",
+      "date": "2006-06-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10136",
+        "user_name": "pulp",
+        "first_name": "Jochen",
+        "last_name": "Baier",
+        "email": "email at jochen-baier.de",
+        "homepage": ""
+      },
+      "release_notes": "* Support for functions not ending with new line (-> between of text)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5809",
+      "filename": "autoproto.vim",
+      "script_version": "0.05",
+      "date": "2006-06-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10136",
+        "user_name": "pulp",
+        "first_name": "Jochen",
+        "last_name": "Baier",
+        "email": "email at jochen-baier.de",
+        "homepage": ""
+      },
+      "release_notes": "*set noignorecase during tag search: big performance boost if tag do not exist"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5790",
+      "filename": "autoproto.vim",
+      "script_version": "0.04",
+      "date": "2006-06-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10136",
+        "user_name": "pulp",
+        "first_name": "Jochen",
+        "last_name": "Baier",
+        "email": "email at jochen-baier.de",
+        "homepage": ""
+      },
+      "release_notes": "* Support for nested functions: Redisplay parent prototype if a function was used as a parameter.\n* skip numbers\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5748",
+      "filename": "autoproto.vim",
+      "script_version": "0.03",
+      "date": "2006-05-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10136",
+        "user_name": "pulp",
+        "first_name": "Jochen",
+        "last_name": "Baier",
+        "email": "email at jochen-baier.de",
+        "homepage": ""
+      },
+      "release_notes": "- Display found tag in the first line of the preview window.\n- some fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5739",
+      "filename": "autoproto.vim",
+      "script_version": "0.02",
+      "date": "2006-05-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10136",
+        "user_name": "pulp",
+        "first_name": "Jochen",
+        "last_name": "Baier",
+        "email": "email at jochen-baier.de",
+        "homepage": ""
+      },
+      "release_notes": "upps... small bug"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5738",
+      "filename": "autoproto.vim",
+      "script_version": "0.01",
+      "date": "2006-05-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10136",
+        "user_name": "pulp",
+        "first_name": "Jochen",
+        "last_name": "Baier",
+        "email": "email at jochen-baier.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

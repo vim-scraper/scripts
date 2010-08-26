@@ -1,0 +1,42 @@
+{
+  "script_id": "2962",
+  "name": "liftweb.vim",
+  "summary": "A plugin for vim to ease navigation for projects that use the Lift framework.",
+  "script_type": "utility",
+  "description": "A plugin for vim to ease navigation for projects that use the Lift Scala web\nframework. Heavily inspired by the awesome that is Tim Pope's rails.vim (at\nhttp://rails.vim.tpope.net/) .\n\nCurrently provides a few commands:\n\n* :Lmodel, Lsnippet, Lactor, Lcomet -- all take a class name and take you to\n  the appropriate associated file\n* :Lview -- takes a class name and takes you to the appropriate view file\n* :Lspec or :Ltest -- when called from a class (e.g., GroupSnip), takes you to\n  the associated test file (GroupSnipTest)\n* :Lclass -- the opposite of Lspec, takes you to the class for the current test\n\nThe github repository for this lives at http://github.com/Shadowfiend/liftweb-vim/ ;\nplease file bugs at http://github.com/Shadowfiend/liftweb-vim/issues .",
+  "install_details": "Just copy the files to the appropriate locations in ~/.vim and open a scala file in your Lift project and you're ready to rock.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12319",
+      "filename": "liftweb-vim.tar.gz",
+      "script_version": "1.1",
+      "date": "2010-02-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18964",
+        "user_name": "lightfiend",
+        "first_name": "Antonio",
+        "last_name": "Salazar Cardozo",
+        "email": "savedfastcool at gmail.com",
+        "homepage": "http://shadowfiend.posterous.com/"
+      },
+      "release_notes": "Added correct vim script id for GetLatestVimScripts configuration."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12315",
+      "filename": "liftweb-vim.tar.gz",
+      "script_version": "1.0",
+      "date": "2010-02-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18964",
+        "user_name": "lightfiend",
+        "first_name": "Antonio",
+        "last_name": "Salazar Cardozo",
+        "email": "savedfastcool at gmail.com",
+        "homepage": "http://shadowfiend.posterous.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

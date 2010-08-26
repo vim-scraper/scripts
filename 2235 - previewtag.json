@@ -1,0 +1,26 @@
+{
+  "script_id": "2235",
+  "name": "previewtag",
+  "summary": "preview the definition and switch it to a new window",
+  "script_type": "utility",
+  "description": "The script opens the definition of functions and variables in the preview window on demand and provides operations to close the preview window, delete the buffer in the preview window and switch the buffer in the preview window to a new window. Quite simple, but useful.\n\nThe script provides four commands:\nPshow: open the definition of the current word in the preview window\nPdelete: delete the buffer showing in the preview window\nPshowORdelete: if the cursor is in preview window, delete the current buffer (like Pdelete); Otherwise open the definition of current word in preview window\nPswitch: if the preview window is open, close it and open the buffer in a new window \n\nVim also provides a \"pclose\" command to close the preview window, without deleting the buffer.\n\nIf you want to open the tag preview immediately when you put cursor on a word, please uncomment the last line of the script. However, I found automatically preview is kind of boresome, so I do not provide a switch of auto-preview in the script.\n\nYou can also refer to another tiny script autopreview at http://vim.sourceforge.net/scripts/script.php?script_id=2228.\n\nRelated vim docs:\n:help ptag\n:help previewwindow",
+  "install_details": "#1 Put previewtag.vim in your vim plugin directory\n\n#2 Key map is recommended,  for example:\n\tmap <F5> :PshowORdelete<CR>\n\tmap <S-F5> :Pdelete<CR>\n\tmap <C-F5> :pclose<CR>\n\tmap <F6> :Pswitch<CR>\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8672",
+      "filename": "previewtag.vim",
+      "script_version": "0.1",
+      "date": "2008-05-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14399",
+        "user_name": "beyondwdq",
+        "first_name": "Danqi",
+        "last_name": "Wang",
+        "email": "beyondwdq at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "2843",
+  "name": "FlipLR",
+  "summary": "Flips left hand side and right hand side.",
+  "script_type": "utility",
+  "description": "This script flips left hand side and right hand side.\n'lhs {operator} rhs' => 'rhs {operator} lhs'\n\nUsage:\n  1. In visual mode, select left hand side, operator and right hand side.\n  2. execute ':FlipLR operator'\n  2'. execute ':FlipLR /operator/' to flip with regexp\n\n  This mapping may help you.\n      noremap \\f :FlipLR <C-R>=g:FlipLR_detectPivot()<CR>\n\nScreencast:\n  http://bitbucket.org/shu/fliplr/downloads/fliplr.htm\n\nRepository:\n  http://bitbucket.org/shu/fliplr/",
+  "install_details": "Just source this file. (Put this file into the plugin directory.)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11702",
+      "filename": "fliplr.vim",
+      "script_version": "1.1",
+      "date": "2009-11-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "added regexp support and auto detection"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11670",
+      "filename": "fliplr.vim",
+      "script_version": "1.0",
+      "date": "2009-11-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "changed EOL characters (ff=dos -> ff=unix)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11664",
+      "filename": "fliplr.vim",
+      "script_version": "1.0",
+      "date": "2009-11-06",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

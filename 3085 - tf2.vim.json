@@ -1,0 +1,42 @@
+{
+  "script_id": "3085",
+  "name": "tf2.vim",
+  "summary": "TF2 script syntax highlighting",
+  "script_type": "syntax",
+  "description": "Extremely basic syntax highlighting of Team Fortress 2 scripts (.cfg). Pretty much a find/replace of the original quake.vim with the custom color support removed.",
+  "install_details": "1) Place tf2.vim into ~/.vim/syntax in Linux or ~/vimfiles/syntax in Windows (make the folders if they don't already exist).\n2) Add the following to ~/.vim/filetype.vim or ~/vimfiles/filetype.vim (make an empty filetype.vim if it doesn't already exist) to automatically detect TF2 scripts:\n\naugroup filetypedetect\n    au! BufRead,BufNewFile */tf/cfg/*.cfg\tsetfiletype tf2\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13085",
+      "filename": "tf2.vim",
+      "script_version": ".2",
+      "date": "2010-06-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19802",
+        "user_name": "dpyro",
+        "first_name": "Sumant",
+        "last_name": "Manne",
+        "email": "darkpyro at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "a few more commands added\nI'm going to have to write a script to properly make this script eventually =S"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12960",
+      "filename": "tf2.vim",
+      "script_version": ".1",
+      "date": "2010-05-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19802",
+        "user_name": "dpyro",
+        "first_name": "Sumant",
+        "last_name": "Manne",
+        "email": "darkpyro at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

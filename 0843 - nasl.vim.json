@@ -1,0 +1,58 @@
+{
+  "script_id": "843",
+  "name": "nasl.vim",
+  "summary": "syntax highlighting for Nessus nasl scripts",
+  "script_type": "syntax",
+  "description": "Performs syntax highlighting for Nessus Attack Scripting\nLanguage (NASL) scripts.\n\nThis is still in rapid development, and by no means finished.  But, it's already useful, so I thought I would share it.",
+  "install_details": "Put the script in the same place where your other syntax scripts are located (on my Debian Linux system that would be /usr/share/vim/vim61/syntax).   If you don't have access to that directory, then you can put it somewhere in your ~/.vim directory, not sure where...\n\nTo have the nasl files be automatically recognized by the .nasl filename, you will need to edit the filetype.vim file on your system, adding an entry like this:\n\n\" Nasl script file\nau BufNewFile,BufRead *.nasl                    setf nasl\n\nThat way, the nasl.vim file will load automatically upon running :syntax enable, as long as you're editing a file which ends in .nasl (I'll work on having .inc files recognized as well).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2588",
+      "filename": "nasl.vim",
+      "script_version": "0.3",
+      "date": "2003-12-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3997",
+        "user_name": "markusdes",
+        "first_name": "Markus",
+        "last_name": "DeShon",
+        "email": "markusdes at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Have now added all the functions from all the .inc files."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2545",
+      "filename": "nasl.vim",
+      "script_version": "0.2",
+      "date": "2003-12-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3997",
+        "user_name": "markusdes",
+        "first_name": "Markus",
+        "last_name": "DeShon",
+        "email": "markusdes at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "This is a much better version, includes all builtin functions.  I will add the functions from all the standard .inc files next."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2543",
+      "filename": "nasl.vim",
+      "script_version": "0.1",
+      "date": "2003-12-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3997",
+        "user_name": "markusdes",
+        "first_name": "Markus",
+        "last_name": "DeShon",
+        "email": "markusdes at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

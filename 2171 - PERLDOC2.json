@@ -1,0 +1,42 @@
+{
+  "script_id": "2171",
+  "name": "PERLDOC2",
+  "summary": "Perldoc with sytnax highlighting in vim",
+  "script_type": "utility",
+  "description": "This is PERLDOC2 for Vim. This plugin provides colouful experience for viewing perl documentation. The following pod items receive special highlighting treatment: verbatim text, headings and lists. The generated pod documents are kept in a cache directory, which allows browsing back and forth in your pod history.\n\nFor more information and some screenshots, see http://mechanicalrevolution.com/blog/perldoc_vim.html",
+  "install_details": "1. Install the Pod::Simple::Vim module from CPAN.\n2. Install syntax/perldoc.vim and plugin/perldoc2.vim in the respective folders in your vim runtime path.\n3. Set the g:Perldoc_path variable in your vimrc to to point to a directory where the cached pod files will be stored (include trailing slash!).\n4. Use the Perldoc command, which requires one argument - the name of a module, e.g. \":Perldoc Test::More\".",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11276",
+      "filename": "PERLDOC2.zip",
+      "script_version": "0.3",
+      "date": "2009-08-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13965",
+        "user_name": "pshangov",
+        "first_name": "Peter",
+        "last_name": "Shangov",
+        "email": "pshangov at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed line-endings to unix style"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10322",
+      "filename": "PERLDOC2.zip",
+      "script_version": "0.2",
+      "date": "2009-03-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13965",
+        "user_name": "pshangov",
+        "first_name": "Peter",
+        "last_name": "Shangov",
+        "email": "pshangov at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Now uses the Pod::Simple::Vim module from CPAN and no longer requires vim with perl bindings"
+    }
+  ]
+}

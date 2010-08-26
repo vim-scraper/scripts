@@ -1,0 +1,42 @@
+{
+  "script_id": "1319",
+  "name": "perlprove.vim",
+  "summary": "Perl unittest compiler. Parses Test::Harness' `prove` output.",
+  "script_type": "utility",
+  "description": "Runs the Test::Harness 'prove' utility and formats the errors. It is implemented as a compiler, so it's invoked with :make and the usual error navigation commands work.\n\nUsage:\n:make  - runs prove for the testfile you are in. Failed tests and perl errors are recognized by vim and it jumps to the first error (failed test or perl syntax error). Use :cn and :cp to go to the next resp. previous error. :cl gives a list of all the errors and :cc <number> jumps to a specific error message. See the 'quickfix' part in the vim manual.\n:make <arguments>  - runs prove with the argument you give. It does not add the filename of the current test. Useful to run all your test, eq: ':make *t', or ':make t'\n",
+  "install_details": "Copy perlprove.vim to ~/.vim/compiler\nAdd to your .vimrc:\nau BufRead,BufNewFile *.t set filetype=perl | compiler perlprove",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4450",
+      "filename": "perlprove.vim",
+      "script_version": "2",
+      "date": "2005-07-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8017",
+        "user_name": "harmen",
+        "first_name": "Harmen",
+        "last_name": "Bus",
+        "email": "no  at  none.com",
+        "homepage": ""
+      },
+      "release_notes": "'-l' argument to prove added.\nFixed some comments."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4446",
+      "filename": "perlprove.vim",
+      "script_version": "1",
+      "date": "2005-07-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8017",
+        "user_name": "harmen",
+        "first_name": "Harmen",
+        "last_name": "Bus",
+        "email": "no  at  none.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

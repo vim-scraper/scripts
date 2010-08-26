@@ -1,0 +1,266 @@
+{
+  "script_id": "1507",
+  "name": "TabLineSet.vim",
+  "summary": "A Vim7 tabline customization",
+  "script_type": "utility",
+  "description": "Screenshot link:  http://www.geocities.com/eric_p_arnold/TabLineSet_eg.html\n\nSee feedback tip#1239   http://vim.sourceforge.net/tips/tip.php?tip_id=1239\n \nSynopsis:\n\n    -   Configurable, intelligent/dynamic tab field sizing.\n\n    -   See all buffers loaded in windows in all tabs.\n\n    -   New colorscheme and general presentation.  The highlighting groups are\n        defined at the end of the script.  Tweak as desired.\n\n    -   The indicator sets are customizable.\n        (It will also turn verbose mode off automatically, as needed.)\n\n        You can add the   g:TabLineSet_.*   vars to your .vimrc, where you can\n        customize tab min/max, etc., and these these indicators:\n            modified        : whether any window in the tab needs saving\n            windows         : window count in the tab\n            buffers_list    : tab label contains comma list of buffers contained\n            closers         : add hot spots (\"!\") to the tab for click-to-close\n\n            These are mostly for development, but might be useful otherwise:\n            tabnr           : include the tab number for the selected tab/window\n            winnr           : ... window number\n            bufnr           : ... buffer number\n            filler_func     : tell it to use   g:TabLineSetFillerFunc   to\n                              contain the name of a function to be evaluated\n                              at runtime.  It's proof of concept, mostly.\n\n\n    -   You can add these mappings to your .vimrc to control the verbose\n        settings on the fly:\n\n        The first one toggles all indicators off:\n\n            nmap <Leader>tv :call TabLineSet_verbose_toggle()<CR>\n\n        The second rotates through a list of option settings which\n        configurable/extensible via g:TabLineSet_verbose_sets.  See below.\n\n            nmap <Leader>tr :call TabLineSet_verbose_rotate()<CR>\n\n    -   Additional customization can be done via the filter lists.  These are\n        more complex, requiring use of regex's and such, but they allow you to\n        make arbitrary changes to the TabLine string at runtime.\n\n    -   You have the choice of editing stuff in place here, but it might be\n        better to copy the vars and highlights of interest into your .vimrc .\n        I think I've isolated it all to be easy to cut and paste, maybe.\n\n    -   Finally, the ultimate customization:  dink around with the script\n        yourself :-)\n\n\n",
+  "install_details": "Put it in the plugin directory.  Tweak it as desired.\n\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5746",
+      "filename": "TabLineSet.vim",
+      "script_version": "2.0.1",
+      "date": "2006-05-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "- startup bug with Tab.._min undefined\n[blah, sorry]"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5745",
+      "filename": "TabLineSet.vim",
+      "script_version": "2.0",
+      "date": "2006-05-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "- Heavily restructured for support for gui tabs;\nprobably installed some bugs too :-P\n- Some speed tweaks\n- Added g:TabLineSet_max_cols to enable GUI tab\nscrolling\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5714",
+      "filename": "TabLineSet.vim",
+      "script_version": "1.8.3",
+      "date": "2006-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "- Checks for need to recalc, now ~instant return for page redraws"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5696",
+      "filename": "TabLineSet.vim",
+      "script_version": "1.8.1.1",
+      "date": "2006-05-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Added wrap-max-lines increase/decrease \"buttons\" on tabline."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5694",
+      "filename": "TabLineSet.vim",
+      "script_version": "1.8.1",
+      "date": "2006-05-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "- Corrected indexing for mousefunc patch"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5691",
+      "filename": "TabLineSet.vim",
+      "script_version": "1.8",
+      "date": "2006-05-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "- Use the tabline wrapping patch if available.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5645",
+      "filename": "TabLineSet.vim",
+      "script_version": "1.7.1",
+      "date": "2006-05-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "- Reset highlighting based on synIDattr() and whether some external operation has cleared attributes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5640",
+      "filename": "TabLineSet.vim",
+      "script_version": "1.7",
+      "date": "2006-05-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "- Added pre- and post-proc function hooks\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5635",
+      "filename": "TabLineSet.vim",
+      "script_version": "1.61",
+      "date": "2006-05-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "- [Really, this time]Fixed problem where slow-down occurs when the\ntabline function is called for every keystroke.  Use\nthe toggle or rotate mappings/functions to reset the\nhighlighting, if something clobbers it."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5564",
+      "filename": "TabLineSet.vim",
+      "script_version": "1.55",
+      "date": "2006-04-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "- disable the g:TabLineSetFillerFunc per the performance problem with VIm70d."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5531",
+      "filename": "TabLineSet.vim",
+      "script_version": "1.5",
+      "date": "2006-04-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "- added filter lists so users can apply multiple regex's to the tabline string from the config vars.\n- re-arranged the close button, the window counter,\n  and the (tab,win,buf) list"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5511",
+      "filename": "TabLineSet.vim",
+      "script_version": "1.4",
+      "date": "2006-04-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "- added comma list of buffers contained in tab\n- changed toggle and rotate mapping functions to\n  handle multiple option sets to switch through\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5510",
+      "filename": "TabLineSet.vim",
+      "script_version": "1.3.5",
+      "date": "2006-04-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Added an autocommand to address problems of start up highlighting conflicts."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5509",
+      "filename": "TabLineSet.vim",
+      "script_version": "1.3",
+      "date": "2006-04-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "\n- Added more indicators, and toggle mapping funcs\nfor verbose control.\n- Changed the name of the script from tabset.vim\n- Solidified the non-GUI color scheme.\n- Started some hooks to customize slack area. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5506",
+      "filename": "tabset.vim",
+      "script_version": "1.2",
+      "date": "2006-04-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed some bugs, better width calc., more presentation and highlighting thingies."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5505",
+      "filename": "tabset.vim",
+      "script_version": "1.1",
+      "date": "2006-03-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

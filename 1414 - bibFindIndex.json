@@ -1,0 +1,26 @@
+{
+  "script_id": "1414",
+  "name": "bibFindIndex",
+  "summary": "Jump to an index in an alphabetically ordered file",
+  "script_type": "ftplugin",
+  "description": "This is a small ftplugin that helps jumping to a key in a bibtex file. \nIt assumes a bibtex file that is alphabethically ordered by the bibitem \nkey. Maybe some people will find this useful.\n\nType <LocalLeader>g and a bibtex-key you want to find.\nType <LocalLeader>n to jump to the next key in line.\n\nExample use:\n\nIf the keys in the file were: \n    \n    @article{aa,\n    ...}\n    @article{ab\n    ...}\n    @article{aba\n    ...}\n    @article{ac\n    ...}\n\nthen '<LL>gab<cr>' would take you to \"ab\" but '<LL>nab<cr>' to \"ac\". \nActually BibGotoNextIndex is the main reason for why I wrote this one.\n\nIf g:bibFindIndexAllowSpaces is true, the \"entry head\" may include whitespace. \n(I'm not sure if this is legal bibtex, though.)\n",
+  "install_details": "Copy the file to ~/.vim/ftplugin/bib/\n\nAlso available via git\nhttp://github.com/tomtom/vimtlib/tree/master\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4829",
+      "filename": "bibFindIndex.vim",
+      "script_version": "0.1",
+      "date": "2005-11-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

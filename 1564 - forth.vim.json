@@ -1,0 +1,58 @@
+{
+  "script_id": "1564",
+  "name": "forth.vim",
+  "summary": "Syntax highlighting for the Forth programming language",
+  "script_type": "syntax",
+  "description": "This version is an update of the version shipped with Vim 6.X and 7.X. I have only tested it with Vim 7.X.\n\nNew version allows highlighting of \"space errors\" in comments (e.g. trailing spaces and/or tabs). Thanks to Benjamin Krill for this nice feature. To turn it on, add the following line to your vimrc:\n\nlet forth_space_errors=1\n\nIf you have switched it on, you can turn off highlighting of trailing spaces in comments by setting forth_no_trail_space_error in your vimrc. If you do not want the highlighting of a tabulator following a space in comments, you can turn this off by setting forth_no_tab_space_error.\n\n\nComment for the Initial upload:\n\nThomas E. Vaughan send me a patch, to allow words end with a parenthesis. Such a trailing parenthesis will now no longer start the highlighting for stack comments.\n\nI have also added a fix for a bug in the script, that led to an annoying W18 warning while parsing the script. Bill McCarthy and Ilya Sher found that bug in 2004!\nShame on me, I thought I had applied that fix *two* years ago to the offical version.\nWelcome to embarrassment city :-\\",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10961",
+      "filename": "forth.vim",
+      "script_version": "1.12",
+      "date": "2009-07-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7075",
+        "user_name": "cvjb",
+        "first_name": "Christian",
+        "last_name": "Brüssow",
+        "email": "info at cvjb.de",
+        "homepage": "http://www.cvjb.de"
+      },
+      "release_notes": "Josh Grams send a patch to allow the parenthesis comments at the beginning of a line. That patch also fixed a typo in one of the comments. Thank you :-)\n\nI have only tested the file with Vim 7.2, but I think it will also work with Vim 6.X.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8247",
+      "filename": "forth.vim",
+      "script_version": "1.11",
+      "date": "2008-02-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7075",
+        "user_name": "cvjb",
+        "first_name": "Christian",
+        "last_name": "Brüssow",
+        "email": "info at cvjb.de",
+        "homepage": "http://www.cvjb.de"
+      },
+      "release_notes": "Shawn K. Quinn <sjquinn at speakeasy dot net> send a big patch with\nnew words commonly used in Forth programs or defined by GNU Forth.\nI also fixed a typo in closing words for class and object definition."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7354",
+      "filename": "forth.vim",
+      "script_version": "1.10",
+      "date": "2007-07-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7075",
+        "user_name": "cvjb",
+        "first_name": "Christian",
+        "last_name": "Brüssow",
+        "email": "info at cvjb.de",
+        "homepage": "http://www.cvjb.de"
+      },
+      "release_notes": "Benjamin Krill send me a nice patch to highlight \"space errors\" in comments (e.g. trailing spaces and/or tabs). Thanks :-)"
+    }
+  ]
+}

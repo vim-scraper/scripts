@@ -1,0 +1,26 @@
+{
+  "script_id": "1990",
+  "name": "kwiki.vim",
+  "summary": "Syntax highlighting for kwiki files",
+  "script_type": "syntax",
+  "description": "The script is based on the wiki.vim developed by Andreas Kneib <aporia@web.de> and Mathias Panzenböck <grosser.meister.morti@gmx.at>.  The formatting rules are mainly derived (with modification) from the perl module Kwiki::Formatter. http://search.cpan.org/~ingy/Kwiki-0.39/lib/Kwiki/Formatter.pm\n",
+  "install_details": "Simply drop the file into your syntax directory ($HOME/.vim/syntax) and add one line into your filetype.vim:\n\n    au BufRead,BufNewFile *.kwiki setf kwiki\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7495",
+      "filename": "kwiki.vim",
+      "script_version": "0.1",
+      "date": "2007-08-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12913",
+        "user_name": "rueycheng",
+        "first_name": "Ruey-Cheng",
+        "last_name": "Chen",
+        "email": "rueycheng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

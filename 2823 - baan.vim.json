@@ -1,0 +1,74 @@
+{
+  "script_id": "2823",
+  "name": "baan.vim",
+  "summary": "Indenting for Baan scripts",
+  "script_type": "indent",
+  "description": "Hitherto I have not found an indent vim script for Baan. This is just a small indent file that works for baan scripts. \n\nVersion created: Gvim 7.2\n\nPlease let me know if there are any improvement/bugs. \n\n",
+  "install_details": "Place this file in the \"indent\" directory under the directory where vim is installed ($VIMHOME).\nIf your file has \".baan\" extension this should work automatically. If it does not for some reason or the other then\n                     \"set indentexpr=Get_Baan_Indent()\"\nAs an aside (and as a Baan coder) you might probably want to add this to your .vmrc:\n                    \"set filetype=baan\"  \n\n               \n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11595",
+      "filename": "baan.vim",
+      "script_version": "0.22",
+      "date": "2009-10-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18234",
+        "user_name": "rkka546",
+        "first_name": "Rajesh",
+        "last_name": "Kannan",
+        "email": "Rajesh.Kannan at infor.com",
+        "homepage": ""
+      },
+      "release_notes": "pre-processor definitions get indent of 0. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11571",
+      "filename": "baan.vim",
+      "script_version": "0.21",
+      "date": "2009-10-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18234",
+        "user_name": "rkka546",
+        "first_name": "Rajesh",
+        "last_name": "Kannan",
+        "email": "Rajesh.Kannan at infor.com",
+        "homepage": ""
+      },
+      "release_notes": "Double deduction of indents on \"endcase\". "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11569",
+      "filename": "baan.vim",
+      "script_version": "0.2",
+      "date": "2009-10-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18234",
+        "user_name": "rkka546",
+        "first_name": "Rajesh",
+        "last_name": "Kannan",
+        "email": "Rajesh.Kannan at infor.com",
+        "homepage": ""
+      },
+      "release_notes": "In v0.1 only 3GL was indented.\nAdded indenting for 4GL syntax as well. \nPlease let me know if there are any bugs. Thanks!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11567",
+      "filename": "baan.vim",
+      "script_version": "0.1",
+      "date": "2009-10-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18234",
+        "user_name": "rkka546",
+        "first_name": "Rajesh",
+        "last_name": "Kannan",
+        "email": "Rajesh.Kannan at infor.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

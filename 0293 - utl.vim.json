@@ -1,0 +1,74 @@
+{
+  "script_id": "293",
+  "name": "utl.vim",
+  "summary": "Univeral Text Linking - Execute URLs, footnotes, open emails, organize ideas",
+  "script_type": "utility",
+  "description": "--- WHAT IS UTL.VIM?\n\nIt brings the benefits of URL-based hyperlinking to plain text, extending the\nURL syntax for plain text needs, in accordance with the RFC 2396 (towards\ncurrent RFC 3986) URL specification.\n\nUtl is very easy to start. Just  :so %  the .vba file and dive into the live examples\nof the doc.\n\n--- USAGES\n\n- Open any URLs found in text with appropriate handler\n- Open files of any media type from within Vim (.pdf, .jpg, etc)\n- Small helper utilities via embedded Vimscript\n- Project management\n- Organizing ideas\n- Commenting source code\n- Personal Wiki\n- Editing HTML\n- Bookmark files, directories, URLs\n\n--- CHARACTERISTICS\n\n- Well documented and helpful verbose mode\n- Is easy to get started\n- Stays out of the way, no side effects\n- Extensible\n\n--- KEYWORDS\nHypertext, URL, URI, email, footnotes, Wiki, bookmarks\n\n--- CHANGES SINCE UTL V2.0\n\nThe most important changes are:\n\n- Added generic media type handler: open .pdf, .doc,\n  .jpg etc without the need to define handler variables.\n- Added support for footnote references: make \"[1]\"\n  executable.\n- Added scheme to open emails, e.g.\n  <mail:///Inbox?26.07.2008 16:01>\n- Added verbose mode: Better figure out what's going on\n- Added 'copy link/filename to clipboard' function\n- Changed user interface: Basic Command :Utl instead\n  only mapping \\gu\n- Alternate http access method: open web documents\n  directly in Vim\n- Support network files (shares, NFS), e.g.\n  <file://127.0.0.1/path/to/file&gt;\n- Improved jumping back and forth\n- More versatile scheme handler interface\n- Fixed Bugs\n\n--- EXAMPLES\n\nFor live examples and tutorial you can have a look into the docs\nwithout installing by opening the download link below and search\nfor \"getStarted\"",
+  "install_details": "Download the utl_3_0a.vba file and open it in a Vim. Then follow\nthe instructions (:so %).\n    ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9060",
+      "filename": "utl_3_0a.vba",
+      "script_version": "3.0a ALPHA",
+      "date": "2008-07-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "659",
+        "user_name": "stb",
+        "first_name": "Stefan",
+        "last_name": "Bittner",
+        "email": "stb at bf-consulting.de",
+        "homepage": "http://www.bf-consulting.de"
+      },
+      "release_notes": "The most important changes are:\n- Added generic media type handler: open .pdf, .doc,\n  .jpg etc without the need to define handler variables.\n- Added support for footnote references: make \"[1]\"\n  executable.\n- Added scheme to open emails, e.g.\n  <mail:///Inbox?26.07.2008 16:01>\n- Added verbose mode: Better figure out what's going\n- Added 'copy link/filename to clipboard' function\n- Changed user interface: Basic Command :Utl instead\n  only mapping \\gu\n- Alternate http access method: open web documents\n  directly in Vim\n- Support network files (shares, NFS), e.g.\n  <file://127.0.0.1/path/to/file&gt;\n- Improved jumping back and forth\n- More versatile scheme handler interface\n- Fixed Bugs"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4085",
+      "filename": "utl-2_0_0.zip",
+      "script_version": "2.0",
+      "date": "2005-03-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "659",
+        "user_name": "stb",
+        "first_name": "Stefan",
+        "last_name": "Bittner",
+        "email": "stb at bf-consulting.de",
+        "homepage": "http://www.bf-consulting.de"
+      },
+      "release_notes": "Successor of Thlnk.vim with many new features:\n* Call web browser and email client on URLs (configurable scheme handlers),\n* Call MS-Word on .doc files, Acrobat Reader on .pdf, IrfanView on .jpg etc.\n  (configurable media type handlers)\n* New vimscript: protocol for embedding vim commands into text files and source code.\n* Syntax highlighting of URLs\n* Support for URL heuristics, e.g. allow www.vim.org, not only http://www.vim.org\n* Support exeuction of URLs without <URL:...> embedding, e.g. \"see www.vim.org\"\n* Support multiline URLs, Smart setup and customization facility, bugs fixed.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=927",
+      "filename": "thlnk-1.2.1.zip",
+      "script_version": "1.2.1",
+      "date": "2002-06-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "659",
+        "user_name": "stb",
+        "first_name": "Stefan",
+        "last_name": "Bittner",
+        "email": "stb at bf-consulting.de",
+        "homepage": "http://www.bf-consulting.de"
+      },
+      "release_notes": "Please see release notes for version 1.2. The reason for this version 1.2.1 is, that I\npacked the .vim files with the wrong 'fileformats' setting into the .zip file. Sorry!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=926",
+      "filename": "thlnk-1.2.zip",
+      "script_version": "1.2",
+      "date": "2002-06-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "659",
+        "user_name": "stb",
+        "first_name": "Stefan",
+        "last_name": "Bittner",
+        "email": "stb at bf-consulting.de",
+        "homepage": "http://www.bf-consulting.de"
+      },
+      "release_notes": "- New section \"Tips and Common Pitfails\" added to the docs. Enhanced Documentation.\n- Enhanced warning and error messages.\n- Bug fixes:\n  * {Visual}\\gu didn't work on Windows gVim without guioptions+=a set.\n  * Klaus Horsten <horsten@gmx.at>: With 'wrapscan' unset, fragment addressing could fail.\n  * Patrik Nyman <patrik.nyman@orient.su.se>: Non existing http: or rcp: URLs made thlnk\n    list the current buffer."
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "script_id": "3171",
+  "name": "phpcomplete.vim",
+  "summary": "php omnicomplete with extra support",
+  "script_type": "ftplugin",
+  "description": "Default phpcomplete.vim does not support in-file checking of $var = new Class; so if you don't have a tags file with the variable in it already you have to hack around it by placing the comment /* @var $yourvar YourClass */ above the line which is really kludgy.\n\nThis patch allows for in-file checking so you don't need the comment.\n\n$instance = new Class;\n...\n$instance->Blah(); // <-- complete without comment\n\nIt also allows support for singleton instantiations:\n\n$instance = Class::getInstance();\n$instance->completeMe(); // sweet completion\n\n=== Usage ===\n// example class which has a TAGS file generated for it somewhere\nclass SomeClass {\n  private function _private_method() {} // never shows up in completion list\n  public static function staticMethod() {} // only shows up when using completion on SomeClass::<C-X><C-O>\n  public function completeMe() {} // only shows up when using completion on $instance_of_someclass-><C-X><C-O>\n}\n\n== Non-static completion ==\n$instance = new SomeClass;\n...\n$instance-><C-X><C-O> to display the omnicompletion menu (see :help ins-completion)\n$instance->completeMe(); // will autoselect completeMe since it's the only public non-static method\n\n== Static completion ==\nSomeClass::<C-X><C-O> to display omnicompletion menu\nSomeClass::staticMethod(); // once again will autoselect staticMethod since it's the only public static method\n\n== Singleton completion ==\n$instance = SomeClass::getInstance();\n$instance-><C-X><C-O> complete just like non-static\n\n\n\n=== Other features ===\n * Correct restriction of static or standard methods based on context ( show only static methods with :: and only standard with ->)\n * Real support for self:: and $this-> with the aforementioned context restriction\n * Constant variable completion (not just define(VARIABLE, 1) but const VARIABLE = 1)\n\nFollow updates:\nhttp://github.com/shawncplus/phpcomplete.vim",
+  "install_details": "Place in $HOME/.vim/autoload/phpcomplete.vim and enable the php ftplugin",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13496",
+      "filename": "phpcomplete.vim",
+      "script_version": "1.3.2",
+      "date": "2010-08-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17073",
+        "user_name": "shawncplus",
+        "first_name": "Shawn",
+        "last_name": "Biddle",
+        "email": "shawn at shawnbiddle.com",
+        "homepage": "http://www.shawnbiddle.com"
+      },
+      "release_notes": "Don't complete self::, static::, or $this-> while outside of a class"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13494",
+      "filename": "phpcomplete.vim",
+      "script_version": "1.3.1",
+      "date": "2010-08-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17073",
+        "user_name": "shawncplus",
+        "first_name": "Shawn",
+        "last_name": "Biddle",
+        "email": "shawn at shawnbiddle.com",
+        "homepage": "http://www.shawnbiddle.com"
+      },
+      "release_notes": "Support for PHP 5.3's LSB static:: context"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13431",
+      "filename": "phpcomplete.vim",
+      "script_version": "1.3",
+      "date": "2010-07-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17073",
+        "user_name": "shawncplus",
+        "first_name": "Shawn",
+        "last_name": "Biddle",
+        "email": "shawn at shawnbiddle.com",
+        "homepage": "http://www.shawnbiddle.com"
+      },
+      "release_notes": "Correctly limit completion lists to static or normal methods based on :: or ->. Adds support for self:: completion"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13429",
+      "filename": "phpcomplete.vim",
+      "script_version": "1.2",
+      "date": "2010-07-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17073",
+        "user_name": "shawncplus",
+        "first_name": "Shawn",
+        "last_name": "Biddle",
+        "email": "shawn at shawnbiddle.com",
+        "homepage": "http://www.shawnbiddle.com"
+      },
+      "release_notes": "Added in-file completion for $this-> context"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13421",
+      "filename": "phpcomplete.vim",
+      "script_version": "1.1",
+      "date": "2010-07-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17073",
+        "user_name": "shawncplus",
+        "first_name": "Shawn",
+        "last_name": "Biddle",
+        "email": "shawn at shawnbiddle.com",
+        "homepage": "http://www.shawnbiddle.com"
+      },
+      "release_notes": "Added support for completion of const variables (const SOMETHING = 1;, not just \ndefine(\"SOMETHING\", 1);) "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13419",
+      "filename": "phpcomplete.vim",
+      "script_version": "1",
+      "date": "2010-07-28",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17073",
+        "user_name": "shawncplus",
+        "first_name": "Shawn",
+        "last_name": "Biddle",
+        "email": "shawn at shawnbiddle.com",
+        "homepage": "http://www.shawnbiddle.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

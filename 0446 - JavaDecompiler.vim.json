@@ -1,0 +1,58 @@
+{
+  "script_id": "446",
+  "name": "JavaDecompiler.vim",
+  "summary": "Automatically decompiles java class files and displays java code.",
+  "script_type": "utility",
+  "description": "When you edit a .class file using vim, this plugin will decompile the class file for you and display it in the current buffer.\n\nAdmittedly, the buffer management is not very robust, but it's a very handy plugin nonetheless.  How much cooler is it to view decompiled code using your favorite editor than to download a new UI to view Java code in?!",
+  "install_details": "Put jad.vim in your plugins directory.  \nDownload jad for your operating system (http://kpdus.tripod.com/jad.html) and make sure it is in your system path.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1329",
+      "filename": "jad.vim",
+      "script_version": "1.3",
+      "date": "2002-10-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1161",
+        "user_name": "alexander_kurilovich",
+        "first_name": "Alexander",
+        "last_name": "Kurilovich",
+        "email": "alexander_kurilovich at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Delete not needed code.\nDetach buffer from 'class'-file and attach it to 'jad'-file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1319",
+      "filename": "jad.vim",
+      "script_version": "1.2",
+      "date": "2002-10-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1161",
+        "user_name": "alexander_kurilovich",
+        "first_name": "Alexander",
+        "last_name": "Kurilovich",
+        "email": "alexander_kurilovich at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Remove some gzip dependencies :)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1299",
+      "filename": "jad.vim",
+      "script_version": "1.1",
+      "date": "2002-10-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1137",
+        "user_name": "dmcqb",
+        "first_name": "David",
+        "last_name": "Bowers",
+        "email": "vive_lafrique (at) yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

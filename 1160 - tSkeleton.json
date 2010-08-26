@@ -1,0 +1,378 @@
+{
+  "script_id": "1160",
+  "name": "tSkeleton",
+  "summary": "File Templates and Code Skeletons/Snippets",
+  "script_type": "utility",
+  "description": "tSkeleton provides file templates and code skeletons (snippets). These \ntemplates may contain special tags that are replaced with some computed \nvalue (e.g., variables, user input ...), vimscript code, or place \nholders/jump positions (when used in conjunction with imap.vim or \n|TSkeletonMapGoToNextTag()|.\n\n\nFile templates:\n\nIn order to add support for a new filetype, save a skeleton file to \n~/.vim/skeletons/file.suffix and add something like this to your .vimrc \nfile:\n\n    autocmd BufNewFile *.suffix       TSkeletonSetup template.suffix\n    autocmd BufNewFile /here/*.suffix TSkeletonSetup othertemplate.suffix\n\nAlternatively, you can store templates as:\n\n    ~/vimfiles/skeletons/templates/GROUP/FILETYPE PATTERN\n\n\nCode skeletons:\n\nSmaller skeleton bits are stored in SKELETONS/bits/FILETYPE/ or \nSKELETONS/bits/general/. I.e., code skeletons can be filetype specific \nor generally available.\n\nThe filenames of the bits may be grouped in submenus as in:\n\n    ../tex/&Define.%5Cnew&command\n    ../tex/&Define.%5Cnew&environment\n\nThis will create skeletons for \\newcommand and \\newenvironment but will \ngroup the skeletons under the TSkel.Define. menu with the respective \naccelerators.\n\n\nDefault key maps:\n\n    <Leader>## ... Expand name under cursor\n    <Leader>#t ... Insert code skeleton via command line\n    <c-\\><c-\\> ... In insert mode, expand the bit before the cursor (on \n                   a German keyboard this happens to be <c-#><c-#>)\n\n\nGeneral remarks:\n\nA list of special tags:\n\n    <+FILE NAME ROOT+> :: the file name root\n    <+FILE NAME+>      :: the file name\n    <+FILE SUFFIX+>    :: the file suffix\n    <+FILE DIRNAME+>   :: the file's directory\n    <+NOTE+>           :: a note\n    <+DATE+>           :: the current date (the format is controlled via \n                          g:tskelDateFormat)\n    <+AUTHOR+>         :: the author's name (g:tskelUserName)\n    <+EMAIL+>          :: the author's e-mail (g:tskelUserEmail)\n    <+WEBSITE+>        :: the author's homepage (g:tskelUserWWW)\n    <+LICENSE+>        :: the name of the license this file is released \n                          under (g:tskelLicense)\n\ntSkeleton also supports the following pseudo-tags:\n    <+CURSOR+>         :: where to place the cursor after insertion\n    <+&NAME+>          :: a vim option\n    <+g:NAME+>         :: a global variable\n    <+b:NAME+>         :: a buffer local variable\n    <+?QUERY?+>        :: query the user\n    <+?VAR|QUERY?+>    :: query the user and propose some choices from \n                          the variable ${VAR}\n    <+bit:BIT>, <+bit:BIT|\"DEFAULT\">, <+bit:BIT|COMMANDS> :: insert a \n                          bit; if the bit isn't defined for the current \n                          filetype, use DEFAULT; if DEFAULT matches \".*\" \n                          insert it as a string; otherwise interpret it \n                          as a command sequence to be fed to normal\n    <+tskel:TSKELETON> ... :: same as the above\n    <+include(TSKELETON)+> :: Another synonym for the above.\n    <+call:FUNCTION(ARGS)+> :: Insert the result value of some function\n    <+execute(EX COMMAND)+> :: Run a vim command.\n\nFlow control:\n    <+if(CONDITION)+>\n    <+elseif(CONDITION)+>\n    <+else+>\n    <+endif+>\n\nLoops:\n    <+for(VAR in LIST)+>\n    <+endfor+>, <+endfor(VAR)+>\n\nVariables:\n    <+let(VAR=VALUE)+>\n\nInteraction:\n    <+input(VAR, QUERY, [DEFAULT], [COMPLETION])+>\n\nOther:\n    <+nl+>\n    <+joinline+>\n    <+nop+>\n\nA wiki like table could then be constructed using a skeleton like this:\n\n    <+input('s:my_rows?!', 'Rows: ')+>\n    <+input('s:my_cols?!', 'Cols: ')+>\n    <+for(i in range(s:my_rows))+>\n    |<+for(j in range(s:my_cols))+> <+CURSOR+> |<+endfor(j)+><+nop+>\n    <+endfor(i)+>\n\nUnknown tags are kept in the expanded skeleton. These tags can be used \nas cursor jump marks. This syntax was originally used by imap (vimscript \n#244 or vimscript #475). If you don't want to install imap, you can also  \nuse |TSkeletonMapGoToNextTag()|.\n\n",
+  "install_details": "This script requires tlib (vimscript #1863).\n\nEdit the vba file and type:\n\n    :so %\n\nSee :help vimball for details. If you use vim 7.0, you probably need to \nupdate vimball (vimscript #1502) first.\n\nIMPORTANT: When updating from an older version, please remove the cache \nfiles in ~/vimfiles/cache/tskel_*/** (or select \"Reset\" from the menu) \nand (if existent) the directories ~/vimfiles/skeletons/menu, \n~/vimfiles/skeletons/bbits.\n\n\nIf you don't already have some skeletons, you may want to download \nthe file tSkeleton-Samples.zip from the list below.\n\n\nThe files are stored in ~/vimfiles/skeletons or ~/.vim/skeletons (see \ng:tskelDir). The directory structure should look like this:\n\n    skeletons/\n        NAME.SUFFIX (templates for new files)\n        templates/\n            GROUP/ (templates for new files)\n                FILETYPE PATTERN.SUFFIX\n        map/\n            FILETYPE (map files for conditional expansion)\n        bits/\n            FILETYPE.txt (single line templates)\n            general/\n                GENERAL CODE SKELETONS ...\n            FILETYPE/\n                FILETYPE SPECIFIC CODE SKELETONS: ONE SKELETON PER FILE ...\n\n\nYou might want to use imaps.vim's (vimscript #244 or vimscript #475) place \nholders in conjunction with this plugin..\n\n\nIf you don't use imaps.vim, you can :call TSkeletonMapGoToNextTag(). \nLike imaps, this will map <c-j> to a function that makes the cursor jump \nto the next tag.\n\n\nATTENTION:\n\nIf you had an older version (pre 4.0) installed, you might also want to \nremove the older cache directories in ~/.vim/skeletons/ (eg menu, \nbbits).\n\nIf you add a new skeleton or template, you'll also have to do \n:TSkeletonBitReset to make the plugin rescan the source directory.\n\nIf you update from 1.0, be aware that the default \"markup\" for place \nholders has changed.\n\ntSkeleton up to 2.1 is not compatible with vim7 up to patch 8. You need \nat least vim 7.0.08 to use this plugin. For windows, current executables \nincluding patches can be downloaded from the cream website.\n\ntSkeleton 3 can cause an unpatched vim7 to crash. I'm not sure about \nthat though. If this happens to you, please update (vim) to a more \nrecent version.\n\n\nAlso available via git\nhttp://github.com/tomtom/tskeleton_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11545",
+      "filename": "tSkeleton.vba.gz",
+      "script_version": "4.7",
+      "date": "2009-10-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- TSkeletonMapHyperComplete() (default: <c-space>): Map a magic key that expands skeletons or, if no matching templates were found, completions, tags, words etc.\n- Minibits: Allow single words as bit definition: \"word\" expands to \"word<+CURSOR+>\"\n- TSkeletonSetup: allow full filenames as argument\n- Auto templates: don't cd into the templates directory\n- tskeleton#ExpandBitUnderCursor(): Third argument is a dictionary.\n- FIX: Problem with <+name/expandsion+> kind of tags when located at the beginning or end of a line\n- s:GetBitDefs()\n- Improved tskeleton#Complete() (for use as completefunc or omnifunc)\n- FIX: Cursor positioning after expanding templates without a <+CURSOR+> tag\n- Don't build the menu for tSkeleton scratch buffers\n- Require tlib 0.29\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9595",
+      "filename": "tSkeleton.vba.gz",
+      "script_version": "4.5",
+      "date": "2008-12-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Make sure tlib is loaded even if it is installed in a different rtp-directory\n- Call s:InitBufferMenu() earlier.\n- C modifier: Consider _ whitespace\n- g:tskelMarkerExtra (extra markers for tskeleton#GoToNextTag)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8126",
+      "filename": "tSkeleton.vba.gz",
+      "script_version": "4.3",
+      "date": "2008-01-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- bbcode group\n- tskelKeyword_{&ft} and tskelGroup_{&ft} variables can be buffer-local\n- Case-sensitivity can be configured via [bg]:tskelCaseSensitive and \n[bg]:tskelCaseSensitive_{&filetype}\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7941",
+      "filename": "tSkeleton.vba.gz",
+      "script_version": "4.2",
+      "date": "2007-11-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Enable <+CURSOR/foo+>. After expansion \"foo\" will be selected.\n- New (old) default values: removed 'abbreviations' from g:tskelTypes \nand set g:tskelAutoAbbrevs to 0 in order to minimize surprises.\n- Enabled tex-Skeletons for the viki filetype\n- FIX: Place the cursor at the end of an inserted bit that contains no \ncursor marker (which was the original behaviour).\n- Split html bits into html and html_common; the java group includes \nhtml_common.\n- CHANGE: Made bit names case-sensitive\n- NEW: select() tag (similar to the query tag)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7696",
+      "filename": "tSkeleton.vba.gz",
+      "script_version": "4.1",
+      "date": "2007-09-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Automatically define iabbreviations by adding [bg]:tskelAbbrevPostfix \n(default: '#') to the bit name (i.e., a bit with the file \"foo.bar\" will \nby default create the menu entry \"TSkel.foo.bar\" for the bit \"bar\" and \nthe abbreviation \"bar#\"). If this causes problems, set \ng:tskelAutoAbbrevs to 0.\n- Bits can have a <tskel:abbrev> section that defines the abbreviation.\n- New type 'abbreviations': This will make your abbreviations accessible \nas templates (in case you can't remember their names)\n- New experimental <tskel:condition> section (a vim expression) that \nchecks if a bit is eligible in the current context.\n- New <+input()+> tag.\n- New <+execute()+> tag.\n- New <+let(VAR=VALUE)+> tag.\n- <+include(NAME)+> as synonym for <+bit:NAME+>.\n- Experimental <+if()+> ... <+elseif()+> ... <+else+> ... <+endif+>, \n<+for(var in list)+> ... <+endfor+> tags.\n- Special tags <+nop+>, <+joinline+>, <+nl+> to prevent certain \nproblems.\n- These special tags have to be lower case.\n- Made tskeleton#GoToNextTag() smarter in recognizing something like: \n<+/DEFAULT+>.\n- Defined <Leader>## and <Leader>#<space> (see g:tskelMapLeader) as \nvisual command (the user will be queried for the name of a skeleton)\n- Some functions have moved and changed names. It should now be possible \nto plug-in custom template expanders (or re-use others).\n- Use append() via tlib#buffer#InsertText() to insert bits. This could \ncause old problems to reappear although it seems to work fine.\n- The markup should now be properly configurable (per buffer; you can \nset template-specific markers in the tskel:here_before section).\n- Require tlib 0.14\n- The default value for g:tskelUseBufferCache is 0 as many people might \nfind the accumulation of cached information somewhat surprising. Unless \nyou use tag/functions type of skeleton bit, it's unnecessary anyway.\n- Removed the dependency on genutils.\n- The g:tskelMarkerCursor variable was removed and replaced with \ng:tskelMarkerCursor_mark and g:tskelMarkerCursor_rx.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7633",
+      "filename": "tSkeleton.vba.gz",
+      "script_version": "4.0",
+      "date": "2007-09-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Renamed g:tskelPattern* variables to g:tskelMarker*\n- If g:tskelMarkerHiGroup is non-empty, place holders will be \nhighlighted in this group.\n- Re-enable 'mini' in g:tskelTypes.\n- Calling TSkeletonBit with no argument, brings up the menu.\n- Require tlib 0.12\n- CHANGE: The cache is now stored in ~/vimfiles/cache/ (use \ntlib#cache#Filename)\n- INCOMPATIBLE CHANGE: Use autoload/tskeleton.vim\n- FIX: Problem with cache name\n- FIX: Problem in s:IsDefined()\n- FIX: TSkeletonEditBit completion didn't work before expanding a bit.\n- FIX: Command-line completion when tSkeleton wasn't invoked yet (and \nmenu wasn't built).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7379",
+      "filename": "tSkeleton.vba.gz",
+      "script_version": "3.5",
+      "date": "2007-07-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- FIX: Minor problem with auto-templates\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7366",
+      "filename": "tSkeleton.vba.gz",
+      "script_version": "3.4",
+      "date": "2007-07-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Automatically reset bits information after editing a bit.\n- Automatically define autocommands for templates with the form \"NAME \nPATTERN\" (where \"#\" in the pattern is replaced with \"*\"), i.e. the \ntemplate file \"text #%2ffoo%2f#.txt\" will define a template for all new \nfiles matching \"*/foo/*.txt\"; the filetype will be set to \"text\"\n- These \"auto templates\" must be located in \n~/.vim/skeletons/templates/GROUP/\n- TSkeletonCB_FILENAME(), TSkeletonCB_DIRNAME()\n- FIX: TSkeletonGoToNextTag() didn't work properly with ### type of \nmarkers.\n- FIX: TSkeletonLateExpand(): tag at first column\n- FIX: In templates, empty lines sometimes were not inserted in the \ndocument\n- FIX: Build menu on SessionLoadPost event.\n- FIX: Protect against autocommands that move the cursor on a BufEnter \nevent\n- FIX: Some special characters in the skeleton bit expansion were escaped \ntwice with backslashes.\n- Require tlib 0.9\n- Make sure &foldmethod=manual in the scratch buffer\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7140",
+      "filename": "tSkeleton.vba.gz",
+      "script_version": "3.3",
+      "date": "2007-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- New :TSkeletonEditBit command\n- FIX: Embedded <tskel> tags in file templates didn't work\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7115",
+      "filename": "tSkeleton.vba.gz",
+      "script_version": "3.2",
+      "date": "2007-05-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- \"tags\" & \"functions\" types are disabled by default due to a noticeable \ndelay on initialization; add 'tags' and 'functions' to g:tskelTypes to \nre-enable them (with the new caching strategy, it's usable, but can \nproduce much noise; but this depends of course on the way you handle \ntags)\n- Improved caching strategy: cache filetype bits in \nskeletons/cache_bits; cache buffer-specific bits in \nskeletons/cache_bbits/&filetype/path (set g:tskelUseBufferCache to 0 to \nturn this off; this speeds up things quite a lot but creates many files \non the long run, so you might want to purge the cache from time to time)\n- embedded <tskel:> tags are now extracted on initialization and not \nwhen the skeleton is expanded (I'm not sure yet if it is better this \nway)\n- CHANGE: dropped support for the ~/.vim/skeletons/prefab subdirectory; \nyou'll have to move the templates, if any, to ~/.vim/skeletons\n- FIX: :TSkeletonEdit, :TSkeletonSetup command-line completion\n- FIX: Problem with fold markers in bits when &fdm was marker\n- FIX: Problems with PrepareBits()\n- FIX: Problems when the skeletons/menu/ subdirectory didn't exist\n- TSkeletonExecInDestBuffer(code): speed-up\n- Moved functions from EncodeURL.vim to tlib.vim\n- Updated the manual\n- Renamed the skeletons/menu subdirectory to skeletons/cache_menu\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7030",
+      "filename": "tSkeleton.vba.gz",
+      "script_version": "3.1",
+      "date": "2007-04-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Tag-based code completion for vim\n- Made the supported skeleton types configurable via g:tskelTypes\n- FIX: Tag-based skeletons the name of which contain blanks\n- FIX: Undid shortcut that prevented the <+bit:+> tag from working\n- Preliminary support for using keys like <space> for insert mode \nexpansion.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7023",
+      "filename": "tSkeleton.vba.gz",
+      "script_version": "3.0",
+      "date": "2007-04-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This version is probably less stable than the predecessor. Or maybe not.\n- Partial rewrite for vim7 (drop vim6 support)\n- Now depends on tlib (vimscript #1863)\n- \"query\" now uses a more sophisticated version from autoload/tlib.vim\n- The default value for g:tskelQueryType is \"query\".\n- Experimental (proof of concept) code completion for vim script \n(already sourced user-defined functions only). Use :delf \nTSkelFiletypeBits_prototypes_vim to disable this as it can take some \ntime on initialization.\n- Experimental (proof of concept) tags-based code completion for ruby.  \nUse :delf TSkelProcessTag_ruby to disable this. It's only partially \nuseful as it simply works on method names and knows nothing about \nclasses, modules etc. But it gives you an argument list to fill in. It \nshouldn't be too difficult to adapt this for other filetypes for which \nsuch an approach could be more useful.\n- The code makes it now possible to somehow plug in custom bit types by \ndefining TSkelFiletypeBits_{NAME}(dict, filetype), or \nTSkelFiletypeBits_{NAME}_{FILETYPE}(dict, filetype), \nTSkelBufferBits_{NAME}(dict, filetype), \nTSkelBufferBits_{NAME}_{FILETYPE}(dict, filetype).\n- FIX s:RetrieveAgent_read(): Delete last line, which should fix the \nproblem with extraneous return characters in recursively included \nskeleton bits.\n- FIX: bits containing backslashes\n- FIX TSkeletonGoToNextTag(): Moving cursor when no tag was found.\n- FIX: Minibits are now properly displayed in the menu.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7022",
+      "filename": "tSkeleton-Samples.zip",
+      "script_version": "3.0samples",
+      "date": "2007-04-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This files contains some templates to be used with this plugin. They were previously distributed with the plugin."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6245",
+      "filename": "tSkeleton.zip",
+      "script_version": "2.3a",
+      "date": "2006-10-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Support for current versions of genutils (> 2.0), really"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6220",
+      "filename": "tSkeleton.zip",
+      "script_version": "2.2",
+      "date": "2006-09-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Don't display query menu, when there is only one eligible bit\n- EncodeURL.vim now correctly en/decoded urls\n- UTF8 compatibility -- use col() instead of virtcol() (thanks to Elliot Shank)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5676",
+      "filename": "tSkeleton.zip",
+      "script_version": "2.1",
+      "date": "2006-05-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Don't accidentally remove torn off menus; rebuild the menu less often\n- Maintain insert mode (don't switch back to normal mode) in <c-\\><c-\\> imap\n- If no menu support is available, use the <SID>Query function to let the user select among eligible bits (see also g:tskelQueryType)\n- Create a normal and an insert mode menu\n- Fixed selection of eligible bits\n- Ensure that g:tskelDir ends with a (back)slash\n- Search for 'skeletons/' in &runtimepath & set g:tskelDir accordingly\n- If a template is named \"#.suffix\", an autocmd is created automatically.\n- Set g:tskelQueryType to 'popup' only if gui is win32 or gtk.\n- Minor tweak for vim 7.0 compatibility\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4488",
+      "filename": "tSkeleton.zip",
+      "script_version": "2.0",
+      "date": "2005-08-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- You can define \"groups of bits\" (e.g. in php mode, all html bits are \n  available too)\n- context sensitive expansions (only very few examples yet); this causes \n  some slowdown; if it is too slow, delete the files in .vim/skeletons/map/\n- one-line \"mini bits\" defined in either \n  ./vim/skeletons/bits/{&filetype}.txt or in $PWD/.tskelmini\n- Added a few LaTeX, HTML and many Viki skeleton bits\n- Added EncodeURL.vim\n- Hierarchical bits menu by calling a bit \"SUBMENU.BITNAME\" (the \"namespace\" \n  is flat though; the prefix has no effect on the bit name; see the \"bib\" \n  directory for an example)\n- the bit file may have an ampersand (&) in their names to define the \n  keyboard shortcut\n- Some special characters in bit names may be encoded as hex (%XX as in \n  URLs)\n- Insert mode: map g:tskelMapInsert ('<c-\\><c-\\>', which happens to be the \n  <c-#> key on a German qwertz keyboard) to TSkeletonExpandBitUnderCursor()\n- New <tskel:msg> tag in skeleton bits\n- g:tskelKeyword_{&filetype} variable to define keywords by regexp (when \n  'iskeyword' isn't flexible enough)\n- removed the g:tskelSimpleBits option\n- Fixed some problems with the menu\n- Less use of globpath()\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4447",
+      "filename": "tSkeleton.zip",
+      "script_version": "1.5",
+      "date": "2005-07-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Menu of small skeleton \"bits\"\n- TSkeletonLateExpand() (mapped to <Leader>#x)\n- Disabled <Leader># mapping (use it as a prefix only)\n- Fixed copy & paste error (loaded_genutils)\n- g:tskelDir defaults to $HOME .\"/vimfiles/skeletons/\" on Win32\n- Some speedup\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4297",
+      "filename": "tSkeleton.zip",
+      "script_version": "1.4",
+      "date": "2005-05-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Popup menu with possible completions if TSkeletonExpandBitUnderCursor() is \ncalled for an unknown code skeleton (if there is only one possible completion, \nthis one is automatically selected)\n- Make sure not to change the alternate file and not to distort the window \nlayout\n- require genutils\n- Syntax highlighting for code skeletons\n- Skeleton bits can now be expanded anywhere in the line. This makes it \npossible to sensibly use small bits like date or time.\n- Minor adjustments\n- g:tskelMapLeader for easy customization of key mapping (changed the map \nleader to \"<Leader>#\" in order to avoid a conflict with Align; set \ng:tskelMapLeader to \"<Leader>t\" to get the old mappings)\n- Utility function: TSkeletonGoToNextTag(); imaps.vim like key bindings via TSkeletonMapGoToNextTag()\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3972",
+      "filename": "tSkeleton.zip",
+      "script_version": "1.3",
+      "date": "2005-03-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- TSkeletonCleanUpBibEntry (mapped to <Leader>tc for bib files)\n- complete set of bibtex entries\n- fixed problem with [&bg]: tags\n- fixed typo that caused some slowdown\n- other bug fixes\n- a query must be enclosed in question marks as in <+?Which ID?+>\n- the \"test_tSkeleton\" skeleton can be used to test if tSkeleton is working\n- and: after/before blocks must not contain function definitions\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3951",
+      "filename": "tSkeleton.zip",
+      "script_version": "1.2",
+      "date": "2005-03-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- new pseudo tags: bit (recursive code skeletons), call (insert function result)\n- before & after sections in bit definitions may contain function definitions\n- fixed: no bit name given in <SID>SelectBit()\n- don't use ={motion} to indent text, but simply shift it\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3786",
+      "filename": "tSkeleton.zip",
+      "script_version": "1.1",
+      "date": "2005-01-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Skeleton bits (small inline skeletons or whatever you want to call it)\n- User-defined tags\n- Modifiers <+NAME:MODIFIERS+> (c=capitalize, u=toupper, l=tolower, s//=substitute)\n- the default markup for tags has changed to <+TAG+> (for \"compatibility\" with \nimaps.vim), the cursor position is marked as <+CURSOR+> (but this can be \nchanged by setting g:tskelPatternLeft, g:tskelPatternRight, and \ng:tskelPatternCursor)\n- in the not so simple mode, skeleton bits can contain vim code that is \nevaluated after expanding the template tags (see .../skeletons/bits/vim/if for \nan example)\n- function TSkeletonExpandBitUnderCursor(), which is mapped to <Leader>#\n- utility function: TSkeletonIncreaseRevisionNumber()\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3718",
+      "filename": "tSkeleton.zip",
+      "script_version": "1.0",
+      "date": "2004-12-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

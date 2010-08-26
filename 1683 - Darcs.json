@@ -1,0 +1,42 @@
+{
+  "script_id": "1683",
+  "name": "Darcs",
+  "summary": "basic Darcs support for vim",
+  "script_type": "utility",
+  "description": "Defines the following commands:\n  DarcsDiff shows the diff between the file in the current buffer and the Darcs version of that file\n  DarcsOff closes the diff view opened by DarcsDiff\n  DarcsChanges shows the changes to the file in the current buffer. ",
+  "install_details": "copy darcs.vim into your .vim/plugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6324",
+      "filename": "darcs.vim",
+      "script_version": "0.2.1",
+      "date": "2006-10-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11048",
+        "user_name": "Sylvain Joyeux",
+        "first_name": "Sylvain",
+        "last_name": "Joyeux",
+        "email": "sylvain.joyeux at m4x.org",
+        "homepage": "http://www.jhaampe.org"
+      },
+      "release_notes": "added credits/description/... comments in top of file"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6323",
+      "filename": "darcs.vim",
+      "script_version": "0.2",
+      "date": "2006-10-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11048",
+        "user_name": "Sylvain Joyeux",
+        "first_name": "Sylvain",
+        "last_name": "Joyeux",
+        "email": "sylvain.joyeux at m4x.org",
+        "homepage": "http://www.jhaampe.org"
+      },
+      "release_notes": "add the s:FindDir function that was missing in 0.1"
+    }
+  ]
+}

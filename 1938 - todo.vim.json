@@ -1,0 +1,58 @@
+{
+  "script_id": "1938",
+  "name": "todo.vim",
+  "summary": "Syntax highlighting for simple to do lists.",
+  "script_type": "syntax",
+  "description": "Adds syntax highlighting for simple to do lists.\n\nThis is pretty rudimentary right now, but I've been using it for a while. Please send me comments/suggestions.\n\nThe file todo.vim lists known limitations/bugs.",
+  "install_details": "Quick install:\n\n    o Extract todo.vim under the syntax directory.\n    o Add the following to your .vimrc (or to ftdetect/filetype.vim; sample filetype.vim is included)\n\n        au BufRead,BufNewFile *.todo setfiletype todo\n\nAny file of the form *.todo or any file whose filetype is set as 'todo' will now have syntax highlighting enabled. Read the comments in todo.vim and view the sample file sample.todo for details.\n\nOptional: Add the following to your .vimrc (or to scripts.vim file under the config directory; sample scripts.vim is included). This allows, in addition, for files starting with '#todo' in the first line to be marked as to do lists:\n\n        if getline(1) =~? '^#\\?TODO\\>'\n            setfiletype todo\n        endif",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7847",
+      "filename": "todo_vimfiles.zip",
+      "script_version": "0.31",
+      "date": "2007-10-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12480",
+        "user_name": "suresh_sri",
+        "first_name": "Suresh",
+        "last_name": "Srinivasan",
+        "email": "suresh_sri at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Same as 0.3, but .zip'ed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7846",
+      "filename": "todo_vimfiles.tar.gz",
+      "script_version": "0.3",
+      "date": "2007-10-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12480",
+        "user_name": "suresh_sri",
+        "first_name": "Suresh",
+        "last_name": "Srinivasan",
+        "email": "suresh_sri at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor bug fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7773",
+      "filename": "todo_vimfiles.zip",
+      "script_version": "0.21",
+      "date": "2007-10-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12480",
+        "user_name": "suresh_sri",
+        "first_name": "Suresh",
+        "last_name": "Srinivasan",
+        "email": "suresh_sri at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Same as 0.2, but as a .zip instead of .gz"
+    }
+  ]
+}

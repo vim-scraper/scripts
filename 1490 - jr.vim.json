@@ -1,0 +1,42 @@
+{
+  "script_id": "1490",
+  "name": "jr.vim",
+  "summary": "jr language syntax script",
+  "script_type": "syntax",
+  "description": "This script provides syntax highlighting for the JR programming language, available at http://www.cs.ucdavis.edu/~olsson/research/jr/",
+  "install_details": "install in the syntax directory, et voila !  You will also need to edit the synmenu.vim and filetype.vim files, and add jr to the list of languages.\n\nThe line to add in symmenu.vim should look like this (you'll need to adjust the numbers):\n    an 50.40.410 &Syntax.HIJK.Jr :cal SetSyn(\"jr\")<CR>\n\nThe lines to add in filetype.vim:\n\n\" JR\nau BufNewFile,BufRead *.jr                      setf jr\n\n\n\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5502",
+      "filename": "jr.vim",
+      "script_version": "1.2",
+      "date": "2006-03-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9594",
+        "user_name": "fkilc",
+        "first_name": "francois",
+        "last_name": "kilchoer",
+        "email": "fmk.anibis at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This version adds support for two extra keywords, co and elseafter.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5392",
+      "filename": "jr.vim",
+      "script_version": "1.1",
+      "date": "2006-03-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9594",
+        "user_name": "fkilc",
+        "first_name": "francois",
+        "last_name": "kilchoer",
+        "email": "fmk.anibis at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

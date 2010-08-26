@@ -1,0 +1,58 @@
+{
+  "script_id": "3039",
+  "name": "vimgdb",
+  "summary": "Emacs like gdb interface to cterm vim",
+  "script_type": "utility",
+  "description": "This script provides an emacs like GDB interface to vim. Woks in cygwin and unix terminals (no need for +clientserver).\n\nFind the screen shots at \"Vim Viki\"\n\nStart the program like this\n\nvimgdb <gdb-params> <exe-file> <exe-params>\n\nThis will open vim with two windows. Type the gdb commands in bottom window. The top window will show the current file line and breakpoints highlighted.\n\nYou can also jump to top window and use the following keys\n<F6> run\n<F5> continue\n<F7> step into\n<F8> step over\n<F9> toggle break point\nCtr-p Watch the variable under Cursor/Visual selection\n\nwatch the output/variables in bottom window.\n\nKnown Bugs:\nDon't use the quit gdb command (that will hang the vim), instead quit the vim.\n\nCredits:\nThis script is preliminarily based on Tomas Zellerin's gdbvim",
+  "install_details": "copy the vimgdb, vimgdb_msg to any directory in the system path\n\ncopy the vimgdb.vim to ~/.vim/misc directory\n\nNeeds perl & gdb\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13526",
+      "filename": "vimgdb.tar.gz",
+      "script_version": "1.2",
+      "date": "2010-08-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7617",
+        "user_name": "mseeralan",
+        "first_name": "Sureshkumar",
+        "last_name": "Manimuthu",
+        "email": "m.sureshkumar at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Hard coded path for vimgdb_msg removed.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13500",
+      "filename": "vimgdb.zip",
+      "script_version": "1.1",
+      "date": "2010-08-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7617",
+        "user_name": "mseeralan",
+        "first_name": "Sureshkumar",
+        "last_name": "Manimuthu",
+        "email": "m.sureshkumar at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Previews version did not work on some systems.\nThis uses sockets for communication instead of pipes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12765",
+      "filename": "vimgdb.gz",
+      "script_version": "0.1",
+      "date": "2010-04-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7617",
+        "user_name": "mseeralan",
+        "first_name": "Sureshkumar",
+        "last_name": "Manimuthu",
+        "email": "m.sureshkumar at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

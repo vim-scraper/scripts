@@ -1,0 +1,42 @@
+{
+  "script_id": "986",
+  "name": "ASPJScript",
+  "summary": "ASP JScript Support",
+  "script_type": "syntax",
+  "description": "These three files will enable support for ASP in JScript mode.\n\nScreenshot at: http://vi-improved.com/aspjscript.png (large)",
+  "install_details": "Unzip the files in your vim directory.  If you want it to work automatically, you will also need to edit your filetype.vim to source aspjscript.vim which require jscript.vim or, more simply, you can just add \nau BufNewFile,BufRead *.asp :set ft=aspjscript \" all my .asp files ARE jscript\ninto your .vimrc (_vimrc)\n\nHope this helps you... join #vim on irc.freenode.net for all your vim help needs :)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3065",
+      "filename": "aspjscript.zip",
+      "script_version": "1.1",
+      "date": "2004-05-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2162",
+        "user_name": "metacosm",
+        "first_name": "Robert",
+        "last_name": "(MetaCosm)",
+        "email": "vim at metacosm.dhs.org",
+        "homepage": "http://vi-improved.org"
+      },
+      "release_notes": "Now includes matchit.vim stuff for html tag matching."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3021",
+      "filename": "aspjscript.zip",
+      "script_version": "1.0",
+      "date": "2004-05-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2162",
+        "user_name": "metacosm",
+        "first_name": "Robert",
+        "last_name": "(MetaCosm)",
+        "email": "vim at metacosm.dhs.org",
+        "homepage": "http://vi-improved.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

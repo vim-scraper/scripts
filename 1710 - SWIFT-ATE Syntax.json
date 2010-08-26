@@ -1,0 +1,26 @@
+{
+  "script_id": "1710",
+  "name": "SWIFT-ATE Syntax",
+  "summary": "SWIFT ATE files highlighting",
+  "script_type": "syntax",
+  "description": "Proper SWIFT (http://www.swift.com) ATE files highlighting.\n\nThis syntax complies to FIN release 2006.",
+  "install_details": "1. copy downloaded file to your syntax directory\n2. add the following lines to your filetype.vim file :\n\t\" ATE SWIFT Message\n\tau BufNewFile,BufRead *.ate\t\t\tsetf ate",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6423",
+      "filename": "ate.vim",
+      "script_version": "1.0",
+      "date": "2006-11-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11118",
+        "user_name": "dotpanic",
+        "first_name": "Mike",
+        "last_name": "Meirsman",
+        "email": "meirsman at ultim8team.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

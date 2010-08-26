@@ -1,0 +1,74 @@
+{
+  "script_id": "234",
+  "name": "std_c.zip",
+  "summary": "A Standard C syntax file.",
+  "script_type": "syntax",
+  "description": "This C syntax file is to help developing portable Standard C code.  That is C code that has to be able to compile on many different compilers.  The default is to highlight C89 C code, but it can be configured to allow or flag as an error C94 and C99 language features (types, constants, etc.)\n\nAdditional non-standard C features can be allowed - C++ comments, GNU C keywords, $ in identitfiers for VMS C, etc.\n\nThe syntax file also has the following benefits:\n\no more language elements highlighted (e.g. function and identifier names)\no more syntax errors highlighted, and\no better highlighting of macros.\n\nDetails of all configuration options are documented in the supplied help file.\n\nMore detail can be found at http://www.eandem.co.uk/mrw/vim/syntax/index.html#ansic",
+  "install_details": "Download the zip file and expand into your runtime path using the directory paths included.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5856",
+      "filename": "std_c.zip",
+      "script_version": "12.5",
+      "date": "2006-06-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "443",
+        "user_name": "mrdubya",
+        "first_name": "Mike",
+        "last_name": "Williams",
+        "email": "mrw at eandem.co.uk",
+        "homepage": "http://www.eandem.co.uk/mrw/"
+      },
+      "release_notes": "Misc updates:\no Add support for syntax based folding.\no Add VIM7 spell group to comments and strings.\no Braces within parentheses no longer highlighted as an error (controllable).\no Add missing C99 printf float format specifier F.\no Doc updated for new configuration options."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3307",
+      "filename": "std_c.zip",
+      "script_version": "11.2",
+      "date": "2004-08-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "443",
+        "user_name": "mrdubya",
+        "first_name": "Mike",
+        "last_name": "Williams",
+        "email": "mrw at eandem.co.uk",
+        "homepage": "http://www.eandem.co.uk/mrw/"
+      },
+      "release_notes": "Bug fixes for nested comments and system header include statements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2293",
+      "filename": "std_c.zip",
+      "script_version": "10.8",
+      "date": "2003-09-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "443",
+        "user_name": "mrdubya",
+        "first_name": "Mike",
+        "last_name": "Williams",
+        "email": "mrw at eandem.co.uk",
+        "homepage": "http://www.eandem.co.uk/mrw/"
+      },
+      "release_notes": "Correct highlighting of #pragma and #warn[ing] pp directives. Minor fix to correct handling of '-' in sscanf() scanlists when there are the last character."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2045",
+      "filename": "std_c.zip",
+      "script_version": "10.5",
+      "date": "2003-06-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "443",
+        "user_name": "mrdubya",
+        "first_name": "Mike",
+        "last_name": "Williams",
+        "email": "mrw at eandem.co.uk",
+        "homepage": "http://www.eandem.co.uk/mrw/"
+      },
+      "release_notes": "Added following:\no correct highlighting of digraphs in tokens if enabled\no C++ comments can have the line continuation character - \\ !!!\no Fixed bug in highlighting nested array bracketing, and\no Change invalid token ~= from operator highlight to an error."
+    }
+  ]
+}

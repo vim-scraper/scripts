@@ -1,0 +1,26 @@
+{
+  "script_id": "1114",
+  "name": "pmd.vim",
+  "summary": "Integrates PMD using Vim quickfix mode",
+  "script_type": "utility",
+  "description": "PMD (see http://pmd.sourceforge.net) is a utility that scans Java source code to find potential problems, unused variables, unnecessary imports, etc.  This plugin integrates PMD with Vim using Vim's quickfix features (see :help quickfix).\n\nTo invoke PMD from Vim, either issue the command :Pmd or enter <Leader>pmd from command mode.  The latter keystroke command may be customized.  See the pmd.vim file for details.\n\nThe :Pmd command may take one argument, which the file or directory to run PMD against.  If left out, PMD will run against the filename of the current buffer, which is also the behavior of the <Leader>pmd keystroke command.",
+  "install_details": "Copy the pmd.vim file into the plugin directory or source it as needed.  There are two settings.  The command to run PMD should be set in the Pmd_Cmd variable.  The PMD rulesets to use should be set in the Pmd_Rulesets variable.  See the pmd.vim file for details.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3577",
+      "filename": "pmd.vim",
+      "script_version": "1.0",
+      "date": "2004-10-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1019",
+        "user_name": "thundrfyre",
+        "first_name": "Henry",
+        "last_name": "So, Jr.",
+        "email": "henryso at panix.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

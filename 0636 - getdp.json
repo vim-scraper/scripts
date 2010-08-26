@@ -1,0 +1,42 @@
+{
+  "script_id": "636",
+  "name": "getdp",
+  "summary": "Syntax file for GetDP Numerical Environment",
+  "script_type": "syntax",
+  "description": "GetDP is a Numerical Environment for partial diferential equations, mainly through the Finite Element method. This simple script helps vim users in daily work providing color and syntax support.",
+  "install_details": "The GetDP community uses .pro files to store their problems, so adding this lines in filetype.vim will help\" GetDP (Scientific Environment)augroup filetypedetectau BufNewFile,BufRead *.pro     setf getdpaugroup END ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2729",
+      "filename": "getdp.vim",
+      "script_version": "0.2",
+      "date": "2004-02-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "986",
+        "user_name": "patoledo",
+        "first_name": "Patricio",
+        "last_name": "Toledo",
+        "email": "patoledo at ing.uchile.cl",
+        "homepage": ""
+      },
+      "release_notes": "Better comments, more keywords"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1978",
+      "filename": "getdp.vim",
+      "script_version": "0.1",
+      "date": "2003-05-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "986",
+        "user_name": "patoledo",
+        "first_name": "Patricio",
+        "last_name": "Toledo",
+        "email": "patoledo at ing.uchile.cl",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

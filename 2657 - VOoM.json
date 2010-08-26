@@ -1,0 +1,250 @@
+{
+  "script_id": "2657",
+  "name": "VOoM",
+  "summary": "Vim Outliner of Markers -- two-pane outliner and related utilities",
+  "script_type": "utility",
+  "description": "VOoM (Vim Outliner of Markers) emulates a two-pane text outliner. It can be used with any buffer that has start fold markers with level numbers, that is {{{1, {{{2, {{{3, etc. (See :help fold-marker. Markers are specified by option 'foldmarker'.) The only restriction is that there are should be no end fold markers with levels: }}}3, }}}2, etc.\n\nNote that this is not a 'filetype' plugin. VOoM is mostly a utility for navigating and manipulating start fold markers with levels. Numbered markers are versatile for organizing all kinds of files: source code, Vim help file, plain text notes, a large wiki file, a custom GTD format, and so on.\n\nScreenshots and an animation: http://vim-voom.webs.com/\n\nOVERVIEW\n============================================================\nThere are four main Ex commands: Voom, Voomhelp, Voomexec, Voomlog.\n\n:Voom\n        Create outline of the current buffer. Outline is constructed from lines with start fold markers with level numbers, which become headlines. Outline is displayed in a special buffer in separate window which emulates the tree pane of a two-pane outliner. Such buffers are referred to as Tree buffers. The current buffer becomes a Body buffer.\n\n:Voomhelp\n        Open help file voom.txt as outline in a new tabpage.\n\n:Voomexec [vim|py]\n        Execute text in the current node or fold as Vim script or Python script. This is useful for testing code snippets and for organizing scripts by segregating them into nodes or folds. This command can be used independently of the outlining functionality provided by the command :Voom.\n\n:Voomlog\n        Create scratch buffer __PyLog__ and redirect Python stdout and stderr to that buffer. This is useful when developing Python scripts and when scripting Vim with Python. This feature is completely independent from the rest of the plugin.\n\nNOTE: commands Voomexec and Voomlog attempt to emulate similar features of Leo outlining editor.\n\n\nREQUIREMENTS\n============================================================\nThis plugin uses Python and requires Python-enabled Vim 7.x, that is Vim compiled with the Python interface. Your Vim is Python-enabled if it can do\n        :py print 2**0.5\n        :py import sys; print sys.version\n\nPython version should be 2.4-2.7. Python 3 is not supported.\n\nVim version 7.2 or above is preferred. Version 7.1 should also work. Versions 7.0 might work as well but has not been tested. Vim should be compiled using normal or bigger feature set.\n\n\nQUICK DEMO (no installation needed)\n============================================================\nExtract VOoM archive to any folder. Open \"plugin/voom.vim\" in Vim and do\n        :so %\n        :Voom\nThis will create Tree buffer for voom.vim, which will become a Body buffer.\n\nAll VOoM mappings, except Return and Tab, are for Tree buffers only.\n\n<Up>, <Down>, <Left>, <Right> arrow keys move around the Tree and select new node (Normal mode).\n\n<Return> selects node the cursor is on and then cycles between Tree and Body. So, to select another node, move to it with h, j, etc. and hit Return.\n\n<Tab> cycles between Tree and Body windows without selecting node.\n\n<Space> expands/contracts node without selecting it. Standard Vim folding command (zo, zc, zR, zM, etc.) can be used as well.\n\nLeft mouse click in the Tree selects node. If the click is outside of headline text, the node's expanded/contracted status is toggled.\n\nEdit a headline (line with a numbered fold marker) in voom.vim and go back into the Tree: the outline will be updated.\n\n<C-Up>, <C-Down> move node or a range of sibling nodes up/down.\n<C-Left>, <C-Right> promote/demote.\n\nExecute the command :Voomhelp to see all commands and mappings.\n\n\nTo create outline for another buffer, execute the command :Voom for it\n        :tab h netrw\n        :Voom\nFolder \"voom_samples\" contains some outlines to experiment with. File \"calendar_outline.txt\" is a rather large outline for stress-testing purposes: 3.1MB, 56527 lines, 4160 headlines.\n\n\nTo try Python Log Buffer feature:\n        :Voomlog\n        :py assert 2==3\n        :py print VOOM.nodes\n        :py print u'\\u2248 \\u2260'\n",
+  "install_details": "Copy files \"plugin/voom.vim\" and \"plugin/voom.py\" to your local plugin folder. Copy help file \"doc/voom.txt\" to your local doc folder. This will make commands Voom, Voomhelp, Voomexec, Voomlog available from any buffer. \n\nNOTE: In version 2.0 this plugin was renamed from VOOF (Vim Outliner Of Folds/Foldmarkers) to VOoM (Vim Outliner of Markers). \"voom\" is used everywhere instead of \"voof\", case of letters preserved: all commands start with \"Voom\" instead of \"Voof\", user options start with \"g:voom_\", etc. If you are upgrading from previous versions, please delete old \"voof\" files (voof.vim, voof.py, voof.pyc, voof.txt), delete file \"voofScript.py\" if any, edit user options in vimrc if you have any, run :helptags.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13454",
+      "filename": "VOoM-3.0.zip",
+      "script_version": "3.0",
+      "date": "2010-08-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* New command :VoomSort [options] for sorting outline.\n\n* Outline buffer (Tree) is no longer automatically wiped out when the source buffer (Body) is unloaded, deleted, or wiped out. Instead, outline is locked until the source buffer is loaded again. This change was necessary to eliminate crashes after :q, :q! and similar problems. This can also make working with outlines easier when buffers routinely get unloaded, as when 'hidden' or 'bufhidden' are not set.\n\n* Option 'bufhidden' for Tree and PyLog buffers is set to \"wipe\" instead of \"hide\".\n\n* Various glitches fixed. Memory usage reduced, especially when outlining large buffers.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13082",
+      "filename": "VOoM-2.1.zip",
+      "script_version": "2.1",
+      "date": "2010-06-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* It's now possible to customize how Tree headline text is constructed for individual filetypes:\n - 'commentstring' and new user option g:voom_rstrip_chars control which characters are stripped from the right side of headlines when default procedure is used.\n - The default procedure for Tree headline text construction can be replaced with user-defined functions via an add-on. Sample add-on is included.\n\n* Fixed bug in PyLog buffer: original sys.stdout and sys.stderr could be lost after some actions.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12762",
+      "filename": "VOoM-2.0.zip",
+      "script_version": "2.0",
+      "date": "2010-04-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- This plugin was renamed from VOOF to VOoM. All commands start with \"Voom\" instead of \"Voof\", files were renamed, and so on. Please see Install section for instructions on how to upgrade from previous versions.\n- Added rudimentary support for add-ons, a sample add-on. Fixed probable bug in mouse click mapping."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12547",
+      "filename": "VOOF-1.92.zip",
+      "script_version": "1.92",
+      "date": "2010-03-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved performance of several outline operations when working with very large outlines. Optimized some code."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12325",
+      "filename": "VOOF-1.91.zip",
+      "script_version": "1.91",
+      "date": "2010-02-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Voofgrep can perform boolean AND and NOT searches."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11927",
+      "filename": "VOOF-1.9.zip",
+      "script_version": "1.9",
+      "date": "2009-12-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "It's now possible to save and restore Tree buffer folding.\nCommand \"Voofrun\" was renamed \"Voofexec\".\nSeveral other small changes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11407",
+      "filename": "VOOF-1.8.zip",
+      "script_version": "1.8",
+      "date": "2009-09-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug in mappings.\nAdded highlighting for warnings and other messages.\nDistribution now follows Vim directory structure: there are plugin and doc folders.\nChanged license to WTFPL, version 2.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11295",
+      "filename": "VOOF-1.7.zip",
+      "script_version": "1.7",
+      "date": "2009-08-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "more foolproofing"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11238",
+      "filename": "VOOF-1.6.zip",
+      "script_version": "1.6",
+      "date": "2009-08-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added defensive measures that prevent data corruption when outline update fails for any reason.\nFixed some bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11192",
+      "filename": "VOOF-1.5.zip",
+      "script_version": "1.5",
+      "date": "2009-08-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New commands: Voofgrep, Voofunl.\nFixed bug in \"Move Down\" outline operation.\nVarious improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11001",
+      "filename": "VOOF_14.zip",
+      "script_version": "1.4",
+      "date": "2009-07-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New Tree navigation commands: go to next/previous marked node. Various small changes and fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10748",
+      "filename": "VOOF_13.zip",
+      "script_version": "1.3",
+      "date": "2009-06-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for non-default start fold markers specified by 'foldmarker' option. Various other small improvements and fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10704",
+      "filename": "VOOF_12.zip",
+      "script_version": "1.2",
+      "date": "2009-05-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor bug fixes and edits. See CHANGELOG node in voof.txt."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10682",
+      "filename": "VOOF_11.zip",
+      "script_version": "1.1",
+      "date": "2009-05-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fix involving nomodifiable and readonly buffers."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10679",
+      "filename": "VOOF.zip",
+      "script_version": "1.0",
+      "date": "2009-05-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "1357",
+  "name": "larlet.vim",
+  "summary": "Type large letters in Insert mode",
+  "script_type": "game",
+  "description": "Larlet.vim provides an enhanced Insert mode: It allows you to type larger symbols, i.e. symbols composed of several characters.  This is rather fun than a utility.\n\nIf you're looking for a real utility, you might better use Unix' banner or surf to http://www.figlet.org/\n\nTo toggle Larlet mode press F8 in Insert mode or Normal mode.  This maps one key per symbol.  Currently, the following keys are mapped:\n\n    abcdefghijklmnopqrstuvwxyz.,;!?=+-*:'`#()[]{}^~%$&0123456789/\\\"_@<>|EL\n\nCase is not distinguished, only lower letter keys get mapped.  The upper keys are free to map special symbols (e.g. E - euro symbol, L - lambda).  The mappings are per buffer, thus there should be no inference with the rest of the session (except the globally set 'listchars' option reminds you to not use hard tabs).\n\nv0.04: An alternative key for toggling can be mapped this way:\n    :nmap <buffer> <F8> <plug>Larlet_ToggleKeymap\n    :imap <buffer> <F8> <c-o><plug>Larlet_ToggleKeymap\n\nEditing possibilities are - of course - limited. Symbols will always be appended at the end of a d-line [1].  i_Space adds d-spaces, i_Enter creates d-newlines.  i_Backspace deletes symbols from the end of a d-line, by looking for a d-space backwards.\n\nSymbol size is fixed to 2 lines x 5 columns.  Symbols are arranged tightly in the text, thus \"type-setting\" is not monospace.\n\n(v0.10 only) A menu \"Larlet\" will be installed for setting some options. [2]\n(v0.04) Letter and word spacing can be changed with :SpaceSet\n\n(v0.10 only)\n'fileformat' of the script is dos, if you're on unix you have to convert it.  Ok, this script is not written in a very clean manner, make sure to use it in an extra vim session.\n\nExample:\n.  /  /|  /¯) /  /¯¯ -/-  | / / /|/)\n. /_ /¯| /¯\\ /_ /_¯  /  o |/ / /  /\n(this looks like crap, you'll need a monospace font for viewing)\n\n----------\n[1] As symbols need two buffer lines of text, some above terms get a \"d\" prepended for \"double\"\n[2] Note: v0.10 is a typo, it should be v0.01\n",
+  "install_details": "Set encoding to latin1 (already the default for many people):\n    :set enc=latin1\nOther encodings may also work, but they cannot be multi-byte and probably require the +iconv feature for conversion (because larlet uses some chars above 127).\n\n    :source larlet.vim\nfor current buffer\n\n2007 Nov 26",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7537",
+      "filename": "larlet.vim",
+      "script_version": "0.04",
+      "date": "2007-08-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "made script less intrusive, minor new features, dropped menu, ff=unix, nicer symbols (and umlauts removed)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4593",
+      "filename": "larlet.vim",
+      "script_version": "0.10",
+      "date": "2005-09-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

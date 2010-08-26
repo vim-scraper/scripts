@@ -1,0 +1,42 @@
+{
+  "script_id": "2533",
+  "name": "muttaliasescomplete.vim",
+  "summary": "Omnicompletion for mutt aliases",
+  "script_type": "utility",
+  "description": "This script adds an omnicompletion function that gets completion entries from a mutt aliases file. I tested only on GNU/Linux with vim 7.2, but it should work on other systems.\n\nPlease send comments, suggestions and patches to \"dotfiles at kb dot ccchl dot de\".",
+  "install_details": "Edit the following line in script:\nlet g:aliases_file = glob('~/.mutt/aliases')\n\nYour .vimrc:\nautocmd FileType mail set omnifunc=muttaliasescomplete#Complete\nsource path/to/muttaliasescomplete.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11299",
+      "filename": "muttaliasescomplete.vim",
+      "script_version": "0.2",
+      "date": "2009-09-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16481",
+        "user_name": "kbo",
+        "first_name": "Karsten",
+        "last_name": "B",
+        "email": "vim at kb.ccchl.de",
+        "homepage": ""
+      },
+      "release_notes": "Several input files and improved file reading. Thanks to Valentin for the patch!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9895",
+      "filename": "muttaliasescomplete.vim",
+      "script_version": "0.1",
+      "date": "2009-02-01",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "16481",
+        "user_name": "kbo",
+        "first_name": "Karsten",
+        "last_name": "B",
+        "email": "vim at kb.ccchl.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

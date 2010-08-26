@@ -1,0 +1,26 @@
+{
+  "script_id": "2312",
+  "name": "Indent Highlight",
+  "summary": "Yet another indentation (scope) highlighting",
+  "script_type": "indent",
+  "description": "This plugin provides a function that will highlight (or remove\nhighlighting ) of the current scope and parent scope based on difference in\nindentation. It can be very usefull for languages that use indentation to\ndefine the scope ( python, rubby, etc. )\n\nI wrote this script so that I could quickly restore visual stack when\ncoding in python. So for python I created the following mapping in my vimrc:\n\nmap <silent> <Leader>ih :call IHighlight( 1, \"\\^[[:space:]]*\\\\(def\\\\\\\\|class\\\\)[[:space:]]\\\\+\" )<CR> \nmap <silent> <Leader>is :call IHighlight( 0, \"\\^[[:space:]]*\\\\(def\\\\\\\\|class\\\\)[[:space:]]\\\\+\" )<CR>\n\nwhich allows me by entering \\ih (or \\is) to highlihgt current scope along\nwith the parent scope and than by entering \\ih (or \\is) again remove the\nhighlighting\n\nthe difference between \\ih and \\is is that\nthe first one (\\ih) will turn off all syntax highlighting untill indentation highlighting is active\nthe syntax highlighting will be turned back on when you enter \\ih again turning the indentation highlighting off\nthe second one (\\is) will apply indentation highlighting on top of existing syntax highlighting\n\none can extend this functionality and provide bindings for movement keys so\nthat highlighting follows the cursor position",
+  "install_details": "just drop it in your plugin directory and you can start using IHightlight function\n\nFor a specific language I would recommend to add specific mapping in your vimrc file\nsomething like this: \nmap <silent> <Leader>ih :call IHighlight( 1, regexp )<CR>\nor this: \nmap <silent> <Leader>is :call IHighlight( 0, regexp )<CR>\n where regexp is the regexp that matches language specific scope identifiers such as \"class\", \"method\", \"def\" and etc. This really depends on the language.\n\nFor python I use these mappings: \nmap <silent> <Leader>ih :call IHighlight( 1, \"\\^[[:space:]]*\\\\(def\\\\\\\\|class\\\\)[[:space:]]\\\\+\" )<CR> \nmap <silent> <Leader>is :call IHighlight( 0, \"\\^[[:space:]]*\\\\(def\\\\\\\\|class\\\\)[[:space:]]\\\\+\" )<CR>\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9029",
+      "filename": "indent_highlight.vim",
+      "script_version": "1.0",
+      "date": "2008-07-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "690",
+        "user_name": "atsiporu",
+        "first_name": "Andrey",
+        "last_name": "Tsiporukha",
+        "email": "andrey at tsiporukha.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

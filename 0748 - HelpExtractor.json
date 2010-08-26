@@ -1,0 +1,42 @@
+{
+  "script_id": "748",
+  "name": "HelpExtractor",
+  "summary": "plugin writer aid; allows plugin and help to be distributed as one file",
+  "script_type": "utility",
+  "description": "(this plugin has largely been superceded by script#1502 for vim7.0)\n\nThe HelpExtractor is a bit of vim code that allows one to merge the plugin with the help.  In addition, helptags is run automatically for the user.\n\nTypical use under Unix/Linux/Cygwin, done from the .vim (vimfiles) directory:\n\n    cat plugin/yourplugin.vim HelpExtractor.vim doc/yourplugin.txt > yourplugin.vim\n\nHelpExtractor will modify the accompanying plugin the first time the user runs Vim (it will delete the extraction code) and will generate the associated help file.  The distributed file will then have the following format:\n\n    [Plugin]\n    [HelpExtractor]\n    [HelpFile]\n\nWhen vim is next executed, the HelpExtractor modifies the plugin to be:\n\n    [Plugin]\n\nand creates a file in the user's .vim/doc directory containing the [Helpfile].  Since the HelpExtractor also runs helptags automatically, the associated help is immediately available without any actions being required of the user.  Notice that the [HelpExtractor] itself disappears.\n\n",
+  "install_details": "1. make .vim (vimfiles) your current directory\n2. place HelpExtractor.tar.gz in the .vim (vimfiles) directory\n3. gunzip HelpExtractor.tar.gz\n4. tar -oxvf HelpExtractor.tar\n5. vim\n    :helptags ~/.vim/doc\n    :wq\n\nWill create VIMSCRIPT/HelpExtractor.vim and doc/HelpExtractor.txt.  ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4319",
+      "filename": "HelpExtractor.tar.gz",
+      "script_version": "3",
+      "date": "2005-05-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "HelpExtractor v2 exhibited odd behavior when one attempted to source a plugin using it from a non-standard location.  Remember, the HelpExtractor is trying to extract documentation from the file, put it in the .vim/doc (vimfiles\\doc) directory, and remove the extractor code.  An error message is now produced and the extraction is \"finish\"d, leaving the plugin operational but with the extractor code and help intact (but not available via :help).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3434",
+      "filename": "HelpExtractor.vim",
+      "script_version": "2",
+      "date": "2004-09-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "HelpExtractor will create a doc directory for the user if it doesn't currently exist under Linux/Unix.  It now also cooperates with the GetLatestVimScripts automatic updating.\n"
+    }
+  ]
+}

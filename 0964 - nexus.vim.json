@@ -1,0 +1,42 @@
+{
+  "script_id": "964",
+  "name": "nexus.vim",
+  "summary": "Syntax highlighting for Nexus file format",
+  "script_type": "syntax",
+  "description": "This is a syntax highlighting for Nexus, a file format used by many programs in evolutionary biology, like GDA, Paup*, Mesquite, ModelTest, MrBayes and MacClade. A formal description can be found at\n\nMaddison, D.R., D.L. Swofford, and W.P. Maddison. 1997. NEXUS: An extensible file format for systematic information. Systematic Biology 46: 590-621\n\nwhile some examples and a short description can be found at\n\nhttp://workshop.molecularevolution.org/resources/fileformats/\n\nThe syntax also takes in consideration some reserved words (private block) used for MrBayes. For the most curious, a screenshot can be seen at\n\nhttp://carvalho.webhop.net/nexus_vim.png",
+  "install_details": "Just put nexus.vim in the syntax folder under $VIMRUNTIME, and call the syntax with :cal SetSyn(\"nexus\").",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2947",
+      "filename": "nexus.vim",
+      "script_version": "0.2",
+      "date": "2004-04-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2023",
+        "user_name": "Kozure",
+        "first_name": "Luis",
+        "last_name": "Carvalho",
+        "email": "lexcarvalho at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed some minor bugs, added nexus prefix as suggested by Olivier Mengue' and added nexusPublic to define public blocks."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2936",
+      "filename": "nexus.vim",
+      "script_version": "0.1",
+      "date": "2004-04-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2023",
+        "user_name": "Kozure",
+        "first_name": "Luis",
+        "last_name": "Carvalho",
+        "email": "lexcarvalho at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

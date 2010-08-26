@@ -1,0 +1,122 @@
+{
+  "script_id": "1717",
+  "name": "tcl.vim",
+  "summary": "indentation file for tcl",
+  "script_type": "indent",
+  "description": "This is a replacement for the tcl indent file that ships with vim. \n\nHandles line continuations, nested braces and combination of the two. Skips over braces in comments. This should produce indented code that looks \"as you'd expect\".\n\nIf you have any suggestions or bugs, please send them along. \n\nRequires vimscript #1603.",
+  "install_details": "place in ~/.vim/indent",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6740",
+      "filename": "tcl.vim",
+      "script_version": "0.3.6",
+      "date": "2007-02-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Another tweek to the indent/comment interaction."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6733",
+      "filename": "tcl.vim",
+      "script_version": "0.3.5",
+      "date": "2007-02-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Change the way indentation interacts with comments and line-continues. Now it basically ignores comments when reformatting indentation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6708",
+      "filename": "tcl.vim",
+      "script_version": "0.3.3",
+      "date": "2007-02-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Thanks to some feedback, found a bug w/rt the indentation of commented text."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6703",
+      "filename": "tcl.vim",
+      "script_version": "0.3.1",
+      "date": "2007-02-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "fixed a bug for vim<7.0 that would cause a dead hang. This version is properly tested on vim 6.4."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6699",
+      "filename": "tcl.vim",
+      "script_version": "0.3",
+      "date": "2007-02-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This is a big improvement over the previous version. Too many things to list. Just try it."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6660",
+      "filename": "tcl.vim",
+      "script_version": "0.2",
+      "date": "2007-01-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Much improved. Handles hanging indents for things like data runs in [array set]. Handles escaped braces and other edge cases."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6444",
+      "filename": "tcl.vim",
+      "script_version": "0.1",
+      "date": "2006-11-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

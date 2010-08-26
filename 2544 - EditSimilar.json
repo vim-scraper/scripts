@@ -1,0 +1,138 @@
+{
+  "script_id": "2544",
+  "name": "EditSimilar",
+  "summary": "Commands to edit files with a similar filename. ",
+  "script_type": "utility",
+  "description": "DESCRIPTION\nFiles edited in Vim often relate to one another; maybe they just differ in\nfile extensions, are numbered sequentially, or contain common patterns. One\ncan use the built-in cmdline-completion or filename-modifiers like %:r to\nquickly edit a similar file, or even use special plugins, e.g. to alternate\nbetween source and header files (vimscript #31). \n\nThis script provides custom versions of the :edit, :view, :split, :vsplit,\n:sview, :file, :write and :saveas commands which facilitate quick and simple\nediting of similarly named files. To quickly edit another file based on the\ncurrent file, one can: \n- substitute {old} with {new}\n- go to previous/next numbered file or add any offset to the number\n- change the file extension\nTo open a set of similar files, it is possible to: \n- open all files matching a pattern in split windows\n\nUSAGE\nSubstitutions: Change all occurrences via {text}={replacement} in the\ncurrently edited file (modeled after the Korn shell's \"cd {old} {new}\"\ncommand). This can also be achieved with the built-in filename-modifiers: \n    :edit %:gs?pattern?replacement?\nbut the syntax is difficult to memorize (it's subtly different from :s) and\nharder to type (because one has to use regular expressions instead of the\nsimpler file wildcards). \n\n:EditSubstitute[!] {text}={replacement} [{text}={replacement} [...]]\n:ViewSubstitute[!] {text}={replacement} [{text}={replacement} [...]]\n:SplitSubstitute[!] {text}={replacement} [{text}={replacement} [...]]\n:VsplitSubstitute[!] {text}={replacement} [{text}={replacement} [...]]\n:SviewSubstitute[!] {text}={replacement} [{text}={replacement} [...]]\n:FileSubstitute {text}={replacement} [{text}={replacement} [...]] \n:WriteSubstitute[!] {text}={replacement} [{text}={replacement} [...]] \n:SaveSubstitute[!] {text}={replacement} [{text}={replacement} [...]] \n(+ shortcut commands like :Esubst[!] ...)\n\nNext / Previous: Add an offset to the last number in the currently edited file. \n:[N]EditNext[!] [N]\n:[N]EditPrevious[!] [N]\n:...\n\nRoot: Change the file extension in the currently edited file. \nThis is an enhanced version of the built-in :edit %:r.{extension}\n:EditRoot[!] {extension}\n:...\n\nPattern: Open all files matching the pattern in split windows, similar to how\n :argadd {name} adds all matching files to the argument list. \n\n:SplitPattern {file-pattern}\n:...",
+  "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim EditSimilar.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.0 or higher. ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12494",
+      "filename": "EditSimilar.vba.gz",
+      "script_version": "1.17",
+      "date": "2010-02-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "BUG: :999EditPrevious on 'file00' caused E121: Undefined variable: l:replacement. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11708",
+      "filename": "EditSimilar.vba.gz",
+      "script_version": "1.16",
+      "date": "2009-11-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "BUG: Next / previous commands interpreted files such as 'C406' as hexadecimal. Thanks to Andy Wokula for sending a patch. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11350",
+      "filename": "EditSimilar.vba.gz",
+      "script_version": "1.15",
+      "date": "2009-09-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Offset commands (:EditNext et al.) now check that the digit pattern does not\naccidentally match inside a hexadecimal number (which are unsupported). "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11229",
+      "filename": "EditSimilar.vba.gz",
+      "script_version": "1.14",
+      "date": "2009-08-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- BF: :[N]EditPrevious with supplied [N] would skip over existing smaller number file and would claim that no substituted file existed. \n- BF: :[N]EditPrevious with supplied large [N] together with a low original number hogs the CPU because the loop iterates over the entire number range where the resulting offset would be negative."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10913",
+      "filename": "EditSimilar.vba.gz",
+      "script_version": "1.13",
+      "date": "2009-06-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "ENH: :EditNext / :EditPrevious without the optional [count] now skip over gaps\nin numbering. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10589",
+      "filename": "EditSimilar.vba.gz",
+      "script_version": "1.12",
+      "date": "2009-05-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- ENH: {text} in :EditSubstitute can now also contain file wildcards (?, *, **\n  and [...]) to save typing. \n- ENH: On Windows, {text} in :EditSubstitute can now also use forward slashes\n  as path separators (as an alternative to the usual backslashes). \n- ENH: Supporting substitutions spanning both pathspec and filename by finally\n  applying failed replacements of multi-path elements to the entire filespec. \n- Added \":ViewSimilar\" and \":SviewSimilar\" commands to open similar files in\n  read-only mode. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10018",
+      "filename": "EditSimilar.vba.gz",
+      "script_version": "1.10",
+      "date": "2009-02-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "ENH: {replacement} in :EditSubstitute and {extension} in :EditRoot can now\ncontain file wildcards to save typing. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9992",
+      "filename": "EditSimilar.vba.gz",
+      "script_version": "1.00",
+      "date": "2009-02-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "626",
+  "name": "ShowPairs",
+  "summary": "Highlights the matching pair surrounding the current cursor location.",
+  "script_type": "utility",
+  "description": "ShowPairs highlights the matching pair surrounding the current cursor location.  The main goal of this script is to highlight matching braces and parenthesis making it easier to edit nested expressions.\nHowever, ShowPairs uses the 'matchpairs' global option to determine what it should highlight, so it should be generic enough for other needs.",
+  "install_details": "Put showpairs.vim into your $HOME/.vim/plugin or $HOME\\vimfiles\\plugin folder.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5096",
+      "filename": "showpairs.vim",
+      "script_version": "2.1",
+      "date": "2006-02-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "386",
+        "user_name": "Trandor",
+        "first_name": "Anthony",
+        "last_name": "Kruize",
+        "email": "akruize at netspace.net.au",
+        "homepage": ""
+      },
+      "release_notes": "Fixed errors that occured when the plugin was loaded due to 'fg' and 'bg' not being defined yet, and the fact that I used an autocmd from Vim 7, oops.\nThanks to Alex Kunin for actually letting me know about the problem so I could fix it."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1945",
+      "filename": "showpairs.vim",
+      "script_version": "1.1",
+      "date": "2003-04-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "386",
+        "user_name": "Trandor",
+        "first_name": "Anthony",
+        "last_name": "Kruize",
+        "email": "akruize at netspace.net.au",
+        "homepage": ""
+      },
+      "release_notes": "Fixed the fileformat so it doesn't include ^M's everywhere.\nFixed the highlighting so it works when 'fg' and 'bg' aren't yet defined."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1931",
+      "filename": "showpairs.vim",
+      "script_version": "1.0",
+      "date": "2003-04-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "386",
+        "user_name": "Trandor",
+        "first_name": "Anthony",
+        "last_name": "Kruize",
+        "email": "akruize at netspace.net.au",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

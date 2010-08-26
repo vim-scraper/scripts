@@ -1,0 +1,26 @@
+{
+  "script_id": "209",
+  "name": "Perldoc.vim",
+  "summary": "perldoc command from vim",
+  "script_type": "ftplugin",
+  "description": "The Perldoc.vim plugin is a command + function that enables the perldoc command to be used from within the Vim text editor.  When activated the Perldoc command opens a new window at the top of the screen and places the output of the perldoc command into that window. This read-only window is just a Vim window, so you can perform all of the normal commands that you can in Vim - such as searching for a word or expression, yanking examples and code snippets.",
+  "install_details": "See the README.txt file.\n\nFor fastest installation save the zip file in your personal vim directory (eg $HOME/.vim,   or $VIM\\vimfiles\\) and unzip, it will place the 3 vim files in the correct locations. Details are in the README file. Please read it before e-mailing, but do e-mail if you have questions.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1002",
+      "filename": "perldoc.zip",
+      "script_version": "1.1.1",
+      "date": "2002-07-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "494",
+        "user_name": "bobsed",
+        "first_name": "Colin",
+        "last_name": "Keith",
+        "email": "vim at ckeith.clara.net",
+        "homepage": ""
+      },
+      "release_notes": "Support for su'ing to non-root user when executing the perldoc command as root. Perl below v5.6x do not support the -U flag to enable \"unsecure\" mode. See README.txt / vim docs for details."
+    }
+  ]
+}

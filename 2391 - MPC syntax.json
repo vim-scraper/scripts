@@ -1,0 +1,42 @@
+{
+  "script_id": "2391",
+  "name": "MPC syntax",
+  "summary": "Syntax Highlight for MakeProjectCreator files",
+  "script_type": "syntax",
+  "description": "Syntax Highlight for Makefile, Project, and Workspace Creator (http://www.ociweb.com/products/mpc).\n",
+  "install_details": "Put it into syntax directory and add mpc filetype \n\nau BufNewFile,BufRead *.m\\(wb\\|wc\\|pb\\|pc\\) setf mpc\n\nin your filetype.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9336",
+      "filename": "mpc.vim",
+      "script_version": "0.1.2",
+      "date": "2008-10-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15253",
+        "user_name": "likema",
+        "first_name": "Like",
+        "last_name": "Ma",
+        "email": "likemartinma at gmail.com",
+        "homepage": "http://likema.blogspot.com/"
+      },
+      "release_notes": "Fix loading failed on Vim 7.1 Kubuntu 7.04 by converting this script file format from dos to unix."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9312",
+      "filename": "mpc.vim",
+      "script_version": "0.1.1",
+      "date": "2008-10-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15253",
+        "user_name": "likema",
+        "first_name": "Like",
+        "last_name": "Ma",
+        "email": "likemartinma at gmail.com",
+        "homepage": "http://likema.blogspot.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

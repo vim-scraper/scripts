@@ -1,0 +1,58 @@
+{
+  "script_id": "2715",
+  "name": "UltiSnips",
+  "summary": "The ultimate snippet solution for python enabled Vim.",
+  "script_type": "utility",
+  "description": "This is the initial release of UltiSnips. It is the Ultimate solution for snippets under Vim. Snippets are intelligent text that spares you a lot of typing. Like many snippets solutions, this one ins heavily inspired by TextMates Snippet Syntax and offers all features that TextMate offers. But in Vim.\n\nMost people consider UltiSnips live changing: we have currently (8/2010) an average rating of 3.89 of 4 (4 == life changing). Chances are you like it, therefore.\n\nThis release features the following features:\n\n- TextMates snippet syntax\n- Tabstops, Placeholders (also nested)\n- Mirrors and Transformations (also inside Placeholders)\n- ShellCode, VimCode and a very powerful PythonCode interpolation\n- Live update as you type\n- snippets for file types and snippets that are always defined\n- same name, multiple snippets\n- recursive snippets: snippet in snippet\n- forward and backward jumping to placeholders and tab stops\n- convert script to download and convert TM bundles\n- > 150 unit tests to guarantee that stuff works.\n- Tested on Linux and Mac OS X\n\nThere have been many attempts to do things right; I think, this one nails it. \n\nTry it:\nExample 1:\n- open /tmp/file.c\ntype for<tab>endcounter<c-j>mycounter<c-j><c-j>int a = 3;\nyields:\n------------------- SNIP -------------------\nfor(size_t mycounter = 0; mycounter < endcounter; ++mycounter)\n{\n\tint a = 3;\n}\n------------------- SNAP -------------------\n\nExample 2:\n- open /tmp/blah.help\n- :set ft=help\n- type sec<tab>MY COOL SECTION<c-h>blah\nyields:\n------------------- SNIP -------------------\n=============================================================================\nMY COOL SECTION                                        *blah-my-cool-section*\n\nblah\n------------------- SNAP -------------------\n\n\nIf you like the script, please contact me and vote for the script!",
+  "install_details": "To use UltiSnips, you need a python enabled Vim 7. You have python if \n   :echo has(\"python\")\nyields '1'.\n\nThere are two ways to install\n\n1) download package below\n2) install from version control (recommended)\n\n1)\n1.1 - download package\n1.2 - unpack for example into your ~/.vim directory\n1.3 - add this directory to your vim path\n\n2) This is taken from the help file:\nIf you have Python, you only need to install UltiSnips. The recommended way to\ndo so is by using bzr (http://bazaar-vcs.org/). It is in all major linux\ndistribution (either package bzr or bazaar) and can be easily installed under\nMac OS X: >\n   $ easy_install bzr\n\nTo get UltiSnips, check it out into a directory of your choice. Then add this\ndirectory to your Vim runtime path: >\n   $ cd ~/.vim/\n   $ bzr get lp:ultisnips ultisnips_rep\n   $ vim ~/.vimrc\n\nadd the line: >\n   set runtimepath+=~/.vim/ultisnips_rep\n\nRestart vim. UltiSnips should work now. To access the help, use >\n   :helptags ~/.vim/ultisnips_rep/doc\n   :help UltiSnips\n\n!! Help wanted !!\nI am looking for people to:\n- Contributing and converting snippets\n- TestDrive UltiSnips under Windows\n- Make a nice screencast summing up it's features\n\nProject page: https://launchpad.net/ultisnips \nBug Tracker: https://bugs.launchpad.net/ultisnips \nHelp File online with full documentation and many example snippets: \nhttp://bazaar.launchpad.net/~sirver/ultisnips/trunk/annotate/head:/doc/UltiSnips.txt\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13661",
+      "filename": "UltiSnips-1.2.tar.gz",
+      "script_version": "1.2",
+      "date": "2010-08-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17646",
+        "user_name": "SirVer",
+        "first_name": "Holger",
+        "last_name": "Rapp",
+        "email": "HolgerRapp at gmx.net",
+        "homepage": "http://www.widelands.org"
+      },
+      "release_notes": "- many bugs were fixed\n- smode mappings for printable characters are now removed before expanding a\n  snippet. This is configurable. *UltiSnips-warning-smappings*\n- all shipped snippets are now fully compatible with UltiSnips\n- added support for global snippets which enhance python interpolation even\n  more *UltiSnips-globals*\n- added support for multi word and regular expression triggers. Very\n  powerful in combination with python interpolation.\n- Python interpolation became much more powerful *UltiSnips-python* \n- added support for clearsnippets command *UltiSnips-clearing-snippets*\n- added support for option w which is a little more strict than i.\n- added support for listing of valid triggers. Defaults to <c-tab>.\n- added support for option i (inword expansion)\n- extends keyword is now supported on the first line of snippet files. This makes it easy to\n       define special cases, for example cpp extends c: a cpp trigger is useless\n       in c, but a c trigger is valuable for cpp. \n- UltiSnips now adheres to expandtab and tabstop options of vim"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11046",
+      "filename": "UltiSnips-1.1.tar.gz",
+      "script_version": "1.1",
+      "date": "2009-07-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17646",
+        "user_name": "SirVer",
+        "first_name": "Holger",
+        "last_name": "Rapp",
+        "email": "HolgerRapp at gmx.net",
+        "homepage": "http://www.widelands.org"
+      },
+      "release_notes": "Made triggers configurable. You can also use the same trigger for expanding and tabbing. The TextMate configuration <tab> and <s-tab> is now possible.\nConditional Inserts can now be nested\nAdded support for b option. This only considers a snippet at the beginning of a line ( *UltiSnips-adding-snippets* )\nAdded support for ! option. This overwrites previously defined snippets with the same tab trigger ( *UltiSnips-adding-snippets* )\nSupport for dotted filetype syntax. Now snippets for more than one filetype can be active ( *UltiSnips-adding-snippets* )\nMinor bug fixing.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11021",
+      "filename": "UltiSnips-1.0.tar.gz",
+      "script_version": "1.0",
+      "date": "2009-07-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17646",
+        "user_name": "SirVer",
+        "first_name": "Holger",
+        "last_name": "Rapp",
+        "email": "HolgerRapp at gmx.net",
+        "homepage": "http://www.widelands.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

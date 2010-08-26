@@ -1,0 +1,42 @@
+{
+  "script_id": "1374",
+  "name": "TailMinusF",
+  "summary": "Provides near real-time update of a file in the preview window.",
+  "script_type": "utility",
+  "description": "TailMinusF allows you to view the contents of a file in real time.  When a\nchange in the file is detected, the window displaying the file is updated and\nrepositioned to the last line.\n\nThe update is not exactly real time, but usually updates within a few seconds\nof the file change.  The update interval of the output is determined by the\n|updatetime| parameter, along with continued usage of Vim.  This means that if\nyou are not doing any editing or motion commands, the preview window will not\nbe updated.  See |CursorHold| for more information.\n\nBecause this window becomes the preview window, it will accept all related\ncommands.  For more information, see |preview-window|.\n\nOnce installed, simply use &#039:Tail <filename>&#039 to see the file.\n Use ':pclose' to close this window.",
+  "install_details": "- Unzip the files into your Vim runtime path (vimfiles on Windows, .vim on Unix)\n- In Vim, run &#039:helptags&#039 to rebuild your help file\n- Restart Vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4688",
+      "filename": "tailminusf.zip",
+      "script_version": "1.1",
+      "date": "2005-10-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8222",
+        "user_name": "jheddings",
+        "first_name": "Jason",
+        "last_name": "Heddings",
+        "email": "vim at heddway.com",
+        "homepage": ""
+      },
+      "release_notes": "Corrected file format for greater compatibility."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4650",
+      "filename": "tailminusf.zip",
+      "script_version": "1.0",
+      "date": "2005-10-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8222",
+        "user_name": "jheddings",
+        "first_name": "Jason",
+        "last_name": "Heddings",
+        "email": "vim at heddway.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

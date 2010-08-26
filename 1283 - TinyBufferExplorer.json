@@ -1,0 +1,74 @@
+{
+  "script_id": "1283",
+  "name": "TinyBufferExplorer",
+  "summary": "A 1-file buffer list plugin with Grouping",
+  "script_type": "utility",
+  "description": "[Key features]\n\n    1. incremental collection of buffers\n      - buffer information are collected in the background\n      - less time requred showing lists\n\n    2. grouping\n      - it suppresses excessive information\n      - it's easy to switch among groups\n      - defined groups:\n        - Directory groups corresponding to buffers\n        - MRU(Most Recently Used buffers) group\n        - Search group\n        - [new] All buffers group\n\n    3. ease of accessing buffers and groups\n      - the MRU group can list buffers you are likely to edit\n      - the group list supports you switching among groups\n      - it's easy to switch to the Directory group in which\n        the current buffer is\n\n    4. [new] selectable UIs\n      - \"Fullfeatured\" (default), SimpleGroup and Minimal\n      - \"SimpleGroup\": one window, supports switching groups\n      - \"Minimal\": one window, shows all buffers\n\n    5. customizable list format (Fullfeatured UI only)\n\n[How to use it? (and screenshots)]\n\nThere are 3 UIs now. (You can choose by command)\n\nFullfeatured UI: \n  execute :TinyBufferExplorer or :TBE.\n  http://bitbucket.org/shu/tinybufferexplorer/downloads/fullfeatured.png\n\nSimpleGroup UI:\n  execute :TBESimpleGroup.\n  http://bitbucket.org/shu/tinybufferexplorer/downloads/simplegroup.png\n\nMinimal UI:\n  execute :TBEMinimal.\n  http://bitbucket.org/shu/tinybufferexplorer/downloads/minimal.png\n\nFor more detailed descriptions, read tbe.vim(in clumsy English).\n",
+  "install_details": "Put this plugin in your plugin directory(e.g. $VIMRUNTIME/plugin).\nThen restart Vim or :source it. \n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13030",
+      "filename": "tbe.vim",
+      "script_version": "2.0b1",
+      "date": "2010-05-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "This is a makeover. (may have some bugs inside...)\n\n+ selectable UIs\n+ ALL group\n+ a performance tuning (drawing)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11363",
+      "filename": "tbe.vim",
+      "script_version": "1.0.1",
+      "date": "2009-09-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "bug fix. (improved not to hijack your yank)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5328",
+      "filename": "tbe.vim",
+      "script_version": "1.0.0",
+      "date": "2006-02-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "renewed with grouping and incremental collection of buffers"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4281",
+      "filename": "tbe.vim",
+      "script_version": "0.3.1",
+      "date": "2005-05-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

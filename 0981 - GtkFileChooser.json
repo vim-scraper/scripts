@@ -1,0 +1,42 @@
+{
+  "script_id": "981",
+  "name": "GtkFileChooser",
+  "summary": "Patch that adds GtkFileChooser support to gvim (GTK 2.4+)",
+  "script_type": "utility",
+  "description": "This patch makes GTK/GNOME VIM use new GtkFileChooser for opening and saving files. It requires at least version 2.4 of GTK+ .\n\nComments are welcome :)",
+  "install_details": "Diff was made against 6.2.426 but should apply to earlier versions with some tweaking.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3036",
+      "filename": "vim-gtkfilechooser_20040519.diff",
+      "script_version": "0.2",
+      "date": "2004-05-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5131",
+        "user_name": "moose",
+        "first_name": "Krzysztof",
+        "last_name": "Luks",
+        "email": "kluks at iq.pl",
+        "homepage": ""
+      },
+      "release_notes": " * this patch no longer makes changes to configure.in and config.h\n * removed extraneous printf\n * tested with VIM 6.3b"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3006",
+      "filename": "vim-gtkfilechooser_20040508.diff.gz",
+      "script_version": "0.1",
+      "date": "2004-05-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5131",
+        "user_name": "moose",
+        "first_name": "Krzysztof",
+        "last_name": "Luks",
+        "email": "kluks at iq.pl",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

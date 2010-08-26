@@ -1,0 +1,26 @@
+{
+  "script_id": "464",
+  "name": "VB Line-Number",
+  "summary": "Translate Line #'s reported by vb command line to source code line",
+  "script_type": "ftplugin",
+  "description": "When the VB command-line compiler reports errors, the line #s are as if you were editing in the VB editor.\n\nThis script translate Line #'s reported by vb command line to the actual source code line.\n\nSimply type  <VBline#>gvb  or  :VGO <VBLine#>  \nand you go to the corresponding line in the VB code.\n",
+  "install_details": "Install as a filetype plugin for all VB files.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1349",
+      "filename": "vblinenr.vim",
+      "script_version": "0.1",
+      "date": "2002-10-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

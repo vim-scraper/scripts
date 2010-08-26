@@ -1,0 +1,154 @@
+{
+  "script_id": "1062",
+  "name": "greputils",
+  "summary": "Interface with grep, find and id-utils (not just another grep wrapper)",
+  "script_type": "utility",
+  "description": "Derived from my original idutils.vim, this script is a lot more powerful and useful than ever. The commands that make use of Vim built-in grep are especially useful and unique (thanks to Tim Chase for the idea).\n\n  - There are many plugins that wrap the Vim built-in :grep command and try\n    to simplify the usage. However this plugin aims at providing two\n    specific features:\n        - Escape the arguments such that the arguments can be passed to the\n          external grep/lid/find literally. This avoids unwanted\n          interpretations by the shell, thus allowing you to concentrate on\n          the regular expression patterns rather than how to escape them.\n          This has been tested well on both windows and UNIX with\n          sh/bash/cmd as command shells.\n        - Allow you to preview the results before letting Vim handle them as\n          part of quickfix. This, besides allowing you to further filter the\n          results, also prevents Vim from adding buffers for files that are\n          uninteresting and thus help reduce the number of buffers. It also\n          supports basic quickfix commands that can be used to open a buffer \n          without needing to convert it to a quickfix window. You can\n          consider it as a lightweight quickfix window. The preview window\n          is also great if you just want to take a peak at the results, not\n          really navigate them (such as to get an estimate of where all a\n          reference is found).\n    - Also provides commands to run the Vim built-in :g/re/p on multiple\n      buffers using :argdo, :bufdo and :windo commands and redirect the\n      output to the grep-results preview window. You can then convert the\n      results to a quickfix window, or use the preview window to navigate.\n    - As a bonus, the plugin also works around Vim problem with creating a\n      number of unnamed buffers as you close and open quickfix window\n      several times. This helps keep buffer list uncluttered.\n                                                                              \n  - The command merely wraps the built-in :grep, :grepadd, :cfile and\n    :cgetfile commands to create the quickfix list. The rest of the quickfix\n    commands work just like they do on the quickfix results created by using\n    only the built-in functionality. This also means that the plugin assume\n    that you have the options such as 'grepprg', 'shellpipe' are properly\n    set. Read the help on quickfix for the full list of commands and options\n    that you have.\n                                                                              \n      :h quickfix \n                                                                              \n  - Other than the preview functionality which enables filtering, the plugin\n    also provides an easy way to specify a number of filter commands that\n    you can chain on the output of the grep/lid/find, each prefixed with\n    \"+f\". The arguments to the filter command are themselves escaped, the\n    same way as the grep command arguments as described above.\n  - Supports GNU \"grep\" and MS Windows \"findstr\" for running \"find-in-file\"\n    kind of searches, id-utils \"lid\" for running index searches, and GNU\n    \"find\" to search for file names. If you need to add support for a new\n    grep command or a grep-like tool, it is just a matter of modifying a few\n    internal variables and possibly adding a new set of commands.\n  - On windows, setting multiple ID files for IDPATH doesn't work, so the\n    plugin provides a workaround by running \"lid\" separately on each ID file\n    if there are multiple ID files separated by \";\" in the IDPATH.\n  - Make sure that the 'grepprg' and 'shellpipe' options are properly set\n    and that the built-in :grep itself works. For GNU id-utils, make sure\n    IDPATH environmental variable is set or path to the ID file is specified\n    with the \"-f\" argument in the g:greputilsLidcmd setting. You can also\n    specify the \"-f ID\" arguments to the :IDGrep command.\n  - Uses EscapeCommand() function from genutils.vim plugin that supports\n    Cygwin \"bash\", MS Windows \"cmd\" and Unix \"sh\" for shell escaping. Other\n    environments are untested.\n  - Defines the following commands:\n                                                                              \n      Grep, GrepAdd, IDGrep, IDGrepAdd, Find, FindAdd\n      Grepp, GreppAdd, IDGrepp, IDGreppAdd, Findp, FindpAdd\n                                                                              \n    The second set of commands are used to open the results in a preview\n    window instead of directly in the quickfix window. And those that have a\n    suffix of \"Add\" add the new list of results to the existing list,\n    instead of replacing them (just like in :grepadd). This can be very\n    useful in combination with the preview commands.\n                                                                              \n    You can open the preview window at anytime using GrepPreview command.\n    Once you are in the preview window, you can filter the results using the\n    regular Vim commands, and when you would like to browse the results\n    using Vim quickfix commands, just use Cfile and Cgetfile commands, which\n    are functionally equivalent to the built-in cfile and cgetfile commands\n    respectively, except that they don't take a filename as argument use the\n    current preview window contents to create the error-list. There are\n    also, GOpen, GClose and GWindow commands defined on the lines of copen,\n    cclose and cwindow respectively.\n                                                                              \n    Use the GrepPreviewSetup command to convert an arbitrary buffer\n    containing :grep output as a preview window. This is useful to take\n    advantage of the quickfix like functionality that the plugin provides on\n    grep results generated by your own commands.\n                                                                              \n    If cmdalias.vim is installed, it also creates aliases for the Grep,\n    GrepAdd, Cfile and Cgetfile commands to the corresponding built-in\n    commands, i.e., grep, grepadd, cfile and cgetfile respectively.\n                                                                              \n    The preview window supports the following commands:\n      preview command     quickfix command ~\n      GG [count]          cc [count]\n      [count]GNext        [count]cnext\n      [count]GPrev        [count]cNext, cprevious\n      <CR>                <CR>\n      <2-LeftMouse>       <2-LeftMouse>\n                                                                              \n    The commands supports [count] argument just like the corresponding\n    quickfix command.\n                                                                              \n  General Syntax:\n      <grep command> [<grep/lid/find options> ...] <regex/keyword>\n                     [<filename patterns>/<more options>]\n                     [+f <filter arguments> ...]\n                                                                              \n    Note that typically you have to pass in at least one filename pattern to\n    grep/findstr where as you don't pass in any for lid.\n  - Also defines the following commands:\n                                                                              \n      ArgGrep, ArgGrepAdd, BufGrep, BufGrepAdd, WinGrep, WinGrepAdd\n                                                                              \n    You can use the above commands to run Vim's built-in g/re/p command to\n    find matches across buffers loaded in the current session, without\n    needing any external tools. Each of the above commands (and their \"Add\"\n    variants), run g/re/p command on a bunch of buffers loaded using one of\n    :argdo, :bufdo and :windo commands respectively. These commands are\n    designed to always open the results in the preview window. If you like,\n    you can convert it to a quickfix result, by using :Cfile or :Cgetfile\n    command.\n                                                                              \n  General Syntax:\n      [range]<Arg|Buf|Win>Grep[Add] [<pattern>]\n                                                                              \n    If you don't specify a pattern, the current value in search register\n    (@/) will be used, which essentially means that the last search pattern\n    will be used. See also g:greputilsVimGrepSepChar setting under\n    installation section.\n                                                                              \n    The range, if not specified, defaults to all the lines in all the\n    applicable buffers. If you explicitly specify a range, please note that\n    a range such as \"%\" or \"1,$\" is translated to the absolute line numbers\n    with reference to the current buffer by Vim itself, so it is not the\n    same as not specifying at all. This means, if there are 100 lines in the\n    current buffer, specifying \"%\" or \"1,$\" is equivalent to specifying\n    \"1,100\" as the range. The range is more useful with the \"GrepBufs\"\n    command mentioned below.\n  - Also defines \"GrepBufs\" command that can be used to grep for a Vim\n    regular expression pattern in the specified set of buffers (or the\n    current buffer). If no pattern is specified it will default to the\n    current search pattern. Buffers can be specified by name (see :h\n    bufname()) or by their number using the #<bufno> notation. You can also\n    complete the buffer names by using the completion character (<Tab>).\n                                                                              \n  General Syntax:\n      [range]GrepBufs[Add] [pattern] [buffer ...]\n                                                                              \n    This by syntax is very close to the Unix grep command. The main\n    difference being that it uses Vim regex and it searches the buffers\n    already loaded instead of those on the file system.\n                                                                              \n    The range has same semantics as for any of the \"arg\", \"buf\" or \"win\" grep\n    commands, but it is more useful here while limiting the grep for one\n    buffer alone.\n                                                                              \nExamples:\n  The following examples assume that you are using GNU grep for both the\n  'grepprg' and as the g:greputilsFiltercmd.\n                                                                              \n  - Run GNU grep from the directory of the current file recursively while\n    limiting the search only for Java files.\n      Grep -r --include=*.java \\<main\\> %:h\n  - Run lid while filtering the lines that are not from Java source.\n      IDGrep main +f \\.java\n  - Run lid while filtering the lines that contain src.\n      IDGrep main +f -v src\n  - Find Java files starting with A and ending with z under src.\n      Find src -iname A*z.java\n                                                                              \n  - To search for the current word in all the files and filter the results\n    not containing \\.java in the grepped output. This will potentially\n    return all the occurences in the java files only. \n      IDGrep <cword> +f \\.java \n                                                                              \n  - If any argument contains spaces, then you need to protect them by\n    prefixing them with a backslash.  The following will filter those lines\n    that don't contain \"public static\".\n      IDGrep <cword> +f public\\ static\n                                                                              \n  - Run \":bufdo g/public static/p\" and show output in preview window:\n      BufGrep public\\ static\n\n\n\n\n\nSearch_key_words: idutils greputils greputil id-utils gnu id grep gid mkid lid windo argdo bufdo Hari Krishna Dara",
+  "install_details": "- Drop the file in your plugin directory or source it from your vimrc.\n- Requires genutils (vimscript#197) and multvals (vimscript #171) plugins\n  also to be installed.\n                                                                           \nOptional Settings:\n    g:greputilsLidcmd, g:greputilsFindcmd, g:greputilsFiltercmd,\n    g:greputilsFindMsgFmt, g:greputilsAutoCopen, g:greputilsVimGrepCmd,\n    g:greputilsVimGrepAddCmd, g:greputilsGrepCompMode,\n    g:greputilsLidCompMode, g:greputilsFindCompMode,\n    g:greputilsExpandCurWord, g:greputilsVimGrepSepChar,\n    g:greputilsPreserveLastResults, g:greputilsPreserveAllResults,\n    g:greputilsPreviewCreateFolds\n                                                                           \n  - Use g:greputilsLidcmd and g:greputilsFiltercmd to set the path/name to\n    the lid and GNU or compatible find executable (defaults to \"lid\").\n  - Use g:greputilsFiltercmd to set the path/name of the command that you\n    would like to use as the filter when \"+f\" option is used (defaults to\n    \"grep\").\n  - Set g:greputilsFindMsgFmt to change the message (%m) part of the find\n    results. You can specify anything that is accepted in the argument for\n    \"-printf\" find option.\n  - Use g:greputilsAutoCopen to specify if the error list window should\n    automatically be opened or closed based on whether there are any\n    results or not (runs :cwindow command at the end).\n  - Use g:greputilsVimGrepCmd and g:greputilsVimGrepAddCmd to have the\n    plugin run a different command than the built-in :grep command to\n    generate the results. This is mainly useful to use the plugin as a\n    wrapper to finally invoke another plugin after the arguments are\n    escaped and 'shellpipe' is properly set. The callee typically can just\n    run the :grep command on the arguments and do additional setup.\n  - Use g:greputilsGrepCompMode, g:greputilsLidCompMode and\n    g:greputilsFindCompMode to change the completion mode for Grep, IDGrep\n    and Find commands respectively. The default completion mode for Grep\n    and Find are \"file\" to match that of the built-in commands, where as\n    it is set to \"tag\" for IDGrep (except the -f argument to specify an ID\n    file, you never need to pass filenam to lid). When completion mode is\n    \"file\", Vim automatically expands filename meta-characters such as \"%\"\n    and \"#\" on the command-line, so you still need to escape then. If this\n    is an issue for you, then you should switch to \"tag\" or a different\n    completion mode. When completion mode is not \"file\", the plugin\n    expands the filename meta characters in the file arguments anyway, and\n    this can be considered as an advantage (think about passing patterns\n    to the command literally). However it is still useful to have\n    \"<cword>\" and \"<cWORD>\" expand inside the patterns, in which case you\n    can set g:greputilsExpandCurWord setting.  Changing this option at\n    runtime requires you to reload the plugin.\n  - When completion mode is not set to \"file\", you can set\n    g:greputilsExpandCurWord to have the plugin expand \"<cword>\" and\n    \"<cWORD>\" tokens. This essentially gives you all the goodness of file\n    completion while still being able to do tag completions.\n  - For Vim built-in grep operations such as :BufGrep, if you want to\n    change the character sorrounding the pattern from the default '/' to\n    something else (see |E146|), you can use the\n    g:greputilsVimGrepSepChar. This is useful if you have a lot of \"/\"\n    characters in your pattern.\n  - The plugin normally preserves the previous results in the preview\n    window, which you can retrieve by doing an undo immediately after\n    generating the new results, inside the preview window. If you don't\n    like this, you can disable this feature by resetting\n    g:greputilsPreserveLastResults setting. You can instead set the\n    g:greputilsPreserveAllResults to preserve all the changes done in the\n    preview window, by user and the plugin itself.\n  - While using the *pAdd commands (that add results to preview window),\n    the individual set of results are folded together to be able to\n    identify them better. You can disable this feature by resetting the\n    g:greputilsPreviewCreateFolds setting.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4434",
+      "filename": "greputils.vim",
+      "script_version": "2.8",
+      "date": "2005-07-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Support for inversing the search pattern. You can pass \"!\" to built-in grep commands.\n- Fixed broken GrepBufs command.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4433",
+      "filename": "greputils.vim",
+      "script_version": "2.7",
+      "date": "2005-07-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed broken Cfile command.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4432",
+      "filename": "greputils.vim",
+      "script_version": "2.6",
+      "date": "2005-07-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Just added support for specifying range for all the built-in grep commands. Useful mainly for GrepBufs command.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4035",
+      "filename": "greputils.vim",
+      "script_version": "2.5",
+      "date": "2005-03-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Better handling of unsaved and unnamed buffers while doing built-in grep.\n- New setting g:greputilsPreserveAllResults to be able to undo over\n  several search results, as far as Vim allows you to do.\n- Better integration with selectbuf so that the built-in grep performs\n  better, if both plugins are installed (need to get the latest\n  selectbuf).\n- Much better handling of opening and closing preview window. Requires\n  the latest version genutils.vim.\n- Misc. bug fixes. Update documentation.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3560",
+      "filename": "greputils.vim",
+      "script_version": "2.4",
+      "date": "2004-10-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Augmented the built-in grep (:WinGrep, :ArgGrep, :BufGrep)\n  functionality with the new command :GrepBufs to grep specified\n  buffers only. This is very similar to unix :grep command with given\n  filenames.\n- New commands :GOpen, :GClose and :GWindow on the lines of :copen,\n  :cclose and :cwindow to work with the preview window. The existing\n  commands :GNext, :GPrev and :GG commands now work globally, just like\n  the :cnext, :cprev and :cc commands.\n- Fixed misc. bugs.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3364",
+      "filename": "greputils.vim",
+      "script_version": "2.3",
+      "date": "2004-08-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "\t- Misc. improvements for Grep Preview window.\n\t  - The Grep Preview window now implements undo functionality to be able\n\t    to undo and recover the previous result set.\n\t  - When you add results to the existing results, the results sets are\n\t    folded such that you can easily distinguish them.\n\t  - Preview window shouldn't be resized if it is already visible.\n\t- The grep commands that utilize the Vim's built-in grep functionality\n\t  are refined and are more useful than ever.\n\t  - They now have command-line completion enabled to complete tags.\n\t  - <cword> and <cWORD> were not being expanded for Vim-grep\n\t    commands.\n\t  - Cleanup the grep window for \"pattern not found\" error messages and\n\t    such.\n\t  - The current buffer is restored at the end of the operation.\n\t  - Vim event generation is disabled. This provides a significant\n\t    improvement in the speed as well as avoid side effects. This along\n\t    with the above improvement also makes the grep operation look\n\t    completely tranparent.\n\t- New useful GrepPreviewSetup command.\n\t- On windows, setting multiple ID files in IDPATH doesn't work, as it\n\t  does on *NIX. The plugin works around this problem by invoking lid on\n\t  individual ID files and gathering all the results.\n\t- If you use findstr on windows, grepping on a single file doesn't\n\t  generate the results in the right format (no filename prefix etc.).\n\t  The plugin now works around this issue.\n\t- See help on new settings g:greputilsVimGrepSepChar,\n\t  g:greputilsPreviewCreateFolds and g:greputilsPreserveLastResults.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3363",
+      "filename": "greputils.vim",
+      "script_version": "6.2",
+      "date": "2004-08-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Added BufGrep, WinGrep and ArgGrep commands that use the Vim's built-in g/re/p command with :bufdo, :windo and :argdo respectively to do search. This is an experimental feature, please try it and give feedback.\n- Also fixed a couple or more of minor bugs.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3362",
+      "filename": "greputils.vim",
+      "script_version": "2.1",
+      "date": "2004-08-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Requires Vim 6.3\n- Added support for running GNU find command and open the files from preview or through quickfix result.\n- Basic quickfix like commands have been added to the [Grep Preview] window. This is very useful if you want to quickly reach one or two files by running \"find\" or \"lid\" and don't care about the full results.\n- The default completion mode for grep has been changed to \"file\" from \"tag\", which is what is more useful.\n- Fixed :Cfile and :Cgetfile to work correctly if the current directory has changed since the results are generated.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3361",
+      "filename": "greputils.vim",
+      "script_version": "2.0",
+      "date": "2004-08-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This is an enhanced version of idutils.vim, made more generic and supports regular :grep command too. See description for information on the new version. Needs Vim 6.3\n"
+    }
+  ]
+}

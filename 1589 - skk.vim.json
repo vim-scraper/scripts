@@ -1,0 +1,42 @@
+{
+  "script_id": "1589",
+  "name": "skk.vim",
+  "summary": "Japanese SKK",
+  "script_type": "utility",
+  "description": "This script is an implementation of the Japanese SKK (Simple Kana to Kanji\nconversion program).\n\nThis script is no longer maintained here.\nYou can get newer versions of skk.vim from vimscript #3118.",
+  "install_details": "REQUIREMENT: SKK-JISYO.[SML]\nSet two global variables if necessary.\n  let skk_jisyo = \"path to private dictionary\"\n  let skk_large_jisyo = \"path to SKK-JISYO.[SML]\"\n:so skk.vim or put this script into your plugin directory.\nTo start SKK-mode, press <C-j> in Insert-mode or Commandline-mode.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6283",
+      "filename": "skk.zip",
+      "script_version": "0.22",
+      "date": "2006-10-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10365",
+        "user_name": "noriaki",
+        "first_name": "Noriaki",
+        "last_name": "Yagi",
+        "email": "no_yag at yahoo.co.jp",
+        "homepage": ""
+      },
+      "release_notes": "Fixed the flicker of the commandline when editing in Insert-mode."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5891",
+      "filename": "skk.zip",
+      "script_version": "0.21",
+      "date": "2006-06-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10365",
+        "user_name": "noriaki",
+        "first_name": "Noriaki",
+        "last_name": "Yagi",
+        "email": "no_yag at yahoo.co.jp",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

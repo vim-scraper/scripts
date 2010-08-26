@@ -1,0 +1,26 @@
+{
+  "script_id": "3204",
+  "name": "htip",
+  "summary": "quick haskell hints at the status line",
+  "script_type": "utility",
+  "description": "with default key binding enabled, move the cursor over a word, for example \"map\" and press <leader>ht \nthis will put the following line in the status line: \n\n\n1/1: map :: (a->b) -> [a] -> [b]\n(1/1 - first line of, well, a single line) \n\npressing <leader>hh will show the next line, if any.\n\n<leader>hH show the previous one, the list is cyclic \n\nthere are also <leader>hi for info, <leader>hb for browse, <leader>hk for kind.\n\nsee code for more details ",
+  "install_details": "just put under ~/.vim/plugin \nto enable default key bindings put \nlet g:htip_bindkeys=1 \nin your ~/.vimrc ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13592",
+      "filename": "htip.vim",
+      "script_version": "0.1",
+      "date": "2010-08-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "20508",
+        "user_name": "TheRagingTowel",
+        "first_name": "Itay",
+        "last_name": "Donenhirsch",
+        "email": "itay at bazoo.org",
+        "homepage": "http://itay.bazoo.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

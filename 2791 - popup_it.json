@@ -1,0 +1,58 @@
+{
+  "script_id": "2791",
+  "name": "popup_it",
+  "summary": "Auto complete popup plugin",
+  "script_type": "utility",
+  "description": "use regexp to match line pattern\nthen auto popup complete menu.\ndefault support c c.gtk tex html css javascript \n\n\"             let g:usrPopup= {}\n\"             let s:usrPopup[\"type\"] = [\n\"                         \\ {'cmd'     : \"\\<c-n>\",\n\"                         \\  'pattern' : ['xx', 'yy'],\n\"                         \\  'exclude' : ['zz'],\n\"                         \\ },\n\"                         \\{item2}\n\"                         \\{item3}\n\"                         \\]\n",
+  "install_details": "Put this file in your VIM plugins dir",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12900",
+      "filename": "popup_it.vim",
+      "script_version": "1.07",
+      "date": "2010-04-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17444",
+        "user_name": "777su",
+        "first_name": "su",
+        "last_name": "su",
+        "email": "vimtexhappy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Let input more smooth\nSet autopopup delay time.\n\nlet g:PopupDelayTime=400  \nput it to .vimrc (ms)   "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11438",
+      "filename": "popup_it.vim",
+      "script_version": "1.06",
+      "date": "2009-09-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17444",
+        "user_name": "777su",
+        "first_name": "su",
+        "last_name": "su",
+        "email": "vimtexhappy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "fix"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11413",
+      "filename": "popup_it.vim",
+      "script_version": "1",
+      "date": "2009-09-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17444",
+        "user_name": "777su",
+        "first_name": "su",
+        "last_name": "su",
+        "email": "vimtexhappy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "init"
+    }
+  ]
+}

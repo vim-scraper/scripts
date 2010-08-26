@@ -1,0 +1,42 @@
+{
+  "script_id": "2880",
+  "name": "rc.vim",
+  "summary": "syntax highlight file for the rc shell scripting language",
+  "script_type": "syntax",
+  "description": "This is a syntax file for the rc shell scripting language.  \n\nCredits\n\nMost of the work is done by Andy.  I have only made some minor changes to make this syntax highlight works with Byron Rakitzis' reimplementation.\n\nFor unix (not plan9) users, there are two slightly different rc available.  One is plan9port's version and the other is Byron Rakitzis' (as packaged by Debian and other *nix software distribution).  This syntax file is compatible with both versions.  (There is a minor tradeoff: less powerful `(ba)sh like substitution` syntax error detection. For a pure syntax file\" for p9p, see: http://lug.rose-hulman.edu/svn/misc/trunk/config/spenceal/vim/ )\n\nBug Report: http://bitbucket.org/weakish/weakishscripts/issues/\n\nTips for using rc shell in Vim (this is not related to syntax directly, but I think users who codes rc shell script in Vim may have interests):\n\nAdd the following lines to your .vimrc:\n\nset shell=/usr/bin/rc\\ -l\n\"  or /bin/rc or /usr/local/bin/rc or /opt/local /bin/rc, etc\nset shellcmdflag=-c\nset shellpipe=>[2=1]\\|\\ tee\nset shellredir=>%s\\ >[2=1]\n\n",
+  "install_details": "Copy rc.vim to ~/.vim/syntax/rc.vim or c:\\program files\\vim\\vimfiles\\syntax\\rc.vim (if you are on Windows)\n\n(Optional) Add this line in your .vimrc:\n\nau BufRead,BufNewFile *.rc set filetype=rc\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11957",
+      "filename": "rc.vim",
+      "script_version": "20091226",
+      "date": "2009-12-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18504",
+        "user_name": "weakish",
+        "first_name": "Weakish",
+        "last_name": "Jiang",
+        "email": "weakish at gmail.com",
+        "homepage": "http://weakish.pigro.net"
+      },
+      "release_notes": "Adjust rcHereDoc pattern to get <<EOF >output highlighted correctly."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11861",
+      "filename": "rc.vim",
+      "script_version": "20091204",
+      "date": "2009-12-04",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "18504",
+        "user_name": "weakish",
+        "first_name": "Weakish",
+        "last_name": "Jiang",
+        "email": "weakish at gmail.com",
+        "homepage": "http://weakish.pigro.net"
+      },
+      "release_notes": "I suggest all users to replace the old version. The old version is my poorly-reinvented wheel.  This new version is based on Andy Spencer's work.  Andy Spencer's syntax file is for p9p's rc and I made some minor changes to make it compatible with Byron Rakitzis' reimplementation too."
+    }
+  ]
+}

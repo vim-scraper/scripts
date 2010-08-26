@@ -1,0 +1,42 @@
+{
+  "script_id": "2496",
+  "name": "Changed",
+  "summary": "Displays signs on changed lines.",
+  "script_type": "utility",
+  "description": "Description:\n  Displays signs on changed lines.\nRequirements:\n  * +signs (appears in :version)\n  * diff command\n  * setting &termencoding\nUsage:\n  [Settings]\n                                                                                                         \n  1. Setting &termencoding\n      Set &termencoding option according to your terminal encoding. \n      Its default value is same as &encoding.\n      example:\n          set termencoding=cp932\n                                                                                                         \n  2. Changing signs\n      To change signs, re-define signs after sourcing this script.\n      example (changing text):\n          sign define SIGN_CHANGED_DELETED_VIM text=D texthl=ChangedDefaultHl\n          sign define SIGN_CHANGED_ADDED_VIM   text=A texthl=ChangedDefaultHl\n          sign define SIGN_CHANGED_VIM         text=M texthl=ChangedDefaultHl\n      example (changin highlight @gvimrc):\n          highlight ChangedDefaultHl cterm=bold ctermbg=red ctermfg=white gui=bold guibg=red guifg=white\n                                                                                                         \n  [Usual]\n                                                                                                         \n  Edit a buffer and wait seconds or execute :Changed.\n  Then signs appear on changed lines.\n",
+  "install_details": "Just source this file. (Put this file into the plugin directory.)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9835",
+      "filename": "changed.vim",
+      "script_version": "1.1",
+      "date": "2009-01-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "Added support for multi-byte file name.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9727",
+      "filename": "changed.vim",
+      "script_version": "1.0",
+      "date": "2008-12-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

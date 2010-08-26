@@ -1,0 +1,58 @@
+{
+  "script_id": "1951",
+  "name": "gvim-pdfsync",
+  "summary": "Open file in OS X Vim at a specific line. Good for PDFSync inverse searches.",
+  "script_type": "utility",
+  "description": "For a summary of the newest developments (e.g., PDFSync support in the new MacVim project), see\n\nhttp://phaseportrait.blogspot.com/2007/12/pdfsync-inverse-searches-in-macvim.html\n\nBelow are the comments at the head of the gvim-pdfsync script. \n\n# gvim-pdfsync: Script for opening a file in Vim in OS X and positioning\n#               the cursor at a particular line. If the file is already\n#               open in an existing Vim, the cursor will be repositioned\n#               re-opening the file.\n#\n#               The script is meant to extend the inverse searching\n#               (c.f. PDFSync compatible PDF viewers (e.g., Skim or\n#               TeXniscope) or DVI viewers that pay attention to \n#               source specials (e.g., TeXniscope)) to MacVim.\n#\n# Author: Ted Pavlic\n#         ted@tedpavlic.com\n#         http://www.tedpavlic.com/\n#\n# Usage: gvim-pdfsync \"%file\" [%line]\n#\n#        where %file is a file name and %line is a line number.\n#\n# History and acknowledgments: \n#\n#    The genesis of this script is this comment:\n#\n#    http://www.macosxhints.com/comment.php?mode=view&cid=88674\n#\n#    to this thread:\n#\n#    http://www.macosxhints.com/article.php?story=20070111095701823\n#\n#    Most of the important AppleScript is by Yonatan Amit, the original\n#    author of that thread.\n#\n# For more information (and history):\n#\n# http://phaseportrait.blogspot.com/2007/07/pdfsync-inverse-searches-on-vim-for-os.html\n#",
+  "install_details": "NOTE: THIS IS DESIGNED FOR OS X. It uses AppleScript.\n\nSave this file in the path somewhere. For example:\n\n/usr/local/bin/gvim-pdfsync\n\nThen chmod it 0755. For example,\n\nchmod 0755 /usr/local/bin/gvim-pdfsync\n\nIt then can be used like this:\n\ngvim-pdfsync \"%file\" %line\n\nwhere %file is the name of the file being opened and %line is the desired line number for the cursor. If you run it again with a different line number, the Vim application will reposition the cursor.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7387",
+      "filename": "gvim-pdfsync",
+      "script_version": "1.03",
+      "date": "2007-07-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9318",
+        "user_name": "tpavlic",
+        "first_name": "Ted",
+        "last_name": "Pavlic",
+        "email": "ted at tedpavlic.com",
+        "homepage": "http://www.tedpavlic.com/"
+      },
+      "release_notes": "More conventional usage line. Updated documentation. Trivial changes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7368",
+      "filename": "gvim-pdfsync",
+      "script_version": "1.02",
+      "date": "2007-07-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9318",
+        "user_name": "tpavlic",
+        "first_name": "Ted",
+        "last_name": "Pavlic",
+        "email": "ted at tedpavlic.com",
+        "homepage": "http://www.tedpavlic.com/"
+      },
+      "release_notes": "Added \"usage\" and changed some internal handling of shell variables. Trivial changes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7343",
+      "filename": "gvim-pdfsync",
+      "script_version": "1.01",
+      "date": "2007-07-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9318",
+        "user_name": "tpavlic",
+        "first_name": "Ted",
+        "last_name": "Pavlic",
+        "email": "ted at tedpavlic.com",
+        "homepage": "http://www.tedpavlic.com/"
+      },
+      "release_notes": "Somehow in a copy and paste while putting the script together, a couple of \\&#039s turned into &#039s. \n\nFixed that. Now the script should work fine."
+    }
+  ]
+}

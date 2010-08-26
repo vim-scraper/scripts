@@ -1,0 +1,26 @@
+{
+  "script_id": "1096",
+  "name": "buffer-perlpython.pl",
+  "summary": "run 'perl -cw' or 'pychecker' over the buffer, display results in a new window",
+  "script_type": "utility",
+  "description": "Bindings to check or run perl/python and display the results in a new window.\n\nWhen scripting:\n\nF1: perl -cw or pychecker over the current buffer, results in a new window\nF2: close the current window\nF3: perl/python (actually run the script) the buffer, output in a new window",
+  "install_details": "Have this in my .vimrc, so using autocmds works for mapping F1/F2/F3. If you source it from anywhere other than your .vimrc you'll need to do so before opening the .py/.pl/.cgi file for the mappings to work.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3510",
+      "filename": "buffer-perlpython.vim",
+      "script_version": "1.0",
+      "date": "2004-10-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6036",
+        "user_name": "adam42",
+        "first_name": "Adam",
+        "last_name": "Moore",
+        "email": "throw at sweet.as",
+        "homepage": "http://sweet.as"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

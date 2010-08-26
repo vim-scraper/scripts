@@ -1,0 +1,26 @@
+{
+  "script_id": "1469",
+  "name": "promela",
+  "summary": "Promela indent file",
+  "script_type": "indent",
+  "description": "This is my first attempt at writing an indent file for VIM.\nIt seems to work OK for at least basic stuff.",
+  "install_details": "Just put it in $HOME/.vim/indent and make sure that the PROMELA file type is recognized by VIM.\nIf VIM does not recognize PROMELA either add this to your existing $HOME/.vim/filetype.vim:\n\" Promela\nau BufNewFile,BufRead *.prom,*.prm,*.promela,*.pml              setf promela\n\nor create a filetype.vim looking like this:\naugroup filetypedetect\nau BufNewFile,BufRead *.prom,*.prm,*.promela,*.pml              setf promela\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5231",
+      "filename": "promela.vim",
+      "script_version": "0.2",
+      "date": "2006-02-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9451",
+        "user_name": "oscarh",
+        "first_name": "Oscar",
+        "last_name": "Hellström",
+        "email": "oscar at hellstrom.st",
+        "homepage": "http://oscar.hellstrom.st"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "script_id": "1697",
+  "name": "surround.vim",
+  "summary": "Delete/change/add parentheses/quotes/XML-tags/much more with ease",
+  "script_type": "utility",
+  "description": "Surround.vim is all about \"surroundings\": parentheses, brackets, quotes, XML tags, and more.  The plugin provides mappings to easily delete, change and add such surroundings in pairs.  While it works under Vim 6, much of the functionality requires Vim 7.\n\nExamples follow.  It is difficult to provide good examples in the variable width font of this site; check the documentation for more.\n\nPress cs\"' (that's c, s, double quote, single quote) inside\n\n\"Hello world!\"\n\nto change it to\n\n'Hello world!'\n\nNow press cs'<q> to change it to\n\n<q>Hello world!</q>\n\nTo go full circle, press cst\" to get\n\n\"Hello world!\"\n\nTo remove the delimiters entirely, press ds\" .\n\nHello world!\n\nNow with the cursor on \"Hello\", press ysiw] (iw is a text object).\n\n[Hello] world!\n\nLet's make that braces and add some space (use \"}\" instead of \"{\" for no space): cs]{\n\n{ Hello } world!\n\nNow wrap the entire line in parentheses with yssb or yss) .\n\n({ Hello } world!)\n\nRevert to the original text: ds{ds)\n\nHello world!\n\nEmphasize hello: ysiw<em>\n\n<em>Hello</em> world!\n\nFinally, let's try out visual mode. Press a capital V (for linewise visual mode)\nfollowed by S<p class=\"important\">.\n\n<p class=\"important\">\n  <em>Hello</em> world!\n</p>\n\nThis plugin is very powerful for HTML and XML editing, a niche which currently seems underfilled in Vim land.  (As opposed to HTML/XML *inserting*, for which many plugins are available).  Adding, changing, and removing pairs of tags simultaneously is a breeze.\n\nThe \".\" command will work with ds, cs, and yss if you install repeat.vim, vimscript #2136.\n\nAll feedback appreciated.  I am particularly interested to hear back on the following topics:\n\nHow exactly should indenting be handled?  Is the current s/S distinction useful, or should we just always reindent with =?\n\nIs the s mapping annoying in visual mode? While you can just use c to get the original s function, does it still interfere with motor memory?  This can be disabled if you provide your own map instead, but would this be a good default?\n\nIs the open/closing brace == add/don't add whitespace worth maintaining, or would it be better to just type an extra space before the brace to get said whitespace?\n\nhttp://github.com/tpope/vim-surround",
+  "install_details": "Extract to ~/.vim, or ~\\vimfiles (Windows).  You'll need to regenerate helptags (fill in the install path below)\n\n:helptags ~/.vim/doc",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12566",
+      "filename": "surround.zip",
+      "script_version": "1.90",
+      "date": "2010-03-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Completely eliminate wonky % mapping in prompts. \nWorkaround for user remapped d. [Christian Oudard] \nIntroduce vgS and begin phasing out vs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8283",
+      "filename": "surround.zip",
+      "script_version": "1.34",
+      "date": "2008-02-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "One more regression fix.\nThis is really really planned as the last release with partial Vim 6.0 compatibility  (third time's the charm)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8229",
+      "filename": "surround.zip",
+      "script_version": "1.33",
+      "date": "2008-02-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Fixed regressions from previous release.\nThis is really planned as the last release with partial Vim 6.0 compatibility."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8185",
+      "filename": "surround.zip",
+      "script_version": "1.30",
+      "date": "2008-01-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Fixed edge case where ds could move a multiline inner text down one line.\nThis is planned as the last release with partial Vim 6.0 compatibility."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7744",
+      "filename": "surround.zip",
+      "script_version": "1.27",
+      "date": "2007-10-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Fixed multiline surrounds in insert mode \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7434",
+      "filename": "surround.vim",
+      "script_version": "1.26",
+      "date": "2007-07-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Added a /* C style comment */ target.\nInsert mode indenting limited to multiline insertions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7093",
+      "filename": "surround.zip",
+      "script_version": "1.24",
+      "date": "2007-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "surround_indent now works in insert mode.\nAdded <C-]> to add braces on separate lines."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6747",
+      "filename": "surround.zip",
+      "script_version": "1.23",
+      "date": "2007-02-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "xmap rather than vmap, to avoid interfering with select mode.\nsurround_insert_tail to specify a universal suffix for use in insert mode."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6737",
+      "filename": "surround.zip",
+      "script_version": "1.22",
+      "date": "2007-02-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Function properly when clipboard=unnamed\nVery experimental custom prompting for substitution text"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6411",
+      "filename": "surround.zip",
+      "script_version": "1.18",
+      "date": "2006-11-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Zip file instead of documentation extraction hack"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6399",
+      "filename": "surround.vim",
+      "script_version": "1.17",
+      "date": "2006-11-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Insert mode mapping that doesn't conflict with flow control.\nFixed edge case with ys where one too many characters would be grabbed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6379",
+      "filename": "surround.vim",
+      "script_version": "1.16",
+      "date": "2006-11-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "S in blockwise visual mode strips trailing whitespace."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6357",
+      "filename": "surround.vim",
+      "script_version": "1.12",
+      "date": "2006-10-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Lots of tiny bug fixes and cleanup.\n\"S\" mappings to force surroundings onto a separate line.\nSupport for blockwise visual mode."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6348",
+      "filename": "surround.vim",
+      "script_version": "1.6",
+      "date": "2006-10-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

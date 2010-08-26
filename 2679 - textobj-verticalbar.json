@@ -1,0 +1,42 @@
+{
+  "script_id": "2679",
+  "name": "textobj-verticalbar",
+  "summary": "Text objects for vertical bar",
+  "script_type": "utility",
+  "description": "textobj-verticalbar is a Vim plugin to provide text objects to select wiki's table cell.\n\nFor example, if the content of a buffer as follows:\n(here \"*\" means the cursor)\n\n\t|| Header 1*|| Header 2 || Header 3 ||\n\t|| Row1 || Cell1-2 || Cell1-3 ||\n\t|| Row2 || Cell2-2 || Cell2-3 ||\n\n\n|<Plug>(textobj-verticalbar-a)| will select columns as follows:\n(here \"<\" and \">\" indicates the selected range)\n\n\t||<Header 1>|| Header 2 || Header 3 ||\n\t|| Row1 || Cell1-2 || Cell1-3 ||\n\t|| Row2 || Cell2-2 || Cell2-3 ||\n\n|<Plug>(textobj-verticalbar-i)| will select columns as follows:\n(here \"<\" and \">\" indicates the selected range)\n\n\t|<| Header 1 |>| Header 2 || Header 3 ||\n\t\t--------- \n\t|| Row1 || Cell1-2 || Cell1-3 ||\n\t|| Row2 || Cell2-2 || Cell2-3 ||\n\nRequirements:\n- Vim 7.2 or later\n- textobj-user 0.3.7 or later (vimscript#2100)\n\n",
+  "install_details": "Download textobj-verticalbar-*.zip, and extract your ~/.vim directory.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11503",
+      "filename": "textobj-verticalbar_0.0.3.zip",
+      "script_version": "0.0.3",
+      "date": "2009-10-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15550",
+        "user_name": "ampmmn",
+        "first_name": "John",
+        "last_name": "Yanagiya",
+        "email": "htmn.ymgw at gmail.com",
+        "homepage": "http://d.hatena.ne.jp/ampmmn"
+      },
+      "release_notes": "Fixed bug with multi-byte characters."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10846",
+      "filename": "textobj-verticalbar-0.0.2.zip",
+      "script_version": "0.0.2",
+      "date": "2009-06-16",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "15550",
+        "user_name": "ampmmn",
+        "first_name": "John",
+        "last_name": "Yanagiya",
+        "email": "htmn.ymgw at gmail.com",
+        "homepage": "http://d.hatena.ne.jp/ampmmn"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

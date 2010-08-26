@@ -1,0 +1,122 @@
+{
+  "script_id": "1607",
+  "name": "color_peruse",
+  "summary": "Peruse, compare, choose color schemes",
+  "script_type": "utility",
+  "description": "Peruse, compare, choose color schemes\n\nWhen the cursor is in the ColorPeruse window:   \n<kPlus>      :ColorPeruse 1             (next color)\n<kMinus>    :ColorPeruse -1            (prev color)\n<kMultiply> :ColorPeruse                 (original color)\n<kDivide>   :ColorPeruse 0              (color under cursor)\n     =             :call ColorPeruseDel() (remove duplicate lines)\n     +             :call ColorPeruseMerge() (append all :set rtp colors to list)\n     ?      Help\n     :q     quit\n \n\nYou are in vim when in the ColorPeruse window, so you can edit items you \ndon't like from the list, or place markers to return to re-view particular colorschemes.\nYou can cut/paste to put favorites or color/lightness groups together \nto compare more closely.\nAlso, since it is in vim, you can save the ColorPeruse list to a file, or \nload it from a previous perusal list.\n\n\n",
+  "install_details": "copy to ~/.vim/plugin\n\nPut this mapping in .vimrc:\n    map <Leader>cp :ColorPeruse<Space>Mylist<CR>:echo g:colors_name<CR>\nThen \\cp will start it up.\nIf you once create this 'Mylist' file, it is suggested that you move it\ninto a directory in vim's runtimepath. Type :set rtp to see this path.\nThis 'Mylist' file does not have to exist.\nIn such a list, you may have comments beginning with \" which will be ignored,\nand you can sort the list in any order you choose.\n\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6014",
+      "filename": "color_peruse.vim",
+      "script_version": "1.9",
+      "date": "2006-07-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor change to handling file path detection of favorite colors list."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5992",
+      "filename": "color_peruse.vim",
+      "script_version": "1.8",
+      "date": "2006-07-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved options for your favorite colors list."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5981",
+      "filename": "color_peruse.vim",
+      "script_version": "1.6",
+      "date": "2006-07-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "Cursor positions to current colorscheme at startup."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5971",
+      "filename": "color_peruse.vim",
+      "script_version": "1.5",
+      "date": "2006-07-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "Maps keys only in buffer for <kMinus> - Previous color, <kPlus> - Next color, <kMultiply> - Original color, <kDivide> - Color under cursor. Friendlier \"missing g:colors_name\" message."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5968",
+      "filename": "color_peruse.vim",
+      "script_version": "1.4",
+      "date": "2006-07-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "Maps keys only in buffer for <kMinus> - Previous color, <kPlus> - Next color, <kMultiply> - Original color, <kDivide> - Color under cursor."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5955",
+      "filename": "color_peruse.vim",
+      "script_version": "1.1",
+      "date": "2006-07-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "You can narrow down the the list to your preferred items. You can also reset to the original colorscheme any time."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5953",
+      "filename": "color_peruse.vim",
+      "script_version": "1.0",
+      "date": "2006-07-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

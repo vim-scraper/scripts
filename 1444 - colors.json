@@ -1,0 +1,26 @@
+{
+  "script_id": "1444",
+  "name": "colors",
+  "summary": "Functions to manipulate color values (vim7).",
+  "script_type": "utility",
+  "description": "Rgb2Hsv - change RGB into HSV colorspace\nHsv2Rgb - change HSV into RGB colorspace\n\nr, g, b [0..255]\nh [0..359]\ns, v [0..255] sic!\n\nHex2Rgb - change Hex notation (#ffffff) into rgb [255,255,255]\nRgb2Hex - change RGB notation into Hex notation\nTxt2Rgb - change text names of functions into RGB notation (names according to rgb.txt of X consortium)\n\nIn addition there is function ColorFormula which will tell if brightness and\ncolor differences are good enough (according to W3C) to became background and text colors.\nGood for testing colorschemes on HTML sites and Vim.\n",
+  "install_details": ":so colors.vim\n\nMay be placed in plugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4968",
+      "filename": "colors.vim",
+      "script_version": "1.0",
+      "date": "2006-01-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "script_id": "330",
+  "name": "code2html",
+  "summary": "Generate HTML or XHTML+CSS from a Vim buffer using the syntax-hili colorscheme",
+  "script_type": "utility",
+  "description": "WHAT:\nThis is a substantially modified rewrite of the \"2html.vim\" script that's found in the Vim runtime \"syntax\" directory, and used exactly as that file is used (i.e.): \n\n  :so[urce] ~/scripts/code2html.vim\n\nRECENT:\n24 Sep 2008 - ATTENTION PLEASE! There will be no more revisions to this script under *this* name.  Because there is a collision between the name \"code2html[.vim]\" and another F/LOSS software project by that name, I am renaming this script to \"buf2html[.vim]\".  THE NEW SCRIPT IS LOCATED AT http://www.vim.org/scripts/script.php?script_id=2384.\n\nWHO:\nBased on work by Bram Moolenaar and David Ne&#269;as (\"Yeti\"), now maintained by Soren Andersen.  Past contributions by Christian Hujer.       \n\nWHY:\nThe main thing this module changes is the automatic addition of some simple css code to specify the fixed-width (monospace) font you want the HTML-ized syntax-colored code to be rendered in -- IF any of those fonts are findable by the reader's WWW browser. This provides an HTML rendering in modern browsers that can surprisingly closely replicate the appearance in the GVIM editor.\n\nINSTALL:\nSave this vim file to a directory convenient for you. Do *not* place it in a runtime plugin directory; you do not want it to be evaluated when opening any file for editing.  This is a script but not a plugin.  The author tends to have a ~/scripts dir on his accounts, and places this file there, alongside awk, sed, perl and other such script/programs.\n\nFEATURES:\nThe code will find out what \"guifont\" value the user is using, and convert that specification (usually set in \".gvimrc\") to a css font spec. There are also changes to output an up-to-date xml -type header (DTD) by Christian Hujer.\n\nIt will also create a \"<DIV>\" section containing the main \"<PRE>\" block. To understand why this is good, running a test example shows better than a thousand words. It allows specification of the font in css, as well as some other things, like padding of the contents of the \"<PRE>\" and some differing bgcolor for the document as a whole vs the \"code\" content. This is all primarily a matter of personal preference of course.\n\nExamples of source highlighted with this script can be found at my home page at http://intrepid.perlmonk.org\n\nIf you view the output of this script -- run on your GVIM on one of your own source code documents, and viewed in a competent css-supporting browser -- you may find that the document looks so identical to your GVIM display that you'll be tempted to start sending vim commands to your browser ;-). \n\nUPDATE: 22 Oct 2002\nIn a little while a new version will be uploaded (presently I am having Christian check our merged changes before we commit to releasing this major update).\n  * Made output of DTD not dependant on whether user has html_use_css=1.\n  * Made significant changes to program flow, fixed a problem with output of the style definitions in the header STYLE block.\n  * Added several new variables that the user can set to change the behavior of the script.\n\nAll in all, the program is more robust, outputs more correct (according to latest W3C standards) HTML, script has more configurability, and the output is prettier (as source).\n\nUPDATE: Aug 08 2002 20:32:28 EDT\nSorry -- did not have time right now to properly document ALL the changes in v1.1, but these include:\n  * fixed the stupid \".main_code\" bug (should have written to the head style block \"#main-code\" instead of \".main-code\"). aargh.\n  * added a new function to create the CSS font specifier, it is doing a much better job than the previous code\n  * the output is much more cosmetically proper.\nThank you very much to all the people who downloaded version 1.0. Please give the update a try -- it is much improved.\n",
+  "install_details": "There is no name-clash at present with any syntax file shipped in the VIM distro, so it could be placed in $VIMRUNTIME/syntax. But I prefer and recommend that you place it in an easy-to-remember location such as ~/scripts/.\n\nYou will also most likely want to \":let html_use_css = 1\" before :source'ing this module, or there will be little point in it at all, because most of the changes go into action in the doc head '<STYLE ...' block.  Set that in your ~/.vimrc, -or- do :let g:html_use_css=1 | source ~/scripts/code2html.vim\n\nA few notes on system fixed-width fonts, ADDED 06 Jul 2002:\nWell, about fonts, not much can be said that isn't prefaced with the acknowledgement that the bottom line is personal taste. I am sure that fonts have been discussed by VIMmers many times before.\n\nAnyway I wanted to note that the choices I make in my \"_vimrc\" reflect my personal tastes and knowledge, YMMV. However as it may be helpful for some readers I want to show what my _vimrc contains now:\n\n  :set guifont=anonymous:h8,lucida_console:h9,andale_mono:h10,lucida_sans_typewriter:h9,\n  :set guifont+=onuava:h9,crystal:h9,monospace_821_bt:h9,courier_new:h9\n\nThe first entry, \"Anonymous\", is a new discovery that I am excited about. It is a monospaced (fixed-width) font that looks very good and is unbelievably readable in my Win32-GVIM display at a 8-pixel height setting (\":h8\") whereas I dare not go lower than \":h9\" with my second fav, Lucida Console (which is a very good font and slightly nudges out the popular \"Andale Mono\" at lowest point sizes, in my preference).\n\nThe Windows version of \"Anonymous\" is presently at\n http://www.ms-studio.com/FontSales/Resources/AnonymousTT.zip\n linked to from  http://www.ms-studio.com/FontSales/anonymous.html\n\n\"Anonymous\" is released as Copyrighted freeware (I didn't read any detailed licensing terms but the sense one gets from that terminology is that it's likely to be pretty much compatible with the intent of most Open Source software licensing philosophies). I can definitely recommend that readers give this font a try.\n\nIn any case, the point of setting as many possible alternates in _gvimrc (or wherever you find it convenient to do so) is to hit as many target systems as possible without having the browser default to it's unqualified default monospace font. Of course for *serious* Web users that setting may already be those users' strong personal preference, but this is likely to be true in only a small minority of cases (any anyway such users will also often be using WWW clients that can override our specification with a user setting, such as Opera, if they object to our choice).\n\nPlease read the comments in the script source code for a more detailed explanation of Usage.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2227",
+      "filename": "code2html-1_51_vim.tar",
+      "script_version": "1.51",
+      "date": "2003-08-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "723",
+        "user_name": "perlspinr",
+        "first_name": "Sören",
+        "last_name": "Andersen",
+        "email": "somian08 at gmail.com",
+        "homepage": "http://intrepid.perlmonk.org"
+      },
+      "release_notes": "The .tar file contains code2html-1_51_vim.gz and code2html-1_51_vim.gz.asc (a PGP/GnuPG signature for verifying the gzipped-script). I jumped version numbers, sorry."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1105",
+      "filename": "code2html_vim.gz",
+      "script_version": "1.2",
+      "date": "2002-08-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "723",
+        "user_name": "perlspinr",
+        "first_name": "Sören",
+        "last_name": "Andersen",
+        "email": "somian08 at gmail.com",
+        "homepage": "http://intrepid.perlmonk.org"
+      },
+      "release_notes": "More small bug-stomping + now adds a little note at page bottom -- \"made with VIM\" sort of thing."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1093",
+      "filename": "code2html_vim.gz",
+      "script_version": "1.1",
+      "date": "2002-08-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "723",
+        "user_name": "perlspinr",
+        "first_name": "Sören",
+        "last_name": "Andersen",
+        "email": "somian08 at gmail.com",
+        "homepage": "http://intrepid.perlmonk.org"
+      },
+      "release_notes": "many \"robustifications\" and bug fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=987",
+      "filename": "code2html.vim.gz",
+      "script_version": "1.0",
+      "date": "2002-07-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "723",
+        "user_name": "perlspinr",
+        "first_name": "Sören",
+        "last_name": "Andersen",
+        "email": "somian08 at gmail.com",
+        "homepage": "http://intrepid.perlmonk.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

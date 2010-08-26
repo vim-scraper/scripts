@@ -1,0 +1,58 @@
+{
+  "script_id": "1532",
+  "name": "txt.vim",
+  "summary": "Universal syntax script for all txt docs, logs and other types",
+  "script_type": "syntax",
+  "description": "This is an universal syntax script for all text documents, logs, changelogs, readmes and all other strange and undetected filetypes. The goal is to keep it very simple.It colors numbers, operators, signs, cites, brackets, delimiters, comments, TODOs, errors, debug, changelog tags and basic smileys ;]\n\nVisit project site:\nhttp://www.haze.ehost.pl/spoonman/index.php5?p=9\n\nor take a look at 4 comparision screenshots (version 1.2, colors used: dusk and moria):\nhttp://www.haze.ehost.pl/spoonman/images/vim-txt-dusk-1-1.2.png\nhttp://www.haze.ehost.pl/spoonman/images/vim-txt-moria-1-1.2.png\n\nhttp://www.haze.ehost.pl/spoonman/images/vim-txt-dusk-2-1.2.png\nhttp://www.haze.ehost.pl/spoonman/images/vim-txt-moria-2-1.2.png\n\nI'd also suggest to add a file into your $HOME/ftdetect called txt.vim that contains a line:\n au BufRead,BufNewFile *  setfiletype txt\nThis way if Vim cannot detect a filetype of a file you've just opened - it sets this universal syntax.\n\nYour suggestions are very welcome.",
+  "install_details": "Download package and unzip to your $HOME/syntax directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6580",
+      "filename": "txt-vim-syntax-1.2.zip",
+      "script_version": "1.2",
+      "date": "2007-01-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8147",
+        "user_name": "SpOOnman",
+        "first_name": "Tomasz",
+        "last_name": "Kalkosinski",
+        "email": "tomasz2k at poczta.onet.pl",
+        "homepage": ""
+      },
+      "release_notes": "1.2 Release (03.01.2007)\n- add: Changelog tags: add, chg, fix, rem, del linked with Keyword\n- add: note to txtTodo group"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5904",
+      "filename": "txt.vim",
+      "script_version": "1.1",
+      "date": "2006-06-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8147",
+        "user_name": "SpOOnman",
+        "first_name": "Tomasz",
+        "last_name": "Kalkosinski",
+        "email": "tomasz2k at poczta.onet.pl",
+        "homepage": ""
+      },
+      "release_notes": "Add: International cites\nChg: txtString color to Normal\nChg: Simplified number coloring working better now"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5625",
+      "filename": "txt.vim",
+      "script_version": "1.0",
+      "date": "2006-04-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8147",
+        "user_name": "SpOOnman",
+        "first_name": "Tomasz",
+        "last_name": "Kalkosinski",
+        "email": "tomasz2k at poczta.onet.pl",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

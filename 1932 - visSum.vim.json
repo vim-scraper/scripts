@@ -1,0 +1,74 @@
+{
+  "script_id": "1932",
+  "name": "visSum.vim",
+  "summary": "Computes sum of selected numbers",
+  "script_type": "utility",
+  "description": "It is something so trivial, I can't believe it hasn't been done before.\nAfter looking for an hour I couldn't find a plugin to do this without relying on external programs, so here is my offering, 100% pure vimscript.\n\nHighlight some lines containing numbers, and use <Leader>su (usually that's \\su) and the sum appears in the message line.  \n\nIt works by grepping each line of your selection for the first number it sees, and adds that to the running total.\n\nVisual Block support added in version 0.2.\n\nFeedback to g?? ArjBsnyFbCe@tzNnvZy.pbz - NOSPAM\n",
+  "install_details": "Drop visSum.vim into your ~/.vim/plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7856",
+      "filename": "visSum.vim",
+      "script_version": "0.3",
+      "date": "2007-11-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Stores sum in buffer variable b:sum.\n:VisSum command can take a register name as an argument to store the sum."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7660",
+      "filename": "visSum.vim",
+      "script_version": "0.2",
+      "date": "2007-09-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Support for Visual Block mode"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7278",
+      "filename": "visSum.vim",
+      "script_version": "0.1c",
+      "date": "2007-06-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "It was too late at night when I uploaded 0.1b.  Cleaned script up a bit."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7275",
+      "filename": "visSum.vim",
+      "script_version": "0.1a",
+      "date": "2007-06-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

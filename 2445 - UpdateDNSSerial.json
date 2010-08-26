@@ -1,0 +1,26 @@
+{
+  "script_id": "2445",
+  "name": "UpdateDNSSerial",
+  "summary": "Update automatically the serial of DNS Zone",
+  "script_type": "utility",
+  "description": "This script help you to update automatically the serial of SOA when editing a DNS zone with vim. It find the serial, increment or update with the current time as : YYYYMMDDNU where YYYY=year, MM: month, DD:day, NU:number version.",
+  "install_details": "Juste add the file in your .vim/plugin directory. To apply it on your file type :call UpdateDNSSerial() or add a shortcut in .vimrc.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9512",
+      "filename": "UpdateDNSSerial.vim",
+      "script_version": "0.1",
+      "date": "2008-11-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14411",
+        "user_name": "mknux",
+        "first_name": "Alexandre",
+        "last_name": "MOREL",
+        "email": "almorel at gmail.com",
+        "homepage": "http://blog.mknux.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

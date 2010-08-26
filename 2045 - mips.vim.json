@@ -1,0 +1,42 @@
+{
+  "script_id": "2045",
+  "name": "mips.vim",
+  "summary": "Your standard MIPS syntax highlighting",
+  "script_type": "syntax",
+  "description": "Frankly, I wasn't happy with the state of MIPS highlighting, so this script attempts to correct this.  It recognizes the entire set of MIPS instructions and directives, as well as all registers (be they aliased ($s0), directly numerical ($16), or an FP register ($f0)), correct MIPS comment style, and label declarations.\n\nIf you have any problems, I invite you to contact me and report them.  Enjoy!",
+  "install_details": "Just copy the script to your syntax directory.  On UNIX, this is ~/.vim/syntax/.  Note that filetype is not autodetected, so to enable the highlighting, you must run the command \":set syntax=mips\".",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7826",
+      "filename": "mips.vim",
+      "script_version": "1.0.1",
+      "date": "2007-10-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13254",
+        "user_name": "bricka",
+        "first_name": "Alex",
+        "last_name": "Brick",
+        "email": "bricka at ccs.neu.edu",
+        "homepage": "http://www.alexrbrick.com"
+      },
+      "release_notes": "A minor fix to enable 6.x compatibility (noticed and patched by Jarmo Jaakkola), and a fix to hexadecimal numbers."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7808",
+      "filename": "mips.vim",
+      "script_version": "1.0",
+      "date": "2007-10-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13254",
+        "user_name": "bricka",
+        "first_name": "Alex",
+        "last_name": "Brick",
+        "email": "bricka at ccs.neu.edu",
+        "homepage": "http://www.alexrbrick.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

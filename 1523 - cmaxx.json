@@ -1,0 +1,90 @@
+{
+  "script_id": "1523",
+  "name": "cmaxx",
+  "summary": "Expands user defined templates for any filetype.",
+  "script_type": "utility",
+  "description": "This script was inspired by Borland Delphis code template function.\n\nTemplates can be defined in text files. The filename (wihtout extension) is the template name. By entering the template name in the document and pressing the expasion key (predefined to <F6>) the template is expanded.\n\nTemplates can also use macros which will be replaced bei either a user defined or a predefined text during template expansion.",
+  "install_details": "The fastest way to install the script is to unpack the tarball to you local script folder, start vim and follow the instructions.\n\nThe best way to add this script to vim is to put it in the plugin directory in the user's vim folder (for Unix/Linux: ~/.vim/plugin; for Windows: ~/vimfiles/plugin, for more inforation see |.vimrc|).  Then the script will be sourced automatically at the startup.\n\nThe script relies on a folder where the defined templates reside.  The location of this folder is defined in the variable 'g:CMAxx_TemplateDir'.  The script does not define a default path so it does not work if the variable is not set.  A possible location would be ~/.vim/templates.\n\nThe script comes with a number of templates in the \"templates\" folder.  Move this folder to your preferred location and set 'g:CMAxx_TemplateDir' to this path.  The folder \"templates\" should be part of this path.  A good choice would be local scripts folder.\n\nThe script will create some mappings.  These mappings can be turned off by two variables.  If the variable 'g:CMAxx_NoExpansionKey' is defined, the mappings for |F6|, |i_F6| and |n_F6| will not be created.  If 'g:CMAxx_NoMappings' is set, all the leader-mappings will not be set.\n\nDon't forget to run \":helptags\" at the location where you have installed cmaxx.\n\n\nBug reports and feature requests are welcome!",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5703",
+      "filename": "cmaxx-1.1.0.tar.gz",
+      "script_version": "1.1.0",
+      "date": "2006-05-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6688",
+        "user_name": "headroom",
+        "first_name": "Markus",
+        "last_name": "Trenkwalder",
+        "email": "markus()trenkwalder(a)gmx()at",
+        "homepage": ""
+      },
+      "release_notes": "Added the possibility to select the value for a macro from a list (see \":help  macro-list-variables\")."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5620",
+      "filename": "cmaxx-1.0.3.tar.gz",
+      "script_version": "1.0.3",
+      "date": "2006-04-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6688",
+        "user_name": "headroom",
+        "first_name": "Markus",
+        "last_name": "Trenkwalder",
+        "email": "markus()trenkwalder(a)gmx()at",
+        "homepage": ""
+      },
+      "release_notes": "Fixed another bug with buffer local variables found by Andreas Karpfen."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5618",
+      "filename": "cmaxx-1.0.2.tar.gz",
+      "script_version": "1.0.2",
+      "date": "2006-04-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6688",
+        "user_name": "headroom",
+        "first_name": "Markus",
+        "last_name": "Trenkwalder",
+        "email": "markus()trenkwalder(a)gmx()at",
+        "homepage": ""
+      },
+      "release_notes": "- Fixed some bugs regarding buffer local variables (thanx to Igor Prischepoff)\n- New feature: mappings can be tured off by two variables."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5604",
+      "filename": "cmaxx-1.0.1.tar.gz",
+      "script_version": "1.0.1",
+      "date": "2006-04-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6688",
+        "user_name": "headroom",
+        "first_name": "Markus",
+        "last_name": "Trenkwalder",
+        "email": "markus()trenkwalder(a)gmx()at",
+        "homepage": ""
+      },
+      "release_notes": "Works with vim 6.x again."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5587",
+      "filename": "cmaxx-1.0.0.tar.gz",
+      "script_version": "1.0.0",
+      "date": "2006-04-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6688",
+        "user_name": "headroom",
+        "first_name": "Markus",
+        "last_name": "Trenkwalder",
+        "email": "markus()trenkwalder(a)gmx()at",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

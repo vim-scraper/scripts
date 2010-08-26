@@ -1,0 +1,74 @@
+{
+  "script_id": "561",
+  "name": "help.vim",
+  "summary": "help subsystem (create buffer with context-dependent help page)",
+  "script_type": "utility",
+  "description": "This plugin can help you call man or perldoc -f or many other help system in dependent from context.\n\nChanges:\n      * 1.18-1 now support perdoc in win32 OS...\n      * 1.18     several bugfixes, added call apropos if man page not found.\n      * 1.17     support fvwm, muttrc filetype, many fixes...\n      * 1.17g   new, extended implementation of help.vim (http://www.vim.org/scripts/script.php?script_id=561)\n      * 1.17b   forked by help.vim,v 1.16 2002/01/05 19:58:38 from Slava Gorbanev, added support tcl/tk and many fixes\n\nUsage:\n          use <F1> by default or other key (if you remap it) to call Help(expand(\"<cword>\"))\n          this function creating in half window buffer with contex-dependent\n          manual (or other) page about word under corsor.\n \n    By default in help-buffer set key-mapping:\n    q           for exit (and ``Esc'' in GUI mode)\n    o           for command :only\n    D           for go to DESCRIPTION section\n    S           for go to SYN section\n    (and other --- see source code by detail)\n\nYou can mapping go to any other section:\nfor example for go to NAME section by N key call next command:\nmap N :call GoToSection('NAME')\n\nNow support: sh, vim, perl, tcl/tk, C/C++, fvwm, muttrc and many other.\n\n TODO nicier documentation (oh, my terrible english)...\n TODO support many other language",
+  "install_details": "put this into your plugin directory (~/.vim/plugin)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9572",
+      "filename": "help.vim",
+      "script_version": "1.20",
+      "date": "2008-11-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1475",
+        "user_name": "nik",
+        "first_name": "Nikolay",
+        "last_name": "Panov",
+        "email": "author at niksite.ru",
+        "homepage": "http://www.niksite.ru/"
+      },
+      "release_notes": "Some new help systems are supported now (e.g. pydoc for python). And the plugin is tested under vim 7."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9571",
+      "filename": "help.vim",
+      "script_version": "1.20",
+      "date": "2008-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1475",
+        "user_name": "nik",
+        "first_name": "Nikolay",
+        "last_name": "Panov",
+        "email": "author at niksite.ru",
+        "homepage": "http://www.niksite.ru/"
+      },
+      "release_notes": "Some new help systems are supported now (e.g. pydoc for python)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1889",
+      "filename": "help.vim",
+      "script_version": "1.18-1",
+      "date": "2003-04-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1475",
+        "user_name": "nik",
+        "first_name": "Nikolay",
+        "last_name": "Panov",
+        "email": "author at niksite.ru",
+        "homepage": "http://www.niksite.ru/"
+      },
+      "release_notes": "now support perdoc in win32 OS..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1798",
+      "filename": "help.vim",
+      "script_version": "1.18",
+      "date": "2003-03-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1475",
+        "user_name": "nik",
+        "first_name": "Nikolay",
+        "last_name": "Panov",
+        "email": "author at niksite.ru",
+        "homepage": "http://www.niksite.ru/"
+      },
+      "release_notes": "several bugfixes, added call apropos if man page not found"
+    }
+  ]
+}

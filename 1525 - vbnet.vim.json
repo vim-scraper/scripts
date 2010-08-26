@@ -1,0 +1,42 @@
+{
+  "script_id": "1525",
+  "name": "vbnet.vim",
+  "summary": "Syntax highlighting for VB.NET",
+  "script_type": "syntax",
+  "description": "Although VB.NET is really just a new version of VB, the differences seemed large enough to warrant new syntax highlighting.  Nonetheless, this file aims to be backwards compatible with classic VB, although some deprecated VB syntax may be flagged as an error.\n\nFolding is supported. Try \":set foldmethod=syntax\".\n\nI haven't done any VB since that one semester in college. I'd appreciate someone taking over this file and submitting it to be included in Vim. I believe it to be a rename and :%s/vbnet/vb/g away from being a far superior replacement for the vb.vim included with Vim, but it is terrible at VBScript, which vb.vim also handles.\n",
+  "install_details": "Copy vbnet.vim to your syntax directory (.vim/syntax or vimfiles/syntax in your home directory).  To activate it, use the command \":set ft=vbnet\".\n\nThe following autocmd can be added to your vimrc to automatically set the filetype (and activate syntax highlighting) for all VB.NET files.\n\nautocmd BufNewFile,BufRead *.vb set ft=vbnet",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5622",
+      "filename": "vbnet.vim",
+      "script_version": "1.7",
+      "date": "2006-04-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Fixed bugs reported by John Lenz"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5591",
+      "filename": "vbnet.vim",
+      "script_version": "1.4",
+      "date": "2006-04-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

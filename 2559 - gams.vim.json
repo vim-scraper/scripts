@@ -1,0 +1,26 @@
+{
+  "script_id": "2559",
+  "name": "gams.vim",
+  "summary": "Simple syntax highlighting for GAMS modelling software (www.gams.com)",
+  "script_type": "syntax",
+  "description": "As far as I know, there is no syntax highlighting for GAMS modeling language in vim. Here goes one, works with gvim. No other functionality, just the highlighting. ",
+  "install_details": "Put\n\nau BufEnter *.gms set ft=gams\n\nin your .vimrc, or run \n\nset ft=gams\n\nafter opening your .gms file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10052",
+      "filename": "gams.vim",
+      "script_version": "0.1",
+      "date": "2009-02-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10395",
+        "user_name": "vonkad",
+        "first_name": "David",
+        "last_name": "Vonka",
+        "email": "davidek at zla-ryba.cz",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

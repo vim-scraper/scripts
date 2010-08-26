@@ -1,0 +1,26 @@
+{
+  "script_id": "1615",
+  "name": "SWIG syntax",
+  "summary": "Syntax file for SWIG",
+  "script_type": "syntax",
+  "description": "This is a syntax file for SWIG (Simplified Wrapper Interface Generator) description files.  The default syntax for .i files highlights comments in a reverse color scheme which is really horrible.  This syntax builds on vim's c++ syntax by adding highlighting for common swig directives and user defined directives.  For an alternative syntax, see  vimscript #1247 (which I found after writing this).  ",
+  "install_details": "copy the script to ~/.vim/syntax/ and add the following to your vimrc:\nau BufNewFile,BufRead *.i set filetype=swig\nau BufNewFile,BufRead *.swg set filetype=swig\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5991",
+      "filename": "swig.vim",
+      "script_version": "0.0.1",
+      "date": "2006-07-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10531",
+        "user_name": "rstanchak",
+        "first_name": "Roman",
+        "last_name": "Stanchak",
+        "email": "rstancha at cse.wustl.edu",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

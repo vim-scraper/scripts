@@ -1,0 +1,74 @@
+{
+  "script_id": "2429",
+  "name": "autocorrect.vim",
+  "summary": "Correct common typos and misspellings as you type",
+  "script_type": "utility",
+  "description": "Looking through the examples in Vim, there are examples of correcting typos and misspellings like:\n\niabbrev teh the\niabbrev het the\n...\n\nHowever, it is very time-consuming to create this list by hand.  You also have to enter the correct capitalization, which is a pain.  ('teh->the' is not equal to 'Teh->The')\n\nIt seems silly for everyone to create their own autocorrect file, so hopefully we can work together to make a sweet list.  I found a nice list from Wikipedia and cleaned it up a bit as a basis, and incorporated the typo fixes from Vim Cream.  I also added some words that I commonly misspelled or mistyped, and have taken additional contributions from users of the script.\n\nI'm sure there are some mistakes, or common mistakes that aren't in here yet, so if you find any, please contact me and I will gladly change things.  There are some additional details or thoughts as well as a shortcut to a word-processing mode at http://22ideastreet.com/blog/2008/11/06/vim-word-processing.\n\nI find this script invaluable when using Mozex to edit forms online (blog posts, web mail, etc.)\n\nThere is a GitHub repository that you can contribute to at http://github.com/panozzaj/vim-autocorrect/tree/master",
+  "install_details": "You can just type :source /path/to/the/autocorrect.vim to load up the corrections.\n\nI recommend putting autocorrect.vim in your vimfiles directory somewhere and then sourcing it when you want autocorrect to be enabled.  The other two files included in the .tar file are just to generate the list.  I would not recommend adding directly to autocorrect.vim, as these changes will get wiped out whenever you regenerate.  Ruby is necessary to generate from the data file, but a generated file is included in the .tar, so you can start immediately!",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10423",
+      "filename": "autocorrect.tar",
+      "script_version": "1.03",
+      "date": "2009-04-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15473",
+        "user_name": "panozzaj",
+        "first_name": "Anthony",
+        "last_name": "Panozzo",
+        "email": "panozzaj at gmail.com",
+        "homepage": "http://22ideastreet.com"
+      },
+      "release_notes": "Thanks to Gilles Bertrand for sending me a list containing a bunch of new corrections!  Many of the corrections are longer or more technical in nature.  In addition, I created a file in the GitHub repository that contains multiple word corrections in case this is ever easy to do in the future with Vim.  I also added a README in the tar file itself."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9900",
+      "filename": "autocorrect.tar",
+      "script_version": "1.02",
+      "date": "2009-02-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15473",
+        "user_name": "panozzaj",
+        "first_name": "Anthony",
+        "last_name": "Panozzo",
+        "email": "panozzaj at gmail.com",
+        "homepage": "http://22ideastreet.com"
+      },
+      "release_notes": "Found that Cream had an abbreviation file, so I took any words that were in there that I didn't already have and added them (about thirty, with some day of the week capitalization.)  Changed output of generator to recognize when a fix was just a capitalization.  Reduced size of final file by changing from 'iabbrev' to 'ia' (8000*5 characters!)  Also went through and deleted corrections of dubious quality and fixed some problems in the source file.  Added a couple of things that I've made mistakes on in the past two months.  All in all, a bunch of nice changes, less lines and size and more autocorrectionness."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9618",
+      "filename": "autocorrect.tar",
+      "script_version": "1.01",
+      "date": "2008-12-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15473",
+        "user_name": "panozzaj",
+        "first_name": "Anthony",
+        "last_name": "Panozzo",
+        "email": "panozzaj at gmail.com",
+        "homepage": "http://22ideastreet.com"
+      },
+      "release_notes": "Added mistakes that I have made over the last month that should have been autocorrected.\n\nConverted from dos line endings to unix ones.  Before I did this, it worked fine on the Windows box, but would cause a line break to be inserted on other operating systems when space was pressed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9446",
+      "filename": "autocorrect.tar",
+      "script_version": "1.0",
+      "date": "2008-11-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15473",
+        "user_name": "panozzaj",
+        "first_name": "Anthony",
+        "last_name": "Panozzo",
+        "email": "panozzaj at gmail.com",
+        "homepage": "http://22ideastreet.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

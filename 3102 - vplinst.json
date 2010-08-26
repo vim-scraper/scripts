@@ -1,0 +1,42 @@
+{
+  "script_id": "3102",
+  "name": "vplinst",
+  "summary": "[yet another] Vim Plugin Installer",
+  "script_type": "utility",
+  "description": "Vplinst stands for \"VIM plugin installer\" and is an attempt to make an automatic plugin installer for Vim. It installs scripts distributed in various different manners: vba (VimBall), tgz, .vim, .zip. You just configure the scripts you want in the vplinst.conf file, run the script and it will download and install them for you.\n\nThis utility consists in awk and sh scripts, that almost match POSIX and may run in any UNIX operating system with /bin/sh and awk.\n\nFork it on http://github.com/silasdb/vplinst\n\nPlease, communicate any problems and bugs you experienced.",
+  "install_details": "Just unpack it, cd the directory where the unpacked scripts belong to and run the vplinst.sh script. Configure the scripts you want in the vplinst.conf file. More information in the README.rst file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13263",
+      "filename": "vplinst-1.1.tar.gz",
+      "script_version": "1.1",
+      "date": "2010-06-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19969",
+        "user_name": "silasdb",
+        "first_name": "Silas",
+        "last_name": "Silva",
+        "email": "silasdb at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changes from vplinst-1.0 to vplinst-1.1:\n\n    * Fixed bug: tar was not being executed for .tgz files.\n    * New TODO.rst file in the source distribution\n    * Added support for ftp - now supporting ftp and wget.\n    * Added the RELEASENOTES.rst file, with releasing information."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13053",
+      "filename": "vplinst-1.0.tar.gz",
+      "script_version": "1.0",
+      "date": "2010-05-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19969",
+        "user_name": "silasdb",
+        "first_name": "Silas",
+        "last_name": "Silva",
+        "email": "silasdb at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

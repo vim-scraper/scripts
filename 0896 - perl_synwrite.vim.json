@@ -1,0 +1,42 @@
+{
+  "script_id": "896",
+  "name": "perl_synwrite.vim",
+  "summary": "checks Perl syntax before allowing file write",
+  "script_type": "ftplugin",
+  "description": "This plugin causes write attempts to fail if the contents of the buffer produce an error when run through \"perl -c\"\n\nThe plugin uses can use autocommands for the BufWriteCmd and FileWriteCmd events, but by default only provides a :Write command to check-then-write.",
+  "install_details": "Put this file in one of the locations described in :help ftplugin such as \"~/.vim/after/ftplugin\";  if you want autocommands, which are quirky, define perl_synwrite_au = 1",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4979",
+      "filename": "perl_synwrite.vim",
+      "script_version": "5",
+      "date": "2006-01-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "569",
+        "user_name": "rjbs",
+        "first_name": "Ricardo",
+        "last_name": "Signes",
+        "email": "rjbs-vim at public.manxome.org",
+        "homepage": "http://rjbs.manxome.org"
+      },
+      "release_notes": "work with shebang of \"#!perl\"\nbetter internals"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4944",
+      "filename": "perl_synwrite.vim",
+      "script_version": "4",
+      "date": "2006-01-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "569",
+        "user_name": "rjbs",
+        "first_name": "Ricardo",
+        "last_name": "Signes",
+        "email": "rjbs-vim at public.manxome.org",
+        "homepage": "http://rjbs.manxome.org"
+      },
+      "release_notes": "respect tainting, include a bit more information"
+    }
+  ]
+}

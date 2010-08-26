@@ -1,0 +1,26 @@
+{
+  "script_id": "583",
+  "name": "comment.vim",
+  "summary": "Comment and uncomment selected blocks of code.",
+  "script_type": "utility",
+  "description": "This script contains two simple functions to comment and uncomment visually selected blocks of C and C++ code using \"#ifdef 0...#endif\".   If'd out sections are commented with the author's name and a timestamp.\n\nThe default mappings are .c to comment and .C to uncomment.\n\ne.x.\n#if 0 /* author Tue Mar 25 19:08:09 EST 2003 */\n...\n#endif /* author Tue Mar 25 19:08:09 EST 2003 */\n",
+  "install_details": "Copy comment.vim to your plugin directory or source it in your .vimrc.\nSet the variable g:Author if you would like the  author's name to appear in the commented out block.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1813",
+      "filename": "comment.vim",
+      "script_version": "0.1",
+      "date": "2003-03-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1614",
+        "user_name": "deicide",
+        "first_name": "Mike",
+        "last_name": "S",
+        "email": "__xdfrfew__ at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

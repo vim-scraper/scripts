@@ -1,0 +1,26 @@
+{
+  "script_id": "1514",
+  "name": "SwitchExt",
+  "summary": "Switch between source and header files",
+  "script_type": "utility",
+  "description": "It can switch between your source file (.c/.cpp files) and the related header file (.h files), to save your time :)",
+  "install_details": "put it under your vim plugin directory\nset g:switchext_srcext to your source extension, if ommited, it will be \"cpp\"\nyou can also map a key to :call SwitchExt() to switch faster.\n\nhere's a vimrc example:\n\nlet g:switchext_srcext = \"cpp\"\nmap <F3> <ESC>:call SwitchExt()<CR>",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5543",
+      "filename": "switchext.vim",
+      "script_version": "0.1",
+      "date": "2006-04-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9835",
+        "user_name": "fishywang",
+        "first_name": "Yuxuan",
+        "last_name": "Wang",
+        "email": "wang at yuxuan.org",
+        "homepage": "http://wang.yuxuan.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

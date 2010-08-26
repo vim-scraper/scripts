@@ -1,0 +1,90 @@
+{
+  "script_id": "1167",
+  "name": "substitute.vim",
+  "summary": "Fast mappings for performing substitutions",
+  "script_type": "utility",
+  "description": " Visual and normal mode mappings for easy access to substitutions with the\n s/// command.\n\n This script will make it easy to replace the word under the cursor, or the\n visually selected text across the whole file. If more than one line is\n selected the substitution will only occur on the selected lines.\n\nDefault key mappings:\n\n   ;;  Perform substitution across the whole file.\n\n   ;'  The same, but prompt for each substitution.\n\n Pressing <C-R><C-R> will insert the text being replaced into the command line\n window.\n\n When the search and replace has completed the cursor can be returned to where\n the search started by jumping to mark ' (pressing '' or `').\n\nNote:\n\n - The contents of a register (default \"9) is overwritten\n\n",
+  "install_details": "Place substitute.vim into the plugin directory, or source it from within vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10093",
+      "filename": "substitute.vba.gz",
+      "script_version": "1.1",
+      "date": "2009-03-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4354",
+        "user_name": "aklt",
+        "first_name": "Anders",
+        "last_name": "Thøgersen",
+        "email": "anderslt at gmail.com",
+        "homepage": "http://bladre.dk"
+      },
+      "release_notes": "Use VimBall and GetLatestVimscripts"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4628",
+      "filename": "substitute.vim",
+      "script_version": "1.04",
+      "date": "2005-09-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4354",
+        "user_name": "aklt",
+        "first_name": "Anders",
+        "last_name": "Thøgersen",
+        "email": "anderslt at gmail.com",
+        "homepage": "http://bladre.dk"
+      },
+      "release_notes": "Added a separate helpfile and the possibility of changing\nmappings and the register that the script uses.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3760",
+      "filename": "substitute.vim",
+      "script_version": "1.03",
+      "date": "2005-01-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4354",
+        "user_name": "aklt",
+        "first_name": "Anders",
+        "last_name": "Thøgersen",
+        "email": "anderslt at gmail.com",
+        "homepage": "http://bladre.dk"
+      },
+      "release_notes": "Changed the meaning of the ;' mapping, and added <unique> to the map\ndefinitions.  Added the Escape function so $ and ^ are only escaped when they\nappear at the beginning, or at the end.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3731",
+      "filename": "substitute.vim",
+      "script_version": "1.01",
+      "date": "2004-12-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4354",
+        "user_name": "aklt",
+        "first_name": "Anders",
+        "last_name": "Thøgersen",
+        "email": "anderslt at gmail.com",
+        "homepage": "http://bladre.dk"
+      },
+      "release_notes": "The check to see if the mappings already exist has been removed.  It is probably better to let the user add his or her preferred mappings by modifying the script."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3728",
+      "filename": "substitute.vim",
+      "script_version": "1.0",
+      "date": "2004-12-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4354",
+        "user_name": "aklt",
+        "first_name": "Anders",
+        "last_name": "Thøgersen",
+        "email": "anderslt at gmail.com",
+        "homepage": "http://bladre.dk"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

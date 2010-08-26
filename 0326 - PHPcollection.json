@@ -1,0 +1,58 @@
+{
+  "script_id": "326",
+  "name": "PHPcollection",
+  "summary": "PHP Collection contains: compiler, ftplugin, script for K key, dicts",
+  "script_type": "utility",
+  "description": "PHP Collection contains 3 files and 2 links:\ncompiler, ftplugin, script for use with 'keywordprg' and PHP\nmanual, links to vim dictionaries of PHP functions and prototypes.\n\nI. PHP compiler (cphp.vim)\nRequirements:\n1. PHP compiled as cgi\n2. bash\n3. grep compatible tool :help grep\n4. standard message error from PHP (it doesn't use debugger) :help\ncompiler\nHelp:\n:make <file_name> <QUERY_STRING>\n\nII. PHP ftplugin (php.vim)\nInspired by Christopher Swingley I add some things and put it in\nftplugin file.\nFirst part is ``objective'' and contains only important(?) settings. In\nsecond are some useful options commented by default.\n\nIII. Bash script for 'keywordprg' option. (phpmanual.sh)\nWritten by Leszek Krupinski <leszek@php.net> for use with K.\nDefault settings points to lynx and directory where Mkd8.2 puts\nphp-manual rpm.\n\nIV. Links. Both dictionaries where created by Leszek Krupinski\nDictionary of PHP functions:\nhttp://www.leon.w-wa.pl/texts/phpfunclist\nDictionary of PHP prototypes:\nhttp://www.leon.w-wa.pl/texts/phpproto\n\nThanks for Doug Kearns, Leszek Krupinski and Christopher Swingley\n\nAll faults are only mine.\n\nMikolaj Machowski\n<mikmach@wp.pl>\n",
+  "install_details": "1. Rename cphp.vim as php.vim and place it in\n.vim/compiler/\n2. Place it in\n.vim/ftplugin/\n3. Make script executable and place it in eg.\n.vim/external/         (suggested in php.vim)\n4. You could place dictionaries in eg.\n.vim/dictionaries/     (suggested in php.vim)\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1602",
+      "filename": "phpcollection.zip",
+      "script_version": "0.2",
+      "date": "2003-01-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1345",
+        "user_name": "Jerub",
+        "first_name": "Stephen",
+        "last_name": "Thorne",
+        "email": "stephen at thorne.id.au",
+        "homepage": "http://thorne.id.au/blog"
+      },
+      "release_notes": "Updated 2003-01-06 by Stephen Thorne <stephen@mu.com.au> to use php4's 'lint' filter, instead of executing a php file with a query string. The format of errors had changed since the original version too, so the error string was modified.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=977",
+      "filename": "php.zip",
+      "script_version": "0.1.1",
+      "date": "2002-07-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "Small changes in README file:\nadded manual to compiler."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=970",
+      "filename": "php.zip",
+      "script_version": "0.1",
+      "date": "2002-07-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

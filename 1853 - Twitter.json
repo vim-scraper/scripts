@@ -1,0 +1,42 @@
+{
+  "script_id": "1853",
+  "name": "Twitter",
+  "summary": "A simple client for Twitter",
+  "script_type": "utility",
+  "description": "It's just a simple client for Twitter, if you want to update your Twitter status, check public timeline or your friends timeline all right from within your Vim, then this script is for you!\n\nNOTE: It requires your Vim to be compiled with Python bindings (which is, in most distributions by default)",
+  "install_details": "Extract the tarball into your ~/.vim/plugin\nIn order to update your status or fetch your friends time line you have to set your Twitter accounts username/password pair, you can set them using:\n\n:let g:twitterusername='username'\n:let g:twitterpassword='password'\n\nor put 'em in your ~/.vimrc\n\n\nUSER NOTES (useful tips from a user of this script):\n-----------------------------------------------------------------------\nHere's what I added to my _vimrc:\n\n\" helpful mappings for using twitter.vim\n\" see http://vim.sourceforge.net/scripts/script.php?script_id=1853\n\nlet g:twitterusername='username'\nlet g:twitterpassword=''\n\nmap <unique> <eader>tp <Esc>:let g:twitterpassword=inputsecret('password? ')<cr>\nmap <unique> <eader>tw <Esc>:execute 'TwitterStatusUpdate ' . inputdialog('Enter a Twitter status message:')<cr>\nmap <unique> <eader>tf <Esc>:TwitterFriendsTimeline<cr>\n\ntp will prompt you for your twitter password so you don't have to hardcode it in a file, tw will prompt you for your status message and tf will list your friend's twitters.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8574",
+      "filename": "twitter.tar.gz",
+      "script_version": "0.2",
+      "date": "2008-04-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11720",
+        "user_name": "gluegadget",
+        "first_name": "Amir Mohammad",
+        "last_name": "Saied",
+        "email": "amirsaied at gmail.com",
+        "homepage": "http://www.gluegadget.com/blog/"
+      },
+      "release_notes": "Source fixed, now you would get \"from VimScript#1853\" appended to your status updates."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6952",
+      "filename": "twitter.tar.gz",
+      "script_version": "0.1.1",
+      "date": "2007-04-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11720",
+        "user_name": "gluegadget",
+        "first_name": "Amir Mohammad",
+        "last_name": "Saied",
+        "email": "amirsaied at gmail.com",
+        "homepage": "http://www.gluegadget.com/blog/"
+      },
+      "release_notes": "BUGFIX: It's now possible to pass statuses containing ' (single-quotation)\n(Thanks to Armen Baghumian)"
+    }
+  ]
+}

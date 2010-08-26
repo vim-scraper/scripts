@@ -1,0 +1,42 @@
+{
+  "script_id": "312",
+  "name": "ipsec_conf.vim",
+  "summary": "Syntax highlighting for FreeS/WAN ipsec.conf",
+  "script_type": "syntax",
+  "description": "Highlights keywords, IP addresses, numbers, and strings in FreeS/WAN's (http://www.freeswan.org/) ipsec.conf configuration file.\n\nSomewhat validating: it flags unknown constructs as errors in red.",
+  "install_details": "Copy to ~/.vim/syntax and add the following to ~/.vim/filetype.vim:\n\n    au! BufRead,BufNewFile ipsec.conf\tsetfiletype ipsec_conf",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=912",
+      "filename": "ipsec_conf.vim",
+      "script_version": "0.1.1",
+      "date": "2002-06-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "702",
+        "user_name": "bruckie",
+        "first_name": "Bruce",
+        "last_name": "Christensen",
+        "email": "b r u c k i e  at  y a h o o . c o m",
+        "homepage": "http://www.brucec.net/"
+      },
+      "release_notes": "Changes:\n\n- Added support for X.509 keywords\n- Fixed a bug that caused Vim 6 to eat 100% CPU (thanks to Christian Gall <cg@cgall.de> for reporting the bug)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=908",
+      "filename": "ipsec_conf.vim",
+      "script_version": "0.1.0",
+      "date": "2002-06-08",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "702",
+        "user_name": "bruckie",
+        "first_name": "Bruce",
+        "last_name": "Christensen",
+        "email": "b r u c k i e  at  y a h o o . c o m",
+        "homepage": "http://www.brucec.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

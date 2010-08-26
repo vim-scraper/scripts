@@ -1,0 +1,154 @@
+{
+  "script_id": "2356",
+  "name": "Superior Haskell Interaction Mode (SHIM)",
+  "summary": "GHCi integration for VIM",
+  "script_type": "utility",
+  "description": "Superior Haskell Interaction Mode (SHIM) integrates GHCi with VIM, allowing you to quickly load files or individual lines into the interpreter, interact with the interpreter like you would in a normal terminal, and quickly pinpoint error locations. It was inspired by Emacs' Haskell mode.\n\nThe script uses Ruby to spawn a GHCi process and communicate with it through pipes, reading from VIM and writing the output into a dedicated GHCi window. It is integrated with quickfix to allow you to maintain a list of errors and move among them.\n\nRequires VIM with Ruby support, Ruby with pty extension (Unix), and GHCi.",
+  "install_details": "Put shim.vim into your VIM plugins directory or source the file manually. That's it.\n\nYou can map the functions \"GhciFile\", \"GhciRange <range>\", and \"GhciReload\" to key combinations of your preference for faster acess. Take a look at the source file for the options you may want to customize.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13472",
+      "filename": "shim.vim",
+      "script_version": "0.3.5",
+      "date": "2010-08-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15047",
+        "user_name": "larsko",
+        "first_name": "Lars",
+        "last_name": "Kotthoff",
+        "email": "lars at larsko.org",
+        "homepage": "http://www.larsko.org"
+      },
+      "release_notes": "fixed requirements"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11836",
+      "filename": "shim.vim",
+      "script_version": "0.3.4",
+      "date": "2009-12-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15047",
+        "user_name": "larsko",
+        "first_name": "Lars",
+        "last_name": "Kotthoff",
+        "email": "lars at larsko.org",
+        "homepage": "http://www.larsko.org"
+      },
+      "release_notes": "Allowing for digits in module names."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11728",
+      "filename": "shim.vim",
+      "script_version": "0.3.3",
+      "date": "2009-11-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15047",
+        "user_name": "larsko",
+        "first_name": "Lars",
+        "last_name": "Kotthoff",
+        "email": "lars at larsko.org",
+        "homepage": "http://www.larsko.org"
+      },
+      "release_notes": "Fixed a bug in the previous release and exposed GhciInit command to set up the buffer, window, and GHCi."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11675",
+      "filename": "shim.vim",
+      "script_version": "0.3.2",
+      "date": "2009-11-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15047",
+        "user_name": "larsko",
+        "first_name": "Lars",
+        "last_name": "Kotthoff",
+        "email": "lars at larsko.org",
+        "homepage": "http://www.larsko.org"
+      },
+      "release_notes": "Changes to the GHCi arguments are now taken into account when GHCi is reloaded."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11061",
+      "filename": "shim.vim",
+      "script_version": "0.3.1",
+      "date": "2009-07-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15047",
+        "user_name": "larsko",
+        "first_name": "Lars",
+        "last_name": "Kotthoff",
+        "email": "lars at larsko.org",
+        "homepage": "http://www.larsko.org"
+      },
+      "release_notes": "Added option to specify any extra arguments to GHCi."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10419",
+      "filename": "shim.vim",
+      "script_version": "0.3",
+      "date": "2009-04-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15047",
+        "user_name": "larsko",
+        "first_name": "Lars",
+        "last_name": "Kotthoff",
+        "email": "lars at larsko.org",
+        "homepage": "http://www.larsko.org"
+      },
+      "release_notes": "SHIM now deals with GHCi having gone away (restarts it) and the ghci buffer not being visible when e.g. loading a file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10305",
+      "filename": "shim.vim",
+      "script_version": "0.2",
+      "date": "2009-03-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15047",
+        "user_name": "larsko",
+        "first_name": "Lars",
+        "last_name": "Kotthoff",
+        "email": "lars at larsko.org",
+        "homepage": "http://www.larsko.org"
+      },
+      "release_notes": "Tweaked the regular expression to match the GHCi prompt again and added a function to kill and restart GHCi if something goes wrong."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9711",
+      "filename": "shim.vim",
+      "script_version": "0.1.1",
+      "date": "2008-12-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15047",
+        "user_name": "larsko",
+        "first_name": "Lars",
+        "last_name": "Kotthoff",
+        "email": "lars at larsko.org",
+        "homepage": "http://www.larsko.org"
+      },
+      "release_notes": "Changing regular expression to match ghci prompt. For some error messages it would incorrectly match part of the error message as the prompt."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9167",
+      "filename": "shim.vim",
+      "script_version": "0.1",
+      "date": "2008-08-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15047",
+        "user_name": "larsko",
+        "first_name": "Lars",
+        "last_name": "Kotthoff",
+        "email": "lars at larsko.org",
+        "homepage": "http://www.larsko.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

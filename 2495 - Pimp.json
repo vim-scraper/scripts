@@ -1,0 +1,42 @@
+{
+  "script_id": "2495",
+  "name": "Pimp",
+  "summary": "Pimp provides a python shell in order to support REPL style development",
+  "script_type": "ftplugin",
+  "description": "Pimp (Python Chimp) is based on (blatantly copied from) the Chimp plugin\n(vimscript #2348).  It provides a very simple REPL mechanism by allowing you to\nevaluate the contents of the active vim buffer in a running python console and\ninteract with the results.\n\n=Screenshots=\nhttp://www.flickr.com/photos/nushoin/3121961021/sizes/o/\nhttp://www.flickr.com/photos/nushoin/3121961023/sizes/o/\n\nTo use the plugin you have to open a terminal (e.g. xterm) and run one of the\ntwo scripts provided in the 'bin' directory.  For a split screen configuration\nrun ~/.vim/bin/vimPython.bash. For a gvim session interacting with a python\ninterpreter running in another window run ~/.vim/bin/gvimPython.bash. Note that\nyou have to *execute* the scripts, not source them.\n\nNow open a python source file or set the filetype to python (:set ft=python).\nEnter some python code, then hit <Esc> for normal mode, followed by <Leader>pf.\nThe contents of the buffer should now be evaluated in the python console.\n\n*Note*\nThe launching scripts try to run gvim, either in the terminal version (gvim -v,\nin the vimPython.bash script) or the gui version (gvimPython.bash). It is\npossible to run pimp with the non-gui version of vim by changing vimPython.bash.\nHowever in this case evaluating marked text in visual mode will not work.\n\n=Default bindings=\nAssuming that your <Leader> key is '&#039:\n\\pf Evaluate the current buffer (normal mode)\n\\pb Evaluate the marked code (visual mode).\n\n=Tips=\n - To move between the windows in the split screen configuration hit <Ctrl>-a\n   <Tab> (<Ctrl>-a is the escape key of gnu screen). \n - To resize the window hit <Ctrl>-a followed by :resize N<Enter> where N is the\n   number of lines, E.g.  <Ctrl>-a:resize 10<Enter>. \n - To scroll back hit <Ctrl>-a<Esc>. That enters screen's copy mode (similar to\n   vim's visual mode). To exit that mode hit <Esc>.\n - *New* As of Pimp version 0.5, evaluation of code selected in visual mode\n   actually works! Try using the right-extended visual block mode (Ctrl-v $) to\n   mark indented code (e.g. inside a function) in order to evaluate it. Take\n   advantage of the visual block mode to mark the code without the indentation\n   of course.\n - The code is evaluated in IPython's namespace. That makes it possible to\n   access previously defined variables, functions etc. The reverse is true as\n   well - it's possible to switch to the IPython window and interact with the\n   results of the evaluated code, invoke functions etc.\n - IPython has an abundance of 'magic' commands. For example it's possible to\n   'cd', 'pwd' etc. from within IPython. Check the IPython documentation for\n   details.\n\nIt is advised to read the gnu screen manual (man screen) for additional\ninformation about gnu screen's options and capabilities.\n",
+  "install_details": "Pimp depends on IPython (http://ipython.scipy.org) as the python shell and on\ngnu screen (http://www.gnu.org/software/screen) for it's operation. It is also\nrecommended to install the full version of vim (the package is named vim-gnome \nunder Ubuntu and vim-enhanced in Fedora).\n\nUnder Debian/Ubuntu:\nsudo apt-get install ipython screen vim-gnome\nUnder Fedora:\nyum install ipython screen vim-enhanced\n\n=Installing the plugin=\nmkdir ~/.vim\ncd ~/.vim\ntar -xvzf /path/to/Pimp.tar.gz\nchmod +x ~/.vim/bin/*.bash\n\nAdd the following to your ~/.vimrc file:\nfiletype plugin on\n\n=Keyboard bindings=\nYou may override the default keyboard bindings in your .vimrc file. For example\nto bind Ctrl-e add the following lines to your .vimrc file:\nmap <c-e> <Plug>PimpEvalFile\nimap <c-e> <Esc><Plug>PimpEvalFilea\nvmap <c-e> <Plug>PimpEvalBlock\n\n=Problems and solutions=\nWhen working in the split screen configuration, vim is run under a gnu screen\nsession.  gnu screen itself runs inside a terminal emulator, e.g. konsole. Both\ngnu screen and the terminal it is run in can cause various problems. Those\nproblems include trapping of keyboard shortcuts, wrong handling of colors\n(relevant to users of CSApprox - vimscript #2390) etc. Please refer to the file\n~/.vim/reference/pimp/PimpCaveats.README for details.\n\n=Testing=\nThis plugin has been tested on Ubuntu 8.10 and Fedora 9. If you can test it on\nother platforms I'll be happy to hear about any platform related bugs and\nsolutions, and will integrate the fix into the next version.\n\nPlease send me an email if you have any problem installing or using the plugin.\nMy email is listed on my profile page.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9720",
+      "filename": "Pimp-0.5.tar.gz",
+      "script_version": "0.5",
+      "date": "2008-12-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15781",
+        "user_name": "yariv",
+        "first_name": "Yariv",
+        "last_name": "Barkan",
+        "email": "nushoin at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Evaluation of code now works in all visual modes, some bugfixes and enhancements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9714",
+      "filename": "Pimp.tar.gz",
+      "script_version": "0.4",
+      "date": "2008-12-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15781",
+        "user_name": "yariv",
+        "first_name": "Yariv",
+        "last_name": "Barkan",
+        "email": "nushoin at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

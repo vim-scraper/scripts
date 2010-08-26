@@ -1,0 +1,26 @@
+{
+  "script_id": "2481",
+  "name": "pygtk_syntax",
+  "summary": "Syntax Highlighting for pygtk and friends in python",
+  "script_type": "syntax",
+  "description": "This script adds python syntax highlighting for:\n gtk gtk.gdk gtk.glade gobject rsvg atk cairo pango gnome\n\nAll highlighted items will only show up after a \".\" character. (e.g. threads_init() will not be highlighted but gtk.gdk.threads_init() will be)\n\ngtk functions and gtk objects can be set to have different highlight values by adding \nIncludedFunction\nIncludedFunction2\nhighlight groups in your colorscheme file.\n",
+  "install_details": "Extract to ~/.vim/after/syntax/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9653",
+      "filename": "pygtk_syntax.tar.bz2",
+      "script_version": "1.0",
+      "date": "2008-12-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15731",
+        "user_name": "albertt",
+        "first_name": "Jason",
+        "last_name": "Siefken",
+        "email": "siefkenj at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

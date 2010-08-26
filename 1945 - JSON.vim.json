@@ -1,0 +1,74 @@
+{
+  "script_id": "1945",
+  "name": "JSON.vim",
+  "summary": "A syntax highlighting file for JSON",
+  "script_type": "syntax",
+  "description": "A simple highlighting file for JSON constructs.",
+  "install_details": "To your filetype.vim just add something like:\n\nau! BufRead,BufNewFile *.json setfiletype json\n\nIt should also be possible to embed the json highlighting in other syntax files, but I have not tested that yet.\n\nFeedback is welcomed.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10853",
+      "filename": "json.vim",
+      "script_version": "0.4",
+      "date": "2009-06-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8417",
+        "user_name": "asmodai",
+        "first_name": "Jeroen",
+        "last_name": "Ruigrok van der Werven",
+        "email": "asmodai at in-nomine.org",
+        "homepage": "http://www.in-nomine.org/"
+      },
+      "release_notes": "Fixed some syntax highlighting for numbers.\nSmall improvements and fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7337",
+      "filename": "json.vim",
+      "script_version": "0.3",
+      "date": "2007-07-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8417",
+        "user_name": "asmodai",
+        "first_name": "Jeroen",
+        "last_name": "Ruigrok van der Werven",
+        "email": "asmodai at in-nomine.org",
+        "homepage": "http://www.in-nomine.org/"
+      },
+      "release_notes": "Make strings using single quotes show as errors.\nProperly display numbers and display fractions where the integral part of 0 is followed by other digits show as an error."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7336",
+      "filename": "json.vim",
+      "script_version": "0.2",
+      "date": "2007-07-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8417",
+        "user_name": "asmodai",
+        "first_name": "Jeroen",
+        "last_name": "Ruigrok van der Werven",
+        "email": "asmodai at in-nomine.org",
+        "homepage": "http://www.in-nomine.org/"
+      },
+      "release_notes": "JSON allows strings to span multiple lines, fix this accordingly."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7331",
+      "filename": "json.vim",
+      "script_version": "0.1",
+      "date": "2007-07-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8417",
+        "user_name": "asmodai",
+        "first_name": "Jeroen",
+        "last_name": "Ruigrok van der Werven",
+        "email": "asmodai at in-nomine.org",
+        "homepage": "http://www.in-nomine.org/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

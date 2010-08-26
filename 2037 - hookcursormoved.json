@@ -1,0 +1,138 @@
+{
+  "script_id": "2037",
+  "name": "hookcursormoved",
+  "summary": "Facilitate definition of triggers on CursorMoved[I] events",
+  "script_type": "utility",
+  "description": "This experimental plugin provides some help with the definition of \nfunctions that should be called when the cursor position changed.\n\nWhen the cursor position changes, it first checks if a certain condition \nis met and then calls functions registered in \n[bg]:hookcursormoved_{CONDITION} (an array).\n\nPre-defined conditions:\n    linechange\n        The line-number has changed.\n    parenthesis\n        Cursor is over (), [], or {}.\n    syntaxchange\n        The syntax group under the cursor has changed (i.e. the cursor \n        has moved in/out of a syntax group.\n    syntaxleave\n        b:hookcursormoved_syntax (ARRAY) should contain the syntax names \n        which should run the hook code.\n    syntaxleave_oneline\n        Same as a above but check also for changes of the line number.\n\nIn order to define a new conditions, you have to define a function \n\"HookCursorMoved_{CONDITION}(mode)\", which returns true if the condition \nis met.\n\nFunctions are best registered using |hookcursormoved#Register()|.\nExample: >\n\n    function! WhatsGoingOn(mode) \"{{{3\n        if mode == 'i'\n            DoThis\n        elseif mode == 'n'\n            DoThat\n        endif\n    endf\n\n    call hookcursormoved#Register('b', 'syntaxchange', function('WhatsGoingOn'))\n\n",
+  "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0,\nplease make sure, you have the current version of vimball\n(vimscript #1502) installed.\n\n\nAlso available via git\nhttp://github.com/tomtom/hookcursormoved_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11543",
+      "filename": "hookcursormoved.vba.gz",
+      "script_version": "0.9",
+      "date": "2009-10-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- hookcursormoved#Register: Print a message on unknown hooks (don't throw an error)\n- hookcursormoved#Register: If g:hookcursormoved_linechange is undefined, assume the plugin wasn't loaded."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8926",
+      "filename": "hookcursormoved.vba.gz",
+      "script_version": "0.8",
+      "date": "2008-07-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "hookcursormoved#Register: Allow deregister"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7979",
+      "filename": "hookcursormoved.vba.gz",
+      "script_version": "0.7",
+      "date": "2007-11-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Minor tweaks\n- FIX: Check correct column in s:CheckChars()\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7963",
+      "filename": "hookcursormoved.vba.gz",
+      "script_version": "0.6",
+      "date": "2007-11-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Check correct column in syntax* tests."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7936",
+      "filename": "hookcursormoved.vba.gz",
+      "script_version": "0.5",
+      "date": "2007-11-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- hookcursormoved#Register() takes mode as optional 3rd argument which \nallows to check a condition only in insert or only in normal mode.\n- Defined parenthesis_round_open and parenthesis_round_close.\n- Modes are now defined via the g:hookcursormoved_{mode} variable (the \nfunction name as string).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7842",
+      "filename": "hookcursormoved.vba.gz",
+      "script_version": "0.4",
+      "date": "2007-10-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Defined parenthesis_round\n- FIX: parenthesis"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7787",
+      "filename": "hookcursormoved.vba.gz",
+      "script_version": "0.3",
+      "date": "2007-10-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Defined parenthesis, syntaxleave_oneline conditions\n- Removed namespace parameter (everything is buffer-local)\n- Perform less checks (this should be no problem, if you use #Register).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7751",
+      "filename": "hookcursormoved.vba.gz",
+      "script_version": "0.2",
+      "date": "2007-10-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Renamed s:Enable() to hookcursormoved#Enable()\n- Renamed s:enabled to b:hookcursormoved_enabled\n"
+    }
+  ]
+}

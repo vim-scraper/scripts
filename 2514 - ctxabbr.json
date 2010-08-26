@@ -1,0 +1,58 @@
+{
+  "script_id": "2514",
+  "name": "ctxabbr",
+  "summary": "Context-sensitive abbreviations",
+  "script_type": "utility",
+  "description": "*ctxabbr* is a Vim plugin to provide a convenient way to define a variant of\nnormal |abbreviations|, called as \"context-sensitive abbreviations\".\nNormal abbreviations are short words which will be replaced with the words\nthey stand for whenever you enter the short words.\nBut sometimes, it is useful to replace such abbreviations\nwith some text according to the context - text around the cursor.\n\nFor example,\n\n\tcall ctxabbr#define('sc', 'System.Collections', '<using')\n\nWith the above setting, whenever you enter \"sc\", it is replaced with\n\"System.Collections\" if it is entered after a word \"using\", or\n\"sc\" otherwise.  It is illustrated as follows:\n\n\tusing sc       ==>    using System.Collections\n\t// sc sc sc    ==>    // sc sc sc\n\n\n\nRequirements:\n- Vim 7.2 or later\n\nLatest version:\nhttp://github.com/kana/vim-ctxabbr",
+  "install_details": "...",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9792",
+      "filename": "vim-ctxabbr-0.0.2.zip",
+      "script_version": "0.0.2",
+      "date": "2009-01-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Support buffer-local abbreviations.- Add |ctxabbr#reset()|."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9791",
+      "filename": "vim-ctxabbr-0.0.1.zip",
+      "script_version": "0.0.1",
+      "date": "2009-01-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Remove unintentionally remained :echomsg for debugging.- |ctxabbr#define()|: Add \"!\" condition."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9785",
+      "filename": "vim-ctxabbr-0.0.0.zip",
+      "script_version": "0.0.0",
+      "date": "2009-01-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

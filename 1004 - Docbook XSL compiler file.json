@@ -1,0 +1,42 @@
+{
+  "script_id": "1004",
+  "name": "Docbook XSL compiler file",
+  "summary": "DocBook XSL compiler file",
+  "script_type": "ftplugin",
+  "description": "Most people compile docbook documents with tools like jade or openjade. Other tools, like xsltproc, are possible.\n\nBasically, this script is a bound of commands in order to compile docbook documents correctly using xsltproc. It just set a few vim parameters like makeprg, errorformat and stringcomments.",
+  "install_details": "Place this script under $VIM/compiler.\n\nTo use it, type :compiler xsltproc.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3145",
+      "filename": "xsltproc.vim",
+      "script_version": "0.2",
+      "date": "2004-06-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5313",
+        "user_name": "dpino",
+        "first_name": "Diego",
+        "last_name": "Pino",
+        "email": "diego_pino_garcia at yahoo.es",
+        "homepage": ""
+      },
+      "release_notes": "Some bug fixes\n\nNow make command accepts parameters. Useful if you want to compile with -xinclude option."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3099",
+      "filename": "xsltproc.vim",
+      "script_version": "0.1",
+      "date": "2004-06-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5313",
+        "user_name": "dpino",
+        "first_name": "Diego",
+        "last_name": "Pino",
+        "email": "diego_pino_garcia at yahoo.es",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

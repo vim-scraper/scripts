@@ -1,0 +1,154 @@
+{
+  "script_id": "229",
+  "name": "searchInRuntime",
+  "summary": "Search files through the paths lists, and execute any command on them",
+  "script_type": "utility",
+  "description": "This plugin extends the command 'runtime' (:h runtime) to execute any command (not only 'source') on files found in the '&runtimepath' option.\n\nIt defines the command \":SearchInRuntime\" which takes as a first parameter the command to execute and then the search patterns used to search files in the 'runtimepath' directories list.\n\nE.g. 1:\n     :SearchInRuntime! source here/foo*.vim \nis equivalent to :\n     :runtime! here/foo*.vim\n\nE.g. 2:\n     :silent exe 'SearchInRuntime 0r there/that.'.&ft\nwill search 'runtimepath' list for the first file named \"that.<filetype>\" present in the directory \"there\", and inserts it in the current buffer. If no file is found, nothing is done.\n\nN.B.: The [!] (bang) character can be used to apply the command to all found files. Otherwise, 'SearchInRuntime' stops after the first file.\n\nSince the version 1.1 : \n(*) the 'verbose' option is supported :\n    >= 0 -> display when no file is found\n    >= 1 -> display the list of file found\n    >= 3 -> display the list of directories searched\n(*) ':SearchInPATH' : like ':SearchInRuntime', but with $PATH\n(*) ':SearchInVar' : works on any list of directories defined in a variable.\n(*) Contrary to ':runtime', the search can accept absolute paths, for instance :\n     :runtime! /usr/local/share/vim/*.vim                           is not valid while\n     :SearchInRuntime source /usr/local/share/vim/*.vim   is accepted.\n\nSince the version 1.5.:\n(*) The commands passed to the different :SearchIn* commands can accept any number of arguments before the names of the files found.To use them, add at the end of the :SearchIn* command: a pipe (' |0 ') and then the list of the other parameters. For instance:\n      :SearchInRuntime! grep plugin/*foo*.vim |0 text\n    For every file name plugin/*foo*.vim in the 'runtimepath', this will execute:\n      :grep text {path-to-the-file}\n\n(*) The commands passed to the different :SearchIn* commands can accept any number of arguments after the names of the files found. To use them, add at the end of the :SearchIn* command: a pipe (' | ') and then the list of the other parameters\n\n        :SearchInRuntime! Echo plugin/*foo*.vim | final arguments\n    For every file name plugin/*foo*.vim in the 'runtimepath', this will execute:\n        :Echo {path-to-the-file} final arguments\n\nSince Version 2.0.x:\n- Custom auto-completion added -- if vim supports it\n- New commands: :Split and :Vsplit to split open files found into &path\n\nSince Version 2.1.0:\n- new commands for vim7+ only: :GSplit and :GVSplit\n- overloaded mapping for vim7+ only: gf and CTRL-W_f\n- new mapping: glf that echoes the files in 'path' that match the pattern under the cursor\n\nGSplit, GVSplit, gf and CTRL-W_f permit to help the end-user to select a file among those matching a file-pattern (either given as parameter to the commands, or written under the cursor). If the selected file is already opened in a window, then that window is made the new active window -- this avoid to split-open the same file again and again.\n\nFull documentation available on:\n    http://hermitte.free.fr/vim/ressources/vimfiles/doc/searchInRuntime.html\nor within the tarball archive.",
+  "install_details": "Drop searchInRuntime.vim into {rtp}/plugin/, \nand searchInRuntime.txt into {rtp}/doc/\n\nThen, install the documentation from vim with:\n    :helptags {rtp}/doc",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4988",
+      "filename": "searchInRuntime.tar.gz",
+      "script_version": "2.1.3",
+      "date": "2006-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Bug fix: regression introduced on gf and <c-w>f"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4963",
+      "filename": "searchInRuntime.tar.gz",
+      "script_version": "2.1.2",
+      "date": "2006-01-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "* Various bug fixes for :G*split (paths withs spaces, UNC paths, URLs, absolute paths, ... ; factorisation of paths). \n* Possibility to choose the names of the \"Goto-Or-Split\" commands (:G*split).\n* New behavior for :G*split: we jump to the first matching window unless the command in banged ; in that latter case, the user is asked to choose the matching file to open/jump-to.\n* All these modifications concern only Vim7+ as the corresponding feature is not supported on 6.x versions of Vim."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4891",
+      "filename": "searchInRuntime.tar.gz",
+      "script_version": "2.1.0",
+      "date": "2005-12-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Two minor bugfixes. New commands and overridden mappings for vim7+: :GSplit, :GVSplit, gf, CTRL-W_f and glf. When several matching files can be found in 'path', the user is asked which one to open. If it is already opened in a window, that window becomes active."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4218",
+      "filename": "searchInRuntime.tar.gz",
+      "script_version": "2.0.3",
+      "date": "2005-04-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Support for \"smart\" auto-completion added for each command from the plugin -- \"smart\" means: \"respect the parameter position\". New commands: :Sp and :Vsp that split open files found into &path ; and :Runtime, another wrapper for :runtime with auto-completion."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1875",
+      "filename": "searchInRuntime.tar.gz",
+      "script_version": "1.6c",
+      "date": "2003-03-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Bug fix for non-Windows users."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1403",
+      "filename": "searchInRuntime.tar.gz",
+      "script_version": "1.6",
+      "date": "2002-11-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Tarball containing the plugin and its documentation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1383",
+      "filename": "searchInRuntime.vim",
+      "script_version": "1.6",
+      "date": "2002-11-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "The :SearchIn* commands can pass any number of additional arguments to the \"inner\" command. SearchInENV changed in SearchInVar."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=757",
+      "filename": "searchInRuntime.vim",
+      "script_version": "1.1",
+      "date": "2002-04-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Two more commands : ':SearchInENV' and ':SearchInPATH' ; '&verbose' is supported like with ':runtime'."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=637",
+      "filename": "searchInRuntime.vim",
+      "script_version": "1.0",
+      "date": "2002-02-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "102",
+        "user_name": "hermitte",
+        "first_name": "Luc",
+        "last_name": "Hermitte",
+        "email": "hermitte at free.fr",
+        "homepage": "http://hermitte.free.fr/vim"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

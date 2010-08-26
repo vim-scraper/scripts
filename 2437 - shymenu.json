@@ -1,0 +1,58 @@
+{
+  "script_id": "2437",
+  "name": "shymenu",
+  "summary": "Show the menu bar only when pressing an accelerator key",
+  "script_type": "utility",
+  "description": "shymenu will show the menu bar only when the user presses an accelerator \nkey. The menu will be hidden again after an item was selected.\nshymenu achieves this by defining key maps for those accelerator keys \n(see 'winaltkeys') that would normaly activate a menu.\n\nOn a terminal, shymenu will define accelerator keys for the |:emenu| \ncommand.\n\nSee also:\nhttp://groups.google.com/group/vim_use/browse_frm/thread/44c870c1e930bcc0\n",
+  "install_details": "shymenu is only effective when the menubar is hidden. To to this, \nadd this line to your vimrc file:\n\n  set guioptions-=m\n\nEdit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0, \nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n\n\nAlso available via git\nhttp://github.com/tomtom/shymenu_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9516",
+      "filename": "shymenu.vba.gz",
+      "script_version": "0.3",
+      "date": "2008-11-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Correct line offset if necessary\n- Set g:shymenu_wildcharm from &wildcharm\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9495",
+      "filename": "shymenu.vba.gz",
+      "script_version": "0.2",
+      "date": "2008-11-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Disable insert mode maps by default (conflict with international characters). Set g:shymenu_modes = \"ni\" to re-enable them."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9491",
+      "filename": "shymenu.vba.gz",
+      "script_version": "0.1",
+      "date": "2008-11-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

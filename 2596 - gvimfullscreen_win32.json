@@ -1,0 +1,26 @@
+{
+  "script_id": "2596",
+  "name": "gvimfullscreen_win32",
+  "summary": "Put gvim in full screen on Windows",
+  "script_type": "utility",
+  "description": "Allows you to run gvim in full screen on Windows on a single monitor.\n\nThis is a copy of Yasuhiro Matsumoto's VimTweak's EnableMaximize functionality modified to deal with window borders and allowing the window to overlap the task bar.\n\nSource code included and also available on GitHub: http://github.com/derek/gvimfullscreen_win32/tree/master",
+  "install_details": "Unzip the gvimfullscreen_win32.zip file. Copy the DLL to the folder where GVIM.EXE is located.\n\nCall directly:\n:call libcallnr(\"gvimfullscreen.dll\", \"ToggleFullScreen\", 0)<CR>\n\nMap a function key:\nmap <F11> <Esc>:call libcallnr(\"gvimfullscreen.dll\", \"ToggleFullScreen\", 0)<CR>\n\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10328",
+      "filename": "gvimfullscreen_win32.zip",
+      "script_version": "1.0",
+      "date": "2009-03-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16778",
+        "user_name": "delboy",
+        "first_name": "Derek",
+        "last_name": "McLoughlin",
+        "email": "derek.mcloughlin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

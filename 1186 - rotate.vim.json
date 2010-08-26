@@ -1,0 +1,58 @@
+{
+  "script_id": "1186",
+  "name": "rotate.vim",
+  "summary": "This file enables Vim to rotate text (counter) clockwise, put it upside down,etc",
+  "script_type": "utility",
+  "description": "This script enables Vim to do things like rotate text (counter) clockwise (l/r), put it upside down (u),\nexchange lines and columns (x), reorder it from right to left (h) or from bottom to top (v).\nThe command :<range>Rot [arg] allows a range in which this will be done.\nIf no range is specified the current line is taken. The optional argument (in parenthesis) specifies which\noperation is performed. If none is given, lines and columns are exchanged.\nThe command :Rotv [arg] operates on the last visual area and is good for use in Visual mode.\nThe corresponding commands :<range>Srot [arg] and :Srotv [arg] open the result in a new window.\nAny comments are welcome.\n\n",
+  "install_details": "Put it in your plugin directory.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3856",
+      "filename": "rotate.vim",
+      "script_version": "1.6",
+      "date": "2005-02-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6698",
+        "user_name": "jpaulusvim",
+        "first_name": "Jens",
+        "last_name": "Paulus",
+        "email": "jpaulus at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "New version which fixes bad performance when operating on huge text files\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3808",
+      "filename": "rotate.vim",
+      "script_version": "1.2",
+      "date": "2005-01-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6698",
+        "user_name": "jpaulusvim",
+        "first_name": "Jens",
+        "last_name": "Paulus",
+        "email": "jpaulus at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "A slightly improved version\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3779",
+      "filename": "rotate.vim",
+      "script_version": "1.0",
+      "date": "2005-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6698",
+        "user_name": "jpaulusvim",
+        "first_name": "Jens",
+        "last_name": "Paulus",
+        "email": "jpaulus at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

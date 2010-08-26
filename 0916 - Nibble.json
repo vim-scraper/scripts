@@ -1,0 +1,58 @@
+{
+  "script_id": "916",
+  "name": "Nibble",
+  "summary": "Nibble or Snake game for Vim.",
+  "script_type": "game",
+  "description": "- Based on my memories from the first PC game that I played called Nibble (or Nibbles?) written for DOS I think in Basic.\n- Recreated the first 5 levels that I remember, very easy to add new levels\n  (see s:InitLevel() function).\n- Use :Nibble command to start the game.\n- Use 'h', 'j', 'k' and 'l' keys to control the direction of the snake and\n  drive it on to the aim (call it a sleeping mouse :).\n- Use 'q' to quit, <C-C> or <C-Break> to stop and <Space> to pause.\n- You have 3 lives to expend. The current number of lives, level and the score\n  is displayed.\n- If the snake touches the border, the blocks or itself you loose a life.\n- Game ends when all the lives are consumed or you complete all the levels.\n\nGood exerciese to practice hjkl key movements, even for experienced Vi users,\nas you need to sometimes react very quickly.\n\n\n\nSearch_key_words: nibble nibbles snake game games hari krishna dara",
+  "install_details": "- Vim 7.0 (Preferably GUI version).\n- Extract the zip file into your runtime directory. \n- Install genutils.vim (vimscript #197)\n- For a more uniform movement of the snake across both horizontally and vertically, use a font that gives you a more square looking block (MS windows raster fonts on the console are a good example, but I couldn't find a way to set these on a GUI version), and also resize Vim window to have equal number of rows and columns. If you find such a font for GUI version, please let me know.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6711",
+      "filename": "nibble-2.0.zip",
+      "script_version": "2.0",
+      "date": "2007-02-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Just updated to work with Vim7. It now uses the new Vim7 Lists and\nDictionaries so much cleaner code than before. No longer uses multvals.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2768",
+      "filename": "nibble-1.1.zip",
+      "script_version": "1.1",
+      "date": "2004-02-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Updated with Bram's feedback.\n- Space should resume paused game.\n- When paused, should be able to close the game window and still be able to resume it.\n- Highlighting definition may not work on all the color schemes.\n\nAlso clears out any pending key strokes before starting a new level."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2764",
+      "filename": "nibble-1.0.zip",
+      "script_version": "1.0",
+      "date": "2004-02-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

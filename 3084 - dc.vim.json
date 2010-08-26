@@ -1,0 +1,26 @@
+{
+  "script_id": "3084",
+  "name": "dc.vim",
+  "summary": "syntax definitions for dc (desktop calculator)",
+  "script_type": "syntax",
+  "description": "Syntax definitions file for dc (desktop calculator). \n\nCatch a glimpse of it at http://brhefele.brainaxle.com/misc/dc.html - note this html file was generated using vim's export highlighted as html tool.\n\nImportant note: this was written to support the way I code dc. The big problem with highlighting dc (IMO) is that of macros. Macros are stored in strings, with no clear way to delineate what a string may or may not be used for later on. Or, at least, no prescribed way. So, I need to prescribe my own way. Basically, everything inside [] is interpreted as a string, unless the string is followed by an execute command (x) OR a save command and a newline (s.\\n). This allows me to use macros as functions, and for the sake of tidiness, I keep all functions on their own lines. I assume, then, that a []sx in the middle of the line is just a string being saved for later. I make a lot of assumptions. And I may change this later to allow for some variables to be set depending on a user's usage. For instance, I also set load/save register operations to a specific highlight. But if you load a register to execute, including as part of a conditional, the whole operation changes to a different highlight (that for execute).\n\nSo again, this won't work for everyone. It might not work for anyone except me, really, since who uses dc these days anyway? But if you have any issues, suggestions, I welcome any and all emails on the subject.\n",
+  "install_details": "Drop dc.vim into ~/.vim/syntax\nEither set the filetype manually (:setf dc) or add\n\nau! BufRead,BufNewFile *.dc  setfiletype dc\n\nto filetype.vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12940",
+      "filename": "dc.vim",
+      "script_version": "1.0",
+      "date": "2010-05-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19780",
+        "user_name": "brh",
+        "first_name": "brian",
+        "last_name": "hefele",
+        "email": "brhefele at brainaxle.com",
+        "homepage": "http://brhefele.brainaxle.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

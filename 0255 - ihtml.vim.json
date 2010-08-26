@@ -1,0 +1,42 @@
+{
+  "script_id": "255",
+  "name": "ihtml.vim",
+  "summary": "iHTML syntax highlighting",
+  "script_type": "syntax",
+  "description": "Does \"smart\" highlighting of all iHTML syntax.  Handles up to iHTML Enterprise Edition 2.20.  Also highlights SQL within SQL= attributes (which you can turn off if you'd like).  If you're using foldmethod=syntax, there are some nice folds setup by this syntax file.\n\nLatest version always available here:\nhttp://www.markfeeney.com/resources/ihtml.vim",
+  "install_details": "Drop the file in ~/.vim/syntax or on win32 in c:\\vim\\vimfiles\\syntax (assuming you're using drive c).  Setup some autocommands to load ihtml.vim for files ending with ihtml or iht.  Another better strategy is to load the syntax file for any files containing <!iHTML> in the first 2 or three lines of the file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=764",
+      "filename": "ihtml.vim",
+      "script_version": "1.4",
+      "date": "2002-04-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "572",
+        "user_name": "markf",
+        "first_name": "Mark",
+        "last_name": "Feeney",
+        "email": "vim at markfeeney.com",
+        "homepage": "http://www.markfeeney.com/"
+      },
+      "release_notes": "Was missing a few end tags in the last veresion.  Also, a few environment variables were messed up and/or missing."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=721",
+      "filename": "ihtml.vim",
+      "script_version": "1.2",
+      "date": "2002-03-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "572",
+        "user_name": "markf",
+        "first_name": "Mark",
+        "last_name": "Feeney",
+        "email": "vim at markfeeney.com",
+        "homepage": "http://www.markfeeney.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

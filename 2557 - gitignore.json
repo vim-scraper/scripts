@@ -1,0 +1,26 @@
+{
+  "script_id": "2557",
+  "name": "gitignore",
+  "summary": "Set 'wildignore' from ./.gitignore",
+  "script_type": "utility",
+  "description": "Another one from StackOverflow.\n\nIt will read your .gitignore file from the directory where you launch vim and parse it, transforming its format into one suitable for wildignore, and then set that option.  Thus, tab-completion won't present those files as options when using vim commands that expect a filename.\n\nLimitations:\n * This will read the .gitignore file from the directory where you launch vim. No effort is made to look for other .gitignore files and parse them. Alternatively, you could specify an absolute path to a file on the first line.\n * The wildignore option in vim doesn't support the notion of negating ignores like you can in a .gitignore file. That is, you can't say :set wildignore=*.html,!foo.html to have it ignore all html files except foo.html. Therefore, .gitignore lines that start with ! are simply ignored.",
+  "install_details": "Place the file in your plugin directory, such as ~/.vim/plugin/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10040",
+      "filename": "gitignore.vim",
+      "script_version": "0.1",
+      "date": "2009-02-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16577",
+        "user_name": "bellaire",
+        "first_name": "Adam",
+        "last_name": "Bellaire",
+        "email": "bellaire at ufl.edu",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

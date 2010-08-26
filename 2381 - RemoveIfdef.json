@@ -1,0 +1,26 @@
+{
+  "script_id": "2381",
+  "name": "RemoveIfdef",
+  "summary": "remove ifdef macro of C/C++ program",
+  "script_type": "utility",
+  "description": "Description:\n  This script finds #ifdef/#else/#endif keyword, and removes undefined area.\n  And display the defined macros in your source code after executing.\n\n  When we analysis the source code written by another person, a lot of\n  #ifdef are troublesome very much.  This script helps you to analysis it by\n  removing undefined area.\n  Please see the example. It helps you to understand this script work.\n\nInstructions:\n  1 - Put in your plugin directory, and open the C/C++ file\n  2 - Type :RemoveIfdef\n  3 - This script finds ifdef macro and remove undefined area\n  If you want to add the macros, add them to this script' argument.\n\nFeature:\n  - support the comment (// and /* ... */)\n  - decide macro keyword from file extension (support C/C++ and Verilog)\n\nArgument:\n  <None> : Remove undefined area by the macro defined in just source file.\n  [-n]   : Print code with original source code line. This argument should\n           be specified at first.\n           ex) #define AAA\n               #ifdef AAA\n               // comment\n               #endif\n                 ===>\n               1 #define AAA\n               3 // comment\n  String : Add these strings into macro list\n\nNote:\n 1. This script changes the C/C++ source code directly. If you want to\n    cancel, please undo (u).\n 2. If some macro are defined in the include files, this script doesn't\n    work exactly.\n\nExamples:\n  - example source code\n      #define AAA\n      // comment 1\n      #ifdef BBB\n      #ifdef AAA\n      // comment 2\n      #else // AAA\n      // comment 3\n      #endif // AAA\n      #else // BBB\n      #ifdef AAA\n      // comment 4\n      #else // AAA\n      // comment 5\n      #endif // AAA\n      #endif // BBB\n\n  - Type RemoveIfdef\n      -> // comment 1\n         // comment 4\n\n  - Type RemoveIfdef BBB\n      -> // comment 1\n         // comment 2\n\nKnown Bug:\n - Does not support include\n - There are some bugs about /* ... */ comment analysis",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9284",
+      "filename": "removeifdef.vim",
+      "script_version": "0.42",
+      "date": "2008-09-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6549",
+        "user_name": "watanama",
+        "first_name": "Masashi",
+        "last_name": "Watanabe",
+        "email": "watanama at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

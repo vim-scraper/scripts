@@ -1,0 +1,42 @@
+{
+  "script_id": "1077",
+  "name": "lindo.vim",
+  "summary": "Syntax highlighting for LINDO (Linear, INteractive, and Discrete Optimizer)",
+  "script_type": "syntax",
+  "description": "A syntax highlighting file for LINDO (Linear, INteractive, and Discrete Optimizer).\n\nPlease e-mail comments and suggestions with subject \"vim\".\n\n",
+  "install_details": "Copy lindo.vim to your syntax/ directory.\n\nAdd the following to filetype.vim:\n\n- - - - - - - - -\n\" LINDO\nau BufNewFile,BufRead *.lindo     setf lindo \n- - - - - - - - -",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3578",
+      "filename": "lindo.vim",
+      "script_version": "0.2",
+      "date": "2004-10-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5838",
+        "user_name": "jcataldo",
+        "first_name": "Juan",
+        "last_name": "Cataldo",
+        "email": "jcataldo at inf.utfsm.cl",
+        "homepage": "http://www.inf.utfsm.cl/~jcataldo/"
+      },
+      "release_notes": "Added more LINDO statements (taken from the \"com\" command output)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3399",
+      "filename": "lindo.vim",
+      "script_version": "0.1",
+      "date": "2004-08-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5838",
+        "user_name": "jcataldo",
+        "first_name": "Juan",
+        "last_name": "Cataldo",
+        "email": "jcataldo at inf.utfsm.cl",
+        "homepage": "http://www.inf.utfsm.cl/~jcataldo/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

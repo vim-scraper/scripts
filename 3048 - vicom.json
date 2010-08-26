@@ -1,0 +1,42 @@
+{
+  "script_id": "3048",
+  "name": "vicom",
+  "summary": "Intelligent Line Commenter for the most popular programs [LINUX ONLY]",
+  "script_type": "utility",
+  "description": "Vicom uses the [Ctrl X] and [Ctrl Y] keys to comment or uncomment lines of code in a program.\nIt does this by examining the filename entered on the command line. It automatically writes\nsuitable key maps to a small r/w buffer located in the .vimrc file. Allowing the same pair of\nkeys to perform the comment or uncomment function for different comment styles.\nVicom's purpose is to rapidly comment out or restore blocks of source code whilst testing and\ndebugging. Used with the Vimake package it turns Vim in to a powerful programmers workbench.\nVicom once installed runs as an alias to both Vim and Gvim. So if you normally start a Vim\nsession such as:\n        vi newprog.cc   or gvim newprog.cpp\nVicom first examines the command line and determines that the comment and uncomment maps should\nbe for a cpp program. It then writes these maps to a small buffer then passes control on to Vim\nto perform its normal loading of the file. Now when you press <Ctl+X> or <Ctl+Y> the correct\ncomments occur in your program. If you load a file type that Vicom does not recognize the keymap\nbuffer is cleared.\nVicom recognizes the following file types. Gnu gcc,g++,Nasm,AT&T(gas)as,ruby,perl,python and bash.\n",
+  "install_details": "copy package to your home directory\nrun    tar -zxvf vicom-1.05.tar.gz        (vers 1.04 had a bug in automake script)\ncd to ./vicom-1.05\nrun  .configure\nrun   make install\nrun  vcominst.\n\nFull installation and usage instruction are in the doc directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12799",
+      "filename": "vicom-1.05.tar.gz",
+      "script_version": "1.05",
+      "date": "2010-04-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8430",
+        "user_name": "mikeofthenight",
+        "first_name": "michael",
+        "last_name": "lear",
+        "email": "mikeofthenight2003 at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Revised version-1.04 Bug fixed in automake script preventing xydata file being\nrenamed to match calling program."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12798",
+      "filename": "vicom-1.04.tar.gz",
+      "script_version": "1.04",
+      "date": "2010-04-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8430",
+        "user_name": "mikeofthenight",
+        "first_name": "michael",
+        "last_name": "lear",
+        "email": "mikeofthenight2003 at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

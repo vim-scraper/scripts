@@ -1,0 +1,26 @@
+{
+  "script_id": "1370",
+  "name": "CVSconflict",
+  "summary": "CVS conflict resolution using vimdiff",
+  "script_type": "utility",
+  "description": "CVS conflict resolution using vimdiff\n\nWhen one does \"cvs update\", one may get files marked with \"C\" for conflict.  Cvs was unable to automatically merge one's local version of such files with the repository's version, and so merging requires human intervention.  The :CVSconflict command takes the current conflict file, splits it into two separate files, and enables vimdiff-style editing and viewing.\n\nA command,\n\n  :CVSconflict\n\nis provided which transforms the current file containing cvs conflict sections such as\n\n  <<<<<<<\n  ...local version...\n  =======\n  ...repository version...\n  >>>>>>>\n\ninto two side by side versions.  Vim&#039s diff mode is enabled with these two windows, greatly facilitating the production of a merged file.\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#CVSCONFLICT)\n",
+  "install_details": "1. Place copy in your .vim/plugin (vimfiles\\plugin) directory\n2. gunzip CVSconflict.vim.gz\n\nThe file should automatically set up help the next time you fire up vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4631",
+      "filename": "CVSconflict.vim.gz",
+      "script_version": "1",
+      "date": "2005-09-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "When one does \"cvs update\", one may get files marked with \"C\" for conflict.  Cvs was unable to automatically merge one's local version with the repository, and merging requires human intervention.  The :CVSconflict command takes the current conflict file, splits it into two separate files, and enables vimdiff-style editing and viewing.\n"
+    }
+  ]
+}

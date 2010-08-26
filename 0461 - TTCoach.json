@@ -1,0 +1,122 @@
+{
+  "script_id": "461",
+  "name": "TTCoach",
+  "summary": "Utility to train touch typing skills",
+  "script_type": "utility",
+  "description": "Detailed help in ttcoach.txt.\nInstall :help add-local-help\n\nThis plugin is very similar to to other touch type training programs and provide simple statistics (chars per minute, time, faults, faults per key and finger)",
+  "install_details": "       Unpack ttcoach.zip file in your .vim or vimfiles directory. It will create\n       ttcoach directory with some files in it.\n       They should be:\n           macros/ttcoach.vim - this file\n           files for training in macros/ttcoach directory\n           doc/ttcoach.txt\n           plugin/ttcplug.vim\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2733",
+      "filename": "ttcoach.zip",
+      "script_version": "1.2",
+      "date": "2004-02-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "Basic support for utf-8 &encoding - en and de work, pl and fr are broken."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2703",
+      "filename": "ttcoach.zip",
+      "script_version": "1.1",
+      "date": "2004-02-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "Major bugfixes (especially for Windows)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2701",
+      "filename": "ttcoach.zip",
+      "script_version": "1.0",
+      "date": "2004-01-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": " - highlight bugs, not \":sleep\" - goals system - two new exercise files with Vim exercises: colon and sqbrackets - fixed bug with multiple keyboards attached  - many small bugfixes  - Show only ttc files in Explorer commands - Save statistics always with generation - it will free one F-key - Add ! to all :normal commands - TTCustom works on copies, not original files. Shi^W:wq happens - improvements in editing custom files - Menus - Give possibility to save Custom files in separate dir"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2379",
+      "filename": "ttcoach.zip",
+      "script_version": "0.9",
+      "date": "2003-10-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "- drill: new exercise for Vim Normal mode commands- name of layout, exercise and accuracy in statusline- most important Fx shortcuts in statusline- add words per minute statistics- improved handling of small_help window- automatic highlighting with i,I commands (no need for F4)- remove blank lines in TTCustom files- silencing of preparation commands"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2328",
+      "filename": "ttcoach.zip",
+      "script_version": "0.8",
+      "date": "2003-09-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "Vim TTCoach v. 0.8New exercises:    SlovakNew command:    TTCustom - more in help fileNew shortcut:    F1 - short helpRemoved few bugs and moved ttcoach.vim to macros/ttcoach. Now only twoplaces to remove if you don't want to use TTCoach any longer :(Please remove old version of TTCoach before installing this one."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1398",
+      "filename": "ttcoach.zip",
+      "script_version": "0.7.1",
+      "date": "2002-11-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "bug fix release: incorrect variables in ttc_plug_en.vim"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1397",
+      "filename": "ttcoach.zip",
+      "script_version": "0.7",
+      "date": "2002-11-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "- ttcoach.vim is now layout independent; really improved F3 mapping; better use of :TTexplore command"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "1741",
+  "name": "R-MacOSX",
+  "summary": "Evaluate R (www.r-project.org) code from Vim in Mac OS X.",
+  "script_type": "ftplugin",
+  "description": "Enables you to evaluate code in R (http://www.r-project.org) via the shell command \"osascript\". Tested on Vim 7.0, R 2.4.0 (GUI 1.17) and Mac OS 10.4.8. Probably should also work on earlier versions.\n\nEvaluate current line or visual selection with <Cmd-E> and source current file with <Shift-Cmd-E>. The key mappings are inspired by the R GUI internal editor.\n\nTODO (patches accepted!):\n- the key mappings should be customizable",
+  "install_details": "Copy the file \"r.vim\" to the ftplugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6553",
+      "filename": "r.vim",
+      "script_version": "0.2",
+      "date": "2006-12-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6542",
+        "user_name": "jarimatti",
+        "first_name": "Jarimatti",
+        "last_name": "Valkonen",
+        "email": "jarimatti at iki.fi",
+        "homepage": ""
+      },
+      "release_notes": "File sourcing now works regardless of the working directory. Also added escaping of the R comment character '#'."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6544",
+      "filename": "r.vim",
+      "script_version": "0.1",
+      "date": "2006-12-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6542",
+        "user_name": "jarimatti",
+        "first_name": "Jarimatti",
+        "last_name": "Valkonen",
+        "email": "jarimatti at iki.fi",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "2924",
+  "name": "tocterm",
+  "summary": "Utitliy to add cterm support to color schemes without the GUIColorSchemes plugin",
+  "script_type": "utility",
+  "description": "Script to add cterm support to color schemes without the need for the GUIColorSchemes plugin\n\nGit Repo: http://shawnbiddle.com/toCterm\n\nNote: The utlity will only convert HTML colors. Named colors (Grey, Green, etc.) will not be translated to cterm.\nNote #2: Depending on the speed of your machine and the size of your colorscheme the script may take a while.",
+  "install_details": "Requirements:\nPHP >= 5\n\nInstall:\n1. tar -zxvf tocterm.tar.gz\n2. Place 'xterm' in your path\n\nUsage:\n1. Open the color scheme to convert in Vim\n2. :so <path to Vim-toCterm>/tocterm.vim\n3. ???\n4. Profit",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12087",
+      "filename": "tocterm.tar.gz",
+      "script_version": "1.0",
+      "date": "2010-01-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17073",
+        "user_name": "shawncplus",
+        "first_name": "Shawn",
+        "last_name": "Biddle",
+        "email": "shawn at shawnbiddle.com",
+        "homepage": "http://www.shawnbiddle.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

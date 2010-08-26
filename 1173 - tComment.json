@@ -1,0 +1,186 @@
+{
+  "script_id": "1173",
+  "name": "tComment",
+  "summary": "An extensible & universal comment plugin that also handles embedded filetypes",
+  "script_type": "utility",
+  "description": "TComment works like a toggle, i.e., it will comment out text that \ncontains uncommented lines, and it will remove comment markup for \nalready commented text (i.e. text that contains no uncommented lines).\n\nIf the file-type is properly defined, TComment will figure out which \ncomment string to use. Otherwise you use |TCommentDefineType()| to \noverride the default choice.\n\nTComment can properly handle an embedded syntax, e.g., ruby/python/perl \nregions in vim scripts, HTML or JavaScript in php code etc.\n\nMost of the time the default toggle keys will do what you want (or to be \nmore precise: what I think you want it to do ;-).\n\nAs operator (the prefix can be customized via g:tcommentMapLeaderOp1 \nand g:tcommentMapLeaderOp2):\n\n    gc{motion}   :: Toggle comments (for small comments within one line \n                    the &filetype_inline style will be used, if \n                    defined)\n    gcc          :: Toggle comment for the current line\n    gC{motion}   :: Comment region\n    gCc          :: Comment the current line\n\nBy default the cursor stays put. If you want the cursor to the end of \nthe commented text, set g:tcommentOpModeExtra to '>' (but this may not \nwork properly with exclusive motions).\n\nPrimary key maps:\n\n    <c-_><c-_>   :: :TComment\n    <c-_><space> :: :TComment <QUERY COMMENT-BEGIN ?COMMENT-END>\n    <c-_>b       :: :TCommentBlock\n    <c-_>a       :: :TCommentAs <QUERY COMMENT TYPE>\n    <c-_>n       :: :TCommentAs &filetype <QUERY COUNT>\n    <c-_>s       :: :TCommentAs &filetype_<QUERY COMMENT SUBTYPE>\n    <c-_>i       :: :TCommentInline\n    <c-_>r       :: :TCommentRight\n    <c-_>p       :: Comment the current inner paragraph\n\nThere is also a secondary set of key maps with <Leader>_ as leader (more \npreferable on terminals).\n\nAlternatively, you can type (? meaning \"optional argument\"):\n\n    :?<range> TComment ?commentBegin ?commentEnd\n    :?<range> TComment! ?commentBegin ?commentEnd\n    NOTE: If there is a visual selection that begins and ends in the same \n    line, then TCommentInline is used instead.\n\n    NOTE: The range is optional and defaults to the current line.\n\n    :?<range> TCommentInline ?commentBegin ?commentEnd\n    :?<range> TCommentInline! ?commentBegin ?commentEnd\n    Use the {&ft}_inline comment style.\n\n    :?<range> TCommentBlock ?commentBegin ?commentEnd\n    :?<range> TCommentBlock! ?commentBegin ?commentEnd\n    Comment as \"block\", e.g. use the {&ft}_block comment style.\n    NOTE: This command is kind of crude. It doesn't indent or reformat \n    the text.\n\n    :?<range> TCommentAs FILETYPE [COUNT]\n    :?<range> TCommentAs! FILETYPE [COUNT]\n    NOTE: TCommentAs requires g:tcomment_{filetype} to be defined.\n    NOTE: This command supports command line completion. See 'wildmode' \n    and 'wildmenu' for how to get the most out of it. If a count is \n    given, the comment leader is repeated, e.g. TCommentAs vim 3 will \n    use \"\"\" as comment leader.\n\n    :?<range> TCommentRight\n    :?<range> TCommentRight!\n    NOTE: This command comments out the text to the right of the cursor. \n    If a visual selection was made (be it block-wise or not), all lines \n    are commented out at from the current cursor positon downwards.\n\n    The bang (!) variants always comment out the selected text and don't \n    work as toggles.\n\n    Using this command you can also use different comment styles with \n    the TCommentDefineType(name, commentstring) function. This function \n    takes two arguments:\n        name :: The name is either &filetype or {&filetype}_{style}. \n            I.e., For block comments the {&filetype}_block and for \n            inline comments the {&filetype}_inline styles are used.\n        comment string :: a string mostly as described in \n            'commentstring'.\n    \n    If you want to define, e.g., a fancy block comment style for html \n    you put something like this into ~/.vim/after/plugin/tComment.vim:\n\n        call TCommentDefineType(\"html_fancy_block\", \"<!--%s  -->\\n  -- \")\n\n    The part after the newline character is used for marking \"middle\" \n    lines.\n\n    This comment style could then be accessed via (this command has \n    command line completion): >\n\n        '<,'>TCommentAs html_fancy_block\n\n    If you're editing a html file, this could best be done by the <c-_>s     \n    key map.\n",
+  "install_details": "Edit the vba file and type:\n\n    :so %\n\nSee :help vimball for details. If you use vim 7.0, you may need to \nupdate your vimball installation first.\n\n\nAlso available via git\nhttp://github.com/tomtom/tcomment_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11513",
+      "filename": "tComment.vba.gz",
+      "script_version": "1.10",
+      "date": "2009-10-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- tcomment#Operator defines w:tcommentPos if invoked repeatedly\n- s:GuessFileType: use len(getline()) instead of col()"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8689",
+      "filename": "tComment.vba.gz",
+      "script_version": "1.9",
+      "date": "2008-05-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Fix left offset for inline comments (via operator binding)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8640",
+      "filename": "tComment.vba.gz",
+      "script_version": "1.8a",
+      "date": "2008-05-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "The file autoload/tcomment.vim was packed as autoload/tComment.vim. If you installed 1.8, please rename that file or remove autoload/tComment.vim and use this vimball."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8627",
+      "filename": "tComment.vba.gz",
+      "script_version": "1.8",
+      "date": "2008-05-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Definitly require vim7\n- Split the plugin into autoload & plugin.\n- g:TCommentFileTypes is a list (this could cause problems when updating in certain situations)\n- Fixed some block comment strings\n- Removed extraneous newline in some block comments.\n- Maps for visal mode (thanks Krzysztof Goj)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7588",
+      "filename": "tComment.vba.gz",
+      "script_version": "1.7",
+      "date": "2007-08-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- gc{motion} (see g:tcommentMapLeaderOp1) functions as a comment toggle \noperator (i.e., something like gcl... works, mostly); gC{motion} (see \ng:tcommentMapLeaderOp2) will unconditionally comment the text.\n- TCommentAs takes an optional second argument (the comment level)\n- New \"n\" map: TCommentAs &filetype [COUNT]\n- Defined mail comments/citations\n- g:tcommentSyntaxMap: Map syntax names to filetypes for buffers with \nmixed syntax groups that don't match the filetypeEmbeddedsyntax scheme (e.g.  \n'vimRubyRegion', which should be commented as ruby syntax, not as vim \nsyntax)\n- FIX: Comments in vim*Region\n- TComment: The use of the type argument has slightly changed (IG -> i, \nnew: >)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7046",
+      "filename": "tComment.vba.gz",
+      "script_version": "1.6",
+      "date": "2007-05-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Ignore sql when guessing the comment string in php files; tComment \nsometimes chooses the wrong comment string because the use of sql syntax \nis used too loosely in php files; if you want to comment embedded sql \ncode you have to use TCommentAs\n- Use keepjumps in commands.\n- Map <c-_>p & <L>_p to vip:TComment<cr>\n- Made key maps configurable via g:tcommentMapLeader1 and \ng:tcommentMapLeader2\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5475",
+      "filename": "tComment.zip",
+      "script_version": "1.5",
+      "date": "2006-03-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- \"Inline\" visual comments (uses the &filetype_inline style if \navailable; doesn't check if the filetype actually supports this kind of \ncomments); tComment can't currently deduce inline comment styles from \n&comments or &commentstring (I personally hardly ever use them); default \nmap: <c-_>i or <c-_>I\n- In visual mode: if the selection spans several lines, normal mode is \nselected; if the selection covers only a part of one line, inline mode \nis selected\n- Fixed problem with lines containing ^M or ^@ characters.\n- It's no longer necessary to call TCommentCollectFileTypes() after \ndefining a new filetype via TCommentDefineType()\n- Disabled single <c-_> mappings\n- Renamed TCommentVisualBlock to TCommentRight\n- FIX: Forgot 'x' in ExtractCommentsPart() (thanks to Fredrik Acosta)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4037",
+      "filename": "tComment.zip",
+      "script_version": "1.4",
+      "date": "2005-03-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Fixed problem when &commentstring was invalid (e.g. lua)\n- perl_block\n- <c-_>s mapped to :TCommentAs <c-r>=&ft<cr>"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4019",
+      "filename": "tComment.zip",
+      "script_version": "1.3",
+      "date": "2005-03-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- slightly improved recognition of embedded syntax\n- if no commentstring is defined in whatever way, reconstruct one from \n&comments\n- The TComment... commands now have bang variants that don't act as toggles \nbut always comment out the selected text\n- fixed problem with commentstrings containing backslashes\n- comment as visual block (allows commenting text to the right of the main \ntext, i.e., this command doesn't work on whole lines but on the text to the \nright of the cursor)\n- enable multimode for dsl, vim filetypes\n- added explicit support for some other file types I ran into\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3758",
+      "filename": "tComment.zip",
+      "script_version": "0.2",
+      "date": "2005-01-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Fixed uncommenting of non-aligned comments\n- improved support for block comments (with middle lines and indentation)\n- using TCommentBlock for file types that don't have block comments creates \nsingle line comments\n- the default key bindings have slightly changed\n- removed the TCommentAsBlock command (TCommentAs provides its functionality)\n- removed g:tcommentSetCMS"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3749",
+      "filename": "tComment.zip",
+      "script_version": "0.1",
+      "date": "2005-01-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

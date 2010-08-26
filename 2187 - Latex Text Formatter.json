@@ -1,0 +1,106 @@
+{
+  "script_id": "2187",
+  "name": "Latex Text Formatter",
+  "summary": "This scripts makes it easier to format latex text",
+  "script_type": "utility",
+  "description": "The script allows to format a piece of latex text by splitting paragraphs according to latex keywords.\n\nThe main function, FormatLatexPar, formats the latex text to which the cursor belong, stopping above and below when a keyword is found, or when the vim paragraph ends. Then it moves at the end of the formatted section. If the current line is a comment, does the same thing, but searching for neighboring comments. The function is mapped to CTRL-j.\n\nNote: have a look also at a similar scrip (http://www.vim.org/scripts/script.php?script_id=2307).\n\nTodolist: merge multiple empty line into one.\n\nIf you have better solutions, improvements or suggestions, email me!\n\nHere is an example of text, and the resulting formatted text obtained by repeated calls of the function:\n\n<EXAMPLE BEGIN>\nThis is an example of the latex formatting script: the paragraphs are\nformatted\nby taking into account special latex ending keywords, as any\n\\begin{something}\n    or as,\n    for example\n\\end{something}\n\nAlso\nformulas\n$$\n    like this\n    one\n$$\nare kept separated\n\nOther separators are a line beginning\nwith\n{\n    as this one\n}   \nbut others can be easily added\n\nAlso,\ncomments\n% like this\n% or this\n% are merged\n\nbut not % if the comment is not at the beginning of the line\n% as in this case.\n\n\b\\begin{itemize}\n    \\item Some commands, as item, are delimiters,\n    but one may want\n    to format them with the text.\n    \\item These are treated differently\n    in the script\n\\end{itemize}\n\nYou can easily suit this script to your needs\nchanging SingleLineLatexParEndings and\nMultiLineLatexParEndings functions.\n<EXAMPLE END>\n\nis formatted, by subsequent calls, into\n\n<FORMATTED EXAMPLE BEGIN>\nThis is an example of the latex formatting script: the paragraphs \nare formatted by taking into account special latex ending keywords,\nas any\n\b\\begin{something}\n    or as, for example\n\\end{something}\n\nAlso formulas\n$$\n    like this one\n$$  \nare kept separated\n\nOther separators are a line beginning with\n{\n    as this one\n}   \nbut others can be easily added\n\nAlso, comments\n% like this or this are merged\n\nbut not % if the comment is not at the beginning of the line\n% as in this case.\n\n\\b\begin{itemize}\n    \\item Some commands, as item, are delimiters, but one may want\n    to format them with the text.\n    \\item These are treated differently in the script\n\\end{itemize}\n\nYou can easily suit this script to your needs changing\nSingleLineLatexParEndings and MultiLineLatexParEndings functions.\n<FORMATTED EXAMPLE END>",
+  "install_details": "Copy in your .vim/plugin directory. If CTRL-j is already mapped, change the mapping for FormatLatexPar.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9487",
+      "filename": "LatexParFormat.vim",
+      "script_version": "2.2",
+      "date": "2008-11-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14047",
+        "user_name": "sandro.bosio",
+        "first_name": "Sandro",
+        "last_name": "Bosio",
+        "email": "sandro.bosio at polimi.it",
+        "homepage": ""
+      },
+      "release_notes": "Corrected a bug possibly splitting a comment at the end of a line, making it normal text."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9282",
+      "filename": "LatexParFormat.vim",
+      "script_version": "2.1",
+      "date": "2008-09-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14047",
+        "user_name": "sandro.bosio",
+        "first_name": "Sandro",
+        "last_name": "Bosio",
+        "email": "sandro.bosio at polimi.it",
+        "homepage": ""
+      },
+      "release_notes": "Resolved problem with undos jumping at the beginning of the file. Better implementation (i.e., more readable) of some functions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9266",
+      "filename": "LatexParFormat.vim",
+      "script_version": "2.0",
+      "date": "2008-09-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14047",
+        "user_name": "sandro.bosio",
+        "first_name": "Sandro",
+        "last_name": "Bosio",
+        "email": "sandro.bosio at polimi.it",
+        "homepage": ""
+      },
+      "release_notes": "Basic improvements and bug removals: 1) It distinguish between paragraph separating commands (that do not have to be formatted with the text) and paragraph beginning commands (that will be formatted together with the paragraph they begin). 2) Works also on commented text, for any level of comments. The functions are now much more readable, too."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9237",
+      "filename": "LatexParFormat.vim",
+      "script_version": "1.3",
+      "date": "2008-09-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14047",
+        "user_name": "sandro.bosio",
+        "first_name": "Sandro",
+        "last_name": "Bosio",
+        "email": "sandro.bosio at polimi.it",
+        "homepage": ""
+      },
+      "release_notes": "Added some paragraph delimiters, learned some vim scripting, improved readability for some functions. Now it works also for \\item, and can be extended to any paragraph begin that one wants to be inlined with the text."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8538",
+      "filename": "LatexParFormat.vim",
+      "script_version": "1.2",
+      "date": "2008-04-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14047",
+        "user_name": "sandro.bosio",
+        "first_name": "Sandro",
+        "last_name": "Bosio",
+        "email": "sandro.bosio at polimi.it",
+        "homepage": ""
+      },
+      "release_notes": "Some changes to the definition of paragraph endings (see the comments)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8438",
+      "filename": "LatexParFormat.vim",
+      "script_version": "1.0",
+      "date": "2008-03-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14047",
+        "user_name": "sandro.bosio",
+        "first_name": "Sandro",
+        "last_name": "Bosio",
+        "email": "sandro.bosio at polimi.it",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

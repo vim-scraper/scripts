@@ -1,0 +1,538 @@
+{
+  "script_id": "1879",
+  "name": "AutoComplPop",
+  "summary": "Automatically opens popup menu for completions",
+  "script_type": "utility",
+  "description": "Repository:\n  https://bitbucket.org/ns9tks/vim-autocomplpop/\n\nIssues:\n  http://bitbucket.org/ns9tks/vim-autocomplpop/issues/\n\n==============================================================================\nINTRODUCTION                                                *acp-introduction*\n\nWith this plugin, your vim comes to automatically opens popup menu for\ncompletions when you enter characters or move the cursor in Insert mode. It\nwon't prevent you continuing entering characters.\n\n\n==============================================================================\nINSTALLATION                                                *acp-installation*\n\nPut all files into your runtime directory. If you have the zip file, extract\nit to your runtime directory.\n\nYou should place the files as follows:\n>\n        <your runtime directory>/plugin/acp.vim\n        <your runtime directory>/doc/acp.txt\n        ...\n<\nIf you disgust to jumble up this plugin and other plugins in your runtime\ndirectory, put the files into new directory and just add the directory path to\n'runtimepath'. It's easy to uninstall the plugin.\n\nAnd then update your help tags files to enable fuzzyfinder help. See\n|add-local-help| for details.\n\n\n==============================================================================\nUSAGE                                                              *acp-usage*\n\nOnce this plugin is installed, auto-popup is enabled at startup by default.\n\nWhich completion method is used depends on the text before the cursor. The\ndefault behavior is as follows:\n\n        kind      filetype    text before the cursor ~\n        Keyword   *           two keyword characters\n        Filename  *           a filename character + a path separator \n                              + 0 or more filename character\n        Omni      ruby        \".\", \"::\" or non-word character + \":\"\n                              (|+ruby| required.)\n        Omni      python      \".\" (|+python| required.)\n        Omni      xml         \"<\", \"</\" or (\"<\" + non-\">\" characters + \" \")\n        Omni      html/xhtml  \"<\", \"</\" or (\"<\" + non-\">\" characters + \" \")\n        Omni      css         (\":\", \";\", \"{\", \"^\", \"@\", or \"!\")\n                              + 0 or 1 space\n\nAlso, you can make user-defined completion and snipMate's trigger completion\n(|acp-snipMate|) auto-popup if the options are set.\n\nThese behavior are customizable.\n\n                                                                *acp-snipMate*\nsnipMate's Trigger Completion ~\n\nsnipMate's trigger completion enables you to complete a snippet trigger\nprovided by snipMate plugin\n(http://www.vim.org/scripts/script.php?script_id=2540) and expand it.\n\n\nTo enable auto-popup for this completion, add following function to\nplugin/snipMate.vim:\n>\n  fun! GetSnipsInCurrentScope()\n    let snips = {}\n    for scope in [bufnr('%')] + split(&ft, '\\.') + ['_']\n      call extend(snips, get(s:snippets, scope, {}), 'keep')\n      call extend(snips, get(s:multi_snips, scope, {}), 'keep')\n    endfor\n    return snips\n  endf\n<\nAnd set |g:acp_behaviorSnipmateLength| option to 1.\n\nThere is the restriction on this auto-popup, that the word before cursor must\nconsist only of uppercase characters.\n\n                                                               *acp-perl-omni*\nPerl Omni-Completion ~\n\nAutoComplPop supports perl-completion.vim\n(http://www.vim.org/scripts/script.php?script_id=2852).\n\nTo enable auto-popup for this completion, set |g:acp_behaviorPerlOmniLength|\noption to 0 or more.\n\n\n==============================================================================\n",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11894",
+      "filename": "vim-autocomplpop.zip",
+      "script_version": "2.14.1",
+      "date": "2009-12-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Changed the way of auto-popup for avoiding an issue about filename completion.\n- Fixed a bug that popup menu was opened twice when auto-popup was done.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11731",
+      "filename": "vim-autocomplpop.zip",
+      "script_version": "2.14",
+      "date": "2009-11-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Added the support for perl-completion.vim."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11725",
+      "filename": "vim-autocomplpop.zip",
+      "script_version": "2.13",
+      "date": "2009-11-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Changed to sort snipMate's triggers.\n- Fixed a bug that a wasted character was inserted after snipMate's trigger\n  completion.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11714",
+      "filename": "vim-autocomplpop.zip",
+      "script_version": "2.12.1",
+      "date": "2009-11-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Changed to avoid a strange behavior with Microsoft IME."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11706",
+      "filename": "vim-autocomplpop.zip",
+      "script_version": "2.12",
+      "date": "2009-11-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Added g:acp_behaviorKeywordIgnores option.\n- Added g:acp_behaviorUserDefinedMeets option and removed\n  g:acp_behaviorUserDefinedPattern.\n- Changed to do auto-popup only when a buffer is modified.\n- Changed the structure of g:acp_behavior option.\n- Changed to reflect a change of behavior options (named g:acp_behavior*)\n  any time it is done.\n- Fixed a bug that completions after omni completions or snipMate's trigger\n  completion were never attempted when no candidate for the former\n  completions was found.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11604",
+      "filename": "vim-autocomplpop.zip",
+      "script_version": "2.11.1",
+      "date": "2009-10-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Fixed a bug that a snipMate's trigger could not be expanded when it was\n  completed.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11570",
+      "filename": "vim-autocomplpop.zip",
+      "script_version": "2.11",
+      "date": "2009-10-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Implemented experimental feature which is snipMate's trigger completion."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11558",
+      "filename": "vim-autocomplpop.zip",
+      "script_version": "2.10",
+      "date": "2009-10-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Improved the response by changing not to attempt any completion when\n  keyword characters are entered after a word which has been found that it\n  has no completion candidate at the last attempt of completions.\n- Improved the response by changing to close popup menu when <BS> was\n  pressed and the text before the cursor would not match with the pattern of\n  current behavior.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11538",
+      "filename": "vim-autocomplpop.zip",
+      "script_version": "2.9",
+      "date": "2009-10-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Changed default behavior to support XML omni completion.\n- Changed default value of g:acp_behaviorKeywordCommand option.\n  The option with \"\\<C-p>\" cause a problem which inserts a match without\n  <CR> when 'dictionary' has been set and keyword completion is done.\n- Changed to show error message when incompatible with a installed vim.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11379",
+      "filename": "vim-autocomplpop.zip",
+      "script_version": "2.8.1",
+      "date": "2009-09-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Fixed a bug which inserted a selected match to the next line when\n  auto-wrapping (enabled with 'formatoptions') was performed.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11373",
+      "filename": "vim-autocomplpop.zip",
+      "script_version": "2.8",
+      "date": "2009-09-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Added g:acp_behaviorUserDefinedFunction option and\n  g:acp_behaviorUserDefinedPattern option for users who want to make custom\n  completion auto-popup.\n- Fixed a bug that setting 'spell' on a new buffer made typing go crazy.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11366",
+      "filename": "vim-autocomplpop.zip",
+      "script_version": "2.7",
+      "date": "2009-09-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Changed naming conventions for filenames, functions, commands, and options \n  and thus renamed them.\n- Added g:acp_behaviorKeywordCommand option. If you prefer the previous\n  behavior for keyword completion, set this option \"\\<C-n>\".\n- Changed default value of g:acp_ignorecaseOption option.\n                                                                              \nThe following were done by Ingo Karkat:\n                                                                              \n- ENH: Added support for setting a user-provided 'completefunc' during the\n  completion, configurable via g:acp_behavior. \n- BUG: When the configured completion is <C-p> or <C-x><C-p>, the command to\n  restore the original text (in on_popup_post()) must be reverted, too. \n- BUG: When using a custom completion function (<C-x><C-u>) that also uses\n  an s:...() function name, the s:GetSidPrefix() function dynamically\n  determines the wrong SID. Now calling s:DetermineSidPrefix() once during\n  sourcing and caching the value in s:SID. \n- BUG: Should not use custom defined <C-X><C-...> completion mappings. Now\n  consistently using unmapped completion commands everywhere. (Beforehand,\n  s:PopupFeeder.feed() used mappings via feedkeys(..., 'm'), but\n  s:PopupFeeder.on_popup_post() did not due to its invocation via\n  :map-expr.) \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9335",
+      "filename": "autocomplpop.vim",
+      "script_version": "2.6",
+      "date": "2008-10-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Improved the behavior of omni completion for HTML/XHTML."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8821",
+      "filename": "autocomplpop.vim",
+      "script_version": "2.5",
+      "date": "2008-06-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Added some options to customize behavior easily:\n    g:AutoComplPop_BehaviorKeywordLength\n    g:AutoComplPop_BehaviorFileLength\n    g:AutoComplPop_BehaviorRubyOmniMethodLength\n    g:AutoComplPop_BehaviorRubyOmniSymbolLength\n    g:AutoComplPop_BehaviorPythonOmniLength\n    g:AutoComplPop_BehaviorHtmlOmniLength\n    g:AutoComplPop_BehaviorCssOmniPropertyLength\n    g:AutoComplPop_BehaviorCssOmniValueLength\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8656",
+      "filename": "autocomplpop.vim",
+      "script_version": "2.4",
+      "date": "2008-05-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Added g:AutoComplPop_MappingDriven option."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8513",
+      "filename": "autocomplpop.vim",
+      "script_version": "2.3.1",
+      "date": "2008-03-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Changed to set 'lazyredraw' while a popup menu is visible to avoid\n  flickering.\n- Changed a behavior for CSS.\n- Added support for GetLatestVimScripts.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8506",
+      "filename": "autocomplpop.vim",
+      "script_version": "2.3",
+      "date": "2008-03-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Added a behavior for Python to support omni completion.\n- Added a behavior for CSS to support omni completion.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8477",
+      "filename": "autocomplpop.vim",
+      "script_version": "2.2",
+      "date": "2008-03-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Changed not to work when 'paste' option is set.\n- Fixed AutoComplPopEnable command and AutoComplPopDisable command to\n  map/unmap \"i\" and \"R\".\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8472",
+      "filename": "autocomplpop.vim",
+      "script_version": "2.1",
+      "date": "2008-03-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Fixed the problem caused by \".\" command in Normal mode.\n- Changed to map \"i\" and \"R\" to feed completion command after starting\n  Insert mode.\n- Avoided the problem caused by Windows IME.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8460",
+      "filename": "autocomplpop.vim",
+      "script_version": "2.0",
+      "date": "2008-03-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Changed to use CursorMovedI event to feed a completion command instead\n  of key mapping. Now the auto-popup is triggered by moving the cursor.\n- Changed to feed completion command after starting Insert mode.\n- Removed g:AutoComplPop_MapList option.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8385",
+      "filename": "autocomplpop.vim",
+      "script_version": "1.7",
+      "date": "2008-03-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Added behaviors for HTML/XHTML. Now supports the omni completion for\n  HTML/XHTML.\n- Changed not to show expressions for CTRL-R =.\n- Changed not to set 'nolazyredraw' while a popup menu is visible.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8261",
+      "filename": "autocomplpop.vim",
+      "script_version": "1.6.1",
+      "date": "2008-02-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Changed not to trigger the filename competion by a text which has\n  multi-byte characters.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8207",
+      "filename": "autocomplpop.vim",
+      "script_version": "1.6",
+      "date": "2008-02-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Redesigned g:AutoComplPop_Behavior option.\n- Changed default value of g:AutoComplPop_CompleteOption option.\n- Changed default value of g:AutoComplPop_MapList option.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8086",
+      "filename": "autocomplpop.vim",
+      "script_version": "1.5",
+      "date": "2007-12-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Implemented continuous-completion for the filename completion. And\n  added new option to g:AutoComplPop_Behavior.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8034",
+      "filename": "autocomplpop.vim",
+      "script_version": "1.4",
+      "date": "2007-12-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Fixed the bug that the auto-popup was not suspended in fuzzyfinder.\n- Fixed the bug that an error has occurred with Ruby-omni-completion\n  unless Ruby interface.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7960",
+      "filename": "autocomplpop.vim",
+      "script_version": "1.3",
+      "date": "2007-11-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Supported Ruby-omni-completion by default.\n- Supported filename completion by default.\n- Added g:AutoComplPop_Behavior option.\n- Added g:AutoComplPop_CompleteoptPreview option.\n- Removed g:AutoComplPop_MinLength option.\n- Removed g:AutoComplPop_MaxLength option.\n- Removed g:AutoComplPop_PopupCmd option.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7931",
+      "filename": "autocomplpop.vim",
+      "script_version": "1.2",
+      "date": "2007-11-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Fixed bugs related to 'completeopt'."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7907",
+      "filename": "autocomplpop.vim",
+      "script_version": "1.1",
+      "date": "2007-11-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "- Added g:AutoComplPop_IgnoreCaseOption option.\n- Added g:AutoComplPop_NotEnableAtStartup option.\n- Removed g:AutoComplPop_LoadAndEnable option.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7464",
+      "filename": "autocomplpop.vim",
+      "script_version": "1.0",
+      "date": "2007-08-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "g:AutoComplPop_LoadAndEnable option for a startup activation is added.\nAutoComplPopLock command and AutoComplPopUnlock command are added to suspend and resume.\n'completeopt' and 'complete' options are changed temporarily while completing by this script.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7107",
+      "filename": "autocomplpop.vim",
+      "script_version": "0.4",
+      "date": "2007-05-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "The first match are selected when the popup menu is Opened. You can insert the first match with CTRL-Y."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7085",
+      "filename": "autocomplpop.vim",
+      "script_version": "0.3",
+      "date": "2007-05-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "Fixed the problem that the original text is not restored if 'longest' is not set in 'completeopt'. Now the plugin works whether or not 'longest' is set in 'completeopt', and also 'menuone'.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7084",
+      "filename": "autocomplpop.vim",
+      "script_version": "0.2",
+      "date": "2007-05-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "When completion matches are not found, insert CTRL-E to stop completion.\nClear the echo area.\nFixed the problem in case of dividing words by symbols, popup menu is not opened.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7048",
+      "filename": "autocomplpop.vim",
+      "script_version": "0.1",
+      "date": "2007-05-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12324",
+        "user_name": "isskr",
+        "first_name": "Takeshi",
+        "last_name": "NISHIDA",
+        "email": "ns9tks at DELETE-ME.gmail.com",
+        "homepage": "http://bitbucket.org/ns9tks/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

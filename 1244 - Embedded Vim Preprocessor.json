@@ -1,0 +1,42 @@
+{
+  "script_id": "1244",
+  "name": "Embedded Vim Preprocessor",
+  "summary": "Embedded Vim Preprocessor",
+  "script_type": "utility",
+  "description": "This is a basic Preprocessor Engine \n\n   It contains a script for processing Embedded Vim code in any file by using the following statements:\n\n\n*Now: Includes statmens were added, it supports nested including, and each included file will be proccesed too.\n\n<?vim:include=\"file_source.html\">\n\n...any text...\n<?vim>\n   ...\n  {pure vim statements}\n   ...\n</?vim>\n...any text...\n\n\n\nor\n...any text...<?vim={a vim expresion}>...any text...\n_________________________________________________________________________\n\n\n****WRITE THE FOLLOWING FILE:****\n---------File.txt--------------------\n<?vim:include=\"headerfile.txt\">\nYou can use it on any file\n<?vim>\nlet i=0\nwhile i<11\n</?vim>\nThe i value is: <?vim=\"actually \".i >\n<?vim>let i=i+1 | endw</?vim>\n---------------------------------------\n\n*****TYPE ':%PPEV'****\n\n\n****AND YOU WILL GET THE FOLLOWING FILE****\n-----------File2.txt---------------------\nHeader of the included file\nYou can use it on any file\nThe i value is: actually 0\nThe i value is: actually 1\nThe i value is: actually 2\nThe i value is: actually 3\nThe i value is: actually 4\nThe i value is: actually 5\nThe i value is: actually 6\nThe i value is: actually 7\nThe i value is: actually 8\nThe i value is: actually 9\nThe i value is: actually 10\n--------------------------------------\n_________________________________________________________________________\nCurrent Features:\n  *You can use  embedded  Vim code with any file, then\n  *using ':%PPEV' command it generates another file(any name) with the Embedded Vim Code processed\n  *<?vim> </?vim> statements\n  *<?vim={expr}> statement\n  *<?vim:include=\"{file}\"> statement\nFuture versions:\n  *ifdef\n  *ifndef\n  *define\n\n ",
+  "install_details": "Just source the evcp.vim file.\nIt contains install instructions, step by step tutorial, and example files generated with EVP",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4077",
+      "filename": "evcp1.0.1.tar.gz",
+      "script_version": "1.0.1",
+      "date": "2005-03-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5606",
+        "user_name": "gandalf",
+        "first_name": "Roberto",
+        "last_name": "Morales",
+        "email": "timer24 at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fixed: Now you don't need to escape quotes in normal text\nBug fixed: Empty processing lines, and other overwrite errors were fixed.\nNew Features: <?vim:include=\"\"> statement, unix and windows support"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4053",
+      "filename": "evp-1.0.tar.gz",
+      "script_version": "v1.0",
+      "date": "2005-03-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5606",
+        "user_name": "gandalf",
+        "first_name": "Roberto",
+        "last_name": "Morales",
+        "email": "timer24 at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "657",
+  "name": "epperl.vim",
+  "summary": "Syntax highlighting for EP-PERL files",
+  "script_type": "syntax",
+  "description": "Allows syntax highlighting for EP-PERL scripts.\nSupports the <EP-PERL>, <EP-IF> and <EP-COMMENT> tags.\nsupport for the other tags might be enabled in later versions.",
+  "install_details": "just copy to your syntax library, and add the following in your ~/.vimrc file:\naugroup filetypedetect\nautocmd! BufNewFile,BufRead *.ep,*.nep setf epperl\naugroup END\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2023",
+      "filename": "epperl.vim",
+      "script_version": "1.2",
+      "date": "2003-05-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2437",
+        "user_name": "avshalom",
+        "first_name": "Avshalom",
+        "last_name": "Ish-Lev",
+        "email": "vim-online at ishlev.com",
+        "homepage": ""
+      },
+      "release_notes": "* added support for highlighting perl vars inside the HTML section.\n* fixed highlighting of any text (instead of the perl greyish color, it was blue)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2015",
+      "filename": "epperl.vim",
+      "script_version": "v1.1",
+      "date": "2003-05-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2437",
+        "user_name": "avshalom",
+        "first_name": "Avshalom",
+        "last_name": "Ish-Lev",
+        "email": "vim-online at ishlev.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

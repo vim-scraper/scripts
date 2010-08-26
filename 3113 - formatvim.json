@@ -1,0 +1,266 @@
+{
+  "script_id": "3113",
+  "name": "formatvim",
+  "summary": "Convert current file to colored HTML, BBCode or whatever",
+  "script_type": "utility",
+  "description": "There are some things that included out-of-the-box 2html.vim plugin does not support, so I ended in writing my own format.vim script:\n\n - 'list' and 'listchars'\n - Foreground colors for lines with differencies\n - Normal special character coloring\n - Background color for the whole line with differencies and folds, not just for   text\n - Tags linked to their definition (slow, HTML only, but partially on by default)\n - Side-by-side diff (also present in latest 2html version)\n - My killer feature: exporting to any format you can write specification for. (for example, bbcode; bbcode specification for unixforum.org is included in the distribution)\n\nExamples:\nhttp://kp-pav.narod2.ru/formatvim-2.2.1-side-by-side-diff.html\nhttp://kp-pav.narod2.ru/formatvim-2.2.1-diff.html\nhttp://kp-pav.narod2.ru/formatvim-2.2.1-AllFolds.html (if you want to open/close fold permanently, not only at hover, either click anywhere inside the fold or click its header)\n\nYou can download new version of plugin from sourceforge.net: you will need the following projects: \n\nhttp://sourceforge.net/projects/formatvim\nhttp://sourceforge.net/projects/vimcompcrtr \nhttp://sourceforge.net/projects/vimargumentchec \nhttp://sourceforge.net/projects/vimstuff \nhttp://sourceforge.net/projects/vimpluginloader ",
+  "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"formatvim\"]) and add ``call scriptmanager#Activate([\"formatvim\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13616",
+      "filename": "formatvim-2.2.1.tar.gz",
+      "script_version": "2.2.1",
+      "date": "2010-08-18",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Fixed some validator errors"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13572",
+      "filename": "formatvim-2.2.tar.gz",
+      "script_version": "2.2",
+      "date": "2010-08-14",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added support for tags"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13520",
+      "filename": "formatvim-2.1.tar.gz",
+      "script_version": "2.1",
+      "date": "2010-08-08",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added support for more then two diff windows, some other fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13488",
+      "filename": "format-2.0.tar.xz",
+      "script_version": "2.0",
+      "date": "2010-08-04",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added experimental side-by-side diff creation, added cursor position support (unfinished, disabled by default), major changes to format specification, some fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13269",
+      "filename": "format-1.8.2.tar.xz",
+      "script_version": "1.8.2",
+      "date": "2010-06-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added «KeepColorCache» option, improved «bbcode-unixforum» format specification, some other fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13266",
+      "filename": "format-1.8.1.tar.xz",
+      "script_version": "1.8.1",
+      "date": "2010-06-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Made «linestart'»and «lineend» keys optional, some fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13265",
+      "filename": "format-1.8.tar.xz",
+      "script_version": "1.8",
+      "date": "2010-06-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added FormatCommand options that override both default and user settings."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13260",
+      "filename": "format-1.7.tar.xz",
+      "script_version": "1.7",
+      "date": "2010-06-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added «html-vimwiki» format."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13140",
+      "filename": "format-1.6.tar.xz",
+      "script_version": "1.6",
+      "date": "2010-06-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added commandline completion"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13137",
+      "filename": "format-1.5.tar.xz",
+      "script_version": "1.5",
+      "date": "2010-06-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added AllFolds option (for html format specification it is just like g:html_dynamic_folds for 2html, but you are free to write something else), ~8% perfomance improvement."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13133",
+      "filename": "format-1.4.tar.xz",
+      "script_version": "1.4",
+      "date": "2010-06-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added \"nolf\" (joins everything in a single line) and \"haslf\" (allow format specification to define line breaks) format specification options."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13131",
+      "filename": "format-1.3.tar.xz",
+      "script_version": "1.3",
+      "date": "2010-06-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added lcs:nbsp handling, some fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13119",
+      "filename": "format-1.2.1.tar.xz",
+      "script_version": "1.2.1",
+      "date": "2010-06-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Greatly improved performance (~37% for ShowProgress=0, ~53% for ShowProgress=1 and ~43% for ShowProgress=2)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13118",
+      "filename": "format-1.2.tar.xz",
+      "script_version": "1.2",
+      "date": "2010-06-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added ShowProgress option (adds progressbar). Note that ShowProgress=2 makes my script ~30% slower while ShowProgress=1 slows down only for ~5%."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13117",
+      "filename": "format-1.1.tar.xz",
+      "script_version": "1.1",
+      "date": "2010-06-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added NoLineNR (removes line numbering) and CollapsFiller (collapses too long diff fillers) options."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13116",
+      "filename": "format-1.0.tar.xz",
+      "script_version": "1.0",
+      "date": "2010-06-05",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

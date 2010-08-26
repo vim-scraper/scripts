@@ -1,0 +1,26 @@
+{
+  "script_id": "535",
+  "name": "tiger.vim",
+  "summary": "Tiger Vim Indent File",
+  "script_type": "indent",
+  "description": "Tiger is a language introduced by andrew Appel in his book(s) \"Modern Compiler Implementation in {ML,C,Java}.\" \nFor further information, go to : \"www.cs.princeton.edu/~appel/modern\"\n\nThis file gives you a \"correct\" indentation when working on Tiger files.\nIt is to be used with the associated syntax file.\n\nLook at this screenshot to see which coding style is actually \"supported\" :\n\"http://www.xbsd.org/~flz/pics/shot-tiger.jpg&quot;",
+  "install_details": "Just source the file when opening a *.tig file.\nCreate an autocmd like this one :\nau BufNewFile,BufRead *.tig so ~/.vim/indent/tiger.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1648",
+      "filename": "tiger.vim",
+      "script_version": "0.1",
+      "date": "2003-01-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1397",
+        "user_name": "flz",
+        "first_name": "Florent",
+        "last_name": "Thoumie",
+        "email": "flz at epita.fr",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "1516",
+  "name": "smcl.vim",
+  "summary": "vim syntax file for SMCL files",
+  "script_type": "syntax",
+  "description": "smcl.vim is a syntax file for Stata's smcl- and hlp-files\n\nThis syntax file will help identify: \n\n* most smcl codes\n* errors in parens, brackets, ...\n",
+  "install_details": "I keep smcl.vim in $HOME/.vim/syntax/ and associate smcl- and hlp-files in$HOME/.vim/filetypes.vim using the following:\n\naugroup filetypedetect\n        autocmd! BufRead,BufNewFile *.hlp       set filetype=smcl\n        autocmd! BufRead,BufNewFile *.ihlp      set filetype=smcl\n        autocmd! BufRead,BufNewFile *.smcl    set filetype=smcl\naugrougp END ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5561",
+      "filename": "smcl.vim",
+      "script_version": "1.1.1",
+      "date": "2006-04-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1118",
+        "user_name": "jsp",
+        "first_name": "Jeffrey",
+        "last_name": "Pitblado",
+        "email": "jeffrey.pitblado at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "'syntax clear' only under version control\ncheck for 'b:current_syntax', removed 'did_smcl_syntax_inits'"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5553",
+      "filename": "smcl.vim",
+      "script_version": "1.0.0",
+      "date": "2006-04-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1118",
+        "user_name": "jsp",
+        "first_name": "Jeffrey",
+        "last_name": "Pitblado",
+        "email": "jeffrey.pitblado at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

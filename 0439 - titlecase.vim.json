@@ -1,0 +1,26 @@
+{
+  "script_id": "439",
+  "name": "titlecase.vim",
+  "summary": "Convert range or visual to titlecase.",
+  "script_type": "utility",
+  "description": "Sample:\nGiven:\nChange a range or visual to title case, i.e.\n\":TitleCase<CR>\" results in:\nChange A Range Or Visual To Title Case, I.E.\n\nThis simple changes (via :s) \\<\\l (start of word, lowercase a-z) to uppercase. Probably not perfect Titlecase but works good enough for a quickie!\n\nRemaps (with no elegance) <F5> to FeralTitleCase_Visual, change as desired.\n\nVisual method works for single line visuals only, multi line it tries to be clever and makes a mess.. use with caution, single (part of) line works fine though. (needs to have a check that say I don't do multi line visuals!; or only char wise visuals or something).\nRange Command (defaults to current line) is:TitleCase\nIts small, crude and dirty. But it works :)\n\nHappy VIMing!",
+  "install_details": "Place in plugin folder\n\nUninstall remove or rename script file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1284",
+      "filename": "titlecase.vim",
+      "script_version": "0.1",
+      "date": "2002-10-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "818",
+        "user_name": "FeralOfFireTop",
+        "first_name": "Robert",
+        "last_name": "KellyIV",
+        "email": "feral at eclecticwizard.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

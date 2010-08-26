@@ -1,0 +1,74 @@
+{
+  "script_id": "952",
+  "name": "psql.vim",
+  "summary": "PostgreSQL hightlighting.",
+  "script_type": "color scheme",
+  "description": "This sets up highlighting for *.psql files, which contain PostgreSQL SQL.\nYou may also need to make an entry for *.psql in your filetype.vim .",
+  "install_details": "Instructions for a global install.\nAdd psql.vim to your syntax directory. (/usr/share/vim/vim61/syntax/ under RH 7.3, your install location may vary). \nThen add these two lines to filetype.vim\n\" PostgreSQL\nau BufNewFile,BufRead *.psql                    setf psql\n\nPlease report bugs and desired features.\nCurrently, most keywords  seem to work.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2943",
+      "filename": "psql.vim",
+      "script_version": "0.04",
+      "date": "2004-04-17",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "4905",
+        "user_name": "devdas",
+        "first_name": "Devdas",
+        "last_name": "Bhagat",
+        "email": "dvb at users.sourceforge.net",
+        "homepage": ""
+      },
+      "release_notes": "Added procedural, trusted, language, handler and validator as keywords"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2916",
+      "filename": "psql.vim",
+      "script_version": "0.03",
+      "date": "2004-04-05",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "4905",
+        "user_name": "devdas",
+        "first_name": "Devdas",
+        "last_name": "Bhagat",
+        "email": "dvb at users.sourceforge.net",
+        "homepage": ""
+      },
+      "release_notes": "Added a few more keywords, colorised the mathematical operators.\nOperators will now be highlighted like functions instead of statements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2909",
+      "filename": "psql.vim",
+      "script_version": "0.02",
+      "date": "2004-04-03",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "4905",
+        "user_name": "devdas",
+        "first_name": "Devdas",
+        "last_name": "Bhagat",
+        "email": "dvb at users.sourceforge.net",
+        "homepage": ""
+      },
+      "release_notes": "Added support for aggregates and most functions. Right now, the functions are from 7.3.3, I will update to 7.4 later today, hopefully.\nThanks to David Fetter for coming up with a neat way to obtain the function listing.\npsql -E \\df\nAnother hint from David:\nset $PSQL_EDITOR to vim -c ':set ft=psql' to obtain the same highlighting in psql.\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2908",
+      "filename": "psql.vim",
+      "script_version": "0.01",
+      "date": "2004-04-03",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "4905",
+        "user_name": "devdas",
+        "first_name": "Devdas",
+        "last_name": "Bhagat",
+        "email": "dvb at users.sourceforge.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

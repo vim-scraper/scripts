@@ -1,0 +1,138 @@
+{
+  "script_id": "1581",
+  "name": "lookupfile",
+  "summary": "Lookup files using Vim7 ins-completion",
+  "script_type": "utility",
+  "description": "Now requires Vim 7.1 version.\n\nLookupfile is a very simple approach to opening files by typing a pattern to\nrepresent the file you are looking for, and selecting a file from the completion\ndropdown to open in the current Vim session. It provides a consistent interface\nto lookup files by various means (tags, path, buffers, external tools etc.). It\nuses the new Vim7 insert-mode completion mechanism to show matching files.\n\nThe most part of the plugin is autoloaded so it doesn't increase the startup time and doesn't take up Vim resources until it is used for the first time.\n\nHere are the list of commands that the plugin defines:\n        LookupFile      Lookup files from tag files. This is a like a fast GNU\n                        find on name. It can lookup files from any Vim\n                        compatible tag file (which includes those from ctags),\n                        but at the moment it is advisable to generate\n                        specialized tag files using :find command (see\n                        |lookupfile-tags|).\n        LUPath          Lookup files from 'path' using |globpath()|. The :find\n                        command while being able to lookup files from 'path', it\n                        doesn't provide any completion mechanism, and it is\n                        clumsy when there are multiple files with the same name.\n                        The :find command doesn't even accept a pattern.\n        LUBufs          Lookup loaded files (buffers) using |bufname()|. This is\n                        a great addition to whatever buffer-explorer you are\n                        using. When there are too many buffers open, this\n                        sometimes makes it easy to find the right buffer, by\n                        typing part of its name.\n        LUWalk          Lookup files using |glob()|. This works like the Emacs\n                        ido.el, allowing you to walk up and down a path looking\n                        for files. If you use the filename completion with :edit\n                        command, then you will find this a lot more convenient\n                        and faster to use.\n        LUArgs          Lookup files from |:args| list.\n\nIt is also very easy to add new commands to or customize the plugin at various\nlevels. At the simplest, you can create custom command on top of the above that\neither pass dynamic arguments or tmporarily change the settings (e.g., you could\nhave a command that will start LUPath with the 'path' temporarily changed to\nfind only the include header files). You can also take advantage of the the\n|lookupfile-extend| features to add new commands that lookup files from a\ncompletely new source. You can even add commands that lookup something\ncompletely different than a file (like e.g., a spelling using spellsuggest()).\n\nFor more information install the plugin and type :h lookupfile after running :heptags command.\n\nHere is what users have to say about the plugin:\n    - I am thoroughly enjoying your lookupfile script -- it's just awesome! -- Reva Revadigar (regarding :LookupFile and :LUWalk commands)\n    - I use Lookupfile a couple of hundred times a day -- Max Dyckhoff (regarding :LookupFile command)\n    - I tried the new plugin. Excellent! Exactly what I want. -- Eddy Zhao (regarding :LUWalk command)\n\n\n\nSearch_Key_Words: lookupfile util utils lookup complete completion filename open edit file tags path ctags glob globpath Hari Krishna Dara",
+  "install_details": "Expand the zip in your runtime directory.\nGenerate help tags using :helptags command.\nInstall the latest version of genutils (vimscript #197).\nRead help on |lookupfile-installation|.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7671",
+      "filename": "lookupfile-1.8.zip",
+      "script_version": "1.8",
+      "date": "2007-09-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Even more control on the mappings with the new setting\n  |LookupFile_EnableRemapCmd|.\n- New feature to specify names that follow CamelCasing pattern by abbreviating\n  them. This works more or less like for the \"Open Type\" dialog in Eclipse.\n  For more information see, |LookupFile_TagsExpandCamelCase|.\n- New feature to remember the recent files, see\n  |Lookupfile_RecentFileListSize|.\n- Changed the message line such that the message is shown on the left side and\n  the pattern is shown on the right side. This prevents the more important\n  message from getting lost when the filenames are too long.\n- New settings |LookupFile_EnableRemapCmd|, |LookupFile_SearchForBufsInTabs|,\n  |LookupFile_TagsExpandCamelCase|, |Lookupfile_RecentFileListSize|.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7175",
+      "filename": "lookupfile-1.7.zip",
+      "script_version": "1.7",
+      "date": "2007-05-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Bug fix: LUPath and LUArgs were broken (stoning at gmail dot com).\n- Removed debugging code. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7172",
+      "filename": "lookupfile-1.6.zip",
+      "script_version": "1.6",
+      "date": "2007-05-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Requires Vim 7.1.\n\nThis is a combined 1.5(previously unreleased)/1.6 release of lookupfile and includes the following improvements and bugfixes.\n- LookupFile now uses CursorHoldI instead of CursorMovedI to show matches. This\n  means, the matches are not computed until you stop typing, which should give a\n  better experience. See |LookupFile_UpdateTime| for more information.\n- The plugin now sets 'completefunc' such that you can now hit <C-X><C-U> to\n  trigger completions explicitly (instead of waiting for\n  g:LookupFile_UpdateTime). This is useful if you are a slow typer and so prefer\n  a large value for g:LookupFile_UpdateTime.\n- The plugin now recognizes 'ignorecase' and 'smartcase' settings to match files\n  even on systems that are case-sensitive. This is mainly significant for the\n  commands that use |globpath()| or |glob()| which are, |:LUPath| and |:LUWalk|,\n  as the others already respect these settings.\n- There is now a separate command called :LUTags that always does what\n  :LookupFile used to do, while the :LookupFile command itself now gets\n  dynamically assigned to the last command used. This also means, the map that\n  is choosen in |lookupfile-map| now invokes the last command that is used, use\n  |LookupFile_DefaultCmd| and |LookupFile_DisableDefaultMap| settings to control\n  this behavior.\n- LUWalk now supports showing only directory names in the results. Just type\n  an extra / to filter those that are not directories (the suffix will then be\n  two slashes).\n- The default behavior of |:LUBufs| is now to match the entire |bufname()|,\n  just like the |:buffer| command would do. To see the old behavior, reset\n  |LookupFile_Bufs_LikeBufCmd| setting.\n- If you have the new version of SelectBuf also installed, you can have\n  |:LUBufs| sort buffers in MRU order. See, |LookupFile_Bufs_BufListExpr|.\n- When tags file is not generated as per the requirements of |lookupfile-tags|,\n  the format of the matches doesn't look good, so by default the matches just\n  show full filenames. See |LookupFile_UsingSpecializedTags| to get better\n  formatted results.\n- New settings |LookupFile_UsingSpecializedTags|, |LookupFile_SortMethod|,\n  |LookupFile_DefaultCmd|, |LookupFile_DisableDefaultMap|,\n  |LookupFile_Bufs_LikeBufCmd|, |LookupFile_Bufs_BufListExpr|,\n  |LookupFile_EscCancelsPopup|.\n- Bug fix: exact matches were getting dropped from results  (Max Dyckhoff).\n- Bug fix: <BS> in |:LUWalk| right after selecting a directory match caused it\n  to misbehave.\n- Bug fix: if tags file is not in the current directory, the opening fails. Now\n  :LookupFile expands the filenames explicitly so that the paths are always\n  valid.\n- Bug fix: Unsetting |LookupFile_AllowNewFiles| didn't disable the feature.\n- Bug fix: <C-E> was not hiding the popup.\n- Bug fix: <S-BS> triggers the default insert-mode completion (Max Dyckhoff).\n- Fixed misc. bugs in opening files.\n- Workaround for <Esc> not working on some systems, allow disabling the\n  mapping.\n- Bug fix: When there is an exising swapfile, opening the files result in an\n  error message (David Fishburn).\n- When LookupFile_UsingSpecializedTags is set, sorting should be done on the\n  filename (patch by Timothy, Guo). "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6124",
+      "filename": "lookupfile-1.4.zip",
+      "script_version": "1.4",
+      "date": "2006-08-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Fixed a bug in the initial pattern getting ignored.\n- LUBufs now completes the full pathname of the buffers, so that it is\n  less dependent on the current directory of Vim.\n- LUBufs and LUPath commands now present the matches in a better format.\n- Pressing <F5> while popup is visible didn't close the lookupfile\n  window.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6083",
+      "filename": "lookupfile-1.3.zip",
+      "script_version": "1.3",
+      "date": "2006-08-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- New feature to create a file, if the file doesn't already exist (Ido).\n  Can be disabled using g:LookupFile_AllowNewFiles setting.\n- Bug fix: while using LUWalk, if the first match is a directory, then\n  selecting files was offset by one.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6073",
+      "filename": "lookupfile-1.2.zip",
+      "script_version": "1.2",
+      "date": "2006-08-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- New LUWalk command that works very similar to Emacs ido.el to quickly navigate\n  paths.\n- g:LookupFile_AlwaysAcceptFirst setting to always accept the first\n  entry (the default is 0).\n- g:LookupFile_FileFilter to specify a filter.\n- All commands now accepts the initial pattern as argument. This provides\n  unlimited number of possibilities to create your own custom commands (see\n  |lookupfile-tips| for some examples).\n- The g:LookupFile_MinPatLength is automatically set to 0 except for tag and\n  'path' lookup.\n- When Lookup window is opened, the filetype is set to \"lookupfile\". This allows\n  you to create ftplugins to fine tune the behavior.\n- Renamed :LUBuf command to :LUBufs.\nThe plugin has been in extensive use by myself and a couple of other users, and there are no major issues."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5921",
+      "filename": "lookupfile-1.1.zip",
+      "script_version": "1.1",
+      "date": "2006-07-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Added LUBuf, LUPath and LUArgs commands.\n- Renamed the prefix for all the settings from g:lookupfile_ to\n  g:LookupFile_. This is required to support Funcref settings.\n- Now the cursor position is preserved, while opening a file that is\n  already loaded.\n- Using genutils 2.1.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5854",
+      "filename": "lookupfile-1.0.zip",
+      "script_version": "1.0",
+      "date": "2006-06-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

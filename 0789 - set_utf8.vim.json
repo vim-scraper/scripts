@@ -1,0 +1,42 @@
+{
+  "script_id": "789",
+  "name": "set_utf8.vim",
+  "summary": "Switching to Unicode in an orderly manner",
+  "script_type": "utility",
+  "description": "This script endeavours to set the various options required to allow (g)vim to process Unicode files properly, without, for instance, messing up keyboard input.",
+  "install_details": "Installation:\n1) Copy this script to your \"user scripts\" direcory,\n   i.e.: (direectory names below as required by the corresponding shell)\n\to for Unix (with sh or similar):\n\t  $HOME/.vim/scripts\n\n\to for Windows (with COMMAND.COM, CMD.EXE or similar)\n\t  - if you have a HOME directory\n\t    %HOME%\\vimfiles\\scripts\n\n\t  - if you don't; but have a VIM directory\n\t    %VIM%\\vimfiles\\scriprs\n\n\t  - otherwise, it will usually be something similar to one of the\n\t    following, depending on where you installed Vim (take your pick):\n\t    C:\\VIM\\vimfiles\\scripts\n\t    \"C:Program Files\\VIM\\vimfiles\\scripts\"\n\t    C:\\PROGRA~1\\VIM\\vimfiles\\scripts\n\t    C:\\vimfiles\\scripts\n\n 2) Open the script in a text editor such as Vim.\n There are two settings at the end which you might want to comment away.\n\n\nHow to use it: simply add the following line to your vimrc, if and when you\nwant to switch over to UTF-8 processing:\n\n \truntime scripts/set_utf8.vim\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2391",
+      "filename": "set_utf8.vim",
+      "script_version": "1.01",
+      "date": "2003-10-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "579",
+        "user_name": "tonymec",
+        "first_name": "Antoine",
+        "last_name": "Mechelynck",
+        "email": "antoine.mechelynck at skynet.be",
+        "homepage": "http://users.skynet.be/antoine.mechelynck/"
+      },
+      "release_notes": "no change, except the script's ends-of-line are now in \"unix\" format for compatibility across platforms."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2390",
+      "filename": "set_utf8.vim",
+      "script_version": "1.0",
+      "date": "2003-10-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "579",
+        "user_name": "tonymec",
+        "first_name": "Antoine",
+        "last_name": "Mechelynck",
+        "email": "antoine.mechelynck at skynet.be",
+        "homepage": "http://users.skynet.be/antoine.mechelynck/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

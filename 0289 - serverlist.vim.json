@@ -1,0 +1,154 @@
+{
+  "script_id": "289",
+  "name": "serverlist.vim",
+  "summary": "Switch between VIM windows quickly",
+  "script_type": "utility",
+  "description": "Script creates key mappings for each existing VIM window.  After sourcing the script, you can press \\a in normal mode to switch to window 1, \\b for window 2, etc.  The keys are broadcasted to each window, such that the same key always map to the same window.  \\. will show mapping for current window.",
+  "install_details": "to run, :source serverlist.vim\nVIM needs to be compiled with +clientserver\n\nyou can also place script in plugins directory to create shortcut keys automatically, but that will increase VIM startup time considerably (quadratic to number of windows), so be careful.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2805",
+      "filename": "serverlist.vim",
+      "script_version": "1.31",
+      "date": "2004-03-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "653",
+        "user_name": "omoikane",
+        "first_name": "Don",
+        "last_name": "Yang",
+        "email": "omoikane at uguu.org",
+        "homepage": "http://uguu.org/"
+      },
+      "release_notes": "always delay mapping windows until buffer is available (bugfix)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2039",
+      "filename": "serverlist.vim",
+      "script_version": "1.3",
+      "date": "2003-06-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "653",
+        "user_name": "omoikane",
+        "first_name": "Don",
+        "last_name": "Yang",
+        "email": "omoikane at uguu.org",
+        "homepage": "http://uguu.org/"
+      },
+      "release_notes": "compatibility fixes for 6.2"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1489",
+      "filename": "serverlist.vim",
+      "script_version": "1.22",
+      "date": "2002-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "653",
+        "user_name": "omoikane",
+        "first_name": "Don",
+        "last_name": "Yang",
+        "email": "omoikane at uguu.org",
+        "homepage": "http://uguu.org/"
+      },
+      "release_notes": "window cycling now works in both directions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1264",
+      "filename": "serverlist.vim",
+      "script_version": "1.21",
+      "date": "2002-09-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "653",
+        "user_name": "omoikane",
+        "first_name": "Don",
+        "last_name": "Yang",
+        "email": "omoikane at uguu.org",
+        "homepage": "http://uguu.org/"
+      },
+      "release_notes": "Fix to get around cmap <C-V> issue (for mswin.vim users)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1253",
+      "filename": "serverlist.vim",
+      "script_version": "1.2",
+      "date": "2002-09-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "653",
+        "user_name": "omoikane",
+        "first_name": "Don",
+        "last_name": "Yang",
+        "email": "omoikane at uguu.org",
+        "homepage": "http://uguu.org/"
+      },
+      "release_notes": "Add key mapping to cycle windows."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=959",
+      "filename": "serverlist.vim",
+      "script_version": "1.1",
+      "date": "2002-06-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "653",
+        "user_name": "omoikane",
+        "first_name": "Don",
+        "last_name": "Yang",
+        "email": "omoikane at uguu.org",
+        "homepage": "http://uguu.org/"
+      },
+      "release_notes": "Preserve existing keymappings."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=956",
+      "filename": "serverlist.vim",
+      "script_version": "1.01",
+      "date": "2002-06-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "653",
+        "user_name": "omoikane",
+        "first_name": "Don",
+        "last_name": "Yang",
+        "email": "omoikane at uguu.org",
+        "homepage": "http://uguu.org/"
+      },
+      "release_notes": "bugfix for insert mode"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=955",
+      "filename": "serverlist.vim",
+      "script_version": "1.0",
+      "date": "2002-06-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "653",
+        "user_name": "omoikane",
+        "first_name": "Don",
+        "last_name": "Yang",
+        "email": "omoikane at uguu.org",
+        "homepage": "http://uguu.org/"
+      },
+      "release_notes": "Added key mapping to show shortcut for current window."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=845",
+      "filename": "serverlist.vim",
+      "script_version": "0.9",
+      "date": "2002-05-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "653",
+        "user_name": "omoikane",
+        "first_name": "Don",
+        "last_name": "Yang",
+        "email": "omoikane at uguu.org",
+        "homepage": "http://uguu.org/"
+      },
+      "release_notes": "."
+    }
+  ]
+}

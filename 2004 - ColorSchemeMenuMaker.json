@@ -1,0 +1,250 @@
+{
+  "script_id": "2004",
+  "name": "ColorSchemeMenuMaker",
+  "summary": "Auto-generates menu containing your colorschemes (keywords: color scheme menu)",
+  "script_type": "color scheme",
+  "description": "Are you in the mood for a blue desktop, but don't want to take the time to go through all of your installed color scheme files just to find the ones you want?  Or do you like to make each of your Vim windows a different color to easily identify which editor contains which projects?\n\nIf so, this plugin is for you.\n\nThis script crawls through the directories in your &runtimepath searching for installed colorscheme files.  When it finds a colorscheme, it adds it to a menu called ColorSchemes where it is sorted by the predominant color used.  Color schemes are also stored alphabetically by name in this menu.  This way, you can have all of your blue themes at your fingertips.  Or if you just remember the name, you can quickly browse to it.\n\nThis script works by analysing the guibg option of the Normal highlight group to determine which basic color to file the scheme under.  It will place each theme in one of the following categories: black, blue, cyan, darkgrey, green, grey, offwhite, orange, purple, red, white, yellow, or unknown if no background color is specified.  It uses a heuristic that is still a work in progress, so it doesn't always guess the color correctly.  For that matter, people have a hard time deciding what category a color might fall under, so it may always be a work in progress!\n\nIf you install new color schemes, force a re-scan by clicking 'Rebuild Menu' in the ColorSchemes menu.  'Reload Menu' simply forces Vim to re-source an already generated menu file.\n\nA menu entry that appears with an asterisk before it indicates a color scheme that contains more than one \"hi Normal\" command.  This script assumes that the first such command encountered is the one that will be executed.  Such entries are not guaranteed to be sorted correctly.\n\nSince version 0.6, this script includes an autoload plugin that facilitates tweaking the color selection algorithm.\nThis autoload plugin contains a Perl script which generates an HTML page that shows the Normal background color for each installed theme, along with the plugin's guess at which category it should be filed under.  The embedded Perl script calls the very same functions the plugin uses, letting you quickly assess the results of your changes.  The plugin keeps track of the three previous guesses, and highlights the colorschemes that have been affected by your changes.  \n\nMore details are found in plugin/ColorSchemeMenuMaker.vim.\n\nIf you can make any improvements, I'd love to see them!\n",
+  "install_details": "Unpack the archive in your $HOME/.vim (or $HOME/vimfiles, you poor, poor Win32 user) directory. The next time you start an instance of Vim, it will detect that the file ColorSchemes.vim is not present, and will add all of your color schemes to the menu.  ColorSchemes.vim is written in the the same directory the main plugin is located.\n\nSubsequently, Vim will use the generated file instead of re-scanning all of your color schemes.\n\nSend feedback to ewfalor -at- gmail -dot- com",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9824",
+      "filename": "ColorSchemeMenuMaker.zip",
+      "script_version": "1.0.1",
+      "date": "2009-01-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug when rebuilding menu more than once and the number of colorschemes contained in the menu changes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8498",
+      "filename": "ColorSchemeMenuMaker.zip",
+      "script_version": "1.0",
+      "date": "2008-03-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "No reported problems for quite a while; I feel this\nplugin is no longer beta-quality.\nReloadColorsMenu and RebuildColorsMenu commands will\nonly remove menu items created by this plugin.  Other\nitems placed in the ColorSchemes menu aren't destroyed\nwhen refreshing the menu unless absolutely necessary.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8088",
+      "filename": "ColorSchemeMenuMaker.zip",
+      "script_version": "0.10.1",
+      "date": "2007-12-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug: generated menu called non-existent function.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8066",
+      "filename": "ColorSchemeMenuMaker.zip",
+      "script_version": "0.10",
+      "date": "2007-12-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Menus sorted in case-insensitive fashion.  If this change breaks your muscle-memory, set the global var g:csmmIgnoreCase to 0 in your .vimrc to get the old behavior.  Super thanks to Bill McCarthy for suggesting this.\n\nFunctions ReloadColors(), RefreshColors(), and their corresponding commands renamed to ReloadColorsMenu() and RebuildColorsMenu().\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7841",
+      "filename": "ColorSchemeMenuMaker.zip",
+      "script_version": "0.9.1",
+      "date": "2007-10-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Repackaged as zipfile - too many problems with vimballs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7819",
+      "filename": "ColorSchemeMenuMaker.vba",
+      "script_version": "0.9",
+      "date": "2007-10-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Tries not to create submenus which are too tall to fit on the screen.  By default, generated submenus are split so as to contain fewer than 45 items.  This number may be overridden via g:MaxEntriesPerSubmenu."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7774",
+      "filename": "ColorSchemeMenuMaker.vba",
+      "script_version": "0.8.1",
+      "date": "2007-10-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Shuangshi Jie bugfix: changed to Unix line endings.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7750",
+      "filename": "ColorSchemeMenuMaker.vba",
+      "script_version": "0.8",
+      "date": "2007-10-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Avoid loading menu in console mode."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7698",
+      "filename": "ColorSchemeMenuMaker.vba",
+      "script_version": "0.7",
+      "date": "2007-09-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed some bugs in SDK mode.  Tweaked IsDarkGrey()."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7674",
+      "filename": "ColorSchemeMenuMaker.vba",
+      "script_version": "0.6",
+      "date": "2007-09-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "SDK mode lets you quickly see effects of changes to color detection algorithm.  See \nplugin/ColorSchemeMenuMaker.vim for details. \nAdded purple submenu. \nFixed yellow vs. green - robinhood now shows up with green themes.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7623",
+      "filename": "ColorSchemeMenuMaker.vim",
+      "script_version": "0.5",
+      "date": "2007-09-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Store the generated menu under the same directory this file is located.  Thanks to Vincent Vandalon for pointing out that not all folks have a ~/vimfiles directory under WinXP."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7589",
+      "filename": "ColorSchemeMenuMaker.vim",
+      "script_version": "0.4",
+      "date": "2007-08-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Switched to Unix line endings.  Look for rgb.txt under /usr/share/X11 to accomodate Gentoo Linux."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7586",
+      "filename": "ColorSchemeMenuMaker.vim",
+      "script_version": "0.3",
+      "date": "2007-08-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Now works on Linux by looking for rgb.txt in /usr/X11R6/lib/X11 instead of $VIMRUNTIME.  If your rgb.txt is kept somewhere else, store that absolute pathname in your .vimrc in a variable called g:rgbtxt."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7576",
+      "filename": "ColorSchemeMenuMaker.vim",
+      "script_version": "0.2",
+      "date": "2007-08-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Menu categories include a count of contained items."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7575",
+      "filename": "ColorSchemeMenuMaker.vim",
+      "script_version": "0.1",
+      "date": "2007-08-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

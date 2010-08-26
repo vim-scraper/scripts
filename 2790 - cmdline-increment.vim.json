@@ -1,0 +1,42 @@
+{
+  "script_id": "2790",
+  "name": "cmdline-increment.vim",
+  "summary": "increment, decrement commandline number.",
+  "script_type": "utility",
+  "description": "Increment last appearing number in commandline-mode command with Control-a ,\nand decrement with Control-x .\n\n    <C-a> increment commandline last appearing number.\n    <C-x> decrement commandline last appearing number.\n\n\n------------------------------------------------------------------------------\n[Usage]\n\n1.  Enter commandline mode.\n2.  Enter next command.\n\n    :edit workfile_1.txt\n\n3.  And Press Control-a , or press Control-x .\n\n\n------------------------------------------------------------------------------\n[Customized Mapping]\n\nIf you will customize increment, decrement mapping,\nadd put these code to your vimrc .\n\n    \" (for example)\n    \" increment with Shift-Up\n    cmap <S-Up> <Plug>IncrementCommandLineNumber\n    \" decrement with Shift-Down\n    cmap <S-Down> <Plug>DecrementCommandLineNumber\n",
+  "install_details": "copy cmdline-increment.vim to your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11405",
+      "filename": "cmdline-increment.vim",
+      "script_version": "0.2",
+      "date": "2009-09-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9013",
+        "user_name": "advweb",
+        "first_name": "omi",
+        "last_name": "taku",
+        "email": "mail at nanasi.jp",
+        "homepage": "http://nanasi.jp/"
+      },
+      "release_notes": "- plugin is now not using 'l' register.\n- below 0 number decrement is newly not supported.\n  minial value is 0.\n- default mapping is switched to <c-a>, <c-x>.\n- custom mapping is supported.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11398",
+      "filename": "cmdline-increment.vim",
+      "script_version": "0.1",
+      "date": "2009-09-17",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "9013",
+        "user_name": "advweb",
+        "first_name": "omi",
+        "last_name": "taku",
+        "email": "mail at nanasi.jp",
+        "homepage": "http://nanasi.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

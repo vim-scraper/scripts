@@ -1,0 +1,58 @@
+{
+  "script_id": "2561",
+  "name": "NumberToEnglish",
+  "summary": "Converts Arabic numerals to English",
+  "script_type": "utility",
+  "description": "Converts a number (such as -1234) to English (negative one thousand two hundred thirty four); handles the biggest integer Vim can work with (billions).\n\nThis actually figures out the English value by crunching the numbers (not through abbreviations) and thus doesn't have any startup overhead.\n\nUsage: call the function NumberToEnglish and pass it the number; optionally, a second parameter can be passed in which, if not 1, will cause the return\nvalue's first letter to be capitalized (Two hundred thirty four vs. two hundred thirty four).\n\nTwo insert-mode mappings have been provided for convenience to make this happen on the currently typed number while typing.\n\n<Plug>NumberToEnglish: converts the (positive only) number to English\n\n<Plug>CNumberToEnglish: converts the (positive only) number to English, capitalizing the first letter\n\nTwo identical version of these mappings that start with a D (for \"Detailed\") will append the original number in parentheses after the expansion.",
+  "install_details": "Just drop it into your plugin directory and, if you like, set up the mappings; for example:\n\nimap <leader>ne <Plug>NumberToEnglish\nimap <leader>nd <Plug>DNumberToEnglish\nimap <leader>nE <Plug>CNumberToEnglish\nimap <leader>nD <Plug>DCNumberToEnglish\n\nSee the notes for version 1.3 if the introduction of another language is desired; the system isn't perfect, but should work for most Indo-European languages that follow the same basic numbering scheme as English (French is provided as an example).\n\nNote: Requires the use of GetVar (http://vim.sourceforge.net/scripts/script.php?script_id=353).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10133",
+      "filename": "NumberToEnglish.vim",
+      "script_version": "1.3",
+      "date": "2009-03-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Made the plugin accept global values for overriding the returned string; useful for changing the language, for example. Place the following in your _vimrc for\nFrench:\n\nlet g:numberToEnglish_digits = [ \"\", \"un\",   \"deux\",  \"trois\",  \"quatre\",   \"cinq\",      \"six\",      \"sept\",         \"huit\",         \"neuf\" ]\nlet g:numberToEnglish_teens  = [ \"\", \"onze\", \"douze\", \"treize\", \"quatorze\", \"quinze\",    \"seize\",    \"dix-sept\",     \"dix-huit\",     \"dix-neuf\" ]\nlet g:numberToEnglish_tens   = [ \"\", \"dix\",  \"vingt\", \"trente\", \"quarante\", \"cinquante\", \"soixante\", \"soixante dix\", \"quatre vingt\", \"quatre vingt dix\" ]\n\nlet g:numberToEnglish_scale = [ \"\", \"mille\", \"million\", \"billion\" ]\n\nlet g:numberToEnglish_hundred = \"cent\"\n\nThis change necessitates the use of GetVar (http://vim.sourceforge.net/scripts/script.php?script_id=353). Technically, the usage of GetVar allows the setting\nof any combination of these variables on a per-window, buffer or tab level (allowing different languages, capitalizations, etc., depending upon the buffer\ntype, for example).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10090",
+      "filename": "NumberToEnglish.vim",
+      "script_version": "1.2",
+      "date": "2009-03-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added two new mappings:\n\n<Plug>DNumberToEnglish and <Plug>DCNumberToEnglish -- the D is short for \"Detailed\".\n\nDiffers from the versions without the D in that it places the original number at the end of the expanded version:\n\nThus, 12341234 becomes twelve million three hundred forty one thousand two hundred thirty four (12341234).\n\nVersion 1.1 (not uploaded):\n\nTook the hard-coded values out of the functions into script-local variables -- no sense defining them every time.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10059",
+      "filename": "NumberToEnglish.vim",
+      "script_version": "1.0",
+      "date": "2009-02-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

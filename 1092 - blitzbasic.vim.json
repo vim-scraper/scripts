@@ -1,0 +1,26 @@
+{
+  "script_id": "1092",
+  "name": "blitzbasic.vim",
+  "summary": "syntax file for blitzbasic source code",
+  "script_type": "syntax",
+  "description": "Just a syntax file. Who will use vim to edit blitzbasic programs is another question :)",
+  "install_details": "Read the FAQ, or do it the wrong way like me: put blitzbasic.vim into /usr/share/vim/vim63/syntax/, and edit  /usr/share/vim/vim63/filetype.vim, addings this:\n\" BlitzBasic\nau BufNewFile,BufRead *.bb\t\t\tcall <SID>FTVB(\"blitzbasic\")",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3498",
+      "filename": "blitzbasic.vim",
+      "script_version": "1.0",
+      "date": "2004-09-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6010",
+        "user_name": "elias",
+        "first_name": "elias",
+        "last_name": "pschernig",
+        "email": "elias at users.sf.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "1321",
+  "name": "CSVTK",
+  "summary": "Tool kit to work with Comma Separated Values files",
+  "script_type": "utility",
+  "description": "CSVTK Provides functions and mappings to help working with CSV files or\nany files where a separator (e.g. a comma) is used between values and\nwhere values can be enclosed between delimiters (e.g. double quotes).\nSeparators characters inside delimiters are not considered as separators.\n\nField numberting starts at 1.\n\nMappings allow user to:\n  * Jump to a specific field,\n  * Display the field number of the field under the cursor,\n  * Return the value of field (given the field number) on current line or\n  specified line,\n  * Toggle highlighting for each field (in one or several colors).\n\nThe highlight will show in the current line and be updated when user \nchanges line (the highlight is updated thanks to an autocomand on the \nCursorHold event, therefore it is not updated when in insert mode). The \nseparator following the field is highlighted as part of the field.\n\nAlso, a few examples are provided to show how to display the current field\nnumber in the status line (so you always know what field you're in) and\nhow to fold lines depending on field content.",
+  "install_details": "Place in your plugin directory.\nLook at the begining of the script for more info.\nLook at the mappings near the end of the script, and change as you wish.\nLook at the example at the end of the script.\n\nRequires vimscript#171\nOptional but recommended: vimscript#479",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4997",
+      "filename": "csvtk.vim",
+      "script_version": "1.1",
+      "date": "2006-01-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8031",
+        "user_name": "Christophe_R",
+        "first_name": "Christophe",
+        "last_name": "R",
+        "email": "christophe_r at comcast.net",
+        "homepage": ""
+      },
+      "release_notes": "Added one function and two mappings to jump to the next/previous highlighted field.\nThe script now requires the genUtils.vim script (for the 'CmpByNumber' sort function)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4451",
+      "filename": "csvtk.vim",
+      "script_version": "1.00",
+      "date": "2005-07-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8031",
+        "user_name": "Christophe_R",
+        "first_name": "Christophe",
+        "last_name": "R",
+        "email": "christophe_r at comcast.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

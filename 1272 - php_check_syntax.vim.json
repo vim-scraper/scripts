@@ -1,0 +1,26 @@
+{
+  "script_id": "1272",
+  "name": "php_check_syntax.vim",
+  "summary": "Check the syntax when saving or reading a php file",
+  "script_type": "ftplugin",
+  "description": "This plugin is superseded by vimscript #1431.\n\nThis ftplugin is based on Klaus Horsten's php_console (vimscript #779). In \nopposition to php_console, it only checks the syntax. It does this automatically\nwhen opening or closing a file.\n\nIf you use this as a ftplugin, the script will miss the first BufRead event \nas this is when it's being loaded.\n\nIf php isn't in your path, set the g:php_check_syntax_cmd variable \n(including the -l switch).\n",
+  "install_details": "Save this file either in ~/.vim/ftplugin/php/ or ~/.vim/plugin/.\n\n\nAlso available via git\nhttp://github.com/tomtom/vimtlib/tree/master\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4240",
+      "filename": "php_check_syntax.vim",
+      "script_version": "0.2",
+      "date": "2005-05-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Reset makeprg & errorformat to its initial value. Don't set shellpipe."
+    }
+  ]
+}

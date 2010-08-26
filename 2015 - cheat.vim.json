@@ -1,0 +1,58 @@
+{
+  "script_id": "2015",
+  "name": "cheat.vim",
+  "summary": "Vim wrapper for cheat (http://cheat.errtheblog.com) utility.",
+  "script_type": "utility",
+  "description": "Usage:\n\n:Cheat <Tab>\nwill autocomplete the available cheatsheets.\n\nalternatively, you can position the cursor over a word matching a cheatsheet (say ambition) and hit <leader>ch\nTip: looks nicer when you have wildmenu turned on ;-)",
+  "install_details": "Just drop in $VIM/plugin/ and you're set.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8748",
+      "filename": "cheat.vim",
+      "script_version": "1.2",
+      "date": "2008-06-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11497",
+        "user_name": "alexandru",
+        "first_name": "Alexandru",
+        "last_name": "Ungur",
+        "email": "alexandru at globalterrasoft.ro",
+        "homepage": ""
+      },
+      "release_notes": "* added CheatRecent command to get a list of recent cheatsheets\n* thanks to Ferry Boender for the code for dumping output of\n   commands into a window (Bexec - script #1788) now Cheat dumps\n   its output into a window as well, and no longer to 'stdout'\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7676",
+      "filename": "cheat.vim",
+      "script_version": "1.1",
+      "date": "2007-09-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11497",
+        "user_name": "alexandru",
+        "first_name": "Alexandru",
+        "last_name": "Ungur",
+        "email": "alexandru at globalterrasoft.ro",
+        "homepage": ""
+      },
+      "release_notes": "Added caching to decrease the loading time. By default it caches to \"$HOME/.cheats\" but that can be overriden from .vimrc with:\nlet g:cheats_cache = \"/path/to/your/file\"\n\nAlso the plugin does not depend on any *nix commands any longer (cut, grep, cat) so it may be possible to run it on other platforms as well.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7635",
+      "filename": "cheat.vim",
+      "script_version": "1.0",
+      "date": "2007-09-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11497",
+        "user_name": "alexandru",
+        "first_name": "Alexandru",
+        "last_name": "Ungur",
+        "email": "alexandru at globalterrasoft.ro",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

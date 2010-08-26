@@ -1,0 +1,42 @@
+{
+  "script_id": "678",
+  "name": "genindent.vim",
+  "summary": "Generic function for indentexpr",
+  "script_type": "indent",
+  "description": "This is a function meant to deal with a simple case of indentation:\nThe assumption is that you have blocks whose begining and end can be identified by a pattern. In this case, you just set b:indent_block_start and b:indent_block_end to these patterns, and the function returns the indent of a line based on the assumption that all lines within a block should be indented by one shiftwidth. It is also possible to ignore lines matching a certain pattern (e.g., comments) using a third variable b:indent_ignore. For an example, see the fluxbox indent file (vimscript #679).",
+  "install_details": "Put this in the plugin subdir of your favorite part in the runtimepath (e.g., ~/.vim/plugin). Alternatively, put it somewhere else and source it from an indent file where you'd like to use it.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10915",
+      "filename": "genindent.vim",
+      "script_version": "1.1",
+      "date": "2009-07-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Fixed = to == (thanks to Kenny Root)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2080",
+      "filename": "genindent.vim",
+      "script_version": "1.0",
+      "date": "2003-06-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

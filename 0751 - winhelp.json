@@ -1,0 +1,42 @@
+{
+  "script_id": "751",
+  "name": "winhelp",
+  "summary": "A script for easy lookup in Windows .chm and .hlp help files.",
+  "script_type": "utility",
+  "description": "This script lets you setup a collection of help files in Windows .hlp and\n.chm format and search for the word under the cursor in them. The current\nfiles and state is stored in the scricpt file for further sessions. Use the\nnew winhelp dropdown menu to add or remove files.\nCheck out tip #506\nhttp://www.vim.org/tips/tip.php?tip_id=506\nand tip #232\nhttp://www.vim.org/tips/tip.php?tip_id=232\n\nThe default keymappings for normal mode are: \nCtrl+Shift+F1 - pops up a menu with the help files and search the selected\nfile for the word under the cursor.\nCtrl+F1 - search the current help file for the word. Use the winhelp menu\nfor setting the current help file.\n\nBUGS/Features\n-If the path to a.chm file has any spaces does not keyhh or hh works\nproperly. I think this is a known issue with Windows HTML help. Bob solved\nit by linking directories and I think that is the only way.\n-If you do an ALT+TAB to get away from a .chm file may you see an temporary\n extra copy in the taskbar. Note that the icons for .chm is the ones\n normally used for .hlp files.\n -It will probably take some time before you get used to how keyhh works. \n In my experience does it work very well but sometimes do you have to look twice to see it. :)   \n-The popup menu can be incorrect after removing a file from  the collection. After a restart is it OK. \n ",
+  "install_details": "The script must be in the $VIM/vimfiles/plugin/ directory.\nFor the .hlp files is the script using Windows winhelp program. You can test with a \"winhelp helpfile.hlp\" from the command line. If no luck can you try to replace winhelp with winhlp32 in the script but I belive this is the same.\nFor the .chm files is keyhh from this page used\nhttp://www.keyworks.net/keyhh.htm \nIt worked for me but I dont know if you need the HTML workshop installed?\nMy suggestion is to visit MSDN in case of problems. Here is a direct\nlink to the HTML help downloads from MSDN\n http://msdn.microsoft.com/library/default.asp?url=/library/en-us/htmlhelp/html/hwMicrosoftHTMLHelpDownloads.asp\n\nMSDN is also the main source for .chm files. The Platform SDK has a complete set of .chm files for Windows. Borland has some .hlp files here\nhttp://info.borland.com/techpubs/bcppbuilder/v5/updates/ent.html\nthere the most interesting are\nB5MS.ZIP - Win32 API documentation old but useful with stuff like\nOpenGL1.1, a similar file can be downloaded from the lcc compiler page\nB5SCL.ZIP - Standard C++ library help with STL\nB5RTL.ZIP - C lib reference\n \nJava users should take a look at tip #232 mentioned above. \n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2301",
+      "filename": "winhelp.vim",
+      "script_version": "2.0",
+      "date": "2003-09-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1367",
+        "user_name": "PP",
+        "first_name": "Peter",
+        "last_name": "Puck",
+        "email": "ptrpck at netscape.net",
+        "homepage": ""
+      },
+      "release_notes": "Fixed so that help files can be in a path with spaces, thanks to Bob Davis for the bug report. It still does not work properly for .chm files in such paths but the bug is not in the script.\nFixed some other bugs and updated the documentation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2278",
+      "filename": "winhelp.vim",
+      "script_version": "1.0",
+      "date": "2003-08-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1367",
+        "user_name": "PP",
+        "first_name": "Peter",
+        "last_name": "Puck",
+        "email": "ptrpck at netscape.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "2225",
+  "name": "sort python imports",
+  "summary": "this script allows you to sort python imports alphabetically",
+  "script_type": "utility",
+  "description": "Keep your imports tidy!\nThis script allows you to sort python imports easlily.\n\nUse :PyFixImports, command to fix imports in the beginning of currently edited file.                                                 \nYou can also use visual mode to select range of lines and then use <C-i> to sort imports in those lines.\n\nNeeds vim compiled with python support!",
+  "install_details": "Just put it in your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8703",
+      "filename": "sort_python_imports.vim",
+      "script_version": "1.2",
+      "date": "2008-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14328",
+        "user_name": "goj",
+        "first_name": "Krzysiek",
+        "last_name": "Goj",
+        "email": "bin-krzysiek at poczta.gazeta.pl",
+        "homepage": "http://krzysiek-goj.blogspot.com"
+      },
+      "release_notes": "bugfix: from foo import (bar, baz)\nNow requires only python 2.3 (patch from Konrad Delong)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8637",
+      "filename": "sort_python_imports.vim",
+      "script_version": "1.1",
+      "date": "2008-05-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14328",
+        "user_name": "goj",
+        "first_name": "Krzysiek",
+        "last_name": "Goj",
+        "email": "bin-krzysiek at poczta.gazeta.pl",
+        "homepage": "http://krzysiek-goj.blogspot.com"
+      },
+      "release_notes": "Bugfix: now works for 'from foo.bar import baz' style imports"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8633",
+      "filename": "sort_python_imports.vim",
+      "script_version": "1.0",
+      "date": "2008-05-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14328",
+        "user_name": "goj",
+        "first_name": "Krzysiek",
+        "last_name": "Goj",
+        "email": "bin-krzysiek at poczta.gazeta.pl",
+        "homepage": "http://krzysiek-goj.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

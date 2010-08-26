@@ -1,0 +1,26 @@
+{
+  "script_id": "2334",
+  "name": "backup.vim",
+  "summary": "Puts backups where they belong: out of the way",
+  "script_type": "utility",
+  "description": "backup.vim stores backups out of the way in the ~/.vim_plugins/vim_backup directory.\n\nEach file is split into it&#039s file name and path, the md5sum of the path is used to create a unique subfolder in ~/.vim_plugins/vim_backup, and the files are backed up into that folder.  This ensures that your files are backed up, that your directories are not cluttered with *~ files, and that each file that you edit has it&#039s own unique backup.\n",
+  "install_details": "This script requires that vim was built with python enabled\n\nSimply copy backup.vim to ${HOME}/.vim/plugin/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9089",
+      "filename": "backup.vim",
+      "script_version": "0.4",
+      "date": "2008-08-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14943",
+        "user_name": "chaosgame",
+        "first_name": "Nathan",
+        "last_name": "Lawrence",
+        "email": "chaosgame at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

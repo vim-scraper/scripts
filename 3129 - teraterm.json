@@ -1,0 +1,26 @@
+{
+  "script_id": "3129",
+  "name": "teraterm",
+  "summary": "Teraterm MACRO syntax highlighting",
+  "script_type": "syntax",
+  "description": "Teraterm MACRO syntax highlighting. This script provides syntax highlighting for the Teraterm MACRO programming/scripting language.",
+  "install_details": "1) Put the teraterm.vim into your vimfiles/syntax directory\n2) Edit your vimfiles/filetype.vim to include something like the lines below, which assumes that these files will end in *.ttl:\n\naugroup filetypedetect\n\n\\\" Teraterm MACRO files\nau BufNewFile,BufRead *.ttl\tsetf Teraterm\n\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13230",
+      "filename": "teraterm.vim",
+      "script_version": "1.0",
+      "date": "2010-06-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2909",
+        "user_name": "rbb",
+        "first_name": "Russell",
+        "last_name": "Brinkmann",
+        "email": "russbbrink at yahoo.com",
+        "homepage": "http://www.russandbecky.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

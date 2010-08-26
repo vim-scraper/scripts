@@ -1,0 +1,154 @@
+{
+  "script_id": "1225",
+  "name": "DotOutlineTree",
+  "summary": "Helps you edit structured text.",
+  "script_type": "utility",
+  "description": "This plugin makes an outline tree of a buffer.\nAlso this plugin enables jumping to a node and operating nodes.\n\nCurrently, it supports three formats:\n\n    - reStructuredText\n    - TaskPaper\n    - dot-structured text (.. title)\n\nFor more detailed descriptions, read dot.vim, or go to\nhttp://chimachima-site.infoseek.ne.jp/ (in Japanese).",
+  "install_details": "Put this plugin in your plugin directory(e.g. $VIMRUNTIME/plugin).\nThen restart VIM.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12121",
+      "filename": "dot.vim",
+      "script_version": "1.2.2",
+      "date": "2010-01-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "changed EOL characters in this script.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12034",
+      "filename": "dot.vim",
+      "script_version": "1.2.1",
+      "date": "2010-01-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "* using &filetype to detect the document type\n    - 'rst', 'rest', 'taskpaper'\n* stripping leading spaces in rest documents\n* (explicit declaration of magic regexp)\nthanks to Sergey Khorev!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11989",
+      "filename": "dot.vim",
+      "script_version": "1.2.0",
+      "date": "2009-12-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "arbitrary string heading for 'dot-structured' format, outline tree.\n\n* arbitrary string heading\n    - let b:DOT_headingMark = '#'\n* outline tree folding\n    - let b:DOT_foldTree = 1\n    - to expand tree, press l or r\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11362",
+      "filename": "dot.vim",
+      "script_version": "1.1.2",
+      "date": "2009-09-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "bug fix. (improved not to hijack your yank)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10706",
+      "filename": "dot.vim",
+      "script_version": "1.1.1",
+      "date": "2009-05-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "bug fix. (auto-detection of document type)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9297",
+      "filename": "dot.vim",
+      "script_version": "1.1.0",
+      "date": "2008-10-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "Implemented auto-detection of document type."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9162",
+      "filename": "dot.vim",
+      "script_version": "1.0.0",
+      "date": "2008-08-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "Parsing (making outline of) reStructuredText and TaskPaper is now supported."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4041",
+      "filename": "dot.vim",
+      "script_version": "0.3.0",
+      "date": "2005-03-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "Added commands that move the cursor to a next/previous node."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3935",
+      "filename": "dot.vim",
+      "script_version": "0.2.0",
+      "date": "2005-02-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

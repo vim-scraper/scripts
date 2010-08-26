@@ -1,0 +1,138 @@
+{
+  "script_id": "2917",
+  "name": "tplugin",
+  "summary": "A plugin loader/runtimepath manager with autoload capabilities",
+  "script_type": "utility",
+  "description": "This plugin helps users to deal with plugins that are distributed via \nsource code repositories. Usually, you would make those plugins \navailable to vim by adding the local copies of those repositories to \n|runtimepath|. The disadvantage of this approach is that the value of \n|runtimepath| becomes unnecessarily complex and that the plugins are \nloaded on startup.\n\ntplugin scans those plugins for commands and functions. It then amends \nthe |runtimepath| only if a respective command/function/map is called \n(similar to the AsNeeded plugin). This helps to keep your |runtimepath| \nsimple and to improve startup time.\n\nIn order to achieve this goal, plugins are installed in an alternative \ndirectory structure where each plugin (consequently referred to as \n\"repo\") is installed in a subdirectory. tplugin takes care of modifying \n'runtimepath' and of loading the vim script files as necessary.\n\nAlternative directory layout:\n\n    ROOT/\n      repo1/\n        after/\n        autoload/\n        doc/\n        plugin/\n      repo2/\n        after/\n        autoload/\n        doc/\n        plugin/\n      ...\n\nRepos can be enabled (i.e. added to 'runtimepath') either explicitly \nwith the |:TPlugin| command or automatically by calling a command, \nfunction, or by requesting a filetype plugin/syntax/indent file defined \nin a repo -- this is done similar to how AsNeeded autoloads files.\n\nFull docs:\nhttp://github.com/tomtom/vimtlib/raw/master/doc/tplugin.txt\n",
+  "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0, \nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n\nGetting started:\n\n    1. Add this to your vimrc file:\n\n        runtime macros/tplugin.vim\n        \" Only necessary if you use a non-standard root directory\n        TPluginRoot /home/x/src/repos\n\n    2. Install your plugins/repos in the root directory.\n\n    3. After restarting vim, type :TPluginScan!\n\nAlso available as git repository:\nhttp://github.com/tomtom/tplugin_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13660",
+      "filename": "tplugin.vba",
+      "script_version": "0.9",
+      "date": "2010-08-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Renamed #TPluginInclude to @TPluginInclude\n- Added support for @TPluginMap, @TPluginBefore, @TPluginAfter annotations\n- TPluginMap() restores the proper mode\n- Load after/autoload/* files\n- ..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12831",
+      "filename": "tplugin.vba",
+      "script_version": "0.8",
+      "date": "2010-04-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Delete commands only when they were defined without a bang; make sure all commands in a file defined without a bang are deleted\n- g:tplugin_scan defaults to 'cfpt'\n- Don't register each autoload function but deduce the repo/plugin from the prefix.\n- g:tplugin_scan defaults to 'cfpta'\n- TPluginCommand and TPluginFunction are functions. Removed the commands with the same name.\n- #TPluginInclude tag\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12443",
+      "filename": "tplugin.vba.gz",
+      "script_version": "0.7",
+      "date": "2010-02-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- TPluginScan: try to maintain information about command-line completion (this won't work if a custom script-local completion function is used)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12391",
+      "filename": "tplugin.vba.gz",
+      "script_version": "0.6",
+      "date": "2010-02-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- CHANGE: The root specific autoload files are now called '_tplugin.vim'\n- Provide a poor-man implementation of fnameescape() for users of older versions of vim.\n- If the root name ends with '*', the root is no directory tree but a single directory (actually a plugin repo)\n- s:TPluginComplete(): Hide tplugin autoload files.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12275",
+      "filename": "tplugin.vba.gz",
+      "script_version": "0.5",
+      "date": "2010-02-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Support for ftdetect\n- Support for ftplugins in directories and named {&FT}_{NAME}.vim\n- :TPlugin accepts \"-\" as argument, which means load \"NO PLUGIN\".\n- :TPluginScan: don't use full filenames as arguments for TPluginFiletype()\n- FIX: Concatenation of filetype-related files\n- FIX: Don't add autoload files to the menu.\n- FIX: Don't load any plugins when autoloading an \"autoload function\"\n- FIX: Filetype-related problems\n- FIX: s:ScanLine: Don't create duplicate autoload commands.\n- FIX: s:ScanRoots(): Remove empty entries from filelist\n- g:tplugin_autoload_exclude: Exclude repos from autoloading\n- If g:tplugin_autoload == 2, run |:TPluginScan| after updating tplugin.\n- Moved autoload functions to macros/tplugin.vim -- users have to rescan their repos.\n- Per repo metadata (ROOT/REPO/tplugin.vim)\n- Relaxed the rx for functions\n- Replaced :TPluginMap with a function TPluginMap()\n- Speed up :TPluginScan (s:ScanRoots(): run glob() only once, filter file contents before passing it to s:ScanSource())\n- TPluginMap(): Don't map keys if the key already is mapped (via maparg())\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12127",
+      "filename": "tplugin.vba.gz",
+      "script_version": "0.3",
+      "date": "2010-01-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- TPluginBefore, TPluginAfter commands to define inter-repo dependencies\n- Support for autoloading filetypes\n- Support for autoloading <plug> maps\n- Build helptags during :TPluginScan (i.e. support for helptags requires \nautoload to be enabled) - Call delcommand before autoloading a plugin because of an unknown command\n- TPluginScan: Take a root directory as the second optional argument\n- The autoload file was renamed to ROOT/tplugin.vim\n- When adding a repository to &rtp, ROOT/tplugin_REPO.vim is loaded\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12050",
+      "filename": "tplugin.vba.gz",
+      "script_version": "0.2",
+      "date": "2010-01-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Experimental autoload for commands and functions (à la AsNeeded)\n- Improved command-line completion for :TPlugin\n- The after path is inserted at the second to last position\n- When autoload is enabled and g:tplugin_menu_prefix is not empty, build a menu with available plugins (NOTE: this is disabled by default)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12015",
+      "filename": "tplugin.vba.gz",
+      "script_version": "0.1",
+      "date": "2010-01-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

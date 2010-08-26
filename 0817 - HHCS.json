@@ -1,0 +1,42 @@
+{
+  "script_id": "817",
+  "name": "HHCS",
+  "summary": "Six low contrast dark colorschemes for happy hacking.",
+  "script_type": "color scheme",
+  "description": "    Low contrast dark colorschemes.\n    No bold. No italic. For very small font. (I'm using 7.5pts font in NotePC)\n    Fullcolor gui only.\n    Six variations with a feeling of unification. So it is easy to change hh<theme> by session, filetype, account, mood or \"Today's Lucky Color\".\n\n    Try hhspring first.\n",
+  "install_details": "    $ tar xvfz HHCS_<ver>.tar.gz\n    $ mv HappyHackingColorScheme/hh*.vim $VIMRUNTIME/colors/\n    $ vim HappyHackingColorScheme/htmltest.html\n    :color hhazure\n    :color hhorange\n    :color hhpink\n    :color hhspring\n    :color hhteal\n    :color hhviolet",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2526",
+      "filename": "HHCS_1.2.tar.gz",
+      "script_version": "1.2",
+      "date": "2003-11-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3565",
+        "user_name": "hirauchi",
+        "first_name": "Hideyuki",
+        "last_name": "HIRAUCHI",
+        "email": "hira at users.sourceforge.jp",
+        "homepage": ""
+      },
+      "release_notes": "[BUG_FIX]hhazure,hhviolet.Error.bg:more clear.\n[MAJOR_CHANGE]all.CursorIM.bg:CursorIM.bg=Comment.fg\n[MINOR_CHANGE]all.NumberNr,Folded,FoldColumn.fg:more blightness\n[MINOR_CHANGE]all.Identifier.fg:less brightness\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2478",
+      "filename": "HHCS_1.1.tar.gz",
+      "script_version": "1.1",
+      "date": "2003-11-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3565",
+        "user_name": "hirauchi",
+        "first_name": "Hideyuki",
+        "last_name": "HIRAUCHI",
+        "email": "hira at users.sourceforge.jp",
+        "homepage": ""
+      },
+      "release_notes": "[MAJOR_CHANGE]differentiate hhorange-hhpink-hhviolet-hhazure:"
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "script_id": "1000",
+  "name": "gtk-vim-syntax",
+  "summary": "Syntax highlighting for GLib, Gtk+, Xlib, Gimp, Gnome, and more.",
+  "script_type": "syntax",
+  "description": "A collection of C extension syntax files for xlib, glib, gobject, gdk, gdk-pixbuf, gtk+, atk, pango, cairo, gimp, libgnome, libgnomecanvas, libgnomeui, libglade, gtkglext, vte, linc, gconf, and ORBit.\n\nThe xlib one was originally created by Hwanjin Choe (vimscript #570), the others were generated from gtk-doc declaration lists and support enabling/disabling of highlighting of deprecated declarations.",
+  "install_details": "Include selected files in your ~/.vim/after/syntax/c.vim with :run glib.vim. See README in the tarball for details.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11573",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20091024",
+      "date": "2009-10-24",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Keyword `if' that appeared in the previous version among GObject identifiers due to some gtk-doc misparsing was removed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11555",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20091021",
+      "date": "2009-10-21",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Syntaxes were updated to versions corresponding to GNOME 2.28.  Two new files were added: for libsoup and libunique."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10338",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20090402",
+      "date": "2009-04-02",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "All syntax files were updated to Gnome 2.26 versions; clutter and goocanvas syntax files were added."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9761",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20090105",
+      "date": "2009-01-05",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "GObject syntax file missing in the last release was re-added."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9747",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20090102",
+      "date": "2009-01-02",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Everything was updated to Gnome 2.24.  GIO and evince syntax files were added."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7712",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20070925",
+      "date": "2007-09-25",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "All files were updated to Gnome 2.20 versions of the respective libraries. (GLib to 2.14, Gtk+ to 2.12, ...). Syntax file for linc was dropped, files for at-spi, gail, dbus-glib, gtksourceview, gnome-desktop, gnome-vfs, liboil and poppler were added."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6457",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20061121",
+      "date": "2006-11-21",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Variables (e.g. gtk_major_version or glib_mem_profiler_table) were added, they are highlighted as Identifiers by default (suggestions how to differentiate them from functions are welcome).\n\nThe synax files were cleaned up bit: hi-links are created only for symbol classes actually present in the file, deprecation stuff is completely excluded from files that contain no deprecated symbols."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6449",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20061120",
+      "date": "2006-11-20",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Syntax highlighting files for librsvg, libwnck, libgsf and libnotify were added."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6440",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20061119",
+      "date": "2006-11-19",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "atk syntax was updated to 1.12, cairo to 1.2, gdk, gdk-pixbuf and gtk+ to 2.10, glib and gobject to 2.12, libglade to 2.6, gnome libs to 2.16, pango to 1.14 and vte to 0.14."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5589",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20060423",
+      "date": "2006-04-23",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Syntax files for Gnome libs were updated to 2.14."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5469",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "2006-03-20",
+      "date": "2006-03-20",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Pango syntax file was updated to 1.12."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5459",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "2006-03-19",
+      "date": "2006-03-19",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "GLib syntax file was updated to 2.10."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4556",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "2005-09-06",
+      "date": "2005-09-06",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Deprecated symbol handling was improved.  Syntax items for deprecated symbols have their own groups (fooDeprecatedFunction instead of fooFunction) so it's possible to link them to something else than normal symbols.  By default, they are not highlighted at all (like before).  If you set\n\n:let foo_enable_deprecated = 1\n\nthey are linked to the same highligt groups as normal symbols.  If you set\n\n:let foo_deprecated_errors = 1\n\nthey are linked to Error.\n\nGLib, GObject, Gdk, Gkd-Pixbuf, Gtk+ syntax files were updated to 2.8. Atk and Pango to 1.10. Cairo was newly added.  As a side effect, missing highlighting of GdkPixmap, GdkWindow, and GdkBitmap was fixed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3977",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20050308",
+      "date": "2005-03-08",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Functions taking filename arguments that were incorrectly highlighted as constants since GLib and Gtk+ 2.6 are highlighted as functions again."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3910",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20050225",
+      "date": "2005-02-25",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Bug fixed: union types were not highlighted."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3790",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20050123",
+      "date": "2005-01-23",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Libglade syntax highlighting was added."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3722",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20041222",
+      "date": "2004-12-22",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Gtk+ and GLib syntax files were updated to 2.6, Pango and Atk to 1.8, Gimp to 2.2, Gnome to 2.8."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3335",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20040815",
+      "date": "2004-08-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Syntax highlighting file for GtkGLExt was added."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3320",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20040813",
+      "date": "2004-08-13",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Fixed bug: many last enum values were not highlighted."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3111",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20040611",
+      "date": "2004-06-11",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Quite a few missing enums were fixed.  Parameterless macros like\n\n#define gimp_get_data gimp_procedural_db_get_data\n\nare highlighted as Macro (not Constant as the previous version did) -- if the generator can figure out gimp_procedural_db_get_data is a function."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3098",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20040605",
+      "date": "2004-06-05",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Parameterless macros were separated to somethingDefine syntax groups, highlighted as Constant by default.  This fixes highlighting of things like NULL or FALSE as macros and is more compatible with Hwanjin Choe's original files."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3074",
+      "filename": "gtk-vim-syntax.tar.gz",
+      "script_version": "20040531",
+      "date": "2004-05-31",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

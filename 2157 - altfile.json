@@ -1,0 +1,138 @@
+{
+  "script_id": "2157",
+  "name": "altfile",
+  "summary": "easy switching between related files",
+  "script_type": "utility",
+  "description": "Screenshot: http://altfile.googlecode.com/files/shot1.png\nProject site: http://code.google.com/p/altfile/\n\n-----\n\nSuppose we have a project which resides in a \"proj\" directory. Content of that directory might look like this:\n\n  proj/classes/Class1.php\n  proj/classes/Class2.php\n  proj/classes/Namespace/Class3.php\n  proj/tpl/Class1.html\n  proj/tpl/Class2.html\n  proj/tpl/Namespace/Class3.html\n  proj/tests/Class1.phpt\n  proj/tests/Class2.phpt\n  proj/tests/Namespace/Class3.phpt\n\nCreate \"proj/.altfile\" and put these lines inside:\n\n  class: classes/{MATCH}.php\n  template: tpl/{MATCH}.html\n  test: tests/{MATCH}.phpt\n\nNow load \"proj/classes/Class1.php\" and hit the hot key. Menu will\nappear:\n\n  class  [template]  test\n\nNow you can use it as any other wild menu: cursor keys, <CR>, <Esc>.\n\nBy default previously active item is highilighted (works like Alt-Tab for Windows or Cmd-Tab for Mac OS X). So, to quickly switch between two files all you have to do is <M-Tab><CR>.\n\nNow load \"proj/tpl/Class4.html\" - it does not exist, and you'll get empty window. Hit <M-Tab>, select \"class\" and hit <CR> - VIM will create new buffer for (still non-existing) \"proj/classes/Class4.php\". Ta-dah! Actually, this is my main reason for creating this plugin.\n\nNote that it DOES NOT matter what is your current directory: you can cd to whatever place you want. But it DOES matter where \".altfile\" is, becase patterns inside it are relative to its placement.\n\nTo show visual file selector hit <F3>. Use movement/cursor keys to highlight a file; <CR> loads file; <Tab> switches between labels.\n",
+  "install_details": "Copy this file to your ~/.vim/plugin/ folder. Bind some key to AltFile_ShowMenu() and AltFile_ShowSelector():\n\n    nmap <expr> <M-Tab> AltFile_ShowMenu()\n    nmap <F3> :call AltFile_ShowSelector()<CR>\n\nMake sure that wildmenu is enabled:\n\n    set wildmenu",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8372",
+      "filename": "altfile-0.2a.zip",
+      "script_version": "0.2a",
+      "date": "2008-03-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13915",
+        "user_name": "alexkunin",
+        "first_name": "Alex",
+        "last_name": "Kunin",
+        "email": "alexkunin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "No more \":drop\" (i.e. no more GUI dependency). File load/activation code is smarter now. Uncommented forgotten try...catch block. Removed all inline docs, added link to the project site."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8352",
+      "filename": "altfile-0.2.zip",
+      "script_version": "0.2",
+      "date": "2008-02-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13915",
+        "user_name": "alexkunin",
+        "first_name": "Alex",
+        "last_name": "Kunin",
+        "email": "alexkunin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added visual file selector (resembles BufExplorer; also, some tricks were borrowed from source code of that really nice script).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8329",
+      "filename": "altfile.vim",
+      "script_version": "0.1e",
+      "date": "2008-02-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13915",
+        "user_name": "alexkunin",
+        "first_name": "Alex",
+        "last_name": "Kunin",
+        "email": "alexkunin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Autoload support and \"write-plugin\" guidelines (thanks to Thomas Link for advices). Couple of minor bugs fixed.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8306",
+      "filename": "altfile.vim",
+      "script_version": "0.1d",
+      "date": "2008-02-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13915",
+        "user_name": "alexkunin",
+        "first_name": "Alex",
+        "last_name": "Kunin",
+        "email": "alexkunin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Now wildmenu is used as \"engine\", so look & feel are much better now. No more numeric shortcats, however. Lots of code cleanup.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8298",
+      "filename": "altfile.vim",
+      "script_version": "0.1c",
+      "date": "2008-02-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13915",
+        "user_name": "alexkunin",
+        "first_name": "Alex",
+        "last_name": "Kunin",
+        "email": "alexkunin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Default choice now mimics Alt-Tab (Cmd-Tab for Mac users), i.e. hitting the hot key and then <CR> will cycle between last two files. Visual adjustments: current file is square brakets, and asterisk indicates default choice.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8296",
+      "filename": "altfile.vim",
+      "script_version": "0.1b",
+      "date": "2008-02-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13915",
+        "user_name": "alexkunin",
+        "first_name": "Alex",
+        "last_name": "Kunin",
+        "email": "alexkunin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "If selected file is already visible in some window, the script will activate it.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8288",
+      "filename": "altfile.vim",
+      "script_version": "0.1a",
+      "date": "2008-02-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13915",
+        "user_name": "alexkunin",
+        "first_name": "Alex",
+        "last_name": "Kunin",
+        "email": "alexkunin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "When GUI is available, dialog forced to be console-friendly, i.e. no GUI window is poping up.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8286",
+      "filename": "altfile.vim",
+      "script_version": "0.1",
+      "date": "2008-02-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13915",
+        "user_name": "alexkunin",
+        "first_name": "Alex",
+        "last_name": "Kunin",
+        "email": "alexkunin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

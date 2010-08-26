@@ -1,0 +1,26 @@
+{
+  "script_id": "283",
+  "name": "txt2pdf.vim",
+  "summary": "Script to save the current file and convert it to PDF using txt2pdf",
+  "script_type": "utility",
+  "description": "Script to save the current file and convert it to PDF using txt2pdf. You need to install txt2pdf http://www.sanface.com/txt2pdf.html\n\nYou can also use txt2pdf PRO http://www.sanface.com/txt2pdfPRO.html and txt2pdf PRO + crypt http://www.sanface.com/txt2pdfPROcrypt.html to\nmake more complex PDFs like\nhttp://www.sanface.com/pdf/Purchase_Order.pdf\nhttp://www.sanface.com/pdf/invoice.pdf\nhttp://www.sanface.com/pdf/hfmus.pdf\nhttp://www.sanface.com/pdf/heraldbill.pdf\n",
+  "install_details": "Inside the distribution three files: txt2pdf.vim the VIM plugin, txt2pdf.txt the plugin documentation, txt2pdf.vim the syntax for txt2pdf.cfg.\nPut the plugin inside your VIM plugin directory.\nPut the doc inside your VIM doc directory (generate the local tags file with the |:helptags| command).\nPut the syntax plugin inside your VIM syntax directory and configure filetype.vim (au BufNewFile,BufRead txt2pdf.cfg                setf txt2pdf) .\nRemember to set global variables:\n\ttxt2pdf_path\t: the path of txt2pdf executable\n\ttxt2pdfcfg_path\t: the path of your configuration file (usually txt2pdf.cfg)\n\ttxt2pdf_key\t: the key to start the command (deafult <F2>)\n\ttxt2pdfconf_key\t: the key to start an input dialog to enter the txt2pdf configuration file path (deafult <F3>)\nin vimrc file.\nYou can find more information in the ReadMe file inside the distribution.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3737",
+      "filename": "txt2pdfvim.zip",
+      "script_version": "2.15",
+      "date": "2004-12-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "637",
+        "user_name": "sanface",
+        "first_name": "SANFACE",
+        "last_name": "Software",
+        "email": "sanface at sanface.com",
+        "homepage": "http://www.sanface.com/"
+      },
+      "release_notes": "Update to support txt2pdf PRO + crypt 7.5, txt2pdf PRO 7.5 and txt2pdf 7.6"
+    }
+  ]
+}

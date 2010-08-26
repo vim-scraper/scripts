@@ -1,0 +1,26 @@
+{
+  "script_id": "1100",
+  "name": "clearsilver",
+  "summary": "syntax files for *.cs and *.hdf",
+  "script_type": "syntax",
+  "description": "These are syntax files for managing clearsilver templates (see http://clearsilver.net).  cs.vim will add formatting to <?cs ... ?> embedded in html syntax (it depends on runtime! syntax/html.vim).  hdf.vim is syntax highlighting for Hierarchical Data Format (HDF) files.\n\ncs.vim conflicts with the C# .cs extention.  So if you are also using vim to edit C# files you will have to... figure it out.",
+  "install_details": "cp clearsilver.vim ~/.vim\ncd ~/.vim\ntar -xf clearsilver.vim\n\nthis will put two files in ~/.vim/syntax\n\nYou also need to update ~/.vim/filetype.vim with:\n\nif exists(\"did_load_myfiletypes\")\nfinish\nendif\nlet did_load_myfiletypes= 1\n\naugroup filetypedetect\n au BufNewFile,BufReadPost *.hdf setf hdf\n au BufNewFile,BufReadPost *.cs setf cs\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3532",
+      "filename": "clearsilver.tar",
+      "script_version": ".01",
+      "date": "2004-10-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1171",
+        "user_name": "culley",
+        "first_name": "culley",
+        "last_name": "harrelson",
+        "email": "vim at culley.fastmail.fm",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

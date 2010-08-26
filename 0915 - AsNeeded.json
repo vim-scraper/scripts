@@ -1,0 +1,170 @@
+{
+  "script_id": "915",
+  "name": "AsNeeded",
+  "summary": "Loads plugins as-needed (functions/maps/commands)  (autoload)",
+  "script_type": "utility",
+  "description": "  [AsNeeded V14 AND LATER REQUIRES VIMBALL V18 OR LATER FOR UNPACKING]\n\nThe AsNeeded plugin loads plugins from the .vim/AsNeeded directory only as they're needed.  One major advantage over vim 7.0's autoload method is: plugins don't need to be changed!   Just put the plugin in the AsNeeded directory (usually under .vim/ or vimfiles\\).  It'll work even better if you type :MkAsNeeded while in vim after having updated your AsNeeded directory, too.\n\nSo, how does it work?  Well, whenever a plugin attempts to execute a function that hasn't been loaded yet, AsNeeded will find the script in the AsNeeded directory, load the script, and execute the function.\n\nAnd, whenever you want to execute a command that's not been loaded yet, and you've run :MkAsNeeded, then the plugin will be transparently loaded and the command executed!  If you didn't do :MkAsNeeded, or you wish to use a map, then instead you can use\n\n\t:AN map\n\t:AN command [arguments]\n\nand AsNeeded will locate the map or command, load the script, and make the map or command available for your subsequent use.  Alternatively, you can use\n\n\t:ANX map\n\t:ANX command [arguments]\n\nand AsNeeded will do what :AN would do plus attempt to execute the map or command.\n\nFor even faster loading of your desired function, map, or command, you can (as of v6) use\n\n\t:MkAsNeeded\n\nThis command will create a <ANtags> file in your AsNeeded subdirectory which basically lists your maps, functions, and commands and couples them with their associated source file.  When you then use :AN, :AsNeeded, or :ANX, AsNeeded will use that file to quickly load the associated source file.\n\nAnd, now for a user testimonal!\n\n    Zdenek Sekera (by permission)\n\n    I use FuncUndefined sometimes but most of the\n    time I use the AsNeeded mechanism of Dr.Chips,\n    which is very clever, very complete and completely\n    unintrusive, there is almost nothing to do once\n    the mechanics is setup.  It even finds functions\n    (mappings as well!!) inside a file of a different\n    name, etc...  Very pleasant.\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#ASNEEDED)\n",
+  "install_details": "1. In your <.vimrc>: to enable plugins,\n   set nocp\n   if version >= 600\n     filetype plugin on\n   endif\n\n2. Make a <.vim/AsNeeded> directory:\n   cd .vim\n   mkdir AsNeeded\n\n3. Put whatever plugins you want into the AsNeeded directory\n\n4. Use vim 7.1 or later, or update vim 7.0's vimball plugin with vimscript#1502.\n\n5. vim AsNeeded.vba.gz\n     :so %\n    :q\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9224",
+      "filename": "AsNeeded.vba.gz",
+      "script_version": "16",
+      "date": "2008-09-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "<*> ANtags now smaller (uses relative paths)\n<*> saves and restore magic setting\n<*> MkAsNeeded creates a menu: DrChip.ANmenu full of commands that AsNeeded can load\n<*> Improved cmdsrch\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6778",
+      "filename": "AsNeeded.vba.gz",
+      "script_version": "15",
+      "date": "2007-02-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Various bugfixes to automatic updating of ANtags and improvements to handling of no user-specified mapleader.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6204",
+      "filename": "AsNeeded.vba.gz",
+      "script_version": "14",
+      "date": "2006-09-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "(-NEW-)  Setting a variable, g:AsNeededAutoMake, to something like \"ls -1l\", lets AsNeeded keep ANtags and ANcmds up-to-date automatically!\n(bugfix) Taglist does a quick-loading trick that involved using FuncUndefined autocmds.  AsNeeded now defers to taglist instead of issuing a warning.\n(bugfix) ei=all was inadvertently being left on; thus no autocmds were operational after AsNeeded successfully loaded a function.  Fixed!\n(bugfix) included |'patchmode'| in the SaveSettings() and RestoreSettings() bypass functions\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5719",
+      "filename": "AsNeeded.vba.gz",
+      "script_version": "13",
+      "date": "2006-05-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "AsNeeded now uses Thomas's idea for producing a \"ANcmds.vim\" plugin with skeleton commands. Plus some bugfixes.  With this feature, commands in scripts in the AsNeeded/ directory act as if they're always available, even when the scripts haven't been loaded.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5429",
+      "filename": "AsNeeded.vim.gz",
+      "script_version": "12",
+      "date": "2006-03-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "(bugfix) AsNeeded needs to work around several options that the user may set.  However, if a plugin changed one of these, AsNeeded \"restored\" the option at the time that AsNeeded was invoked, thereby overriding whatever the plugin/map etc may have set.  AsNeeded now restores the options, then sources the plugin/map etc."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5145",
+      "filename": "AsNeeded.vim.gz",
+      "script_version": "11",
+      "date": "2006-02-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Bugfixes (success message itself sometimes caused an error, internally used buffers now wiped silently, keeps/restores lz)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4789",
+      "filename": "AsNeeded.vim.gz",
+      "script_version": "10",
+      "date": "2005-11-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "bugfix: maps with backslashes are escaped so they can be found\nbugfix: report option workaround\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4423",
+      "filename": "AsNeeded.vim.gz",
+      "script_version": "9",
+      "date": "2005-07-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "MakeANtags command and function search patterns improved\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3877",
+      "filename": "AsNeeded.vim.gz",
+      "script_version": "8",
+      "date": "2005-02-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Another bug fix; this time, for some maps, tags were being generated but not executed.  Fixed!\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3870",
+      "filename": "AsNeeded.vim.gz",
+      "script_version": "7",
+      "date": "2005-02-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "MakeANtags now warns the user when no tags were found for each scriptfile it examines in the AsNeeded directory.\nTwo bugfixes: MakeANtags was missing some maps and, under Windows, was omitting backslashes in paths.  Fixed!\n"
+    }
+  ]
+}

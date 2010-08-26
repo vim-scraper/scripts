@@ -1,0 +1,58 @@
+{
+  "script_id": "3197",
+  "name": "current-func-info.vim",
+  "summary": "Get current function name",
+  "script_type": "utility",
+  "description": "current-func-info shows current function's name to statusline, tabline,\nanywhere.\n|cfi#get_func_name()| to get function's name.\n\nSupported languages: C, Perl, Ruby, Python, Vim\n\n\ncfi#load()\t\t\t\t*cfi#load()*\n\tLoad \"autoload/cfi.vim\" and \"plugin/cfi.vim\".\n\ncfi#get_func_name([{filetype}])\t\t\t\t*cfi#get_func_name()*\n\tReturns function's name.\n\tInclude this expression to |'statusline'| or |'tabline'| and so on.\n\ncfi#format({fmt}, {default})\t\t\t*cfi#format()*\n\tReturns formatted string. >\n    let &statusline = '%{cfi#format(\"[%s()]\", \"no function\")}'\n<\tThis returns \"no function\" if cfi#get_func_name() returns empty string.\n\tOr returns \"[func()]\" if cfi#get_func_name() returns \"func\".\n\ncfi#create_finder({filetype})\t\t\t\t*cfi#create_finder()*\n\tReturns Dictionary of instance for finder.\n\n\tTo create finder, implement |s:finder.find()| or\n\timplement |s:finder.get_func_name()|, |s:finder.find_begin()|,\n\t|s:finder.find_end()|.\n\n\t(TODO: Write more descriptions)\n\n\tSee ftplugin/*.vim for the details.\n\ncfi#supported_filetype({filetype})\t\t\t\t*cfi#supported_filetype()*\n\tReturn boolean value if {filetype} is supported.",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13638",
+      "filename": "cfi.zip",
+      "script_version": "0.0.2",
+      "date": "2010-08-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "- Implement cfi#format()\n- Implement Python support"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13558",
+      "filename": "cfi.zip",
+      "script_version": "0.0.1",
+      "date": "2010-08-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "- Fixed bug of ftplugin/vim/cfi.vim: couldn't get the name of last function in a file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13557",
+      "filename": "cfi.zip",
+      "script_version": "0.0.0",
+      "date": "2010-08-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

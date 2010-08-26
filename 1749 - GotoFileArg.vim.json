@@ -1,0 +1,26 @@
+{
+  "script_id": "1749",
+  "name": "GotoFileArg.vim",
+  "summary": "Jump right to file in arg list by name, substr, regex",
+  "script_type": "utility",
+  "description": "GotoFileArg.vim v0.9b\n\nMostly for those who load up VIM with a lot of files at once in the arg list.\nWhen jumping around in files, this allows you to jump right to a file, by a\nsubstring/regex of the filename.  It repositions VIM in the arg list so\nsubsequent :n :N commands work from the actual location of the file.\n\nAt present it also maps esc-f as the keystroke to type the filename in.\n(esc-f is alt-f / meta1-f on my system, and many others).\n\nFeatures:\n  * Filename match is done using \"=~\" so a substring / regex are fine\n  * Last pattern is remembered\n  * If the current filename matches, the search, as one would expect, begins\nat the next file, and wraps.\n",
+  "install_details": "Place file in your plugins dir.\nI place it at: ~/.vim/plugin/GotoFileArg.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6566",
+      "filename": "GotoFileArg.vim",
+      "script_version": "0.9b",
+      "date": "2007-01-01",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "11511",
+        "user_name": "Jaggy",
+        "first_name": "B",
+        "last_name": "Hechinger",
+        "email": "brandonh at mail.voyager.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

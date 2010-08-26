@@ -1,0 +1,42 @@
+{
+  "script_id": "627",
+  "name": "MarkShift",
+  "summary": "Highlights indents when \"expandtab\" option is on.",
+  "script_type": "syntax",
+  "description": "Usefull for editing indented source files which have been\nedited with the expand tab setting. When activated the\nfirst space out of every N spaces is highlighted. N is\nworked out automaticlly from the shiftwidth setting of the\nbuffer.",
+  "install_details": "Place into your plugins directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1938",
+      "filename": "markshift.vim",
+      "script_version": "1.2",
+      "date": "2003-04-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "729",
+        "user_name": "kotku",
+        "first_name": "brad",
+        "last_name": "phelan",
+        "email": "kotku at rocketmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed the distance between the highlight bar to use &ts as apposed to &sw as per suggestion gowri.satyanarayana@oracle.com, April 24, 2003 22:12 "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1937",
+      "filename": "markshift.vim",
+      "script_version": "1.1",
+      "date": "2003-04-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "729",
+        "user_name": "kotku",
+        "first_name": "brad",
+        "last_name": "phelan",
+        "email": "kotku at rocketmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Was not able to toggle the shift highlighting off due to misnaming of a variable"
+    }
+  ]
+}

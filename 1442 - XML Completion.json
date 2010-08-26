@@ -1,0 +1,26 @@
+{
+  "script_id": "1442",
+  "name": "XML Completion",
+  "summary": "Completion for XML files",
+  "script_type": "ftplugin",
+  "description": "Context sensitive completion for XML.\nCompletes:\n * element names\n * attribute names (rejects already presented attributes)\n * attribute values (if defined as enumeration)\n * closing tag names\n * keywords in XML declaration\n\n1. Invoking\n\nThe completion function is XmlComplete() and is imapped on \\C-J.\n\n2. Completion in elements\n\nDistribution contains definition files (recipes) for DocBook 4.[234], XSL FO 1.0, XSLT 1.0, Relax NG 1.0, XML Schemas 1.0, SVG 1.1, XHTML 1.1, XInclude 1.0 and OpenOffice 1.0 XML format.\n\nIf g:xmlSubelements == \"yes\" (default \"no\"), completion of element names is restricted on subelements of parent element. This feature is new and momentarily works only for DocBook, XSLT and XML Schemas (the recipes must be modified).\n\nCompletion algorithm:\n1. If name of currently opened tag is prefixed, looks for respective xmlns mapping for its URN. If mapping exists, selects recipe associated with this URN.\n2. If name isn't prefixed, looks for implicit NS. If exists, ... (see above).\n3. Looks for Doctype decl. If found, tries first PUBLIC, then SYSTEM ident.\n4. If all fails, fires \\C-N for normal completion.",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4965",
+      "filename": "xml_completion-1.18.tar.gz",
+      "script_version": "1.18",
+      "date": "2006-01-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9220",
+        "user_name": "dt",
+        "first_name": "David",
+        "last_name": "Tardon",
+        "email": "d.tardon at tiscali.cz",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

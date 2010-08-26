@@ -1,0 +1,106 @@
+{
+  "script_id": "2152",
+  "name": "snippets.vim",
+  "summary": "Simple snippet storage and retrieval separated by filetype.",
+  "script_type": "utility",
+  "description": "Simple utility for managing snippets of text within vim. Users can add, edit, and delete snippets within vim. Command completion is supported in all places that make sense. A menu is also added at \"Plugin/Snippets\".\n\nCOMMANDS\nAddSnippet -- adds new snippet that contain a range of lines\nEditSnippet -- edits a snippet in a new tab\nDeleteSnippet -- deletes a snippet (with confirmation)\nInsertSnippet -- inserts a snippet before the current line\nAppendSnippet -- inserts a snippet after the current line\nListSnippets -- lists snippets\n\nMAPPINGS (<leader> is set to '\\&#039, by default)\n<leader>ssa -- AddSnippet with current buffer (normal mode)\n<leader>ssa -- AddSnippet with range of lines (visual mode)\n<leader>sse -- EditSnippet\n<leader>ssd -- DeleteSnippet\n<leader>ssp -- AppendSnippet\n<leader>ssP -- InsertSnippet\n<leader>ssl -- ListSnippets",
+  "install_details": "Place script in ~/.vim/plugin and start vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8333",
+      "filename": "snippets.vim",
+      "script_version": "0.2",
+      "date": "2008-02-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Made functions, variables, and mappings \"script-friendly\". Thanks #vim!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8328",
+      "filename": "snippets.vim",
+      "script_version": "0.1.5",
+      "date": "2008-02-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Split the PutSnippet command into InsertSnippet and AppendSnippet"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8278",
+      "filename": "snippets.vim",
+      "script_version": "0.1.4",
+      "date": "2008-02-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "The base snippet directory can now be overridden by setting the variable \"g:snippets_base_directory\" in the vimrc file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8277",
+      "filename": "snippets.vim",
+      "script_version": "0.1.3",
+      "date": "2008-02-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Confirmation dialog now uses the builtin confirm()"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8274",
+      "filename": "snippets.vim",
+      "script_version": "0.1.2",
+      "date": "2008-02-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Fixed a problem where the base snippet directory was not being created on startup."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8272",
+      "filename": "snippets.vim",
+      "script_version": "0.1.1",
+      "date": "2008-02-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell at gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Forgot to add a description to the script header."
+    }
+  ]
+}

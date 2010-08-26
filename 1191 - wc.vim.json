@@ -1,0 +1,26 @@
+{
+  "script_id": "1191",
+  "name": "wc.vim",
+  "summary": "Manuscript word counter - Strunk & White style",
+  "script_type": "utility",
+  "description": "Provides word count for manuscripts (essay or story documents), compliant with standard author rules (such as Strunk & White style lexicon for English grammar).\n\nStandard word count utilities (like unix 'wc') do not provide an accurate count because they count breaks between words.  In fiction writing, some sentences--like this one--have more words than breaks between words..\n\nTo use, install and type :WC\n\nLine ranges are supported.\n\nTo count the lines of a particular section of a document, insert a new line with 8 dashes, and the count will stop at that line.\n--------\nLike that.\n\nThe word count also ignores the common author mark for section breaks using asterisk as shown below.\n \n* * * \n\nThis script is based on the sed 'wc' example provided in the GNU info pages; the algorithm replaces each whitespace seperated word by a single character and then counts the length of the string.\n\n",
+  "install_details": "Copy to vim plugin directory.\nUse with :WC command.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3804",
+      "filename": "wc.vim",
+      "script_version": "1.0",
+      "date": "2005-01-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6791",
+        "user_name": "jcline",
+        "first_name": "jcline",
+        "last_name": "",
+        "email": "jcline at ieee.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

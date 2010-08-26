@@ -1,0 +1,26 @@
+{
+  "script_id": "1889",
+  "name": "automated-rafb.net uploader plugin",
+  "summary": "only works on Windows, uploads current file in rafb.net",
+  "script_type": "utility",
+  "description": "the script is actually a perl script\nand you only have to make a minor modification to vimrc\nto be able to use it.\nwhat it does it is automated to go to rafb.net\npaste the current file you're editing there,and\nthen as rafb.net gives you a link to the file\nthe script will put it in your clipboard so you can reffer\nto where you need it.\nthis script would be recommended for whoever needs to paste some code.\nyou can use F5 to run the script on the current file.\nit only works on windows.",
+  "install_details": "put post_rafb.pl in your Vim folder\nadd the following line to your vimrc\n:map <F5> :!perl \"D:\\Program Files\\Vim\\post_rafb.pl\" \"%:p\"<Enter><Enter>\nclose and open again vim and it will work\n(be carefull at D:\\ , it may not be your install path)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7076",
+      "filename": "post_rafb.pl",
+      "script_version": "0.1",
+      "date": "2007-05-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12362",
+        "user_name": "johnj_",
+        "first_name": "Petrea",
+        "last_name": "Stefan",
+        "email": "randomcoder1 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

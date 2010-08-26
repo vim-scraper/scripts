@@ -1,0 +1,42 @@
+{
+  "script_id": "2938",
+  "name": "Multi-Replace",
+  "summary": "Perfom non-cumulative multi-replace",
+  "script_type": "utility",
+  "description": "This script provides several functions to do multiple-string replacements.\n\nThe quick brown fox jumped over the six lazy dogs.\nreplace (dogs=fox, fox=dogs, x=ck) will give\nThe quick brown dogs jumped over the sick lazy fox.\n\nNote that values are non-cumulative and longest-string-first, which is why\n\"x=ck\" does not interfere with \"dogs=fox\" or \"fox=dogs\" replacements.\nThis can be used to specify exceptions in a replacement list. \n\nTypical uses: \n- Replacing variable names (eg code localization / code reuse)\n- Replacing keywords with translations\n- Generating code from a template\n- Swapping keywords\n  etc\n\nIts main function is provided  by the MultiReplace function, which performs\nnon-cumulative replacements, replacing occurrences of hash keys with their corresponding hash values. Hash values may be arrays, in which case values are rotated across the lines containing the key value. Range of lines to replace may also be specified.\n\nMultiReplace(dict, from, to)\n\nSeveral functions that create the \"dict\" hash are also provided.\n\n1) Read values from prompt\nMultiReplace(ReadUserlist(), 1,  \"$\")\n\n2) Replacement dictionary\nA buffer may be also specified. A replacement list buffer will contain TAB separated pairs, with the string to find on the left and the string to replace with on the right. Such a replacement would be invoked with\n\nMultiReplace(ReadDictionary(\"#\"), 1, \"$\")\n\nWhere the \"#\" here refers to the alternate buffer:\nReadDictionary(buffer)\n\n3) Look up table \nA buffer containing delimiter-separated values my also be used. To use a csv that does not contain quote marks (ie, no quotes and no values with linebreaks), and replace all occurrences from column 1 with values from column 4:\n\nMultiReplace(ReadColumns(\"#\", \",\", 1, 4), 1, \"$\")\n\nReadColumns is defined as\nReadColumns(buffer, sep, keycol, valcol)\n\nMappings\nThe following mappings are included in the file. This allows you to select a range of text, enter \",rem\" and then enter \"=\" and specify find=replace pairs for a quick replacement.\n\n:map ,rem :call MultiReplace(\"\",1,\"$\")\n:vmap ,rem :call MultiReplace(\"\",line(\"'<\"),line(\"'>\"))\n\n\n\n\n",
+  "install_details": "Insert contents into your vimrc file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12304",
+      "filename": "multireplace.vim",
+      "script_version": "1.1",
+      "date": "2010-02-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8022",
+        "user_name": "zlel",
+        "first_name": "eiji",
+        "last_name": "kumiai",
+        "email": "greensleeves13 at hotmail.com",
+        "homepage": "http://sourceforge.net/projects/taskmenu/"
+      },
+      "release_notes": "Fixed problem with \"N\" becoming \"n\" when in ignorecase mode."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12156",
+      "filename": "multireplace.vim",
+      "script_version": "1.0",
+      "date": "2010-01-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8022",
+        "user_name": "zlel",
+        "first_name": "eiji",
+        "last_name": "kumiai",
+        "email": "greensleeves13 at hotmail.com",
+        "homepage": "http://sourceforge.net/projects/taskmenu/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

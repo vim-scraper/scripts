@@ -1,0 +1,154 @@
+{
+  "script_id": "1628",
+  "name": "findfuncname.vim",
+  "summary": "Find the name of the function you are editing",
+  "script_type": "utility",
+  "description": "This is similar to the tip I posted previously, except I made a few fixes and made it self-contained as a plugin.\n\nThe script contains a function called 'FunctionName()' that returns the name of the function you are currently working in.  This is handy if you got there through a search, or are in a large function or small screen/window and can't see the function's name.  \n\nThis on-command (I've seen some that constantly display in the status line) function uses a search pattern to search for a pattern that matches every function declaration I've tried in C, Objective-C, C++, Perl, and Python with the caveat that the function declaration must start on the first character of the line.  I'll fix this one of these days, since Java files will break on that particular point.\n\n",
+  "install_details": "download the script and place it in your plugin directory, or make sure that your .vimrc sources the script wherever you have saved it.\n\nAdd the following to your .gvim or .vimrc:\nmap \\func :echo FunctionName()<CR>\n\nNow, typing \\func displays the line number and declaration of the name of the function I am editing in.  ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11428",
+      "filename": "findfuncname.vim",
+      "script_version": "3.5",
+      "date": "2009-09-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10580",
+        "user_name": "alex.esplin",
+        "first_name": "Alex",
+        "last_name": "Esplin",
+        "email": "alex.esplin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Updated the regex to catch commas (if argument list is split from the declaration line onto succeeding lines) or closing parens (if argument list is all on the declaration line)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11427",
+      "filename": "findfuncname.vim",
+      "script_version": "3.4",
+      "date": "2009-09-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10580",
+        "user_name": "alex.esplin",
+        "first_name": "Alex",
+        "last_name": "Esplin",
+        "email": "alex.esplin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug with the filename matching when checking for Python files. Made the regex for C-like function declarations a little more specific."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11425",
+      "filename": "findfuncname.vim",
+      "script_version": "3.3",
+      "date": "2009-09-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10580",
+        "user_name": "alex.esplin",
+        "first_name": "Alex",
+        "last_name": "Esplin",
+        "email": "alex.esplin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed to detect if the current file ends with .py and makes it look for the most recent 'class name:' or def 'func():' statement."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10315",
+      "filename": "findfuncname.vim",
+      "script_version": "3.2",
+      "date": "2009-03-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10580",
+        "user_name": "alex.esplin",
+        "first_name": "Alex",
+        "last_name": "Esplin",
+        "email": "alex.esplin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "minor change to allow for empty space at the end of the declaration line"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10029",
+      "filename": "findfuncname.vim",
+      "script_version": "3.1",
+      "date": "2009-02-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10580",
+        "user_name": "alex.esplin",
+        "first_name": "Alex",
+        "last_name": "Esplin",
+        "email": "alex.esplin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Small change to allow for code with the curly brace on the line below the function declaration."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10022",
+      "filename": "findfuncname.vim",
+      "script_version": "3.0",
+      "date": "2009-02-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10580",
+        "user_name": "alex.esplin",
+        "first_name": "Alex",
+        "last_name": "Esplin",
+        "email": "alex.esplin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Major change to search pattern.\n\nActually works for most C, C++, Python, and Perl programs with functions.\n\nRelies on function starting in the first column, so Java files will have issues, I'll fix this soon..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9845",
+      "filename": "findfuncname.vim",
+      "script_version": "2.0.1",
+      "date": "2009-01-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10580",
+        "user_name": "alex.esplin",
+        "first_name": "Alex",
+        "last_name": "Esplin",
+        "email": "alex.esplin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "minor comment/documentation change"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9844",
+      "filename": "findfuncname.vim",
+      "script_version": "2.0",
+      "date": "2009-01-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10580",
+        "user_name": "alex.esplin",
+        "first_name": "Alex",
+        "last_name": "Esplin",
+        "email": "alex.esplin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Major overhaul using a backwards-searching regular expression that seems to dodge control statements (if,else,else if,for,while, etc...) and catch most function declarations."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6036",
+      "filename": "findfuncname.vim",
+      "script_version": "1.0",
+      "date": "2006-08-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10580",
+        "user_name": "alex.esplin",
+        "first_name": "Alex",
+        "last_name": "Esplin",
+        "email": "alex.esplin at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

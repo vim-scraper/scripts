@@ -1,0 +1,58 @@
+{
+  "script_id": "262",
+  "name": "doc.vim",
+  "summary": "Syntax colouring for ASCII documentation",
+  "script_type": "syntax",
+  "description": "Gives you syntax coloring for ASCII-documentation files.\nNot perfect, but may be a base for your own.\n\nDetects headlines (underlined with '-' or '='),\nenumerations, lists (starting with '-' or '*')\nsome simple time, date formats \nsome simple email addresses, web addresses.",
+  "install_details": "copy file to vim/syntax directory,\nenter ':so $VIM/syntax/doc.vim' in .txt or .doc files\nor edit some installation files to add it in the syntax menu.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3338",
+      "filename": "syncol_doc.zip",
+      "script_version": "0.3",
+      "date": "2004-08-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "209",
+        "user_name": "ramming",
+        "first_name": "thomas",
+        "last_name": "ramming",
+        "email": "Thomas.Ramming at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "added red for german/English Achtung/attention Hinweis/remark lines."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=797",
+      "filename": "syncol_doc.zip",
+      "script_version": "0.2",
+      "date": "2002-04-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "209",
+        "user_name": "ramming",
+        "first_name": "thomas",
+        "last_name": "ramming",
+        "email": "Thomas.Ramming at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "some new matches for headlines, german quotes and a \ntextline sourrounded by underscore/'abovescore' (called it cBlock).\nUsing extended ascii characters (see script printascii.vim).\n\nPacked with a sample ascii file and the same as html that you can see what my gvim does."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=760",
+      "filename": "doc.vim",
+      "script_version": "0.1",
+      "date": "2002-04-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "209",
+        "user_name": "ramming",
+        "first_name": "thomas",
+        "last_name": "ramming",
+        "email": "Thomas.Ramming at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

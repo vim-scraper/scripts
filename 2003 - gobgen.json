@@ -1,0 +1,74 @@
+{
+  "script_id": "2003",
+  "name": "gobgen",
+  "summary": "GObject skeleton generator",
+  "script_type": "utility",
+  "description": "This plugin generate simple c and h templates for new GObject class and interface.\nThere a bit of commands for this:\n- GOBGenerateC\n- GOBGenerateIC\n- GOBGenerateCModule\n- GOBGenerateH\n- GOBGenerateIH\nScript by default uses current file name for class name (optionaly you can type class name manually)\n\nFor nice code formating it is need to enable ai option",
+  "install_details": "Copy gobgen.vim file to ~/.vim/plugins directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7879",
+      "filename": "gobgen.vim",
+      "script_version": "1.3",
+      "date": "2007-11-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12981",
+        "user_name": "daa",
+        "first_name": "Andrey",
+        "last_name": "Dubravin",
+        "email": "daa84 at inbox.ru",
+        "homepage": ""
+      },
+      "release_notes": "Add GOBGenenrateIH GOBGenenrateIC for interface generation\nFix: prefix prompt identical for all functions"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7771",
+      "filename": "gobgen.vim",
+      "script_version": "1.2",
+      "date": "2007-10-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12981",
+        "user_name": "daa",
+        "first_name": "Andrey",
+        "last_name": "Dubravin",
+        "email": "daa84 at inbox.ru",
+        "homepage": ""
+      },
+      "release_notes": "Fix bug in GOBGenerateH function (parentName not defined)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7667",
+      "filename": "gobgen.vim",
+      "script_version": "1.1",
+      "date": "2007-09-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12981",
+        "user_name": "daa",
+        "first_name": "Andrey",
+        "last_name": "Dubravin",
+        "email": "daa84 at inbox.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added GOBGenerateCModule function, that generate .c file pattern for plugin class realisation\nFix: cast dispose and finalize functions\nFix: remove question about prefix name editing"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7558",
+      "filename": "gobgen.vim",
+      "script_version": "1.0",
+      "date": "2007-08-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12981",
+        "user_name": "daa",
+        "first_name": "Andrey",
+        "last_name": "Dubravin",
+        "email": "daa84 at inbox.ru",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

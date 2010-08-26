@@ -1,0 +1,42 @@
+{
+  "script_id": "2205",
+  "name": "CoremoSearch",
+  "summary": "A simple simultaneous search script.",
+  "script_type": "utility",
+  "description": "  This script provides simultaneous search functionality.\n                                                                     \n  You can add a string that you want to search and remove a string.\n\n  (from 0.2) Color highlighting is available setting :set[l] nohlsearch.\n                                                                     \nUsage:\n  A. Adding a word (like asterisk(*) keystroke)\n      1. Place the cursor on the word that you want to search.\n      2. Press <C-@> or :CoremoSearchAdd\n                                                                     \n  B. Adding a selected string\n      1. In visual mode, select the string that you want to search.\n      2. Press <C-@> or :CoremoSearchAddV\n                                                                     \n  A'. Removing a word\n      1. Place the cursor on the word.\n      2. Press <Learder><C-@> or :CoremoSearchRemove\n          (in most cases, <Leader> equals to backslash(\\) keystroke)\n                                                                     \n  B'. Removing a selected string\n      1. In visual mode, select the string.\n      2. Press <Learder><C-@> or :CoremoSearchRemoveV\n          (in most cases, <Leader> equals to backslash(\\) keystroke)\n",
+  "install_details": "Put this plugin in your plugin directory(e.g. $VIMRUNTIME/plugin).\nThen restart Vim or :source it.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8512",
+      "filename": "coremo_search.vim",
+      "script_version": "0.2",
+      "date": "2008-03-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "supports coloring search words!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8505",
+      "filename": "coremo_search.vim",
+      "script_version": "0.1",
+      "date": "2008-03-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

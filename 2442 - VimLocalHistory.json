@@ -1,0 +1,26 @@
+{
+  "script_id": "2442",
+  "name": "VimLocalHistory",
+  "summary": "Automatic backup and poor man's revision control.",
+  "script_type": "utility",
+  "description": "VLH automatically saves buffers on write using git.  This provides a convenient, automatic backup system of, e.g. files in /etc that are modified, as well as a poor man's \"local history\" (a lá the eclipse feature with the same name).\n\nFeedback, bug reports and suggestions gratefully accepted at <vlh@hjdivad.com>.\n\n\nTo use, install, configure g:vlh_repository_dir and then use vim normally.  Every time you write a buffer whose path is on the local filesystem, a copy is saved in a git repository.\n\nYou can open, diff or restore older versions of files with the commands VLHOpen, VLHDiff and VLHReplace.\n\nsource code is available from github at http://github.com/hjdivad/vimlocalhistory/tree/master",
+  "install_details": "To install from a tarball:\n\n\tAfter ensuring that you meet the requirements, copy the contents of\n\tplugin to user-specific vim plugin directory, probably ~/.vim/plugin/\n\n\tTo install documentation, copy README (this file) to your vim\n\tdocumentations directory, such as ~/.vim/doc/vlh.txt.  After copying\n\tthe documentation, execute \":helptags ~/.vim/doc\" from within vim to\n\tmake the documentation accessible.\n\nTo install from source:\n\n\tInstall the requirements, additionally installing rake version 0.8.1\n\tor higher, and then execute\n\n\t\trake install\n\n\twhich will install the plugin and documentation.\n\n\nOnce VLH is installed, make sure to edit your ~/.vimrc to include\n\n\tlet g:vlh_repository_dir = \"/path/where/youd/like/to/store/localhistory\"\n\nI suggest using ~/.vim/localhistory.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9505",
+      "filename": "vimlocalhistory-0.2.tar.gz",
+      "script_version": "0.2",
+      "date": "2008-11-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11273",
+        "user_name": "hjdivad",
+        "first_name": "David",
+        "last_name": "JH",
+        "email": "vim at hjdivad.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

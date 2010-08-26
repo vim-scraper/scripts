@@ -1,0 +1,42 @@
+{
+  "script_id": "1291",
+  "name": "luarefvim",
+  "summary": "Lua reference manual",
+  "script_type": "utility",
+  "description": "This a Vim help file containing references for Lua 5.0 and 5.1, and it is -- with a few exceptions and adaptations -- a copy of the Lua 5.0 and Lua 5.1 reference manuals. Lua is a lightweight script language; see http://www.lua.org .\n\nSimilarly to CRefVim (from where a lot of ideas were drawn), you can easily search for references for words under the cursor, visually selected words, and manual contents.",
+  "install_details": "This reference consists of three files: the manual itself, lua50refvim.txt for Lua version 5.0 and lua51refvim.txt for Lua version 5.1, a plugin file, luarefvim.vim, to load key bindings, and a help file syntax extension, help.vim. To install luarefvim, copy the manual for the version you want, the plugin and the help files to their respective locations: lua5Xrefvim.txt to $VIMUSERHOME/doc, luarefvim.vim to $VIMUSERHOME/plugin, and help.vim to $VIMUSERHOME/after/syntax, where $VIMUSERHOME is $HOME/.vim on Un*x systems or $HOME/vimfiles on Win32.\n\nFinally, to generate the tags, change dir to $VIMUSERHOME/doc, start Vim, and issue ':helptags .' . For more information on installing help files, call ':help add-local-help'.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6470",
+      "filename": "luarefvim.zip",
+      "script_version": "0.2",
+      "date": "2006-11-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2023",
+        "user_name": "Kozure",
+        "first_name": "Luis",
+        "last_name": "Carvalho",
+        "email": "lexcarvalho at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added reference manual for Lua version 5.1."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4321",
+      "filename": "luarefvim.zip",
+      "script_version": "0.1",
+      "date": "2005-05-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2023",
+        "user_name": "Kozure",
+        "first_name": "Luis",
+        "last_name": "Carvalho",
+        "email": "lexcarvalho at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

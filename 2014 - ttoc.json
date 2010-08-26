@@ -1,0 +1,74 @@
+{
+  "script_id": "2014",
+  "name": "ttoc",
+  "summary": "A regexp-based table of contents of the current buffer",
+  "script_type": "utility",
+  "description": "This plugin tries to duplicate the functionality of Marc Weber's \noutline.vim (vimscript #1947) on the basis of its description and of \nvim's own |:g|. Other than outline.vim, it relies on tlib\n(vimscript #1863).\n\nThe TToC[!] command can be used to get a quick table of contents of the \nbuffer based on a given regular expression. The regexp can be defined on \nthe command line, in window (w:ttoc_rx), buffer-local (b:ttoc_rx) \nvariables or in global filetype-specific (g:ttoc_rx_{&filetype}) \nvariables. The order actually is: [wbg]:ttoc_rx_{&filetype} > \n[wbg]:ttoc_rx.\n\nIn the list view, you can select a line and either preview it (<c-p>), \njump there (<), close the list and jump there (<cr>).\n\nExample:\n\n  \" Use the default settings for the current file-type\n  :TToC\n  \" Show all words beginning at column 1\n  :TToC ^\\w\n  \" Show 'if' statements (but not the concluding 'then' statement)\n  :TToC ^\\s*if\\>.\\{-}\\ze\\s\\+then\n  \" Show 'if' statements and 3 extra lines\n  :3TToC! \\<if\\>\n\nTToC only shows the matching string. TToC! works somewhat like |:g| in \nshowing the whole line, only that you can browse/filter the list and \nselect an item after reviewing the results. \n",
+  "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties, please make \nsure, you have the current version of vimball (vimscript #1502) \ninstalled.\n\nThis script requires tlib (vimscript #1863) to be installed.\n\nSuggested maps (to be set in ~/.vimrc): >\n    noremap  <Leader>cc       :TToC<cr>\n    inoremap <Leader>cc       <c-o>:TToC<cr>\n    noremap  <Leader>c<space> :TToC!\n    inoremap <Leader>c<space> <c-o>:TToC!\n\nThe following gives you a |[I| or |]I| like experience but with a IMHO more \nconvenient UI:\n\n    noremap  <Leader>c#       :TToC! <c-r><c-w><cr>\n    inoremap <Leader>c#       <c-o>:TToC! <c-r><c-w><cr>\n\n\nAlso available via git\nhttp://github.com/tomtom/ttoc_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11512",
+      "filename": "ttoc.vba.gz",
+      "script_version": "0.5",
+      "date": "2009-10-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Handle multi-line regexps (thanks to M Weber for pointing this out)\n- Changed key for \"trace cursor\" from <c-t> to <c-insert>.\n- Require tlib 0.32\n- Fill location list\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9549",
+      "filename": "ttoc.vba.gz",
+      "script_version": "0.3",
+      "date": "2008-11-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Highlight the search term on partial searches\n- Defined :Ttoc as synonym for :TToC\n- Defined :Ttocbg to open a toc in the \"background\" (leave the focus/cursor in the main window)\n- Require tlib 0.21\n- Experimental: ttoc#Autoword(onoff): automatically show lines containing the word under the cursor; must be enabled for each buffer.\n- Split plugin into (autoload|plugin)/ttoc.vim\n- Follow/trace cursor functionality (toggled with <c-t>): instantly preview the line under cursor.\n- Restore original position when using preview"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7883",
+      "filename": "ttoc.vba.gz",
+      "script_version": "0.2",
+      "date": "2007-11-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- <c-e> Run a command on selected lines.\n- g:ttoc_world can be a normal dictionary.\n- Use tlib#input#ListD() instead of tlib#input#ListW().\n- Require tlib >= 0.14\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7634",
+      "filename": "ttoc.vba.gz",
+      "script_version": "0.1",
+      "date": "2007-09-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

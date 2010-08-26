@@ -1,0 +1,42 @@
+{
+  "script_id": "1409",
+  "name": "OMNeT++ NED syntax file",
+  "summary": "Syntax file for OMNeT++ NED files",
+  "script_type": "syntax",
+  "description": "I didn't find a syntax file for the network description language of the OMNeT++ network simulator. Its files are called *.ned.\n\nThis syntax file just does basic highlighting and doesn't know any regions or areas. I will maybe change this when I learned how to do it ;)\n\nIf somebody has a better syntax file for this filetype, please tell me!",
+  "install_details": "copy to ~/.vim/syntax\nadd to your ~/.vimrc:\n   au BufNewFile,BufRead *.ned set syntax=ned\nthat should be all.\nPreviously, I had the line \n   au Filetype ned set syntax=ned\nBut I found out that this doesn't work with every installation, so use the one above...",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4813",
+      "filename": "ned.vim",
+      "script_version": "0.2",
+      "date": "2005-11-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4444",
+        "user_name": "tteifel",
+        "first_name": "Timo",
+        "last_name": "Teifel",
+        "email": "timo at teifel-net.de",
+        "homepage": "http://www.teifel.net"
+      },
+      "release_notes": "new keywords added\nrecognises numbers\nmade it more portable (I read the right chapter in the help ;-) )"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4809",
+      "filename": "ned.vim",
+      "script_version": "0.1",
+      "date": "2005-11-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4444",
+        "user_name": "tteifel",
+        "first_name": "Timo",
+        "last_name": "Teifel",
+        "email": "timo at teifel-net.de",
+        "homepage": "http://www.teifel.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

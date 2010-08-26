@@ -1,0 +1,106 @@
+{
+  "script_id": "679",
+  "name": "fluxbox.vim",
+  "summary": "syntax and indent files for fluxbox wm menu file",
+  "script_type": "syntax",
+  "description": "This includes two files, one is a syntax file for the menu file of the fluxbox (and also blackbox) window manager, and the other is an indent file for the same menu file. The indent file depends on the GenericIndent function in the genindent.vim plugin (vimscript #678).",
+  "install_details": "In a runtimepath directory:\ngunzip fluxbox.tar.gz\ntar xvf fluxbox.tar\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3555",
+      "filename": "fluxbox.tar.gz",
+      "script_version": "1.5",
+      "date": "2004-10-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "1. Added the 'commanddialog' keyword2. Fixed icon support to allow icons for menu entries.3. Fixed folding, so that '# [end]' doesn't close a fold."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3421",
+      "filename": "fluxbox.tar.gz",
+      "script_version": "1.4",
+      "date": "2004-09-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Updated for fluxbox version 0.9.10"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2696",
+      "filename": "fluxbox.tar.gz",
+      "script_version": "1.3",
+      "date": "2004-01-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Added the 'separator' keyword introduced in v0.9.7"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2360",
+      "filename": "fluxbox.tar.gz",
+      "script_version": "1.2",
+      "date": "2003-09-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Changed comment pattern in the syntax file so that a comment that appears after a menu entry is highlighted (suggested by Eike von Seggern)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2084",
+      "filename": "fluxbox.tar.gz",
+      "script_version": "1.1",
+      "date": "2003-06-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "bugfix: changed set to setlocal in the syntax file (thanks to Henry van Roessel)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2081",
+      "filename": "fluxbox.tar.gz",
+      "script_version": "1.0",
+      "date": "2003-06-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

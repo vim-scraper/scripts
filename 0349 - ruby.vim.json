@@ -1,0 +1,26 @@
+{
+  "script_id": "349",
+  "name": "ruby.vim",
+  "summary": "Ruby language compiler plugin",
+  "script_type": "utility",
+  "description": "NB: The ruby compiler plugin is now part of the vim-ruby project at rubyforge.org.  Please visit the vim-ruby project page for the latest information about this plugin and the vim-ruby project.  This page no longer contains the most recent version of the plugin.\n\nhttp://vim-ruby.rubyforge.org\nhttp://rubyforge.org\n\nThis is a compiler plugin for the Ruby language.  Not terribly glamorous, but it does take advantage of multi-line errorformats, and it's a little more graceful than the errorformats I've seen so far.",
+  "install_details": "First, make sure it's not already installed.  I've been told it will be included in future releases of Vim (> 601), so check that $VIMRUNTIME/compiler/ruby.vim doesn't already exist before attempting to install it.\n\n...unless of course, it's a newer revision.  =)\n\nSimply place the ruby.vim file in your compiler plugin subdirectory and either source it by hand or enable filetype plugins (':filetype plugin on').",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1040",
+      "filename": "ruby-0.2.tar.gz",
+      "script_version": "0.2",
+      "date": "2002-07-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "802",
+        "user_name": "timmy",
+        "first_name": "Tim",
+        "last_name": "Hammerquist",
+        "email": "penryu at gmail.com",
+        "homepage": "http://src.penryu.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

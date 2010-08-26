@@ -1,0 +1,58 @@
+{
+  "script_id": "2661",
+  "name": "plumbing.vim",
+  "summary": "Syntax highlighting for Plan 9 plumbing files",
+  "script_type": "syntax",
+  "description": "This script will color highlight Plan 9's plumber configuration files (plumbing).\n\nAll of the different elements of a plumbing file can be colored separately, per your own preference.  Here is an example:\n\nhttp://img194.imageshack.us/img194/4161/plumbingvimsyntax.png",
+  "install_details": "1 - Put the plumbing.vim file in to your $HOME/.vim/after/syntax directory.\n2 - Put this line in to your $HOME/.vimrc:\n\n     set syntax on\n\n3 - Put the following line in your plumbing file:\n\n     # vim: filetype=plumbing\n\n4 - Quit and restart vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10735",
+      "filename": "plumbing.vim",
+      "script_version": "1.2",
+      "date": "2009-06-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos at spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Two bugfixes: 1 - variables werent' being highlighted separately when part of a \"start\" verb.  2 - the arguments to the \"isFile\" verb weren't being highlighted at all."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10734",
+      "filename": "plumbing.vim",
+      "script_version": "1.1",
+      "date": "2009-06-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos at spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a minor bug that was keep variables from being highlighted separately when they were part of the arguments to the \"set\" verb."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10732",
+      "filename": "plumbing.vim",
+      "script_version": "1.0",
+      "date": "2009-06-04",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos at spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "825",
+  "name": "find_in_files",
+  "summary": "To find a string in the files in current directory",
+  "script_type": "utility",
+  "description": "All of us when working in list of files come across the problem of searching for string in the files and then if the string is found, we manually open that file and go to a specific line. \n\nAll this can be done with a stroke of key using this script.\n\nThis script is used to find a string in files in current directory. This script copies the finding in a buffer and opens it in the same window. \n\nTo go to a particular line/file in which the string is found. Click F2 on the top of the line in the buffer.\n\nProcedure:\n1. execute :CALL \"<string>\" in gvim\n\tThis will execute windows findstr command and will open the file in the same buffer\n2. Go to a line/file in the new buffer that you want to open.\n3. Press F2\n\nResult:\nIt will open up a file in a same window and will go to that line.\n\nHow to Execute:\n1. :CALL \"<string>\"\n\tWill search for String in all the files in current dorectory\n2. Press <F3>, this will search all files in directory for string on which the cursor exists\n3. Press <F4>, this will seach current file for string on which the cursor exists.",
+  "install_details": "1. untar the file\n2. copy find_in_files.vim in plugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2522",
+      "filename": "find_in_files.zip",
+      "script_version": "1.01",
+      "date": "2003-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3881",
+        "user_name": "sappy",
+        "first_name": "Sappy",
+        "last_name": "Goel",
+        "email": "sappygoel at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "changes to use grep and copen as suggested by Gary Johnson"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2498",
+      "filename": "find_in_files.zip",
+      "script_version": "1.0",
+      "date": "2003-11-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3881",
+        "user_name": "sappy",
+        "first_name": "Sappy",
+        "last_name": "Goel",
+        "email": "sappygoel at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

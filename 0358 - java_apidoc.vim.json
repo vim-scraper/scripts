@@ -1,0 +1,138 @@
+{
+  "script_id": "358",
+  "name": "java_apidoc.vim",
+  "summary": "Java API documentation viewer (JavaDoc)",
+  "script_type": "ftplugin",
+  "description": "When viewing/editing a Java source file, put the cursor on an 'import...' line, or on a class name such as 'String', and then press F2. A browser opens showing the API (generated JavaDoc HTML pages) for the imported package or class. The mechanism can be extended to include your own generated JavaDocs.",
+  "install_details": "Put this file in ~/.vim/ftplugin (or wherever Vim looks for plugins), then edit the code following the three lines marked in the script with CONFIGURATION to your taste.\n\nCONFIGURATION - BROWSER\nOn a recent RedHat distribution, this should work (as will 'dillo', 'opera', 'ygti'), Windows users will probably want to set this to \"explorer\":\n-----------------------------------------------------------------------------\nau FileType java let browser=\"htmlview\"\n-----------------------------------------------------------------------------\n\nCONFIGURATION - JAVA API PATH\nSet the javadoc_path variable to a comma separated list of paths to  the tops of the Javadoc trees. Change these to match your api locations. Windows users: You should use double backslashes when specifying path names, e.g. C:\\\\jdk\\\\doc\\\\api\n-----------------------------------------------------------------------------\nlet javadoc_path=\"/home/etch/www/dox/java/j2se1.4.2/api\"\n-----------------------------------------------------------------------------\n\nCONFIGURATION - KEY ASSIGNMENT\nThis is where you, er, assign the key you want to use.\n-----------------------------------------------------------------------------\nnmap <F2> :call OpenJavadoc()<CR><CR>\n-----------------------------------------------------------------------------",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3152",
+      "filename": "java_apidoc.vim",
+      "script_version": "3.1.1",
+      "date": "2004-06-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "856",
+        "user_name": "etch007",
+        "first_name": "Paul",
+        "last_name": "Etchells",
+        "email": "etch at etch.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Version number in the comment was wrong - otherwise identical to the last version. Thanks to eagle-eyed Mike Arms for spotting that."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3140",
+      "filename": "java_apidoc.vim",
+      "script_version": "3.1",
+      "date": "2004-06-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "856",
+        "user_name": "etch007",
+        "first_name": "Paul",
+        "last_name": "Etchells",
+        "email": "etch at etch.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Improved Win32 compatability.  Thanks to W. H. Jou for the patch."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2885",
+      "filename": "java_apidoc.vim",
+      "script_version": "3.0",
+      "date": "2004-03-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "856",
+        "user_name": "etch007",
+        "first_name": "Paul",
+        "last_name": "Etchells",
+        "email": "etch at etch.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Now same script works on 'nix and win32."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2798",
+      "filename": "java_apidoc.vim",
+      "script_version": "1.2",
+      "date": "2004-03-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "856",
+        "user_name": "etch007",
+        "first_name": "Paul",
+        "last_name": "Etchells",
+        "email": "etch at etch.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Now features fast file indexing by using the allclasses-noframe.html or allclasses-frame.html generated during a javadoc pass - well worth having!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2603",
+      "filename": "java_apidoc.vim",
+      "script_version": "1.1",
+      "date": "2003-12-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "856",
+        "user_name": "etch007",
+        "first_name": "Paul",
+        "last_name": "Etchells",
+        "email": "etch at etch.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Skips 'class-use' folders by default, but these can be searched by setting let s:skip_class_use = 1 at the top of the script."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1407",
+      "filename": "java_apidoc.vim",
+      "script_version": "2.0",
+      "date": "2002-11-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "878",
+        "user_name": "kosiew",
+        "first_name": "kam onn",
+        "last_name": "siew",
+        "email": "kosiew at tm.net.my",
+        "homepage": ""
+      },
+      "release_notes": "13-Nov-02 Wed 08:18:11 PM \nmodified to work in Windows environment\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1062",
+      "filename": "java_apidoc.vim",
+      "script_version": "1.0.1",
+      "date": "2002-07-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "856",
+        "user_name": "etch007",
+        "first_name": "Paul",
+        "last_name": "Etchells",
+        "email": "etch at etch.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Some minor errors in the comments, viz: java_api_path should be javadoc_path"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1061",
+      "filename": "java_apidoc.vim",
+      "script_version": "1.0",
+      "date": "2002-07-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "856",
+        "user_name": "etch007",
+        "first_name": "Paul",
+        "last_name": "Etchells",
+        "email": "etch at etch.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

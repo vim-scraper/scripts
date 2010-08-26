@@ -1,0 +1,314 @@
+{
+  "script_id": "2845",
+  "name": "ywchaos",
+  "summary": "Journal taking and diary making, to record all the chaos of your life :)",
+  "script_type": "utility",
+  "description": "It's at the very early stage. If you feel the script is useful but still not so convenient in the journal taking and chaos orgnizing with vim in KISS way, any feedback is welcome, if you have thoughts on improvement, any advice is appreciated! My email is:\n\n        ywupub AT gmail DOT com\n\n1. Journal recording.\n\nHit the key <Leader>n (<Leader> normally means \\ on your keyboard if you haven't changed the <Leader> definition.) to create a new journal entry. ywchaos will insert a new entry with timestamp under today's datestamp for you.\n\n2. Tag support.\n\nyou can add a tag with the format of \"@tag\"(Without the double quotes) at anywhere you want in a file, or use \"@tag1|tag2\" for creating multi-tags, you can also use \"@tag:subtag\" to define sub-tags. <tab> can be used for autocompletion after '@', '|' or ':'.\nAfter a \"@tag\" has been defined, next time you edit ywchaos file, ywchaos will add the \"tag\" to TAGS list region which is on the very first part of the file. You can also use <Leader><C-l> to reflesh the TAGS list region manually.\n\n(subtag support is experimental, not so convenient for subtag adding at present, you much create tag then :subtag for every subtag.)\n\n3. Folding & highlighting & picture supporting.\n\nywchaos folds the file according to the datestamp[mm/dd/yyyy], the timestamp[hh:mm:ss], and the snip. Just a few highlightings(tags, journal entries) for ywchaos itself are supported at present, ywchaos is to manage the..., chaos, so I've no idea which stuffs should be highlighted, if you have a good advice, please let me know.\n\nBUT great news is, you can insert any other different filetypes of snip as you like, and use their syntaxs to hightlight(if they exists), so ywchaos can actually support all highlightings as vim supports! Only syntax is supported, not indentation. I don't know if filetype's indentation can be integrated in one file, if you know, please let me know.\n\nywchaos makes the insertion of picture is easy, you can hit <Leader>i, select the html tag, then use the auto completion to insert a <img src=> tag(auto-completion for file name after '=' is supported), then you can rename ywchaos file from foo.ywchaos to foo.html, then see the pictures in your browser.\n\nSpecial note for txtfmt users: you can use set ft=ywchaos.txtfmt, instead of simply ft=ywchaos to make ywchaos and txtfmt[http://www.vim.org/scripts/script.php?script_id=2208] work together. Thanks Brett Stahlman for such nice script to turn vim into a word processor :) You could go to http://txtfmt.webs.com/ywchaos.htm for the screenshots!\n\n4. keybinding:\n\n<Leader>n          Create a new journal entry with the format of \"$datestamp\\n$timestamp\" and start editing.\n\n<Leader>i          ywchaos will prompt you to insert html tags or other filetype of snips as you like(auto-completion is supported), and use the corresponding syntax to highlight the html tag or snip region.\n\n<Tab>       When on TAGS list region, unfolds all the entries which have the tag under the cursor, another <Tab> will restore to old fold way, otherwise do folding/unfolding toggling. When in insert mode, <tab> will try to complete the tag name after '@' or '|'.\n\n<Leader><C-l>      Refresh the TAGS list region manually.\n\n<C-]>       To vimgrep the tag(auto-completion is supported) for current file.\n\n5. A sample test.ywchaos(Trick: you can name it to test.htm to view the picture):\n\n------------------------------------------------\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n<pre style=\"word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap\" >\n<TAGS>\nChinese \nProgramming      C\nvim              ywchaos\n&#20013;&#25991; \n</TAGS>\n\nLogo pic:\n<img src=http://www.google.com/intl/en_ALL/images/logo.gif >\n\n11/18/2009\n22:40:40 @&#20013;&#25991;|Chinese\n&#36825;&#26159;&#20013;&#25991;&#27979;&#35797;. This is a test for Chinese.\n11/08/2009 \n15:52:00 @vim:ywchaos \nI've created a new ywchaos entry in vim. \nIt's not so good, I'll email developer to improve it! \n\nFollowing the a C snip that I'm learning for programming! @Programming:C \n<BEGINSNIP=c> \n#include <stdio.h> \n/* Just for example. */\nmain() \n{ \n    int i; \n    printf(\"Hello, ywchaos!\\n\"); \n} \n<ENDSNIP=c> \n\nvim:ft=ywchaos:\n------------------------------------------------\n\n6. Thanks:\n\nChristian Brabandt for the help with the function that gets tags in file.\nXbeta for the inspiration of html tag support[http://xbeta.info/pre-txt.htm]",
+  "install_details": "1. Unzip(tar jxvf) ywchaos.tar.bz2 into your ~/.vim/(or vimfiles/ when on windows).\n\nywchaos has the following files:\n\n    plugin/ywchaos.vim\n    ftplugin/ywchaos.vim\n    syntax/ywchaos.vim\n\n2. Create a new file with a line at the very end of the file:\n\n    vim:ft=ywchaos:\n\n3. That's all. Now close the file then re-open it. If modeline is annoying, you can add one line in your ~/.vimrc:\n\n    au BufRead,BufNewFile *.ywchaos set ft=ywchaos\n\nThen next time when you want to create a new ywchaos file, named it with foo.ywchaos is enough.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12468",
+      "filename": "ywchaos-0.14.tar.bz2",
+      "script_version": "0.14",
+      "date": "2010-02-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Reserved first two lines for html pre tags to fix html encoding issue, please see the example file and adjust for your own file.\n2) Changed folding functions. Now use <tab> in tags list region to toggle tags view or dates view.\n3) Fixed bug in new entry creation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12339",
+      "filename": "ywchaos-0.13.tar.bz2",
+      "script_version": "0.13",
+      "date": "2010-02-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Implemented html syntax, now you can rename ywchaos file to .html to view the pictures.\n2. Added simplist html tags insertion & completion support.\n3. Changed Tag list region to start from 2nd line. 1st line reserves for html pre tag.\nPlease take the test file in the document for a try!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11895",
+      "filename": "ywchaos-0.12.tar.bz2",
+      "script_version": "0.12",
+      "date": "2009-12-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Fixed bug that cursor position may change after refresh the TAGS list region.\n2. Improved the highlight after tag name changed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11817",
+      "filename": "ywchaos-0.11.tar.bz2",
+      "script_version": "0.11",
+      "date": "2009-11-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Tag grep(<C-]>) and tag outlining(<TAB>) now differ well with the subtags sharing a same name which in different parent tags.\n2) Improved TAGS list region generation function."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11770",
+      "filename": "ywchaos-0.10.tar.bz2",
+      "script_version": "0.10",
+      "date": "2009-11-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Improved TAGS list region generating function to prevent the lost of TAGS header.\n2) Fixed the bug of messing up the highlighting when inserting multi filetypes of snips.\n3) Fixed bug of vimgrep(<C-]>) for the multi-tag & subtag's matching.\n4) Ignore case in tags highlighting.\n5) Improved highlighting. Highlights accroding to English *word* and Chinese *charactors* .\n6) Removed '@' from the option of 'iskwd'."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11736",
+      "filename": "ywchaos-0.9.tar.bz2",
+      "script_version": "0.9",
+      "date": "2009-11-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Arrange the subtags alphabetically.\n2. Improved <Tab> for subtag completion."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11729",
+      "filename": "ywchaos-0.8.tar.bz2",
+      "script_version": "0.8",
+      "date": "2009-11-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Fixed <C-]> not working for the new format of TAGS list region.\n2) Improved TAGS list region generating function."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11721",
+      "filename": "ywchaos-0.7_2.tar.bz2",
+      "script_version": "0.7_2",
+      "date": "2009-11-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug with the var undefined..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11720",
+      "filename": "ywchaos-0.7.tar.bz2",
+      "script_version": "0.7",
+      "date": "2009-11-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "UPGRATE NOTE!!!: Delete the TAGSLINE manually please, new version use a different fomat which is called TAGS list region now. Please see the document and the sample file for detail.\n1) Tagsline format has changed to TAGS list region. Also note that the modeline should be change to the end of file if you use modeline.\n2) Added sub-tags supported which defined by @tag:subtag.\n3) Improved to test condition that if <tab> should try to complete on '|' and ':'.\n4) Fixed minor highlighting bug."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11705",
+      "filename": "ywchaos-0.6.tar.bz2",
+      "script_version": "0.6",
+      "date": "2009-11-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Added <tab> autocompetion for tag name when in insert mode after '@' and '|'.\n2) Added folding support on snips.\n3) Added syntax of @tag1|tag2 to support multi-tags.\n4) Improved syntax highlighting.\n5) Removed useless buffer variable."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11704",
+      "filename": "ywchaos-0.5_2.tar.bz2",
+      "script_version": "0.5_2",
+      "date": "2009-11-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug that snips can't be highlighted when start editing."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11703",
+      "filename": "ywchaos-0.5.tar.bz2",
+      "script_version": "0.5",
+      "date": "2009-11-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Supports inserting any other filetypes of snip and their highlightings!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11695",
+      "filename": "ywchaos-0.4.tar.bz2",
+      "script_version": "0.4",
+      "date": "2009-11-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Suppressed <Tab> no fold found's warning.\n2) Fixed bug of <Tab> behavior on TAGSLINE.\n3) Added <Leader><C-l> for easing the TAGSLINE refresh."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11691",
+      "filename": "ywchaos-0.3.tar.bz2",
+      "script_version": "0.3",
+      "date": "2009-11-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "TAGSLINE treament improved.\n<Tab> key map improved.\nAccept 'yy' and 'yyyy' as year string, but 'yyyy' is recommended.\nMinor bugs fixed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11687",
+      "filename": "ywchaos-0.2.tar.bz2",
+      "script_version": "0.2",
+      "date": "2009-11-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1. More highlightings support.\n2. Timestamp format changed to show second now.\n3. Timestamp entry can be folded now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11674",
+      "filename": "ywchaos-0.1_2.tar.bz2",
+      "script_version": "0.1_2",
+      "date": "2009-11-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed wrong package suffix, sorry for inconvenient!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11673",
+      "filename": "ywchaos-0.1_2.vim",
+      "script_version": "0.1_2",
+      "date": "2009-11-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed non-work highlighting and some minor bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11672",
+      "filename": "ywchaos-0.1_1.tar.bz2",
+      "script_version": "0.1_1",
+      "date": "2009-11-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix function name typo."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11671",
+      "filename": "ywchaos-0.1.tar.bz2",
+      "script_version": "0.1",
+      "date": "2009-11-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

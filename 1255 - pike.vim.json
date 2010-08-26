@@ -1,0 +1,122 @@
+{
+  "script_id": "1255",
+  "name": "pike.vim",
+  "summary": "pike syntax highlighting",
+  "script_type": "syntax",
+  "description": "Borrowed a few things from (the much superior) lpc.vim by Shizhu Pan -- which fixed bug with parens among other things, quit highlighting arrays/mappings as a single giant identifier, and updated the predef function list dramatically.\n\nIt is otherwise the original syntax file written by Francesco Chemolli.",
+  "install_details": "It's probably simplest to just put this file in your ~/.vim dir, which (by default) is at the top of your runtimepath.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4161",
+      "filename": "pike.vim",
+      "script_version": "1.0.7",
+      "date": "2005-04-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7339",
+        "user_name": "spottedkangaroo",
+        "first_name": "Paul",
+        "last_name": "Miller",
+        "email": "vimfan at voltar-confed.org",
+        "homepage": "http://voltar.org/"
+      },
+      "release_notes": "The pikeRange highlighter was missing ranges without a number on both ends.   This syntax file appears to finally be relatively bug free..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4150",
+      "filename": "pike.vim",
+      "script_version": "1.0.6",
+      "date": "2005-04-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7339",
+        "user_name": "spottedkangaroo",
+        "first_name": "Paul",
+        "last_name": "Miller",
+        "email": "vimfan at voltar-confed.org",
+        "homepage": "http://voltar.org/"
+      },
+      "release_notes": "Sadly, I had introduced a bug in the last \"release.\"  I'm obviously not very good at this, but I think _this_ version may be the last one for a while. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4149",
+      "filename": "pike.vim",
+      "script_version": "1.0.5",
+      "date": "2005-04-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7339",
+        "user_name": "spottedkangaroo",
+        "first_name": "Paul",
+        "last_name": "Miller",
+        "email": "vimfan at voltar-confed.org",
+        "homepage": "http://voltar.org/"
+      },
+      "release_notes": "By copying how perl.vim does numbers, I was able to fix a bunch of problems with the number highlighting in pike.vim.  *whew*  This should be the last update for a while."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4140",
+      "filename": "pike.vim",
+      "script_version": "1.0.3",
+      "date": "2005-04-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7339",
+        "user_name": "spottedkangaroo",
+        "first_name": "Paul",
+        "last_name": "Miller",
+        "email": "vimfan at voltar-confed.org",
+        "homepage": "http://voltar.org/"
+      },
+      "release_notes": "Yet another tiny update.  The special functions are nolonger predef:: colored."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4139",
+      "filename": "pike.vim",
+      "script_version": "1.0.2",
+      "date": "2005-04-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7339",
+        "user_name": "spottedkangaroo",
+        "first_name": "Paul",
+        "last_name": "Miller",
+        "email": "vimfan at voltar-confed.org",
+        "homepage": "http://voltar.org/"
+      },
+      "release_notes": "yet another miniature fix.  throw is an Exception instead of a predef:: now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4138",
+      "filename": "pike.vim",
+      "script_version": "1.0.1",
+      "date": "2005-04-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7339",
+        "user_name": "spottedkangaroo",
+        "first_name": "Paul",
+        "last_name": "Miller",
+        "email": "vimfan at voltar-confed.org",
+        "homepage": "http://voltar.org/"
+      },
+      "release_notes": "I changed the way the predef:: matching is done so it won't hit member functions that have a co-incidentally similar name."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4136",
+      "filename": "pike.vim",
+      "script_version": "1.0",
+      "date": "2005-04-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7339",
+        "user_name": "spottedkangaroo",
+        "first_name": "Paul",
+        "last_name": "Miller",
+        "email": "vimfan at voltar-confed.org",
+        "homepage": "http://voltar.org/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

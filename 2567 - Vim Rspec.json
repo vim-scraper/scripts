@@ -1,0 +1,74 @@
+{
+  "script_id": "2567",
+  "name": "Vim Rspec",
+  "summary": "Enable the use of the spec command inside Vim",
+  "script_type": "utility",
+  "description": "This plugin make easy to run the spec command inside Vim. You need Hpricot (http://wiki.github.com/why/hpricot)  OR xsltproc (http://www.xmlsoft.org/XSLT/xsltproc2.html) and grep (http://www.gnu.org/software/grep) to use it. Hpricot takes precedence over xsltproc. \nThere are four files on the package: the Vim script, the Ruby script, the XSL file and the syntax file.\n\nThere are two commands available: \n\nYou can run RunSpec and spec will run with the current file (if it's a *_spec.rb file) \nYou can run RunSpecs and spec will run with all the files inside the spec directory. \n\nAfter some of the commands above runs, it will open a new window with the result, where you can click on the error lines where there's a file path with the line number and it will open on a new window, moving the cursor to the line where the error is.\n\nOf course, you can create some mappings to make easier to call the commands.\n\nThe project is hosted at Github: http://github.com/taq/vim-rspec",
+  "install_details": "To install, unpack the files on your ~/.vim directory and source it to make it available. You can also use the Makefile to install the files, just type:\nmake install\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10130",
+      "filename": "vim-rspec-0.0.5.zip",
+      "script_version": "0.0.5",
+      "date": "2009-03-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "Added folding to the passed specs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10113",
+      "filename": "vim-rspec-0.0.4.zip",
+      "script_version": "0.0.4",
+      "date": "2009-03-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "Implemented parsing with hpricot."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10096",
+      "filename": "vim-rspec-0.0.3.zip",
+      "script_version": "0.0.3",
+      "date": "2009-03-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "Implemented the 'not implemented' status."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10091",
+      "filename": "vim-rspec-0.0.2.zip",
+      "script_version": "0.0.2",
+      "date": "2009-03-03",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

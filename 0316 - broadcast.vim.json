@@ -1,0 +1,26 @@
+{
+  "script_id": "316",
+  "name": "broadcast.vim",
+  "summary": "Send keystrokes to all VIM windows",
+  "script_type": "utility",
+  "description": "This plugin lets you broadcast to all GVIM windows (or all other windows except current).  Especially handy for someone who prefers to open each file in a separate window instead of a separate buffer.  Lots of things possible, for example:\n\nGlobally replace text across all GVIM windows:\n   :Bcast :%s/oldtext/newtext/g<CR>\n\nExit all other opened GVIM windows:\n   :Bcast0 :q<CR>\n",
+  "install_details": "Place script in your plugin directory, then use \":Bcast <keys>\" or \":Bcast0 <keys>\" to invoke.\nVIM needs to be compiled with +clientserver.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=920",
+      "filename": "broadcast.vim",
+      "script_version": "0.9",
+      "date": "2002-06-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "653",
+        "user_name": "omoikane",
+        "first_name": "Don",
+        "last_name": "Yang",
+        "email": "omoikane at uguu.org",
+        "homepage": "http://uguu.org/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

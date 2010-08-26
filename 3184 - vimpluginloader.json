@@ -1,0 +1,74 @@
+{
+  "script_id": "3184",
+  "name": "vimpluginloader",
+  "summary": "Plugin that helps to create complicated vim scripts",
+  "script_type": "utility",
+  "description": "This plugin provides the ability to autoload other plugins on demand, create \nglobal functions and commands and share plugin's functionality.\n\nFeatures:\n    &#8729; Autoloading plugins on FuncUndefined event.\n    &#8729; Autoloading plugins when their command is called.\n    &#8729; Autoloading plugins when their mapping is used.\n    &#8729; Autoloading plugins when their functionality is required.\n    &#8729; Displaying plugins' status.\n    &#8729; Unloading and reloading plugins (useful for plugin developers).\n    &#8729; Searching for a function number through registered plugins.",
+  "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"vimpluginloader\"]) and add ``call scriptmanager#Activate([\"vimpluginloader\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13664",
+      "filename": "vimpluginloader-1.1.3.tar.gz",
+      "script_version": "1.1.3",
+      "date": "2010-08-24",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added lazygetfunctions() and run() functions useful for cyclic dependency resolution"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13614",
+      "filename": "vimpluginloader-1.1.2.tar.gz",
+      "script_version": "1.1.2",
+      "date": "2010-08-18",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Fixed completion for vim7.3"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13552",
+      "filename": "vimpluginloader-1.1.tar.gz",
+      "script_version": "1.1",
+      "date": "2010-08-11",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added `autocommands'"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13538",
+      "filename": "vimpluginloader-1.0.tar.gz",
+      "script_version": "1.0",
+      "date": "2010-08-10",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

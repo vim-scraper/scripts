@@ -1,0 +1,26 @@
+{
+  "script_id": "1187",
+  "name": "cream-replacemulti",
+  "summary": "Replace text across multiple files",
+  "script_type": "utility",
+  "description": "\nThis script replaces text across multiple files. It is a pure Vim implementation and does not depend on external utilties that do similar things (like sed, grep, cat, or Find). As such, it is cross-platform and has been tested on both Windows95/XP and Linux.\n\nReplace Multi is intended to be used in the GUI version of Vim, gVim. It presents a rather hackish dialog to take user input for the Find, Replace, and Path components and present options for Case Sensitivity and the use of Vim's Regular Expressions. (Some day in the future it might be adapted to work from the command line without a dialog.)\n\nIn testing, Replace Multi performed a replacment operation on 1000 small files in 25 seconds. (2.80Ghz Pentium 4 Windows XP machine with 1Gb of RAM.) Obviously Vim and system settings could vary this greatly, but as a benchmark this is about 40 files/second.\n\n\nThis is one of many custom utilities and functions for gVim from the Cream project (http://cream.sourceforge.net), a configuration of Vim for those of us familiar with Apple and Windows software.\n\n",
+  "install_details": "\nThis script is dependant on MultVals (http://www.vim.org/script.php?script_id=171).\n\nJust drop cream-replacemulti.vim and multvals.vim into your plugins directory. Then (re)start Vim and use the command line to call function Cream_replacemulti():\n\n  :call Cream_replacemulti()\n\nor use mappings like:\n\n  imap <C-F3> <C-o>:call Cream_replacemulti()<CR>\n  vmap <C-F3> :<C-u>call Cream_replacemulti()<CR>\n  nmap <C-F3>      :call Cream_replacemulti()<CR>\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3787",
+      "filename": "cream-replacemulti.vim",
+      "script_version": "1.0",
+      "date": "2005-01-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

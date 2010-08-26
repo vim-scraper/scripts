@@ -1,0 +1,218 @@
+{
+  "script_id": "1454",
+  "name": "baycomb",
+  "summary": "An intuitive Color Scheme (w/ dark & light colors)",
+  "script_type": "color scheme",
+  "description": "This is a dark scheme consisting primarily of red/orange & green/blue/purple, with support for Terminal and 7.0 users. \nBoth the original dark and a light version is included, be sure to specify the version:\n  :set background=dark   or   :set background=light\n\nColors are laid out intuitively, such that:\n         action/structure syntax is tan (Control Structure: red; Commands: orange; Operators: tannish yellow)\n         variables/values are blue (Identifier: greenish blue; Type: greyish blue; Constants: blue)                                   \n         text/special text is white/yellow (Normal: white; Title: golden; Underline: yellow; Special: brown)\nIt works very well for me coding in Html, ASP, and Perl.\n\nScreenshots (v2.1): [removed from image host, I'll need to resubmit some]\n\nRecommended programming fonts:\n  ProFont, Proggy Fonts, Dina, or Envy Code A (downloadable), as well as Lucida Console or Terminal\nSet :set linespace=0  to your preferred line spread (default is 1). \n\nComments and suggestions:               axs221@gmail.com ",
+  "install_details": "Add :colo baycomb to your Gvimrc/Vimrc, after moving baycomb to $vimruntime/colors/\n\nBE SURE to set background to dark to get the original dark colors.\n:set background=dark    or    :set background=light  in your Vimrc",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5795",
+      "filename": "baycomb.vim",
+      "script_version": "2.4",
+      "date": "2006-06-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New colors for Diff mode"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5680",
+      "filename": "baycomb.vim",
+      "script_version": "2.3",
+      "date": "2006-05-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed Comments to green, several changed to the Terminal. Thanks to Bob Lied for the suggestions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5519",
+      "filename": "baycomb.vim",
+      "script_version": "2.2",
+      "date": "2006-04-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Some adjustments mixing the old with the new."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5441",
+      "filename": "_vimrc",
+      "script_version": "VimRC",
+      "date": "2006-03-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "My current VimRC, hopefully someone will find it useful."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5430",
+      "filename": "baycomb.vim",
+      "script_version": "2.1g",
+      "date": "2006-03-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a Terminal bug from a background not being set."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5428",
+      "filename": "baycomb.vim",
+      "script_version": "2.1f",
+      "date": "2006-03-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor changes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5423",
+      "filename": "baycomb.vim",
+      "script_version": "2.1e",
+      "date": "2006-03-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added Terminal and GUI colors from the bayQua color scheme for when background is set to \"light\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5416",
+      "filename": "baycomb.vim",
+      "script_version": "2.1d",
+      "date": "2006-03-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "More changes to various Terminal colors to lower overall brightness & fatigue. Added Terminal colors for MatchParen and TabLine."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5410",
+      "filename": "baycomb.vim",
+      "script_version": "2.1c",
+      "date": "2006-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor adjustments to the new Terminal."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5405",
+      "filename": "baycomb.vim",
+      "script_version": "2.1",
+      "date": "2006-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Updated Terminal colors to flow better together and match the latest changes in GUI. Now uses more yellow/cyan than red/blue, since it appears more readable in a Windows terminal. Also changed comments to black on darkgreen. See new Terminal Screenshot."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5370",
+      "filename": "baycomb.vim",
+      "script_version": "2.0",
+      "date": "2006-03-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Many changes (see new screenshot)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5366",
+      "filename": "baycomb.vim",
+      "script_version": "1.9",
+      "date": "2006-03-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed Identifier and Operator to better blend in."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5024",
+      "filename": "baycomb.vim",
+      "script_version": "0.1",
+      "date": "2006-02-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

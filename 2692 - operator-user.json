@@ -1,0 +1,106 @@
+{
+  "script_id": "2692",
+  "name": "operator-user",
+  "summary": "Define your own operator easily",
+  "script_type": "utility",
+  "description": "*operator-user* is a Vim library plugin to provide an easy way to define your\nown |operator|.  Though there are several pitfalls to define operators, you\ndon't have to take care of them with |operator#user#define()| which are\nprovided by this library plugin.\n\nFor example, the following code defines operator \"_\" to adjust the height of\nthe current window to the same as the target range:\n\n\tmap _  <Plug>(operator-adjust)\n\tcall operator#user#define('adjust', 'Op_adjust_window_height')\n\tfunction! Op_adjust_window_height(motion_wiseness)\n\t  execute (line(\"']\") - line(\"'[\") + 1) 'wincmd' '_'\n\t  normal! `[zt\n\tendfunction\n\nYou can use this operator as follows:\n\n\t10__\tAdjust to 10 lines and show the current line at the top.\n\t_ip\tAdjust to the same height of the paragraph under the cursor.\n\nThis operator is useful to adjust the visible content in the current window.\n\nSee also |operator-user-exmaples| for more examples and explanations.\n\n\nRequirements:\n- Vim 7.2 or later\n\nOptionals:\n- |grex| (vimscript#2773)\n- |operator-replace| (vimscript#2782)\n- |wwwsearch| (vimscript#2785)\n\nLatest version:\nhttp://github.com/kana/vim-operator-user\n\nDocument in HTML format:\nhttp://kana.github.com/config/vim/operator-user.html",
+  "install_details": "...",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11340",
+      "filename": "vim-operator-user-0.0.5.zip",
+      "script_version": "0.0.5",
+      "date": "2009-09-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Add |operator#user#visual_command_from_wise_name()|.- Revise a bit of the document."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11338",
+      "filename": "vim-operator-user-0.0.4.zip",
+      "script_version": "0.0.4",
+      "date": "2009-09-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Fix a bug that it rarely fails to select the same text as a given {motion} in Normal mode.  It is caused by a bug in Vim; |v:count1| may be 0 in some cases.- Fix a bug that register designation (\"a, \"b, etc) doesn't work for user defiend operators."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11320",
+      "filename": "vim-operator-user-0.0.3.zip",
+      "script_version": "0.0.3",
+      "date": "2009-09-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "Incompatible change:- |operator#user#define()|, |operator#user#define_ex_command()|: Change the meaning of the first argument:  Old versions:\t  The argument is {lhs} to execute the operator to be defined.  New version:\t  The argument is {name} of the operator to be defined.\t  {lhs} to execute the operator is \"<Plug>(operator-{name})\".  See also |operator-user-bugs-C| for the details."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11312",
+      "filename": "vim-operator-user-0.0.2.zip",
+      "script_version": "0.0.2",
+      "date": "2009-09-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Add |operator#user#define_ex_command()|.- Add a note on a bug.  See |operator-user-bugs-B| for the details.- Remove :DefineOperator.  It's useless as a part of this library."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11029",
+      "filename": "vim-operator-user-0.0.1.zip",
+      "script_version": "0.0.1",
+      "date": "2009-07-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Rename as \"operator-user\".  The old name \"myoperator\" is not good for further works."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10902",
+      "filename": "vim-myoperator-0.0.0.zip",
+      "script_version": "0.0.0",
+      "date": "2009-06-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "script_id": "2612",
+  "name": "Rubytest.vim",
+  "summary": "Run ruby tests in vim",
+  "script_type": "utility",
+  "description": "Rubytest.vim will help you to run ruby test (including vanilla test, rspec, shoulda etc.) in vim.\n\nInstallation\n------------\n\nUnzip downloaded file and copy rubytest.vim to your ~/.vim/plugin directory.\n\nUsage\n-----\n\nAfter installation, press <Leader>t will run the test under your cursor if you are editing a ruby test file.\n\nexample:\n\n$ cd <your rails/merb root>\n$ vim test/unit/user_test.rb\n(move cursor into a test case, press <Leader>t)\n\n(<Leader> is mapping to '\\&#039 by default in vim)\n\nBy default, you will see the full result. You can change to use quickfix window by\n\n  let g:rubytest_in_quickfix = 1\n\nin your .vimrc. With this option, only test errors will be shown to you after a test run. You can quick jump to the place where the error raise in source file by moving cursor onto the error message and press return (or ctrl-w return to open a new window and jump).\n\nYou can customize the command which will be used to run the test case by settting these options in your vimrc file:\n\n  let g:rubytest_cmd_test = \"ruby %p\"\n  let g:rubytest_cmd_testcase = \"ruby %p -n '/%c/'\"\n  let g:rubytest_cmd_spec = \"spec -f specdoc %p\"\n  let g:rubytest_cmd_example = \"spec -f specdoc %p -e '%c'\"\n  let g:rubytest_cmd_feature = \"cucumber %p\"\n  let g:rubytest_cmd_story = \"cucumber %p -n '%c'\"\n\n(%p will be replaced by the path of test file, %c will be replaced by the name of test case under cursor)\n\nDefault Key Bindings\n--------------------\n\n<Leader>t: run test case under cursor\n<Leader>T: run all tests in file\n\nYou can change default key bindings:\n\n  map <Leader>\\ <Plug>RubyTestRun \" change from <Leader>t to <Leader>\\\n  map <Leader>] <Plug>RubyFileRun \" change from <Leader>T to <Leader>]\n\nThe latest code is hosted on http://github.com/janx/vim-rubytest/tree/master",
+  "install_details": "Unzip downloaded file and copy rubytest.vim to your ~/.vim/plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13145",
+      "filename": "rubytest.tar.bz2",
+      "script_version": "1.0.2",
+      "date": "2010-06-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17161",
+        "user_name": "jjjan",
+        "first_name": "jan",
+        "last_name": " ",
+        "email": "jan.h.xie at gmail.com",
+        "homepage": "http://rwsleep.blogspot.com"
+      },
+      "release_notes": "fix testunit result display in quickfix; Added describe|context patterns so we can run examples under a grouping of describe or context."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12735",
+      "filename": "rubytest.tar.bz2",
+      "script_version": "1.0.1",
+      "date": "2010-03-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17161",
+        "user_name": "jjjan",
+        "first_name": "jan",
+        "last_name": " ",
+        "email": "jan.h.xie at gmail.com",
+        "homepage": "http://rwsleep.blogspot.com"
+      },
+      "release_notes": "show full result by default"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12596",
+      "filename": "rubytest.tar.bz2",
+      "script_version": "1.0.0",
+      "date": "2010-03-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17161",
+        "user_name": "jjjan",
+        "first_name": "jan",
+        "last_name": " ",
+        "email": "jan.h.xie at gmail.com",
+        "homepage": "http://rwsleep.blogspot.com"
+      },
+      "release_notes": "There's many changes in this new release:\n* Support cucumber features\n* Support rspec drb mode\n* fix serveral bugs"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11409",
+      "filename": "rubytest.tar.bz2",
+      "script_version": "0.9.7",
+      "date": "2009-09-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17161",
+        "user_name": "jjjan",
+        "first_name": "jan",
+        "last_name": " ",
+        "email": "jan.h.xie at gmail.com",
+        "homepage": "http://rwsleep.blogspot.com"
+      },
+      "release_notes": "fixed escape bug on windows. (bogdan)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10830",
+      "filename": "rubytest.tar.bz2",
+      "script_version": "0.9.6",
+      "date": "2009-06-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17161",
+        "user_name": "jjjan",
+        "first_name": "jan",
+        "last_name": " ",
+        "email": "jan.h.xie at gmail.com",
+        "homepage": "http://rwsleep.blogspot.com"
+      },
+      "release_notes": "improved support for rspec"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10585",
+      "filename": "rubytest.tar.bz2",
+      "script_version": "0.9.5",
+      "date": "2009-05-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17161",
+        "user_name": "jjjan",
+        "first_name": "jan",
+        "last_name": " ",
+        "email": "jan.h.xie at gmail.com",
+        "homepage": "http://rwsleep.blogspot.com"
+      },
+      "release_notes": "add quickfix support"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10462",
+      "filename": "rubytest.tar.bz2",
+      "script_version": "0.9.1",
+      "date": "2009-04-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17161",
+        "user_name": "jjjan",
+        "first_name": "jan",
+        "last_name": " ",
+        "email": "jan.h.xie at gmail.com",
+        "homepage": "http://rwsleep.blogspot.com"
+      },
+      "release_notes": "fix test case finder"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10418",
+      "filename": "rubytest.tar.bz2",
+      "script_version": "0.9.0",
+      "date": "2009-04-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17161",
+        "user_name": "jjjan",
+        "first_name": "jan",
+        "last_name": " ",
+        "email": "jan.h.xie at gmail.com",
+        "homepage": "http://rwsleep.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

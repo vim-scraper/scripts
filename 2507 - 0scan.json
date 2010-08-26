@@ -1,0 +1,138 @@
+{
+  "script_id": "2507",
+  "name": "0scan",
+  "summary": "Tags based search for any things you might want to find(ctags, buffers,...).",
+  "script_type": "utility",
+  "description": "Scan the entities with one \"Tags Based\" common interface.\n\nScan:\nbuffers to switch to;\nfiles to open;\nwindows and tabs to switch to;\nfiles like c++, python, vim, sco, html and more ( on request ) to jump to things like \"constructors\", \"objects\", \"methods\", etc;\nyour ctags database to browse source code;\ndefinition and declaration of method;\nvim's registers to paste text;\ncurrent file changes to move to;\nvim marks to jump to;\n\nand more ( on request )\n\nCreate your own scans to browse things related to your work flow.\nTo look at sample how to create your own scan just select any file at ~/.vim/autoload/railmoon/oscan/extractor/\nfor example:  ~/.vim/autoload/railmoon/oscan/extractor/buffers.vim\n\nDetailed description:\nhttp://www.railmoon.com/vim_plugins/0scan/Entries/2009/9/26_Introduction.html\n\nDo not hesitate to email me problems or suggestions.\n ",
+  "install_details": "unzip into ~/.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9916",
+      "filename": "0scan.zip",
+      "script_version": "0.5.2",
+      "date": "2009-02-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10706",
+        "user_name": "Ni",
+        "first_name": "Mykola",
+        "last_name": "Golubyev",
+        "email": "golubev.nikolay at gmail.com",
+        "homepage": "http://www.railmoon.com"
+      },
+      "release_notes": "Added Files scan to open files from the current file dir( http://www.railmoon.com/0scan/scan-files ). \nTags are always case insensitive now ( were depend on ignorecase option ). Windows scan had a little bug.   \n-- thanks to Raimon Grau for feedback.\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9897",
+      "filename": "0scan.zip",
+      "script_version": "0.5.1",
+      "date": "2009-02-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10706",
+        "user_name": "Ni",
+        "first_name": "Mykola",
+        "last_name": "Golubyev",
+        "email": "golubev.nikolay at gmail.com",
+        "homepage": "http://www.railmoon.com"
+      },
+      "release_notes": "Added \"Changes\" scan( http://www.railmoon.com/0scan/scan-changes ). Changed \"Registers\" scan to show no more then 5 lines from register."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9861",
+      "filename": "0scan.zip",
+      "script_version": "0.5",
+      "date": "2009-01-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10706",
+        "user_name": "Ni",
+        "first_name": "Mykola",
+        "last_name": "Golubyev",
+        "email": "golubev.nikolay at gmail.com",
+        "homepage": "http://www.railmoon.com"
+      },
+      "release_notes": "Added Registers Scan to find text through all your registers to paste. \nhttp://www.railmoon.com/0scan/scan-registers\n\nMinor re-factoring."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9799",
+      "filename": "0scan.zip",
+      "script_version": "0.4.4",
+      "date": "2009-01-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10706",
+        "user_name": "Ni",
+        "first_name": "Mykola",
+        "last_name": "Golubyev",
+        "email": "golubev.nikolay at gmail.com",
+        "homepage": "http://www.railmoon.com"
+      },
+      "release_notes": "Fixed problem with autocomplpop.vim ( sometimes it stayed turned off after 0scan ). Added html ctags scan."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9782",
+      "filename": "0scan.zip",
+      "script_version": "0.4.3",
+      "date": "2009-01-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10706",
+        "user_name": "Ni",
+        "first_name": "Mykola",
+        "last_name": "Golubyev",
+        "email": "golubev.nikolay at gmail.com",
+        "homepage": "http://www.railmoon.com"
+      },
+      "release_notes": "Added python ctags scan support. Keys <C-n>, <C-j>, <C-p>, <C-k> can now be used to select appropriate result line ( Thanks Vincent Wang for feedback )"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9770",
+      "filename": "0scan.zip",
+      "script_version": "0.4.2",
+      "date": "2009-01-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10706",
+        "user_name": "Ni",
+        "first_name": "Mykola",
+        "last_name": "Golubyev",
+        "email": "golubev.nikolay at gmail.com",
+        "homepage": "http://www.railmoon.com"
+      },
+      "release_notes": ":OScan<CR> now lists all available scans. :OScan <Tab> now complete with available scans. Thanks Vasilii Pascal for feedback."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9756",
+      "filename": "0scan.zip",
+      "script_version": "0.4.1",
+      "date": "2009-01-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10706",
+        "user_name": "Ni",
+        "first_name": "Mykola",
+        "last_name": "Golubyev",
+        "email": "golubev.nikolay at gmail.com",
+        "homepage": "http://www.railmoon.com"
+      },
+      "release_notes": "clean up zip archive from swap files."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9755",
+      "filename": "0scan.zip",
+      "script_version": "0.4",
+      "date": "2009-01-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10706",
+        "user_name": "Ni",
+        "first_name": "Mykola",
+        "last_name": "Golubyev",
+        "email": "golubev.nikolay at gmail.com",
+        "homepage": "http://www.railmoon.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

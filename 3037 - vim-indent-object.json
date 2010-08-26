@@ -1,0 +1,74 @@
+{
+  "script_id": "3037",
+  "name": "vim-indent-object",
+  "summary": "Text Objects based on Indentation Level",
+  "script_type": "utility",
+  "description": "Vim text objects provide a convenient way to select and operate on various\ntypes of objects. These objects include regions surrounded by various types of\nbrackets and various parts of language (ie sentences, paragraphs, etc).\n\nThis plugin defines a new text object, based on indentation levels. This is\nvery useful in languages such as Python, in which the syntax defines scope in\nterms of indentation. Using the objects defined in this plugin, an entire if\nstructure can be quickly selected, for example.\n\nProject Repository:\nhttp://github.com/michaeljsmith/vim-indent-object\n\nFeedback/criticism is welcome:\nmsmith@msmith.id.au\nhttp://msmith.id.au\n\nThis plugin defines two new text objects. These are very similar - they differ\nonly in whether they include the line below the block or not.\n\n        Key Mapping       Description\n\n        <count>ai         (A)n (I)ndentation level and line above.\n        <count>ii         (I)nner (I)ndentation level (no line above).\n        <count>aI         (A)n (I)ndentation level and lines above/below.\n        <count>iI         (I)nner (I)ndentation level (no lines above/below).\n\n\nNote that the iI mapping is mostly included simply for completeness, it is\neffectively a synonym for ii.\n\nJust like regular text objects, these mappings can be used either with\noperators expecting a motion, such as 'd' or 'c', as well as in visual mode.\nIn visual mode the mapping can be repeated, which has the effect of\niteratively increasing the scope of indentation block selected. Specifying a\ncount can be used to achieve the same effect.\n\nThe difference between |ai| and |aI| is that |ai| includes the line\nimmediately above the indentation block, whereas aI includes not only that,\nbut also the line below. Which of these is most useful largely depends on the\nstructure of the language being edited.\n\nFor example, when editing the Python code, |ai| is generally more useful, as\nthe line above the indentation block is usually related to it. For example, in\nthe following code (* is used to indicate the cursor position):\n\n      if foo > 3:\n         log(\"foo is big\") *\n         foo = 3\n      do_something_else()\n\nthe if clause is logically related to the code block, whereas the function\ncall below is not. It is unlikely we would want to select the line below when\nwe are interested in the if block.\n\nHowever, in other languages, such as Vim scripts, control structures are\nusually terminated with something like 'endif'. Therefore, in this example:\n\n      if foo > 3\n         echo \"foo is big\" *\n         let foo = 3\n      endif\n      call do_something_else()\n\nwe would more likely want to include the endif when we select the if\nstructure.\n\nWhen scanning code blocks, the plugin usually ignores blank lines. There is an\nexception to this, however, when the block being selected is not indented. In\nthis case if blank lines are ignored, then the entire file would be selected.\nInstead when code at the top level is being indented blank lines are\nconsidered to delimit the block.\n",
+  "install_details": "Unpack the zip archive onto your vim runtime directory.\n\nAlternatively unpack it to a location of your choice, and update your runtimepath to point to it.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12790",
+      "filename": "vim-indent-object.zip",
+      "script_version": "1.1.2",
+      "date": "2010-04-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19478",
+        "user_name": "michaeljsmith",
+        "first_name": "Michael",
+        "last_name": "Smith",
+        "email": "msmith at msmith.id.au",
+        "homepage": "http://msmith.id.au"
+      },
+      "release_notes": "Now uses linewise visual mode by default."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12773",
+      "filename": "vim-indent-object.zip",
+      "script_version": "1.1.1",
+      "date": "2010-04-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19478",
+        "user_name": "michaeljsmith",
+        "first_name": "Michael",
+        "last_name": "Smith",
+        "email": "msmith at msmith.id.au",
+        "homepage": "http://msmith.id.au"
+      },
+      "release_notes": "Fixed when using 'ignorecase'."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12766",
+      "filename": "vim-indent-object.zip",
+      "script_version": "1.1",
+      "date": "2010-04-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19478",
+        "user_name": "michaeljsmith",
+        "first_name": "Michael",
+        "last_name": "Smith",
+        "email": "msmith at msmith.id.au",
+        "homepage": "http://msmith.id.au"
+      },
+      "release_notes": "Made behaviour more consistent and intuitive."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12758",
+      "filename": "vim-indent-object.zip",
+      "script_version": "1.0",
+      "date": "2010-04-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19478",
+        "user_name": "michaeljsmith",
+        "first_name": "Michael",
+        "last_name": "Smith",
+        "email": "msmith at msmith.id.au",
+        "homepage": "http://msmith.id.au"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

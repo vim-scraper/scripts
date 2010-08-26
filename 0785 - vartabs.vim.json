@@ -1,0 +1,26 @@
+{
+  "script_id": "785",
+  "name": "vartabs.vim",
+  "summary": "Make your TAB-Key stop at arbitrary positions",
+  "script_type": "ftplugin",
+  "description": "The usual <TAB> stops at any 'shiftwidth' position.\nSometimes (eg. when programming in RPG or /370-ASM) it is useful to have arbitrary positions (eg. for /370-ASM they are 10,16,71).\n\nThis script will give you this feature depending on the filetype.",
+  "install_details": "1) Copy VARTABS.VIM into your plugin-directory\n2) Add in the approbiate filetype-plugin the following line (numbers must be ascending!):\n  :call VarTab_SetStops(\"10,16,71\") means: <TAB> will now stop on column 10, 16, 71 and then 10 again.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2378",
+      "filename": "VARTABS.VIM",
+      "script_version": "1.0",
+      "date": "2003-10-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3244",
+        "user_name": "MikeTheGuru",
+        "first_name": "Michael",
+        "last_name": "Fitz",
+        "email": "mfitz at aon.at",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

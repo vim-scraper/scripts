@@ -1,0 +1,602 @@
+{
+  "script_id": "2993",
+  "name": "ywtxt",
+  "summary": "Ease vim to write plain documents.",
+  "script_type": "utility",
+  "description": "1  Introduce:\n   \n   Ease vim to write plain document. It's at the very early stage, with\n   some fancy highlights. Any advice is welcome. My email is:\n\n   ywupub AT gmail DOT com\n\n2  Usage:\n\n   Open a new file: test.ywtxt, done.\n\n3  ywtxt file format:\n3.1  Heading format:\n\nywtxt treats lines start with \"#  \" or \"1  \"(note the following 2\nspaces) as a 1st level heading, \"#.#  \" or \"1.1  \"(note the following 2\nspaces) as a 2nd level heading, so forth.\n\nLines started with optional spaces and \"%\" are treated as a comment\nline. Characters between *bold* will get bolded, /italic/ italic,\n_underlined_ underlined.\n\nTODO and NOTE in document will get highlighted.\n   \n\"Figure #.  \", \"Fig. #.  \", \"&#22270; #.  \", \"Table #.  \",  \"&#34920; #.  \",\n\"Figure #-#.  \", \"Fig. #-#.  \", \"&#22270; #-#.  \", \"Table #-#.  \",  \"&#34920; #-#.  \"\nwill make ywtxt know it's a figure/table, and can generate the figures/tables\nof contents for them(note there are 2 spaces following the \"#.\".\n\nThe first line in document with a trailing space is a title:\n        This is a title, note the spaces after the dot.  \n\nywtxt use foldmethod 'marker' for mom document, so everything you can do with vim folding marker also can be implemented with ywtxt.\n\n3.2  Snip support:\n\nHit <Ctrl-j> then s will prompt you insert a filetype of snip,\nyou can use <tab> to auto-complete the filetype name. The snip region\nwill get highlighted according to the syntax of it(if vim supports it).\nWarn, if you insert a filetype which vim doesn't support, you will meet\nerror warning when opening the file.\n\nNote: Trying to insert ywtxt filetype as a snip will make ywtxt's\nfolding fragible.\n\n3.3  Cross-references\n\nDefine a anchor: '[#anchor]' without the prefix '*', then hit <enter> on the\nstring \"*[path/to/file#anchor]\" will let you go to the anchor.\n\nHit <Enter> on the pattern \"*[path/to/file#anchor]\" in document will let you\ngo to the file and locate onto the \"[#anchor]\" position.\nFor example: \n    *[./mini2.ywtxt#string]\nWill go to mini2.ywtxt and locate on the anchor [#string].\n\nIf you omit the \"file\" part in the pattern, then ywtxt will try to\nlocate the position in the current document.\nFor example: \n    *[#string]\nWill go to the anchor [#string] in the current document.\n\nIf document doesn't contain [#string], ywtxt will warn you and go to normal\nstring \"string\".\n\n3.4  More highlightings\n\nThere are times, however, when the simple markup isn't flexible enough.\nIn such cases, You can use Txtfmt (The Vim Highlighter) to add arbitrary\nhighlighting to my journal entries. The trick is to set 'filetype' equal\nto ywtxt.txtfmt instead of ywtxt alone. The following screenshot shows\nthe result:\n    \n   http://txtfmt.webs.com/ywtxt.htm\n    \nThe highlighting provided by Txtfmt is similar to \"rich text\" in a word\nprocessor: foreground/background colors and all combinations of\nunderline, bold, italic, etc...\n    \nTxtfmt (The Vim Highlighter):\nhttp://www.vim.org/scripts/script.php?script_id=2208\n\n4  Key maps:\n4.1  Key maps for the normal window(mother file window):\n\n      <Tab>               Fold/unfold. Under ^[keyword], echo the corresponding reference name. Under the lines in the bibliography section, jump to the citing point of the document.\n      <Enter>             Under ^[keyword] or the lines in the bibliography section, jump into the .bib file and located to the coressponding location.\n      \\t                  Open a table of contents(toc) window of the current document, it's named as \"_<file you're writing>_TOC_\" .\n      <Ctrl-j>            Prompt for inserting a new (parent/current/child/other level heading)/Non_export2html/Reference/Snip.\n      \\o                  Insert a current level heading line.\n      \\O                  Insert a parent level heading line.\n      \\q                  Close the toc window.\n      \\<tab>              Jump into the toc window without refreshing.\n\n4.2  key maps for insert mode\n      <Ctrl-j>            Prompt for inserting a new (parent/current/child/other level heading)/Non_export2html/Reference/Snip.\n      _{                  _{} insert a subscript.\n      ^{                  ^{} insert a superscript.\n      ^[                  ^[] insert a citation.\n\n4.3  key maps for toc window:\n\n      <Enter>             Jump into the coressponding location of the document.\n      <space>             Jump into the coressponding location of the document without leaving the toc window.\n      x                   Jump into the coressponding location of the document and close the toc window.\n      <Leader><tab>       Jump into the mother file window without changing the position.\n      q                   Close the toc window.\n      r                   Refresh the toc window.\n      Shift_H             Decrease the level of heading.\n      Shift_L             Increase the level of heading.\n      Shift_J             Move current heading region down.\n      Shift_K             Move current heading region up.\n      Shift_D             Delete current heading region, and put the content into register z.\n      Shift_Y             Yank current heading region, and put the content into register z.\n      Shift_S             Auto number the sections mark(#.) in mother file according to the toc's showing.\n      w                   Save the mother file.\n      u                   Undo the mother file.\n      ctrl_R              Redo the mother file.\n      Shift_E             Export the ywtxt file to simple html file.\n      Shift_X             Outline/un-outline the document. (Not working yet)\n      Shift_j             Go to the next line and outline the document. (Not working yet)\n      Shift_k             Go to the previous line and outline the document. (Not working yet)\n      t                   Toggle the toc type: \"Con(t)ents/(F)igures/Ta(b)les/(A)nchors/(L)inks\".\n\n5  html export feature:\n\n   In toc window, hit <shift-e> will export .ywtxt to .html file, after\n   saved the new openning buffer of the generated html file, you can\n   open the html in your browser, or even copy and paste it into your\n   office suite to reserve the looking of .ywtxt.\n\n   All strings _{} will become subscript, ^{} superscript. Comment lines\n   will be deleted. [/path/to/file.bmp] will display directly in\n   html(supports jpg, png, bmp and gif).\n\n   Hit <ctrl-j> then % will insert region mark: \"^% BEGIN_NOHTML {{{\", \"^% END_NOHTML }}}\". Regions between \"^% BEGIN_NOHTML {{{\", \"^% END_NOHTML }}}\" will not be exported to html. Warn!!!: please don't try to nested the region, otherwise you might break up your document!!!\n\n   Hint: You can export the .ywtxt to .html, then paste it into Microsoft Word, then the levels of heading will abey with the html.\n\n6  Misc vars:\n6.1  g:ywtxt_autonumber\n\nConfiguring auto-setting the heading number after creating the heading. Note if you feel it makes vim slow down, you's better disable it.\nExample: set g:ywtxt_autonumber=0\n\n6.2  g:ywtxt_browserapp\n\nConfigure the browser app for viewing the html after exported.\nYou must make sure browser app is runable.\nExample: set g:ywtxt_browserapp = 'opera'\n\n6.3  g:ywtxt_tocwidth\n\nConfiguration for toc window's width. Default is the document's 1/4.\nExample: set g:ywtxt_tocwidth=20\n\n6.4  g:ywtxt_headings_hl\n\nSpecify the colors for headings, you must strictly follow the following pattern:\n\n    \\ 'heading level':[['color for dark term', 'color for light term'], ['color for dark gui',], ['color for light gui'],\n\notherwise, ywtxt will produce error.  Also note that the colors you specify must be ones that vim knows. The setting format is(example is the default setting) is:\n\n    let g:ywtxt_headings_hl = {\n                \\ '1':[['blue', 'blue'],['LightSkyBlue', 'Blue1']],\n                \\ '2':[['yellow', 'yellow'],['LightGoldenrod', 'DarkGoldenrod']],\n                \\ '3':[['cyan', 'cyan'],['Cyan1', 'Purple']],\n                \\ '4':[['red', 'red'],['red1', 'red']],\n                \\ '5':[['green', 'green'],['PaleGreen', 'ForestGreen']],\n                \\ '6':[['magenta', 'magenta'],['Aquamarine', 'CadetBlue']],\n                \\ '7':[['blue', 'blue'],['LightSteelBlue', 'Orchid']],\n                \\ '8':[['green', 'green'],['LightSalmon', 'RosyBrown']],\n                \\ '9':[['blue', 'blue'],['LightSkyBlue', 'Blue1']],\n                \\ '10':[['yellow', 'yellow'],['LightGoldenrod', 'DarkGoldenrod']],\n                \\}\n\nYou can add more highlighting levels than 10 as you wish.\n\nTIP: You can assign blank value for the default bg/fg color in bold face.\n\nlet g:ywtxt_headings_hl = {\n            \\ '1':[['', ''],['', '']],\n            \\ '2':[['', ''],['', '']],\n            \\ '3':[['', ''],['', '']],\n            \\ '4':[['', ''],['', '']],\n            \\ '5':[['', ''],['', '']],\n            \\ '6':[['', ''],['', '']],\n            \\ '7':[['', ''],['', '']],\n            \\ '8':[['', ''],['', '']],\n            \\ '9':[['', ''],['', '']],\n            \\ '10':[['', ''],['', '']],\n            \\}\n\n6.5  g:ywtxt_2htmlpre_usercmds, g:ywtxt_2htmlpost_usercmds\n\nYou can run cmds before and after the 2html routine, format:\n\n    let g:ywtxt_2htmlpre_usercmds=['vim_cmd1', 'vim_cmd2']\n    let g:ywtxt_2htmlpost_usercmds=['vim_cmd3', 'vim_cmd4']\n\nfor example,\n\n    let g:ywtxt_2htmlpre_usercmds=['set nonumber']\n    let g:ywtxt_2htmlpost_usercmds=['set number']\n\nwill make the 2html routine disable the number the lines then back to 'number' option after 2html. However, if you want to do some modification operators, it's very dangrous, use at your own risk!!!\n7  Advanced features\n7.1  Customize section number style:\n\nFor global effect: add a line as the following line in your .vimrc:\n\n    let g:ywtxt_HeadingsPat = '\"Chapter #\" \"Section #\" \"#.\" \"#.#\"'\n\nFor buffer effect: Add a line into .ywtxt(Must add it from a start of line, no any space allowed before the '%'):\n\n    % HEADINGS \"Chapter #\" \"Section #\" \"#.\" \"#.#\"\n\nTo immune from the global effect for some files: Add a line into .ywtxt(Must add it from a start of line, no any space allowed before the '%'):\n\n    % HEADINGS NONE\n\nExplanation:\n\nIf you've defined the headings pattern as the above way, then next time you open the document,  ywtxt will use all(here is \"Chapter #\" \"Section #\" \"#.\") of patterns excluding the last one(here is \"#.#\") as the very first level headings' pattern, the last one is used for ywtxt to determine how to auto-generate the following deeper levels, in this example, the 1st level heading will be \"Chapter #  \", 2nd \"Section #  \", 3th \"#.  \", 4th '#.# ', 5th '#.#.# ', and so on(Note the 2 spaces after the heading). You can omit the last one be a ywtxt's known pattern, then ywtxt will auto-generate the levels from the last one you've specified with \"#.#\", \"#.#.#\", ..., if you want ywtxt to auto-generate with other level, then you have to specify the last one with ywtxt's known heading pattern, e.g.  \"#\", \"#.#\", \"#.#.#\"... Heading is always followed by 2 spaces(but you don't need to specify the space here, ywtxt always auto-inserts them for you.).\n\n7.2  include other files\n\n    Lines starting with '% input /dir/to/file' will include another file when 2html. The feature is very limited at present, no proper heading syntax supporting.\n\n7.3  Advanced .bib file support:\n\n   Warn: It needs you have some basic knowledge on the bib file and its\n   format, if you haven't heard of it, please skip this section. ywtxt's\n   bib supporting is very limited, now it just fits for me, only works\n   for article class.\n\n7.3.1  Usage:\n\n      1) In .ywtxt, you can insert the text like '^[keyword1]' or\n      '^[keyword1, 2]' to mean referrig to a single or multiple references.\n      \"keyword1\" means the keyword in .bib file.\n\n      2) Add the following 2 lines into your foo.ywtxt file whereever you like:\n\n      % bibfile = '/path/to/your/bib/file.bib'\n      % endbib\n\n      3) In toc window, hit <Shift-b> will generate the Bibliography in\n      between the lines of mensioned above for you.\n\n      Warn!!! everything between the above lines will be deleted, you've been warned!\n\n      You can\n      \n        let g:ywtxt_bib_nump = 0\n\n      to disable the [<number>] ahead of the reference list.\n\n      4) Under the ^[keyword], use <Tab> to show you the reference name,\n      under the lines in the Bibliography section, use <Tab> to go to the\n      citing location in the document.\n\n      Under the ^[keyword] or lines in the Bibliography section, use\n      <Enter> to jump into the .bib file and located under the\n      corresponding location.\n\n      After exporting to html, ^[keyword] will change into ^[<num>].\n\n7.3.2  multiple references sections:\n\nYou can use multiple references section, just be sure that every\nreferences section has the following two lines:\n\n      % bibfile = '/path/to/your/bib/file.bib'\n      % endbib\n\n7.3.3  .bib format:\n\n      It has some restrictions with the bib file: every item must start at a new line, and be embraced by {}, ended with a comma ','. Every entry must be ended at a separated line with '}', following is an example:\n\n      @article{keyword1,\n      title = {title},\n      author = {author1 and author2},\n      journal = {journal},\n      volumn = {1},\n      number = {1},\n      year = {2010},\n      pages = {1--2},\n      }\n\n      @book{keyword2,\n      author = {author1 and author2},\n      address = {Nanjing},\n      publisher = {publisher},\n      year = {2010},\n      }\n\n      Customize bib entry type:\n\n      To customize your own types of bib entry, you need to let ywvim know all of them firstly:\n\n          let g:ywtxt_bib_entrytypes = [\"article\", \"book\"] : \n\n      Then specify the format for each bib entry that you have specified before, the format is a list: g:ywtxt_bib_entries_{type}, with the items [entry, trailing character] or [entry, heading character, traling character], the default in ywtxt is:\n\n          let g:ywtxt_bib_entries_article = [\n                      \\[\"author\",\". \"],\n                      \\[\"title\",\". \"],\n                      \\[\"journal\",\", \"],\n                      \\[\"year\",\", \"],\n                      \\[\"volume\",\"\"],\n                      \\[\"number\",\"(\", \") :\"],\n                      \\[\"pages\",\". \"],\n                      \\]\n          let s:ywtxt_bib_entries_book = [\n                      \\[\"author\",\". \"],\n                      \\[\"title\",\". \"],\n                      \\[\"address\",\": \"],\n                      \\[\"publisher\",\", \"],\n                      \\[\"year\",\". \"],\n                      \\]\n\n8  Thanks\n\n   txtbrowser[http://www.vim.org/scripts/script.php?script_id=2899]'s author Guoyooo Ping for the inspiration.\n\n9  Todoes:\n   1) Support to bib input's auto-completion and other input\n   auto-completions\n\n   2) To integrate vimwiki's table support.",
+  "install_details": "Installation: Extract the downloaded script tarball into ~/.vim/, it has following files:\n\n    plugin/ywtxt.vim\n    ftplugin/ywtxt.vim\n    syntax/ywtxt.vim\n\nAdd the following line into ~/.vimrc:\n\n    au BufRead,BufNewFile *.ywtxt set ft=ywtxt\n\nDone. If you don't like the file name's suffix .ywtxt, you can change it to whatever you want.\n\nAn Example file mini.ywtxt:\n=======> mini.ywtxt start <========\n                                  Title \n\n% HEADINGS \"Chapter #\" \"Section #\" \"#.\" \"#.#\"\n\nChapter 1  Hello\n\nFig. #.  wfwefe\n\n*[#anchor]\n\nSection 1  Bla\n% [#anchor]\n\nFigure #.  wfwefef\nRefer to ^[bibkw]\nRefer to ^[bibkw3]\n\nSection 2  References\n% bibfile = './mini.bib'\n[1] Ref Title 1. Yue Wu 1. Ref Jou 1. 2010. 1(2) :3--4. \n[2] Ref Title 3. Yue Wu 3. Ref Jou 3. 2010. 1(2) :3--4. \n% endbib\n\nChapter 2  Hello2\n\nTable #.  wfwefef\n\nSection 1  Bla2\n\nRefer to ^[bibkw2]\nRefer to ^[bibkw]\nRefer to ^[bibkw3]\nRefer to the book^[bibkw4].\n\nSection 2  References\n\n% bibfile = './mini.bib'\n[1] Ref Title 2. Yue Wu 2. Ref Jou 2. 2010. 1(2) :3--4. \n[2] Ref Title 1. Yue Wu 1. Ref Jou 1. 2010. 1(2) :3--4. \n[3] Ref Title 3. Yue Wu 3. Ref Jou 3. 2010. 1(2) :3--4. \n[4] Yue Wu book. Book1. Pekin: publisher, 2010. \n% endbib\n\n% vim:ft=ywtxt:\n=======> mini.ywtxt end <========\n \n An Example file mini.bib:\n=======> mini.bib start <========\n@article{bibkw,\n    author = {Yue Wu 1},\n    title = {Ref Title 1},\n    journal = {Ref Jou 1},\n    year = {2010},\n    volume = {1},\n    number = {2},\n    pages = {3--4},\n}\n@article{bibkw2,\n    author = {Yue Wu 2},\n    title = {Ref Title 2},\n    journal = {Ref Jou 2},\n    year = {2010},\n    volume = {1},\n    number = {2},\n    pages = {3--4},\n}\n@article{bibkw3,\n    author = {Yue Wu 3},\n    title = {Ref Title 3},\n    journal = {Ref Jou 3},\n    year = {2010},\n    volume = {1},\n    number = {2},\n    pages = {3--4},\n}\n@book{bibkw4,\n    author = {Yue Wu book},\n    title = {Book1},\n    address = {Pekin},\n    publisher = {publisher},\n    year = {2010},\n}\n=======> mini.bib end <========",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13460",
+      "filename": "ywtxt_0.18.tar.bz2",
+      "script_version": "0.18",
+      "date": "2010-08-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Greatly improved: speed issue for large document.\n\n2. Major changed: foldmethod changed from 'syntax' to 'marker' in documnet for speed issue, so you need to append '{{{' and '}}} to lines '^% BEGIN.*$' and '^% END.*$' respectively to fold your old format of ywtxt documents. Method:\n:%s/^\\(% BEGIN.*\\)/\\1 {{{/c\n:%s/^\\(% END.*\\)/\\1 }}}/c\nSorry for inconvenience!\n\n3. Fixed: bug in wrong location when inserting nohtml region.\n\n4. Changed: heading creation will prompt you to insert heading text.\n\n5. Improved toc generation speed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13446",
+      "filename": "ywtxt_0.17.tar.bz2",
+      "script_version": "0.17",
+      "date": "2010-07-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Added: In toc window, keymap J, K to move a heading region up/down. D/Y to delete/yank a heading region, and put deleted/yanked content into \"z.\n2. Changed: key map to re-indent heading level in toc window \\> -> L; \\< -> H\n3. Changed: Doesn't fold document's headings for speed issue.\n4. Changed: g:ywtxt_autonumber is on by default, heading creation will set section number.\n5. Improved: g:ywtxt_headings_hl, now you can assign blank value for the default bg/fg color in bold face.\n6. Improved: heading syntax.\n7. Fixed: bug in heading creation.\n8. Fixed: export2html bug in nohtml region"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13061",
+      "filename": "ywtxt_0.16_1.tar.bz2",
+      "script_version": "0.16_1",
+      "date": "2010-05-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for non_export2html region \"^% BEGIN_NOHTML\", \"^% END_NOHTML\"(keymap: <ctrl-o>%).\n\nImproved the function for switching the types of toc: \"Con(t)ents/(F)igures/Ta(b)les/(A)nchors/(L)inks\"\n\nFixed non-working keymap for <space> in toc window.\n\nFixed reindentation bug with customized headings.\n\nFixed a heading level bug with the customized heading which contains \"#.\".\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13039",
+      "filename": "ywtxt_0.16.tar.bz2",
+      "script_version": "0.16",
+      "date": "2010-05-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Changed the reference region format, please see document for details.\n\n2) Abandoned var: g:ywtxt_biblioname.\n\n3) Added operator to create arbitrary heading level(<Ctrl-j> o).\n\n4) Added syntax for title: The first line in document with a trailing space.\n\n5) Added book type to the default bib type.\n[1] Authors. Book name. City: publisher, year.\n\n6) Changed export-to-html routine, now will generate a tmp file firstly(foo.ywtxt -> foo_ywtxt -> foo_ywtxt.html -> rm foo_ywtxt).\n\n7) Added vars: g:ywtxt_2htmlpre_usercmds, g:ywtxt_2htmlpost_usercmds, see doc for details(Section 6.5).\n\n8) Added var: g:ywtxt_bib_nump to set/unset [<number>] in References list when generating references. Default: 1.\n\n9) Added feature '% input file', to include another file when 2html. The feature is very limited, no proper heading syntax supporting.\n\n10) Improved syntax for bold/underlined/italic chars in-between * around the Chinese charactors.\n\n11) Improved the cursor postion in the document after doing operators in toc window.\n\n12) Fixed locating back to the document after finishing exporting to html.\n\n13) Fixed non-working of changing bib keywords to numbers while exporting to html.\n\n14) Fixed a bug of heading recorgnization.\n\n15) Fixed a bug with the function of the bib file finding.\n\n16) Fixed error while hit <tab> on '~'.\n\n17) Fixed error related to <tab> (reference recognization)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12890",
+      "filename": "ywtxt_0.15_6.tar.bz2",
+      "script_version": "0.15_6",
+      "date": "2010-04-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Changed, removed and integrated keymaps for creating headings/reference/snip, works both in normal/insert mode(<Ctrl-j>).\n2) Added var for configuring auto-setting the heading number after creating a heading(set g:ywtxt_autonumber=1). Note it will be slow.\n3) Improved syntax bug for bold/underlined/italic/."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12779",
+      "filename": "ywtxt_0.15_5.tar.bz2",
+      "script_version": "0.15_5",
+      "date": "2010-04-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug of location with <space>, thanks Zhang Xin's good catch."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12778",
+      "filename": "ywtxt_0.15_4.tar.bz2",
+      "script_version": "0.15_4",
+      "date": "2010-04-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed snip inserting bug which is brought by the last update."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12777",
+      "filename": "ywtxt_0.15_3.tar.bz2",
+      "script_version": "0.15_3",
+      "date": "2010-04-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Added syntax for figure/table(figure #-#.; table #-#.)\n2) Fixed comment region bug.\n3) Removed setting to nowrap in toc window.\n4) Removed '[' as a file name charactor, now <C-x><C-f> can complete the file name after '['."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12704",
+      "filename": "ywtxt_0.15_2.tar.bz2",
+      "script_version": "0.15_2",
+      "date": "2010-03-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Improved anchor-locating behavior for Chinese and English.\n2) Changed highlight for anchor.\n3) Added keymap for insert mode: _{ _{}"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12696",
+      "filename": "ywtxt_0.15_1.tar.bz2",
+      "script_version": "0.15_1",
+      "date": "2010-03-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Added definition for anchor \"[#anchor]\", please see the section cross-references in document. Thanks for Adrien Pied Piérard's suggestion.\n2) Removed keymap in insert mode: _(_{}). Thanks for Adrien Pied Piérard's suggestion.\n3) Added syntax highligh for anchor. Thanks for Adrien Pied Piérard's suggestion.\n4) Removed textwidth setting.\n5) Suppressed new file msg when open toc window."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12683",
+      "filename": "ywtxt_0.15.tar.bz2",
+      "script_version": "0.15",
+      "date": "2010-03-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Added var g:ywtxt_browserapp to support opening html directly after export to html, see section \"Misc vars\" for detail.\n2) Added support for Cross-references(*[file#anchor]). Please see the section \"ywtxt file format\" for details."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12674",
+      "filename": "ywtxt_0.14_2.tar.bz2",
+      "script_version": "0.14_2",
+      "date": "2010-03-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Fixed outline/unoutline in toc window.\n2) Suppressed the not pattern found warning when exporting to html."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12665",
+      "filename": "ywtxt_0.14_1.tar.bz2",
+      "script_version": "0.14_1",
+      "date": "2010-03-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed toc window not refresh after undo/redo"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12663",
+      "filename": "ywtxt_0.14.tar.bz2",
+      "script_version": "0.14",
+      "date": "2010-03-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Added configurable heading highlighting(g:ywtxt_headings_hl) support. Please see the document for details.\n2) Added encoding declaration in syntax/ywtxt.vim and ftplugin/ywtxt.vim, to prevent encoding issue. thanks zhangxin's report.\n3) Improved italic, bold, and underlined definition to allow blank spaces in between."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12636",
+      "filename": "ywtxt_0.13_2.tar.bz2",
+      "script_version": "0.13_2",
+      "date": "2010-03-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Fixed errors caused by operations on toc window title line. Thanks pengo's catching.\n2) Speeded up a little for the toc window opening and jumping.\n3) Added syntax: \"&#22270; #.  \",  \"&#34920; #.  \"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12631",
+      "filename": "ywtxt_0.13_1.tar.bz2",
+      "script_version": "0.13_1",
+      "date": "2010-03-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug: operations in toc winodow unworking."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12630",
+      "filename": "ywtxt_0.13.tar.bz2",
+      "script_version": "0.13",
+      "date": "2010-03-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Added feature: Customized heading pattern can be set globally(g:ywtxt_HeadingsPat), please see the advanced features in the document for details.\n2) Improved: The setting for customized heading pattern needn't force user to specify the last pattern to be a ywtxt known pattern.\n3) Improved the handling of the title line in toc window.\n4) Improved uncontinious section support, thanks for zhangxin's catch.\n5) Ignore the unproper user setting for customized section pattern.\n6) Fixed a bug in keymap shift-x: Outline/un-outline."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12620",
+      "filename": "ywtxt_0.12_3.tar.bz2",
+      "script_version": "0.12_3",
+      "date": "2010-03-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug in customize section pattern which has spaces in name."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12619",
+      "filename": "ywtxt_0.12_2.tar.bz2",
+      "script_version": "0.12_2",
+      "date": "2010-03-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug in bib generation.\nFixed a heading syntax bug."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12618",
+      "filename": "ywtxt_0.12_1.tar.bz2",
+      "script_version": "0.12_1",
+      "date": "2010-03-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug: toc location uncorrectly.\nFixed reindent bug.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12617",
+      "filename": "ywtxt_0.12.tar.bz2",
+      "script_version": "0.12",
+      "date": "2010-03-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Added feature to customize section number style, please see the advanced features section in document.\n\n2) Improved snip folding and syntax supportings.\n\n3) Improved the displaying of toc.\n\n4) Improved keymap in toc window: Shift-x fold/unfold all.\nThanks for pengo's suggestion.\n\n5) Added warning before trying to generate references region.\nThanks for pengo's suggestion.\n\n6) Improved the uncontinuous headings handling.\nthanks for pengo's catching.\n\n7) Changed: Syntax for figure and table to:\n\"Figure #.  \"\n\"Fig. #.  \"\n\"Table #.  \"\n\n8) Added support on Figure/table of contents. Hit 't' in toc window to toggle\ntoc's type.\n\n9) Added support for the Multiple reference sections. Please see the\nadvanced feature in document."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12589",
+      "filename": "ywtxt_0.11_2.tar.bz2",
+      "script_version": "0.11_2",
+      "date": "2010-03-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Fixed non-working toc window.\n2) Fixed references region identification. Thanks for pengo's catching.\n3) Improved toc window intendation. Thanks for pengo's suggestion."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12588",
+      "filename": "ywtxt_0.11_1.tar.bz2",
+      "script_version": "0.11_1",
+      "date": "2010-03-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed folding and toc highlighting bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12587",
+      "filename": "ywtxt_0.11.tar.bz2",
+      "script_version": "0.11",
+      "date": "2010-03-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) NOTE! Imcompatible changed!!!: heading format changed again till 0.10: \"1  \", \"#.#  \"(note the following has 2 spaces!)\nHow to upgrade:\n0.10 user: :call Ywtxt_old2new()<CR> This function will be abandoned in next release.\nearlier than 0.10 user: :%s/^\\(\\%(\\%(#\\|\\d\\+\\)\\.\\)*\\)\\(#\\|\\d\\+\\)\\.\\(\\s\\)/\\1\\2\\3 /g\n2) snip support. <Leader>I inserts snip, auto-completion supported. See the document for details.\n3) Added keymaps for toc window: J, K: outline next/previous line.\n4) Abandoned indentation feature.\n5) Fixed html export bugs. Thanks for pengo's great catch.\n6) note and todo strings get highlighted anywhere.\n7) Added done(DONE) syntax.\n8) Optimized the toc display."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12586",
+      "filename": "ywtxt_0.10_3.tar.bz2",
+      "script_version": "0.10_3",
+      "date": "2010-03-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This will be the last 0.10 series verion, please see all 0.10 series's changelog and the updated document to get how to update. Note again! you can use :call Ywtxt_old2new() then ggVG= to reformat the old version, but please care the inproperly reformat!!! Ywtxt_old2new() will be abandoned in next version! You've been warned.\n1) Fixed a heading determination error."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12585",
+      "filename": "ywtxt_0.10_2.tar.bz2",
+      "script_version": "0.10_2",
+      "date": "2010-03-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This will be the last 0.10 series verion, please see all 0.10 series's changelog and the updated document to get how to update. Note again! you can use :call Ywtxt_old2new() then ggVG= to reformat the old version, but please care the inproperly reformat!!! Ywtxt_old2new() will be abandoned in next version! You've been warned.\n1) Improved heading determination\n2) Improved Indentation function"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12584",
+      "filename": "ywtxt_0.10_1.tar.bz2",
+      "script_version": "0.10_1",
+      "date": "2010-03-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed: a serious toc heading bug.\nNote!!! Please see the version *0.10*'s changelog and the updated document for detailed changes, otherwise ywtxt will not work properly with the older format in the new version!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12581",
+      "filename": "ywtxt_0.10.tar.bz2",
+      "script_version": "0.10",
+      "date": "2010-03-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Uncompatible Changed!: Heading format changed to \"#. \", \"   #.# \", old user can use :call Ywtxt_old2new() to reformat the old format of ywtxt, note that function Ywtxt_old2new() will abandon in next version.\n2) Widened: Comment region definition: Lines starts with optional spaces and % considered as comment.\n3) Changed: Delete comment region when export to html.\n4) Added: Markup for superscript(^{}) and subscript(_{})\n5) Added: imap for _(_{}), ^{(^{}) and ^[(^[])\n6) Added: g:ywtxt_tocwidth for configuration of toc window's width. Thanks for pengo's suggestion.\n7) Improved: Highlight note and todo strings in headings. Add \"&#27880;&#24847;\" in note syntax. Thanks for pengo's suggestion.\n8) Added: markup of \"[/path/to/local.pic]\" (jpg, png, bmp, gif) can be viewed in exporting html directly.\n9) Changed: bibliography's name to references.\n10) Added: Auto Indent.\n11) Improved: toc window cursorline.\n12) Improved: reindent func."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12573",
+      "filename": "ywtxt_0.9.tar.bz2",
+      "script_version": "0.9",
+      "date": "2010-03-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Added simple html export. Hit <Shift-e> in toc window will export .ywtxt to .html, set the references keyword to number in document.\n2) Added keymap in toc window: <Shift-X> will outline the heading in document.\n3) Changed definition of keymap <space>: open the heading in document without leaving the toc window.\n4) Abandoned the :call Ywtxt_GenBibliography() way to generate bibliography, use <Shift-b> in toc window instead.\n5) Improved reindent function.\n6) Suppressed the no folding found warning of <tab>."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12559",
+      "filename": "ywtxt_0.8.tar.bz2",
+      "script_version": "0.8",
+      "date": "2010-03-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Changed toc window openning from horizotally to vertically.\n2) Added syntax for TODO, NOTE."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12540",
+      "filename": "ywtxt_0.7.tar.bz2",
+      "script_version": "0.7",
+      "date": "2010-03-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Added support and keymaps for bibliography generation and viewing, please see the advancd feature in the document for details.\n2) Improved the header creation funtion.\n3) Added syntax for Figure capture."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12519",
+      "filename": "ywtxt_0.6.tar.bz2",
+      "script_version": "0.6",
+      "date": "2010-02-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Added feature: auto number the section numbers in file according to the toc, and added key maps in toc window(S, w, <leader><tab>, <C-r>, u) and normal file(<leader><tab>). See the document for details.\n2) Added syntax for bold(*b*), underline(_u_) and italic(/i/).\n3) Fixed cursor location of toc window.\n4) Cleaned some unused vars."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12513",
+      "filename": "ywtxt_0.5.tar.bz2",
+      "script_version": "0.5",
+      "date": "2010-02-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Improved the toc refresh.\n2. Removed the dangerous saving operation when changing the level of header."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12512",
+      "filename": "ywtxt_0.4.tar.bz2",
+      "script_version": "0.4",
+      "date": "2010-02-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for auto-generating numbered sections in toc window.\nFixed unprecisely jumping from toc's bug."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12508",
+      "filename": "ywtxt_0.3.tar.bz2",
+      "script_version": "0.3",
+      "date": "2010-02-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Fixed syntax for headers matching bug.\n2) Added feature of changing the level of headers with \\< and \\> in toc window (Warn!: file will get saved!).\n3) Added keymap <enter>, x for toc window, see the document for detail.\n4) Added syntax for [keywords,keywords], figures(Fig. #.<space>) and tables(Table #)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12505",
+      "filename": "ywtxt_0.2.tar.bz2",
+      "script_version": "0.2",
+      "date": "2010-02-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Added highlight for headers(up to 10 levels).\n2) Fixed toc generation and cursor location bugs.\n3) Remove normal window key maps for toc window.\n4) Changed toc window name to the _<file name root>_TOC_\n5) Added Function for refreshing the toc window(bind it to r in toc window).\n6) Added key map for normal window: \\q      Close the toc window."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12502",
+      "filename": "ywtxt_0.1.tar.bz2",
+      "script_version": "0.1",
+      "date": "2010-02-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17429",
+        "user_name": "Wu, Yue",
+        "first_name": "Yue",
+        "last_name": "Wu",
+        "email": "ywupub at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

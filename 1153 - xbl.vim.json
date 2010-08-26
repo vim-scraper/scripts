@@ -1,0 +1,42 @@
+{
+  "script_id": "1153",
+  "name": "xbl.vim",
+  "summary": "Syntax highlighting for Extensible Binding Language (XBL)",
+  "script_type": "syntax",
+  "description": "Syntax highlighting for Extensible Binding Language (XBL). The main purpose of the script is to syntax highlight javascript code contained in CDATA blocks.\n\nThe script is a hack; my understanding of VIM scripting is almost nil. I look forward to improvements made by anyone.\n\nTo have vim detect the file type from files with the .xbl extension,\njust add the following two lines to the \"filetype.vim\" file in the\ndirectory that contains the \"syntax\" directory:\n\n\" XBL\nau BufNewFile,BufRead *.xbl   setf xbl\n\nTo have xbl syntax coloration appear in the syntax drop-down menu, just\nadd the line:\n \nan 50.120.240 &Syntax.WXYZ.XBL :cal SetSyn(\"xbl\")<CR>\n\nto the \"synmenu.vim\" file (the value 240 in 50.120.240 might differ\naccording to what is already in your own file).\n\n-- Thanks to Xavier Grosjean <xavcap AT c-est-simple DOT com> for\ninformation on file type detection and menu updating.\n\nUse \":set syntax=xbl\" to turn it on for non-xbl files after the file is opened.\n",
+  "install_details": "Just copy the file, xbl.vim, to your syntax directory.\nSee http://www.x2ii.info for latest version.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6225",
+      "filename": "xbl.vim",
+      "script_version": "1.1",
+      "date": "2006-09-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6434",
+        "user_name": "kurtb149",
+        "first_name": "Kurt",
+        "last_name": "Brown",
+        "email": "kurtb149 at yahoo.com",
+        "homepage": "http://www.x2ii.info/"
+      },
+      "release_notes": "Updated contact info."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3691",
+      "filename": "xbl.vim",
+      "script_version": "1.0",
+      "date": "2004-12-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6434",
+        "user_name": "kurtb149",
+        "first_name": "Kurt",
+        "last_name": "Brown",
+        "email": "kurtb149 at yahoo.com",
+        "homepage": "http://www.x2ii.info/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

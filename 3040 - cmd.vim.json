@@ -1,0 +1,74 @@
+{
+  "script_id": "3040",
+  "name": "cmd.vim",
+  "summary": "Execute shell(or Windows cmd) command in Vim and echo output in Vim",
+  "script_type": "utility",
+  "description": "\nCmd.vim is a vim plugin to provide vim the ability to execute shell command\ndirectly in vim and echo the result in vim. For example, you could use \":!ls\"\nto list all the files of current directory, Now cmd.vim provide a new command\n\":Ls\" to implement the same function, but the result is in vim insteading of in\nthe shell. The mainpage in Chinese is avaiable at:\n\nhttp://code.google.com/p/cmd-dot-vim/\n\nThere are many well known shell command to implement powerful functions, now I\nport them to vim version, In the current release, there are four command\navailable now, More are to be added. For those not listed below, you could use\n\":Shell your_command\" to execute your_command like \"! your_command\", with the\nresult in Vim insteading of Shell.\n\n\t\":Date\" - print or set the system date and time\n\t\":Gcc\" - gcc - GNU project C and C++ compiler\n\t\":Ls\" - list directory contents\n\t\":Sdcv Words\" - call sdcv to lookup Words in vim\n\n[Note]: Please note that since Vim claim user defined commands must start with an\nuppercase letter, so every shell command start with an uppercase letter.\n\n[Note]: Please note that cmd.vim is an adapter, So please make sure the original\ncommand is available. it is expected that cmd.vim works where the original\ncommand works, whatever it's Linux, Cygwin, Windows, or Mac. \n\n[Note]: In most circumstances, it will be better if you map them to your\nfavorite map, For example, To look up the a word under the cursor, or to lookup\nthe words selected:\n\n\tnmap <script> <silent> <unique> <Leader>l <ESC>:Sdcv '<cword>' <CR>\n\tvmap <script> <silent> <unique> <Leader>l y<ESC>:Sdcv <c-r>\" <CR>",
+  "install_details": "\nPut the cmd.vim to your $HOME/.vim/plugin or the $HOME/vimfiles/plugin or\nthe $VIM/vimfiles/plugin.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12854",
+      "filename": "cmd.vim",
+      "script_version": "1.0.3",
+      "date": "2010-04-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17317",
+        "user_name": "guoyoooping",
+        "first_name": "yp",
+        "last_name": "guo",
+        "email": "guoyoooping at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "Feature improvement:\nAdd a parameter '\\t' for Date command in Windows. Without that \":Date\" will be interactive."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12781",
+      "filename": "cmd.vim",
+      "script_version": "1.0.2",
+      "date": "2010-04-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17317",
+        "user_name": "guoyoooping",
+        "first_name": "yp",
+        "last_name": "guo",
+        "email": "guoyoooping at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "New feature: For every command, you could use \":Shell command\" to get the same result as \":Command\". So For command not listed, cmd.vim also works. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12774",
+      "filename": "cmd.vim",
+      "script_version": "1.0.1",
+      "date": "2010-04-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17317",
+        "user_name": "guoyoooping",
+        "first_name": "yp",
+        "last_name": "guo",
+        "email": "guoyoooping at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Infrastructure changed for simplicity.\n2. Add a new command \":Gcc\" - compile this file using gcc."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12768",
+      "filename": "cmd.vim",
+      "script_version": "1.0",
+      "date": "2010-04-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17317",
+        "user_name": "guoyoooping",
+        "first_name": "yp",
+        "last_name": "guo",
+        "email": "guoyoooping at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

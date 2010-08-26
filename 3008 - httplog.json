@@ -1,0 +1,26 @@
+{
+  "script_id": "3008",
+  "name": "httplog",
+  "summary": "Highlight access log of Apache, nginx, etc",
+  "script_type": "syntax",
+  "description": "This is a simple syntax file to highlight access log of several HTTP servers (with the default log format).\n\nlocalhost's IP, 192.168.x.x will be highlight differently and 5xx HTTP status code will be highlighted in ErrorMsg. And a few browsers' name will be highlighted too.",
+  "install_details": "Put it in your syntax directory. You can add this to your filetype.vim  to make Vim recognize the log files:\n  au BufRead\t\t*access.log*\t\t\tsetf httplog\n\n  ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12580",
+      "filename": "httplog.vim",
+      "script_version": "0.1",
+      "date": "2010-03-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15944",
+        "user_name": "lilydjwg",
+        "first_name": "lilydjwg",
+        "last_name": " ",
+        "email": "lilydjwg at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

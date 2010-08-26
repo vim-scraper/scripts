@@ -1,0 +1,42 @@
+{
+  "script_id": "2213",
+  "name": "VimTAP",
+  "summary": "Test Anything Protocol for vim",
+  "script_type": "utility",
+  "description": "The Test Anything Protocol makes testing with different languages in the same project\neasy. It decouples the tests generating results from the harness interpreting the results.\nWith VimTAP we now have TAP for vim.\n\nFor now the following is implemented:\n - Plan\n - Ok\n - Is & Isnt\n - Like & Unlike\n - Diag\n\nDiag is probably not completely functional, yet. \\n, \\r and \\r\\n are all considered to\ndelimit lines.\n\nAlso a driver for running the tests from outside vim is provided. It can be used with\nPerl's TAP::Parser runtests utility.\n\nThis package is still work in progress!",
+  "install_details": "Unzip the zip file into your .vim/vimfiles directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10071",
+      "filename": "VimTAP-0.3.zip",
+      "script_version": "0.3",
+      "date": "2009-03-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "62",
+        "user_name": "mikesh",
+        "first_name": "Meikel",
+        "last_name": "Brandmeyer",
+        "email": "Brandels_Mikesh at web.de",
+        "homepage": ""
+      },
+      "release_notes": "New Features:\n * Skip\n * Todo\n * BailOut\n * SetOutputFile/FlushOutput\n\nUses now Harnesses under the hood."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8561",
+      "filename": "VimTAP-0.2.vba",
+      "script_version": "0.2",
+      "date": "2008-04-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "62",
+        "user_name": "mikesh",
+        "first_name": "Meikel",
+        "last_name": "Brandmeyer",
+        "email": "Brandels_Mikesh at web.de",
+        "homepage": ""
+      },
+      "release_notes": "Two new test functions are introduced, Like und Unlike, for use with\nregular expressions instead of concrete values for comparison.\n\nSome online documentation was added.\n\nThe vtruntest.sh utility was also added to provide a driver, which can\nbe used to run tests from outside vim. One possibility is for example\nthe runtests of Perl's TAP::Parser: runtests -e 'sh vtruntest.sh'"
+    }
+  ]
+}

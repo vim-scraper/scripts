@@ -1,0 +1,186 @@
+{
+  "script_id": "1624",
+  "name": "pastie.vim",
+  "summary": "Interface with pastie.org; read and create pastes",
+  "script_type": "utility",
+  "description": "This script lets you read and create pastes at http://pastie.org/ .  Pastes can be created from a range, a register (including the clipboard), any number of files, all open windows, or an existing paste.  It automatically maps between Vim filetypes and pastie's parsers.  Details for how to use the :Pastie command are included in the comments at the top of the plugin.\n\nPastie is the preferred method of sharing code in the Ruby IRC community.\n\nhttp://github.com/tpope/vim-pastie",
+  "install_details": "Place in ~/.vim/plugin (or vimfiles/plugin).\nRuby is required, but the Vim Ruby interface is not.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10260",
+      "filename": "pastie.vim",
+      "script_version": "2.0",
+      "date": "2009-03-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Switch from pastie.caboo.se domain to pastie.org"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8043",
+      "filename": "pastie.vim",
+      "script_version": "1.15",
+      "date": "2007-12-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Update for new server-side parser names."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7797",
+      "filename": "pastie.vim",
+      "script_version": "1.14",
+      "date": "2007-10-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "More updates for server changes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7736",
+      "filename": "pastie.vim",
+      "script_version": "1.13",
+      "date": "2007-10-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Updates for latest server side changes.\nFixed issue with Vim 6.2."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7314",
+      "filename": "pastie.vim",
+      "script_version": "1.9",
+      "date": "2007-07-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Fixed bug in using clipboard as a source"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6617",
+      "filename": "pastie.vim",
+      "script_version": "1.8",
+      "date": "2007-01-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Don't close current tab with \":Pastie!\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6543",
+      "filename": "pastie.vim",
+      "script_version": "1.7",
+      "date": "2006-12-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Fixed bug in Firefox cookie extraction"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6517",
+      "filename": "pastie.vim",
+      "script_version": "1.6",
+      "date": "2006-12-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Support shell=csh"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6296",
+      "filename": "pastie.vim",
+      "script_version": "1.5",
+      "date": "2006-10-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Properly handle new anti-bot measures"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6018",
+      "filename": "pastie.vim",
+      "script_version": "1.4",
+      "date": "2006-07-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Extracts login account token from Firefox cookies."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6007",
+      "filename": "pastie.vim",
+      "script_version": "1.2",
+      "date": "2006-07-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

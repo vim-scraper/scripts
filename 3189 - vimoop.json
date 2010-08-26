@@ -1,0 +1,58 @@
+{
+  "script_id": "3189",
+  "name": "vimoop",
+  "summary": "Adds some features of Python OOP model to vim.",
+  "script_type": "utility",
+  "description": "Provides inheritance, uses __init__ function as a constructor. This plugin was used to create YAML parser (vimscript #3190) by rewriting Python code in vimscript.",
+  "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"vimoop\"]) and add ``call scriptmanager#Activate([\"vimoop\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13569",
+      "filename": "vimoop-1.1.1.tar.gz",
+      "script_version": "1.1.1",
+      "date": "2010-08-14",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added default exception message"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13537",
+      "filename": "vimoop-1.1.tar.gz",
+      "script_version": "1.1",
+      "date": "2010-08-10",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added Exception built-in class, commented out list of instances attached to the class, so that garbage collector could free them."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13481",
+      "filename": "vimoop-1.0.tar.xz",
+      "script_version": "1.0",
+      "date": "2010-08-04",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

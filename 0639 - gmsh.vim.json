@@ -1,0 +1,26 @@
+{
+  "script_id": "639",
+  "name": "gmsh.vim",
+  "summary": "Syntax file for GMSH meshing facilities",
+  "script_type": "syntax",
+  "description": "Gmsh (http://www.geuz.org/gmsh) is an automatic 3D finite element mesh generator (primarily Delaunay) with build-in CAD and post-processing facilities.This simple script helps vim users in daily work providing color and syntax support.",
+  "install_details": "The GMSH community uses .geo files to store their problems, so adding this lines in filetype.vim will help\n\n\" GMSH (Meshing Facilities)\naugroup filetypedetect\nau BufNewFile,BufRead *.geo     setf gmsh\naugroup END\n\nFor other GMSH file add the following comment at the end of the file \n\n// vim: set filetype=gmsh :  //\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1982",
+      "filename": "gmsh.vim",
+      "script_version": "1.0",
+      "date": "2003-05-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2338",
+        "user_name": "champane",
+        "first_name": "CHAMPANEY",
+        "last_name": "Laurent",
+        "email": "laurent.champaney at meca.uvsq.fr",
+        "homepage": "http://www.lema.uvsq.fr/champaney"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

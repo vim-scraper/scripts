@@ -1,0 +1,58 @@
+{
+  "script_id": "1937",
+  "name": "Syntax for XUL",
+  "summary": "Highlighting for XML User interface Language.",
+  "script_type": "syntax",
+  "description": "Syntax highlighting for the XML User interface Language (XUL) a.k.a. eXtensible User interface Language.  Based on Nicolai Nespor's xul.vim v0.5.  Follows XUL's reference at http://developer.mozilla.org/en/docs/XUL_Reference.\n\nAlso available at http://bioinf.ibun.unal.edu.co/~miguel/?id=5",
+  "install_details": "Just place file into syntax folder.  To tell vim detect *.xul files automatically, just put the following line into filetype.vim (into the vim configuration dir) before the XML line:\nau BufNewFile,BufRead *.xul  setf xul\nIf you want to disable the attributes syntax, put let nohl_xul_atts = 1 in your ./[g]vim.\n<script/> is not the better way, it's better <script></script>; but, if you want <script/> form support, just place into your ./[g]vim file: let xul_noclose_script = 1.  If you do so, it's possible to damage the <script></script> performance, in the case you use any \"/\" char into the <script>, for example: <script type=\"application/x-javascript\">.  It's up to you.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7456",
+      "filename": "xul.vim",
+      "script_version": "0.35",
+      "date": "2007-08-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12657",
+        "user_name": "miguel",
+        "first_name": "Miguel",
+        "last_name": "Rodriguez",
+        "email": "lmrodriguezr at gmail.com",
+        "homepage": "http://bioinf.ibun.unal.edu.co/~miguel/"
+      },
+      "release_notes": "<script /> form supported.  Identified and fixed some bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7332",
+      "filename": "xul.vim",
+      "script_version": "0.2",
+      "date": "2007-07-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12657",
+        "user_name": "miguel",
+        "first_name": "Miguel",
+        "last_name": "Rodriguez",
+        "email": "lmrodriguezr at gmail.com",
+        "homepage": "http://bioinf.ibun.unal.edu.co/~miguel/"
+      },
+      "release_notes": "<script> tag completely highlighted"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7306",
+      "filename": "xul.vim",
+      "script_version": "0.1",
+      "date": "2007-06-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12657",
+        "user_name": "miguel",
+        "first_name": "Miguel",
+        "last_name": "Rodriguez",
+        "email": "lmrodriguezr at gmail.com",
+        "homepage": "http://bioinf.ibun.unal.edu.co/~miguel/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

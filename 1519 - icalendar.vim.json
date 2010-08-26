@@ -1,0 +1,58 @@
+{
+  "script_id": "1519",
+  "name": "icalendar.vim",
+  "summary": "Syntax file for icalendar files",
+  "script_type": "syntax",
+  "description": "This is a very rudimentary syntax file for icalendar files (.ics), used by Apple's iCal, Mozilla's Sunbird, Google Calendar, and other software. A screenshot of the syntax highlighting using the \"koehler\" colorscheme is available here: http://severinghaus.org/projects/icalendar_syntax.png",
+  "install_details": "You may want to add something like this to your vimrc:\n\nautocmd! BufRead,BufNewFile *.ics setfiletype icalendar",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5573",
+      "filename": "icalendar.vim",
+      "script_version": "0.3",
+      "date": "2006-04-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9477",
+        "user_name": "HorsePunchKid",
+        "first_name": "Steven",
+        "last_name": "Severinghaus",
+        "email": "sns at severinghaus.org",
+        "homepage": "http://severinghaus.org/"
+      },
+      "release_notes": "Various keywords are more precisely matched; more complete set of keywords; minor highlighting improvements; tested in 7.0b"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5569",
+      "filename": "icalendar.vim",
+      "script_version": "0.2",
+      "date": "2006-04-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9477",
+        "user_name": "HorsePunchKid",
+        "first_name": "Steven",
+        "last_name": "Severinghaus",
+        "email": "sns at severinghaus.org",
+        "homepage": "http://severinghaus.org/"
+      },
+      "release_notes": "A bit prettier; various standard icalendar properties are recognized, dates highlighted, custom properties, etc."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5568",
+      "filename": "icalendar.vim",
+      "script_version": "0.1",
+      "date": "2006-04-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9477",
+        "user_name": "HorsePunchKid",
+        "first_name": "Steven",
+        "last_name": "Severinghaus",
+        "email": "sns at severinghaus.org",
+        "homepage": "http://severinghaus.org/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

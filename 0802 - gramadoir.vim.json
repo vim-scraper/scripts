@@ -1,0 +1,58 @@
+{
+  "script_id": "802",
+  "name": "gramadoir.vim",
+  "summary": "Interface to an Irish language grammar checker",
+  "script_type": "utility",
+  "description": "An Gramadoir is a command line\ngrammar checking engine for \nminority languages.  It is fully\nimplemented for Irish (Gaelic) at the\nmoment with some other languages\nin the works.  See\nhttp://borel.slu.edu/gramadoir/\nfor more information.  \n\nThis plugin provides a split screen\ninterface to the grammar checker,\nwith the text you are editing on top\nand a buffer containing the errors\noutput by An Gramadoir below.\n\nPressing <Leader>g once runs\nthe grammar checker and opens\nthe error buffer.  Each successive\nuse of <Leader>g moves the buffers to\nthe next error, in parallel.  Syntax \nhighlighting shows the erroneous text \nin red.  \n\nPressing <Leader>a stops the grammar\nchecker and returns to normal editing.",
+  "install_details": "Drop gramadoir.vim into your plugin\ndirectory.     I usually also map <F3> to \n<Plug>Gr in my ~/.vimrc.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3283",
+      "filename": "gramadoir.vim",
+      "script_version": "0.5",
+      "date": "2004-07-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3677",
+        "user_name": "scannell",
+        "first_name": "Kevin",
+        "last_name": "Scannell",
+        "email": "kscanne at gmail.com",
+        "homepage": "http://borel.slu.edu/"
+      },
+      "release_notes": "Calls new perl backend grammar checker.  Simplified ignore file format."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2732",
+      "filename": "gramadoir.vim",
+      "script_version": "0.4.1",
+      "date": "2004-02-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3677",
+        "user_name": "scannell",
+        "first_name": "Kevin",
+        "last_name": "Scannell",
+        "email": "kscanne at gmail.com",
+        "homepage": "http://borel.slu.edu/"
+      },
+      "release_notes": "<Leader>n now adds the current error to a user\n\"ignore file\".   Some bug fixes for correctly dealing with errors\nsplit across lines.  "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2424",
+      "filename": "gramadoir.vim",
+      "script_version": "0.3",
+      "date": "2003-10-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3677",
+        "user_name": "scannell",
+        "first_name": "Kevin",
+        "last_name": "Scannell",
+        "email": "kscanne at gmail.com",
+        "homepage": "http://borel.slu.edu/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

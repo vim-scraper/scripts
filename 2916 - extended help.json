@@ -1,0 +1,42 @@
+{
+  "script_id": "2916",
+  "name": "extended help",
+  "summary": "Simple plugin to open and close help without leaving current window",
+  "script_type": "utility",
+  "description": "Plugin to open and close help without leaving current window\nIt is mostly useful when you want a quick reference\n\nUse:\n:Help subject - get help using :help command. It opens help window but cursor stays in the current window\n:Help! subject - help with :help! command\n:Help or :Help! - close help window\n",
+  "install_details": "put into $VIMRUNTIME/plugin",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12029",
+      "filename": "extended_help.vim",
+      "script_version": "1.1",
+      "date": "2010-01-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1837",
+        "user_name": "iamphet",
+        "first_name": "Sergey",
+        "last_name": "Khorev",
+        "email": "sergey.khorev at gmail.com",
+        "homepage": "http://sites.google.com/site/khorser/"
+      },
+      "release_notes": "Add completion, fix argument handling, do not switch to another window if :Help was used in help window"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12014",
+      "filename": "extended_help.vim",
+      "script_version": "1.0",
+      "date": "2010-01-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1837",
+        "user_name": "iamphet",
+        "first_name": "Sergey",
+        "last_name": "Khorev",
+        "email": "sergey.khorev at gmail.com",
+        "homepage": "http://sites.google.com/site/khorser/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

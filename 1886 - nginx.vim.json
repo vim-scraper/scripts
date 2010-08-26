@@ -1,0 +1,74 @@
+{
+  "script_id": "1886",
+  "name": "nginx.vim",
+  "summary": "initial version",
+  "script_type": "syntax",
+  "description": "nginx.vim highlights configuration files for nginx, the high-performance web server (see http://nginx.net).",
+  "install_details": "Download nginx.vim to ~/.vim/syntax/, and then add this line to ~/.vim/filetype.vim:\n\nau BufRead,BufNewFile /usr/local/nginx/conf/* set ft=nginx\n\n(adjust the path to your nginx installation)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12990",
+      "filename": "nginx.vim",
+      "script_version": "0.3.1",
+      "date": "2010-05-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12345",
+        "user_name": "emiller",
+        "first_name": "Evan",
+        "last_name": "Miller",
+        "email": "emmiller+vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bugfix: lines with \"{\" did not show in the comment color when prefixed by \"#\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12453",
+      "filename": "nginx.vim",
+      "script_version": "0.3",
+      "date": "2010-02-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12345",
+        "user_name": "emiller",
+        "first_name": "Evan",
+        "last_name": "Miller",
+        "email": "emmiller+vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Update to work with the latest Nginx directives (as of 0.8.32) and 3rd party modules. Thanks to Sergey Bochenkov."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11456",
+      "filename": "nginx.vim",
+      "script_version": "0.2",
+      "date": "2009-09-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12345",
+        "user_name": "emiller",
+        "first_name": "Evan",
+        "last_name": "Miller",
+        "email": "emmiller+vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Support more modules and keywords. Thanks to Bruno Michel."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7071",
+      "filename": "nginx.vim",
+      "script_version": "0.1",
+      "date": "2007-05-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12345",
+        "user_name": "emiller",
+        "first_name": "Evan",
+        "last_name": "Miller",
+        "email": "emmiller+vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

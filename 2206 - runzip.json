@@ -1,0 +1,42 @@
+{
+  "script_id": "2206",
+  "name": "runzip",
+  "summary": "edit zip files recursively (zip files inside zip files)",
+  "script_type": "utility",
+  "description": "this plugin improves vim runtime zip plugin, making it able to recursively read and write zip files : it allows editing zipfiles inside zipfiles inside zipfiles (on an arbitrary number of levels).\n\nWarning: this plugin needs python interface. it can be used only if vim is compiled with +python feature. To check this, type :version, and look for +python.",
+  "install_details": "unzip zip.zip in ~/.vim directorys.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11942",
+      "filename": "zip.zip",
+      "script_version": "1.1",
+      "date": "2009-12-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12828",
+        "user_name": "arno.",
+        "first_name": "arno.",
+        "last_name": "",
+        "email": "arenevier at fdn.fr",
+        "homepage": ""
+      },
+      "release_notes": "fixes fail to write zip files when compress type is not ZIP_STORED ZIP_DEFLATED. patch by tocer"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8508",
+      "filename": "zip.zip",
+      "script_version": "1",
+      "date": "2008-03-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12828",
+        "user_name": "arno.",
+        "first_name": "arno.",
+        "last_name": "",
+        "email": "arenevier at fdn.fr",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

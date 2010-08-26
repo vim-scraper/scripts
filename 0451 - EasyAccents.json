@@ -1,0 +1,42 @@
+{
+  "script_id": "451",
+  "name": "EasyAccents",
+  "summary": "Easy accents while you type: a' a` c, etc.",
+  "script_type": "utility",
+  "description": "EasyAccents makes entering accented characters easy in insert mode.  Of course there are many European keyboards that have accented characters on keys, but US-style keyboards don't.  During insert mode,  a' becomes an accented a, etc.  It works with utf8 encoding.\n\nEasyAccents may be toggled on and off with:\n  :EZA\n\nYou can get just the two characters o', for example, by simply escaping the ':  o&#039 -> o'\n\nHistory/Features:\n\nv5: included g:EasyAccents_VowelFirst option\n    fixed insert vs append bug\n\nv4: EasyAccents handles a' a` A' o: etc : during insert mode, these pairs of\ncharacters become the associated accented characters.  Use <Leader>ea (\\ea) to\ntoggle EasyAccents on and off.  Especially helpful for US style keyboards.\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#EASYACCENTS)\n",
+  "install_details": "1. vim EasyAccents.vba.gz\n2. :so %\n\n ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9231",
+      "filename": "EasyAccents.vba.gz",
+      "script_version": "9",
+      "date": "2008-09-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Improved help and more easy-accents!  o' o` o~ etc.  Start it with :EZA, stop it with :EZA .\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2905",
+      "filename": "EasyAccents.vim.gz",
+      "script_version": "6",
+      "date": "2004-04-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Normally EasyAccents supports 'a `a ~a :a etc to produce accented characters.\nNow, putting g:EasyAccents_VowelFirst=0 makes EasyAccents handle a' a` a~ a: .\nV6 supports even more accents: a@ A@ D@ e@ E@ N~ p@ u@ x@\n"
+    }
+  ]
+}

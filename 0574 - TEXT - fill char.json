@@ -1,0 +1,26 @@
+{
+  "script_id": "574",
+  "name": "TEXT - fill char",
+  "summary": "script for on-the-fly indenting of columns according to previous or next line",
+  "script_type": "utility",
+  "description": "Script for on-the-fly indenting of columns according\nto the previous or next line (it allows for instance to easily align\n'=' sign in a sequence of C initializations, and much more).\n\nEXAMPLE:\n\nline 1: background-color: _#eeeeee\nline 2: color:|\n\nChar | is cursor, char _ is space. \n\nAfter call :FillUpSpace (you can map to TAB) is \nsituation this:\n\nline 1: background-color:_#eeeeee\nline 2: color:___________|\n\nCursor is under #. It's all.\n\nYou can use :FillUpPrevious for fill any char (by char \nprevious cursor) \n\nEXAMPLE:\n\nline1: Chapter1 ...................... 7\nline2: Chapter2 .|\n\nAfter use :FillUpPrevious is situation this:\n\nline1: Chapter1 ...................... 7\nline2: Chapter2 ......................|\n",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1742",
+      "filename": "TEXT_charFill.vim",
+      "script_version": "1.0",
+      "date": "2003-02-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1489",
+        "user_name": "wraith",
+        "first_name": "Petr",
+        "last_name": "Mach",
+        "email": "gsl at seznam.cz",
+        "homepage": "http://iglu.cz/wraith/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

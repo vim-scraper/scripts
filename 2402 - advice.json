@@ -1,0 +1,26 @@
+{
+  "script_id": "2402",
+  "name": "advice",
+  "summary": "alter the behavior of a command in modular way",
+  "script_type": "utility",
+  "description": "*advice* is a library for Vim scripts to provide a modular way to alter the\nbehavior of a command.\n\nFor example, if you want to change the default register for the command |C| to\n\"_ (|quote_|), you have to write a new operator then map |C| to execute the\noperator, i.e., redefine the whole command.  But how about if you also want to\nchange |C| in Visual mode to always behave as same as the default |C| in\n|blockwise-visual| mode?  How about if you want to disable one of the altered\nbehaviors afterwards?  Therefore, redefining the whole command is not elegant\nway.\n\nADVICE provides useful API to do such customization.\n\nThe concept of ADVICE is derived from the one of Emacs.  See also:\nhttp://www.gnu.org/software/emacs/elisp/html_node/Advising-Functions.html .\nNote that there are some differences from the one of Emacs, especially: there\nis no activation and ADVICE supports \"usual\" commands only (see\n|advice-Normal-command|).  Because Ex commands and functions cannot be\nsupported only by Vim script.\n\nRequirements:\n- Vim 7.2 or later\n\nLatest version:\nhttp://github.com/kana/vim-advice",
+  "install_details": "...",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9344",
+      "filename": "vim-advice-0.0.0.zip",
+      "script_version": "0.0.0",
+      "date": "2008-10-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

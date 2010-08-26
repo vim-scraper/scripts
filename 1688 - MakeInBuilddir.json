@@ -1,0 +1,42 @@
+{
+  "script_id": "1688",
+  "name": "MakeInBuilddir",
+  "summary": "runs :make for projects where build and source directories are separated",
+  "script_type": "utility",
+  "description": "Let's consider a libtool/autoconf project where source and build directories are separeted:\n  source_dir\n  source_dir/build\n\nIf you're editing a file in source_dir/src and type Make then\n  1/ the name of the build directory will be asked (here 'build') (it is asked only once)\n  2/ :make will be run in source_dir/build/src\n\nsource_dir is found by searching for configure.ac, configure.in or configure\n\nThe following additional commands are defined:\n   Compile - compiles the current file by calling the libtool-specific\n           :make basename.lo\n   MakeAll - runs :make in source_dir regardless of the directory of the current file\n   Reconfigure - runs \"config.status --recheck\" in source_dir/build\n   RegenAll - runs \"config.status\" in source_dir/build\n   Run execname - starts execname instead of :make\n   Debug execname - start a libtool-wrapped gdb (for libtool generated executables)\n",
+  "install_details": "copy makeinbuilddir.vim in .vim/plugin",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6335",
+      "filename": "makeinbuilddir.vim",
+      "script_version": "0.3",
+      "date": "2006-10-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11048",
+        "user_name": "Sylvain Joyeux",
+        "first_name": "Sylvain",
+        "last_name": "Joyeux",
+        "email": "sylvain.joyeux at m4x.org",
+        "homepage": "http://www.jhaampe.org"
+      },
+      "release_notes": "Added completion for -C in :Make"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6325",
+      "filename": "makeinbuilddir.vim",
+      "script_version": "0.1",
+      "date": "2006-10-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11048",
+        "user_name": "Sylvain Joyeux",
+        "first_name": "Sylvain",
+        "last_name": "Joyeux",
+        "email": "sylvain.joyeux at m4x.org",
+        "homepage": "http://www.jhaampe.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

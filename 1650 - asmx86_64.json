@@ -1,0 +1,90 @@
+{
+  "script_id": "1650",
+  "name": "asmx86_64",
+  "summary": "Syntax highlighting for x86_64 asm including gcc preprocessor",
+  "script_type": "syntax",
+  "description": "This syntax is especially adapted to working in the Linux kernel (x86_64)\n\nI am still working on it ... so this is a first version enjoy",
+  "install_details": "copy into your ~/.vim/syntax/ directory\n\nto use it, just type :\n\nset syntax=asmx86_64",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6535",
+      "filename": "asmx86_64.vim",
+      "script_version": "0.5",
+      "date": "2006-12-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "Added mm registers and made the syntax usable for objdump output as well"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6242",
+      "filename": "asmx86_64.vim",
+      "script_version": "0.4",
+      "date": "2006-10-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "Included all mnemonics (with their size suffix)\nFixed the .macro colouring..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6170",
+      "filename": "asmx86_64.vim",
+      "script_version": "0.3b",
+      "date": "2006-09-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "Close to completion, just needs now to add xmm and mmx registers, some instructions, and to deal with the #ifdef / '#' comment problem"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6168",
+      "filename": "asmx86_64.vim",
+      "script_version": "0.2b",
+      "date": "2006-09-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "Fixed comments syntax: added a 'hack' so that # comment are correctly highted (they are highlighted as long as # is folowed by a space\nAdded %regs and regs (still needs mmx and xmm regs\n\nThis version should work with vim 5.7+ (if some of you try it on old version, please let me know).\n\nknwon bugs:\n\n'#' comments only works if followed by a space e.g.:\n# my comment (will be highlighted correctly)\n#my comment will not ...\n\ngcc preproc directives works if not followed by a space e.g.:\n#ifdef will be highlighted correctly\n# ifdef will not ...\n\nStill working on this problem"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6164",
+      "filename": "asmx86_64.vim",
+      "script_version": "0.1a",
+      "date": "2006-09-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

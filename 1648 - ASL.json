@@ -1,0 +1,26 @@
+{
+  "script_id": "1648",
+  "name": "ASL",
+  "summary": "ACPI syntax language",
+  "script_type": "syntax",
+  "description": "Syntax file for the ACPI Syntax Language. Uses the c.vim syntax file as base. Added important keywords for highlighting.",
+  "install_details": "Copy asl.vim to your $HOME/.vim/syntax directory and add\n\n  autocmd BufNew,BufRead *.asl setf asl\n\nto your .vimrc.\n\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6136",
+      "filename": "asl.vim",
+      "script_version": "0.1",
+      "date": "2006-09-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10773",
+        "user_name": "Hasw",
+        "first_name": "Sebastian",
+        "last_name": "Witt",
+        "email": "se.witt at gmx.net",
+        "homepage": "http://www.hasw.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "script_id": "2390",
+  "name": "CSApprox",
+  "summary": "Make gvim-only colorschemes work transparently in terminal vim",
+  "script_type": "utility",
+  "description": "CSApprox.vim\n\n============\nDESCRIPTION\n============\n\nIt's hard to find colorschemes for terminal Vim.  Most colorschemes are\nwritten to only support GVim, and don't work at all in terminal Vim.\n\nThis plugin makes GVim-only colorschemes Just Work in terminal Vim, as long\nas the terminal supports 88 or 256 colors - and most do these days.  This\nusually requires no user interaction (but see the help for what to do if\nthings don't Just Work).  After getting this plugin happily installed, any\ntime you use :colorscheme it will do its magic and make the colorscheme Just\nWork.\n\nWhenever you change colorschemes using the :colorscheme command this script\nwill be executed.  It will take the colors that the scheme specified for use\nin the GUI and use an approximation algorithm to try to gracefully degrade\nthem to the closest color available in your terminal.  If you are running in\na GUI or if your terminal doesn't support 88 or 256 colors, no changes are\nmade.  Also, no changes will be made if the colorscheme seems to have been\nhigh color already.\n\nIf for some reason this transparent method isn't suitable to you (for instance\nif your environment can't be configured to meet the |csapprox-requirements|,\nor you need to work in Vim 6), another option is also available: using the\n|:CSApproxSnapshot| command to create a new GUI/88-/256-color terminal\ncolorscheme.  To use this command, a user would generally start GVim, choose a\ncolorscheme that sets up the desired colors, and then use |:CSApproxSnapshot|\nto create a new colorscheme based on those colors that works in high color\nterminals.  This method is more flexible than the transparent mode and works\nin more places, but also requires more user intervention, and makes it harder\nto deal with colorschemes being updated and such.\n\n======\nNOTES\n======\n\nIdeally, this plugin should require absolutely no configuration, but you may\nneed some tweaking to make sure vim realizes that your terminal supports more\nthan 16 colors.  Also, konsole and Eterm users will want to make sure that\nthis plugin realizes that the terminal does not use colors that are exactly\nxterm-compatible; they will want to skim through the help articles\n|csapprox-palettes| and |csapprox-configuration| for a better end result.\n\n==============\nSCREENSHOTS\n==============\n\nSome quick side-by-side screenshots can be found at\nhttp://www.cs.drexel.edu/~mjw452/CSApprox/",
+  "install_details": "Install like most other vim scripts:\nmkdir ~/.vim\ncd ~/.vim\nunzip /path/to/CSApprox.zip\nvim -c 'helptags ~/.vim/doc'",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10336",
+      "filename": "CSApprox.zip",
+      "script_version": "3.50",
+      "date": "2009-04-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13145",
+        "user_name": "godlygeek",
+        "first_name": "Matt",
+        "last_name": "Wozniski",
+        "email": "mjw452 at drexel.edu",
+        "homepage": ""
+      },
+      "release_notes": "Fix a major regression that prevented the Eterm and Konsole colors from being correctly snapshotted\n\nFix a related bug causing incorrect terminal colors after calling :CSApproxSnapshot\n\nFix a bug causing black to be used instead of dark grey\n\nHave snapshots calculate g:colors_name programmatically\n\nIntroduce many tweaks for better speed\n\nClarify some things at :help csapprox-terminal-example\n\nDefault to using our own list of rgb.txt colors rather than searching, for performance.  Add a new variable, g:CSApprox_use_showrgb, which forces us to try finding the colors using the \"showrgb\" program instead, and fall back on our own list if it isn't available\n\nRemove g:CSApprox_extra_rgb_txt_dirs - not needed in light of the above change"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9891",
+      "filename": "CSApprox.zip",
+      "script_version": "3.05",
+      "date": "2009-01-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13145",
+        "user_name": "godlygeek",
+        "first_name": "Matt",
+        "last_name": "Wozniski",
+        "email": "mjw452 at drexel.edu",
+        "homepage": ""
+      },
+      "release_notes": "Fix a harmless \"Undefined variable\" error in :CSApproxSnapshot\n\nFix a behavioral bug when dumping out colors defined external to the scheme."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9849",
+      "filename": "CSApprox.zip",
+      "script_version": "3.00",
+      "date": "2009-01-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13145",
+        "user_name": "godlygeek",
+        "first_name": "Matt",
+        "last_name": "Wozniski",
+        "email": "mjw452 at drexel.edu",
+        "homepage": ""
+      },
+      "release_notes": "Update the docs for better info on :CSApproxSnapshot\n\nAllow snapshotted schemes to work on Vim 6, and work properly in Konsole and Eterm (thanks David Majnemer!)\n\nFix a bug causing a syntax error when using GVim while CSApprox was loaded.  (thanks again, David Majnemer!)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9666",
+      "filename": "CSApprox.zip",
+      "script_version": "2.00",
+      "date": "2008-12-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13145",
+        "user_name": "godlygeek",
+        "first_name": "Matt",
+        "last_name": "Wozniski",
+        "email": "mjw452 at drexel.edu",
+        "homepage": ""
+      },
+      "release_notes": "Add a hooks system, allowing users to specify a command to run, either before or after the approximation algorithm is run, for all schemes or one specific one.\n\nAlso rewrite :CSApproxSnapshot to be more maintainable and less of a hack, and fix several bugs that it contained.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9525",
+      "filename": "CSApprox.zip",
+      "script_version": "1.50",
+      "date": "2008-11-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13145",
+        "user_name": "godlygeek",
+        "first_name": "Matt",
+        "last_name": "Wozniski",
+        "email": "mjw452 at drexel.edu",
+        "homepage": ""
+      },
+      "release_notes": "Add :CSApproxSnapshot for writing out a colorscheme file representing the current colors that will work in gvim, 88 color vim, or 256 color vim, even without +gui.  See :help :CSApproxSnapshot"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9406",
+      "filename": "CSApprox.zip",
+      "script_version": "1.10",
+      "date": "2008-10-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13145",
+        "user_name": "godlygeek",
+        "first_name": "Matt",
+        "last_name": "Wozniski",
+        "email": "mjw452 at drexel.edu",
+        "homepage": ""
+      },
+      "release_notes": "Distribute an rgb.txt along with CSApprox, so that CSApprox can still be used on distributions where no rgb.txt is provided with the X server (like Ubuntu Intrepid Ibex).  Thanks to Penn Su for finding this!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9308",
+      "filename": "CSApprox.zip",
+      "script_version": "1.00",
+      "date": "2008-10-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13145",
+        "user_name": "godlygeek",
+        "first_name": "Matt",
+        "last_name": "Wozniski",
+        "email": "mjw452 at drexel.edu",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

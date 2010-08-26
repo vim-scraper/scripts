@@ -1,0 +1,74 @@
+{
+  "script_id": "440",
+  "name": "stata.vim",
+  "summary": "vim syntax file for Stata programs",
+  "script_type": "syntax",
+  "description": "stata.vim is a syntax file for Stata do and ado programs.\n\nThis syntax file will help identify:\n\n* some common Stata programming commands\n* Stata functions\n* local and global macro expansions\n* regular (\"\") and compound (`\"\"') double quotes\n* numeric and string formats \n* Stata comments\n* errors in parens, brackets, ...\n",
+  "install_details": "I keep stata.vim in $HOME/.vim/syntax/ and associate Stata programs in\n$HOME/.vim/filetypes.vim using the following: \n\naugroup filetypedetect\n        autocmd! BufRead,BufNewFile *.ado       set filetype=stata\n        autocmd! BufRead,BufNewFile *.class    set filetype=stata\n        autocmd! BufRead,BufNewFile *.do         set filetype=stata\naugrougp END\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5571",
+      "filename": "stata.vim",
+      "script_version": "1.1.2",
+      "date": "2006-04-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1118",
+        "user_name": "jsp",
+        "first_name": "Jeffrey",
+        "last_name": "Pitblado",
+        "email": "jeffrey.pitblado at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* fixed 'start' expression for stataFunc matches"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5560",
+      "filename": "stata.vim",
+      "script_version": "1.1.1",
+      "date": "2006-04-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1118",
+        "user_name": "jsp",
+        "first_name": "Jeffrey",
+        "last_name": "Pitblado",
+        "email": "jeffrey.pitblado at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "renamed syntax groups st* to stata*\n'syntax clear' only under version control\ncheck for 'b:current_syntax', removed 'did_stata_syntax_inits'"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5552",
+      "filename": "stata.vim",
+      "script_version": "1.1.0",
+      "date": "2006-04-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1118",
+        "user_name": "jsp",
+        "first_name": "Jeffrey",
+        "last_name": "Pitblado",
+        "email": "jeffrey.pitblado at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* updated for Stata 9\n* improved function coverage\n* trimmed most Stata commands out, leaving only common programming commands\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1286",
+      "filename": "stata.vim",
+      "script_version": "1.0.5",
+      "date": "2002-10-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1118",
+        "user_name": "jsp",
+        "first_name": "Jeffrey",
+        "last_name": "Pitblado",
+        "email": "jeffrey.pitblado at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

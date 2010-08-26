@@ -1,0 +1,42 @@
+{
+  "script_id": "3198",
+  "name": "undofile.vim",
+  "summary": "persistent undo: enable 'undofile' for certain files only",
+  "script_type": "utility",
+  "description": "If you want 'undofile' only for certain files, you will notice that 'undofile' cannot be set in a modeline, or once the buffer is loaded (because an existing undo file will not be loaded then).  Bram suggests to use a BufReadPre autocmd which sets 'undofile' before the buffer is loaded.  This script does the steps for you.\n\nUsage:\n\n:SetUndoFile[!]\n\n  execute :setlocal undofile, install a BufReadPre autocmd for the current file name and also maintain a plugin file \"plugin/undofile_autocmds.vim\" that enables all such autocmds at next startup of Vim.\n\n  This means you can execute this command once for the current file and then never ever again -- FIRE AND FORGET ;)\n\n  The plugin file (if not found in the runtimepath) is stored in the first directory of the runtimepath (which must contain a \"plugin\" folder).  Older Vims will ignore the plugin.\n\n  With [!], ignore if 'undofile' is already set.\n\n\n:UnsetUndoFile\n\n  opposite of :SetUndoFile.  Does :setlocal noundofile, removes the autcommand and the autcommand entry from \"plugin/undofile_autocmds.vim\"; finally it executes :DelUndoFile.\n\n\n:DelUndoFile\n\n  delete the undofile for the current buffer.  Fails silently.\n\nPLEASE REPORT BUGS",
+  "install_details": "requires the persistent_undo feature (since Vim7.3)\n:source this script when needed, or drop it in your plugin folder",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13567",
+      "filename": "undofile.vim",
+      "script_version": "0.2",
+      "date": "2010-08-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "forgot the init folklore"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13565",
+      "filename": "undofile.vim",
+      "script_version": "0.1",
+      "date": "2010-08-14",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

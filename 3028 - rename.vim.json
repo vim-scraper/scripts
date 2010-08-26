@@ -1,0 +1,42 @@
+{
+  "script_id": "3028",
+  "name": "rename.vim",
+  "summary": "rename variables and files in your code",
+  "script_type": "utility",
+  "description": "This script is a fork of renamec.vim from Bastian Mathes\n\nIt features two functions:\n:call Renamec() renames the variable under the cursor. Cscope is called to get the references to the corresponding C symbol.\n:call Renamef() renames the file under the cursor. The references to this files (like #include\"path/to/file\") are updated.\n\n- When renaming a variable or a file, the quickfix list is updated, so you can jump in the code to modified parts (for example to check if the comments need an update).\n- The buffers where the modifications occured are not unloaded and changes are joined so that they can be canceled easily with ':bufdo undo'\n",
+  "install_details": "open the vimball archive with vim and source it with ':so %'",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12710",
+      "filename": "rename.vba",
+      "script_version": "1.1",
+      "date": "2010-03-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19413",
+        "user_name": "chmduquesne",
+        "first_name": "Christophe-Marie",
+        "last_name": "Duquesne",
+        "email": "chm.duquesne at gmail.com",
+        "homepage": "http://chm.duquesne.free.fr/blog"
+      },
+      "release_notes": "code cleanup"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12707",
+      "filename": "rename.vba",
+      "script_version": "1.0",
+      "date": "2010-03-25",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "19413",
+        "user_name": "chmduquesne",
+        "first_name": "Christophe-Marie",
+        "last_name": "Duquesne",
+        "email": "chm.duquesne at gmail.com",
+        "homepage": "http://chm.duquesne.free.fr/blog"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

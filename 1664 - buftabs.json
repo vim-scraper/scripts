@@ -1,0 +1,186 @@
+{
+  "script_id": "1664",
+  "name": "buftabs",
+  "summary": "Minimalistic buffer tabs saving screen space",
+  "script_type": "utility",
+  "description": "[Screeshot available at  http://zevv.nl/play/code/vimscripts/]\n\n\nIntroduction\n------------\nThis is a simple script that shows a tabs-like list of buffers in the bottom\nof the window. The biggest advantage of this script over various others is\nthat it does not take any lines away from your terminal, leaving more space\nfor the document you're editing. The tabs are only visible when you need\nthem - when you are switchin between buffers.\n\nUsage\n-----\nThis script draws buffer tabs on vim startup, when a new buffer is created\nand when switching between buffers.\n\nIt might be handy to create a few maps for easy switching of buffers in your\n.vimrc file. For example, using F1 and F2 keys:\n\n  noremap <f1> :bprev<CR> \n  noremap <f2> :bnext<CR>\n\nor using control-left and control-right keys:\n\n  :noremap <C-left> :bprev<CR>\n  :noremap <C-right> :bnext<CR>\n\n\nSome configuration options are available for styling and layout, check the top of the plugin file for instructions.\n",
+  "install_details": "Copy the script into your plugin directory, and optionally define configuration items for styling the buftabs layout.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12520",
+      "filename": "buftabs.vim",
+      "script_version": "0.16",
+      "date": "2010-02-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10887",
+        "user_name": "Zevv",
+        "first_name": "Ico",
+        "last_name": "-",
+        "email": "vim at zevv.nl",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug causing errors when using buftabs in vimdiff mode."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12392",
+      "filename": "buftabs.vim",
+      "script_version": "0.15",
+      "date": "2010-02-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10887",
+        "user_name": "Zevv",
+        "first_name": "Ico",
+        "last_name": "-",
+        "email": "vim at zevv.nl",
+        "homepage": ""
+      },
+      "release_notes": "* Fixed window width handling bug which caused strange behaviour in combination with the bufferlist plugin.\n* Fixed wrong buffer display when deleting last window.\n* Added extra options for tabs style and highlighting.\n\nThaks to all contributors!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12205",
+      "filename": "buftabs.vim",
+      "script_version": "0.14",
+      "date": "2010-01-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10887",
+        "user_name": "Zevv",
+        "first_name": "Ico",
+        "last_name": "-",
+        "email": "vim at zevv.nl",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug that caused buftabs in command line being overwritten when 'hidden' mode is enabled.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10557",
+      "filename": "buftabs.vim",
+      "script_version": "0.13",
+      "date": "2009-05-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10887",
+        "user_name": "Zevv",
+        "first_name": "Ico",
+        "last_name": "-",
+        "email": "vim at zevv.nl",
+        "homepage": ""
+      },
+      "release_notes": "Reusing right-aligned part of original statusline instead of using fixed '%l,%c'"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10237",
+      "filename": "buftabs.vim",
+      "script_version": "0.12",
+      "date": "2009-03-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10887",
+        "user_name": "Zevv",
+        "first_name": "Ico",
+        "last_name": "-",
+        "email": "vim at zevv.nl",
+        "homepage": ""
+      },
+      "release_notes": "Fixed support for split windows"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8181",
+      "filename": "buftabs.vim",
+      "script_version": "0.10",
+      "date": "2008-01-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10887",
+        "user_name": "Zevv",
+        "first_name": "Ico",
+        "last_name": "-",
+        "email": "vim at zevv.nl",
+        "homepage": ""
+      },
+      "release_notes": "Added GPL license"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7544",
+      "filename": "buftabs.vim",
+      "script_version": "0.9",
+      "date": "2007-08-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10887",
+        "user_name": "Zevv",
+        "first_name": "Ico",
+        "last_name": "-",
+        "email": "vim at zevv.nl",
+        "homepage": ""
+      },
+      "release_notes": "Now compatible with older Vim versions < 7.0 as well"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7056",
+      "filename": "buftabs.vim",
+      "script_version": "0.8",
+      "date": "2007-05-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10887",
+        "user_name": "Zevv",
+        "first_name": "Ico",
+        "last_name": "-",
+        "email": "vim at zevv.nl",
+        "homepage": ""
+      },
+      "release_notes": "Update buftabs when leaving insert to properly show modified-status."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6846",
+      "filename": "buftabs.vim",
+      "script_version": "0.7",
+      "date": "2007-03-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10887",
+        "user_name": "Zevv",
+        "first_name": "Ico",
+        "last_name": "-",
+        "email": "vim at zevv.nl",
+        "homepage": ""
+      },
+      "release_notes": "Added configuration option to show tabs in statusline instead of cmdline"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6832",
+      "filename": "buftabs.vim",
+      "script_version": "0.6",
+      "date": "2007-03-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10887",
+        "user_name": "Zevv",
+        "first_name": "Ico",
+        "last_name": "-",
+        "email": "vim at zevv.nl",
+        "homepage": ""
+      },
+      "release_notes": "'only_basename' changed to a global variable.  Removed functions and add event handlers instead.  'hidden' mode broke some things, so is disabled now. Fixed documentation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6799",
+      "filename": "buftabs.vim",
+      "script_version": "0.5",
+      "date": "2007-02-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10887",
+        "user_name": "Zevv",
+        "first_name": "Ico",
+        "last_name": "-",
+        "email": "vim at zevv.nl",
+        "homepage": ""
+      },
+      "release_notes": "Added option for showing only filenames without directories in tabs"
+    }
+  ]
+}

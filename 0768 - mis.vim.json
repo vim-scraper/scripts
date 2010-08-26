@@ -1,0 +1,26 @@
+{
+  "script_id": "768",
+  "name": "mis.vim",
+  "summary": "Syntax file for Minimal Instruction Set (MIS)",
+  "script_type": "syntax",
+  "description": "This script provides syntax highlighting for the (rather obscure) MIS programming language.\n\nIt assumes the following conventions:\n\n* names of pointers to address locations end in \"_@\".. Ex. mypointer_@\n* names of pointers to pointers end in \"_@@\".. Ex. mypointer_@@\n\nIf these conventions are followed, the syntax will be highlighted accordingly. ",
+  "install_details": "Drop the file into your ~/.vim/syntax directory (create one if it doesn't exist), and add the following to your ~/.vimrc\n\nautocmd BufRead,BufNewFile *.mis  setfiletype mis",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2321",
+      "filename": "mis.vim",
+      "script_version": "0.1",
+      "date": "2003-09-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3313",
+        "user_name": "Arker",
+        "first_name": "Dennis",
+        "last_name": "Craven",
+        "email": "xx7w03f02 at sneakemail.com",
+        "homepage": "http://arker.homelinux.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

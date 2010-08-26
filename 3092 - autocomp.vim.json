@@ -1,0 +1,42 @@
+{
+  "script_id": "3092",
+  "name": "autocomp.vim",
+  "summary": "Auto-complete VIM script tailored for those with RSI",
+  "script_type": "utility",
+  "description": "The purpose of this script is to allow the user to auto-complete a word without having to first press a key combination to open up the list of options, and then have to press more keys (usually the arrow keys) until you get to the word you want to type. With this script, you type a letter or two, and then the number that represents the word that you want to type. The idea is to have the user press as few keys as possible for an auto-completion.\n\nThis script is made for people who cannot type as much as they used to anymore. It will probably slow you down somewhat initially, but if you're looking for this script, you're probably not worried about speed.\nUntil someone figures out how to connect speech recognition to VIM in a useful way, this may help.  :-)\n\nDocumentation and usage instructions are in the file autocomp.vim.",
+  "install_details": "Copy autocomp.vim to the VIM plugin's directory.\nOn Windows, this would be: ...\\vimfiles\\plugin\\.\nOn Linux: ~/.vim/plugin/.\n\nUse the F5 key to open the auto-complete window.\nYou can customize the key using something like the following in your VIM rc file:\nnmap <unique> <...> <Plug>AutocompStart\n\nAlso available at:\nhttp://github.com/andre-luiz-dos-santos/autocomp",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13016",
+      "filename": "autocomp.vim",
+      "script_version": "1.0.1",
+      "date": "2010-05-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19886",
+        "user_name": "andre-luiz-dos-santos",
+        "first_name": "André",
+        "last_name": "dos Santos",
+        "email": "andre.netvision.com.br at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "The previous version didn't work on Linux because the file was saved with Windows line endings. Switched to UNIX line endings."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13010",
+      "filename": "autocomp.vim",
+      "script_version": "1.0",
+      "date": "2010-05-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19886",
+        "user_name": "andre-luiz-dos-santos",
+        "first_name": "André",
+        "last_name": "dos Santos",
+        "email": "andre.netvision.com.br at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

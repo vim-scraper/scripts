@@ -1,0 +1,74 @@
+{
+  "script_id": "1873",
+  "name": "projtags.vim",
+  "summary": "Set tags file for per project",
+  "script_type": "utility",
+  "description": "Usage:\n\nSet your projects path into g:ProjTags as a list, for example:\n\nlet g:ProjTags = [ \"~/work/proj1\" ]\n\nIn this case for all file match the pattern \"~/work/proj1/*\", the tag file\n\"~/work/proj1/tags\" will be used.\n\nYou can also specify a tags file other than the default one or more tags\nfiles for one directory by a list:\n\nlet g:ProjTags += [[ \"~/work/proj2\", \"~/work/proj2/tags\",\n\"~/work/common.tags\" ]]\n\nIn this case for all files match the pattern \"~/work/proj2/*\", the tag files\n\"~/work/proj2/tags\" and \"~/work/common.tags\" will be used.\n\nIf one of the items in the list begins with \":\", it will be treated as a\ncommand (other than tag file):\n\nlet g:ProjTags += [[ \"~/work/proj3\", \"~/work/proj3/tags\",\n\":set shiftwidth=4\" ]]\n\nIn this case for all files match the pattern \"~/work/proj3/*\", the tag file\n\"~/work/proj3/tags\" will be used, and \"shiftwidth=4\" will be set.\n\nPlease note that if you use \"set\" in the command, we will actually use\n\"setlocal\" instead, to avoid polluting the whole vim environment.\n\nYou can add the above codes into your vimrc file",
+  "install_details": "put this file under your ~/.vim/plugins/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12536",
+      "filename": "projtags.vim",
+      "script_version": "0.4",
+      "date": "2010-03-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9020",
+        "user_name": "fishy",
+        "first_name": "Yuxuan",
+        "last_name": "Wang",
+        "email": "wang at yuxuan.org",
+        "homepage": "http://wang.yuxuan.org"
+      },
+      "release_notes": " + can handle directories end with \"/\" now"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11112",
+      "filename": "projtags.vim",
+      "script_version": "0.3",
+      "date": "2009-07-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9020",
+        "user_name": "fishy",
+        "first_name": "Yuxuan",
+        "last_name": "Wang",
+        "email": "wang at yuxuan.org",
+        "homepage": "http://wang.yuxuan.org"
+      },
+      "release_notes": "+ can add commands now"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7027",
+      "filename": "projtags.vim",
+      "script_version": "0.2",
+      "date": "2007-04-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9020",
+        "user_name": "fishy",
+        "first_name": "Yuxuan",
+        "last_name": "Wang",
+        "email": "wang at yuxuan.org",
+        "homepage": "http://wang.yuxuan.org"
+      },
+      "release_notes": "+ more tags file for one directory support (contributed by Joseph Barker)\n+ check for g:ProjTags before use it "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7024",
+      "filename": "projtags.vim",
+      "script_version": "0.1",
+      "date": "2007-04-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9020",
+        "user_name": "fishy",
+        "first_name": "Yuxuan",
+        "last_name": "Wang",
+        "email": "wang at yuxuan.org",
+        "homepage": "http://wang.yuxuan.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

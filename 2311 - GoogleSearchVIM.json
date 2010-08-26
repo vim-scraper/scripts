@@ -1,0 +1,58 @@
+{
+  "script_id": "2311",
+  "name": "GoogleSearchVIM",
+  "summary": "Search for keywords with the Google Desktop Search engine from inside VIM",
+  "script_type": "utility",
+  "description": " This plugin allows you to use Google Desktop Search engine to search text\n files on your hard drives (or network drives if configured in GDS) from within VIM. \n This requires python, pygoogledesktop script, python windows extensions, and Google Desktop Search engine installed.\n Right now, this is a Windows only program, until I find time to modify it\n for other OS's.\n\nThis might get you quicker results instead of using vimgrep or grep.\n",
+  "install_details": "Make sure you have the latest Google Desktop Search engine installed for Windows!\n\nMake sure the correct version of Python is installed on your machine that\nVIM supports.  Type :version and you should see a \"+python\" or \"+python/dyn\"\nIf it is not there, then you cannot use this script.\nAlso in that same version command, check for \"DFEAT_PYTHON\" to see\nwhere python is installed for VIM to use and make sure your python is\nlocated there.\n\nMake sure you have a copy of PyGoogleDesktop python package installed\nas well. \"http://code.google.com/p/pythongoogledesktop&quot; or if you have\nsetuptools, do \"easy_install pygoogledesktop\" to install.  The easy_install should download the pywin32 extensions if you don't have them.\n\nNOTE: Make sure that the (PythonInstallDirectory)\\PythonXX\\Scripts directory is in your PYTHONPATH.  Hopefully I'll have this fixed soon!\n\nInstall googlesearch.vim into your plugin directory\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9197",
+      "filename": "googlesearch.vim",
+      "script_version": "0.4",
+      "date": "2008-08-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12300",
+        "user_name": "JackAtk",
+        "first_name": "Jack",
+        "last_name": "Atkinson",
+        "email": "jgatkinsn at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a little problem with the results buffer acting like a file wanting to be saved.  Changed the buffer type, so it will no longer prompt you to save it, so you can use \"gf\" to jump to the file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9026",
+      "filename": "googlesearch.vim",
+      "script_version": "0.3",
+      "date": "2008-07-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12300",
+        "user_name": "JackAtk",
+        "first_name": "Jack",
+        "last_name": "Atkinson",
+        "email": "jgatkinsn at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "trying to fix some result buffer problems"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9025",
+      "filename": "googlesearch.vim",
+      "script_version": "0.2",
+      "date": "2008-07-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12300",
+        "user_name": "JackAtk",
+        "first_name": "Jack",
+        "last_name": "Atkinson",
+        "email": "jgatkinsn at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

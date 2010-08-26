@@ -1,0 +1,58 @@
+{
+  "script_id": "2805",
+  "name": "assistant",
+  "summary": "Show the prototype of function(PHP/Vim/...)",
+  "script_type": "utility",
+  "description": "\"   To show the prototype of function or method, just press <C-h>,also upport user complete function(<C-x-u>) \n\"   Now support php and vim(zh-cn) function list.\n\"   It's very easy to make your self function list, see the file in assistant dir, the help file formate is like 'key' => 'value'\n\n\"   <C-h>&#24555;&#25463;&#38190;&#26174;&#31034;&#24403;&#21069;&#20301;&#32622;&#20989;&#25968;&#30340;&#21407;&#22411;&#65292;&#25903;&#25345;PHP&#12289;Vim&#33050;&#26412;\n\"   <C-x-u>&#34917;&#20840;&#24403;&#21069;&#20301;&#32622;&#20989;&#25968;\n\"   &#33509;&#21916;&#27426;&#29992;netbeans&#25110;&#32773;eclipse&#30340;&#34917;&#20840;&#24555;&#25463;&#38190;&#65292;&#21487;&#20197;&#23558;=config=&#20013;&#30340;&#38190;&#26144;&#23556;&#21551;&#29992;&#12290;\n\"   &#38656;&#35201;&#28155;&#21152;&#25903;&#25345;&#26356;&#22810;&#30340;&#25991;&#20214;&#65292;&#21482;&#35201;&#23558;&#31526;&#21512; &#38190;=>&#20540; &#24418;&#24335;&#30340;&#23383;&#20856;&#25991;&#20214;\n\"   &#20197; &#34917;&#20840;&#25991;&#20214;&#21518;&#32512;&#21517;.txt &#20445;&#23384;&#21040; assistant &#30446;&#24405;&#19979;&#21363;&#21487;&#65292;1.35&#29256;&#20043;&#21518;&#20250;&#33258;&#21160;&#36733;&#20837;&#12290;",
+  "install_details": "Just put the files into ~/.vim/plugin or <HOMEDIR>\\vimfiles\\plugin (for Windows).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13623",
+      "filename": "assistant1.35.zip",
+      "script_version": "1.35",
+      "date": "2010-08-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18169",
+        "user_name": "a-yu",
+        "first_name": "an",
+        "last_name": "yu",
+        "email": "a-yu at live.cn",
+        "homepage": ""
+      },
+      "release_notes": "Automatically detect the assistant file directory."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13493",
+      "filename": "assistant1.30.zip",
+      "script_version": "1.30",
+      "date": "2010-08-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18169",
+        "user_name": "a-yu",
+        "first_name": "an",
+        "last_name": "yu",
+        "email": "a-yu at live.cn",
+        "homepage": ""
+      },
+      "release_notes": "Now auto \"set completefunc\" when BufEnter, BufRead and filetype changed..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12920",
+      "filename": "assistant.zip",
+      "script_version": "1.25",
+      "date": "2010-04-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18169",
+        "user_name": "a-yu",
+        "first_name": "an",
+        "last_name": "yu",
+        "email": "a-yu at live.cn",
+        "homepage": ""
+      },
+      "release_notes": "Fixed some bug, and support user complete function(<C-x-u>)\nThanks for Caglar Toklu."
+    }
+  ]
+}

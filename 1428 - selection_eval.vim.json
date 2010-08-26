@@ -1,0 +1,26 @@
+{
+  "script_id": "1428",
+  "name": "selection_eval.vim",
+  "summary": "Evaluate the statements which you select with visual mode.",
+  "script_type": "utility",
+  "description": "Evaluate the statements which you select with visual mode.\n\nCommands:\nvmap <c-e><c-r> evaluate with using ruby.\nvmap <c-e><c-l> evaluate with using perl.\nvmap <c-e><c-p> evaluate with using python.\nvmap <c-e><c-s> evaluate with using shell(bash)\nvmap <c-e><c-v> evaluate with using vim.\n\nyou need to install the interpreter which you want to use.\n\nUsage: \n1. press <ctrl> + v\n2. select the snippets with visual mode.  cf) echo \"hello world\"\n3. press <c-e><c-v> or :EV (evaluate by vim.)\n4. you get the result in the another buffer.\n5. when you press the <e-c>c or :ECL, the result buffer is closed.\n\nReference: dbext.vim\n\nI use this scripts on FreeBSD5.4 and cygwin. (vim6.3)",
+  "install_details": "cp selection_eval.vim $HOME/.vim/plugin \n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4885",
+      "filename": "selection_eval.vim",
+      "script_version": "0.1",
+      "date": "2005-12-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9004",
+        "user_name": "shunsuke_l",
+        "first_name": "shunsuke",
+        "last_name": "tsutsui",
+        "email": "shunsuke_l at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

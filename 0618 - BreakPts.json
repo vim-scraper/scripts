@@ -1,0 +1,106 @@
+{
+  "script_id": "618",
+  "name": "BreakPts",
+  "summary": "Set/View Vim breakpoints and browse functions visually",
+  "script_type": "utility",
+  "description": "YOU NEED Vim7.0 FOR THE NEW VERSION TO WORK.\n\nNew version no longer depends on multvals.vim\n\nThe plugin provides a few features for debugging Vim scripts that are similar\nto what IDEs normally have, such as browing source, managing breatpoints etc.\nSetting breakpoints visually in functions is very important as you need to\nspecify the exact line number for the line you are interested in (which often\nis difficult to find out if you use |line-continuation| characters to format\ncode). This also avoids typing in the |:breakadd| command while guessing what\nthe scriptids for your script are. It also defines a few convenience commands\nthat take the place of Vim built-in commands and add Vim command-line\ncompletion feature.\n\nThe plugin also provided utilties to create various conditional breakpoints\nprogrammatically to help debug complex and iterative logic. You can set a\ncondition, a skip count and an expire count for your breakpoint to be valid on\nany particular line.\n\nYou can also simply use the plugin to browse Vim sripts and functions. It\nprovides a browser history type of features to drill into the code, by\nnavigating the function calls and return back to the previous function at any\ntime.\n\nHere is a list of features:\n    - Set/unset breakpoints in functions and scripts visually.\n    - Save/clear/restore list of breakpoints across sessions.\n    - Browse functions and script by navigating through the list of functions\n      (and function references) and scripts.\n    - Reload scripts when they change externally (during development)\n    - Global functions to set/unset breakpoints programmatically with optional\n      conditions.\n    - Misc. alternative commands for the built-ins that typically work better\n      (better completion and defaults).\n    - Remote debugging ability to debug scripts in one Vim session using\n      another Vim as the debugger.\n\n\n\nSearch_keywords: breakpoint breakpts breakadd breaklist breakdel break vim WinManager visual list Hari Krishna Dara\n",
+  "install_details": "- To install, download the latest versions of these two plugins:\n    breakpts: http://www.vim.org/script.php?script_id=618\n    genutils:  http://vim.sourceforge.net/script.php?script_id=197\n- Extract the zip archives in to your runtime directory (.vim or vimfiles\n  under your HOME directory).\n- Make sure your vim has +signs feature.\n- Start a new instance or go to an existing instance of vim.\n- Execute:\n                                                                           \n    :helpt <your runtime directory>/doc\n                                                                           \n  This should generate the help tags for the breakpts plugin help.\n- Take a look at the |breakpts-settings| to change any default\n  configuration and behavior.\n                                                                           \nOptional:\n- Take a look at the |breakpts-winmanager| to configure with winmanager.\n- Choose a hotkey as described in |breakpts-usage|.\n- Considier installation the following two optional plugins:\n  - If cmdalias plugin is installed, it will be used to create aliases for\n    a few commands, to make it easier to type. Download the plugin from:\n        http://www.vim.org/script.php?script_id=745\n  - If foldutil plugin is installed, it will be used to foldaway the code\n    such that the breakpoints are easier to see. Download the plugin from:\n        http://www.vim.org/script.php?script_id=158\n\n\nFor versions older than 4.0, you also need multvals.vim: vimscript#171 in addition to genutils, and you need to download the non-autoload versions of both. See their respective installation sections for more information .\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8142",
+      "filename": "breakpts-4.0.zip",
+      "script_version": "4.0",
+      "date": "2008-01-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- The script is now more aligned to Vim 7.0.\n- It is now autoloaded.\n- Not dependent on multvals anymore.\n- Comes with a Vim style help file.\n- Minor improvements and fixes.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5661",
+      "filename": "breakpts.vim",
+      "script_version": "3.2",
+      "date": "2006-05-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Release 3.2 for vim7 compatibility. Thanks to David Fishburn for\nproviding most of the patches for vim7 and testing it.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3233",
+      "filename": "breakpts.vim",
+      "script_version": "3.1",
+      "date": "2004-07-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Just trying to fix a bad upload for version 3.1\n\n- Now requires Vim 6.3 \n- More documentation. \n- The script now works perfectly well for remote debugging. All the Vim bugs\n  were fixed in 6.3 and I have used the plugin for some real debugging this\n  time, and found it to be quite usable. \n- You can now reload scripts from remote session. \n- Many new useful commands with command-completions. \n  - Runtime: that completes filenames from 'rtp' \n  - Debug: that completes command and function names (with arguments).\n  - Breakadd/Breakdel: that complete function names/script paths \n  - Where: to see the context at the debug prompt. \n- Useful BreakPtsSetupBuf command. A few other global commands. \n- Lots of other misc. and subtle improvements. Read the script header completely\n  for details (you can diff with the old version if you like :)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2612",
+      "filename": "breakpts.vim",
+      "script_version": "3.0",
+      "date": "2003-12-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "See the function header for details.\n- Now BreakPts command can take an option to specify the initial view.\n- New BPOpen command to open a script for editing from the scripts view.\n- Experimental features to debug scripts from a remote vim using the\n  |clientserver| functionality. It is now possible to view the context and execute the :debug\n  mode commands such as >next >cont from the browser, while debugging\n  remotely. CAUTION: This requires installing a patch to vim and sometimes makes Vim crash (see installation section).\n- Two global functions BPBreak() and BPBreakIf() to add breakpoints from\n  with in your script. The BPBreak() can also be used while at the\n  :debug prompt (>) to easily add breakpoints without needing to worry\n  about the function name and line number. This requires a patch to be\n  installed to vim (see installation section).\n- New setting g:brkptsModFuncHeader.\n- New version dependency check on dependent libraries. You now get an\n  error message during the Vim startup if you don't have the right\n  version of multvals and genutils.\n- Remember the line number when the browser is closed and reopened.\n- Fixed a bug in handling function names, such as <SID>Func.\n- Fixed a bug in browser name on unixy vim.\n- Plugin reloading now handles some non-standard naming conventions for\n  the loaded_ variable and works better.\n- Fixed other misc. bugs.\n- The g:loaded_breakpts variable now contains the version number for any dependency checking (see :help v:version for format information)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2099",
+      "filename": "breakpts.vim",
+      "script_version": "2.0",
+      "date": "2003-06-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Number of improvements, thanks to David Fishburn {fishburn at sybase dot org} for feedback/ideas and help with identifying issues. Note: This version requires Vim 6.2. New features at a glance:\n\n    - View the list of scripts loaded.\n    - View the script listing and set \"file\" breakpoints.\n    - Reload a script after unletting the g:loaded_xxx variable.\n    - Mappins to goto next/previous breakpoint.\n    - Fold the contents so that only breakpoints are visible (with some\n      context).\n    - A command to clear all the breakpoints.\n    - A new :BPBrklist command to get the list of breakpoints. You can\n      press <F9> on them to disable/enable them.\n    - :BPSave command to save the current breakpoints in a specified global\n      variable. You can later exec the variable to reinstate the\n      breakpoints. This allows you to save/restore breakpoints across sessions.\n\nSee description for more information. Please continue to send in your suggestions/bug reports etc.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1909",
+      "filename": "breakpts.vim",
+      "script_version": "1.0",
+      "date": "2003-04-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

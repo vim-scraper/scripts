@@ -1,0 +1,26 @@
+{
+  "script_id": "2856",
+  "name": "vimmpc",
+  "summary": "Manipulate a running mpd daemon from within vim",
+  "script_type": "utility",
+  "description": "Uploading this old utility due to popular demand (and to promote interest).\n\nAbout\n--------\n\nVimmpc provides functionality for manipulating http://www.musicpd.org/\nfrom within Vim.\n\nMain site: http://gavin.brokentrain.net/projects/vimmpc/",
+  "install_details": "Download and extract straight to vim directory or by symlinking:-\n\n  tar xzf vimmpc-(revision).tar.gz\n  cd ~/.vim/plugin\n  ln -s /path/to/vimmpc/vimmpc.vim\n  ln -s /path/to/vimmpc/vimmpc.py\n\nAnd finally:\n  $ vim -c 'MPC' to launch. (or :MPC from within vim)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11762",
+      "filename": "vimmpc-20070410.tar.gz",
+      "script_version": "20070410",
+      "date": "2009-11-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18403",
+        "user_name": "gaving",
+        "first_name": "Gavin",
+        "last_name": "Gilmour",
+        "email": "gavin.gilmour at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

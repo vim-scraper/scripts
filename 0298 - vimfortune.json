@@ -1,0 +1,26 @@
+{
+  "script_id": "298",
+  "name": "vimfortune",
+  "summary": "Show random tips when launching VIM",
+  "script_type": "utility",
+  "description": "This simple script shows you a random tip using 'fortune' program when launching VIM\nwithout specifying filename(s) to edit(ie. '%vim' and not '%vim foobar.c').\nYou can also explicitly view a tip by typing\n:TIPS\nor\n:!fortune vimtips\n\nIncluded are pre-formatted datafiles converted from the vim tips available from:\nhttp://vim.sourceforge.net/tips/download.php",
+  "install_details": "You should have 'fortune' installed (normally, you already have one if using un*x-like OS).\nCopy the datafiles to the data directory of fortune, and the script to the script directory of VIM. \nExample:\n% cp vimtips vimtips.dat /usr/share/games/fortune\n% cp vimfortune.vim ~/.vim/plugin",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=871",
+      "filename": "vimfortune-011.tgz",
+      "script_version": "0.1.1",
+      "date": "2002-05-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "670",
+        "user_name": "key",
+        "first_name": "key",
+        "last_name": "",
+        "email": "key at lexpress.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

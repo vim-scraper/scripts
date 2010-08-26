@@ -1,0 +1,138 @@
+{
+  "script_id": "1764",
+  "name": "code_complete",
+  "summary": "function parameter complete, code snippets, and much more.",
+  "script_type": "utility",
+  "description": "Demo :http://files.myopera.com/mbbill/files/code_complete.gif\nIt shows what this script can do.\nIn insert mode, when you type \"<tab>\"(default value of g:completekey) after function name with a \"(\" , function parameters will be append behind, use \"<tab>\" key again to switch between parameters.\nThis key is also used to complete code snippets.\nExample:\npress <tab> after function name and (     \n  foo ( <tab>                             \nbecomes:                                  \n  foo ( `<first param>`,`<second param>` )\npress <tab> after code template           \n  if <tab>                                \nbecomes:                                  \n  if( `<...>` )                           \n  {                                       \n      `<...>`                             \n  }                                       \n",
+  "install_details": "1. Put code_complete.vim to plugin  directory.                          \n2. Use the command below to create tags file including signature field.     \n   ctags -R --c-kinds=+p --fields=+S .\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10778",
+      "filename": "code_complete.vim",
+      "script_version": "2.9",
+      "date": "2009-06-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "Set file format to unix."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10347",
+      "filename": "code_complete.vim",
+      "script_version": "2.8",
+      "date": "2009-04-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "Add support to function pointer."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7384",
+      "filename": "code_complete.vim",
+      "script_version": "2.7",
+      "date": "2007-07-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "No longer force set selection to inclusive."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6841",
+      "filename": "code_complete.zip",
+      "script_version": "2.6",
+      "date": "2007-03-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "new features:  user defined snippets file support.\nchanges:   '('  no longer used , and one \"<tab>\" after '(' instead."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6656",
+      "filename": "code_complete.vim",
+      "script_version": "2.5",
+      "date": "2007-01-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "Speed up the script when the tag file is very big, thanks to Martin Stubenschrott."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6645",
+      "filename": "code_complete.vim",
+      "script_version": "2.4",
+      "date": "2007-01-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "bugfix"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6638",
+      "filename": "code_complete.vim",
+      "script_version": "2.3",
+      "date": "2007-01-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "Some improvements, including hot key customization and so on."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6606",
+      "filename": "code_complete.vim",
+      "script_version": "2.2",
+      "date": "2007-01-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "script_id": "2965",
+  "name": "SyntaxMotion.vim",
+  "summary": "Cursor motion & visual selection by syntax highlighting group",
+  "script_type": "utility",
+  "description": "This plugin provides cursor motion by syntax highlighting groups in normal\nand visual mode:\n\n- type  \\<right>  (actually <Leader><right>) to move the cursor forward to \n  the end of the syntax group where cursor is located.\n\n- type  \\<left>  (actually <Leader><right>) to move the cursor forward to \n  the beginning of the syntax group where cursor is located.\n\nFor example, when inside a string, pressing  \\<right>  moves to the end of \nthe string.  When inside a comment, pressing  \\<left>  moves to the \nbeginning of the comment.  You can extrapolate this behavior to any kind\nof syntax group.\n\nRepeating the motion multiple times will move to the next syntax\nhighlighting group (forward or backward). A repeat count number can also be\ngiven before typing  \\<left>  or  \\<right>.  For example, typing  3\\<left>\nmoves the cursor to the left by 3 syntax elements.\n\nStrictly speaking, motion actually moves to the start or end of the text\nwhich has the same \"color\" (rather than same \"syntax group\") as the color\nof the text where cursor is originally located. So if your color scheme\ndefines the same colors for multiple syntax groups, motion may actually span\nmultiple consecutive syntax groups if they have the same colors.  Motion is\nbased on syntax highlighting colors rather than syntax highlighting groups\nto make behavior more intuitive (what you see is what you get) since users\nsee colors on the screen but may not be aware of different syntax highlight\ngroups.\n\nPlugin also provides a way to select the text visually around the position\nof the cursor with the same syntax group as where cursor is located:\n\n- type  va<right>  to visually select the text with the same syntax as \n  where cursor is located, and move the cursor to the end of the selected\n  text.\n\n- type  va<left>  to visually select the text with the same syntax as \n  where cursor is located, and move the cursor to the beginning of the \n  selected text.\n\nSyntax highlighting must be enabled for the plugin to work.\n\nLicense: The VIM LICENSE applies to SyntaxMotion.vim (see \":help copyright\"\nexcept use \"SyntaxMotion.vim\" instead of \"Vim\").\n\nToDo:\n- write a proper help page\n- provide mapping in operator pending mode\n",
+  "install_details": "Drop SyntaxMotion.vim into your favorite plugin directory: ~/.vim/plugin/ on Unix, $HOME/vimfiles/plugin or $VIM/vimfiles/plugin on Windows).\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12358",
+      "filename": "SyntaxMotion.vim",
+      "script_version": "0.5",
+      "date": "2010-02-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14105",
+        "user_name": "dominique",
+        "first_name": "Dominique",
+        "last_name": "Pellé",
+        "email": "dominique.pelle at gmail.com",
+        "homepage": "http://dominiko.livejournal.com"
+      },
+      "release_notes": "Bug fix in Visual Selection when cursor was at beginning or end of syntax block"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12357",
+      "filename": "SyntaxMotion.vim",
+      "script_version": "0.4",
+      "date": "2010-02-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14105",
+        "user_name": "dominique",
+        "first_name": "Dominique",
+        "last_name": "Pellé",
+        "email": "dominique.pelle at gmail.com",
+        "homepage": "http://dominiko.livejournal.com"
+      },
+      "release_notes": "Added mappings to perform visual selection of text which has same syntax as where cursor is located. Use  va<left>  and   va<right>"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12331",
+      "filename": "SyntaxMotion.vim",
+      "script_version": "0.3",
+      "date": "2010-02-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14105",
+        "user_name": "dominique",
+        "first_name": "Dominique",
+        "last_name": "Pellé",
+        "email": "dominique.pelle at gmail.com",
+        "homepage": "http://dominiko.livejournal.com"
+      },
+      "release_notes": "now work with repeat count  (example: 3\\<right>)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12328",
+      "filename": "SyntaxMotion.vim",
+      "script_version": "0.2",
+      "date": "2010-02-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14105",
+        "user_name": "dominique",
+        "first_name": "Dominique",
+        "last_name": "Pellé",
+        "email": "dominique.pelle at gmail.com",
+        "homepage": "http://dominiko.livejournal.com"
+      },
+      "release_notes": "now also works in visual mode"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12327",
+      "filename": "SyntaxMotion.vim",
+      "script_version": "0.1",
+      "date": "2010-02-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14105",
+        "user_name": "dominique",
+        "first_name": "Dominique",
+        "last_name": "Pellé",
+        "email": "dominique.pelle at gmail.com",
+        "homepage": "http://dominiko.livejournal.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

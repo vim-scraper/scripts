@@ -1,0 +1,26 @@
+{
+  "script_id": "1294",
+  "name": "nightshade.vim",
+  "summary": "Bright colors on a black background with a 2nd colorization script for printing",
+  "script_type": "color scheme",
+  "description": "NightShade uses a black background with bright highlighting.\nNightShade_Print uses similar colors but is designed for printing.\n\nI put the macro below in my .vimrc file to allow a single key\nto change to the nightshade_print colorization, print, then change back.\n\n   map <F1> :colorscheme nightshade_print<CR> :hardcopy<CR> :colorscheme nightshade<CR>\n",
+  "install_details": "tar -xvzf nightshade.tar.gz\nmove the nightshade.vim and nightshade_print.vim files to the vim colors subdirectory.\nIf desired, create a macro to switch to the print colorscheme, print, and switch back as described in the README file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4335",
+      "filename": "nightshade.tar.gz",
+      "script_version": "1.0",
+      "date": "2005-06-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7707",
+        "user_name": "turnerminator",
+        "first_name": "Dave",
+        "last_name": "Turner",
+        "email": "turner at ameslab.gov",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

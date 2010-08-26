@@ -1,0 +1,154 @@
+{
+  "script_id": "795",
+  "name": "xterm16.vim",
+  "summary": "An adjustable contrast color scheme for GUI and 8, 16 or 256 color terminals.",
+  "script_type": "color scheme",
+  "description": "An adjustable contrast fully customisable color scheme for GUI & 8, 16 or 256 color terminals, designed to minimise eyestrain. The main features are:\n\n\t- Four color maps:\n\t    'allblue'   : A colormap with most foreground colors blueish (to\n\t\t          minimize contrast etc.)\n\t    'soft'      : A colormap with foreground colors of similar\n\t\t          intensities to reduce eyestrain.\n\t    'softlight' : A colormap with a bright background (for web\n\t\t          hosting etc.)\n\t    'standard'  : A colormap for use on terminals with only 8/16\n\t\t\t   colors.\n\t  The first three colormaps will work only on 256 color capable\n\t  terminals or the GUI. The last one will work anywhere.\n\n\t- Adjustable brightness / contrast. Lets you easily adjust the\n\t  brightness and contrast settings. Extremely useful (for instance)\n\t  when there is a glare on your monitor, or for long late dim light\n\t  dim light late at night :)\n\n\t- Terminal and GUI support. If you use xterm, rxvt or mrxvt (compiled\n\t  with 256 colors), then the colors on your terminal will be almost\n\t  identical to your GUI colors. On any other terminal emulator, a few\n\t  scripts (included) and parts of this help are designed to help you\n\t  get the colors you want.\n\n\t- LCD / CRT Monitor support. The color response of LCD and CRT\n\t  monitors is pretty different. This color scheme has an option to\n\t  adjust colors on CRT monitors to give a similar appearance.\n\n\t- Customizable colors. If you find any color unreadable or ugly, you\n\t  can change it easily. When adjusting the brightness, your custom\n\t  colors will be suitably adjusted too!\n\n\t- Customizable highlighting groups. If you don't like the highlighting\n\t  of any particular group, you can change it to suit your needs. This\n\t  is useful for instance if you want the cursor to be brighter than\n\t  everything else / etc.\n\nThe first screenshot below is also the complete documentation and description.\n\nScreenshots:\n\nhttp://www.math.cmu.edu/~gautam/per/opensource/xterm16/xterm16-doc.html [Complete documentation and description]\nhttp://www.math.cmu.edu/~gautam/per/opensource/xterm16/xterm16-src.html [HTMLised source]\nhttp://www.math.cmu.edu/~gautam/per/opensource/xterm16/c-source.html [HTMLised C code]\nhttp://www.math.cmu.edu/~gautam/per/opensource/xterm16/timestamp-doc.html [Another VIM help file]\nhttp://www.math.cmu.edu/~gautam/per/opensource/xterm16/email.html [HTMLised email]\nhttp://www.math.cmu.edu/~gautam/per/opensource/xterm16/mrxvt.png [Transparent background in mrxvt]\n\n(On javascript enabled 'good' browsers, you should be able to adjust the Brightness, colormap and monitor type in each of the HTMLised screenshots above.)\n",
+  "install_details": "For local installation, put the |xterm16.vim| file in your ~/.vim/colors directory. To install globally put it in $VIMRUNTIME/colors. Finally add the following lines to your {.vimrc}: >\n\n    \" let xterm16_brightness = 'default'     \" Change if needed\n    \" let xterm16_colormap = 'allblue'       \" Change if needed\n    colo xterm16\n\nIf you want to change the default colors on your terminal (to match those in the screenshots) look at the file \"xterm16.txt\" (in Vim if you want it to look pretty) for details. (You can also view it online at the above links)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6172",
+      "filename": "xterm16-2.43.tbz2",
+      "script_version": "2.43",
+      "date": "2006-09-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3615",
+        "user_name": "gi1242",
+        "first_name": "gi1242",
+        "last_name": "gi1242",
+        "email": "gi1242 at gmail.com",
+        "homepage": "http://www.math.cmu.edu/~gautam"
+      },
+      "release_notes": "Added highlighting groups for the Tab line (thanks to Paddy Newman)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5721",
+      "filename": "xterm16-2.42.tbz2",
+      "script_version": "2.42",
+      "date": "2006-05-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3615",
+        "user_name": "gi1242",
+        "first_name": "gi1242",
+        "last_name": "gi1242",
+        "email": "gi1242 at gmail.com",
+        "homepage": "http://www.math.cmu.edu/~gautam"
+      },
+      "release_notes": "Fixed glaring documentation error (should set t_Co=256, and not 16). Minor highlighting group bugfixes. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5565",
+      "filename": "xterm16-2.41.tbz2",
+      "script_version": "2.41",
+      "date": "2006-04-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3615",
+        "user_name": "gi1242",
+        "first_name": "gi1242",
+        "last_name": "gi1242",
+        "email": "gi1242 at gmail.com",
+        "homepage": "http://www.math.cmu.edu/~gautam"
+      },
+      "release_notes": "Minor changes to highlighting groups: Added cursorline & cursorcollumn (thanks to Georg Dhan for pointing this out). Also made sure that Comments are a different color than other highlighting groups in the 'allblue' colormap."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5515",
+      "filename": "xterm16-2.4.tbz2",
+      "script_version": "2.4",
+      "date": "2006-04-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3615",
+        "user_name": "gi1242",
+        "first_name": "gi1242",
+        "last_name": "gi1242",
+        "email": "gi1242 at gmail.com",
+        "homepage": "http://www.math.cmu.edu/~gautam"
+      },
+      "release_notes": "Added an \"allblue\" colormap (makes all foreground colors a shade of blue). Also added a \"softlight\" colormap with light background for webhosting. Added syntax items for Vim7 (is still backward compatible to vim6.4)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4342",
+      "filename": "xterm16-2.2.tbz2",
+      "script_version": "2.2",
+      "date": "2005-06-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3615",
+        "user_name": "gi1242",
+        "first_name": "gi1242",
+        "last_name": "gi1242",
+        "email": "gi1242 at gmail.com",
+        "homepage": "http://www.math.cmu.edu/~gautam"
+      },
+      "release_notes": "Now fully supports rxvt and mrxvt when compiled with 256 colors. Included an option for transparency with mrxvt. Added a perl script to make changing colors on 16 color terminals easier. Few minor color modifications (StatusLine, StatusLineNC). I mainly wrote this so I can switch to mrxvt with transparency without changing my precious colors :)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3636",
+      "filename": "xterm16-2.1.tbz2",
+      "script_version": "2.1",
+      "date": "2004-11-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3615",
+        "user_name": "gi1242",
+        "first_name": "gi1242",
+        "last_name": "gi1242",
+        "email": "gi1242 at gmail.com",
+        "homepage": "http://www.math.cmu.edu/~gautam"
+      },
+      "release_notes": "Improved version to support adjustable brightness and contrast, CRT / LCD monitors. Includes a new 'soft' colormap, where all foreground colors are of almost 'equal' intensity for long late night coding sessions. This version takes advantage of xterm's color support. If you use xterm (compiled with 256 colors), then this script can adjust the colors automatically (without making you mess with .Xresources etc). [Ofcourse, it works on other terminals / GUI too]."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2520",
+      "filename": "xterm16.tbz2",
+      "script_version": "1.3",
+      "date": "2003-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3615",
+        "user_name": "gi1242",
+        "first_name": "gi1242",
+        "last_name": "gi1242",
+        "email": "gi1242 at gmail.com",
+        "homepage": "http://www.math.cmu.edu/~gautam"
+      },
+      "release_notes": "Changed the Diff / Fold highlighting groups. Added files to change default colors of ctheme (thanks to Juhapekka Tolvanen) and rxvt."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2463",
+      "filename": "xterm16.tbz2",
+      "script_version": "1.2",
+      "date": "2003-11-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3615",
+        "user_name": "gi1242",
+        "first_name": "gi1242",
+        "last_name": "gi1242",
+        "email": "gi1242 at gmail.com",
+        "homepage": "http://www.math.cmu.edu/~gautam"
+      },
+      "release_notes": "Added support to remap the unreadable darkblue on the linux console. Disabled HTML groups from using cterm attributes and used colors instead. Added options to customise GUI colors. All options added here can be disabled."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2451",
+      "filename": "xterm16.tbz2",
+      "script_version": "1.1",
+      "date": "2003-11-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3615",
+        "user_name": "gi1242",
+        "first_name": "gi1242",
+        "last_name": "gi1242",
+        "email": "gi1242 at gmail.com",
+        "homepage": "http://www.math.cmu.edu/~gautam"
+      },
+      "release_notes": "Minor Changes to highlighting groups. Now includes files to change colors on xterm, konsole or gnome-terminal to make the red / dark blue colors more readable."
+    }
+  ]
+}

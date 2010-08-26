@@ -1,0 +1,58 @@
+{
+  "script_id": "750",
+  "name": "aiseered.vim",
+  "summary": "A color scheme with a dark red background.",
+  "script_type": "color scheme",
+  "description": "(For those who are interested: \"aiSee\" is a trade mark which is expected to be pronounced \"I see\".)\n\nI find this scheme quite pleasant -- even though any red, including dark red, is always said to be a bad choice for a background.\n\nAnyway, I'm not selling a pig in a poke here: http://www.aisee.com/aiseered.png\n\nI've written the scheme especially for working with files in GDL/VCG format (hence the naming), and it goes well together with vimscript #706. It also works quite fine for C/C++ and I've heard of people using it for editing Ruby. However, I wouldn't recommend using it for editing HTML if you do care for your eyes.\n\naiseered was tested with gVim 6.2 under Windows 2000 and with gVim 6.3 under Ubuntu Linux.\n\nYour feedback is appreciated.",
+  "install_details": "gVim/Windows users:\n------------------------------\nSimply put the downloaded VIM file to your Vim color schemes directory (for Vim 6.3, it is usually C:\\Vim\\vim63\\colors or C:\\Program Files\\Vim\\vim63\\colors) and then use the Vim command \n:color aiseered\nto switch the coloring on. \n\ngVim/Linux users:\n-------------------------\nCopy the downloaded VIM file to the directory $VIMRUNTIME/colors/ and use the command\n:color aiseered\nto switch the coloring on. \n\nIf you are not sure about the value of $VIMRUNTIME, try ~/.vim or type \n:help runtime \n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3794",
+      "filename": "aiseered.vim",
+      "script_version": "0.2",
+      "date": "2005-01-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2895",
+        "user_name": "Schwallex",
+        "first_name": "Alexander",
+        "last_name": "Evstiougov",
+        "email": "alev0000 at stud.uni-sb.de",
+        "homepage": "http://www.stud.uni-saarland.de/~alev0000"
+      },
+      "release_notes": "This version is for gVim/Linux"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2310",
+      "filename": "aiseered.vim",
+      "script_version": "0.2win",
+      "date": "2003-09-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2895",
+        "user_name": "Schwallex",
+        "first_name": "Alexander",
+        "last_name": "Evstiougov",
+        "email": "alev0000 at stud.uni-sb.de",
+        "homepage": "http://www.stud.uni-saarland.de/~alev0000"
+      },
+      "release_notes": "Minor enhancements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2275",
+      "filename": "aiseered.vim",
+      "script_version": "0.1win",
+      "date": "2003-08-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2895",
+        "user_name": "Schwallex",
+        "first_name": "Alexander",
+        "last_name": "Evstiougov",
+        "email": "alev0000 at stud.uni-sb.de",
+        "homepage": "http://www.stud.uni-saarland.de/~alev0000"
+      },
+      "release_notes": "Initial upload; useful for gVim only."
+    }
+  ]
+}

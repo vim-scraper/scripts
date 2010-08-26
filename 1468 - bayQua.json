@@ -1,0 +1,106 @@
+{
+  "script_id": "1468",
+  "name": "bayQua",
+  "summary": "An offwhite version of the baycomb colorscheme, influenced by TaQua",
+  "script_type": "color scheme",
+  "description": "An offwhite version of baycomb.vim, with subtle background shading on syntax.\nThis is basically a mix between my latest colorscheme, baycomb, and TaQua, by Eustaquio Rangel de Oliveira Jr. \n\nWhite backgrounds make it harder for me to identify normal text, and it seems harder to identify colors than on a dark background, so I added the soft glowing colors to syntax background. They may or may not be visible on your computer (they are too light to see on my computer at work; i adjusted them to be darker but then they were too dark and overpowering on my home computer).\n\nThe scheme has highlighting for both the GUI and Terminal. For tips and more information, go to baycomb's site:\n\nbaycomb: http://www.vim.org/scripts/script.php?script_id=1454\nTaQua: http://www.vim.org/scripts/script.php?script_id=594\n\n                                                                                 _______________\n     Comments and suggestions:                    ***| axs221@gmail.com | ***\n                                                                                 ---------------------------",
+  "install_details": "If the grey terminal background is too dark, try white (add to vimrc or baqua.vim):\n   hi Normal ctermbg=white\n\nTry bolding Identifiers if, for example, you'd like to easily spot where tags close in HTML\n   hi Identifier gui=bold",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5317",
+      "filename": "bayQua.vim",
+      "script_version": "1.2b",
+      "date": "2006-02-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Removed background colors."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5240",
+      "filename": "bayQua.vim",
+      "script_version": "1.2",
+      "date": "2006-02-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Updated Terminal colors to better match the GUI. Colors now look almost exactly like the GUI (on my Windows Console atleast)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5237",
+      "filename": "bayQua.vim",
+      "script_version": "1.1c",
+      "date": "2006-02-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor changes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5233",
+      "filename": "bayQua.vim",
+      "script_version": "1.1b",
+      "date": "2006-02-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed Underlined to be readable, and made a few adjustments."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5232",
+      "filename": "bayQua.vim",
+      "script_version": "1.1",
+      "date": "2006-02-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Updated terminal colors, now featuring a dark grey background and adjusted values for terminal colors to be visible on new light bg."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5229",
+      "filename": "bayQua.vim",
+      "script_version": "1.0",
+      "date": "2006-02-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8778",
+        "user_name": "axs221",
+        "first_name": "Shawn",
+        "last_name": "Axsom",
+        "email": "axs221 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload."
+    }
+  ]
+}

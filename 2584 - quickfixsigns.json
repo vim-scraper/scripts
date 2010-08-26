@@ -1,0 +1,74 @@
+{
+  "script_id": "2584",
+  "name": "quickfixsigns",
+  "summary": "Mark quickfix & location list items with signs",
+  "script_type": "utility",
+  "description": "Mark items in the quickfix and location lists with signs -- those lists \nare filled by, e.g., the :make command. Other lists can be configured \nvia the |g:quickfixsigns_lists| variable. By default, quickfixsigns also \ndisplays signs for the marks a-zA-Z.\n\nThe attached text is displayed in a balloon when hovering with the mouse \nover the sign.\n",
+  "install_details": "Requirements: has('signs')\n\nEdit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0,\nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n\n\nAlso available via git\nhttp://github.com/tomtom/quickfixsigns_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11434",
+      "filename": "quickfixsigns.vba.gz",
+      "script_version": "0.5",
+      "date": "2009-09-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Set balloonexpr only if empty (don't try to be smart)\n- Disable CursorMoved(I) events, when &lazyredraw isn't set.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10313",
+      "filename": "quickfixsigns.vba.gz",
+      "script_version": "0.4",
+      "date": "2009-03-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- FIX: Error when g:quickfixsigns_marks = [] (thanks Ingo Karkat)\n- s:ClearBuffer: removed old code\n- QuickfixsignsMarks(state): Switch the display of marks on/off.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10312",
+      "filename": "quickfixsigns.vba.gz",
+      "script_version": "0.3",
+      "date": "2009-03-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Old signs weren't always removed\n- Avoid \"flicker\" etc.\n- g:quickfixsigns_max: Don't display signs if the list is longer than n items.\n\nIncompatible changes:\n- Removed g:quickfixsigns_show_marks variable\n- g:quickfixsigns_marks: Marks that should be used for signs\n- g:quickfixsigns_lists: event field is a list\n- g:quickfixsigns_lists: timeout field: don't re-display this list more often than n seconds\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10233",
+      "filename": "quickfixsigns.vba.gz",
+      "script_version": "0.2",
+      "date": "2009-03-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "GLVS, minor fix"
+    }
+  ]
+}

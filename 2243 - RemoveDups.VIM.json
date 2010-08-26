@@ -1,0 +1,26 @@
+{
+  "script_id": "2243",
+  "name": "RemoveDups.VIM",
+  "summary": "Removing duplicates",
+  "script_type": "utility",
+  "description": "After sorting a file (eg. with the very useful vissort.vim) you can mark an area (line- or blockwise) an remove any lines containing duplicate values within this mark, so making anything in the marked area uinique.\n\nThs most common use is:\nmark a block\n:Sort it\nRemark the same block using gv\n:call RemoveDups()",
+  "install_details": "copy it into plugins\n\nIf you like you can add a command invoking it; I haven't done yet.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8706",
+      "filename": "RemoveDups.VIM",
+      "script_version": "1",
+      "date": "2008-05-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3244",
+        "user_name": "MikeTheGuru",
+        "first_name": "Michael",
+        "last_name": "Fitz",
+        "email": "mfitz at aon.at",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

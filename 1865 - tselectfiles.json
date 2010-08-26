@@ -1,0 +1,138 @@
+{
+  "script_id": "1865",
+  "name": "tselectfiles",
+  "summary": "A quick file selector/browser/explorer (sort of)",
+  "script_type": "utility",
+  "description": "This plugin provides a simple file browser. It is not a full blown \nexplorer but can be nevertheless be useful for quickly selecting a few \nfiles or renaming them.\n\nAs the plugin does some caching in the background, the filelist is only \ngenerated once for each path or when called with [!]. In conjuncture \nwith the use of the [wbg]:tselectfile_filter_rx variable, this provides \nfor use as a simple ad-hoc project manager.\n\nVIM-CENTRIC EXAMPLE:\nWhen I open a file under \"~/vimfiles\", I set b:tselectfiles_dir \nto all the relevant directories under \"~/vimfiles\" and then set \nb:tselectfile_filter_rx = expand('%:t:r'). Thus, when I open \n\"~/vimfiles/plugin/foo.vim\", b:tselectfile_filter_rx is \"foo\", and \n:TSelectFiles shows all the files under \"~/vimfiles\" matching \"foo\".\n\nFeatures:\n    - list files (recursively or the in the current directory only), \n      dynamically select files matching a pattern\n    - open files\n    - preview files\n    - rename/move files\n    - batch rename/move files (using a regular expression)\n    - copy files\n    - delete files\n    - show file info\n\nAdvanced uses:\n\nRelated files: If you set |g:tselectfiles_filter_rx| to some appropriate \nvalue, only files matching that regexp will be shown initially. This can \nbe used to restrict the list to \"related\" files. (The initial filter can \nbe removed by pressing <c-bs>.) See also |tselectfiles#BaseFilter()| and \n|g:tselectfiles_part_subst|.\n\nRolodex: If a filename matches an entry in \n|g:tselectfiles_filedescription_rx| (a dictionnary patter => funcref), \nfuncref(filename) will be called to retrieve the file's description. \nThis function could be used to extract metadata or selected lines from \nthe file etc. By mapping one record onto one file, you would get some \nsort of rolodex-like database. See \n|tselectfiles#FormatVikiMetaDataOrFirstLine()| for an example for \nviki/deplate (vimscript #861) formatted files.\n",
+  "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties, please make \nsure, you have the current version of vimball (vimscript #1502) \ninstalled.\n\nThis script requires tlib (vimscript #1863) to be installed.\n\n\nAlso available via git\nhttp://github.com/tomtom/tselectfiles_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11510",
+      "filename": "tselectfiles.vba.gz",
+      "script_version": "0.10",
+      "date": "2009-10-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- :TSelectFiles, :TSelectFilesInSubdirs, tselectfiles#SelectFiles: take \nan initial pattern as the second optional argument (i.e. if you pass a \ndirectory as first optional argument, you'll have to escape blanks with \na backslash).\n- tselectfiles#SelectFiles: if dir is &, search &path\n- tselectfiles_filter_rx is always evaluated unless a pattern is \nprovided as extra argument\n- tselectfiles_prefix is always evaluated\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9958",
+      "filename": "tselectfiles.vba.gz",
+      "script_version": "0.9",
+      "date": "2009-02-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Don't assume s:select_files_pattern.limit is set\n- Include .* in tselectfiles_hidden_rx\n- FIX: Include .* files (but hide them by default; thanks to \nnaquad/Daniil F.).\n- FIX: If 'splitbelow' is false, opening buffers in split view didn't \nproperly work (thanks to naquad/Daniil F.)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9594",
+      "filename": "tselectfiles.vba.gz",
+      "script_version": "0.8",
+      "date": "2008-12-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Require tlib 0.28\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9360",
+      "filename": "tselectfiles.vba.gz",
+      "script_version": "0.7",
+      "date": "2008-10-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- NEW: g:tselectfiles_part_subst* variables (for use with tselectfiles#BaseFilter())\n- NEW: [bg]:tselectfiles_filter_basename variable (if true, match on basename only)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9310",
+      "filename": "tselectfiles.vba.gz",
+      "script_version": "0.6",
+      "date": "2008-10-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- [gbw]tselectfiles_prefix: Remove prefix from filenames in list\n- [gbw]tselectfiles_limit variable\n- [wbg]:tselectfiles_filter_rx is used only when no directory is given on the command line.\n- Require tlib >= 0.18\n- If the filename matches an entry in g:tselectfiles_filedescription_rx, use the expression there to construct a file description (eg the file's first line)\n- Option to run vimgrep on selected files.\n- tselectfiles#BaseFilter(): Set b:tselectfiles_filter_rx to something useful.\n- tselectfiles#BaseFilter(): takes 2 optional arguments to substitute a rx in the current buffer's filename.\n- tselectfiles_filter_rx: Set as array\n- Problem when browsing single directories\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7649",
+      "filename": "tselectfiles.vba.gz",
+      "script_version": "0.4",
+      "date": "2007-09-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- \"Delete file\" will ask whether to delete a corresponding buffer too.\n- <c-w> ... View file in original window\n- Disabled <c-o> Open dir\n- Require tlib >= 0.13\n- When renaming a file that's loaded, rename also the buffer.\n- You can filter the list of selected files via setting the \n[wbg]:tselectfiles_filter_rx variable.\n- Renamed g:tselectfiles_no_cache to g:tselectfiles_no_cache_rx\n- [bg]:tselectfiles_use_cache and [bg]:tselectfiles_no_cache_rx can now \nalso be set per buffer.\n- Renamed some variables from tselectfile_* to tselectfiles_*.\n- Can be \"suspended\" (i.e. you can switch back to the orignal window)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7361",
+      "filename": "tselectfiles.vim",
+      "script_version": "0.2",
+      "date": "2007-07-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Require tlib 0.9\n- \"Delete file\" will ask whether to delete a corresponding buffer too.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7000",
+      "filename": "tselectfiles.vim",
+      "script_version": "0.1",
+      "date": "2007-04-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

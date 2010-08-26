@@ -1,0 +1,26 @@
+{
+  "script_id": "1985",
+  "name": "runtests.vim",
+  "summary": "Automatically generate, manage, and run test files for perl source.",
+  "script_type": "utility",
+  "description": "This is a quick and dirty vim script for automatically generating, managing, and running perl t/*.t files for any perl file you are currently editing.\n\nThe idea is to give a perl developer a leg up in creating tests for new or legacy code to give some basic unit tests.  Please note that these tests are just stub tests - it is up to the developer to expand the stub tests to fully exercise the code they're testing.\n\nIn a module (.pm) file, it looks for a new() constructor and adds a special test to create an object of that package, adds an isa_ok() for the created object, and every subroutine that it finds is called as an method on that object.\n\nIn a normal perl file (.pl), calls all subroutines as functions in ok() calls.\n\nAlso has a few extra commands for opening a quick view to the test file, creating a Makefile, which helps run your tests as well as a few extra bonuses such as running code coverage reporting, automatically opening the HTML code coverage report in a local web browser.  Please note that the last element is completely untested and not working on windows or linux - patches welcome :)\n\nHelp is available after installing:  :help runtests\n\nIdeas for improvements or other suggestions welcome.",
+  "install_details": "Move runtests.tgz to ~/.vim.\n\nUntar: tar xzvf runtests.tgz",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7472",
+      "filename": "runtests.tgz",
+      "script_version": "1.0",
+      "date": "2007-08-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12892",
+        "user_name": "kent@c2group.net",
+        "first_name": "Kent",
+        "last_name": "Cowgill",
+        "email": "kent at c2group.net",
+        "homepage": "http://www.kentcowgill.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

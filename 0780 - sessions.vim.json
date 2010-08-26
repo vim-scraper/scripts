@@ -1,0 +1,42 @@
+{
+  "script_id": "780",
+  "name": "sessions.vim",
+  "summary": "named shortcuts to groups of files",
+  "script_type": "utility",
+  "description": "This plugin introduces following additions to regular session management (see\nhelp on viminfo, mkview, mksession):\n- short commands for session saving, loading, clearing and merging:\n  :SS <name> --- save session <name>\n  :SL <name> --- load session <name>\n  :SN <name> --- clear buffer list and set new current session name.\n  :SS without parameter saves current session loaded with :SL or created\n      with SN.\n  :SM <name> --- merge session <name> into current one.\n\n- All sessions are stored and loaded out of specific directory named\n  'sessions' in &runtimepath. \n  Note: it is nessessary to create this directory manually before using\n  plugin. E.g. 'mkdir -p ~/.vim/sessions' will do on Unix-like systems.\n\n- Session name argument does not need to have path prefix or extension. It's\n  also may be completed from already saved session names.\n\n- Major difference to built-in session mechanism is that saved session by\n  default does not contain any mapping, window layout, line number or\n  unlisted buffer information whatsoever. There's just file list and current\n  working directory/file. This is done intentionally, with robustness and\n  loading speed in mind (see help on viminfo to learn how to store file\n  marks across sessions). To enable old-stype session files, set variable\n  g:Sessions_Old_style = 1 in your .vimrc.\n",
+  "install_details": "Don't forget to create directory 'sessions' somewhere in &runtimepath.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2384",
+      "filename": "sessions.vim",
+      "script_version": "0.2",
+      "date": "2003-10-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2861",
+        "user_name": "andrewr",
+        "first_name": "Andrew",
+        "last_name": "Rodionoff",
+        "email": "arnost at mail.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added MRU list feature. File encodings are now stored in minisession."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2369",
+      "filename": "sessions.vim",
+      "script_version": "0.1",
+      "date": "2003-10-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2861",
+        "user_name": "andrewr",
+        "first_name": "Andrew",
+        "last_name": "Rodionoff",
+        "email": "arnost at mail.ru",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

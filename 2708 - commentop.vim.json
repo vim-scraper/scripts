@@ -1,0 +1,90 @@
+{
+  "script_id": "2708",
+  "name": "commentop.vim",
+  "summary": "commands and operators to comment/uncomment lines in many languages",
+  "script_type": "utility",
+  "description": "!!NOTICE!! NO BACKWARD COMPATIBILITY FOR 1.0.2 OR BEFORE !!\n\nDescription:\n  This plugin provides a set of commands and operators  to comment or\n  uncomment lines. Linewise comment token (such as double quote in vim\n  script) is detected automatically by looking up filetype of the file.\n  Filetypes working well by default:\n    vim, python, perl, ruby, haskell, sh, bash, zsh, java, javascript,\n    Makefile, tex\n  With definition in this script, these also work:\n    (c), cpp, csharp, php, matlab\n\n  You can also easily define your own comment token for filetype. Add below\n  in your .vimrc:\n    CommentopSetCommentType FILETYPE REMOVEPATTERN INSERTSTRING\n\n  plugin keymaps:\n    <Plug>CommentopToggleNV    \" (n/v) toggle comment [count] or visual lines\n    <Plug>CommentopAppendNV    \" (n/v) comment out [count] or visual lines\n    <Plug>CommentopRemoveNV    \" (n/v) uncomment [count] or visual lines\n\n    <Plug>CommentopToggleOP    \" (n op) toggle comment {motion}\n    <Plug>CommentopAppendOP    \" (n op) comment out {motion}\n    <Plug>CommentopRemoveOP    \" (n op) uncomment {motion}\n\n  default mapping:\n    co       <Plug>CommentopToggleNV\n    cO       <Plug>CommentopAppendNV\n    c<C-O>   <Plug>CommentopRemoveNV\n\n    go       <Plug>CommentopToggleOP\n    gO       <Plug>CommentopAppendOP\n    g<C-O>   <Plug>CommentopRemoveOP\n\nExamples:\n  in normal mode:\n     co          \" toggle comment for this line\n     3cO         \" comment out 3 lines\n\n  in normal mode (operator):\n     goip        \" toggle comment for this paragraph\n     gOa{        \" comment out this {} block\n\n  in visual mode:\n     c<C-O>      \" remove comments in visual selection\n",
+  "install_details": "Place this file in /usr/share/vim/vim*/plugin or ~/.vim/plugin/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11064",
+      "filename": "commentop.vim",
+      "script_version": "1.1.1",
+      "date": "2009-07-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17575",
+        "user_name": "tsuzuki",
+        "first_name": "Takahiro",
+        "last_name": "SUZUKI",
+        "email": "takahiro.suzuDELETEMEki.ja at gmDELETEMEail.com",
+        "homepage": ""
+      },
+      "release_notes": "simplified the script using range function.\ncounting WS with virtcol (work fine with mixture of tabs and spaces).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11000",
+      "filename": "commentop.vim",
+      "script_version": "1.1.0",
+      "date": "2009-07-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17575",
+        "user_name": "tsuzuki",
+        "first_name": "Takahiro",
+        "last_name": "SUZUKI",
+        "email": "takahiro.suzuDELETEMEki.ja at gmDELETEMEail.com",
+        "homepage": ""
+      },
+      "release_notes": "simplified <Plug> maps (no backward compatibility for 1.0.2 or before)\ndetermine the comment string automatically (using 'commentstring')"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10995",
+      "filename": "commentop.vim",
+      "script_version": "1.0.2",
+      "date": "2009-07-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17575",
+        "user_name": "tsuzuki",
+        "first_name": "Takahiro",
+        "last_name": "SUZUKI",
+        "email": "takahiro.suzuDELETEMEki.ja at gmDELETEMEail.com",
+        "homepage": ""
+      },
+      "release_notes": "bug fix (wrong comment string with ft=vim)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10983",
+      "filename": "commentop.vim",
+      "script_version": "1.0.1",
+      "date": "2009-07-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17575",
+        "user_name": "tsuzuki",
+        "first_name": "Takahiro",
+        "last_name": "SUZUKI",
+        "email": "takahiro.suzuDELETEMEki.ja at gmDELETEMEail.com",
+        "homepage": ""
+      },
+      "release_notes": "bug fix (gO was mapped to comment out operator)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10972",
+      "filename": "commentop.vim",
+      "script_version": "1.0",
+      "date": "2009-07-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17575",
+        "user_name": "tsuzuki",
+        "first_name": "Takahiro",
+        "last_name": "SUZUKI",
+        "email": "takahiro.suzuDELETEMEki.ja at gmDELETEMEail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

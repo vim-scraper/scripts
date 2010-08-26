@@ -1,0 +1,42 @@
+{
+  "script_id": "1763",
+  "name": "lua-support",
+  "summary": "Lua-IDE -- Write and run Lua-scripts using menus and hotkeys.",
+  "script_type": "utility",
+  "description": "- insert various types of comments\n- insert complete statements (e.g. 'if then else end' )\n- insert often used code snippets (e.g. empty function, open file) \n- read, write, maintain your own code snippets in a separate directory\n- run scripts or run syntax check from within the editor\n- show compilation erros in a quickfix window; navigate with hotkeys \n\nHere are some screen shots :   http://lug.fh-swf.de/vim/vim-lua/\n\nThe help file online :   http://lug.fh-swf.de/vim/vim-doc/luasupport.html\n\nDocumentation \n_____________ \nThis plugin comes with a help file (luasupport.txt).  Read it with   \n   :h luasupport \nor type \\h in normal mode.",
+  "install_details": "Copy the zip archive  lua-support.zip to $HOME/.vim/ or $VIM/vimfiles \n(on the Windows platforms) and run\n      unzip lua-support.zip\n\nSee also the README file within the zip file.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7313",
+      "filename": "lua-support.zip",
+      "script_version": "1.1",
+      "date": "2007-07-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ New menu item and key mapping to adjust end-of-line comments.\n+ New insert mode mappings.\n+ A few mappings have been renamed (to bring them into line with my C/C++).\n+ New global variable for Lua compiler and interpreter name.\n+ Better adaption for console mode.\n+ Better adaption for MS Windows.\n+ Snippets can now be managed in the console mode."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6605",
+      "filename": "lua-support.zip",
+      "script_version": "1.0",
+      "date": "2007-01-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "942",
+  "name": "pqmagic.vim",
+  "summary": "Syntax Highlighting for \"PowerQuest PartitionMagic 7 Pro Scripting Files\"",
+  "script_type": "syntax",
+  "description": "Syntax Highlighting for \"PowerQuest PartitionMagic 7 Pro Scripting Files\"",
+  "install_details": "Copy the file to your vimfile/syntax directory.\n\nAdd the following line to your filetype.vim:\n\naugroup filetypedetect\n\" PowerQuest PartitionMagic Pro Script File\nau BufNewFile,BufRead *.pqs\t\t\t\tsetf pqmagic\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2855",
+      "filename": "pqmagic.vim",
+      "script_version": "1.0",
+      "date": "2004-03-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4824",
+        "user_name": "ongel",
+        "first_name": "Günther",
+        "last_name": "Pfannhauser",
+        "email": "guenther at ongel.at",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

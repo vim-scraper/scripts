@@ -1,0 +1,42 @@
+{
+  "script_id": "1698",
+  "name": "C_Epita",
+  "summary": "Usefull for EPITA students",
+  "script_type": "syntax",
+  "description": "This script will help you,  with the EPITA norme.\n * Headers are automaticaly generated on writing FILE\n * cindent is config\n * (norme checker) not yet implemented",
+  "install_details": "copy the file in your plugin dir (ex : ~/.vim/plugin)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6362",
+      "filename": "c_epita.vim",
+      "script_version": "0.0.2",
+      "date": "2006-11-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11103",
+        "user_name": "N0n0",
+        "first_name": "Arnaud",
+        "last_name": "GODET",
+        "email": "arnaud.godet at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix a bug in the generted HEADERS, who are more thn 80 columns.\nOn saving:\n* Generate Headers\n* Generate #ifndef for the .h files\n* Delete tailing white spaces\n* warn you if your function contains more than 25 lines\n* add a function <Esc>count_line_func who count the number of lines inside a C function"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6350",
+      "filename": "c_epita.vim",
+      "script_version": "0.0.1",
+      "date": "2006-10-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11103",
+        "user_name": "N0n0",
+        "first_name": "Arnaud",
+        "last_name": "GODET",
+        "email": "arnaud.godet at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "script_id": "1195",
+  "name": "vis",
+  "summary": "Extended Visual Mode Commands, Substitutes, and Searches",
+  "script_type": "utility",
+  "description": "I'm hereby making the <vis.vim> script, long available at http://mysite.verizon.net/astronaut/vim/index.html#VIS, also available here at vim.sf.net.  There are two commands made available: B and S.\n\n\n----------------\nVisual Commands:\n----------------\n\n    B\n\n    Use V, v, or ctrl-v to visually mark some region.  Then use\n       :B cmd     (this command will appear as:   :'<,'>B cmd)\n\n    The command will then be applied to just the visually selected region.\n    For examples:\n\n      Use ctrl-v to select a column and then do a substitute on just that column.  \n      ctrl-v ..move.. :B s/pattern/becomes/\n    \n      Use ctrl-v to select a column, then apply an external filter to that column.\n      ctrl-v ..move.. :B !sort\n\n\n----------------\nVisual Searches:\n----------------\n\n    S\n\n    Use V, v, or ctrl-v to visually mark some region.  Then use\n        :S pattern   (this search will appear as     :'<,'>S pattern)\n\n    The search will then be applied to just the visually selected region.\n    It may be repeated with n and N commands, too (without having to\n    re-mark the region).  A plain S will apply the last :S-pattern\n    to the latest selected region.\n\n\n-----------------\nRelated Subjects:\n-----------------\n\n * For incrementing/decrementing numbers, dates, and letters in a column: see vimscript#670 and vimtip#150\n * For sorting based on a column (column-restricted, whole lines but column-keyed), see vimtip#588\n * For overwriting visual blocks with other visual blocks: see vimtip#808\n * For more on applying substitutes to a visual block: see vimtip#63\n * For swapping pairs of visual blocks: see vimtip#329\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#VIS)\n",
+  "install_details": "vim vis.vba.gz\n:so %\n\n(uses vimscript#1502's vimball archiver)\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5847",
+      "filename": "vis.vba.gz",
+      "script_version": "19",
+      "date": "2006-06-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "improvement -- cecutil updated to use keepjumps (vim 7.0)\nbugfix -- small mod made to allow AlignMaps to work with visual blocks (...:B norm \\somemap)\nbugfix -- works around formatoption setting\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4529",
+      "filename": "vis.tar.gz",
+      "script_version": "18",
+      "date": "2005-08-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Bugfix - vis.vim now works around a virtcol() behavior difference between ve=all vs ve=block\n(effect -- a ctrl-v selected region, with ve=block and a short last line, didn't build a search pattern for the entire block)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4199",
+      "filename": "vis.tar.gz",
+      "script_version": "17",
+      "date": "2005-04-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Vis.vim now uses cecutil.vim functions; I've now included them in the tarball to make installation simpler."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4164",
+      "filename": "vis.vim.gz",
+      "script_version": "16",
+      "date": "2005-04-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* Both B and S visual mode commands now use <q-args> instead of <args>\n* Visual character selections (v) didn't restrict itself to the selected region when either ignorecase is used or if only one or two lines were in the region.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3823",
+      "filename": "vis.vim.gz",
+      "script_version": "15",
+      "date": "2005-02-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Visual Commands, Substitutes, and Searches (visual line, character, and block)\n"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "script_id": "1083",
+  "name": "multiwin.vim",
+  "summary": "MultiWin: use VIM like a Rolodex",
+  "script_type": "utility",
+  "description": "This script manipulates noequalalways, splitbelow, winheight, winminheight, and laststatus to make each buffer (either loaded by command line or via :new) occupy its own window.  All inactive windows are minimized to only statuslines.  This gives the appearance of a Rolodex.  Simply click on a status line and that window is maximized.\n\nNote: once vim is loaded, you must use :new (or :split) to \"add\" a window to the list.  Using :e will change the buffer in the current window.\n\nThis has same effect of using -o on the vim command line when you run vim with multiple filenames on the command line, or \"Edit with single vim\" context menu in Windows Explorer when multiple files are selected.\n\nThis script will not run if vim is set to compatible or is in diff mode.\n\nYou can disable the automatic-ness of this script by setting g:singlewin in your vimrc\n\nThis script is compatible with vim 6.3 and 7.0. \n\nI'd would like to give credit where credit is due:\nAntoine J. Mechelynck - the initial idea of playing with winheight and the other options\nCharles E. Campbell, Jr. - enlightening me on the use of sball\nBram - for deflecting my attempts at sliding a patch in and making me think of alternate ways to trick vim into maximizing the current window.and for showing me eventhandler()\nBreadman - for showing me wincmd _\n",
+  "install_details": "Place this script into your vimfiles\\plugin directory.\n\nWARNING!  This will override settings to noequalalways, splitbelow, winheight, winminheight, and laststatusline.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3724",
+      "filename": "multiwin.vim",
+      "script_version": "1.4",
+      "date": "2004-12-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5182",
+        "user_name": "pi-rho",
+        "first_name": "Patrick",
+        "last_name": "Avery",
+        "email": "patrick.avery at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "MultiWin now keeps quickfix windows at a certain height (default: 10 lines).\n\nMultiWin now reacts to files opened by drag-drop and via the Explorer context menu \"Edit with existing Vim\" command."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3518",
+      "filename": "multiwin.vim",
+      "script_version": "1.3",
+      "date": "2004-10-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5182",
+        "user_name": "pi-rho",
+        "first_name": "Patrick",
+        "last_name": "Avery",
+        "email": "patrick.avery at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added extra mappings (gf opens a new window for filename under cursor, Alt-Left and Alt-Right change the current window) and added documentation via DrChip's HelpExtractor."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3509",
+      "filename": "multiwin.vim",
+      "script_version": "1.2",
+      "date": "2004-10-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5182",
+        "user_name": "pi-rho",
+        "first_name": "Patrick",
+        "last_name": "Avery",
+        "email": "patrick.avery at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a runtime toggle to suspend multiwin's actions (<Leader>win)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3449",
+      "filename": "multiwin.vim",
+      "script_version": "1.1",
+      "date": "2004-09-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5182",
+        "user_name": "pi-rho",
+        "first_name": "Patrick",
+        "last_name": "Avery",
+        "email": "patrick.avery at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Replaced of the WinHeightKludge function with wincmd _ and stacked the VimEnter event... all thanks to Breadman!"
+    }
+  ]
+}

@@ -1,0 +1,490 @@
+{
+  "script_id": "1318",
+  "name": "snippetsEmu",
+  "summary": "An attempt to emulate TextMate's snippet expansion",
+  "script_type": "utility",
+  "description": "***** IMPORTANT *****\nThe plugin has now been split into two separate vimballs. The plugin itself and the bundles. This was done because bundles were updated a lot more often than the plugin itself.\n\nPrevious users of the plugin should delete the old file when upgrading to 1.0. The name of the file changed in 0.6 and so you'll end up with two versions when unpacking the file. Remove the old version \"snippetEmu.vim\" from the plugin directory. The new version is called \"snippetsEmu.vim\". Note the extra 's'\n\n\nHomepage: http://slipperysnippets.blogspot.com/\nIssue tracker: http://code.google.com/p/snippetsemu/issues/list\n\nPlease email me bugs or create them in the issue tracker.\n\nThis file contains some simple functions that attempt to emulate some of the behaviour of 'Snippets' from the OS X editor TextMate, in particular the variable bouncing and replacement behaviour.\n\nDIVING IN:\n\nInstall the plugin, start a new perl file (as an example) and type the following in insert mode:\n\nfor<tab><tab><tab><tab>\n\nYou'll see the text expand and the jumping in action. Try the same again but this time type a new value for 'var' once it is selected. I.e.\n\nfor<tab>test<tab><tab><tab>\n\nNotice how all the 'var's are replaced with 'test'.\n\nCheck out the bundles and the docs for more examples of what can be done.\n\n*IMPORTANT*\n\nIf you have any questions, suggestions, problems or criticisms about the plugin then please, please email me and I will do the best to help.",
+  "install_details": "Firstly create an 'after/ftplugin' directory in your vim home (e.g. ~/.vim/after/ftplugin under unix or vimfiles/after/ftplugin under Windows). This is required as Vimball sometimes does not create it for some reason.\n\nDownload the plugin vimball (and the bundle vimball if you would like the default snippets).\n\nNow open the Vimball(s) with Vim and follow the instructions (source the vimball to install everything). Vimball should create the help tags. Do a :helptags on your doc directory if it hasn't.\n\nEnjoy",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8450",
+      "filename": "snippy_plugin.vba",
+      "script_version": "1.2.3",
+      "date": "2008-03-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed jumping bug which caused problems with tags between two named tags being missed out. (really, really uploaded new version)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8443",
+      "filename": "snippy_bundles.vba",
+      "script_version": "1.2",
+      "date": "2008-03-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Small fix to php bundle. 'php' trigger is now 'phpp'. Previous version could too easily cause conflicts when using the 'incl' snippet."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8386",
+      "filename": "snippy_bundles.vba",
+      "script_version": "1.1",
+      "date": "2008-03-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Updates to the C and HTML bundles"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8348",
+      "filename": "snippy_bundles.vba",
+      "script_version": "1.0",
+      "date": "2008-02-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Filetype plugins for snippetsEmu"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8347",
+      "filename": "snippy_plugin.vba",
+      "script_version": "1.2.2",
+      "date": "2008-02-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fix to plugin. Annoying window jumping sorted out. Bundles are now in a separate vimball."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7735",
+      "filename": "snippetsemu1.2.1.vba",
+      "script_version": "1.2.1",
+      "date": "2007-09-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "VBA file now has unix fileformat, so things should be working better. Vimball has also added fold markers, which aren't backwards compatible, so I've removed them as well."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7732",
+      "filename": "snippetsemu1.2.vba",
+      "script_version": "1.2",
+      "date": "2007-09-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Finally released new version. Big change: No more messing with iskeyword. Other stuff - Commands with autocomplete, new commands for creating snippets, updated bundles. Be sure to read the docs to see what's available."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6951",
+      "filename": "snippetsemu1_1.vba",
+      "script_version": "1.1",
+      "date": "2007-04-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New version contains several bug fixes, reverts start and end tags to more 'friendly' settings and tries to address indenting issues. Snippets must now define their own 'local' indenting. Make sure you create the after/ftplugin directories as described in the installation instructions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6561",
+      "filename": "SnippetsEmu_1.0.1.vba",
+      "script_version": "1.0.1",
+      "date": "2006-12-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Even more super 1.0.1 version with Unix line endings on the Vimball so things install properly on *nix."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6558",
+      "filename": "SnippetsEmu_1.0.vba",
+      "script_version": "1.0",
+      "date": "2006-12-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Super new 1.0 version with many new features and improvements. New bundles also included."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6477",
+      "filename": "snippetsEmu0.6.1.vba",
+      "script_version": "0.6.1",
+      "date": "2006-11-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Quick fix changes the line endings for the VBA to UNIX which should hopefully stop some problems people are having"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6468",
+      "filename": "snippetsEmu0.6.vba",
+      "script_version": "0.6",
+      "date": "2006-11-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bugs fixes as per usual but this new version includes a set of snippets bundles for use with various filetypes. Plugin is now a VimBall so everything is in one file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6108",
+      "filename": "snippetEmu0.5.6.vim",
+      "script_version": "0.5.6",
+      "date": "2006-08-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed several bugs from the last version including random bug which prevented snippets from starting with 's'."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6068",
+      "filename": "snippetEmu0.5.5.vim",
+      "script_version": "0.5.5",
+      "date": "2006-08-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed various bugs: s:search_str not being defined or being buffer specific and command tag execution not working with two tags on the same line."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5987",
+      "filename": "snippetEmu0.5.4.vim",
+      "script_version": "0.5.4",
+      "date": "2006-07-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "TextMate compatibile mode now works under linux."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5944",
+      "filename": "snippetEmu0.5.3.vim",
+      "script_version": "0.5.3",
+      "date": "2006-07-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fixes. Things are a lot better behaved. Edge cases should (should) work a lot better now. Highly recommended upgrade."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5916",
+      "filename": "snippetEmu0.5.2.vim",
+      "script_version": "0.5.2",
+      "date": "2006-07-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor bug fix. Textmate compatible mode did not allow quotes in expansions. Fixed"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5912",
+      "filename": "snippetEmu0.5.1.vim",
+      "script_version": "0.5.1",
+      "date": "2006-07-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This new version adds some bug fixes to the last release and adds the new functionality of being able to define multicharacter start and end tags. It is now easier to define tags which work across multiple languages."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5907",
+      "filename": "snippetEmu0.5.0.vim",
+      "script_version": "0.5.0",
+      "date": "2006-07-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This new version adds TextMate style expansions: snippets are not expanded automatically. The user must press Tab for a snippet to be expanded. Tabbing will jump between tags or insert a <Tab> if no tags are active. \n\nThe tag syntax has changed. Default values are not supported anymore: use the tag's name instead. Commands can now be added in the first tag and unnamed tags can include commands. \n\nThis is a test release: please send bug reports."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4977",
+      "filename": "snippetEmu.vim",
+      "script_version": "0.3.6",
+      "date": "2006-01-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor bug fix.  Replacement values modified by commands would be passed to future commands in their modified form, rather than with the original replacement value."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4969",
+      "filename": "snippetEmu.vim",
+      "script_version": "0.3.5",
+      "date": "2006-01-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fundamental change to the way the new commands feature works.  The command is now 'executed' and the result placed in the variable @z.  The intention is for the command to be a function call rather than a standard command.  I.e. using substitute() rather than :s///.  The value to be replaced is available to the function in @z (previous values of the variable are kept and restored once the command has been executed).  See the updated docs for examples."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4962",
+      "filename": "snippetEmu.vim",
+      "script_version": "0.3.1",
+      "date": "2006-01-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fix - Non-greedy matching is now done on the command searching."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4959",
+      "filename": "snippetEmu.vim",
+      "script_version": "0.3",
+      "date": "2006-01-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New version allows commands to be included in named tags.  Experimental version - does not appear to break older functionality, however."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4947",
+      "filename": "snippetEmu.vim",
+      "script_version": "0.2.5",
+      "date": "2006-01-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Tag delimiters can now be set with autocommands to allow for different filetypes.  I.e. '<' and '>' for programming and '@' for HTML."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4946",
+      "filename": "snippetEmu.vim",
+      "script_version": "0.2.4",
+      "date": "2006-01-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug where certain tags were not recognised"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4940",
+      "filename": "snippetEmu.vim",
+      "script_version": "0.2.3",
+      "date": "2006-01-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Now works with autoindenting"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4480",
+      "filename": "snippetEmu.vim",
+      "script_version": "0.2.2",
+      "date": "2005-08-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Better behaved.  Couple of bug fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4479",
+      "filename": "snippetEmu.vim",
+      "script_version": "0.2.1",
+      "date": "2005-08-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added check for the default key combo so that the user's settings aren't clobbered."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4471",
+      "filename": "snippetEmu.vim",
+      "script_version": "0.2",
+      "date": "2005-08-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "I've given this a full point release as it's a major rewrite.  Start and end tags can now be defined and default values can also be used."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4444",
+      "filename": "snippetEmu.vim",
+      "script_version": "0.1",
+      "date": "2005-07-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8005",
+        "user_name": "Lllama",
+        "first_name": "Felix",
+        "last_name": "Ingram",
+        "email": "F.ingram.lists at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

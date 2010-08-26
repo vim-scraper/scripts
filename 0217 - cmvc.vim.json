@@ -1,0 +1,90 @@
+{
+  "script_id": "217",
+  "name": "cmvc.vim",
+  "summary": "Menu / Mappings for CMVC version control application",
+  "script_type": "utility",
+  "description": "This script integrates using the IBM Configuration Management Version Control (CMVC) application from within Vim.  It provides keyboard shortcuts as well as a menu to access common functions such as checking files in and out, viewing and responding to defects, etc.\n\nCurrently, only the functions I use regularly (Defect, File, Track, and VerifyCm) are implemented.  If you want to add others, the API should be fairly straightforward to do so.  Of course, I would appreciate receiving any changes you make, so that I can incorporate it into the next version (and avoid duplicating the work myself).\n\nNOTE:  This script currently requires Vim 6.  If there is interest in making it 5.x compatible, let me know and I will see what I can do.\n\nTODO:\t    Here are some other things I want to add when I get around to it:\n    -\tImplement more functions, like Report, to get a list of available defects / files / etc., which you can then view or\n\tcheckout.\n    -\tMake the script more \"plugin-ized\", like allowing users to override the default mappings and use their own.\n    -\tKeep a history of releases, components, and families used, then present them in a \"confirm\" dialog so the user\n\tcan just pick one instead of retyping it.  Inlcude an \"other\" button to bring up an \"inputdialog\" so the user can still\n\tenter an unlisted / new value.\n    -\tAdd commands to let the functions be used in Command mode.",
+  "install_details": "Just drop this file into your plugin directory, and it will automatically be loaded when you start Vim.  Otherwise, just put it in a directory of your choice and :source it as needed.  The syntax file should go into your syntax directory.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2215",
+      "filename": "CMVC.tar.gz",
+      "script_version": "1.4",
+      "date": "2003-08-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "20",
+        "user_name": "dwsharp",
+        "first_name": "Dan",
+        "last_name": "Sharp",
+        "email": "dwsharp at hotmail.com",
+        "homepage": "http://mywebpage.netscape.com/sharppeople/vim"
+      },
+      "release_notes": "- Make Defect List View prettier.\t\n- Fix diff function\t\n- If set to use password authentication, prompt user to log in on first command if necessary.\n- Misc. bug fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=743",
+      "filename": "CMVC.tar.gz",
+      "script_version": "1.3",
+      "date": "2002-04-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "20",
+        "user_name": "dwsharp",
+        "first_name": "Dan",
+        "last_name": "Sharp",
+        "email": "dwsharp at hotmail.com",
+        "homepage": "http://mywebpage.netscape.com/sharppeople/vim"
+      },
+      "release_notes": "Fixed some glaring bugs and added:\n   - Check out / extract a particular version of a file.\n   - Diff two versions of a file with vim's builtin diff support.\n   - Login and Logout commands for in case your server requires it.\n   - Support more optional attributes of Defect and File commands"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=679",
+      "filename": "CMVC.tar.gz",
+      "script_version": "1.2",
+      "date": "2002-03-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "20",
+        "user_name": "dwsharp",
+        "first_name": "Dan",
+        "last_name": "Sharp",
+        "email": "dwsharp at hotmail.com",
+        "homepage": "http://mywebpage.netscape.com/sharppeople/vim"
+      },
+      "release_notes": "--  Now uses full path name when extracting / checking out files.\n    Instead of putting the file in the current directory and\n    editing it there (preventing the concurrent editing of files \n    with the same name in two different releases), use the -top\n    option to put the files in the appropriate subdirectory of \n    the current directory and edit the file there.\n--  Add a help file.\n--  Enhance highlighting of -view output.\n--  Make script compatible with Johannes Zellner's AutoLoadGen.vim\n--  Only load menus when the gui is running.\n--  Allow a customizable top-level menu.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=592",
+      "filename": "cmvc.tar.gz",
+      "script_version": "1.1",
+      "date": "2002-02-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "20",
+        "user_name": "dwsharp",
+        "first_name": "Dan",
+        "last_name": "Sharp",
+        "email": "dwsharp at hotmail.com",
+        "homepage": "http://mywebpage.netscape.com/sharppeople/vim"
+      },
+      "release_notes": "-   Added syntax file for to highlight -view output.\n-   Added extra map command for closing -view buffer\n-   Bug fixes\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=590",
+      "filename": "cmvc.vim",
+      "script_version": "1.0",
+      "date": "2002-02-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "20",
+        "user_name": "dwsharp",
+        "first_name": "Dan",
+        "last_name": "Sharp",
+        "email": "dwsharp at hotmail.com",
+        "homepage": "http://mywebpage.netscape.com/sharppeople/vim"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "2912",
+  "name": "syntax/Gemfile.vim",
+  "summary": "The syntax file of Gemfile which is used for a RubyGems library \"Bundler\"",
+  "script_type": "syntax",
+  "description": "Highlights some method names for Gemfile.",
+  "install_details": "Copy the `Gemfile.vim` on your ~/.vim/syntax/ directory.\n\nYou may need to write ftdetect for Gemfile like:\n\n    \" ~/.vim/ftdetect/Gemfile.vim\n    autocmd BufRead,BufNewFile Gemfile set filetype=Gemfile\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12498",
+      "filename": "Gemfile.vim",
+      "script_version": "1.1",
+      "date": "2010-02-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15405",
+        "user_name": "ujihisa",
+        "first_name": "ujihisa",
+        "last_name": ".",
+        "email": "ujihisa at gmail.com",
+        "homepage": "http://ujihisa.blogspot.com"
+      },
+      "release_notes": "To work with the latest version of Bundler.\n(Patch from Iain Hecker. Thanks!)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12004",
+      "filename": "Gemfile.vim",
+      "script_version": "1.0",
+      "date": "2010-01-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15405",
+        "user_name": "ujihisa",
+        "first_name": "ujihisa",
+        "last_name": ".",
+        "email": "ujihisa at gmail.com",
+        "homepage": "http://ujihisa.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

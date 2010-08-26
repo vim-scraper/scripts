@@ -1,0 +1,42 @@
+{
+  "script_id": "2960",
+  "name": "bisect",
+  "summary": "Navigation via bisection",
+  "script_type": "utility",
+  "description": "This plugin will allow you to reach a desired location on the visible screen by\nperforming a sequence of bisections to the left, right, up, and down.  By default,\nthese are performed using the <C-h>, <C-l>, <C-j>, and <C-k> commands, respectively.\n<C-n> cancels a bisect.\n\nFor example, suppose your cursor is above the desired location on the screen.  Call\nthe BisectDown command, and your cursor will move halfway between its current\nlocation and the bottom of the screen.  Now suppose your cursor is below the desired\nposition.  Call the BisectUp command, and your cursor will move to halfway between\nits current position and its original position.  Repeat as necessary.  BisectLeft and\nBisectRight work analagously.  Horizontal and vertical commands can be interleaved.\n\nWorks in normal and all visual modes. \n\nMore information available here: http://github.com/mikezackles/Bisect\n\nNote that the github repo is slightly more up to date.  (Switching to visual mode cancels a bisect).  I swear I'll get around to updating the vimball soon.",
+  "install_details": "vim bisect.vba.gz\n:so %\n:q",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12305",
+      "filename": "bisect.vba.gz",
+      "script_version": "0.0.1",
+      "date": "2010-02-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18959",
+        "user_name": "mikezackles",
+        "first_name": "Zachary",
+        "last_name": "Michaels",
+        "email": "mikezackles at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Vimball for easier install.  Extra doc."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12298",
+      "filename": "bisect.tgz",
+      "script_version": "0.0.1",
+      "date": "2010-02-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18959",
+        "user_name": "mikezackles",
+        "first_name": "Zachary",
+        "last_name": "Michaels",
+        "email": "mikezackles at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "script_id": "346",
+  "name": "php.vim",
+  "summary": "Indent for php",
+  "script_type": "indent",
+  "description": "This was the original vim php indent file written in 2002 and included in Vim 6.X releases.\n\nIndents after <?php tag, <? tag (optional), ( )or { }.  The script can also format switch/case statements and more recently will automatically format /* comment sections */\n\nIt likes the following format:\n<pre>\n    if($something)\n    {\n         dothis();\n    }\n</pre>\nIt was not designed to and will not handle if blocks etc. without braces and also does not format html.  Please use braces and separate display logic for more readable code.\n",
+  "install_details": "Place in your /usr/share/vim/vim70/indent directory, replacing the version which is installed by default.  NOTE: This script is no longer included in Vim as of 7.0, yet was replaced by another script.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6758",
+      "filename": "php.vim",
+      "script_version": "1.2",
+      "date": "2007-02-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "815",
+        "user_name": "milosch",
+        "first_name": "Miles",
+        "last_name": "Lott",
+        "email": "milos at groupwhere.org",
+        "homepage": "http://groupwhere.org"
+      },
+      "release_notes": "Versions 0.8 - 1.1 have a switch/case formatting bug caused by an incomplete variable renaming.  1.2 should fix this."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6756",
+      "filename": "php.vim",
+      "script_version": "1.1",
+      "date": "2007-02-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "815",
+        "user_name": "milosch",
+        "first_name": "Miles",
+        "last_name": "Lott",
+        "email": "milos at groupwhere.org",
+        "homepage": "http://groupwhere.org"
+      },
+      "release_notes": "Same as the last version, adding #-commented lines"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6754",
+      "filename": "php.vim",
+      "script_version": "1.0",
+      "date": "2007-02-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "815",
+        "user_name": "milosch",
+        "first_name": "Miles",
+        "last_name": "Lott",
+        "email": "milos at groupwhere.org",
+        "homepage": "http://groupwhere.org"
+      },
+      "release_notes": "Decided to skip lines commented using // except for the initial tab"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6752",
+      "filename": "php.vim",
+      "script_version": "0.9",
+      "date": "2007-02-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "815",
+        "user_name": "milosch",
+        "first_name": "Miles",
+        "last_name": "Lott",
+        "email": "milos at groupwhere.org",
+        "homepage": "http://groupwhere.org"
+      },
+      "release_notes": "Sameday bugfix for certain commenting styles, e.g. closing with /**/"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6751",
+      "filename": "php.vim",
+      "script_version": "0.8",
+      "date": "2007-02-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "815",
+        "user_name": "milosch",
+        "first_name": "Miles",
+        "last_name": "Lott",
+        "email": "milos at groupwhere.org",
+        "homepage": "http://groupwhere.org"
+      },
+      "release_notes": "Borrowed methods from current dist of php.vim for automatic formatting of comments (http://www.2072productions.com/?to=phpindent.txt).  Otherwise, the function of the file is largely unchanged, i.e. it STILL works.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6021",
+      "filename": "php.vim",
+      "script_version": "0.7",
+      "date": "2006-08-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "815",
+        "user_name": "milosch",
+        "first_name": "Miles",
+        "last_name": "Lott",
+        "email": "milos at groupwhere.org",
+        "homepage": "http://groupwhere.org"
+      },
+      "release_notes": "Fixed /* comment */ indentation with patch from devin@tritarget.com."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4049",
+      "filename": "php.vim",
+      "script_version": "0.6",
+      "date": "2005-03-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "815",
+        "user_name": "milosch",
+        "first_name": "Miles",
+        "last_name": "Lott",
+        "email": "milos at groupwhere.org",
+        "homepage": "http://groupwhere.org"
+      },
+      "release_notes": "Fix indentation for closing bracket (patch from ITLab at MUSC - http://www.itlab.musc.edu/).  Problem reported by various users.  The fix came via the debian vim maintainers (bug 282135)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3032",
+      "filename": "php.vim",
+      "script_version": "0.5",
+      "date": "2004-05-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "815",
+        "user_name": "milosch",
+        "first_name": "Miles",
+        "last_name": "Lott",
+        "email": "milos at groupwhere.org",
+        "homepage": "http://groupwhere.org"
+      },
+      "release_notes": "Bug fix for open tag and empty statements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3031",
+      "filename": "php.vim",
+      "script_version": "0.4",
+      "date": "2004-05-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "815",
+        "user_name": "milosch",
+        "first_name": "Miles",
+        "last_name": "Lott",
+        "email": "milos at groupwhere.org",
+        "homepage": "http://groupwhere.org"
+      },
+      "release_notes": "Fixes for closing php tag, switch statement closure, and php_indent_shortopentags option from Steffen Bruentjen <vim@kontraphon.de>\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1555",
+      "filename": "php.vim",
+      "script_version": "0.3",
+      "date": "2002-12-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "815",
+        "user_name": "milosch",
+        "first_name": "Miles",
+        "last_name": "Lott",
+        "email": "milos at groupwhere.org",
+        "homepage": "http://groupwhere.org"
+      },
+      "release_notes": "This adds an option to turn off the formatting of switch/case statements.  This combines versions 0.1 and 0.2."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1036",
+      "filename": "php.vim",
+      "script_version": "0.2",
+      "date": "2002-07-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "815",
+        "user_name": "milosch",
+        "first_name": "Miles",
+        "last_name": "Lott",
+        "email": "milos at groupwhere.org",
+        "homepage": "http://groupwhere.org"
+      },
+      "release_notes": "This adds formatting of switch/case/default, but with some strict requirements for preformatting.\nPlease read the file to see what I mean."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1032",
+      "filename": "php.vim",
+      "script_version": "0.1",
+      "date": "2002-07-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "815",
+        "user_name": "milosch",
+        "first_name": "Miles",
+        "last_name": "Lott",
+        "email": "milos at groupwhere.org",
+        "homepage": "http://groupwhere.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

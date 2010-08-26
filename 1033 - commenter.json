@@ -1,0 +1,74 @@
+{
+  "script_id": "1033",
+  "name": "commenter",
+  "summary": "A handy comment/uncomment plugin",
+  "script_type": "utility",
+  "description": "Usage&#65306;\n   In normal mode&#65292;press <Leader>c to comment/uncomment current line.\n   If current line is blank line and no non-blank line before it, insert file header comment. The file header comment use template files. These templates should be placed to  ~/.vim/plugin/templates/ directory. template file name is same as cvim plugin.\n   If current line is function declaration line, and if g:DoxygenFuncDesc is set to 1, insert Doxygen style function comment. Else use function comment template file.\n   In visual mode, press <Leader>c to comment/uncomment blocks. This only applies to c source or header files.\n\nMainly targeted:  c,h,cpp file modification\nAlso applicable&#65306;   java,sh,vim,awk,sed,perl,python file modification",
+  "install_details": "Linux: Copy commenter.vim to $HOME/.vim/plugin/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4662",
+      "filename": "commenter.vim",
+      "script_version": "0.8.1",
+      "date": "2005-10-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5601",
+        "user_name": "sparks",
+        "first_name": "Sparks",
+        "last_name": "Lu",
+        "email": "cnlgm at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Use <Leader>ch to add #ifndef/#define/#endif lines for header files\nInsert comment symbol at beginning of line for block comment"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3887",
+      "filename": "commenter.vim",
+      "script_version": "0.8",
+      "date": "2005-02-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5601",
+        "user_name": "sparks",
+        "first_name": "Sparks",
+        "last_name": "Lu",
+        "email": "cnlgm at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Allow any count of whitespace after comment symbol when uncommont line.\nInsert commont symbol immediately before first non-whitespace character instead of beginning of line."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3541",
+      "filename": "commenter.vim",
+      "script_version": "0.7",
+      "date": "2004-10-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5601",
+        "user_name": "sparks",
+        "first_name": "Sparks",
+        "last_name": "Lu",
+        "email": "cnlgm at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Use <Leader>c to commenter/uncommenter instead of Ctrl-c.\nPython supported."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3238",
+      "filename": "commenter.vim",
+      "script_version": "0.6.1",
+      "date": "2004-07-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5601",
+        "user_name": "sparks",
+        "first_name": "Sparks",
+        "last_name": "Lu",
+        "email": "cnlgm at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

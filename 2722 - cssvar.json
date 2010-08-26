@@ -1,0 +1,26 @@
+{
+  "script_id": "2722",
+  "name": "cssvar",
+  "summary": "Use variables in CSS",
+  "script_type": "ftplugin",
+  "description": "This plugin allows you to define and use variables in stylesheets and make simple calculations with them, like this:\n\n    [pagewidth = 1000]\n    #wrapper { \n        width: [pagewidth]px;\n        margin: [pagewidth/4]px}\n\nIn the target CSS file this will become:\n\n    #wrapper { \n        width: 1000px;\n        margin: 250px}\n\nYou can assign the value of a color to a variable and use it anywhere in the stylesheet. When you change the assignment, the value is updated in the whole stylesheet.\n\n    [textcolor = #09c]\n    h1 {color: [textcolor]}\n\nThe variables are surrounded by two delimiters which you can define in the plugin file (or anywhere in the stylesheet). In the examples above square brackets are used but any printable ascii character, not used in the CSS code, will do. \n\n    ^textcolor = #09c$\n\nIt's possible to define the same character as opening and closing delimiter.\n\n    |textcolor = #09c|\n\nHOW IT WORKS\nThe plugin uses two CSS files. One source file (in the current buffer) with the CSS code and variables and one target file with pure CSS and calculated variables. This last file is generated when the plugin is invoked and you should link to this file in the (X)HTML.\n",
+  "install_details": "Put css_var.vim in your file type plugin directory ~/.vim/ftplugin.\nOpen the file and change the defaults to your liking.\nIncluded in the zip archive is a css test file and documentation.\n\nTo invoke the plugin:\n:call CSSvar()\n\nYou can put a mapping in your .vimrc to call the plugin like this:\nnmap <F5> <Plug>CSSvar\nimap <F5> <C-O><Plug>CSSvar\n\nREQUIREMENTS\nThis plugin requires Python-enabled Vim.\nTested with Vim 7.1 and Python 2.5.2 on Linux and with MacVim on Mac OS X.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11078",
+      "filename": "cssvar.zip",
+      "script_version": "1.0",
+      "date": "2009-07-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17395",
+        "user_name": "Benno",
+        "first_name": "Benno",
+        "last_name": "van Keulen",
+        "email": "bne at ziggo.nl",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

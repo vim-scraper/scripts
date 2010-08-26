@@ -1,0 +1,58 @@
+{
+  "script_id": "1329",
+  "name": "verilogams.vim",
+  "summary": "Highlighting scheme for Verilog-AMS",
+  "script_type": "syntax",
+  "description": "We're in 6.4 now, but unfortunately, Bram used the 1.0 version I sent him initially. I'll let him know that he can grab the latest version here for the 7.0 release.\n\nSo for the best highlighting experience, you should keep your own copy of 1.2 installed.",
+  "install_details": "Put verilogams.vim in ~/.vim/syntax/.\n\nCreate ~/.vim/filetype.vim (or edit it if you already have one) and add these lines:\n\naugroup filetypedetect\nau BufNewFile,BufRead *.va setf verilogams\nau BufNewFile,BufRead *.vams setf verilogams\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4588",
+      "filename": "verilogams.vim",
+      "script_version": "1.2",
+      "date": "2005-09-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8112",
+        "user_name": "smprather@gmail.com",
+        "first_name": "Stephen",
+        "last_name": "Prather",
+        "email": "smprather at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Some missing keywords fixed by Prasanna Tam. Thanks Prasanna!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4514",
+      "filename": "verilogams.vim",
+      "script_version": "1.1",
+      "date": "2005-08-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8112",
+        "user_name": "smprather@gmail.com",
+        "first_name": "Stephen",
+        "last_name": "Prather",
+        "email": "smprather at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* Added the metric scale factors to the number matcher. I still need to improve the number matcher a bit, but I don't have time now.\n* I initially missed some of the type keywords like genvar. I think I got em all now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4493",
+      "filename": "verilogams.vim",
+      "script_version": "1.0",
+      "date": "2005-08-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8112",
+        "user_name": "smprather@gmail.com",
+        "first_name": "Stephen",
+        "last_name": "Prather",
+        "email": "smprather at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

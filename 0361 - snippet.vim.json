@@ -1,0 +1,42 @@
+{
+  "script_id": "361",
+  "name": "snippet.vim",
+  "summary": "Replace a word with any text",
+  "script_type": "utility",
+  "description": "Snippets are fragments of code, usually related to keywords . \nFor example the C language defines \"for\" and \"do\" as keywords, \namong others.  Since \"for\" is usually written\n    as : \n         for (...;...;...) {\n                 //code here\n         }\nMost users will create an abbreviation for the keyword \"for\" to add the\nparenthesis and curly-braces such as : \n         iabb xFor for<space>(<space>;<space>;<space>)<space>{<cr><cr>}\n\nTo accomplish this using snippets, create a file with these lines :\n\n for ( <#cursor#>; ; ) {\n\n }\n\nNow when editing a 'c' file, when you type 'for<C-S>' ,for is replaced by the\nsnippet of code you placed in the file.  Additionally the cursor is placed \nbetween the opening ( and the first ; ... ready for you to begin typing.\n",
+  "install_details": "place plugin/snippet.vim in your ~/.vim/plugin directory\nplace syntax/snippet.vim in your ~/.vim/syntax directory\nplace doc/snippet.txt in your ~/.vim/doc \nsee :he add-local-help for details on adding plugin help.\nmkdir ~/.vim/snippets ( read help for alternatives )\nmkdir ~/.vim/snippets/<syntax>\n\nto use the snippet syntax file, add : \n\naugroup filetypedetect \n  au! BufRead,BufNewFile *.spt setfiletype snippet \naugroup END \n\nto your filetype.vim \n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2620",
+      "filename": "snippet.zip",
+      "script_version": "1.5",
+      "date": "2003-12-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "612",
+        "user_name": "aldy0169",
+        "first_name": "Timothy",
+        "last_name": "Aldrich",
+        "email": "tim at aldrichsystems.com",
+        "homepage": "http://www.geocities.com/aldy0169"
+      },
+      "release_notes": "Minor fix in the include functionality."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1106",
+      "filename": "snippet.zip",
+      "script_version": "1.4",
+      "date": "2002-08-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "612",
+        "user_name": "aldy0169",
+        "first_name": "Timothy",
+        "last_name": "Aldrich",
+        "email": "tim at aldrichsystems.com",
+        "homepage": "http://www.geocities.com/aldy0169"
+      },
+      "release_notes": "another Vikas improvement :\nchanged visual selection from character wise 'v' to line wise 'V'\nincorporates all previous fixes see changelog for list"
+    }
+  ]
+}

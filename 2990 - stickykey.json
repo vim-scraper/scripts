@@ -1,0 +1,26 @@
+{
+  "script_id": "2990",
+  "name": "stickykey",
+  "summary": "You don't need press very far away meta keys",
+  "script_type": "utility",
+  "description": "latest version at http://github.com/tyru/stickykey.vim/\n\n\nThis plugin provides Sticky Key to you.\nWith Sticky Key, you can emulate <C-o> by \";o\".\n(In this case, <Plug>(stickykey-ctrl) is mapped to \";\")\n\nAnd I suppose you are using GNU screen :)\nInputting screen's hotkey is a little complicated.\nBut you can send key input to screen fastly, certainly, and easily.\n\n\n\nMAPPINGS\n\n<Plug>(stickykey-...-remap) works like recursive mapping.\n\n\n<Plug>(stickykey-ctrl)\n<Plug>(stickykey-ctrl-remap)\n    Sticky key for |ctrl|.\n\n<Plug>(stickykey-alt)\n<Plug>(stickykey-alt-remap)\n    Sticky key for |alt|.\n\n<Plug>(stickykey-shift)\n<Plug>(stickykey-shift-remap)\n    Sticky key for |shift|.\n\n<Plug>(stickykey-command)\n<Plug>(stickykey-command-remap)\n    Sticky key for Macintosh command key. (see |<D-|)\n\n\nVARIABLES\n\ng:stickykey_when_no_escaped_key\t\t\tstring (default: \"thru\")\n    This variables determines when stickykey can not find\n    escaped input with meta key.\n    For e.g., while waiting the next key after pressing\n    \"<Plug>(stickykey-ctrl)\", <C-o> is input.\n    This variable can be any one of those:\n        \"nop\":\n            Behave like no key is input.\n        \"thru\":\n            Execute key without escaping with meta key.\n        \"again\":\n            Dispose current key input, wait next input again.",
+  "install_details": "just install to your ~/.vim directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12493",
+      "filename": "stickykey.zip",
+      "script_version": "0.0.0",
+      "date": "2010-02-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

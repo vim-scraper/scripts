@@ -1,0 +1,26 @@
+{
+  "script_id": "2898",
+  "name": "circos.vim",
+  "summary": "Syntax file for Circos visualization program conf files",
+  "script_type": "syntax",
+  "description": "Circos http://mkweb.bcgsc.ca/circos is a visualization program for genes, but can also be used for anything you would like to visualize as a circle with relationships.\n\nThis syntax file helps edit circos.conf, ideogram.conf and ticks.conf.",
+  "install_details": "Copy circos.vim to your ~/.vim/syntax/ directory\n\nOn your configuration file ~/.vimrc add the following lines:\n\naugroup filetype\n  au! BufNewFile,BufRead circos*conf,ideogram*conf,ticks*conf  set ft=circos ai textwidth=80 formatoptions=tcroqn2 comments=n:>\naugroup END\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11950",
+      "filename": "circos.vim",
+      "script_version": "0.1",
+      "date": "2009-12-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18667",
+        "user_name": "chmeee",
+        "first_name": "Jose Manuel",
+        "last_name": "Pavon",
+        "email": "chmeee at gmail.com",
+        "homepage": "http://twitter.com/chmeee"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

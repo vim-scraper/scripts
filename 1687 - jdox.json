@@ -1,0 +1,26 @@
+{
+  "script_id": "1687",
+  "name": "jdox",
+  "summary": "generates javadoc compatibile comments for c++ function definitions",
+  "script_type": "utility",
+  "description": "JDOX is a vim plugin that generates javadoc compatibile comment for c++ function definitions. The main point that differs jdox from similar commenting plugins is that jdox supports comments between arguments, function name and return types.\nExample:\n/**\n * Function: a_function\n * @author Pawel Prokop\n * @param str \n * @param number \n * @return unsigned  int\n * @version 1.0\n */\nunsigned \nint  a_function  ( char * str, /* int not_used_anymore, */ unsigned int number) {\n\n",
+  "install_details": "copy jdox_cpp.vim into .vim/plugin directory.\nUsage: when cursor is on function name press \\d (backslash d)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6315",
+      "filename": "jdox_cpp.vim",
+      "script_version": "1.00pre1",
+      "date": "2006-10-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11061",
+        "user_name": "pa810",
+        "first_name": "Pawel",
+        "last_name": "Prokop",
+        "email": "pablo at wizard.ae.krakow.pl",
+        "homepage": "http://prokop.ae.krakow.pl"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

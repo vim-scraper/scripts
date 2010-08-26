@@ -1,0 +1,170 @@
+{
+  "script_id": "3075",
+  "name": "NrrwRgn",
+  "summary": "A Narrow Region Plugin similar to Emacs",
+  "script_type": "utility",
+  "description": "This is a script emulates Emacs Narrowing feature, by opening a selected range in a new scratch buffer.\n\nSimilar scripts:\nnarrow_region: http://www.vim.org/scripts/script.php?script_id=2038\nnarrow: http://www.vim.org/scripts/script.php?script_id=2097\nnarrow: http://www.vim.org/scripts/script.php?script_id=2446\n\nUse :NarrowRegion to narrow a line based selection or alternatively visually select a range and press <Leader>nr\n\nIn the scratch buffer simply save it and the changes will be copied into the original file.\nThis is only a very simple help. You should probably read the help, that is provided with the plugin. See :h NarrowRegion\n\nThis Plugin is also available at github: http://github.com/chrisbra/NrrwRgn\n\nPlease rate this plugin if you like it!",
+  "install_details": "as usual. Open the file in vim, and source it (:so %)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13644",
+      "filename": "NrrwRgn-0.13.vba",
+      "script_version": "0.13",
+      "date": "2010-08-22",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "This adds the experimental feature of using the command :NUD to view a chunk of a unified diff in diff-mode"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13422",
+      "filename": "NrrwRgn-0.12.vba",
+      "script_version": "0.12",
+      "date": "2010-07-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "The Vimball for Version 0.11 contained some garbage that causes various errors.. So this Version is a new packaged version and should work now. Not sure how that happened.\n(Thanks Dennis Hostetler!)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13420",
+      "filename": "NrrwRgn-0.11.vba",
+      "script_version": "0.11",
+      "date": "2010-07-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Don't set 'winfixwidth' and 'winfixheight'"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13038",
+      "filename": "NrrwRgn-0.10.vba",
+      "script_version": "0.10",
+      "date": "2010-05-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "- Restore Cursorposition using winrestview() and winsaveview()\n- fix a bug, that prevented the use of visual narrowing\n- Make sure when closing the narrowed buffer, the content will be written to\n  the right original region\n- use topleft for opening the Narrowed window\n- check, that the original buffer is still available\n- If you Narrow the complete buffer using :NRV and write the changes back, an\n  additional trailing line is inserted. Remove that line.\n- When writing the changes back, update the highlighting."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13029",
+      "filename": "NrrwRgn-0.9.vba",
+      "script_version": "0.9",
+      "date": "2010-05-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "- It is now possible to Narrow a window recursively. This allows to have\n  several narrowed windows, and allows for example to only diff certain\n  regions (as was suggested in a recent thread at the vim_use mailinglist:\n  http://groups.google.com/group/vim_use/msg/05d7fd9bd1556f0e) therefore, the\n  use for the g:nrrw_rgn_sepwin variable isn't necessary anymore.\n- Small documentation updates"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13025",
+      "filename": "NrrwRgn-0.8.vba",
+      "script_version": "0.8",
+      "date": "2010-05-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "- the g:nrrw_rgn_sepwin variable can be used to force seperate Narrowed Windows, so you could easily diff those windows.\n- make the separating of several windows a little bit safer (look at the bufnr(), so it should work without problems for several buffers)\n- switch from script local variables to buffer local variables, so narrowing for several buffers should work.\n- set 'winfixheight' for narrowed window \n- Added command :NRV (suggested by Charles Campbell, thanks!)\n- added error handling, in case :NRV is called, without a selected region\n- take care of beeps, when calling :NRV\n- output WarningMsg"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13023",
+      "filename": "NrrwRgn-0.7.vba",
+      "script_version": "0.7",
+      "date": "2010-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "- really use the black hole register for deleting the old buffer contents in the narrowed buffer (suggestion by esquifit in http://groups.google.com/group/comp.editors/msg/3eb3e3a7c68597db)\n- make autocommand nesting, so the highlighting will be removed when writing the buffer contents.\n- Use g:nrrw_rgn_nohl variable to disable highlighting (as this can be disturbing)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12938",
+      "filename": "NrrwRgn-0.6.vba",
+      "script_version": "0.6",
+      "date": "2010-05-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Version 0.6:\n- the previous version had problems restoring the orig buffer, this version fixes it (highlighting and setl ma did not work correctly)\nVersion 0.5 (unreleased): \n- The mapping that allows for narrowing a visually selected range, did not work.  (Fixed!)\n- Make :WidenRegion work as expected (close the widened window)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12912",
+      "filename": "NrrwRgn-0.4.vba",
+      "script_version": "0.4",
+      "date": "2010-04-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "- Highlight narrowed region in the original buffer\n- Save and Restore search-register\n- Provide shortcut commands |:NR|\n- Provide command |:NW| and |:NarrowWindow|\n- Make plugin autoloadable\n- Enable GLVS (see |:GLVS|)\n- Provide Documenation (:h NarrowRegion)\n- Distribute Plugin as vimball |pi_vimball.txt|"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12911",
+      "filename": "NrrwRgn.vba",
+      "script_version": "0.3",
+      "date": "2010-04-28",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

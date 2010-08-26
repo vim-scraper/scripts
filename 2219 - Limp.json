@@ -1,0 +1,74 @@
+{
+  "script_id": "2219",
+  "name": "Limp",
+  "summary": "Lisp IDE",
+  "script_type": "utility",
+  "description": "Limp's goal is to provide a compelling alternative to Slime for Vim. It will let you send s-expressions to a running Lisp.\n\nIt will do this for you:\n\n* booting/attaching/detaching a Lisp (SBCL) from Vim or a command-line script, optionally specifying a core;\n* send code to the attached Lisp (and limited introspection, see Help Describe);\n* automatically close brackets;\n* ease s-exp navigation and (some) transposing;\n* highlight current form under the cursor;\n* lookup documentation from the HyperSpec;\n* complete (some) names.\n\nQuickstart (better version with screenshots in the documentation):\n\nIn a file with \"filetype=lisp\" set, hit <F12> to invoke Limp and start a Lisp or connect to an existing.\nWrite a piece of code, e.g.:\n\n  (defun hello-world (who)\n    (format t \"Hello, ~A!~%\" who))\n\nPlace the cursor at any location inside the code and type <Leader>et (Evaluate Top) to send your code to the running Lisp.\n\nHit <F12> again to see the results!  Then, by placing the cursor at hello-world and typing <Leader>hd (Help Describe) followed by <F12>, you'll see information about the symbol!\n\n(Full list of key bindings at http://mikael.jansson.be/hacking/limp/docs/#keyboard-reference )\n\nTo test it, type\n\n  :Eval (hello-world '|Limp User|)\n\nfollowed by <Enter> and <F12>.\n\nMore info in the documentation! \nUses code from ViLisp (vimscript #221), AutoClose (vimscript #1849), HiMtchBrkt (vimscript #1435)",
+  "install_details": "See http://mikael.jansson.be/hacking/limp/docs or the included documentation for complete installation instructions.\n\nAuthor's setup: Linux/Ubuntu-7.04, SBCL-1.0.x, GVim/Vim-7.1 (make sure to install a Vim with +eval, i.e. `sudo aptitude install vim-full`)\n\nIssue tracker and roadmap at http://mikael.jansson.be/hacking/limp\nRepository at https://svn.jansson.be/public/limp",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8771",
+      "filename": "limp-0.3.4.tar.gz",
+      "script_version": "0.3.4",
+      "date": "2008-06-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14305",
+        "user_name": "mikaeljansson",
+        "first_name": "Mikael",
+        "last_name": "Jansson",
+        "email": "mail at mikael.jansson.be",
+        "homepage": "http://mikael.jansson.be"
+      },
+      "release_notes": "Mostly bugfix release, with some extra candy.\nFixed bugs: #15 (mappings set twice when navigating Lisp buffers); #16 (more robust startup procedure), #19 (eval working on unsaved buffers).\nNew features: #20 (proper installer), #21 (s-exp navigation and (experimental) transposing)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8720",
+      "filename": "limp-0.3.3.tar.gz",
+      "script_version": "0.3.3",
+      "date": "2008-05-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14305",
+        "user_name": "mikaeljansson",
+        "first_name": "Mikael",
+        "last_name": "Jansson",
+        "email": "mail at mikael.jansson.be",
+        "homepage": "http://mikael.jansson.be"
+      },
+      "release_notes": "* CompileFile/CompileAndLoadFile now saves the file before telling Lisp to load it (#4).\n* New command, :Eval, same functionality as \\ex.\n* Easier keyboard configuration (keys.vim)\n* It is now a Lisp filetype plugin, so Limp will start automatically for Lisp files. (set filetype=lisp)\n* Configurable location of SBCL in lisp.sh\n* Updated documentation about Cmd for Fn-keys in OS X"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8617",
+      "filename": "limp-0.3.2.tar.gz",
+      "script_version": "0.3.2",
+      "date": "2008-04-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14305",
+        "user_name": "mikaeljansson",
+        "first_name": "Mikael",
+        "last_name": "Jansson",
+        "email": "mail at mikael.jansson.be",
+        "homepage": "http://mikael.jansson.be"
+      },
+      "release_notes": "* 2008-04-28 by Mikael Jansson <mail@mikael.jansson.be>\n\n  + **ADDED**: TODO file in the distro.\n  + *FIXED*: Last occurance of \"Lim\" found in the HyperSpec helper. Now\n    documentation should work properly.\n  + TWEAK: Only change colorscheme and nocompatible when not previously set.\n\n* 2008-04-27 by Mikael Jansson <mail@mikael.jansson.be>\n\n  + *FIXED*: Connect-or-boot, without a name given to boot."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8609",
+      "filename": "limp-0.3.1.tar.gz",
+      "script_version": "0.3.1",
+      "date": "2008-04-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14305",
+        "user_name": "mikaeljansson",
+        "first_name": "Mikael",
+        "last_name": "Jansson",
+        "email": "mail at mikael.jansson.be",
+        "homepage": "http://mikael.jansson.be"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "script_id": "1223",
+  "name": "plist.vim",
+  "summary": "Old-Style ASCII Property List",
+  "script_type": "syntax",
+  "description": "Property Lists were a configuration file format commonly used in the OpenStep framework. Currently, Apple has updated Property Lists to be XML-based, but Cocoa still supports the old-style Property Lists as well.\n\nProperty Lists are also available to the GNUStep libraries.\n\nMore information about property lists may be found at:\nhttp://developer.apple.com/documentation/Cocoa/Conceptual/PropertyLists/Concepts/OldStylePListsConcept.html\n\nAll suggestions to improve this syntax file are welcome.",
+  "install_details": "Add to your syntax directory and run \":setf plist\" when you have a property list file open.\n\nTo autodetect Property Lists with the extension .plist add the following to your vimrc:\n\naugroup filetypedetect\n  au! BufNewFile,BufRead *.plist setf plist\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4063",
+      "filename": "plist.vim",
+      "script_version": "1.3",
+      "date": "2005-03-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7011",
+        "user_name": "mjimenez",
+        "first_name": "Matthew",
+        "last_name": "Jimenez",
+        "email": "mjimenez at ersnet.net",
+        "homepage": ""
+      },
+      "release_notes": "Comment and comment errors should work properly in dictionaries and arrays"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3934",
+      "filename": "plist.vim",
+      "script_version": "1.2",
+      "date": "2005-02-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7011",
+        "user_name": "mjimenez",
+        "first_name": "Matthew",
+        "last_name": "Jimenez",
+        "email": "mjimenez at ersnet.net",
+        "homepage": ""
+      },
+      "release_notes": "Array are allowed to be outside of dictionaries.\nKey-Value pairs in dictionaries can have unquoted numbers as value."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3926",
+      "filename": "plist.vim",
+      "script_version": "1.1",
+      "date": "2005-02-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7011",
+        "user_name": "mjimenez",
+        "first_name": "Matthew",
+        "last_name": "Jimenez",
+        "email": "mjimenez at ersnet.net",
+        "homepage": ""
+      },
+      "release_notes": "Dictionaries are acceptable values for keys in other dictionaries."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3925",
+      "filename": "plist.vim",
+      "script_version": "1.0",
+      "date": "2005-02-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7011",
+        "user_name": "mjimenez",
+        "first_name": "Matthew",
+        "last_name": "Jimenez",
+        "email": "mjimenez at ersnet.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

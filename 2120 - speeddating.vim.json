@@ -1,0 +1,122 @@
+{
+  "script_id": "2120",
+  "name": "speeddating.vim",
+  "summary": "Use CTRL-A/X to increment dates, times, and more",
+  "script_type": "utility",
+  "description": "Take the following date:\n\n1999-12-31\n\nBecause Vim treats the hyphen as a negative sign, pressing CTRL-A on the 31 would normally increment it to\n\n1999-12-30\n\nCompare this with what happens when speeddating.vim is installed:\n\n2000-01-01\n\nPressing 5<C-X> on the 03 in the first line below transforms it into the second:\n\nSat, 01 Jan 2000 00:00:03 +0000\nFri, 31 Dec 1999 23:59:58 +0000\n\nSeveral date, time, and datetime formats are included.  Additional formats can be defined in a strftime-like syntax with the :SpeedDatingFormat command.\n\nExisting VIm semantics are preserved.  CTRL-A and CTRL-X accept a count, and plain number incrementing is used if no date format is matched.\n\nUse of CTRL-A/X in visual mode enables incrementing several lines at once.  Blank spots are filled by incrementing the match from the previous line, allowing for creation of sequences (1, 2, 3; 2000-10-30, 2000-10-31, 2000-11-01).\n\nCan also increment roman numerals and ordinals (1st, 2nd, 3rd, ...).  In visual mode, letters of the alphabet are supported.\n\nd<C-X> sets the timestamp under the cursor to the current time.  d<C-A> does the same, but uses UTC rather than the local time.\n\nThe \".\" command will work as expected if you install repeat.vim, vimscript #2136.\n\nFeedback wanted: speeddating currently supports locale dependent day/month names/abbrevations, but also includes English abbreviation support.  However, most of the built-in formats just use the English version, because it is either mandated by a standard (like RFC 822) or because they are typically used in an international context (like the Last Change: header in Vim scripts).  Is it even worth supporting the locale dependent names at all?  Is anyone actively using them?\n\nhttp://github.com/tpope/vim-speeddating",
+  "install_details": "Extract in ~/.vim (~\\vimfiles on Windows).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12533",
+      "filename": "speeddating.zip",
+      "script_version": "20100301",
+      "date": "2010-03-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Fix hanging when incrementing a month across a year boundary."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12438",
+      "filename": "speeddating.zip",
+      "script_version": "20100219",
+      "date": "2010-02-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Real documentation file.\nCTRL-X on March 31 yields February 28 not March 3."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9356",
+      "filename": "speeddating.vim",
+      "script_version": "20081016",
+      "date": "2008-10-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Fix false positives on patterns with periods"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8454",
+      "filename": "speeddating.vim",
+      "script_version": "20080314",
+      "date": "2008-03-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Basic timezone support.\nFormats like \"Fri Mar 14\" are smartly incremented, rather than assuming the year 2000.\nFixed error when wrapping down that would result in things like 23:60:60."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8197",
+      "filename": "speeddating.vim",
+      "script_version": "20080129",
+      "date": "2008-01-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Integer treated as unix timestamp with maps for current time.\n%* at beginning/end of pattern suppresses \\</\\>.\n%0x in a pattern is %x with mandatory leading zeros.\nThree new default formats."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8166",
+      "filename": "speeddating.vim",
+      "script_version": "20080120",
+      "date": "2008-01-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Removed days of week.  They may be added back if desired with :SpeedDatingFormat (%A is full name, %a is abbreviation).\nRoman numerals are now just a special year format.  They can be disabled with :SpeedDatingFormat! (%^v for uppercase, %v for lowercase).\nChanged default \"now\" mappings to d<C-A> and d<C-X>.\nBug fixes, mostly concerning visual mode."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8146",
+      "filename": "speeddating.vim",
+      "script_version": "20080111",
+      "date": "2008-01-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

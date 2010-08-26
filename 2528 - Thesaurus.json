@@ -1,0 +1,42 @@
+{
+  "script_id": "2528",
+  "name": "Thesaurus",
+  "summary": "Thesaurus suggestion script",
+  "script_type": "utility",
+  "description": "Usage:\n   Use the Thesaurus normal mode command to find the synonyms for the word\n   under the cursor. The plugin requires vim to be build with python support,\n   and uses the nltk python module for stemming the words. You can obtain\n   nltk from http://www.nltk.org, or via easy_install.\n\n   The plugin defaults to using the en_US thesaurus files, usually installed\n   with Openoffice.org. These files can be located in\n   /usr/share/myspell/dicts. A different thesaurus file can be specified via\n   the g:thesaurus_file variable. It expects the full path to the files,\n   without the extension. If none is specified, a value of\n   '/usr/share/myspell/dicts/th_en_US_v2' is assumed.",
+  "install_details": "Drop it in ~/.vim/plugins",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11075",
+      "filename": "thesaurus.vim",
+      "script_version": "0.2",
+      "date": "2009-07-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11127",
+        "user_name": "urandom",
+        "first_name": "Viktor",
+        "last_name": "Kojouharov",
+        "email": "vkojouharov at gmail.com",
+        "homepage": "http://bloka.org"
+      },
+      "release_notes": "cleanups and more visual  descriptions"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9875",
+      "filename": "thesaurus.vim",
+      "script_version": "0.1",
+      "date": "2009-01-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11127",
+        "user_name": "urandom",
+        "first_name": "Viktor",
+        "last_name": "Kojouharov",
+        "email": "vkojouharov at gmail.com",
+        "homepage": "http://bloka.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

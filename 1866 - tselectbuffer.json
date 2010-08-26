@@ -1,0 +1,90 @@
+{
+  "script_id": "1866",
+  "name": "tselectbuffer",
+  "summary": "A quick buffer selector/switcher",
+  "script_type": "utility",
+  "description": "This plugin provides a simple buffer selector. It doesn't have all the \nfeatures other buffer selectors have but can be useful for quickly \nswitching to a different buffer or for deleting buffers.\n\nThe idea is to view the buffer list, to do something, and to close the \nbuffer list. If you really want to permanently watch the buffer list to \nsee whether it's changed, you might want to use a different plugin.\n\nFeatures:\n    - list buffers, dynamically filter buffers matching a pattern\n    - switch to a buffer\n    - rename a buffer (you may need to use :saveas! or :w! when writing \n    the renamed buffer to disk)\n    - delete one or more buffer(s)\n\n:[N]TSelectBuffer[!]\n    List buffers. With a count or a !, show also hidden buffers.\n    Keys:\n    <cr>  ... Select (close the buffer list)\n    <c-s> ... Open in split window\n    <c-v> ... Open in vertically split window\n    <c-t> ... Open in new tab\n    <c-w> ... Show in original window (continue with the buffer list)\n    <c-d> ... Delete a buffer\n    <c-u> ... Rename a buffer\n    <     ... Jump to opened buffer in window/tab\n\nSuggested keymaps (put something like this into ~/.vimrc):\n    noremap <m-b> :TSelectBuffer<cr>\n    inoremap <m-b> <c-o>:TSelectBuffer<cr>\n",
+  "install_details": "vimscript #1863 is required.\n\nCopy the vim file to ~/.vim/plugin/\n\n\nAlso available via git\nhttp://github.com/tomtom/tselectbuffer_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9596",
+      "filename": "tselectbuffer.vim",
+      "script_version": "0.6",
+      "date": "2008-12-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Alternate buffer wasn't initially selected after 0.4\n- FIX: <c-s> and similar keys didn't work.\n- MRU order (set g:tselectbuffer_order to \"mru\")\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7651",
+      "filename": "tselectbuffer.vim",
+      "script_version": "0.4",
+      "date": "2007-09-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- <c-w> ... View file in original window\n- < ... Jump to already opened window, preferably on the current tab \npage (if any)\n- Enabled <c-t> to open buffer in tab\n- Require tlib 0.13\n- Initially select the alternate buffer\n- Make a count act as bang.\n- Can be \"suspended\" (i.e. you can switch back to the orignal window)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7362",
+      "filename": "tselectbuffer.vim",
+      "script_version": "0.3",
+      "date": "2007-07-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- <c-u>: Rename buffer (and file on disk)\n- <c-v>: Show buffers in vertically split windows\n- Require tlib 0.9\n- \"Delete buffer\" will wipe-out unloaded buffers.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7131",
+      "filename": "tselectbuffer.vim",
+      "script_version": "0.2",
+      "date": "2007-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Minor improvements\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7001",
+      "filename": "tselectbuffer.vim",
+      "script_version": "0.1",
+      "date": "2007-04-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

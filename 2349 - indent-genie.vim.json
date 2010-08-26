@@ -1,0 +1,26 @@
+{
+  "script_id": "2349",
+  "name": "indent/genie.vim",
+  "summary": "Indent script for the genie (vala flavour) language",
+  "script_type": "indent",
+  "description": "A vim indent script for the genie programming language. http://live.gnome.org/Genie \n\nThe script is derived from the python indent script.",
+  "install_details": "copy genie.vim to ~/.vim/indent/. Add:\n\naugroup setgenie\n  au!\n  au BufNewFile *.gs setlocal filetype=\"genie\"\n  au BufRead *.gs setlocal filetype=\"genie\"\naugroup END\n\nto your ~/.vimrc file.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9150",
+      "filename": "genie.vim",
+      "script_version": "0.1",
+      "date": "2008-08-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15003",
+        "user_name": "hashao",
+        "first_name": "ha",
+        "last_name": "shao",
+        "email": "hashao2 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

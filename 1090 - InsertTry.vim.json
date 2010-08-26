@@ -1,0 +1,42 @@
+{
+  "script_id": "1090",
+  "name": "InsertTry.vim",
+  "summary": "put java's try catch around marked lines",
+  "script_type": "ftplugin",
+  "description": "mark some lines and type ¬t\nthe marked lines will be enclosed in a try block with an additional catch and finally block\n\nWhre is the ¬ key? Feel free to change this.\n\ncustomize:\n:let b:java_InsertTry_Style=\"Java\" | \"C\" | \"JavaShort\"                         default = \"Java\"\n:let b:java_InsertTry_Goto=\"catch\" | \".\"                                                   default = \"catch\"\n\n",
+  "install_details": "simply copy to\n${VIMRUNTIME}/ftplugin/java/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3497",
+      "filename": "InsertTry.vim",
+      "script_version": "0.2",
+      "date": "2004-09-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6006",
+        "user_name": "romanw",
+        "first_name": "Roman",
+        "last_name": "Wagner",
+        "email": "romanw at cs.tu-berlin.de",
+        "homepage": ""
+      },
+      "release_notes": "* bugs deleted\n* new features ( see description )"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3493",
+      "filename": "InsertTry.vim",
+      "script_version": "0.1",
+      "date": "2004-09-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6006",
+        "user_name": "romanw",
+        "first_name": "Roman",
+        "last_name": "Wagner",
+        "email": "romanw at cs.tu-berlin.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

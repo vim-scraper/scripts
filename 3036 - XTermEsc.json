@@ -1,0 +1,42 @@
+{
+  "script_id": "3036",
+  "name": "XTermEsc",
+  "summary": "highlight xterm escape sequences",
+  "script_type": "syntax",
+  "description": "This highlights text based on xterm escape sequences using the appropriate color. This is similar to the AnsiEsc script but does not depend on the Conceal patch.  (http://www.vim.org/scripts/script.php?script_id=302)\n\nThis is done using one of two modes and is configured by setting the g:xterm_trim_escapes variable. When set to 0, escape sequences will be left in the buffer and highlighted using the Ignore group. When set to 1 and the buffer is modifiable, escape sequences will be deleted and highlighting will be performed based on row-column matching. Row-column matching may not work well if the file is being edited but is appropriate under some circumstances. Note that this only affect the escape sequences themselves, not highlighted text.",
+  "install_details": "Copy xterm.vim to your local syntax directory and use `:setf xterm' when you want highlighting.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13112",
+      "filename": "xterm.vim",
+      "script_version": "0.2",
+      "date": "2010-06-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9971",
+        "user_name": "andy753421",
+        "first_name": "Andy",
+        "last_name": "Spencer",
+        "email": "andy753421 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fixes, check &modifiable before trying to delete escapes, highlight escapes with Ignore group"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12757",
+      "filename": "xterm.vim",
+      "script_version": "0.1",
+      "date": "2010-04-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9971",
+        "user_name": "andy753421",
+        "first_name": "Andy",
+        "last_name": "Spencer",
+        "email": "andy753421 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "1959",
+  "name": "CharSort",
+  "summary": "Functions and mappings to sort the characters in a string",
+  "script_type": "utility",
+  "description": "Mappings:\n <lead>so  --  sort, case sensitive\n <lead>si  --  sort, case insensitive\n\nThese mappings work in visual and normal mode--in normal mode they take a motion operator.  See \":help mapleader\"\n\nFunction:\n CharSort#Sort({string} [, {i/c}]) -- Sort {string}\n    {i/c} == c  -- match case (default)\n    {i/c} == i  -- ignore case",
+  "install_details": "Either source this file directly or put it in <runtimepath>/autoload and copy the following maps in the file to your vimrc.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7358",
+      "filename": "CharSort.vim",
+      "script_version": "0.1",
+      "date": "2007-07-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

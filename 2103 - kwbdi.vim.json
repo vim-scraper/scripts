@@ -1,0 +1,42 @@
+{
+  "script_id": "2103",
+  "name": "kwbdi.vim",
+  "summary": "Keep Window on Buffer Delete - Improved",
+  "script_type": "utility",
+  "description": "This is an improved version of kwbd.vim. It allows you to delete a buffer without closing the window. It meets the following criteria:\n\n\n    * The window layout must be kept in all circumstances.\n    * If there is an alternate buffer must be showing that.\n    * If there is not alternate buffer then must be showing the preious buffer.\n    * If there is no alternate nor previous buffer (it is the only buffer) must show an empty buffer. \n\nIf there are two windows with the same buffer open, both windows will remain open, and the buffer will be deleted\n\nTo delete a buffer while keeping the window open, just type \\bd\n\nThanks to the authors of kwbd.vim and minibufexpl.vim!",
+  "install_details": "Copy the script into ~/.vim/plugin",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8068",
+      "filename": "kwbdi.vim",
+      "script_version": "1.1",
+      "date": "2007-12-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13609",
+        "user_name": "benbooth5",
+        "first_name": "Ben",
+        "last_name": "Booth",
+        "email": "benbooth5 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "fixed some bugs"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8067",
+      "filename": "kwbdi.vim",
+      "script_version": "1.0",
+      "date": "2007-12-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13609",
+        "user_name": "benbooth5",
+        "first_name": "Ben",
+        "last_name": "Booth",
+        "email": "benbooth5 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

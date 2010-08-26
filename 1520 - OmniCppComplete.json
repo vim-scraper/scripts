@@ -1,0 +1,42 @@
+{
+  "script_id": "1520",
+  "name": "OmniCppComplete",
+  "summary": "C/C++ omni-completion with ctags database",
+  "script_type": "ftplugin",
+  "description": "This script is for vim 7.0 or higher it provides an omnifunc cppcomplete function.\nYou can use the omni completion (intellisense) in C and C++ files.\nThis is a full vim script and you only need a ctags database.\n\nIt's not finished yet but now you can :\n\n    -   Complete namespaces, classes, structs and union members.\n    -   Complete inherited members for classes and structs (single and multiple inheritance).\n    -   Complete attribute members eg: myObject->_child->_child etc...\n    -   Complete type returned by a function eg: myObject->get()->_child.\n    -   Complete the \"this\" pointer.\n    -   Complete a typedef.\n    -   Complete the current scope (global and class scope).\n    -   Complete an object after a cast (C and C++ cast).\n    -   Complete anonymous types (eg: struct {int a; int b;}g_Var; g_Var.???). It also works for a typedef of an anonymous type.\n\n\nNotes :\n    -   The script manage cached datas for optimization.\n    -   Ambiguous namespaces are detected and are not included in the context stack.\n    -   The parsed code is tokenized so you can run a completion even if the current \n        instruction has bad indentation, spaces, comments or carriage returns between words\n        (even if it is not realistic).\n\nScreenShots :\n\n    http://vissale.neang.free.fr/Vim/OmniCppComplete/ScreenShots/screenshots.htm\n\n\n",
+  "install_details": "1) Unzip the plugin to ~/.vim (unix) or %HOMEPATH%\\vimfiles (windows)\n2) Run Vim and type the following command :\n\n:helptags $HOME/.vim/doc\n\nor\n\n:helptags $HOME/vimfiles/doc\n\n3) Type :h omnicppcomplete and please read the installation paragraph.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7722",
+      "filename": "omnicppcomplete-0.41.zip",
+      "script_version": "0.41",
+      "date": "2007-09-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9429",
+        "user_name": "FromtonRouge",
+        "first_name": "Vissale",
+        "last_name": "NEANG",
+        "email": "fromtonrouge at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "-   It's recommended to update ctags to version 5.7 or higher\n-   The plugin is now activated for C files\n-   New value for OmniCpp_SelectFirstItem when the option is equal to\n    2 the first item is selected without inserting it to \n    the text (patch from Marek Olszewski)\n-   Bug when completing union members fixed with ctags 5.7 \n    (reported by Willem-Jan de Hoog) \n-   New option OmniCpp_LocalSearchDecl (patch from Roland Kuck)\n-   Bug when tags=something,,somethingelse (reported by Tobias Pflug)\n-   Bug with nested structure (reported by Mikhail Daen)\n-   Bug where the script fails to detect the type of a variable when \n    the ignorecase option is on (reported by Alexey Vakhov)\n-   Error message when trying to use completion on a not yet saved \n    Vim buffer (reported by Neil Bird)\n-   Error message when trying to use completion on an file opened from \n    a tselect command (reported by Henrique Andrade)\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5859",
+      "filename": "omnicppcomplete.zip",
+      "script_version": "0.4",
+      "date": "2006-06-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9429",
+        "user_name": "FromtonRouge",
+        "first_name": "Vissale",
+        "last_name": "NEANG",
+        "email": "fromtonrouge at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "WARNING1: Please uninstall the previous version (remove at least autoload/cppomnicomplete.vim)\nWARNING2: Option names have changed, don't forget to update your .vimrc\nWARNING3: It's recommended to update ctags to the latest version (5.6)\nWARNING4: Default value for OmniCpp_NamespaceSearch option is now 1\n\n-   The script is renamed to OmniCppComplete according to the library\n    script directory structure.        \n-   OmniCpp_ClassScopeCompletionMethod renamed to OmniCpp_DisplayMode\n-   Fixed a bug where the quickfix list is modified after a completion.\n-   OmniCpp_ShowPrototypeInAbbr option added. It allows to show the\n    function signature in the abbreviation.\n-   OmniCpp_ShowAccess option added. It allows to hide the access\n    information in the popup menu.\n-   The tags database format must be a ctags 5.6 database if you want to \n    complete anonymous types.\n-   Fixed current scope detection not working properly in destructors.\n-   Don't show protected and private members according to the current scope. \n-   Overloaded functions are now filtered properly.\n-   New cache system using less memory.\n-   The class scope of a method is now resolved properly with \"using\n    namespace\" declarations.\n-   OmniCpp_SelectFirstItem option added. It allows to not select the first\n    item in the popup menu when 'completeopt' does not contain \"longest\".\n-   Fixed the bug where a \"random\" item in the popup menu is selected\n    by default when 'completeopt' does not contain \"longest\" option.\n-   The script is now split in library scripts.\n-   Cache added for 'using namespace' search in included files\n-   Default value for OmniCpp_NamespaceSearch is now 1 (search only in the\n    current buffer).\n-   Namespace search automatically disabled for C files even if \n    OmniCpp_NamespaceSearch != 0.\n-   To avoid linear search in tags files, the ignorecase option is now \n    disabled when getting tags datas (the user setting is restored after).\n-   Fixed a bug where friend functions may crash the script and also crash vim."
+    }
+  ]
+}

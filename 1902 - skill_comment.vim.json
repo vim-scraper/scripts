@@ -1,0 +1,26 @@
+{
+  "script_id": "1902",
+  "name": "skill_comment.vim",
+  "summary": "After pair of brackets auto-add starting keyword in the comment",
+  "script_type": "ftplugin",
+  "description": "Vim filetype plugin enhancement\nLanguage: skill (cadence extension language)\n\nType \");\" in Insert mode to insert the word located before the matching \"(\".\nFor selected keywords this also adds the argument (following the keyword).\nTo work properly, keyword and argument must be found on the same line.\n\nExample:\n\nprocedure( vscCheckpointHier( @key lib cell view message inclibs )\n    let(( ddCVs )\n        vscPrint0(sprintf( nil \"Hierarchy for %s,%s,%s ...\" lib cell view ))\n        when( ddCVs = vscGetHierarchyDDs( ?lib lib ?cell cell ?view view\n                                          ?inclibs inclibs )\n            vscPrint0(sprintf( nil \"  %d cellviews.\" length(ddCVs) ))\n            vscCheckpoint( ddCVs ?message message)\n        ); when ddCVs\n    ); let\n); procedure vscCheckpointHier\n",
+  "install_details": "Copy the file to  ~/.vim/ftplugin  -- or  vimfiles\\ftplugin (Win)\n\nHow come ...?\nVim will detect that the script belongs to the skill filetype, because the\nfilename matches \"skill_*.vim\".\n\nMake sure your vimrc contains\n    filetype plugin on\nelse the script won't be loaded automatically.\n\n2007 Oct 10",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7138",
+      "filename": "skill_comment.vim",
+      "script_version": "4",
+      "date": "2007-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

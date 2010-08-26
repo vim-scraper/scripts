@@ -1,0 +1,122 @@
+{
+  "script_id": "1864",
+  "name": "tmru",
+  "summary": "Most Recently Used Files",
+  "script_type": "utility",
+  "description": "This plugin provides a simple most recently used files facility.\n\n:TRecentlyUsedFiles ... open one or more recently used file(s)\n:TRecentlyUsedFilesEdit ... edit the mru list\n\nIf viminfo contains \"!\", the data is stored as global variable. Otherwise,\ntlib#cache is used -- which saves the data in ${vimfiles}/cache/tmru/files\nby default.",
+  "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0,\nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n\nvimscript #1863 is required.\n\nCopy tmru.vim to ~/.vim/plugin/\n\nSuggested keymaps (put something like this into ~/.vimrc):\n    noremap <m-r> :TRecentlyUsedFiles<cr>\n\nIn order to disable the sub-menu, set g:tmruMenu to \"\" in your vimrc file.\n\nAlso available via git\nhttp://github.com/tomtom/tmru_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10171",
+      "filename": "tmru.vba.gz",
+      "script_version": "0.7",
+      "date": "2009-03-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "If viminfo doesn't include '!', then use tlib#cache to save the file list."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9593",
+      "filename": "tmru.vba.gz",
+      "script_version": "0.6",
+      "date": "2008-12-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- g:tmruEvents can be configured (eg. BufEnter)\n- Require tlib 0.28\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7791",
+      "filename": "tmru.vim",
+      "script_version": "0.5",
+      "date": "2007-10-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Don't escape backslashes for :edit"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7650",
+      "filename": "tmru.vim",
+      "script_version": "0.4",
+      "date": "2007-09-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- <c-w> ... View file in original window\n- <c-i> ... Show file info\n- <c-t> ... Show in tab\n- Require tlib >= 0.13\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7360",
+      "filename": "tmru.vim",
+      "script_version": "0.3",
+      "date": "2007-07-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Autocmds use expand('%') instead of expand('<afile>')\n- Build menu (if the prefix g:tmruMenu isn't empty)\n- Key shortcuts to open files in (vertically) split windows or tabs\n- Require tlib >= 0.9\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7114",
+      "filename": "tmru.vim",
+      "script_version": "0.2",
+      "date": "2007-05-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- :TRecentlyUsedFilesEdit\n- Don't register nofile buffers or buffers with no filename.\n- <c-c> copy file name(s) (to @*)\n- When !has('fname_case'), ignore case when checking if a filename is \nalready registered.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6999",
+      "filename": "tmru.vim",
+      "script_version": "0.1",
+      "date": "2007-04-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "script_id": "248",
+  "name": "vimRubyX",
+  "summary": "enhancements to vim ruby interface",
+  "script_type": "utility",
+  "description": "Enhancements to the VIM-Ruby interface.\nThis allows you to easily define and call vim functions from ruby.\nCalling is done as if all the vim user defined and built in functions were\nmethods on the VIM module\nDefining is done by adding a new method to the VIM module.",
+  "install_details": "The vimRubyX plugin is actually a ruby module. But since it is only usefull\nfrom vim and for more convenience it is packaged as a vim plugin. To install\nit just unzip the package in a directory in your runtime view and run\n|:helptags| on the appropriate doc directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2813",
+      "filename": "vimRubyX.zip",
+      "script_version": "1.3",
+      "date": "2004-03-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "exit more graciously if vim is not ruby enabled (no ruby support compiled in or dynamic ruby and ruby lib not found)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=778",
+      "filename": "Vimrubyx.zip",
+      "script_version": "1.2",
+      "date": "2002-04-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "better exception handling in EvalRb"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=771",
+      "filename": "vimRubyX.zip",
+      "script_version": "1.1",
+      "date": "2002-04-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "added interactive ruby evaluation and enhanced vim ex-command support from within ruby"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=692",
+      "filename": "vimRubyX.zip",
+      "script_version": "1.0",
+      "date": "2002-03-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "251",
+        "user_name": "BenoitCerrina",
+        "first_name": "Benoit",
+        "last_name": "Cerrina",
+        "email": "benoit.cerrina at writeme.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

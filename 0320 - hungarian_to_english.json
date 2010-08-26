@@ -1,0 +1,74 @@
+{
+  "script_id": "320",
+  "name": "hungarian_to_english",
+  "summary": "Strips Hungarian notation from C and C++ identifiers.",
+  "script_type": "utility",
+  "description": "A function to strip Hungarian decorations from C and C++ \nidentifier names.  In some cases, this can make code \neasier to read.  It might also change how your program \nruns or make it not compile, so use with caution!\n",
+  "install_details": "Put hungarian_to_english.vim in $VIM/vimfiles/plugin directory and change the key mapping from <F8> to \nwhichever key combination you prefer.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=961",
+      "filename": "hungarian_to_english.vim",
+      "script_version": "1.0.3",
+      "date": "2002-06-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "727",
+        "user_name": "itrotts",
+        "first_name": "Issac",
+        "last_name": "Trotts",
+        "email": "issac at myfirstlink.net",
+        "homepage": "http://www.issactrotts.net"
+      },
+      "release_notes": "- removal of fBlah \n- no more spurious error messages from patterns not found"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=958",
+      "filename": "hungarian_to_english.vim",
+      "script_version": "1.0.2",
+      "date": "2002-06-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "727",
+        "user_name": "itrotts",
+        "first_name": "Issac",
+        "last_name": "Trotts",
+        "email": "issac at myfirstlink.net",
+        "homepage": "http://www.issactrotts.net"
+      },
+      "release_notes": "- removal of aBlah, eBlah, _blah, chBlah\n- better handling of m_bBlah and its friends\n- fixed it so it works not just on the first offending instance\n  of each line\n- corrected incorrectly changing identifiers like PRINTF when\n  ignorecase is turned on\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=957",
+      "filename": "hungarian_to_english.vim",
+      "script_version": "1.0.1",
+      "date": "2002-06-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "727",
+        "user_name": "itrotts",
+        "first_name": "Issac",
+        "last_name": "Trotts",
+        "email": "issac at myfirstlink.net",
+        "homepage": "http://www.issactrotts.net"
+      },
+      "release_notes": "- fixed a bug with capitalization\n- added removal of the m_blah notation\n- changed to only operate on the selected range\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=945",
+      "filename": "hungarian_to_english.vim",
+      "script_version": "1.0",
+      "date": "2002-06-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "727",
+        "user_name": "itrotts",
+        "first_name": "Issac",
+        "last_name": "Trotts",
+        "email": "issac at myfirstlink.net",
+        "homepage": "http://www.issactrotts.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

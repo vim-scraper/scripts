@@ -1,0 +1,42 @@
+{
+  "script_id": "1590",
+  "name": "unimpaired.vim",
+  "summary": "Pairs of handy bracket mappings",
+  "script_type": "utility",
+  "description": "Much of unimpaired.vim was extracted from my vimrc when I noticed a pattern: complementary pairs of mappings.  They fall into three categories.\n\nThere are mappings which are simply short normal mode aliases for commonly used ex commands. ]q is :cnext. [q is :cprevious. ]a is :next. [b is :bprevious.  See the documentation for the full set of 16 mappings and mnemonics.  All of them take a count.\n\nThere are linewise mappings. [<Space> and ]<Space> add newlines before and after the cursor line. [e and ]e exchange the current line with the one above or below it.\n\nThere are mappings for encoding and decoding. [x and ]x encode and decode XML (and HTML). [u and ]u encode and decode URLs. [y and ]y do C String style escaping.\n\nOh, and there's also [o and ]o to go to the next/previous file in the directory.\n\nhttp://github.com/tpope/vim-unimpaired",
+  "install_details": "Unzip in ~/.vim (~\\vimfiles on Windows). Use :helptags ~/.vim/doc to enable :help.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12570",
+      "filename": "unimpaired.zip",
+      "script_version": "1.1",
+      "date": "2010-03-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Add <Plug> aliases for all mappings.\nSkip swap files with ]o and [o.\nAccept a count with [e and ]e."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12237",
+      "filename": "unimpaired.zip",
+      "script_version": "1.0",
+      "date": "2010-01-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

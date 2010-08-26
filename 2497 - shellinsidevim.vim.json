@@ -1,0 +1,138 @@
+{
+  "script_id": "2497",
+  "name": "shellinsidevim.vim",
+  "summary": "Let you execute the shell command without leaving vim",
+  "script_type": "utility",
+  "description": "New version has combined into http://www.vim.org/scripts/script.php?script_id=2793\n\n --Typing the Ex command \"Shell\" will also allow you to run a Shell which you\n   give and pass up to 20 parameters to that shell.\n\n   Sample syntax...\n       :Shell ps -e\n\n --Pressing \"F4\" will toggle the display of a buffer containing the output\n   produced when running the shell command.\n\n **************************Some special syntax format**************************\n\n --If a Shell command starts with \":\", this Shell will be executed as a vim Ex\n  command, this is convenience if you map this command to a shortcut such as:\n\n  map <CR> :Shell\n\n  Then you could use this script to execute all the normal command directly.\n\n  --If a Shell command starts with \">\", this Shell will be executed with inputs\n  which come from a file, which name is \".VIM_STD_IN\". If the input file dose\n not exsits, you could give the inputs line by line by typing directly.\n\n  --If a Shell command ends with \";\", this Shell will be executed as a program\n  development tool. You could use this script for your development, then you \n  could pass the compile or interpret command as the Shell parameters with \";\"\n  followed. When the command finished it will jump to the first error line if\n  there are some errors. Of caurse you should special a compiler first.",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11424",
+      "filename": "shellinsidevim.tar.bz2",
+      "script_version": "2.7",
+      "date": "2009-09-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15830",
+        "user_name": "WarGrey",
+        "first_name": "Zhenliang",
+        "last_name": "Ju",
+        "email": "juzhenliang at gmail.com",
+        "homepage": "http://www.wargrey.net"
+      },
+      "release_notes": "In some different platforms, the vim may not support the feature '@+'.\nSo these vimers will not use the result of the shell command in the System Clipboard.\n\nBTW: This function of the plugin is unpublicized before."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11417",
+      "filename": "shellinsidevim.tar.bz2",
+      "script_version": "2.6",
+      "date": "2009-09-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15830",
+        "user_name": "WarGrey",
+        "first_name": "Zhenliang",
+        "last_name": "Ju",
+        "email": "juzhenliang at gmail.com",
+        "homepage": "http://www.wargrey.net"
+      },
+      "release_notes": "support the 'cd' command to change the current directory\nAnother fine adjustment"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10142",
+      "filename": "shellinsidevim.tbz2",
+      "script_version": "2.4",
+      "date": "2009-03-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15830",
+        "user_name": "WarGrey",
+        "first_name": "Zhenliang",
+        "last_name": "Ju",
+        "email": "juzhenliang at gmail.com",
+        "homepage": "http://www.wargrey.net"
+      },
+      "release_notes": "Changed:\nThis version, you can put them into any plugin directory of your runtime path.\nThe old version only can find the common.vim if it is in the vim root plugin directory."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10138",
+      "filename": "shellinsidevim.tbz2",
+      "script_version": "2.3",
+      "date": "2009-03-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15830",
+        "user_name": "WarGrey",
+        "first_name": "Zhenliang",
+        "last_name": "Ju",
+        "email": "juzhenliang at gmail.com",
+        "homepage": "http://www.wargrey.net"
+      },
+      "release_notes": "Updated:\n1.Add three global variables:\na. g:ShowOutputWindowWhenVimLaunched. \nIf its value gather then 0, The output window will open. The default value is 1.\nb. g:AutoShowOutputWindow.\nif its value is non-zero, the output window will open after command executing if it was closed.\nc. g:ShowOutputInCommandline\nIf its value is non-zero, the outputs from system() will also echoed at the vim command line.\n\n2.You can use \"clear\" shell command to clear the output windows"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10114",
+      "filename": "shellinsidevim.tbz2",
+      "script_version": "2.2",
+      "date": "2009-03-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15830",
+        "user_name": "WarGrey",
+        "first_name": "Zhenliang",
+        "last_name": "Ju",
+        "email": "juzhenliang at gmail.com",
+        "homepage": "http://www.wargrey.net"
+      },
+      "release_notes": "Divide the common functions into a single vim file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10109",
+      "filename": "shellinsidevim.vim",
+      "script_version": "2.2",
+      "date": "2009-03-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15830",
+        "user_name": "WarGrey",
+        "first_name": "Zhenliang",
+        "last_name": "Ju",
+        "email": "juzhenliang at gmail.com",
+        "homepage": "http://www.wargrey.net"
+      },
+      "release_notes": "changed:\nCatch the exception from system(), this is useful when you interrupt the shell.\n\nGive some more variables for controlling the output.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9790",
+      "filename": "shellinsidevim.vim",
+      "script_version": "2.1",
+      "date": "2009-01-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15830",
+        "user_name": "WarGrey",
+        "first_name": "Zhenliang",
+        "last_name": "Ju",
+        "email": "juzhenliang at gmail.com",
+        "homepage": "http://www.wargrey.net"
+      },
+      "release_notes": "fixed bug&#65306;\nThe shell with input file by invoking system(exp,input) does not work, maybe this is a bug of vim itself.\n\nupdate:\nThe message in the output window is highlighted for reading.\n\nchanged:\nThe input file has a fixed name called \".VIM_STD_IN\", the orig variable g:VIM_STD_IN_FILE has been deleted.\n\nOther:\nlast version I gave an error email , this is a correct one"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9729",
+      "filename": "shellinsidevim.vim",
+      "script_version": "2.0",
+      "date": "2008-12-29",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "15830",
+        "user_name": "WarGrey",
+        "first_name": "Zhenliang",
+        "last_name": "Ju",
+        "email": "juzhenliang at gmail.com",
+        "homepage": "http://www.wargrey.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

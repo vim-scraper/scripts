@@ -1,0 +1,58 @@
+{
+  "script_id": "1989",
+  "name": "gitvimdiff",
+  "summary": "Script to show git diffs in vimdiff format",
+  "script_type": "utility",
+  "description": "This script will show a git diff in vimdiff format. -g will use gvimdiff instead of vimdiff.\n\nIt creates a temporary file based on the diff output of git diff, and then runs vimdiff (or gvimdiff) against that. On completion it should delete the temporary files.",
+  "install_details": "The file itself is a bash script, so just make it executable on a Unix-like system.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11271",
+      "filename": "gitvimdiff",
+      "script_version": "1.5",
+      "date": "2009-08-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11759",
+        "user_name": "buchan",
+        "first_name": "Geoff",
+        "last_name": "Buchan",
+        "email": "geoffrey.buchan at gmail.com",
+        "homepage": "http://fillmore.homelinux.net"
+      },
+      "release_notes": "Bug fix: remove temporary file with file suffix on exit"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11259",
+      "filename": "gitvimdiff",
+      "script_version": "1.3",
+      "date": "2009-08-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11759",
+        "user_name": "buchan",
+        "first_name": "Geoff",
+        "last_name": "Buchan",
+        "email": "geoffrey.buchan at gmail.com",
+        "homepage": "http://fillmore.homelinux.net"
+      },
+      "release_notes": "Add code to put orignal file suffix on patched file.\nThis fixes syntax highlighting for the file.\nThanks to Stefan Heinemann for the patch!\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7492",
+      "filename": "gitvimdiff",
+      "script_version": "1.2",
+      "date": "2007-08-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11759",
+        "user_name": "buchan",
+        "first_name": "Geoff",
+        "last_name": "Buchan",
+        "email": "geoffrey.buchan at gmail.com",
+        "homepage": "http://fillmore.homelinux.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

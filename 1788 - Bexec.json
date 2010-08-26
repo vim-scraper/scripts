@@ -1,0 +1,58 @@
+{
+  "script_id": "1788",
+  "name": "Bexec",
+  "summary": "Execute script in buffer and display output in buffer.",
+  "script_type": "utility",
+  "description": "The Bexec plugin allows the user to execute the current buffer if it contains a script with a shebang (#!/path/to/interpreter) on the first line or if the default interpreter for the script's type is known by Bexec. The output of the script will be grabbed and displayed in a separate buffer.\n\nIt can be used to execute, for instance, Shell, PHP, PERL, Python or SQL scripts from within Vim.\n\nScreenshots can be found at: http://www.electricmonk.nl/index.php?page=bexec\n",
+  "install_details": "Edit bexec-vX.Y.vba in vim and run:\n\n:so %",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6727",
+      "filename": "bexec-v0.3.vba",
+      "script_version": "0.3",
+      "date": "2007-02-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11653",
+        "user_name": "fboender",
+        "first_name": "Ferry",
+        "last_name": "Boender",
+        "email": "f.boender at electricmonk.nl",
+        "homepage": "http://www.electricmonk.nl"
+      },
+      "release_notes": "A bexec_interpreter setting was added which overrides all other ways of finding an interpreter. A (requested) function BexecCloseOut() was added which closes the output window.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6694",
+      "filename": "bexec-v0.2.vba",
+      "script_version": "0.2",
+      "date": "2007-01-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11653",
+        "user_name": "fboender",
+        "first_name": "Ferry",
+        "last_name": "Boender",
+        "email": "f.boender at electricmonk.nl",
+        "homepage": "http://www.electricmonk.nl"
+      },
+      "release_notes": "The <F5> mapping has been removed in favour of <leader>bx. Custom filters where added (see :help bexec-customizing) and it is now possible to add your own known interpreters and custom filters from your .vimrc.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6691",
+      "filename": "bexec-v0.1.vba",
+      "script_version": "0.1",
+      "date": "2007-01-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11653",
+        "user_name": "fboender",
+        "first_name": "Ferry",
+        "last_name": "Boender",
+        "email": "f.boender at electricmonk.nl",
+        "homepage": "http://www.electricmonk.nl"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

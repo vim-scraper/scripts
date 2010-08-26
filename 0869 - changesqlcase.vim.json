@@ -1,0 +1,58 @@
+{
+  "script_id": "869",
+  "name": "changesqlcase.vim",
+  "summary": "Upper case sql keywords from a visual mode selection.",
+  "script_type": "utility",
+  "description": "Description:\nThis plugin is a function that wraps around a big substitution expression.\nThe goal is to be able up upper case sql keywords from a visual selection.\nIt is quite similar to this script:\n\nhttp://www.vim.org/scripts/script.php?script_id=305\n\nwhich uses insert mode abbreviations to capitalize as you type.  My script\nwill be useful if you need to clean up existing scripts or if you are\nprogramming in another language and want to format sql inside of a string\nvariable.  \n\nThe sql keyword list is taken from the postgresql 7.4 docs:\n\nhttp://www.postgresql.org/docs/current/static/sql-keywords-appendix.html#KEYWORDS-TABLE\n\nPlease send a patch to include keywords specific to the database you are\nworking with.\n\nInstallation:\n\nPlace this script in your ~/.vim/plugin/ directory or source from your vimrc\nfile. To use the script create a visual map:\n\nvmap <leader>uc  :call ChangeSqlCase()<cr>\n\nCustomization:\n1. Add the confirmation flag to the substitution if you are mostly doing\nsingle lines.  If you turn on confirmation on a multi-line visual selection\nyou will need to cancel out of the confirmation for each line.\n2. delete any keywords that cause you grief.\n3. add any keywords that are missing for your database\n\nTodo:\n1. This script could be modified to accept a database variable that altered\nthe keyword list.\n2. lowercase as well as uppercase\n\nBugs:\n\nAs noted in the vim manual |10.3|:\n\n   When using Visual mode to select part of a line, or using CTRL-V to\n  select a block of text, the colon commands will still apply to whole\n  lines.  This might change in a future version of Vim.\n\nSo if you select just the string in side of the quotes in the following\nexample:\n\ntest=\"select * from example\" { dont update me }\n\nthe word 'update' after the end quote will also change case.  \n",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2642",
+      "filename": "changesqlcase.vim",
+      "script_version": "0.1.2",
+      "date": "2003-12-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1171",
+        "user_name": "culley",
+        "first_name": "culley",
+        "last_name": "harrelson",
+        "email": "vim at culley.fastmail.fm",
+        "homepage": ""
+      },
+      "release_notes": "removed confirmation flag-- it was causing too many problems for multi-line selections"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2640",
+      "filename": "changesqlcase.vim",
+      "script_version": "0.1.1",
+      "date": "2003-12-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1171",
+        "user_name": "culley",
+        "first_name": "culley",
+        "last_name": "harrelson",
+        "email": "vim at culley.fastmail.fm",
+        "homepage": ""
+      },
+      "release_notes": "set confirmation flag as the default behavior"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2638",
+      "filename": "changesqlcase.vim",
+      "script_version": "0.1",
+      "date": "2003-12-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1171",
+        "user_name": "culley",
+        "first_name": "culley",
+        "last_name": "harrelson",
+        "email": "vim at culley.fastmail.fm",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

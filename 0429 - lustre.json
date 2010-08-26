@@ -1,0 +1,42 @@
+{
+  "script_id": "429",
+  "name": "lustre",
+  "summary": "compiles and runs a lustre program",
+  "script_type": "ftplugin",
+  "description": "this script compiles and runs a lustre program \nthere are 2 maps that hace been;\n<m-c>    compile \n<m-r>     run\nto run it u must first compile it succesfully...run does not make compilation\n\nfor each case the action is for the current node and for that the file must be of the format \nnode nodename",
+  "install_details": "put it in the ftplugins directory...\n\nprobably u'll need a file \"filetype.vim\"\ncontaining the below (for the recognision of the lustre file type)\n\nfiletype.vim:\n\n\" Lustre file\naugroup filetypedetect\n  au! BufRead,BufNewFile *.lus  setfiletype lustre\naugroup END\n\n\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1272",
+      "filename": "lustre.vim",
+      "script_version": "0.41",
+      "date": "2002-10-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1068",
+        "user_name": "sofrod",
+        "first_name": "odyss",
+        "last_name": "sofronis",
+        "email": "sofronis at csd.uoc.gr",
+        "homepage": "http://www-verimag.imag.fr/~sofronis"
+      },
+      "release_notes": "     "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1245",
+      "filename": "Lustre.vim",
+      "script_version": "0.3",
+      "date": "2002-09-25",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "1068",
+        "user_name": "sofrod",
+        "first_name": "odyss",
+        "last_name": "sofronis",
+        "email": "sofronis at csd.uoc.gr",
+        "homepage": "http://www-verimag.imag.fr/~sofronis"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "script_id": "1447",
+  "name": "Altair OptiStruct Syntax",
+  "summary": "Fixed field formatting (8 field) for Altair OptiStruct",
+  "script_type": "syntax",
+  "description": "8 Field formatting for editing Altair OptiStruct decks - you'll never again need to add another \"$......><......><......><......><......><......>\" line when editing an OptiStruct deck . The syntax shows the 8 field spacing with coloured fields.\nIt is also recommended that this syntax be used for editing nastran files - its much more useful than the nastran syntax!!",
+  "install_details": "Add filetype.vim to C:\\Program Files\\Vim\\vim63  = allows vim to autoselect profile for .fem & .bdf files\nAdd optistruct.vim to C:\\Program Files\\Vim\\vim63\\syntax = profile\nAdd synmenu.vim to C:\\Program Files\\Vim\\vim63  = adds optistruct profile to the syntax menu\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5412",
+      "filename": "optistruct_linux.tar.gz",
+      "script_version": "110306",
+      "date": "2006-03-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9223",
+        "user_name": "irl_be",
+        "first_name": "Sam",
+        "last_name": "Patten",
+        "email": "sampatten944 at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "As previous but in unix/linux format."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5288",
+      "filename": "optistruct.zip",
+      "script_version": "210206",
+      "date": "2006-02-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9223",
+        "user_name": "irl_be",
+        "first_name": "Sam",
+        "last_name": "Patten",
+        "email": "sampatten944 at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "As before with more cards supported."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5016",
+      "filename": "optistruct.zip",
+      "script_version": "310106",
+      "date": "2006-01-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9223",
+        "user_name": "irl_be",
+        "first_name": "Sam",
+        "last_name": "Patten",
+        "email": "sampatten944 at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added 8 & 16 field format support & some more cards"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5011",
+      "filename": "optistruct.zip",
+      "script_version": "300106",
+      "date": "2006-01-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9223",
+        "user_name": "irl_be",
+        "first_name": "Sam",
+        "last_name": "Patten",
+        "email": "sampatten944 at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved 8 field colouring & added colours for some useful cards."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4986",
+      "filename": "optistruct.zip",
+      "script_version": "160106",
+      "date": "2006-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9223",
+        "user_name": "irl_be",
+        "first_name": "Sam",
+        "last_name": "Patten",
+        "email": "sampatten944 at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

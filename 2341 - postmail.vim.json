@@ -1,0 +1,106 @@
+{
+  "script_id": "2341",
+  "name": "postmail.vim",
+  "summary": "mail message posting plugin. (python required)",
+  "script_type": "utility",
+  "description": "Send 'current editing buffer', or 'selected area of text' with email.\nMost simplest usage is to execute :Mail command.\n\nSupported Mail Auth type is\n    - basic SMTP password Auth\n    - POP before STMP Auth\n    - Outbound Port 25 Blocking\n    - GMail\n\nThis plugin needs '+python', '+iconv', '+multi_byte' and\nPython is installed, and $PATH is appropriately set.\n\nUSAGE\nYou can use :Mail command to send email.\nSee also postmail-example .\n\n:[range]Mail\n        send mail message.\n        if [range] is selected, send selected text.\n        if [range] is not selected, send current buffer.\n\n:[range]Mail {to_mailaddress}\n        send mail message to {to_mailaddress}.\n        if [range] is selected, send selected text.\n        if [range] is not selected, send current buffer.\n\n:[range]Mail {to_mailaddress1} {to_mailaddress2}, {to_mailaddress3}\n        send mail message to {to_mailaddress1}, {to_mailaddress2}, and\n        {to_mailaddress2}.\n        if [range] is selected, send selected text.\n        if [range] is not selected, send current buffer.\n\nCOMMAND USAGE EXAMPLE\n:Mail\n        send mail message.\n        message is current buffer text.\n\n:Mail mail@nanasi.jp\n        send current buffer text to 'mail@nanasi.jp' address.\n\n:6,20Mail mail@nanasi.jp\n        send from line 6 to line 20 text to 'mail@nanasi.jp' address.\n",
+  "install_details": "1. Unzip postmail-vim-plugin.zip, and copy to 'plugin', 'doc' directory in\n   your 'runtimepath' directory.\n\n    $HOME/vimfiles (Windows)\n    $HOME/.vim/ (Unix)\n\n2. Edit 'postmail.conf' and setup mail server configuration.\n    postmail.conf file encoding is same with &encoding value.\n\n    :echo &encoding\n\n3. Execute ':helptags' command to your runtimepath 'doc' directory.\n\n    :helptags $HOME/vimfiles/doc (Windows)\n    :helptags $HOME/.vim/doc (Unix)\n\nCONFIGURATION\npostmail.conf file is mail server configuration file.\nsimply configuration file setup is to comment out, and replace some\nconfiguration setting. See postmail.conf in your plugin directory.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11857",
+      "filename": "postmail-vim-plugin.zip",
+      "script_version": "0.6",
+      "date": "2009-12-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9013",
+        "user_name": "advweb",
+        "first_name": "omi",
+        "last_name": "taku",
+        "email": "mail at nanasi.jp",
+        "homepage": "http://nanasi.jp/"
+      },
+      "release_notes": "refactoring plugin, and more easy setupable.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9147",
+      "filename": "postmail.zip",
+      "script_version": "0.5.3",
+      "date": "2008-08-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9013",
+        "user_name": "advweb",
+        "first_name": "omi",
+        "last_name": "taku",
+        "email": "mail at nanasi.jp",
+        "homepage": "http://nanasi.jp/"
+      },
+      "release_notes": "plugin/postmail.vim\n- Add escape code if mail_encoding is 'ISO-2022-JP'."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9132",
+      "filename": "postmail.zip",
+      "script_version": "0.5.2",
+      "date": "2008-08-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9013",
+        "user_name": "advweb",
+        "first_name": "omi",
+        "last_name": "taku",
+        "email": "mail at nanasi.jp",
+        "homepage": "http://nanasi.jp/"
+      },
+      "release_notes": "- Change script name from 'sendmail' to 'postmail'.\n- Change from 'Vimball' to 'zip' archive distribution.\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9126",
+      "filename": "sendmail.vba.zip",
+      "script_version": "0.5.1",
+      "date": "2008-08-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9013",
+        "user_name": "advweb",
+        "first_name": "omi",
+        "last_name": "taku",
+        "email": "mail at nanasi.jp",
+        "homepage": "http://nanasi.jp/"
+      },
+      "release_notes": "version : 0.5.1\n\nplugin/sendmail.vim\n- Remove document. Move to document directory.\n- Fix error check logic, 'sendmail.conf is not configured.'.\n\ndoc/sendmail.txt\n- Created.\n\nplugin/sendmail.py\n- Send mail in background.\n\nplugin/sendmail.conf\n- Removed.\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9125",
+      "filename": "sendmail_doc_ja.zip",
+      "script_version": "0.5.1",
+      "date": "2008-08-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9013",
+        "user_name": "advweb",
+        "first_name": "omi",
+        "last_name": "taku",
+        "email": "mail at nanasi.jp",
+        "homepage": "http://nanasi.jp/"
+      },
+      "release_notes": "Help Document In Japanese."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9121",
+      "filename": "sendmail.vba",
+      "script_version": "0.5",
+      "date": "2008-08-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9013",
+        "user_name": "advweb",
+        "first_name": "omi",
+        "last_name": "taku",
+        "email": "mail at nanasi.jp",
+        "homepage": "http://nanasi.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

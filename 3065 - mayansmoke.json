@@ -1,0 +1,106 @@
+{
+  "script_id": "3065",
+  "name": "mayansmoke",
+  "summary": "Pleasant and ergonomic light-background color scheme.",
+  "script_type": "color scheme",
+  "description": "This is a pleasant and ergonomic light-background color scheme, designed for long hours of coding and working. The UI elements are muted without being drab, the syntax elements are colorful without being garish, and the background is relaxing without being soporific. It is of a low-enough contrast so as not to cause eye-burn, but high-enough contrast so as not to cause eye-strain. The syntax coloration offers just a little higher resolution than most, distinguishing between class names vs. functions, strings and numbers vs. other constants, etc. Many of the colors in this color scheme are drawn from Mayan murals, paintings and codices, and thus the name. \n\nScreenshots:\n==========\n\n    - Python: http://jeetworks.org/files/images/mayansmoke-python1.png\n    - Python: http://jeetworks.org/files/images/mayansmoke-python2.png\n    - C++: http://jeetworks.org/files/images/mayansmoke-cpp1.png\n    - C++ http://jeetworks.org/files/images/mayansmoke-cpp2.png\n\nVersion 1.0.1 onwards:\n==================\n\nHas special syntax highlighting for decorators. For this to work,  you need the following lines in your '$VIMRUNTIME/syntax/python.vim' or '$VIMRUNTIME/after/syntax/python.vim':\n\n    syn match   pythonDecorator\t\"@\" display contains=pythonDecoratorFunction nextgroup=pythonDecoratorFunction skipwhite\n    syn match   pythonDecoratorFunction\t\"[a-zA-Z_][a-zA-Z0-9_]*\" display contained nextgroup=pythonFunc skipwhite\n\nVersion 1.1.0 onwards:\n==================\n\nAllows for customization of \"Special Key\" highlighting visibility (used for whitespace/listchar etc.) by setting of \"g:mayansmoke_special_key_visibility\" value in your \"~/.vimrc\": \n    \n    let g:mayansmoke_special_key_visibility = 0  \" lower visibility\n    let g:mayansmoke_special_key_visibility = 1  \" medium visibility\n    let g:mayansmoke_special_key_visibility = 2  \" higher visibility\n\nVersion 1.4 onwards:\n=================\n\nAllows for customization of Cursor Line and Cursor Column highlighting visibility by setting of \"g:mayansmoke_cursor_line_visibility\" value in your \"~/.vimrc\": \n    \n    let g:mayansmoke_cursor_line_visibility = 0  \" lower visibility\n    let g:mayansmoke_cursor_line_visibility = 1  \" medium visibility\n    let g:mayansmoke_cursor_line_visibility = 2  \" higher visibility\n",
+  "install_details": "Download/save/copy/move the file \"mayansmoke.vim\" to your \"$VIMRUNTIME/colors\" directory (e.g., \"~/.vim/colors\"). Activate the color scheme by entering the command, \":colors mayansmoke\".",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13314",
+      "filename": "mayansmoke.vim",
+      "script_version": "1.5",
+      "date": "2010-07-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19500",
+        "user_name": "jeetsukumaran",
+        "first_name": "Jeet",
+        "last_name": "Sukumaran",
+        "email": "jeetsukumaran at gmail.com",
+        "homepage": "http://jeetworks.org"
+      },
+      "release_notes": "Added PHP syntax colors, contributed by Ryan Kulla."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13032",
+      "filename": "mayansmoke.vim",
+      "script_version": "1.4",
+      "date": "2010-05-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19500",
+        "user_name": "jeetsukumaran",
+        "first_name": "Jeet",
+        "last_name": "Sukumaran",
+        "email": "jeetsukumaran at gmail.com",
+        "homepage": "http://jeetworks.org"
+      },
+      "release_notes": "* 256-color terminal mode colors, added by Clayton Parker.\n* Cursor line (and column) visibility can be customized by the g:mayansmoke_cursor_line_visibility variable.\n* Slight hue-shift in background."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12928",
+      "filename": "mayansmoke.vim",
+      "script_version": "1.3",
+      "date": "2010-05-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19500",
+        "user_name": "jeetsukumaran",
+        "first_name": "Jeet",
+        "last_name": "Sukumaran",
+        "email": "jeetsukumaran at gmail.com",
+        "homepage": "http://jeetworks.org"
+      },
+      "release_notes": "* Added custom diff syntax colors.\n* Cursor line/column color tweak (beige instead of white)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12894",
+      "filename": "mayansmoke.vim",
+      "script_version": "1.2",
+      "date": "2010-04-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19500",
+        "user_name": "jeetsukumaran",
+        "first_name": "Jeet",
+        "last_name": "Sukumaran",
+        "email": "jeetsukumaran at gmail.com",
+        "homepage": "http://jeetworks.org"
+      },
+      "release_notes": "Now allows for customization of \"Special Key\" highlighting visibility (used for whitespace/listchar etc.) by setting of \"g:mayansmoke_special_key_visibility\" value. 0 = lower visibility, 1 = medium visibility, 2 = higher visibility."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12864",
+      "filename": "mayansmoke.vim",
+      "script_version": "1.0.1",
+      "date": "2010-04-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19500",
+        "user_name": "jeetsukumaran",
+        "first_name": "Jeet",
+        "last_name": "Sukumaran",
+        "email": "jeetsukumaran at gmail.com",
+        "homepage": "http://jeetworks.org"
+      },
+      "release_notes": "* Tweaked ignore colors to actually ignore.\n* Added special syntax highlighting for Python decorators."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12857",
+      "filename": "mayansmoke.vim",
+      "script_version": "1.0",
+      "date": "2010-04-17",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "19500",
+        "user_name": "jeetsukumaran",
+        "first_name": "Jeet",
+        "last_name": "Sukumaran",
+        "email": "jeetsukumaran at gmail.com",
+        "homepage": "http://jeetworks.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

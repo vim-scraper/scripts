@@ -1,0 +1,26 @@
+{
+  "script_id": "2268",
+  "name": "apachelogs.vim",
+  "summary": "Syntax highlight for apache log files",
+  "script_type": "syntax",
+  "description": "Recognizes and differences IP address, referer, error type, date and hour and apache general error log constructions. Very useful for debugging perl via warn + CGI, php, for example, because you can easily identify  whether is and apache notice or a real error, which user agent IP produced it, with wich referer was called, etc... \n\nFor example a perl module that produces an error will break in the pm, but the caller that produces it is the perl script itself, that in apache is the referer. Both are highlighted differently with this syntax file.",
+  "install_details": "Copy to the syntax directory in the root vim installation",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8817",
+      "filename": "apachelogs.vim",
+      "script_version": "1.002",
+      "date": "2008-06-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14595",
+        "user_name": "igjav",
+        "first_name": "Ignacio",
+        "last_name": "Javier",
+        "email": "ignacio.javier.igjav at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Correct unix line endings"
+    }
+  ]
+}

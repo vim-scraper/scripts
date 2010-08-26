@@ -1,0 +1,42 @@
+{
+  "script_id": "322",
+  "name": "srecord.vim",
+  "summary": "Syntax highlights S-Record files.",
+  "script_type": "syntax",
+  "description": "Syntax highlights S-Record files.",
+  "install_details": "Create a filetype for your srecords. For example in my filetype.vim page I\\\\&#039ve entered\n\n \\\\\\\"Srecord Files\n\nau! BufRead,BufNewFile *.s19 setfiletype srecord \n\nNow place the script in your syntax plugin in directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1079",
+      "filename": "srecord.vim",
+      "script_version": "2.0",
+      "date": "2002-08-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "729",
+        "user_name": "kotku",
+        "first_name": "brad",
+        "last_name": "phelan",
+        "email": "kotku at rocketmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for other S-Record line types. Previously only S3 type lines were supported."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=949",
+      "filename": "srecord.vim",
+      "script_version": "1.0",
+      "date": "2002-06-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "729",
+        "user_name": "kotku",
+        "first_name": "brad",
+        "last_name": "phelan",
+        "email": "kotku at rocketmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

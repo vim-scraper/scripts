@@ -1,0 +1,154 @@
+{
+  "script_id": "2582",
+  "name": "blogit.vim",
+  "summary": "A script to blog on wordpress",
+  "script_type": "utility",
+  "description": "This script allows you to list, edit, write and publish articles on Wordpress. It uses the XML-RPC API and provides the following commands:\n\n\":Blogit ls [blog_name]\"\n Lists all articles in the blog\n\":Blogit new [blog_name]\"\n Opens page to write new article\n\":Blogit edit <id> [blog_name]\"\n Opens the article <id> for edition\n\":Blogit page <id> [blog_name]\"\n  Edit a blog page\n\":Blogit commit\"\n Saves the article to the blog\n\":Blogit push\"\n Publish article\n\":Blogit unpush\"\n Unpublish article\n\":Blogit rm <id>\"\n Remove an article\n\":Blogit tags\"\n  Show tags and categories list\n\":Blogit this\"\n  Create a blog post from current buffer\n\":Blogit preview\"\n  Preview current post locally\n\":Blogit help\"\n Display help\n\nEdited articles are displayed like mails.\n\nWebsite: http://symlink.me/wiki/blogit",
+  "install_details": "Get package and uncompress it in your ~/.vim directory. \n\nCreate a file called passwords.vim somewhere in your 'runtimepath'\n(preferred location is \"~/.vim/\"). Don't forget to set the permissions so\nonly you can read it. This file should include:\n\n    let blogit_username='Your blog user name'\n    let blogit_password='Your blog password. Not the API-key.'\n    let blogit_url='https://your.path.to/xmlrpc.php'\n\nIn addition you can set these settings in your vimrc:\n\n    let blogit_unformat='pandoc --from=html --to=rst --reference-links'\n    let blogit_format='pandoc --from=rst --to=html --no-wrap'\n\nThe blogit_format and blogit_unformat each contain a shell command to\nfilter the blog entry text (no meta data) before a commit and after an\nedit, respectively. In the example we use pandoc[1] to edit the blog in\nreStructuredText[2].\n\nIf you have multible blogs replace 'blogit' in 'blogit_username' etc. by a\nname of your choice (e.g. 'your_blog_name') and use:\n\n    let blog_name='your_blog_name'\nor\n    let b:blog_name='your_blog_name'\n\nto switch which is used by default. If a blog post/comment/list is open in\nthe current buffer that is used instead. To explicitly select which blog\nshould be used with the commands ls, new, this and edit add your_blog_name\nas and aditional argument, e.g.:\n\n    Blogit edit 42 your_blog_name",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12000",
+      "filename": "blogit-1.4.3.tar.bz2",
+      "script_version": "1.4.3",
+      "date": "2010-01-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16963",
+        "user_name": "romain",
+        "first_name": "Romain",
+        "last_name": "Bignon",
+        "email": "romain at peerfuse.org",
+        "homepage": "http://romain.peerfuse.org"
+      },
+      "release_notes": "* Added infrastructure for acceptance tests;\n* Added gettext i18n;\n* Fixed pep8 compliance;\n* Fixed setting date on \":Blogit commit\" and \"push\";\n* Fixed time in blog posts;\n* Improved help file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11608",
+      "filename": "blogit-1.4.2.tar.bz2",
+      "script_version": "1.4.2",
+      "date": "2009-10-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16963",
+        "user_name": "romain",
+        "first_name": "Romain",
+        "last_name": "Bignon",
+        "email": "romain at peerfuse.org",
+        "homepage": "http://romain.peerfuse.org"
+      },
+      "release_notes": "Minor bugfixes:\n\n* Fixed encoding issues;\n* Fixed omnicomplete issues."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11408",
+      "filename": "blogit-1.4.1.tar.bz2",
+      "script_version": "1.4.1",
+      "date": "2009-09-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16963",
+        "user_name": "romain",
+        "first_name": "Romain",
+        "last_name": "Bignon",
+        "email": "romain at peerfuse.org",
+        "homepage": "http://romain.peerfuse.org"
+      },
+      "release_notes": "This minor release fixes some bugs:\n\n* Implemented sending new pages;\n* Implemented (un)pushing of pages;\n* Fixed dates."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11355",
+      "filename": "blogit-1.4.tar.bz2",
+      "script_version": "1.4",
+      "date": "2009-09-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16963",
+        "user_name": "romain",
+        "first_name": "Romain",
+        "last_name": "Bignon",
+        "email": "romain at peerfuse.org",
+        "homepage": "http://romain.peerfuse.org"
+      },
+      "release_notes": "This is probably the final stable release of the 1.x branch. Here is changelog:\n\n* Introduced the *Blogit page* command to edit a page content (closes #134);\n* Ability to give the blog name to edit/ls/new/this commands;\n* Fixed non-ascii problem with datetimes;\n* Fixed \"variables not updated when switching blogs\" (closes #144);\n* Several other minors fixes;\n* Added vim documentation file for blogit.\n* Code refactoring;\n* Better unitary tests system.\n\nReally thanks to Adam who has still done a lot of work.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11195",
+      "filename": "blogit-1.3.tar.bz2",
+      "script_version": "1.3",
+      "date": "2009-08-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16963",
+        "user_name": "romain",
+        "first_name": "Romain",
+        "last_name": "Bignon",
+        "email": "romain at peerfuse.org",
+        "homepage": "http://romain.peerfuse.org"
+      },
+      "release_notes": "This release is mostly a bugfix release:\n\n* Finished up displaying comments;\n* Fixed order of comments;\n* Fixed comment count;\n* Support shortening of Blogit-commands;\n* Update comments via \":Blogit commit\";\n* Fixed using multible buffers;\n* Added command \"preview\";\n* Code cleanup."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11033",
+      "filename": "blogit-1.2.tar.bz2",
+      "script_version": "1.2",
+      "date": "2009-07-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16963",
+        "user_name": "romain",
+        "first_name": "Romain",
+        "last_name": "Bignon",
+        "email": "romain at peerfuse.org",
+        "homepage": "http://romain.peerfuse.org"
+      },
+      "release_notes": "This new release of blogit.vim introduces this new features:\n\n* Added the :Blogit this command to create a blog post from the current vim buffer;\n* The :Blogit categories command is merged into the :Blogit tags command;\n* Comments can be displayed with gf on Status,\n\nThere is also some minor (or less minors) bugfixes.\n\nThanks to Adam Schmalhofer for contributing."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10886",
+      "filename": "blogit-1.1.tar.bz2",
+      "script_version": "1.1",
+      "date": "2009-06-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16963",
+        "user_name": "romain",
+        "first_name": "Romain",
+        "last_name": "Bignon",
+        "email": "romain at peerfuse.org",
+        "homepage": "http://romain.peerfuse.org"
+      },
+      "release_notes": "The blogit.vim 1.1 release's changes are: \n* Use a separated file to set blogit.vim settings. \n* Use of filter to get/post text. Default is pandoc, to display text as ReST. \n* Multi-blogs support. \n* Localized timestamps. \n* Date/times are displayed in users preferred time format. \n* Omni-complete categories and tags. \n \nThere are also some bug fixes, and code cleanup. \n \nThanks to Adam Schmalhofer for his patches."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10382",
+      "filename": "blogit-1.0.1.tar.bz2",
+      "script_version": "1.0.1",
+      "date": "2009-04-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16963",
+        "user_name": "romain",
+        "first_name": "Romain",
+        "last_name": "Bignon",
+        "email": "romain at peerfuse.org",
+        "homepage": "http://romain.peerfuse.org"
+      },
+      "release_notes": "The blogit.vim 1.0.1 release fixes these issues:\n* option to disable tags (which are a wordpress plugin)\n* datetime issues (datetime is now UTC)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10381",
+      "filename": "blogit-1.0.tar.bz2",
+      "script_version": "1.0",
+      "date": "2009-04-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16963",
+        "user_name": "romain",
+        "first_name": "Romain",
+        "last_name": "Bignon",
+        "email": "romain at peerfuse.org",
+        "homepage": "http://romain.peerfuse.org"
+      },
+      "release_notes": "Initial version."
+    }
+  ]
+}

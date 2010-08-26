@@ -1,0 +1,138 @@
+{
+  "script_id": "1861",
+  "name": "errormarker.vim",
+  "summary": "Highlights and sets error markers for lines with compile errors",
+  "script_type": "utility",
+  "description": "Hooks the make quickfix command and converts all compiler errors into signs that are placed next to the line with the error. Additionally, lines with errors are highlighted. Hover with your mouse over such a line to get the error message in a tooltip (only gui), or press \\cc. The error markers will be updated on every call to :make.\n\nA screenshot of doxygen in action with a lot of errors can be found at http://mh21.piware.de/vim-error-markers-doxygen.png.",
+  "install_details": "Copy the file errormarker.vim into ~/.vim/plugin. The help file will be automatically installed the next time VIM is launched.\n\nTo distinguish between warnings and errors for gcc messages, place sth. like this in your .vimrc:\n        let &errorformat=\"%f:%l:%c: %t%*[^:]:%m,%f:%l: %t%*[^:]:%m,\" . &errorformat\nIf you use a different locale than English, this may be also needed:\n        set makeprg=LANGUAGE=C\\ make",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13041",
+      "filename": "errormarker.vim",
+      "script_version": "0.1.12",
+      "date": "2010-05-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12220",
+        "user_name": "mh21",
+        "first_name": "Michael",
+        "last_name": "Hofmann",
+        "email": "mh21 at piware.de",
+        "homepage": "http://mh21.de/"
+      },
+      "release_notes": "shortcut (<Leader>cc) to show error at cursor (thanks Eric Rannaud)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8877",
+      "filename": "errormarker.vim",
+      "script_version": "0.1.11",
+      "date": "2008-07-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12220",
+        "user_name": "mh21",
+        "first_name": "Michael",
+        "last_name": "Hofmann",
+        "email": "mh21 at piware.de",
+        "homepage": "http://mh21.de/"
+      },
+      "release_notes": "- changelog fix"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8876",
+      "filename": "errormarker.vim",
+      "script_version": "0.1.10",
+      "date": "2008-07-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12220",
+        "user_name": "mh21",
+        "first_name": "Michael",
+        "last_name": "Hofmann",
+        "email": "mh21 at piware.de",
+        "homepage": "http://mh21.de/"
+      },
+      "release_notes": "- removes accidental dependency on NerdEcho"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7264",
+      "filename": "errormarker.vim",
+      "script_version": "0.1.9",
+      "date": "2007-06-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12220",
+        "user_name": "mh21",
+        "first_name": "Michael",
+        "last_name": "Hofmann",
+        "email": "mh21 at piware.de",
+        "homepage": "http://mh21.de/"
+      },
+      "release_notes": "- fixes Win32 icon display"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7225",
+      "filename": "errormarker.vim",
+      "script_version": "0.1.8",
+      "date": "2007-06-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12220",
+        "user_name": "mh21",
+        "first_name": "Michael",
+        "last_name": "Hofmann",
+        "email": "mh21 at piware.de",
+        "homepage": "http://mh21.de/"
+      },
+      "release_notes": "- check for Vim version"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7214",
+      "filename": "errormarker.vim",
+      "script_version": "0.1.7",
+      "date": "2007-06-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12220",
+        "user_name": "mh21",
+        "first_name": "Michael",
+        "last_name": "Hofmann",
+        "email": "mh21 at piware.de",
+        "homepage": "http://mh21.de/"
+      },
+      "release_notes": "- fixes gcc error message parsing example"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7068",
+      "filename": "errormarker.vim",
+      "script_version": "0.1.6",
+      "date": "2007-05-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12220",
+        "user_name": "mh21",
+        "first_name": "Michael",
+        "last_name": "Hofmann",
+        "email": "mh21 at piware.de",
+        "homepage": "http://mh21.de/"
+      },
+      "release_notes": "- support for GetLatestVimScripts (vimscript#642)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7012",
+      "filename": "errormarker.vim",
+      "script_version": "0.1.5",
+      "date": "2007-04-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12220",
+        "user_name": "mh21",
+        "first_name": "Michael",
+        "last_name": "Hofmann",
+        "email": "mh21 at piware.de",
+        "homepage": "http://mh21.de/"
+      },
+      "release_notes": "- clarified documentation about paths"
+    }
+  ]
+}

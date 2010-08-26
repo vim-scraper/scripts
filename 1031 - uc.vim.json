@@ -1,0 +1,74 @@
+{
+  "script_id": "1031",
+  "name": "uc.vim",
+  "summary": "syntax for Intel Network Processor Microcode",
+  "script_type": "syntax",
+  "description": "syntax color file for Intel Network Processor Microcode",
+  "install_details": "in the distribution, place the downloaded uc.vim in your syntax directory (e.g. on windows vimfiles/syntax or on unix .vim/syntax).\n\nCreate a file \"filetype.vim\" which contains an autocommand for your filetype.\n(Autocommands were explained in section |40.3|.)  Example: >\n\n\taugroup filetypedetect\n\tau BufNewFile,BufRead *.uc setf uc\n\taugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3274",
+      "filename": "uc.vim",
+      "script_version": "0.04",
+      "date": "2004-07-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5594",
+        "user_name": "Gui Wei",
+        "first_name": "wei",
+        "last_name": "Gui",
+        "email": "gawain_g at citiz.net",
+        "homepage": ""
+      },
+      "release_notes": "fix bug that Number not perporly colored in comments"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3269",
+      "filename": "uc.vim",
+      "script_version": "0.03",
+      "date": "2004-07-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5594",
+        "user_name": "Gui Wei",
+        "first_name": "wei",
+        "last_name": "Gui",
+        "email": "gawain_g at citiz.net",
+        "homepage": ""
+      },
+      "release_notes": "add options manipulate the syntax:\nuc_comment_strings\tstrings and numbers inside a comment\nuc_space_errors\t\ttrailing white space and spaces before a <Tab>\nuc_no_trail_space_error\t ... but no trailing spaces\nuc_no_tab_space_error\t ... but no spaces before a <Tab>\nuc_no_bracket_error\tdon't highlight {}; inside [] as errors\n\nadd syntax color for transfer register\nfix some misconfig\nuc_no_if0\t\tdon't highlight \"#if 0\" blocks as comments\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3243",
+      "filename": "uc.vim",
+      "script_version": "0.02",
+      "date": "2004-07-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5594",
+        "user_name": "Gui Wei",
+        "first_name": "wei",
+        "last_name": "Gui",
+        "email": "gawain_g at citiz.net",
+        "homepage": ""
+      },
+      "release_notes": "Intel MicroCode\nadd syntax color for register variable"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3232",
+      "filename": "uc.vim",
+      "script_version": "0.01",
+      "date": "2004-07-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5594",
+        "user_name": "Gui Wei",
+        "first_name": "wei",
+        "last_name": "Gui",
+        "email": "gawain_g at citiz.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

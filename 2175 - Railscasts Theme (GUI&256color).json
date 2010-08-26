@@ -1,0 +1,42 @@
+{
+  "script_id": "2175",
+  "name": "Railscasts Theme (GUI&256color)",
+  "summary": "A railscasts color theme that works in 256color terminals as well as gui",
+  "script_type": "color scheme",
+  "description": "This theme is based on Josh O'Rourke's Vim clone of the railscast\ntextmate theme ( vimscript #1995 ).  The key thing I have done here is\nsupply 256-color terminal equivalents for as many of the colors as\npossible, and fixed up a few of the funny tags for editing e-mails and\nsuch.\n\nYou can see a side-by-side comparison at http://zork.net/~nick/screenshots/colorcomparison.png\n",
+  "install_details": "To use for gvim:\n1: install this file as ~/.vim/colors/railscasts.vim\n2: put \"colorscheme railscasts\" in your .gvimrc\n\nIf you are using Ubuntu, you can get the benefit of this theme in your\ngnome-terminals by taking the following steps:\n\n1: sudo apt-get install ncurses-term\n2: put the following in your .vimrc\n    if $COLORTERM == 'gnome-terminal'\n        set term=gnome-256color\n        colorscheme railscasts\n    else\n        colorscheme default\n    endif\n3: if you wish to use this with screen, add the following to your .screenrc:\n    attrcolor b \".I\"\n    termcapinfo xterm 'Co#256:AB=\\E[48;5;%dm:AF=\\E[38;5;%dm'\n    defbce \"on\"\n    term screen-256color-bce\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8379",
+      "filename": "railscasts.vim",
+      "script_version": "2.1",
+      "date": "2008-03-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13980",
+        "user_name": "SpaceHobo",
+        "first_name": "Nick",
+        "last_name": "Moffitt",
+        "email": "nick at zork.net",
+        "homepage": ""
+      },
+      "release_notes": "Accidentally commented out the more specific ruby colors, and made the capitalization spelling color less obnoxious.  Also got rid of goofy if/else block and just made all the definitions inline.  This helps uniformity greatly."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8374",
+      "filename": "railscasts.vim",
+      "script_version": "2.0",
+      "date": "2008-03-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13980",
+        "user_name": "SpaceHobo",
+        "first_name": "Nick",
+        "last_name": "Moffitt",
+        "email": "nick at zork.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

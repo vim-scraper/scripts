@@ -1,0 +1,74 @@
+{
+  "script_id": "3047",
+  "name": "scalacommenter.vim",
+  "summary": "Functions for documenting Scala-code",
+  "script_type": "utility",
+  "description": "Re-written using the Self.vim Object prototype system, hence\njustifying a major version number increase\n(see: http://www.vim.org/scripts/script.php?script_id=3072).\nThe self.vim code is embedded in the scalacommenter.vim code\nso you don't need to download self.vim.\n\nInspired by Kalle Bjorklid's JCommenter.\nWorks on Vim version 7.0 and above\n\nThis has two capabilities: \n  1) Generating a comment template, and\n  2) Formatting an existing set of comment tags.\n\nGenerating ScalaDoc comments for Scala sources.\nThis is triggered by executing the ScalaCommentWriter() function\n  1) while the cursor is over something meaningful, or\n  2) if a (visual) selection exists,\nThe selected text is parsed and the comment template generated.\n\nThe following comments are generated (in the appropriate situations):\n\n1. File comments: user specifies the template, generated when the\n    cursor is on the first line of the file.\n2. Class comments: generated when on top of a class declaration\n    Tags if applicable: @author, @version, @since, @param, @tparam and @throws\n3. Trait comments: generated when on top of a trait declaration\n    Tags if applicable: @author, @version and @since\n4. Object comments: generated when on top of a object declaration\n    Tags if applicable: @author, @version and @since\n5. Inner Class comments: generated when on top of an inner class declaration\n    Tags if applicable: @param, @tparam and @throws\n6. Inner Trait comments: generated when on top of an inner trait declaration\n7. Inner Object comments: generated when on top of an inner object declaration\n8. Method comments: generated when on top of a method declaration.\n    Tags if applicable: @param, @tparam, @return and @throws\n9. Fields, val and var, comments: generated when on top of a var or val\n    declaration.\n\nIf executed and the class, trait, object or method already has a ScalaDoc\ncomment, an attempt is made to add/remove parameter and template parameter\ntags as needed.\n\nFormatting existing ScalaDoc comments for Scala sources.\nThis is triggered by executing the ScalaCommentFormatter() function\nThe user (visual) selection of the comment tag lines to be formatted\nand invokes the ScalaCommentFormatter() function.\nAs an example, the following is selected and formatted:\n   * @author    Tom  Jones\n   * @version   1.3 03/10/50\n   * @param  name This is the name\n   * @param  value the value to associate with the value\n   *  This is a second line. Here is a second second line.\n   *    This is a third line. Here is a third third line.\n   * @throws java.io.EOFException For no reason\n   * @author Jane Doe\nbecomes:\n   * @author  Tom Jones\n   * @author  Jane Doe\n   * @version 1.3 03/10/50\n   * @param   name                         This is the name\n   * @param   value                          the value to associate with the value This\n   *                                                     is a second line. Here is a second second\n   *                                                     line. This is a third line. Here is a third\n   *                                                     third line.\n   * @throws  java.io.EOFException For no reason\n\nNote that tags are re-ordered and grouped based upon Sun's JavaDoc guide.\nThe start line selected to be formatted must be a comment tag line.\nThe end line selected to be formated should be a comment tag line\nor a line containing additional text for a previous tag line.\n\nWork flow:\n  Generate comment template,\n  Fill in template and then\n  Format the comment's tags.\n\nFor more details about what is produced and how to configure the production,\nsee the start of the script for additional documentation.\n",
+  "install_details": "Add the scalacommenter.vim to your .vim directory (or whatever).\nHere's what I have in my .vimrc:\n\n  autocmd FileType scala source $HOME/.vim/scalacommenter.vim\n  autocmd FileType scala map <M-c> :call ScalaCommentWriter()<CR>\n  autocmd FileType scala map <M-f> :call ScalaCommentFormatter()<CR>\n  autocmd FileType scala map cm :call ScalaCommentWriter()<CR>\n  autocmd FileType scala map cf :call ScalaCommentFormatter()<CR>\n  autocmd FileType scala let b:scommenter_class_author='Richard Emberson'\n  autocmd FileType scala let b:scommenter_file_author='Richard Emberson'\n  autocmd FileType scala let g:scommenter_file_copyright_list = [\n  \\    'COPYRIGHT',\n  \\    'Second line of copyright',\n  \\    'And a third line'\n  \\]\n  autocmd FileType scala let b:scommenter_extra_line_text_offset = 20\n  autocmd FileType scala let b:scommenter_user_tags = [\n  \\[\"pre\", 0, 1, 0],\n  \\[\"post\", 0, 1, 0],\n  \\[\"requires\", 1, 1, 0],\n  \\[\"provides\", 0, 1, 0]\n  \\]\n\nThe user tags: \"pre\", \"post\", \"requires\" and \"provides\" appear in\na couple of the base Scala library code - I include them just for\ntesting the user-defined tags capability.\n\nNote that Alt-c and <M-c> may not work on Unix systems, hence\nI map in command mode \"cm\" to call the ScalaCommentWriter function.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12986",
+      "filename": "scalacommenter.vim",
+      "script_version": "2.2",
+      "date": "2010-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6544",
+        "user_name": "rme",
+        "first_name": "richard",
+        "last_name": "emberson",
+        "email": "richard.n.emberson at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor correction: could not handle parameters with templates with commas: \n  def getAtomicVars(atomicMethods: List[XMethodInfo], methods: HashMap[global.Symbol, XMethodInfo], vars: HashMap[global.Symbol, XVarInfo]) : List[XVarInfo] = {\n  }\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12896",
+      "filename": "scalacommenter.vim",
+      "script_version": "2.1",
+      "date": "2010-04-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6544",
+        "user_name": "rme",
+        "first_name": "richard",
+        "last_name": "emberson",
+        "email": "richard.n.emberson at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Very minor: Method recognition failed for the List methods: '::', ':::' and 'reverse_:::'.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12887",
+      "filename": "scalacommenter.vim",
+      "script_version": "2.0",
+      "date": "2010-04-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6544",
+        "user_name": "rme",
+        "first_name": "richard",
+        "last_name": "emberson",
+        "email": "richard.n.emberson at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Refactored comment generation code using Self.vim, the Vim\n  dictionary-base object prototype system. Unified the code that\n  generated output for both the writing and re-formatting of\n  comments.\nThrow tags are now sorted in alphabetical order\nUnified the comment writing code so that comment formatting,\n  first comment generation, and subsequent generation all\n  use the came code.\nText associated with an existing comment tag is no longer lost.\nAdd b:scommenter_top_level_tparams_only which controls if all\n  template parameters have @tparam tags generated or only those\n  at the top-level have tags generated.\nFixed scanning parameters, now scans past qualifiers like 'val',\nSupports curried notations func(a: A)(b: B). \n'var' or 'private var', etc.\nAdded b:scommenter_extra_line_text_offset allowing the user to control\n  the offset of any additional text associated with a tag.\nThere is now a b:scommenter_user_tags configuration variable allowing\n  the user to register in their .vimrc file third-party tags.\nAdded b:scommenter_warning_message_enable which controls the printing\n  of warning messages (if any)\nAdded b:scommenter_line_between_user_unknown_and_std_tags which \n  controls if a single comment line is printed between the \n  user/unknown tags and the standard tags. \nAdded b:scommenter_user_unknown_before_std_tags which controls the\n  order of formatting of the user/unknown tags and the standard tags.\nAdded b:scommenter_warn_deleted_tags which allows the user to\n  save the text from tags deleted during re-formatting.\nSupports capturing parameter template @specialized information\n  in comments.\nThe @deprecated(text) annotation now becomes a ScalaDoc @deprecated\n   tag (just as the @throws annotation does).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12797",
+      "filename": "scalacommenter.vim",
+      "script_version": "1.0",
+      "date": "2010-04-09",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "6544",
+        "user_name": "rme",
+        "first_name": "richard",
+        "last_name": "emberson",
+        "email": "richard.n.emberson at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

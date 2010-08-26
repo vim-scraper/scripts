@@ -1,0 +1,26 @@
+{
+  "script_id": "1954",
+  "name": "yavdb",
+  "summary": "Yet Another (Generic) Vim Debugger Integration",
+  "script_type": "utility",
+  "description": "This is a generic Vim <->Debugger Interface Tool designed to be adaptable to any debugger application.  Currently supported debuggers include jdb and gdb.\n\nScript Requirements:\n-VIM compiled with Signs, Client-Server, and Python support.\n-Python 2.5\n-An operating system with support for named pipes\n\nUsing YAVDB:\n\n  yavdb [-s servername] [-t type] <debugger command line>\n\n-s specifies the Vim servername.  If no VIM (or GVIM) window exists with this servername, a new GVIM window will be opened.  If not specified, the servername 'VimDebugger' will be used.  If multiple applications are being debugged simultaneously unique servernames must be used.\n\n-t can be used to override the debugger type.  If this option is omitted the debugger name will be used as the type.  Currently supported debugger types include 'gdb' and 'jdb'.  Note that jdb will only correctly notify VIM of events when classnames are identical to filenames (other than the .java extension).\n\nVIM will have the following key mappings set:\n\n<C-F5> Run Application\n<F5> Continue Execution\n<F7> Step Into a Function\n<F8> Next Instruction\n<F9> Set Breakpoint\n<F10> Print variable value under cursor\n",
+  "install_details": "Place the file yavdb.vim in your plugins directory.\nPlace the file yavdb on in a directory on your path.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7349",
+      "filename": "yavdb.tgz",
+      "script_version": "0.1",
+      "date": "2007-07-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3510",
+        "user_name": "eaglehawk",
+        "first_name": "David",
+        "last_name": "Morris",
+        "email": "junk at morris-clan.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

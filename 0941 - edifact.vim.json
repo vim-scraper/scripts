@@ -1,0 +1,42 @@
+{
+  "script_id": "941",
+  "name": "edifact.vim",
+  "summary": "Syntax script for generic EDIFACT messages (extensible)",
+  "script_type": "syntax",
+  "description": "This syntax script will colorize UN/EDIFACT messages.\nAll formatting errors are reported with the \"Error\" highlighting.\n\nHooks are provided for extensibility (including EDIFACT messages in another syntax) and to define a more specific syntax (coloring known tags, checking segment definitions with mandatory/conditionnal data...).\n\n\nFor more information about EDIFACT:\n- http://www.unece.org/trade/untdid/\n- http://www.gefeg.com/jswg/index.htm",
+  "install_details": "Drop into your personnal syntax directory: $HOME/{.vim|vimfiles}/syntax ({Unix|Windows}).\n\nTo manually colorize a file:\n  :syntax on\n  :set syntax=edifact\n\nTo assign edifact syntax to files, add this to your ~/{.vim|vimfiles}/filetype.vim:\n  augroup filetypedetect\n    au! BufNewFile,BufRead *.edifact,*.edi,*.EDIFACT,*.EDI set filetype=edifact\n  augroup END\n\nSee also the built-in help in Vim:\n    :help 'filetype'\n    :help mysyntaxfile\n    :help filetype-plugin\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2862",
+      "filename": "edifact.vim",
+      "script_version": "2.0",
+      "date": "2004-03-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4820",
+        "user_name": "dolmen",
+        "first_name": "Olivier",
+        "last_name": "Mengué",
+        "email": "dolmen at users.sourceforge.net",
+        "homepage": "http://o.mengue.free.fr/"
+      },
+      "release_notes": "Improved error reporting to ease editing:\n- unclosed segments\n- invalid text between segments\n- error stops at the next quote, which may be just before the beginning of a\nvalid segment\nRenamed edifactStar  to edifactAsterisk, edifactQuote to edifactApostrophe to\nuse the same terms as in the standards.\nImproved grammar with @edifactSegmentHook to plug more specific segment definition.\nAdded 'keepend' to edifactSegment.\nAdded sample parsing for TXT segment that checks data element lengths.\nDid tests of derived syntax reusing this syntax."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2851",
+      "filename": "edifact.vim",
+      "script_version": "1.0",
+      "date": "2004-03-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4820",
+        "user_name": "dolmen",
+        "first_name": "Olivier",
+        "last_name": "Mengué",
+        "email": "dolmen at users.sourceforge.net",
+        "homepage": "http://o.mengue.free.fr/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

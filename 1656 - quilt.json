@@ -1,0 +1,282 @@
+{
+  "script_id": "1656",
+  "name": "quilt",
+  "summary": "Enable quilt usage in vim",
+  "script_type": "utility",
+  "description": "(from the help of the plugin: :help quilt-intro ) :\n\n\nQuilt is a project initiated by Andrew Morton to work with patches sent on the\nLKML. It is quite stable now, and really usefull to deal with stacked patches.\n\nFirst of all, before using this plugin, you must install quilt on your\nstation, for, under debian distribution, type in a command shell:\n\n\taptitude install quilt\n\nNow that you have your station setuped, let's speak a little about Quilt\nitself, more information can be found in man quilt shell command.\n\nThe idea behind quilt is that you work on patches, not on sources directly, so\nall your productions are patches. You create a patch to track your\nmodifications and send this patch to a work group so they can valiadate/accept\nor integrate your modifications.\n\nNow you need a tool to help you maintain your patches, and that's exacltly\nwhat quilt does. Quilt let you apply a patch, modify your files (and thus the\npatch), unapply the patch. But it also allows you to do that on several\npatches at a time (one patch applied after the other ...) that's what we call\nthe stacked patches. (or the patch stack). \n\nYou can go to a level on the patch stack, modify the patch, and come back to\nanother patch stack level.\n\nThis plugin helps you handle all those boring operations with simple vim\ncommands ;)\n\nTo sum up the workflow :\n\n|:QuiltSetup| <patchdir>\n\n then:\n\n|:QuiltNew|   <patchname>\n\n ... open a file ...\n\n|:QuiltAdd|\n\n ... work on the file ...\n ... save your modifiations ...\n\n |:QuiltRefresh|\n\n and so on ... \n\n:help quilt-usage",
+  "install_details": "uncompress the archive in your .vim directory (or in the system directory), then restart vim (or :source ~/.vim/plugin/quilt.vim then :helptag ~/.vim/doc/ )\n\nthe archive contains :\n\nplugin/quilt.vim (the plugin itself)\ndoc/quilt.txt      (the vim documentation about the plugin)\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7705",
+      "filename": "quilt-0.9.6.tar.gz",
+      "script_version": "0.9.6",
+      "date": "2007-09-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "Fixed files handling in patches/ directory (thanks to Jordan Crouse)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7072",
+      "filename": "quilt-0.9.5.tar.gz",
+      "script_version": "0.9.5",
+      "date": "2007-05-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "bugfix handling absolute filenames\nadded readonly mode for files not in current patch"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6418",
+      "filename": "quilt-0.9.4.tar.gz",
+      "script_version": "0.9.4",
+      "date": "2006-11-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "* Fixed g:Quilt* variables that were reseted every :source quilt.vim \n* Added ta customization command for calling thunderbird (debian... \n QuiltThunderbirdCmd should be set to \"icedove\" not \"thunderbird\" \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6406",
+      "filename": "quilt-0.9.3.tar.gz",
+      "script_version": "0.9.3",
+      "date": "2006-11-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "* Fixed QuiltAnnotate interface for files not completely from a patch"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6389",
+      "filename": "quilt-0.9.2.tar.gz",
+      "script_version": "0.9.2",
+      "date": "2006-11-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "* Fixed QuiltAnnotate Interface when anotating a file not from the 0 line (the Followcursor was not working)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6384",
+      "filename": "quilt-0.9.1.tar.gz",
+      "script_version": "0.9.1",
+      "date": "2006-11-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "* Added a function to keep the current line in QuiltAnnotate\n* Added auto close interface when one is closed"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6381",
+      "filename": "quilt-0.9.tar.gz",
+      "script_version": "0.9",
+      "date": "2006-11-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "* Added auto .rej opening when opening a file\n* Added QuiltPatchEdit command\n* Added .rej auto recognition in QuiltFiles\n* Added automatic .rej recognition for FAILED hunk to QuiltPop\n* Added automatic .rej recognition for FAILED hunk to QuiltPush\n* Added color on QuiltPop/Push success/failure ...\n* Added QuiltAnnotate command\n* Fixed autocmd usage, so that commands are deleted on :source\n* Added the license (GPL of course)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6343",
+      "filename": "quilt-0.8.1.tar.gz",
+      "script_version": "0.8.1",
+      "date": "2006-10-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "* Fixed the nocompatible option that caused problem in 'compatible'"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6340",
+      "filename": "quilt-0.8.tar.gz",
+      "script_version": "0.8",
+      "date": "2006-10-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "* Added completion of patches directory for QuiltNew\n* Beautified the help file :)\n* Added patch argument for QuiltAdd\n* Changed the completion of QuiltAdd (first arg file, second patch )\n* Added QuiltRemoveFrom command\n* Added QuiltRemoveFrom completion (patch, then files in <patch>)\n* Beautified the code (comments and such ...)\n* Added QuiltMail email address completion\n* Fixed QuiltHeader to add the correct 'Subject:' template\n* Added a status line in QuiltHeader to show the current patch name\n* Fixed a little bug in QuiltHeader preventing to Push/Pop whille\n  editing a header                                                     \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6322",
+      "filename": "quilt-0.7.tar.bz2",
+      "script_version": "0.7",
+      "date": "2006-10-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "* Added QuiltRename command                                            \n* Factorized code (adding DoSystem function)                           \n* Added QuiltPushAll command                                           \n* Added QuiltPopAll command                                            \n* Added internal <SID>CurrentArgNumber                                 \n* Added QuiltHeader command                                            \n* Added QuiltWriteHeader command                                       \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6224",
+      "filename": "quilt.tar.gz",
+      "script_version": "0.6.1",
+      "date": "2006-09-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "* Fixed the mail feature, special characters are now parsed and and rendered properly in thunderbird                                 \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6215",
+      "filename": "quilt.tar.gz",
+      "script_version": "0.6",
+      "date": "2006-09-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "* Added QuiltPatches command                                          \n* Fixed bug in commands taking a file a argument when no file was given\n  (and no file was opened)                                            \n* Added QuiltMail bind with thunderbird                                \n* Fixed some bugs ...                                                  \n* Spellchecked the help ;)          "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6202",
+      "filename": "quilt.tar.gz",
+      "script_version": "0.5",
+      "date": "2006-09-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "Added a help file for all command (and describing a workflow using quilt)\nFixed a bug in QuiltStatus, raising error on vim startup"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6198",
+      "filename": "quilt.vim",
+      "script_version": "0.4",
+      "date": "2006-09-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "\"       * Changed :exe into system() with return value check                   \n\"       * Added QuiltStatus as an autocommand for file reading                 \n\"       * Added QuiltRefresh warning parsing, create a quickfix using cexpr    \n\"       * Added QuiltFiles command                                             \n\"       * Fixed some bugs                                                      \n\"       * Suppressed verbose output for QuiltAdd                               \n\"       * Suppressed verbose output for QuiltRefresh                           \n\"       * Suppressed verbose output for QuiltRemove                            \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6190",
+      "filename": "quilt.vim",
+      "script_version": "0.3",
+      "date": "2006-09-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "* Added the ! argument for Pop,Push,Refresh\n* Added the QuiltMoveTo/QuiltFinishMove command\n* Spellchecked the Changelog ;)\n* Fixed the QuiltRefresh bug\n* Fixed QuiltAdd definition bug\n* Added QuiltGoTo[!] (Push/Pop)\n* Added QuiltSetup[!]\n* Make this file 80 characters terminal friendly\n* Added QuiltNew command\n* Added QuiltDelete[!]\n* Fixed a whole bunch of bugs ... (thanks to #vim IRC channel )\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6182",
+      "filename": "quilt.vim",
+      "script_version": "0.2b",
+      "date": "2006-09-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": " \t* add QuiltRefresh, QuiltPush, QuiltPop commands\n \t* add QuiltAdd, QuiltRemove\n \t* check if the current directory is a quilt directory\n \t* add parameters for Refresh, Add, Pop, Add ... \n \t* add patch completion\n \t* add in patch files completion\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6179",
+      "filename": "quilt.vim",
+      "script_version": "0.1a",
+      "date": "2006-09-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9378",
+        "user_name": "goutnet",
+        "first_name": "Florian",
+        "last_name": "Delizy",
+        "email": "florian.delizy at unfreeze.net",
+        "homepage": "http://www.unfreeze.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

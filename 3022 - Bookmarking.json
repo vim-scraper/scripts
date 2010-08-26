@@ -1,0 +1,42 @@
+{
+  "script_id": "3022",
+  "name": "Bookmarking",
+  "summary": "A bookmaking facility for Vim for marking points of interest.",
+  "script_type": "utility",
+  "description": "Add a bookmarking feature to Vim that allows lines of interest to be marked. While similar to marks, you don't need to assign a bookmark to a mark key, instead an infinite number of bookmarks can be created and then jumped through in sequential order (by line number) with no strain on your memory. This is great to use when you are browsing through some source code for the first time and need to mark out places of interest to learn how it works. It lets you just worry about the code and not have to remember which marks you have or haven't used.\n\nUsage:\n  * <F3> / :ToggleBookmark - Set a bookmark at the current location.\n  * <F4> / :PreviousBookmark - Jump to the closest bookmark earlier that the current location in the file.\n  * <F5> / :NextBookmark - Jump to the closest bookmark later than the current location in the file.\n\nYou can follow the development on Github at http://github.com/dterei/VimBookmarking",
+  "install_details": "Normal vimball installation process:\n\n1. Download the vimball 'bookmarking.vba'\n2. $ vim bookmarking.vba\n3. (In Vim) ': source %'\n4. (In Vim) ': q'\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13302",
+      "filename": "bookmarking.vba",
+      "script_version": "2.1",
+      "date": "2010-07-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18268",
+        "user_name": "dterei",
+        "first_name": "David",
+        "last_name": "Terei",
+        "email": "dave.terei at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug that caused the plugin to fail for files without a '.' in their names"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12662",
+      "filename": "bookmarking.vba",
+      "script_version": "1.0",
+      "date": "2010-03-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18268",
+        "user_name": "dterei",
+        "first_name": "David",
+        "last_name": "Terei",
+        "email": "dave.terei at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial Release"
+    }
+  ]
+}

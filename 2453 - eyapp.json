@@ -1,0 +1,42 @@
+{
+  "script_id": "2453",
+  "name": "eyapp",
+  "summary": "Syntax highlighting for Parse::Eyapp and Parse::Yapp",
+  "script_type": "syntax",
+  "description": "Parse::Eyapp and Parse::Yapp (see http://search.cpan.org/dist/Parse-Eyapp/) are\nyacc-like parser generators for Perl. \nThe syntax file eyapp.vim provides syntax highlighting for the yapp and eyapp languages \n(see http://search.cpan.org/dist/Parse-Eyapp/)",
+  "install_details": "Just add to your ~/.vim/filetype the lines that associate *.eyp and *.yp files with the eyapp language:\n\n ~/.vim$ cat filetype.vim\n\" my filetype file\nif exists(\"did_load_filetypes\")\nfinish\nendif\naugroup filetypedetect\n  \"eyapp and yapp programs\n  au BufRead,BufNewFile *.yp           setfiletype eyapp\n  au BufRead,BufNewFile *.eyp         setfiletype eyapp\naugroup END\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9613",
+      "filename": "eyapp.vim",
+      "script_version": "2",
+      "date": "2008-12-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15552",
+        "user_name": "casiano",
+        "first_name": "Casiano",
+        "last_name": "Rodriguez-Leon",
+        "email": "casiano.rodriguez.leon at gmail.com",
+        "homepage": "http://search.cpan.org/~casiano/"
+      },
+      "release_notes": "fixed bug in regexp for C comments"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9530",
+      "filename": "eyapp.vim",
+      "script_version": "1",
+      "date": "2008-11-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15552",
+        "user_name": "casiano",
+        "first_name": "Casiano",
+        "last_name": "Rodriguez-Leon",
+        "email": "casiano.rodriguez.leon at gmail.com",
+        "homepage": "http://search.cpan.org/~casiano/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

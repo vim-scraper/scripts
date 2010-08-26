@@ -1,0 +1,42 @@
+{
+  "script_id": "2165",
+  "name": "ukrainian-enhanced.vim",
+  "summary": "Ukrainian enhanced keymap",
+  "script_type": "utility",
+  "description": "A keymap for Ukrainian (UTF-8).\n\nThe \"Ukrainian enhanced keymap\" simply allows you typing Ukrainian in Vim using jcuken Windows layout.\nThere is another ukrainian layout already in Vim. See keymap\\ukrainian-jcuken.vim script by Anatoli Sakhnik. But this one differs in way it maps numeric keys. It uses values usual for Windows users.\n\nSee also:\n\t:help keymap\n\t:help i_Ctrl-^\n\nI use this in my vimrc file:\n\" Ukrainian support\n\"set keymap=ukrainian-enhanced\n\" Default - latin layout\n\"set iminsert=0\n\" Default - latin layout in search mode\n\"set imsearch=0\n",
+  "install_details": "Just copy the file to $VIM/vimfiles/keymap\n\nTo start typing in cyrillic use command:\n:set keymap=ukrainian-enhanced\n\nTo toggle between languages use \"Ctrl-^\" in insert mode.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8349",
+      "filename": "ukrainian-enhanced.vim",
+      "script_version": "1.1",
+      "date": "2008-02-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13942",
+        "user_name": "vansha",
+        "first_name": "Ivan",
+        "last_name": "Korneliuk",
+        "email": "vansha at gmail dot com",
+        "homepage": "http://www.korneliuk.blogspot.com"
+      },
+      "release_notes": "Fix letter names."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8343",
+      "filename": "ukrainian-enhanced.vim",
+      "script_version": "1.0",
+      "date": "2008-02-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13942",
+        "user_name": "vansha",
+        "first_name": "Ivan",
+        "last_name": "Korneliuk",
+        "email": "vansha at gmail dot com",
+        "homepage": "http://www.korneliuk.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

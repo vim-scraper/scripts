@@ -1,0 +1,26 @@
+{
+  "script_id": "606",
+  "name": "asmMIPS",
+  "summary": "MIPS specific assembly syntax (MAL)",
+  "script_type": "syntax",
+  "description": "Highlights MIPS assembly keywords, registers, labels, constants etc..",
+  "install_details": "copy this file into your syntax folder and add the following line in your .gvimrc\n\nautocmd BufNewFile,BufRead *.s :cal SetSyn(\"asmMIPS\") \n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1870",
+      "filename": "asmMIPS.vim",
+      "script_version": "1.0",
+      "date": "2003-03-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1945",
+        "user_name": "alisyed",
+        "first_name": "Syed",
+        "last_name": "Ali",
+        "email": "alisyed at sfsu.edu",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "2242",
+  "name": "openser.vim",
+  "summary": "Openser configuration syntax",
+  "script_type": "syntax",
+  "description": "Syntax file for Openser configuration. In version 1.00 it includes all core keywords as of version 1.3.X.\nWorks in Vim 7.1.",
+  "install_details": "Install script into vim syntax files directory. Switch to openser syntax either with \"setf openser\" or add filetype detection.\nThis detection works quite well if used instead of standard *.cfg:\n\nau BufNewFile,BufRead *.cfg   call s:cfgType()\n\nfunc! s:cfgType()\n   let max = line(\"$\") > 50 ? 50 : line(\"$\")\n   for n in range(1, max)\n      if getline(n) =~ '^\\s*modparam\\s*('\n         setf openser\n         return\n      elseif getline(n) =~ '^\\s*loadmodule\\s*\"[^\"]\\+.so\"\\s*$'\n         setf openser\n         return\n      elseif getline(n) =~ '^\\s*route\\s*{\\s*'\n         setf openser\n         return\n      endif\n   endfor\n   setf cfg\nendfunc\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8705",
+      "filename": "openser.vim",
+      "script_version": "1.00",
+      "date": "2008-05-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14443",
+        "user_name": "viraptor",
+        "first_name": "Stanis&#322;aw",
+        "last_name": "Pitucha",
+        "email": "viraptor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

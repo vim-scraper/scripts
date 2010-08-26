@@ -1,0 +1,26 @@
+{
+  "script_id": "1946",
+  "name": "QuickFixFilterUtil",
+  "summary": "filter matched files in the quickfix window manually/ drop .svn .hg _darcs",
+  "script_type": "utility",
+  "description": "When grepping I don\\\\&#039t want to get the files stored by the version control system. That\\\\&#039s why I\\\\&#039ve written this script to remove those matches. \nIt can also be used to replace filenames (cygwin problem)..\nIf you are unsure which and how many files have been removed just invoke :LogShowAll and rerun. \n",
+  "install_details": "Just source the files and follow the instructions.\nYou\\\\&#039ll be asked before any action is taken.\n\nIf you don\\\\&#039t feel comfortable installing to .vim insntall to another arbitrary directory and add it to your runtimepath\n(let runtimepath+= ..)\n\nDefault mappings are provided in the file\n/autoload/vl/lib/quickfix/filtermod.vim\nfunction vl#lib#quickfix#filtermod#EnableQuickFixScript()\n\nIf you still have problems drop me a mail.\n\nPatches welcome.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8151",
+      "filename": "vimlib_quickfixfilter_installer_sourceme.zip",
+      "script_version": "0.1",
+      "date": "2008-01-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10341",
+        "user_name": "MarcWeber",
+        "first_name": "Marc",
+        "last_name": "Weber",
+        "email": "marco-oweber at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "The autocommands now do work .git are removed automatically as well now"
+    }
+  ]
+}

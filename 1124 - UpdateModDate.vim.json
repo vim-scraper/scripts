@@ -1,0 +1,42 @@
+{
+  "script_id": "1124",
+  "name": "UpdateModDate.vim",
+  "summary": "Updates a date stamp within a file whenever it is saved.",
+  "script_type": "utility",
+  "description": "This script uses an autocmd hook to run a function whenever a file is saved.\nThe function then looks if it finds a special token (by default %DATE_TAG%) within the file, and if it's found, a datestamp on the same line is updated to the current date.\n\nThis script will run on all systems that provide date(1), so it should work on unix systems, as well as on cygwin.\n\nIf no special token is found, nothing is done at all.\nIf there are multiple tokens within the file, only the first one from the beginning of the buffer will be updated.\n\nThe date format and the special token are fully configureable.",
+  "install_details": "Put the file into your plugin directory (~/.vim/plugin). It will then automatically be loaded.\n\nTo see an example of the script doing it's work, just put the following line in a file and save it, the date should then be updated automatically:\n%DATE_TAG% Last Modified: Sun Nov  7 21:54:49 UTC 2004.\nIf it works once, but not thereafter, it is because your date -u uses a different output format then that on my machine. See below on how to set the DatePattern to match your date output.\n\nYou can add whitespace, comments, whatever to that line, just do not change %DATE_TAG% or anything within the date part, and pay attention that the special date token (%DATE_TAG%) and the date are on the same line.\n\nThere are 3 variables you can set from your vimrc file:\n*** UMD_DateToken: This is the string the script uses to find the correct line. It defaults to '%DATE_TAG%'\n*** UMD_DateCommand: This is the command that will be executed to get the current date. It defaults to  'date -u | tr -d \"\\n\"' (this gets the date with UTC time and removes the trailing newline.\n*** UMD_DatePattern: This is a regexp that defines which part of the line with the special token should be substituted with the new date. Make sure it matches if you change the DateCommand. It defaults to '\\w\\+\\s\\+\\w\\+\\s\\+\\d\\+\\s\\+\\d\\{2\\}:\\d\\{2\\}:\\d\\{2\\}\\s\\+UTC\\s\\+\\d\\+', which matches the date -u output.\n\nThe easy way to get a working UMD_DatePattern:\nIn vim use \n:r!date <options-you-want> \nto read the output of date with the options you want into the current buffer.\nNow start a vim search and construct a pattern that matches your date string within the search (hlmatch/incsearch should be on, so you see what is currently matched). Once the pattern matches the whole date string, enclose it in '' and set UMD_DatePattern to that string in your vimrc.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3613",
+      "filename": "UpdateModDate.vim",
+      "script_version": "1.2",
+      "date": "2004-11-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6241",
+        "user_name": "Greek0",
+        "first_name": "Christian",
+        "last_name": "Aichinger",
+        "email": "Greek0 at gmx.net",
+        "homepage": ""
+      },
+      "release_notes": "I've changed the default UDM_DatePattern a bit, to better match different date -u outputs. \nIt does now match the date part less strictly, but the time part more exactly. I hope this solves the \"it works once but not thereafter\" problem for most people."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3612",
+      "filename": "UpdateModDate.vim",
+      "script_version": "1.1",
+      "date": "2004-11-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6241",
+        "user_name": "Greek0",
+        "first_name": "Christian",
+        "last_name": "Aichinger",
+        "email": "Greek0 at gmx.net",
+        "homepage": ""
+      },
+      "release_notes": "The script now starts to search for the DateToken from the very top of the file, and it will only update the first occurance.\n\nI changed the script so that the values for DateToken, DatePattern, DateCommand aren't hardcoded any more.\nYou can now define UMD_DateToken, UMD_DatePattern and UMD_DateCommand in your vimrc.\n\nThe default values are:\nlet s:UMD_DateToken = '%DATE_TAG%'\nlet s:UMD_DatePattern = '\\w\\{3\\}\\s\\w\\{3\\}\\s\\+\\d\\+\\s\\+\\d\\+:\\d\\+:\\d\\+\\s\\+UTC\\s\\+\\d\\+'\nlet UMD_DateCommand = 'date -u | tr -d \"\\n\"'\n"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "1692",
+  "name": "tailtab.vim",
+  "summary": "View log files getting updated automagically",
+  "script_type": "utility",
+  "description": "This is a plugin that lets you view multiple log files or any files of interest that are modified externally. The files are opened in read \nonly mode.\n\n:TailView /tmp/foo /var/log/bar ...\n\nwill open as many new tabs as files and you can update the file from disk using the \n<Ctrl-K> keypress in normal mode. Also when you swich tabs using the gt command the file gets updated from disk automatically.\n\nOf course you can use the TAB key to complete file names.\n\nNormal vim usage is not affected in any way. Only files opened with the TailView command are in read only mode and updated from disk\nautomatically when you enter that tab",
+  "install_details": "Normal instructions. Just drop the script into ~/.vim/plugin directory\nand restart vim!",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6333",
+      "filename": "tailtab.vim",
+      "script_version": "0.2",
+      "date": "2006-10-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11069",
+        "user_name": "girish1729",
+        "first_name": "Girish",
+        "last_name": "Venkatachalam",
+        "email": "girishvenkatachalam at gmail.com",
+        "homepage": "http://girish1729.googlepages.com"
+      },
+      "release_notes": "Thanks to Bill McCarthy for comments.\n\nNow, the Ctrl-K update hotkey works only for TailView buffers."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6331",
+      "filename": "tailtab.vim",
+      "script_version": "0.1",
+      "date": "2006-10-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11069",
+        "user_name": "girish1729",
+        "first_name": "Girish",
+        "last_name": "Venkatachalam",
+        "email": "girishvenkatachalam at gmail.com",
+        "homepage": "http://girish1729.googlepages.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

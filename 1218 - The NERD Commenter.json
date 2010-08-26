@@ -1,0 +1,458 @@
+{
+  "script_id": "1218",
+  "name": "The NERD Commenter",
+  "summary": "A plugin that allows for easy commenting of code for many filetypes.",
+  "script_type": "utility",
+  "description": "Grab the latest dev version from github: https://github.com/scrooloose/nerdcommenter.\n\nThe following key mappings are provided by default (there is also a menu\nprovided that contains menu items corresponding to all the below mappings):\n\nMost of the following mappings are for normal/visual mode only. The\n|NERDComInsertComment| mapping is for insert mode only.\n\n,cc |NERDComComment| \nComments out the current line or text selected in visual mode.\n\n,cn |NERDComNestedComment| \nSame as |NERDComComment| but forces nesting.\n\n,c<space> |NERDComToggleComment| \nToggles the comment state of the selected line(s). If the topmost selected\nline is commented, all selected lines are uncommented and vice versa.\n\n,cm |NERDComMinimalComment| \nComments the given lines using only one set of multipart delimiters if\npossible. \n\n,ci |NERDComInvertComment| \nToggles the comment state of the selected line(s) individually. Each selected\nline that is commented is uncommented and vice versa.\n\n,cs |NERDComSexyComment| \nComments out the selected lines ``sexily''\n\n,cy |NERDComYankComment|\nSame as |NERDComComment| except that the commented line(s) are yanked\nbefore commenting.\n\n,c$ |NERDComEOLComment| \nComments the current line from the cursor to the end of line.\n\n,cA |NERDComAppendComment| \nAdds comment delimiters to the end of line and goes into insert mode between\nthem.\n\n,cI |NERDComPrependComment| \nAdds comment delimiters to the start of line and goes into insert mode between\nthem.\n\n|NERDComInsertComment| \nAdds comment delimiters at the current cursor position and inserts between.\nDisabled by default.\n\n,ca |NERDComAltDelim| \nSwitches to the alternative set of delimiters.\n\n,cl OR ,cr OR ,cb |NERDComAlignedComment| \nSame as |NERDComComment| except that the delimiters are aligned down the\nleft side (,cl), the right side (,cr) or both sides\n(,cb).\n\n,cu |NERDComUncommentLine| \nUncomments the selected line(s).\n\nFiletypes that can be commented by this plugin:\nabaqus abc acedb ada ahdl amiga aml ampl ant apache apachestyle asm68k asm asn\naspvbs atlas autohotkey autoit automake ave awk basic b bc bdf bib bindzone bst\nbtm caos catalog c cfg cg ch changelog cl clean clipper cmake conf config\ncontext cpp crontab cs csc csp css cterm cupl csv cvs dcl debchangelog\ndebcontrol debsources def diff django docbk dns dosbatch dosini dot dracula dsl\ndtd dtml dylan ecd eiffel elf elmfilt erlang eruby eterm expect exports\nfetchmail fgl focexec form fortran foxpro fstab fvwm fx gdb gdmo geek\ngentoo-package-keywords' gentoo-package-mask' gentoo-package-use' gnuplot gtkrc\nhaskell hb h help hercules hog html htmldjango htmlos ia64 icon idlang idl\nindent inform inittab ishd iss ist jam java javascript jess jgraph jproperties\njproperties jsp kconfig kix kscript lace lex lftp lifelines lilo lisp lite\nlotos lout lprolog lscript lss lua lynx m4 mail make maple masm master matlab\nmel mf mib mma model moduala.  modula2 modula3 monk mush muttrc named nasm\nnastran natural ncf netdict netrw nqc nroff nsis ocaml occam omlet omnimark\nopenroad opl ora otl ox pascal passwd pcap pccts perl pfmain php phtml pic pike\npilrc pine plaintex plm plsql po postscr pov povini ppd ppwiz procmail progress\nprolog psf ptcap python python qf radiance ratpoison r rc readline rebol\nregistry remind rexx robots rpl rtf ruby sa samba sas sather scheme scilab\nscreen scsh sdl sed selectbuf sgml sgmldecl sgmllnx sicad simula sinda skill\nslang sl slrnrc sm smarty smil smith sml snnsnet snnspat snnsres snobol4 spec\nspecman spice sql sqlforms sqlj sqr squid st stp strace svn systemverilog tads\ntaglist tags tak tasm tcl terminfo tex text plaintex texinfo texmf tf tidy tli\ntrasys tsalt tsscl tssgm uc uil vb verilog verilog_systemverilog vgrindefs vhdl\nvim viminfo virata vo_base vrml vsejcl webmacro wget winbatch wml [^w]*sh\nwvdial xdefaults xf86conf xhtml xkb xmath xml xmodmap xpm2 xpm xslt yacc yaml\nz8a \n",
+  "install_details": "The NERD Commenter requires Vim 7 or higher.\n\nExtract the plugin files in your ~/.vim (*nix) or ~/vimfiles (Windows). You\nshould have 2 files: \n    plugin/NERD_commenter.vim\n    doc/NERD_commenter.txt\n\nNext, to finish installing the help file run: \n    :helptags ~/.vim/doc\n\nSee |add-local-help| for more details.\n\nMake sure that you have filetype plugins enabled, as the script makes use of\n|'commentstring'| where possible (which is usually set in a filetype plugin).\nSee |filetype-plugin-on| for details, but basically, stick this in your vimrc \n    filetype plugin on",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10318",
+      "filename": "NERD_commenter.zip",
+      "script_version": "2.2.2",
+      "date": "2009-03-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- remove the NERDShutup option and the message is\n  suppresses, this makes the plugin silently rely on\n  &commentstring for unknown filetypes.\n- add support for dhcpd, limits, ntp, resolv, rgb, sysctl,\n  udevconf and udevrules. Thanks to Thilo Six.\n- match filetypes case insensitively\n- add support for mp (metapost), thanks to Andrey Skvortsov.\n- add support for htmlcheetah, thanks to Simon Hengel.\n- add support for javacc, thanks to Matt Tolton.\n- make <%# %> the default delims for eruby, thanks to tpope.\n- add support for javascript.jquery, thanks to Ivan Devat.\n- add support for cucumber and pdf. Fix sass and railslog\n  delims, thanks to tpope\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9497",
+      "filename": "NERD_commenter.zip",
+      "script_version": "2.2.1",
+      "date": "2008-11-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- add support for newlisp and clojure, thanks to Matthew Lee Hinman.\n- fix automake comments, thanks to Elias Pipping\n- make haml comments default to -# with / as the alternative delimiter,\n  thanks to tpope\n- add support for actionscript and processing thanks to Edwin Benavides\n- add support for ps1 (powershell), thanks to Jason Mills\n- add support for hostsaccess, thanks to Thomas Rowe\n- add support for CVScommit\n- add support for asciidoc, git and gitrebase. Thanks to Simon Ruderich.\n- use # for gitcommit comments, thanks to Simon Ruderich.\n- add support for mako and genshi, thanks to Keitheis.\n- add support for conkyrc, thanks to David\n- add support for SVNannotate, thanks to Miguel Jaque Barbero.\n- add support for sieve, thanks to Stefan Walk\n- add support for objj, thanks to Adam Thorsen.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9303",
+      "filename": "NERD_commenter.zip",
+      "script_version": "2.2.0",
+      "date": "2008-10-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- rewrote the mappings system to be more \"standard\".\n  - removed all the mapping options. Now, mappings to <plug>\n    mappings are used\n  - see :help NERDComMappings, and :help\n    NERDCreateDefaultMappings for more info\n- remove \"prepend comments\" and \"right aligned comments\".\n- add support for applescript, calbire, man, SVNcommit,\n  potwiki, txt2tags and SVNinfo.  Thanks to nicothakis,\n  timberke, sgronblo, mntnoe, Bernhard Grotz, John O'Shea,\n  François and Giacomo Mariani respectively.\n- bugfix for haskell delimiters. Thanks to mntnoe."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9031",
+      "filename": "NERD_commenter.zip",
+      "script_version": "2.1.18",
+      "date": "2008-07-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- add support for llvm. Thanks to nicothakis.\n- add support for xquery. Thanks to Phillip Kovalev.\n- fixed haskell delimiters (hackily). Thanks to Elias\n  Pipping.\n- add support for mailcap. Thanks to Pascal Brueckner.\n- add support for stata. Thanks to Jerónimo Carballo.\n- applied a patch from ewfalor to fix an error in the help\n  file with the NERDMapleader doc\n- disable the insert mode ctrl-c mapping by default, see\n  :help NERDComInsertComment if you wish to restore it\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8860",
+      "filename": "NERD_commenter.zip",
+      "script_version": "2.1.16",
+      "date": "2008-06-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "compatibility fix for vim7.2, cheers to Ben Schmidt, David Fishburn, and\nErik Falor for the emails, and to JaGoTerr for posting the issue.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8833",
+      "filename": "NERD_commenter.zip",
+      "script_version": "2.1.15",
+      "date": "2008-06-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- added pamconf support, thanks to Martin Kustermann\n- added mason support, thanks to Indriði Einarsson\n- added map support, thanks to Chris\n- added bzr support, thanks to Stromnov\n- added group support, thanks to Krzysztof A. Adamski\n- change license to wtfpl\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8700",
+      "filename": "NERD_commenter.zip",
+      "script_version": "2.1.14",
+      "date": "2008-05-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- added support for gitconfig, tar, nerdtree\n- added support for dtrace, thanks to nicothakis for the post\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8643",
+      "filename": "NERD_commenter.zip",
+      "script_version": "2.1.13",
+      "date": "2008-05-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": " - added support for rib, pyrex/cython, liquid, services, gitcommit,\n  vimperator, and slice. Thanks to spookypeanut, Greg Jandl, Christophe\n  Benz, A Pontus, and Stromnov for emailing me and/or posting issues.\n- set the NERDRemoveExtraSpaces option to 1 by default as the doc states\n- other fixes: (thanks to Zhang Shuhan for all his emails and testing)\n    * made the sexy comment mapping fall back to normal commenting if sexy\n      comments arent possible for the current filetype\n    * fixed some bugs with sexy comments\n    * made the uncommenting side of toggle comments slightly more robust\n    * fixed a bug where some extra spaces werent being removed (although\n      the currect options were set)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8510",
+      "filename": "NERD_commenter.zip",
+      "script_version": "2.1.12",
+      "date": "2008-03-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- added support for patran and dakota, thx to Jacobo Diaz for the email\n- added support for gentoo-env-d, gentoo-init-d, gentoo-make-conf, grub, modconf and sudoers filetypes, thx to Li Jin for the patch.\n- added support for SVNdiff, gitAnnotate, gitdiff. Thx to nicothakis for posting the issue\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8335",
+      "filename": "NERD_commenter.zip",
+      "script_version": "2.1.11",
+      "date": "2008-02-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- fixed a bug with the selection option and visual commenting (again).  Thanks to Ingo Karkat (again).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8325",
+      "filename": "NERD_commenter.zip",
+      "script_version": "2.1.10",
+      "date": "2008-02-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- added support for Wikipedia (thanks to Chen Xing)\n- added support for mplayerconf\n- bugfixes (thanks to Ingo Karkat for the bug report/patch)\n- added support for mkd (thanks to Stefano Zacchiroli)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8161",
+      "filename": "NERD_commenter.zip",
+      "script_version": "2.1.9",
+      "date": "2008-01-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- added support for mrxvtrc and aap, thx to Marco for the emails\n- added dummy support for SVNAnnotate, SVKAnnotate and CVSAnnotate, thx to nicothakis for posting the issue\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8051",
+      "filename": "NERD_commenter.zip",
+      "script_version": "2.1.8",
+      "date": "2007-12-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- fixed a couple of bugs with the NERDSpaceDelims option, thx to David Miani and Jeremy Hinegardner\n- added dummy support for lhaskell, thx to pipp for posting the issue\n- added an alternative set of delims for the plsql filetype, thx to Kuchma Michael\n- added support for spectre, thx to Brett Warneke\n- added support for scala, thx to Renald Buter\n- added support for asymptote, thx to Vladimir Lomov\n- made NERDDefaultNesting enabled by default as this seems more intuitive, thx to marco for the suggestion\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7827",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.1.6",
+      "date": "2007-10-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- added support for gentoo-conf-d thanks to tinoucas for posting the issue and the patch\n- added support for the D filetype. Thanks to Greg Weber for the email.\n- added dummy support for cobol, cheers to timberke for posting the issue.\n- added support for velocity. Thanks to Bruce Sherrod for the email.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7786",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.1.5",
+      "date": "2007-10-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- added support for lilypond, bbx and lytex. Thanks to Eyolf Østrem for the email.\n- added an alterative set of delimiters for the dosbatch filetype, thanks to Ingo Karkat for the email.\n- added support for the markdown filetype. Thanks to Nicolas Weber for posting the issue.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7731",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.1.4",
+      "date": "2007-09-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- added support for the ahk filetype. Cheers to Don Hatlestad for the email.\n- added support for desktop and xsd filetypes. Thanks to Christophe Benz.\n- added dummy support for Rails-log\n- fixed a bunch of bugs in the comment delimiter setup process, thanks to Cheng Fang for the email :D\n- hardcore refactoring and removal of seldomly used, overly-complex functionality\n- the script now requires vim 7\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7570",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.1.3",
+      "date": "2007-08-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- fixed numerous bugs that were causing tabs to permanently be converted to spaces, even if noexpandtab was set. Thanks to Heptite on #vim for working with me to track them down :)\n- added dummy support for \"lookupfile\". Thanks to David Fishburn for the email.\n- added support for \"rst\", thanks to Niels Aan de Brugh for the email.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7543",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.1.2",
+      "date": "2007-08-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "Added support for the vera and ldif filetypes. Thanks to Normandie\nAzucena and Florian Apolloner for the emails.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7525",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.1.1",
+      "date": "2007-08-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- added dummy support for SVNcommitlog and vcscommit. Thanks to John O'Shea for the email.\n- added support for Groovy. Thanks to Jason Mills for the email.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7466",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.1.0",
+      "date": "2007-08-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- now the script resets the delimiters when the filetype of the buffer changes (thanks to James Hales for the patch)\n- added formal support/doc for prepending a count to many of the commenting maps so you can go, eg, 5,cc to comment 5 lines from normal  mode. Thanks again to James Hales for the patch.\n- added support for the \"gams\" filetype that Jorge Rodrigues created.\n- added support for the \"objc\" filetype, thanks to Rainer Müller for the email.\n- added support for the \"sass\" filetype that Dmitry Ilyashevich created."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7391",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.0.7",
+      "date": "2007-07-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "Added support for eclass and ebuild filetypes. Thanks to Alex Tarkovsky\nfor the email.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7309",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.0.6",
+      "date": "2007-06-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- Changed the default setting of NERDMapleader to \",c\", meaning all the maps now start with ,c instead of \\c. This is to stop a major mapping clash with the vcscommand plugin. Anyone wanting to keep the \\c map leader should read :help NERDMapleader.\n- Added support for debcontrol and dummy support for debchangelog filetypes, thanks to Stefano Zacchiroli for the email.\n- Made it so that the NERDShutUp option now only controls the \"Pleeease email the delimiters...\" requests. It no longer affects the general output of the script.\n- Simplified the names of the help tags. \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7253",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.0.5",
+      "date": "2007-06-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- Added support for autoit, autohotkey and docbk filetypes (thanks to  Michael Böhler)\n- Added support for cmake (thanks to Aaron Small)\n- Added support for htmldjango and django filetypes (thanks to Ramiro  Morales)\n- Improved the delimiters for eruby again\n- Applied a patch from Seth Mason to fix some pathing issues with the help  file installation.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7097",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.0.4",
+      "date": "2007-05-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- Added support for verilog_systemverilog and systemverilog filetypes\n  (Thanks to Alexey for the email)\n- Added support for fstab, thanks to Lizendir for the email.\n- Added support for the smarty filetype.\n- Improved the delimiters for eruby.\n- Added dummy support for changelog filetype.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7060",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.0.3",
+      "date": "2007-05-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- Added dummy support for the csv filetype (thx to Mark Woodward for the\n  email)\n- Added dummy support for vo_base and otl filetypes (thanks to fREW for\n  the email)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6977",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.0.2",
+      "date": "2007-04-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "Minor bug fix that was stopping nested comments from working"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6972",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.0.1",
+      "date": "2007-04-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- Fixed the visual bell for the |NERDComToEOLMap| map.\n- Added another possible value to the NERDMenuMode option which causes the\n  menu to be displayed under 'Plugin -> Comment'. See :h NERDMenuMode.\n  This new menu mode is now the default.\n- Added support for the occam filetype (thanks to Anders for emailing me)\n- Made the main commenting function (NERDComment) available outside the\n  script. See :h NERD_com_NERDComment\n- bug fixes and refactoring\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6938",
+      "filename": "NERD_commenter.vim",
+      "script_version": "2.0.0",
+      "date": "2007-04-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7006",
+        "user_name": "scrooLoose",
+        "first_name": "Marty",
+        "last_name": "Grenfell",
+        "email": "martin.grenfell at gmail.com",
+        "homepage": "http://got-ravings.blogspot.com/"
+      },
+      "release_notes": "- NOTE: renamed the script to  NERD_commenter.vim. When you install this\n  version you must delete the old files: NERD_comments.vim and \n  NERD_comments.txt.\n- Reworked the mappings and main entry point function for the script to\n  avoid causing visual-bells and screen scrolling.\n- Changes to the script options (see |NERD_com-Customisation| for\n  details):\n    - They are all camel case now instead of underscored.\n    - Converted all of the regular expression options into simple boolean\n      options for simplicity.\n    - All the options are now stated positively, eg.\n      NERD_dont_remove_spaces_regexp has become NERDRemoveExtraSpaces.\n    - Some of the option names have been changed (other than in the above\n      ways)\n    - Some have been removed altogether, namely: NERD_create_h_filetype\n      (why was a commenting script creating a filetype?!),\n      NERD_left_align_regexp, NERD_right_align_regexp, \n\n- Removed all the NERD_use_alt_style_XXX_coms options and replaced them\n  with a better system. Now if a filetype has alternative delims, the\n  script will check whether an option of the form\n  \"NERD_<&filetype>_alt_style\" exists, and if it does then alt delims will\n  be used. See |NERD_com-cust-delims| for details.\n- The script no longer removes extra spaces for sexy comments for the\n  NERDRemoveExtraSpaces option (it will still remove spaces if\n  NERDSpaceDelims is set).\n- Added dummy support for viminfo and rtf.\n- Added support for the \"gentoo-package-\\(keywords\\|mask\\|use\\)\"\n  filetypes.\n- Added '#' comments as an alternative for the asm filetype\n\nThanks to Markus Klinik and Anders for bug reports, and again to Anders\nfor his patch. Thanks to John O'Shea and fREW for the filetype\ninformation.\n"
+    }
+  ]
+}

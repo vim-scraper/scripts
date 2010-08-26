@@ -1,0 +1,26 @@
+{
+  "script_id": "2315",
+  "name": "sofu.vim",
+  "summary": "Highlighting for sofu files",
+  "script_type": "syntax",
+  "description": "Provides simple highlighting for sofu files, which are used in some projects:\nFor more information on sofu see http://sofu.sf.net\n\nNormaly these files get autodetected as \"conf\", which is o.k., but this script provides a better highlighting.\n\nBased somewhat on the included conf.vim",
+  "install_details": "Just copy into the global syntax folder or your private one and if you want auto-detection add\n\nau BufRead,BufNewFile *.sofu\t\t\tsetf sofu\n\nin either filetype.vim or your own ftdetect/sofu.vim\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9036",
+      "filename": "sofu.vim",
+      "script_version": "0.23",
+      "date": "2008-07-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14861",
+        "user_name": "maluku",
+        "first_name": "Marc",
+        "last_name": "Lucksch",
+        "email": "marc_lucksch at web.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

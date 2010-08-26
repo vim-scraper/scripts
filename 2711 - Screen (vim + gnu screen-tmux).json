@@ -1,0 +1,170 @@
+{
+  "script_id": "2711",
+  "name": "Screen (vim + gnu screen/tmux)",
+  "summary": "Simulate a split shell, using gnu screen or tmux, that you can send commands to.",
+  "script_type": "utility",
+  "description": "Screenshot:\nhttp://eclim.org/_images/screenshots/vim/gnu_screen_shell.png\n\nThis plugin aims to simulate an embedded shell in vim by allowing you to easily\nconvert your current vim session into one running in gnu screen (or tmux) with\na split gnu screen window containing a shell, and to quickly send statements /\ncode to whatever program is running in that shell (bash, python, irb, etc.).\nSpawning the shell in your favorite terminal emulator is also supported for\ngvim users or anyone else that just prefers an external shell.\n\nCurrently tested on Linux and Windows (win32 gvim and cygwin vim), but\nshould also work on any unix based platform where screen is supported\n(OSX, BSD, Solaris, etc.).\n\nWindows Users: Whether you are using gvim or not, you will need cygwin\ninstalled with cygwin's bin directory in your windows PATH.\n\nYou can also find this screen plugin in my vimfiles github repository:\nhttp://github.com/ervandew/vimfiles \n\nCommands:\n  :ScreenShell [cmd] - Starts a screen hosted shell performing the\n    following steps depending on your environment.\n\n    When running a console vim on a unix based OS (Linux, BSD, OSX):\n      1. save a session file from your currently running vim instance\n         (current tab only)\n      2. start gnu screen with vim running in it\n      3. load your saved session file\n      4. create a lower gnu screen split window and start a shell, or if\n         g:ScreenShellExternal is set, start an external terminal with\n         screen running.\n      5. if a command was supplied to :ScreenShell, run it in the new\n         shell.\n         Ex. :ScreenShell ipython\n\n      Note: If you are already in a gnu screen session, then only steps\n            4 and 5 above will be run.\n\n    When running gvim:\n      1. start an external terminal with screen running.\n      2. if a command was supplied to :ScreenShell, run it in the new\n         shell.\n         Ex. :ScreenShell ipython\n\n  :ScreenSend - Send the visual selection or the entire buffer contents to\n    the running gnu screen shell window.\n\nAn example workflow may be:\n  Open a python file to work on:\n    $ vim something.py\n\n  Decide you want to run all or pieces of the code in an interactive\n  python shell:\n    :ScreenShell python\n\n  Send code from a vim buffer to the shell:\n    :ScreenSend\n\n  Quit the screen session and return to your original vim session:\n    :ScreenQuit\n      or\n    :qa\n",
+  "install_details": "1. Download the vimball (screen.vba) to any directory.\n2. Open the file in vim ($ vim screen.vba)\n3. Source the file (:so %)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12180",
+      "filename": "screen.vba",
+      "script_version": "1.1",
+      "date": "2010-01-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- fixed to handle non screen TERM env var better\n- added support for vertically split screen/tmux regions (suggested by Hemant Borole)\n- added setting to specify whether vim or the shell gain focus when first opening a split region (suggested by Sung Pae)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11845",
+      "filename": "screen.vba",
+      "script_version": "1.0",
+      "date": "2009-12-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- added support for using tmux instead of gnu screen\n- now distributing as a vimball with a help file (:h screen)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11519",
+      "filename": "screen.vim",
+      "script_version": "0.8",
+      "date": "2009-10-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a global funcref allowing other plugins to send strings to the running screen session (based on suggestion by Jakson Alves de Aquino)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11343",
+      "filename": "screen.vim",
+      "script_version": "0.7",
+      "date": "2009-09-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- fixed grabbing of partial visual selection on one line for sending\n- now suppresses vim's reload prompt when returning to your original vim session, and auto reloads the modified files for you."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11266",
+      "filename": "screen.vim",
+      "script_version": "0.6",
+      "date": "2009-08-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- fixed running :ScreenShell when vim is already in a screen session.\n- fixed starting screen in an external terminal on Windows.\n- fixed executing of command supplied to :ScreenShell when using an external shell (thanks to Tobais Wolf for reporting this issue)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11243",
+      "filename": "screen.vim",
+      "script_version": "0.5",
+      "date": "2009-08-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- gvim (windows, linux, etc.) now supported by forcing usage of an external terminal\n- multiple vim instances running independent screen shells now supported\n- when using an external terminal from a console vim, only restart vim in a screen session if g:ScreenShellServername is set and clientserver is supported.\n- ability to attach to an existing screen session."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11180",
+      "filename": "screen.vim",
+      "script_version": "0.4",
+      "date": "2009-08-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- fixed usage in cygwin, which the previous version broke\n- fixed handling of large amounts of text sent through :ScreenSend (thanks to Tobias Wolf for discovering the issue)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11170",
+      "filename": "screen.vim",
+      "script_version": "0.3",
+      "date": "2009-08-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Improved error handling running :ScreenShell when not all buffers can be saved.\nSeveral enhancements based on suggestions by Tobias Wolf.\n- Added support for spawning a terminal instead of using a split region for the shell.\n- The vim instance started in screen now has its server name set, permitting remote calls.\n- The shell screen window title is now based on the command supplied to :ScreenShell, if any.\n- Other minor improvements behind the scenes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11125",
+      "filename": "screen.vim",
+      "script_version": "0.2",
+      "date": "2009-08-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Replaced control characters with the vim escape sequence equivalents.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10999",
+      "filename": "screen.vim",
+      "script_version": "0.1",
+      "date": "2009-07-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

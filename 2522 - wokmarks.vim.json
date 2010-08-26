@@ -1,0 +1,74 @@
+{
+  "script_id": "2522",
+  "name": "wokmarks.vim",
+  "summary": "local marks usage more similar to other editors",
+  "script_type": "utility",
+  "description": "Lets you set and toggle a mark on a line without specifying which mark to use exactly.  wokmarks will choose an unused mark from a pool of allowed marks.  The script is quite verbose: you will get info which mark was set, removed or jumped to.\n\n\nUsage: (default keys)\n\ntm\nset pool mark for current line (if no local mark exists)\n\ntt\ntoggle pool mark for current line\n\ntk\ntj\njump to the [count]th local mark above/below the cursor position (like [' and ]' which are less verbose).\nWithout count, the search for marks wraps around the buffer boundaries.\n\ntl\nlist local marks\n\ntD\nremove all pool marks from the buffer or pool marks in range\n\n\"t\" actually is a built-in command; see below if you want to map other keys in the vimrc.\nLocal marks = pool marks + user marks.  User marks will not be set or removed by the script.\n\nv0.3: The toggle hook will be executed whenever wokmarks adds or removes marks.  Purpose is to be able to update external marks highlighting etc.  Add a command to the hook:\n\n     :autocmd User WokmarksChange   :MyMarksHighlightingUpdate\n\nThis must not be wrapped in an augroup -- this way you can define the autocmd before wokmarks is loaded.\n\n\nCustomization:\n\n:let g:wokmarks_pool = \"abcdfghijklmnopqrtuvwxyz\"\n(string)\nPool of allowed marks.  The marks s and e excluded here (user marks), they are commonly used for start and end positions.\n\n:let g:wokmarks_do_maps = 1\n(number)\nValues:\n0    don't map any keys\n1    map the default keys\n2    map Ctrl-F2 to toggle a mark, and  F2 / Shift-F2 to jump to the next or previous mark\n\nThe default keys are being mapped this way:\n:map tk <Plug>PrevMarkWok\n:map tj <Plug>NextMarkWok\n:nmap tt <Plug>ToggleMarkWok\n:nmap tm <Plug>SetMarkWok\n:map tD <Plug>KillMarksWok\n:nnoremap <silent> tl :marks abcdefghijklmnopqrstuvwxyz<CR>\n\n\nCredits must go to vimscript #66\n\n2010 Mar 28",
+  "install_details": "rename the file to wokmarks.vim\nthis is a global plugin, :h add-plugin",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13601",
+      "filename": "wokmarks_0.3.1.vim",
+      "script_version": "0.3.1",
+      "date": "2010-08-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "- fix: the hook executed modelines (via :doautocmd, wtf?); reset 'modeline'"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12731",
+      "filename": "wokmarks_0.3.vim",
+      "script_version": "0.3",
+      "date": "2010-03-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "- added toggle hook (:au User WokmarksChange) (Tom Link)\n- added Wokmarks_GetLocalMarks() "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11643",
+      "filename": "wokmarks_0.2.vim",
+      "script_version": "0.2",
+      "date": "2009-11-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "- tj tk set the ' mark, to allow jumping back with CTRL-O\n- added Omap mode for <Plug>NextMarkWok, <Plug>PrevMarkWok\n- let Wokmarks_GetMark() also accept \".\", \"$\", etc.\n- if g:wokmarks_do_maps == 2, then F2 maps are used (Tom Link)\n- prev/next mark searches wrap around (Tom Link)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9851",
+      "filename": "wokmarks_0.1.vim",
+      "script_version": "0.1",
+      "date": "2009-01-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

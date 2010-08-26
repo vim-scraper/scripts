@@ -1,0 +1,58 @@
+{
+  "script_id": "403",
+  "name": "eruby.vim",
+  "summary": "Highlight eruby code blocks within html.",
+  "script_type": "syntax",
+  "description": "This script properly highlights <% ... %>, <%=...%>, and <%#...%> as ruby code within html.",
+  "install_details": "Save the file eruby.vim to your ~/.vim/syntax directory and add a line in your ~/.vimrc or in ~/.vim/filetype.vim to load this syntax file for all *.rhtm and *.rhtml files.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1505",
+      "filename": "eruby.vim",
+      "script_version": "2.0",
+      "date": "2002-11-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "210",
+        "user_name": "brailsmt",
+        "first_name": "Michael",
+        "last_name": "Brailsford",
+        "email": "brailsmt at yahoo.com",
+        "homepage": "http://students.cs.byu.edu/~mtb6"
+      },
+      "release_notes": "Fix to correctly highlight eruby tags within html tags.  Also added comments with instructions to install .rhtml as a new filetype.  Removed the ~/.vim/filetype.vim file from the package."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1456",
+      "filename": "eruby.tar.gz",
+      "script_version": "1.5",
+      "date": "2002-11-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "210",
+        "user_name": "brailsmt",
+        "first_name": "Michael",
+        "last_name": "Brailsford",
+        "email": "brailsmt at yahoo.com",
+        "homepage": "http://students.cs.byu.edu/~mtb6"
+      },
+      "release_notes": "Fixed the highlighting of blocks that are broken up by html.  Fixed the highlighting of case \nstatements.   Included the html ftplugins, so that indenting and all the other nice html ftplugins\nwork.  Thanks to Tim Bates for pointing these out.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1180",
+      "filename": "eruby_vim.tar.gz",
+      "script_version": "1.0",
+      "date": "2002-09-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "210",
+        "user_name": "brailsmt",
+        "first_name": "Michael",
+        "last_name": "Brailsford",
+        "email": "brailsmt at yahoo.com",
+        "homepage": "http://students.cs.byu.edu/~mtb6"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

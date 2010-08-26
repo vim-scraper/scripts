@@ -1,0 +1,170 @@
+{
+  "script_id": "1038",
+  "name": "vimgrep.vim",
+  "summary": "Editing utilities using grep/find without external grep/find programs",
+  "script_type": "utility",
+  "description": "grep/find utility wholly contained in Vim.  Commands implemented specifically to aid the editing task, not just find pattern matches.  Vimgrep() provides grep utility without an external grep type program.  It includes :help documentation grep-ing, selective or mass editing of files with matches, and display of output to command line or a named buffer.  Vimfind() provides find utility without an external find type program and offers same selective/mass editing as Vimgrep(). See doc directory in package for various documentation file formats and select one for more information.",
+  "install_details": "NOTE:  REQUIRES vsutil_vim.zip http://www.vim.org/scripts/script.php?script_id=1056\nUnzip into your .vim|vimfiles directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3407",
+      "filename": "vimgrep.zip",
+      "script_version": "3.2",
+      "date": "2004-09-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5397",
+        "user_name": "dsilvia",
+        "first_name": "Dave",
+        "last_name": "Silvia",
+        "email": "dsilvia at mchsi.com",
+        "homepage": ""
+      },
+      "release_notes": "Version 3.2\n  Added:\n    -  VimfindEdit/EditVimfind()\n       operates the same as\n       VimgrepEdit/EditVimgrep()\n       VimgrepEditDel functionality\n       also applies."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3357",
+      "filename": "vimgrep_vim.zip",
+      "script_version": "3.1",
+      "date": "2004-08-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5397",
+        "user_name": "dsilvia",
+        "first_name": "Dave",
+        "last_name": "Silvia",
+        "email": "dsilvia at mchsi.com",
+        "homepage": ""
+      },
+      "release_notes": "Version 3.1\n  Enhanced:\n   -  Rewrote s:vimGrep() for\n      search optimization."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3330",
+      "filename": "vimgrep_vim.zip",
+      "script_version": "3.0 b",
+      "date": "2004-08-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5397",
+        "user_name": "dsilvia",
+        "first_name": "Dave",
+        "last_name": "Silvia",
+        "email": "dsilvia at mchsi.com",
+        "homepage": ""
+      },
+      "release_notes": "decoupled vsutil.vim\ndecoupled curBuf.vim\nthese are now separate packages"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3313",
+      "filename": "vimgrep_vim.zip",
+      "script_version": "3.0",
+      "date": "2004-08-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5397",
+        "user_name": "dsilvia",
+        "first_name": "Dave",
+        "last_name": "Silvia",
+        "email": "dsilvia at mchsi.com",
+        "homepage": ""
+      },
+      "release_notes": "Version 3.0\n  New:\n   -  Rewrote to change optional\n      arguments to switches instead\n      of positional arguments.\n      Simplifies usage.\n   -  Changed documentation to\n      reflect same.\n  Misc:\n   -  Some minor code clean up\n   -  Removed use of dummy file\n      for empty Vim session."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3308",
+      "filename": "vimgrep_vim.zip",
+      "script_version": "2.2",
+      "date": "2004-08-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5397",
+        "user_name": "dsilvia",
+        "first_name": "Dave",
+        "last_name": "Silvia",
+        "email": "dsilvia at mchsi.com",
+        "homepage": ""
+      },
+      "release_notes": " Version 2.2\n  Fixed:\n   -  Inappropriate inclusion of\n      command/function arguments.\n  New:\n   -  Added BuiltInHelp\n   -  Added VimfindToBuf\n   -  Added VimfindList\n   -  Added VimgrepList\n   -  Added VimgrepHelpList\n   -  Added Command/Function Help\n      menu/mapped '??'\n\n      Vim[find|grep]List opens a\n      buffer listing file name\n      results from the respective\n      function.  Then simply cursor\n      to a line in the list, and\n      press 'o' to open the listed\n      file in an edit buffer."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3300",
+      "filename": "vimgrep_vim.zip",
+      "script_version": "2.1",
+      "date": "2004-08-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5397",
+        "user_name": "dsilvia",
+        "first_name": "Dave",
+        "last_name": "Silvia",
+        "email": "dsilvia at mchsi.com",
+        "homepage": ""
+      },
+      "release_notes": "Many's the slip\nTwixt cup and lip\n\nSomehow the wrong version\ngot put into the zip\nThis is the corrected one"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3299",
+      "filename": "vimgrep_vim.zip",
+      "script_version": "2.1",
+      "date": "2004-08-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5397",
+        "user_name": "dsilvia",
+        "first_name": "Dave",
+        "last_name": "Silvia",
+        "email": "dsilvia at mchsi.com",
+        "homepage": ""
+      },
+      "release_notes": "Version 2.1\n  Fixed:\n   -  echo-ed results scrolling off\n      command line by adding Pause()\n   -  problem with file argument\n      being '/' would append '/*' to\n      search which always failed.\n      Now only appends extra '/' if\n      file argument does not end in\n      '/' or '&#039.\n  Enhanced:\n   -  Stopped search after first match\n      if FNonly.  Do no search at all\n      if srchpat == '\\%$'\n  New:\n   -  Added Vimfind\n      (inspired by email from\n        Hari Krishna Dara)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3292",
+      "filename": "vimgrep_vim.zip",
+      "script_version": "2.0",
+      "date": "2004-08-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5397",
+        "user_name": "dsilvia",
+        "first_name": "Dave",
+        "last_name": "Silvia",
+        "email": "dsilvia at mchsi.com",
+        "homepage": ""
+      },
+      "release_notes": "Version 2.0\n  Changed script name to vimgrep.vim\n  Introduced naming convention for\n  commands and functions.  Commands\n  begin Vimgrep[\\w*], functions and\n  variables begin [\\w*]Vimgrep\n\n  Function MiniVimGrep() obsoleted.\n  Replaced with Vimgrep().\n  Wrapper exists to maintain\n  backward compatibility.\n\n  New:\n   -  Added opening of edit buffers\n      for successfully grep-ed files.\n   -  Added help files grep-ing.\n   -  Added delete of edit/help\n      buffers.\n   -  Added gvim menu/toolbar items\n      and key mappings for deleting.\n   -  Included documentation files.\n   -  rewrote, beefed up, made more\n      robust, and otherwise enhanced."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3253",
+      "filename": "minigrep.vim",
+      "script_version": "1.1",
+      "date": "2004-07-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5397",
+        "user_name": "dsilvia",
+        "first_name": "Dave",
+        "last_name": "Silvia",
+        "email": "dsilvia at mchsi.com",
+        "homepage": ""
+      },
+      "release_notes": "The two public functions are:\n\n     MiniVimGrep(pattern,file(s),[match case],[file names only])\n     BufMiniGrep(pattern,[match case],[file names only])\n\nwhere optional\n\n      'match case' is zero or non-zero\n      'file names only' is zero or non-zero\n\n\nMiniVimGrep() operates on file(s) arguments and BufMiniGrep() operates on open buffers.\n\nVersion 1.1\n  For grep-ing in open buffers:\n   -  Added BufMiniGrep for grep-ing all open buffers\n   -  Added code to set cursor to line 1, col 1 in the file in case it is\n      being done with open buffers.  Then the cursor is set back to its\n      original position.\n   -  Added code to allow passing '%' or '' for file, meaning current buffer\n   -  Added augroup and autocmd to save the buffer number so it can be used\n      to return to the original buffer if grep-ing in open buffers\n\n  For multiple files\n   -  Added code to check for comma and newline file name separators.\n      Comma allows the user to specify 'file' argument as\n      \"file1,file2,...\", while newline allows 'file' argument to be\n      something like glob(expand(\"%:p:h\").\"/*\") or\n      glob(\"<some-path>/*\")\n   -  Added code to check if file is the same as the original open\n      buffer, if so, don't do bdelete.\n   -  Added second optional argument for returning file names only.\n      If non-zero, just return file names, not the matching lines.\n\n  Misc\n   -  Added code to test for empty files\n   -  Added code to test for directories"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3249",
+      "filename": "minigrep.vim",
+      "script_version": "1.0",
+      "date": "2004-07-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5397",
+        "user_name": "dsilvia",
+        "first_name": "Dave",
+        "last_name": "Silvia",
+        "email": "dsilvia at mchsi.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

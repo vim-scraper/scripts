@@ -1,0 +1,106 @@
+{
+  "script_id": "3068",
+  "name": "recover.vim",
+  "summary": "Show differences for recovered files",
+  "script_type": "utility",
+  "description": "Please rate the plugin, if you like it!\n\n2. recover Manual                                       *recover-manual*\n\nFunctionality\n\nWhen using |recovery|, it is hard to tell, what has been changed between the\nrecovered file and the actual on disk version. The aim of this plugin is, to\nhave an easy way to see differences, between the recovered files and the files\nrestored on disk.\n\nTherefore this plugin sets up an auto command, that will create a diff buffer\nbetween the recovered file and the on-disk version of the same file. You can\neasily see, what has been changed and save your recovered work back to the\nfile on disk.\n\nBy default this plugin is enabled. To disable it, use >\n    :RecoverPluginDisable\n\nTo enable this plugin again, use >\n    :RecoverPluginEnable\n\n3. ChangesPlugin Feedback                                   *recover-feedback*\n\nFeedback is always welcome. If you like the plugin, please rate it at the\nvim-page:\nhttp://www.vim.org/scripts/script.php?script_id=3068\n\nYou can also follow the development of the plugin at github:\nhttp://github.com/chrisbra/Recover.vim\n\nPlease don't hesitate to report any bugs to the maintainer, mentioned in the\nthird line of this document.\n",
+  "install_details": "This plugin comes as vimball, which makes it really easy to install it\ninto the right place.\n1) Edit recover.vba with your vim (:e recover.vba)\n2) From within vim, simply source the file (using :so %)\n3) Restart vim to autoload the plugin and the documentation (:q)\n4) Read the help at :h recoverPlugin.txt\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13091",
+      "filename": "Recover-0.9.vba",
+      "script_version": "0.9",
+      "date": "2010-06-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": ": use feedkeys(...,'t') instead of feedkeys()  (this works more reliable, although it pollutes the history), so delete those\n  spurious history entries\n: |RecoverPluginHelp| shows a small help message, about diff commands (suggested by David Fishburn, thanks!)\n: |RecoverPluginFinish| is a shortcut for |FinishRecovery|\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13083",
+      "filename": "Recover-0.8.vba",
+      "script_version": "0.8",
+      "date": "2010-06-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "0.8:\n:make :FinishRecovery more robust\n0.7 (unreleased):\n|FinishRecovery| closes the diff-window and cleans everything up (suggestion by David Fishburn)\n:DeleteSwapFile is not needed anymore"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13080",
+      "filename": "Recover-0.6.vba",
+      "script_version": "0.6",
+      "date": "2010-05-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": ": |recover-feedback|\n: Ask to really open a diff buffer for a file (suggestion: David Fishburn, thanks!)\n: DeleteSwapFile to delete the swap file, that was used to create the diff buffer\n: change feedkeys(...,'t') to feedkeys('..') so that not every command appears in the history.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12943",
+      "filename": "Recover-0.5.vba",
+      "script_version": "0.5",
+      "date": "2010-05-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "-0r command in recover plugin adds extra \\n\n  Patch by Sergey Khorev (Thanks!)\n- generate help file with 'et' set, so the README at github looks prettier"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12903",
+      "filename": "recover.vba",
+      "script_version": "0.4",
+      "date": "2010-04-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "0.4: Apr 26, 2010: \n- handle Windows and Unix path differently\n- Code cleanup\n- Enabled |:GLVS|\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12879",
+      "filename": "recover.vba",
+      "script_version": "0.3",
+      "date": "2010-04-20",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

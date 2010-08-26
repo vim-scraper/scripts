@@ -1,0 +1,42 @@
+{
+  "script_id": "740",
+  "name": "sbutils",
+  "summary": "Some utilities I find useful",
+  "script_type": "utility",
+  "description": "This is a collection of utilities that i will be updating regularly. I'm putting it online just in case somebody wants exactly what's there, if you're just browsing, you should probably skip this version.\n\nStarting with 2 utils:\n\n1. Count the no. of occurences of a -PERL- regex in a range ( :<range>Count <regex>)\n2. Insert a timestamp, formatted according to a time-format string at the current cursor position in the command mode ( <Leader>t) where <Leader> is usually '&#039\n3. Comment a block of C-code by selecting a range and hitting <Leader>C - it replaces /* and */ inside with {{{ and }}} to cope with nested comments.\n\n",
+  "install_details": "Source from ~/.vimrc (:source sb.vim)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2258",
+      "filename": "sb.vim",
+      "script_version": "0.11",
+      "date": "2003-08-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3159",
+        "user_name": "sb98052",
+        "first_name": "sapan",
+        "last_name": "bhatia",
+        "email": "spam at corewars.org",
+        "homepage": "http://www.cs.princeton.edu/~sapanb"
+      },
+      "release_notes": "New util:\nTo select a range and put it within C comments, replacing internal /* and */ with {{{ and }}} to cope with nesting (well, i find it useful:)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2251",
+      "filename": "sb.vim",
+      "script_version": "0.1",
+      "date": "2003-08-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3159",
+        "user_name": "sb98052",
+        "first_name": "sapan",
+        "last_name": "bhatia",
+        "email": "spam at corewars.org",
+        "homepage": "http://www.cs.princeton.edu/~sapanb"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "2112",
+  "name": "autohotkey (ahk)",
+  "summary": "autohotkey syntax highlighting",
+  "script_type": "syntax",
+  "description": "autohotkey (ahk) syntax file.\nBest in combination with color scheme pspad.\n\nExamples:\nIsense script\nhttp://academicproductivity.com/software/ISense.ahk.html\n\nactiveGoto script\nhttp://academicproductivity.com/software/activegoto.ahk.html\n\nIn a Nutshell:\nBuilt-in finctions are blue\nUser defined functions are green\nAutohotkey variables are orange\nLabels are red (return too; makes it easy to find subs scopes)\nGUI commands, others, are brown\n",
+  "install_details": "drop into /vimfiles/syntax.\n\nMake sure the extension ahk is mapped to this syntax file. To do that, go to /vimYourVersionNb/filetype.vim and add:\n\n\" Autohotkey\nau BufNewFile,BufRead *.ahk\t\t\tsetf autohotkey\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8113",
+      "filename": "autohotkey.vim",
+      "script_version": "0.1",
+      "date": "2008-01-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13670",
+        "user_name": "quesada",
+        "first_name": "Jose",
+        "last_name": "Quesada",
+        "email": "quesada at gmail.com",
+        "homepage": "http://academicproductivity.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

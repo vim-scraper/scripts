@@ -1,0 +1,26 @@
+{
+  "script_id": "2271",
+  "name": "AutoInclude",
+  "summary": "Automatically add #include statements for c++ files",
+  "script_type": "utility",
+  "description": "This script allows you to automatically add the #include statements at the top of you *.{cc,hh} files.\nTo use it, place the cursor on the type you need to include, then press <;;> and the corresponding #include statement will be added.\nIn *.cc files, the correct #include is added, and in *.hh files, the forward declaration is added.\n\nExample:\nvoid myfunc (Foo* x);\n-> if you place the cursor on \"Foo\" and press <;;> (just the 2 semicolons), the #include \"foo.hh\" will be added at the top of the file. (The insertion location is specified by a variable, see Install Details).\n\nThe naming standard used is \"Foo\" and \"FooBar\", for the FooBar class the #include will be: #include \"foo-bar.hh\".",
+  "install_details": "Just put the autoinclude.vim file in your ~/.vim/plugin directory.\nYou can specify the line where the #include will be added with the g:AutoIncludeLine variable.\nJust add this line to your ~/.vimrc file:\nlet g:AutoIncludeLine = 42 \nWhere 42 is the line number.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8830",
+      "filename": "autoinclude.vim",
+      "script_version": "1.0",
+      "date": "2008-06-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11791",
+        "user_name": "pyrho",
+        "first_name": "Py",
+        "last_name": "Rho",
+        "email": "pyrhockz at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

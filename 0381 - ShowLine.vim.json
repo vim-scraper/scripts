@@ -1,0 +1,26 @@
+{
+  "script_id": "381",
+  "name": "ShowLine.vim",
+  "summary": "Display line(s) in the command area (like echo), but syntax highlighted.",
+  "script_type": "utility",
+  "description": "Display a line or lines in the command area, like the builtin echo, but using the original lines' syntax highlighting.\n\nUseful to other scripts for displaying lines of text, highlighted as they appear in the editor window (e.g., see ShowBlockName.vim -- vimscript #382)",
+  "install_details": "I put it in my autoload directory (~/vim/autoload), so the function is automagically loaded as needed via an autocommand:\n\nautocmd FuncUndefined *\texe 'runtime autoload/' . expand('<afile>') . '.vim'",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1131",
+      "filename": "ShowLine.vim",
+      "script_version": "1.1",
+      "date": "2002-08-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "952",
+        "user_name": "Timeframed",
+        "first_name": "Gary",
+        "last_name": "Holloway",
+        "email": "gary at castandcrew dot com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

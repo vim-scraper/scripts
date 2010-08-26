@@ -1,0 +1,58 @@
+{
+  "script_id": "2351",
+  "name": "RltvNmbr.vim",
+  "summary": "Display relative line numbers",
+  "script_type": "utility",
+  "description": "The RltvNmbr plugin uses the signs feature to display the line numbering relative to the current line.  A number of commands take [count] arguments for which this is helpful.\n\n:RltvNmbr\n    This command turns relative line numbering on.\n\n:RltvNmbr!\n    This command turns relative line numbering off.\n\nCAVEAT:\n    Your vim must have the signs feature compiled in!  This typically means that your vim has been configured and compiled to be \"huge\":\n        configure --with-features=huge\n        compile\n        install\n\n\tTo check this:\n\t\t:echo has(\"signs\")\n\tshould show a \"1\".  Alternatively, look at the output of  :version  and see if you have +signs listed.\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#RLTVNMBR)\n",
+  "install_details": "vim RltvNmbr.vba.gz\n:so %\n\n(assuming you have vim 7.1 or later; with vim 7.0, you'll need to upgrade your vimball plugin)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9540",
+      "filename": "RltvNmbr.vba.gz",
+      "script_version": "3",
+      "date": "2008-11-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* Speeded up sign unplacing\n* Included g:rltvnmbrmode to report en/dis-ablement of relative numbering\n* Includes some more autocmds for relative number updating\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9159",
+      "filename": "RltvNmbr.vba.gz",
+      "script_version": "2",
+      "date": "2008-08-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Been a number of requests to provide a toggling command, and so:  :RN  will toggle RltvNmbr'ing.  Plus a few more events will redraw the relative numbering signs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9155",
+      "filename": "RltvNmbr.vba.gz",
+      "script_version": "1",
+      "date": "2008-08-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Displays line numbers relative to the current line -- helpful with commands that use [count]s."
+    }
+  ]
+}

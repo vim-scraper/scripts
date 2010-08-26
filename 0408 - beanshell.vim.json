@@ -1,0 +1,58 @@
+{
+  "script_id": "408",
+  "name": "beanshell.vim",
+  "summary": "Runs the current buffer using BeanShell.",
+  "script_type": "utility",
+  "description": "This script invokes BeanShell ( see http://www.beanshell.org ) on the contents of the current buffer.\n\nThe script depends on java (needed to run BeanShell) as well as BeanShell itself.  The java executable should be in your PATH and the BeanShell jar should be in your CLASSPATH in order to use this script in its default configuration.\n\nPress \"<Leader>br\" and BeanShell will be invoked on the contents of the current buffer (the current buffer will not be written out).  The output from BeanShell will appear in a new window.\n\nBeanShell may also be invoked by entering the command \":BeanShell\" or by selecting the \"Invoke BeanShell\" item from the \"Plugin\" menu.\n\nStarting with version 1.2, a range may be supplied to the \"BeanShell\" command and the key command may be activated within a visual block.  Invoking BeanShell this way will cause it to act upon the specified lines rather than the entire buffer.",
+  "install_details": "Either drop beanshell.vim into your plugins directory or :source it as needed.\n\nThe command to execute BeanShell may be configured by setting the variable \"BeanShell_Cmd\".  This defaults to \"java bsh.Interpreter\", but may be set to anything so you can (for example) forego having java in your path and specify it in this variable.\n\nThe key command to invoke BeanShell may be configured by mapping some key to <Plug>BeanShell.  For example, to have Shift-F3 invoke BeanShell, enter the command \":map <S-F3> <Plug>BeanShell\" (or place this command in your vimrc).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5740",
+      "filename": "beanshell.vim",
+      "script_version": "1.2",
+      "date": "2006-05-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1019",
+        "user_name": "thundrfyre",
+        "first_name": "Henry",
+        "last_name": "So, Jr.",
+        "email": "henryso at panix.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for a range on the \"BeanShell\" command and for a visual block on the key command."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1195",
+      "filename": "beanshell.vim",
+      "script_version": "1.1",
+      "date": "2002-09-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1019",
+        "user_name": "thundrfyre",
+        "first_name": "Henry",
+        "last_name": "So, Jr.",
+        "email": "henryso at panix.com",
+        "homepage": ""
+      },
+      "release_notes": "Brought the script more in-line with the suggestions in section 41.9 of the VIM User Manual (:help write-plugin)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1191",
+      "filename": "beanshell.vim",
+      "script_version": "1.0",
+      "date": "2002-09-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1019",
+        "user_name": "thundrfyre",
+        "first_name": "Henry",
+        "last_name": "So, Jr.",
+        "email": "henryso at panix.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

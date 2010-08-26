@@ -1,0 +1,58 @@
+{
+  "script_id": "1617",
+  "name": "afterimage.vim",
+  "summary": "Edit PNG and GIF icons by converting them to XPM",
+  "script_type": "utility",
+  "description": "This plugin converts PNG and GIF icons to XPM with ImageMagick when edited in vim. XPM is an easy to edit plain text image format (it looks great in gvim, too).  The plugin is handy for quick changes to small icons; bigger files are of course more managable in a traditional image editor.\n\nSee a screenshot at http://yfrog.com/37afterimagep .\n\nAs a bonus, support is also provided for PDFs, Word documents, and Mac OS X plist files.\n\nhttp://github.com/tpope/vim-afterimage",
+  "install_details": "Install in ~/.vim/plugin, or vimfiles/plugin.  ImageMagick needs to be installed, and \"convert\" in your path.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12375",
+      "filename": "afterimage.zip",
+      "script_version": "2.1",
+      "date": "2010-02-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Be a little more aggressive in setting filetype to XPM"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12117",
+      "filename": "afterimage.zip",
+      "script_version": "2.0",
+      "date": "2010-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Rename imagemagick.vim to afterimage.vim.\nAdd support for pdf, doc, and plist.\nExtract documentation comments to help file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5994",
+      "filename": "imagemagick.vim",
+      "script_version": "1.1",
+      "date": "2006-07-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

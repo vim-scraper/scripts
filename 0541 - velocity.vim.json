@@ -1,0 +1,58 @@
+{
+  "script_id": "541",
+  "name": "velocity.vim",
+  "summary": "Syntax file for velocity templates",
+  "script_type": "syntax",
+  "description": "velocity.vim adds syntax highlighting for velocity templates, a template engine for Java from the Jakarta Project (http://jakarta.apache.org/velocity).",
+  "install_details": "Copy the velocity.vim file into your ~/.vim/syntax/ directory, and add the following to you ~/.vim/filetype.vim file, inside the \"augroup filedetect\" block:\n\nau! BufRead,BufNewFile *.vm  setfiletype velocity\n\n\nFor details about adding syntax highlighting support for new file types, read the help at  |:h mysyntaxfile<CR>| and |:h new-filetype<CR>| .",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1839",
+      "filename": "velocity.vim",
+      "script_version": "0.2.1",
+      "date": "2003-03-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1406",
+        "user_name": "terceiro",
+        "first_name": "Antonio",
+        "last_name": "Terceiro",
+        "email": "terceiro at softwarelivre.org",
+        "homepage": "http://people.softwarelivre.org/~terceiro/"
+      },
+      "release_notes": "Fixed the velocity reference syntax highlighting rule. Thanks to Philippe Paravicini <philippe.paravicini@datalex.com>."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1695",
+      "filename": "velocity.vim",
+      "script_version": "0.2",
+      "date": "2003-02-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1406",
+        "user_name": "terceiro",
+        "first_name": "Antonio",
+        "last_name": "Terceiro",
+        "email": "terceiro at softwarelivre.org",
+        "homepage": "http://people.softwarelivre.org/~terceiro/"
+      },
+      "release_notes": "more complete version, based on the VTL Refernce guide at http://jakarta.apache.org/velocity/vtl-reference-guide.html"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1665",
+      "filename": "velocity.vim",
+      "script_version": "0.1",
+      "date": "2003-01-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1406",
+        "user_name": "terceiro",
+        "first_name": "Antonio",
+        "last_name": "Terceiro",
+        "email": "terceiro at softwarelivre.org",
+        "homepage": "http://people.softwarelivre.org/~terceiro/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

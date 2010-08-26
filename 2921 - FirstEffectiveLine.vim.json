@@ -1,0 +1,26 @@
+{
+  "script_id": "2921",
+  "name": "FirstEffectiveLine.vim",
+  "summary": "Go to the first effective(non-comment) line of the file",
+  "script_type": "utility",
+  "description": "This plugin provides a normal mode command 'gG', which moves to the first\neffective line of the current file.\nIn this script, \"effective line\" means a line whose first character is\nnot a comment nor a preprocessor nor empty.\n\nIf you want to map the command to another keys than 'gG', add a line like below\nin your vimrc.\n  nmap YOURKEY <Plug>GotoFirstEffectiveLine\n",
+  "install_details": "Place this file in /usr/share/vim/vim*/plugin or ~/.vim/plugin/\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12028",
+      "filename": "FirstEffectiveLine.vim",
+      "script_version": "1.0.0",
+      "date": "2010-01-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17575",
+        "user_name": "tsuzuki",
+        "first_name": "Takahiro",
+        "last_name": "SUZUKI",
+        "email": "takahiro.suzuDELETEMEki.ja at gmDELETEMEail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

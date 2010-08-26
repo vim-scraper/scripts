@@ -1,0 +1,26 @@
+{
+  "script_id": "497",
+  "name": "waimea.vim",
+  "summary": "Highlighting for Waimea config files",
+  "script_type": "syntax",
+  "description": "Highlight config files for the Waimea window manager (http://www.waimea.org).  You can see a screenshot at (http://students.cs.byu.edu/~mtb6/waimea_config.png).  It is not finished.  I have the the menu files and style files highlighted.  They aren't that great yet, but since there is a complete lack of highlighting files for Waimea config, I thought I would release this really early.  Enjoy!  And please feel free to send me feedback.\n\nNOTE!\nI was contacted by the author of waimea, and he informed me that style and menu files will be changing in the near future, so I have not put any more effort into this syntax file.  If there is a demand to make it complete for waimea 0.4.0 then let me know and I will certainly do so.",
+  "install_details": "For now, just put it in your ~/.vim/syntax directory.  You can then either edit ~/.vim/filetype.vim or add an autocommand to your .vimrc to source the file when opening a waimea config file.  Or you can type \":set ft=waimea\" manually when after you open the file.  I will make things nicer, when it is more complete.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1465",
+      "filename": "waimea.vim",
+      "script_version": "0.1",
+      "date": "2002-11-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "210",
+        "user_name": "brailsmt",
+        "first_name": "Michael",
+        "last_name": "Brailsford",
+        "email": "brailsmt at yahoo.com",
+        "homepage": "http://students.cs.byu.edu/~mtb6"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "script_id": "1597",
+  "name": "color_toon",
+  "summary": "Colorscheme utility.",
+  "script_type": "utility",
+  "description": "Shows the colors and the cterm/gui numbers of the colors. Shows the current syntax highlighting of the color scheme.\nYou can change the highlighting colors and save a copy\nin a 'myjunk.vim' colorscheme.\n\nUsage: Colortoon\n       Colortoon d  - shows 2nd group of 127 cterm_gui colors\n       Colortoon j  - sets colors from last myjunk.vim file\n       \n        (1) First, run Colortoon.\n        (2) Get the desired range of colors into the NamedColors window:\n              If cc is mapped to Colorchange as in the suggested setup,\n              typing cc will type for you the command line:\n              Colorchange h 9\n              Following 9<Space>, type a number between 0 and 6.\n                0 or blank - All the colors (too many for vim < 7)\n                1 - 1st group of 182 named colors (only for guifg and guibg)\n                2 - 2nd group of 182 named colors (only for guifg and guibg)\n                3 - 3rd group of 182 named colors (only for guifg and guibg)\n                4 - 1st group of 128 cterm_gui colors\n                5 - 2nd group of 127 cterm_gui colors\n                6 - All 255 cterm_gui colors (too many for vim < 7)\n\n                4 or 5 is recommended.\n                You may follow the number with a space and the letter r if you\n                want to see color blocks instead of colored lettering.\n\n              Step (2) may be repeated whenever desired.\n                \n        (3) Position to desired hi group in myjunk window and type :y b\n        (4) Position to desired color in NamedColors window and type :y a\n        (5) Colormake                 - Set foreground color per registers a,b\n            Colormake b               - Set background color per registers a,b\n            If you mapped cm to Colormake as in the suggested setup,\n            type cm instead.\n\n         In steps 3 & 4, ':y a' means :y<SPACEBAR>a<RETURN>\n                                   or :yank<SPACEBAR>a<RETURN>\n                                   or \"ayy\n \n                               ':y b' means :y<SPACEBAR>b<RETURN>\n                                   or :yank<SPACEBAR>b<RETURN>\n                                   or \"byy\n                         \n                        If you consistently(!) reverse a and b, it still works.\n\n\nYou can also try editing the line in the myjunk window, then copy and \npaste that line to the command line which will also update highlighting.\nYou can copy the line with  yy\n                 and paste it with  :@\"\n",
+  "install_details": " Requires:     colornames.vim (v1.3) plugin (included in version 1.4.02 zip)\n                    \n Note: A new version of colornames.vim (v1.5) is available with\n          new options for HSV sorted colors: neutral->red->green->blue->purple\n\n Setup:   Copy color_toon.vim to ~/.vim/plugin/\n               Copy colornames.vim to ~/.vim/plugin/\n               Recommend adding to vimrc the mappings:\n                  map cn  :Colortoon<Space>\n                  map cm  :Colormake<Space>\n                  map cc  :Colorchange h 9<Space>\n\n               Windows - copy to $VIMRUNTIME/plugin\n                       - adjust myjunk | adjust plugin location if necessary.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5952",
+      "filename": "color_toon.zip",
+      "script_version": "1.4.02",
+      "date": "2006-07-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "More colors (cterm_gui numbered and gui named). Better performance and more flexibility. Requires colornames.vim which is included in the zip. Fixed windows problems in version 1.4 and 1.4.01."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5951",
+      "filename": "color_toon.zip",
+      "script_version": "1.4.01",
+      "date": "2006-07-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "More colors (cterm_gui numbered and gui named). Better performance and more flexibility. Requires colornames.vim which is included in the zip. Fixed Windows problem in version 1.4."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5949",
+      "filename": "color_toon.zip",
+      "script_version": "1.4",
+      "date": "2006-07-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "More colors (cterm_gui numbered and gui named). Better performance and more flexibility. Requires colornames.vim which is included in the zip."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5935",
+      "filename": "color_toon.vim",
+      "script_version": "1.3.01",
+      "date": "2006-07-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "Correction to capture the color scheme intro for Windows."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5933",
+      "filename": "color_toon.vim",
+      "script_version": "1.3",
+      "date": "2006-07-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved the Colormake function. Reversed default to not input myjunk. Strips \"font=\" out of highlighting to be friendlier to xterms."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5925",
+      "filename": "color_toon.vim",
+      "script_version": "1.2",
+      "date": "2006-07-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "New command Colormake makes changing colors easy."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5922",
+      "filename": "color_toon.vim",
+      "script_version": "1.1",
+      "date": "2006-07-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "More fun. Works better for vim7. Syntax highlighting shows up in a more logical place. New options."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5915",
+      "filename": "color_toon.zip",
+      "script_version": "1.0",
+      "date": "2006-07-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10303",
+        "user_name": "lmo",
+        "first_name": "Walter",
+        "last_name": "Hutchins",
+        "email": "walter at hutchinsandrea.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

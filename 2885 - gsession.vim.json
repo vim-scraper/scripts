@@ -1,0 +1,74 @@
+{
+  "script_id": "2885",
+  "name": "gsession.vim",
+  "summary": "global session manager (improved)",
+  "script_type": "utility",
+  "description": "gsession.vim provides global namespace and current path namespace for you to save session. so if you save session with the same name in different space, it won't conflict.\n\ngsession.vim also provides anonymous sessions , so you don't need to think about session name , gsession.vim saves time for you.\n\ngsession.vim saves your session files into the same directory (~/.vim/session/) by default. and auto-detect your session file to load session file when you are opening vim editor without arguments. you can also define your session dir by g:session_dir option.\n\ngsession.vim also save your session file when you are leaving vim editor.\n\ngsession.vim also support making a local session file <leader>sS, which is just like :mksession! command. but you can define your favorite session filename.",
+  "install_details": "see http://github.com/c9s/gsession.vim for more details.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12482",
+      "filename": "gsession-vim-0.23.tar.gz",
+      "script_version": "0.23",
+      "date": "2010-02-24",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "13514",
+        "user_name": "c9s",
+        "first_name": "Yo-An",
+        "last_name": "Lin",
+        "email": "cornelius.howl at gmail.com",
+        "homepage": "http://c9s.blogspot.com"
+      },
+      "release_notes": "different namespace support for git branch(This package is released by VIM::Packager http://github.com/c9s/vim-packager)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12479",
+      "filename": "gsession-vim-0.22.tar.gz",
+      "script_version": "0.22",
+      "date": "2010-02-24",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "13514",
+        "user_name": "c9s",
+        "first_name": "Yo-An",
+        "last_name": "Lin",
+        "email": "cornelius.howl at gmail.com",
+        "homepage": "http://c9s.blogspot.com"
+      },
+      "release_notes": "windows path support(This package is released by VIM::Packager http://github.com/c9s/vim-packager)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11888",
+      "filename": "gsession-vim-0.21.tar.gz",
+      "script_version": "0.21",
+      "date": "2009-12-09",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "13514",
+        "user_name": "c9s",
+        "first_name": "Yo-An",
+        "last_name": "Lin",
+        "email": "cornelius.howl at gmail.com",
+        "homepage": "http://c9s.blogspot.com"
+      },
+      "release_notes": "remove sesdir property from option.(This package is released by VIM::Packager http://github.com/c9s/vim-packager)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11883",
+      "filename": "gsession-vim-0.2.tar.gz",
+      "script_version": "0.2",
+      "date": "2009-12-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13514",
+        "user_name": "c9s",
+        "first_name": "Yo-An",
+        "last_name": "Lin",
+        "email": "cornelius.howl at gmail.com",
+        "homepage": "http://c9s.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "script_id": "587",
+  "name": "fgl.c",
+  "summary": "Creating tags for INFORMIX 4GL/4Js programs under UNIX environment",
+  "script_type": "utility",
+  "description": "The zip file contains three files - fgl.c, parsers.h, and source.mak.\n\nWhen 'fgl.c' file in fgl.zip is compiled with exuberant ctags source files, which you can download, ctags(executable) will generate tags for functions, cursor ids, prepared statements id, and global/module level variables. I compiled exuberant ctags source in AIX and Linux without any problem. Only trouble I faced was that source codes in ctags-5.4 tar file had DOS line breaks and had to translate them to UNIX line breaks using dos2unix utility.\n\nIf you use taglist.vim, add the following lines in taglist.vim script. \nScroll down the script to a section where tag types are defined for different languages:\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n\" fgl language\nlet s:tlist_def_fgl_settings = 'fgl;f:function;c:cursor;s:prepared;v:variable'\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n",
+  "install_details": "1. Download Exuberant ctags source at \"http://sourceforge.net/project/showfiles.php?group_id=6556&quot; and decompress into a directory\n2. Unzip fgl.zip file to the same source directory.\n3. You should convert DOS line breaks to UNIX line breaks if necessary\n4. Type \". ./configure\" in the directory\n5. Type \"make\" to compile source codes\n6. Copy ctags(executable) to a directory whose execution path is recognized\n7. Add the following line to .vimrc/.gvimrc to set tag option in vim/gvim\n    set tag=tags\n    This line tells vim to look for a file 'tags' in the current directory. You may want to specify the path as well (ex. set tag=~/tmp/tags) to put the output to another directory. Also you can set more than a tag file separated by a space. \n8. Type \"ctags *.4gl\" in your 4GL program directory. This will create a tag file in the current directory. Using -f option, you can put the output tag file in another directory. In this case, just make sure that vim's tag option (in .vimrc) is set to a right directory. (For more help, type 'ctags --help')\n9. Now you are ready to use tags in vim/gvim/vi.  Open a 4gl file -> place the cursor on tag(function, 4GL cursor, ..) -> press CTRL+]  to jump to its definition, or CTRL+t to jump back\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9619",
+      "filename": "fgl.zip",
+      "script_version": "1.7",
+      "date": "2008-12-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1671",
+        "user_name": "timkebox",
+        "first_name": "Tim",
+        "last_name": "Kim",
+        "email": "cool.msg at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a logic to recognize report function"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9410",
+      "filename": "fgl.zip",
+      "script_version": "1.6",
+      "date": "2008-10-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1671",
+        "user_name": "timkebox",
+        "first_name": "Tim",
+        "last_name": "Kim",
+        "email": "cool.msg at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix for recognizing curly brackets for comments"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8974",
+      "filename": "fgl.zip",
+      "script_version": "1.5",
+      "date": "2008-07-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1671",
+        "user_name": "timkebox",
+        "first_name": "Tim",
+        "last_name": "Kim",
+        "email": "cool.msg at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "A bug fix when comment finishes with a curly bracket."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8929",
+      "filename": "fgl.zip",
+      "script_version": "1.4",
+      "date": "2008-07-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1671",
+        "user_name": "timkebox",
+        "first_name": "Tim",
+        "last_name": "Kim",
+        "email": "cool.msg at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Catches variables ending with comment\n(ex. define  xxx char(1)   #bla blas)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8917",
+      "filename": "fgl.zip",
+      "script_version": "1.3",
+      "date": "2008-07-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1671",
+        "user_name": "timkebox",
+        "first_name": "Tim",
+        "last_name": "Kim",
+        "email": "cool.msg at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "A few bugs fixed"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8884",
+      "filename": "fgl.zip",
+      "script_version": "1.2",
+      "date": "2008-07-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1671",
+        "user_name": "timkebox",
+        "first_name": "Tim",
+        "last_name": "Kim",
+        "email": "cool.msg at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved code efficiency -> faster to create tags"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8864",
+      "filename": "fgl.zip",
+      "script_version": "1.1",
+      "date": "2008-06-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1671",
+        "user_name": "timkebox",
+        "first_name": "Tim",
+        "last_name": "Kim",
+        "email": "cool.msg at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Cursor id, prepared statement id, variables are added for tag creation. (global and module scope variables are add. The names of variable should start g_xxx, m_xxx, respectively. Other naming conventions change the prefix in fgl.c)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1825",
+      "filename": "fgl.tar",
+      "script_version": "1.0",
+      "date": "2003-03-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1671",
+        "user_name": "timkebox",
+        "first_name": "Tim",
+        "last_name": "Kim",
+        "email": "cool.msg at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

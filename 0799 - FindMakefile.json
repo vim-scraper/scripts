@@ -1,0 +1,26 @@
+{
+  "script_id": "799",
+  "name": "FindMakefile",
+  "summary": "Change directory to one containing a Makefile",
+  "script_type": "utility",
+  "description": "Change directory to the directory containing the current file and then repeatedly \"cd ..\" until ./Makefile exists.\nYou run it by enterning :call FindMakefile()\nI've mapped <F4> to a function that calls FindMakefile () and then does \"mak %<.o\"\nI needed this because using tags to jump to a source file sometimes left me with the wrong current working directory for this to work.",
+  "install_details": "Add the function to your .vimrc file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2416",
+      "filename": "FindMakefile.vim",
+      "script_version": "1.0",
+      "date": "2003-10-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3645",
+        "user_name": "ranec",
+        "first_name": "Craig",
+        "last_name": "Emery",
+        "email": "vim.org at cemery.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

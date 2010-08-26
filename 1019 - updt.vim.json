@@ -1,0 +1,26 @@
+{
+  "script_id": "1019",
+  "name": "updt.vim",
+  "summary": "Vim syntax file for ClearCase update log.",
+  "script_type": "syntax",
+  "description": "A simple syntax file for coloring a Clear Case update log\nfile.",
+  "install_details": "Put it somewhere in your rtp/syntax and the following to you\nfiletype detection:\n\naugroup filetypedetect\n    au BufNewFile,BufRead *.updt     setf updt\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3174",
+      "filename": "updt.vim",
+      "script_version": "0.1",
+      "date": "2004-06-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3397",
+        "user_name": "lang2",
+        "first_name": "Wenzhi",
+        "last_name": "Liang",
+        "email": "wenzhi.liang at gmail.com",
+        "homepage": "http://vimcdoc.sf.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

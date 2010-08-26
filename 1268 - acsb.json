@@ -1,0 +1,42 @@
+{
+  "script_id": "1268",
+  "name": "acsb",
+  "summary": "CScope frontend (multi queries, multi stacks)",
+  "script_type": "utility",
+  "description": "A cscope frontend supporting\no Multiple queries\n   It uses a buffer for listing the results of cscope queries.\no Multiple tag stacks\n   Supports multiple tag stacks for serious code analyzis.\n   The stacks are shown in a buffer.\nMore information (e.g. usage) can be found at the beginning of the script file.\nIt uses its own tag stack and not the one that vim has built in. It means that\nif you use both vim's ctags support and this script in parallel the two tag stacks\nwill not interfere.\n\n",
+  "install_details": "Copy this file into ~/.vim/plugins/\nEdit the keybindings in the beginning of the script file. It is very likely that the default clashes with your settings.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6081",
+      "filename": "acsb.tar.gz",
+      "script_version": "200608xx",
+      "date": "2006-08-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6080",
+        "user_name": "forester",
+        "first_name": "Gabor",
+        "last_name": "Fekete",
+        "email": "mocsok at loveable.com",
+        "homepage": ""
+      },
+      "release_notes": "Updated the documentation"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6080",
+      "filename": "acsb.tar.gz",
+      "script_version": "200608xx",
+      "date": "2006-08-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6080",
+        "user_name": "forester",
+        "first_name": "Gabor",
+        "last_name": "Fekete",
+        "email": "mocsok at loveable.com",
+        "homepage": ""
+      },
+      "release_notes": "o Fix: don't rebuild the database when not needed\no Mod: Use strings instead of numbers for ACSBfindsym.\no Add: support for separate cscope.out directory in the source tree.\nE.g. If your source code is at /home/joe/code, then you can have\nthe cscope.* files built in /home/joe/code/cscope-data/.\no Add: C-R rebuilds the database.\n"
+    }
+  ]
+}

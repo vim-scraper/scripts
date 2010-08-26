@@ -1,0 +1,218 @@
+{
+  "script_id": "2518",
+  "name": "WOIM.vim",
+  "summary": "Plugin for WOIM outliner (a system for describing any state or transition)",
+  "script_type": "ftplugin",
+  "description": "WOIM is a methodology to describe anything - any state, item(s), pattern, action, process, transition, program, instruction set etc. So, you can use it as an outliner, a ToDo list handler, a process design tool, a data modeler, or any other way you want to describe something.\n\nThis plugin does both highlighting and various automatic handling of WOIM lists, like collapsing lists or parts of lists in a sophisticated way.\n\nFor information on WOIM, go to:\n\n http://www.isene.com/artweb.cgi?article=012-woim.txt",
+  "install_details": "Drop the file in the syntax directory. Add the following to your .vimrc file or create a file named woim.vim with the following and drop that file in the ftdetect directory:\n\nau BufRead,BufNewFile *.woim set filetype=woim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11891",
+      "filename": "woim.vim",
+      "script_version": "0.9.3",
+      "date": "2009-12-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Christian Bryn caught an important bug/lacking setting. The syntax file now sets noexpandtab."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11589",
+      "filename": "woim.vim",
+      "script_version": "0.9.2",
+      "date": "2009-10-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "A few needed minor fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11231",
+      "filename": "woim.vim",
+      "script_version": "0.9.1",
+      "date": "2009-08-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "New_feature:\nAdded highlighting of item motions:\n<<          means \"delete this item\" (put at the end of a line)\n>>#1.1. means \"move this item to after item 1.1.\"\n->           means \"indent item right\"\n<-<-       means \"indent item two left\"\n>>#1.-> means \"move item to after item 1. and indent right\"\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11168",
+      "filename": "woim.vim",
+      "script_version": "0.9",
+      "date": "2009-08-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "New_feature: Accommodated for the use of subroutine calls (##ref)\nFix: Cleaned up syntax variable names to fit modern WOIM\nFix: Multi-lines have consecutive lines start with a <space>\nFix: Quotes or Comment can now span several lines\nFix: Comments allowed in Operators\nFix: Comments and references allowed inside Qualifiers\nFix: Identifier must end in a period and then a space\nBug_fix: Allowing a period to be part of a tag\nBug_fix: Fixed wrong markup for astrices not used for multi-line"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11058",
+      "filename": "woim.vim",
+      "script_version": "0.8.6",
+      "date": "2009-07-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Bug fix: Corrected attributes ending in capitals that was treated as a WOIMkey\nBug fix: Fixed references containing a hyphen\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11055",
+      "filename": "woim.vim",
+      "script_version": "0.8.5",
+      "date": "2009-07-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "New feature: Expanded Attributes to include relative times and greater/smaller than.\nNew feature: References with spaces are now accommodated for by putting it in quotes.\nNew feature: Made references in attributes possible.\nBug fix: Fixed references that includes ampersands (\"&\").\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11053",
+      "filename": "woim.vim",
+      "script_version": "0.8.1",
+      "date": "2009-07-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Bug fix: Fixed highlighting of attributes with a colon (like time stamps)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11047",
+      "filename": "woim.vim",
+      "script_version": "0.8",
+      "date": "2009-07-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "New feature: Expanded folding to a maximum of 15 levels with folding levels set with <leader>a to <leader>f for levels 10 to 15.\nImprovement: Better syntax highlighting for indexes\nBug fix: Fixed syntax syncing when entering the document in the first place"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11013",
+      "filename": "woim.vim",
+      "script_version": "0.7.2",
+      "date": "2009-07-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Better syntax highlighting for references.\nAdded unobtrusive highlighting of vim bottom set-lines."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10850",
+      "filename": "woim.vim",
+      "script_version": "0.7.1",
+      "date": "2009-06-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Bug fix: Fixed an error in syntax highlighting properties containing a \"-\" (like ISO dates)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10818",
+      "filename": "woim.vim",
+      "script_version": "0.7",
+      "date": "2009-06-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Added macro to jump to next point in a template and fill in the value. A template item is an item that ends in an equal sign and where the value after the equal sign is to be filled out. Example:\n\nExampleTask\n   Task name = \n   Responsible person =\n   Deadline = "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10392",
+      "filename": "woim.vim",
+      "script_version": "0.6",
+      "date": "2009-04-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Some minor adjustments, but a needed upgrade if you are a WOIM user.\n(WOIM = task list, descriptive system, process description, state description... it can describe anything,)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9833",
+      "filename": "WOIM.vim",
+      "script_version": "0.4",
+      "date": "2009-01-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g at isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

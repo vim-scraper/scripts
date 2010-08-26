@@ -1,0 +1,266 @@
+{
+  "script_id": "2156",
+  "name": "leo256",
+  "summary": "A pleasant high contrasted dark theme (256 colors, gui + term, dark bg)",
+  "script_type": "color scheme",
+  "description": "This is my multipurpose everyday theme I use for coding (and everything else :-).\n\nIt focuses on high readability and colors harmony.\n\nGood results with most programming languages:\n  - Ruby\n  - Lua\n  - Scala\n  - Clojure\n  - PHP\n  - HTML\n  - ...\n\nHave a look:\n\nhttp://www.leonini.net/vim_leo_theme_0.94.png \nhttp://www.leonini.net/vim_leo_theme_0.93.png\nhttp://www.leonini.net/vim_leo_theme_0.9.png\n\nold:\n\nhttp://www.leonini.net/vim_leo_theme.0.2.png\nhttp://www.leonini.net/vim_leo_theme.0.32.png\nhttp://www.leonini.net/vim_leo_theme.0.40.png\nhttp://www.leonini.net/vim_leo_theme2.0.40.png\nhttp://www.leonini.net/vim_leo_theme_0.8.png\nhttp://www.leonini.net/vim_leo_theme_0.82.png\n",
+  "install_details": "Just copy leo.vim into ~/.vim/colors.\n\nTo use it, issue ':colorscheme leo' in vim and you're done (put 'colorscheme leo' in you .vimrc for a permanent setting).\n\nIf your term reports only 8 colors ('tput colors') you can try to set in you .vimrc\nset t_Co=256\n\nRecent xterm, Eterm, gnome-terminal and konsole support 256 colors. \n\nBackground color of your terminal should be deep black. Colors will appear a little dark on Eterm (compare with screenshots if needed).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12796",
+      "filename": "leo.vim",
+      "script_version": "0.94",
+      "date": "2010-04-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "Folding color correction."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12750",
+      "filename": "leo.vim",
+      "script_version": "0.93",
+      "date": "2010-03-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "Console and GUI are deliberately slightly differents (see 0.93 screenshot)\nPreference for a dark black in console and a more lighter black in GUI."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12742",
+      "filename": "leo.vim",
+      "script_version": "0.92",
+      "date": "2010-03-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "- Fixed visual in GUI mode\n- Dark line numbers\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12548",
+      "filename": "leo.vim",
+      "script_version": "0.91",
+      "date": "2010-03-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "fixed cursor color with MatchParen"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10845",
+      "filename": "leo.vim",
+      "script_version": "0.9",
+      "date": "2009-06-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "- more blue (blue <=> green swap)\n- lot of changes, some may prefer previous version\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9963",
+      "filename": "leo.vim",
+      "script_version": "0.82",
+      "date": "2009-02-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "- menu backgrounf lighter\n- LineNr\n- gui comments in italic\n- invisible chars\n- status bar\n- add MatchParen\n- add Underlined"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9917",
+      "filename": "leo.vim",
+      "script_version": "0.8",
+      "date": "2009-02-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "GUI fix and full synchronization\ncolor < 16 fix (all in 256 code)\nlighter comments\nboolean and number more visible\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9609",
+      "filename": "leo.vim",
+      "script_version": "0.6",
+      "date": "2008-12-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "GUI synchro (almost) done,\nMinor changes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9607",
+      "filename": "leo.vim",
+      "script_version": "0.6",
+      "date": "2008-12-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "GUI synchro (almost) done\nMinor changes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9119",
+      "filename": "leo.vim",
+      "script_version": "0.5",
+      "date": "2008-08-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "Lot of changes, including:\n- search highlight\n- Ligther vertical separation\n- Folding\n- Better diff\n- Better pmenu\n- Uniformisation between status bar, tabs and pmenu\n..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8999",
+      "filename": "leo.vim",
+      "script_version": "0.31",
+      "date": "2008-07-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "- Added coloration for popup menu (omni-completion, ...) (thanks Ryan)\n- Added coloration for tabs\n\n(all parts of vim should be themed now)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8996",
+      "filename": "leo.vim",
+      "script_version": "0.3",
+      "date": "2008-07-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "- General improvements\n- Correct colors on normal xterm\n- Preliminary GUI version"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8882",
+      "filename": "leo.vim",
+      "script_version": "0.22",
+      "date": "2008-07-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "still less bold, little improvements"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8340",
+      "filename": "leo.vim",
+      "script_version": "0.21",
+      "date": "2008-02-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "less bold, little improvements"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8310",
+      "filename": "leo.vim",
+      "script_version": "0.2",
+      "date": "2008-02-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "Ful theme, details, diff mode, string background"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8285",
+      "filename": "leo.vim",
+      "script_version": "0.1",
+      "date": "2008-02-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13914",
+        "user_name": "iamleo",
+        "first_name": "Lorenzo",
+        "last_name": "Leonini",
+        "email": "vim at leonini.net",
+        "homepage": "http://www.leonini.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

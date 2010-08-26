@@ -1,0 +1,26 @@
+{
+  "script_id": "1267",
+  "name": "teol.vim",
+  "summary": ":TEOL <string> and :TSOL <string>; toggles string at end/start of line(s)",
+  "script_type": "utility",
+  "description": "This is a vim remake of an old macro I had for Multi-Edit, handy it was though\nnot so necessary with VIM, given A and :s but this will not mess up your cursor\nposition, works on a range, etc. It has some use.\n\nThere are default/example mappings for both visual and normal modes:\n\nFor end of line toggling:\n\n<leader>;    toggles \";\" at end of line.\n<leader>,    toggles \",\" at end of line.\n<leader>:    toggles \":\" at end of line.\n\n\nFor start of line: (start of line for this is first non white space char, like\n^ as opposed to 0 )\n\n<leader>s,    toggles \", \" at start of line.\n<leader>s:    toggles \": \" at start of line.\n\n\nNOTE that you can toggle strings not just chars; I.e. \":TSOL --\", \":TEOL --\"\nand so on.",
+  "install_details": "Just drop in plugins folder, nothing more nothing less.\nOptional: Edit file as desired for mappings; mappings could be placed elsewhere if wanted as they are in the style of: nnoremap    <leader>;    :TEOL;<cr>",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4217",
+      "filename": "teol.vim",
+      "script_version": "0.2-",
+      "date": "2005-04-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "818",
+        "user_name": "FeralOfFireTop",
+        "first_name": "Robert",
+        "last_name": "KellyIV",
+        "email": "feral at eclecticwizard.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

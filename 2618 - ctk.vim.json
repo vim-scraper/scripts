@@ -1,0 +1,266 @@
+{
+  "script_id": "2618",
+  "name": "ctk.vim",
+  "summary": "a fast compile and run plugin for Vim",
+  "script_type": "utility",
+  "description": "ctk is a fast compile and run plugin for Vim. \n\n-- you can add a modeline in your source code to modifie the behavior of ctk. \n-- you can press a hotkey to invoke compiler.\n-- you can press a key to compiler and run your program.\n-- you can add some trigger word to change your compiler's behavior. just like :CC debug\n\ninstall it, and press :h ctk to see details help",
+  "install_details": "1. use Vim to open ctk.vba, and press :so%<CR> (that <CR> means return key).\n2. drop .compiler_info to your runtimepath folder, see the output of \":ec &rtp\". try :h 'rtp' to get help.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12207",
+      "filename": "ctk.vba",
+      "script_version": "0.5",
+      "date": "2010-01-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "  - support upcase letter placeholder\n  - remain placeholder will substitute environment variables. add a option ctk_envvarfmt to detect the variable formant.\n  - add RefreshCTK command, and auto refresh all buffer after EditCompilerInfo command.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11554",
+      "filename": "ctk.vba",
+      "script_version": "0.4-bugfix",
+      "date": "2009-10-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "NOTE: if you have you own .compiler_info file, please backup it and install new version, and you can diff two info file and decide how to merge them.\n\n  - add python support in .compiler_info file\n  - add a new \"#RUN_DIRECT\" syntax for support script file. see .compiler_info \"Python\" section and :h ctk-run-direct.\n  - fix the encoding conversion error in previous version"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11128",
+      "filename": "ctk.vba",
+      "script_version": "0.4-bugfix",
+      "date": "2009-08-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "  - add option g:ctk_cmdenc\n  - add discribes of using :silent/:redir command in cmd or run in doc\n  - fix the bug when compile multi-times, the += operator in modeline acts incorrect."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11052",
+      "filename": "ctk.vba",
+      "script_version": "0.4",
+      "date": "2009-07-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "  - fix the bug StopCTK doesn't stop ctk.\n  - change the usage of some command, see :h ctk-usage for details.\n  - add command \":SetExtensionName\" command.\n  - modfiy the document."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10996",
+      "filename": "ctk.vba",
+      "script_version": "0.3-bugfix",
+      "date": "2009-07-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "-- fix the bug 'gc' and 'gC' use previous entry (it's quite sick!)\n-- fix the bug when the program name is same as Unix standard program (e.g. test), the Unix program will be run instead of ours. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10988",
+      "filename": "ctk.vba",
+      "script_version": "0.3-bugfix",
+      "date": "2009-07-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "-- fixed the syntax error in doc file :-) thanks to yiran.\n-- fixed the issue that ctk raise error when :RUN asm.\n-- add quoted place-holder's doc describe.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10984",
+      "filename": "ctk.vba",
+      "script_version": "0.3-bugfix",
+      "date": "2009-07-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "-- fix the bug when you press \"gc\" and there isn't any window has b:compiler_info, ctk will raise a error.\n-- remove the process of autocmd FuncUndefined\n-- remove s:find_source() function, and just find b:compiler_info when needed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10946",
+      "filename": "ctk.vba",
+      "script_version": "0.3-bugfix",
+      "date": "2009-07-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "  - thanks to lee, change a syntax error :-)\n  - correct all wrong marks in script.\n  - in linux console, the RUN can't stop after program runs, so didn't redraw in linux console."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10898",
+      "filename": "ctk.vba",
+      "script_version": "0.3-bugfix",
+      "date": "2009-06-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "just bugfix. and fix some issues in Windows."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10567",
+      "filename": "ctk.vba",
+      "script_version": "0.3",
+      "date": "2009-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "-- add a quoted tag support\n-- changed document\n-- make info line's syntax be the same as the modeline's\n-- remove the '*' command-type. you can use :call foobar() to replace it."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10561",
+      "filename": "ctk.vba",
+      "script_version": "0.2-bugfix",
+      "date": "2009-05-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "bugfix: autonamed file didn't use default output name."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10483",
+      "filename": "ctk.vba",
+      "script_version": "0.2-bugfix",
+      "date": "2009-04-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "-- fix the bug that quickfix window won't close when compiling success."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10472",
+      "filename": "ctk.vba",
+      "script_version": "0.2-bugfix",
+      "date": "2009-04-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "-- change the way to calculate the index of temporary file.\n-- change the way to rename file. the file has its name won't rename now (it's my mistake...)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10458",
+      "filename": "ctk.vba",
+      "script_version": "0.2-bugfix",
+      "date": "2009-04-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "sorry for forgot to turn-off the debug message..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10456",
+      "filename": "ctk.vba",
+      "script_version": "0.2-bugfix",
+      "date": "2009-04-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "add some stuff in doc, and changed the behavior of :CC\n\nif your compile command is \":foobar\" (that is, a Vim command instead of a shell command), the output will disappear at command line. see :h :RUN"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10451",
+      "filename": "ctk.vba",
+      "script_version": "0.2",
+      "date": "2009-04-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

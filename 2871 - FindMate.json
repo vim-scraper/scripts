@@ -1,0 +1,42 @@
+{
+  "script_id": "2871",
+  "name": "FindMate",
+  "summary": "Find files in your whole system or current directory",
+  "script_type": "utility",
+  "description": "FindMate provides a convenient way (at least for me) to quickly find the\nfiles you want. It uses the locate and file commands to achieve its goal\n(vimgrep on windows). \n\nOriginality it was released by Manuel Aguilar and Victor Guardiola but since I\ncouldn't reach neither of them I decide to upload it by myself (and add some\ndocumentation) because I consider that this script could help someone else.\n\nThe original script can be still found at\n\nhttp://snipt.net/voyeg3r/findmate-plugin-for-vim/\n\nYou can launch FindMate by typing:\n\n    ,, File_name (two commas)\n\nOr\n\n    :FindMate File_name\n\nThe shortcut can be redefined by using:\n\n    map your_shortcut   <Plug>FindMate",
+  "install_details": "Download this file to ~/.vim  or to /vimfiles  (on Win32 platforms) and extract the files there.\nUpdate your help tags files, running:\n\n:helpt ~/.vim/doc/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11807",
+      "filename": "FindMate.zip",
+      "script_version": "0.1",
+      "date": "2009-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17640",
+        "user_name": "chilicuil",
+        "first_name": "chili",
+        "last_name": "cuil",
+        "email": "chilicuil.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11804",
+      "filename": "findmate.vim.orig",
+      "script_version": "original",
+      "date": "2009-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17640",
+        "user_name": "chilicuil",
+        "first_name": "chili",
+        "last_name": "cuil",
+        "email": "chilicuil.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Original"
+    }
+  ]
+}

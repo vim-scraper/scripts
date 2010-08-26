@@ -1,0 +1,58 @@
+{
+  "script_id": "1282",
+  "name": "tagselect",
+  "summary": "Provides a better :tselect command.",
+  "script_type": "utility",
+  "description": "If you don't like the more prompt that comes up when there are too many\nhits to the :tselect and the related commands, then try this plugin.\nUseful even with finding help topics in a help window (see :help {subject}\nand see the tip on the usage below).\n                                                                           \n  Use :Tselect command instead of :tselect to bring up the :tselect output\n  in a vim window. You can then search and press enter on the line(s) of\n  the tag which you would like to select. If you don't want to select any\n  tag you can quit by pressing \"q\". You can also start typing the number\n  of the tag instead of moving the cursor to the line and pressing enter.\n                                                                           \n  To select another tag index for the same tag, you can use :Tselect\n  without arguments or just use :tselect itself.\n                                                                           \n  You can also use :Stselect, :Tjump and :Stjump commands to execute\n  :stselect, :tjump and :stjump commands respectively.\n                                                                           \n  The normal mode commands, \"g]\" and \"g^]\" (g] and g_CTRL-]) and their\n  corresponding visual mode commands (v_g] and v_g_CTRL-]) and window\n  split commands (CTRL-W_g] and CTRL-W_g-CTRL-]) will be remapped to use\n  the plugin. To disable these maps, set g:no_tagselect_maps in your\n  vimrc.\n                                                                           \n  You can also use :Tags command to show the output of :tags command in\n  a vim window. You can then search and press enter on the line of the tag\n  which you would like to jump to. The plugin executes the appropriate\n  command (:tag or :pop) with the right index.\n                                                                           \n  Use g:tagselectWinSize to set the preferred size of the window. The\n  default is -1, which is to take just as much as required (up to the\n  maximum), but you can set it to empty string to make the window as high\n  as possible, or any +ve number to limit its size.\n                                                                           \n  Use g:tagselectExpandCurWord to configure if <cword> and <cWORD> tokens\n  will be expanded or not.\nTips:\n  - You can intermix the usage of the plugin commands with that of\n    built-in commands (ie., :tn, :tp followed by a :Tselect)\n  - You can use :Ts instead of the full :Tselect, as long as there are no\n    other commands which could confuse the usage. The same applies to\n    :Tjump (:Tj) and other commands.\n  - The [Tag Select] buffer is set to to \"tagselect\" filetype, so this\n    allows you to customize the look & feel (colors, maps etc.) by\n    creating syntax/tagselect.vim and ftplugin/tagselect.vim files in your\n    runtime.\n  - In a help window, you can use the :Tselect /<pattern> command to do\n    very powerful and handy lookup of the help topics. Using this\n    technique to find the help topic you want is fun and easy and you are\n    sure to bump into features that you are not aware of (both in Vim and\n    in plugins that you installed). E.g., to find all the topics that have\n    \"shell\" in its name,\n        :h\n        :Tselect /shell\nLimitations:\n  - Executes tag commands (:tselect :stselect) twice, once to show the\n    list, and once to jump to the selected tag. This means, if the tag\n    search takes considerable time, then the time could potentially be\n    doubled (which is usually not a problem because Vim seems to cache the\n    last tag results). This could probably be fixed in Vim7 using the new\n    tag functions.\n\n\n\n\nSearch_key_words: tag tags tagselect tselect stselect tjump stjump visual explorer hari krishna dara",
+  "install_details": "Copy the file into your plugin directory. Requires Vim 6.3\n\nThe plugin depends on the genutils (vimscript #197) plugin, which itself has a dependency on the multvals (vimscript #171), so make sure you install these two as well.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4356",
+      "filename": "tagselect.vim",
+      "script_version": "1.2",
+      "date": "2005-06-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New commands: Stselect, Tjump and Stjump on the lines of stselect,\ntjump and stjump respectively. Their corresponding normal and visual\ncommands are also mapped.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4334",
+      "filename": "tagselect.vim",
+      "script_version": "1.1",
+      "date": "2005-06-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- New :Tags command for built-in :tags command.\n- Fixed a couple of major bugs:\n  - entering the tag index directly is broken.\n  - bug in selecting tag indexes > 99\n- Minor improvements.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4277",
+      "filename": "tagselect.vim",
+      "script_version": "1.0",
+      "date": "2005-05-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

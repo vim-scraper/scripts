@@ -1,0 +1,154 @@
+{
+  "script_id": "1955",
+  "name": "doxygen-support.vim",
+  "summary": "Generate Doxygen comments from user defined templates",
+  "script_type": "utility",
+  "description": "This plugin generates Ex commands and a menu (or a menu tree) from a template\nfile containing user defined comment templates to be used for source code\ndocumentation with Doxygen. The template file can have user defined macros.\n\nExample and screen shots :   http://lug.fh-swf.de/vim/vim-doxygen/index.html\n\nThe help file online :   http://lug.fh-swf.de/vim/vim-doc/doxygensupport.html\n\nDocumentation\n--------------------------------------------------------\nThis plugin comes with a help file (doxygensupport.txt). Read it with  \n\n  :h doxygensupport\n\n\nMAILING LIST\n--------------------------------------------------------\nYou can subscribe to the vim-plugins-list mailing list to post your questions or\nsuggestions for improvement or to report bugs.  The list will also be used to\nannounce new releases ( c.vim / bash-support / perl-support / doxgen-support ).\nVisit the following page for subscribing to the mailing list:\n     \n  http://lug.fh-swf.de/cgi-bin/mailman/listinfo/vim-plugins-list\n\nThe vim-plugins-list list is very low on traffic.\n\n_______________________\nThank you for rating doxygen-support !\n \n",
+  "install_details": "(1) Copy the zip archive  doxygen-support.zip to $HOME/.vim/ or $VIM/vimfiles\n    (on the Windows platforms) and run\n\n      unzip doxygen-support.zip\n\n    If you have already an older version of doxygen-support and you have modified\n    the template files you may want to save your templates first or copy the \n    files from the archive by hand.\n\n(2) Loading of plugin files must be enabled. If not use\n      :filetype plugin on\n    This is the minimal content of the file '$HOME/.vimrc'. Create one if there\n    is none. \n\n(3) Set at least some personal details in the main file \n    'doxygen-support/templates/doxygen.templates'. \n\n(4) Restart gVim/Vim generate the help tags \n\n      :helptags ~/.vim/doc\n\n    and look at the doxygensupport help with\n\n      :h doxygensupport\n\n  For a system-wide installation please see the help file 'doc/doxygensupport.txt'.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13297",
+      "filename": "doxygen-support.zip",
+      "script_version": "2.1",
+      "date": "2010-07-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- Completely new doxygen integration.\n- New ex-commands."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8483",
+      "filename": "doxygen-support.zip",
+      "script_version": "2.0.2",
+      "date": "2008-03-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- Windows: Missing variable from 2.0.1 was still wrong.\n- Bugfix: variable g:Doxy_LoadMenus had no effect.\n- Documentation corrected."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8423",
+      "filename": "doxygen-support.zip",
+      "script_version": "2.0.1",
+      "date": "2008-03-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- Windows: Missing variable prevents correct plugin loading (thanks to Martin Banszel)\n- Documentation corrected."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8394",
+      "filename": "doxygen-support.zip",
+      "script_version": "2.0",
+      "date": "2008-03-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- Systemwide installation now possible.\n- Visual mode insert (surround a marked region).\n- Dialog to ask for parameters possible.\n- Automatic generation of submenu titles."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7996",
+      "filename": "doxygen-support.zip",
+      "script_version": "1.4",
+      "date": "2007-11-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- Templates now can contain preprocessor statements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7453",
+      "filename": "doxygen-support.zip",
+      "script_version": "1.3",
+      "date": "2007-08-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- Include mechanism for template files.\n- Menu items can be sorted/unsorted."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7438",
+      "filename": "doxygen-support.zip",
+      "script_version": "1.2",
+      "date": "2007-08-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "+ New 'insert' attribute for templates."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7426",
+      "filename": "doxygen-support.zip",
+      "script_version": "1.1",
+      "date": "2007-07-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- New template attributes allow insertion above and below the current line and appending to the current line."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7350",
+      "filename": "doxygen-support.zip",
+      "script_version": "1.0",
+      "date": "2007-07-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner at fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

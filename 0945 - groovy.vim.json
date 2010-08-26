@@ -1,0 +1,74 @@
+{
+  "script_id": "945",
+  "name": "groovy.vim",
+  "summary": "syntax file for the groovy programming language",
+  "script_type": "syntax",
+  "description": "Syntax file for the Groovy programming language. It relies on the java.vim syntax file.\nI was inspired by java.vim and ruby.vim syntax definition, so I thank the authors of those scripts.\n",
+  "install_details": "1) copy the file in the (global or user's $HOME/.vim/syntax/) syntax folder\n\n2) add this line to recognize groovy files by filename extension:\n  au BufNewFile,BufRead *.groovy  setf groovy\n\n  in the global vim filetype.vim file or inside $HOME/.vim/filetype.vim\n  [groovy is still not recognized by vim! :-( ]\n\n3) add this part to recognize by content groovy script (no extension needed :-)\n  if did_filetype()\n    finish\n  endif\n  if getline(1) =~ '^#!.*[/\\\\]groovy\\>'\n    setf groovy\n  endif\n\n  in the global scripts.vim file or in $HOME/.vim/scripts.vim\n\n\n 4) open/write a .groovy file or a groovy script :-)\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2926",
+      "filename": "groovy.vim",
+      "script_version": "0.1.9b",
+      "date": "2004-04-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4843",
+        "user_name": "puks",
+        "first_name": "Alessio",
+        "last_name": "Pace",
+        "email": "billy.corgan at tiscali.it",
+        "homepage": "http://it.geocities.com/puccio_13/"
+      },
+      "release_notes": "groovy's specific classes highlighted separatly from java's (if enabled)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2907",
+      "filename": "groovy.vim",
+      "script_version": "0.1.9",
+      "date": "2004-04-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4843",
+        "user_name": "puks",
+        "first_name": "Alessio",
+        "last_name": "Pace",
+        "email": "billy.corgan at tiscali.it",
+        "homepage": "http://it.geocities.com/puccio_13/"
+      },
+      "release_notes": "-scripts does not depend at runtime from java.vim;\n-highlight for ${params} in strings"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2896",
+      "filename": "groovy.vim",
+      "script_version": "0.1.7",
+      "date": "2004-03-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4843",
+        "user_name": "puks",
+        "first_name": "Alessio",
+        "last_name": "Pace",
+        "email": "billy.corgan at tiscali.it",
+        "homepage": "http://it.geocities.com/puccio_13/"
+      },
+      "release_notes": "Attempts to recognize all the groovy methods at: http://groovy.codehaus.org/groovy-jdk.html"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2864",
+      "filename": "groovy.vim",
+      "script_version": "0.1",
+      "date": "2004-03-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4843",
+        "user_name": "puks",
+        "first_name": "Alessio",
+        "last_name": "Pace",
+        "email": "billy.corgan at tiscali.it",
+        "homepage": "http://it.geocities.com/puccio_13/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "3054",
+  "name": "Otter.vim",
+  "summary": "Otter theorem prover input file highlighter",
+  "script_type": "syntax",
+  "description": "Highlight input files for the Otter theorem prover. ( http://www.mcs.anl.gov/research/projects/AR/otter/ )\n",
+  "install_details": "Put the following in your ~/.vimrc\n\nau BufRead,BufNewFile *.in set filetype=otter\nau! Syntax otter source /path/to/otter.vim\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12821",
+      "filename": "otter[1].vim",
+      "script_version": "4.12.10",
+      "date": "2010-04-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19580",
+        "user_name": "theepicsnail",
+        "first_name": "steven",
+        "last_name": "vanhorn",
+        "email": "theepicsnail at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

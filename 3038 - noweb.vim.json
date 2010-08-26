@@ -1,0 +1,42 @@
+{
+  "script_id": "3038",
+  "name": "noweb.vim",
+  "summary": "A syntax file for noweb, with separate highlighting for documentation and code",
+  "script_type": "syntax",
+  "description": "This is a simple syntax for noweb. Basically, it is a nice way to view code and documentation with separate syntax highlighting. Also, it can autofold code blocks.\n\nThe script uses the following options:\n\nnoweb_backend\nnoweb_language\nnoweb_fold_code\n\nSet noweb_backend to the basename of the syntax file you want to use, minus the \\\".vim\\\" extension. So, for TeX, you would:\n\nlet noweb_backend = \\\"tex\\\"\n\nnoweb_language is similar, but is used to highlight the contents of code blocks. So, for example:\n\nlet noweb_language = \\\"cpp\\\"\n\nMakes the syntax for code snippets = C++.\n\nFinally, there is noweb_fold_code, which sets whether or not code blocks should be automatically folded. If 1, then they will be folded. Otherwise, not.",
+  "install_details": "Just copy the script to your ~/.vim/syntax directory.\n\nOptionally, add something like this to your ~/.vimrc:\n\nfiletype on\nfiletype plugin on\n\nau BufRead,BufNewFile *.nw    set filetype=noweb\n\nlet noweb_backend = \\\"tex\\\"\nlet noweb_language = \\\"cpp\\\"\nlet noweb_fold_code = 1\n\nThis will set the script to run for .nw files, assuming a documentation backend of TeX, a code language of C++, and turns on automatic code chunk folding.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13268",
+      "filename": "noweb.vim",
+      "script_version": "0.2",
+      "date": "2010-06-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19484",
+        "user_name": "mmcdermott",
+        "first_name": "Michael",
+        "last_name": "McDermott",
+        "email": "mmcdermott at mad-computer-scientist.com",
+        "homepage": "http://www.mad-computer-scientist.com/"
+      },
+      "release_notes": "Added a patch from Matt Edlefsen fixing a syntax highlighting idiosyncrasy."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12761",
+      "filename": "noweb.vim",
+      "script_version": "0.1",
+      "date": "2010-04-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19484",
+        "user_name": "mmcdermott",
+        "first_name": "Michael",
+        "last_name": "McDermott",
+        "email": "mmcdermott at mad-computer-scientist.com",
+        "homepage": "http://www.mad-computer-scientist.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

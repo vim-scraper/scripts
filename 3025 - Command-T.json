@@ -1,0 +1,170 @@
+{
+  "script_id": "3025",
+  "name": "Command-T",
+  "summary": "Fast file navigation for VIM",
+  "script_type": "utility",
+  "description": "The Command-T plug-in provides an extremely fast, intuitive mechanism for opening files with a minimal number of keystrokes. It's named \"Command-T\" because it is inspired by the \"Go to File\" window bound to Command-T in TextMate.\n\nFiles are selected by typing characters that appear in their paths, and are ordered by an algorithm which knows that characters that appear in certain locations (for example, immediately after a path separator) should be given more weight.\n\nFor more details and demonstration screencasts seen on the official Command-T website:\n\n  https://wincent.com/products/command-t\n\nThe latest version of the documentation can be viewed in the project Git repository:\n\n  http://git.wincent.com/command-t.git/blob_plain/HEAD:/doc/command-t.txt",
+  "install_details": "To install open the vimball archive in Vim:\n\n  vim command-t.vba\n\nThen source it:\n\n  :so %\n\nThe C extension must also be then compiled; for instance, if Vimball installs your plugin files in ~/.vim, then you would do this:\n\n  cd ~/.vim/ruby/command-t\n  ruby extconf.rb\n  make\n\nNote that Command-T requires a version of VIM with Ruby support enabled, and it must be compiled using the same version of Ruby that Vim itself links against. For more details see the documentation:\n\n  http://git.wincent.com/command-t.git/blob_plain/HEAD:/doc/command-t.txt",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13622",
+      "filename": "command-t-0.8.vba",
+      "script_version": "0.8",
+      "date": "2010-08-19",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win at wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- overrides for the default mappings can now be lists of strings, allowing multiple mappings to be defined for any given action\n- <Leader>t mapping only set up if no other map for |:CommandT| exists (patch from Scott Bronson)\n- prevent folds from appearing in the match listing\n- tweaks to avoid the likelihood of \"Not enough room\" errors when trying to open files\n- watch out for \"nil\" windows when restoring window dimensions\n- optimizations (avoid some repeated downcasing)\n- move all Ruby files under the \"command-t\" subdirectory and avoid polluting the \"Vim\" module namespace"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13322",
+      "filename": "command-t-0.8b.vba",
+      "script_version": "0.8b",
+      "date": "2010-07-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win at wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- large overhaul if the scoring algorithm to make the ordering of returned results more intuitive; given the scope of the changes and room for optimization of the new algorithm, this release is labelled as \"beta\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13157",
+      "filename": "command-t-0.7.vba",
+      "script_version": "0.7",
+      "date": "2010-06-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win at wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- handle more |'wildignore'| patterns by delegating to VIM's own |expand()| function; with this change it is now viable to exclude patterns such as 'vendor/rails/**' in addition to filename-only patterns like '*.o' and '.git' (patch from Mike Lundy)\n- always sort results alphabetically for empty search strings; this eliminates filesystem-specific variations (patch from Mike Lundy)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12914",
+      "filename": "command-t-0.6.vba",
+      "script_version": "0.6",
+      "date": "2010-04-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win at wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- |:CommandT| now accepts an optional parameter to specify the starting directory, temporarily overriding the usual default of VIM's |:pwd|\n- fix truncated paths when operating from root directory"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12813",
+      "filename": "command-t-0.5.1.vba",
+      "script_version": "0.5.1",
+      "date": "2010-04-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win at wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- fix for Ruby 1.9 compatibility regression introduced in 0.5\n- documentation enhancements, specifically targetted at Windows users"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12780",
+      "filename": "command-t.vba",
+      "script_version": "0.5",
+      "date": "2010-04-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win at wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- |:CommandTFlush| now re-evaluates settings, allowing changes made via |:let| to be picked up without having to restart VIM\n- fix premature abort when scanning very deep directory hierarchies\n- remove broken |<Esc>| key mapping on vt100 and xterm terminals\n- provide settings for overriding default mappings\n- minor performance optimization"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12715",
+      "filename": "command-t.vba",
+      "script_version": "0.4",
+      "date": "2010-03-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win at wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- add |g:CommandTMatchWindowAtTop| setting (patch from Zak Johnson)\n- documentation fixes and enhancements\n- internal refactoring and simplification"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12701",
+      "filename": "command-t.vba",
+      "script_version": "0.3",
+      "date": "2010-03-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win at wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- add |g:CommandTMaxHeight| setting for controlling the maximum height of the match window (patch from Lucas de Vries)\n- fix bug where |'list'| setting might be inappropriately set after dismissing Command-T\n- compatibility fix for different behaviour of \"autoload\" under Ruby 1.9.1\n- avoid \"highlight group not found\" warning when run under a version of VIM that does not have syntax highlighting support\n- open in split when opening normally would fail due to |'hidden'| and |'modified'| values\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12693",
+      "filename": "command-t.vba",
+      "script_version": "0.2",
+      "date": "2010-03-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win at wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- compatibility fixes for compilation under Ruby 1.9 series\n- compatibility fixes for compilation under Ruby 1.8.5\n- compatibility fixes for Windows and other non-UNIX platforms\n- suppress \"mapping already exists\" message if <Leader>t mapping is already defined when plug-in is loaded\n- exclude paths based on |'wildignore'| setting rather than a hardcoded regular expression"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12679",
+      "filename": "command-t.vba",
+      "script_version": "0.1",
+      "date": "2010-03-22",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win at wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

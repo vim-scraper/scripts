@@ -1,0 +1,58 @@
+{
+  "script_id": "1477",
+  "name": "Modeliner",
+  "summary": "Generates modeline according to the current settings.",
+  "script_type": "utility",
+  "description": "[How to use it?]\n\nexecute ':Modeliner'.\n\n\n[And, what will happen?]\n\nIf your current settings are like below:\n  - setl fenc=utf-8\n  - setl et\n  - setl sts=4\n\nthen you will get a modeline like:\n  - for 'c' filetype:\n      /* vim: set fenc=utf-8 et sts=4 : */\n  - for 'xml' filetype:\n      <!-- vim: set fenc=utf-8 et sts=4 : -->\n\n\n[How to include my favorite options?]\n\nModify  g:Modeliner_format.  It is a simple format.\n\nAn example:\n    let g:Modeliner_format = 'fenc=  tw=  et  ts=  sts=  sw=  backup wrap'",
+  "install_details": "Put this plugin in your plugin directory(e.g. $VIMRUNTIME/plugin).\nThen restart Vim or :source it. ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8861",
+      "filename": "modeliner.vim",
+      "script_version": "0.3.0",
+      "date": "2008-06-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "If you use The NERD Commenter, this script uses it to generate a modeline as a comment."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7743",
+      "filename": "modeliner.vim",
+      "script_version": "0.2.0",
+      "date": "2007-10-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "finds the existing modeline and overwrite it"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5305",
+      "filename": "modeliner.vim",
+      "script_version": "0.1.0",
+      "date": "2006-02-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim at gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

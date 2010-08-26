@@ -1,0 +1,26 @@
+{
+  "script_id": "1300",
+  "name": "Shortcut functions for KeepCase script (",
+  "summary": "Makes substitutions using Michael Geddes' KeepCase functions easier",
+  "script_type": "utility",
+  "description": "This is a very simple script that allows you to easily do case-preserving text replacements over an arbitrary range. See vimscript #6 by Michael Geddes for the functions this script depends on.\n\nFor example:\n\n:'<,'>call S('building','campus')\n\nwill replace all occurrences of \"building\" with \"campus\", \"BUILDING_ID\" with \"CAMPUS_ID\", \"getBuilding\" with \"getCampus\", etc. across the currently selected range.\n\nAlso included is the SS(pat,sub) function which uses KeepCaseSameLen for the substitutions instead of KeepCase.\n\nThanks to Michael Geddes for a great script!",
+  "install_details": "Just copy this script and vimscript #6 to ~/.vim/plugin and restart VIM.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4360",
+      "filename": "keepcasefun.vim",
+      "script_version": "1.0",
+      "date": "2005-06-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7743",
+        "user_name": "vtowel",
+        "first_name": "Paul",
+        "last_name": "Hoepfner-Homme",
+        "email": "85ujn0302 at sneakemail.com",
+        "homepage": "http://open-eyes.org/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

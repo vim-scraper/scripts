@@ -1,0 +1,74 @@
+{
+  "script_id": "1252",
+  "name": "trt.vim",
+  "summary": "Test Real Time scripting language for C testing.",
+  "script_type": "syntax",
+  "description": "This is a syntax file for TRT (Rational Test Real Time), a scripting tool for testing programs written in C.",
+  "install_details": "Put this file in the syntax directory of vim.\nAdd the two following lines in your filetype.vim to add detection of .pts, .def, .hts files :\n\n\" TRT scripts\nau BufNewFile,BufRead *.pts,*.hts,*.def setf trt",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4589",
+      "filename": "trt.vim",
+      "script_version": "1.3",
+      "date": "2005-09-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7304",
+        "user_name": "shangouet",
+        "first_name": "Samuel",
+        "last_name": "Hangouët",
+        "email": "shangouet at laposte.net",
+        "homepage": ""
+      },
+      "release_notes": "Improve colorisation patterns\nRemove match of numbers in comments (very dangerous !)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4272",
+      "filename": "trt.vim",
+      "script_version": "1.2",
+      "date": "2005-05-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7304",
+        "user_name": "shangouet",
+        "first_name": "Samuel",
+        "last_name": "Hangouët",
+        "email": "shangouet at laposte.net",
+        "homepage": ""
+      },
+      "release_notes": "Improved the management of syntax typing errors."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4229",
+      "filename": "trt.vim",
+      "script_version": "1.1",
+      "date": "2005-05-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7304",
+        "user_name": "shangouet",
+        "first_name": "Samuel",
+        "last_name": "Hangouët",
+        "email": "shangouet at laposte.net",
+        "homepage": ""
+      },
+      "release_notes": "Added C syntax inside { } blocks, parens'errors display, correct a little bug by putting keepend in # region matching definition, and complete the list of keywords from TRT user manual."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4120",
+      "filename": "trt.vim",
+      "script_version": "1.0",
+      "date": "2005-04-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7304",
+        "user_name": "shangouet",
+        "first_name": "Samuel",
+        "last_name": "Hangouët",
+        "email": "shangouet at laposte.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

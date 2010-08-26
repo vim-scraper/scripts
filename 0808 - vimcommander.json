@@ -1,0 +1,330 @@
+{
+  "script_id": "808",
+  "name": "vimcommander",
+  "summary": "totalcommander-like two-panel tree file explorer for vim",
+  "script_type": "utility",
+  "description": "This is an adaptation of opsplorer (vimscript #362), intended to be more like the Total Comander (http://www.ghisler.com) file explorer.\n\nThis opens two panels of file explorers on the top half of the vim screen.\nTargets for moving and copying defaults to the other panel, like totalcmd. TAB switches between panels.\nVimcommander keys are mostly totalcommander's:\nF3 - view\nF4 - edit\nF5 - copy\nF6 - move\nF7 - create dir\nF8 - del\nOthers: C-U, C-Left/C-Right, C-R, BS, DEL, C-H, etc.\nSelection of files/dirs also works: INS, +, -. Then copy/move/del selected files.\n\nSuggested binding is\nnoremap <silent> <F11> :cal VimCommanderToggle()<CR>\n\nTested on Linux. I have reports that it doesn't work on Windows.\n\nIf you want to contribute, note that vimcommander is hosted at github: http://github.com/lpenz/vimcommander/.",
+  "install_details": "Drop vimcommander.vim in ~/.vim/plugin\nPut in you .vimrc a map to VimCommanderToggle():\nnoremap <silent> <F11> :cal VimCommanderToggle()<CR>\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12703",
+      "filename": "vimcommander_0.80.vba",
+      "script_version": "0.80",
+      "date": "2010-03-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "C-H is no longer toggles hidden file showing, as it overwrites backspace binding in some terminals."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12478",
+      "filename": "vimcommander_0.79.vba",
+      "script_version": "0.79",
+      "date": "2010-02-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Windows path handling working, thanks to Zacco!\nUsing vimball format from now on."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12254",
+      "filename": "vimcommander.vim",
+      "script_version": "0.78",
+      "date": "2010-01-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Change dir dialog, required in windows."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12166",
+      "filename": "vimcommander.vim",
+      "script_version": "0.77",
+      "date": "2010-01-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Version scheme changed.\nAccepting initial directories from global configuration variables."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9822",
+      "filename": "vimcommander.vim",
+      "script_version": "76",
+      "date": "2009-01-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Directory escaping was missing. Thanks devix for the fix."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8019",
+      "filename": "vimcommander.vim",
+      "script_version": "75",
+      "date": "2007-12-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "If hidden files were enabled, the glob coud become '**', taking a very long time to build the tree. Thanks go to Oleg Popov for the fix"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7542",
+      "filename": "vimcommander.vim",
+      "script_version": "74",
+      "date": "2007-08-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Works with 'splitright'. Thanks to Vladimir Marek again!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7301",
+      "filename": "vimcommander.vim",
+      "script_version": "73",
+      "date": "2007-06-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Files with spaces working now, thanks to Vladimír Marek!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5533",
+      "filename": "vimcommander.vim",
+      "script_version": "69",
+      "date": "2006-04-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "+ and - bound to kPlus and kMinus."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5413",
+      "filename": "vimcommander.vim",
+      "script_version": "68",
+      "date": "2006-03-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Fix: directories with spaces. New: local copy.\nNew version numbering scheme."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4642",
+      "filename": "vimcommander.vim",
+      "script_version": "1.54.2.9",
+      "date": "2005-10-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Now vimcommander keeps the previous window open, preventing the break of C-O among other things."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4269",
+      "filename": "vimcommander.vim",
+      "script_version": "1.54.2.8",
+      "date": "2005-05-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Does not come back to the begining of last open file when switching off.\nmkdir was not working when dir had spaces.\nFixes to make S-F4 working, and to prevent error report when canceling interactive questions.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2787",
+      "filename": "vimcommander.vim",
+      "script_version": "1.54.2.2",
+      "date": "2004-02-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Directory change is optional. Fixed <leader>o/<C-O>."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2675",
+      "filename": "vimcommander.vim",
+      "script_version": "1.54.2.1",
+      "date": "2004-01-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "ToggleHiddenFiles and key conflict solved.\nFixed typo in doc.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2497",
+      "filename": "vimcommander.vim",
+      "script_version": "1.52",
+      "date": "2003-11-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Self-installing documentation created. Directory history implemented. Bugfix: does not overwrite \" register; does not lose track of last buffer anymore. Uses only the window where its openend. Some changes in the layout also. Licensing info appended."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2490",
+      "filename": "vimcommander.vim",
+      "script_version": "1.41",
+      "date": "2003-11-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Bugfix: remembers last panel visited and proper closure now working."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2484",
+      "filename": "vimcommander.vim",
+      "script_version": "1.39",
+      "date": "2003-11-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Bugfix: move is now working. Alternate keys for C-. Options for the window are saved/restored when entering/exiting."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2479",
+      "filename": "vimcommander.vim",
+      "script_version": "1.35",
+      "date": "2003-11-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Fullscreen. Toggle improved. Selection of files thru <INS>, + and - implemented. Generally more similar to wincmd."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2464",
+      "filename": "vimcommander.vim",
+      "script_version": "1.16",
+      "date": "2003-11-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "New: \nF7 - create directory\nC-U exchange panels\nF11 - switch buffer-vimcommander\nC-Right/C-Left - puts dir under cursor on other panel\nCopy, move & del work with dirs (CAUTION ADVISED)\nFixed: \ncopy, move & paste for files with spaces.\n\nRemoving keys & compatibility with opsplorer.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2443",
+      "filename": "vimcommander.vim",
+      "script_version": "1.7",
+      "date": "2003-11-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1551",
+        "user_name": "lpenz",
+        "first_name": "Leandro",
+        "last_name": "Penz",
+        "email": "lpenz at terra.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

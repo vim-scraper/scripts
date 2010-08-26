@@ -1,0 +1,26 @@
+{
+  "script_id": "1930",
+  "name": "maxscript.vim",
+  "summary": "Syntax highlighting for MAXScript 8.0",
+  "script_type": "syntax",
+  "description": "This file will provide basic highlighting for MAXScript release 8.0. Comments, keywords, numbers, and strings are currently highlighted.",
+  "install_details": "Save in vimfiles/syntax or in .vim/syntax, depending on platform.\n\nWrite the following to ftdetect/maxscript.vim:\n\n    augroup filetypedetect\n    au! BufRead,BufNewFile *.ms\t\tsetf maxscript\n    augroup END\n\nYou can also add *.mse, *.mcr, *.mzp, *.ds if you use those names.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7268",
+      "filename": "maxscript.vim",
+      "script_version": "0.1",
+      "date": "2007-06-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9716",
+        "user_name": "jleedev",
+        "first_name": "Josh",
+        "last_name": "Lee",
+        "email": "jleedev at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

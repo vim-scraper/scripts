@@ -1,0 +1,26 @@
+{
+  "script_id": "2594",
+  "name": "tmarks",
+  "summary": "Browse, place, & delete marks",
+  "script_type": "utility",
+  "description": "This plugin provides commands to browse and to manipulate (place & \ndelete) marks.\n\n:TMarks\n    Browse all marks.\n\n:{range}TMarksPlace\n    Place the next available a-z mark at the specified line.\n\n:{range}TMarksDelete\n    Delete all a-z marks in range.\n\n:TMarksDeleteAll\n    Delete all a-z marks in the current buffer.\n\nIn conjunction with vimscript #2584, this plugin is similar to vimscript #152.\n\nYou might want to try wokmarks (vimscript #2522), which I personally use now.",
+  "install_details": "Edit the vba file and type:\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0, \nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n\nThis script requires tlib (vimscript #1863) to be installed.\n\nAlso available via git: http://github.com/tomtom/tmarks_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10314",
+      "filename": "tmarks.vba.gz",
+      "script_version": "0.1",
+      "date": "2009-03-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "1438",
+  "name": "XML Folding",
+  "summary": "Folds XML / HTML Tags, CDATA and comments",
+  "script_type": "utility",
+  "description": "It pretend to be the fold solution for all XML/HTML/SVG and other xml derivated...\n\nThis script supports:\n\nTag folds between two different lines: <tag> </tag>\nComments folds: <!-- comment -->\nCDATA folds content between \"<!<CDATA[\" and \"]]>\"",
+  "install_details": "You only need to download it and run under your XML/HTML file with the\n\n:so XMLFolding.vim\n\nor, if you want to, add this line into your ~/.vimrc:\n\nau BufNewFile,BufRead *.xml,*.htm,*.html so XMLFolding\n\nDoing this, always the script will be loaded on open these files.\nDont forget to put the correct path to access the file!!! ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5685",
+      "filename": "XMLFolding.vim",
+      "script_version": "1.1",
+      "date": "2006-05-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9034",
+        "user_name": "thadeudepaula",
+        "first_name": "Thadeu",
+        "last_name": "de Paula",
+        "email": "thadeudepaula at gmail.com",
+        "homepage": "http://mundolivre.hostrix.com.br"
+      },
+      "release_notes": "In this version... only lines started and ended by a tag ,without spaces before, are used to make an folding... with this rule, the folding errors will be less!!!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4936",
+      "filename": "XMLFolding.vim",
+      "script_version": "1.0",
+      "date": "2006-01-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9034",
+        "user_name": "thadeudepaula",
+        "first_name": "Thadeu",
+        "last_name": "de Paula",
+        "email": "thadeudepaula at gmail.com",
+        "homepage": "http://mundolivre.hostrix.com.br"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

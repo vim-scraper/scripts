@@ -1,0 +1,154 @@
+{
+  "script_id": "760",
+  "name": "peaksea",
+  "summary": "Refined color, contains both gui and cterm256 for dark and light background",
+  "script_type": "color scheme",
+  "description": "The peak sea color (peaksea.vim) is the new version of the well-known colorscheme ps_color.\n\nNow the color contains light-background scheme for gui and 256 color term, with dark-background scheme supporting gui and 256 and 16 color term.\n\nYou can fire any issues at http://code.google.com/p/peaksea/issues/list\n",
+  "install_details": "put the peaksea.vim in your $HOME/.vim/colors/ (or %HOME%\\vimfiles\\colors for Windows)\n\nTo enable the scheme, you can put in ~/.vimrc the following:\n\nif ! has(\"gui_running\")\n    set t_Co=256\nendif\n\" feel free to choose :set background=light for a different style\nset background=dark\ncolors peaksea\n\nThe newest version of most modern terminal emulators have 256 color support, the following has been tested:\nworks great: xterm, konsole 4.2+, gnome-terminal, xfce4-terminal, putty for windows, \nworks after some tweaks: screen (recompile and add a .screenrc, google for details.), konsole 3.x (I had provided a patch at https://bugs.kde.org/show_bug.cgi?id=169013)\nworks with issue: rxvt (no 256-color by default, needs hack for 256-color support)\n\nThe 16-color support has no difference from the ps_color.vim, you'll need to tune color codes for 16-color to work, the instructions can be found inside the old ps_color.vim. There are predefined konsole and xfce4-terminal profile at http://code.google.com/p/peaksea/source/browse/trunk\n\nNote: if you don't like the dark-black background and want it be pure black: simply search for the following line\nhi Normal guifg=#d0d0d0 guibg=#202020 gui=NONE\nand change #202020 into #000000.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12309",
+      "filename": "peaksea.vim",
+      "script_version": "3.4",
+      "date": "2010-02-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3263",
+        "user_name": "poet",
+        "first_name": "Pan",
+        "last_name": "Shizhu",
+        "email": "pan.shizhu at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "For light-background terminal we always assume 256color support.\nTransparency is supported in 256color mode, search the text \"transparency\" in peaksea.vim for details.\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9419",
+      "filename": "peaksea.vim",
+      "script_version": "3.3",
+      "date": "2008-10-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3263",
+        "user_name": "poet",
+        "first_name": "Pan",
+        "last_name": "Shizhu",
+        "email": "pan.shizhu at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Anton Sharnov thinks it is better to leave the foreground color as is for spell error in 256-color cterm. If you agree this, the version 3.3 is for you, else you can just edit the source. Also, your can search for text 'transparency' within the peaksea.vim to know how to get cterm background transparency."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8752",
+      "filename": "peaksea.vim",
+      "script_version": "3.2",
+      "date": "2008-06-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3263",
+        "user_name": "poet",
+        "first_name": "Pan",
+        "last_name": "Shizhu",
+        "email": "pan.shizhu at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This version adds 256 color term support, a good color scheme has to support 256color term.\nThe old ps_color got a name now: peak sea color."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6328",
+      "filename": "ps_color.vim",
+      "script_version": "3.00",
+      "date": "2006-10-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3263",
+        "user_name": "poet",
+        "first_name": "Pan",
+        "last_name": "Shizhu",
+        "email": "pan.shizhu at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This version reads the 'background' option instead of setting it. Hence you must do :set background=dark or :set background=light before :colo ps_color. (Note that it is incompatible with previous versions!) Some highlightings are made more harmonize with others. Adds an option to enable cterm background transparency."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5986",
+      "filename": "ps_color.vim",
+      "script_version": "2.9",
+      "date": "2006-07-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3263",
+        "user_name": "poet",
+        "first_name": "Pan",
+        "last_name": "Shizhu",
+        "email": "pan.shizhu at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This version adds new highlight groups for Vim 7. All the existing Vim 6 highlight groups unchanged. So you don't need to upgrade if using Vim 6. This script was tested both under Vim 6 and Vim 7."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5985",
+      "filename": "reloaded.vim",
+      "script_version": "0.9",
+      "date": "2006-07-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3263",
+        "user_name": "poet",
+        "first_name": "Pan",
+        "last_name": "Shizhu",
+        "email": "pan.shizhu at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This is an optional utility for \"ps_color\" scheme, now it works both under Vim 6 and Vim 7."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3642",
+      "filename": "ps_color.vim",
+      "script_version": "2.82",
+      "date": "2004-11-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3263",
+        "user_name": "poet",
+        "first_name": "Pan",
+        "last_name": "Shizhu",
+        "email": "pan.shizhu at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This version change the default background color to the popular \"dark grey\". It can still be changed anyway."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3237",
+      "filename": "reloaded.vim",
+      "script_version": "0.6",
+      "date": "2004-07-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3263",
+        "user_name": "poet",
+        "first_name": "Pan",
+        "last_name": "Shizhu",
+        "email": "pan.shizhu at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This is a utility to tune the whole color scheme in HSL color space. There are some minor fix since version 0.5...\n\nFor me it's great fun, I'll be happy if you found it interesting. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2299",
+      "filename": "ps_color.vim",
+      "script_version": "n/a",
+      "date": "2003-09-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3263",
+        "user_name": "poet",
+        "first_name": "Pan",
+        "last_name": "Shizhu",
+        "email": "pan.shizhu at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

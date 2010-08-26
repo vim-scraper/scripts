@@ -1,0 +1,26 @@
+{
+  "script_id": "1237",
+  "name": "MS SQL Server Syntax",
+  "summary": "Microsoft SQL Server 2000 T-SQL (Transact-SQL) Syntax",
+  "script_type": "syntax",
+  "description": "Syntax file for M$ SQL Server 2000 Transact-SQL\n\nI added all reserved words, system functions and stored procedures.\n\nNotes:\n- All types, statements, and operators are colored as Keyword.\n- All keywords must be UPPER_CASED.\n- @local_variables (lower_cased) are colored as Special\n- User-defined types in the form of \"Some_User_Defined_Type\" are colored as Type. (you must append the ending \"_Type\")\n- @@SYSTEM_VARIABLES are colored as PreProc. Must be UPPER_CASED too.",
+  "install_details": "Put it into /syntax/sql.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4008",
+      "filename": "sql.vim",
+      "script_version": "0.99",
+      "date": "2005-03-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5744",
+        "user_name": "aquila_deus",
+        "first_name": "Aquila",
+        "last_name": "Deus",
+        "email": "aquila_deus at yahoo.co.uk",
+        "homepage": "http://aquila-deus.myweb.hinet.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "1359",
+  "name": "SmartCase",
+  "summary": "replacing words while keeping original lower/uppercase style",
+  "script_type": "utility",
+  "description": "An example, you may want to replace any FileSize appears in your program into LastModifiedTime. Since it appears everywhere as both uppercases and lowercases, you have to write it several times:\n\n  :%s/FileSize/LastModifiedTime/g      \" function names\n  :%s/file_size/last_modified_time/g   \" variable names\n  :%s/FILE_SIZE/LAST_MODIFIED_TIME/g   \" macros\n  :%s/File size/Last modified time/g   \" document/comments\n  ......\n\nThis script copes with the case style for you so that you need write just one command:\n\n  :%s/file\\A\\?size/\\=SmartCase(\"LastModifiedTime\")/ig\n\nAn alternative way:\n  first search for the string:  /\\cfile\\A\\?size\n  then run a command:  :%SmartCase \"LastModifiedTime\"\n\nBy the way, SmartCase can also cope with the circumstance where you want to replace the string's case style while keeping its words. For example:\n  FileSize => file_size\n  LastModifiedTime => last_modified_time\n  ......\nThis can be done with the following command:\n\n  :%s/\\(\\u\\l\\+\\)\\{2,}/\\=SmartCase(0,\"reference_style\")/g\n\nTo sum up: the first argument to SmartCase is the reference words, the secend argument is the reference styles, if the second argument omitted, it's submatch(0).",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4960",
+      "filename": "smartcase.vim",
+      "script_version": "1.0.2",
+      "date": "2006-01-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7148",
+        "user_name": "elephant",
+        "first_name": "Yuheng",
+        "last_name": "Xie",
+        "email": "xie_yuheng at yahoo.com.cn",
+        "homepage": "http://elephant.net.cn/"
+      },
+      "release_notes": "changed <q-args> to <args> for multiple arguments capability.\nchanged some usage help."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4603",
+      "filename": "smartcase.vim",
+      "script_version": "1.0.1",
+      "date": "2005-09-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7148",
+        "user_name": "elephant",
+        "first_name": "Yuheng",
+        "last_name": "Xie",
+        "email": "xie_yuheng at yahoo.com.cn",
+        "homepage": "http://elephant.net.cn/"
+      },
+      "release_notes": "1) Added a command interface :SmartCase\n2) a bug fixed\nThank Salman Halim for the bug report and advices."
+    }
+  ]
+}

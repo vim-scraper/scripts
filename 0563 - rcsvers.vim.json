@@ -1,0 +1,474 @@
+{
+  "script_id": "563",
+  "name": "rcsvers.vim",
+  "summary": "Use RCS to keep a backup version whenever you save a file",
+  "script_type": "utility",
+  "description": "A Vim plugin for automatically saving backup versions in RCS whenever a file is saved.  You can compare to any revision as well.\nkeywords: VCS, version control system, incremental saving, automatic versioning, automatic journalling or journaling, or autosave backups with versions.\n\nThe maintainer is Juan Frias (juandfrias at gmail.com)\n\nWhat's RCS? It's the Revision Control System, a set of programs used for keeping many versions of a file. See http://www.gnu.org/software/rcs/rcs.html\n\nThe RCS programs are freely available at http://www.cs.purdue.edu/homes/trinkle/RCS/\n\nBe careful if you really use RCS as your production file control, it will add versions like crazy.  See the g:rvMode option to have more control over when a save is added to the revision file.\n\nrcs-menu.vim by Jeff Lanzarotta is handy to have along with this (vimscript #41).\n\nInspired by savevers.vim by Ed Ralston (vimscript #89).\n\n Mapped Keys: \n               <Leader>rlog    To access the saved revisions log.  This works as\n                                      a toggle to quit the revision windows too.\n\n               <enter>         This will compare the current file to the\n                                    revision under the cursor (works only in\n                                    the revision log window)\n\n               <Leader>older   does a diff with the previous version\n\n               <Leader>newer   does a diff with the next version\n\n You probably want to map these in your _vimrc to something easier to type, \n like a function key.  Do it like this:\n\"re-map rcsvers.vim keys\nmap <F8> \\rlog\nmap <F5> \\older\nmap <F6> \\newer\n\n You may need to set the following shell(environment) variables, you'll get a warning if so:\n user name:\n\t\tLOGNAME=myusername\n timezone:  \n\t\tTZ=EST5EDT \n\nLook here if you have problems with Daylight Saving Time (DST) with RCS after 2007 on Microsoft Windows:  http://support.microsoft.com/kb/932590",
+  "install_details": "Drop it in your plugin directory.  Your RCS executables must be in your path.  There are lots of options, but by default it acts exactly like RCS from the command line.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12020",
+      "filename": "rcsvers.vim",
+      "script_version": "1.28",
+      "date": "2010-01-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Adds syntax highlighting to temporary files retrieved from RCS and fix of \\rci to work with vim 7. (thanks to Sergey Khorev)\nAlso added Fredrik Eriksson's patch to allow editing of messages. (http://thebc.se/patch-for-rcsversvim)\nAnd added the -d option to preserve original modification times. (Roger)\nRemoved the rvtempdir in favor of more secure tempname() call. (Roger)\nWe used to skip the pre-checkin, but I think we should do it, if someone or something else has modified the file since the last RCS version then we will put their version in the RCS file. (Roger)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6993",
+      "filename": "rcsvers.vim",
+      "script_version": "1.27",
+      "date": "2007-04-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add a new mode for revising (never/ask/always) and fix rlog window width, both thanks to Callum Gibson.  See g:rvMode .\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6607",
+      "filename": "rcsvers.vim",
+      "script_version": "1.26",
+      "date": "2007-01-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix for Windows for usernames with spaces (from Roger), and macosx directory separator (thanks to Jeff Fox)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4996",
+      "filename": "rcsvers.vim",
+      "script_version": "1.25",
+      "date": "2006-01-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix for Windows if you don't have the TZ variable set, and fix how it works when saving a file to another name.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4681",
+      "filename": "rcsvers.vim",
+      "script_version": "1.24",
+      "date": "2005-10-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Just updating author/maintainer email addresses."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4609",
+      "filename": "rcsvers.vim",
+      "script_version": "1.24",
+      "date": "2005-09-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "RCS sets the executable bit on the checked-out file to be the same as the rcs archive file.  So if that property changes after you did your first checkin, your checked-out file will maintain the original setting. So now we change the executable mode of the rcs archive file to align with the current setting of the checked-out copy. Thanks to Ben Bernard.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4129",
+      "filename": "rcsvers.vim",
+      "script_version": "1.23",
+      "date": "2005-04-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added an option to fix the path on Cygwin systems.  \n See g:rvUseCygPathFiltering  \n Thanks to Simon Johann-Günter"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4031",
+      "filename": "rcsvers.vim",
+      "script_version": "1.22",
+      "date": "2005-03-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "some re-factoring, and add the option to leave RCS files unlocked when saving, which is handy for multiple users of the same RCS file.   \nSee g:rvLeaveRcsUnlocked. (from Roger Pilkey)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3268",
+      "filename": "rcsvers.vim",
+      "script_version": "1.21",
+      "date": "2004-07-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "small update: Remember the last position in the rlog window. Rename RevisionLog window to avoid collisions\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3187",
+      "filename": "rcsvers.vim",
+      "script_version": "1.20",
+      "date": "2004-06-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a mapping to create an initial RCS file. Useful when the script \nis set to save only when a previous RCS file exists. see\nrvSaveIfPreviousRCSFileExists (thanks to Steven Michalske for the\n suggestion) Added <silent> to the default mappings to keep the status\nbar clean."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3110",
+      "filename": "rcsvers.vim",
+      "script_version": "1.19",
+      "date": "2004-06-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1.19  Added the option to prompt the user for file and check-in message on\n every save. See rvDescMsgPrompt option for details. Thanks to Kevin\n Stegemoller for the suggestion. Also \\rlog will now display the\n check-in message in the pick list for easier identification.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2785",
+      "filename": "rcsvers.vim",
+      "script_version": "1.18",
+      "date": "2004-02-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added the option to save an RCS version only if the RCS file already\n  exists (No new RCS files will be created). (from Marc Schoechlin)\n  See rvSaveIfPreviousRCSFileExists option.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2687",
+      "filename": "rcsvers.vim",
+      "script_version": "1.17",
+      "date": "2004-01-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added the option to save an RCS version only when there is an RCS\ndirectory in the files directory. See rvSaveIfRCSExists option.\n(from Camillo Särs)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2579",
+      "filename": "rcsvers.vim",
+      "script_version": "1.16",
+      "date": "2003-12-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Save some settings that \"set diff\" mangles, and different check for &cp\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2337",
+      "filename": "rcsvers.vim",
+      "script_version": "1.15",
+      "date": "2003-09-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add functions to go back and forth between versions (mapped to \\older and \\newer). It's kind of jerky, but comes in handy sometimes. Also fixed a few bugs with quotes.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2051",
+      "filename": "rcsvers.vim",
+      "script_version": "1.14",
+      "date": "2003-06-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add option to set \"rlog\" command-line options.  fix rlog display,\nwhich would crash once in a while saying stuff like \"10,10d invalid\nrange\". When creating a new RCS file on an existing text file, save a\nversion before adding the new revision.\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1973",
+      "filename": "rcsvers.vim",
+      "script_version": "1.13",
+      "date": "2003-05-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "A g:rvFileQuote fix, suggested by Wiktor Niesiobedzki.  Add the ability to use the current instance of vim for the diff, which is now the default.  Change the name of the diff temp file to include the version.  Make \\rlog a toggle (on/off)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1872",
+      "filename": "rcsvers.vim",
+      "script_version": "1.12",
+      "date": "2003-03-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": " 1.12  (From Juan Frias) Script will not load if the 'cp' flag is set. Added the option to use an exclude expression, and include expression.  Fixed yet more bugs thanks to Roger for all the beta testing.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1793",
+      "filename": "rcsvers.vim",
+      "script_version": "1.11",
+      "date": "2003-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "(for Juan Frias) Minor bug fix, when using spaces in the description. \nAlso added some error detection code to check and see that RCS \nand CI were successful. And removed requirements for SED and GREP, \nscript will no longer need these to display the log.\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1776",
+      "filename": "rcsvers.vim",
+      "script_version": "1.10",
+      "date": "2003-03-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1599",
+        "user_name": "jdany",
+        "first_name": "Juan",
+        "last_name": "Frias",
+        "email": "jfrias at boxfi.com",
+        "homepage": "http://juan.axisym3.net/vim-the-editor/"
+      },
+      "release_notes": "Fixed some major bugs with files with long filenames and spaces Win/Dos systems. Added a variable to pass additional options to the initial RCS check in. Fixed some documentations typos."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1775",
+      "filename": "rcsvers.vim",
+      "script_version": "1.9",
+      "date": "2003-02-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1599",
+        "user_name": "jdany",
+        "first_name": "Juan",
+        "last_name": "Frias",
+        "email": "jfrias at boxfi.com",
+        "homepage": "http://juan.axisym3.net/vim-the-editor/"
+      },
+      "release_notes": "Added even more options, the ability to set your own description and pass additional options to CI command. Dos/Win Temp directory is taken from the $TEMP environment variable, and quote filenames when using diff program to prevent errors with long filenames with spaces. Also removed confirm box from script. (Thanx Roger for all the beta testing)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1773",
+      "filename": "rcsvers.vim",
+      "script_version": "1.8",
+      "date": "2003-02-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1599",
+        "user_name": "jdany",
+        "first_name": "Juan",
+        "last_name": "Frias",
+        "email": "jfrias at boxfi.com",
+        "homepage": "http://juan.axisym3.net/vim-the-editor/"
+      },
+      "release_notes": "Minor suffix bug fix. Required if you are using suffixes. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1771",
+      "filename": "rcsvers.vim",
+      "script_version": "1.7",
+      "date": "2003-02-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1599",
+        "user_name": "jdany",
+        "first_name": "Juan",
+        "last_name": "Frias",
+        "email": "jfrias at boxfi.com",
+        "homepage": "http://juan.axisym3.net/vim-the-editor/"
+      },
+      "release_notes": "1.7   Will not alter the $xx$ tags when automaticaly checking in files.\n      (Thanks to Engelbert Gruber). Added option to save under the current\n      directory with no RCS sub directory. Also added the option to choose\n      your own suffixes.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1765",
+      "filename": "rcsvers.vim",
+      "script_version": "1.6",
+      "date": "2003-02-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1599",
+        "user_name": "jdany",
+        "first_name": "Juan",
+        "last_name": "Frias",
+        "email": "jfrias at boxfi.com",
+        "homepage": "http://juan.axisym3.net/vim-the-editor/"
+      },
+      "release_notes": "Complete script re-write. It now allows user define options and the ability to compare to older revisions if you have SED and GREP installed. Working on a way to get rid of these external program in a later version."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1758",
+      "filename": "rcsvers.vim",
+      "script_version": "1.5",
+      "date": "2003-02-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1179",
+        "user_name": "grubert",
+        "first_name": "engelbert",
+        "last_name": "gruber",
+        "email": "engelbert.gruber at ssg.co.at",
+        "homepage": ""
+      },
+      "release_notes": "FIX files in current directory - RCS in filedirectory.\n+ Check for file .novimrcs in files directory to skip versioning."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1757",
+      "filename": "rcsvers.vim",
+      "script_version": "1.4",
+      "date": "2003-02-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1179",
+        "user_name": "grubert",
+        "first_name": "engelbert",
+        "last_name": "gruber",
+        "email": "engelbert.gruber at ssg.co.at",
+        "homepage": ""
+      },
+      "release_notes": "FIX editing files not in current directory."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1755",
+      "filename": "rcsvers.vim",
+      "script_version": "1.3",
+      "date": "2003-02-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "error in uploading"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1754",
+      "filename": "rcsvers.vim",
+      "script_version": "1.2",
+      "date": "2003-02-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "option to select the rcs directory, and better comments thanks to Juan Frias\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1721",
+      "filename": "rcsvers.vim",
+      "script_version": "1.0",
+      "date": "2003-02-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "479",
+        "user_name": "rpilkey",
+        "first_name": "Roger",
+        "last_name": "Pilkey",
+        "email": "rpilkey at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

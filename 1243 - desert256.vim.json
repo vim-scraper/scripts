@@ -1,0 +1,42 @@
+{
+  "script_id": "1243",
+  "name": "desert256.vim",
+  "summary": "A slightly-modified desert theme, for 88- and 256-color xterms.",
+  "script_type": "color scheme",
+  "description": "These are the colors of the \"desert\" theme by Hans Fugal with a few small modifications (namely that I lowered the intensity of the normal white and made the normal and nontext backgrounds black), modified to work with 88- and 256-color xterms.\n\nThe original \"desert\" theme is available as part of the vim distribution or at http://hans.fugal.net/vim/colors/.\n\nThe real feature of this color scheme, with a wink to the \"inkpot\" theme, is the programmatic approximation of the gui colors to the palettes of 88- and 256- color xterms.  The functions that do this (folded away, for readability) are calibrated to the colors used for Thomas E. Dickey's xterm (version 200), which is available at http://dickey.his.com/xterm/xterm.html.\n\nI struggled with trying to parse the rgb.txt file to avoid the necessity of converting color names to #rrggbb form, but decided it was just not worth the effort.  Maybe someone seeing this may decide otherwise...",
+  "install_details": "Copy this file into ~/.vim/colors (or $VIM/vimfiles/colors in Windows).  Start it from within vim using :colorscheme desert256.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4055",
+      "filename": "desert256.vim",
+      "script_version": "1.0.1",
+      "date": "2005-03-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1019",
+        "user_name": "thundrfyre",
+        "first_name": "Henry",
+        "last_name": "So, Jr.",
+        "email": "henryso at panix.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor attribute tweaks to keep the appearance of things the same on more systems. Fixed the reverse video issue with :help."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4052",
+      "filename": "desert256.vim",
+      "script_version": "1.0",
+      "date": "2005-03-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1019",
+        "user_name": "thundrfyre",
+        "first_name": "Henry",
+        "last_name": "So, Jr.",
+        "email": "henryso at panix.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

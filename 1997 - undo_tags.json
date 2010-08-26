@@ -1,0 +1,74 @@
+{
+  "script_id": "1997",
+  "name": "undo_tags",
+  "summary": "small utility that lets you tag undo branches",
+  "script_type": "utility",
+  "description": "Undo branches are a very cool feature in vim7, which I recently discovered.\nYou can navigate through the change history of the current session as\nlong as you do not run out of undolevels.\n\nThis small plugin lets you:\n-  Assign tags / names and description to points in the buffers change history\n-  List the tags / names\n-  Choose a tag / name to revert back",
+  "install_details": "Extract it to your vim dir.\nDo :helptags",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7609",
+      "filename": "undo_tags-1.2.tgz",
+      "script_version": "1.2",
+      "date": "2007-08-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12594",
+        "user_name": "politza",
+        "first_name": "Andreas",
+        "last_name": "Politz",
+        "email": "politzaOfh-trier,de",
+        "homepage": ""
+      },
+      "release_notes": "+helpfile more standard alike\n+better handling of long tagnames\n+allow tagging a virgin buffer "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7549",
+      "filename": "undo_tags-1.1.tar.gz",
+      "script_version": "1.1",
+      "date": "2007-08-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12594",
+        "user_name": "politza",
+        "first_name": "Andreas",
+        "last_name": "Politz",
+        "email": "politzaOfh-trier,de",
+        "homepage": ""
+      },
+      "release_notes": "- renamed commands\n- replaced autocommand with function\n- added command for deleting tags\n- use changenr() instead of :undolist\n  this way it always returns to the correct textstate\n+thanks to A.Wokula\n\n\t\t\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7546",
+      "filename": "undo_tags-1.0.1.tar.gz",
+      "script_version": "1.0.1",
+      "date": "2007-08-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12594",
+        "user_name": "politza",
+        "first_name": "Andreas",
+        "last_name": "Politz",
+        "email": "politzaOfh-trier,de",
+        "homepage": ""
+      },
+      "release_notes": "bugfix :  changed the strftime  string, which happens to crash on some windows© versions"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7536",
+      "filename": "undo_tags-1-0.tar.gz",
+      "script_version": "1.0",
+      "date": "2007-08-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12594",
+        "user_name": "politza",
+        "first_name": "Andreas",
+        "last_name": "Politz",
+        "email": "politzaOfh-trier,de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

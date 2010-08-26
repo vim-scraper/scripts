@@ -1,0 +1,58 @@
+{
+  "script_id": "1961",
+  "name": "Tabmerge",
+  "summary": "Merge a tab's windows with the current tab",
+  "script_type": "utility",
+  "description": "Usage:\n :Tabmerge [tab number] [top|bottom|left|right]\n\nThe tab number can be \"$\" for the last tab.  If the tab number isn't specified the tab to the right of the current tab is merged.  If there is no right tab, the left tab is merged.\n\nThe location specifies where in the current tab to merge the windows. Defaults to \"top\".\n",
+  "install_details": "Put the script in your plugin directory or source it directly.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8828",
+      "filename": "Tabmerge.vim",
+      "script_version": "0.3",
+      "date": "2008-06-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Can now merge to the left/right as well"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7372",
+      "filename": "Tabmerge.vim",
+      "script_version": "0.2",
+      "date": "2007-07-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Made the tab number optional\n- Wasn't properly restoring 'switchbuf' when there was an error"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7369",
+      "filename": "Tabmerge.vim",
+      "script_version": "0.1",
+      "date": "2007-07-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

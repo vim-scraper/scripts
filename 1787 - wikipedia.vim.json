@@ -1,0 +1,42 @@
+{
+  "script_id": "1787",
+  "name": "wikipedia.vim",
+  "summary": "Syntax highlighting for MediaWiki articles",
+  "script_type": "syntax",
+  "description": "This file is for people who use external editors to work on articles on Wikipedia and other MediaWiki sites.  Please note that I didn't write this -- it was downloaded from http://en.wikipedia.org/wiki/Wikipedia%3AText_editor_support#Vim and may well be more up-to-date there.  If the version here is out of date contact me and I'll upload the improved version.\n\nVersion 1 of this script also contains a few settings to better deal with the fact that MediaWiki articles only contain newlines between paragraphs, you may prefer to remove those and put them in ~/.vim/ftplugin/Wikipedia.vim.  In version 2 these have been moved to a separate file.",
+  "install_details": "augroup filetypedetect\nau BufNewFile,BufRead *.wiki setf Wikipedia\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7538",
+      "filename": "Wikipedia.tar.gz",
+      "script_version": "2",
+      "date": "2007-08-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11710",
+        "user_name": "mvcorks",
+        "first_name": "Matt",
+        "last_name": "Corks",
+        "email": "mvcorks at alumni.uwaterloo.ca",
+        "homepage": "http://theorem.ca/~mvcorks/"
+      },
+      "release_notes": "Again, I didn't write this, I'm just uploading a new version from http://en.wikipedia.org/wiki/Wikipedia%3AText_editor_support#Vim so it will be distributed more widely.\nFull credit for this upgrade goes to Ian Tegebo, username yontege on this site, who emailed me updated versions of these files and suggested that I upload them here.\n\nThis package includes the following files:\nfiletype.vim\nftplugin/Wikipedia.vim\nsyntax/Wikipedia.vim"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6688",
+      "filename": "wikipedia.vim",
+      "script_version": "1",
+      "date": "2007-01-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11710",
+        "user_name": "mvcorks",
+        "first_name": "Matt",
+        "last_name": "Corks",
+        "email": "mvcorks at alumni.uwaterloo.ca",
+        "homepage": "http://theorem.ca/~mvcorks/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "script_id": "987",
+  "name": "DoxygenToolkit.vim",
+  "summary": "Simplify Doxygen documentation in C, C++, Python.",
+  "script_type": "utility",
+  "description": "Currently five purposes have been defined :\n\nGenerates a doxygen license comment.  The tag text is configurable.\n\nGenerates a doxygen author skeleton.  The tag text is configurable.\n\nGenerates a doxygen comment skeleton for a C, C++ or Python function or class,\nincluding @brief, @param (for each named argument), and @return.  The tag\ntext as well as a comment block header and footer are configurable.\n(Consequently, you can have \\brief, etc. if you wish, with little effort.)\n\nIgnore code fragment placed in a block defined by #ifdef ... #endif (C/C++).  The\nblock name must be given to the function.  All of the corresponding blocks\nin all the file will be treated and placed in a new block DOX_SKIP_BLOCK (or\nany other name that you have configured).  Then you have to update\nPREDEFINED value in your doxygen configuration file with correct block name.\nYou also have to set ENABLE_PREPROCESSING to YES.\n\nGenerate a doxygen group (begining and ending). The tag text is\nconfigurable.\n\nUse:\n- Type of comments (C/C++: /// or /** ... */, Python: ## and # ) :\n  In vim, default C++ comments are : /** ... */. But if you prefer to use ///\n  Doxygen comments just add 'let g:DoxygenToolkit_commentType = \"C++\"'\n  (without quotes) in your .vimrc file\n\n- License :\n  In vim, place the cursor on the line that will follow doxygen license\n  comment.  Then, execute the command :DoxLic.  This will generate license\n  comment and leave the cursor on the line just after.\n\n- Author :\n  In vim, place the cursor on the line that will follow doxygen author\n  comment.  Then, execute the command :DoxAuthor.  This will generate the\n  skeleton and leave the cursor just after @author tag if no variable\n  define it, or just after the skeleton.\n\n- Function / class comment :\n  In vim, place the cursor on the line of the function header (or returned\n  value of the function) or the class.  Then execute the command :Dox.  This\n  will generate the skeleton and leave the cursor after the @brief tag.\n\n- Ignore code fragment (C/C++ only) :\n  In vim, if you want to ignore all code fragment placed in a block such as :\n    #ifdef DEBUG\n    ...\n    #endif\n  You only have to execute the command :DoxUndoc(DEBUG) !\n  \n- Group :\n  In vim, execute the command :DoxBlock to insert a doxygen block on the\n  following line.\n\nLimitations:\n- Assumes that the function name (and the following opening parenthesis) is\n  at least on the third line after current cursor position.\n- Not able to update a comment block after it's been written.\n- Blocks delimiters (header and footer) are only included for function\n  comment.\n- Assumes that cindent is used.\n- Comments in function parameters (such as void foo(int bar /* ... */, baz))\n  are not yet supported.\n\n\nExample:\nGiven:\nint\n  foo(char mychar,\n      int myint,\n      double* myarray,\n      int mask = DEFAULT)\n{ //...\n}\n\nIssuing the :Dox command with the cursor on the function declaration would\ngenerate\n\n/**\n * @brief\n *\n * @param mychar\n * @param myint\n * @param myarray\n * @param mask\n *\n * @return\n */\n\n\nTo customize the output of the script, see the g:DoxygenToolkit_*\nvariables in the script's source.  These variables can be set in your\n.vimrc.\n\nFor example, my .vimrc contains:\nlet g:DoxygenToolkit_briefTag_pre=\"@Synopsis  \"\nlet g:DoxygenToolkit_paramTag_pre=\"@Param \"\nlet g:DoxygenToolkit_returnTag=\"@Returns   \"\nlet g:DoxygenToolkit_blockHeader=\"--------------------------------------------------------------------------\"\nlet g:DoxygenToolkit_blockFooter=\"----------------------------------------------------------------------------\"\nlet g:DoxygenToolkit_authorName=\"Mathias Lorente\"\nlet g:DoxygenToolkit_licenseTag=\"My own license\"   <-- !!! Does not end with \"\\<enter>\"",
+  "install_details": "Copy to your '~/.vim/plugin' directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13524",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.2.10",
+      "date": "2010-08-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "'extern' keyword added in list of values to ignore for return type."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13521",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.2.9",
+      "date": "2010-08-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Correct bugs related to templates and add support for throw statement (many thanks to Dennis Lubert):\n- Template parameter of different type from class and typename are recognized.\n- Indentation mistake while detecting template.\n- New options are available: g:DoxygenToolkit_throwTag_pre (default set to '@throw ', can be changed to '@exception ' and g:DoxygenToolkit_throwTag_post\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13505",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.2.8",
+      "date": "2010-08-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Add support for documentation of template parameters.\n(Thanks to Dennis)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11878",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.2.7",
+      "date": "2009-12-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Increase comparibility with c/c++ IDE"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11765",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.2.6",
+      "date": "2009-11-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Bug correction (thanks to Jhon Do):\nDoxygenToolkit_briefTag_funcName and other xxx_xxName parameters should work properly now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11228",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.2.5",
+      "date": "2009-08-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "DoxLic function is corrected (thanks to Roland Kammerer). Date and name are properly set."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10579",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.2.4",
+      "date": "2009-05-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Bug correction (thanks to Anders Bo Rasmussen)\n   - C++: now functions like  void foo(type &bar); are correctly documented.\n          The parameter's name is 'bar' (and no more '&bar')."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10284",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.2.3",
+      "date": "2009-03-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Added @version tag into the DocBlock generated by DoxygenAuthorFunc() (thanks to Dave Walter)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9847",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.2.2",
+      "date": "2009-01-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Comments are now allowed in function declaration. Example:\n- C/C++:   void func( int foo, // first param\n                                   int bar  /* second param */);\n\n- Python:  def func( foo,  # first param\n                                 bar ) # second param"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9823",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.2.1",
+      "date": "2009-01-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Bug correction (many thanks to Alexey Radkov)\n- C/C++: following function/method are now correctly documented:\n   - operator(),\n   - constructor with initialization parameter(s),\n   - pure virtual method,\n   - const method.\n\n- Python:\n   - Single line function are now correctly documented."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9809",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.2.0",
+      "date": "2009-01-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "The main function has been rewritten (I hope it is cleaner).\n - There is now support for function pointer as parameter (C/C++).\n - You can configure the script to get one line documentation (for\n   attribute instance for example, you need to set\n   g:DoxygenToolkit_compactOneLineDoc to \"yes\").\n\n - NEW: Support Python scripts:\n   - Function/method are not scanned, so by default they are considered\n      as if they always return something (modify this behavior by defining\n      g:DoxygenToolkit_python_autoFunctionReturn to \"no\")\n   - self parameter is automatically ignored when scanning function\n      parameters (you can change this behavior by defining\n      g:DoxygenToolkit_python_autoRemoveSelfParam to \"no\")"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6978",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.17",
+      "date": "2007-04-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Number of lines scanned is now configurable. Default value is still 10 lines. (Thanks to Spencer Collyer for this improvement).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6809",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.16",
+      "date": "2007-02-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Bug correction : now, function that returns null pointer are correctly documented (thanks to Ronald WAHL for his report and patch).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6735",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.15",
+      "date": "2007-02-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Generated documentation with block header/footer activated do not integrate header and footer anymore.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6376",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.14",
+      "date": "2006-11-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "New option available for cinoptions : g:DoxygenToolkit_cinoptions (default value is still c1C1)\nThanks to Arnaud GODET for this. Now comment can have different indentation style.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4177",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.13",
+      "date": "2005-04-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Changes for linux kernel comment style"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4048",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.12",
+      "date": "2005-03-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Fixed indentation in comments (suggested by Soh Kok Hong and required by other users)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3800",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.12",
+      "date": "2005-01-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Now you can use your own comment tag (not only C or C++). In this case, you have to define: 'g:DoxygenToolkit_startCommentTag', 'g:DoxygenToolkit_interCommentTag' and 'g:DoxygenToolkit_endCommentTag' in your .vimrc file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3646",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.11",
+      "date": "2004-11-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "The real 0.1.11 version...\nSorry for my mistake (thank to Jason Mills who pointed me out this error....)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3086",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.10",
+      "date": "2004-06-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Bug correction for constructors / destructor and functions preceded by spaces (or tabs)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3058",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.9",
+      "date": "2004-05-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Fixed filename bug when including doxygen author comment whereas file has not been open directly on commamd line.\nNow /// or /** doxygen comments are correctly integrated (except for license)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3054",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.8",
+      "date": "2004-05-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Some changes and bug correction for some configuration (thanks to Jason Mills)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3029",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.7",
+      "date": "2004-05-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Bug correction in DoxygenUndocumentFunc."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3025",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.6",
+      "date": "2004-05-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Few code modification and new functionalities"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3023",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.1.5",
+      "date": "2004-05-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "2724",
+  "name": "Rename2",
+  "summary": "Rename the file you are currently editing and keep on editing",
+  "script_type": "utility",
+  "description": "This is really just a bugfix for the original Rename script by Christian J. Robinson (vimscript#1928) which suffered from the fact that it did not consider the possibility that the file in the current buffer might no reside in the current directory. \nIn my version, the new file will always end up in the directory of the original file.",
+  "install_details": "Simply copy the script to your ~/.vim/plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11097",
+      "filename": "Rename2.vim",
+      "script_version": "0.1",
+      "date": "2009-07-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17740",
+        "user_name": "manni",
+        "first_name": "Manni",
+        "last_name": "Heumann",
+        "email": "vim at lxxi.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

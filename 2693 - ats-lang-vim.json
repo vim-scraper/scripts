@@ -1,0 +1,26 @@
+{
+  "script_id": "2693",
+  "name": "ats-lang-vim",
+  "summary": "syntax highlighting for ATS",
+  "script_type": "syntax",
+  "description": "A (rather incomplete) syntax highlighting for ATS (see http://www.ats-lang.org)\n\nFuture improvements are planned.",
+  "install_details": "Copy this script into ~/.vim/syntax, then add the lines below to your ~/.vimrc:\n\nau BufRead,BufNewFile *.dats set filetype=ats\nau BufRead,BufNewFile *.sats set filetype=ats\nau! Syntax ats source ats.vim\n\nEnjoy! :)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10904",
+      "filename": "ats.vim",
+      "script_version": "0.1",
+      "date": "2009-06-27",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17543",
+        "user_name": "artyoms",
+        "first_name": "Artyom",
+        "last_name": "Shalkhakov",
+        "email": "artyom.shalkhakov at gmail.com",
+        "homepage": "http://artyoms.idhost.kz"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

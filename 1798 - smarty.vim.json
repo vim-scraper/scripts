@@ -1,0 +1,42 @@
+{
+  "script_id": "1798",
+  "name": "smarty.vim",
+  "summary": "smarty syntax file",
+  "script_type": "syntax",
+  "description": "A friend and I found that there were no acceptable vim syntax files for smarty, so we took the only one we could find and added everything from the smarty documentation (http://smarty.php.net/manual/en) to it.  If nothing else, this is a very good start on a complete smarty syntax file.  We have even used vimtip #498 to use autocomplete with this syntax and so far it seems to work well.",
+  "install_details": "just drop it in your ~/.vim/syntax directory, then put this somewhere in your vimrc file: \n\nau BufRead,BufNewFile *.tpl set filetype=smarty\n\nadditionally, if you would like dictionary completion, feel free to add something like this:\n\nau Filetype smarty exec('set dictionary=/home/user/.vim/syntax/smarty.vim')\nau Filetype smarty set complete+=k\n\nThis will allow <Control-x><Control-k> for dictionary autocomplete. \nWe have a mapping that makes it a bit easier:\n\nimap <S-Space><S-Space> <C-X><C-K>\n\nYou could use imap <C-Space> <C-X><C-K>, but we have that mapped for normal omni (auto) completion.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6741",
+      "filename": "smarty.vim",
+      "script_version": "2",
+      "date": "2007-02-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11774",
+        "user_name": "kenjo",
+        "first_name": "Ken",
+        "last_name": "Earl",
+        "email": "frumplemeister at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "a few small fixes.  Added support for single quotes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6734",
+      "filename": "smarty.vim",
+      "script_version": "1",
+      "date": "2007-02-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11774",
+        "user_name": "kenjo",
+        "first_name": "Ken",
+        "last_name": "Earl",
+        "email": "frumplemeister at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

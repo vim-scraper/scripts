@@ -1,0 +1,42 @@
+{
+  "script_id": "1024",
+  "name": "IndentHL",
+  "summary": "Vim Syntax Highlighting for indent whitespace",
+  "script_type": "syntax",
+  "description": "Tabs and spaces are colored in slightly different colors from lightest to\ndarkest for dark background or from darkest to lightest for light background\nexample (x is darkest color and z lightest):\n\n    function foo()\n    x if b\n    x y echo &#039something&#039\n    x y while c\n    x y z echo &#039something else&#039\n    x y endwhile\n    x endif\n    endfunction\n    \nActually it forms vertical stripes\n\nYou can switch it off and on by \n   :call OnOffIndentHi()\n",
+  "install_details": "Put script in  ~/.vim/after/syntax/php.vim\n               or \n               ~/.vim/after/syntax/c.vim\n               and\n               ~/.vim/after/syntax/php.vim\n               and\n               ~/.vim/after/syntax/vim.vim\n               and\n               ~/.vim/after/syntax/html.vim\n                                                    \nI haven&#039t test it with other syntaxes but hopefully works",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3210",
+      "filename": "IndentHL.vim",
+      "script_version": "0.2",
+      "date": "2004-07-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5531",
+        "user_name": "vsajko",
+        "first_name": "Vedran",
+        "last_name": "Sajko",
+        "email": "vsajko at inet.hr",
+        "homepage": ""
+      },
+      "release_notes": "support for light background,\ncorrected some bugs\nand some checking added\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3204",
+      "filename": "IndentHL.vim",
+      "script_version": "0.1",
+      "date": "2004-07-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5531",
+        "user_name": "vsajko",
+        "first_name": "Vedran",
+        "last_name": "Sajko",
+        "email": "vsajko at inet.hr",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

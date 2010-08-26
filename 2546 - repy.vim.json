@@ -1,0 +1,42 @@
+{
+  "script_id": "2546",
+  "name": "repy.vim",
+  "summary": "Syntax Coloring for Restricted Python",
+  "script_type": "syntax",
+  "description": "This is the syntax file for RePy - https://seattle.cs.washington.edu/wiki/RepyLibrary\n\nIt needs the python.vim from Dmitry Vasiliev found at http://www.vim.org/scripts/script.php?script_id=790\n",
+  "install_details": "Step 0 - If you don't have it already, get the python.vim syntax plugin at: http://www.vim.org/scripts/script.php?script_id=790\n\nStep 1 - Copy repy.vim into ~/.vim/syntax.\n\nStep 2 - Add the following line to ~/.vimrc:\nau! BufRead,BufNewFile *.repy  setfiletype repy",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9998",
+      "filename": "repy.vim",
+      "script_version": "1.1",
+      "date": "2009-02-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16609",
+        "user_name": "joao",
+        "first_name": "Joao",
+        "last_name": "Moreno",
+        "email": "mail at joaomoreno.com",
+        "homepage": "http://joaomoreno.com"
+      },
+      "release_notes": "* Added 'import' as a forbidden expression.\n* Added Thanks"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9997",
+      "filename": "repy.vim",
+      "script_version": "1.0",
+      "date": "2009-02-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16609",
+        "user_name": "joao",
+        "first_name": "Joao",
+        "last_name": "Moreno",
+        "email": "mail at joaomoreno.com",
+        "homepage": "http://joaomoreno.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

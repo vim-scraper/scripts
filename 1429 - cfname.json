@@ -1,0 +1,106 @@
+{
+  "script_id": "1429",
+  "name": "cfname",
+  "summary": "Shows (or jumps to) the C/C++ prototype of the function the cursor is in",
+  "script_type": "utility",
+  "description": "This is a simple (limited) script for C/C++ programmers.\nWhen editing source files with very long functions, it may happen the \nprogrammer does not know which function the current line is in (e.g. \nwhen using tags and jumping with Ctrl-] or jumping after a search). \nHere are some shortcuts to be typed in normal mode: \n   ff: shows the function prototype on the command line \n   fb: jumps to the function beginning \n   fe: jumps to the function end \n   ft: jumps back where the cursor was before typing 'fb' or 'fe'\n       (the first 'fb' or 'fe' if a sequence of them is typed)\n   fz: folds the function \n   fo: unfolds the function      \nAlso, the function name is visible between square brackets on the status \nline, with automatic update. To disable/enable this feature on-the-go use 'fd'/'fs'.\nTo disable it steadily, comment the statements \n'au BufRead,BufNewFile * CFunSetStatusByFileName' and\n'au BufEnter * CFunSetStatusByFileName' by putting a \" in front of them.\n\nNote that, by default, the status line is not visible when only one window is open.\nIf you like to have it always visible, add the statement 'set laststatus=2' in the script.\n\n\n***KNOWN ISSUES***: \n- The automatic update of the status bar may slow down or even block the cursor movements. \n  This has been experienced with VIM running on an UNIX machine; also experienced with\n  very large files and functions. Refer to the instructions above to disable the status line update. \n\n- In files with comments like \"// ... }\" (with unmatched '{' or '}' brackets), the script does not\n  work well (however, from version 2.2 on, the cursor should behave properly). \n  I think it will not be easy to fix this problem. \n\n\n***SPECIAL VERSION***\nThere is a special version 3.0a by Yakov Lerner. This version has two differences with respect\nto version 3.0:\n1) if the user has a non-standard status line, that is preserved and the function name information\n   is added to it (the status line is not changed to default);\n2) the status line is updated with the function name information only after a while if the\n   cursor position is held (it shows [...] before). That is useful if you feel window scrolling\n   is slowed down too much.\nWith version 3.0a, use a capital F as the first letter for shortcuts.\n\n\nNote that taglist.vim (vimscript #273), the most downloaded script, already does the job of showing \nthe function prototype, together with a lot more! However, try this little thing too!\n\n",
+  "install_details": "Just drop the script into your plugin directory and restart VIM",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5485",
+      "filename": "Cfname.vim",
+      "script_version": "3.0",
+      "date": "2006-03-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9006",
+        "user_name": "VFVIM70",
+        "first_name": "Fabio",
+        "last_name": "Visona'",
+        "email": "fabioviso at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "The function name is now automatically displayed on the status bar only for *.c, *.cpp or *.cc files, because the status bar update caused the scrolling of non-c files to slow down unnecessarily. These changes have been contributed by Yakov Lerner.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5484",
+      "filename": "Cfname.vim",
+      "script_version": "3.0a",
+      "date": "2006-03-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9006",
+        "user_name": "VFVIM70",
+        "first_name": "Fabio",
+        "last_name": "Visona'",
+        "email": "fabioviso at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Special version by Yakov Lerner (see description above)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4897",
+      "filename": "Cfname.vim",
+      "script_version": "2.2",
+      "date": "2005-12-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9006",
+        "user_name": "VFVIM70",
+        "first_name": "Fabio",
+        "last_name": "Visona'",
+        "email": "fabioviso at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Added 'ft' to jump back where the cursor was before typing 'fb' or 'fe'\n- Added missing restoring of the cursor position in 'CF_GetPrototype' when \n  'searchpair' calls fail\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4893",
+      "filename": "Cfname.vim",
+      "script_version": "2.1",
+      "date": "2005-12-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9006",
+        "user_name": "VFVIM70",
+        "first_name": "Fabio",
+        "last_name": "Visona'",
+        "email": "fabioviso at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug: some ^M characters in the script lead to warning messages under UNIX\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4890",
+      "filename": "Cfname.vim",
+      "script_version": "2.0",
+      "date": "2005-12-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9006",
+        "user_name": "VFVIM70",
+        "first_name": "Fabio",
+        "last_name": "Visona'",
+        "email": "fabioviso at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added automatic visualization of the function name in the status line;\nAdded \"fz\" and \"fo\" commands to fold/unfold the function.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4887",
+      "filename": "Cfname.vim",
+      "script_version": "1.0",
+      "date": "2005-12-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9006",
+        "user_name": "VFVIM70",
+        "first_name": "Fabio",
+        "last_name": "Visona'",
+        "email": "fabioviso at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "script_id": "1571",
+  "name": "php.vim",
+  "summary": "PHP Syntax",
+  "script_type": "syntax",
+  "description": "PHP syntax file, with several bug fixes, improvements and additions.  Should be up-to-date with all features of PHP 5.1.4.  If anything is missing, broken, not working well on your setup, or an inconvenience for you, please let me know, all feedback is welcome: <toomuchphp-vim at yahoo.com>.\n\n\nNew and improved highlighting features include:\n===============================================\n\n- User-defined special functions (__autoload(), __construct(), etc)\n- Built-in constants (STDIN, STR_PAD_LEFT, etc)\n- Built-in classes (stdClass, Exception, Reflection, etc)\n- Built-in interfaces (Iterator, Serializable, etc)\n- Complex expressions inside double-quoted strings using { }\n- Support for PCRE patterns\n  (Patterns are only recognized if the pattern is inside the\n  function call.)\n- Braces are colored to help you see when they are mismatched.\n\n\n* You can find a complete list of available options near the top of the syntax file.\n\n* Release 0.9 is the official 'stable' release, however I do encourage you to use the latest version as it shouldn't have any bugs either.",
+  "install_details": "Copy php.vim to:\n  ~/.vim/syntax/php.vim\n    or\n  c:\\program files\\vim\\vimfiles\\syntax\\php.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8651",
+      "filename": "php.tar.gz",
+      "script_version": "0.9.7",
+      "date": "2008-05-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10023",
+        "user_name": "peter_hodge",
+        "first_name": "Peter",
+        "last_name": "Hodge",
+        "email": "toomuchphp-vim at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Many small bug fixes and improvements"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6341",
+      "filename": "php.tar.gz",
+      "script_version": "0.9.6",
+      "date": "2006-10-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10023",
+        "user_name": "peter_hodge",
+        "first_name": "Peter",
+        "last_name": "Hodge",
+        "email": "toomuchphp-vim at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Highlights ';' errors in many more places, can now fold array() structures as well."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6326",
+      "filename": "php.tar.gz",
+      "script_version": "0.9.5",
+      "date": "2006-10-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10023",
+        "user_name": "peter_hodge",
+        "first_name": "Peter",
+        "last_name": "Hodge",
+        "email": "toomuchphp-vim at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "New colors for { } around class/function/try/catch code blocks.  Better errors when a brace or semicolon is out of place.  Options can be configured globally or separately for each buffer."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6046",
+      "filename": "php.tar.gz",
+      "script_version": "0.9.4",
+      "date": "2006-08-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10023",
+        "user_name": "peter_hodge",
+        "first_name": "Peter",
+        "last_name": "Hodge",
+        "email": "toomuchphp-vim at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Now supports multi-line patterns and double-quoted patterns (but no variable substitution yet)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5976",
+      "filename": "php.tar.gz",
+      "script_version": "0.9.3",
+      "date": "2006-07-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10023",
+        "user_name": "peter_hodge",
+        "first_name": "Peter",
+        "last_name": "Hodge",
+        "email": "toomuchphp-vim at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved support for PCRE patterns, fixed variable substituion in strings, added option to highlight '->' in an alternate color when used for object properties."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5861",
+      "filename": "syntax.tar.gz",
+      "script_version": "0.9.2",
+      "date": "2006-06-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10023",
+        "user_name": "peter_hodge",
+        "first_name": "Peter",
+        "last_name": "Hodge",
+        "email": "toomuchphp-vim at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved support for preg* functions, added support for most built-in constants"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5836",
+      "filename": "syntax.tar.gz",
+      "script_version": "0.9.1",
+      "date": "2006-06-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10023",
+        "user_name": "peter_hodge",
+        "first_name": "Peter",
+        "last_name": "Hodge",
+        "email": "toomuchphp-vim at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Alpha support for regular expressions inside preg_*() functions, plus some very minor additions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5816",
+      "filename": "php.vim",
+      "script_version": "0.9",
+      "date": "2006-06-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10023",
+        "user_name": "peter_hodge",
+        "first_name": "Peter",
+        "last_name": "Hodge",
+        "email": "toomuchphp-vim at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

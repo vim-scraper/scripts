@@ -1,0 +1,58 @@
+{
+  "script_id": "1978",
+  "name": "Easy alignment to column",
+  "summary": "Quickly align a word to a predefined column",
+  "script_type": "utility",
+  "description": "This script was made to ease typing programming code like:\n\n    int                        someVariable;\n    double                     foo;\n    std::vector< std::string > andSomeLongerName;\n\n(If this doesn't look nicely aligned it's because you're not viewing it using a fixed-width font.)\n\nThe attached script allows you to quickly align the variable names on the same (virtual) column. It defines two mappings for this:\n\n  ,a : Align the current cursor to the predefined column.\n  ,A : Try to find the alignment column automatically on the previous line.\n\n(Replace , with your g:mapleader.)\n\nThe first mapping actually does want we want to achieve, but the latter makes it really easy to use. It looks for the separating gap, which is \\s\\s (two consecutive white-space characters), and a single tab (following by anything) as a plan B. This may not always work of course. To specify the column, I hijack one of your mark (c in this case), which you can always set manually. If you don't want mark c to be sacrificed to the script, it's very easy to adapt it and make it use another (by editing the key mappings in the file).\n\nThe variable g:align_uses_tabs can be reset if you want the script to only insert spaces. Else, it inserts as many tabs as possible, than \"fine-tunes\" using spaces.\n",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7665",
+      "filename": "alignment.vim",
+      "script_version": "0.2.1",
+      "date": "2007-09-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12839",
+        "user_name": "nielsadb",
+        "first_name": "Niels",
+        "last_name": "Aan de Brugh",
+        "email": "nielsadb at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added key mapping for align (,a) and using Unix EOLs now (thanks to Maarten Bressers for noticing)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7577",
+      "filename": "alignment.vim",
+      "script_version": "0.2",
+      "date": "2007-08-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12839",
+        "user_name": "nielsadb",
+        "first_name": "Niels",
+        "last_name": "Aan de Brugh",
+        "email": "nielsadb at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix for expandtab.\nAlign at white-space at the beginning of a line too."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7442",
+      "filename": "alignment.vim",
+      "script_version": "0.1",
+      "date": "2007-08-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12839",
+        "user_name": "nielsadb",
+        "first_name": "Niels",
+        "last_name": "Aan de Brugh",
+        "email": "nielsadb at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

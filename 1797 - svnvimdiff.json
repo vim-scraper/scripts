@@ -1,0 +1,90 @@
+{
+  "script_id": "1797",
+  "name": "svnvimdiff",
+  "summary": "svn diff + vimdiff",
+  "script_type": "utility",
+  "description": "This shell script will display svn diff output by using vimdiff. If you use the -g switch, you use gvimdiff instead of vimdiff. This was cloned from the script cvsvimdiff, written by Stefano Zacchiroli and Enrico Tassi. It launches whatever vim version you have.",
+  "install_details": "The download itself is a bash shell script, so as long as bash is installed, you don't need to do anything other than make the file executable.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11270",
+      "filename": "svnvimdiff",
+      "script_version": "1.5",
+      "date": "2009-08-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11759",
+        "user_name": "buchan",
+        "first_name": "Geoff",
+        "last_name": "Buchan",
+        "email": "geoffrey.buchan at gmail.com",
+        "homepage": "http://fillmore.homelinux.net"
+      },
+      "release_notes": "Bug fix: remove temporary file with file suffix on exit"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11258",
+      "filename": "svnvimdiff",
+      "script_version": "1.4",
+      "date": "2009-08-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11759",
+        "user_name": "buchan",
+        "first_name": "Geoff",
+        "last_name": "Buchan",
+        "email": "geoffrey.buchan at gmail.com",
+        "homepage": "http://fillmore.homelinux.net"
+      },
+      "release_notes": "Add code to put orignal file suffix on patched file.\nThis fixes syntax highlighting for the file.\nThanks to Stefan Heinemann for the patch!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7491",
+      "filename": "svnvimdiff",
+      "script_version": "1.2",
+      "date": "2007-08-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11759",
+        "user_name": "buchan",
+        "first_name": "Geoff",
+        "last_name": "Buchan",
+        "email": "geoffrey.buchan at gmail.com",
+        "homepage": "http://fillmore.homelinux.net"
+      },
+      "release_notes": "Fix: don't fail when you pass arguments to svn diff but no filename"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7490",
+      "filename": "svnvimdiff",
+      "script_version": "1.1",
+      "date": "2007-08-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11759",
+        "user_name": "buchan",
+        "first_name": "Geoff",
+        "last_name": "Buchan",
+        "email": "geoffrey.buchan at gmail.com",
+        "homepage": "http://fillmore.homelinux.net"
+      },
+      "release_notes": "Add support to pass additional arguments to svndiff, so, for example, you can diff against particular revisions.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6726",
+      "filename": "svnvimdiff",
+      "script_version": "1.0",
+      "date": "2007-02-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11759",
+        "user_name": "buchan",
+        "first_name": "Geoff",
+        "last_name": "Buchan",
+        "email": "geoffrey.buchan at gmail.com",
+        "homepage": "http://fillmore.homelinux.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

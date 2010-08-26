@@ -1,0 +1,42 @@
+{
+  "script_id": "1316",
+  "name": "bwHomeEndAdv.vim",
+  "summary": "This script enhances the <Home> and <End> in both normal mode and insert mode",
+  "script_type": "utility",
+  "description": "Description:\n  This script enhances the <Home> and <End> key in both normal mode and\n  insert mode. \n\n  <Home> is enhanced to behave like in Visual C++, you can use <Home> to\n  jump between the first column and the first non-space character of a\n  line.\n\n  Besides, <End> is also enhanced and can be used to jump between the last\n  column and the last non-space character of a line.",
+  "install_details": "Drop the script to your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4517",
+      "filename": "bwHomeEndAdv.vim",
+      "script_version": "1.3",
+      "date": "2005-08-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6275",
+        "user_name": "BruceWho",
+        "first_name": "Bruce",
+        "last_name": "Who",
+        "email": "bruce.who.hk at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Bug fix: After Entering VIM, and press <End> for the first time while the cursor is already at the end of the line, an error occurs.\n- add <silent> to each mapping to make it behave like normal <Home> & <End>.\nThanks to Andrzej Zaborowski who reported the bug and gave me a patch, and also gave me the suggestion."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4442",
+      "filename": "bwHomeEndAdv.vim",
+      "script_version": "1.2",
+      "date": "2005-07-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6275",
+        "user_name": "BruceWho",
+        "first_name": "Bruce",
+        "last_name": "Who",
+        "email": "bruce.who.hk at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

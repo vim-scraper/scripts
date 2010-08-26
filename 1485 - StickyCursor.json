@@ -1,0 +1,42 @@
+{
+  "script_id": "1485",
+  "name": "StickyCursor",
+  "summary": "remembers the cursor position relative to the window",
+  "script_type": "utility",
+  "description": "The default vim behavour when switching to an open buffer is to scroll the window so the cursor will be positioned at the window's center.\n\nThis script remembers the cursor position relative to the window for every visited buffer and restores it (makes proper scrolling) when switched back to the buffer.\n\nFor more pleasure you can \":set nostartofline\" option.\n",
+  "install_details": "just place to the plugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6613",
+      "filename": "stickycursor.vim",
+      "script_version": "1.1",
+      "date": "2007-01-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9570",
+        "user_name": "sply",
+        "first_name": "Sply",
+        "last_name": "Splyeff",
+        "email": "cv-c at fluid.ru",
+        "homepage": "http://www.sply.org"
+      },
+      "release_notes": "If the cursor moved after we leaved a buffer, don't try to restore in-window position."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5362",
+      "filename": "stickycursor.vim",
+      "script_version": "1",
+      "date": "2006-03-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9570",
+        "user_name": "sply",
+        "first_name": "Sply",
+        "last_name": "Splyeff",
+        "email": "cv-c at fluid.ru",
+        "homepage": "http://www.sply.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

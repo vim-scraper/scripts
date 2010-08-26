@@ -1,0 +1,106 @@
+{
+  "script_id": "884",
+  "name": "AutoAlign",
+  "summary": "Automatically align as you type (autoalign): bib c c++ html maple matlab tex vim",
+  "script_type": "ftplugin",
+  "description": "[AutoAlign V12 AND LATER REQUIRES VIMBALL V18 OR LATER TO UNPACK]\n                               [AutoAlign also requires vimscript#294]\n\n Note:  this plugin is not a right-margin justification tool; see vimscript#177 for that\n\nAutoAlign is currently composed of one regular plugin and six ftplugins.  As you type statements such as (for vim)\n\n\tlet xyz= 1\n\tlet x= 2\n\nthe ftplugin/vim/AutoAlign script will call upon the Align command to line up those equal signs, resulting in aligned equal signs (which can't be usefully shown here due to browsers' use of proportional fonts).\n\nSimilarly the c ftplugin will do so for\n\n\tx= 3;\n\txy[0]= 4;\n\tabc->def= 5;\n\n\tone= 2;\n\n(it only applies to what you're currently typing, it doesn't take any previously existing lines into account).  For c++,\n= signs, <<, and >> operators get aligned.  For maple, :=.  \n\nFormer Version Notes:\n   5: AutoAlign maps and functions changed to allow use of \".\" to repeat entry of =... expressions.  Uses g:mapleader instead of a built-in backslash to access AlignMaps.  First release of AutoAlign using vim's user-help. \n   4: Now supports: bib c cpp tex vim. AutoAlign now breaks the undo sequence at every align operation, so one undo undoes the entire AutoAlign.  Bugfix: (with virtual edit) has been fixed (when backspacing over ==).  Bugfix: unwanted beeping due to virtual edit being off fixed\n   3: Now supported: bib c tex vim.  :AA toggles AutoAlign on and off. AutoAlign now auto-aligns only blocks of alignable text.  cecutil.vim included (SaveMark, SaveWinPosn, etc)\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#AUTOALIGN)\n",
+  "install_details": "1. Get vimball v18 or later (vimscript#1502) if you  haven't done so already.  Be sure to remove all vestiges of any older vimball versions, too.  (if you have vim 7.1a or later, you probably can skip this step)\n2. vim AutoAlign.vba.gz\n   :so %\n   :q\n3. AutoAlign uses vimscript#294 (Align, AlignMaps); you'll also need that if you haven't gotten it yet.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7510",
+      "filename": "AutoAlign.vba.gz",
+      "script_version": "13",
+      "date": "2007-08-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "AutoAlign leaves \".\" alone when it starts; thus, one can now insert \"= 0\", for example, and re-apply it with vim's \".\" operator.  Tnx to Antony Scriven!\nSome bug fixes for C++'s > and < auto-aligning.\nAutoAlign now passes the pluginkiller test. (vimscript#1489)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6207",
+      "filename": "AutoAlign.vba.gz",
+      "script_version": "12",
+      "date": "2006-09-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Fixed a bug with ftplugin/bib/AutoAlign.vim (ie. for LaTeX *.bib files)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5482",
+      "filename": "AutoAlign.tar.gz",
+      "script_version": "11",
+      "date": "2006-03-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "I inadvertently left debugging on in AutoAlign v10; this one has debugging de-activated.\nPlus some bugfixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5468",
+      "filename": "AutoAlign.tar.gz",
+      "script_version": "10",
+      "date": "2006-03-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Works with ve= and ve=all.  Uses startinsert or startinsert!, depending on whether the cursor in inside the line or being used to append."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4815",
+      "filename": "AutoAlign.tar.gz",
+      "script_version": "7",
+      "date": "2005-11-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "AutoAlign now supports html\nAutoAlign now has b:autoalign_suspend# for suspend-alignment patterns\nAn undefined b:autoalign_reqdpat# no longer causes an error\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4099",
+      "filename": "AutoAlign.tar.gz",
+      "script_version": "6",
+      "date": "2005-03-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "AutoAlign is now split into a plugin containing the majority of vimscript; the supported ftplugins contain the invoking imaps and pattern definitions that the plugin uses.  Matlab support added.  Should be easy to add more languages should anyone wish to contribute the needed patterns!  Currently supported: bib c cpp maple matlab tex vim\n"
+    }
+  ]
+}

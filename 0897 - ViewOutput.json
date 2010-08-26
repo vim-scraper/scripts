@@ -1,0 +1,42 @@
+{
+  "script_id": "897",
+  "name": "ViewOutput",
+  "summary": "scroll back and search [long] output of vim command",
+  "script_type": "utility",
+  "description": "If you want to scroll backward (and forward) and search within long output of the vim command (such as :au, :let), execute command with prefix VO. \n\nVO (viewoutput) will place output of vim command in new buffer where you can search and view it using vim commands. Example:\n\n      :VO au\n      :VO let",
+  "install_details": "Drop viewoutput.vim into your ~/.vim/plugin directory.\n\nTo change the command that creates the preview window (the default is \"new\"),\nyou can edit definition of g:viewoutput_newbuffer variable at the beginning of\nscript:\n\nlet g:viewoutput_newbuffer=\"5new\"     | \" create preview window 5 lines high\nlet g:viewoutput_newbuffer=\"bot 5new\" | \" bottom preview window 5 lines high\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2722",
+      "filename": "viewoutput.vim",
+      "script_version": "2.0",
+      "date": "2004-02-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2342",
+        "user_name": "lerner",
+        "first_name": "Yakov",
+        "last_name": "Lerner",
+        "email": "jilerner at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug with 'VO map' (silent map produced output without newlines). Saving output to register rather than tempfile. Improvements thanks to Antony Scriven and Charles Campbell. Config variable  g:viewoutput_newbuffer added."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2716",
+      "filename": "viewoutput.vim",
+      "script_version": "1.0",
+      "date": "2004-02-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2342",
+        "user_name": "lerner",
+        "first_name": "Yakov",
+        "last_name": "Lerner",
+        "email": "jilerner at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

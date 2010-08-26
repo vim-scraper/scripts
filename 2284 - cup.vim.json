@@ -1,0 +1,26 @@
+{
+  "script_id": "2284",
+  "name": "cup.vim",
+  "summary": "CUP Syntax highlighting",
+  "script_type": "syntax",
+  "description": "Syntax highlighting for the CUP parser generator, an LALR parser generator for JAVA. See http://www.cs.princeton.edu/~appel/modern/java/CUP/\n\nThe latest version can be found at http://www.trapdoor.org/projects/4\n\nPatches are welcome.",
+  "install_details": "Copy cup.vim to ~/.vim/syntax and add the following line to ~/.vim/filetype.vim :\n\nautocmd BufNewFile,BufRead *.cup setf cup",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8889",
+      "filename": "cup.vim",
+      "script_version": "1.0",
+      "date": "2008-07-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12329",
+        "user_name": "JonSiddle",
+        "first_name": "Jon",
+        "last_name": "Siddle",
+        "email": "jon at trapdoor.org",
+        "homepage": "http://www.trapdoor.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

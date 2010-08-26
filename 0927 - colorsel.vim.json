@@ -1,0 +1,122 @@
+{
+  "script_id": "927",
+  "name": "colorsel.vim",
+  "summary": "A RGB/HSV color selector",
+  "script_type": "utility",
+  "description": "A simple interactive RGB/HSV color selector modelled after Gimp2 RGB/HSV color selector. Needs gvim and :set nocp (and probably a high-color display).\n\nUsage: :so colorsel.vim and\n\n:ColorSel [color]\n\nstarts the color selector.  The optional color argument can be in rrggbb or rgb form or a CSS named color.\n\nj, k (or arrows) change active channel.\n\nh, l (or arrows), b, w (or pgdown, pgup), 0, $ (or home, end) change channel values (by 1, by `word' and to 0/maximum).\n\ny yanks the current color as #rrggbb to the unnamed register, \"xy to register x.\n\n\"xp/\"xP gets the color from register x.\n\nx swaps the current and alternate color.\n\nq immediately quits.\n\nThe swatch and slider sizes are configurable, palettes and alternate colors can be switched off, see the source.",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12789",
+      "filename": "colorsel.zip",
+      "script_version": "20100406",
+      "date": "2010-04-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "The plug-in now uses the autoload mechanism and, consequently, no longer comes in a single Vim file.  Pressing 'f' now also cycles through a state when no text displayed at all.  (Changes by Ingo Karkat)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12759",
+      "filename": "colorsel.vim",
+      "script_version": "20100401",
+      "date": "2010-04-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "The color swatch shows text (with changeable proprties), ColorSel can directly edit a hlighlight group and there were several improvements to working with two colors. (Modifications by Ingo Karkat)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10529",
+      "filename": "colorsel.vim",
+      "script_version": "20090505",
+      "date": "2009-05-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Colours can be stored to a palette (vim registers are used for that).  The colour swatch can be split to show an alternate colour.  Vim 6.2 is required now.  A few small bugs were fixed.  (Enhancements thanks to Ingo Karkat.)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10470",
+      "filename": "colorsel.vim",
+      "script_version": "20090428",
+      "date": "2009-04-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "ColorSel can be run with an rgb argument (in addition to rrggbb) or with a named color argument (basic CSS colors are supported).  If it is run with a bogus argument, the color is set to black.\n\nImprovements thanks to Martin Junger."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4784",
+      "filename": "colorsel.vim",
+      "script_version": "20051121",
+      "date": "2005-11-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Compatibility with Vim 7 was fixed (thanks to Markus Trenkwalder)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2938",
+      "filename": "colorsel.vim",
+      "script_version": "20040416",
+      "date": "2004-04-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "ColorSel now accepts an optional rrggbb color argument (with optional # prefix) to set the color to (either in an existing selector or when creating a new one). Thanks to Thomas Link for the idea."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2795",
+      "filename": "colorsel.vim",
+      "script_version": "20040303",
+      "date": "2004-03-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti at physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

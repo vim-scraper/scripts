@@ -1,0 +1,26 @@
+{
+  "script_id": "2296",
+  "name": "sipngrep",
+  "summary": "Syntax file for sip captures from ngrep (udp)",
+  "script_type": "syntax",
+  "description": "Syntax includes:\n- coloring numbers / usernames\n- folding with first line of packet in summary\n- coloring 'important' and other headers\n- coloring for standard possible problems (lack of username or domain, incorrect method, private ips)\n- marking 4XX, 5XX, 6XX statuses\n\nDesigned looking at capture produced by `ngrep -q -tt -W byline udp and port 5060` or similar.",
+  "install_details": "Put the file in vim directory/syntax/sipngrep.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8946",
+      "filename": "sipngrep.vim",
+      "script_version": "1.0",
+      "date": "2008-07-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14443",
+        "user_name": "viraptor",
+        "first_name": "Stanis&#322;aw",
+        "last_name": "Pitucha",
+        "email": "viraptor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

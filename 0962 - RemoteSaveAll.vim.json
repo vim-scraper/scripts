@@ -1,0 +1,26 @@
+{
+  "script_id": "962",
+  "name": "RemoteSaveAll.vim",
+  "summary": ":RWALL[!] - save modified files in all running vim instances, also :WALL[!]",
+  "script_type": "utility",
+  "description": "(1)  This script (plugin) defines command :RWALL which saves all modified files in all running vim instances. Command takes no arguments. Bang can be used (:RWALL!) in which case the command which is sent to all running vims is :wall!. Without bang, the command which is sent to all running vims is :wall.\n\nLocal vim is also saved.\n\n\"All running vim instances\" include only servername-enabled vims. Vim instances with servername disabled will not be saved. :RWALL/:WALL uses vim clientserver feature to execute \":wall[!]\" command in other running vims.\n\nSynonym :WALL is set equivalent to :RWALL\n\n(2) To do this from shell (to signal all running vims to save their modified file)\nyou can use either one of the following shell scripts:\n\n(2a) Shell script RWALL.sh -- requires that RemoteSaveAll.vim be installed\n\n#!/bin/sh\n# Description: save  modified files in all running vims\n# this script requires that plugin RemoteSaveAll.vim be installed\n# in the plugin directory\nvim -c 'RWALL' -c 'q!'\n\n(2b) Shell script savevims.sh -- does not require RemoteSaveAll.vim plugin\n\n#!/bin/sh\n# Description: save  modified files in all running vims\nfor srv in `vim --serverlist`; do\n    vim --servername \"$srv\" --remote_send '<C-\\><C-N>:wall<CR>'\ndone\n\n(3) To check that your running vims are 'servername-enabled' and can be remotely saved, do:\n          vim --serverlist \nat shell prompt, or\n          :echo serverlist()\nin vim. If nothing is printed, then no running vims are detected.\n",
+  "install_details": "Copy the file RemoteSaveAll.vim into your personal plugin directory (~/.vim/plugin).\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2933",
+      "filename": "RemoteSaveAll.vim",
+      "script_version": "1.0",
+      "date": "2004-04-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2342",
+        "user_name": "lerner",
+        "first_name": "Yakov",
+        "last_name": "Lerner",
+        "email": "jilerner at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

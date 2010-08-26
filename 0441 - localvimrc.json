@@ -1,0 +1,74 @@
+{
+  "script_id": "441",
+  "name": "localvimrc",
+  "summary": "load subdirectory specific vimrc files",
+  "script_type": "utility",
+  "description": "Sometimes, when you work on different projects, you have the problem, that they use different indentation, tab expansion and so on. You need vimrc for each project that overrides your prefered settings from ~/.vimrc\n\nThis plugin searches for local vimrc files in the filesystem tree of the currently opened file. By default it searches for all \".lvimrc\" files from the file's directory up to the root directory and loads them in reverse order. The filename and amount of loaded files is customizable through global variables.\n\nVariables:\n\ng:localvimrc_name\n  Filename of local vimrc files. Defaults to \".lvimrc\".\n\ng:localvimrc_count\n  On the way from root, the last localvimrc_count files are sourced. Defaults to -1 (all)\n\ng:localvimrc_sandbox\n  Source the found local vimrc files in a sandbox for security reasons. Defaults to 1.\n\ng:localvimrc_ask\n  Ask before sourcing any local vimrc file. Defaults to 1.\n",
+  "install_details": "Copy the localvimrc.vim script to the .vim/plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10578",
+      "filename": "localvimrc.vim",
+      "script_version": "2758",
+      "date": "2009-05-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "- source .lvimrc in a sandbox to better maintain security, configurable using g:localvimrc_sandbox \n- ask user before sourcing any local vimrc file, configurable using g:localvimrc_ask  \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7726",
+      "filename": "localvimrc.vim",
+      "script_version": "1870",
+      "date": "2007-09-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "- new configuration variable g:localvimrc_name to change filename\n- new configuration variable g:localvimrc_count to limit number of loaded files"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6948",
+      "filename": "localvimrc.vim",
+      "script_version": "1613",
+      "date": "2007-04-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "- switched to arrays in vim 7\n- escape file/path names correctly"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1288",
+      "filename": "localvimrc.vim",
+      "script_version": "1.2",
+      "date": "2002-10-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

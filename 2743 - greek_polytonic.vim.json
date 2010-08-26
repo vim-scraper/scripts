@@ -1,0 +1,26 @@
+{
+  "script_id": "2743",
+  "name": "greek_polytonic.vim",
+  "summary": "Keymap for the typing of traditional multi-accented (polytonic) Greek",
+  "script_type": "utility",
+  "description": "This is a keyboard layout useful to native Greek speakers and Greek\nscholars (Hellenists) who wish to use Vim/gVim to type traditional Greek\n(often referred to as multi-accented or polytonic).\n\nThis layout allows the typing of multi-accented (polytonic) Greek\ntext in the manner of writing by hand.  Accents and breathings are typed\nafter the vowels in any order without dead keys. In other words, first we \ntype the letter and then we \"decorate\" it with the required accents.  This\nserves for a more comfortable typing of Greek.  Furthermore it allows easier\ncorrection of errors. A wrong accent (or no accent) can be replaced with\nwith the correct one without deleting the character.  We simply place the\ncursor to the right of the vowel and press the required accent.  If the\ncharacter can take the accent, it will be replaced by the accented version\nof the same character.\n--------------------------------------------------------------\nThe main accent keys are as follows:\n\n/              Oxia (acute)\n\\              Varia (grave)\n~ (or =)   Perispomeni (circumflex)\n]               Psili  (lenis)\n[               Dasia (asper)\n\"               Dialytika (diaeresis)\n|               Ypogegrammeni (Iota subscript)\n---------------------------------------------------------------\n\nExamples. \nTyping the sequence:    a/, will give Small Alpha with Oxia.\nTyping:  a/]  or  a]/   will give Small Alpha with Oxia and Psili.\nTyping:  a, followed by any combination of /,],|, will give \n              Small Alpha with Oxia and Psili and Ypogegrammeni.\n\nTyping of multi-accented Greek is easier this way because this method is \nsimilar to the way we write by hand.  Only a few accent keys are used \n(easier to memorize). See the included table. Also read the source file.\n\nYou can still use the dead keys of the modern Greek keymap. For example,\n Alpha with Tonos can be derived either with \"a/\" or with \";a\".\n\nInstallation:\n\n  Copy the file greek_polytonic.vim to your home .vim  keymap directory\n  (~/.vim/keymap/) If the directory does not exist, create it.\n\n\n\n\nUsage:\n\n  * Load the keymap:\n              set keymap=greek_polytonic\n  * Set encodings:  \n              set encoding=utf-8\n              set inputenc=utf-8\n              set fenc=utf-8\n \n  * Set vim to use a monospaced unicode font that includes all the \"Greek Extented\" characters and symbols.\n     Example: set guifont=Consolas\\ Regular\\ 16\n\n  Examples of suitable fonts are:\n\n    Dejavu Sans mono\n    Courier New\n    Bitstream Vera Sans Mono\n    Consolas \n \n* Also switch the keyboard to Greek with ALT-SHIFT (or whatever)\n\n* To type any of the actual symbols of the accent keys (/, \\, ] , [, .. etc.,)  \n   you can toggle off the keymap with CTRL-^.\n\n\n\nNotes: \n\n   Consolas is a Microsoft font found in Windows 7 (The Consolas font\n   shipped with Windows Vista is not suitable - has no extended Greek\n   characters). It is a very good monospaced font for displaying\n   and for printing polytonic Greek text.  (Microsoft is very good to us\n   Greek scholars). Here is a screenshot of vim editing the text of \n   Ptolemy's Almagest displayed in 16 pt Consolas:\n   http://img9.imageshack.us/img9/3386/ptolemyalmagest.jpg\n   \n   If you have problems with printing greek utf-8 use\n   paps (http://paps.sourceforge.net/)\n   I use it from within vim by creating a command as folows:\n   :command Paps write !paps --font=Consolas\\ 10 | lpr\n\n",
+  "install_details": "Unzip contents.\n\nCopy the file greek_polytonic.vim to your home .vim   keymap directory\n  (~/.vim/keymap/).  If the directory does not exist, create it.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11204",
+      "filename": "greek-polytonic-keymap.tar.gz",
+      "script_version": "1.0",
+      "date": "2009-08-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17570",
+        "user_name": "proteuss",
+        "first_name": "andreas",
+        "last_name": "proteus",
+        "email": "proteuss at sdf.lonestar.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

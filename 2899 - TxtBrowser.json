@@ -1,0 +1,138 @@
+{
+  "script_id": "2899",
+  "name": "TxtBrowser",
+  "summary": "Browse plain text easily(show the title tag and syntax highlight)",
+  "script_type": "syntax",
+  "description": "\nThe \"TxtBrowser\" plugin is a plain text browser plugin for Vim and provides the\nfollowing features to allow you to efficiently browse through plain text\nfiles(for example RFCs). Chinese intruction is available at(&#20013;&#25991;&#20171;&#32461;&#35831;&#35775;&#38382;):\n\nhttp://guoyoooping.blog.163.com/blog/static/1357051832009112910162389/\n\n1. Title tag list: Show an overview of the structure of plain text and list all\nthe titles in the taglist windows, you can jump to them just by clicking. Use\n\":Tlist\" command to open the taglist and use \":TlistUpdate\" to update the\ntaglist after modification. \n\n2. Syntax highlight: highlight the key element in your plain text. This include\nthe title, URLs, keywords you defined(default is TODO, ERROR, etc), Words in\nbracket, etc. Syntax hightlight would be auto loaded after install. Snapshot of\nfeature 1 and 2 are available at:\n\nhttp://guoyoooping.blog.163.com/album/edit/#m=1&aid=193892890\n\n3. Browser Utilities(use \":help txt-howto\" for details): \n\n<Leader>s: Search text under cursor(or selected) through search engine(google).\n<Leader>f: Find text under cursor(or selected) through web dictionary(www.dict.cn).\n<Leader>g: Goto the URL under cursor(or selected).\n<Leader>h: Highlight the word under cursor(or selected), it's easy and\n\t            simple, for more powerful highlight, You could refer to\n\t            txtfmt(vimscript #2208)\n*: Search forward for the word under cursor(or text selected).\n#: Search backward for the word under cursor(or text selected).",
+  "install_details": "\n1) Please make sure taglist(vimscript #273: taglist.vim) has been installed.\n\n[Note]: Taglist has problem in supporting Chinese(CJK: Chinese, Japanese,\nKorean) in Windows, It is strongly recommended for CJK users to apply the\npatch(http://att.newsmth.net/att.php?s.731.55149.150442.diff) or use the fixed\ntaglist.vim(http://att.newsmth.net/att.php?p.731.55149.1226.vim) I provided. I\nwill not provide the patch after taglist fix these bugs.\n\n2) Download the txtbrowser.zip file and unzip the files to the $HOME/.vim or\nthe $HOME/vimfiles or the $VIM/vimfiles directory. After this step, you should\nhave the following five files (the directory structure should be preserved):\n\n* $HOME/.vim/syntax/txt.vim - syntax for text/plain.\n* $HOME/.vim/ftplugin/txt.vim - language definition for text/plain.\n* $HOME/.vim/plugin/txtbrowser.vim - browser tools.\n* $HOME/.vim/doc/txtbrowser.txt - help document in English.\n* $HOME/.vim/doc/txtbrowser.cnx - help document in Chinese.\n\nDon't forget to open the file and Use \":helptags .\" to install help tag.\n\n3) Add the following line into your .vimrc file and restart your vim.\n\nsyntax on \"syntax highlighting on\nfiletype plugin on\nau BufEnter *.txt setlocal ft=txt",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13506",
+      "filename": "txtbrowser-1.3.4.zip",
+      "script_version": "1.3.4",
+      "date": "2010-08-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17317",
+        "user_name": "guoyoooping",
+        "first_name": "yp",
+        "last_name": "guo",
+        "email": "guoyoooping at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Add all the function to the right click menu. Shall I disable the right click menu by default? I need advice.\n2. Fix somes bugs. Thanks to Hong Xu for warm help."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13319",
+      "filename": "txtbrowser-1.3.3.zip",
+      "script_version": "1.3.3",
+      "date": "2010-07-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17317",
+        "user_name": "guoyoooping",
+        "first_name": "yp",
+        "last_name": "guo",
+        "email": "guoyoooping at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "Use the \"#\" to search backward insteading of \"?\", it's default in vim. Thanks to Hong Xu again for warm advice."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13309",
+      "filename": "txtbrowser-1.3.2.zip",
+      "script_version": "1.3.2",
+      "date": "2010-07-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17317",
+        "user_name": "guoyoooping",
+        "first_name": "yp",
+        "last_name": "guo",
+        "email": "guoyoooping at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "1) Highlight the braces, quotes and square brackets along with the syntax matchs.\n2) Only highlight the syntax \"txtList\" itself, not including the spaces ahead of it.\n3) Add New features: ?: Search backward for the word under cursor(or selected).\nThanks to Pengo and Hong Xu for warm advice."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13216",
+      "filename": "txtbrowser-1.3.1.zip",
+      "script_version": "1.3.1",
+      "date": "2010-06-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17317",
+        "user_name": "guoyoooping",
+        "first_name": "yp",
+        "last_name": "guo",
+        "email": "guoyoooping at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "Add new features:\n<Leader>h: Highlight the word under cursor(or selected);\n*: Search forward for the word under cursor(or selected)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13214",
+      "filename": "txtbrowser-1.3.zip",
+      "script_version": "1.3",
+      "date": "2010-06-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17317",
+        "user_name": "guoyoooping",
+        "first_name": "yp",
+        "last_name": "guo",
+        "email": "guoyoooping at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "Equal to 1.2.9, Compared to version 1.2, there are changes as following:\n1)Infrastructure improvement for easy install. Users only need to unzip the file to you $HOME or vimfiles directory.\n2)Bug fix: fix many bugs in encodings, Now Chinese in almost every circumstance could be show normally.\n3)Bug fix: syntax highligh parse error between two \"'s\".\n4)Other bug fix and feature improvement."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12563",
+      "filename": "txtbrowser.zip",
+      "script_version": "1.2",
+      "date": "2010-03-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17317",
+        "user_name": "guoyoooping",
+        "first_name": "yp",
+        "last_name": "guo",
+        "email": "guoyoooping at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "This version(1.2) equals to version 1.1.8. Minor version upgrade to wait for\nnew feature added. compared to 1.1, there are changes:\n1)Plugin name changed from \"txt.zip\" to \"TxtBrowser\"\n2)Add utilities to browser url in vim.\n3)bug fix for Chinese title couldn't listed(\":help txt-faqs\" 6.2 for details)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12165",
+      "filename": "txt.zip",
+      "script_version": "1.1",
+      "date": "2010-01-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17317",
+        "user_name": "guoyoooping",
+        "first_name": "yp",
+        "last_name": "guo",
+        "email": "guoyoooping at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "Same as release 1.0.6(minor change.) Version upgrate to 1.1.x for new features release. Changes since version 1.0:\n1) Delete some personal configuration in txt.vim.\n2) Add the help document in both English and Chinese. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11955",
+      "filename": "txt.zip",
+      "script_version": "1.0",
+      "date": "2009-12-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17317",
+        "user_name": "guoyoooping",
+        "first_name": "yp",
+        "last_name": "guo",
+        "email": "guoyoooping at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

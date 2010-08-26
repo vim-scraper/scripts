@@ -1,0 +1,90 @@
+{
+  "script_id": "3087",
+  "name": "OutlookVim",
+  "summary": "Use Vim to edit the body of an email from Microsoft Outlook",
+  "script_type": "utility",
+  "description": "For Windows users, this plugin will allow you to add a button in Microsoft Outlook which will create a new buffer in Vim with the body of the current email.  The buffer can be edited in a specific instance of Vim and you can choose whether to use tabs.\n\nThe filetype of the buffer is automatically set to \"mail\".  This allows you to use all of Vim's great plugins and editing features to alter the email and customize the buffer using Vim's standard filetype support.  When finished, simply saving the file will automatically update the body of the email in Microsoft Outlook.\n\nThis has been tested with Outlook 2003 (WinXP SP3) and Outlook 2007 (Windows 7 64bit and 32bit).\n\nThere are a number of preferences you can set within the plugin to customize it for your use.  \nThese settings can be explored here:\n:h outlook-configuration\n:h outlook.txt\n\nInstallation instructions for Outlook can be found here:\n:h outlook-macro\n:h outlook.txt\n\nNOTE:  All code is included in these files.  There are no executables you need to run on your system.   For those interested, the documentation outlines how Vim and Outlook communicate with each other.\n\nPlease use the VimWiki (link at top of page) to post comments and suggestions.\nI routinely monitor the vim_use group.\n\n\n",
+  "install_details": "Unzip outlookvim_vXXX.zip into your $VIM/vimfiles/plugin directory.  \n\nTo update the Vim Help, run:\n:helptags $VIM/vimfiles/doc  (Windows) \n\nThe help contains two pieces of important information:\n:h outlookvim.txt\n\n1.  How to install two buttons in Outlook to launch Vim\n2.  How to configure your Vim plugin to your file locations and your preferences.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13561",
+      "filename": "outlookvim_v5.zip",
+      "script_version": "5.0",
+      "date": "2010-08-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "New Features\n------------\n- Changed how the script looks for some system files especially useful if you do not store your vimfiles directory in the $VIM directory (Adam Duck).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13108",
+      "filename": "outlookvim_v4.zip",
+      "script_version": "4.0",
+      "date": "2010-06-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "New Features\n------------\n- Updated documentation.  Added a troubleshooting section (Zsolt Botykai).\n- Updated outlookvim.js to display a message if double clicked on to determine if Windows Script Host is correctly installed.\n- Updated outlookvim.bas (the Outlook VBScript Macro) to show an error if it cannot access the file system.  Modified all the message boxes Outlook may display to indicate \"OutlookVim:\" is displaying the message.\n- You can specify whether new emails should be opened in a new tab via the g:outlook_use_tabs configuration option (Zsolt Botykai).\n\nAfter unzipping the contents into your vimfiles directory, copy and paste the outlookvim.bas file into your Outlook macro created earlier (ALT-F11 in Outlook).\n\nAlso from within Vim run (choose the location where the plugin was installed):\n:helptags $VIM\\vimfiles\\doc"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12984",
+      "filename": "outlookvim_v3.zip",
+      "script_version": "3.0",
+      "date": "2010-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": " New Features\n ------------\n - You can specify which Vim instance to edit the file by setting a variable in your .vimrc (i.e. let g:outlook_servername = 'OUTLOOK')\n \n Bug Fixes\n ---------\n - For some (international?) Windows versions, there were errors when (or a failure) editing the file.  Needed to escape the backslashes of the filename.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12965",
+      "filename": "outlookvim_v2.zip",
+      "script_version": "2.0",
+      "date": "2010-05-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "This version adds support for Microsoft Outlook 2007 as well as earlier versions. \nDocumentation improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12963",
+      "filename": "outlookvim_v1.zip",
+      "script_version": "1.0",
+      "date": "2010-05-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

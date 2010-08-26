@@ -1,0 +1,74 @@
+{
+  "script_id": "2473",
+  "name": "python_open_module",
+  "summary": "open the python module file below the cursor when coding python",
+  "script_type": "ftplugin",
+  "description": "the python_open_module.vim is the script that allows you open the module file  below the cursor when coding python. It's easy to use. For example, you can create a new python file and input:\n\nimport string\n\nmove the cursor above \"string\" and press \"<LocalLeader>oo\"(\"\\oo\" in common in vim) in normal mode You could see the string.py file opened in current window. you can continue to input:\n\nstring.lower\n\ndo same above and you can see string.py file opened the cursor jump into lower function.\n\nthe open fail if the module is buildin such as 'sys' or is not available.\n\nThere are three options for mapping key, you can chang it to any other key:\n\npom_key_open='<LocalLeader>oo'              # open module file in the current window\npom_key_open_in_win='<LocalLeader>ow'             # open module file in a new window\npom_key_open_in_tab='<LocalLeader>ot'               # open module file in a tab\n\n\nWORNING: Required vim compiled with +python\n",
+  "install_details": "copy the script into ~/.vim/ftplugin",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9680",
+      "filename": "python_open_module.vim",
+      "script_version": "1.0.2",
+      "date": "2008-12-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed it can't open the module file in current window if the current buffer is changed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9676",
+      "filename": "python_open_module.vim",
+      "script_version": "1.0.1",
+      "date": "2008-12-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "fixed a bug"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9673",
+      "filename": "python_open_module.vim",
+      "script_version": "1.0",
+      "date": "2008-12-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* rename python_jumper.vim to python_open_module.vim.\n* allow map key youself, cancel old map key such as 'gf'\n* increasing identification of module name\n* bug fixed"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9625",
+      "filename": "python_jumper.vim",
+      "script_version": "0.6",
+      "date": "2008-12-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

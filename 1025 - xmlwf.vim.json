@@ -1,0 +1,26 @@
+{
+  "script_id": "1025",
+  "name": "xmlwf.vim",
+  "summary": "A compiler plugin for the xmlwf xml well-formedness checker",
+  "script_type": "utility",
+  "description": "xmlwf is a command-line utility for checking whether an xml document is well-formed.  This plugin will enable you to use xmlwf through Vim, to check the well-formedness of the xml file you are editing.  Vim will take you right to the errors, if there are any.",
+  "install_details": "You must have the xmlwf utility on your system.  I believe it is part of the Expat library.  Copy the file to your compiler directory, usually ~/.vim/compiler/.  To use it, open an xml file and type \":compiler xmlwf\".\nThen, \":make\".  It should take you directly to the first error in the document, if there are any.  Note: the xmlwf.vim file has UNIX line endings, so if you get a bunch of garbage when you try to use it on a windows machine (via cygwin, perhaps) just save the file with DOS line endings.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3206",
+      "filename": "xmlwf.vim",
+      "script_version": "0.1",
+      "date": "2004-07-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5143",
+        "user_name": "rrowsome",
+        "first_name": "Robert",
+        "last_name": "Rowsome",
+        "email": "rrowsome at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

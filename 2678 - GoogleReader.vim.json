@@ -1,0 +1,106 @@
+{
+  "script_id": "2678",
+  "name": "GoogleReader.vim",
+  "summary": "vimscript for googlereader",
+  "script_type": "utility",
+  "description": "This is vimscript for googlereader (http://www.google.com/reader/)Usage:  :GoogleReaderKeyBinding:  [LIST]  type <c-n> to goto next and open entry  type <c-p> to goto prev and open entry  type <cr> to show entry  type <c-a> to show all list  type <s-a> to show unread list  type +     to toggle read/unread mark  type *     to toggle star/unstar mark  type r to reload entries  type q to close window  [CONTENT]  type <c-n> to show next entry  type <c-p> to show previous entry  type <c-i> to open URL with browser  type q to close window  type ? to show help listRequire:  curl command (http://curl.haxx.se/)",
+  "install_details": "copy it to your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13267",
+      "filename": "googlereader.vim",
+      "script_version": "2.2",
+      "date": "2010-06-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "103",
+        "user_name": "mattn",
+        "first_name": "Yasuhiro",
+        "last_name": "Matsumoto",
+        "email": "mattn.jp at gmail.com",
+        "homepage": "http://mattn.kaoriya.net/"
+      },
+      "release_notes": "This is an upgrade for GoogleReader.vim: fixed authentication problem. added Authorization header."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12301",
+      "filename": "googlereader.vim",
+      "script_version": "2.1",
+      "date": "2010-02-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "103",
+        "user_name": "mattn",
+        "first_name": "Yasuhiro",
+        "last_name": "Matsumoto",
+        "email": "mattn.jp at gmail.com",
+        "homepage": "http://mattn.kaoriya.net/"
+      },
+      "release_notes": "This is an upgrade for GoogleReader.vim: added script type header for Vimana. change default browser to 'x-www-browser'. set nolist in entries."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10883",
+      "filename": "googlereader.vim",
+      "script_version": "2.0",
+      "date": "2009-06-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "103",
+        "user_name": "mattn",
+        "first_name": "Yasuhiro",
+        "last_name": "Matsumoto",
+        "email": "mattn.jp at gmail.com",
+        "homepage": "http://mattn.kaoriya.net/"
+      },
+      "release_notes": "This is an upgrade for GoogleReader.vim: does not work correctoly. invalid token."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10880",
+      "filename": "googlereader.vim",
+      "script_version": "1.9",
+      "date": "2009-06-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "103",
+        "user_name": "mattn",
+        "first_name": "Yasuhiro",
+        "last_name": "Matsumoto",
+        "email": "mattn.jp at gmail.com",
+        "homepage": "http://mattn.kaoriya.net/"
+      },
+      "release_notes": "This is an upgrade for GoogleReader.vim: does not work correctoly. and can't open browser on linux."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10874",
+      "filename": "googlereader.vim",
+      "script_version": "1.8",
+      "date": "2009-06-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "103",
+        "user_name": "mattn",
+        "first_name": "Yasuhiro",
+        "last_name": "Matsumoto",
+        "email": "mattn.jp at gmail.com",
+        "homepage": "http://mattn.kaoriya.net/"
+      },
+      "release_notes": "This is an upgrade for GoogleReader.vim: handle error of authentication."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10869",
+      "filename": "googlereader.vim",
+      "script_version": "1.7",
+      "date": "2009-06-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "103",
+        "user_name": "mattn",
+        "first_name": "Yasuhiro",
+        "last_name": "Matsumoto",
+        "email": "mattn.jp at gmail.com",
+        "homepage": "http://mattn.kaoriya.net/"
+      },
+      "release_notes": "This is an upgrade for GoogleReader.vim: show wrapped text in context window."
+    }
+  ]
+}

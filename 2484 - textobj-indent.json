@@ -1,0 +1,74 @@
+{
+  "script_id": "2484",
+  "name": "textobj-indent",
+  "summary": "Text objects for indented blocks of lines",
+  "script_type": "utility",
+  "description": "*textobj-indent* is a Vim plugin to provide text objects to select a block of\nlines which are similarly indented to the current line.\n\nFor example, if the content of a buffer as follows:\n(here \">\" means the current line under the cursor,\nand \"_\" means a space to indent)\n\n\t  if some_condition_is_satisfied\n\t> __if another_condition_is_satisfied\n\t  ____call s:do_x()\n\t  __endif\n\n\t  __...\n\t  __endif\n\t  else\n\t  __...\n\t  endif\n\n|<Plug>(textobj-indent-a)| will select lines as follows:\n(here \"|\" indicates the selected line)\n\n\t  if some_condition_is_satisfied\n\t>|__if another_condition_is_satisfied\n\t |____call s:do_x()\n\t |__endif\n\t |\n\t |__...\n\t |__endif\n\t  else\n\t  __...\n\t  endif\n\n|<Plug>(textobj-indent-i)| will select lines as follows:\n\n\t  if some_condition_is_satisfied\n\t>|__if another_condition_is_satisfied\n\t |____call s:do_x()\n\t |__endif\n\n\t  __...\n\t  __endif\n\t  else\n\t  __...\n\t  endif\n\nMore variants are also available.  See |textobj-indnet-mapping| for the\ndetails.\n\n\nRequirements:\n- Vim 7.2 or later\n- |textobj-user| 0.3.8 or later (vimscript#2100)\n\nLatest version:\nhttp://github.com/kana/vim-textobj-indent\n\nDocument in HTML format:\nhttp://kana.github.com/config/vim/textobj-indent.html",
+  "install_details": "...",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11291",
+      "filename": "vim-textobj-indent-0.0.3.zip",
+      "script_version": "0.0.3",
+      "date": "2009-08-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "Incompatible changes:- Requrie |textobj-user| 0.3.8 or later.Major improvements:- Add |<Plug>(textobj-indent-same-a)| and |<Plug>(textobj-indent-same-i)|.Minor improvements:- Revise the document a bit.- Add tests.- Fix a minor bug.- Revise to be autoloaded."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10410",
+      "filename": "vim-textobj-indent-0.0.2.zip",
+      "script_version": "0.0.2",
+      "date": "2009-04-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Fix the bug to calculate indentation levels.  Now these text objects target a set of lines with the same indentation as you see."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10049",
+      "filename": "vim-textobj-indent-0.0.1.zip",
+      "script_version": "0.0.1",
+      "date": "2009-02-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Add |<Plug>(textobj-indent-a)| and |<Plug>(textobj-indent-i)|.- Remove |<Plug>(textobj-indent)|.  Use |<Plug>(textobj-indent-a)| instead."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9659",
+      "filename": "vim-textobj-indent-0.0.0.zip",
+      "script_version": "0.0.0",
+      "date": "2008-12-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

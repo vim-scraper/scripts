@@ -1,0 +1,106 @@
+{
+  "script_id": "1238",
+  "name": "Mark",
+  "summary": "a little script to highlight several words in different colors simultaneously",
+  "script_type": "utility",
+  "description": "This script is written to highlight several words in different colors simultaneously. For example, when you are browsing a big program file, you could highlight some key variables. This will make it easier to trace the source code.\n\nI think this script is functional similar with MultipleSearch vimscript #479.\n\nUsage:\n\nHighlighting:\n  Normal mode:\n    \\m mark or unmark the word under (or before) the cursor\n          Place the cursor under the word to be highlighted, press \\m, then the word will be colored.\n    \\r manually input a regular expression\n          To highlight an arbitrary regular expression, press \\r and input the regexp.\n    \\n clear this mark (i.e. the mark under the cursor), or clear all highlighted marks\n  Visual mode:\n    \\m mark or unmark a visual selection\n          Select some text in Visual mode, press \\m, then the selection will be colored.\n    \\r manually input a regular expression (base on the selection text)\n  Command line:\n    :Mark regexp   to mark a regular expression\n    :Mark regexp   with exactly the same regexp to unmark it\n    :Mark          to clear all marks\nSearching:\n  Normal mode:\n    * # \\* \\# \\/ \\? use these six keys to jump to the other marks\n    and you could also use VIM's / and ? to search, since the mark patterns have\n    been added to the search history.\n\nHere is a sumerization of * # \\* \\# \\/ \\?:\n\n\" First of all, \\#, \\? and # behave just like \\*, \\/ and *, respectively,\n\" except that \\#, \\? and # search backward.\n\"\n\" \\*, \\/ and *'s behaviors differ base on whether the cursor is currently\n\" placed over an active mark:\n\"\n\"       Cursor over mark                  Cursor not over mark\n\" ---------------------------------------------------------------------------\n\"  \\*   jump to the next occurrence of      jump to the next occurrence of\n\"       current mark, and remember it       \"last mark\".\n\"       as \"last mark\".\n\"\n\"  \\/   jump to the next occurrence of        same as left\n\"       ANY mark.\n\"\n\"   *   if \\* is the most recently used,        do VIM's original *\n\"       do a \\*; otherwise (\\/ is the\n\"       most recently used), do a \\/.\n\nScreenshot:\nhttp://elephant.net.cn/files/vim_screenshot.png (It is also the screenshot of my colorscheme vimscript #1253.)\n\nBugs and Notes:\nSome words which have been already colored by syntax scripts could not be highlighted.\n\nmark.vim should be re-sourced after any changing to colors. For example, if you\n:set background=dark  OR\n:colorscheme default\nyou should\n:source PATH_OF_PLUGINS/mark.vim\nafter that. Otherwise, you won't see the colors.\nUnfortunately, it seems that .gvimrc runs after plugin scripts. So if you set any color settings in .gvimrc, you have to add one line to the end of .gvimrc to source mark.vim.",
+  "install_details": "Just drop the script file \"mark.vim\" into the plugin directory. Restart VIM.\n\nIf you want to use another leader instead of default \"\\\", you may say in your .vimrc\n    let mapleader = \",\"\nThat will use ,m ,r ,n instead of \\m \\r \\n as the trigger.\n\nIf you set any color settings in .gvimrc, you should also add\n    source PATH_OF_PLUGINS/mark.vim\nto the end of .gvimrc (see above).\n\nIf you want different colors or more colors, you may define MarkWord1-6, 7, 8...\nin your vimrc file. Just to pay attention that there should be no lines like\n    colorscheme xxxx\n    set background=dark\nrun after you have set your colors. It's due to the same reason.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8603",
+      "filename": "mark.vim",
+      "script_version": "1.1.8-g",
+      "date": "2008-04-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7148",
+        "user_name": "elephant",
+        "first_name": "Yuheng",
+        "last_name": "Xie",
+        "email": "xie_yuheng at yahoo.com.cn",
+        "homepage": "http://elephant.net.cn/"
+      },
+      "release_notes": "1.1.8 global version. It differ from 1.1.8 that colors will be shared between buffers, instead of localized to buffers as in 1.1.8.\nIf you would like to have the same words highlighted in different files, use this.\nIf you would like to have different words highlighted in different files, use 1.1.8."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5400",
+      "filename": "mark.vim",
+      "script_version": "1.1.8",
+      "date": "2006-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7148",
+        "user_name": "elephant",
+        "first_name": "Yuheng",
+        "last_name": "Xie",
+        "email": "xie_yuheng at yahoo.com.cn",
+        "homepage": "http://elephant.net.cn/"
+      },
+      "release_notes": "Added \\* \\# \\/ \\? for the ability of jumping to ANY mark, even when the cursor is not currently over any mark.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4632",
+      "filename": "mark.vim",
+      "script_version": "1.1.7",
+      "date": "2005-09-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7148",
+        "user_name": "elephant",
+        "first_name": "Yuheng",
+        "last_name": "Xie",
+        "email": "xie_yuheng at yahoo.com.cn",
+        "homepage": "http://elephant.net.cn/"
+      },
+      "release_notes": "bug fix again"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4598",
+      "filename": "mark.vim",
+      "script_version": "1.1.5",
+      "date": "2005-09-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7148",
+        "user_name": "elephant",
+        "first_name": "Yuheng",
+        "last_name": "Xie",
+        "email": "xie_yuheng at yahoo.com.cn",
+        "homepage": "http://elephant.net.cn/"
+      },
+      "release_notes": "Thank Luc Hermitte for the big improvement to my script:\n1) now can use :Mark to trigger the function.\n2) \\r on visual mode to input a regexp base on the selection\n3) may alter the leader (instead of default \"\\\") in .vimrc"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4322",
+      "filename": "mark.vim",
+      "script_version": "1.1.4",
+      "date": "2005-05-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7148",
+        "user_name": "elephant",
+        "first_name": "Yuheng",
+        "last_name": "Xie",
+        "email": "xie_yuheng at yahoo.com.cn",
+        "homepage": "http://elephant.net.cn/"
+      },
+      "release_notes": "use map-<silent> to avoid echo on the command line"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4059",
+      "filename": "mark.vim",
+      "script_version": "1.1.2",
+      "date": "2005-03-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7148",
+        "user_name": "elephant",
+        "first_name": "Yuheng",
+        "last_name": "Xie",
+        "email": "xie_yuheng at yahoo.com.cn",
+        "homepage": "http://elephant.net.cn/"
+      },
+      "release_notes": "\\n now first try to clear this mark (i.e. the mark under the cursor), before clearing all marks. \nmapped * and # for jumping to the next and previous occurrence of this mark. \nmark patterns now also added to the search history"
+    }
+  ]
+}

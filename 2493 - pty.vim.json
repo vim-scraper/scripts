@@ -1,0 +1,26 @@
+{
+  "script_id": "2493",
+  "name": "pty.vim",
+  "summary": "Remote terminal support for vim thanks to python.  ",
+  "script_type": "utility",
+  "description": "Remote terminal support for vim thanks to python.\n\n\nYou need VIM with python support and urxvt (rxvt-unicode) to use this script.\n<http://software.schmorp.de/pkg/rxvt-unicode.html&gt;\n\nFurthermore this script only provides python functions, so some knowledge about\nthis (very fine) language is usefull, but not required to benefit from it.\n\nCalling the python function rxvtSend('text','cmd') the first time will spawn\na subprocesses given by the shell command 'cmd' in a new terminal window and\npass 'text' to it. Subsequent calls with the same 'cmd' argument will send further\ntext to the this subprocess. If you close the terminal window, the child\nprocess stays alive and the next call of 'rxvtSend' opens a new terminal and\nconnects to it again. If you want to kill the child, call 'rxvtKill()'. \n\n",
+  "install_details": "It's a vimball archive, you only have to source it.\nFor requirements see above.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9709",
+      "filename": "pty.vba",
+      "script_version": "0.1",
+      "date": "2008-12-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15755",
+        "user_name": "johanng",
+        "first_name": "Johann",
+        "last_name": "Giwer",
+        "email": "johanngiwer at web.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

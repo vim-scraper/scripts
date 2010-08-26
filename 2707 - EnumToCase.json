@@ -1,0 +1,74 @@
+{
+  "script_id": "2707",
+  "name": "EnumToCase",
+  "summary": "Convert enumerated lists to case statements",
+  "script_type": "utility",
+  "description": "This is a very simple plugin that converts a list of enumerated names (copied and pasted directly from an enum block) into a set of correctly indented case statements.\n\nThe command should be called as:\n\n:'<,'>EnumToCase\n\nMore details are available at http://sites.google.com/site/abudden/contents/Vim-Scripts/enumtocase",
+  "install_details": "Copy to the plugin/ subdirectory in your .vim or vimfiles directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11024",
+      "filename": "enumtocase.vim",
+      "script_version": "r282",
+      "date": "2009-07-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14627",
+        "user_name": "abudden",
+        "first_name": "Al",
+        "last_name": "Budden",
+        "email": "abudden at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added optional support for maintaining end-of-line comments or anything.  More details on http://sites.google.com/site/abudden/contents/Vim-Scripts/enumtocase"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11022",
+      "filename": "enumtocase.vim",
+      "script_version": "r281",
+      "date": "2009-07-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14627",
+        "user_name": "abudden",
+        "first_name": "Al",
+        "last_name": "Budden",
+        "email": "abudden at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for comments in enum declaration (end-of-line comment suggestion from Timo Teifel)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10976",
+      "filename": "enumtocase.vim",
+      "script_version": "r272",
+      "date": "2009-07-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14627",
+        "user_name": "abudden",
+        "first_name": "Al",
+        "last_name": "Budden",
+        "email": "abudden at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug in regular expression related to enumerations with a specified value."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10967",
+      "filename": "enumtocase.vim",
+      "script_version": "r271",
+      "date": "2009-07-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14627",
+        "user_name": "abudden",
+        "first_name": "Al",
+        "last_name": "Budden",
+        "email": "abudden at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

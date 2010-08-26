@@ -1,0 +1,74 @@
+{
+  "script_id": "2967",
+  "name": "daemon_saver.vim",
+  "summary": "Vim version of FreeBSD daemon_saver",
+  "script_type": "game",
+  "description": "This is a Vim version of daemon_saver from FreeBSD.\nThe script adds :Daemon command, which starts screensaver.\nDaemon speed is adjustable through g:daemon_saver_speed variable. Default is '80' (ms).\n\nTo start the screensaver automatically after some time put this to your .vimrc:\n\nau CursorHold * Daemon\nset updatetime=60000\n\nThis will start Daemon after 60 seconds of vim being idle.",
+  "install_details": "Add script to plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12361",
+      "filename": "daemon_saver.vim",
+      "script_version": "2.1",
+      "date": "2010-02-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17030",
+        "user_name": "forneus",
+        "first_name": "Krzysztof",
+        "last_name": "Szatan",
+        "email": "k.szatan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* fixes changing background on cterm \n* fixes restroring syntax highliting"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12356",
+      "filename": "daemon_saver.vim",
+      "script_version": "2.0",
+      "date": "2010-02-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17030",
+        "user_name": "forneus",
+        "first_name": "Krzysztof",
+        "last_name": "Szatan",
+        "email": "k.szatan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* works with NERDTree & TagList \n* restores help window\n* stores more session information"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12353",
+      "filename": "daemon_saver.vim",
+      "script_version": "1.1",
+      "date": "2010-02-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17030",
+        "user_name": "forneus",
+        "first_name": "Krzysztof",
+        "last_name": "Szatan",
+        "email": "k.szatan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* works with modified buffers\n* restores Cursor colors properly\n* uses minimum session information"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12333",
+      "filename": "daemon_saver.vim",
+      "script_version": "1.0",
+      "date": "2010-02-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17030",
+        "user_name": "forneus",
+        "first_name": "Krzysztof",
+        "last_name": "Szatan",
+        "email": "k.szatan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

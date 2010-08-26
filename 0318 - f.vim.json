@@ -1,0 +1,106 @@
+{
+  "script_id": "318",
+  "name": "f.vim",
+  "summary": "Function that shows lines that do contain a given regexp. The rest is folded.",
+  "script_type": "utility",
+  "description": ":call F()\nThis function lets you see all the lines in a file\nthat contain a given regular-expression.\n\nThe remaining lines are folded with the manual method,\nand can be opened to see some 'nearby' line.\n\nIf no regular expression is specified, the last regular expression\nspecified for search is utilized.\n\nThe idea comes from the mainframe ISPF editor.\n\nAfter you get your folds, you can give commands affecting only the folded lines\nusing:\n\n:folddoclosed\n\nor use:\n\n:folddoopen\n\nto operate only on the visible lines.\n\nzo   to open a fold a bit\nzozj to open a fold a bit and leave the cursor on the fold line\nzO   to open a fold completely \nzE   to open all folds\n\nzf{motion} to close folders 'a bit more' (or to create folders)\nIf you have 2 adjacent folders, zf<ENTER> will 'merge' them.\nIn the same way a visible line can be 'added' to a nearby folder.\n\n:call FA()\nThis function is similar to F() above, except instead of typing in\na regular expression, the current word the cursor is over is used as\nthe regular expression.\n\nThe function FA() has been prepared and added by:\nKen Huisman - ken.huisman@gmail.com\n\nSuggested mappings:\n:map <F5> :call F()<CR>\n:map <F6> :normal zozj<CR>\n\n:<Up> to recall the macro after having executed it once\n\nediting the \"f.vim\" file itself:\n\ntry giving as an expression  nfold\ntry giving as an expression  as\ntry giving as an expression   as     [that is: ' as' ]\ntry giving as an expression  let\ntry giving as an expression  ^\":\ntry giving as an expression  :fun\\|:endf\ntry giving as an expression  :endf\ntry giving as an expression  ^:endf\n\nfor remarks, complaints, etc. write to: azc100@gmail.com\nversion 05042001",
+  "install_details": "source the file \n:so f.vim\n\n:call F()\n\n:call FA()\n\n\"f.vim\" can also be added to the .vimrc file\nThere are a few suggested mappings, but they are commented.\nIf you wish to use them, put them (uncommented :-) in your .vimrc file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4264",
+      "filename": "f.vim",
+      "script_version": "05051001",
+      "date": "2005-05-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "716",
+        "user_name": "sussi",
+        "first_name": "Antonio",
+        "last_name": "Colombo",
+        "email": "azc100 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a modification introduced by Paul Wei. When no search string is specified, the one remembered from the last search command is used instead."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4186",
+      "filename": "f.vim",
+      "script_version": "05042001",
+      "date": "2005-04-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "716",
+        "user_name": "sussi",
+        "first_name": "Antonio",
+        "last_name": "Colombo",
+        "email": "azc100 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Comments modification, thanks to Alexander Langer"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3783",
+      "filename": "f.vim",
+      "script_version": "05011901",
+      "date": "2005-01-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "716",
+        "user_name": "sussi",
+        "first_name": "Antonio",
+        "last_name": "Colombo",
+        "email": "azc100 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added new function FA() written and contributed by \nKen Huisman [ken.huisman@gmail.com]. The current word the cursor is over is used as the regular expression to search."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2585",
+      "filename": "f.vim",
+      "script_version": "03121201",
+      "date": "2003-12-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "716",
+        "user_name": "sussi",
+        "first_name": "Antonio",
+        "last_name": "Colombo",
+        "email": "azc100 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Modified as per suggestions/corrections from Michael Fitz and Jean-Marc Frigerio. Mainly diagnostics and highlighting."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=994",
+      "filename": "f.vim",
+      "script_version": "02070801",
+      "date": "2002-07-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "716",
+        "user_name": "sussi",
+        "first_name": "Antonio",
+        "last_name": "Colombo",
+        "email": "azc100 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added :foldenable to be able to use the function also while inside :help"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=937",
+      "filename": "f.vim",
+      "script_version": "02062101",
+      "date": "2002-06-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "716",
+        "user_name": "sussi",
+        "first_name": "Antonio",
+        "last_name": "Colombo",
+        "email": "azc100 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

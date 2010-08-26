@@ -1,0 +1,186 @@
+{
+  "script_id": "1343",
+  "name": "AutoTag",
+  "summary": "Updates entries in a tags file automatically when saving",
+  "script_type": "utility",
+  "description": "If you use ctags to make tags files of your source, it's nice to be able to re-run ctags on a source file when you save it.\n\nHowever, using ctags -a will only change existing entries in a tags file or add new ones. It doesn't delete entries that no longer exist. Should you delete an entity from your source file that's represented by an entry in a tags file, that entry will remain after calling ctags -a.\n\nThis python function will do two things:\n\n1) It will search for a tags file starting in the directory where your source file resides and moving up a directory at a time until it either finds one or runs out of directories to try.\n\n2) Should it find a tags file, it will then delete all entries in said tags file referencing the source file you've just saved and then execute ctags -a on that source file using the relative path to the source file from the tags file.\n\nThis way, every time you save a file, your tags file will be seamlessly updated.",
+  "install_details": "Simply source the file autoTag.vim from your .vimrc file.\nThis utility will (obviously) only work when using vim that's been compiled with python support.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12473",
+      "filename": "autotag.vim",
+      "script_version": "1.10",
+      "date": "2010-02-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3645",
+        "user_name": "ranec",
+        "first_name": "Craig",
+        "last_name": "Emery",
+        "email": "vim.org at cemery.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Minor bug-fix from Manpreet."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11095",
+      "filename": "autotag.vim",
+      "script_version": "1.9",
+      "date": "2009-07-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3645",
+        "user_name": "ranec",
+        "first_name": "Craig",
+        "last_name": "Emery",
+        "email": "vim.org at cemery.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Minor change to support updating the taglist menu (for script #273)\nThanks Nick."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10912",
+      "filename": "autotag.vim",
+      "script_version": "1.8",
+      "date": "2009-06-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3645",
+        "user_name": "ranec",
+        "first_name": "Craig",
+        "last_name": "Emery",
+        "email": "vim.org at cemery.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Tidied up the diag stuff, using *much* more meaningful variables.\nFixed the empty default tags file name.\nConfirmed working in MacVim, other platforms not verified. :-$"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9886",
+      "filename": "autotag.vim",
+      "script_version": "1.7",
+      "date": "2009-01-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3645",
+        "user_name": "ranec",
+        "first_name": "Craig",
+        "last_name": "Emery",
+        "email": "vim.org at cemery.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "More backwards compatibility aimed at Python 2.3."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9883",
+      "filename": "autotag.vim",
+      "script_version": "1.6",
+      "date": "2009-01-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3645",
+        "user_name": "ranec",
+        "first_name": "Craig",
+        "last_name": "Emery",
+        "email": "vim.org at cemery.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Support Python older than 2.4."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9640",
+      "filename": "autotag.vim",
+      "script_version": "1.5",
+      "date": "2008-12-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3645",
+        "user_name": "ranec",
+        "first_name": "Craig",
+        "last_name": "Emery",
+        "email": "vim.org at cemery.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Improved support for Python 2.6 (with some help from Andreas Schneider: cheers!) by moving to Python 2.4 subprocess API."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7256",
+      "filename": "autotag.vim",
+      "script_version": "1.4",
+      "date": "2007-06-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3645",
+        "user_name": "ranec",
+        "first_name": "Craig",
+        "last_name": "Emery",
+        "email": "vim.org at cemery.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Changed the way the script prints messages.\nNow there's a run-time configurable verbosity level in the script.\nBy default it's 0 (zero) so no messages are printed.\nI use level 1 (one) and get a nice quick message telling me which ctags file is being updated."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7240",
+      "filename": "autotag.vim",
+      "script_version": "1.3",
+      "date": "2007-06-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3645",
+        "user_name": "ranec",
+        "first_name": "Craig",
+        "last_name": "Emery",
+        "email": "vim.org at cemery.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Submission from Johan Segolsson added configuration of the ctags command name.\nThanks Johan."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7227",
+      "filename": "autotag.vim",
+      "script_version": "1.2",
+      "date": "2007-06-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3645",
+        "user_name": "ranec",
+        "first_name": "Craig",
+        "last_name": "Emery",
+        "email": "vim.org at cemery.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "1.1 would re-declare the Python class on every write.\nI've also made the information messages better.\nIf you experience a pause during the update, the messages should now let you know where it's happening. :-)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4663",
+      "filename": "autotag.vim",
+      "script_version": "1.1",
+      "date": "2005-10-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3645",
+        "user_name": "ranec",
+        "first_name": "Craig",
+        "last_name": "Emery",
+        "email": "vim.org at cemery.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a couple of small issues:\nFiles with spaces in their names / paths are now quoted before being given as arguments to ctags\n(though I plan to change this code from using os.popen to using os.execl so as to completely avoid these kinds of issues)\nIf the tags file is found in \\ (e.g. c:\\) then I was making the relative path incorrectly. This is fixed.\nI've cleaned up the handling of '/' and '\\&#039 in paths (since tags files specify files with '/' but your OS may not)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4548",
+      "filename": "autotag.vim",
+      "script_version": "1.0",
+      "date": "2005-09-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3645",
+        "user_name": "ranec",
+        "first_name": "Craig",
+        "last_name": "Emery",
+        "email": "vim.org at cemery.org.uk",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

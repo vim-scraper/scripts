@@ -1,0 +1,58 @@
+{
+  "script_id": "565",
+  "name": "HTML - insert",
+  "summary": "Script for easy insert HTML tag A href and IMG with filled attributes.",
+  "script_type": "utility",
+  "description": "Script add command :IMG and :HREF for easy inserting xhtml elements IMG and ANCHOR.\n\nWithout parameter call file browser dialog for select file.\n\nIf Vim is not support browse() function (non GUI Vim), you must insert path manualy.\n\n:IMG command call identify (from ImageMagic) for detect geometry of image. ",
+  "install_details": "Add content from script file to .vimrc or _vimrc.\nOr read script file with command :source .\nOr insert script into plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1736",
+      "filename": "HTML_insert.vim",
+      "script_version": "1.2",
+      "date": "2003-02-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1489",
+        "user_name": "wraith",
+        "first_name": "Petr",
+        "last_name": "Mach",
+        "email": "gsl at seznam.cz",
+        "homepage": "http://iglu.cz/wraith/"
+      },
+      "release_notes": " big improvements\n      rename HTML_loadImg() to HTML_insertImg() and fix inserted tag for XHTML compatibility\n      create  HTML_insertHref() width new :HREF command\n      create Absolute2Relative() for make inserted path relative for files in up directory"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1726",
+      "filename": "HTML_loadImg.vim",
+      "script_version": "1.1",
+      "date": "2003-02-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1495",
+        "user_name": "moon",
+        "first_name": "Patrick",
+        "last_name": "Mairif",
+        "email": "moon at sumbalum.de",
+        "homepage": "http://moon.sumbalum.de"
+      },
+      "release_notes": "bugfix: parsing manually added image path"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1723",
+      "filename": "HTML_loadImg.vim",
+      "script_version": "1.0",
+      "date": "2003-02-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1489",
+        "user_name": "wraith",
+        "first_name": "Petr",
+        "last_name": "Mach",
+        "email": "gsl at seznam.cz",
+        "homepage": "http://iglu.cz/wraith/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

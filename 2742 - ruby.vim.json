@@ -1,0 +1,58 @@
+{
+  "script_id": "2742",
+  "name": "ruby.vim",
+  "summary": "Ruby Indentation with IndentAnything",
+  "script_type": "indent",
+  "description": "This is a Ruby Indentation script.\nI don't like the default indent/ruby.vim ( vim-ruby from RubyGems ).\n\nNOTE:\n  This script requires IndentAnything version 1.2.2 or above.\n  See http://www.vim.org/scripts/script.php?script_id=1839 .\n",
+  "install_details": "Extract the gzip file.\nThen copy the file in your home directory under ~/.vim/indent/.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11777",
+      "filename": "ruby.vim.gz",
+      "script_version": "0.1.6",
+      "date": "2009-11-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16822",
+        "user_name": "igrep",
+        "first_name": "IGREQUE",
+        "last_name": "IGREQUE",
+        "email": "whosekiteneverfly at gmail.com",
+        "homepage": "http://blog.livedoor.jp/igrep"
+      },
+      "release_notes": "Removed '*' and '/' from b:lineContList. Because '/' causes a mis-indent when using a Regexp literal.\nNote I've never tried this script on vim 6.0."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11226",
+      "filename": "ruby.vim.gz",
+      "script_version": "0.1.5",
+      "date": "2009-08-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16822",
+        "user_name": "igrep",
+        "first_name": "IGREQUE",
+        "last_name": "IGREQUE",
+        "email": "whosekiteneverfly at gmail.com",
+        "homepage": "http://blog.livedoor.jp/igrep"
+      },
+      "release_notes": "Fixed a bug which happens when you use a statement modifier."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11203",
+      "filename": "ruby.vim.gz",
+      "script_version": "0.1.2",
+      "date": "2009-08-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16822",
+        "user_name": "igrep",
+        "first_name": "IGREQUE",
+        "last_name": "IGREQUE",
+        "email": "whosekiteneverfly at gmail.com",
+        "homepage": "http://blog.livedoor.jp/igrep"
+      },
+      "release_notes": "Fixed a simple mistake and make one of b:indentTrios better."
+    }
+  ]
+}

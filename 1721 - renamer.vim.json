@@ -1,0 +1,58 @@
+{
+  "script_id": "1721",
+  "name": "renamer.vim",
+  "summary": "Use the power of vim to rename groups of files",
+  "script_type": "utility",
+  "description": "Basic Usage:\nShow a list of file names in a directory, rename then in the vim \nbuffer using vim editing commands, then have vim rename them on disk\nStart the plugin with the command :Renamer\n\nDetails:\nRenaming a single file is easily done via an operating system file explorer,\nthe vim file explorer (netrw.vim), or the command line.  When you want to\nrename a bunch of files, especially when you want to do a common text\nmanipulation to those file names, this plugin may help.  It shows you all\nthe files in the current directory, and lets you edit their names in the vim\nbuffer.  When you're ready, issue the command \":Ren\" to perform the mass\nrename.  The intention is to rename files in the same directory, but\nrelative paths can be specified to move files around - provided the \ndestination directories exist",
+  "install_details": "The usual - drop this file into your $HOME/.vim/plugin directory (unix)\nor $HOME/vimfiles/plugin directory (Windows), etc.\nUse the commands defined below to invoke the functionality (or redefine them\nelsewhere to what you want), and set the User Configurable Variables as\ndesired.\n\nInstalling As Windows XP Right Click Menu Option:\nTo add running this script on a directory as a right click menu option,\nin Windows XP, if you are confident working with the registry, do as\nfollows (NOTE - THESE INSTRUCTIONS CAME FROM THE WEB AND WORKED FOR\nME, BUT I CAN'T GUARANTEE THEY ARE 100% SAFE):\n- Run the Registry Editor (REGEDIT.EXE). \n- Open My Computer\\HKEY_CLASSES_ROOT\\Directory and click on the \n  sub-item 'shell'. \n- Select New from the Edit menu, and then select Key. \n- Here, type VimRenamer and press Enter. \n- Double-click on the (default) value in the right pane, and type the name\n  to see in the meny, eg Rename Files with Vim Renamer, and press Enter.\n- Highlight the new key in the left pane, select New from the Edit menu, \n  and then select Key again. \n- Type the word Command for the name of this new key, and press Enter. \n- Double-click on the (default) value in the right pane, and type the full \n  path and filename to vim, along with the command as per the following \n  example line:\n  \"C:\\Program Files\\vim\\vim70\\gvim.exe\" -c \"cd %1|Renamer\"\n  Change the path as required, press Enter when done.\n- Close the Registry Editor when finished.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13165",
+      "filename": "renamer.vim",
+      "script_version": "1.2",
+      "date": "2010-06-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6380",
+        "user_name": "John Orr",
+        "first_name": "John",
+        "last_name": "Orr",
+        "email": "john undersc0re orr yah00 c0m",
+        "homepage": ""
+      },
+      "release_notes": "Fix filename handling for linux - thanks Antonio Monizio\nImprove :w support to avoid delay showing command line - thanks Sergey Bochenkov\nOther minor improvements"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12345",
+      "filename": "renamer.vim",
+      "script_version": "1.1",
+      "date": "2010-02-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6380",
+        "user_name": "John Orr",
+        "first_name": "John",
+        "last_name": "Orr",
+        "email": "john undersc0re orr yah00 c0m",
+        "homepage": ""
+      },
+      "release_notes": "Added options to\n      a) support :w as substitute for :Ren, and\n      b) ignore wildignore settings when reading in files.\nFixed a bug with highlighting after file deletion.\nVarious other minor changes, eg naming the buffer.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6479",
+      "filename": "renamer.vim",
+      "script_version": "1.0",
+      "date": "2006-11-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6380",
+        "user_name": "John Orr",
+        "first_name": "John",
+        "last_name": "Orr",
+        "email": "john undersc0re orr yah00 c0m",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

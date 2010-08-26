@@ -1,0 +1,26 @@
+{
+  "script_id": "529",
+  "name": "blockquote.vim",
+  "summary": "insert block quotes like emacs blockquote.el",
+  "script_type": "utility",
+  "description": "Example:\n,----[ title ]-\n| some text\n`----\n\nWithout title:\n,----\n| some text\n`----\n\nUsage:\n  Blockquote a range (default: current line)\n  :<range>Bq [title]\n  Blockquote a file\n  :Bqf {filename}\n  Blockquote a file, starting at line {start}\n  :Bqf {filename} {start}\n  Blockquote a file, starting at line {start} and ending at {end}\n  :Bqf {filename} {start} {end}\n  Remove a blockquote, starting at <range> (default: current line)\n  :<range>UBq\n",
+  "install_details": "Source from your .vimrc\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1633",
+      "filename": "blockquote.vim",
+      "script_version": "0.1",
+      "date": "2003-01-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1374",
+        "user_name": "aferber",
+        "first_name": "Andreas",
+        "last_name": "Ferber",
+        "email": "af-vim at myipv6.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

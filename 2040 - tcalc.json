@@ -1,0 +1,186 @@
+{
+  "script_id": "2040",
+  "name": "tcalc",
+  "summary": "A small ruby-based RPN-calculator",
+  "script_type": "utility",
+  "description": "It turns out that ruby is pretty good at maths and deals well with \ncomplex or rational numbers etc. Anyway, in certain occasions a postfix \nsyntax and a stack are better suited for calculations than ruby's infix \nsyntax. So, here comes ...\n\n:TCalc[!]\n    A small ruby-based[*] RPN-calculator, a simple ASCII function \n    plotter, and stack-based playground :-).\n\nThe tcalc.rb script can also be used as a stand-alone calculator (with \noptional support for curses and readline). Run \"tcalc --help\" for \ninformation on the command-line options.\n\nInput:\n    - Numbers (anything that starts with \"-\" or a decimal)\n    - Strings (anything that matches /^\"(.*?)\"$/)\n        - Be aware that the strings and numbers get evaluated by ruby. \n          You can thus execute ruby code by input like: -1;p'foo'\n    - Methods & constants of the following classes are available:\n        Float    :: http://www.ruby-doc.org/core/classes/Float.html\n        Complex  :: http://www.ruby-doc.org/core/classes/Complex.html\n        Rational :: http://www.ruby-doc.org/core/classes/Rational.html\n        Integer  :: http://www.ruby-doc.org/core/classes/Integer.html\n        Matrix   :: http://www.ruby-doc.org/core/classes/Matrix.html\n        Vector   :: http://www.ruby-doc.org/core/classes/Vector.html\n        Math     :: http://www.ruby-doc.org/core/classes/Math.html\n    - #N (pull the item at position N to the top)\n    - Commands: COMMAND[COUNT][,ARGUMENT]\n        - If COUNT is \"#\", the top element will be used.\n    - Enter, escape => exit\n\nTokens are separated by blanks (à la forth). The blanks between the \nwords thus are significant.\n",
+  "install_details": "As VIM-plugin:\nExtract the archive's contents to ~/vimfiles (or ~/.vim).\n\nStand-alone ruby script:\nCopy the file ruby/tcalc.rb to your path (you could also rename it to \ntcalc).\n\n\nAlso available via git\nhttp://github.com/tomtom/tcalc_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8028",
+      "filename": "tcalc.zip",
+      "script_version": "0.11",
+      "date": "2007-12-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- New words: all?, any?, array_*, and, or, !=\n- Curses frontend: Show possible completions; map 127 to backspace, F1 \nto 'ls'; improved handling of cursor keys etc.\n- Debugger (sort of)\n- FIX: Nested blocks & more\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8009",
+      "filename": "tcalc.zip",
+      "script_version": "0.10",
+      "date": "2007-11-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- rm,* ... Remove all words\n- If g:tcalc_lines < 0, use fixed window height.\n- VIM: use the tcalc window to display plots, lists etc.\n- FIX: Nested words and some more\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8000",
+      "filename": "tcalc.zip",
+      "script_version": "0.9",
+      "date": "2007-11-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- FIX: Curses frontend: Display error messages properly\n- FIX: readline support.\n- FIX: sort words on completion\n- Distribute as zip\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7995",
+      "filename": "tcalc.vba.gz",
+      "script_version": "0.8",
+      "date": "2007-11-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Named arguments: args is a synonym for assert but provides for named \narguments.\n- New words: Sequence/seq, map, mmap, plot (a simple ASCII function \nplotter), stack_size, stack_empty?, iqueue_size, iqueue_empty?\n- Syntactic sugar for assignments: VALUE -> VAR\n- Defined \"Array\" as a synonym for \"group\"\n- \"define\" command as alternative to the forth-like syntax for defining \nwords\n- Dynamic binding of words/variables (the words \"begin ... end\" \nestablish a new scope)\n- The stack, the input queue, and the dictionary are accessible like \nwords (__STACK__, __IQUEUE__, __WORDS__)\n- TCalc and tcalc#Calculator take initial tokens as argument.\n- TCalc! with [!] will reset the stack & input queue.\n- Completion of partial commands\n- Readline-support for CLI mode (--no-curses).\n- Simple key handling for the curses-based frontend\n- Non-VIM-versons save the history in ~/.tcalc/history.txt\n- #VAR,METHOD has slightly changed.\n- TCalc syntax file.\n- FIX: Command line completion\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7844",
+      "filename": "tcalc.vba.gz",
+      "script_version": "0.7",
+      "date": "2007-10-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Comments: /* ... */\n- New words:\n    - assert: Display an error message if the stack doesn't match the \n    assertion.\n    - validate: Like assert but push a boolean (the result of the check) \n    on the stack.\n    - do: synonym for recapture.\n    - source: load a file (see also g:tcalc_dir)\n    - require: load a ruby library\n    - p: print an object (doesn't do much, but prettyprint seems \n    to have problems)\n    - history (useful when using tcalc as stand-alone calculator)\n- tcalc.rb can now be used as stand-alone program (a simple \ncurses-based frontend).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7832",
+      "filename": "tcalc.vba.gz",
+      "script_version": "0.6",
+      "date": "2007-10-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Included support for rational and complex numbers\n- Included matrix support \n- Syntax for pushing arrays [ a b c ... ]\n- New \"at\" method to select an item from array-like objects\n- Removed shortcut variables.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7789",
+      "filename": "tcalc.vba.gz",
+      "script_version": "0.5",
+      "date": "2007-10-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Minor fix: command regexp\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7765",
+      "filename": "tcalc.vba.gz",
+      "script_version": "0.4",
+      "date": "2007-10-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- COUNT can be \"#\", in which case the top number on the stack will be \nused (e.g. \"3 dup3\" is the same as \"3 3 dup#\")\n- Disabled vars, (, ) commands\n- Variables are words\n- New words can be defined in a forth-like manner \":NAME ... ;\"\n- Built-in commands get evaluated before any methods.\n- Messages can be sent to objects on the stack by \"#N,METHOD\", e.g. \"1 2 \ng2 3 #1,<<\" yields \"[1,2,3]\"\n- The copyN, cN command now means: push a copy of element N.\n- ( ... ) push unprocessed tokens as array\n- recapture command (feed an array of unprocessed tokens to the input \nqueue)\n- if, ifelse commands\n- delN, deleteN commands\n- Can push strings (\"foo bar\")\n- \"Symbols\" à la 'foo (actually a string)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7764",
+      "filename": "tcalc.vba.gz",
+      "script_version": "0.3",
+      "date": "2007-10-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- The swap count argument is increased by one (for conformance with the \nrot command).\n- Shortcuts are now RPN expression (elements at the stack can be \nreferred to by # (= top element) or #N).\n- Removed g:tcalc_reverse_display\n- Positions on the stack can be referred to by #N.\n- rot works the other way round\n- d, dup command\n- clear command\n- print, hex, HEX, oct, dec, bin, float, format commands\n- Removed dependency on tlib\n- Variables; ls, vars, let, =, rm commands\n- Command line completion for variables and commands\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7763",
+      "filename": "tcalc.vba.gz",
+      "script_version": "0.2",
+      "date": "2007-10-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Arguments were (not properly) reverted: 12 4 / now yields 3.\n- The input will be split into tokens, i.e. you can input \"1 2 + <cr>\" \nor \"1<cr>2<cr>+<cr>\". (Command-line completions doesn't work properly \nthough.)\n- The syntax has slightly changed: \"CmdCount,Arg\", eg, \"y3,a\"\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7761",
+      "filename": "tcalc.vba.gz",
+      "script_version": "0.1",
+      "date": "2007-10-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

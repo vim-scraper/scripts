@@ -1,0 +1,42 @@
+{
+  "script_id": "895",
+  "name": "Toggle",
+  "summary": "allows you to toggle bool (true/false) and other words with a shortcut",
+  "script_type": "utility",
+  "description": "In this version, the script can toggle:\n    true     <->     false\n    on       <->     off\n    yes      <->     no\n    define  <->     undef\n    +        <->     -\n    >        <->     <\n    positive and negative numbers\n\nMove the cursor on the word/char/number to be toggled and press <C-T> (Ctrl-T).\nThis shortcut can be modified in the script file - of course...\n\nIf the cursor is positioned on a number, the script looks for a corresponding + or - sign for that number. \nIf it's found, it will be replaced by the other one. If none is found, a - sign is inserted before the number.",
+  "install_details": "put this plugin into your ~/.vim/plugin folder or source it in your ~/.vimrc",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2727",
+      "filename": "toggle.vim",
+      "script_version": "0.3",
+      "date": "2004-02-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4444",
+        "user_name": "tteifel",
+        "first_name": "Timo",
+        "last_name": "Teifel",
+        "email": "timo at teifel-net.de",
+        "homepage": "http://www.teifel.net"
+      },
+      "release_notes": "I added define/undef as new words.\nI added a mapping for visual mode (it actually quits visual mode and calls the Toggle function. But now it works, if you clicked with the mouse on the word and accidentally switched on visual mode...)\nI realised that <C-S-T> is the same than <C-T> I didn't intent to break these mappings, but since I didn't find another suitable keymapping, I now use <C-T>. Anyone who doesn't like that can change that easily."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2714",
+      "filename": "toggle.vim",
+      "script_version": "0.2",
+      "date": "2004-02-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4444",
+        "user_name": "tteifel",
+        "first_name": "Timo",
+        "last_name": "Teifel",
+        "email": "timo at teifel-net.de",
+        "homepage": "http://www.teifel.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

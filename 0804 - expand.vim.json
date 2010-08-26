@@ -1,0 +1,26 @@
+{
+  "script_id": "804",
+  "name": "expand.vim",
+  "summary": "method to simply an quickly post expand a cmd.  \"index ff<c-cr>\" for example.",
+  "script_type": "utility",
+  "description": "method to simply an quickly post expand a cmd.  \"index ff<c-cr>\" for example.\n(<c-cr> being mapped to this cmd.)\n\nNOTE this is a QUICKY!\nFor what it is worth, hopefully useful to someone :)\n\nThe reason for this over a basic mapping, or DrC.Stubs is the ability to\nspecify the variable(s) to work on.\n\nI.e.\n  iInd < m_array.size() for<c-cr>\n\n  for    (    iInd = 0; iInd < m_array.size(); iInd++)\n  {\n      <cursor>\n  }\n\nor\n  m_array ff<c-cr>\n\n  for(int i=0;i<m_array.length; i++){\n      <cursor>\n  }//end for loop over array m_array[i]\n\nNOTE that the command function shold leave the cursor in a position that a\nnormal mode `o` will place the cursor at the desired location. Kind of a HACK\nbut good enough for now.",
+  "install_details": "Drop in ~/.vim/plugin or the like.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2427",
+      "filename": "expand.vim",
+      "script_version": "0.1",
+      "date": "2003-10-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "818",
+        "user_name": "FeralOfFireTop",
+        "first_name": "Robert",
+        "last_name": "KellyIV",
+        "email": "feral at eclecticwizard.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

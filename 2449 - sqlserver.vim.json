@@ -1,0 +1,58 @@
+{
+  "script_id": "2449",
+  "name": "sqlserver.vim",
+  "summary": "Syntax file for SQL Server 2005/2008",
+  "script_type": "syntax",
+  "description": "This is a syntax file for SQL Server 2005/2008.  All TSQL and ODBC keywords are included, as well as a comprehensive list of functions, system variables, system stored procedures, server options, and future keywords (as defined by Microsoft).\n\nFor complete source history or to file a bug report/issue (please use Wiki tab for this), please visit:\nhttp://github.com/hoffstein/vim-tsql/tree/master",
+  "install_details": "1)  Put the sqlserver.vim file in your syntax directory.\n\nOn Windows, this is $VIM/vimfiles/syntax or $HOME/vimfiles/syntax.\nOn Linux, this is $HOME/.vim/syntax or $VIM/vimfiles/syntax.\n\n2) If you want to make this your default syntax file for .sql files, add the following to your vimrc:\n    \n    let g:sql_type_default = \"sqlserver\"\n\n3) If you want to associate this syntax file with another extension, add the following to your vimrc (replace \"ext\" with the desired extension):\n\n    au BufNewFile,BufRead *.ext set filetype=sqlserver\n\n4) The file contains instructions for enabling/disabling several highlighting options (for example, system stored procedures).  By default, all syntax is highlighted.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9810",
+      "filename": "sqlserver.vim",
+      "script_version": "1.0.2",
+      "date": "2009-01-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14355",
+        "user_name": "hoffstein",
+        "first_name": "Benjamin",
+        "last_name": "Hoffstein",
+        "email": "ben at hoffstein.net",
+        "homepage": ""
+      },
+      "release_notes": "Corrected highlighting of DATEPART function parameters."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9611",
+      "filename": "sqlserver.vim",
+      "script_version": "1.0.1",
+      "date": "2008-12-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14355",
+        "user_name": "hoffstein",
+        "first_name": "Benjamin",
+        "last_name": "Hoffstein",
+        "email": "ben at hoffstein.net",
+        "homepage": ""
+      },
+      "release_notes": "Added a few missing keywords (PERSISTED, OPENXML), reorganized source file with folding, and updated fileformat to unix."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9519",
+      "filename": "sqlserver.vim",
+      "script_version": "1.0.0",
+      "date": "2008-11-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14355",
+        "user_name": "hoffstein",
+        "first_name": "Benjamin",
+        "last_name": "Hoffstein",
+        "email": "ben at hoffstein.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

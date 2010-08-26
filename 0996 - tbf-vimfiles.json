@@ -1,0 +1,26 @@
+{
+  "script_id": "996",
+  "name": "tbf-vimfiles",
+  "summary": "Collection of syntax files for C, C#, Java, NSIS and Doxygen",
+  "script_type": "syntax",
+  "description": "A random collection of vim files I use. Containing syntax files for C, C# and Java featuring syntax based folding support. Also contains highlighting for doxygen comments in C and C#. And contains a simple syntax highligher for NSIS.\n\nUsage for folding in C, C++, C# and Java: First of all { code blocks; }  are recognized. Should cover most language constructs, like classes, functions, branches, loops. Additonally explicitly defined regions are supported. In C# you use pairs for \"#region/#endregion\" pragmas for that purpose. In C (and C++) explicit regions are marked by \"/* region */\" and \"/* endregion */\". The region markers for Java are \"// region\" and \"//endregion\".\n\n",
+  "install_details": "Just place the files in ~/.vim or $VIMRUNTIME, as suggested by the tarballs directory structure.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3053",
+      "filename": "tbf-vimfiles.tar.gz",
+      "script_version": "0.1",
+      "date": "2004-05-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3932",
+        "user_name": "tbf",
+        "first_name": "Mathias",
+        "last_name": "Hasselmann",
+        "email": "just ask google",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "885",
+  "name": "FormatBlock",
+  "summary": "Format (i.e., gqq) a block of lines above/below the current line",
+  "script_type": "utility",
+  "description": "\" Format (i.e., gqq) a block of lines above/below the current line from the\n\" line matching <beg_pattern> to the line matching <end_pattern>; intervening\n\" lines of the block should match <in_pattern>, if given.\n\"\n\n\" EXAMPLE SETUP\n\" Format block (do a 'gq' format) on a C-style statement (i.e., from cursor's\n\" line to line ending with ';'):\n\"\n\"\tmap gqs :call FormatBlock('', ';$', '')<CR>\n\nPrimarily used as a \"helper\" function to FormatComment ( vimscript #886 )",
+  "install_details": "I put this in my autoload directory (~/vim/autoload), so the function is automagically loaded as needed via an autocommand:\n\nautocmd FuncUndefined * exe 'runtime autoload/' . expand('<afile>') . '.vim'",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2689",
+      "filename": "FormatBlock.vim",
+      "script_version": "1.3",
+      "date": "2004-01-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "952",
+        "user_name": "Timeframed",
+        "first_name": "Gary",
+        "last_name": "Holloway",
+        "email": "gary at castandcrew dot com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

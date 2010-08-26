@@ -1,0 +1,42 @@
+{
+  "script_id": "1895",
+  "name": "gmcs.vim",
+  "summary": "Mono C# compiler profile",
+  "script_type": "utility",
+  "description": "Mono C# compiler profile.  Tells vim to run gmcs when you :make your file.  Plus, when you run the :make command on your .cs file, this will parse the error messages and let you jump right to the problem points.   ",
+  "install_details": "Place file in your $VIMRUNTIME/compiler directory, and issue the ':compiler gmcs' command.\n\nSee :help compiler for more info.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7165",
+      "filename": "gmcs.vim",
+      "script_version": "1.2.1",
+      "date": "2007-05-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Can now be used with GNU Make.  Just set makeprg=make and provide a makefile.  The error output is is correctly parsed and jumps to the correct files. \n\nEmail comments and improvements to ewfalor@gmail.com"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7109",
+      "filename": "gmcs.vim",
+      "script_version": "1.2",
+      "date": "2007-05-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved error format distinguishes warnings and errors."
+    }
+  ]
+}

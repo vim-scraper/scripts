@@ -1,0 +1,42 @@
+{
+  "script_id": "1782",
+  "name": "polycl.vim",
+  "summary": "Polyhedra CL syntax",
+  "script_type": "syntax",
+  "description": "CL is the programming language of stored procedures embedded in the Polyhedra database.\nFor more information about Polyhedra, see: http://www.enea.com/templates/Extension____259.aspx\n\nThis script provides syntax highlighting and folding for this language.\n\nSee also vimscript#1799: Polyhedra configuration syntax",
+  "install_details": "Save into your personnal syntax directory: $HOME/{.vim|vimfiles}/syntax ({Unix|Windows}).\n\nTo manually colorize a file:\n  :syntax on\n  :filetype on\n  :set filetype=polycl\n\nTo assign CL syntax to a particular file, put this line at the beginning or end of your code:\n  -- vim: set filetype=polycl :\n\nTo assign CL syntax to files *.cl, add this to your ~/{.vim|vimfiles}/filetype.vim:\n  augroup filetypedetect\n    au! BufNewFile,BufRead *.cl setf polycl\n  augroup END\n\nSee also the built-in help in Vim:\n    :help 'filetype'\n    :help 'modeline'\n    :help filetype-plugin\n    :help mysyntaxfile\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6746",
+      "filename": "polycl.vim",
+      "script_version": "0.9.1",
+      "date": "2007-02-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4820",
+        "user_name": "dolmen",
+        "first_name": "Olivier",
+        "last_name": "Mengué",
+        "email": "dolmen at users.sourceforge.net",
+        "homepage": "http://o.mengue.free.fr/"
+      },
+      "release_notes": "Major fixes (typos).\nFixed string escapes.\nStarted highlighting of operators and split of reserved word in multiple classes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6671",
+      "filename": "polycl.vim",
+      "script_version": "0.9",
+      "date": "2007-01-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4820",
+        "user_name": "dolmen",
+        "first_name": "Olivier",
+        "last_name": "Mengué",
+        "email": "dolmen at users.sourceforge.net",
+        "homepage": "http://o.mengue.free.fr/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

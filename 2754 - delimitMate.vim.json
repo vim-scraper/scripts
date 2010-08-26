@@ -1,0 +1,234 @@
+{
+  "script_id": "2754",
+  "name": "delimitMate.vim",
+  "summary": "Provides auto-balancing and some expansions for parens, quotes, etc.",
+  "script_type": "utility",
+  "description": "This plug-in provides automatic closing of quotes, parenthesis, brackets, etc., besides some other related features that should make your time in insert mode a little bit easier, like syntax awareness (will not insert the closing delimiter in comments and other configurable regions), visual wrapping, <CR> and <Space> expansions (off by default), and some more.\n\nMost of the features can be modified or disabled permanently, using global variables, or on a FileType basis, using :autocmd. With a couple of exceptions and limitations, this features don't brake undo, redo or history.\n\ni.e.: The following line in your vimrc would turn auto-completion off for the \"mail\" file type:\n\n        au FileType mail let b:delimitMate_autoclose = 0\n\nRead :help delimitMate for detailed information. You can also follow the \"Vim wiki\" link on the top to discuss about this script.",
+  "install_details": "This script is packaged as a vimball. If gnuzip is in your $PATH, simply edit delimitMate.vba.gz in Vim and then source the file; otherwise, decompress the archive first.\ne.g.:\n        vim delimitMate.vba.gz\n        :source %\n\nIf you want to remove this plugin, type the following inside Vim:\n\n        :RmVimball delimitMate\n\nIf you have GetLatestVimScripts configured, delimitMate will be automatically added the next time you run :GetScripts.\n\nIf you can't use the vimball source, download the zipped version here:\nhttp://github.com/Raimondi/delimitMate/downloads\n\nLeave bug reports and feature request here:\nhttp://github.com/Raimondi/delimitMate/issues",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13447",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "2.4.1",
+      "date": "2010-07-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "- Fix problem with <Home> and <End>.\n- Add missing doc on 'delimitMate_smart_quotes', delimitMateBalance and  'delimitMate_balance_matchpairs'.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13432",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "2.4",
+      "date": "2010-07-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "- Unbalanced parens: see :help delimitMateBalance.\n- Visual wrapping now works on block-wise visual with some limitations.\n- Arrow keys didn't work on terminal.\n- Added option to allow nested quotes.\n- Expand Smart Quotes to look for a string on the right of the cursor."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13139",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "2.3.1",
+      "date": "2010-06-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "- Fix: an extra <Space> is inserted after <Space> expansion."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13123",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "2.3",
+      "date": "2010-06-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "- Syntax aware: Will turn off when editing comments or other regions.\n- Changed format of most mappings.\n- Fix: <CR> expansion doesn't brake automatic indentation adjustments anymore.\n- Fix: Arrow keys would insert A, B, C or D instead of moving the cursor when using Vim on a terminal."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13019",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "2.2",
+      "date": "2010-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "- Added command :DelimitMateSwitch to switch the plug-in on and off.\n- Fix: some problems with <Left>, <Right> and <CR>.\n- Fix: A small problem when inserting a delimiter at the beginning of the line.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12985",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "2.1",
+      "date": "2010-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "- Most of the functions have been moved to an autoload script to avoid loading unnecessary ones.\n- Fixed a problem with the redo command.\n- Many small fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12764",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "2.0",
+      "date": "2010-04-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "* New features:\n- All features are redo/undo-wise safe.\n- A single quote typed after an alphanumeric character is considered an apostrophe and one single quote is inserted.\n- A quote typed after another quote inserts a single quote and the cursor jumps to the middle.\n- <S-Tab> jumps out of any empty pair.\n- <CR> and <Space> expansions are fixed, but the functions used for it are global and can be used in custom mappings. The previous system is still active if you have any of the expansion options set.\n- <S-Backspace> deletes the closing delimiter.\n\n* Fixed bug:\n- s:vars were being used to store buffer options."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11531",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "1.6",
+      "date": "2009-10-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "Now delimitMate tries to fix the balancing of single quotes when used as apostrophes. You can read \":help delimitMate_apostrophes\" for details.\nFixed an error when b:delimitMate_expand_space wasn't set and g:delimitMate_expand_space was."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11486",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "1.5",
+      "date": "2009-10-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "Fix: delimitMate should work correctly for files passed as arguments to Vim. Thanks to Ben Beuchler for helping to nail this bug."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11463",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "1.4",
+      "date": "2009-10-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "Fix: delimitMate is now enabled on new buffers, even if they don't have the file type option set or were opened directly from the terminal.\nEdit: added missing doc file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11426",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "1.3",
+      "date": "2009-09-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "Local options can be used along with autocmd for specific file type configurations.\nFixes:\n- Unnamed register content is not lost on visual mode.\n- Use noremap where appropiate.\n- Wrapping a single empty line works as expected."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11335",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "1.2",
+      "date": "2009-09-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "Fixes:\n- When inside nested empty pairs, deleting the innermost left delimiter would delete all right contiguous delimiters.\n- When inside an empty pair, inserting a left delimiter wouldn't insert the right one, instead the cursor would jump to the right.\n- New buffer inside the current window wouldn't have the mappings set."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11251",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "1.1",
+      "date": "2009-08-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "Fixed an error that ocurred when mapleader wasn't set and added support for GetLatestScripts auto-detection."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11237",
+      "filename": "delimitMate.vba.gz",
+      "script_version": "1.0",
+      "date": "2009-08-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

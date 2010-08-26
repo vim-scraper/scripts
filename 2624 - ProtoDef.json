@@ -1,0 +1,74 @@
+{
+  "script_id": "2624",
+  "name": "ProtoDef",
+  "summary": "Tool to help create skeleton implementations of c++ function prototypes",
+  "script_type": "utility",
+  "description": "Requires:\n- ctags 5.7 or greater\n- PERL (just PERL, you don't need to have Vim compiled with PERL support)\n- FSwitch Vim utility (vimscript #2590)\n\nCheck out the video demo at: http://www.vimeo.com/4448265\n\nYou've got a C++ header file and you've got some prototypes declared in there.  Now you need to create some definitions in a C++ implementation file.  What do you do?  Yank and paste?  Naw :)  Use this plugin instead...\n\nThe concept is pretty simple: while in the implementation file, you hit a key and all of the currently undefined function prototypes in the header file are automatically pulled in to the implementation file and inserted at the current cursor position.\n\n- Pure virtual functions are ignored\n- Functions that are already defined in the header file are ignored\n- Free functions are brought in\n- Class name is automatically prefixed to member functions\n- Constructors and Destructors sort first\n- Only the missing items are pulled in so you can use this utility to bring the implementation file up to match the contents of the header file\n- However you format the prototype shouldn't really make a difference.  ProtoDef endeavours to reduce all declarations to a canonical form.\n\n",
+  "install_details": "- Extract the archive.\n- put doc/protodef.txt into ~/.vim/doc\n- put plugin/protodef.vim into ~/.vim/plugin\n- :helptags ~/.vim/doc\n- read protodef.txt and follow what's in the Setup section to understand what to do with the pullproto.pl file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11376",
+      "filename": "protodef-0.9.3.tar.gz",
+      "script_version": "0.9.3",
+      "date": "2009-09-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17010",
+        "user_name": "Derek Wyatt",
+        "first_name": "Derek",
+        "last_name": "Wyatt",
+        "email": "derek at derekwyatt.org",
+        "homepage": "http://derekwyatt.org"
+      },
+      "release_notes": "Fixed a bug in the autocmd where the \".C\" extension was written as \",C\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11241",
+      "filename": "protodef_0.9.2.tar.gz",
+      "script_version": "0.9.2",
+      "date": "2009-08-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17010",
+        "user_name": "Derek Wyatt",
+        "first_name": "Derek",
+        "last_name": "Wyatt",
+        "email": "derek at derekwyatt.org",
+        "homepage": "http://derekwyatt.org"
+      },
+      "release_notes": "Added the ability to ignore the namespace (e.g. if you define a namespace block and don't need the prototypes to be prefixed with the namespace)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10537",
+      "filename": "protodef_0.9.1.tar.gz",
+      "script_version": "0.9.1",
+      "date": "2009-05-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17010",
+        "user_name": "Derek Wyatt",
+        "first_name": "Derek",
+        "last_name": "Wyatt",
+        "email": "derek at derekwyatt.org",
+        "homepage": "http://derekwyatt.org"
+      },
+      "release_notes": "Fixed issue with nested classes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10507",
+      "filename": "protodef_0.9.0.tar.gz",
+      "script_version": "0.9.0",
+      "date": "2009-05-02",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17010",
+        "user_name": "Derek Wyatt",
+        "first_name": "Derek",
+        "last_name": "Wyatt",
+        "email": "derek at derekwyatt.org",
+        "homepage": "http://derekwyatt.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

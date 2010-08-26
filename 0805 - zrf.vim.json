@@ -1,0 +1,42 @@
+{
+  "script_id": "805",
+  "name": "zrf.vim",
+  "summary": "Syntax file for Zillions of Games' ZRF",
+  "script_type": "syntax",
+  "description": "This is a syntax file for proper highlighting of Zillions Rule Files (ZRF) which are used to describe games in Zillions of Games. Zillions of Games is a universal gaming environment that allows the definition of new games by the user. For more details simply visit http://www.zillionsofgames.com.",
+  "install_details": "See file zrf_vim.txt contained in the ZIP file. Basically just add\n\n    au BufNewFile,BufRead *.zrf    setf zrf  (for vim 6.x)\n\nor\n\n    au BufNewFile,BufRead *.zrf    call s:StarSet('zrf')  (for vim 7.x)\n\nto your $VIMRUNTIME/filetype.vim file and enjoy.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9941",
+      "filename": "zrf_vim.zip",
+      "script_version": "1.2",
+      "date": "2009-02-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3716",
+        "user_name": "joscho",
+        "first_name": "Jochen",
+        "last_name": "Schoof",
+        "email": "joscho at gmx.de",
+        "homepage": "http://www.joscho.de"
+      },
+      "release_notes": "Updated the installation description to also match vim 7.x.\nNo changes in zrf.vim file except version number and date.\nSyntax file can be used in both vim 6.x and 7.x."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2428",
+      "filename": "zrf_vim.zip",
+      "script_version": "1.1",
+      "date": "2003-10-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3716",
+        "user_name": "joscho",
+        "first_name": "Jochen",
+        "last_name": "Schoof",
+        "email": "joscho at gmx.de",
+        "homepage": "http://www.joscho.de"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

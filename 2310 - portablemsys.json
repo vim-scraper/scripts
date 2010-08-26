@@ -1,0 +1,74 @@
+{
+  "script_id": "2310",
+  "name": "portablemsys",
+  "summary": "Use msys as Portable GVim's shell",
+  "script_type": "utility",
+  "description": "This plugin automatically sets the shell option to point to msys location.\nIt lets you have both Portable GVim and msys+MinGW on your portable usb stick, without needing to set the path every time you plug in the usb stick, thus giving you portable compiling powers :-)\n",
+  "install_details": "1. Place portablemsys.vim inside your Portable GVim's plugin folder\n2. Edit your vimrc file to include the line:\n        let Msys='PortableApps\\msys'\n    or wherever your msys is located at (in relation to GVim's drive letter).\n3. Remove the following line from your msys\\etc\\profile file:\n        cd $HOME\n    or any other directory changes.\n4. Enjoy.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12001",
+      "filename": "portablemsys.vim",
+      "script_version": "1.0.3",
+      "date": "2010-01-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14836",
+        "user_name": "ronh",
+        "first_name": "ron",
+        "last_name": "h",
+        "email": "ron_h at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "PortableMsys now sets the makeef option to let make create an error file without problems.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9962",
+      "filename": "portablemsys.vim",
+      "script_version": "1.0.2",
+      "date": "2009-02-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14836",
+        "user_name": "ronh",
+        "first_name": "ron",
+        "last_name": "h",
+        "email": "ron_h at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for a fixed path if you decide to save your Portable GVim to hdd. eg:    let Msys='C:\\msys' "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9040",
+      "filename": "portablemsys.vim",
+      "script_version": "1.0.1",
+      "date": "2008-07-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14836",
+        "user_name": "ronh",
+        "first_name": "ron",
+        "last_name": "h",
+        "email": "ron_h at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed problem where :shell will not bring up the Msys shell."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9024",
+      "filename": "portablemsys.vim",
+      "script_version": "1.0.0",
+      "date": "2008-07-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14836",
+        "user_name": "ronh",
+        "first_name": "ron",
+        "last_name": "h",
+        "email": "ron_h at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

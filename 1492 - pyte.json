@@ -1,0 +1,106 @@
+{
+  "script_id": "1492",
+  "name": "pyte",
+  "summary": "A clean, light (nearly white) theme",
+  "script_type": "color scheme",
+  "description": "This is a light theme I use for coding.\nBackground is very light grey, special things are green or blue, this is for gui only and uses italic for some things (which I find very nice as its makes gvim look less console-like).\n\nScreenshot: http://leetless.de/vim.html",
+  "install_details": "Copy this file to your private or public colors-directory.\nUnder Linux the following should work: mkdir -p ~/.vim/colors; cp pyte.vim ~/.vim/colors\nIf in doubt use instructions of any other colors-package they should work too, or read\nthe vim help about colorscheme-files.\n\nAs this theme only defined highlight-groups for the vim-gui, you might want to use a different one for textmode.\nTo do this, simply put \"colors my_console_scheme\" into your .vimrc-File and \"colors pyte\" ingot your .gvimrc file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13283",
+      "filename": "pyte.vim",
+      "script_version": "1.2.2",
+      "date": "2010-07-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8893",
+        "user_name": "HenningHasemann",
+        "first_name": "Henning",
+        "last_name": "Hasemann",
+        "email": "henning at hasemail.de",
+        "homepage": "http://www.leetless.de"
+      },
+      "release_notes": "Little color fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5826",
+      "filename": "pyte.vim",
+      "script_version": "1.2.1",
+      "date": "2006-06-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8893",
+        "user_name": "HenningHasemann",
+        "first_name": "Henning",
+        "last_name": "Hasemann",
+        "email": "henning at hasemail.de",
+        "homepage": "http://www.leetless.de"
+      },
+      "release_notes": "- Fixed issue with Error-color, if you used cursorline before, errors got white-on white, now foreground color for errors is red which schould cause your attention on every of my defined background colors."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5813",
+      "filename": "pyte.vim",
+      "script_version": "1.2",
+      "date": "2006-06-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8893",
+        "user_name": "HenningHasemann",
+        "first_name": "Henning",
+        "last_name": "Hasemann",
+        "email": "henning at hasemail.de",
+        "homepage": "http://www.leetless.de"
+      },
+      "release_notes": "Added support for some new features in vim:\n- CursorLines\n- TabLine\n- Pmenu (auto-completion)\n\nNote that this colorscheme does not (and will propably never) *require* VIM v7, as vims-scripting language provides conditionals to query the version.\nSo it should look (at your opinion) nice with VIM6 and VIM7 now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5812",
+      "filename": "pyte.vim",
+      "script_version": "1.1",
+      "date": "2006-06-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8893",
+        "user_name": "HenningHasemann",
+        "first_name": "Henning",
+        "last_name": "Hasemann",
+        "email": "henning at hasemail.de",
+        "homepage": "http://www.leetless.de"
+      },
+      "release_notes": "Defined colors for diff-view (vim -d)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5803",
+      "filename": "pyte.vim",
+      "script_version": "1.01",
+      "date": "2006-06-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8893",
+        "user_name": "HenningHasemann",
+        "first_name": "Henning",
+        "last_name": "Hasemann",
+        "email": "henning at hasemail.de",
+        "homepage": "http://www.leetless.de"
+      },
+      "release_notes": "Made NonText Foreground grey so the \"~\" signs on an empty document dont look that ugly anymore"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5420",
+      "filename": "pyte.vim",
+      "script_version": "1.0",
+      "date": "2006-03-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8893",
+        "user_name": "HenningHasemann",
+        "first_name": "Henning",
+        "last_name": "Hasemann",
+        "email": "henning at hasemail.de",
+        "homepage": "http://www.leetless.de"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

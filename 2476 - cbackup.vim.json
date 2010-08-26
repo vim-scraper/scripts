@@ -1,0 +1,26 @@
+{
+  "script_id": "2476",
+  "name": "cbackup.vim",
+  "summary": "Use VMS style versioned backup with centralized backup directory",
+  "script_type": "utility",
+  "description": "This is a modification of vimscript #1537 to make it work with centralized backup directories. Backups are saved by default in $HOME/.backups, with recursive subdirectories reflecting the original location of the file being saved, using the VMS versioning system.\n\nParts of the script running under VMS were not changed. Script was tested on Linux, and should work in other environments too (Windows, Mac).",
+  "install_details": "Download the script and put it in your ~/.vim/plugin/ directory.\n\nConfiguration:\n\ng:backup_directory - the root of the backup directory structure, by default it's set to \"$HOME/.backups\". It will be automatically created if not found.\n\ng:backup_purge - number of files to preserve during write, by default 10. Older files will be automatically removed.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9634",
+      "filename": "cbackup.vim",
+      "script_version": "2.2.1",
+      "date": "2008-12-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15711",
+        "user_name": "harnir",
+        "first_name": "Maciej",
+        "last_name": "Delmanowski",
+        "email": "harnir at harnir.net",
+        "homepage": "http://harnir.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

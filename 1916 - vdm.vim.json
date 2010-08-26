@@ -1,0 +1,58 @@
+{
+  "script_id": "1916",
+  "name": "vdm.vim",
+  "summary": "Syntax file for VDM-SL",
+  "script_type": "syntax",
+  "description": "This script provides syntax highlight for VDM-SL specification language.\nhttp://www.vdmtools.jp/en/\n\nDownload at http://rcg-pt.net/programacao/vdm.vim.gz",
+  "install_details": "Put vdm.vim in your syntax diretory (e.g. ~/.vim/syntax).\nAdd line below to your .vimrc file:\nau BufNewFile,BufRead *.vdm     setf vdm",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8249",
+      "filename": "vdm.vim",
+      "script_version": "2.6",
+      "date": "2008-02-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12099",
+        "user_name": "rcg",
+        "first_name": "Rui Carlos",
+        "last_name": "Gonçalves",
+        "email": "rcgoncalves.pt at gmail.com",
+        "homepage": "http://rcg-pt.net"
+      },
+      "release_notes": "Error fixed (multiple spaces in expressions)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7317",
+      "filename": "vdm.vim",
+      "script_version": "2.5",
+      "date": "2007-07-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12099",
+        "user_name": "rcg",
+        "first_name": "Rui Carlos",
+        "last_name": "Gonçalves",
+        "email": "rcgoncalves.pt at gmail.com",
+        "homepage": "http://rcg-pt.net"
+      },
+      "release_notes": "Error correction (exits  -->  exists)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7249",
+      "filename": "vdm.vim",
+      "script_version": "2.4",
+      "date": "2007-06-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12099",
+        "user_name": "rcg",
+        "first_name": "Rui Carlos",
+        "last_name": "Gonçalves",
+        "email": "rcgoncalves.pt at gmail.com",
+        "homepage": "http://rcg-pt.net"
+      },
+      "release_notes": "Correction on mk_* functions syntax."
+    }
+  ]
+}

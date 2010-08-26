@@ -1,0 +1,26 @@
+{
+  "script_id": "2598",
+  "name": "reorder.vim",
+  "summary": "Reorder the items in natural language lists",
+  "script_type": "utility",
+  "description": "Supposing you have a list \"foo, bar, and baz\" in English where all of the elements are separated by commas and there's the word \"and\" or \"or\" before the last item in the list.\n\nThe attached Reorder plugin works as follows: Select the list you want to reorder in visual mode (like \"foo, bar, and baz\") then run :Reorder 3,2,1 (or :'<,'>Reorder 3,2,1 --- the line numbers are ignored for your convenience, since Vim puts them in anyway), and watch Vim reorder your list to \"baz, bar, and foo\".\n\nRequires Ruby support, and the facets gem installed.",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10340",
+      "filename": "reorder.vim",
+      "script_version": "1.0",
+      "date": "2009-04-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17096",
+        "user_name": "kabloom",
+        "first_name": "Ken",
+        "last_name": "Bloom",
+        "email": "kbloom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

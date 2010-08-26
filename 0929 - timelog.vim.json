@@ -1,0 +1,26 @@
+{
+  "script_id": "929",
+  "name": "timelog.vim",
+  "summary": "Vim {,ft}plugin for keeping track of one's time.",
+  "script_type": "ftplugin",
+  "description": "\" What:   timelog.vim:  Vim {,ft}plugin for keeping track of one's time.\n\" Usage:  source the file, or stick it in your ftplugin directory and\n\"         have ft=timelog on your modeline.\n\"         Keys:  n new job\n\"                t go\n\"                q stop \n\"                s[1-9] sort by that column\n\nWhat is it?\n===========\n\nA simple time tracking utility.\n\nWhy?\n====\n\nI tried karm and gtt and didn't like them.  I find it useful - someone\nelse might too.\n\nInstallation\n============\n\nDrop it in ~/vim/ftplugin/.  When you open a file with the modline telling\nvim that the filetype is \"timelog\":\n\n\" vim:ft=timelog:\n\nit'll be sourced.  I personally have an alias to check out (RCS) my\ntimelog file, open it with vim and check it back in when I'm finished.\n\nUsage\n=====\n\n\nKeys:\n   n new job\n   t start timing highlighted job (or job with the cursor on it)\n   q stop timing\n   s[1-9] sort by that column\n\n\nHere's an example of what mine could look like:\n\n\" vim:ft=timelog:\n\" usage:\n\"   t go\n\"   q stop\n\"   n new job\n\"   s[1-9] sort by that column\n\" dates in yy-mm-dd time in hh:mm:ss\nstart     last      time      what?\n--------  --------  --------  -------\n03-11-03  03-11-03  00:10:23  O  ----    Write doc for timelog.vim \n02-11-19  03-10-19  05:19:02  C  0712    something\n02-11-19  02-11-19  00:14:41  C  0977    something else\n03-11-03  03-11-03  00:00:00  N  ----    blah\n\nThe first 3 columns are what timelog.vim give you - when the job was\ncreated, when it was last modified and time spent on it.  The rest can be\nwhatever you like.  For me here I have a tag for whether the job is New,\nOpen or Completed (N, O, C), a reference nuber for the job if I have one\nand a description.\n\nThere can be several timlog blocks seperated by white space and can have\ntext between.  Each timelog block can be sorted seperately.\n\nBugs?\n=====\n\nWell, the seconds aren't quite seconds and not all motions highlight the\nline the cursor ends up on.",
+  "install_details": "Drop it in ~/vim/ftplugin/.  When you open a file with the modline telling\nvim that the filetype is \"timelog\":\n\n\" vim:ft=timelog:\n\nit'll be sourced.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2806",
+      "filename": "timelog.vim",
+      "script_version": "1.0",
+      "date": "2004-03-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4687",
+        "user_name": "pudz",
+        "first_name": "Andrew",
+        "last_name": "Woods",
+        "email": "pudz at freebsd-uk.eu.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

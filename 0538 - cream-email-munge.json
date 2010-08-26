@@ -1,0 +1,58 @@
+{
+  "script_id": "538",
+  "name": "cream-email-munge",
+  "summary": "Munge an email address",
+  "script_type": "utility",
+  "description": "\nPosted email addresses are regularly harvested and processed by automated web search tools. These addresses often end up added or sold to bulk email lists so that the unsuspecting address owner receives large quantities of unsolicited email, also known as Spam. \n\nTo avoid having one's email address harvested in this way, it can be \"munged\", or made unrecognizable to the automated system while still clearly appearing as an email address to any human reader. Examples:\n\n  unmunged:  \n       username@domain.com\n\n  munged, separator type:\n       <username>·<domain>·<com>\n       |username|at|domain|dot|com|\n\n  munged, substitution type:\n       useNrnaOme@SdomPainA.coMm (remove \"NOSPAM\" to email)\n       useSrnPamAe@MdoFmaRinE.cEom (remove \"SPAMFREE\" to email)\n\n  munged, completion type:\n       usernam____n.com (insert \"e@domai\" to email)\n\nThis script provides a visual mode mapping Shift+F12 which will munge any selected email address randomly per one of the examples above. The main function \"Cream_email_munge()\" will also return a munged address if passed a valid email, like:\n\n  let mymunge = Cream_email_munge(\"username@domain.com\")\n\n\nThis is one of many custom utilities and functions for gVim from the Cream project (http://cream.sourceforge.net), a configuration of Vim for those of us familiar with Apple and Windows software.\n\n",
+  "install_details": "\nDrop this file into your plugins directory and (re)start Vim.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1661",
+      "filename": "cream-email-munge.vim",
+      "script_version": "0.2a",
+      "date": "2003-01-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "Fixed omission of <CR> at mapping end, sorry."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1660",
+      "filename": "cream-email-munge.vim",
+      "script_version": "0.2",
+      "date": "2003-01-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "Added both substitution type munging [useNrnaOme@SdomPainA.coMm (remove \"NOSPAM\" to email)] and completion type munging [usernam____n.com (insert \"e@domai\" to email)].\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1658",
+      "filename": "cream-email-munge.vim",
+      "script_version": "0.1",
+      "date": "2003-01-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

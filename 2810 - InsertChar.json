@@ -1,0 +1,26 @@
+{
+  "script_id": "2810",
+  "name": "InsertChar",
+  "summary": "Press <tab> to insert a single character",
+  "script_type": "utility",
+  "description": "Allows you to use <tab> <letter> to insert a single character (no need to press escape). You can also use 3<tab> <letter> to insert 3 characters.\n\nIf you install vimscript #2136, then the '.' command will also repeat the last insert.\n",
+  "install_details": "Step 1:\nPlace InsertChar.vim in the ~/.vim/plugin/ folder, or ~/.vim/autoload if your prefer.\n\nStep 2:\nSet up a mapping in your ~/.vimrc:\nnnoremap <TAB> :<C-U>call InsertChar#insert(v:count1)<CR>\n\nYou can change <TAB> to any other key you prefer, but the rest of the command must be the same.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11521",
+      "filename": "InsertChar.vim",
+      "script_version": "1.0",
+      "date": "2009-10-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10023",
+        "user_name": "peter_hodge",
+        "first_name": "Peter",
+        "last_name": "Hodge",
+        "email": "toomuchphp-vim at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

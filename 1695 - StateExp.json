@@ -1,0 +1,42 @@
+{
+  "script_id": "1695",
+  "name": "StateExp",
+  "summary": "Ease writing code by expanding statements.",
+  "script_type": "utility",
+  "description": "The main point this script targets to is to ease writing code. Just type sw<ctrl-s> and you get a complete switch(){case;break;}  statement. \nBut it can also be used to add a header to a letter, etc. What to expand and how to expand can easily be configured.          \n                                                                    \nTo invoke the statement expansion, type a short form of a statement and press <ctrl-s> in insert mode.                        \n  Memory aid: s (s)tatement expansion                               \nThe statement will be expanded. By default the most important C statements are defined. \n                                                                    \nPress <leader>sh to get a list of defined statements.               \n  Memory aid: sh (s)tatement expansion (h)elp                       \n ",
+  "install_details": "Just copy this script into Vim's plugin directory, for details see Vim help ':help plugin'.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6681",
+      "filename": "StateExp.vim",
+      "script_version": "1.01.00",
+      "date": "2007-01-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1276",
+        "user_name": "Habi",
+        "first_name": "Christian",
+        "last_name": "Habermann",
+        "email": "vimonline.20.habi at spamgourmet.com",
+        "homepage": "http://www.habermann-net.de"
+      },
+      "release_notes": "- better alignment of help page if statements are not all of the same length\n- new statement: 'else { }'"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6339",
+      "filename": "stateexp.vim",
+      "script_version": "1.00.00",
+      "date": "2006-10-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1276",
+        "user_name": "Habi",
+        "first_name": "Christian",
+        "last_name": "Habermann",
+        "email": "vimonline.20.habi at spamgourmet.com",
+        "homepage": "http://www.habermann-net.de"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

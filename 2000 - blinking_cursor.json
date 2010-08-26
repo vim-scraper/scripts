@@ -1,0 +1,26 @@
+{
+  "script_id": "2000",
+  "name": "blinking_cursor",
+  "summary": "Makes the cursor blink in x terms when the user is in insert mode",
+  "script_type": "utility",
+  "description": "A short script ( with two c prgrams ) that makes the cursor blink in x terms when the user switches in insert mode. I think it may run on other vim Version, but i didn't test yet. ",
+  "install_details": "* Supported os:\n  - Linux/UNIX\n* Install:\n  - copy the archive somewhere in your Vim path (usually /usr/share/vim/addons/plugin if you've got root permissions  or ~/.vim/plugin). You can also put it anywhere as long as you keep  'vimblinkcursor' and 'vimstopblinking' along with blink_cursor.vim. In this case switch the script on manually into Vim with:\n          :so /path/to/the/script/blinking_cursor.vim\n\n  - untar the archive:\n          $ tar -zxvf blinking_cursor.tar.gz\n\n  - Make sure that your terminal isn't set to make the cursor blink (in gnome-terminal : Edit=>Current Profile...). If you want to keep the cursor blinking while not using vim, you can add this line in your ~/.bashrc file :\n            /full/path/to/the/script/vimblinkcursor&\nand in your ~/.vimrc:\n            augroup blinking_cursor\n            au!    \n            au VimLeave * :silent! ! /full/path/to/the/scriptvimblinkcursor&\n            augroup END\n\n  - If it doesn't work as expected, or if you are not on a i386-arch computer, compile vimblinkcursor and stopblinking sources again:\n           $ gcc vimblinkcursor.c -o vimblinkcursor\n           $ gcc vimstopblinking.c -o vimstopblinking\n\n  - If it still does not work properly, please e-mail me\n* TODO:\n  - let the user set the blinking delays\n  - let the user switch the script on/off \n  - port to windows ( i don't think i can do it myself _I've got only an uninstalled win95 copy_. If someone can, please e-mail me ) \n* Thanks\n  - blinking_cursor.vim uses blink.c by Bram Moolenaar (provided with vim in /tools)\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7550",
+      "filename": "blinking_cursor.tar.gz",
+      "script_version": "0.1",
+      "date": "2007-08-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12958",
+        "user_name": "lisael",
+        "first_name": "Bruno",
+        "last_name": "Dupuis",
+        "email": "lisael at laposte.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

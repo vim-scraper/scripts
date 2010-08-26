@@ -1,0 +1,26 @@
+{
+  "script_id": "2614",
+  "name": "sdticket",
+  "summary": "syntax support of sd (p2p bug tracking system)",
+  "script_type": "syntax",
+  "description": "this supports sd (peer-to-peer bug tracking system) ticket syntax.\n\nhttp://syncwith.us/ \nhttp://github.com/obra/sd",
+  "install_details": "put the sdticket.vim to ~/.vim/syntax/\n\nand add the below settings to your .vimrc\n\n au BufNewFile,BufRead *\n     \\ if getline(1) =~ \"required ticket metadata\" |\n     \\   setf sdticket |\n     \\ endif\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10430",
+      "filename": "sdticket.vim",
+      "script_version": "0.1",
+      "date": "2009-04-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13514",
+        "user_name": "c9s",
+        "first_name": "Yo-An",
+        "last_name": "Lin",
+        "email": "cornelius.howl at gmail.com",
+        "homepage": "http://c9s.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

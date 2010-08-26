@@ -1,0 +1,42 @@
+{
+  "script_id": "1634",
+  "name": "matlab_run.vim",
+  "summary": "Run matlab script using Python for Windows users",
+  "script_type": "ftplugin",
+  "description": "I no longer use Matlab nor Windows so I won't be able to improve this script any more.  Feel free to take over it and improve it.  \n\nRequired Python and its module win32com.  \nOnly in win32 platform.\n\nKnown successful versions\nWinXP, Python 2.4, Vim 7, Matlab 6.5\n\nPlease refer to tip#1298: http://www.vim.org/tips/tip.php?tip_id=1298\n(Thanks for the improvement from the comments.)\n\nHow to use:\nType ,r then it will save your file and run the file in Matlab.  The output from Matlab will be displayed in the current window.\n\nRemarks: \n1. Work for function file as well as script file, as long as the function does not require inputs.\n\n2. It will automatically add the path of your file using addpath in Matlab.  If you want to remove it you need to use rmpath in Matlab to do so manually. (Ignore this for version 1.1)\n\n3. It may take longer time than usual when you open an m file because it also starts Matlab.\n\n4. DO NOT close the Matlab Command Window.  It will close itself when you close your m files.\n\n5. For those of you who don't have Python but consider to install it, I recommand the enthought edition (http://code.enthought.com/enthon/) which includes pywin32.  As a Matlab user, you may also find scipy and numpy very useful in the future.",
+  "install_details": "Download the file and put in $vim/vimfiles/ftplugin.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6116",
+      "filename": "matlab_run.vim",
+      "script_version": "1.2",
+      "date": "2006-08-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10514",
+        "user_name": "manuhack",
+        "first_name": "Manu",
+        "last_name": "Hack",
+        "email": "manuhack at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Polish the script a little bit.  \n\nIn this version it won't open Matlab when you open an m file.  But need to open Matlab before running scripts.  \n\ntype ,o to open Matlab.\ntype ,r to run.  \n\nCertainly you could map to your favorite keys."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6063",
+      "filename": "matlab_run.vim",
+      "script_version": "1.1",
+      "date": "2006-08-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10514",
+        "user_name": "manuhack",
+        "first_name": "Manu",
+        "last_name": "Hack",
+        "email": "manuhack at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This version does not add path.  You can also run m files in different directory now."
+    }
+  ]
+}

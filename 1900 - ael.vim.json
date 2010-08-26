@@ -1,0 +1,58 @@
+{
+  "script_id": "1900",
+  "name": "ael.vim",
+  "summary": "Syntax for Asterisk Extension Language (AEL)",
+  "script_type": "syntax",
+  "description": "Includes highlighting for most of the basic structure of AEL files.",
+  "install_details": "Place ael.vim in ~/.vim/syntax, and activate it with \":setf ael\" when editing an AEL file, or add the appropriate code to ~/.vim/filetype.vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12203",
+      "filename": "ael.vim",
+      "script_version": "0.3",
+      "date": "2010-01-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12438",
+        "user_name": "cmdrwalrus",
+        "first_name": "Chad",
+        "last_name": "Wallace",
+        "email": "cmdrwalrus at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Tweaked treatment of Set, goto, macros and interpolation.  Added for and while loops.  Made semicolons optional after closing braces.  Added support for callerid on extensions.  Added support for multiline comments (thanks to Andrea Spadaccini)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7188",
+      "filename": "ael.vim",
+      "script_version": "0.2",
+      "date": "2007-06-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12438",
+        "user_name": "cmdrwalrus",
+        "first_name": "Chad",
+        "last_name": "Wallace",
+        "email": "cmdrwalrus at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added recognition of Set and other application calls, as well as $[] and ${} expressions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7133",
+      "filename": "ael.vim",
+      "script_version": "0.1",
+      "date": "2007-05-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12438",
+        "user_name": "cmdrwalrus",
+        "first_name": "Chad",
+        "last_name": "Wallace",
+        "email": "cmdrwalrus at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

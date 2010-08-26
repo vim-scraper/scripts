@@ -1,0 +1,106 @@
+{
+  "script_id": "1555",
+  "name": "CD_Plus",
+  "summary": "cd completion accelerator & file browser",
+  "script_type": "utility",
+  "description": "\n\n Features:\n\n    Gets you where you're going with the minimum possible keystrokes:\n\n        Each key stroke is completed as it is typed.  Since I used <Tab>\n        and ^D constantly, I figured, why not make it the default?\n\n        A directory listing is maintained in a separate window.  The clean,\n        scrollable/editable directory/file completion list is in a regular\n        Vim window.\n\n        A history is maintained individually for directories and files\n        accessed.\n\n        The completion is optimized for fast directory browsing, and file\n        opening.\n\n        You can create aliases for any directory/file.  So, if you've set an\n        alias for '1', then ':cd 1<cr>' moves to that directory.\n\n\n\n    Key Commands:\n\n    ^H <BS>     The backspace keys are a combination of single char backspace\n                and immediate history \"rollback\".  They attempt to go back to\n                the first valid directory completion point.\n\n    ^W          Erase backwards a word/directory.\n\n    ^U          Clear the line.\n\n    <TAB>       Rotate through the current list.\n    <S-TAB>     \n\n    <CR>        Execute a \"cd\" command to the currently shown directory.\n\n                If <CR> is typed in the display window, the name under the\n                cursor will be copied to the command line.\n\n    <ESC>       Jump into the __CD__ display window.   <ESC> jumps back.\n                <CR> selects and jumps back.  Changes made to history lists\n                in the buffer are saved to the global history vars.\n\n    <C-F>       ^F opens the command edit window.\n\n    <C-C>       ^C quits without changing directories.\n\n    <C-N>       Forward/backward in the directory/file history.\n    <C-P>       \n\n    /           Can have special actions, see 'Navigating'\n\n    <C-L>       Refresh\n\n    <C-E>       Scroll one line\n    <C-Y>\n    <C-D>       Scroll page\n    <C-B>\n                Note : it is almost as easy to do your scrolling using\n                <ESC> to bounce to/from the display window.\n\n\n    Other Commands:\n\n        The built-in commands are implemented as aliases (as are pc-drive\n        names).  You can override them, but then it's up to you to create\n        new ones.  Enter commands after a trailing  / .\n\n    'set '      Set an alias to the current directory displayed.\n\n    'delete '   Delete an alias.\n\n    'o pt '     Sets options.  (o<SPACE>pt is to force it to match sooner.)\n        \n            -   Set display column wrap width.  Set to 0 for auto-sizing to\n                longest path name.\n\n            -   Auto-change directory.  (default is 'local', as in 'lcd')\n\n            -   Recan for pc drives, and create 'C:/' style aliases.\n\n            -   Match collapses (shortens) listings (default on; off means\n                always show full directory listing).\n\n            -   Toggle highlighting on/off\n\n\n    'sort '     Sets sorting type. (default==alpha, time, size)\n\n    'long'      Long listing toggle (sets wrap, fsize, etc.)\n\n    'help '     This listing.\n\n    'history '  Browse the history.  A separate history is accessed\n                depending on whether the current command is 'cd' or 'lcd',\n                or some other file oriented command like 'e' or 'new'.\n\n    'edit '     Switch to 'open/edit' file mode.\n    'new '      \n\n    ': '        Input other ex command.  I.e.  :vimgrep aug<CR>\n                will prepend as ':vimgrep aug /someroot/somefiles*'\n\n\n            Most of these can be abbreviated as first-char<space>  .\n\n\n        Note:   Spaces might not be displayed at the end of a line due to\n                some problem with 'echo' and 'input()'.\n\n\n    Navigating:\n\n        Every character typed will be treated as part of a directory or alias,\n        and the display will change accordingly.  Unmatched characters will\n        generally be discarded.  This takes a little getting used to, since\n        you might tend to type ahead more than will match (see also // below ).\n\n        The  /  character is somewhat special.  If you add a slash after a\n        directory name, it moves the display to that directory, and sets the\n        current 'input' value to null.  Therefore, typing aliases is best done\n        after a trailing  /  char.\n\n        Literal input:\n\n            '//' must be used to enter non-existing names.\n\n            Adding a / to the end of a line which already ends in / will\n            toggle the  'g:CD_any_input'  option (default off).\n            Normally, keys which don't match anything are thrown away unless\n            this option == 1.  It also affects what names can be taken\n            from the ^N/^P history.  Aliases are not completed, and must be\n            entered as .../full_alias<space>/\n\n\n\n    Aliases:\n\n    -   Aliases automatically have a space added after them to help\n        distinguish from directories of the same name.\n\n    -   Best way to see all aliases is to clear the line with ^U\n\n\n\n\n    Customizing:\n\n        The default key mapping is:\n\n            cnoremap <silent> <expr> e<space> ( getcmdpos() == 1 && getcmdtype() == ':' ? CD_Plus_start('e') : 'e' )\n            cnoremap <expr> cd ( getcmdpos() == 1 && getcmdtype() == ':' ? CD_Plus_start('cd') : 'cd' )\n            cnoremap <expr> lcd ( getcmdpos() == 1 && getcmdtype() == ':' ? CD_Plus_start('lcd') : 'lcd' )\n        \n        a simpler keymap might be:\n            nnoremap <leader>cd :call CD_Plus('cd')<CR>\n\n        There is a list of globals,  following the script header, which you\n        can change.  There are a few more, but these are the simple ones,\n        which can also be set via option aliases.\n\n            g:CD_rc_file                default: $HOME . '/.vim_cd_plus'\n                                    Most globals and history are saved\n                                    here.\n\n            g:CD_autochdir          'off', 'local', or 'global'\n\n            g:CD_dsp_wrap_len       default 19, specifies display column\n                                    wrapping.\n\n            g:CD_any_input          0 or 1, the starting value for literal\n                                    input (also set by trailing // toggle).\n\n            g:CD_scan_pc_drives     0 or 1, whether to attempt to discover\n                                    pc drive names (like C:, D:, etc.) and\n                                    create aliases for them.\n\n        If you want to customize the highlighting or sorting, it's a little\n        more complicated.  For highlighting, there is an 'init' function\n        that needs to be changed.  For sorting, an entry must be added to\n        the g:CD_aliases dict var (see top of script), and a new function\n        must be defined to do the sorting.  See the Sort_by_ftime() or\n        Sort_by_extension() functions for examples.\n\n\n\n    Caveats:\n\n    -   Works only with 'shellslash' on.\n    -   Restoring the command line height is a true pain in the ass.  It\n        works most of the time, though that is little consolation.\n    -   Tabbing is a little slow on large directory lists because of the\n        redraw requirement.  It isn't much a problem, though since it's only\n        noticable when you hold the tab key down.\n",
+  "install_details": "Put into your plugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5849",
+      "filename": "CD_Plus.vim",
+      "script_version": "2.3",
+      "date": "2006-06-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "-\tadded window size restore\n-\tchanged // to 'literal' command\n-\tbug with fname and dirname sharing same prefix\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5815",
+      "filename": "CD_Plus.vim",
+      "script_version": "2.2",
+      "date": "2006-06-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "-\tFixed accumulating syntax entries (gradual slow down)\n-\tHighlighting shortcuts to speed up tabbing\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5810",
+      "filename": "CD_Plus.vim",
+      "script_version": "2.1",
+      "date": "2006-06-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "-\tMisc fixes (stray error messages)\n-\tOption to recan for pc drives\n-\tMisc fixes for pc drive pathnames\n\t(Still some problems).\n-\tAdded sorting options\n-\tFaster scrolling and tabbing\n-\tChanged :excmd enter method\n-\tAdded file size and time options.\n-\tAdded match collapse listing option.\n-\tAdded highlighting toggle\n-\tAdded long listing toggle\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5800",
+      "filename": "CD_Plus.vim",
+      "script_version": "2.0",
+      "date": "2006-06-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "\n -\tAdded literal input mode (allow non-existent\n   names).\n -\tAdded ^F command window access.\n -\tDisplay and highlighting cleaned and improved.\n -\tAdded options aliases for col wrap and\n   autochdir.\n -\tAdded ^E ^Y passthrough for scrolling.\n -\tMisc fixes.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5793",
+      "filename": "CD_Plus.vim",
+      "script_version": "1.5",
+      "date": "2006-06-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "-   many minor fixes\n-   added filename completion, and quick switch to\n    edit, etc., and cmap e<space> .....\n-   added separate directory and filename\n    histories.\n-   will try to create intermediate directories.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5743",
+      "filename": "CD_Plus.vim",
+      "script_version": "1.0",
+      "date": "2006-05-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

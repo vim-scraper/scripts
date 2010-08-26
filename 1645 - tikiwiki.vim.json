@@ -1,0 +1,58 @@
+{
+  "script_id": "1645",
+  "name": "tikiwiki.vim",
+  "summary": "TikiWiki syntax highlighting",
+  "script_type": "syntax",
+  "description": "Syntax file for the tikiwiki language.\nThis is mainly useful if your browser allows you to edit text areas in an external editor (like the Mozex entension of Firefox). See also vimtip #805 if you are on Windows.\n",
+  "install_details": "Put the script in ~/.vim/syntax or C:\\program files\\vim\\vimfiles\\syntax\nYou can then type ':set syntax=tikiwiki' (without the quotes) to have tikiwiki syntax highlighting.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6971",
+      "filename": "tikiwiki.vim",
+      "script_version": "1.2",
+      "date": "2007-04-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10763",
+        "user_name": "ipkiss",
+        "first_name": "Olivier",
+        "last_name": "Teuliere",
+        "email": "ipkiss at via.ecp.fr",
+        "homepage": ""
+      },
+      "release_notes": "- Added support for plugins syntax: {PLUGINNAME(param=>value)/}\n- Allowed = instead of => in the parameters list of a plugin, since tikiwiki also seems to allow them\n- Unknown plugin names are highlighted like errors\n- Plugins inside headings and title bars are now allowed\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6969",
+      "filename": "tikiwiki.vim",
+      "script_version": "1.1",
+      "date": "2007-04-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10763",
+        "user_name": "ipkiss",
+        "first_name": "Olivier",
+        "last_name": "Teuliere",
+        "email": "ipkiss at via.ecp.fr",
+        "homepage": ""
+      },
+      "release_notes": "Added dedicated support for the FANCYTABLE plugin\nUsed @NoSpell in a few syntax groups to avoid spell checking\nThe plugin attributes are now more tolerant to additional white spaces"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6126",
+      "filename": "tikiwiki.vim",
+      "script_version": "1.0",
+      "date": "2006-09-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10763",
+        "user_name": "ipkiss",
+        "first_name": "Olivier",
+        "last_name": "Teuliere",
+        "email": "ipkiss at via.ecp.fr",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

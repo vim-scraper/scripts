@@ -1,0 +1,42 @@
+{
+  "script_id": "1369",
+  "name": "Zopedav",
+  "summary": "Handles remote editing with WebDAV, including zope",
+  "script_type": "ftplugin",
+  "description": "This script allows editing of WebDAV resources and is zope-aware. \nThis plugin does not conflict with netrw and catches the \nwebdav:// and zope:// url schemes.\n\n- Zope scheme\nzope://[username:password@]host[:port]/path/to/document urls are \nGET using a \"/document_src\" suffix and\nPUT using no suffix\n\n- WebDAV scheme\nwebdav://[username:password@]host[:port]/path/to/document urls are \nGET using no suffix and\nPUT using no suffix\n\n- Using SSL\nShall you need to use ssl, add an \"s\" prefix to the protocol, for instance\nszope://securedhost/some/private/document.dtml\nswebdav://securedhost/some/private/document\n\n- Options\nIf you intent on editing every WebDAV resource under the \"/source\"\nurl suffix or/and upload them back under the \"/upload\" suffix, use the\nfollowing options in your .vimrc :\nlet g:webdav_get_suffix = \"/source\"\nlet g:webdav_put_suffix = \"/upload\"\n\nNB: No error handling is performed\nNB: See also vimscript #1075 \n",
+  "install_details": "- Download cURL from http://curl.haxx.se/download.html and put curl executable in your path\n- Put zopedav.vim in your $VIMRUNTIME/plugin directory\n- Edit any zope://localhost:8080/some/document.dtml or webdav://localhost:8080/document\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9189",
+      "filename": "zopedav.vim",
+      "script_version": "2.0",
+      "date": "2008-08-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8414",
+        "user_name": "sebastienmigniot",
+        "first_name": "Sébastien",
+        "last_name": "Migniot",
+        "email": "smigniot at hotmail.com",
+        "homepage": "http://www.migniot.com"
+      },
+      "release_notes": "Version 1.0 was a script kiddie thing. Version 2.0 is robust, uses cURL for WebDAV communication and is ready for Zope out-of-the-box. Version 2.0 can also edit standard WebDAV resources as well."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4624",
+      "filename": "zopedav.vim",
+      "script_version": "1.0",
+      "date": "2005-09-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8414",
+        "user_name": "sebastienmigniot",
+        "first_name": "Sébastien",
+        "last_name": "Migniot",
+        "email": "smigniot at hotmail.com",
+        "homepage": "http://www.migniot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

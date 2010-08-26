@@ -1,0 +1,26 @@
+{
+  "script_id": "797",
+  "name": "preview.vim",
+  "summary": "Preview current file in selected browser.",
+  "script_type": "utility",
+  "description": "This has been tested on windows only. It  can probably be made to work on linux but is untested on that platform..(one day ;-)) \n(If anyone modifies this script to work on both platforms, please feel free to upload the modified script)\n\nPressing <S-F12> will prompt you for the browser you would like to preview the current file in. Browsers can be added by modifying the appropriately commented lines in the script.  (make sure to modify the current paths for browsers on your system).\n\nThere is also the option to include only files of a specific type. These are .php, .php3, .jsp, .asp, .html, .htm, and .vim at the moment but others can easily be added.\n\nIf the file is in your server directory (http:\\\\localhost\\) or a sub directory of it, it will be previewed through the server - NOT as a local file. \n\negs http:\\\\localhost\\test.php\n        http:\\\\localhost\\examples\\chapter04\\index.php\n\nOtherwise it will be previewed simply as a local file\neg    c:\\mysite\\index.html\n",
+  "install_details": "place in your  plugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2413",
+      "filename": "preview.vim",
+      "script_version": "0.1",
+      "date": "2003-10-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2542",
+        "user_name": "Mark Woodward",
+        "first_name": "Mark",
+        "last_name": "Woodward",
+        "email": "markwoodward at internode.on.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

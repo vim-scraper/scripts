@@ -1,0 +1,90 @@
+{
+  "script_id": "2501",
+  "name": "VimClojure",
+  "summary": "A filetype, syntax and indent plugin for Clojure",
+  "script_type": "ftplugin",
+  "description": "This package contains a filetype, a syntax and an indent plugin\nfor the Clojure (http://clojure.org) programming language.\n\nSince version 2.0, it also contains the interactive part formerly known as \"Gorilla\".\nThis includes:\n* docstring lookup\n* javadoc lookup\n* repl in a vim buffer\n* omni completion\n\n",
+  "install_details": "Extract the archive into your .vim (or vimfiles) directory. Enable syntax highlighting and filetype plugins in your .vimrc.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11066",
+      "filename": "vimclojure-2.1.2.zip",
+      "script_version": "2.1.2",
+      "date": "2009-07-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "62",
+        "user_name": "mikesh",
+        "first_name": "Meikel",
+        "last_name": "Brandmeyer",
+        "email": "Brandels_Mikesh at web.de",
+        "homepage": ""
+      },
+      "release_notes": "This release is compatible with Clojure 1.0 and\nClojure-Contrib 919 (in old SVN terms). Other\npre-GTIC contrib versions from Github should also\nwork. For Clojure(-Contrib) head consider using the\nbleeding-edge branch from the repository.\n\nThe Ivy configuration will fetch an known-to-work\nClojure(-Contrib) version. For manual compilation,\nyou have to care for that yourself. A compiled jar\nis already included in the distribution in the build\nsubdirectory.\n\nChanges since v2.1.1:\n\n* Fixed a regression of qualified keywords highlighting\n* Fixed a infinite loop if there is no prompt in the Repl buffer\n* Made compilation of ng client a bit more comfortable\n* Added library configuration for OpenSolaris (thanks to Richard Newman)\n* Changed normal invokations to ignore keymappings (reported by James Reeves)\n* Fixed typo in lispwords: defmethod -> defmulti\n* Added letfn to lispwords\n* Added c.c.def/defnk to lispwords\n* Added #_ and #! as comment indicators to syntax highlighting\n  (currently only the #_ is marked as comment, the following form\n  is still highlighted normally.)\n* Fixed annoying o/O delay bug\n* Simplified plugin installation"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10755",
+      "filename": "vimclojure-2.1.1.zip",
+      "script_version": "2.1.1",
+      "date": "2009-06-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "62",
+        "user_name": "mikesh",
+        "first_name": "Meikel",
+        "last_name": "Brandmeyer",
+        "email": "Brandels_Mikesh at web.de",
+        "homepage": ""
+      },
+      "release_notes": "This is a bugfix release.\n\n* fixed syntax highlighting of strings with escaped quotes\n* added syntax highlighting of numbers in radixR format\n* added missing clojure names to highlighting\n* fixed keyword highlighting\n* fixed find invocation in launcher\n* fixed spurious -1 in EvalLine\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10405",
+      "filename": "vimclojure-2.1.0.zip",
+      "script_version": "2.1.0",
+      "date": "2009-04-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "62",
+        "user_name": "mikesh",
+        "first_name": "Meikel",
+        "last_name": "Brandmeyer",
+        "email": "Brandels_Mikesh at web.de",
+        "homepage": ""
+      },
+      "release_notes": "New features: \n* improved completion \n* goto source \n* show source \n* stacktrace short-cuts for the Repl \n* more robust in case of not running server \n* improved error messages \n* dynamic syntax highlighting for use'd and alias'd namespaces \n* pretty printing of macros expansions \n* improved build system with optional Ivy dependency resolution \n* simplification of plugin installation procedure \n\nFixed many bugs, in particular: \n* resizing windows when executing nails \n* EvalToplevel evaluated more than one expression \n* Line and File number information is now correctly when sending expressions "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10166",
+      "filename": "vimclojure-2.0.0.tar.gz",
+      "script_version": "2.0.0",
+      "date": "2009-03-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "62",
+        "user_name": "mikesh",
+        "first_name": "Meikel",
+        "last_name": "Brandmeyer",
+        "email": "Brandels_Mikesh at web.de",
+        "homepage": ""
+      },
+      "release_notes": "Updated for latest Clojure SVN. Merged with Gorilla."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9740",
+      "filename": "vimclojure-1.3.0.tar.gz",
+      "script_version": "1.3.0",
+      "date": "2009-01-01",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "62",
+        "user_name": "mikesh",
+        "first_name": "Meikel",
+        "last_name": "Brandmeyer",
+        "email": "Brandels_Mikesh at web.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "2562",
+  "name": "ansi_blows.vim",
+  "summary": "Matching ANSI colorscheme for gVim and vim",
+  "script_type": "color scheme",
+  "description": "This is a color scheme that I use to make my gVim identical (other than spell highlighting) to Vim.  In order to do this, I set the variables in the ansi_blows.vim colorscheme to exactly match the colors that my terminal emulator uses.  I've tweaked these values in both places to be very readable, to me.  Of course I suggest tweaking them for your own needs, or to match the colors that you are used to in your terminal emulator.  For convenience, I've included in comments some common color sets that I'm aware of.\n\nNote, I made this on vim 7.2, it may not work on any prior versions, but it probably does.",
+  "install_details": "Copy the script to ~/.vim/colors\nTweak the color variables defined near the top of the script\nAdd \"colors ansi_blows\" to your .vimrc (and, if they are separate, your .gvimrc).\nEnjoy a consistent vim environment.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10067",
+      "filename": "ansi_blows.vim",
+      "script_version": "0.6",
+      "date": "2009-03-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16711",
+        "user_name": "lostlogic",
+        "first_name": "Brandon",
+        "last_name": "Low",
+        "email": "lostlogic at lostlogicx.com",
+        "homepage": "http://www.lostlogicx.com"
+      },
+      "release_notes": "Added Rasterman's colors to the example color sets."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10065",
+      "filename": "ansi_blows.vim",
+      "script_version": "0.5",
+      "date": "2009-03-01",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "16711",
+        "user_name": "lostlogic",
+        "first_name": "Brandon",
+        "last_name": "Low",
+        "email": "lostlogic at lostlogicx.com",
+        "homepage": "http://www.lostlogicx.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

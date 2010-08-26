@@ -1,0 +1,26 @@
+{
+  "script_id": "2753",
+  "name": "banned.vim",
+  "summary": "Microsoft SDL Banned API syntax highlighting plugin",
+  "script_type": "syntax",
+  "description": "The banned.vim syntax plugin will hilight C function calls that have been banned by Microsoft's Security Development Lifecycle (SDL). Although many of these function calls are Windows-specific, there are quite a few that are available in UNIX and should be avoided. This syntax plugin adds functionality to the existing C and C++ vim syntax plugins. Details on the banned APIs can be found here: http://msdn.microsoft.com/en-us/library/bb288454.aspx\n",
+  "install_details": "Copy banned.vim to your runtimepath/after/syntax directory as both c.vim and cpp.vim. This way both your C and C++ syntax highlighting will be ammended. That's all you have to do. There is no need to modify your runtime configs. If you don't know what your runtimepath is then check the documentation: http://vimdoc.sourceforge.net/htmldoc/options.html#%27runtimepath%27",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11236",
+      "filename": "banned.vim",
+      "script_version": "1.0",
+      "date": "2009-08-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17890",
+        "user_name": "yesmar",
+        "first_name": "Ramsey",
+        "last_name": "Dow",
+        "email": "ramsey at casabasecurity.com",
+        "homepage": "http://www.casabasecurity.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "script_id": "1676",
+  "name": "toggle_words.vim",
+  "summary": "toggle words like:'true'=>'false', 'True'=>'False' etc",
+  "script_type": "utility",
+  "description": "\" Documentation: \n\"   The purpose of this plugin is very simple, it can toggle words among\n\"   'true'=>'false', 'True'=>'False', 'if'=>'elseif'=>'else'=>'endif' etc . \n\"\n\"   To use it, move the cursor on some words like 'true', 'False', 'YES', etc, \n\"   call command \n\"     :ToggleWord\n\"\n\"   It will toggle 'true'=>'false', 'False'=>'True', 'YES'=>'NO' etc. Yes,\n\"   this script will try to take the case into account when toggling words, so\n\"   'True' will be toggled to 'False' instead of 'false'. Currently the way to\n\"   check the case is very simple, but it works well for me.\n\"\n\"   You can define a map for 'ToggleWord' comand to make it easier: \n\"     nmap ,t :ToggleWord<CR>\n\"\n\"   This script can search the candicate words to toggle based on\n\"   current filetype, for example, you can put the following configuration\n\"   into your .vimrc to define some words for python:\n\"      let g:toggle_words_dict = {'python': [['if', 'elif', 'else']]}\n\"   \n\"   There are some default words for toggling predefined in the\n\"   script(g:_toogle_words_dict) that will work for all filetypes.\n\"   Any comment, suggestion, bug report are welcomed. \n",
+  "install_details": "just put this script into YOUR_HOME_DIR/[._]vim/plugin folder.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10038",
+      "filename": "toggle_words.vim",
+      "script_version": "1.5",
+      "date": "2009-02-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4557",
+        "user_name": "linsong",
+        "first_name": "Vincent",
+        "last_name": "Wang",
+        "email": "linsong.qizi at gmail.com",
+        "homepage": "http://vincent-wang.livejournal.com"
+      },
+      "release_notes": "add support to extend default toggle words ('*'), based on patch provided by Jeremy Cantrell, thanks"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8981",
+      "filename": "toggle_words.vim",
+      "script_version": "1.3",
+      "date": "2008-07-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4557",
+        "user_name": "linsong",
+        "first_name": "Vincent",
+        "last_name": "Wang",
+        "email": "linsong.qizi at gmail.com",
+        "homepage": "http://vincent-wang.livejournal.com"
+      },
+      "release_notes": "* fix error of 'E488: Trailing characters', patch provided by Jeremy Cantrell\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8977",
+      "filename": "toggle_words.vim",
+      "script_version": "1.2",
+      "date": "2008-07-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4557",
+        "user_name": "linsong",
+        "first_name": "Vincent",
+        "last_name": "Wang",
+        "email": "linsong.qizi at gmail.com",
+        "homepage": "http://vincent-wang.livejournal.com"
+      },
+      "release_notes": "* fixed typo(november => novermber)\n* sorted and stacked the definitions to make them more readable/editable\n* added a few new definitions (allow/deny, min/max, before/after, block/inline/none, left/right)\n* add revision history \n(most of above changes come from Fergus Bremner, thanks Fergus!)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7308",
+      "filename": "toggle_words.vim",
+      "script_version": "1.01",
+      "date": "2007-06-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4557",
+        "user_name": "linsong",
+        "first_name": "Vincent",
+        "last_name": "Wang",
+        "email": "linsong.qizi at gmail.com",
+        "homepage": "http://vincent-wang.livejournal.com"
+      },
+      "release_notes": "Yes, this script will try to take the case into account when toggling words, so 'True' will be toggled to 'False' instead of 'false'. Currently the way to check the case is very simple, but it works well for me."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6271",
+      "filename": "toggle_words.vim",
+      "script_version": "1.0",
+      "date": "2006-10-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4557",
+        "user_name": "linsong",
+        "first_name": "Vincent",
+        "last_name": "Wang",
+        "email": "linsong.qizi at gmail.com",
+        "homepage": "http://vincent-wang.livejournal.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

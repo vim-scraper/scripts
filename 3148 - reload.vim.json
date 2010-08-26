@@ -1,0 +1,90 @@
+{
+  "script_id": "3148",
+  "name": "reload.vim",
+  "summary": "Automatic reloading of Vim scripts ((file-type) plug-ins, auto-load/syntax/inden",
+  "script_type": "utility",
+  "description": "The reload.vim plug-in automatically reloads various types of Vim scripts as they're being edited in Vim to give you instant feedback on the changes you make. For example while writing a Vim syntax script you can open a split window of the relevant file type and every time you :update your syntax script, reload.vim will refresh the syntax highlighting in the split window. For more information about the plug-in please refer to its homepage or the project page on GitHub:\n\n  http://peterodding.com/code/vim/reload/\n  http://github.com/xolox/vim-reload\n\nIf you have questions, bug reports, suggestions, etc. the author can be contacted at peter@peterodding.com. If you like this plug-in please vote for it below!",
+  "install_details": "Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is \"~/.vim\" on UNIX and \"%USERPROFILE%\\vimfiles\" on Windows), restart Vim and execute the command \":helptags ~/.vim/doc\" (use \":helptags ~\\vimfiles\\doc\" instead on Windows). Now try it out: Edit any Vim script that's already loaded and check that the script is reloaded when you save it (the reload.vim plug-in will print a message to confirm when a script is reloaded).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13392",
+      "filename": "reload.zip",
+      "script_version": "0.5.1",
+      "date": "2010-07-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Bug fix: Forgot that color scheme reloading can fail:\nhttp://github.com/xolox/vim-reload/commit/e2443ff27a07e15a94d7935ae202d69894b1ab50"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13388",
+      "filename": "reload.zip",
+      "script_version": "0.5",
+      "date": "2010-07-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Simplified ftplugin/syntax/indent reloading, fixed E325 workaround:\n   http://github.com/xolox/vim-reload/commit/b703505c93f24f27c973b37836257c1cacda011d\n\n  Shortened code by moving xolox#timer#stop() calls:\n   http://github.com/xolox/vim-reload/commit/cd36d10f1f92a3b7e7d6c765e149af623772b3aa"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13332",
+      "filename": "reload.zip",
+      "script_version": "0.4",
+      "date": "2010-07-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "The plug-in now clears inclusion guards before reloading plug-in scripts: http://github.com/xolox/vim-reload/commit/8fb0c8585c95056873bc2f4b4178cf874d97da20"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13326",
+      "filename": "reload.zip",
+      "script_version": "0.3.1",
+      "date": "2010-07-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Automatic update support using GLVS and README updates:\nhttp://github.com/xolox/vim-reload/commit/5fc2712cede6af6ab27911e02142a0b26bae6620"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13325",
+      "filename": "reload.zip",
+      "script_version": "0.3",
+      "date": "2010-07-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

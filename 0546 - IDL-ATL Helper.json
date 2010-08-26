@@ -1,0 +1,74 @@
+{
+  "script_id": "546",
+  "name": "IDL/ATL Helper",
+  "summary": "Create/modify (win32) idl files and ATL projects",
+  "script_type": "ftplugin",
+  "description": "NB: This is designed for Microsoft idl files.  Suggestions for extending it are welcome.\n\n* Create idl files - adds guids (using guidgen)\n   - Add interfaces,enums (with guids)\n   - Coclass wizard to create cpp files for ATL  (some support for comet)\n* Easy Method and property creation\n   change  \n        long MyFunc( string arg1, bool *arg2)\n  to\n        HRESULT MyFunc( [in] BSTR arg1, [in,out] VARIANT_BOOL *arg2, long *ret);\n* Convert IDL functions to their c++ equivalents.\n    - Change helpstring() to comments\n\n* Modify guids quickly!\n* add a unique id()  to methods and properties.\n\n",
+  "install_details": "Recommend using buffermenu vimscript #246 for menus\nAdd as a filetype plugin for both cpp and idl files.\n(Source it from after/ftplugin/cpp.vim and after/ftplugin/idl.vim)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1752",
+      "filename": "idl.vim",
+      "script_version": "1.5",
+      "date": "2003-02-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Remove dependence on external function GetComment (woops)\nFix up some of the ATL functionality (I haven't used them for yonks)\nAdd maps for modify Guid, adding library definitions and addling coclasses\nRemove absolute dependence on SourceSafe script."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1750",
+      "filename": "idl.vim",
+      "script_version": "1.4",
+      "date": "2003-02-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Fixed default MSDEV path.\nCleaned up handling of functions\nCleaned up handling of id() for 3 part properties.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1692",
+      "filename": "idl.vim",
+      "script_version": "1.3",
+      "date": "2003-02-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Fixed support for adding [in] [in,out] to parameters (broken in 1.1 & 1.2)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1691",
+      "filename": "idl.vim",
+      "script_version": "1.2",
+      "date": "2003-02-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Fixed up adding of id() attributes."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "2734",
+  "name": "PreviewDialog",
+  "summary": "Shows a GTK dialog with the color or image below the cursor",
+  "script_type": "utility",
+  "description": "PreviewDialog is written to show a GTK preview dialog with the color or image below the cursor.\nIt's very useful to edit css files, but can be used for anything.\n\nFor a quick introduction, see this screencast:\nhttp://blog.taylon.eti.br/files/preview_dialog.ogg\n\nOptions:\n   g:PreviewDialogKey:\n     Change shotcurt (Default is 'F8')\n    \n   g:PreviewDialogEnable:\n     Enable PreviewDialog (Default is '1')\n    \n   g:PreviewDialogAuto:\n     Shows the dialog automatically when hold cursor over a word (Default is '1')\n\n   g:PathPyFile:\n     Set the path of .py file (Default is '~/.vim/')\n    \n   g:DialogPosition:\n     Set default window position. Can you use 'center', 'right_top' or 'right_bottom' (Default is 'right_bottom')\n\nAny suggestion, bug report or feature request are welcome.",
+  "install_details": "Requires Python and GTK.\n\nOpen preview_dialog.vba with vim/gvim and run:\n:so %",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11163",
+      "filename": "preview_dialog.vba",
+      "script_version": "0.1",
+      "date": "2009-08-09",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17796",
+        "user_name": "Taylon",
+        "first_name": "Taylon",
+        "last_name": "Silmer",
+        "email": "taylon at taylon.eti.br",
+        "homepage": "http://blog.taylon.eti.br"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

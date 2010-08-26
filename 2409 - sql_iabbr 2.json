@@ -1,0 +1,42 @@
+{
+  "script_id": "2409",
+  "name": "sql_iabbr 2",
+  "summary": "convert SQL keywords uppercase automatically. ",
+  "script_type": "ftplugin",
+  "description": "With this ftplugin you can type \"create table foo (foo_id int);\" and get \"CREATE TABLE foo (foo_id INT);\".  It is based on both sql.vim and the output from postgresql's \\dT command while in psql.  That makes it a tad bit tailored to postgresql, but it will work with any SQL compliant dbms. \n\nI probably won't upload every update I make immediately so the most current version may be found on github.\nhttp://github.com/xenoterracide/sql_iabbr/tree/master\ngit://github.com/xenoterracide/sql_iabbr.git\n\nearlier versions of this plugin are here http://www.vim.org/scripts/script.php?script_id=305 I am unable to contact Michael Brailsford so have forked the script with my changes. Changes have currently amounted to adding reserved words that weren't present.",
+  "install_details": "copy to ~/.vim/ftplugin/sql, and you're good to go.  ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9374",
+      "filename": "sql_iabbr.vim",
+      "script_version": "2.0.1",
+      "date": "2008-10-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14670",
+        "user_name": "xenoterracide",
+        "first_name": "Caleb",
+        "last_name": "Cushing",
+        "email": "xenoterracide at gmail.com",
+        "homepage": "http://xenoterracide.blogspot.com"
+      },
+      "release_notes": "just updating download urls and version."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9372",
+      "filename": "sql_iabbr.vim",
+      "script_version": "2.0.0",
+      "date": "2008-10-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14670",
+        "user_name": "xenoterracide",
+        "first_name": "Caleb",
+        "last_name": "Cushing",
+        "email": "xenoterracide at gmail.com",
+        "homepage": "http://xenoterracide.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

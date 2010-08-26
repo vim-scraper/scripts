@@ -1,0 +1,74 @@
+{
+  "script_id": "2336",
+  "name": "metarw-git",
+  "summary": "metarw scheme: git",
+  "script_type": "utility",
+  "description": "*metarw-git* is a scheme for |metarw| to read or to browse various objects in\na git repository with fakepaths like \"git:HEAD~3:src/ui.c\".\n\nNote that this scheme just supports reading from an object.  Writing to an\nobject is not supported.\n\n\nRequirements:\n- Vim 7.1.299 or later\n- metarw 0.0.0 or later (vimscript#2335)\n\nLatest version:\nhttp://github.com/kana/vim-metarw-git\n\nDocument in HTML format:\nhttp://kana.github.com/config/vim/metarw-git.html",
+  "install_details": "...",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10583",
+      "filename": "vim-metarw-git-0.0.3.zip",
+      "script_version": "0.0.3",
+      "date": "2009-05-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- When completing branches, remove \"remotes/\" prefix from remote-tracking branches.- Fix not to complete wrong or unnecessary stuffs as branches.  For example, \"(no branch)\", \"origin/HEAD -> origin/master\", etc."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10536",
+      "filename": "vim-metarw-git-0.0.2.zip",
+      "script_version": "0.0.2",
+      "date": "2009-05-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Fix a bug that metarw-git uses wrong function to escape file-like arguments to shells.  Thanks @thinca for reporting this."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9104",
+      "filename": "vim-metarw-git-0.0.1.zip",
+      "script_version": "0.0.1",
+      "date": "2008-08-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Fix requirements - metarw-git uses |fnameescape()| which is added\n  since Vim 7.1.299.  (thanks to id:thinca)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9095",
+      "filename": "vim-metarw-git-0.0.0.zip",
+      "script_version": "0.0.0",
+      "date": "2008-08-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "Initial upload."
+    }
+  ]
+}

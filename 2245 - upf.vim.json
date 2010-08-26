@@ -1,0 +1,42 @@
+{
+  "script_id": "2245",
+  "name": "upf.vim",
+  "summary": "Syntax for Unified Power Format  files(UPF)",
+  "script_type": "syntax",
+  "description": "UPF provides the ability for electronic systems to be designed with \npower as a key consideration early in the process.\nThe current Working Groups website address is  www.accellera.org/activities/upf\n\nThe latest version of the script is maintained at http://kher.org/blog/vim_syntax_for_UPF.html",
+  "install_details": "Following steps are valid for UNIX. For windows, suitable equivalents need to be used\n\nStep 1: Untar the archive upf.tar.gz\n \n If you already have ~/.vim ~/.vim/syntax and ~/.vim/filetype.vim then skip  Step 2\n \n Step 2: If you don't have ~/.vim then\n         % mv upf_syntax ~/.vim\n         Skip Step 3\n \n Step 3: Append the lines from upf_syntax/filetype.vim to ~/.vim/filetype.vim\n             or  Drop upf_syntax/syntax/upf.vim in ~/.vim/syntax/\n\n          if exists(\"did_load_filetypes\")\n          finish\n          endif\n          augroup filetypedetect\n          au! BufRead,BufNewFile *.upf setfiletype upf\n          augroup END \n\n\nHappy vimming!!\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8791",
+      "filename": "upf.vba",
+      "script_version": "0.2",
+      "date": "2008-06-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6161",
+        "user_name": "aditya",
+        "first_name": "Aditya",
+        "last_name": "Kher",
+        "email": "aditya.kher at gmail.com",
+        "homepage": "http://www.kher.org"
+      },
+      "release_notes": "vba for vim 7.0 or better"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8711",
+      "filename": "upf.tar.gz",
+      "script_version": "0.1",
+      "date": "2008-05-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6161",
+        "user_name": "aditya",
+        "first_name": "Aditya",
+        "last_name": "Kher",
+        "email": "aditya.kher at gmail.com",
+        "homepage": "http://www.kher.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

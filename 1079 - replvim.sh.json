@@ -1,0 +1,74 @@
+{
+  "script_id": "1079",
+  "name": "replvim.sh",
+  "summary": "Allow a read eval print loop and vim to play nicely together",
+  "script_type": "utility",
+  "description": "UNIX command-line only\n\n Usage : replvim.sh [options] replname code_type file\n\nRuns a screen/vim session on the given file so that one window\nholds a repl and another window holds vim. \nHit:\n<leader>e    to eval the current expression \n<leader>r     to evaluate the given marked range\n<leader>f     to evaluate the whole file\nctrl-a <TAB>  to switch windows to the repl \nctrl-a \\      to exit everything \nSet the leader in vim with \n:let mapleader = \",\" \nreplacing \",\" with the key you like the most\n\nArguments (wrap these in an alias or sh script):\n replname   The repl being used (ocaml, bigloo, chicken have been tested)\n code_type  Can be 'lisp' for lisp-like or 'ocaml' \n file               The file for vim to edit\n\nOptions:\n --lines n   Use n lines of screen space for the repl\n --nopipe   Use files instead of pipes. This can be used when vim 6.3\n                    gives FSYNC errors when writing to pipes on some OSes.\n --echo      Echo the commands being sent to the repl and allow access\n                   to them in the readline history\n\nRequires (on your PATH):\n  socat (http://www.dest-unreach.org/socat/)\n  screen (http://www.gnu.org/software/screen/)\nif you don't have these your life will be much richer for obtaining them\n\n(at saul (dot alien-science org)) welcomes your fixes and extensions\n\n",
+  "install_details": "install screen\ninstall socat\nreplvim.sh replname code_type file",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3499",
+      "filename": "replvim.sh",
+      "script_version": "0.3",
+      "date": "2004-09-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5848",
+        "user_name": "alien-science",
+        "first_name": "Saul",
+        "last_name": "Hazledine",
+        "email": "saul at alien-science.org",
+        "homepage": "http://www.alien-science.org"
+      },
+      "release_notes": "Fixed issue with FSYNC error message. Opened repl to user input. Added readline support to repl. Added options to echo commands that are sent to repl and to change initial size of repl window."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3441",
+      "filename": "replvim.sh",
+      "script_version": "0.2",
+      "date": "2004-09-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5848",
+        "user_name": "alien-science",
+        "first_name": "Saul",
+        "last_name": "Hazledine",
+        "email": "saul at alien-science.org",
+        "homepage": "http://www.alien-science.org"
+      },
+      "release_notes": "More sensible handling of lisp expressions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3419",
+      "filename": "replvim.sh",
+      "script_version": "0.1",
+      "date": "2004-09-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5848",
+        "user_name": "alien-science",
+        "first_name": "Saul",
+        "last_name": "Hazledine",
+        "email": "saul at alien-science.org",
+        "homepage": "http://www.alien-science.org"
+      },
+      "release_notes": "Tested on Solaris, OpenBSD and Linux."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3413",
+      "filename": "replvim.sh",
+      "script_version": "0.0",
+      "date": "2004-09-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5848",
+        "user_name": "alien-science",
+        "first_name": "Saul",
+        "last_name": "Hazledine",
+        "email": "saul at alien-science.org",
+        "homepage": "http://www.alien-science.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

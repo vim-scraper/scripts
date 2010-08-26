@@ -1,0 +1,42 @@
+{
+  "script_id": "605",
+  "name": "cream-numberlines",
+  "summary": "Number lines of a selection",
+  "script_type": "utility",
+  "description": "\nFeatures:\n\no Dialog prompt for optional start number. (Default is actual line number.)\n\no Column of numbers is right justified.\n\n\nUsage:\n\no Must be called from visual mode (with a selection).\n\no Required argument indicates mode, only \"v\" (visual) allowed.\n\no Example mapping:\n\n    vmap <silent> <F12> :<C-u>call Cream_number_lines(\"v\")\n\n\nThis is one of many custom utilities and functions for gVim from the Cream project (http://cream.sourceforge.net), a configuration of Vim for those of us familiar with Apple and Windows software.\n\n\n",
+  "install_details": "\nDrop this file into your plugins directory and (re)start Vim.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1869",
+      "filename": "cream-numberlines.vim",
+      "script_version": "0.2",
+      "date": "2003-03-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "Adjusted to not include last line of selection if cursor is in column 1."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1868",
+      "filename": "cream-numberlines.vim",
+      "script_version": "0.1",
+      "date": "2003-03-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

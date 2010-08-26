@@ -1,0 +1,170 @@
+{
+  "script_id": "1074",
+  "name": "python_calltips",
+  "summary": "Display Python code calltips and allows you to auto-complete your Python code",
+  "script_type": "utility",
+  "description": "This script simualate code calltips in a new bottow window of Vim.\nIn fact, it display python help doc strings of word under the cursor\nby scanning the imported modules in the current file.\nthis file Reference :    http://vim.sourceforge.net/scripts/script.php?script_id=73 \n\nNote: Because Python language is dynamic and the type of object is certain \n         when running, the calltips is only displayed for the part of all object.   \n\nIt require Python and Vim compiled with \"+python\" \nand MAKE SURE \"set iskeyword+=.\"\n    \nIt work well in my box in Win2000/XP + Vim6.3 + python2.3. \nIt can also work in GNU/Linux.\nNote: as I know, Vim6.2 come into conflict with Python2.3, becase Vim6.2\n         is compiled with Python2.1. you can update vim version to 6.3.\n        Maybe yours not.\n\nMore detail is in the header of script file. \n\nI write a tip(vimtip #778) about the script for all Pythoner. I wish you enjoy it.",
+  "install_details": "Put the plugin into \"$VIMRUNTIME/ftplugin\" folder\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4287",
+      "filename": "python_calltips.vim",
+      "script_version": "1.01",
+      "date": "2005-05-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Nothing to do except IGNORE a exception when press '.' key in a string"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3620",
+      "filename": "python_calltips.vim",
+      "script_version": "1.0",
+      "date": "2004-11-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Change:\n1.get rid of  F4 key. You can get tips without any extral keys\n2.support multi buffers\n3.hightlight calltips syntax..\nThank Staale flock and Levin Du help"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3573",
+      "filename": "python_calltips.vim",
+      "script_version": "0.85",
+      "date": "2004-10-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix  the  clash with winmanager.vim and  minibufexpl.vim   plugin.\nThanks Staale Flock"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3474",
+      "filename": "calltips-linux.png",
+      "script_version": "0.8",
+      "date": "2004-09-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Snapshot in Linux"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3473",
+      "filename": "calltips-windows.gif",
+      "script_version": "0.8",
+      "date": "2004-09-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Snapshot in win2000"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3470",
+      "filename": "python_calltips.vim",
+      "script_version": "0.8",
+      "date": "2004-09-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1.Rewrap the plugin, and change name to python_calltips.vim. In version 0.8, the plugin don't run automatically \n\n2.Add two function to start or end the plugin. You can run function \n  :call DoCalltips()        #start running \n  :call EndCalltips()       #end running \n\n3.if you use gVim, you can click  menu to start or end it in \"Tools\" menu :  \"Start Calltips\" and \"End Calltips\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3445",
+      "filename": "pyCallTips.py",
+      "script_version": "0.7",
+      "date": "2004-09-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1.More variable can be display calltips.\n2.Refresh automatically if you don't press key until 5s in \"Nomal\" mode"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3427",
+      "filename": "pyCallTips.py",
+      "script_version": "0.6",
+      "date": "2004-09-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1.add \"CT_unmapkeys()\" and \"CT_mapkeys()\" function\n2.add calltips of buitin types such as string, list, dictionay, file\n3.thank Guilherme Salgado. He fix a bug in linux, and I know the script work well in linux"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3397",
+      "filename": "pyCallTips.py",
+      "script_version": "0.5",
+      "date": "2004-08-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Congratulate China win 32 gold medal in Olympiad Game.\nand thanks montumba, without his help, I can't release 0.5 so quickly."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3396",
+      "filename": "pyCallTips.py",
+      "script_version": "0.3",
+      "date": "2004-08-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5813",
+        "user_name": "tocer",
+        "first_name": "tocer",
+        "last_name": "deng",
+        "email": "tocer.deng at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "add builtin function"
+    }
+  ]
+}

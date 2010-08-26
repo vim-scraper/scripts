@@ -1,0 +1,58 @@
+{
+  "script_id": "514",
+  "name": "mrswin.vim",
+  "summary": "Like mswin, but can be toggled off and on",
+  "script_type": "utility",
+  "description": "Sourcing <mrswin.vim> toggles between <mswin.vim> and normal Vim.  You'll find <mswin.vim> distributed with Vim as\n\n   ..\\vim\\vim63\\mswin.vim\n\n(the leading path may vary).  This file needs to be executed instead of the default <mswin.vim>; every time it is sourced, it toggles between <mswin.vim> and Normal vim mappings and settings.  \n\nIt is important that you substitute using <mrswin.vim> for <mswin.vim>; <mrswin.vim> saves the settings and mappings extant prior to doing the <mswin.vim> settings and mappings.  Consequently, if you have <mswin.vim> sourced first, then its settings and mappings are what will be restored (ie., you won't be able to toggle because both sets of settings and mappings will be the same).\n",
+  "install_details": "Change the name of\n   ..\\vim\\vim63\\mswin.vim\nto\n   ..\\vim\\vim63\\old_mswin.vim.\n\nPut <mrswin.vim> wherever and have\n\n   so ...wherever/mrswin.vim\n\nin your <_vimrc> file.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3276",
+      "filename": "mrswin.vim.bz2",
+      "script_version": "4",
+      "date": "2004-07-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "bugfix: inadvertently left debugging enabled -- now fixed!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3241",
+      "filename": "mrswin.vim.bz2",
+      "script_version": "3",
+      "date": "2004-07-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "MrsWin now checks for a running gui vs simply having gui capability in deciding to map meta-<space> like mswin.vim does.\nMrsWin updated to be based upon v6.3's mswin\nFolding and debugging commands were added\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1557",
+      "filename": "mrswin.vim",
+      "script_version": "1",
+      "date": "2002-12-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

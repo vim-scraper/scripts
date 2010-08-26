@@ -1,0 +1,26 @@
+{
+  "script_id": "2108",
+  "name": "csv reader",
+  "summary": "Read csv file (comma or tab, choosable), easy to move to every column in color.",
+  "script_type": "utility",
+  "description": "When you open a .csv file, you can read it more easy, this script make the current column\nhighlighting, and you can jump to the field that you want or select the comma or tab as the split symbol.\n[ Some code come from network, and I like to share this with you. Thanks, every body. ]\n\nF9: move to ahead column\nF10: move to next column\nF11:jump to field\nF12: select the split symbol, you can directly push the enter as input comma, or type comma or tab.",
+  "install_details": "step1;  put the readcsv.vim into your plugin folder.\n\nstep2;  add below line into your .vimrc\n\nautocmd BufNewFile,Bufread *.csv call CSVSELECT()\nmap <F9> :call CSV_HighlightPrevCol()<CR> \nmap <F10> :call CSV_HighlightNextCol()<CR> \nmap <F11> :call CSV_goto_field()<CR>\nmap <F12> :call CSV_SE()<CR>\n\nstep3; Now ',' is default. If you use comma as default, you need not do this.\n\nthere is a way to set it use 'tab' by default. \nopen  readcsv.vim\nfind almost last line,  change the line \n\ncall CSVSettings()\nto be\ncall CSVTabs()  ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8085",
+      "filename": "readcsv.zip",
+      "script_version": "6.0",
+      "date": "2007-12-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13635",
+        "user_name": "corey.cn",
+        "first_name": "Hongli",
+        "last_name": "Gao",
+        "email": "left.slipper (at) gmail (dot) com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

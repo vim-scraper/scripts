@@ -1,0 +1,26 @@
+{
+  "script_id": "1221",
+  "name": "monkeyd configuration syntax",
+  "summary": "Syntax highlighting for monkeyd http server configuration files",
+  "script_type": "syntax",
+  "description": "Syntax highlighting for monkeyd http server configuration files",
+  "install_details": "Place in ~/.vimrc/syntax/.\nYou may wish to create a ~/.vim/ftdetect/monkey.vim file containing something like:\n    au BufNewFile,BufRead /*/etc/monkeyd/* set filetype=monkeyd",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3922",
+      "filename": "monkeyd.vim",
+      "script_version": "20050227",
+      "date": "2005-02-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4078",
+        "user_name": "ciaranm",
+        "first_name": "Ciaran",
+        "last_name": "McCreesh",
+        "email": "ciaran.mccreesh at googlemail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

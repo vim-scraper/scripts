@@ -1,0 +1,122 @@
+{
+  "script_id": "1910",
+  "name": "QuickBuf",
+  "summary": "Very small, clean but quick and powerful buffer manager!",
+  "script_type": "utility",
+  "description": "QuickBuf\nVim plugin helps navigate and manipulate buffers\nMaintainer: palnart <palnart@gmail.com>\n\nBrief description:\nWhile making the task of browsing and manipulating buffers visual and simple, QuickBuf also offers advanced abilities of dealing with buffers (ex: \"unlisted\" mode). It's unique among several other buffer managers for creating no dedicated buffer and defining no auto command, thus minimize its interference.\n\nGive it a try and you may find it all you need to work with Vim's buffers!\nAny bugs or suggestions, please mail to: palnart@gmail.com\n\nUsage:\n+ Press the assigned hotkey to activate QuickBuf (default <F4>). It brings out a list of buffers that you can browse and give commands on! Some indicators in the list:\n\t- * : the buffer being opened in the active window\n\t- = : a buffer being opened in a window, but not active\n\t- [+] : modifed buffer\n+ Use k/j or <Up>/<Down> keys to select the buffer.\n+ Press a key to give a command to the currently selected buffer\n\t- d : delete buffer\n\t- w : wipe out buffer\n\t- s : open buffer in a new horizontally split window\n\t- u : open buffer\n\t- <enter> : open buffer and leave QuickBuf; if the\tbuffer is already opened in a window, switch to that window.\n+ d, w, and <enter> operations may fail (ex: delete a modified buffer), QuickBuf will inform you so that you can force them by preceding the above characters with an exclamation mark ('!'). Ex: !d, !w, !<enter>\n+ Instead of moving the selection bar around to select a buffer, you can use a number to specify a buffer. For example: '2d' will delete the second buffer in the list. Try '3<enter>', '1w', '1!w'\n+ Use 'l' key to toggle between LISTED and UNLISTED mode. Which mode QuickBuf enter first depends on the active buffer. While in UNLISTED mode, 'unlisted' buffers (the buffers you have deleted) are showed. Also:\n\t- [+] indicates a loaded buffer\n\t- 'd' command makes the selected buffer 'listed' again\n+ Press <esc> key to leave QuickBuf",
+  "install_details": "Install:\n+ Source it with ':so qbuf.vim' or simply put it in /plugin under Vim's folder.\n+ To define hotkey for QuickBuf:\n\tDefine g:qb_hotkey before source qbuf.vim, ex:\n\t\tlet g:qb_hotkey = \"<F3>\"\n\tOr put that line in your _vimrc profile. Default, key \"<F4>\" is used.\n\tWhenever you change g:qb_hotkey, :so qbuf.vim again to update hotkey.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9909",
+      "filename": "qbuf.vim",
+      "script_version": "1.12",
+      "date": "2009-02-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12520",
+        "user_name": "palnart",
+        "first_name": "pal",
+        "last_name": "nart",
+        "email": "palnart at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "ADD: key 'c' to close an already opened window.\nADD: checking vim's version to silently skip on older vim (less than 7.0). Thanks to Bernhard Walle."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8128",
+      "filename": "qbuf.zip",
+      "script_version": "1.11",
+      "date": "2008-01-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12520",
+        "user_name": "palnart",
+        "first_name": "pal",
+        "last_name": "nart",
+        "email": "palnart at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changes:\n   - Automatically select the active buffer\n   - Fix the display problem related to Vim's option \"lazyredraw\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8083",
+      "filename": "qbuf.zip",
+      "script_version": "1.1",
+      "date": "2007-12-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12520",
+        "user_name": "palnart",
+        "first_name": "pal",
+        "last_name": "nart",
+        "email": "palnart at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changes:\n- More stable, tolerant to malformed commands\n- Add <up>/<down> key to navigate buffer list\n- Add 's' command to open buffer in a new split window\n- Deal with Vim's multiple window\n- Improve: 'u' command automatically move select bar to the next buffer\n- Add some decorations"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7198",
+      "filename": "qbuf.zip",
+      "script_version": "1.01",
+      "date": "2007-06-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12520",
+        "user_name": "palnart",
+        "first_name": "pal",
+        "last_name": "nart",
+        "email": "palnart at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor fix:\nSave and keystroke when user press <Enter> but error switching to another buffer, no need to wait a keystroke, just leave QuickBuf, error message still visible!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7197",
+      "filename": "qbuf.zip",
+      "script_version": "1.0",
+      "date": "2007-06-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12520",
+        "user_name": "palnart",
+        "first_name": "pal",
+        "last_name": "nart",
+        "email": "palnart at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Redesign, much added, much more feature rich!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7190",
+      "filename": "quickbuf.zip",
+      "script_version": "0.11",
+      "date": "2007-06-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12520",
+        "user_name": "palnart",
+        "first_name": "pal",
+        "last_name": "nart",
+        "email": "palnart at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add a plus sign (+) to indicate modified buffers\nError message when buffer list too long to fit in Vim's shell more readable"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7187",
+      "filename": "qbuf.vim",
+      "script_version": "0.1",
+      "date": "2007-06-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12520",
+        "user_name": "palnart",
+        "first_name": "pal",
+        "last_name": "nart",
+        "email": "palnart at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "3126",
+  "name": "xpcomplete",
+  "summary": "Completion for the XP-Framework (php)",
+  "script_type": "utility",
+  "description": "This file provides the ability to handle a better completion with the XP-Framework. This file is based on the original version from phpcomplete.vim delivered by a standard vim installation.\n\nXP-Framework: http://xp-framework.net/\n\nRequirements:\n\nctags:\nUse absolute paths and --PHP-kinds=+cfidv for your ctag files\n\nExample:\nctags -f $HOME/devel/xp.ctags/tags \\\\\n--langmap=\\\"php:+.inc\\\" \\\\\n-h \\\".php.inc\\\" -R --totals=yes \\\\\n--PHP-kinds=+cfidv \\\\\n--fields=+iaS \\\\\n$HOME/devel/xp.public/trunk/skeleton \\\\\n$HOME/devel/xp.public/trunk/ports/classes \\\\\n$HOME/devel/xp.projects/**/src\n\nTODO:\nScreenshots\nBetter description\n",
+  "install_details": "save xpcomplete.vim in ~/.vim/autoload/\n\nadd follogwing to your vimrc:\nautocmd FileType php set omnifunc=xpcomplete#CompletePHP\nset tags+=$HOME/devel/xp.ctags/tags\n\nIf ctags isn&#039t installed you can download it from its homepage http://ctags.sourceforge.net/ or if you&#039re running Debian/Ubuntu you can install it by executing the following shell command:\n\n    sudo apt-get install exuberant-ctags",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13223",
+      "filename": "xpcomplete.vim",
+      "script_version": "r660",
+      "date": "2010-06-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20162",
+        "user_name": "kuse",
+        "first_name": "Sebastian",
+        "last_name": "Kusnier",
+        "email": "seek at matrixcode.de",
+        "homepage": "http://kusnier.net"
+      },
+      "release_notes": "Previous Bugfix was not perfect\nThis version should work better"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13220",
+      "filename": "xpcomplete.vim",
+      "script_version": "v659",
+      "date": "2010-06-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20162",
+        "user_name": "kuse",
+        "first_name": "Sebastian",
+        "last_name": "Kusnier",
+        "email": "seek at matrixcode.de",
+        "homepage": "http://kusnier.net"
+      },
+      "release_notes": "Bugfix:\n- Solved problem with nested function calls"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13193",
+      "filename": "xpcomplete.vim",
+      "script_version": "r653",
+      "date": "2010-06-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20162",
+        "user_name": "kuse",
+        "first_name": "Sebastian",
+        "last_name": "Kusnier",
+        "email": "seek at matrixcode.de",
+        "homepage": "http://kusnier.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

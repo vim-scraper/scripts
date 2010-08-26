@@ -1,0 +1,26 @@
+{
+  "script_id": "2756",
+  "name": "color-chooser.vim",
+  "summary": "a graphical RGB/HSV color selector",
+  "script_type": "utility",
+  "description": "This plugin allows you to insert and edit colors using a graphical color selection window. It makes #rrggbb hex color codes; as input it detects both #rrggbb hexcodes and X11 color names.\n\nThe script supports three language locales: English, Spanish, Czech.",
+  "install_details": "requirements:\nThe script requires Python version>=2.5 with PyGTK module and GTK to run. It works best with gVim (on xterm Vim there is a bug: the window does not close after the color is selected -- it is usable but awkward).\n\nhow to install: \nCopy the file color-chooser.vim to your plugin directory (\"~/.vim/plugin\"). For the change to take effect, either restart Vim or source the script manually by the command \n:so ~/.vim/plugin/color-chooser.vim\n\nIf you want to install the script for all users, copy it to the main plugin directory of Vim - usually \"/usr/share/vim/vimcurrent/plugin\".\n\nAfter installation, the color selection window is launched by \n:call ColorChooser()\nMap it to a key, such as <F2>, this way:\n:map <F2> :call ColorChooser()<enter>\nThe map command is commented in the script file, you can simply uncomment it.\n\nSeveral options can be set by editing the \"script configuration\" section in the file -- they are described there.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11242",
+      "filename": "color-chooser.vim",
+      "script_version": "1.0",
+      "date": "2009-08-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17889",
+        "user_name": "imploder",
+        "first_name": "Petr",
+        "last_name": "Mejzlík",
+        "email": "petrmej at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

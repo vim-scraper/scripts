@@ -1,0 +1,74 @@
+{
+  "script_id": "2097",
+  "name": "narrow",
+  "summary": "Emulate Emacs' narrowing feature",
+  "script_type": "utility",
+  "description": "*narrow* is a Vim plugin to emulate Emacs' narrowing feature.\nFrom GNU Emacs Manual:\n\n\tNarrowing means focusing in on some portion of the buffer, making the\n\trest temporarily inaccessible. The portion which you can still get to\n\tis called the accessible portion. Canceling the narrowing, which makes\n\tthe entire buffer once again accessible, is called widening. The\n\tbounds of narrowing in effect in a buffer are called the buffer's\n\trestriction.\n\n\tNarrowing can make it easier to concentrate on a single subroutine or\n\tparagraph by eliminating clutter. It can also be used to limit the\n\trange of operation of a replace command or repeating keyboard macro.\n\nNote that there are some differences from the original behavior.\nSee |narrow-bugs| for the detail.\n\n\nRequirements:\n- Vim 7.0 or later\n\nLatest version:\nhttp://github.com/kana/vim-narrow\n\nDocument in HTML format:\nhttp://kana.github.com/config/vim/narrow.html",
+  "install_details": "...",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10060",
+      "filename": "vim-narrow-0.2.1.zip",
+      "script_version": "0.2.1",
+      "date": "2009-02-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Fix minor bugs:  - |:Widen| raises an error for buffers without fold.  - |:Narrow| doesn't hide lines smaller than 'foldminlines'."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8096",
+      "filename": "vim-narrow-0.2.zip",
+      "script_version": "0.2",
+      "date": "2007-12-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Fix |:Narrow| and |:Widen| not to use temporary files.  Now |:Widen| correctly works even if the target buffer is |:Narrow|'ed by two or more Vim processes.\n- Modify |:Narrow| to |zz| after narrowing for visibility.\n- Modify |:Narrow| to include all lines of closed folds in [range]."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8092",
+      "filename": "vim-narrow-0.1.zip",
+      "script_version": "0.1",
+      "date": "2007-12-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Fix the bug that 'foldenable' is not set after :Narrow.\n- Fix the bug that the cursor is moved to somewhere after :Widen.\n- Add g:narrow_allow_overridingp."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8055",
+      "filename": "vim-narrow-0.0.zip",
+      "script_version": "0.0",
+      "date": "2007-12-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

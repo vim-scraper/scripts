@@ -1,0 +1,42 @@
+{
+  "script_id": "1355",
+  "name": "PDV - phpDocumentor for Vim",
+  "summary": "Provides really comfortable generation of phpDocumentor doc blocks for PHP4 & 5.",
+  "script_type": "utility",
+  "description": "PDV (phpDocumentor for Vim)\n========================\n\nVersion: 1.0.0\n\nCopyright 2005 by Tobias Schlitt <toby@php.net>\nInspired by phpDoc script for Vim by Vidyut Luther (http://www.phpcult.com/).\n\nProvided under the GPL (http://www.gnu.org/copyleft/gpl.html).\n\nThis script provides functions to generate phpDocumentor conform\ndocumentation blocks for your PHP code. The script currently\ndocuments:\n\n- Classes\n- Methods/Functions\n- Attributes\n\nAll of those supporting all PHP 4 and 5 syntax elements.\n\nBeside that it allows you to define default values for phpDocumentor tags\nlike @version (I use $id$ here), @author, @license and so on.\n\nFor function/method parameters and attributes, the script tries to guess the\ntype as good as possible from PHP5 type hints or default values (array, bool,\nint, string...).\n\nYou can use this script by mapping the function PhpDoc() to any\nkey combination. Hit this on the line where the element to document\nresides and the doc block will be created directly above that line.\n\nChangelog\n=========\n\nVersion 1.0.0\n-------------------\n\n* Created the initial version of this script while playing around with VIM\n   scripting the first time and trying to fix Vidyut's solution, which\n   resulted in a complete rewrite.",
+  "install_details": "Installation\n=========\n\nFor example include into your .vimrc:\n\nsource ~/.vim/php-doc.vim\ninoremap <C-P> <ESC>:call PhpDocSingle()<CR>i\nnnoremap <C-P> :call PhpDocSingle()<CR>\nvnoremap <C-P> :call PhpDocRange()<CR>\n\nThis includes the script and maps the combination <ctrl>+p\nto the doc functions.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4666",
+      "filename": "php-doc.vim",
+      "script_version": "1.0.1",
+      "date": "2005-10-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7658",
+        "user_name": "dotxp",
+        "first_name": "Tobias",
+        "last_name": "Schlitt",
+        "email": "tobias at schlitt.info",
+        "homepage": "http://schlitt.info/opensource"
+      },
+      "release_notes": "- Fixed commenting of tab indented code.\n- Fixed some smaller parsing bugs.\n- Fixed bug with call-by-reference parameters.\n- ATTENTION: This version contains already some code for version 1.1.0, which does not work by now!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4584",
+      "filename": "php-doc.vim",
+      "script_version": "1.0",
+      "date": "2005-09-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7658",
+        "user_name": "dotxp",
+        "first_name": "Tobias",
+        "last_name": "Schlitt",
+        "email": "tobias at schlitt.info",
+        "homepage": "http://schlitt.info/opensource"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

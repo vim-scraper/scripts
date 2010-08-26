@@ -1,0 +1,58 @@
+{
+  "script_id": "1050",
+  "name": "delete.py",
+  "summary": "Makes the delete key remove 'softtabspace' characters, similar to backspace",
+  "script_type": "indent",
+  "description": "I usually edit Python code that has a lot of whitespace indenting.\nThe backspace key works nicely, and I'm able to delete indents,\nbut I'm unable to do so with the <Del> key.\nI've searched the web, searched the scripts and tips, asked on the vim mailing list,\nasked on IRC and read a lot of documentation.\nIn the end, I found it easier to write a Python script that gave me the desired behaviour.\nSo, here it is. It works for me.",
+  "install_details": "(for *nix)\nNote that you need Python-support compiled in to your Vim.\n(On Debian, just apt-get install vim-python)\nSave the script to your .vim/indent folder.\nAdd these two lines to your .vimrc:\ninoremap <silent> <Del> <ESC>:pyfile ~/.vim/indent/delete.py<CR>i\nnnoremap <silent> <Del> :pyfile ~/.vim/indent/delete.py<CR>\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3286",
+      "filename": "delete.py",
+      "script_version": "0.4",
+      "date": "2004-07-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5668",
+        "user_name": "alexanro",
+        "first_name": "Alexander",
+        "last_name": "Rødseth",
+        "email": "alexander at stud.ntnu.no",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug that made it unable to delete lines when there was only a single character left."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3285",
+      "filename": "delete.py",
+      "script_version": "0.3",
+      "date": "2004-07-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5668",
+        "user_name": "alexanro",
+        "first_name": "Alexander",
+        "last_name": "Rødseth",
+        "email": "alexander at stud.ntnu.no",
+        "homepage": ""
+      },
+      "release_notes": "Made deletion of characters at the end of the line move the cursor one to the left, in order to avoid leaving the cursor at an nonexistant character."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3284",
+      "filename": "delete.py",
+      "script_version": "0.2",
+      "date": "2004-07-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5668",
+        "user_name": "alexanro",
+        "first_name": "Alexander",
+        "last_name": "Rødseth",
+        "email": "alexander at stud.ntnu.no",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

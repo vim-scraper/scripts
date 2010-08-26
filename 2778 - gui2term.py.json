@@ -1,0 +1,26 @@
+{
+  "script_id": "2778",
+  "name": "gui2term.py",
+  "summary": "script that converts GUI only colorschemes to support 256-color terminal",
+  "script_type": "utility",
+  "description": "This is a python2 script that converts GUI only colorschemes to support 256-color terminal.\n\nRequirement: python2.6 (other python2.x may also work)\n\nUsage:\ninvoke it like this in commandline.\n./gui2term.py sourcefile newfile\nor\npython gui2term.py sourcefile newfile\n\nNote:\nIt searches and processes lines in a vim colorscheme that matches the regular expression '^\\s*hi\\w*\\s+[A-Z]\\w+' (in Python or Perl, not Vim regex), so it does not work with all the colorscheme.\nApply it to *GUI only* colorscheme only.\nSome GUI only colorschemes may use the default scheme if it found itself under a terminal. You need to manually remove these lines.",
+  "install_details": "Put the file wherever you like.\n\nTo make it recognize color names, you need to\nEITHER put your rgb.txt (:help rgb.txt, it can be found where you installed Vim) together with the script, or the current working directory, or /usr/share/vim/vim72/rgb.txt\nOR open the script and change lines 256-262 to point variable rgbfile to a rgb.txt.\nUnder Windows '&#039 should be escaped, like this:\n    rgbfile = 'C:\\\\rgb.txt'\nor use 'raw string' like this:\n    rgbfile = r'C:\\rgb.txt'\nor use '/' instead of '&#039 like this:\n    rgbfile = 'C:/rgb.txt'\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11331",
+      "filename": "gui2term.py",
+      "script_version": "1.0",
+      "date": "2009-09-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15944",
+        "user_name": "lilydjwg",
+        "first_name": "lilydjwg",
+        "last_name": " ",
+        "email": "lilydjwg at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

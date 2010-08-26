@@ -1,0 +1,218 @@
+{
+  "script_id": "2527",
+  "name": "jpythonfold.vim",
+  "summary": "A better python fold script",
+  "script_type": "syntax",
+  "description": "This script allows automatically folding of Python code.\nIt completely rewritten from Jorrit Wiersma's script (vimscript #515; other competitors are vimscript#781 and vimscript#2002).\nThe folding and fold text are completely rewritten: the algorithm systematically set up, so it behaves as accurate as possible (at the cost of some speed).\nMain feature of this script is that it folds empty space, saving lots of screen space (although you can turn it off, see below).\nClasses and defs are folded, of course.\nIndent zero comments separating classes and defs are not folded, so you see the global divisions in your code.\nGlobal code is folded in blocks (separated by comments).\n\nThere are three options. To use them, check the script:\n- Keep empty lines out of a fold (giving more readable classes with folded functions, but using more screen space).\n- Ignore non-python files.\n- Allow for multiline class definitions (at the cost of folding comments starting with the word \"class\") or stricter def checking (missing multiline defs).\n\nKnown bug:\n- multiline strings that look like code are handled as such (basically unfixable, actually)\n\nExample: \n------------------------\n#unfolded comment\ndef foo:\n#folded comment\n    #also folded\n    bar = 5\n\n#unfolded, but the empty line above this one is folded with the function\n#code below will be folded\na = 5\nb = 6",
+  "install_details": "Either save it in a file and source that file whenever you want to use the folding, or save it in your ftplugin directory (for example, ~/.vim/ftplugin/python.vim) and it should load every time you edit python code.\nIf you want it to autodetect python code and ignore other code (which is probably what you want if you installed it in the ftplugin directory), uncomment the three lines denoted as such.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10034",
+      "filename": "jpythonfold.vim",
+      "script_version": "3.2",
+      "date": "2009-02-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16451",
+        "user_name": "Jurjen",
+        "first_name": "Jurjen",
+        "last_name": "Bos",
+        "email": "J.Bos-interpay at xs4all.nl",
+        "homepage": ""
+      },
+      "release_notes": "Improved decorator recognition: now works with doxygen. (Thanks, Grissiom)\nBug removed. (Thanks, Andrew)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9986",
+      "filename": "jpythonfold.vim",
+      "script_version": "3.1",
+      "date": "2009-02-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16451",
+        "user_name": "Jurjen",
+        "first_name": "Jurjen",
+        "last_name": "Bos",
+        "email": "J.Bos-interpay at xs4all.nl",
+        "homepage": ""
+      },
+      "release_notes": "Now also folds decorated functions and classes properly. Thanks for the idea, Kai."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9972",
+      "filename": "jpythonfold.vim",
+      "script_version": "3.0.3",
+      "date": "2009-02-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16451",
+        "user_name": "Jurjen",
+        "first_name": "Jurjen",
+        "last_name": "Bos",
+        "email": "J.Bos-interpay at xs4all.nl",
+        "homepage": ""
+      },
+      "release_notes": "Anothter bugfix: except/else in global code doesn't introduce extra folds anymore. Thanks, Grissiom"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9969",
+      "filename": "jpythonfold.vim",
+      "script_version": "3.0.2",
+      "date": "2009-02-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16451",
+        "user_name": "Jurjen",
+        "first_name": "Jurjen",
+        "last_name": "Bos",
+        "email": "J.Bos-interpay at xs4all.nl",
+        "homepage": ""
+      },
+      "release_notes": "Another bugfix: debug code removed. Thanks, Andrew"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9939",
+      "filename": "jpythonfold.vim",
+      "script_version": "3.0.1",
+      "date": "2009-02-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16451",
+        "user_name": "Jurjen",
+        "first_name": "Jurjen",
+        "last_name": "Bos",
+        "email": "J.Bos-interpay at xs4all.nl",
+        "homepage": ""
+      },
+      "release_notes": "Refactored everything again. Now not only faster, but also systematically set up. \nI actually try to explain everything in the script, in case you are interested :-) \nMinor bug fix over 3.0; thanks, Grissiom"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9929",
+      "filename": "jpythonfold.vim",
+      "script_version": "2.5",
+      "date": "2009-02-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16451",
+        "user_name": "Jurjen",
+        "first_name": "Jurjen",
+        "last_name": "Bos",
+        "email": "J.Bos-interpay at xs4all.nl",
+        "homepage": ""
+      },
+      "release_notes": "Found a tiny bug: a function whose first line is a comment got folded wrong. Fixed it by removing (!) some code."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9922",
+      "filename": "jpythonfold.vim",
+      "script_version": "2.4",
+      "date": "2009-02-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16451",
+        "user_name": "Jurjen",
+        "first_name": "Jurjen",
+        "last_name": "Bos",
+        "email": "J.Bos-interpay at xs4all.nl",
+        "homepage": ""
+      },
+      "release_notes": "Now expects a colon in a class definition, but not in a function definition, allowing for multiline defs (with explanation if you happen to disagree).\nStamped out a bug where sometimes global code gets folded in a class.\nSpeeded up a bit."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9910",
+      "filename": "jpythonfold.vim",
+      "script_version": "2.3",
+      "date": "2009-02-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16451",
+        "user_name": "Jurjen",
+        "first_name": "Jurjen",
+        "last_name": "Bos",
+        "email": "J.Bos-interpay at xs4all.nl",
+        "homepage": ""
+      },
+      "release_notes": "Thanks to many helpful comment a brand new version, a bit less slow than 2.2.\nFolding accuracy is improved thanks to my quality control system (i.e. I made a test Python file handling all cases :-)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9908",
+      "filename": "jpythonfold.vim",
+      "script_version": "2.2",
+      "date": "2009-02-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16451",
+        "user_name": "Jurjen",
+        "first_name": "Jurjen",
+        "last_name": "Bos",
+        "email": "J.Bos-interpay at xs4all.nl",
+        "homepage": ""
+      },
+      "release_notes": "Two silly bugs removed in foldtext, making version 2.1 unbearable.\nImproved script layout a bit."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9907",
+      "filename": "jpythonfold.vim",
+      "script_version": "2.1",
+      "date": "2009-02-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16451",
+        "user_name": "Jurjen",
+        "first_name": "Jurjen",
+        "last_name": "Bos",
+        "email": "J.Bos-interpay at xs4all.nl",
+        "homepage": ""
+      },
+      "release_notes": "(2.0 was too buggy)\nMajor rewrite; behaves more consistently in many borderline cases. Made more readable using an extra function. \nAlso handles docstrings with single quotes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9904",
+      "filename": "jpythonfold.vim",
+      "script_version": "1.4",
+      "date": "2009-02-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16451",
+        "user_name": "Jurjen",
+        "first_name": "Jurjen",
+        "last_name": "Bos",
+        "email": "J.Bos-interpay at xs4all.nl",
+        "homepage": ""
+      },
+      "release_notes": "Bugfix release: handles files with tabs, works even when foldcolumn or number is set."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9899",
+      "filename": "jpythonfold.vim",
+      "script_version": "1.3",
+      "date": "2009-02-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16451",
+        "user_name": "Jurjen",
+        "first_name": "Jurjen",
+        "last_name": "Bos",
+        "email": "J.Bos-interpay at xs4all.nl",
+        "homepage": ""
+      },
+      "release_notes": "Minor improvement giving dots between text and line count."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9894",
+      "filename": "jpythonfold.vim",
+      "script_version": "1.1",
+      "date": "2009-02-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16451",
+        "user_name": "Jurjen",
+        "first_name": "Jurjen",
+        "last_name": "Bos",
+        "email": "J.Bos-interpay at xs4all.nl",
+        "homepage": ""
+      },
+      "release_notes": "Thanks to a few useful reactions, here is a new version.\n- It doesn't crash anymore if the script ends in empty lines or comments\n- There is (commented out) code for detecting and ignoring non-python scripts\n\n"
+    }
+  ]
+}

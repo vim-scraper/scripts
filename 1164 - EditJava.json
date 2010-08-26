@@ -1,0 +1,90 @@
+{
+  "script_id": "1164",
+  "name": "EditJava",
+  "summary": "lookup source file for classname under cursor",
+  "script_type": "utility",
+  "description": "Place cursor over a java classname and enter the scripts map key sequence (I  map it to \",g\"). The base java file name is <cword> . \".java\" \n\nFirst if the cursor is over a package classname like 'java.util.Map', then if the cursor is over 'Map', the java/util/Map.java file is opened else if the cursor is over, say, 'util', then the java/util directory is opened. \n\nOtherwise, the script looks for a file with the filename in local directory and  if it exists, opens it.\n\nIf not, it looks for an explicit import file with the filename, if it can be found  in the java source path, then it opens it. If not found, use 'locate' command to look for filename plus import package directories prepended. If found then open it.\n\nIf not, it looks for a file in \"$JAVA_HOME/src/java/lang\" and if found opens it. \n\nIf not it then looks for a match using any of the implicit import statements, those ending in * and in the java source path. If found open it. Otherwise use 'locate' command to search for filename plus import package path prepended and if found open it.\n\nLastly, if not found by any of the above methods it then attempts to find a file using the package path. The current file might be in a parallel junit directory or in some parallel directory structure. If this is found in the java source path then it is opened otherwise it uses \"locate' command to search for the file and if found opens it.\n\nEditJava plus the bufexplorer.vim script, \nthe \"edit cwd\" Tip #2:\nmap ,d :e <C-R>=expand(\"%:p:h\")<CR><CR>  \nand the mapping allowing one to toggle between files\nmap gg :e#^M \nwith the buffer edit commands (where N is an integer)\n:bp\n:bpN\n:bn\n:bpN                         \nprovide one with a collection of tools to view and navigate Java sources.\n",
+  "install_details": "Place script in your vim script directory:\n$HOME/vimscripts/javae.vim\n\nAdd the following to your .vimrc file:\n\n\" Set my Leader character\nlet mapleader = \",\"\n\n\" Source javae.vim\nsource $HOME/vimscripts/javae.vim\n\n\" Create a java source path in .vimrc \n\" (I currently have 17 source paths in my .vimrc):\nlet $JAVASOURCEPATH =\"$JAVA_HOME/src\" .\n  \\\",$HOME/java/xerces/xerces/src\" .\n  \\\",$HOME/java/xerces/xalan/src\" .\n  \\\",$HOME/java/jboss/jboss\" .\n  \\\",$HOME/myproject/src/java\"\n\n\" Creating a mapping to call the script in .vimrc:\n\" goto\nmap <Leader>g :call EditJava('e',$JAVASOURCEPATH)<CR> \n\" open horizontal\nmap <Leader>h :call EditJava('sp',$JAVASOURCEPATH)<CR>\n\" open vertical\nmap <Leader>v :call EditJava('vsp',$JAVASOURCEPATH)<CR>\n\nDefine behavior\nSet g:javae_use_locate_cmd  to 0 if you do not wish to use a 'locate\" command. The default is to use the 'locate' command:\nlet g:javae_use_locate_cmd = 1\n\nSet the name of the 'locate' command. The default value for g:javae_locate_cmd is \"slocate\". If you wish to use a different command put the folloing in your .vimrc:\nlet g:javae_locate_cmd = <command_name>\n\nIf using a 'locate' command, then one can force javae to allways prompt even when there is only one match by setting g:javae_locateopen_alwaysprompt to 1. \nThe default is to only prompt when there is more than one file:\nlet g:javae_locateopen_alwaysprompt = 0\n\nAlso, one can set whether or not to get an error message if in response to a prompt an incorrect value is entered. To not see any error messages set g:javae_locateopen_showerror to 0. The default is to see error messages\nlet g:javae_locateopen_showerror = 1\n\nWhen switching to another buffer the current buffer may need to be saved. The g:javae_automatic_update flag allows one to control this behavior. Setting it to 0:\nlet g:javae_syntax_based = 0\nwill not automatically update the current buffer if it needs to be saved allowing you to automatically see the new buffer, rather you must first manually save the current buffer and re-run the search.\nThe default is to allow for automatic updates:\nlet g:javae_syntax_based = 1.\n\nImport statements do not occur after the first class or interface declaration. While searching the current file for all import statements one can either read each line of the current file or stop after the first class or interface declaration. In addition, what looks like an import statement might be in a comment. If the flag g:javae_syntax_based is set to 0:\nlet g:javae_syntax_based=0\nthen each line in the file is read. \nOn the other hand if it is set to 1:\nlet g:javae_syntax_based = 1\nthe default value, then the search for import statements skips comments and stops after the first class or interface declaration. The reason one might not wish to use the g:javae_syntax_based flag is that under the covers java syntax values are used to determine when one is in a comment or declaration and if the user has modified the default java syntax values found in java.vim, then the syntax base code may not work.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3796",
+      "filename": "javae.vim",
+      "script_version": "1.4",
+      "date": "2005-01-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6544",
+        "user_name": "rme",
+        "first_name": "richard",
+        "last_name": "emberson",
+        "email": "richard.n.emberson at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Now looks a the package path to see if the file being searched for is in a parallel directory structure. Whether or not to automatically save the current buffer, if needed, is controled by a flag. Lastly, java syntax can be used to identify when the first class/interface declaration has occurred and the search for import statements should stop."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3776",
+      "filename": "javae.vim",
+      "script_version": "1.3",
+      "date": "2005-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6544",
+        "user_name": "rme",
+        "first_name": "richard",
+        "last_name": "emberson",
+        "email": "richard.n.emberson at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added ability to use the system \"locate\" command to\nfind the java file if it can not be located in the java path\nexplicitly passed in as a paramenter. Also, fixed a couple\nof bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3742",
+      "filename": "javae.vim",
+      "script_version": "1.2",
+      "date": "2005-01-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6544",
+        "user_name": "rme",
+        "first_name": "richard",
+        "last_name": "emberson",
+        "email": "richard.n.emberson at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "The entry point function, 'EditJava', now takes a command \nargument which is executed if a matching file or directory is \nfound. This allows the user to parameterize the call with their \nchoice of opening a new window for the source file, e.g., the \ncommand can be:\ne, vsplit, new, split, vertical, sview, vnew , etc.\n\nAlso, the 'EditJava' method was refactored."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3733",
+      "filename": "javae.vim",
+      "script_version": "1.1",
+      "date": "2004-12-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6544",
+        "user_name": "rme",
+        "first_name": "richard",
+        "last_name": "emberson",
+        "email": "richard.n.emberson at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Now if there is a package path classname such as java.util.Map\nin ones code, then with cursor over Map, the Map.java file\nis opened and if cursor is over for example 'util' then the\njava/util directory is opened. All of the other means of opening\nthe java file under the cursor are still there."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3725",
+      "filename": "javae.vim",
+      "script_version": "1.0",
+      "date": "2004-12-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6544",
+        "user_name": "rme",
+        "first_name": "richard",
+        "last_name": "emberson",
+        "email": "richard.n.emberson at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

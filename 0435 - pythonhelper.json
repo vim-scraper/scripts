@@ -1,0 +1,122 @@
+{
+  "script_id": "435",
+  "name": "pythonhelper",
+  "summary": "Displays Python class, method or function the cursor is in on the status line",
+  "script_type": "utility",
+  "description": "Vim script to help moving around in larger Python source files. It displays current class, method or function the cursor is placed in in the status line for every python file. It's more clever than Yegappan Lakshmanan's taglist.vim because it takes into account indetation and comments to determine what tag the cursor is placed in and from version 0.80 doesn't need exuberant ctags utility.\n\nNote: The script displays current tag on the status line only in NORMAL mode. This is because CursorHold event in VIM is fired up only in this mode. However if you'd like to know what tag you are in even in INSERT or VISUAL mode, contact me (email specified in the script) and I'll send you a patch that enables firing up CursorHold event in those modes as well.",
+  "install_details": "1. Make sure your Vim has python feature on (+python). If not, you will need to recompile it with --with-pythoninterp option to the configure script\n2. Copy script pythonhelper.vim to the $HOME/.vim/plugin directory\n3. Run Vim and open any python file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12010",
+      "filename": "pythonhelper.vim",
+      "script_version": "0.83",
+      "date": "2010-01-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1099",
+        "user_name": "fuf",
+        "first_name": "Michal",
+        "last_name": "Vitecek",
+        "email": "fuf at mageo.cz",
+        "homepage": ""
+      },
+      "release_notes": "Added support for the CursorHoldI event so that the class/method/function is recognized also in Insert mode."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10987",
+      "filename": "pythonhelper.vim",
+      "script_version": "0.82",
+      "date": "2009-07-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1099",
+        "user_name": "fuf",
+        "first_name": "Michal",
+        "last_name": "Vitecek",
+        "email": "fuf at mageo.cz",
+        "homepage": ""
+      },
+      "release_notes": "- fixed a bug when nested functions/classes were not properly detected"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1807",
+      "filename": "pythonhelper.vim",
+      "script_version": "0.81",
+      "date": "2003-03-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1099",
+        "user_name": "fuf",
+        "first_name": "Michal",
+        "last_name": "Vitecek",
+        "email": "fuf at mageo.cz",
+        "homepage": ""
+      },
+      "release_notes": "- fixed a small bug in indent level recognition"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1321",
+      "filename": "pythonhelper.vim",
+      "script_version": "0.80",
+      "date": "2002-10-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1099",
+        "user_name": "fuf",
+        "first_name": "Michal",
+        "last_name": "Vitecek",
+        "email": "fuf at mageo.cz",
+        "homepage": ""
+      },
+      "release_notes": "- removed the dependency on exuberant ctags which parsed the python source code wrongly anyways. From now on only VIM with python support is needed. This might greatly help windoze users."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1277",
+      "filename": "pythonhelper.vim",
+      "script_version": "0.72",
+      "date": "2002-10-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1099",
+        "user_name": "fuf",
+        "first_name": "Michal",
+        "last_name": "Vitecek",
+        "email": "fuf at mageo.cz",
+        "homepage": ""
+      },
+      "release_notes": "- fixed problem with parsing ctags output on python files that use tabs\n- when there is a syntax error in the file and ctags parses it incorrectly a warning is displayed in the command line"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1274",
+      "filename": "pythonhelper.vim",
+      "script_version": "0.71",
+      "date": "2002-10-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1099",
+        "user_name": "fuf",
+        "first_name": "Michal",
+        "last_name": "Vitecek",
+        "email": "fuf at mageo.cz",
+        "homepage": ""
+      },
+      "release_notes": "- fixed problem with undefined window-bound variable w:PHStatusLine when a window has been split into two.\n- unbound event BufWinEnter because it's not needed because of the above change now"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1273",
+      "filename": "pythonhelper.vim",
+      "script_version": "0.7",
+      "date": "2002-10-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1099",
+        "user_name": "fuf",
+        "first_name": "Michal",
+        "last_name": "Vitecek",
+        "email": "fuf at mageo.cz",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

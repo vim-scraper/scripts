@@ -1,0 +1,42 @@
+{
+  "script_id": "1831",
+  "name": "VimSpy",
+  "summary": "VimSpy enables you to browse through all Vim internal entities.",
+  "script_type": "utility",
+  "description": "VimSpy defines a few commands and key mappings which enables you browse through almost all Vim internal entities such as functions, commands, menus and key mappings. \n\nMain commands: \n\nFunction [funcName]\nCommand [cmdName]\nAutocmd [autocmd]\nMenu [menuName]\nMap [mapping]\nSyntax [synItem]\nHighlight [synItem]\n\nThese commands are simply analogues of well-known Vim informational commands as function, command, autocmd and so on.\nBut they are modified in such a way that enables you use it much more efficient.\n\n1. An output of command is displayed in new window rather than ugly console.\n2. It is nicely highlighted.\n3. All function names and other keywords in output are clickable. When you double-click function name, new window with function definition is opened. In this function definition you may click any other function name and one more definition will be opened.  If you double-click Vim built-in keyword, help window will be opened. You also may to put cursor on keyword you are interested for and press enter. It will have the same effect as double-click.\n\n So you can in such a way quickly browse Vim internals. \n\nVimSpy also has such commands:\n\nChanges -- :change command analogue\nMessages -- :message command analogue\n\nCommandOutput  [cmd [args]] -- display output of any command in new window (It will not be highlighted though, except all command that have uppercase analogues)\n\nAMap        AMenu         ANoreMap   ANoreMenu\nCMap        CMenu         CNoreMap  CNoreMenu\nIMap          IMenu          INoreMap    INoreMenu\nNMap         NMenu        NNoreMap   NNoreMenu\nNoreMap    NoreMenu    OMap          OMenu\nONoreMap ONoreMenu  SMap          SMenu\nSNoreMap  SNoreMenu  VMap          VMenu\nVNoreMap  VNoreMenu  XMap          XMenu\nXNoreMap  XNoreMenu  LMap         LNoreMap    --      analogues of lowercase functions\n\n\n",
+  "install_details": "Just unpack tarball into $VIMRUNTIME or $HOME/.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7009",
+      "filename": "VimSpy.tar.gz",
+      "script_version": "0.2",
+      "date": "2007-04-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5896",
+        "user_name": "do_",
+        "first_name": "Michael",
+        "last_name": "Gnezdov",
+        "email": "brmglt at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Was added good syntax highlighting, ability to browse over all function names and a few new commands (Autocmd, Map and Map and Menu derivatives)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6889",
+      "filename": "CommandOutput.tar.gz",
+      "script_version": "0.1",
+      "date": "2007-03-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5896",
+        "user_name": "do_",
+        "first_name": "Michael",
+        "last_name": "Gnezdov",
+        "email": "brmglt at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

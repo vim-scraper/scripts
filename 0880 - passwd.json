@@ -1,0 +1,26 @@
+{
+  "script_id": "880",
+  "name": "passwd",
+  "summary": "syntax of the /etc/passwd file",
+  "script_type": "syntax",
+  "description": "This is highlighting syntax for the /etc/passwd file.",
+  "install_details": "Drop it into your syntax directory:\n  1. mkdir -p ~/.vim/syntax\n  2. mv passwd.vim ~/.vim/syntax/.\n\nThen, use\n       :setf passwd\n\n, or add this to your ~/.vim/filetypes.vim to enable auto-detection:\n  augroup filetypedetect\n  au BufNewFile,BufRead passwd   setf passwd\n  augroup END ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2676",
+      "filename": "passwd.vim",
+      "script_version": "1.0",
+      "date": "2004-01-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2342",
+        "user_name": "lerner",
+        "first_name": "Yakov",
+        "last_name": "Lerner",
+        "email": "jilerner at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

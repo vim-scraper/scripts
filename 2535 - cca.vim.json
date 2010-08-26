@@ -1,0 +1,90 @@
+{
+  "script_id": "2535",
+  "name": "cca.vim",
+  "summary": "code_complete_again: a complete plugin mixed the code_complete and snippetsEmu",
+  "script_type": "utility",
+  "description": "homepage: http://code.google.com/p/vim-cca/\nnow you can use cca.vim and ctk.vim (http://vim-cca.googlecode.com/files/ctk.vim) implements all features of c.vim\n\nyou can add yourself compiler at snippets file, and all the compilers can invoked by ctk.vim.\n\nin windows, you can compile and run, but now in unix, you can only compile : i can find a way to execute a program in a true-terminal. next version will solve this problem.\n\nctk.vim is only in beta version now.\n\nif you have any good idea, please tell me at here: http://code.google.com/p/vim-cca/issues/list\n\n\nUseage:                                                                          \n                                                                                 \n    this is a re-code version of code_complete(new update)                       \n    (vimscript#2427) the                   \n    original version of code_complete is write by mingbai, at                    \n    (vimscript#1764)                       \n                                                                                 \n    this plugin mix the features of code_complete and snippetEmu,              \n    you can put the snippet file in the cca_snippets_folder (defaultly           \n    \"snippets\"), and put template file in cca_template_folder                    \n    (defaultly \"templates\"). then you can input a tigger word and a              \n    hotkey to complete. e.g: if the hotkey is <m-d> (Alt+d or Meta+d,            \n    i found this combine-key is easy to press :) ) and you has a                 \n    snippet named foo, when you input the \"foo<m-d>\", it maybe changed           \n    to: (which \"|\" is the position of your cursor)                               \n                                                                                 \n        foobar|                                                                  \n                                                                                 \n    cca support snippetsEmu-style named tag and command tag in your              \n    snippet (and template file). you can define the tag-mark youself,            \n    and it will be highlighted (if you open the built-in highlight               \n    function of Vim). this is a summary of the kinds of tag. (the tags           \n    will be highlighted special, if you open highlight. and suppose              \n    the cca_tagstart is \"<{\". the tagcommand is ':',  and the tagend             \n    is \"}>\")                                                                     \n                                                                                 \n        - cursor tag:   <{}> or <{:}> if you press hotkey, and next              \n                        tag is a empty tag, the cursor will move to              \n                        there.                                                   \n        - named tag:    <{foo}> after you press hotkey, the name of              \n                        the tag will selected, and if you input a text           \n                        to replace it, all tag has the same name with            \n                        current tag will be replaced to the same                 \n                        value.  e.g:  (the pipe is position of cursor)           \n                                                                                 \n                        |   <{foo:1}> is a <{foo:2}>.                            \n                                                                                 \n                        after you press <a-d> and input \"bar\"                    \n                        directly, it will changed to:                            \n                                                                                 \n                        bar| is a bar.                                           \n                                                                                 \n                        the :1 and :2 mark is for sign tags for                  \n                        regconize it when you make nest tags.                    \n                                                                                 \n        - identifier tag:                                                        \n                        cca must register tag's name and command for             \n                        replace nest tag correctlly.  if you can sure            \n                        the tag is only for name replace, user won't             \n                        make complete in it (that is, it will never be           \n                        a nest tag), and it didn't have any command,             \n                        you can just add a \"cmd\" mark after                      \n                        identifier.  e.g: <{i:}>. and cca won't                  \n                        register this tag.                                       \n                                                                                 \n        - command tag:  <{foo:1}>, or <{:1}> where \"1\" may be any                \n                        number. this is the command number in                    \n                        dictionary b:cca.tag_table. if this is a                 \n                        noname command tag, the command will calculate           \n                        immediately. and if it has a name, it will act           \n                        as a named tag, and calculate the command when           \n                        you leave the tag (goto the next tag).  the              \n                        \"xt\" snippet in common.vim is a noname command           \n                        tag, and \"printf\" in c_snippets.vim is a named           \n                        command tag.                                             \n                                                                                 \n                XXX:    you can complete at normal, select and insert            \n                        mode, but you must notice that the first char            \n                        of tag is not \"in\" the tag.  e.g: |<{A}> now             \n                        cursor is NOT in the tag A. so it is in normal           \n                        mode, so if you want to jump to next tag, you            \n                        should make sure the cursor is just in the tag           \n                                                                                 \nOptions:                                                                         \n                                                                                 \n        cca_hotkey      this defined the hotkey for complete                     \n                                                                                 \n        cca_submitkey   this defined the submitkey.(that is, jump over           \n                        a line, and leave all tags in this line into             \n                        its default value).                                      \n                                                                                 \n        cca_tagstart                                                             \n        cca_tagend                                                               \n        cca_tagcommand  this defined the tag mark. and you can                   \n                        define them as buffer-variables.                         \n                                                                                 \n        cca_search_range                                                         \n                        this define the search range for tag jump.               \n                        defaultly it is 100, it means just search the            \n                        tags in 100 line under current line. if it set           \n                        to zero, only search tags in screen.                     \n                                                                                 \n        cca_filetype_ext_var                                                     \n                        this define the filetype buffer variable name.           \n                        snippets support this name to show the ext               \n                        name for specific filetype. it defaultly                 \n                        \"ft_ext\", and b:ft_ext will be used as a                 \n                        ext-name specified variable name.                        \n                                                                                 \n        cca_locale_tag_var                                                       \n                        this is a dictionary name for snippets file              \n                        show its locale tag marks. it has three item:            \n                        start, end and cmd. it defined tagstart,                 \n                        tagend and tagcommand in specified snippets              \n                        file.                                                    \n                                                                                 \n                XXX:    to use cca_filetype_ext_var and                          \n                        cca_locale_tag_var, see the specified snippets           \n                        files.                                                   \n                                                                                 \n        cca_snippets_folder                                                      \n        cca_template_folder                                                      \n                        these define the default folder where cca to             \n                        find the snippets files and template files. it           \n                        must be found at 'runtimepath'.                          \n                                                                                 \n        cca_auto_indent no use in this version                                   \n                                                                                 \nCommand:                                                                         \n                                                                                 \n        StartComplete                                                            \n        StopComplete                                                             \n                        Start and stop the complete this will register           \n                        or unregister the key map and do some                    \n                        initialliztion or clean work.                            \n                                                                                 \n        DefineSnippet   define the snippets. each snippets file are              \n                        all combined with this command. the format is:           \n                        DefineSnippet {trigger word}: {complete text}            \n                        trigger word can be anything. it can have                \n                        space, can be a symbol. but if it have space             \n                        and have more than one symbol, when you input            \n                        it, you should add a \"#\" before it. e.g: now             \n                        we define a sinppet:                                     \n                                                                                 \n                DefineSnippet trigger with word: this is a trigger with <{}>word \n                                                                                 \n                        then we can input:                                       \n                        #trigger with word<m-d>                                  \n                                                                                 \n                        then it will change to:                                  \n                        this is a trigger with |word                             \n                                                                                 \n                        the cursor is before \"word\"                              \n                                                                                 \n        RefreshSnippets refresh the current snippets file. if no                 \n                        filetype is set, this command will load                  \n                        \"common.vim\" in snippets folder. the snippets            \n                        file is under \"filetype\" folder in snippets              \n                        folder, or named \"filetype_others.vim\", which            \n                        others can be any words. all of snippets file            \n                        will load in.                                            \n",
+  "install_details": "for cca.vba: open with vim, and press :so%<CR> (<CR> means enter button)\nfor cca.vim: just drop it in your plugin folder, it should be ~/.vim/plugin (in *nix) or $VIM/vimfiles/plugin (in windows).\nfor cca-bundles.zip: unzip it, and put snippets folder into your vim folder (just the parent folder of plugin folder above)\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10043",
+      "filename": "cca.vim",
+      "script_version": "0.2",
+      "date": "2009-02-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "i forgot comment the debug option..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9996",
+      "filename": "cca.vim",
+      "script_version": "0.2",
+      "date": "2009-02-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "bugfix - make function complete more useful."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9995",
+      "filename": "cca.vba",
+      "script_version": "0.2",
+      "date": "2009-02-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "this is a complete package, containing cca.vim, ctk.vim and snippets files. just :so% it if you hasn't installed cca yet."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9989",
+      "filename": "cca.vim",
+      "script_version": "0.2",
+      "date": "2009-02-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "still bugfix, and some new features.\n\nnow you can add a \"!\" before the tag-command, that means the result of the command may be the new text for next tag.\n\ne.g: after you enter \"def\",\n    <{a:'abc'}> <{a}>\nturns to\n    abc def\nand\n    <{a:!abc'}> <{a}>\nturns to\n    abc abc"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9987",
+      "filename": "cca_bundles.zip",
+      "script_version": "0.1",
+      "date": "2009-02-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15469",
+        "user_name": "starwing",
+        "first_name": "Wxyarv",
+        "last_name": "Wang",
+        "email": "weasley_wx AT qq DOT com",
+        "homepage": "http://hi.baidu.com/starwing"
+      },
+      "release_notes": "the bundles of snippets file. directly converse from the snippetsEmu (http://www.vim.org/scripts/script.php?script_id=1318). so it maybe has many bugs, if it is, please tell me at: http://code.google.com/p/vim-cca/issues/list , thank you for use!"
+    }
+  ]
+}

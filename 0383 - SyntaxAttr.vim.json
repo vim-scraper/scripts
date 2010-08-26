@@ -1,0 +1,26 @@
+{
+  "script_id": "383",
+  "name": "SyntaxAttr.vim",
+  "summary": "Show syntax highlighting attributes of character under cursor.",
+  "script_type": "utility",
+  "description": "Displays the syntax highlighting attributes of the character under the cursor; including syntax group (and what it's linked to, if linked), foreground/background colors (name and numeric equivallent), bold, underline, etc.\n\nExample output:\n\n[WIth cursor on a function name in a vim script]\n     group: vimUserFuncName guifg=DarkCyan(#008b8b) gui=bold\n\n[With cursor on \"function\" keyword in vim script]\n     group: vimFuncKey->Statement guifg=Brown(#a52a2a) gui=bold\n\n[WIth cursor on \"let\" keyword in vim script]\n     group: vimLet->Statement guifg=Brown(#a52a2a) gui=bold\n\nThis can be helpfull both developing syntax files, and for determining what something is (according to the syntax rules), since the group names used in syntax files are usually well-named.\n\nRecommended use with a mapping such as:\n\n  map -a\t:call SyntaxAttr()<CR>",
+  "install_details": "I put it in my autoload directory (~/vim/autoload), so the function is automagically loaded as needed via an autocommand: \n\nautocmd FuncUndefined * exe 'runtime autoload/' . expand('<afile>') . '.vim'",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1135",
+      "filename": "SyntaxAttr.vim",
+      "script_version": "1.1",
+      "date": "2002-08-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "952",
+        "user_name": "Timeframed",
+        "first_name": "Gary",
+        "last_name": "Holloway",
+        "email": "gary at castandcrew dot com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

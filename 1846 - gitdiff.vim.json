@@ -1,0 +1,42 @@
+{
+  "script_id": "1846",
+  "name": "gitdiff.vim",
+  "summary": "show git diff in a split window",
+  "script_type": "utility",
+  "description": "This script provides two functions to display git diffs in vim.\n\n:GITDiff [commitish]\n\n    Split the vim window vertically, display the HEAD, or some other changeset, version of the file in the split, then diff them.\n\n:GITChanges [commitish]\n\n    Highlight lines that were changed since the HEAD or some other changeset.\n\nSome examples:\n\n:GITDiff HEAD~10\n:diffoff\n\n:GITChanges origin/master\n:syntax on",
+  "install_details": "1. grab vimball (vimscript#1502) then:\n2. vim gitdiff.vba\n   :so %\n   :q",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7059",
+      "filename": "gitdiff.vba",
+      "script_version": "2",
+      "date": "2007-05-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1186",
+        "user_name": "bartman",
+        "first_name": "Bart",
+        "last_name": "Trojanowski",
+        "email": "bart-vim at jukie.net",
+        "homepage": "http://www.jukie.net/~bart/"
+      },
+      "release_notes": "Needs vimball plugin (vimscript#1502)\nMerged in vimscript#1881 to show changed lines."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6925",
+      "filename": "gitdiff.vim",
+      "script_version": "0.0",
+      "date": "2007-03-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1186",
+        "user_name": "bartman",
+        "first_name": "Bart",
+        "last_name": "Trojanowski",
+        "email": "bart-vim at jukie.net",
+        "homepage": "http://www.jukie.net/~bart/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "793",
+  "name": "ttcn-ftplugin",
+  "summary": "TTCN-3 ftplugin file",
+  "script_type": "ftplugin",
+  "description": "This is a simple ftplugin for TTCN-3. You should put settings that are specific to TTCN in this file.",
+  "install_details": "Just drop the file in your local ftplugin directory (e.g. ~/.vim/ftplugin).\n\nNote: If you want to make Vim automatically detect the file type *.ttcn, see the \"install details\" section of the TTCN-3 syntax highlighting script (vimscript #753).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2939",
+      "filename": "ttcn.vim",
+      "script_version": "0.4",
+      "date": "2004-04-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3210",
+        "user_name": "Ticktack",
+        "first_name": "Stefan",
+        "last_name": "Karlsson",
+        "email": "sssstefan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Fixed so that Vim's gf, [i, ]i, etc. commands works for ttcn files.\n2. Moved some settings to the indent plugin, so make sure you download the latest ttcn-indent script as well!"
+    }
+  ]
+}

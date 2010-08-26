@@ -1,0 +1,42 @@
+{
+  "script_id": "3067",
+  "name": "ref.vim",
+  "summary": "Integrated reference viewer.",
+  "script_type": "utility",
+  "description": "*ref* is a Vim plugin to view the reference.  This plugin can be separated to\ncore of viewer and sources of reference.  As a result, various references can\nbe viewed by the same interface.\n\nFollowing sources are included in this plugin:\n- alc (Online English-Japanese/Japanese-English dictionary)\n- man\n- perldoc\n- phpmanual\n- pydoc\n- refe\n\nReference viewer is mere a buffer to view the reference.  This is opened by :Ref\ncommand or K like :help.  If the reference viewer is already opened in current\ntab page, it is used again.\n\nLatest Version:\nhttp://github.com/thinca/vim-ref",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12882",
+      "filename": "vim-ref-0.3.1.zip",
+      "script_version": "0.3.1",
+      "date": "2010-04-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18219",
+        "user_name": "thinca",
+        "first_name": "thinca",
+        "last_name": " ",
+        "email": "thinca+vim at gmail.com",
+        "homepage": "http://d.hatena.ne.jp/thinca/"
+      },
+      "release_notes": "- |g:ref_detect_filetype| accepts a special key _.\n- |g:ref_detect_filetype| accepts |Funcref|.\n- refe\n  - Fixed the collapses page of the method of refe1."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12869",
+      "filename": "vim-ref-0.3.0.zip",
+      "script_version": "0.3.0",
+      "date": "2010-04-19",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18219",
+        "user_name": "thinca",
+        "first_name": "thinca",
+        "last_name": " ",
+        "email": "thinca+vim at gmail.com",
+        "homepage": "http://d.hatena.ne.jp/thinca/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

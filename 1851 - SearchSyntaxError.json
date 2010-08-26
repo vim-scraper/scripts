@@ -1,0 +1,26 @@
+{
+  "script_id": "1851",
+  "name": "SearchSyntaxError",
+  "summary": "search for the next syntax error detected by the vim highlighting mechanism",
+  "script_type": "utility",
+  "description": "\" This scritp searches for the next syntax error detected by the vim highlighting\n\" mechanism. To search for the next syntax error, issue command\n\"       :ERR\n\" That all, folks.\n\"\n\" You can map this :ERR to your favorite key or key combination as follows:\n\"\n\"    noremap <silent><C-K><C-E>  :ERR<cr>\n\"\n\" For feedback, bugs and wishes: write to: iler.ml at gmail.com\n\"\n\" As a bonus, :ERRP searches backwards for the syntax error.\n\" And <Ctrl-K><Ctrl-E> is mapped to :ERR, unless somebody redefined it(\n\" (your vimrc or some other plugin).",
+  "install_details": "Short instructions: drop script into your personal plugin\ndirectory (~/.vim/plugin). Restart vim. Or source the script directly.\n\nDetailed version:\n\n1. Download script SearchSyntaxError.vim from the link below.\n2. Create directory ~/.vim/plugin if it does not exist:\n                 mkdir -p ~/.vim/plugin\n   (your personal plugin directory).\n3. Copy script SearchSyntaxError.vim into ~/.vim/plugin directory.\n4. Restart vim\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6944",
+      "filename": "SearchSyntaxError.vim",
+      "script_version": "070404b",
+      "date": "2007-04-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2342",
+        "user_name": "lerner",
+        "first_name": "Yakov",
+        "last_name": "Lerner",
+        "email": "jilerner at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "added URL at www.vim.org/scripts. Checksum 36635136"
+    }
+  ]
+}

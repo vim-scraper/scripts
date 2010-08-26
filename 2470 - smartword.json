@@ -1,0 +1,58 @@
+{
+  "script_id": "2470",
+  "name": "smartword",
+  "summary": "Smart motions on words",
+  "script_type": "utility",
+  "description": "*smartword* is a Vim plugin to provide {motion}s on |word|s which are smarter\nthan the built-in ones in some sense.  For example, |w| moves the cursor to\nthe next word as follows (here \"#\" means a position to which |w| moves the\ncursor for each time):\n\n\t<a href=\"http://www.vim.org/\">www.vim.org</a&gt;\n\t # #   # #   #  #  ##  ##  #  #  ##  ##  # #\n\nBecause there are two types of words and |w| moves to the next word which can\nbe the both types.  Let's call \"L\" for a type of words and \"P\" for another\ntype of words, where \"L\" means a word which consists of a sequence of letters\n(which are defined by 'iskeyword' option) and \"P\" means a word which consists\nof a sequence of other non-blank characters.\n\nIn many cases, you might want to move to the next \"L\", not \"P\".  This plugin\nprovides {motion}s to behave so.  For example, |<Plug>(smartword-w)| which is\ncorresponding to |w| moves the cursor as follows:\n\n\t<a href=\"http://www.vim.org/\">www.vim.org</a&gt;\n\t # #     #      #   #   #     #   #   #    #\n\nSee also |smartword-examples| for customization.\n\nSee also the following image if the above figures aren't correctly displayed:\nhttp://gyazo.com/bc7887d9bb0f6aa3eee1e67b0d756b2e.png\n\n\nRequirements:\n- Vim 7.2 or later\n\nLatest version:\nhttp://github.com/kana/vim-smartword\n\nDocument in HTML format:\nhttp://kana.github.com/config/vim/smartword.html",
+  "install_details": "...",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9853",
+      "filename": "vim-smartword-0.0.2.zip",
+      "script_version": "0.0.2",
+      "date": "2009-01-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Fix the document a bit.- Revise the treatment on 'iskeyword'.- Fix 2 bugs on |<Plug>(smartword-e)| and |<Plug>(smartword-ge)| with |o_v|.  These bugs are appeared only in Vim with the patch (*)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9621",
+      "filename": "vim-smartword-0.0.1.zip",
+      "script_version": "0.0.1",
+      "date": "2008-12-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- Fix |<Plug>(smartword-e)| and |<Plug>(smartword-ge)| to be  |inclusive| as same as |e| and |ge|."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9615",
+      "filename": "vim-smartword-0.0.0.zip",
+      "script_version": "0.0.0",
+      "date": "2008-12-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

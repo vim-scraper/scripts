@@ -1,0 +1,58 @@
+{
+  "script_id": "599",
+  "name": "cmake.vim",
+  "summary": "CMake indent file",
+  "script_type": "indent",
+  "description": "A CMake (www.cmake.org) indentation mode, which indents IF()/ELSE()/ENDIF(), FOREACH()/ENDFOREACH(), and MACRO()/ENDMACRO(), and it also supports multiline arguments to commands, quoted and non-quoted arguments.",
+  "install_details": "1. Put in indent/ subdirectory (for example: ~/.vim/indent)\n2. load it when loading CMakeLists.txt or *.cmake:\n:autocmd BufRead,BufNewFile *.cmake,CMakeLists.txt runtime! indent/cmake.vim\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5583",
+      "filename": "cmake-indent.vim",
+      "script_version": "1.4",
+      "date": "2006-04-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1891",
+        "user_name": "legoandy",
+        "first_name": "Andy",
+        "last_name": "Cedilnik",
+        "email": "vim at legoandy.com",
+        "homepage": "http://legoandy.com"
+      },
+      "release_notes": "More cleanups before VIM 7.0"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2102",
+      "filename": "cmake.vim",
+      "script_version": "0.2",
+      "date": "2003-06-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1891",
+        "user_name": "legoandy",
+        "first_name": "Andy",
+        "last_name": "Cedilnik",
+        "email": "vim at legoandy.com",
+        "homepage": "http://legoandy.com"
+      },
+      "release_notes": "Lots of changes here. Now it can handle all CMake files I can find on my disk. This one also uses same logic as the emacs file in the CMake repository."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1848",
+      "filename": "cmake.vim",
+      "script_version": "0.1",
+      "date": "2003-03-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1891",
+        "user_name": "legoandy",
+        "first_name": "Andy",
+        "last_name": "Cedilnik",
+        "email": "vim at legoandy.com",
+        "homepage": "http://legoandy.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

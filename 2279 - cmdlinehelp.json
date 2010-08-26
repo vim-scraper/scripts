@@ -1,0 +1,74 @@
+{
+  "script_id": "2279",
+  "name": "cmdlinehelp",
+  "summary": "Display help on the command currently being edited in the command line",
+  "script_type": "utility",
+  "description": "Has this ever happened to you? You are typing a command and cannot remember \nwhether that particular option is an \"u\" or an \"o\". cmdlinehelp to the \nrescue!\n\nWhen editing a command line, press <c-o> (see also |g:cmdlinehelpMapView|) \nto display help on the command currently being edited.\n\nUse <c-pageup>/<c-pagedown> to scroll the help window.\n\nThis plugin was inspired by a post by Marcel Boon to vim_use:\nhttp://groups.google.com/group/vim_use/browse_frm/thread/aaa3d652d7b76d02\n",
+  "install_details": "Edit the vba file and type:\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0, \nplease make sure, you have the current version of vimball (vimscript \n#1502) installed or update your runtime.\n\n\nAlso available via git\nhttp://github.com/tomtom/cmdlinehelp_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8913",
+      "filename": "cmdlinehelp.vba.gz",
+      "script_version": "0.5",
+      "date": "2008-07-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Support for command with a bang [!]\n- For :call, :echo[m] show help on the function not the command\n- g:cmdlinehelpTable may contain references to custom helper function\n- The keys in g:cmdlinehelpTable are regexps\n- Don't scroll down one line in the tag preview\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8880",
+      "filename": "cmdlinehelp.vba.gz",
+      "script_version": "0.4",
+      "date": "2008-07-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- For :set, :setlocal, :let show help on the option/variable, not the command\n- Catch e426 error.\n- Added debug to g:cmdlinehelpIgnore\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8878",
+      "filename": "cmdlinehelp.vba.gz",
+      "script_version": "0.3",
+      "date": "2008-07-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Prefixes for cheat sheets: g:cmdlinehelpPrefixes\n- Display the help on the top of the preview window\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8875",
+      "filename": "cmdlinehelp.vba.gz",
+      "script_version": "0.2",
+      "date": "2008-07-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- g:cmdlinehelpTable\n- FIX: wrong window after scrolling\n"
+    }
+  ]
+}

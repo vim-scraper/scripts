@@ -1,0 +1,90 @@
+{
+  "script_id": "1696",
+  "name": "VPars",
+  "summary": "Parameter substitution functions to be used in text fragments",
+  "script_type": "utility",
+  "description": "PURPOSE\n\nParameter substitution functions to be used in text fragments.\n\nDesigned as kernel to yet another template processing script, but may as well be used stand-alone or from another Vim script.\n\nMay be used interactively or in batch processing mode, both called from another Vim script (e.g. a templates manager) or directly by the user on a visually selected text block or by calling functions from the command line.\n\n\nCONCEPTUAL OVERVIEW\n\nThese are basic capabilities only. But VPars is extensively documented in the accompanying Vim help text. Look there for more detail and for the programming interface.\n\nVPars basically works on a specially selected text block. It finds variables in there, waits for the user to enter replacement text and substitutes this upon a simple keypress (<F3> by default, but may be redefined at any time). Then the next variable in sequence is found, etc.\n\nThere are built-in mechanisms which allow to skip or alter variables in the course of processing, so VPars will finally wrap around to the beginning of the text block and reprocess it until all variables have been handled.\n\n\nVARIABLES\n\nEach variable is assumed to have one of the following formats.\n\nCURSOR\n<|>\nis a cursor mark which will simply be removed and the cursor be positioned there.\n\nSIMPLE VARIABLES\n<|value|>\nwhere 'value' denotes both the variable label and the default value.\n\n<|value|:label:|>\nwhere 'value' denotes the (possible empty) default value, and 'label' the explicit label of this variable.\n\nRESTRICTIONS\nThere are almost no restrictions on the default value and the label as well, except that they must fit in the same line, and cannot contain another VPars variable. The user can even enter multiple lines as substitution text.\n\nHOW VARIABLES GET SUBSTITUTED\nPressing <F3> with the cursor inside the 'value' field of a simple variable will cause this and all equally named variables be replaced by the following text.\n    * The current variable will be replaced by the text extending from the left '<|' delimiter up to the current cursor position.\n    * If the cursor is positioned immediately after the left delimiter, the variable will be replaced by the given 'default' value.\n    * Any text to the right of the cursor does not count.\n      (Exception: If the variable bears an explicit ':label:' and was initially empty (of the form <||:label:|>), any text between the bars will be taken as replacement, independent of where the cursor was positioned.)\n\nIMPLICIT AUTOMATIC SUBSTITUTION\nAny equally labeled variable within the currently marked text block will automatically receive the same replacement text, except delayed ones (see below). \n\nALTERNATIVES\n<|alt_1|alt_2|..|alt_n|>\nwhere 'alt_1'..'alt_n' denote given alternative substitution values of which the one bearing the cursor will replace this one variable.\n\n<|alt_1|alt_2|..|alt_n|:label:|>\nsame, but explicitely labeled. The selected substitution will replace any variable with this name.\n\nDELAYED VARIABLES\nThere is a primitive means of defining another order to visit the variables and/or cursor marks within the selected text block. This is based on the VPars method of repeatedly processing the given text block until no variables are left over.\n\nIf the variable mark found is surrounded by another level of '< .. >' delimiters, this extra level will be removed and the variable skipped in this turn.\n\nThis allows delaying the variable substitution until others are available, or to position a cursor to a mark located near the beginning of the most recently inserted text after all variable substitutions were done.\n\n\nEXPLICITELY LABELED VARIABLE SUBSTITUTION\nIf there is an explicit ':label:' given, all variables bearing this label will be replaced with the substitution of the first occurrence found. This occurs independent of the form the other variables. Especially will the replacement text of simple variables replace alternative variables bearing this name and vice versa.\n\n\nTEXT BOUNDARIES\nText replacement will occur upon pressing <F3>. As long as there are variables in this block, <F3> will wrap around from the its end to the marked beginning line. This mechanism allows the handling of delayed variables.\n    * The text boundaries are marked linewise.\n    * Usually, the text bundaries will be marked by some calling function.\n    * The user can expressely select a visual block, which will then repeatedly be parsed for variables upon pressing <F3>.\n    * When there is no text block marked or there are no more variables found, the script switches to 'global mode', where the next variable from cursor to the end of the buffer will be found, if any. This global mode is strictly linear, no wrapping around will happen. \n\n\nBATCH PROCESSING\nThere is a VPars function implemented which allows batch replacement of any variable in the selected text block before interactive mode is entered.\n\n\nPRE- AND POSTPROCESSING VARIABLES\nCalling scripts may provide so-called hook functions which provide ways to process a VPars variable before and after substitution. See the vpars.txt help for more.",
+  "install_details": "To install VPars, copy the vpars.zip file into the ~/.vim directory or equivalent and unzip it there. This will install vpars.vim into the plugins subdirectory and vpars.txt into the doc subdirectory.\n\nTo enable access to this vpars.txt documentation start Vim and issue:\n    :helptags ~/.vim/doc\nvpars.txt should then be listed in the LOCAL ADDITIONS section of the Vim main help (issue :help, and the scroll down to the end).\n\nTo access VPars help:\n    :help vpars\nwill display the CONTENTS section of this help, and\n    :help vpars-index\nwill get you to the INDEX section (which collects all VPars help targets). \n\nDo not forget to re-initialize the help tags every time you upgrade to another VPars version.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6612",
+      "filename": "vpars.zip",
+      "script_version": "2.1",
+      "date": "2007-01-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10920",
+        "user_name": "Bippo",
+        "first_name": "Bernd",
+        "last_name": "Pol",
+        "email": "bernd.pol at online.de",
+        "homepage": ""
+      },
+      "release_notes": "more bugfixes;\nbetter behavior of pause/resume block processing"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6492",
+      "filename": "vpars.zip",
+      "script_version": "2.0",
+      "date": "2006-12-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10920",
+        "user_name": "Bippo",
+        "first_name": "Bernd",
+        "last_name": "Pol",
+        "email": "bernd.pol at online.de",
+        "homepage": ""
+      },
+      "release_notes": "A lot of bugs fixed (thanks to Igor Prischepoff for his thorough testing efforts).\nCalling VPars simplified by adding a new VPars_Run() function (see documentation).\nGUI menu user interface and shortcuts overworked; there is now the possibility to pause (,jp) and resume (,jr) processing the substition loop."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6463",
+      "filename": "vpars.zip",
+      "script_version": "1.2",
+      "date": "2006-11-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10920",
+        "user_name": "Bippo",
+        "first_name": "Bernd",
+        "last_name": "Pol",
+        "email": "bernd.pol at online.de",
+        "homepage": ""
+      },
+      "release_notes": "It is possible to escape the delay meaning of <...> brackets by putting dots around the variable: \"<.<|label|>.>\" will result in \"<value>\" after replacement;\ncursor end line positioning will behave better in virtualedit modes;\ntwo new shortcuts provided:\n,jo will visually select the currently valid dedicated text block;\n,ji will invalid such a text block;\na calling script can now ask VPars to put a menu in the GUI."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6401",
+      "filename": "vpars.zip",
+      "script_version": "1.1",
+      "date": "2006-11-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10920",
+        "user_name": "Bippo",
+        "first_name": "Bernd",
+        "last_name": "Pol",
+        "email": "bernd.pol at online.de",
+        "homepage": ""
+      },
+      "release_notes": "Jump to block beginning/end added. Alternate set of shortcuts added ( ,jj = next variable | ,jb = jump block begin | ,je = jump block end )"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6344",
+      "filename": "vpars.zip",
+      "script_version": "1.0",
+      "date": "2006-10-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10920",
+        "user_name": "Bippo",
+        "first_name": "Bernd",
+        "last_name": "Pol",
+        "email": "bernd.pol at online.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

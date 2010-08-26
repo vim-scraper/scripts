@@ -1,0 +1,26 @@
+{
+  "script_id": "1345",
+  "name": "dmd",
+  "summary": "DigitalMars D language file type plugin(syntax, fold, compiler,include search)",
+  "script_type": "ftplugin",
+  "description": "It's a quite poor ftplugin,but it work.\n\nI permiss I will make a d language ftplugin as good as C/C++ have.\nHowever, This is first step.\n\nfeathers:\n   syntax highlight, it's official version.\n   syntax fold, quick and dirty way.\n   include search, set environment veriable DMD to dmd home, vim can search\nall module under $DMD/import for symbol under cursor.(normal [i, [I ). gf key-sequeue open the module under cursor, too\n   ctags support, there is a modified ctags support C/C++/D language.\n\ntodo:\n   make comment works well.\n   redesign syntax fold.\n   ",
+  "install_details": "put it in vimfiles or .vim\n\nfor windows(Ok, for M$ windows), ctags.exe can put in $VIMRUNTIME directory.\nsorry for linux binary absence. ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4562",
+      "filename": "d-vim.zip",
+      "script_version": "1.0",
+      "date": "2005-09-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8303",
+        "user_name": "solotony",
+        "first_name": "liang",
+        "last_name": "huang",
+        "email": "solotony at sohu.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "2036",
+  "name": "F6_Comment",
+  "summary": "Auto commenting that accepts Visual range",
+  "script_type": "utility",
+  "description": "Description:\nI don't know for sure that something like this does not already exist in Vim, but if it does, I can't find it.\n\nI recall Cream having this kind of functionallity mapped to <F6>,\nso to maintain consistency I've kept the convention.\n\nThis uses the current value of &cms / &commentstring to comment and uncomment code.\nIt works for ranges selected in Visual mode, or for the current line in all modes.\nNB. Comment strings may not include '@' or '+'\n(I don't know of any languages that use these characters for comments).\n\nHelp:\nUse <F6> to comment, and <S-F6> to uncomment\n",
+  "install_details": "Just put it in your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8018",
+      "filename": "F6_Comment.vim",
+      "script_version": "1.2",
+      "date": "2007-12-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13180",
+        "user_name": "dmaclay",
+        "first_name": "David",
+        "last_name": "Maclay",
+        "email": "dmaclay at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This version puts the first comment on a line after any leading whitespace."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7760",
+      "filename": "F6_Comment.vim",
+      "script_version": "1.1",
+      "date": "2007-10-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13180",
+        "user_name": "dmaclay",
+        "first_name": "David",
+        "last_name": "Maclay",
+        "email": "dmaclay at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Set the vim file format to \"unix\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7742",
+      "filename": "F6_Comment.vim",
+      "script_version": "1.0",
+      "date": "2007-10-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13180",
+        "user_name": "dmaclay",
+        "first_name": "David",
+        "last_name": "Maclay",
+        "email": "dmaclay at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

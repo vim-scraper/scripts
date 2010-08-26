@@ -1,0 +1,26 @@
+{
+  "script_id": "3072",
+  "name": "self.vim",
+  "summary": "Vim Self Object Prototype System",
+  "script_type": "utility",
+  "description": "The self.vim library provides a base Object Prototype for a VimScript object hierarchy which includes\n method and data inheritance. Method  dispatch is static rather than dynamic - a VimScript \nfunction calling limitation. Included are a couple of limited test scripts. Self.vim is used extensively \nby the Scala comment generating/formating script scommenter.vim version-2.0                                                      \n(http://www.vim.org/scripts/script.php?script_id=3047). If you are interested to see larger, \nmore complex usage of self.vim, you\nmight download the scommenter.vim script and see how the ObjectPrototype\nis used there - there are four different object hierarchies.\n(FYI: Scala is a very progressive, large application language, If you are\na Java, C#, C++, Ruby, Python, Erlang application programmer you might\nwant to investigate Scala - or not.)\n",
+  "install_details": "Self.vim is a library to be used by other scripts so there is\nreally no standalone installation.\nHere is how I test the self.vim script, in my .vimrc I have:\n    source $HOME/.vim/self.vim\n    source $HOME/.vim/self.demo1.vim\n    map t1 :call Demo1()<CR>\n    source $HOME/.vim/self.demo2.vim\n    map t2 :call Demo2()<CR>\nI then start vim (no file) and enter 't1' and 't2'.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12886",
+      "filename": "self.zip",
+      "script_version": "1.0",
+      "date": "2010-04-22",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "6544",
+        "user_name": "rme",
+        "first_name": "richard",
+        "last_name": "emberson",
+        "email": "richard.n.emberson at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

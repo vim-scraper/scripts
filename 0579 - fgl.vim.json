@@ -1,0 +1,42 @@
+{
+  "script_id": "579",
+  "name": "fgl.vim",
+  "summary": "Indent script for IBM INFORMIX 4GL/4Js programs",
+  "script_type": "indent",
+  "description": "The script indents IBM INFORMIX 4GL/4Js programs.\n\nAuto-indent happens when you go to the next line or next word after typing\n1. A whole keyword (e.g. ELSE, WHEN, ON, ...)\n2. A keyword phrase (e.g \"BEFORE FIELD\", \"AFTER FIELD\").\n",
+  "install_details": "1. Place the script(fgl.vim) in \"indent\" directory, which is found where vim editor is installed.\n2. Add the following lines in .vimrc/.gvimrc/_vimrc\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \nset et ts=3 sw=3 ai\nfiletype indent on\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12591",
+      "filename": "fgl.vim",
+      "script_version": "1.2",
+      "date": "2010-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1671",
+        "user_name": "timkebox",
+        "first_name": "Tim",
+        "last_name": "Kim",
+        "email": "cool.msg at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Handling multi line statement\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1795",
+      "filename": "fgl.vim",
+      "script_version": "1.12",
+      "date": "2003-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1671",
+        "user_name": "timkebox",
+        "first_name": "Tim",
+        "last_name": "Kim",
+        "email": "cool.msg at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fix :\nProblem : The ELSE statement is not unindented.\nIt's fixed.\n"
+    }
+  ]
+}

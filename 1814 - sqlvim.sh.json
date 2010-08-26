@@ -1,0 +1,26 @@
+{
+  "script_id": "1814",
+  "name": "sqlvim.sh",
+  "summary": "Run Oracle SQL*Plus commands from vim",
+  "script_type": "utility",
+  "description": "This shell script runs Oracle SQL*Plus commands/sql statements in a register from within vim and inserts the results at the location marking the end of the register.\n\nThe simplest way to use the script is to install it per the instructions in install details, type your SQL code in the vim editor. For example,\n\nMark the line starting with column as ... ma\nGo to line starting with select, then ... \\sx\n\ncolumn tc format a10\nset linesize 120\nselect 'hello' tc from dual;\n\nTC\n----------\nhello\n\n1 row selected.\n\nAnything that you can do on the SQL*Plus command line, you can do from within vim using this script. I have tested it on cygwin and hp/ux.\n",
+  "install_details": "1. Copy script to some directory in your path.\n2. chmod 744 to make it executable.\n3. Add a shell variable to your .bash_profile / .profile called ORA_LOGIN. \n    e.g. ORA_LOGIN=scott/tiger@ora1\n4. Add the following macros to your .vimrc:\n\" maps for sqlvim.sh execution\nmap <Leader>sx  zz:'a,.!sqlvim.sh<CR>\nmap <Leader>sc  zz:.!sqlvim.sh<CR>\n5. Source your .bash_profile and startup vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6837",
+      "filename": "sqlvim.sh",
+      "script_version": "1.0",
+      "date": "2007-03-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11912",
+        "user_name": "dushyant",
+        "first_name": "dushyant",
+        "last_name": "jhamb",
+        "email": "dushyant.jhamb at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

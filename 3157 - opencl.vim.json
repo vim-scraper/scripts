@@ -1,0 +1,26 @@
+{
+  "script_id": "3157",
+  "name": "opencl.vim",
+  "summary": "Syntax file for OpenCL 1.1",
+  "script_type": "syntax",
+  "description": "Script provides syntax highlight for OpenCL (Open Computing Language) syntax files (*.cl).",
+  "install_details": "Place file within /syntax\nEdit filetype.vim:\n\nadd lines -  \n\" OpenCL\nau BufNewFile,BufRead *.cl\t\t\tsetf opencl\n\nRemove- (stop vim from recognizing *.cl as common lisp)\n*.cl from Lisp \n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13350",
+      "filename": "opencl.vim",
+      "script_version": "1.1",
+      "date": "2010-07-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "20507",
+        "user_name": "terenceou",
+        "first_name": "Terence",
+        "last_name": "Ou",
+        "email": "rivan_ at msn.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

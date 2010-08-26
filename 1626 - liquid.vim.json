@@ -1,0 +1,42 @@
+{
+  "script_id": "1626",
+  "name": "liquid.vim",
+  "summary": "Vim syntax file for Liquid Templates",
+  "script_type": "syntax",
+  "description": "This highlights Liquid Template Files ( http://home.leetsoft.com/liquid )\nIt recognizes tags, outputs and comments as well as highlighting \nRuby instance variables.\n\nIt sets the file type to html so that it highlights html as well. If this shouldn't be automatic for some reason, let me know how it should be and I'll change it.\n\nEnjoy ;)",
+  "install_details": "Copy this script to ~/.vim/syntax under *NIX systems (If someone could tell me what the directory is for Windows users, I'd appreciate it and add it here as well).\n\nAdd this line to your ~/.vim/filetype.vim:\n\nau BufNewFile,BufRead *.liquid\t\t\tsetf liquid",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6028",
+      "filename": "liquid.vim",
+      "script_version": "2",
+      "date": "2006-08-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10577",
+        "user_name": "minciue",
+        "first_name": "Eugen",
+        "last_name": "Minciu",
+        "email": "minciue at gmail.com",
+        "homepage": "http://minciue.blogger.com"
+      },
+      "release_notes": "This version doesn't set the filetype to HTML anymore.\nIt now works correctly with Tim Pope's SVN version of rails.vim which will support highlighting Liquid through this file.\nThe identifier names where changed to start with a lowercase letter (so omnicompletion should now work)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6024",
+      "filename": "liquid.vim",
+      "script_version": "1",
+      "date": "2006-08-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10577",
+        "user_name": "minciue",
+        "first_name": "Eugen",
+        "last_name": "Minciu",
+        "email": "minciue at gmail.com",
+        "homepage": "http://minciue.blogger.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

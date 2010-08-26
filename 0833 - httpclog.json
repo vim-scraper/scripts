@@ -1,0 +1,26 @@
+{
+  "script_id": "833",
+  "name": "httpclog",
+  "summary": "Syntax highlighting for a combined http log file",
+  "script_type": "syntax",
+  "description": "This syntax file highlights apache logs, specifically the \"combined\" format ones.  The \"combined\" format includes the user agent and the referrer in the logfile.  This version is very basic.",
+  "install_details": "Upload the script to your vimfiles/syntax directory.\nAdd the following to your .vimrc or filetype.vim:\n\naugroup filetypedetect\n\tau BufNewFile,BufRead access.log*\tsetf httpclog\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2524",
+      "filename": "httpclog.vim",
+      "script_version": "0.1",
+      "date": "2003-11-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3939",
+        "user_name": "bdamm",
+        "first_name": "Ben",
+        "last_name": "Damm",
+        "email": "bdamm-vim at dammfine.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

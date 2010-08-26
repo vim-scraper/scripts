@@ -1,0 +1,90 @@
+{
+  "script_id": "2695",
+  "name": "EnhancedJumps",
+  "summary": "Enhanced jump list navigation commands. ",
+  "script_type": "utility",
+  "description": "DESCRIPTION\nThis plugin enhances the built-in CTRL-I / CTRL-O jump commands: \n- After a jump, the line, column and text of the next jump target are printed: \n    next: 3,9 ENHANCED JUMPS    by Ingo Karkat\n- An error message and the valid range for jumps in that direction is printed\n  if a jump outside the jump list is attempted: \n    Only 8 older jump positions.\n- In case the next jump would move to another buffer, only a warning is\n  printed at the first attempt:\n    next: EnhancedJumps.vim\n  The jump to another buffer is only done if the same jump command is repeated\n  once more immediately afterwards; like this: Pressing CTRL-O, noticing the\n  warning, then quickly pressing CTRL-O again to overcome the warning. \n  With this, you can eagerly jump around the current buffer. Because you will\n  be warned when a jump would move to another buffer, you're much less likely\n  to get lost. \n\nUSAGE\nSimply use the CTRL-O and CTRL-I commands to go to an older / newer cursor\nposition in the jump list. When a warning \"next: {file}\" is echoed, quickly\nrepeat the jump command to move to that buffer (a [count] need to not be\ntyped again; if you do include the [count], it must be the same as before). \nIf you do not want to move to that buffer, just ignore the warning, and\ncontinue browsing the current buffer. On the next jump attempt, the warning\nwill be repeated. ",
+  "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim EnhancedJumps.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.0 or higher. \n\nCONFIGURATION\nIf you do not want to override the built-in jump commands and use separate\nmappings, map your keys to the <Plug>... mapping targets _before_ sourcing\nthis script (e.g. in your vimrc). \n    nmap { <Plug>EnhancedJumpsOlder\n    nmap } <Plug>EnhancedJumpsNewer",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13425",
+      "filename": "EnhancedJumps.vba.gz",
+      "script_version": "1.13",
+      "date": "2010-07-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "BUG: Jump opened fold at current position when \"No newer/older jump position\"\nerror occurred. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11025",
+      "filename": "EnhancedJumps.vba.gz",
+      "script_version": "1.12",
+      "date": "2009-07-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "BF: Trailing space after the command to open the folds accidentally moved cursor one position to the right of the jump target. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11009",
+      "filename": "EnhancedJumps.vba.gz",
+      "script_version": "1.11",
+      "date": "2009-07-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "BF: A '^\\)' in the jump text caused \"E55: Unmatched \\)\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10955",
+      "filename": "EnhancedJumps.vba.gz",
+      "script_version": "1.10",
+      "date": "2009-07-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- ENH: To overcome the next buffer warning, a previously given [count] need not be specified again. A jump command with a different [count] than last time now is treated as a separate jump command and thus doesn't overcome the next buffer warning. \n- BF: Folds at the jump target must be explicitly opened. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10920",
+      "filename": "EnhancedJumps.vba.gz",
+      "script_version": "1.00",
+      "date": "2009-07-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

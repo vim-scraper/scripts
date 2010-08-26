@@ -1,0 +1,58 @@
+{
+  "script_id": "3133",
+  "name": "open-browser.vim",
+  "summary": "Open URI with your favorite browser from your favorite editor",
+  "script_type": "utility",
+  "description": "SYNOPSIS\n\nnmap map-you-like <Plug>(openbrowser-open)\nvmap map-you-like <Plug>(openbrowser-open)\n\n\" In command-line\n:OpenBrowser http://google.com/\n\n\nENVIRONMENTS\n\nWe have tested on these environments.\n- Ubuntu 9.10 GNOME\n- Windows XP\n- Cygwin\n- Mac OS X\n\nThanks for testing:\n- mfumi (Mac OS X)\n- iicebar (Windows XP)\n\nLATEST VERSION\nhttp://github.com/tyru/open-browser.vim",
+  "install_details": "unzip zip file, and move them to ~/.vim or ~/vimfiles (Windows).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13256",
+      "filename": "openbrowser.zip",
+      "script_version": "0.0.2",
+      "date": "2010-06-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "- Rename |g:openbrowser_isfname| to |g:openbrowser_iskeyword|.\nvariable |g:openbrowser_isfname| is still available for\nbackward compatibility.\n- Specialize |g:openbrowser_iskeyword| value to get URI in <cword>.\n- More readable messages."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13249",
+      "filename": "openbrowser.zip",
+      "script_version": "0.0.1",
+      "date": "2010-06-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "- Support opening file path.\n- Fix minor bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13244",
+      "filename": "openbrowser.zip",
+      "script_version": "0.0.0",
+      "date": "2010-06-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

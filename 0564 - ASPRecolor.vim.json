@@ -1,0 +1,42 @@
+{
+  "script_id": "564",
+  "name": "ASPRecolor.vim",
+  "summary": "In ASPVBS buffers, give JS, ASP, and HTML sections different guibg colors",
+  "script_type": "ftplugin",
+  "description": "I edit ASP code a lot.  There's usually three different langauges in the same file: HTML, Vbscript, and Javascript.  The ASPVBS filetype plugin handles this well, including the syntaxes from all three types, but it gets hard for me to distinguish them on the screen.  I wanted to assign different background colors to the different regions - but they're all highlight links, so if I change, say, Comment, then all of HTMLComment, AspVBSComment, and javascriptComment will all change too.\n\nThis plugin changes that.  After an ASPVBS buffer is loaded, it recolors every ASP and javascript syntax item with a new background color - by retrieving the underlying linked highlight definition and redefining the specific highlight item.  ASP becomes dramatically easier to read. See the included file compare.asp.html (also here: http://member.newsguy.com/~rpresser/compare.asp.html).\n\nRequires the MultVals plugin <http://www.vim.org/scripts/script.php?script_id=171&gt; for array handling.\n\nThis technique could be applicable to other kinds of files that have multiple languages in them, like HTML/CSS, or C++ with embedded SQL, or maybe even someday XML.\n",
+  "install_details": "Either source this from your vimrc, or just drop it in a sytem or user plugins/ folder.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2155",
+      "filename": "ASPRecolor.vim",
+      "script_version": "0.95",
+      "date": "2003-07-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "745",
+        "user_name": "rpresser",
+        "first_name": "Ross",
+        "last_name": "Presser",
+        "email": "rpresser at gmail.com",
+        "homepage": "http://rpresser.blogspot.com"
+      },
+      "release_notes": "Vim 6.2 released different versions of the ASP/VBS and HTML/Javascript syntax files, and this broke the hard-coded Recolors in ASPRecolor 0.90.  This version introduces a function that walks the syntax clusters to determine what items to recolor.  It also tries a bit harder to avoid error messages.  **NOW REQUIRES MultVals.vim*** <http://www.vim.org/scripts/script.php?script_id=171&gt;"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1722",
+      "filename": "ASPRecolor.zip",
+      "script_version": "0.90",
+      "date": "2003-02-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "745",
+        "user_name": "rpresser",
+        "first_name": "Ross",
+        "last_name": "Presser",
+        "email": "rpresser at gmail.com",
+        "homepage": "http://rpresser.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

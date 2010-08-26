@@ -1,0 +1,26 @@
+{
+  "script_id": "1413",
+  "name": "brsccs.vim",
+  "summary": "an SCCS browser",
+  "script_type": "utility",
+  "description": "        It allows you to scroll the history back and forth  looking at how the code has changed in a convenient way.\n\n       Very helpful if you work with Sun Studio + Vim + TeamWare.\n\n        To start browsing an sccs file press ,v\n\n        Two windows will pop up: sccs versions and sccs browser.\n        In the sccs browser you see the text annotated by the version numbers.\n        Each line has the version number when it has changed the last time.\n        Press enter in any such line and you jump right to that version.\n        Press ,< and you jump right \"under\" that version. I.e. right before\n        that line was changed.\n       The plugin tries to track your position in the file so that you stay on the same line when move through the history\n\n        enter           go to the version that annotation specifies\n        ,v              start the SCCS browser\n        ,-              go back one version\n        ,+ or ,=        go forward one version\n        ,<              go one version earlier than the annotation specifies\n\n",
+  "install_details": "Drop the brsccs.vim into ~/.vim/plugin/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4828",
+      "filename": "brsccs.tar.gz",
+      "script_version": "0.1",
+      "date": "2005-11-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8844",
+        "user_name": "horsh",
+        "first_name": "Alexander",
+        "last_name": "Gorshenev",
+        "email": "horsh at mail.ru",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

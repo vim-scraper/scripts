@@ -1,0 +1,26 @@
+{
+  "script_id": "1940",
+  "name": "drools.vim",
+  "summary": "Syntax highlighting for DROOLS Rules Sets.",
+  "script_type": "syntax",
+  "description": "Syntax highlighting for \"Rules Set\" files for the DROOLS Rules Engine, a.k.a, JBoss Rules: http://labs.jboss.com/jbossrules/. This does a ton of borrowing from the existing Java syntax file, as written by Claudio Fleiner <claudio@fleiner.com>, so I hope he doesn't mind. This is just an initial version that I wrote to make writing DROOLS files a little more bearable, so if you see any desired improvements, just e-mail me and let me know. Thanks!",
+  "install_details": "In the \"autocmds\" section of your .vimrc file, just add this line:\nau bufreadpost,filereadpost *.drl set ft=drools",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7315",
+      "filename": "drools.vim",
+      "script_version": "0.1",
+      "date": "2007-07-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12673",
+        "user_name": "AlanDaniels",
+        "first_name": "Alan",
+        "last_name": "Daniels",
+        "email": "alan at alandaniels.com",
+        "homepage": "http://www.alandaniels.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

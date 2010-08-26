@@ -1,0 +1,666 @@
+{
+  "script_id": "453",
+  "name": "HTML.zip",
+  "summary": "HTML/XHTML editing macros and menus",
+  "script_type": "utility",
+  "description": "This is a set of HTML/XHTML mappings and menus for Vim 7 or later. The mappings will be local to the buffer so they won't interfere if you edit other files in the same Vim session.\n\nThe macros are automatically insert a tag and position the cursor at the logical insert point.  For example, in insert the mapping \";ah\" inserts <A HREF=\"\"></A> and leaves the cursor between the double quotes.  If you were to visually highlight some text then type \";ah\" it would wrap the tag around the text.  For example:\n        some text\nBecomes:\n        <A HREF=\"\">some text</A>\nWith the cursor positioned between the double quotes in insert mode. Or if you used \";aH\" instead:\n        <A HREF=\"some text\"></A>\nWith the cursor positioned between the > and the < in insert mode.\n\nThere are many other features, such as a configurable template inserted with the \";html\" normal mode macro, browser remote control mappings, etc.\n\nSee http://christianrobinson.name/vim/HTML/faq.shtml for frequently asked questions.\n\nSee http://christianrobinson.name/vim/HTML/HTML.html to preview the help file.",
+  "install_details": "Put \":filetype plugin on\" in your vimrc, then extract HTML.zip in your runtime directory (~/.vim for Unix; see \":help 'runtimepath'\"). Then run \":helptags <directory>/doc\" within vim. \n\nSee http://christianrobinson.name/vim/HTML/ for more information, other archive formats, newer versions, and extra files.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13517",
+      "filename": "HTML.zip",
+      "script_version": "0.36.4",
+      "date": "2010-08-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- More character entity mappings\n- Minor changes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13274",
+      "filename": "HTML.zip",
+      "script_version": "0.36.3",
+      "date": "2010-07-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Various minor fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11606",
+      "filename": "HTML.zip",
+      "script_version": "0.36.1",
+      "date": "2009-10-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- b:no_html_maps can be set like g:no_html_maps\n- Israel Chauca Fuentes provided MacOS browser control code\n- minor fixes and changes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8808",
+      "filename": "HTML.zip",
+      "script_version": "0.35.1",
+      "date": "2008-06-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Try to safely escape shell commands"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8783",
+      "filename": "HTML.zip",
+      "script_version": "0.35",
+      "date": "2008-06-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Added:\n  + The colors in the color menu can be displayed in a split window under the GUI, and colors can be selected from the display (;# mapping and :ColorSelect command)\n  + g:no_html_map_override can be set to prevent the plugin from overriding already existing mappings, and now warning messages are printed when overriding takes place\n  + g:no_html_maps can be set to a regular expression to tell the plugin not to define matching mappings\n  + g:html_map_entity_leader can be used to define the character entity mapping leader--works like g:html_map_leader\n  + MangleImageTag.vim (used by the ;mi mapping) no longer moves the cursor\n  + Miscellaneous minor additions\n- Miscellaneous fixes \n- Significant refactoring to make maintaining the plugin easier"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8654",
+      "filename": "HTML.zip",
+      "script_version": "0.34",
+      "date": "2008-05-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Removed code that was supporting Vim 6, thus:\n  + MangleImageTag() used by ;mi mapping should now always compute correct size\n  + Various code was simplified"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8620",
+      "filename": "HTML.zip",
+      "script_version": "0.33.1",
+      "date": "2008-04-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Character entities for arrows and the Greek alphabet added\n- This is the last version that will support Vim 6"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8556",
+      "filename": "HTML.zip",
+      "script_version": "0.32.2",
+      "date": "2008-04-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Fixed:\n  + Some of the \"boolean\" configuration variables weren't being tested right (Keith Lancaster)\n  + Could get an error when (re-)initializing the menus\n- Changed:\n  + The ;& and ;% normal mode mappings now behave as operator (motion) mappings--use ;&l or ;%l to emulate the old behavior\n- Added:\n  + :HTMLmappings reload/html/xhtml can force reloading of the entire script, or switch the mappings into html/xhtml mode\n- misc. minor fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8422",
+      "filename": "HTML.zip",
+      "script_version": "0.30",
+      "date": "2008-03-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Fixed:\n  + Exclude leading indent from the start tag for visual mappings when in visual-line mode\n- Added:\n  + ;tH (<THEAD>), ;tf (<TFOOT>), and ;tb (<TBODY>) mappings added"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7639",
+      "filename": "HTML.zip",
+      "script_version": "0.29.2",
+      "date": "2007-09-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Fixed:\n  + Tab mapping wasn't positioning the cursor right when there were multiple spaces between a opening and closing tag\n- Added:\n  + Make the <html> tag include an xmlns attribute for XHTML"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7441",
+      "filename": "HTML.zip",
+      "script_version": "0.29",
+      "date": "2007-08-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Added:\n  + g:html_tag_case_autodetect configuration variable\n- Fixed:\n  + The HTMLnextInsertPoint() function was causing a press enter prompt\n  + 'formatoptions' could make visual mappings behave wrong\n- Other minor additions and fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7310",
+      "filename": "HTML.zip",
+      "script_version": "0.28.2",
+      "date": "2007-06-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Fixed:\n  + Defining the menus failed entirely if g:no_html_toolbar was set\n- Changes:\n  + Add \"Select Tag\" and \"Select Inner Tag\" to the PopUp menu\n  + Minor tweaks"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7297",
+      "filename": "HTML.zip",
+      "script_version": "0.28",
+      "date": "2007-06-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Fixed:\n  + Visual mode mappings weren't operating properly when 'selection' was set to \"exclusive\"\n- Added:\n  + ;db -- default browser mapping for Windows"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7233",
+      "filename": "HTML.zip",
+      "script_version": "0.27.6",
+      "date": "2007-06-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Fixed:\n  + Menus weren't getting disabled/enabled properly\n- Changed:\n  + <DT> and <DD> tags now have closing tags and visual mappings\n  + ;;-style mapping for whatever g:html_map_leader is set to\n  + Internal code changes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7211",
+      "filename": "HTML.zip",
+      "script_version": "0.27.4",
+      "date": "2007-06-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Added:\n  + Smart handling of <EM></EM> tags\n  + ;% mapping added -- like ;& but convert to %XX hex strings for URIs\n- Changed:\n  + Moved ;ns / ;nns mappings to ;ne / ;nne, and moved ;nj mappings to ;ns"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7184",
+      "filename": "HTML.zip",
+      "script_version": "0.27.1",
+      "date": "2007-05-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Added:\n  + g:force_html_menu can be set to force the HTML menus to be defined in the console\n  + g:no_html_menu can be set to stop the menu and toolbar items from being defined\n  + w3m browser preview under *nix\n- Minor changes and fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7143",
+      "filename": "HTML.zip",
+      "script_version": "0.26.8",
+      "date": "2007-05-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Fixed:\n  + MangleImageTag() used by ;mi mapping was missing some quotes and computing the wrong sizes when 'encoding' was UTF8 or similar\n  + Tab on the end of a line in insert mode moved the cursor a character left\n  + Temporarily clear the 'comments' option for the ;js mapping so extraneous // comments weren't inserted\n- Various minor changes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7019",
+      "filename": "HTML.zip",
+      "script_version": "0.26.5",
+      "date": "2007-04-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Fixed:\n  + When 'filetype' was set in a modeline \":HTMLmappings disable\" didn't work\n  + Mappings defined with HTMLmap()/HTMLmapo() outside the script weren't redefined when :HTMLmappings disable then enable was run\n- Added:\n  + ;aH, ;aT, ;aN, etc. now work in insert mode -- they get data from the clipboard\n  + ;nj mapping for <NOSCRIPT><CR></NOSCRIPT> added\n  + visual and normal mode mappings for ;ob\n- Various minor changes and fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6967",
+      "filename": "HTML.zip",
+      "script_version": "0.26",
+      "date": "2007-04-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Added:\n  + \":HTMLmappings disable/enable\" command\n  + %vimversion% template token\n- Fixed:\n  + Some recently added mappings weren't in the menu\n  + Inserting the HTML template could trigger the \"Press ENTER\" prompt"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6926",
+      "filename": "HTML.zip",
+      "script_version": "0.25.5",
+      "date": "2007-03-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- New mappings:\n  + ;sj mapping -- like ;js but for sourced JavaScript\n  + ;^ mapping to decode &#...; encoded strings\n  + ;& in insert mode inserts a literal &\n- Minor changes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6857",
+      "filename": "HTML.zip",
+      "script_version": "0.25.1",
+      "date": "2007-03-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Allow b:html_template to be set in addition to g:html_template\n- HTMLnextInsertPoint() used by the <tab> mapping now handles comments, and no longer requires an argument\n- ;s4 mapping added -- Same as ;4 only strict rather than transitional\n- %time%, %time12%, and %time24% template tokens added, and %date% token is now customizable\n- b:do_xhtml_mappings was being ignored"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6766",
+      "filename": "HTML.zip",
+      "script_version": "0.24",
+      "date": "2007-02-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- In rare cases the script tried to re-enable the ToolBar buttons when they didn't exist\n- g:no_html_tab_mapping can be defined to 'move' the <tab> mappings to ;<tab>\n- misc. fixes and additions"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6510",
+      "filename": "HTML.zip",
+      "script_version": "0.23.2",
+      "date": "2006-12-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Bug when testing for g:html_charset\n- Fix a couple of the forms mappings\n- Documentation updates and fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6506",
+      "filename": "HTML.zip",
+      "script_version": "0.23.1",
+      "date": "2006-12-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Dynamic charset support for the template and the ;ct mapping, based on the 'fileencoding', and 'encoding' options (but the conversion table is limited, see \":help html-author-notes\")\n- <option> tag wasn't properly closed"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6497",
+      "filename": "HTML.zip",
+      "script_version": "0.22.2",
+      "date": "2006-12-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- browser_launcher.vim: Bug in detecting the remote command\n- ;me mapping wasn't properly positioning the cursor\n- Minor documentation fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6414",
+      "filename": "HTML.zip",
+      "script_version": "0.22.1",
+      "date": "2006-11-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Make the leader of the ;-mappings configurable with g:html_map_leader\n- Fix error when g:no_html_toolbar is set"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6279",
+      "filename": "HTML.zip",
+      "script_version": "0.21.2",
+      "date": "2006-10-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- ;im mapping wasn't properly positioning the cursor\n- Minor improvement to the HTMLnextInsertPoint function used by the tab mapping"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6253",
+      "filename": "HTML.zip",
+      "script_version": "0.21",
+      "date": "2006-10-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Basic support for XHTML added--see \":help g:do_xhtml_mappings\"\n- Misc. minor fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5785",
+      "filename": "HTML.zip",
+      "script_version": "0.20.4",
+      "date": "2006-05-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- ;h1 - ;h6 and mappings no longer create center aligned tags, ;hr no longer has a default width. Use ;H1 - ;H6 / ;Hr if you still want the old default behavior.\n- Don't display menu/toolbar entries for browsers that don't exist. (Unix only)\n- Allow .-repeating of operator mappings to work properly.\n- Code improvements and bug fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4991",
+      "filename": "HTML.zip",
+      "script_version": "0.19",
+      "date": "2006-01-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Smart-handling of certain tags (bold, italic, underline, comments) if syntax highlighting is on."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4921",
+      "filename": "HTML.zip",
+      "script_version": "0.18",
+      "date": "2005-12-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Implemented normal mode mappings that take an operator (motion) for Vim 7."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4694",
+      "filename": "HTML.zip",
+      "script_version": "0.17.1",
+      "date": "2005-10-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Some visual mappings had insert offset problems when 'indentexpr' was set.\n- Author email in templates wasn't being encoded (bug since the template became configurable)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4657",
+      "filename": "HTML.zip",
+      "script_version": "0.16.2",
+      "date": "2005-10-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "Some visual mappings didn't work with the extra code used to prevent a (visual)bell."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4427",
+      "filename": "HTML.zip",
+      "script_version": "0.16",
+      "date": "2005-07-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Fixed some of the forms visual mappings.\n- Added code to prevent a (visual)bell with some of the visual mappings when 'showmatch' was enabled."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4299",
+      "filename": "HTML.zip",
+      "script_version": "0.15.1",
+      "date": "2005-05-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- MangleImageTag was getting the width and height of gifs reversed.\n- Other minor bugs fixed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3109",
+      "filename": "HTML.zip",
+      "script_version": "0.15",
+      "date": "2004-06-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- A bug crept in that prevented the work-around for the GTK2 toolbar pixmap bug from working."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2965",
+      "filename": "HTML.zip",
+      "script_version": "0.14",
+      "date": "2004-04-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- ;& mapping to change the visual selection or character under the cursor to its &#...; equivalent.\n- ;mi mapping to automatically update the WIDTH/HEIGHT attributes in an IMG tag. (MangleImageTag.vim included. -- Experimental! See \":help ;mi\".)\n- Misc. bug fixes and tweaks."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2838",
+      "filename": "HTML.zip",
+      "script_version": "0.13",
+      "date": "2004-03-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- The template used by ;html is now configurable.\n- Colors menu changed from a cascading menu to an alphabetic menu.\n- Misc. tweaks."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2459",
+      "filename": "HTML.zip",
+      "script_version": "0.12",
+      "date": "2003-11-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Insert mode mappings weren't buffer-local. (Error when removing Vim5 support.)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2426",
+      "filename": "HTML.zip",
+      "script_version": "0.11",
+      "date": "2003-10-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- HTML menu and ToolBar weren't being enabled sometimes when the script was loaded again.\n- Abandoned support for vim versions prior to 6.\n- More minor changes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2333",
+      "filename": "HTML.zip",
+      "script_version": "0.10",
+      "date": "2003-09-13",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Mozilla mappings added.\n- HTML encode author email (to prevent spam harvesters).\n- Work-around for a bug in the Vim GTK2 toolbar interface that doesn't properly find icons.\n- Other minor changes."
+    }
+  ]
+}

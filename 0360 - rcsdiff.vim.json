@@ -1,0 +1,74 @@
+{
+  "script_id": "360",
+  "name": "rcsdiff.vim",
+  "summary": "Visual rcsdiff",
+  "script_type": "utility",
+  "description": "This script will create a new command, 'Rcsdiff'.\n\nNAME\n        Rcsdiff - Compare RCS revisions to current working file.\n\nSYNOPSIS\n        :Rcsdiff [rev]\n\nARGUMENT\n        rev - Revision number. [Optional]\n \nDESCRIPTION\n        Display a diff comparison of the current working file and its\n        RCS (Revision Control System) revision.\n\n        An optional argument is provided to compare a specific revision.\n        If omitted, the latest revision will be used. This is useful for\n        determining changes since the last checkin.\n\nNOTES\n        See the rcsdiff script for more documentation and mappings.",
+  "install_details": "~/.vim/plugin/rcsdiff.vim\n\n* The RCS checkout utility, 'co', must be on your path.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4638",
+      "filename": "rcsdiff.vim",
+      "script_version": "1.2",
+      "date": "2005-09-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "855",
+        "user_name": "schmibly",
+        "first_name": "Brian",
+        "last_name": "Nelson",
+        "email": "nelsonbc at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* remove <leader> mapping \n* update error message handling"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3716",
+      "filename": "rcsdiff.vim",
+      "script_version": "1.1",
+      "date": "2004-12-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "855",
+        "user_name": "schmibly",
+        "first_name": "Brian",
+        "last_name": "Nelson",
+        "email": "nelsonbc at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "upate email address"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2649",
+      "filename": "rcsdiff.vim",
+      "script_version": "1.1",
+      "date": "2004-01-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "855",
+        "user_name": "schmibly",
+        "first_name": "Brian",
+        "last_name": "Nelson",
+        "email": "nelsonbc at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Update documentation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1068",
+      "filename": "rcsdiff.vim",
+      "script_version": "1.0",
+      "date": "2002-07-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "855",
+        "user_name": "schmibly",
+        "first_name": "Brian",
+        "last_name": "Nelson",
+        "email": "nelsonbc at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

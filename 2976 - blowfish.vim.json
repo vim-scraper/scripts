@@ -1,0 +1,26 @@
+{
+  "script_id": "2976",
+  "name": "blowfish.vim",
+  "summary": "blowfish function",
+  "script_type": "utility",
+  "description": "This is a port of blowfish function.\n\nlet encrypted = blowfish#encrypt(\"password\", \"data\", 1)\nlet decrypted = blowfish#decrypt(\"password\", encrypted, 1)\necho encrypted\n=> [113, 35, 42, 246, 6, 245, 188, 236]\necho decrypted\n=> [100, 97, 116, 97] (\"data\")",
+  "install_details": "Put file in your autoload directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12390",
+      "filename": "blowfish.vim",
+      "script_version": "1.0",
+      "date": "2010-02-16",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "11226",
+        "user_name": "yukihiro",
+        "first_name": "Yukihiro",
+        "last_name": "Nakadaira",
+        "email": "yukihiro.nakadaira at gmail.com",
+        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

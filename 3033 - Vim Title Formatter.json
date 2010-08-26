@@ -1,0 +1,26 @@
+{
+  "script_id": "3033",
+  "name": "Vim Title Formatter",
+  "summary": "Formats the gvim instance titlebar string for efficiency",
+  "script_type": "utility",
+  "description": "This simple script formats the title string of the gvim/vim instance in the following format:\n\n<servername/user-defined title> | <current filename> (<filepath>)\n\nA user-defined title will take precedence over the servername. If the servername and user-defined title are both not defined or blank, then the title is simply \n\n<filename> (<filepath>)\n\nIf you ever work on multiple projects (each with its files open in a single gvim instance), then using this script, a glance will tell you which instance you're looking at (based on servername or user-defined title)\n\n:SetVimTitleString <titlestring>\n\nwill set the title of the window.\n\n:ClearVimTitleString\n\nwill clear the title of the window.",
+  "install_details": "Simply copy the file into your .vim/plugin directory. \n\n:SetVimTitleString <titlestring>\n\nwill set the title of the window.\n\n:ClearVimTitleString\n\nwill clear the title of the window.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12738",
+      "filename": "titleformatter.vim",
+      "script_version": "0.1",
+      "date": "2010-03-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19448",
+        "user_name": "denselm",
+        "first_name": "Densel",
+        "last_name": "Santhmayor",
+        "email": "denselm at gmail.com",
+        "homepage": "http://saveourseconds.blogspot.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

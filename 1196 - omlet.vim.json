@@ -1,0 +1,218 @@
+{
+  "script_id": "1196",
+  "name": "omlet.vim",
+  "summary": "Much better OCaml indentation, and more...",
+  "script_type": "indent",
+  "description": "OMLet provides a much better indentation for Caml/OCaml files than the official one. It mostly behaves as tuareg-mode for emacs does. Omlet supports most of the language features, including objects. I believe that the result is already very convincing, check at (http://perso.ens-lyon.fr/david.baelde/productions/omlet.php). You are no more forced to switch to emacs for editing OCaml! And omlet also provides nice folding...\n\nOMLet is nearly stable, and will then be included as official OCaml indentation file in VIm. For now, it is available in the Debian package ocaml-tools.",
+  "install_details": "See the file INSTALL included in the tarball, or run make install blindly...\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4135",
+      "filename": "omlet-0.13.tar.gz",
+      "script_version": "0.13",
+      "date": "2005-04-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6830",
+        "user_name": "mrpingouin",
+        "first_name": "David",
+        "last_name": "Baelde",
+        "email": "david.baelde at ens-lyon.org",
+        "homepage": "http://perso.ens-lyon.fr/david.baelde"
+      },
+      "release_notes": "Add: support for 'c', \"=\" and [|..|]\nBug: parsing of expression and comment un-skipping\nComments are now always aligned on the next block"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4074",
+      "filename": "omlet-0.12.tar.gz",
+      "script_version": "0.12",
+      "date": "2005-03-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6830",
+        "user_name": "mrpingouin",
+        "first_name": "David",
+        "last_name": "Baelde",
+        "email": "david.baelde at ens-lyon.org",
+        "homepage": "http://perso.ens-lyon.fr/david.baelde"
+      },
+      "release_notes": "Bug: omlet now overrides correctly the caml.vim files: autodetect used to do a useless job for syntax and ftplugin...\nAdd: OCaml modeline\nAdd: * in the middle of comments is customizable\nBug: Auto indent is less tricked by keyword prefixed names\nBug: Many minor bugs\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4020",
+      "filename": "omlet-0.11.tar.gz",
+      "script_version": "0.11",
+      "date": "2005-03-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6830",
+        "user_name": "mrpingouin",
+        "first_name": "David",
+        "last_name": "Baelde",
+        "email": "david.baelde at ens-lyon.org",
+        "homepage": "http://perso.ens-lyon.fr/david.baelde"
+      },
+      "release_notes": "Bug: The parsing functions were weak, and were rewritten.\nAdd: More infix operators are now understood.\nBug: Many other bugs corrected by the way.."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3996",
+      "filename": "omlet-0.10.tar.gz",
+      "script_version": "0.10",
+      "date": "2005-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6830",
+        "user_name": "mrpingouin",
+        "first_name": "David",
+        "last_name": "Baelde",
+        "email": "david.baelde at ens-lyon.org",
+        "homepage": "http://perso.ens-lyon.fr/david.baelde"
+      },
+      "release_notes": "Bug: indentation after while/for\nBug: parenthesis on the master keyword's line\nBug: ! was not parsed correctly\nBetter integration with the official file, new syntax & code annotations..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3993",
+      "filename": "omlet-0.9.tar.gz",
+      "script_version": "0.9",
+      "date": "2005-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6830",
+        "user_name": "mrpingouin",
+        "first_name": "David",
+        "last_name": "Baelde",
+        "email": "david.baelde at ens-lyon.org",
+        "homepage": "http://perso.ens-lyon.fr/david.baelde"
+      },
+      "release_notes": "Bug: folding works whatever the value of ocaml_indent_struct is\nBug: issues with patterns\nAnd cleaning, optimizations..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3947",
+      "filename": "omlet-0.8.tar.gz",
+      "script_version": "0.8",
+      "date": "2005-03-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6830",
+        "user_name": "mrpingouin",
+        "first_name": "David",
+        "last_name": "Baelde",
+        "email": "david.baelde at ens-lyon.org",
+        "homepage": "http://perso.ens-lyon.fr/david.baelde"
+      },
+      "release_notes": "Bug Corrected again the type definition indentation\nBug Better handling of comments when parsing\nAdd Better installation procedure, including system-wide installation\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3909",
+      "filename": "omlet.tar.gz",
+      "script_version": "0.7",
+      "date": "2005-02-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6830",
+        "user_name": "mrpingouin",
+        "first_name": "David",
+        "last_name": "Baelde",
+        "email": "david.baelde at ens-lyon.org",
+        "homepage": "http://perso.ens-lyon.fr/david.baelde"
+      },
+      "release_notes": "Add Flexible indentation nearly everywhere\nAdd Much more customization"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3879",
+      "filename": "omlet.tar.gz",
+      "script_version": "0.6",
+      "date": "2005-02-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6830",
+        "user_name": "mrpingouin",
+        "first_name": "David",
+        "last_name": "Baelde",
+        "email": "david.baelde at ens-lyon.org",
+        "homepage": "http://perso.ens-lyon.fr/david.baelde"
+      },
+      "release_notes": "Bug: Sum type definition\nAdd: Polymorphic variants\nAdd: Customization is starting\nMany minor fixes..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3867",
+      "filename": "omlet.tar.gz",
+      "script_version": "0.5",
+      "date": "2005-02-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6830",
+        "user_name": "mrpingouin",
+        "first_name": "David",
+        "last_name": "Baelde",
+        "email": "david.baelde at ens-lyon.org",
+        "homepage": "http://perso.ens-lyon.fr/david.baelde"
+      },
+      "release_notes": "Add Plugins from the official files\nCleaning of indentation code, minor fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3844",
+      "filename": "omlet.tar.gz",
+      "script_version": "0.4",
+      "date": "2005-02-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6830",
+        "user_name": "mrpingouin",
+        "first_name": "David",
+        "last_name": "Baelde",
+        "email": "david.baelde at ens-lyon.org",
+        "homepage": "http://perso.ens-lyon.fr/david.baelde"
+      },
+      "release_notes": "Add: indent 'and' in let/and/.../in\nBug: file didn't load twice correctly\nAnd more work on having it working for everybody"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3842",
+      "filename": "omlet.tar.gz",
+      "script_version": "0.3",
+      "date": "2005-02-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6830",
+        "user_name": "mrpingouin",
+        "first_name": "David",
+        "last_name": "Baelde",
+        "email": "david.baelde at ens-lyon.org",
+        "homepage": "http://perso.ens-lyon.fr/david.baelde"
+      },
+      "release_notes": "Add: Indentation of ;;\nBug: Variables names beginning with let\nBug: Toplevel \"let\" after end of modules/classes\nBug: Many Makefile fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3833",
+      "filename": "omlet.tar.gz",
+      "script_version": "0.2",
+      "date": "2005-02-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6830",
+        "user_name": "mrpingouin",
+        "first_name": "David",
+        "last_name": "Baelde",
+        "email": "david.baelde at ens-lyon.org",
+        "homepage": "http://perso.ens-lyon.fr/david.baelde"
+      },
+      "release_notes": "Minor (|| and && added) and major (bug with then let _ = ... ; ...) enhancements"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3826",
+      "filename": "omlet.tar.gz",
+      "script_version": "0.1",
+      "date": "2005-02-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6830",
+        "user_name": "mrpingouin",
+        "first_name": "David",
+        "last_name": "Baelde",
+        "email": "david.baelde at ens-lyon.org",
+        "homepage": "http://perso.ens-lyon.fr/david.baelde"
+      },
+      "release_notes": "Minor correction in Makefile."
+    }
+  ]
+}

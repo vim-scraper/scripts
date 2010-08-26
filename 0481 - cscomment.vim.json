@@ -1,0 +1,106 @@
+{
+  "script_id": "481",
+  "name": "cscomment.vim",
+  "summary": "Automates creation of /// comments for C# methods",
+  "script_type": "utility",
+  "description": "This script will generate the /// comment blocks for csharp for methods and constructors.  Simply place the cursor anywhere on the first line of the function prototype and hit <c-t>.  It also works on properties, constructors and classes.\n\nAdds summary, remarks, params (for all the params in the function), value (if its a property), and returns (if the function returns something.)\n\nWhile in comment mode you can tab and shift-tab through the tags, and return and backspace work as they should (enter inserts /// on the new line and backspace erases /// in one bs)\n\nYou can get back into comment mode by hitting <c-t> on an existing doc comment.\n\nQuestions, comments, concerns, bugs, ideas, etc, drop me an email.\n",
+  "install_details": "Just drop the script in your plugin directory.  You can modify it to change the map.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1447",
+      "filename": "cscomment.vim",
+      "script_version": "1.3b",
+      "date": "2002-11-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1234",
+        "user_name": "ajensen",
+        "first_name": "Aaron",
+        "last_name": "Jensen",
+        "email": "aj at mostafa.net",
+        "homepage": ""
+      },
+      "release_notes": "-Interfaces are no longer treated as properties\n-Formal ref params are now handled properly\n-Fixed backspace so it works on the last character."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1445",
+      "filename": "cscomment.vim",
+      "script_version": "1.3a",
+      "date": "2002-11-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1234",
+        "user_name": "ajensen",
+        "first_name": "Aaron",
+        "last_name": "Jensen",
+        "email": "aj at mostafa.net",
+        "homepage": ""
+      },
+      "release_notes": "-Fixed bug with insert point reworking\n-Finished backspace support, it now backspaces the /// in one backspace\n\nAnyone have a suggestion for restoring key mappings (like when to call the restore function... and autocmd or something?  <esc> seems too unreliable."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1440",
+      "filename": "cscomment.vim",
+      "script_version": "1.3",
+      "date": "2002-11-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1234",
+        "user_name": "ajensen",
+        "first_name": "Aaron",
+        "last_name": "Jensen",
+        "email": "aj at mostafa.net",
+        "homepage": ""
+      },
+      "release_notes": "-Fixed bug with things not getting unmapped properly (Note that things will not get unmapped if esc isn't hit to leave insert mode, I'll tackle that tomorrow)\n-Made it so properties now get a value tag\n-Reworked the way the insert point is found after a tab/s-tab\n-All tags now start out on one line per tag"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1438",
+      "filename": "cscomment.vim",
+      "script_version": "1.2",
+      "date": "2002-11-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1234",
+        "user_name": "ajensen",
+        "first_name": "Aaron",
+        "last_name": "Jensen",
+        "email": "aj at mostafa.net",
+        "homepage": ""
+      },
+      "release_notes": "-Commenter now allows you to edit your comments and will reshape them as necessary (add params, remove them, etc.) Just press <c-t> on an existing /// comment or a function with a /// comment.\n-Now restores previous imappings\n-Cleaned up a bit\nIf it deletes any tags you don't want it to, let me know. The only top level tags it remembers are remarks, summary, param, and returns."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1405",
+      "filename": "cscomment.vim",
+      "script_version": "1.1",
+      "date": "2002-11-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1234",
+        "user_name": "ajensen",
+        "first_name": "Aaron",
+        "last_name": "Jensen",
+        "email": "aj at mostafa.net",
+        "homepage": ""
+      },
+      "release_notes": "<cr> now adds a new line with ///, useful for long summaries.  <tab> and <s-tab> iterate through summary, params, and return tags so you can fill everything in quickly."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1401",
+      "filename": "cscomment.vim",
+      "script_version": "1.0",
+      "date": "2002-11-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1234",
+        "user_name": "ajensen",
+        "first_name": "Aaron",
+        "last_name": "Jensen",
+        "email": "aj at mostafa.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

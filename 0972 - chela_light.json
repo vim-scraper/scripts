@@ -1,0 +1,42 @@
+{
+  "script_id": "972",
+  "name": "chela_light",
+  "summary": "A light color scheme",
+  "script_type": "color scheme",
+  "description": "This is a light color scheme. I haven't included support for terminals yet, so only try it if you have the GUI running.\n\nMy goal was to make a color scheme that (1) doesn't scare you when you do a \":vert diffsplit\" :-), and (2) is more or less consistent with the standard Windows XP look.\n\nI'm pretty satisfied with the look, but if you're used to sit in front of the computer for 48 hours straight, you should either get yourself a life (recommended) or use a dark color scheme such as \"ps_color\" (vimscript #760) by P. Shizhu.\n\nOn Windows XP I prefer the Lucida Console font (\"set guifont=Lucida_Console:h10:cANSI\"), so this color scheme probably looks best with that font. On Linux it looks pretty OK with Bitstream Vera Sans Mono.",
+  "install_details": "Just drop it in your local color scheme directory (e.g. ~/.vim/colors/) and then execute the command \":colorscheme chela_light\".",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6052",
+      "filename": "chela_light.vim",
+      "script_version": "1.9",
+      "date": "2006-08-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3210",
+        "user_name": "Ticktack",
+        "first_name": "Stefan",
+        "last_name": "Karlsson",
+        "email": "sssstefan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "(1) Made MatchParen less scary. (2) Various minor changes for vim 7."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5555",
+      "filename": "chela_light.vim",
+      "script_version": "1.8",
+      "date": "2006-04-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3210",
+        "user_name": "Ticktack",
+        "first_name": "Stefan",
+        "last_name": "Karlsson",
+        "email": "sssstefan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed \"MatchParen\" from red to gren. The red color made it look to much like an error."
+    }
+  ]
+}

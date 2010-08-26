@@ -1,0 +1,58 @@
+{
+  "script_id": "3082",
+  "name": "tagmaster",
+  "summary": "Tags manipulation script",
+  "script_type": "utility",
+  "description": "Tagmaster is a plugin aimed for easy operating with tags and tag files. It allows generating tags for current project or file, deleting tags for given file, updating tags, etc.\nTags file name can be either specified explicitly, or deduced. Any tag file (found with tagfiles() function) is checked for if it can belong to current project (placed at the same directory level, or several levels up).\nBefore updating tags for given file, they all are deleted first to avoid duplicate tags.\nWhen generating tags for project, current filetype is considered and only files of this filetype are scanned. This is done to avoid collecting garbage from auxiliary files like config scripts, Makefiles, etc.\n\nNOTE: This plugin supports only exuberant ctags version. You should have it in your PATH environment.",
+  "install_details": "move tagmaster.vim and ftypes.vim to the same directory (any) and source tagmaster.vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12980",
+      "filename": "tagmaster-0.3.zip",
+      "script_version": "0.3",
+      "date": "2010-05-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19757",
+        "user_name": "vladvic",
+        "first_name": "Vladimir",
+        "last_name": "Pavluk",
+        "email": "vladvic_r at mail.ru",
+        "homepage": "http://www.pavluk.org"
+      },
+      "release_notes": "Fixed -recurse option behaviour on Windows OS.\nFixed possible exceeding command-line length limit.\nMerged extensions for both C and C++ sources as one project can easily contain both."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12969",
+      "filename": "tagmaster-0.2.zip",
+      "script_version": "0.2",
+      "date": "2010-05-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19757",
+        "user_name": "vladvic",
+        "first_name": "Vladimir",
+        "last_name": "Pavluk",
+        "email": "vladvic_r at mail.ru",
+        "homepage": "http://www.pavluk.org"
+      },
+      "release_notes": "Fixed tags-relative path translation.\nAdded -add / -noadd switches for TUpdate command (primarily for using with autocommands to update tags for saved file)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12936",
+      "filename": "tagmaster-0.1.zip",
+      "script_version": "0.1",
+      "date": "2010-05-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19757",
+        "user_name": "vladvic",
+        "first_name": "Vladimir",
+        "last_name": "Pavluk",
+        "email": "vladvic_r at mail.ru",
+        "homepage": "http://www.pavluk.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

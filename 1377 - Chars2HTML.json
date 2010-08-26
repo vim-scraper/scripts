@@ -1,0 +1,42 @@
+{
+  "script_id": "1377",
+  "name": "Chars2HTML",
+  "summary": "Converting special characters to HTML",
+  "script_type": "utility",
+  "description": "This plugin will convert between characters(ISO-8859-1) and their HTML \\\\\\\"&xxxxxx;\\\\\\\" entity in the current file. Its a rewrite of html_da vim vimscript #1163, this plugin can be used on all filetypes and contains more special characters and their HTML encoding. Nice plugin if you often copy text to use as HTML, with special european characters(ISO-8859-1), embedded in various programming languages.",
+  "install_details": "Put this file in your plugin directory ~/.vim/plugin.\nPut a mapping in your .vimrc to call the commands ConvertChars2Html and ConvertHtml2Chars like this:\nmap ,ch :ConvertChars2Html<CR>\nmap ,hc :ConvertHtml2Chars<CR>\n\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4718",
+      "filename": "Chars2HTML.vim",
+      "script_version": "1.1",
+      "date": "2005-11-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8507",
+        "user_name": "jjc",
+        "first_name": "Jens Juul",
+        "last_name": "Christensen",
+        "email": "jens at jjc.dk",
+        "homepage": "http://www.jjc.dk"
+      },
+      "release_notes": "Fixed a misspelling and added the option to also convert html back to chars again. Thanks to  François Wendling"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4659",
+      "filename": "Chars2HTML.vim",
+      "script_version": "1.0",
+      "date": "2005-10-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8507",
+        "user_name": "jjc",
+        "first_name": "Jens Juul",
+        "last_name": "Christensen",
+        "email": "jens at jjc.dk",
+        "homepage": "http://www.jjc.dk"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "2077",
+  "name": "phtml.vim",
+  "summary": "A syntax file to php templates.",
+  "script_type": "syntax",
+  "description": "Use this script to enable syntax coloring when using a mix of html and php or with template engines like those used by CakePHP, Symfony, SolarPHP and others\n\nTo use xmledit (vimscript #301) with phtml files change line 105 to:\n\nif &filetype == 'xml' || (!exists (\"g:did_xhtmlcf_inits\") && exists (\"g:xml_use_xhtml\") && (&filetype == 'html' || &filetype == 'xhtml' || &filetype == 'php' || &filetype == 'phtml' || &filetype == 'rhtml'))\n\nAnd line 168 to:\n\nif (&filetype == 'html' || &filetype == 'php' || &filetype == 'phtml') && (!exists (\"g:xml_no_html\"))\n\nAnd symlink:\n\ncd $HOME/.vim/ftplugin\nln -s xml.vim phtml.vim",
+  "install_details": "Just drop into .vim/syntax\n\nTo enable a better identation symlink the default html.vim to phtml.vim:\n\nln -s $VIMRUNTIME/indent/html.vim $HOME/.vim/indent/phtml.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7972",
+      "filename": "phtml.vim",
+      "script_version": "0.1.2",
+      "date": "2007-11-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10870",
+        "user_name": "khaoz",
+        "first_name": "Giuliani",
+        "last_name": "Sanches",
+        "email": "giulianisanches at gmail.com",
+        "homepage": "http://giulianisanches.blogspot.com"
+      },
+      "release_notes": "Changed name to phtml.\nNow the script will override the defaul phtml file (wich has some issues) and can be used with any template using php as script language."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7968",
+      "filename": "solar.vim",
+      "script_version": "0.1.1",
+      "date": "2007-11-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10870",
+        "user_name": "khaoz",
+        "first_name": "Giuliani",
+        "last_name": "Sanches",
+        "email": "giulianisanches at gmail.com",
+        "homepage": "http://giulianisanches.blogspot.com"
+      },
+      "release_notes": "This script was based on mako.vim by Armin Ronacher. So.. credits added ;)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7967",
+      "filename": "solar.vim",
+      "script_version": "0.1",
+      "date": "2007-11-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10870",
+        "user_name": "khaoz",
+        "first_name": "Giuliani",
+        "last_name": "Sanches",
+        "email": "giulianisanches at gmail.com",
+        "homepage": "http://giulianisanches.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

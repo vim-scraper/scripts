@@ -1,0 +1,26 @@
+{
+  "script_id": "902",
+  "name": "ratfor.vim",
+  "summary": "Vim syntax file for RATFOR",
+  "script_type": "syntax",
+  "description": "RATFOR is a dialect of FORTRAN made by\nthe creators of C. RATFOR is a preprocessor that provides C like control flow to FORTRAN.\n  \nSo ratfor.vim implements this idea.\n ",
+  "install_details": "Put ratfor.vim where vim could see it.\n\nUsualy ratfor scripts use .r as name extension. So add the next lines in filetype.vim\n\n\" RATFOR (Rational Fortran)\naugroup filetypedetect\nau BufNewFile,BufRead *.r       setf ratfor\nau BufNewFile,BufRead *.ratfor  setf ratfor\naugroup END\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2730",
+      "filename": "ratfor.vim",
+      "script_version": "0.1",
+      "date": "2004-02-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "986",
+        "user_name": "patoledo",
+        "first_name": "Patricio",
+        "last_name": "Toledo",
+        "email": "patoledo at ing.uchile.cl",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

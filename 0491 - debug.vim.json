@@ -1,0 +1,26 @@
+{
+  "script_id": "491",
+  "name": "debug.vim",
+  "summary": "Simple utility to assist in debugging vim scripts",
+  "script_type": "utility",
+  "description": "utility to help in debugging vim scripts\n  put this in the plugin directory\n  will add a new menu VIM->Debug->....\n    menu options \n      DebugOn - turns debug on - will display debug text in VIM scripts\n      DebugOff - turns debug off - will not display debug text in VIM scripts\n      Debug Status - displays debug status in status line\n      Insert Debug Text - insert debug text in vim scripts\n\nusage:\n  eg in following vim script\n\n1 fun! <SID>JavaImpGenerate()  \n2    let impfile = tempname()\n3    let currBuff = bufnr(\"%\")\n    \n  for debugging, insert debug text in above script as follows\n1 fun! <SID>JavaImpGenerate()  \n2    call Debug(\"entering JavaImpGenerate\")\n3    let impfile = tempname()\n4    call Debug(\"impfile = \" . impfile ) \n5    let currBuff = bufnr(\"%\")\n6    call Debug(\"currBuff = \" . currBuff ) \n\nThe debugging stubs in lines 2, 4, 6 will run only if Debug status is on.",
+  "install_details": "save debug.vim in plugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1453",
+      "filename": "debug.vim",
+      "script_version": "1.0.0",
+      "date": "2002-11-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "878",
+        "user_name": "kosiew",
+        "first_name": "kam onn",
+        "last_name": "siew",
+        "email": "kosiew at tm.net.my",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

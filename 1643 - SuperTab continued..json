@@ -1,0 +1,234 @@
+{
+  "script_id": "1643",
+  "name": "SuperTab continued.",
+  "summary": "Do all your insert-mode completion with Tab.",
+  "script_type": "utility",
+  "description": "Supertab aims to provide tab completion to satisfy all your insert completion\nneeds (:help ins-completion).\n\nThis version is a continuation of vimscript #182 by Gergely Kontra, who has\nasked me to take over support and maintenance.  This version contains many\nenhancements.\n\nYou can also find supertab in my github repository:\nhttp://github.com/ervandew/supertab\n\nSupertab provides several features to enhance your insert completion\nexperience:\n- You can set your favorite insert completion type (keyword, omni, etc.) as\n  supertab's default.\n- When using another completion type (ctrl-x ctrl-f), supertab will\n  temporarily make that the default allowing you to continue to use tab for\n  that completion. The duration is configurable to one of 'completion'\n  (retained until you exit the current completion mode), 'insert' (retained\n  until you leave insert mode), or 'session' (retained for the remainder of\n  your vim session).\n- Supertab provides a 'context' completion type which examines the text\n  preceding the cursor to decide which type of completion should be used\n  (omni, user, file, or keyword).  You can also plug in your own functions\n  which will be used to determine which completion type to use according to\n  your new functionality.\n- The 'context' completion can also be used to set the default completion type\n  according to what the file supports, based on a discovery mechanism which\n  you specify.\n- For users not yet familiar with all the various insert completion types that\n  vim supports, supertab also provides a :SuperTabHelp command which opens a\n  temporary buffer listing all the available types and the ability to easily\n  switch to that type.\n\nAfter installing, see the supertab help for more information (:h supertab).\n",
+  "install_details": "1. Download supertab.vba to any directory.\n2. Open the file in vim ($ vim supertab.vba).\n3. Source the file (:so %).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11853",
+      "filename": "supertab.vba",
+      "script_version": "1.0",
+      "date": "2009-12-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- fixed reverse cycling through result when using <c-n> completion\n- now distributed as a vimball with a help file (:h supertab).  Thanks to Christophe-Marie Duquesne."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11533",
+      "filename": "supertab.vim",
+      "script_version": "0.61",
+      "date": "2009-10-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a possible error that may occur in some rare conditions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11386",
+      "filename": "supertab.vim",
+      "script_version": "0.60",
+      "date": "2009-09-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Refactored the contextual completion and default discovery support.\n  - Context completion now supports plugable functions to determine which\n    completion type to use.\n  - Default discovery is now a part of context completion.\n- NOTE: Several non-backwards compatible configuration changes where made.\n  - g:SuperTabRetainCompletionType is now g:SuperTabRetainCompletionDuration\n    and accepts one of 'none', 'insert', or 'session'.\n  - new setting g:SuperTabCompletionContexts defines which context completion\n    functions are consulted.\n  - g:SuperTabDefaultCompletionTypeDiscovery is now\n    g:SuperTabContextDiscoverDiscovery and requires that\n    g:SuperTabContextDefaultCompletionType is set to 'context' and that\n    's:ContextDiscover' is in your g:SuperTabCompletionContexts list.\nPlease see the updated \"Global Variables\" fold in supertab.vim for additional\ndetails and examples."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10998",
+      "filename": "supertab.vim",
+      "script_version": "0.51",
+      "date": "2009-07-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Replaced internal function s:IsWordChar with vim's keyword character class (Thanks to Ingo Karkat for the patch)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10900",
+      "filename": "supertab.vim",
+      "script_version": "0.50",
+      "date": "2009-06-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added check for vim 7 or greater, otherwise disable supertab support (suggested by Vincent Lee).  Also, removed any remaining pre vim 7 logic that is no longer applicable."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9918",
+      "filename": "supertab.vim",
+      "script_version": "0.49",
+      "date": "2009-02-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "fixed case where new buffer may not be initialized by super tab (thanks to Tammer Saleh for reporting the issue)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9837",
+      "filename": "supertab.vim",
+      "script_version": "0.48",
+      "date": "2009-01-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed command line completion (ctrl-x ctrl-v) when invoked from supertab.  Thanks to Frank Chang for the patch."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9795",
+      "filename": "supertab.vim",
+      "script_version": "0.47",
+      "date": "2009-01-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "fixed issue with default completion discovery option if desired type is dependent on file type plugins.  Thanks to Andreas Schneider for reporting the issue."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9510",
+      "filename": "supertab.vim",
+      "script_version": "0.46",
+      "date": "2008-11-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for default completion type 'context', which will result in super tab attempting to determine which completion type to use (file, user/omni, keyword) based on the text preceding the cursor (Based on suggestion by François Beaubert).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8070",
+      "filename": "supertab.vim",
+      "script_version": "0.45",
+      "date": "2007-12-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- fixed possible completion error on first buffer as supertab may not have been properly initialized (thanks to bill emmons for discovering the error)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7904",
+      "filename": "supertab.vim",
+      "script_version": "0.44",
+      "date": "2007-11-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- added config variable to specify discovery list used to determine the default completion type to use for the current buffer. (based on request by Den Yao)\n- added config variables to changed the default mappings for forward backwards completion. (based on request by Li Chaoqun)\n- added config variable to preselect the first entry when completeopt has 'menu' and 'longest'. (based on suggestion and patch by Mike Lundy)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7344",
+      "filename": "supertab.vim",
+      "script_version": "0.43",
+      "date": "2007-07-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "With the permission of the original author, this script is now released under the BSD license."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7228",
+      "filename": "supertab.vim",
+      "script_version": "0.42",
+      "date": "2007-06-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Added g:SuperTabMidWordCompletion variable to determine if completion should be done within a word (enabled by default).  (based on request by Charles Gruenwald)\n- Applied patch to fix <s-tab> cycling through completion results. (submitted by Lukasz Krotowski)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6114",
+      "filename": "supertab.vim",
+      "script_version": "0.41",
+      "date": "2006-08-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6016",
+        "user_name": "ervandew",
+        "first_name": "Eric",
+        "last_name": "Van Dewoestine",
+        "email": "ervandew at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

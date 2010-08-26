@@ -1,0 +1,26 @@
+{
+  "script_id": "2583",
+  "name": "popup_it",
+  "summary": "a easy config auto complete popup",
+  "script_type": "utility",
+  "description": " a easy config auto complete popup plugin\n\n\"             You can put a user auto popup table in you .vimrc like this:\n\"             let useTable[filetype] = [[auto_exec_complete1, key_word], ...]\n\"\n\"             This is a example for c file.\n\"             let usrTable = {}\n\"             let usrTable[\"c\"] = [\n\"                         \\ [\"\\<c-x>\\<c-o>\",'\\k.','\\k->',\n\"                         \\ 'gtk_\\k\\{2,\\}','GTK_\\k\\{1,\\}','Gtk\\k\\{1,\\}',\n\"                         \\ 'g_\\k\\{2,\\}', 'G_\\k\\{1,\\}'],\n\"                         \\ [\"\\<c-n>\",'\\k\\{3,\\}'],\n\"                         \\]\n\"             When you type . -> gtk_(>2char) GTK_(>1char) Gtk_(>1char) \n\"             g_(>2char) G_(>1char) than <c-x><c-o> exec.\n\"             When you type >3char <c-n> exec.\n\nBlow is default auto popup table\n\"defTable: {{{1\nlet s:defTable = {}\nlet s:defTable[\"*\"]    = [\n            \\ [\"\\<c-n>\",'\\k\\{3,\\}']\n            \\]\nlet s:defTable[\"c\"]    = [\n            \\ [\"\\<c-x>\\<c-o>\",'\\k.','\\k->'],\n            \\ [\"\\<c-n>\",'\\k\\{3,\\}'],\n            \\]\nlet s:defTable[\"tex\"]  = [\n            \\ [\"\\<c-n>\",'\\\\\\k\\{2,\\}','\\([\\|{\\)\\.\\*\\k\\{2,\\}'],\n            \\]\nlet s:defTable[\"html\"] = [\n            \\ [\"\\<c-x>\\<c-o>\",'<','</','<\\.\\*\\s\\+\\k','<\\.\\*\\k\\+\\s\\*=\"\\k'],\n            \\]\n\n",
+  "install_details": "Put this file in your VIM plugin dir  \n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10206",
+      "filename": "popup_it.vim",
+      "script_version": "01",
+      "date": "2009-03-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16969",
+        "user_name": "vande",
+        "first_name": "777",
+        "last_name": "us",
+        "email": "vimtexhappy at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

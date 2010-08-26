@@ -1,0 +1,26 @@
+{
+  "script_id": "1293",
+  "name": "Pida",
+  "summary": "A graphical IDE that uses Vim as its editor over the client-server protocol.",
+  "script_type": "utility",
+  "description": "I personally believe that Pida offers a unique experience for programmers and other Vim users. It is essentially an IDE, except that it lives entirely outside the text editor (Vim) and all the other tools it uses.\n\nIt is written in Python, and uses the GTK toolkit.\n\nOnce installed, you can run Pida to connect to existing \"vim -g\" or \"vim --servername <name>\" sessions, or run in embedded mode, to embed a single instance of Vim much like a conventional IDE.\n\nPlease visit http://pida.berlios.de/ for the application website (there may be newer verisons there) for more details, or see a (large) screenshot of pida being used to develop itself at http://pida.berlios.de/images/5/5c/Pida_embed.png.\n\nPida is still early at this stage, and I very much appreciate all types of bug reporting, advice, criticism etc.",
+  "install_details": "Decompress the package and use the command:\n\npython setup.py install\n\n(you may need root access)\n\nNote: We also provide Debian packages at http://pida.berlios.de/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4460",
+      "filename": "pida_0.2.2.tar.gz",
+      "script_version": "0.2.2",
+      "date": "2005-08-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7677",
+        "user_name": "aafshar",
+        "first_name": "Ali",
+        "last_name": "Afshar",
+        "email": "aafshar at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": ";Pastebin plugin : Allows pasting of entered, and yanked text to the rafb.net\nand #Pida pastebins.\n\n;Culebra plugin : Editor using GTSourceView, including syntax highlighting,\nblock indent, block comment, and intelligent Python code completion, can be used in\nplace of Vim.\n\n;Per-filetype Plugins : Plugins can be optionally displayed and hidden for\ndifferent file-types.\n\n;Mercurial support : Basic support has been added to the project plugin to\nsupport the Mercurial version control system.\n\n;Filetype handling : Plugins can be configured to be displayed per filetype.\n\n;Terminal support : Xterm can be used in place of the internal VTE widget.\n\n;Layout : Added options for alternate layouts.\n\n;Buffer list : Display parent directory of buffer filename in buffer list.\n\n;First time-run wizard to select required components."
+    }
+  ]
+}

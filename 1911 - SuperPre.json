@@ -1,0 +1,74 @@
+{
+  "script_id": "1911",
+  "name": "SuperPre",
+  "summary": "syntax for the text that contains several programming language",
+  "script_type": "syntax",
+  "description": "The spre (SuperPre) is a syntax plugin for the text that contains several programing language.  The text can be converted to HTML.  This is useful for writing programming notes or creating web pages.\n\nspre syntax is like a C macro.  Example to make HTML:\n<html>\n<head>\n<title>example</title>\n</head>\n<body>\n#macro\n\" You can use Vim script as embedded macro.\nreturn \"<h1>Example to make HTML</h1>\"\n#end\n\n## comment is removed from result.\n\n#pre c {\"colorscheme\":\"evening\"}\n/* This section will be <pre class=\"c\">...</pre> */\nint func(int n) {\n  return func(n);\n}\n#end\n\n#macro\nlet s:attr = {}\nlet s:attr.colorscheme = \"desert\"\nlet s:attr.tag = \"div\"\nlet s:attr.class = \"c main\"\nlet s:attr.modeline = \"list number\"\n#end\n#pre c s:attr\n/* This section will be <div class=\"c main\">...</div> */\nint main(int argc, char **argv) {\n  return 0;\n}\n#end\n\n#macro\nreturn readfile(expand(\"%:p:h\") . \"/footer.txt\")\n#end\n</body>\n</html>\n\nIf you want to highlight HTML tag outside of spre macro:\n  :set ft=html.spre\nSpre will work as additional syntax.\n\ncolored example:\nhttp://yukihiro.nakadaira.googlepages.com/spre_example.html",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7834",
+      "filename": "spre.zip",
+      "script_version": "1.3",
+      "date": "2007-10-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11226",
+        "user_name": "yukihiro",
+        "first_name": "Yukihiro",
+        "last_name": "Nakadaira",
+        "email": "yukihiro.nakadaira at gmail.com",
+        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+      },
+      "release_notes": "Added #macro"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7323",
+      "filename": "spre.zip",
+      "script_version": "1.2",
+      "date": "2007-07-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11226",
+        "user_name": "yukihiro",
+        "first_name": "Yukihiro",
+        "last_name": "Nakadaira",
+        "email": "yukihiro.nakadaira at gmail.com",
+        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+      },
+      "release_notes": "bug fix"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7203",
+      "filename": "spre.zip",
+      "script_version": "1.1",
+      "date": "2007-06-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11226",
+        "user_name": "yukihiro",
+        "first_name": "Yukihiro",
+        "last_name": "Nakadaira",
+        "email": "yukihiro.nakadaira at gmail.com",
+        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+      },
+      "release_notes": "bug fix"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7196",
+      "filename": "spre.zip",
+      "script_version": "1.0",
+      "date": "2007-06-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11226",
+        "user_name": "yukihiro",
+        "first_name": "Yukihiro",
+        "last_name": "Nakadaira",
+        "email": "yukihiro.nakadaira at gmail.com",
+        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,618 @@
+{
+  "script_id": "1075",
+  "name": "netrw.vim",
+  "summary": "Network oriented reading, writing, and browsing (keywords: netrw ftp scp)",
+  "script_type": "utility",
+  "description": "                STARTING WITH v66, NETRW REQUIRES VIM 7.0\n\nNetrw supports reading and writing files across networks.  One may use urls for filenames or one may use netrw's Nread and Nwrite commands. Netrw as provided here supports remote and local directory browsing, and supports  editing files across the network using a variety of methods.  Please report any bugs to NdrOchip@ScampbellPfamily.AbizM - NOSPAM.\n\n    Example:  vim ftp://user@machine/path\n\n(the following table should be columnar if fixed-width fonts are used in your browser)\n\n    REMOTE EDITING\n        :e dav://machine[:port]/path                      uses cadaver\n        :e fetch://[user@]machine/path                  uses fetch\n        :e ftp://[user@]machine[[:#]port]/path          uses ftp   autodetects <.netrc>\n        :e http://[user@]machine/path                    uses http  uses wget\n        :e rcp://[user@]machine/path                     uses rcp\n        :e rsync://[user@]machine[:port]/path         uses rsync\n        :e scp://[user@]machine[[:#]port]/path        uses scp\n        :e sftp://[user@]machine/path                    uses sftp\n\n    REMOTE READING\n        :Nread ?                                                     give help\n        :Nread \"machine:path\"                                 uses rcp\n        :Nread \"machine path\"                                 uses ftp   with <.netrc>\n        :Nread \"machine id password path\"              uses ftp\n        :Nread \"dav://machine[:port]/path\"                uses cadaver\n        :Nread \"fetch://[user@]machine/path\"            uses fetch\n        :Nread \"ftp://[user@]machine[[:#]port]/path\"    uses ftp   autodetects <.netrc>\n        :Nread \"http://[user@]machine/path\"              uses http  uses wget\n        :Nread \"rcp://[user@]machine/path\"               uses rcp\n        :Nread \"rsync://[user@]machine[:port]/path\"   uses rsync\n        :Nread \"scp://[user@]machine[[:#]port]/path\"  uses scp\n        :Nread \"sftp://[user@]machine/path\"             uses sftp\n\n    REMOTE WRITING\n        :Nwrite ?                                                      give help\n        :Nwrite \"machine:path\"                                  uses rcp\n        :Nwrite \"machine path\"                                  uses ftp   with <.netrc>\n        :Nwrite \"machine id password path\"               uses ftp\n        :Nwrite \"dav://machine[:port]/path\"                  uses cadaver\n        :Nwrite \"ftp://[user@]machine[[:#]port]/path\"     uses ftp   autodetects <.netrc>\n        :Nwrite \"rcp://[user@]machine/path\"                uses rcp\n        :Nwrite \"rsync://[user@]machine[:port]/path\"    uses rsync\n        :Nwrite \"scp://[user@]machine[[:#]port]/path\"   uses scp\n        :Nwrite \"sftp://[user@]machine/path\"               uses sftp\n        http: not supported!\n\n    REMOTE DIRECTORY BROWSING\n        :e [protocol]://[user]@hostname/path/\n        :Nread [protocol]://[user]@hostname/path/\n\n    LOCAL DIRECTORY BROWSING\n        :e /some/path/to/a/directory\n\nNetrw supports browsing both local and remote directories.  For remote directory browsing, one must include a trailing slash (/) on the path!  The interface resembles the file explorer that comes with vim v6.3 and earlier.  Variables which control netrw's optional behavior are named differently, however.\n\nFor remote directory browsing, the [protocol]://[user]@hostname/path/ is user-directory relative.  If you want to specify a full path, use another slash before the path: [protocol]://[user]@hostname//path/.\n\nNetrw supports many file-explorer maps, such as o v d D etc.  Look at the help for netrw-o, for example.  One may also use :Explore and relatives to explore directories with the current file.\n\nThe netrw.vba.gz vimball supports the \"x\" key to execute a file handler for various filetypes.  The file-handling is done in various ways:\n\n    * Under Windows, rundll32 is used with the FileProtocolHandler\n    * If unix and kfmclient exists and is executable, it is used\n    * If unix and gnome-open exists and is executable, it is used\n    * Otherwise, the NetrwFileHandler.vim file handling script is used\n\nWith this feature, one may press the \"x\" key when the cursor is atop a filename and invoke an extension-based file handler to do things like display image files, invoke ghostscript on PostScript files, run OpenOffice or Word, etc.\n\nRECENT NETRWs REQUIRE VIM V7.2\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#NETRW)\n",
+  "install_details": "netrw is now distributed as a vimball!  (see :help vimball)\nYou'll need a vimball plugin v18 or later (see vimscript#1502).\n(if you have vim 7.1a or later, you probably can skip this step)\n\n(if you're updating from the vim 7.0 distribution, please remove all runtime plugin/netrw*.vim and autoload/netrw*.vim first)\n\nvim netrw.vba.gz\n:so %\n:q\n\nand that's it!",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11979",
+      "filename": "netrw.vba.gz",
+      "script_version": "136",
+      "date": "2009-12-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "This one is mostly a bugfix release.  There's also\nT:  (a new map)  puts the file or directory into a background tab\nelinks now uses -source instead of -dump\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9816",
+      "filename": "netrw.vba.gz",
+      "script_version": "135",
+      "date": "2009-01-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "A bugfix release -- see  :he netrw-history  -- "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9389",
+      "filename": "netrw.vba.gz",
+      "script_version": "134",
+      "date": "2008-10-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* dav: will use curl if cadaver isn't available\n* [N] added to various Explore commands\n* bookmarks should now reliably be retained\n* various bugfixes (x for remote jpgs, for example)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9221",
+      "filename": "netrw.vba.gz",
+      "script_version": "133",
+      "date": "2008-09-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "[*] security improvements (you'll need vim 7.2 for this version)\n[*] uses cursorline for thin/long/tree listing styles\n[*] currently trying elinks for http -- comments, please!  I have one dislike so far, so it may be changed back in the future.\n[*] various bug fixes\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9048",
+      "filename": "netrw.vba.gz",
+      "script_version": "v128",
+      "date": "2008-07-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Needs fnameescape() and shellescape(), so you'll need an up-to-date vim with this one: vim v7.2b or later.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8501",
+      "filename": "netrw.vba.gz",
+      "script_version": "123",
+      "date": "2008-03-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Marked files now keeps a \"global\" marked file list.  The global marked file list is used to support tag processing and vimdiff'ing.\nSeveral bugs fixed and security enhancements.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8351",
+      "filename": "netrw.vba.gz",
+      "script_version": "122",
+      "date": "2008-02-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Mainly a bugfix release (sorting sequence improvements)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8262",
+      "filename": "netrw.vba.gz",
+      "script_version": "121",
+      "date": "2008-02-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Bugfixes: netrw attempts to retain the alternate file.  v120 broke an explicit :Explore dirname ; fixed.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8248",
+      "filename": "netrw.vba.gz",
+      "script_version": "120",
+      "date": "2008-02-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Marked file system extended (mt, mh, mu, ms) and bugs removed.  One may now have multiple tree listings.  Bugfix: P works with trees.  Changed q -> qb for query-bookmarks, qf added to provide information about file under cursor.  Explore now has four special listing modes: */filepat, *//filepat, **/pattern, and **//pattern.  gh is now a shortcut for toggling hiding of files and directories which begin with a dot.  The menu now includes entries for Explore.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8133",
+      "filename": "netrw.vba.gz",
+      "script_version": "118",
+      "date": "2008-01-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Netrw has some bug fixes: with :Explore c:/path/, spaces in directory names with s:NetrwOptionRestore(), and with P\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8042",
+      "filename": "netrw.vba.gz",
+      "script_version": "116",
+      "date": "2007-12-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "bug fixes -- removed some unnecessary directory refreshes, and this version does a better job of retaining user options when editing files under the aegis of netrw's browser"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7901",
+      "filename": "netrw.vba.gz",
+      "script_version": "115",
+      "date": "2007-11-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* New: :Explore handles path/**/filename\n* Bugfixes: (shellslash use improved, remote editing of *.tar.gz and *.tar.bz2, sourcing remote files via ftp, etc)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7738",
+      "filename": "netrw.vba.gz",
+      "script_version": "114",
+      "date": "2007-10-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "mT now supports generating tags files for remote marked files\nNetrw's menus are New&Improved!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7725",
+      "filename": "netrw.vba.gz",
+      "script_version": "113",
+      "date": "2007-09-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "New: the \"x\" command has been extended to use Mac OS/X's open facility\n\nBugfix: cursor position restored after deleting or renaming files\nBugfix: ftplugins, autocmds, etc can change settings after netrw opens a file\nBugfix: strlen() -> s:Strlen(), which handles utf-8 characters better\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7617",
+      "filename": "netrw.vba.gz",
+      "script_version": "112",
+      "date": "2007-09-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Added mx (|netrw-mx|) for executing arbitrary commands on marked files\nAdded the :NetrwClean[!] command\nBugfix: More option save/restore work for s:NetrwBrowseChgDir(); s:NetrwOptionSave() and s:NetrwOptionRestore() now take a parameter specifying the type of variables to be used for saving and restoring (either \"w:\" or \"s:\").  The formatoptions, for example, is saved & restored.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7503",
+      "filename": "netrw.vba.gz",
+      "script_version": "111",
+      "date": "2007-08-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Included a \"marked file\" system: one may mark files (with mf or shift-leftmouse); one may then rename, delete, obtain, compress/decompress, and create tags with the marked files.\n\nA double-clicked leftmouse (in gvim) will return one from a file to the netrw browser buffer used to edit it.\n\nAnd, some bug fixes!\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7273",
+      "filename": "netrw.vba.gz",
+      "script_version": "110",
+      "date": "2007-06-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "New Features:\n* added [ and ] maps to NetrwTreeListing (bounce across open directories)\n* preview window may be shown vertically as well as the default horizontally\n\nBug Fixes:\n* g:netrw_shq more consistently used to support \"x\" for special file browsing\n* more [Scratch] buffers are now named properly\n* c mapping now works when directory names have spaces\n* options retained in original buffers after a split + :Explore\n* Fixed remote file deletion/renaming (again)\n* Using <leftmouse to a non-netrw window was causing an error message\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7079",
+      "filename": "netrw.vba.gz",
+      "script_version": "109",
+      "date": "2007-05-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "One may select an error/message window vs echoerr messages\nVarious bug fixes (scp -P and ssh -p for ports, Explore attempts to expand $name)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6895",
+      "filename": "netrw.vba.gz",
+      "script_version": "108",
+      "date": "2007-03-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Netrw now supports sourcing remote files and supports preview (with a \"p\").  Numerous bug fixes.  Works with Microsoft-based ftp servers."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6577",
+      "filename": "netrw.vba.gz",
+      "script_version": "107",
+      "date": "2007-01-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "(browser) tree display mode\n(browser) amiga supported\nnumerous bug fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6180",
+      "filename": "netrw.vba.gz",
+      "script_version": "104",
+      "date": "2006-09-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* NEW: netrw now has a tree listing style (see :help g:netrw_liststyle)\n* MOD: as suggested by Rodolfo Borges, :Explore and variants will position the cursor on the file that had just been edited\n* MOD: changed default g:netrw_sort_sequence order\n* MOD: changed b, Nb to simply mb  (make bookmark)\n* MOD: changed B, NB to simply gb  (goto bookmark)\n* MOD: attempts to retain the alternate file\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6119",
+      "filename": "netrw.vba.gz",
+      "script_version": "103",
+      "date": "2006-08-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "\"t\" now opens tabbed windows for the file under the cursor, plus numerous bug fixes!\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5982",
+      "filename": "netrw.vba.gz",
+      "script_version": "102",
+      "date": "2006-07-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "new stuff: g:netrw_menu support included; :Texplore command implemented; <leftmouse> acts as a <cr> for selecting a file; <rightmouse> acts as a <del> for deleting a file\nbugfixes : g:netrw_keepdir==0 had stopped working; NetOptionSave/Restore now saves/restores the unnamed register; NetSplit and (Local,Net)BrowseChgDir() were both splitting windows.  This affected o, v, and g:netrw_browse_split; works around wildignore setting\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5814",
+      "filename": "netrw.vba.gz",
+      "script_version": "100",
+      "date": "2006-06-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "- numerous bug fixes addressing problems with Windows lacking cygwin\n- user NFH_*() functions were being unused inadvertently\n- [NP]Explore */pat and **//pat now wrap\n- Bookmarks and History added to menu\n- g:netrw_shq has a better default, and is tunable by the user\n- bugfix: hiding pattern candidate separators included some characters it shouldn't have (tnx to Osei Poku)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5682",
+      "filename": "netrw.vba.gz",
+      "script_version": "99",
+      "date": "2006-05-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Since the vim 7.0 release:\n  g:netrw_browse_split=3 for opening files in new tabs implemented.\n  deletes temporary file at end of NetRead()\n  visual mode based Obtain implemented for remote systems.\n added -complete=dir to the various Explore commands\n\n  \n  \n  \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5607",
+      "filename": "netrw.vba.gz",
+      "script_version": "93",
+      "date": "2006-04-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": ":Explore */pattern implemented - search for files containing a pattern in the current directory\n:Explore **//pattern implemented - search for files containing a pattern in the directory and subdirectories\nMoved DrChip.Netrw menu to a top-level Netrw menu, with priority 80\nbugfix - :Nexplore or :Pexplore, issued without first having done an Explore now gives an appropriate error message\nbugfix - removed FocusGained event from causing a slow-browser refresh for Windows\nbugfix - now handles spaces in filenames and directory names when using ftp-based browsing\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5439",
+      "filename": "netrw.tar.gz",
+      "script_version": "81",
+      "date": "2006-03-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "ShellCmdPost and FocusGained used to refresh local browser directory listings when g:netrw_fastmode <= 1.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5395",
+      "filename": "netrw.tar.gz",
+      "script_version": "79",
+      "date": "2006-03-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* directories now displayed with nowrap\n* g:netrw_fastbrowse introduced, allows for control of speed vs always-obtain directory listing\n* bugfix with wide listing, column width < largest filename hangup\n* semi-colons should now work with temporary files\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5004",
+      "filename": "netrw.tar.gz",
+      "script_version": "77",
+      "date": "2006-01-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "New stuff!\ng:netrw_browsex_viewer implemented.  NetBrowseX does better at figuring out whether KDE or gnome is actually being used.\nUse the \"P\" map to edit a file/directory in the previously used window (like Explorer's O)\nUse g:netrw_browse_split to specify horizontal/vertical splitting of the window when editing a file from a browser window\nSome bugfixes, too!\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4683",
+      "filename": "netrw.tar.gz",
+      "script_version": "74",
+      "date": "2005-10-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "(vim v7.0 req'd)\n* Reads remote zip&tar files.\n* netrwSettings now uses autoloading\n* Many bugfixes (ctrl-L, ch==1 Hit-Enter, W95's E121, etc).\n* And more! (see :help netrw-history)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4545",
+      "filename": "netrw.tar.gz",
+      "script_version": "68",
+      "date": "2005-09-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Netrw now takes advantage of autoload (and requires 7.0).\n\"i\" now cycles between thin, long, and wide listing styles.\n\"O\" now obtains a file: remote browsing file -> local copy.\nDouble-click-leftmouse selects word under mouse.\nNetrw now works around the report setting.\nPasswords which contain blanks will now be surrounded by double-quotes automatically.\nNetrw now seems to work with a few more Windows situations.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4495",
+      "filename": "netrw.tar.gz",
+      "script_version": "62",
+      "date": "2005-08-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Document upgrade - :NetrwSettings command allows easy editing and review of all netrw variable settings\nBugfix - Concurrent Explore **/pattern searches allowed\n\nLast vim 6.3 release (unless a major problem appears); future ones will be 7.0 only"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4486",
+      "filename": "netrw.tar.gz",
+      "script_version": "60",
+      "date": "2005-08-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Vim 7.0 only:\n* \"Match # of #\" indicator for Explore **/*.c\n* :Explore **/*.c  will now work from a non-netrw-browser window\n* :Explore **/patterns can now be run in separate browser windows\n\nVim6.3 and Vim7.0:\n* active banner (hitting <cr> in banner region will cause various things to happen)\n* bugfixes\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4461",
+      "filename": "netrw.tar.gz",
+      "script_version": "58",
+      "date": "2005-08-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* Explore and relatives can now handle **/pattern (v7)\n* Nexplore and Pexplore introduced (v7)\n* Various bugfixes\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4453",
+      "filename": "netrw.tar.gz",
+      "script_version": "56",
+      "date": "2005-08-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Netrw now avoids changing directory when g:netrw_keepdir is false\nNetrw's LocalBrowse() now bypasses the autochdir option\nNetrw now uses vim's rename() instead of system + local_rename variable\n-bar used with :Explore :Sexplore etc to allow multiple commands to be separated by bars\nbrowser listings now use the \"nowrap\" option\nbrowser: some unuseful error messages now suppressed\n\nIf you're using vim7, you need to have an up-to-date one supporting the sort command."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3986",
+      "filename": "netrw.tar.gz",
+      "script_version": "54",
+      "date": "2005-03-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* <amatch> used instead of <afile> in the transparency support (BufReadCmd, FileReadCmd, FileWriteCmd)\n* For backwards compatibility, Explore and Sexplore have been implemented.  In addition, Hexplore and Vexplore commands are available, too.\n* ***netrw*** prepended to various error messages netrw may emit\n* g:netrw_port used instead of b:netrw_port for scp\n* any leading [:#] is removed from port numbers\n* backslashes as well as slashes placed in various patterns (ex. g:netrw_sort_sequence) to better support Windows\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3533",
+      "filename": "netrw.tar.gz",
+      "script_version": "51",
+      "date": "2004-10-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "FileWriteCmd event used (supports :[range]w url) supports directory history stack, automatic cygwin use detected (windows), error messages remain visible, bug fixes\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3440",
+      "filename": "netrw.tar.gz",
+      "script_version": "48",
+      "date": "2004-09-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Many things (see :help netrw-history), including:\nremote browsing with ftp, bookmarks, nrml/hide/show, improved x, bugfixes, alt-o/v, preview\n"
+    }
+  ]
+}

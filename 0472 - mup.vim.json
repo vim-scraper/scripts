@@ -1,0 +1,42 @@
+{
+  "script_id": "472",
+  "name": "mup.vim",
+  "summary": "MUP syntax file for musical score publication and auto-MIDI generation",
+  "script_type": "syntax",
+  "description": "This is a first draft of syntax coloring/highlighting for the Mup file format.\nMup file format is a musical publication format by Arkkra Enterprise http://www.arkkra.com\nThis syntax file is not created/maintained by Arkkra Enterprise",
+  "install_details": "You can unzip those files into their respective directories under vimfiles or your .vim directory, but if you already have the syntax.vim and filetype.vim, you have to append to your own files instead of overwriting them. Or, you can place it in $VIMRUNTIME/syntax and use :ru syntax/mup.vim to load it.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1417",
+      "filename": "mup-0.2.zip",
+      "script_version": "0.2",
+      "date": "2002-11-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1202",
+        "user_name": "soonwah",
+        "first_name": "Soon Wah",
+        "last_name": "Chua",
+        "email": "soonwah at qoolife.com",
+        "homepage": "http://www.qoolife.com/csw-services"
+      },
+      "release_notes": "Added the syntax.vim and filetype.vim files for autoloading the syntax when MUP files are used. Take note that if you have existing local copies of syntax.vim and filetype.vim files, you have to append the content of these files to your local copies instead of overwriting them, if you still want your other settings in these files."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1375",
+      "filename": "mup.vim",
+      "script_version": "0.1",
+      "date": "2002-11-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1202",
+        "user_name": "soonwah",
+        "first_name": "Soon Wah",
+        "last_name": "Chua",
+        "email": "soonwah at qoolife.com",
+        "homepage": "http://www.qoolife.com/csw-services"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

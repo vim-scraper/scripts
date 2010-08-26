@@ -1,0 +1,26 @@
+{
+  "script_id": "3179",
+  "name": "help_movement",
+  "summary": "Movement over Vim help sections with ]] etc. ",
+  "script_type": "ftplugin",
+  "description": "DESCRIPTION\nThis filetype plugin provides movement commands for Vim help sections. \n\nUSAGE\n\t\t\tMove around Vim help sections (starting with a =====\n\t\t\tline). \n]]\t\t\tGo to [count] next start of a help section. \n][\t\t\tGo to [count] next end of a help section. \n[[\t\t\tGo to [count] previous start of a help section. \n[]\t\t\tGo to [count] previous end of a help section. ",
+  "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command.\n    vim help_movement.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.0 or higher. \n- Requires the CountJump plugin (vimscript #3130). ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13463",
+      "filename": "help_movement.vba.gz",
+      "script_version": "1.00",
+      "date": "2010-08-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "2186",
+  "name": "pig.vim",
+  "summary": "Pig language syntax highlighting",
+  "script_type": "syntax",
+  "description": "Pig is a powerful system for analysis of large data sets using MapReduce approach.\nhttp://incubator.apache.org/pig",
+  "install_details": "1) copy pig.vim file into your ~/.vim/syntax/ directory;\n\n2) add the following three lines to your ~/.vimrc file:\n\naugroup filetypedetect\n  au BufNewFile,BufRead *.pig set filetype=pig syntax=pig\naugroup END\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10654",
+      "filename": "pig.vim",
+      "script_version": "0.5",
+      "date": "2009-05-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8698",
+        "user_name": "motus",
+        "first_name": "Sergiy",
+        "last_name": "Matusevych",
+        "email": "motus2 at yahoo.com",
+        "homepage": "http://developer.yahoo.com"
+      },
+      "release_notes": "added support for pig 0.2 types and streaming"
+    }
+  ]
+}

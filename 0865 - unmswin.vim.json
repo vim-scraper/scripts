@@ -1,0 +1,26 @@
+{
+  "script_id": "865",
+  "name": "unmswin.vim",
+  "summary": "Undo the action of mswin.vim",
+  "script_type": "utility",
+  "description": "This undoes the actions of the mswin.vim described under :help :behave. It restores the changed options (except guioptions) to their default (which was not necessarily what they were set to before invoking mswin, but that can't be helped) and undoes the mappings (except Ctrl-Q and Alt-Space, which are not deemed harmful).",
+  "install_details": "just drop the file in ~/.vim/macros (on Unix), or in ~/vimfiles/macros (on Windows, if $HOME exists -- in Dos/Windows parlance, that would be %HOME%\\vimfiles\\macros), or in $VIM/vimfiles/macros (for system-wide availability on any platform).\n\nInvoke it by doing :runtime macros/unmswin.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2627",
+      "filename": "unmswin.vim",
+      "script_version": "0.1 BETA",
+      "date": "2003-12-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "579",
+        "user_name": "tonymec",
+        "first_name": "Antoine",
+        "last_name": "Mechelynck",
+        "email": "antoine.mechelynck at skynet.be",
+        "homepage": "http://users.skynet.be/antoine.mechelynck/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

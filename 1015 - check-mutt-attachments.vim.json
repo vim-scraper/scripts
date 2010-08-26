@@ -1,0 +1,58 @@
+{
+  "script_id": "1015",
+  "name": "check-mutt-attachments.vim",
+  "summary": "Script not to forget to attach files mentioned in an email",
+  "script_type": "utility",
+  "description": "When using Vim to write an email from say Mutt, one can mention things like \"I am attaching the email I was telling you about\" and then forget to attach it.\n\nThis script prompts the user when exiting Vim pointing out that an attachment is mentioned in the message, and that may require something attached to the message.\n\nThis implements a suggestion made at: http://groups.google.fr/groups?hl=fr&lr=&ie=UTF-8&selm=caq406%24rq4%241%40FreeBSD.csie.NCTU.edu.tw",
+  "install_details": "Drop the file in your plugin directory.\n\nIf you want to use it with software other than Mutt, tweak the autocmd line.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3165",
+      "filename": "check-mutt-attachments.vim",
+      "script_version": "20040620f2",
+      "date": "2004-06-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "205",
+        "user_name": "hugo",
+        "first_name": "Hugo",
+        "last_name": "Haas",
+        "email": "hugo at larve.net",
+        "homepage": "http://larve.net/people/hugo/"
+      },
+      "release_notes": "Fixed bug in regular expression which was making it always match."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3162",
+      "filename": "check-mutt-attachments.vim",
+      "script_version": "20040620f",
+      "date": "2004-06-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "205",
+        "user_name": "hugo",
+        "first_name": "Hugo",
+        "last_name": "Haas",
+        "email": "hugo at larve.net",
+        "homepage": "http://larve.net/people/hugo/"
+      },
+      "release_notes": "Added detection of French hints in addition to English ones."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3159",
+      "filename": "check-mutt-attachments.vim",
+      "script_version": "20040620",
+      "date": "2004-06-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "205",
+        "user_name": "hugo",
+        "first_name": "Hugo",
+        "last_name": "Haas",
+        "email": "hugo at larve.net",
+        "homepage": "http://larve.net/people/hugo/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

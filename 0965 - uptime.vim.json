@@ -1,0 +1,58 @@
+{
+  "script_id": "965",
+  "name": "uptime.vim",
+  "summary": "Display Vim uptimes",
+  "script_type": "utility",
+  "description": "This script displays vim uptimes.\n\nUsage:\n\n:Uptime\n:Uptime regular (gvim has been up for 2 days, 1 hour, 17 minutes and 2 seconds)\n:Uptime short (2d 01:17:02)\n:Uptime seconds (264)\n\nSee :help uptime.txt for details.\n\nRequirements:\n\nThis plugin has not been tested on Vim versions below 6.2\n",
+  "install_details": "Install the .vim file to your local or global plugins directory. You may also want to install the .txt file into the docs directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3051",
+      "filename": "uptime-1.3.tar.bz2",
+      "script_version": "1.3",
+      "date": "2004-05-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4078",
+        "user_name": "ciaranm",
+        "first_name": "Ciaran",
+        "last_name": "McCreesh",
+        "email": "ciaran.mccreesh at googlemail.com",
+        "homepage": ""
+      },
+      "release_notes": "* moved the :echo so that Uptime() can be used in statusline (thanks to Salman Halim)\n* added in short aliases for the format names"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3050",
+      "filename": "uptime-1.2.tar.bz2",
+      "script_version": "1.2",
+      "date": "2004-05-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4078",
+        "user_name": "ciaranm",
+        "first_name": "Ciaran",
+        "last_name": "McCreesh",
+        "email": "ciaran.mccreesh at googlemail.com",
+        "homepage": ""
+      },
+      "release_notes": "* added optional argument controlling output format ('short', 'regular', 'seconds')\n* added help document"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2941",
+      "filename": "uptime.vim",
+      "script_version": "1.1",
+      "date": "2004-04-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4078",
+        "user_name": "ciaranm",
+        "first_name": "Ciaran",
+        "last_name": "McCreesh",
+        "email": "ciaran.mccreesh at googlemail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

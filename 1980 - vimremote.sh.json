@@ -1,0 +1,26 @@
+{
+  "script_id": "1980",
+  "name": "vimremote.sh",
+  "summary": "script to use gvim from IDE",
+  "script_type": "utility",
+  "description": "I wanted to use vim from the Xilinx ide, and I like the following actions to occur from the IDE\n\n\n1) open every file in a split window in one gvim session\n2) when opening the same file again from the IDE, don't cause a new split window if there is already one\n3) use the line numbers provided by the ide.\n\nIn Xilinx you would define the external editor call \n\n/path/to/vimremote.sh XILINX $1 $2\n\nThe XILINX is just a name so that one particular gvim session is used for it, and not any others you might have hanging around\n\nYou need a decent shell. Don't know how that works in Windows. This script could be useful in many other ide's that allow calls to external editors",
+  "install_details": "Just put the file somewhere on your harddisk, and configure your IDE to use it. The call to vimremote.sh has 3 parameters:\n1) unique name for the gvim to associate with a certain IDE\n2) filename\n3) (optional) line number in the file",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7449",
+      "filename": "vimremote.sh",
+      "script_version": "1.01",
+      "date": "2007-08-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2229",
+        "user_name": "bvdeenen",
+        "first_name": "Bart",
+        "last_name": "van Deenen",
+        "email": "info at vandeenensupport.com",
+        "homepage": "http://www.vandeenensupport.com"
+      },
+      "release_notes": "Does not require file to exist. Everything else the same"
+    }
+  ]
+}

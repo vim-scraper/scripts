@@ -1,0 +1,58 @@
+{
+  "script_id": "2862",
+  "name": "JumpInCode (new update)",
+  "summary": "Cscope and tags plugin , build files in your Current directory",
+  "script_type": "ftplugin",
+  "description": "&#25105;&#21916;&#27426;&#36825;&#20010;&#25554;&#20214;,&#25105;&#35273;&#24471;&#24456;&#26041;&#20415;&#25152;&#20197;&#25105;&#20462;&#25913;&#20102;&#19979;&#24863;&#35874;zuopeng chen&#25552;&#20379;&#30340;&#33050;&#26412;\n\n&#27492;&#20195;&#30721;&#20462;&#25913;&#20110;http://www.vim.org/scripts/script.php?script_id=2770 &#20063;&#26159;&#33258;&#21160;&#29983;&#25104;tags&#21644;cscope,&#20294;&#23427;&#29983;&#25104;&#30340;&#25991;&#20214;&#26159;&#22312;&#24403;&#21069;&#30446;&#24405;/OutDB/&#19979;\n\n&#25552;&#31034;&#65306;\n      &#35831;&#30830;&#23450;&#20102;&#20320;&#24050;&#23433;&#35013;&#20102;ctags&#21644;cscope&#65292; &#22914;&#26524;&#26159;windows&#35831;&#25226;ctags.exe&#21644;cscope.exe&#25918;&#21040;$VIM\\vim7* &#30446;&#24405;&#19979;&#12290;\n       ctags &#21644;cscope Win32&#29256;&#65306; http://code.google.com/p/easy-vim/ \n\n\n--------------------&#21326;&#20029;&#30340;&#20998;&#30028;&#32447;------------------\n***** 1.03vesion *******\n\ncommand:\n<leader>jc  Generate tags and cscope database from current directory to :\n                    &#29983;&#25104;&#24403;&#21069;&#30446;&#24405;&#30340;tags&#21644;cscope&#21040;:\n\nall OS  //buillding file in Current Directory\nCurrentDirectory(&#24403;&#21069;&#30446;&#24405;)/OutDB/cscope.out,tags\n\nother command \n<leader>jst       list existed tags full name and choose tags\n                          &#21015;&#20030;&#24050;&#23384;&#22312;tags&#30340;&#20840;&#36335;&#24452;,&#36873;&#25321;&#35201;&#20351;&#29992;&#30340;tags \n<leader>jsc      list existed cscope database full name and choose cscope.out \n                          &#21015;&#20030;&#24050;&#23384;&#22312;cscope&#30340;&#25968;&#25454;&#24211;&#30340;&#20840;&#36335;&#24452;, &#36873;&#25321;&#35201;&#20351;&#29992;&#30340;cscope.out \n\n----------------------------------------------------------\n\nThanks to zuopeng chen .\nthe code change from http://www.vim.org/scripts/script.php?script_id=2770.\nalso auto build tags & cacope ,but this script build path at CurrentDirectory/OutDB in all OS\n\nAdditional:\n        Please insure you have installed ctags and cscope, Win32 Vim puts ctags.exe and cscope.exe in $VIM\\vim7*\n\n        ctags and cscope for win32 you can download from : http://code.google.com/p/easy-vim/\n\nvim default <leader> is \" \\ \"  :P",
+  "install_details": "$VIM\\vimfiles\\plugin\\JumpInCode_Plus.vim\nor\n$VIM\\vim7*\\plugin\\JumplnCode_Plus.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11954",
+      "filename": "JumpInCode_Plus.vim",
+      "script_version": "1.03",
+      "date": "2009-12-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18413",
+        "user_name": "Angluca",
+        "first_name": "&#27138;&#24107;",
+        "last_name": "Angluca",
+        "email": "Angluca at msn.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed BUGs, Get rid of the user variable,it's well"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11922",
+      "filename": "JumpInCode_Plus.vim",
+      "script_version": "1.01",
+      "date": "2009-12-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18413",
+        "user_name": "Angluca",
+        "first_name": "&#27138;&#24107;",
+        "last_name": "Angluca",
+        "email": "Angluca at msn.com",
+        "homepage": ""
+      },
+      "release_notes": "linux and win32 build files in CurrentPath"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11778",
+      "filename": "JumpInCode Plus.vim",
+      "script_version": "1.00",
+      "date": "2009-11-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18413",
+        "user_name": "Angluca",
+        "first_name": "&#27138;&#24107;",
+        "last_name": "Angluca",
+        "email": "Angluca at msn.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

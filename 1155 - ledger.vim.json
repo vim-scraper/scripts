@@ -1,0 +1,26 @@
+{
+  "script_id": "1155",
+  "name": "ledger.vim",
+  "summary": "Syntax highlighting for ledger (accounting system) files",
+  "script_type": "syntax",
+  "description": "Highlights the syntax for Ledger (http://ledger.sourceforge.net/) command line accounting package.",
+  "install_details": "add this to your filetype.vim, or make a ledger.vim in ftdetect with the following lines:\n\n\" Ledger files with .ldg extentions\nau BufNewFile,BufRead *.ldg,*.ledger        setf ledger\n\nnake sure to name your $LEDGER file with a .ldg or .ledger extention",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3693",
+      "filename": "ledger.vim",
+      "script_version": "1.0",
+      "date": "2004-12-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6438",
+        "user_name": "allanneal",
+        "first_name": "Allan",
+        "last_name": "Neal",
+        "email": "allanneal at comcast.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

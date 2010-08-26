@@ -1,0 +1,42 @@
+{
+  "script_id": "829",
+  "name": "gq",
+  "summary": "Multipurpose e-mail message beautifier",
+  "script_type": "utility",
+  "description": "gq.vim provides shortcut \"q\", a variant on Vim's built-in beautifier\n\"gq\" with enhanced e-mail support. Use it just as you'd use \"gq\" when\nin Visual mode. - Features:\n\n - It's capable of dealing with lists being part of quotations.\n   (Vim's 'comments' engine \"gq\" depends on can't do this.)\n - Quote marks may appear in conjunction with enclosed initials\n   denoting the author's name.\n - It can perform basic tasks on malformed quoting-markup. (remove\n   enclosed whitespace, reposition initials, convert badly wrapped\n   lines)\n - It's configurable. (Have a look at gq.vim to see how this can be\n   accomplished..)\n\nA quote sample to illustrate how it works..\n\n  > AB> > 1. qtqt qtqtq. qtqtqt qtqtqt qtqtq tqtqt tqqtt qtqt qtqt.\n  > >AB > 2. qtqt qtqtq. qtqtqt qtqtqt qtqtq tqtqt tqqtt qtqt qtqt.\n  >CD > - qtqt qtqtq qtqtqt qtqtqt qtqtq, tqtqt tqqtt qtqt qtqt.\n  > CD> * qtqt qtqtq qtqtqt qtqtqt qtqtq, tqtqt tqqtt qtqt qtqt.\n  > qtqt qtqtq qtqtqt. qtqtqt qtqtq tqtqt, tqqtt qtqt qtqt qtqt qt\n  qtqt qtqtqt.\n\n\n\"Vipgq\" (:setl fo=tcrqn ai com=n:>,fb:-,fb:* tw=36):\n\n  > AB> > 1. qtqt qtqtq. qtqtqt\n  > qtqtqt qtqtq tqtqt tqqtt qtqt\n  > qtqt.\n  > >AB > 2. qtqt qtqtq. qtqtqt\n  > >qtqtqt qtqtq tqtqt tqqtt qtqt\n  > >qtqt.\n  >CD > - qtqt qtqtq qtqtqt qtqtqt\n  >qtqtq, tqtqt tqqtt qtqt qtqt.\n  >CD> * qtqt qtqtq qtqtqt qtqtqt\n  >qtqtq, tqtqt tqqtt qtqt qtqt.\n  >qtqt qtqtq qtqtqt. qtqtqt qtqtq\n  >tqtqt, tqqtt qtqt qtqt qtqt qt\n  qtqt qtqtqt.\n\n\n\"Vipgq\" (:setl fo=tcrqn ai com=n:>,fb:-,fb:*,n:A,n:B,n:C,n:D tw=36):\n\n  > AB> > 1. qtqt qtqtq. qtqtqt\n  > AB> > qtqtqt qtqtq tqtqt tqqtt\n  > AB> > qtqt qtqt.\n  > >AB > 2. qtqt qtqtq. qtqtqt\n  > >AB > qtqtqt qtqtq tqtqt tqqtt\n  > >AB > qtqt qtqt.\n  >CD > - qtqt qtqtq qtqtqt qtqtqt\n  >CD > qtqtq, tqtqt tqqtt qtqt\n  >CD > qtqt.\n  > CD> * qtqt qtqtq qtqtqt qtqtqt\n  > CD> qtqtq, tqtqt tqqtt qtqt\n  > CD> qtqt.\n  > qtqt qtqtq qtqtqt. qtqtqt qtqtq\n  > tqtqt, tqqtt qtqt qtqt qtqt qt\n  qtqt qtqtqt.\n\n\n\"Vipq\" (:setl fo=tcqn ai com=n:>,fb:-,fb:* tw=36):\n\n  AB>>> 1. qtqt qtqtq. qtqtqt qtqtqt\n  AB>>>    qtqtq tqtqt tqqtt qtqt\n  AB>>>    qtqt.\n  AB>>> 2. qtqt qtqtq. qtqtqt qtqtqt\n  AB>>>    qtqtq tqtqt tqqtt qtqt\n  AB>>>    qtqt.\n  CD>> - qtqt qtqtq qtqtqt qtqtqt\n  CD>>   qtqtq, tqtqt tqqtt qtqt\n  CD>>   qtqt.\n  CD>> * qtqt qtqtq qtqtqt qtqtqt\n  CD>>   qtqtq, tqtqt tqqtt qtqt\n  CD>>   qtqt.\n  > qtqt qtqtq qtqtqt. qtqtqt qtqtq\n  > tqtqt, tqqtt qtqt qtqt qtqt qt\n  > qtqt qtqtqt.\n",
+  "install_details": "Copy gq.vim to your plugin directory (see \":h add-global-plugin\") or,\nalternatively, issue \":so gq.vim\" prior to composing (for details see\n\":h load-vim-script\").\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2974",
+      "filename": "gq.vim",
+      "script_version": "0.91",
+      "date": "2004-04-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3912",
+        "user_name": "Klaus",
+        "first_name": "Klaus",
+        "last_name": "Bosau",
+        "email": "kbosau at web.de",
+        "homepage": ""
+      },
+      "release_notes": "Just separated the markup engine. You may use \",r\" or \":requote\" now to fix up bad quoting for the whole file while keeping lines as long as they initially were.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2516",
+      "filename": "gq.vim",
+      "script_version": "0.9",
+      "date": "2003-11-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3912",
+        "user_name": "Klaus",
+        "first_name": "Klaus",
+        "last_name": "Bosau",
+        "email": "kbosau at web.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "2792",
+  "name": "perdirvimrc: Autoload vimrc files per di",
+  "summary": "Loads vimrc files that are above the opened file in the directory tree",
+  "script_type": "utility",
+  "description": "This script loads Vim configuration files at startup beginning\nfrom the root directory down to the current working directory.\n\nThis is useful when you want to to set up a specific configuration that\nis only loaded when you edit files within a certain directory.\n \nLet's look at a common situation. To configure Vim depending on your\nproject, your tree would look like this:\n\n~/projects  .................................. Your programming projects\n~/projects/.vim  .......................... Vim settings for all your projects\n~/projects/c-projects  ................ Your C projects\n~/projects/c-projects/.vim  ........ Vim settings for your C projects\n~/projects/php-projects  ........... Your PHP projects\n~/projects/php-projects/.vim  ... Vim settings for your PHP projects\n\nWhen you open the file ~/projects/c-projects/main.c the plugin loads\nthis files in the given order:\n\n~/projects/.vim\n~/projects/c-projects/.vim\n\nThe scripts autoloads files with the name\n\n      _vimrc\n      _vim\n      .vimrc\n      .vim\n\n",
+  "install_details": "Copy \"perdirvimrc.vim\" to your local plugin folder.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11440",
+      "filename": "perdirvimrc.vim",
+      "script_version": "0.2",
+      "date": "2009-09-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18057",
+        "user_name": "wijaa",
+        "first_name": "Wolfgang",
+        "last_name": "Plaschg",
+        "email": "wolfgang.plaschg at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- removed unix-specific bugs"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11419",
+      "filename": "perdirvimrc.vim",
+      "script_version": "0.2",
+      "date": "2009-09-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18057",
+        "user_name": "wijaa",
+        "first_name": "Wolfgang",
+        "last_name": "Plaschg",
+        "email": "wolfgang.plaschg at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- per directory vim-resources are (re-)loaded after BufRead events (File open, Buffer change etc.)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11412",
+      "filename": "perdirvimrc.vim",
+      "script_version": "0.1",
+      "date": "2009-09-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "18057",
+        "user_name": "wijaa",
+        "first_name": "Wolfgang",
+        "last_name": "Plaschg",
+        "email": "wolfgang.plaschg at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

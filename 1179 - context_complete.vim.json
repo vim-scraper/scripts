@@ -1,0 +1,74 @@
+{
+  "script_id": "1179",
+  "name": "context_complete.vim",
+  "summary": "Context sensitive word completion",
+  "script_type": "utility",
+  "description": "The focus of this script is to provide context-sensitive word completion - taking advantage of the popular ctags utility and Vim's built-in perl features. \n\nSuppose you have an instance of an object (o), and you've typed:\n\no.set_\n\nWhile you are still in insert mode, press CTRL-J, and this script will then look up the first member of that object that starts with \"set_\" and complete it for you, like this:\n\no.set_range(integer max, integer min)\n\nIf this isn't the completion that you want, then press CTRL-J again for the next member that starts with \"set_\":\n\no.set_name(string name)\n\nand again for the next one:\n\no.set_value\n\nIf you've gone too far then you can go back with CTRL-K. After each completion you are left in insert mode - so you can just continue typing when you've found the one you want.\n\nThe object can also be replaced with a struct, class, 'this', or 'super'.\n\nCompletions can also be made after the open parentheses to complete the list of parameters:\n\no.set_range(<c-j>\n\nOr after the function:\n\no.get_name().compar<c-j>\n\nPressing CTRL-S will skip through the function parameters, visually selecting each in turn - useful for filling in the parameters after completing a function.",
+  "install_details": "Unpack the tar file into ~/.vim. Then from any vim window type :helptags ~/.vim/doc. You can read the installation details at :help context_complete-setup",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3960",
+      "filename": "context_complete1.0.tar",
+      "script_version": "1.0",
+      "date": "2005-03-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "801",
+        "user_name": "bluebottle",
+        "first_name": "David",
+        "last_name": "Larson",
+        "email": "david at thesilverstream DOT com",
+        "homepage": "http://www.thesilverstream.com"
+      },
+      "release_notes": "Major upgrade.\n- context completion continues after a function (var.getObject().<c-j>)\n- search pattern and keywords are configurable\n- added a new mapping to highlight parameter items in turn\n- added a tag cache file for mega-fast searching.\n- *much* more."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3848",
+      "filename": "context_complete.tar",
+      "script_version": "0.5",
+      "date": "2005-02-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "801",
+        "user_name": "bluebottle",
+        "first_name": "David",
+        "last_name": "Larson",
+        "email": "david at thesilverstream DOT com",
+        "homepage": "http://www.thesilverstream.com"
+      },
+      "release_notes": "- completes 'this.<c-q>'\n- completes 'super.<c-q>'\n- object type guessing is smarter - limits tag choises to members of the current object.\n- more bug fixes and documentation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3818",
+      "filename": "context_complete.tar",
+      "script_version": "0.4",
+      "date": "2005-01-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "801",
+        "user_name": "bluebottle",
+        "first_name": "David",
+        "last_name": "Larson",
+        "email": "david at thesilverstream DOT com",
+        "homepage": "http://www.thesilverstream.com"
+      },
+      "release_notes": "- implemented a basic understanding of class inheritance.\n- tag searching is now *much* faster - uses binary searching whenever possible.\n- function parameter completions are given when asked after \"(\". e.g.: util.do_suff(<c-q>\n- completion suggestions are now sorted."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3792",
+      "filename": "context_complete.vim",
+      "script_version": "0.3",
+      "date": "2005-01-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "801",
+        "user_name": "bluebottle",
+        "first_name": "David",
+        "last_name": "Larson",
+        "email": "david at thesilverstream DOT com",
+        "homepage": "http://www.thesilverstream.com"
+      },
+      "release_notes": "- static members are completed: i.e. ClassName::<c-q>\n- C structs are now understood and treated like classes\n- local variable definition detection is much better... it uses more of vim's built-in features. (yay!)\n- more bug fixes. Finding the definition of a local variable is much more solid."
+    }
+  ]
+}

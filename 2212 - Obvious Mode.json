@@ -1,0 +1,74 @@
+{
+  "script_id": "2212",
+  "name": "Obvious Mode",
+  "summary": "Clearly indicate visually whether Vim is in insert mode",
+  "script_type": "ftplugin",
+  "description": "Clearly indicate visually whether Vim is in insert mode via the StatusLine highlight group.\n\nWhen you go into insert mode, the status line color changes. When you leave insert mode, the status line color changes back.",
+  "install_details": "Put obviousmode.vim in plugins/\nYou probably want to\n    set laststatus=2\nOptionally\n    let g:obviousModeInsertHi = \"your settings\"\n    let g:obviousModeCmdwinHi = \"your settings\"\n        (see :h highlight-args)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8604",
+      "filename": "obviousmode.vim",
+      "script_version": "1.21",
+      "date": "2008-04-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14210",
+        "user_name": "brian60221",
+        "first_name": "Brian",
+        "last_name": "Lewis",
+        "email": "brian at lorf.org",
+        "homepage": ""
+      },
+      "release_notes": "fixing documentation error; said \"let laststatus=2\", should have said \"set laststatus=2\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8597",
+      "filename": "obviousmode.vim",
+      "script_version": "1.2",
+      "date": "2008-04-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14210",
+        "user_name": "brian60221",
+        "first_name": "Brian",
+        "last_name": "Lewis",
+        "email": "brian at lorf.org",
+        "homepage": ""
+      },
+      "release_notes": "More robust color saving/restoration due to Erik Falor. Miscellaneous style/performance improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8589",
+      "filename": "obviousmode.vim",
+      "script_version": "1.1",
+      "date": "2008-04-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14210",
+        "user_name": "brian60221",
+        "first_name": "Brian",
+        "last_name": "Lewis",
+        "email": "brian at lorf.org",
+        "homepage": ""
+      },
+      "release_notes": "Improvements. Thank you to Markus Braun."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8549",
+      "filename": "obviousmode.vim",
+      "script_version": "1.0",
+      "date": "2008-04-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14210",
+        "user_name": "brian60221",
+        "first_name": "Brian",
+        "last_name": "Lewis",
+        "email": "brian at lorf.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

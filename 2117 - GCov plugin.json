@@ -1,0 +1,26 @@
+{
+  "script_id": "2117",
+  "name": "GCov plugin",
+  "summary": "Simple plugin for easy access to .gcov files",
+  "script_type": "utility",
+  "description": "GCov is a profiler that comes with GCC. It is used to combine source code with profiling information and write the result into a gcov file. Switching between gcov and source file can easily become inefficient. This little plugin makes it easy to access current source line in the corresponding .gcov file. Just compile your application with -fprofile-aprc and -ftest-coverage, run it once to create the coverage files and press F11 in any source file to jump to the corresponding line in gcov file. ",
+  "install_details": "Copy this script into ~/.vim/plugins",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8134",
+      "filename": "gcov.vim",
+      "script_version": "0.01",
+      "date": "2008-01-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13699",
+        "user_name": "[volk]",
+        "first_name": "Martin",
+        "last_name": "K. Schreder",
+        "email": "cyberpixl at gmail.com",
+        "homepage": "http://www.schreder.nu"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

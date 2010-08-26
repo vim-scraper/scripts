@@ -1,0 +1,26 @@
+{
+  "script_id": "1171",
+  "name": "DetectIndent",
+  "summary": "Automatically detect indent (expandtab, shiftwidth, tabstop) settings",
+  "script_type": "utility",
+  "description": "This script provides a command which will attempt to guess the correct indent settings for an open file, for use when there is no modeline available. Note that this is a pure vim implementation, and doesn't require any external applications or interpreters.\n\nUsage:\n\n:DetectIndent\n\nMay also be used in an autocommand, for example:\n\n:autocmd BufReadPost * :DetectIndent\n\nOptions:\n\nTo prefer 'expandtab' to 'noexpandtab' when no detection is possible: \n:let g:detectindent_preferred_expandtab = 1\n\nTo specify a preferred indent level when no detection is possible:\n:let g:detectindent_preferred_indent = 4\n\nNotes:\n\nDetection is by no means perfect. It won't work if files use especially perverse combinations of spaces and tabs, or weird tab widths. Bug reports and patches encouraged...\n\nKeeping things up to date on vim.org is a nuisance. For the latest version, visit:\n\n    http://github.com/ciaranm/detectindent",
+  "install_details": "Place in ~/.vim/plugin/ and ~/.vim/doc/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3743",
+      "filename": "detectindent-1.0.tar.bz2",
+      "script_version": "1.0",
+      "date": "2005-01-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4078",
+        "user_name": "ciaranm",
+        "first_name": "Ciaran",
+        "last_name": "McCreesh",
+        "email": "ciaran.mccreesh at googlemail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

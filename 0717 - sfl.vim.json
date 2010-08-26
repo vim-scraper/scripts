@@ -1,0 +1,74 @@
+{
+  "script_id": "717",
+  "name": "sfl.vim",
+  "summary": "VIM Syntax file for SFL hardware description language.",
+  "script_type": "syntax",
+  "description": "SFL, Structured Function description Language, is a one of the Hardware Description Language. SFL is Register Transfer Level HDL, the programming style is like C or Pascal.\nPlease see here: http://www.onlab.ntt.co.jp/mn/parthenon/pack.html\n\nSFL can be converted to Verilog HDL by sfl2vl. \nPlease see here: http://shimizu-lab.dt.u-tokai.ac.jp/pgm/sfl2vl/index.html\n\nThis syntax was designed for dark background.",
+  "install_details": "Put the file to $HOME/.vim/colors, then add this line to $HOME/.vimrc\n\"colorscheme sfl\".\nYou may need to add following line in addition,\n\"syntax enable\".",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2755",
+      "filename": "sfl.vim",
+      "script_version": "2.1",
+      "date": "2004-02-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2914",
+        "user_name": "yiida",
+        "first_name": "Yoshihiro",
+        "last_name": "Iida",
+        "email": "3aepm001 at keyaki.cc.u-tokai.ac.jp",
+        "homepage": "http://shimizu-lab.dt.u-tokai.ac.jp"
+      },
+      "release_notes": "The syntax file has changed more similar Verilog or VHDL color."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2173",
+      "filename": "sfl.vim",
+      "script_version": "1.0",
+      "date": "2003-07-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2914",
+        "user_name": "yiida",
+        "first_name": "Yoshihiro",
+        "last_name": "Iida",
+        "email": "3aepm001 at keyaki.cc.u-tokai.ac.jp",
+        "homepage": "http://shimizu-lab.dt.u-tokai.ac.jp"
+      },
+      "release_notes": "Distinguishes colors between control signals and data signals.\nVersion 1.0 is stable Vim syntax for SFL."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2171",
+      "filename": "sfl.vim",
+      "script_version": "0.3",
+      "date": "2003-07-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2914",
+        "user_name": "yiida",
+        "first_name": "Yoshihiro",
+        "last_name": "Iida",
+        "email": "3aepm001 at keyaki.cc.u-tokai.ac.jp",
+        "homepage": "http://shimizu-lab.dt.u-tokai.ac.jp"
+      },
+      "release_notes": "Supports all of SFL and Verilog keywords.\nDetects reserved port name of SFL and Verilog."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2169",
+      "filename": "sfl.vim",
+      "script_version": "0.2",
+      "date": "2003-07-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2914",
+        "user_name": "yiida",
+        "first_name": "Yoshihiro",
+        "last_name": "Iida",
+        "email": "3aepm001 at keyaki.cc.u-tokai.ac.jp",
+        "homepage": "http://shimizu-lab.dt.u-tokai.ac.jp"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

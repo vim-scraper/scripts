@@ -1,0 +1,26 @@
+{
+  "script_id": "658",
+  "name": "headers.vim",
+  "summary": "Syntax highlighting for SMTP/HTTP headers",
+  "script_type": "syntax",
+  "description": "Does some basic syntax highlighting for SMTP and HTTP header information.\n\nCurrently identifies and colours:\n  - header names\n  - dates\n  - times\n  - hostnames\n  - IP addresses\n  - content-type headers\n  - email addresses\n\nIt's kinda kludgy; corrections and suggestions welcome.",
+  "install_details": "Drop it into $VIM/vim61/syntax.\n\nTo highlight a file:\n:set ft=headers\n:syn on",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2017",
+      "filename": "headers.vim",
+      "script_version": "0.1",
+      "date": "2003-05-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2446",
+        "user_name": "caelyx",
+        "first_name": "sim",
+        "last_name": "b",
+        "email": "projects at caelyx.net",
+        "homepage": "http://caelyx.net/cgi-bin/blog/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

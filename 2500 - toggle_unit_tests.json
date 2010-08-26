@@ -1,0 +1,42 @@
+{
+  "script_id": "2500",
+  "name": "toggle_unit_tests",
+  "summary": "plug-in for toggling between source and unit test files",
+  "script_type": "utility",
+  "description": "Usage:\n\nUse this plug-in when you are doing Test-Driven Development [TDD] in any\nlanguage to quickly switch between unit-test and production code. To make this\nreally fast bind the Toggle function to a function key in your .vimrc:\n\n    \"   [F3]    toggles between (header, ) source and test files.\n    nnoremap    <F3> :<C-U>TUT<CR>\n\nThis plug-in assumes source and unit test files are in the same directory, as\nI believe this to be best practice.\n\nMappings:\n\n<Leader>tut   or   <Plug>ToggleUnitTestsToggle\n    Toggles betwixt source and unit test file\n\nCommands:\n\n:TUT\n\tToggles betwixt source and unit test file\n\nSettings:\n\nBy default, unit_test filenames are deemed to begin with 't_'. \n\nTell toggle_unit_tests.vim your own prefix by setting the following global\nvariable, perhaps in your .vimrc:\n\n    let g:unit_test_prefix='test_'\n",
+  "install_details": "This is a vimball installation.\n\nvim /path/to/toggle_unit_tests.vba\n:so %\n:q",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11130",
+      "filename": "toggle_unit_tests.vba",
+      "script_version": "1.1",
+      "date": "2009-08-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8337",
+        "user_name": "johnsyweb",
+        "first_name": "Pete",
+        "last_name": "Johns",
+        "email": "paj-vim at johnsy.com",
+        "homepage": "http://johnsy.com/?refer=vim"
+      },
+      "release_notes": "Fixed annoying bug where if a file was already loaded into a buffer, the cursor would move to the top when switching.\n\nRefactored code to make easier to read and maintain.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9739",
+      "filename": "toggle_unit_tests.vba",
+      "script_version": "1.0",
+      "date": "2009-01-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8337",
+        "user_name": "johnsyweb",
+        "first_name": "Pete",
+        "last_name": "Johns",
+        "email": "paj-vim at johnsy.com",
+        "homepage": "http://johnsy.com/?refer=vim"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

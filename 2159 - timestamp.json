@@ -1,0 +1,42 @@
+{
+  "script_id": "2159",
+  "name": "timestamp",
+  "summary": "Add a timestamp to your source file",
+  "script_type": "utility",
+  "description": "This SCRIPT will add/update the timestamp when you close the source file.\nC++, C, Java, Makefile, rb, py, vim script is supported.",
+  "install_details": "copy it to [plugin path].",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9480",
+      "filename": "timestamp.vim",
+      "script_version": "1.1",
+      "date": "2008-11-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13928",
+        "user_name": "yegong",
+        "first_name": "Peng",
+        "last_name": "Du",
+        "email": "a at yegong.net",
+        "homepage": "http://www.yegong.net"
+      },
+      "release_notes": "It's a script to insert a \"Last Change\" comment field in your source file.\nYou can modify the default behavior of this plug-in.\nTo add the support of new file type\nput this to your vimrc\nau BufWritePre *.cpp        call TimeStamp('//')\nif the comment block in that language has both the begin and end symbol,\njust enjoy this\nau BufWritePre *.php          call TimeStamp('<?php //', '?>')\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8311",
+      "filename": "timestamp.vim",
+      "script_version": "1.0",
+      "date": "2008-02-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13928",
+        "user_name": "yegong",
+        "first_name": "Peng",
+        "last_name": "Du",
+        "email": "a at yegong.net",
+        "homepage": "http://www.yegong.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

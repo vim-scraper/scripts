@@ -1,0 +1,26 @@
+{
+  "script_id": "553",
+  "name": "adp.vim",
+  "summary": "ADP (OpenACS/AOLserver HTML templating format) syntax highlighting",
+  "script_type": "syntax",
+  "description": "Syntax highlighting for ADP (OpenACS/AOLserver templating format) files.",
+  "install_details": "Single user setup: Put this file into your ~/.vim/syntax directory, and add filetype detection to your ~/.vim/filetype.vim file.\n\nHere's a skeleton filetype.vim, in case you don't have one yet:\n\n-----\n\" filetype detection\n\" sourced before $VIMRUNTIME/filetype.vim\n\"\n\" Detects: adp\n\nif exists(\"did_load_filetypes\")\n  finish\nendif\n\naugroup filetypedetect\n  au! BufRead,BufNewFile *.adp   setfiletype adp\naugroup END\n-----",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1696",
+      "filename": "adp.vim",
+      "script_version": "0.2",
+      "date": "2003-02-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1448",
+        "user_name": "paulcannon",
+        "first_name": "paul",
+        "last_name": "cannon",
+        "email": "pik at debian.org",
+        "homepage": "http://people.debian.org/~pik/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

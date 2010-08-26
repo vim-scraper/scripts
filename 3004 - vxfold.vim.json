@@ -1,0 +1,26 @@
+{
+  "script_id": "3004",
+  "name": "vxfold.vim",
+  "summary": "Fold cycling similar to emacs org-mode (using TAB key)",
+  "script_type": "utility",
+  "description": "This script implements a fold-cycling functionality similar to\nthe one in emacs org-mode.\n\nSubfolds are open/closed each time TAB or Shift-TAB is pressed.\nTAB operates on the lines below a heading that is in the current line.\nShift-TAB operates on the whole buffer.\n\nAfter each press a step in the following cycle will be performed:\n   1. fold closed\n   2. show direct subheadings\n   3. show structure below heading + first line of text\n   4. unfold all\n\n   NOTES: It is possible to skip step 2 and/or 3, but the per-buffer \n   configuration is still missing (I think emacs-org uses only 1-2-4). In step \n   2 the text under the current heading may be visible; this is because of\n   the way folding is implemented in Vim.\n\nFold cycling will work in buffers that are folded in the following way:\n  * headings have folding levels 1-9\n  * text has a folding level higher than 9\n\nThis means that the script can work with TVO (vimscript#517) without\nchanging the folding mode. To enable fold cycling in TVO mode:\n\n  :VxFoldTvo\n\nFor other modes the foldmethod has to be changed. Foldmethods are\nprovided for viki (vimscript#861) and vimwiki (vimscript#2226).\n\n  :VxFoldViki\n  :VxFoldVimWiki\n\nThe later commands will also work on any buffer that has the headings defined\nwith a number of characters at the beginning of line (viki='*', vimwiki='=').\n\nIf a file uses '#' characers to mark headings with levels, it is also possible\nto use fold cycling in it like this:\n\n  :call vxfold#SetFold_OrgBolCount('#')\n  :VxFoldTvo\n\nThe display of the folded text can be changed with\n\n  :call vxfold#SetFoldTextFirstLine()\n\nwhich is the default for VxFoldVimWiki and VxFoldViki.\n\nVersion 0.1 is less than 2 days old, so it is not perfect. It needs more\nwork especially the customization/command part.\n\nPlease report bugs/suggstions on the Vim/Wiki (link top right).\n\n",
+  "install_details": "Unpack into vim runtime directory (eg. ~/.vim)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12542",
+      "filename": "vxfold.zip",
+      "script_version": "0.1",
+      "date": "2010-03-02",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17122",
+        "user_name": "markomahnic",
+        "first_name": "Marko",
+        "last_name": "Mahni&#269;",
+        "email": "marko.mahnic at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

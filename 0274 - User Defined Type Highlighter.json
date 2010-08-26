@@ -1,0 +1,106 @@
+{
+  "script_id": "274",
+  "name": "User Defined Type Highlighter",
+  "summary": "Generate vim highlighting groups from C++ typedefs, structs, and classes.",
+  "script_type": "utility",
+  "description": "Generates vim highlighting groups for typedefs, classes, and structs that you have defined in your C++ header files.  There are a few options that you can set to control its behavior, so read the included help file so you can know what options you can change in your .vimrc if you want.",
+  "install_details": "Thanks to Gavin Sinclair for suggesting that I package this differently.  You should unpackage udt.tar.gz in your ~/.vim directory.  This will add the usr_include.vim file to your ftplugin/cpp directory.  There is no longer a need to source the file in your .vimrc, it will be sourced whenever you load up a C++ file.  You should move the udt.rb file to wherever you keep your scripts (ie. ~/bin).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1030",
+      "filename": "udt.tar.gz",
+      "script_version": "1.1",
+      "date": "2002-07-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "210",
+        "user_name": "brailsmt",
+        "first_name": "Michael",
+        "last_name": "Brailsford",
+        "email": "brailsmt at yahoo.com",
+        "homepage": "http://students.cs.byu.edu/~mtb6"
+      },
+      "release_notes": "Changed a few things and fixed some bugs.  Mainly, I made it so you do not have to move any files to make the plugin work, if you don't want to.  It is still *highly* recommend that you do move the files as suggested in the help file, but you now have the option to not move anything.  Updated the help files, and fixed some typos and other minor things."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=816",
+      "filename": "udt_highlight.tar",
+      "script_version": "1.01",
+      "date": "2002-04-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "210",
+        "user_name": "brailsmt",
+        "first_name": "Michael",
+        "last_name": "Brailsford",
+        "email": "brailsmt at yahoo.com",
+        "homepage": "http://students.cs.byu.edu/~mtb6"
+      },
+      "release_notes": "Very minor bug fix."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=815",
+      "filename": "udt_highlight.tar",
+      "script_version": "1.0",
+      "date": "2002-04-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "210",
+        "user_name": "brailsmt",
+        "first_name": "Michael",
+        "last_name": "Brailsford",
+        "email": "brailsmt at yahoo.com",
+        "homepage": "http://students.cs.byu.edu/~mtb6"
+      },
+      "release_notes": "Improved the handling of typedefs.  Now it properly handles something like \"typedef long long int llint;\".  Added support for user configurable colors, also added documentation.  Anyway, this is a major overhaul of the script.  Install the doc, and you can read all about it.  You should still untar the archive in ~/.vim.  When you start up vim type \":helptags ~/.vim/doc\" then \":he udt\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=804",
+      "filename": "syntax_expander.tar",
+      "script_version": "0.92",
+      "date": "2002-04-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "210",
+        "user_name": "brailsmt",
+        "first_name": "Michael",
+        "last_name": "Brailsford",
+        "email": "brailsmt at yahoo.com",
+        "homepage": "http://students.cs.byu.edu/~mtb6"
+      },
+      "release_notes": "Well, just polishing things up.  I am now very confident that it will work.  I ran the command line version on /usr/include and got a syntax highlighting file of 7000 lines.  I included that file in the tar.  I also added some things to aid in expanding this to work with other languages.  For now though it is for C++ only."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=803",
+      "filename": "syntax_expander.tar",
+      "script_version": "0.91",
+      "date": "2002-04-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "210",
+        "user_name": "brailsmt",
+        "first_name": "Michael",
+        "last_name": "Brailsford",
+        "email": "brailsmt at yahoo.com",
+        "homepage": "http://students.cs.byu.edu/~mtb6"
+      },
+      "release_notes": "Thanks to Gavin Sinclair for suggesting better packaging.  Now you should untar the file in your ~/.vim directory and it will add the syn_expand.vim to the ftplugins/cpp/ directory.  You should then move the csyntax_expander.rb to whereever you keep scripts."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=802",
+      "filename": "syntax_expander.tar",
+      "script_version": "0.9",
+      "date": "2002-04-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "210",
+        "user_name": "brailsmt",
+        "first_name": "Michael",
+        "last_name": "Brailsford",
+        "email": "brailsmt at yahoo.com",
+        "homepage": "http://students.cs.byu.edu/~mtb6"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

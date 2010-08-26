@@ -1,0 +1,26 @@
+{
+  "script_id": "1012",
+  "name": "lingodirector.vim",
+  "summary": "original Director Lingo script colors",
+  "script_type": "color scheme",
+  "description": "These are the original script colors as Macromedia Director uses them. This color scheme will probably only make sense with the Lingo syntax file (vimscript #1010). This way you can not only see the colors your are used to, you can also convert them to HTML to put colored Lingo code snippets on your webpage.\nYou can even choose whether or not to put the line numbers in.\n\nScreenshots:\nhttp://www.oxpal.com/downloads/vim/lingodirector_nonumber.png\nhttp://www.oxpal.com/downloads/vim/lingodirector_number.png\n\nTo create an HTML output: \n* Open a lingo file. \n* Select this color scheme. \n* Type \":set number!\" to toggle the line numbers on and off\n* Then either choose the menu option \"Sytnax>Convert to HTML\", or type \":runtime! syntax/2html.vim\"\n* You are then in the output file, wich you can save, or copy",
+  "install_details": "Download and move to the ~/.vim/colors Folder. You can then choose the scheme from the menu (Edit>Color Scheme>lingodirector) or type \n:colorscheme lingodirector\n\nIf you want a colorscheme as default you simply write the command in your ~/.vimrc file - in this case: \ncolorscheme lingodirector",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3141",
+      "filename": "lingodirector.vim",
+      "script_version": "1.0",
+      "date": "2004-06-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3579",
+        "user_name": "Thomas",
+        "first_name": "Thomas",
+        "last_name": "Schmall",
+        "email": "ts_nowhere at yahoo.com",
+        "homepage": "http://www.oxpal.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

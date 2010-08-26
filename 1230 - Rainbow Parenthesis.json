@@ -1,0 +1,42 @@
+{
+  "script_id": "1230",
+  "name": "Rainbow Parenthesis",
+  "summary": "Highlight matching parens in a rainbow of colors",
+  "script_type": "syntax",
+  "description": "This script highlights matching parenthesis with a rainbow of colors. This make it visually very obvious which matches what. Most useful for Lisp.",
+  "install_details": "I dropped it into my ~/.vim/plugin directory. This make it show up all the time UNLESS you have syntax highlighting active. (because it&#039s cleared out by the act of loading syntax highlighting) SO you must add a line like\n\nruntime plugin/RainbowParenthsis.vim\n\nto the END of your ~/.vim/syntax/lisp.vim file (or the syntax file for whatever language you are using)\nYou may also source it directly with :so <filename>.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4007",
+      "filename": "RainbowParenthsis.vim",
+      "script_version": "1.1",
+      "date": "2005-03-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7072",
+        "user_name": "Dorky",
+        "first_name": "john",
+        "last_name": "gilmore",
+        "email": "jgilmore at 650dialupcom",
+        "homepage": ""
+      },
+      "release_notes": "Now works nice(r) with more complex syntax highlighting (like c, for instance)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3970",
+      "filename": "RainbowParenthsis.vim",
+      "script_version": "1.0",
+      "date": "2005-03-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7072",
+        "user_name": "Dorky",
+        "first_name": "john",
+        "last_name": "gilmore",
+        "email": "jgilmore at 650dialupcom",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

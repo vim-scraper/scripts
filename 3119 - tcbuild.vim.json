@@ -1,0 +1,26 @@
+{
+  "script_id": "3119",
+  "name": "tcbuild.vim",
+  "summary": "syntax of buildinfo file of TCbuild (build tool for Fortran)",
+  "script_type": "syntax",
+  "description": "Define the syntax (keywords and comments) for the buildinfo file of TCbuild, a new build tool for Fortran.",
+  "install_details": "Place tcbuild.vim file in ~/.vim/syntax/ folder.\n\nYou may want to make vim autodetect it by having this in your ~/.vimrc :\nautocmd BufRead,BufNewFile buildinfo set filetype=tcbuild",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13156",
+      "filename": "tcbuild.vim",
+      "script_version": "1.0",
+      "date": "2010-06-10",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "20102",
+        "user_name": "david.froger",
+        "first_name": "David",
+        "last_name": "Froger",
+        "email": "david.froger at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

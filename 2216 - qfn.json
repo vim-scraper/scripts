@@ -1,0 +1,42 @@
+{
+  "script_id": "2216",
+  "name": "qfn",
+  "summary": "quickfixnotes: file annotation with quickfix",
+  "script_type": "utility",
+  "description": "QuickFixNotes, or QFN, is a quick hack that allows file annotation\nbased on |quickfix| functionality.  In particular, this plugin allows the user\nto tie comments to a specific source file, line number, and column number\nwithout modifying the file being reviewed.  The goal of the plugin is to\nprovide a simple and useful mechanism for tracking notes when reviewing any\nsort of text file -- from documents and book drafts to source code and\nconfiguration files.  Paired with xxd, you can even annotate binary formats\nwith it.  qfn is useful any place where inserting comments into the\nfile being reviewed is impractical.\n\nGiven its simplicity, this plugin only supplies a simple set of features:\n\n    * Add a comment for the given line and column number to the |quickfix| list\n    * Save the current |quickfix| list an expected format\n    * Provide all functionality without external scripting dependencies\n\nIn the future, QFN may support more advanced interfaces to the |quickfix|.\n\nTo use, just map <Plug>QuickFixNote and <Plug>QuickFixSave to keys.  \nWhen called, QuickFixNote will add an entry to the quickfix list with a user\nsupplied comment for the current cursor's line number, column, and buffer\nname. ",
+  "install_details": "1. Download the vimball.\n2. Run:   vim qfn.vba\n3. Execute the following ex command:\n       :so %\n4. You should now be able to bind <Plug>QuickFixNote and <Plug>QuickFixSave to\n   your preferred key combinations.  You can use the \":help qfn\" command  at any time\n   to get more information.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8586",
+      "filename": "qfn.vba",
+      "script_version": "20080420",
+      "date": "2008-04-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14253",
+        "user_name": "redpig",
+        "first_name": "Will",
+        "last_name": "Drewry",
+        "email": "redpig at dataspill.org",
+        "homepage": "http://redpig.dataspill.org"
+      },
+      "release_notes": "Removed included :copen mappingl switched to vimball packaging."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8573",
+      "filename": "qfn-20080417.zip",
+      "script_version": "20080417",
+      "date": "2008-04-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14253",
+        "user_name": "redpig",
+        "first_name": "Will",
+        "last_name": "Drewry",
+        "email": "redpig at dataspill.org",
+        "homepage": "http://redpig.dataspill.org"
+      },
+      "release_notes": "Quick release"
+    }
+  ]
+}

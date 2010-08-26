@@ -1,0 +1,58 @@
+{
+  "script_id": "2126",
+  "name": "accurev",
+  "summary": "AccuRev SCM Integration for Vim",
+  "script_type": "utility",
+  "description": "This is the AccuRev SCM Integration for Vim.  \n\nAccuRev is a leading Software Configuration Management (SCM) application that enables massive, parallel software development across local and distributed geographic boundaries.  If you develop software in large teams with multiple releases or product variants... AccuRev is for you. See more at http://www.accurev.com.\n\nThis plugin provides the ability to perform 20+ AccuRev commands (keep, promote, update, merge, etc) directly within Vim.  \n\nThe plugin requires Vim 7.x and supports AccuRev 4.5/4.6/4.7.  Developed on linux (Ubuntu 8.04), it has also been tested on Windows (XPsp2).\n\nThe plugin homepage is http://vim.tools4accurev.com",
+  "install_details": "Unpack the zip file directly in your [unix] $HOME/.vim or [windows] $HOME/vimfiles directory.  See INSTALL.vim4accurev for installation instructions.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11212",
+      "filename": "vim4accurev-1.1.1.zip",
+      "script_version": "1.1.1",
+      "date": "2009-08-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8919",
+        "user_name": "fepus",
+        "first_name": "David",
+        "last_name": "Thomas",
+        "email": "davidpthomas at gmail.com",
+        "homepage": "http://www.davidpthomas.name"
+      },
+      "release_notes": "support for optionally requiring commit comments; ideal for preventing accidental <Enter> or <Esc> at commit time; minor string/path compare patch for Windows users during workspace detection (thanks Charles Bates)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11199",
+      "filename": "vim4accurev-1.1.0.zip",
+      "script_version": "1.1.0",
+      "date": "2009-08-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8919",
+        "user_name": "fepus",
+        "first_name": "David",
+        "last_name": "Thomas",
+        "email": "davidpthomas at gmail.com",
+        "homepage": "http://www.davidpthomas.name"
+      },
+      "release_notes": "In-session plugin enable/disable useful on slow network connections; gvim per-buffer graphical menus; new annotate/blame feature; removed dependency on cwd allows editing workspace files from anywhere (user reported fix); ability to launch stream browser; ability to launch graphical merge on true conflict.  updated docs + more content.  General script refactoring and housecleaning.  enjoy!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8178",
+      "filename": "vim4accurev-1.0.1.zip",
+      "script_version": "1.0",
+      "date": "2008-01-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8919",
+        "user_name": "fepus",
+        "first_name": "David",
+        "last_name": "Thomas",
+        "email": "davidpthomas at gmail.com",
+        "homepage": "http://www.davidpthomas.name"
+      },
+      "release_notes": "Initial version."
+    }
+  ]
+}

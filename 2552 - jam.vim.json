@@ -1,0 +1,42 @@
+{
+  "script_id": "2552",
+  "name": "jam.vim",
+  "summary": "Jam (or Boost.Build) syntax",
+  "script_type": "syntax",
+  "description": "I love Jam, but I hated staring at plain text.  I based this off of something by Matt Armstrong (see source).  This is best effort only.  Jam is also known as bjam and Boost.Jam.",
+  "install_details": "To install, I put it in ~/.vim/syntax and put the following to ~/.vim/filetype.vim:\n\nif exists(\"did_load_filetypes\")\n        finish\nendif\n\n\" jam detection\naugroup filetypedetect\n        au! BufRead,BufNewFile Jamroot        setfiletype jam\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10632",
+      "filename": "jam.vim",
+      "script_version": "0.3",
+      "date": "2009-05-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16656",
+        "user_name": "incripshin",
+        "first_name": "Markus",
+        "last_name": "Peloquin",
+        "email": "markus at cs.wisc.edu",
+        "homepage": "http://pages.cs.wisc.edu/~markus"
+      },
+      "release_notes": "I reworked the set of keywords."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10025",
+      "filename": "jam.vim",
+      "script_version": "0.2",
+      "date": "2009-02-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16656",
+        "user_name": "incripshin",
+        "first_name": "Markus",
+        "last_name": "Peloquin",
+        "email": "markus at cs.wisc.edu",
+        "homepage": "http://pages.cs.wisc.edu/~markus"
+      },
+      "release_notes": "Fixed a small bug with comment detection."
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "script_id": "2368",
+  "name": "CCTree",
+  "summary": "C Call-Tree Explorer - Source-code analysis, real-time display of code flow",
+  "script_type": "ftplugin",
+  "description": "Project details/Screenshots:\n                 http://sites.google.com/site/vimcctree/\n \n  Description:\n       Plugin generates call-trees for any function or macro in real-time inside  Vim. (Functionality similar to that seen in other IDEs like\nKscope, Source navigator, Eclipse)\n\n  Requirements: 1) Cscope          2) Vim 7.xx \n\n \n ",
+  "install_details": "Install details\n  Installation:\n               Copy this file to ~/.vim/plugins/\n               or to /vimfiles/plugins/  (on Win32 platforms)\n\n               It might also be possible to load it as a filetype plugin\n               ~/.vim/ftplugin/c/\n\n               Need to set :filetype plugin on\n          \n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13250",
+      "filename": "cctree.vim",
+      "script_version": "0.75",
+      "date": "2010-06-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Allow CCTree windows to be \"saved\".\nMultiple instances of CCTree preview windows can now exist.\nUse \"<Ctrl-\\>y\" or \":CCTreeWindowSaveCopy\" to save the current view."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12989",
+      "filename": "cctree.vim",
+      "script_version": "0.71",
+      "date": "2010-05-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Obsoletes 0.70 which had a script bug.\nAdded support for multiple cscope databases."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11005",
+      "filename": "cctree.vim",
+      "script_version": "0.65",
+      "date": "2009-07-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added CCTree preview window toggle function (shortcut: <C-\\>w )\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9730",
+      "filename": "cctree.vim",
+      "script_version": ".61",
+      "date": "2008-12-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fix release"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9583",
+      "filename": "cctree.vim",
+      "script_version": "0.60",
+      "date": "2008-11-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for source-file dependency tree"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9371",
+      "filename": "cctree.vim",
+      "script_version": "0.50",
+      "date": "2008-10-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Optimizations for compact memory foot-print and improved compressed-database load speeds"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9317",
+      "filename": "cctree.vim",
+      "script_version": "0.41",
+      "date": "2008-10-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "(Minor fix) Compressed cscope databases will load incorrectly if encoding is not 8-bit"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9307",
+      "filename": "cctree.vim",
+      "script_version": "0.4",
+      "date": "2008-10-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Rewrite of \"tree-display\" code\n2. New syntax hightlighting\n3. Dynamic highlighting for call-trees\n4. Support for new window modes (vertical, horizontal)  \n5. New display format option for compact or wide call-trees\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9273",
+      "filename": "cctree.vim",
+      "script_version": "0.3",
+      "date": "2008-09-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Support compressed cscope databases\n2. Display window related bugs fixed\n3. More intuitive display and folding capabilities"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9245",
+      "filename": "cctree.vim",
+      "script_version": "0.2",
+      "date": "2008-09-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Patch from Yegappan Lakshmanan\n1. Support for using the plugin in Vi-compatible mode.\n2. Filtering out unwanted lines before processing the db.\n3. Command-line completion for the commands.\n4. Using the cscope db from any directory.\n\n(Disables perl interface; native VIM database loads are very fast, thanks to\nfix #2)\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9216",
+      "filename": "cctree.vim",
+      "script_version": "0.1",
+      "date": "2008-09-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

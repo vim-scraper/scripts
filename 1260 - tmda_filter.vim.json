@@ -1,0 +1,26 @@
+{
+  "script_id": "1260",
+  "name": "tmda_filter.vim",
+  "summary": "colorizes tmda filter files",
+  "script_type": "syntax",
+  "description": "Colorizes the filter files used by TMDA ( http://www.tmda.net/ ), the Tagged Message Delivery Agent.\n\nI don't use all of the features of TMDA, so please let me know of any things that should be colorized and aren't.",
+  "install_details": "copy into your ~/.vim/syntax directory.  I also created a .vim/filetype.vim with the following contents:\n\nau BufRead,BufNewFile */.tmda/filters/* setfiletype tmda_filter",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4157",
+      "filename": "tmda_filter.vim",
+      "script_version": "1.2",
+      "date": "2005-04-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7378",
+        "user_name": "monique",
+        "first_name": "Monique",
+        "last_name": "Mudama",
+        "email": "mo.mudd at bounceswoosh.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

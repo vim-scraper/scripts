@@ -1,0 +1,26 @@
+{
+  "script_id": "2249",
+  "name": "pac.vim",
+  "summary": "syntax highlighting for proxy .pac files",
+  "script_type": "syntax",
+  "description": "This is a simple syntax file for highlighting http proxy .pac files.  The proxy auto-config file defines how web browsers and other user agents can automatically choose the appropriate proxy server (access method) for fetching a given URL.  This script will help to parse these proxy files.  A great example to test it out on is at http://www.schooner.com/~loverso/no-ads/. where you can find John LoVerso&#039s outstanding no-ads proxy config file.  Let me know what you think, and send comments to my email.  ",
+  "install_details": "POSIX:      drop into $HOME/.vim/syntax\nWindows:  drop into %ProgramFiles%\\\\Vim\\\\vimfiles\\\\syntax\nadd this line to your $HOME/.vimrc or your %ProgramFiles%\\\\Vim\\\\_vimrc:\n   au BufNewFile,BufRead *.pac set syntax=pac",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8719",
+      "filename": "pac.vim",
+      "script_version": "0.1",
+      "date": "2008-05-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8228",
+        "user_name": "Randall311",
+        "first_name": "Justin",
+        "last_name": "Randall",
+        "email": "jrrandall at gmail.com",
+        "homepage": "http://justin.sharewith.us"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

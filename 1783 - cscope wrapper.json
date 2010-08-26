@@ -1,0 +1,26 @@
+{
+  "script_id": "1783",
+  "name": "cscope wrapper",
+  "summary": "make gvim(WIN32) + cscope(Cygwin) work together",
+  "script_type": "utility",
+  "description": "Actually this isn't a script, but a small application. If you are in the same situation as me cswrapper may help.\n1. I'm using gvim Win32 version. It works perfectly in my Windows XP.\n2. I tried cscope Win32 version, but it always returns 0 lines for any request.\n3. I compiled a cscope(ver 15.6) in Cygwin. It works well in its own command window. But gvim freezes when creating a connection to my cscope with 'cs add cscope.out'.\nI guess the reason is cscope doesn't flush its output, it causes gvim to hang up when reading from the pipe. Instead of hacking into cscope's source code, I created this wrapper. It acts as a cscope command window, reads requests from gvim, gets the result by executing cscope, then passes the result to gvim. It works well for me till now.\nCSWrapper isn't a full function cscope. It only accesses the parameter '-f /path/cscope.out' and acts as a wrapper between gvim and cscope. Please use the original cscope.exe to create databases.",
+  "install_details": "1. Put this program in the same directory as your cscope.exe.\n2. Put this line in your _gvimrc, you may need to add the full path:\nset csprg=cswrapper.exe\n\nIt should work now. If it doesn't work, run 'cswrapper -f /path/cscope.out' in a command window, then try typing a command, for example '0main', to see what happens.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6672",
+      "filename": "CSWrapper.zip",
+      "script_version": "0.1",
+      "date": "2007-01-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11624",
+        "user_name": "Ausun",
+        "first_name": "Ausun",
+        "last_name": "Wang",
+        "email": "ausun1 at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

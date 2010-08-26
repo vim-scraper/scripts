@@ -1,0 +1,74 @@
+{
+  "script_id": "1453",
+  "name": "cecscope",
+  "summary": "command and menu driven cscope interface",
+  "script_type": "utility",
+  "description": "    (requires vim7.0aa snapshot #188 or later)\nDrChip's cscope interface supports commands:\n\n    CS     [cdefgist]   : cscope\n    CSl[!] [cdefgist]   : locallist style (! restores efm)\n    CSs[!] [cdefgist]   : split window and use cscope\n\n    !            split vertically\n    c (calls)    find functions calling function under cursor\n    d (called)   find functions called by function under cursor\n    e (egrep)    egrep search for the word under cursor\n    f (file)     open the file named under cursor\n    g (global)   find global definition(s) of word under cursor\n    i (includes) find files that #include file named under cursor\n    s (symbol)   find all references to the word under cursor\n    t (text)     find all instances of the word under cursor\n\nand menus which allow you to do all the above.  Includes help\nand a tutorial.\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#CECSCOPE)\n",
+  "install_details": "1. Place into your .vim/ or vimfiles\\ directory, as appropriate for your o/s and setup.\n2. gunzip cecscope.vim.gz\n\nThe next time you edit with vim, cecscope's help will be available!",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9492",
+      "filename": "cecscope.vba.gz",
+      "script_version": "4",
+      "date": "2008-11-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Security enhanced with fnameescape(), so cecscope now needs vim 7.2.\nHelp menu fixed.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8140",
+      "filename": "cecscope.vba.gz",
+      "script_version": "3",
+      "date": "2008-01-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": ":CS now supports cscope.out database searching; if the current directory or a parent directory up to but not including the $HOME directory has a cscope.out database, it'll be used.  This provides better support to projects with their multiple subdirectories."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5189",
+      "filename": "cecscope.vim.gz",
+      "script_version": "2",
+      "date": "2006-02-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": ":CSR included (cscope reset)\nChanged commands to :CSH, :CSS, :CSS!, :CSL to make it easier to type"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5012",
+      "filename": "cecscope.vim.gz",
+      "script_version": "1",
+      "date": "2006-01-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

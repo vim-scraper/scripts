@@ -1,0 +1,42 @@
+{
+  "script_id": "1568",
+  "name": "abnf",
+  "summary": "Initial Augmented BNF syntax script",
+  "script_type": "syntax",
+  "description": "Provides basic ABNF syntax highlighting, modeled closely after the excellent BNF syntax script by Michael Brailsford. All errors are my responsibility, however.\n\nI welcome feedback, comments or a new owner for this script. :-)",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5805",
+      "filename": "abnf.vim",
+      "script_version": "1.0.1",
+      "date": "2006-06-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2007",
+        "user_name": "mdaniel",
+        "first_name": "Matthew",
+        "last_name": "Daniel",
+        "email": "vim at mdaniel.scdi.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for marking extraneous whitespace not followed by an element. Since (sigh) ABNF seems to be whitespace sensitive, that could be a problem.\n\nAdded support for marking comments which are not part of a rule (i.e. at the beginning of a file).\n\nBoth of these new features may be enabled or disabled according to your preference.\n\nThe whitespace matching is enabled by default, but may be disabled via {{{let abnf_ignore_whitespace=1}}}.\n\nThe comments thing is disabled by default and may be enabled via {{{let abnf_strict=1}}}"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5799",
+      "filename": "abnf.vim",
+      "script_version": "1.0.0",
+      "date": "2006-06-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2007",
+        "user_name": "mdaniel",
+        "first_name": "Matthew",
+        "last_name": "Daniel",
+        "email": "vim at mdaniel.scdi.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

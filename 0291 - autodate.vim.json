@@ -1,0 +1,26 @@
+{
+  "script_id": "291",
+  "name": "autodate.vim",
+  "summary": "A customizable plugin to update time stamps automatically.",
+  "script_type": "utility",
+  "description": "This plugin inserts and updates a time stamp automatically.\n\nUsers can specify a format and position of the time stamp by options.\nBy default, autodate.vim searches a keyword \"Last Change:.\"\nin the first 50 lines of the buffer, and inserts a time stamp.  Example: \n    Last Change: 24-Jun-2003. \n\nSetting Example:\n    :let b:autodate_keyword_pre = '<!--DATE-->'\n    :let b:autodate_keyword_post = '<!--DATE-->'\n    :let b:autodate_format = '%Y/%m/%d'\nThe Result:\n    <!--DATE-->2003/06/24<!--DATE-->\n\nSee comments in autodate.vim for more details.",
+  "install_details": "Put the file in ~/.vim/plugin/ directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2106",
+      "filename": "autodate.vim",
+      "script_version": "1.0.2",
+      "date": "2003-06-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "454",
+        "user_name": "KoRoN",
+        "first_name": "Taro",
+        "last_name": "MURAOKA",
+        "email": "koron at tka.att.ne.jp",
+        "homepage": "http://www.kaoriya.net/"
+      },
+      "release_notes": "Add \"%[0-9]a\" format, which is replaced with locale independed English day name string."
+    }
+  ]
+}

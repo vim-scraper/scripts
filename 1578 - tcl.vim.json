@@ -1,0 +1,186 @@
+{
+  "script_id": "1578",
+  "name": "tcl.vim",
+  "summary": "Tcl syntax TEST version",
+  "script_type": "syntax",
+  "description": "I am experimenting with updating the syntax file for Tcl. I have added more \"keywords\" and I have enable the syntax highlighting of an option flags starting with \"-\" (i.e. -padx, -text).\n\nSince Tcl doesn't officially have keywords they may need to be pared down since I added all of the Tcl and Tk commands from the Tcl wiki page.\n\nNote: This is basically just something I am working on and not for consumption. However, if you have suggestions or requests please email me.\n\nNote: You need to put \"let tcl_extended_syntax=1\" in your vimrc to get the extra OO syntax coloring. Otherwise you get the \"standard\" syntax coloring.",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6133",
+      "filename": "tcl.vim",
+      "script_version": ".92",
+      "date": "2006-09-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10317",
+        "user_name": "sigzero",
+        "first_name": "Robert",
+        "last_name": "Hicks",
+        "email": "s i g z e r o A T g m a i l D O T c o m",
+        "homepage": ""
+      },
+      "release_notes": "* If you want extended syntax put g:tcl_extended_syntax=1 in your .vimrc\n* I guess I will start using small rev numbers since I am getting close to 1.0  : )"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6132",
+      "filename": "tcl.vim",
+      "script_version": ".91",
+      "date": "2006-09-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10317",
+        "user_name": "sigzero",
+        "first_name": "Robert",
+        "last_name": "Hicks",
+        "email": "s i g z e r o A T g m a i l D O T c o m",
+        "homepage": ""
+      },
+      "release_notes": "* Some patches by IIlya to fix some highlighting errors\n* renamed script vim.tcl since it *is* supposed to replace the current script in the Vim distro."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6077",
+      "filename": "tcldev.vim",
+      "script_version": "0.9",
+      "date": "2006-08-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10317",
+        "user_name": "sigzero",
+        "first_name": "Robert",
+        "last_name": "Hicks",
+        "email": "s i g z e r o A T g m a i l D O T c o m",
+        "homepage": ""
+      },
+      "release_notes": "* some small bug fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5931",
+      "filename": "tcldev.vim",
+      "script_version": "0.8",
+      "date": "2006-07-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10317",
+        "user_name": "sigzero",
+        "first_name": "Robert",
+        "last_name": "Hicks",
+        "email": "s i g z e r o A T g m a i l D O T c o m",
+        "homepage": ""
+      },
+      "release_notes": "* Cleaned up some\n* Namespaces work *I hope*"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5902",
+      "filename": "tcldev.vim",
+      "script_version": ".007",
+      "date": "2006-06-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10317",
+        "user_name": "sigzero",
+        "first_name": "Robert",
+        "last_name": "Hicks",
+        "email": "s i g z e r o A T g m a i l D O T c o m",
+        "homepage": ""
+      },
+      "release_notes": "* Maintainership of tcl.vim has passed to me. yikes!\n* Adding a check. If a user puts \"let tcl_oo=1\" in their rc file then the OO stuff is turned off.\n** That is currently turned off for dev purposes but does work"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5894",
+      "filename": "tcldev.vim",
+      "script_version": ".006",
+      "date": "2006-06-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10317",
+        "user_name": "sigzero",
+        "first_name": "Robert",
+        "last_name": "Hicks",
+        "email": "s i g z e r o A T g m a i l D O T c o m",
+        "homepage": ""
+      },
+      "release_notes": "* Anchored the namespaces so \"oo::whatever\" will color but \"foo::whatever\" will not.\n* I have some other things to match like \"ttk::\" can be embedded in other stuff and ::one is also a namespace  *sheesh*! "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5880",
+      "filename": "tcldev.vim",
+      "script_version": ".005",
+      "date": "2006-06-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10317",
+        "user_name": "sigzero",
+        "first_name": "Robert",
+        "last_name": "Hicks",
+        "email": "s i g z e r o A T g m a i l D O T c o m",
+        "homepage": ""
+      },
+      "release_notes": "* Added namespace highlighting for ttk::, snit::, itcl:: and oo::\n* Added keywords to support OO frameworks"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5863",
+      "filename": "tcldev.vim",
+      "script_version": ".004",
+      "date": "2006-06-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10317",
+        "user_name": "sigzero",
+        "first_name": "Robert",
+        "last_name": "Hicks",
+        "email": "s i g z e r o A T g m a i l D O T c o m",
+        "homepage": ""
+      },
+      "release_notes": "Some cleanup...\n\n* Added Snit (snit::) and Tile (ttk::) namespace coloring\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5862",
+      "filename": "tcldev.vim",
+      "script_version": ".003",
+      "date": "2006-06-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10317",
+        "user_name": "sigzero",
+        "first_name": "Robert",
+        "last_name": "Hicks",
+        "email": "s i g z e r o A T g m a i l D O T c o m",
+        "homepage": ""
+      },
+      "release_notes": "This *should* source correctly now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5852",
+      "filename": "tcldev.vim",
+      "script_version": ".002",
+      "date": "2006-06-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10317",
+        "user_name": "sigzero",
+        "first_name": "Robert",
+        "last_name": "Hicks",
+        "email": "s i g z e r o A T g m a i l D O T c o m",
+        "homepage": ""
+      },
+      "release_notes": "Changed the name to \"tcldev.vim\" to better reflect its intent!\n\nAdded folding\n\nAdded some widget stuff back in (not tested!)\n\nChanged the \"-\" option to make sure it only colors alphas and not numerics\n\nLots of this was done by Tomasz Kalkosi&#324;ski!!\n\nThe intent is to get this up to speed and then submit it to the current maintainer of \"tcl.vim\".\n\nTODO: Tomasz implemented a tclOperator section that isn't in working condition yet.\n\nTODO: Color the following like /* */\n\nif {0} {\n\n}\n\nTODO: Whatever else floats our boat?  : )"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5844",
+      "filename": "tcl.vim",
+      "script_version": ".001",
+      "date": "2006-06-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10317",
+        "user_name": "sigzero",
+        "first_name": "Robert",
+        "last_name": "Hicks",
+        "email": "s i g z e r o A T g m a i l D O T c o m",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

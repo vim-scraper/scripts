@@ -1,0 +1,186 @@
+{
+  "script_id": "666",
+  "name": "hexman.vim",
+  "summary": "Simpler Hex viewing and editing",
+  "script_type": "utility",
+  "description": "Hexmanger provides keymapping to view quickly your file\nin hexmode (convertion is done over the program xxd).\n                                                              \nAdditional features:\n- shows in statusline the current offset (hex and dec.)\n- move to next/previous hex character with <TAB> and <S-TAB>\n  If you don't like this mapping - please set in your vimrc:\n  let hex_movetab = 0\n- staying on a hex character it marks the related ascii column\n- Goto hex offset\t\n- Delete hex character under cursor\t\n- Insert ascii character before cursor\t\n\nAvailable functions:\n                                                                    \n<leader> hm\tHexManager: Call/Leave Hexmode (using xxd)\n<leader> hd  \tHexDelete: delete hex character under cursor\n<leader> hi  \tHexInsert: Insert Ascii character before cursor\n<leader> hg  \tHexGoto: Goto hex offset. \n<leader> hn  \tHexNext: Goto next hex offset. \n<leader> hp  \tHexPrev: Goto previous hex offset. \n<leader> hs  \tHexStatus: Show / Hide hexoffset infos in statusline\n                         and related ascii column\n                                                                    \nIf you want, you can change the mapping in your vimrc:\nExample (call with function key F6 the Hexmode:\nmap <F6>  <Plug>HexManager                                          \n\n                     \n",
+  "install_details": "Normally, this file should reside in the plugins\ndirectory and be automatically sourced. If not, you must\nmanually source this file using ':source hexman.vim'.\n                                                            \nIf you want to edit a file in hexmode, start vim \nwith the -b option - like:\n      vim -b <file>\nand then switch to hexmode with <leader>hm\n(see Available functions).\nThe program xxd is needed to convert the file in hex (and\nback).\nOnly changes in the hex part are used.  \nChanges in the printable text part on the right are ignored.\n\nAdditional help:\n:help *23.4* \n:help xxd                                                   \n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6621",
+      "filename": "hexman.vim",
+      "script_version": "0.7.2",
+      "date": "2007-01-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2529",
+        "user_name": "PF",
+        "first_name": "Peter",
+        "last_name": "Franz",
+        "email": "Peter.Franz.muc at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "Patch from Ingo Karkat / 'xxd' did not start when VIM is installed in a directory containing spaces (e.g. on an English Windows XP: \n\"c:\\Program Files\\vim\\vim70\\xxd.exe\")."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6616",
+      "filename": "hexman.vim",
+      "script_version": "0.7.1",
+      "date": "2007-01-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2529",
+        "user_name": "PF",
+        "first_name": "Peter",
+        "last_name": "Franz",
+        "email": "Peter.Franz.muc at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "Patch from Alejandro Cornejo / language independent cursor offset calculation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5498",
+      "filename": "hexman.vim",
+      "script_version": "0.7.0",
+      "date": "2006-03-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2529",
+        "user_name": "PF",
+        "first_name": "Peter",
+        "last_name": "Franz",
+        "email": "Peter.Franz.muc at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "Support vim7 (xxd was not found / fix match syntax)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2501",
+      "filename": "hexman.vim",
+      "script_version": "0.6.0",
+      "date": "2003-11-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2529",
+        "user_name": "PF",
+        "first_name": "Peter",
+        "last_name": "Franz",
+        "email": "Peter.Franz.muc at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "Search Hex Character with \\hf  \nWith search history eg. /<Up> you can repeat the search.\nPossibility to switch off advanced ascii/hex editing \n(see Additional Features in Script).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2442",
+      "filename": "hexman.vim",
+      "script_version": "0.5.1",
+      "date": "2003-10-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2529",
+        "user_name": "PF",
+        "first_name": "Peter",
+        "last_name": "Franz",
+        "email": "Peter.Franz.muc at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "FIX: Editing in Hex part was not possible (as of 0.5.0)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2439",
+      "filename": "hexman.vim",
+      "script_version": "0.5.0",
+      "date": "2003-10-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2529",
+        "user_name": "PF",
+        "first_name": "Peter",
+        "last_name": "Franz",
+        "email": "Peter.Franz.muc at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "Changes in the printable text part (ascii area) are now supported in\nReplace mode (command \"R\" or Select Mode \"gh\" ) \nfor most characters (see Known Problems).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2241",
+      "filename": "hexman.vim",
+      "script_version": "0.4.1",
+      "date": "2003-08-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2529",
+        "user_name": "PF",
+        "first_name": "Peter",
+        "last_name": "Franz",
+        "email": "Peter.Franz.muc at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "More features: \n- Switch cursor between hex and ascii area with t  or  <leader>ht\n  (or map it to a different keymap in vimrc  e.g.: map <F7>  Plug>HexToggle)\n- After calling/leaving hexman the cursor is set to current file position."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2216",
+      "filename": "hexman.vim",
+      "script_version": "0.2.1",
+      "date": "2003-08-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2529",
+        "user_name": "PF",
+        "first_name": "Peter",
+        "last_name": "Franz",
+        "email": "Peter.Franz.muc at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "Bugfixes (one from Ingo karkat - thank you). New feature: Staying on a ascii character it marks the related hex column."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2194",
+      "filename": "hexman.vim",
+      "script_version": "0.1.0",
+      "date": "2003-07-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2529",
+        "user_name": "PF",
+        "first_name": "Peter",
+        "last_name": "Franz",
+        "email": "Peter.Franz.muc at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "Show own hexman menu entry with hexman commands (gui version).\nIf you don't like the menu - please set in your vimrc:\nlet hex_menu = 0"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2078",
+      "filename": "hexman.vim",
+      "script_version": "0.0.2",
+      "date": "2003-06-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2529",
+        "user_name": "PF",
+        "first_name": "Peter",
+        "last_name": "Franz",
+        "email": "Peter.Franz.muc at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "FIX: default moving to next hex character \nwith <TAB> and <S-TAB> don't work on (LINUX/UNIX)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2046",
+      "filename": "hexman.vim",
+      "script_version": "0.0.1",
+      "date": "2003-06-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2529",
+        "user_name": "PF",
+        "first_name": "Peter",
+        "last_name": "Franz",
+        "email": "Peter.Franz.muc at freenet.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

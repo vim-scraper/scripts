@@ -1,0 +1,26 @@
+{
+  "script_id": "2248",
+  "name": "xml_taginsert",
+  "summary": "Insert xml tags by pressing <F7>",
+  "script_type": "ftplugin",
+  "description": "This maps the <F7> key to an xml tag inserter. When you press <F7> while to cursor is on or directly after a word, the that word is transformed into an xml tag, complete with closing tag. When the cusor is not over a word, you will be prompted for a tag name. This works in insert and comment mode.\n\nThis plugin depends on the imaps plugin that comes with the vim latex-suite (vim-latex) or can be downloaded separately at http://www.vim.org/scripts/script.php?script_id=244",
+  "install_details": "Copy this file into your ftplugin directory. You may additionally want to create a symlink to it as 'html_taginsert.vim', so that it is also loaded when you edit html files.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8718",
+      "filename": "xml_taginsert.vim",
+      "script_version": "0.9",
+      "date": "2008-05-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14476",
+        "user_name": "michaelgoerz",
+        "first_name": "Michael",
+        "last_name": "Goerz",
+        "email": "goerz at physik.fu-berlin.de",
+        "homepage": "http://www.physik.fu-berlin.de/~goerz"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

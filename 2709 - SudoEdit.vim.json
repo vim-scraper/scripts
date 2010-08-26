@@ -1,0 +1,106 @@
+{
+  "script_id": "2709",
+  "name": "SudoEdit.vim",
+  "summary": "Edit Files using sudo or su or any other tool",
+  "script_type": "utility",
+  "description": "If you like this plugin, please rate it!\n\nThis plugin enables vim to read files, using sudo or su or any other tool that\ncan be used for changing the authentication of a user. Therefore it needs any\nof sudo or su installed and usable by the user. This means, you have to know\nthe credentials to authenticate yourself as somebody else.\n\nThis plugin is basically an extended version from sudo.vim \n(http://www.vim.org/scripts/script.php?script_id=729), which seems to be \nunmaintained now. For compatibility reasons, it also supports the sudo: protocol \nhandler, as sudo.vim provides. \n\nThat's why this plugin probably won't work on Windows, but you might be able\nto configure it to use a method that works on Windows (see :h SudoEdit-config)\n\nBy default SudoEdit will first try to use sudo and if sudo is not found it\nwill fall back and try to use su. Note, that you might have to configure these\ntools, before they can use them successfully.\n\nSudoEdit requires at least a Vim Version 7 with patch 111 installed. Patch 111\nintroduced the shellescape() functionality.\n\nThe Plugin provides the 2 Commands :SudoRead for reading a file and SudoWrite\nfor writing a file using the provided super user authentication mechanism. Both \ncommands have file completion enabled to ease the selection of files (if you are able \nto read the path as ordinary user).\n\nYou can optionally configure it to use any other tool, instead of sudo/su. So you could \nprobably adjust it to work on Windows or you can use ssh as authentication method.",
+  "install_details": "Edit SudoEdit.vba and source the file\n:so %\nis all you need. It will install the plugin and also the documentation.\n\nI suggest you take a look at :h SudoEdit.txt before using it.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12872",
+      "filename": "SudoEdit.vba",
+      "script_version": "0.8",
+      "date": "2010-04-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Make plugin autoloadable. See :h autoload-functions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11599",
+      "filename": "SudoEdit.vba",
+      "script_version": "0.7",
+      "date": "2009-10-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Support for reading/writing using sudo:protocol handler\nAdded Debugging capabilities\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11012",
+      "filename": "SudoEdit.vba",
+      "script_version": "0.6",
+      "date": "2009-07-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Fix minor bug, that prevents setting the filename correctly when writing."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10975",
+      "filename": "SudoEdit.vba",
+      "script_version": "0.5",
+      "date": "2009-07-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Minor documentation update"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10974",
+      "filename": "SudoEdit.vba",
+      "script_version": "0.5",
+      "date": "2009-07-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Enables the plugin for |GetLatestVimScripts|"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10973",
+      "filename": "SudoEdit.vba",
+      "script_version": "0.4",
+      "date": "2009-07-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

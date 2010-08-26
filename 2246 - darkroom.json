@@ -1,0 +1,26 @@
+{
+  "script_id": "2246",
+  "name": "darkroom",
+  "summary": "color scheme to mimic writeroom/darkroom editors",
+  "script_type": "color scheme",
+  "description": "This is my attempt to create a simple WriteRoom/DarkRoom like environment in Vim. \n\nIt is probably not ready for prime-time yet. \n\nIt will almost certainly interact badly with any other plugins/scripts that hack buffers as it uses two hidden buffers to get the column feel of DarkRoom.\n\nYou will want to \":set wrap lbr\" for it to work most effectively.\nYou will want to maximize vim before calling \":colorscheme darkroom\" for it to look reasonable.\nYou will also need to use :qa to exit (or :q several times in succession)\n\n\n",
+  "install_details": "Put it in one of your colors directories.\n  ex. $HOME/.vim/colors/\n  ex. $HOME\\vimfiles\\colors\\\n  ex. $VIM\\vimfiles\\colors\\\nThen, just do :colorscheme darkroom",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8715",
+      "filename": "darkroom.vim",
+      "script_version": "0.1",
+      "date": "2008-05-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10239",
+        "user_name": "connorberry",
+        "first_name": "Connor",
+        "last_name": "Berry",
+        "email": "connorberry at yahoo.com",
+        "homepage": "http://www.narwhale.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

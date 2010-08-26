@@ -1,0 +1,90 @@
+{
+  "script_id": "1334",
+  "name": "VST",
+  "summary": "Vim reStructured Text",
+  "script_type": "utility",
+  "description": "Requires Vim7.\n\nVST is script which makes possible to export text files with simple markup to HTML or LaTeX format or S5 HTML presentation. Script doesn't require any external dependency and will work on any platform Vim7 is available. VST is implementation of reStructuredText.\n\nSupported elements of inline markup:\n\n- emphasised text (italic)\n- strongly emphasised text (bold)\n- hyperlinks (in various syntax forms)\n- custom decorations (among them: sub, sup, big, small)\n\nElements of documents structure:\n\n- paragraphs\n- block quotes\n- ordered lists\n- unordered lists\n- option lists\n- footnotes\n- citations\n- images\n- preformatted text\n- colorized preformatted text (HTML export only)\n- tables\n- admonitions\n- table of contents\n\nAlso bunch of auxiliary commands which should ease writing of document and navigating (folding, text table of contents, lists or declared links, replacements)\n\nLatest version of script:\nhttp://skawina.eu.org/mikolaj/vst.zip\n\nHelp file in text form:\nhttp://skawina.eu.org/mikolaj/vst.txt\n\nFollowing versions of help file was produced without any modifications to HTML or LaTeX source:\n\nHTML:\nhttp://skawina.eu.org/mikolaj/vst.html\n\nLaTeX file exported from vst.txt:\nhttp://skawina.eu.org/mikolaj/vst.tex\n\nPDF file produced from vst.tex:\nhttp://skawina.eu.org/mikolaj/vst.pdf\n",
+  "install_details": "Unzip vst.zip from level of ~/.vim. It contains data files and documentation in doc2 directory.\nTo use just do :source vst.vim and for default HTML export do\n:Vst\nShort help about script\n:Vst help",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6377",
+      "filename": "vst.zip",
+      "script_version": "1.4",
+      "date": "2006-11-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "- FIX: Vst link broken\n- FIX: & in URLs double encoded\n- FIX: broken chained links with uppercase letters\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6356",
+      "filename": "vst.zip",
+      "script_version": "1.3",
+      "date": "2006-10-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "  - ADD: show number of directive line and percentage position in file for\n    easier navigation when folding by directive\n  - ADD: proper encryption of URIs (amp, percentage)\n  - ADD: make preproc auxiliary command recursive\n  - ADD: fold according to level of headers: fold1, fold2, etc.\n  - ADD: recursive folding: foldr\n  - ADD: [LaTeX] containers as ghost commands\n  - ADD: [LaTeX] Generator line (debug purposes)\n  - CHG: make folding by directive more flexible\n  - CHG: improve layout of fold texts with centered titles\n  - CHG: improve layout of text table of contents with centered titles\n  - CHG: level of recursiveness is now &maxfuncdepth/2 (50 should be enough\n    for everybody!)\n  - CHG: [HTML] when source are lists starting from no-one use transitional\n    doctype, otherwise strict\n  - CHG: [HTML] \"Downgrade\" to HTML 4.01 (no sense to use XHTML doctype when\n    using content text/html)\n  - FIX: length of ornaments inserted with <C-B>o\n  - FIX: show output of auxiliary commands depending on table\n  - FIX: presence of apostrophes in section titles could cause problems in folding\n  - FIX: internal links in fancy formatted text could be broken\n  - FIX: unnecessary creation of targets from links broken in several lines\n  - FIX: minor fixes in docs\n  - FIX: optimizations, 10-15% speed gains\n  - FIX: [LaTeX] too much whitespace at the end of footnotes\n  - FIX: [LaTeX] internal links work again\n  - FIX: [S5] uploaded CSS files for web page to make presentation work (sorry\n    George!)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6278",
+      "filename": "vst.zip",
+      "script_version": "1.2",
+      "date": "2006-10-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "  - ADD: <C-B>o auxiliary mapping for ornaments\n  - ADD: section numbers in fold auxiliary command\n  - ADD: section numbers in toc auxiliary command\n  - ADD: [LaTeX] raw directive accepts tex, not only latex argument\n  - CHG: don't look for including commands in auxiliary commands - massive\n    speed gains\n  - CHG: [LaTeX] change default font size for 12pt\n  - FIX: [HTML] all styles from multiple 2html directives are in <head>\n  - FIX: [HTML] @ in 2html directive was breaking syntax highlighting\n  - FIX: [HTML] restore validity of generated documents\n  - FIX: [LaTeX] bug with _ in filenames in raw latex file option\n  - FIX: many minor bugs\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5980",
+      "filename": "vst.zip",
+      "script_version": "1.1",
+      "date": "2006-07-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "  - ADD: support for ltrim, rtrim, trim for regular replacement\n  - CHG: `including commands`_ are working recursively now\n  - FIX: wrong indentation of included files\n  - FIX: problems with backslash as last character in line\n  - FIX: minor fixes in docs\n  - FIX: [pdf] incorrect call of cursor function\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5905",
+      "filename": "vst.zip",
+      "script_version": "1.0",
+      "date": "2006-07-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "Tons of imrovements and bugfixes from last vim-online release. Finally stable 1.0 because of final Vim7. Enjoy!"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "2434",
+  "name": "Side-C",
+  "summary": "a simple IDE for C/C++",
+  "script_type": "utility",
+  "description": "Side-C is a small plug-in implementing basic IDE functionality for developing one-file C or C++ programs.  It automates the following actions.\n\n* Finding the program file among several open (so that to know what to compile or what and where to run).\n\n* Building a program from its source.  The error message ('quickfix') window is being shown or hidden as needed.\n\n* Running a program from wherever it resides.  Building it first if necessary.\n\n* Running a program with redirecting its standard input, output, or both.\n\n* Opening a browser for the directory of the currently edited file.\n\n* Running an o.s. command shell in the directory of the currently edited file.\n\nThe plug-in is designed and tested to work on Linux and MS DOS/MS Windows, using gcc on both (DJGPP in the case of MS Windows).  It should work on other Unix systems as well.  With small changes, it should be possible to tailor it to other operating systems and compilers.\n\nSee the comments in the plug-in itself for more details.",
+  "install_details": "Put the file in a plug-in directory, or source it directly",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9678",
+      "filename": "side-c.vim",
+      "script_version": "1.1+",
+      "date": "2008-12-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15060",
+        "user_name": "boykobb",
+        "first_name": "Boyko",
+        "last_name": "Bantchev",
+        "email": "boykobb at gmail.com",
+        "homepage": "http://www.math.bas.bg/bantchev"
+      },
+      "release_notes": "a bug fixed that prevented the quickfix list from properly creating & displaying"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9490",
+      "filename": "side-c.vim",
+      "script_version": "1.1",
+      "date": "2008-11-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15060",
+        "user_name": "boykobb",
+        "first_name": "Boyko",
+        "last_name": "Bantchev",
+        "email": "boykobb at gmail.com",
+        "homepage": "http://www.math.bas.bg/bantchev"
+      },
+      "release_notes": "bugs removed, doc typos corrected, some improvements made "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9472",
+      "filename": "side-c.vim",
+      "script_version": "1.0",
+      "date": "2008-11-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15060",
+        "user_name": "boykobb",
+        "first_name": "Boyko",
+        "last_name": "Bantchev",
+        "email": "boykobb at gmail.com",
+        "homepage": "http://www.math.bas.bg/bantchev"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

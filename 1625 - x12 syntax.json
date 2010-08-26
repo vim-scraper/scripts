@@ -1,0 +1,42 @@
+{
+  "script_id": "1625",
+  "name": "x12 syntax",
+  "summary": "Highlighter for X12 EDI(electronic data interchange) files",
+  "script_type": "syntax",
+  "description": "A simple syntax highlighter for EDI X12 files -\nIt does not validate the correctness of X12s. Just highlights the file. \nCurrently only Healthcare 270/271s are tested.",
+  "install_details": "Copy the file to\n$VIMRUNTIME/syntax/  (Windows)\nor \n~/.vim/syntax/                      (*nix)\n\nPut an entry to $VIMRUNTIME/filetype.vim like:\n\n\" X12\nau BufNewFile,BufRead *.x12\t\tsetf x12\n\nTo auto load the syntax.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7778",
+      "filename": "x12.vim",
+      "script_version": "0.2",
+      "date": "2007-10-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10566",
+        "user_name": "ranjith",
+        "first_name": "ranjith",
+        "last_name": "chandran",
+        "email": "send2r_at_  gmail _dot_ com",
+        "homepage": ""
+      },
+      "release_notes": "Added few more segments left out in 0.1\nAdded highlighting for \":\"  as Special."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6016",
+      "filename": "x12.vim",
+      "script_version": "0.1",
+      "date": "2006-07-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10566",
+        "user_name": "ranjith",
+        "first_name": "ranjith",
+        "last_name": "chandran",
+        "email": "send2r_at_  gmail _dot_ com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

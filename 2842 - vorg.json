@@ -1,0 +1,26 @@
+{
+  "script_id": "2842",
+  "name": "vorg",
+  "summary": "vim organizer syntax file",
+  "script_type": "syntax",
+  "description": "vorg is a simple organizer file format for managing your notes and tasks. It was inspired by org-mode for emacs but the format is different. \nIt is still very much work-in-progress. \n\nUsage:\t\ncreate a file with the .vorg extension and insert the following line:\t\t\n\nvim:ft=vorg\n\t\t\nvorg format:\n\n- Topic Title\n  - Sub Topic Title (tag)\n    - Sub Sub Topic Title\n      sub sub topic text\n      [ ] sub sub topic task\n\t\t\nNotes: \n\n  ( vorg works best with the vim blackboard theme)\n\n  - To indent sub topics in insert mode, use <TAB>\n  - In normal mode, use <TAB> to fold and unfold topics\n  - You can also use asterisk signs (*) instead of minus signs(-)\n  - Tasks are indicated using a pair of square brackets with a blank inside [ ]\n  - You can create tasks without sub items by omitting the -\n\nMore Info:\n\n\t\t- Topic with a context @context\n\t\t- Topic with a deadline < {date}\n\t\t- Topic with a list of tags (tag1,tag2,tag3)\n\t\t- Topic with a timestamp | {date} @ {time}\n\t\t- Topic with a timestamp | {datetime}\n\t\t- Topic with a text content\n\t\t  some text...\n\n\n \t\tInsert-mode Shortcuts:\n\n\t\t-- create a new indented item\n\t\t-= create a new task\n\n\t\tctrl+j move line down\n\t\tctrl+k move line up\n\n\t\tdd - current date\n\t\tdt - current date+time\n\n\n\t\tNormal-mode Shortcuts:\n\t\t\n\t\t<TAB> expand/collapse topics, use <shift> for all sub-topics\n\n\t\tctrl+t find tags (type the tag name and then press <CR>)\n\t\tctrl+o find contexts (type the context and then press <CR>)\n\n\t\tctrl+j  shifts line down\n\t\tctrl+k shifts line up\n\n\t\t,c checkmark a task\n\t\t,u uncheckmark a task\n\n\t\t,w follow hyperlink\n\nThanks Niels AdB for Tip 1557!\nThanks Frank Butler for Tip 646!\n\nMore info can be found inside the script..\nFor updates follow me on twitter (L3V3L9) and look for the upcoming vorg screencast.\n\n",
+  "install_details": "Just put this file in your ~/.vim/syntax folder\n\nIt is recommended to install the following plugins as well:\n- speeddating\n \t\t        \n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11663",
+      "filename": "vorg.vim",
+      "script_version": "0.1.0",
+      "date": "2009-11-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18174",
+        "user_name": "ithai",
+        "first_name": "Ithai",
+        "last_name": "Levi",
+        "email": "markingstone at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

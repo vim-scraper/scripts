@@ -1,0 +1,42 @@
+{
+  "script_id": "1184",
+  "name": "uniface.vim",
+  "summary": "Uniface Proc language syntax file",
+  "script_type": "syntax",
+  "description": "This is a syntax file for the Uniface 7 Proc language.\nUniface is a 4GL of compuware. ",
+  "install_details": "Just copy the uniface.vim into the syntax directory and add this line to filetypes.vim:\n\n\" Uniface\nau BufNewFile,BufRead *.proc\t\t\tsetf uniface\n\nNormaly uniface doesn't work with files, so there is no file extension. I chose .proc.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3858",
+      "filename": "uniface.vim",
+      "script_version": "1.1",
+      "date": "2005-02-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6694",
+        "user_name": "pstorch",
+        "first_name": "Peter",
+        "last_name": "Storch",
+        "email": "peter.storch at web.de",
+        "homepage": ""
+      },
+      "release_notes": "Some Keywords were missing."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3777",
+      "filename": "uniface.vim",
+      "script_version": "1",
+      "date": "2005-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6694",
+        "user_name": "pstorch",
+        "first_name": "Peter",
+        "last_name": "Storch",
+        "email": "peter.storch at web.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

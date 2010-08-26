@@ -1,0 +1,58 @@
+{
+  "script_id": "943",
+  "name": "ProjectBrowse",
+  "summary": "Browse a list of files below a root directory",
+  "script_type": "utility",
+  "description": "Generate a list of files below a set of root directories for rapidly finding and editing medium sized source trees. Intended for moderate sized programming projects with several thousand header and source files, but will be useful to anyone editing large numbers of files in a structured directory layout. ( e.g.: websites, config files, etc )\n\nThe file list can be set to appear either in a new buffer or in the local buffer. Place the cursor on the line of the file of interest and hit return. Although searching may be done in any way, the suggested usage is the / ( slash search ) command. The buffer is set locally to be case insensitive and not use highlighting. Press / and then type the first few characters of the file of interest followed by return ( twice ).\n\nI created this script in response to the browser that ships with the popular Visual Assist program by Whole Tomato Software for MS Visual .NET. I prefer to use vim for all my editing and ctags is great, but when you have another developer telling you to \"Go to file SomeWierdFileDeepInTheDirectoryStructure.cpp\" it can be pretty slow and painful sometimes. This browser solves that problem directly.\n\nThis script has been under nearly daily usage by myself and several others. Now it has been highly optimized to cache the search results to a file. Special thanks to Steven An.\n\nPlease feel free to email me with bugs or feature requests, or just if you like it. I am required to use gvim and .NET extensively, so i am interested in additional features or tips that you want to see.\n",
+  "install_details": "REQUIRES: the unix find command. The script assumes that find is in your path, but you can set the direct path to the directory explicitly. See s:find_path var.\n\nRecommended mapping: use alt-o to open the browser. put this in your .vimrc\nmap <A-o> :ProjectBrowseCached<CR>\nmap <A-O> :ProjectBrowse c:\\Projects\\ c:\\Libraries c:\\Includes<CR>\n\nThe first command will open the cached file list. The second (shift-O) will refresh the list with new files.\n\ns:filter var defaults to nothing. set it to only include cpp and header files, etc.\n\ns:splitBehavior default to none. set it to vert or horiz to open the browser in a new buffer.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6725",
+      "filename": "projectbrowse.vim",
+      "script_version": "1.2",
+      "date": "2007-02-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4825",
+        "user_name": "jheiner",
+        "first_name": "Jon",
+        "last_name": "Heiner",
+        "email": "jheiner at pandemicstudios.com",
+        "homepage": ""
+      },
+      "release_notes": "Now caches the list of files in your project, making this an extraordinarily fast way to access medium sized source trees. This plugin has been under considerable use over the past few years and is quite robust. Special thanks to Steven An for adding the caching."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4943",
+      "filename": "projectbrowse.vim",
+      "script_version": "1.1",
+      "date": "2006-01-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4825",
+        "user_name": "jheiner",
+        "first_name": "Jon",
+        "last_name": "Heiner",
+        "email": "jheiner at pandemicstudios.com",
+        "homepage": ""
+      },
+      "release_notes": "Better usability for opening in current buffer. Will prompt for save if local buffer is modified. Will hide current buffer if modified and not saved. Various cleanup."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2857",
+      "filename": "projectbrowse.vim",
+      "script_version": "1.0a",
+      "date": "2004-03-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4825",
+        "user_name": "jheiner",
+        "first_name": "Jon",
+        "last_name": "Heiner",
+        "email": "jheiner at pandemicstudios.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

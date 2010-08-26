@@ -1,0 +1,106 @@
+{
+  "script_id": "773",
+  "name": "vgrep",
+  "summary": "another grep in wide look",
+  "script_type": "utility",
+  "description": "vgrep.vim is working for some people have complex project with deep directory \n\nThe vgrep.vim plugin script is work another grep unlike unix grep which use different output for look, if you didn't have such grep download at http://www.interlog.com/~tcharron/grep.html and patch with grep20f.dif \n\nwide format via unix format  \n ============ Wide Output Format =================\n File: C:\\vim\\vim62\\plugin\\vgrep.vim             \n     1: File: vgrep.vim                          \n    17: let loaded_vgrep = 1                     \n File: C:\\vim\\vim62\\plugin\\testtttt1\\testtttt2\\testtttt3\\whereis.vim           \n     1: File: whereis.vim                        \n =================================================\n save you eye see real code \n ============ Unix Output ========================\n plugin\\vgrep.vim:1: file...\n plugin\\vgrep.vim:17: let...\n plugin\\testtttt1\\testtttt2\\testtttt2\\whereis.vim:1: file ...\n =================================================\n\n",
+  "install_details": "Copy the vgrep.vim script to the .vim/plugin directory.\nSet Vgrep_Key variable to the key you prefer to invoke\n\ndownload full version 1.1 (include gnugrep.exe and grep.dif and grp.vim)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8959",
+      "filename": "vim_vgrep141.tar.gz",
+      "script_version": "1.4.1",
+      "date": "2008-07-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3378",
+        "user_name": "lecheel",
+        "first_name": "lechee",
+        "last_name": "lai",
+        "email": "lecheel AT yahoo DOT com",
+        "homepage": "http://lecheel.dyndns.org"
+      },
+      "release_notes": "fix vgrep skip ansi text"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8958",
+      "filename": "vim_vgrep.tar.gz",
+      "script_version": "1.4",
+      "date": "2008-07-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3378",
+        "user_name": "lecheel",
+        "first_name": "lechee",
+        "last_name": "lai",
+        "email": "lecheel AT yahoo DOT com",
+        "homepage": "http://lecheel.dyndns.org"
+      },
+      "release_notes": "upgrade to vim 7 and use vgrep instead g2w.pl source code is include"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3380",
+      "filename": "vgrep13.zip",
+      "script_version": "1.3",
+      "date": "2004-08-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3378",
+        "user_name": "lecheel",
+        "first_name": "lechee",
+        "last_name": "lai",
+        "email": "lecheel AT yahoo DOT com",
+        "homepage": "http://lecheel.dyndns.org"
+      },
+      "release_notes": "Add unix grep support via g2w.pl (included)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2361",
+      "filename": "vgrep.vim",
+      "script_version": "1.2",
+      "date": "2003-09-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3378",
+        "user_name": "lecheel",
+        "first_name": "lechee",
+        "last_name": "lai",
+        "email": "lecheel AT yahoo DOT com",
+        "homepage": "http://lecheel.dyndns.org"
+      },
+      "release_notes": "Minor Bugfix\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2355",
+      "filename": "vgrep11.zip",
+      "script_version": "1.1",
+      "date": "2003-09-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3378",
+        "user_name": "lecheel",
+        "first_name": "lechee",
+        "last_name": "lai",
+        "email": "lecheel AT yahoo DOT com",
+        "homepage": "http://lecheel.dyndns.org"
+      },
+      "release_notes": "some bugfix \nAdd TurboGrep support\nAdd OakGrep Support\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2341",
+      "filename": "vgrep.zip",
+      "script_version": "1.0",
+      "date": "2003-09-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3378",
+        "user_name": "lecheel",
+        "first_name": "lechee",
+        "last_name": "lai",
+        "email": "lecheel AT yahoo DOT com",
+        "homepage": "http://lecheel.dyndns.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "script_id": "319",
+  "name": "highlightline.vim",
+  "summary": "This script allows you to highlight lines.",
+  "script_type": "utility",
+  "description": "This is a highlight current line script.\n\npress F2 to highlight the current line\npress F2 again to unhighlight the current highlighted line",
+  "install_details": "Just put this in your plugin directory or source it in your vimrc.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2136",
+      "filename": "highlightline.vim",
+      "script_version": "5",
+      "date": "2003-07-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "717",
+        "user_name": "torrin",
+        "first_name": "Torrin",
+        "last_name": "",
+        "email": "vim at torrin.net",
+        "homepage": ""
+      },
+      "release_notes": "Improved version, same as version 4, just forgot to turn off the echo highlightedline."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2135",
+      "filename": "highlightline.vim",
+      "script_version": "4",
+      "date": "2003-07-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "717",
+        "user_name": "torrin",
+        "first_name": "Torrin",
+        "last_name": "",
+        "email": "vim at torrin.net",
+        "homepage": ""
+      },
+      "release_notes": "This is a much improved version of the script.  It doesn't handle everything correctly yet, but I'm working on it.  Enjoy."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=983",
+      "filename": "highlightline.vim",
+      "script_version": "2.01",
+      "date": "2002-07-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "745",
+        "user_name": "rpresser",
+        "first_name": "Ross",
+        "last_name": "Presser",
+        "email": "rpresser at gmail.com",
+        "homepage": "http://rpresser.blogspot.com"
+      },
+      "release_notes": "On line 41, change    getline(\".\")    to      substitute(getline(\".\"),\"[+\\\"]\",\".\",\"g\")    \nThis fixes the delimiter problem. mentioned in version 2."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=938",
+      "filename": "highlightline.vim",
+      "script_version": "2",
+      "date": "2002-06-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "717",
+        "user_name": "torrin",
+        "first_name": "Torrin",
+        "last_name": "",
+        "email": "vim at torrin.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

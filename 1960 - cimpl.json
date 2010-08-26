@@ -1,0 +1,58 @@
+{
+  "script_id": "1960",
+  "name": "cimpl",
+  "summary": "Generates implimentations for C/C++ function prototypes",
+  "script_type": "utility",
+  "description": "This script generates empty implementations for C/C++ functions from specified header file. For following header file\n\n#ifndef TEST_H\n#define TEST_H\nclass Test\n{\n    public:\n        explicit Test(int val = 0);\n        int getVal() const\n        {\n            return m_val;\n        }\n        void setVal(int val);\n\n        friend const Test operator +(const Test& a, const Test& b);\n\n    private:\n         int m_val;\n};\n\nconst Test operator + ( const Test &a, const Test & b );\n#endif\n\noutput will be\n\nTest::Test(int val)\n{\n    \n}\n\nvoid Test::setVal(int val)\n{\n    \n}\n\nconst Test operator +(const Test& a, const Test& b)\n{\n    \n}\n",
+  "install_details": "You must have installed exuberant-ctags. Copy this script to ~/.vim/plugins. Also you can install tSkeleton (vimscript#1160) to add functions implementations in new source files. \nThis skeleton for .cpp files:\n\n<+call:eval('findfile(expand(\"%:t:r\").\".h\", \".;\") != \"\" ? \"\\n#include \\\"\".findfile(expand(\"%:r:t\").\".h\", \".;\").\"\\\"\\n\" : \"\"')+><+call:eval('findfile(expand(\"%:t:r\").\".h\", \".;\") != \"\" ? \"<+CURSOR+>\".GenImpl(findfile(expand(\"%:r:t\").\".h\", \".;\")) : \"\\n<+CURSOR+>\\n\"')+>\n\nwill find .h files with same name in current directory and if it exists add implementations for definitions from header.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7916",
+      "filename": "cimpl.vim",
+      "script_version": "0.03",
+      "date": "2007-11-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12772",
+        "user_name": "just free man",
+        "first_name": "Alexander",
+        "last_name": "Rodin",
+        "email": "rodin.alexander at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add support for pure virtual functions (thanks to Anton)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7375",
+      "filename": "cimpl.vim",
+      "script_version": "0.02",
+      "date": "2007-07-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12772",
+        "user_name": "just free man",
+        "first_name": "Alexander",
+        "last_name": "Rodin",
+        "email": "rodin.alexander at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add support for operators and friend functions"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7367",
+      "filename": "cimpl.vim",
+      "script_version": "0.01",
+      "date": "2007-07-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "12772",
+        "user_name": "just free man",
+        "first_name": "Alexander",
+        "last_name": "Rodin",
+        "email": "rodin.alexander at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

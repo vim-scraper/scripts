@@ -1,0 +1,42 @@
+{
+  "script_id": "1098",
+  "name": "hamster.vim",
+  "summary": "Hamster (Classic | Playground) syntax file",
+  "script_type": "syntax",
+  "description": "\nHamster (Classic | Playground) \n\nHamster is a local server for news and mail. It's a windows-32-bit-program. It allows the use of multiple news- and mailserver and combines them to one mail- and newsserver for the news/mail-client. It load faster than a normal newsreader because many threads can run simultaneous. It contains scorefile for news and mail, a build-in script language, the GUI allows translation to other languages, it can be used in a network and that's not all features...\nhttp://www.tglsoft.de/misc/hamster_en.htm\nhttp://www.elbiah.de/hamster/index.htm\n\nThis is a syntax file for the builtin scripting language.\n",
+  "install_details": "Copy hamster.vim into your .vim/syntax (Unix) or vimfiles/syntax (Windows) directory.\n\nEdit your .vim|vimfiles/filetype.vim and add the following entry:\n\n\" Hamster Classic | Playground files \n\" NNTP and Mail local server\nau BufNewFile,BufRead *.hsc,*.hsm\t\tsetfiletype hamster\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3781",
+      "filename": "hamster.vim",
+      "script_version": "2.0.6.0a",
+      "date": "2005-01-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "Minor tweak with the naming convention of the syntax items for a different plugin.  No functional change."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3527",
+      "filename": "hamster.vim",
+      "script_version": "2.0.6.0",
+      "date": "2004-10-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

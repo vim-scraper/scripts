@@ -1,0 +1,234 @@
+{
+  "script_id": "2536",
+  "name": "Lucius",
+  "summary": "Composite dark color scheme (GUI and 256 color terminal)",
+  "script_type": "color scheme",
+  "description": "This started out by combining parts of several dark color schemes, including oceandeep (vimscript #368), peaksea (vimscript #760), wombat (vimscript #1778), moria (vimscript #1464), and zenburn (vimscript #415). Since then, it has been tweaked to what it is today and works well in both light and dark environments.\n\nFor the 256 color terminal support, guicolorscheme.vim (vimscript #1809) was used. The settings were further modified to match the GUI version as best possible.\n\nFor v3.5, colorsupport.vim (vimscript #2682) was applied to this color scheme. Some of the results from this were merged in with the other color choices from before to make the cterm version more like the gui.",
+  "install_details": "Copy the file to your vim colors directory and then :colorscheme lucius",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13588",
+      "filename": "lucius.vim",
+      "script_version": "3.6.1",
+      "date": "2010-08-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added ColorColumn for Vim 7.3"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13089",
+      "filename": "lucius.vim",
+      "script_version": "3.6",
+      "date": "2010-06-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Changed the cursor line/column to be a little more visible\n- Updated the fold line"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12868",
+      "filename": "lucius.vim",
+      "script_version": "3.5",
+      "date": "2010-04-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Updated some of the cterm colors after applying colorsupport.vim to the scheme."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12154",
+      "filename": "lucius.vim",
+      "script_version": "3.2",
+      "date": "2010-01-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "A few minor updates (SpecialKey, Identifier, PreProc)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11556",
+      "filename": "lucius.vim",
+      "script_version": "3.1",
+      "date": "2009-10-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Got rid of bold for CursorLine and Pmenu stuff"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11449",
+      "filename": "lucius.vim",
+      "script_version": "3.0",
+      "date": "2009-09-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This version has a lot of small changes. The colors are toned down some more and new colors exist for diffs, status line, popup menu, wild menu, cursor line and column, error, line numbers, splits, folds, etc. Many of the new colors are similar to what they were before, but work a little better with the scheme now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11010",
+      "filename": "lucius.vim",
+      "script_version": "2.6",
+      "date": "2009-07-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Toned down the saturation of some of the colors; other minor things"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10333",
+      "filename": "lucius.vim",
+      "script_version": "2.5",
+      "date": "2009-04-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor tweak to VertSplit"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10269",
+      "filename": "lucius.vim",
+      "script_version": "2.4",
+      "date": "2009-03-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Modified CursorColumn, CursorLine, and CursorIM"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10203",
+      "filename": "lucius.vim",
+      "script_version": "2.3",
+      "date": "2009-03-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed the search highlight to something more visible."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10152",
+      "filename": "lucius.vim",
+      "script_version": "2.2",
+      "date": "2009-03-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Made the normal GUI text slightly brighter"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10033",
+      "filename": "lucius.vim",
+      "script_version": "2.1",
+      "date": "2009-02-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Fixed the normal fg and bg for cterm \n- Removed yellow tint from normal text\n- Fixed status line in cterm"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10020",
+      "filename": "lucius.vim",
+      "script_version": "2.0",
+      "date": "2009-02-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added 256 color terminal support."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9911",
+      "filename": "lucius.vim",
+      "script_version": "1.0",
+      "date": "2009-02-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

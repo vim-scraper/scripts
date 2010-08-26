@@ -1,0 +1,42 @@
+{
+  "script_id": "1451",
+  "name": "svn_commit",
+  "summary": "read in aborted subversion commit log messages",
+  "script_type": "ftplugin",
+  "description": "This plugin will look in the current directory for aborted subversion commit log messages, and then read in the newest one to your current commit log.\n\nThis saves you having to remember what the log files are called, or importing it yourself and tidying up the log message manually.\n\nhttp://atlee.ca/blog/software/svn-commit/",
+  "install_details": "Download and put into your ~/.vim/ftplugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5700",
+      "filename": "svn_commit.vim",
+      "script_version": "0.2",
+      "date": "2006-05-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9312",
+        "user_name": "catlee",
+        "first_name": "Chris",
+        "last_name": "AtLee",
+        "email": "chris at atlee.ca",
+        "homepage": "http://atlee.ca"
+      },
+      "release_notes": "Applied a patch sent in by a user to 'set modified' if reading a previous svn-commit.tmp file.\n\nThis allows you to use ':x' to commit if the log message is what you want."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5007",
+      "filename": "svn_commit.vim",
+      "script_version": "0.1",
+      "date": "2006-01-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9312",
+        "user_name": "catlee",
+        "first_name": "Chris",
+        "last_name": "AtLee",
+        "email": "chris at atlee.ca",
+        "homepage": "http://atlee.ca"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

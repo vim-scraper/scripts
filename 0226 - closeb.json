@@ -1,0 +1,58 @@
+{
+  "script_id": "226",
+  "name": "closeb",
+  "summary": "Close complex brackets or tags",
+  "script_type": "utility",
+  "description": "This plugin closes complex brackets / tags.\nIt is an extended version of closetag, (http://vim.sourceforge.net/scripts/script.php?script_id=13)\n\nIt comes with configuration for closing XML/SGML tags and LaTeX environments but is easily configured for other filetypes.\n\nClosing a bracket / tag also (optionally) inserts a newline and / or indentation, but only if the matching bracket / tag stood on a line of its own.\n\nIf, during scanning for the bracket / tag to close, mismatching brackets are found, they are optionally highlighted.\n\nA path function is provided, which displays all open tags. For example, this function may be used in the status line for a constant display of location in an XML file.\n",
+  "install_details": "Put this into your plugin directory ~/.vim/plugin.\nIt will map CTRL-_ to closing a tag in insert mode (as closetag.vim did). The :Path command displays the \"path\".\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=646",
+      "filename": "closeb.vim",
+      "script_version": "0.2a",
+      "date": "2002-02-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "483",
+        "user_name": "dazzler",
+        "first_name": "Mark A.",
+        "last_name": "Hillebrand",
+        "email": "dazzler at users.sf.net",
+        "homepage": ""
+      },
+      "release_notes": "Commented out some debug code..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=630",
+      "filename": "closeb.vim",
+      "script_version": "0.2",
+      "date": "2002-02-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "483",
+        "user_name": "dazzler",
+        "first_name": "Mark A.",
+        "last_name": "Hillebrand",
+        "email": "dazzler at users.sf.net",
+        "homepage": ""
+      },
+      "release_notes": "This version now supports a new type of close, the \"middle close\". For XML/SGML, it will close the tag and reopen the same tag (useful for list of tags); for LaTeX, it will insert \\item inside of {itemize}, {enumerate}, .. environments, just close otherwise.\n\nMiddle closes are invoke by the two-key sequence CTRL-\\ =\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=629",
+      "filename": "closeb.vim",
+      "script_version": "0.1",
+      "date": "2002-02-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "483",
+        "user_name": "dazzler",
+        "first_name": "Mark A.",
+        "last_name": "Hillebrand",
+        "email": "dazzler at users.sf.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

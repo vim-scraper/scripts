@@ -1,0 +1,42 @@
+{
+  "script_id": "3120",
+  "name": "grails-vim",
+  "summary": "Easy file navigation and testing of Grails projects ",
+  "script_type": "utility",
+  "description": "Grails-vim makes it easy to navigate Grails projects and view the test reports that Grails creates.\n\n  - Navigate from Domain Models to Controllers, Views, Tests and Test Reports\n  - Easily view the errors / failed tests, and jump to the failed tests.\n  - Quickly navigate controller methods, such as Save, Create, Edit, Index\n  - Provides built-in syntax highlighting for .gsp pages\n\nScreenshots:\n\nhttp://notesmine.com/grails_vim#screenshots\n\nRecommended Additional Plugins:\n\nFuzzy Finder:  http://www.vim.org/scripts/script.php?script_id=1984\n\n",
+  "install_details": "Unzip grails-vim.zip into your ~/.vim directory.\n\nInside Vim, run\n\n:helptags ~/.vim/doc\n\n:help grails\n\nIf you want to jump to test results, make sure you have the $GROOVY_HOME \nenvironment variable set correctly.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13213",
+      "filename": "grails-vim.zip",
+      "script_version": "0.2",
+      "date": "2010-06-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17690",
+        "user_name": "Nate",
+        "first_name": "Nathan",
+        "last_name": "Neff",
+        "email": "nathan.neff at gmail.com",
+        "homepage": "http://nateneff.com"
+      },
+      "release_notes": "0.2 features:\n    Added |GrailsMapPrefix| to allow users to define their own map leader\n    for GrailsVim commands\n\n    Added <Plug>GrailsDisplayUrlMappings\n\n    Added documentation about how to change mappings using g:GrailsMapPrefix\n    and/or <leader>\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13166",
+      "filename": "grails-vim.zip",
+      "script_version": "0.1",
+      "date": "2010-06-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17690",
+        "user_name": "Nate",
+        "first_name": "Nathan",
+        "last_name": "Neff",
+        "email": "nathan.neff at gmail.com",
+        "homepage": "http://nateneff.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

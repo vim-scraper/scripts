@@ -1,0 +1,58 @@
+{
+  "script_id": "3138",
+  "name": "datascript.vim",
+  "summary": "Syntax file for the Datascript modelling binary datatypes language",
+  "script_type": "syntax",
+  "description": "Syntax file for the Datascript modelling binary datatypes language.\n\nScreenshot of syntax highlighted datascript file with doxygen comments:\n  http://dominique.pelle.free.fr/pic/datascript-syntax.png\n\nFor more information about Datascript language, see:\n  http://datascript.berlios.de/ ",
+  "install_details": "Save the file datascript.vim to your ~/.vim/syntax/ directory\n(or $VIM/vimfiles/syntax/ on Windows) \n\nUse  \":set filetype=datascript\" to activate datascript file type.\nOr you can use \":set filetype=datascript.doxygen\" to activate\nboth datascript and and doxygen file types.\n\nTo automatically set the datascript file type when opening\n*.ds files, create the following file ~/.vim/filetype.vim\n\nif exists(\"did_load_filetypes\")\n  finish\nendif\naugroup filetypedetect\n  au! BufRead,BufNewFile *.ds setfiletype datascript.doxygen\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13285",
+      "filename": "datascript.vim",
+      "script_version": "0.7",
+      "date": "2010-07-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14105",
+        "user_name": "dominique",
+        "first_name": "Dominique",
+        "last_name": "Pellé",
+        "email": "dominique.pelle at gmail.com",
+        "homepage": "http://dominiko.livejournal.com"
+      },
+      "release_notes": "- added missing keywords, etc."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13282",
+      "filename": "datascript.vim",
+      "script_version": "0.6",
+      "date": "2010-07-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14105",
+        "user_name": "dominique",
+        "first_name": "Dominique",
+        "last_name": "Pellé",
+        "email": "dominique.pelle at gmail.com",
+        "homepage": "http://dominiko.livejournal.com"
+      },
+      "release_notes": "- Added missing highlighting for dsCommentStart"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13281",
+      "filename": "datascript.vim",
+      "script_version": "0.5",
+      "date": "2010-07-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14105",
+        "user_name": "dominique",
+        "first_name": "Dominique",
+        "last_name": "Pellé",
+        "email": "dominique.pelle at gmail.com",
+        "homepage": "http://dominiko.livejournal.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

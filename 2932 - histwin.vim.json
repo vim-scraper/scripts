@@ -1,0 +1,186 @@
+{
+  "script_id": "2932",
+  "name": "histwin.vim",
+  "summary": "Browse the undo tree",
+  "script_type": "utility",
+  "description": "PLEASE RATE THIS PLUGIN, IF YOU LIKE IT!\n\nFeedback is always welcome. See :h histwin-feedback.\n\nYou can now follow development of this plugin via github: http://github.com/chrisbra/histwin.vim\n\nVim 7 has an amazing feature that is called undo-branches. See :h undo-tree. Unfortunalley it is a little bit clumsy to use. \n\nTherefore this plugin allows for easy navigation between the different undo-branches for a file.\nSee this screenshot: http://www.256bit.org/~chrisbra/vim_undotree.png\nThis plugin was inspired by the undo_branches plugin (http://www.vim.org/scripts/script.php?script_id=1997).\n\nThis plugin allows you to\n- see all available undo-branches (Timestamps and Keywords)\n- tag certain states\n- switching to different states (including the first state (before any changes were made)\n- allow to diff the selected undo-branch with the current version\n- replay the changes (ok, this is just for fun ;)\n\nOpen the UndoBrowse window by issuing :UB\nA new window will appear, which contains the name of the file you are watching a small help\nbanner that contains the most important mappings for this window and a list of all available\nundo-branches (which shows the time when this change was made and your tags for that state, if there are any). On each entry you can press Enter or T to jump to that state or tag that state.\n\nThis plugin maps the following keys:\n- 'Enter' on an entry jump to that state in time of the file\n- 'T' tags a state with a phrase. \n- 'R' lets you replay a change \n- 'I' opens/closes the help banner\n- 'Q' closes the window\n- CTRL-L reload view\n- D diff selected version",
+  "install_details": "edit the file histwin.vba with vim. From within vim simply load this file:\n:so %\n\nVim will automatically install this plugin.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12944",
+      "filename": "histwin-0.12.vba",
+      "script_version": "0.12",
+      "date": "2010-05-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "- Small extension to the help file\n- generate help file with 'et' set, so the README at github looks better\n- Highlight the key binding using |hl-SpecialKey|\n- The help tag for the color configuration was wrong."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12883",
+      "filename": "histwin.vba",
+      "script_version": "0.11",
+      "date": "2010-04-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "- Set old buffers read only (disable the setting via the g:undo_tree_nomod variable\n- Make sure, Warning Messages are really displayed using :unsilent"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12878",
+      "filename": "histwin.vba",
+      "script_version": "0.10",
+      "date": "2010-04-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "- Fixed annoying Resizing bug\n- linebreak tags, if they are too long\n- dynamically grow the histwin window, for longer tags (up\n   to a maximum)\n- Bugfix: Always indicate the correct branch\n- Added a few try/catch statements and some error handling"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12202",
+      "filename": "histwin.vba",
+      "script_version": "0.9",
+      "date": "2010-01-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "BF: Error handling for Replaying (it may not work always)\nNF: Finally added Documentation (see :h histwin.txt)\nBF: Use syntax highlighting\nBF: Tagging finally works (you can now tag additional states)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12155",
+      "filename": "histwin.vba",
+      "script_version": "0.8",
+      "date": "2010-01-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "- NF: make speed of the replay adjustable. Use g:undo_tree_speed to set time in milliseconds\n- BF: code cleanup\n- BF: highlighting should work better now.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12146",
+      "filename": "histwin.vba",
+      "script_version": "0.7.2.",
+      "date": "2010-01-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "- BF: Check undolevel Settings\n- BF: make sure when switching to a different undo branch, that the undo-tree will be updated"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12145",
+      "filename": "histwin.vba",
+      "script_version": "0.7.1",
+      "date": "2010-01-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "BF: fixed a problem with mapping the keys which broke the Undo-Tree keys (I guess I don't fully understand, when to use s: and <sid>)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12144",
+      "filename": "histwin.vba",
+      "script_version": "0.7",
+      "date": "2010-01-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "- NF: created autoloadPlugin (patch by Charles Campbell) Thanks!\n- NF: enabled GLVS (patch by Charles Campbell) Thanks!\n- NF: made Plugin available as histwin.vba\n- NF: Check for availability of :UB before defining it\n- BF: cleaned up old comments\n- BF: deleted :noautocmd which could cause trouble with other plugins\n- BF: small changes in coding style (<sid> to s:, fun instead of fu)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12142",
+      "filename": "histwin.vim",
+      "script_version": "0.6",
+      "date": "2010-01-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "BF: fix missing bufname() when creating the undo_tree window\nNF: make undo_tree window a little bit smaller (size is adjustable via g:undo_tree_wdth variable)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12140",
+      "filename": "histwin.vim",
+      "script_version": "0.5",
+      "date": "2010-01-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "NF: Allow diffing with selected branch\nNF: highlight current version\nNF: Use changenr() to determine undobranch\nNF: <C-L> updates view\nNF: allow switching to initial load state, before buffer was edited\nBF: Fix annoying bug, that displays --No lines in buffer--\nBF: fix several small annoying bugs"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12130",
+      "filename": "histwin.vim",
+      "script_version": "0.2",
+      "date": "2010-01-19",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

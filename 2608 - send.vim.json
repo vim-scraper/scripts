@@ -1,0 +1,26 @@
+{
+  "script_id": "2608",
+  "name": "send.vim",
+  "summary": "Send current range to STDIN of arbitrary program",
+  "script_type": "utility",
+  "description": "Send the current range to the STDIN of an arbitrary command line program. Special support for sending text to an ipython interpreter running inside screen (via my send2screen.py script)\nhttp://users.physik.fu-berlin.de/~goerz/blog/2008/09/integrating-vim-with-ipython/",
+  "install_details": "Put the send.vim file into your ~/.vim/plugins folder. You need to have python compiled into vim in order for this plugin to work.\n\nYou probably also want to get my send2screen.py script:\nhttp://users.physik.fu-berlin.de/~goerz/blog/2008/09/integrating-vim-with-ipython/\n\nRead the comments in the send.vim file for documentation.\n\nChange settings in your vimrc:\n\nMap keys as you like (see example at the end of the send.vim file)\n\nSuggestion: enable ipython mode when you're in python files: add\n      let b:sendToProgramMode=\"ipython\"\nto your python.vim ftplugin, or add\n      autocmd BufNewFile,BufRead *.py let b:sendToProgramMode=\"ipython\"\nto your .vimrc\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10401",
+      "filename": "send.vim",
+      "script_version": "2.0",
+      "date": "2009-04-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14476",
+        "user_name": "michaelgoerz",
+        "first_name": "Michael",
+        "last_name": "Goerz",
+        "email": "goerz at physik.fu-berlin.de",
+        "homepage": "http://www.physik.fu-berlin.de/~goerz"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

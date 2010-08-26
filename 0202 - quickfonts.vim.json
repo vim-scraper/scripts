@@ -1,0 +1,202 @@
+{
+  "script_id": "202",
+  "name": "quickfonts.vim",
+  "summary": "quickly switch between a list of favorite fonts, manage list of favorite fonts",
+  "script_type": "utility",
+  "description": "UPDATES \n - allow specification of base menu in which to put quickfonts menu (e.g. 'Plugin')\n - bug fixes and handling of gtk2 style fonts\n\n\nThis plugin manages a list of favorite fonts, and allows you to swich quickly between those fonts.  This is useful if you normally like to use several fonts, for example, if your eyes get tired looking at a small font, or someone comes to look at code on your monitor, or your vision is blurry from a night of heavy drinking, you can quickly switch to a larger font, and the go back to a smaller font when the conditions allow it.\n\nAll functionality is available through an optional menu or through custom vim commands.\n\nFonts are read from a file specified with the global variable g:quickFontsFile or the default file $HOME/.vimquickfonts if that variable doesn't eists.  At vim start up, the file is read, if it doesn't exist your list will be empty. If the 'quickFontsAutoLoad' global variable is set (i.e. in your .vimrc), the script will load the last used font upon gvim start-up. On vim quit, your list of favorites is written to the file as well as the quickfont used last.\n\nYou can switch between the fonts with the mappings Alt-< and Alt->, which I find useful because they also work in some terminal programs (rxvt/xterm on some systems). You can change the mappings in the plugin if those don't suit you or disable them and add your own if you want (see help file).  The same functionality is available with the commands :QuickFontBigger and :QuickFontSmaller.\n\nYou can add a font to your favorites list with the command \n:QuickFontAdd\nwhich either takes no argument, in which case the value of 'guifont' will be added if available, or if an argument of '*' is given, the guifont selector is called, if you select a font from that (with no errors) that font will be added to the list.  A full font specification string can also be given as an argument. Duplicate fonts are eliminated, and new fonts are inserted sorted by pixel size in the list. UPDATE - sorting is done on font width * height rather than just width (for unix/Xwindows).  You  can disable this with: \n\"let quickFontsNoXwininfo = 1\" in your vimrc.\n\nYou can remove a favorite font with the command\n:QuickFontDel\nwhich with no argument deletes the current selected font from the list, or if you give it a number, it will delete the font at that index in the list.\n\nYou can get info on your favorite font list and the currenlty selected font with the command\n:QuickFontInfo\n\nYou can reload your font list from your config file (abandoning any changes to the list) with the command\n:QuickFontReload\n\nFinally, you can always edit the config file by hand, in which case, an autocommand will re-read your changes when you write the file.\n\nCaveats: should work with non-X style fonts, except the font sorting.  There are stubs for sorting fonts for other systems - just not filled out - let me know if want to help with that.\n\n",
+  "install_details": "1 - un-gzip, untar in your ~/.vim direcory, or your vimfiles directory, or in $VIMRUNTIME\n2 - (optional) build local help files (:help helptags)\n3 - (optional) define plugin options in your vimrc - see ':help quickfonts'",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4103",
+      "filename": "quickfonts-1.29.tar.gz",
+      "script_version": "1.29",
+      "date": "2005-03-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "email updated"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2718",
+      "filename": "quickfonts.tar.gz",
+      "script_version": "1.27",
+      "date": "2004-02-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "fix for geometry bug when 'ignorecase' is set - thanks to Stephan  Hegel"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2711",
+      "filename": "quickfonts.tar.gz",
+      "script_version": "1.26",
+      "date": "2004-02-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Shell and documentation fixes from Stephan Hegel"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2477",
+      "filename": "quickfonts.1.25.tar.gz",
+      "script_version": "1.25",
+      "date": "2003-11-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- allow specification of base menu in which to put quickfonts menu (e.g. 'Plugin')\n- fix for error when menus don't exist\n- fix for new font style used by GTK\n- fix for xwinfo name error - needed redraw!\n- other minor fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1671",
+      "filename": "quickfonts-1.21.tar.gz",
+      "script_version": "1.21",
+      "date": "2003-01-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Menus added for most functionality - can be disabled - see help document."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1669",
+      "filename": "quickfonts-1.20.tar.gz",
+      "script_version": "1.20",
+      "date": "2003-01-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Made start-up smoother - window no longer does a size jump when using the auto-load-last-used font feature. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1666",
+      "filename": "quickfonts-1.19.tar.gz",
+      "script_version": "1.19",
+      "date": "2003-01-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added feature to load last font used (from quickfont list) when gvim starts up.  Added flag to disable default mapping creation.  Code clean-up, doc updates, etc."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=892",
+      "filename": "quickfonts-1.18.tar.gz",
+      "script_version": "1.18",
+      "date": "2002-05-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": ":QuickFontAdd funtion can now take a font name - useful for a motif version I use (no GUI font selector)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=798",
+      "filename": "quickfont-1.16.tar.gz",
+      "script_version": "1.16",
+      "date": "2002-04-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added QuickFontSet command that allows jumping to font by index number.  Use :QuickFontInfo and :QuickFontSet x in succession."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=566",
+      "filename": "quickfonts.tar.gz",
+      "script_version": "1.14",
+      "date": "2002-02-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added documentation (run :helptags ~/.vim/doc); Fixed numeric sorting bug; Default config file for Windows changed to $HOME/_vimquickfonts; Fall through when xwininfo fails."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=564",
+      "filename": "quickfonts.vim",
+      "script_version": "1.13",
+      "date": "2002-02-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fonts can be sorted on area (char width * height) instead of just on width - this gives a bit smoother transition as you go bigger and smaller. Uses xwininfo to do this (X systems only) - you can turn it off by letting the var quickFontsNoXwininfo in your vimrc.\nFont sorting separated into different gui systems - only X is implemented now - if you want to help with windows or others, let me know.\nQuickFontReload command added - re-reads your font list file - effectively abandoning changes.\nEscaping of spaces in font names.\nGeneral improvements"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=544",
+      "filename": "quickfonts.vim",
+      "script_version": "1.6",
+      "date": "2002-02-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "89",
+        "user_name": "scotch2",
+        "first_name": "scott",
+        "last_name": "urban",
+        "email": "thomas.scott.urban at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

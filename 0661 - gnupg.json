@@ -1,0 +1,170 @@
+{
+  "script_id": "661",
+  "name": "gnupg",
+  "summary": "Plugin for transparent editing of gpg encrypted files.",
+  "script_type": "utility",
+  "description": "This script implements transparent editing of gpg encrypted files. The filename must have a \".gpg\", \".pgp\" or \".asc\" suffix. When opening such a file the content is decrypted, when opening a new file the script will ask for the recipients of the encrypted file. The file content will be encrypted to all recipients before it is written. The script turns off viminfo and swapfile to increase security.\n\nCommands:\n\n  :GPGEditRecipients\n    Opens a scratch buffer to change the list of recipients. Recipients that\n    are unknown (not in your public key) are highlighted and have\n    a prepended \"!\". Closing the buffer makes the changes permanent.\n\n  :GPGViewRecipients\n    Prints the list of recipients.\n\n  :GPGEditOptions\n    Opens a scratch buffer to change the options for encryption (symmetric,\n    asymmetric, signing). Closing the buffer makes the changes permanent.\n    WARNING: There is no check of the entered options, so you need to know\n    what you are doing.\n\n  :GPGViewOptions\n    Prints the list of options.\n\nVariables:\n\n  g:GPGExecutable\n    If set used as gpg executable, otherwise the system chooses what is run\n    when \"gpg\" is called. Defaults to \"gpg\".\n\n  g:GPGUseAgent\n    If set to 0 a possible available gpg-agent won't be used. Defaults to 1.\n\n  g:GPGPreferSymmetric\n    If set to 1 symmetric encryption is preferred for new files. Defaults to 0.\n\n  g:GPGPreferArmor\n    If set to 1 armored data is preferred for new files. Defaults to 0.\n\n  g:GPGPreferSign\n    If set to 1 signed data is preferred for new files. Defaults to 0.\n\n  g:GPGDefaultRecipients\n    If set, these recipients are used as defaults when no other recipient is\n    defined. This variable is a Vim list. Default is unset.\n\nKnown Issues:\n\n  In some cases gvim can't decryt files\n\n  This is caused by the fact that a running gvim has no TTY and thus gpg is\n  not able to ask for the passphrase by itself. This is a problem for Windows\n  and Linux versions of gvim and could not be solved unless a \"terminal\n  emulation\" is implemented for gvim. To circumvent this you have to use any\n  combination of gpg-agent and a graphical pinentry program:\n\n    - gpg-agent only:\n        you need to provide the passphrase for the needed key to gpg-agent\n        in a terminal before you open files with gvim which require this key.\n\n    - pinentry only:\n        you will get a popup window every time you open a file that needs to\n        be decrypted.\n\n    - gpgagent and pinentry:\n        you will get a popup window the first time you open a file that\n        needs to be decrypted.\n",
+  "install_details": "Copy the gnupg.vim file to the $HOME/.vim/plugin directory. Refer to ':help add-plugin', ':help add-global-plugin' and ':help runtimepath' for more details about Vim plugins.\n\nFrom \"man 1 gpg-agent\":\n...\nYou should always add the following lines to your .bashrc or whatever initialization file is used for all shell invocations:\n\n     GPG_TTY=`tty`\n     export GPG_TTY\n\nIt is important that this environment variable always reflects the output of the tty command. For W32 systems this option is not required.\n...\n\nMost distributions provide software to ease handling of gpg and gpg-agent. Examples are keychain or seahorse.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12200",
+      "filename": "gnupg.vim",
+      "script_version": "3026",
+      "date": "2010-01-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "- fix a bug by using a sh compatible setting for 'shellredir' on unix systems. when 'shell' was set to csh or tcsh by the user and the system has /bin/sh linked to dash the plugin didn't work.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10833",
+      "filename": "gnupg.vim",
+      "script_version": "2782",
+      "date": "2009-06-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "- show more information (key id and creation time) of keys in GPGEditRecipients, GPGViewRecipients and during selecting in case of a ambiguous key.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10683",
+      "filename": "gnupg.vim",
+      "script_version": "2773",
+      "date": "2009-05-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "- fix a bug in detecting windows platforms\n- added g:GPGPreferSign to sign encrypted files by default (thanks to Tim Swast).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9142",
+      "filename": "gnupg.vim",
+      "script_version": "2276",
+      "date": "2008-08-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "- added support for default recipients via the variable g:GPGDefaultRecipients.\n- fixed an wrong error message with symmetric encryption and set recipients (thanks to Sebastian Luettich).\n- create a empty new buffer on leaving vim to wipe out sensitive data on console.\n- make sure senisitive data is never written unencrypted to disk."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9058",
+      "filename": "gnupg.vim",
+      "script_version": "2249",
+      "date": "2008-07-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "- rewritten lots of code to use lists feature of vim 7 instead of my own implementation\n- added a n option to change the name and location of GPG executable\n- try to get GPG_TTY dynamically."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8174",
+      "filename": "gnupg.vim",
+      "script_version": "1933",
+      "date": "2008-01-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "- changed parsin to work with gpg2 correctly\n- save/restore view of saved window\n- fix a bug when encoding and fileencoding is different\n- restructured autocommand triggers\n- added a debug command and debug messages"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6949",
+      "filename": "gnupg.vim",
+      "script_version": "1605",
+      "date": "2007-04-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "- new plugin options to set preferences for symmetric/asymmetric and armor/binary files\n- fix for use with gvim. !! plugin works only in gvim if gpg-agent is available !!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6518",
+      "filename": "gnupg.vim",
+      "script_version": "1472",
+      "date": "2006-12-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "- support for symmetric encrypted files.\n- detection of various encryption options.\n- possibility to change gpg options using new commands GPGEditOptions and GPGViewOptions commands.\n- support editing files with '.gpg', '.pgp' and '.asc' suffixes (tanks to Richard Bronosky).\n- detection of unencrypted files.\n- support for windows systems (thanks to Erik Remmelzwaal)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2108",
+      "filename": "gnupg.vim",
+      "script_version": "1.27",
+      "date": "2003-06-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "updated documentation, that gnupg.vim only works for public/private-key encrypted files."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2029",
+      "filename": "gnupg.vim",
+      "script_version": "1.26",
+      "date": "2003-05-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1120",
+        "user_name": "mbr",
+        "first_name": "Markus",
+        "last_name": "Braun",
+        "email": "markus.braun at krawel.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

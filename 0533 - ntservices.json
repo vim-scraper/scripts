@@ -1,0 +1,122 @@
+{
+  "script_id": "533",
+  "name": "ntservices",
+  "summary": "Control NT services from Vim.",
+  "script_type": "utility",
+  "description": "PLEASE READ THE INSTALL SECTION COMPLETELY.\n\n- This plugin generates a list of NT services that are installed on the\n  local NT/W2K/XP machine with the current started status. You can\n  start/stop the service by pressing S or pause/continue the service by\n  pressing P on the corresponding entry.\n- You can open the servicelist window through WinManager (as described in\n  the installation section below) or by assigning a hot key. You can use\n  the same hot key to open/close the window. Alternatively, you can also\n  use the :NTServices command to open/close the services window.\n- You can choose which fields that you want to see by using the\n  NtsFields command. You can select the sort fields by pressing s\n  consecutively and r for reversing the sort direction.\n- If you have permissions, you can view the service list in a remote m/c\n  by using the NtsSetHost command. With no arguments, it prints the\n  current remote host name. To switch back to the local m/c, use \".\" for\n  the host name.\n- For the sake of speed, the list of services is cached. To see the latest\n  set of services and their states at any time, refresh the window by\n  pressing 'R'.\n- It requires multvals and genutils plugins to be always installed, but\n  others are required only depending on your usage/setting (for a better\n  experience and formatting).\n\nSearch_key_words: NT services ntservices ntservice service multvals genutils align Hari Krishna Dara",
+  "install_details": "- Place the plugin in a plugin diretory under runtimepath and configure\n  WinManager according to your taste. E.g:\n                                                                           \n    let g:winManagerWindowLayout = 'FileExplorer,NTServices'\n                                                                           \n  You can then switch between FileExplorer and NTServices by pressing ^N\n  and ^P.\n- If you don't want to use WinManager, you can still use the :NTServices\n  comamnd or assign a hotkey by placing the following in your vimrc:\n                                                                           \n    nmap <silent> <F5> <Plug>NTServices\n                                                                           \n  You can substitute any key or sequnce of keys for <F5> in the above map.\n- Requires multvals.vim to be installed. Download from:\n    http://www.vim.org/script.php?script_id=171\n- Requires genutils.vim to be installed. Download from:\n    http://www.vim.org/script.php?script_id=197\n- If Align.vim is installed, it is used to format the output.\n- Requires cscript.exe and net.exe to be in the path.\n- Use g:ntservFields, g:ntservSortFieldIndex, g:ntservSortDirection to\n  specify field names, default sort field and the sort direction\n  respectively. Use NtsFields command to see the list of field names\n  possible.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3266",
+      "filename": "ntservices.vim",
+      "script_version": "1.7",
+      "date": "2004-07-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Maintenance release. Fixed broken NTSsetHost command.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2683",
+      "filename": "ntservices.vim",
+      "script_version": "1.6",
+      "date": "2004-01-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor updates:\n- Fixed the bug in connecting to a remote host, basically it wasn't working.\n- NtsSetHost is now global, so you don't have to open the window before\n  switching to a remote host.\n- Check and not load if it is not windows (David Fishburn).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2682",
+      "filename": "ntservices.vim",
+      "script_version": "1.5",
+      "date": "2004-01-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Renamed NTsFields command to NtsFields. \n- Now genutils.vim plugin is required. Download it from http://www.vim.org/script.php?script_id=197 \n- Fixed a bug with buffer name on solaris. \n- New feature to connect to a remote host. \n- q to quit window. \n- Version dependency check on multvals and genutils plugin. You now get an error message during the Vim startup, if you don't have minimum required versions of these two dependent plugins. \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1732",
+      "filename": "ntservices.vim",
+      "script_version": "1.4",
+      "date": "2003-02-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "You can select the list of fields that you want to see in the services list. You can specify the field list in your vimrc, but you can always dynamically change them using NTservFields command at runtime. This new feature adds a new dependency on multvals plugin, but others are still optional."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1654",
+      "filename": "ntservices.vim",
+      "script_version": "1.2",
+      "date": "2003-01-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "With the help of David Fishburn, I was able to identify a problem and fix it. I also added a command and <Plug> mapping to activate the window without needing WinManager at all (for those who don't want to install WinManager). Thanks a lot to David for debugging the problem and providing help in other ways too."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1644",
+      "filename": "ntservices.vim",
+      "script_version": "1.1",
+      "date": "2003-01-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Cscript wasn't executing vbscripts on some machines unless the //E:vbscript option is passed. If it still doesn't work for you, please do me a favour by running cscript manually on the temp file created with the .vbs extension in the temp directory like this:\n\ncscript //E:vbscript //Nologo <temp file created by plugin>\n\nand please report the error that you see. Thank you."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1642",
+      "filename": "ntservices.vim",
+      "script_version": "1.0",
+      "date": "2003-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "292",
+        "user_name": "haridsv",
+        "first_name": "Hari Krishna",
+        "last_name": "Dara",
+        "email": "hari.vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "2261",
+  "name": "nagios syntax",
+  "summary": "Nagios template object configuration file",
+  "script_type": "syntax",
+  "description": "Nagios <http://www.nagios.org/&gt; template object configuration file.\n\nInitially based on gentoo source http://dev.gentoo.org/~ramereth/vim/syntax/nagios.vim\nhttp://bugs.gentoo.org/show_bug.cgi?id=76712\nwhich instead based on http://katanalynx.dyndns.org/~ajar/code :)\n\nCurrent URL:\nhttp://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/packages/vim-syntax-nagios/nagios.vim",
+  "install_details": "- for local install\nPREFIX=~/.vim\n\n- for global install (requries root privileges)\nPREFIX=/usr/share/vim/vimfiles\n\n- and then run:\nmkdir -p $PREFIX/{syntax,ftdetect}\ncp nagios.vim $PREFIX/syntax/nagios.vim\ncat > $PREFIX/ftdetect/nagios.vim <<-EOF\nau BufNewFile,BufRead /*etc/nagios/*.cfg,*sample-config/template-object/*.cfg{,.in},/var/lib/nagios/objects.cache set filetype\n=nagios\nEOF\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8770",
+      "filename": "nagios.vim",
+      "script_version": "1.8",
+      "date": "2008-06-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9628",
+        "user_name": "glen",
+        "first_name": "Elan",
+        "last_name": "Ruusamäe",
+        "email": "glen at alkohol.ee",
+        "homepage": "http://glen.alkohol.ee/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

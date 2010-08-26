@@ -1,0 +1,58 @@
+{
+  "script_id": "1994",
+  "name": "confluencewiki.vim",
+  "summary": "Confluence WIKI syntax",
+  "script_type": "syntax",
+  "description": "This is the syntax highlighter for Atlassian Confluence WIKI \n\nhttp://confluence.atlassian.com/renderer/notationhelp.action?section=all",
+  "install_details": "copy this script to ~/.vim/syntax/confluencewiki.vim\n\nset ft=confluencewiki \n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11306",
+      "filename": "confluencewiki.vim",
+      "script_version": "0.1.0",
+      "date": "2009-09-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11412",
+        "user_name": "dangra",
+        "first_name": "Daniel",
+        "last_name": "Graña",
+        "email": "dangra at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "a lot of improvements made by Ingor Karkat <swdev{AT}ingo-karkat{DOT}de>\n\n- Added confluenceImage.\n- confluenceCode, confluenceQuote and confluenceVerbatim tags are now\n  highlighted as tags, not the formatting they create.\n- confluenceLink now supports optional labels and tips with different\n  highlighting.\n- Adjusted confluenceHeading, confluenceHeadingMarker, confluenceList,\n  confluenceFixed and confluenceLink highlightings to other wiki syntax\n  highlightings.\n- BF: confluenceLink is unbounded, i.e. need not be surrounded by whitespace\n  etc.\n- Added spelling support.\n- BF: confluenceHeading only supports 1-6.\n- BF: confluenceTag parameter names can also contain '-'; parameter values can\n  contain any character except '|' or '}'.\n- Expanded highlighting of confluenceTag to highlight (optional) parameters\n  and their values, similar to HTML tag attributes.\n- confluenceComment tags are now highlighted as tags, not the formatting they\n  create.\n- BF: No spell error on {HTMLcomment}, {code} and {noformat} tags.\n- BF: Applying top-level formatting inside confluenceComment and\n  confluenceQuote, (but not for confluenceCode and confluenceVerbatim).\n- BF: Allowing optional parameters for confluenceCode and confluenceVerbatim.\n- BF: Added 'keepend' for confluenceQuote.\n- Added highlighting for confluenceEmoticons.\n- BF: Added additional allowed characters after confluenceEmphasis and\n  confluenceFixed: !()[]{}\n- Added matching and highlighting for confluenceCitation, confluenceStrike,\n  confluenceUnderlined, confluenceSuperscript, confluenceSubscript.\n- ENH: Escaped (via '&#039) markup is not highlighted any more.\n- Added confluenceEscaping to highlight the escape character '&#039.\n- BF: confluenceSeparator: horizontal ruler must be exactly 4 dashes, but can\n  be surrounded by whitespace in the line.\n- BF: Emphasis must contain at least one non-emphasis character (i.e. an empty\n  emphasis is not rendered). Added after-match atom to\n  s:ConfluenceCreateEmphasis().\n  Added confluenceSymbols for ndash (--) and mdash (---).\n- ENH: Added highlighting for confluenceTableHeader (which can include other\n  emphases).\n- ENH: confluenceImage now supports highlighting of image link (like a\n  confluenceLink) and optional parameter names and values."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7507",
+      "filename": "confluencewiki.vim",
+      "script_version": "0.0.2",
+      "date": "2007-08-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11412",
+        "user_name": "dangra",
+        "first_name": "Daniel",
+        "last_name": "Graña",
+        "email": "dangra at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "{HTMLcomment} support added"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7506",
+      "filename": "confluencewiki.vim",
+      "script_version": "0.0.1",
+      "date": "2007-08-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11412",
+        "user_name": "dangra",
+        "first_name": "Daniel",
+        "last_name": "Graña",
+        "email": "dangra at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "924",
+  "name": "html_portuquese",
+  "summary": "Change the Brazilian Portuguese html charsets (ccedil) to char (ç).",
+  "script_type": "utility",
+  "description": "Useful for all people who edit Brazilian Portuguese websites in HTML or PHP with Vim.\nOn loading a HTML or PHP file, this script replaces all the html-encoded (ccedil, atilde, etc) with their normal Ascii-Chars (ç,ã, etc) so they're more easily readable.\n\nWhen you save the file, all Ascii-Chars are replaced by the HTML Encoding.",
+  "install_details": "put it into vim plugin folder (/usr/share/vim/vim61/plugin) or in your ~/.vim/plugin/ folder",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2791",
+      "filename": "html_portguese.vim",
+      "script_version": "1.1",
+      "date": "2004-02-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4639",
+        "user_name": "kripton",
+        "first_name": "Rubens",
+        "last_name": "Marins",
+        "email": "rubens at brisanet.com.br",
+        "homepage": ""
+      },
+      "release_notes": "fixed a bug typo with acute string"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2788",
+      "filename": "html_portguese.vim",
+      "script_version": "1.0",
+      "date": "2004-02-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4639",
+        "user_name": "kripton",
+        "first_name": "Rubens",
+        "last_name": "Marins",
+        "email": "rubens at brisanet.com.br",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

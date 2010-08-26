@@ -1,0 +1,42 @@
+{
+  "script_id": "2729",
+  "name": "jslint.vim",
+  "summary": "Check JavaScript files for errors with JSLint",
+  "script_type": "utility",
+  "description": "Vim plugin and command line tool for running JSLint (http://jslint.com/).\n\nJSLint is a handy tool that spots errors and common mistakes in JavaScript code.\n\nThe source code for jslint.vim is hosted at (http://github.com/hallettj/jslint.vim).\n\nThis is alpha software and is under heavy development.\n\n\nWorking with quickfix\n--------------------------------\n\nThe quickfix window will display a list of all potential errors in the file with an explanation for each. Running `:JSLint` will automatically open the quickfix window if there are potential errors and will close it if no problems are detected.\n\nNote that the quickfix list will be cleared and regenerated every time you run `:JSLint`.\n\nHere are some quick notes for using quickfix:\n\n- In the quickfix window, moving your cursor over an item and pressing enter  will jump the cursor to that line in your file.\n\n- In either your file or the quickfix window `:cn` will jump the cursor to the next potential error, and `:cp` will jump the cursor to the previous item.\n\n- Open and close the quickfix window with `:copen[n]` and `:ccl[ose]`.\n\nYou can find more detailed documentation in the Vim Reference Manual (http://www.vim.org/htmldoc/quickfix.html)\n\n\nAlternative Plugins\n-----------------------------\n\nThere are other plugins for Vim that integrate JavaScript Lint (http://www.javascriptlint.com/).  JavaScript Lint is another JavaScript checker that is similar to JSLint.\n\njsl.vim (http://www.vim.org/scripts/script.php?script_id=2630) uses Vim's compiler infrastructure making its use consistent with syntax checkers for other languages.\n\njavaScriptLint.vim (http://www.vim.org/scripts/script.php?script_id=2578) runs the contents of a JavaScript file through JavaScript Lint after the file's buffer is saved and places any warnings in the quickfix error window.\n\n\nCredits\n-------------\n\n- Jesse Hallett -- original author\n- Nathan Smith -- Windows compatibility, quickfix integration, better OS X\n  compatibility, and many other improvements\n- Travis Jeffery -- Easy plugin installation with rake\n- Sam Goldstein -- Display of problem report for the current line and bug fixes\n- Bryan Chow -- Fixes for formatting issues and typos\n- Jeff Buttars -- Options to remove and to disable error highlighting\n- Rainux Luo -- Support for reading JSLint options from a `~/.jslintrc` file\n\n\nLicense\n---------\n\nCopyright (c) 2008-2009 Jesse Hallett <hallettj@gmail.com>, except where otherwise noted\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nThe Software shall be used for Good, not Evil.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+  "install_details": "- Make sure you have a JavaScript interpreter installed. In Ubuntu you can\n  install the Spidermonkey shell with this command:\n\n        $ sudo apt-get install spidermonkey-bin\n\n  On Windows you can use `cscript.exe` - which is probably already installed.\n\n- If you have rake installed, run:\n\n        $ rake install\n\n  Otherwise copy the directory plugin/jslint/ into your Vim plugin directory.\n  Usually this is `~/.vim/plugin/`. On Windows it is `~/vimfiles/plugin/`.\n\n- Simple mode:\n\n    *   Open a JavaScript file in Vim and run the command `:JSLintLight` to\n        check the file. If there are potential errors they will be highlighted\n        in red.  If there is an error on the line under the cursor an\n        explanation of that error will be printed at the bottom of the screen.\n\n        Run `:JSLintLight` again once the errors are fixed to remove error\n        highlighting.\n\n- Quickfix mode:\n\n    *   Open a JavaScript file in Vim and run the command `:JSLint` to check\n        the file. If there are potential errors they will be highlighted in red\n        and the quickfix window will open.\n\n        Run `:JSLint` again once the errors are fixed to remove error\n        highlighting and to close the quickfix window.\n\n- (optional) Add any valid JSLint options to `~/.jslintrc` file, they will be\n  used as global options for all JavaScript file.\n  For example:\n\n        /*jslint browser: true, regexp: true */\n        /*global jQuery, $ */\n\n        /* vim: set ft=javascript: */\n\n- (optional) Add configuration to your `~/.vimrc` file to bind JSLint to a key.\n  For example:\n\n        \" Run JSLint on the current file in simple mode when <F4> is pressed.\n        map <F4> :JSLintLight<CR>\n\n        \" Run JSLint on the current file with quickfix when <F5> is pressed.\n        map <F5> :JSLint<CR>\n\nTo get a detailed report of any issues in your JavaScript file outside of Vim,\nrun the `bin/jslint` executable in a terminal. For example:\n\n    $ bin/jslint plugin/jslint/fulljslint.js\n\nYou can copy `bin/jslint` into for `PATH` for easier access. The executable\nrequires that the Vim plugin is installed and also requires Ruby.\n\nTo clear highlighted errors run `:JSLintClear`.  To disable error highlighting\naltogether add this line to your `~/.vimrc` file:\n\n    let g:JSLintHighlightErrorLine = 0 ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11414",
+      "filename": "jslint.vim_0.6.tar.bz2",
+      "script_version": "0.6",
+      "date": "2009-09-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17795",
+        "user_name": "hallettj",
+        "first_name": "Jesse",
+        "last_name": "Hallett",
+        "email": "hallettj at gmail.com",
+        "homepage": "http://sitr.us/"
+      },
+      "release_notes": "New features"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11140",
+      "filename": "jslint.vim.tar.bz2",
+      "script_version": "0.5",
+      "date": "2009-08-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17795",
+        "user_name": "hallettj",
+        "first_name": "Jesse",
+        "last_name": "Hallett",
+        "email": "hallettj at gmail.com",
+        "homepage": "http://sitr.us/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

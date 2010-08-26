@@ -1,0 +1,90 @@
+{
+  "script_id": "1337",
+  "name": "plugin/fonts.vim",
+  "summary": "Multi OS Font Plugin",
+  "script_type": "utility",
+  "description": "This plug-in set's the font used depending on the operating system / windowing system used. It also contains a smaller and larger font to zoom in and out. It is very helpful if you use GVim with more then one OS, display resolutions etc. pp.\n\nYou can easily expand the plugin for more OS's or fonts.\n\nReports errors to: http://code.google.com/p/vim-scripts/issues/list\nDiscuss improvements on: http://groups.google.com/group/vim_scripts\nFor Support see: http://code.google.com/p/vim-scripts/wiki/MultiOSFontPlugin\n",
+  "install_details": "Copy the file into your plug-in directory and edit to reflect fonts installed on your system(s).\n\nIf you don't know the fonts available on your system you have two Ways open:\n\n1) The last \"Edit\" menu entry in GVim is \"Choose Font\". Then it's easy: you choose a nice font and then use \":set guifont\" to find out it's internal name.\n\n2) The \"Choose Font\" Menu is available - AFAIK that happens with older XServer set-ups (like Motif)  in which case you can use the xfontsel program  to find out which fonts are available and what names they have.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6436",
+      "filename": "fonts.vim",
+      "script_version": "1.4",
+      "date": "2006-11-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Now with Sun Solaris support. But mind you: All font settings for XServer platforms depend on the Client and Server used - you might hat to fine tune the script for your environment."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5671",
+      "filename": "fonts.vim",
+      "script_version": "1.3",
+      "date": "2006-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Minor improvements"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5308",
+      "filename": "fonts.vim",
+      "script_version": "1.2",
+      "date": "2006-02-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "This version will resize the window as well when changing fonts. Mapping and menus have been improved to support a function key as g:mapleader."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4670",
+      "filename": "fonts.vim",
+      "script_version": "1.1",
+      "date": "2005-10-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "This version has more features - like using smaller fonts for vimdiff or an alternative fontset for utf8 encoded files."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4527",
+      "filename": "fonts.vim",
+      "script_version": "1.0",
+      "date": "2005-08-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

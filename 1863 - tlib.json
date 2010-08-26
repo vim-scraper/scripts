@@ -1,0 +1,538 @@
+{
+  "script_id": "1863",
+  "name": "tlib",
+  "summary": "Some utility functions",
+  "script_type": "utility",
+  "description": "This library provides some utility functions. There isn't much need to \ninstall it unless another plugin requires you to do so.\n\nThe most useful functions provided by this library probably are:\n\ntlib#input#List(), tlib#input#ListW()\n    - Display a list\n    - Dynamically filter items matching a pattern (somethat like google)\n        - E.g. you filter for \"foo -bar\": show all entries containing foo but not bar.\n    - Select items from a list\n    - Do stuff\n        - Developers can define keys that trigger some action with the \n          selected items\n\ntlib#input#EditList\n    + Edit a list (copy, cut, paste, delete, edit ...)\n\n:TLet VAR = VALUE\n    Set a variable only if it doesn't already exist.\n\n:TScratch\n    Open a scratch buffer (a buffer without a file).\n\n:TVarArg VAR1, [VAR2, DEFAULT2] ...\n    Handle \"rest\" (variable) arguments in functions.\n    EXAMPLES:\n      function! Foo(...)\n          TVarArg ['a', 1], 'b'\n          echo 'a='. a\n          echo 'b='. b\n      endf\n\nTBrowseOutput COMMAND\n    Every wondered how to effciently browse the output of a command \n    without redirecting it to a file? This command takes a command as \n    argument and presents the output via |tlib#input#List()| so that you \n    can easily search for a keyword (e.g. the name of a variable or \n    function) and the like.\n    \n    If you press enter, the selected line will be copied to the command \n    line. Press ESC to cancel browsing.\n    \n    EXAMPLES:\n      TBrowseOutput 20verb TeaseTheCulprit\n      TBrowseOutput let\n      TBrowseOutput map\n\n\nRelated (small) plugins that utilize tlib and thus provide some degree of uniform user experience:\n    tbibtools (vimscript #1915): bibtex-related utilities (sort, reformat, list contents ...)\n    tmboxbrowser (vimscript #1906): A mbox browser -- Read your e-mails with vim\n    tmru (vimscript #1864): Most Recently Used Files\n    trag (vimscript #2033): A slightly language-aware alternative to grep\n    tregisters (vimscript #2017): List, edit, and run/execute registers/clipboards\n    tselectbuffer (vimscript #1866): A quick buffer selector/switcher\n    tselectfile (vimscript #1865): A quick file selector/browser/explorer (sort of)\n    ttagecho (vimscript #2055): Show current tag information\n    ttagcomplete (vimscript #2069): Context-sensitive tags-based completion and code skeletons\n    ttags (vimscript #2018): Tag list browser (List, filter, preview, jump to tags)\n    ttoc (vimscript #2014): A regexp-based table of contents of the current buffer\n\n\nFor full details, please see: \nhttp://github.com/tomtom/vimtlib/blob/master/doc/tlib.txt\n",
+  "install_details": "When installing tlib for the first time, it might be necessary that you create the directory ~/.vim/autoload/tlib before sourcing the vimball. If you have difficulties to install this plugin, please make sure to use the current version of vimball (vimscript #1502). The vimball that comes with vim 7.0 is most likely not recent enough.\n\nOpen the file and type\n\n    :so %\n\nsee :help vimball for details.\n\n\nAlso available via git\nhttp://github.com/tomtom/tlib_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12751",
+      "filename": "tlib.vba",
+      "script_version": "0.37",
+      "date": "2010-03-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- g:tlib_inputlist_livesearch_threshold defaults to 1000\n- tlib#World: optional scratch_pos field\n- tlib#input#List: By default <m-NUMBER> selects by number but NUMBER is interpreted as string\n- tlib#date\n- TTimeCommand\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12444",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.36",
+      "date": "2010-02-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Display a message when the filter is for whatever reason invalid\n- Removed tlib#paragraph#Delete()\n- New: tlib#paragraph#Define(), tlib#textobjects#StandardParagraph()\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11931",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.35",
+      "date": "2009-12-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "tlib#input#EditList(): return the list if the user presses esc"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11881",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.34",
+      "date": "2009-12-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- tlib#buffer#HighlightLine(line): call tlib#autocmdgroup#Init()  (reported by Sergey Khorev)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11509",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.33",
+      "date": "2009-10-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- tlib#agent#Exit: explicitly return empty value (as a consequence, \npressing <esc> when browsing an index-list, returns 0 and not \"\")\n- tlib#signs\n- tlib#input#List: set local statusline\n- Don't reset statusline\n- Don't use fnamemodify() to split filenames (for performance reasons)\n- scratch: Set ft after setting up scratch options\n- tlib#map#PumAccept(key)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10035",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.31",
+      "date": "2009-02-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- :TRequire\n-tlib#input#List: For i-type list views, make sure agents are called \nwith the base indices.\n- World#RestoreOrigin(): Don't assume &splitright\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9957",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.29",
+      "date": "2009-02-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- tlib#string#Strip(): Strip also control characters (newlines etc.)\n- tlib#rx#Suffixes(): 'suffixes' as Regexp\n- World#RestoreOrigin(): Don't assume &splitbelow\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9592",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.28",
+      "date": "2008-12-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- tlib#input#List():\n-- Improved handling of sticky lists; <cr> and <Leftmouse> resume a suspended list and immediately selects the item under the cursor\n-- Experimental \"seq\" matching style: the conjunctions are sequentially ordered, they are combined with \"OR\" (disjunctions), the regexp is 'magic', and \".\" is expanded to '.\\{-}'\n-- Experimental \"cnfd\" matching style: Same as cnf but with an \"elastic\" dot \".\" that matches '\\.\\{-}'\n-- Filtering acts as if &ic=1 && $sc=1\n-- Weighting is done by the filter\n- tlib#agent#Input(): Consume <esc> when aborting input()\n- INCOMPATIBLE CHANGE: Changed eligible values of g:tlib_inputlist_match to \"cnf\", \"cnfd\", \"seq\" and \"fuzzy\"\n- NEW: tlib#buffer#KeepCursorPosition()\n- tlib#buffer#InsertText(): Take care of the extra line when appending text to an empty buffer.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9359",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.27",
+      "date": "2008-10-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- NEW: tlib#normal#WithRegister()\n- FIX: Try not to change numbered registers\n- FIX: Cosmetic bug, wrong packaging (thanks Nathan Neff)\n- Meaning of World#filter_format changed; new World#filter_options \n- Filtering didn't work as advertised\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9309",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.25",
+      "date": "2008-10-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- NEW: tlib#notify#TrimMessage(): trim message to prevent \"Press ENTER\" messages (contributed by Erik Falor)\n- NEW: tlib#notify#Echo()\n- FIX: World.CloseScratch(): Set window\n- FIX: tlib#input#ListW(): Set initial_display = 1 on reset\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9200",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.24",
+      "date": "2008-08-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- s:prototype.SetInitialFilter: accept list as argument\n- Maintain buffer MRU if required\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8834",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.23",
+      "date": "2008-06-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- FIX: very magic mode for tlib#rx#Escape()\n- FIX: tlib#arg#Ex: escape \"!\"\n- Respect the setting of g:tlib_inputlist_filename_indicators\n- tlib#input#List(): Reset syntax on resume; option to make list window \"sticky\"\n- tlib#agent#ToggleStickyList()\n- Simplified tlib#url#Decode()\n- tlib#arg#Ex(): use fnameescape() if available"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7978",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.21",
+      "date": "2007-11-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- tlib#buffer#InsertText(): Respect tabs and (experimental) formatoptions+=or\n- tlib/syntax.vim: Syntax-related functions\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7937",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.20",
+      "date": "2007-11-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "CHANGES:\n- The arguments of tlib#tag#Collect() have changed.\n- tlib#input#List(): The view can be \"suspended\" on initial display.\n- tlib#input#List(): Follow/trace cursor functionality\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7882",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.19",
+      "date": "2007-11-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "NEW:\n    - tag.vim\nFIX:\n    - dir.vim: Use plain dir name in tlib#dir#Ensure()\n    - tlib#input#List(): An initial filter argument creates [[filter]] \n    and not as before [[''], [filter]].\n    - tlib#input#List(): When type was \"si\" and the item was picked by \n    filter, the wrong index was returned.\n    - tlib#input#List(): Don't check if chars are typed when displaying \n    the list for the first time.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7831",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.18",
+      "date": "2007-10-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "NEW:\n    - tlib/time.vim\n    - g:tlib_inputlist_livesearch_threshold (useful on slower systems)\nCHANGES:\n    - tlib#input#ListD(), World: Don't redisplay the list while typing \n    new letters; calculate filter regexps only once before filtering the \n    list.\n    - World.vim: Minor changes to how filenames are handled.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7788",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.17",
+      "date": "2007-10-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "NEW:\n    - TBrowseOutput\n- Some minor changes\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7762",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.16",
+      "date": "2007-10-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- tlib#string#Printf1()"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7733",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.15",
+      "date": "2007-09-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "NEW:\n    - tlib#string#TrimLeft(), tlib#string#TrimRight(), tlib#string#Strip()\n    - Progress bar\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7695",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.14",
+      "date": "2007-09-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "NEW:\n    - tlib#buffer#InsertText()\nCHANGES:\n    - tlib#win#[SG]etLayout(): Use a dictionnary, set &cmdheight.\nFIXES:\n    - tlib#input#List(): Wrong order with pre-defined filters.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7648",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.13",
+      "date": "2007-09-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "CHANGES:\n    - Scratch: Set &fdc=0.\n    - The cache directory can be configured via g:tlib_cache\n    - Renamed tlib#buffer#SetBuffer() to tlib#buffer#Set().\nFIXES:\n    - tlib#input#List(): Select the active item per mouse.\n    - TLet: simplified\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7632",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.12",
+      "date": "2007-09-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "NEW:\n    - tlib/tab.vim\nCHANGES:\n    - Renamed tlib#win#SetWin() to tlib#win#Set()\nIMPROVEMENTS:\n    - tlib#input#List(): <left>, <right> keys work in some lists\n    - tlib#input#List(): If an index_table is provided this will be used \n    instead of the item's list index.\nFIXES:\n    - tlib#input#List(): Problem with scrolling, when the list was \n    shorter than the window (eg when using a vertical window).\n    - tlib#cache#Filename(): Don't rewrite name as relative filename if \n    explicitly given as argument. Avoid double (back)slashes.\n    - TLet: simplified\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7559",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.11",
+      "date": "2007-08-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "NEW:\n    - The :TLet command replaces :TLLet (which was removed)\n    - :TScratch[!] command (with ! don't split but use the whole window)\n    - tlib#rx#Escape(text, ?magic='m')\n    - tlib#buffer#GetList(?show_hidden=0)\n    - tlib#dir#CD(), tlib#dir#Push(), tlib#dir#Pop()\n    - tlib#input#ListW: A slightly remodeled version of tlib#input#List \n    that takes a World as second argument.\n    - Added some documentation doc/tlib.txt (most of it is automatically \n    compiled from the source files)\nCHANGES:\n    - tlib#input#List(): The default keys for AND, NOT have changed to \n    be more Google-like (space, minus); the keys can be configured via \n    global variables.\nIMPROVEMENTS:\n    - In file listings, indicate if a file is loaded, listed, modified \n    etc.\n    - tlib#input#List(): Highlight the filter pattern\n    - tlib#input#List(): <c-up/down> scrolls g:tlib_scroll_lines \n    (default=10) lines\nFIXES:\n    - tlib#input#List(): Centering line, clear match, clear & restore \n    the search register\n    - tlib#input#List(): Ensure the window layout doesn't change (if the \n    number of windows hasn't changed)\n    - tlib#arg#Ex(): Don't escape backslashes by default\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7380",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.10",
+      "date": "2007-07-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- tlib#input#List(): (v)split type of commands leave the original window \nuntouched (you may use <c-w> to replace its contents)\n- tlib#file#With(): Check whether an existing buffer is loaded.\n- Scratch related functions went to tlib/scratch.vim so that they are \naccessible from other scripts.\n- Configure the list window height via g:tlib_inputlist_pct (1..100%)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7359",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.9",
+      "date": "2007-07-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Re-arrangements & modularization (this means many function names have \nchanged, on the other hand only those functions are loaded that are \nactually needed)\n- tlib#input#List(): Added maps with m-modifiers for <c-q>, <c-z>, <c-a>\n- tlib#input#List(): Make sure &fdm is manual\n- tlib#input#List(): When exiting the list view, consume the next 5 \ncharacters in the queue (if any)\n- tlib#input#EditList(): Now has cut, copy, paste functionality.\n- Added documentation and examples\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7299",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.8",
+      "date": "2007-06-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- FIX: Return empty cache name for buffers that have no files attached to it\n- Some re-arranging\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7269",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.7",
+      "date": "2007-06-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- tlib#InputList(): <c-z> ... Suspend/Resume input loop\n- tlib#InputList(): <c-q> ... Input text on the command line (useful on slow systems when working with very large lists)\n- tlib#InputList(): AND-pattern starting with '!' will work as 'exclude matches'\n- tlib#InputList(): FIX <c-bs> pop OR-patterns properly\n- tlib#InputList(): display_format == filename: don't add '/' to directory names (avoid filesystem access)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7157",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.6",
+      "date": "2007-05-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- tlib#InputList(): Disabled <c-space> map\n- tlib#InputList(): try to be smart about user itentions only if a \nlist's length is < g:tlib_sortprefs_threshold (default: 200)\n- tlib#Object: Super() method\n- tlib#MyRuntimeDir()\n- tlib#GetCacheName(), tlib#CacheSave(), tlib#CacheGet()\n- tlib#Args(), tlib#GetArg()\n- FIX: tlib#InputList(): Display problem with first item\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7130",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.5",
+      "date": "2007-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- tlib#InputList(): FIX: Selecting items in filtered view\n- tlib#InputList(): <c-bs>: Remove last AND pattern from filter\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7113",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.4",
+      "date": "2007-05-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- tlib#InputList(): Up/Down keys wrap around list\n- tlib#InputList(): FIX: Problem when reducing the filter & using AND\n- tlib#InputList(): FIX: Problem when using shift-up/down with filtered lists\n- tlib#InputList(): Made <a-numeric> work (can be configured via \n- tlib#InputList(): special display_format: \"filename\"\n- tlib#Object: experimental support for some kind of OOP\n- tlib#World: Extracted some functions from tlib.vim to tlib/World.vim\n- tlib#FileJoin(), tlib#FileSplit(), tlib#RelativeFilename()\n- tlib#Let()\n- tlib#EnsureDirectoryExists(dir)\n- tlib#DirName(dir)\n- tlib#DecodeURL(url), tlib#EncodeChar(char), tlib#EncodeURL(url)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7029",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.3",
+      "date": "2007-04-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Show feedback in statusline instead of the echo area\n- tlib#GetVar(), tlib#GetValue()\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7021",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.2",
+      "date": "2007-04-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- More list convenience functions\n- tlib#EditList()\n- tlib#InputList(): properly handle duplicate items; it type contains \n'i', the list index + 1 is returned, not the element\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6998",
+      "filename": "tlib.vba.gz",
+      "script_version": "0.1",
+      "date": "2007-04-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "1757",
+  "name": "lbdbq",
+  "summary": "query lbdb from Vim",
+  "script_type": "utility",
+  "description": "Functions and various mode mappings for querying lbdb (http://www.spinnaker.de/lbdb/) when using Vim to edit mails and mail headers, for example from Mutt (http://www.mutt.org).\n\nUsing this utility lines like the following appearing in a Vim buffer:\n    To: name surname, name2 surname2\ncan be automatically converted to lines like\n    To: My Friend <foo@example.com>, My Other Friend <bar@example.com>\nby querying lbdb.\n\nWhen the expansion of a given contact is ambiguous (i.e. it corresponds to more than one contact) the user is interactively asked to choose among them.\n\nThe utility can be used in various ways:\n- in normal mode typing <Leader>lb: the current recipient line will be expanded (i.e. all expandable short names will be expanded to full name/address pairs)\n- in insert mode typing <Leader>lb: same as above but without leaving insert mode\n- in line visual mode typing <Leader>lb: same as above but all the visually selected line will be subject to expansion\n- in visual mode typing <Leader>lb: only the short names contained in the visually selected text will be subject to expansion\n\nRELATED SCRIPTS\n\nI'm (now) aware that vimscript #388 is older than this script of mine and provide similar features. But this script is strictly more powerful (YMMV of course). For example it works in various modes (visual/insert/normal/...), is able to substitute more contacts at once, and takes into account the semantics of recipient lines. E.g.: if you try to expand \"name surname\" (without double quotes) the plugin looks up for both of them, while vimscript #388 will look up only for the part under the courses, leading more likely to ambiguous answers.",
+  "install_details": "A matter of taste. Personally I drop lbdbq.vim in my ~/.vim/ directory and from  ~/.vim/after/ftplugin/mail.vim I do\n    source ~/.vim/lbdbq.vim\nIf you don't mind having this plugin always loaded just drop it in ~/.vim/plugin/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7393",
+      "filename": "lbdbq.vim",
+      "script_version": "0.3",
+      "date": "2007-07-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6957",
+        "user_name": "zack",
+        "first_name": "Stefano",
+        "last_name": "Zacchiroli",
+        "email": "zack at bononia.it",
+        "homepage": "http://www.bononia.it/~zack/"
+      },
+      "release_notes": "- quote the name part of returned addresses, so that names with (e.g.) commas does not break the headers\n- change license to GPL v3 or above"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6594",
+      "filename": "lbdbq.vim",
+      "script_version": "0.2",
+      "date": "2007-01-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6957",
+        "user_name": "zack",
+        "first_name": "Stefano",
+        "last_name": "Zacchiroli",
+        "email": "zack at bononia.it",
+        "homepage": "http://www.bononia.it/~zack/"
+      },
+      "release_notes": "- bugfix for lines which are continuation of RFC822 fields\n- added URL field in the plugin\n- less stupid vmappings (i.e. more efficient)\n- normalize spaces when expanding contacts\n- silent mappings"
+    }
+  ]
+}

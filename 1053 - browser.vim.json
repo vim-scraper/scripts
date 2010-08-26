@@ -1,0 +1,138 @@
+{
+  "script_id": "1053",
+  "name": "browser.vim",
+  "summary": "web browser plugin",
+  "script_type": "utility",
+  "description": "This plugin provides vim with web browsing and html formatting capabilities. It includes support for history, bookmarks, text highlighting and more. The main motivation is browsing documentation available in html, so don't expect to see any flash animation :)\n\nThe plugin is implemented using vim's ability to embed perl, so you will \nneed to have a perl enabled version of vim to use it. In addition, several \nperl modules are required. The full details are in the INSTALL file.\n\nDocumentation is available in pod form in 'browser.pod', and as a usual vim \nhelp file.\n\nI wrote and tested it with vim version 6.3 and perl 5.8.4 on linux. I expect \nit to work on any variant of unix. An effort was made to make it work on other \nplatforms as well, but this remains mostly untested.\n\nPlease send me any feedback.\n\nEnjoy!\n",
+  "install_details": "unpack using\n\ntar -xzvf browse-<ver>.tar.gz\n\nand then follow the INSTALL file. You will also need the synmark.vim plugin, vimscript #1128",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4025",
+      "filename": "browser-1.1.tar.gz",
+      "script_version": "1.1",
+      "date": "2005-03-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Mainly bug fixes. New features:- Added the uri history://n to access the n-th newest item in the history.   Similarly, the :History command may now accecpt a numeric argument.- The last access time for each link now appears on the history page- Added the g:browser_connect_timeout variable to control when we give up   connecting to a remote site- Added support for homepage in the plugin. :Browse and similar commands can   now be called with no arguments.- Changed the loading of the plugin so that vim startup time is improved.- Added a command for showing the current mappings, and a command to extend   this list for user defined mappings"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3654",
+      "filename": "browser-1.0.tar.gz",
+      "script_version": "1.0",
+      "date": "2004-11-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "* Added a sidebar* Added context menu entries* Support for opening links with external applications (using mailcap)* The conceal patch is no longer used. The synmark.vim plugin is used instead.* Global browsing history* Both history and bookmarks can be viewed as browser pages* More support for inline images (viewing, etc.)* Page can be updated when modifying its source* Use vim commands as scheme handlers* Some improvements to standalone versions (vimbrowse)* Improved documentation, added glossary"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3489",
+      "filename": "browser-0.4.tar.gz",
+      "script_version": "0.4",
+      "date": "2004-09-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Main Improvements:  - Added support for all inputs in a form (file, textarea, multi-options)  - Improved searching capabilities: Added the possibility to customize the     search engine, added :Dictionary and :Thesaurus commands. The searching     commands can now have no arguments, taking the word under the cursor, or      the visaully select words as arguments, instead (Thanks to Aditya Mahajan     for the ideas)  - The browser buffer is now non-modifiable by default. It becomes     modifiable only when changing form input values (again thanks to Aditya     Mahajan)  - Added the possibility to save inline images to a file  - Removed the dependence on HTML-Format. The only dependency that remains     for formatting is HTML::TreeBuilder (which is more widely available).  - There is no longer need to patch HTML::TreeBuilder to view encodings     correctly.  - I think vimbrowse.pl finally works on windows (didn't test, though). Some     environment variables might need to be set.  - Various other features and bug fixes - see the ChangeLog for details"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3459",
+      "filename": "browser-0.3.1.tar.gz",
+      "script_version": "0.3.1",
+      "date": "2004-09-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Fixed silly bug"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3458",
+      "filename": "browser-0.3.tar.gz",
+      "script_version": "0.3",
+      "date": "2004-09-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Bugfix release: encoding works correctly; setting options has effect also after \nthe plugin is loaded; Various other fixes - see the ChangeLog for details"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3426",
+      "filename": "browser-0.2.tar.gz",
+      "script_version": "0.2",
+      "date": "2004-09-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Main Improvements:\n\t- Added forms support. All input kinds are supported except for \n\t  textarea, file and multiple choice options. Thus, eg, google can be \n\t  used\n\t- Made less system dependent. No known system dependent parts   remain.  Most features should now work on any platform. Partially tested on windows, thanks to Suresh Govindachar.\n\t- A command line (perl) script, 'vimbrowse.pl', now allows lunching \n\t  vim as a browser from the command line.\n\t- Numerous bugs were fixed.\n\nSee the file 'ChangeLog' for some more details"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3311",
+      "filename": "browser-0.1.tar.gz",
+      "script_version": "0.1",
+      "date": "2004-08-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Fixed the INSTALL file - forgot one dependancy"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3310",
+      "filename": "browser-0.1.tar.gz",
+      "script_version": "0.1",
+      "date": "2004-08-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2612",
+        "user_name": "kaminsky",
+        "first_name": "moshe",
+        "last_name": "kamensky",
+        "email": "samvimes at fastmail.fm",
+        "homepage": "http://mkamensky.notlong.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

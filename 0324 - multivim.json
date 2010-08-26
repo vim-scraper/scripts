@@ -1,0 +1,26 @@
+{
+  "script_id": "324",
+  "name": "multivim",
+  "summary": "Integrate multiple vim windows",
+  "script_type": "utility",
+  "description": "Based on bcbuf.vim (vimscript #201), this script allows the user to open a new vim window from within vim, and manage the buffers in all open vim sessions (windows) in a centralized manner. One can:\n\n\n\n\n\n\n\n\n\n0. Open a new vim window from within vim by the command \":nf\"\n\n\n\n\n\n\n\n\n\n1. Yank and Put across multiple sessions using the usual mappings.\n\n\n\n\n\n\n\n\n\n2. Edit a file, first in one session, then in another, using :edit, :split, :vsplit, etc.\n\n\n\n\n\n\n\n\n\n3. Look at all buffers in all sessions using :files, :buffers, etc.\n\n\n\n\n\n\n\n\n\n4. Push a command from one session's history and pop it in another.\n\n\n\n\n\n\n\n\n\nFor more details look at the comments at the start of the script. ",
+  "install_details": "UNIX or related OS required, along with bash and Eterm. Minor modifications required if you want to change these requirements.\n\nThe tarball contains 2 files: \n\n\n\n\n\n\n\n\n\nmultivim.vim is the vim plugin and should go into the usual plugins directory.\n\n\n\n\n\n\n\n\n\nvim_stub is a bash shell script that should go somewhere in your $PATH. vim should always be invoked through it. You might want to\n\n\n\n\n\n\n\n\n\nalias vim='vim_stub'\n\n\n\n\n\n\n\n\n\nFor more help,\n\n\n\n\n:help add-plugin",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=974",
+      "filename": "multivim.tgz",
+      "script_version": "1.2",
+      "date": "2002-07-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "625",
+        "user_name": "akkartik",
+        "first_name": "Kartik",
+        "last_name": "Agaram",
+        "email": "vim at akkartik.com",
+        "homepage": "http://akkartik.name"
+      },
+      "release_notes": "Major bugfix - :files was going into an infinite loop. Now fixed."
+    }
+  ]
+}

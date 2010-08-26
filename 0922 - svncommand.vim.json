@@ -1,0 +1,90 @@
+{
+  "script_id": "922",
+  "name": "svncommand.vim",
+  "summary": "Subversion (svn) integration plugin",
+  "script_type": "utility",
+  "description": "This is no longer maintained. See vcscommand vimscript #90 for a suitable replacement.\n\n\n\nThis is almost a straight port of cvscommand.vim to support subversion. There's some stuff hacked out, some stuff hacked in, and a lot of s/CVS/SVN/g going on.\n\nCurrent support is for single file type ops, just like cvscommand.vim. The commandset available is basically: status, info, update, revert, diff, annotate, commit, add, log, vimdiff, review. It can also parse a svn commit buffer and execute a diff based on that (you'll have to setup a mapping for SVNCommitDiff to do this).\n\nThere is no support for properties, operating on whole directories, or anything super advanced.\n\nAs of 1.67.3 there is limited svk (http://svk.elixus.org) support via the SVNCommandAutoSVK. Useful stuff like diff and log work okay, the rest is YMMV for now.",
+  "install_details": "plop svncommand.vim in ~/.vim/plugin and away you go. Read the script for things that can be customized out of the box. Hack the script to do whatever else you want.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4179",
+      "filename": "svncommand-1.67.3.tar.gz",
+      "script_version": "1.67.3",
+      "date": "2005-04-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1129",
+        "user_name": "laz",
+        "first_name": "Adam",
+        "last_name": "Lazur",
+        "email": "adam at lazur.org",
+        "homepage": "http://adam.lazur.org"
+      },
+      "release_notes": "- fix svn info (doh!)\n- add quick hack svk support via SVNCommandAutoSVK variable\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4176",
+      "filename": "svncommand-1.67.2.tar.gz",
+      "script_version": "1.67.2",
+      "date": "2005-04-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1129",
+        "user_name": "laz",
+        "first_name": "Adam",
+        "last_name": "Lazur",
+        "email": "adam at lazur.org",
+        "homepage": "http://adam.lazur.org"
+      },
+      "release_notes": "    - re-added SVNInfo which got reverted in previous version\n    - pass -v to \"svn status\" for SVNStatus()\n    - add SVNCommitDiff for grabbing a diff from the files listed in svn-commit.tmp"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4173",
+      "filename": "svncommand-1.67.1.tar.gz",
+      "script_version": "1.67.1",
+      "date": "2005-04-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1129",
+        "user_name": "laz",
+        "first_name": "Adam",
+        "last_name": "Lazur",
+        "email": "adam at lazur.org",
+        "homepage": "http://adam.lazur.org"
+      },
+      "release_notes": "- updated to match version 1.67 cvscommand.vim\n- included svn commit and svnlog syntax highlighting"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2784",
+      "filename": "svncommand.vim",
+      "script_version": "2",
+      "date": "2004-02-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1129",
+        "user_name": "laz",
+        "first_name": "Adam",
+        "last_name": "Lazur",
+        "email": "adam at lazur.org",
+        "homepage": "http://adam.lazur.org"
+      },
+      "release_notes": "added svn info support"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2782",
+      "filename": "svncommand.vim",
+      "script_version": "1",
+      "date": "2004-02-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1129",
+        "user_name": "laz",
+        "first_name": "Adam",
+        "last_name": "Lazur",
+        "email": "adam at lazur.org",
+        "homepage": "http://adam.lazur.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

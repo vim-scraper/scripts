@@ -1,0 +1,74 @@
+{
+  "script_id": "2830",
+  "name": "csv.vim",
+  "summary": "A Filetype plugin for csv files.",
+  "script_type": "ftplugin",
+  "description": "This is a filetype plugin for CSV files. It was heavily influenced by the Vim\nWiki Tip667 (http://vim.wikia.com/wiki/VimTip667), though it works\ndifferently.\n\n                                                           *csv-toc*\n1. Installation.................................|csv-installation|\n2. CSV.Commands.................................|csv-commands|\n    2.1 WhatColumn..............................|WhatColumn|\n    2.2 NrColumns...............................|NrColumns|\n    2.3 SearchInColumn..........................|SearchInColumn|\n    2.4 HiColumn................................|HiColumn|\n    2.5 ArrangeColumn...........................|ArrangeColumn|\n    2.6 DeleteColumn............................|DeleteColumn|\n3. CSV Filetype configuration...................|csv-configuration|\n    3.1 Delimiter...............................|csv-delimiter|\n    3.2 Column..................................|csv-column|\n    3.3 hiGroup.................................|csv-higroup|\n\n==============================================================================\n1. Installation\t\t\t\t\t*csv-installation*\n\nIn order to have vim automatically detect csv files, you need to have\n|ftplugins| enabled (e.g. by having this line in your |.vimrc| file:\n\n   :filetype plugin on\n\nTo have Vim automatically detect csv files, you need to do the following.\n\n   1) Create your user runtime directory if you do not have one yet. This \n      directory needs to be in your 'runtime' path. In Unix this would\n      typically the ~/.vim directory, while in Windows this is usually your\n      ~/vimfiles directory. Use :echo expand(\"~\") to find out, what Vim thinks\n      your user directory is. \n      To create this directory, you can do:\n\n\t  :!mkdir ~/.vim \n\t  \n      for Unix and\n\n\t  :!mkdir ~/vimfiles \n\n      for Windows.\n\n   2) In that directory you create a file that will detect csv files.\n\n\tif exists(\"did_load_csvfiletype\")\n\t  finish\n\tendif\n\tlet did_load_csvfiletype=1\n\n\taugroup filetypedetect\n\t  au! BufRead,BufNewFile *.csv,*.dat\t\tsetfiletype csv\n\taugroup END\n\n      You save this file as \"filetype.vim\" in your user runtime diretory:\n\n        :w ~/.vim/filetype.vim\n\n   3) To be able to use your new filetype.vim detection, you need to restart\n      Vim. Vim will then  load the csv filetype plugin for all files whose\n      names end with .csv.\n\n==============================================================================\n2. Installation\t\t\t\t\t                *csv-commands*\n\nThe CSV ftplugin provides several Commands:\n\n2.1 WhatColumn                                                  *WhatColumn*\n--------------\n\nIf you would like to know, on which column the cursor is, use :WhatColumn.\n\n2.2 NrColumns                                                   *NrColumns*\n--------------\n\n:NrColumns outputs the maximum number of columns available. It does this by\ntesting the first 10 lines for the number of columns. This usually should be\nenough.\n\n2.3 SearchInColumn                                          *SearchInColumn*\n------------------\n\nUse :SearchInColumn to search for a pattern within a specific column. The\nusage is:\n:SearchInColumn <nr> /{pat}/\n\nSo if you would like to search in Column 1 for the word foobar, you enter\n\n:SearchInColumn 1 /foobar/\n\nInstead of / as delimiter, you can use any other delimiter you like.\n\n2.4 HiColumn                                                     *HiColumn*\n------------\n\n:HiColumn <nr> can be used to highlight Column <nr>. Currently the plugin uses\nthe WildMenu Highlight Group. If you would like to change this, you need to\ndefine the variable |g:csv_hiGroup|.\n\n2.5 ArrangeColumn                                           *ArrangeColumn*\n-----------------\n\nIf you would like all columns to be arranged visually, you can use the\n:ArrangeColumn command. Beware, that this will change your file and depending\non the size of your file may slow down Vim significantly. This is highly\nexperimental.\n:ArrangeCommand will try to vertically align all columns by their maximum\ncolumn size.\n\n2.6 DeleteColumn                                           *DeleteColumn*\n----------------\n\nThe command :DeleteColumn can be used to delete a specific column.\n\n:DeleteColumn 2\n\nwill delete column 2.\n\n==============================================================================\n3. CSV Configuration\t\t\t\t\t  *csv-configuration*\n\nThe CSV plugin tries to automatically detect the field delimiter for your\nfile, cause although often the file is called CSV (comma separated values), a\nsemicolon is actually used. The column separator is stored in the buffer-local\nvariable (|b:var| delimiter. This delimiter is heavily used, because you need\nit to define a column. Almost all commands use this variable therefore.\n\n3.1 Delimiter                                                  *csv-delimiter*\n-------------   \n\nSo to override the automatic detection of the plugin and define the separator\nmanually, use:\n\n:let b:delimiter=','\n\nto let the comma be the delimiter.\n\n3.2 Column                                                  *csv-column*\n----------\n\nThe definition, of what a column is, is defined as buffer-local variable\nb:col. By default this variable is initialized to:\n\nlet b:col='\\%(\\%([^' . b:delimiter . ']*\"[^\"]*\"[^' . b:delimiter . ']*' \n    \\. b:delimiter . '\\)\\|\\%([^' . b:delimiter . ']*\\%(' . b:delimiter \n    \\. '\\|$\\)\\)\\)'\n\nThis should take care of quoted delimiters within a column. Those should\nobviously not count as a delimiter. \n\nIf you changed the b:delimiter variable, you need to redefine the b:col\nvariable, cause otherwise it will not reflect the change. To change the\nvariable from the comma to a semicolon, you could call in your CSV-Buffer\nthis command:\n\n:let b:col=substitute(b:col, ',', ';', 'g')\n\nCheck with :echo b:col, if the definition is correct afterwards.\n\n3.3 Hilighting Group                                         *csv-higroup*\n--------------------\n\nBy default the csv ftplugin uses the WildMenu highlighting Group to define how\nthe |HiColumn| command highlights columns. If you would like to define a\ndifferent highlighting group, you need to set this via the g:csv_hiGroup\nvariable. You can e.g. define it in your .vimrc:\n\n:let g:csv_hiGroup = \"IncSearch\"\n\nYou need to restart Vim, if you have changed this variable.\n",
+  "install_details": "Open csv.vim in Vim and source the file: \n\n:so % \n\nThis will install the plugin into your $HOME/.vim/ftplugin directory and the documentation into your $HOME/.vim/doc directory. \n\nSee also the help for installing Vimball-Archives (:h vimball-intro) \n\nTake a look at :h ft_csv.txt for the documenation \n and read :h csv-installation to have vim automatically detect csv-files.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12877",
+      "filename": "csv.vba",
+      "script_version": "0.5",
+      "date": "2010-04-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "enabled GLVS (see :h GLVS),\nput cvs.vim on a public repository available at http://github.com/chrisbra/csv.vim"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12607",
+      "filename": "csv.vba",
+      "script_version": "0.4a",
+      "date": "2010-03-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "fixed documentation"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12604",
+      "filename": "csv.vba",
+      "script_version": "0.4",
+      "date": "2010-03-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Better error handling\nadded :InitCSV to reinitialize the plugin\n:HiColumn now by default the current column, if no argument is given"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11615",
+      "filename": "csv.vba",
+      "script_version": "0.3",
+      "date": "2009-10-28",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb at 256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

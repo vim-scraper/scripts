@@ -1,0 +1,58 @@
+{
+  "script_id": "1896",
+  "name": "ragtag.vim",
+  "summary": "A set of mappings for HTML, XML, PHP, ASP, eRuby, JSP, and more (formerly allml)",
+  "script_type": "utility",
+  "description": "This plugin started out as a set of personal mappings, but there was enough enjoyment among those I shared it with for me to clean it up and release it.\n\nFeatures:\n\nWhile there are several HTML and XML scripts on vim.org, I have found none that share a significant amount of functionality with allml.vim.\n\nA huge variety of filetypes are supported:  html, xhtml, wml, xml, xslt, xsd, jsp, php, aspperl, aspvbs, cf, mason, htmldjango, and eruby.  (Let me know if I missed any).  Some features take note of the filetype and adapt to it.\n\nMaps for editing tags.  This includes a couple of \"make last word into a tag pair\" maps, a doctype map (inserts <?xml ...?> in XML), a \"close last tag\" map, and a few extra goodies.\n\nFor templating languages (ASP, PHP, etc.), there are maps for inserting template code.  The maps are dependent on the filetype: in ASP, you get <% %> and <%= %>, in PHP, <?php ?> and <?php print ?>, etc.  If said template language has a comment syntax, there is a map for it, otherwise, that map points to <!-- -->.\n\nMaps for XML/HTML escaping and URL encoding have been moved to unimpaired.vim, vimscript #1590.\n\nEnhances surround.vim, vimscript #1697.\n\nhttp://github.com/tpope/vim-ragtag",
+  "install_details": "Extract in ~/.vim or ~\\vimfiles (Windows).  If you want a few general purpose mappings available globally, add the following to your vimrc:\n\nlet g:ragtag_global_maps = 1\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12338",
+      "filename": "ragtag.zip",
+      "script_version": "2.0",
+      "date": "2010-02-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Rename from allml.vim to ragtag.vim.\nReal documentation file.\nRemove HTML/URL encoding in favor of using unimpaired.vim, vimscript #1590."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7356",
+      "filename": "allml.vim",
+      "script_version": "1.11",
+      "date": "2007-07-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Insert mode HTML/XML and URL escaping.\nClarified documentation and license."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7101",
+      "filename": "allml.vim",
+      "script_version": "1.8",
+      "date": "2007-05-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM at tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "script_id": "1462",
+  "name": "dtd2vim",
+  "summary": "Script for creation XML data file for Vim7 XML omni-completion from DTDs",
+  "script_type": "utility",
+  "description": "Script for creation XML data file for Vim7 XML omni-completion from DTDs\nRequires: perl and perlSGML (tested against 1997Sep18 version)\n\nINSTALLATION:\n\n   Copy into your $PATH\n\nUSAGE:\n\n   dtd2vim <file.dtd> [<dialectname>]\n\nThis command will create file <file.vim> (remove .dtd extension and add .vim;\nother extensions will remain intact).\n\n<dialectname> (not obligatory) will be part of dictionary name and will be\nused as argument for :XMLns command (file name - sans extensions) have to be\nthe same.\n\nperlSGML and this script doesn't work with multiple files. User has to\nprepare single DTD file to parse all data.\n\nIn created file global variable is named g:xmldata_<dialectname>. When second\nargument wasn't provided 'xxxx' will be used.\nAfter that place file in:\n\n   ~/.vim/autoload/xml\n\ndirectory. Of course it can be also global directory or other Vim data\nhierarchy of files. Example for  DocBook 4.4:\nDTD is in file docbook.dtd, call command with\n\n   dtd2vim.pl docbook.dtd docbook44\n\nPut file as:\n  \n   ~/.vim/autoload/xml/docbook44.vim\n\n Omni-completion for DocBook 4.4 files will be started with:\n\n   :XMLns docbook44\n\n command.\n\n",
+  "install_details": "Copy in your $PATH",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5612",
+      "filename": "dtd2vim",
+      "script_version": "2.0",
+      "date": "2006-04-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "- not all element children were properly recognized\n- comment out lines responsible for detection of obligatory attributes, too many false positives; uncomment on your own responsibility"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5253",
+      "filename": "dtd2vim",
+      "script_version": "1.1",
+      "date": "2006-02-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "- generate 'info' field for attributes and tags (/> - EMPTY tag, * - required attribute)\n- no extension"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5159",
+      "filename": "dtd2vim.pl",
+      "script_version": "1.0",
+      "date": "2006-02-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "488",
+        "user_name": "mikmach",
+        "first_name": "Mikolaj",
+        "last_name": "Machowski",
+        "email": "mikmach at wp.pl",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

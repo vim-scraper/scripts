@@ -1,0 +1,90 @@
+{
+  "script_id": "2357",
+  "name": "Nekthuth",
+  "summary": "Connection with a Lisp",
+  "script_type": "utility",
+  "description": "Nekthuth is simultaneously a plugin for vim and library for Comon Lisp that allows developers to interact with a running interpreter from inside their editor.\n\nFeatures include:\n\n    * Form evaluation\n    * Tab completion\n    * Quick macroexpansion\n    * Extension to syntax highlighting\n    * Basic Debugger\n    * On the fly hyperspec rendering inside the vim window\n    * Extensible plugin architecture\n    * Connect to a remote lisp or boot one from inside vim\n    * Find and open source location of symbols under cursor\n\nCurrent limitations include:\n\n    * Requires SBCL with threads\n    * Requires vim > 7.0 with +python\n    * Requires asdf\n\nSee http://nekthuth.com for more information",
+  "install_details": "See http://nekthuth.com/doc.html#starting\n\nYou can optionally follow it's instructions to get the latest version of this plugin, or just get the latest one here.  However, you will need to install an sbcl component using asdf-install (or manually through just asdf).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10981",
+      "filename": "nekthuth-vim_0.3.2.tar.gz",
+      "script_version": "0.3.2",
+      "date": "2009-07-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14828",
+        "user_name": "herbie",
+        "first_name": "Frank",
+        "last_name": "Duncan",
+        "email": "frank at kank.net",
+        "homepage": "http://kank.net"
+      },
+      "release_notes": " * Another bug where mcclim confused vim with syntax additions. Functions with ] or [ in them will no longer show up as highlighted.\n * Install.sh in the vim plugin was using the wrong environment variable"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10906",
+      "filename": "nekthuth-vim_0.3.1.tar.gz",
+      "script_version": "0.3.1",
+      "date": "2009-06-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14828",
+        "user_name": "herbie",
+        "first_name": "Frank",
+        "last_name": "Duncan",
+        "email": "frank at kank.net",
+        "homepage": "http://kank.net"
+      },
+      "release_notes": "* Fixed a bug where loading up packages that defined symboles such as \\ and ' would cause syntax additions to fail\n* Added plugin installation.\n* Fixed how the main thread and repl thread share sender data, which should translate into faster bootup times."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10358",
+      "filename": "nekthuth-vim_0.3.tar.gz",
+      "script_version": "0.3",
+      "date": "2009-04-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14828",
+        "user_name": "herbie",
+        "first_name": "Frank",
+        "last_name": "Duncan",
+        "email": "frank at kank.net",
+        "homepage": "http://kank.net"
+      },
+      "release_notes": "    * Multiple return value (using values, such as in #'get-decoded-time) prints correctly in buffer\n    * Fixed NekthuthInterrupt (0.2 broke it)\n    * Function coloring and complete added for *package* functions and transitively used packages\n    * Remote connection now checks the version correctly. This may be useful someday.\n    * Added #'nekthuth:stop-remote to shut down the remote listener.\n    * Find and open source locaton of symbol under cursor."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9758",
+      "filename": "nekthuth-vim_0.2.tar.gz",
+      "script_version": "0.2",
+      "date": "2009-01-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14828",
+        "user_name": "herbie",
+        "first_name": "Frank",
+        "last_name": "Duncan",
+        "email": "frank at kank.net",
+        "homepage": "http://kank.net"
+      },
+      "release_notes": "* Remote execution in an already running sbcl instance. See setup in the manual for more information.\n* Fixed ClHelp not opening a window upon failure"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9173",
+      "filename": "nekthuth-vim_0.1.tar.gz",
+      "script_version": "0.1",
+      "date": "2008-08-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14828",
+        "user_name": "herbie",
+        "first_name": "Frank",
+        "last_name": "Duncan",
+        "email": "frank at kank.net",
+        "homepage": "http://kank.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "2635",
+  "name": "smartmatcheol.vim",
+  "summary": "Smart matching of trailing whitespace",
+  "script_type": "utility",
+  "description": "If you don't want to highlight trailing whitespaces in all filetypes, then you can use the plug-in.\n\nNB: If you are using `textwidth' option, then plug-in will highlight all characters after `textwidth' length.\n\n",
+  "install_details": "1. Move smartmatcheol.vim into ~/.vim/plugin/\n2. Define g:sme_extlist and g:sme_filelist in ~/.vimrc for highlighting. For example:\nlet g:sme_extlist = [ \"c\", \"h\", \"py\", \"cc\", \"cpp\", \"hpp\", \"xml\", \"xslt\", \"vim\"]\nlet g:sme_filelist = [ \"CMakeLists.txt\", \"vimrc\" ]",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10615",
+      "filename": "smartmatcheol.vim",
+      "script_version": "1.0.1",
+      "date": "2009-05-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14087",
+        "user_name": "pitman",
+        "first_name": "Konstantin",
+        "last_name": "Lepa",
+        "email": "konstantin.lepa at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug in parsing g:sme_filelist."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10610",
+      "filename": "smartmatcheol.vim",
+      "script_version": "1.0.0",
+      "date": "2009-05-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14087",
+        "user_name": "pitman",
+        "first_name": "Konstantin",
+        "last_name": "Lepa",
+        "email": "konstantin.lepa at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

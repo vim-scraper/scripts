@@ -1,0 +1,74 @@
+{
+  "script_id": "1147",
+  "name": "bufkill.vim",
+  "summary": "Unload/delete/wipe a buffer, keep its window(s), display last accessed buffer(s)",
+  "script_type": "utility",
+  "description": "Basic Usage:\nWhen you want to unload/delete/wipe a buffer, use:\n  :bun/:bd/:bw to close the window as well (vim command), or\n  :BUN/:BD/:BW to leave the window(s) intact (this script).\nMappings are also defined.\n\nDetailed Description: \nThis is a script to \na) unload, delete or wipe a buffer without closing the window (or windows) \n    it was displayed in\nb) in its place, display the buffer most recently used in each window \n    it was displayed in.  This selection is taken from the full list of \n    buffers ever displayed in each respective window (since vim was started)\nc) allow one level of undo in case you kill a buffer then change your mind\nd) allow various customisations via option variables\n\nThe inspiration for this script came from\na) my own frustration with vim's lack of this functionality\nb) the description of the emacs kill-buffer command in vimtip #622\n   (this script basically duplicates this command I believe,\n   not sure about the undo functionality)\nc) comments and many mails from Keith Roberts when the issue was \n   raised in the vim@vim.org mailing list.",
+  "install_details": "The usual - drop the file into your $HOME/.vim/plugin directory (unix)\nor $HOME/vimfiles/plugin directory (Windows), etc.\nUse the commands/mappings defined to invoke the functionality \n(or redefine them elsewhere to what you want), and set the \nUser Configurable Variables as desired.  You should be able to make\nany customisations to the controls in your vimrc file, such that \nupdating to new versions of this script won't affect your settings.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13169",
+      "filename": "bufkill.vim",
+      "script_version": "1.7",
+      "date": "2010-06-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6380",
+        "user_name": "John Orr",
+        "first_name": "John",
+        "last_name": "Orr",
+        "email": "john undersc0re orr yah00 c0m",
+        "homepage": ""
+      },
+      "release_notes": "Convert to Vim 7 lists instead of string-based lists.\nAdd buffer navigation (move backwards and forwards through most recently used buffers), support for scratch buffer removal.\nImproved honouring of the 'confirm' vim option - thanks Magnus Thor Torfason\nAdded (opt-in) Ctrl-^ override support to preserve cursor column.\nMinor additional improvements.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13168",
+      "filename": "bufkill.vim",
+      "script_version": "1.2",
+      "date": "2010-06-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6380",
+        "user_name": "John Orr",
+        "first_name": "John",
+        "last_name": "Orr",
+        "email": "john undersc0re orr yah00 c0m",
+        "homepage": ""
+      },
+      "release_notes": "Add column-saving support, to ensure returning to a buffer means positioning the cursor not only at the right line, but also column.\nLast version that will (should...) work with Vim 6.0."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3671",
+      "filename": "bufkill.vim",
+      "script_version": "1.1",
+      "date": "2004-12-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6380",
+        "user_name": "John Orr",
+        "first_name": "John",
+        "last_name": "Orr",
+        "email": "john undersc0re orr yah00 c0m",
+        "homepage": ""
+      },
+      "release_notes": "Fix handling of modified, un-named buffers"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3670",
+      "filename": "bufkill.vim",
+      "script_version": "1.0",
+      "date": "2004-12-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6380",
+        "user_name": "John Orr",
+        "first_name": "John",
+        "last_name": "Orr",
+        "email": "john undersc0re orr yah00 c0m",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "2125",
+  "name": "SDL library syntax (for C)",
+  "summary": "SDL library syntax for C",
+  "script_type": "syntax",
+  "description": "SDL library syntax for C",
+  "install_details": "Add this to the end of your C syntax file:\n\nif version < 600\n  so <sfile>:p:h/libsdl.vim\nelse\n  runtime! syntax/libsdl.vim\nendif",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8159",
+      "filename": "libsdl.vim",
+      "script_version": "1.1",
+      "date": "2008-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13761",
+        "user_name": "andre_nho",
+        "first_name": "André",
+        "last_name": "Wagner",
+        "email": "andre.nho at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fileformat changed to Unix."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8158",
+      "filename": "libsdl.vim",
+      "script_version": "1.0",
+      "date": "2008-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13761",
+        "user_name": "andre_nho",
+        "first_name": "André",
+        "last_name": "Wagner",
+        "email": "andre.nho at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

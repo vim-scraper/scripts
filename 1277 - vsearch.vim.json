@@ -1,0 +1,58 @@
+{
+  "script_id": "1277",
+  "name": "vsearch.vim",
+  "summary": "Allows text to be searched vertically",
+  "script_type": "utility",
+  "description": "This script enables the command \":VS\" which allows you to search for patterns vertically (column-wise)\n\n\" Usage:\n\"  1) .,$VS <pattern> [Preferred approach, shows multiple occurence in a line]\n\"      [ Use @: to search for further hits]\n\"  2)  [range]VS <pattern> [Only first occurence in a line shown]\n\"\n\" Pre-requisites:\n\"   :set nocp cpo+=<\n",
+  "install_details": ":source vsearch.vim\nOR\ndrop the file under:\n$HOME/.vim/plugin\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6427",
+      "filename": "vsearch.vim",
+      "script_version": "1.6",
+      "date": "2006-11-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "421",
+        "user_name": "aeasi",
+        "first_name": "Arun",
+        "last_name": "Easi",
+        "email": "arunke at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Enabled for vim7"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4257",
+      "filename": "vsearch.vim",
+      "script_version": "1.5",
+      "date": "2005-05-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "421",
+        "user_name": "aeasi",
+        "first_name": "Arun",
+        "last_name": "Easi",
+        "email": "arunke at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Significant performance boost! (hence given 1.5) and some usage cleanup\nNew usage:\n\" Usage:\n\"  :[range]VS <pattern>\n\"       - Use @: to search for further hits\n\"       - Range default: whole file\n\"       - Search starts from cursor\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4255",
+      "filename": "vsearch.vim",
+      "script_version": "1.0",
+      "date": "2005-05-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "421",
+        "user_name": "aeasi",
+        "first_name": "Arun",
+        "last_name": "Easi",
+        "email": "arunke at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

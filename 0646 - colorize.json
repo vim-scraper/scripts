@@ -1,0 +1,58 @@
+{
+  "script_id": "646",
+  "name": "colorize",
+  "summary": "Create colorized HTML from source code",
+  "script_type": "utility",
+  "description": "A script-wrapper around modified 2html.vim.\n\nFeatures:\n\n- result caching\n- without surrounding html tags (html, body etc.)\n- striping leading/trailing whitespace\n- specify language (instead of auto-detection by file extension)",
+  "install_details": "requires: Ruby",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2507",
+      "filename": "colorize",
+      "script_version": "5",
+      "date": "2003-11-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1279",
+        "user_name": "mneumann",
+        "first_name": "Michael",
+        "last_name": "Neumann",
+        "email": "mneumann at fantasy-coders.de",
+        "homepage": "http://www.stud.uni-karlsruhe.de/~uu9r/"
+      },
+      "release_notes": "* added terminal option (e.g. use --terminal=xterm-color for coloring output from a CGI script)\n* strip-ws now strips leading _and_ trailing empty lines\n* beautified usage output\n\n* allow reading data from stdin"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1996",
+      "filename": "colorize",
+      "script_version": "3",
+      "date": "2003-05-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1279",
+        "user_name": "mneumann",
+        "first_name": "Michael",
+        "last_name": "Neumann",
+        "email": "mneumann at fantasy-coders.de",
+        "homepage": "http://www.stud.uni-karlsruhe.de/~uu9r/"
+      },
+      "release_notes": "result caching support"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1991",
+      "filename": "colorize",
+      "script_version": "1.0",
+      "date": "2003-05-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1279",
+        "user_name": "mneumann",
+        "first_name": "Michael",
+        "last_name": "Neumann",
+        "email": "mneumann at fantasy-coders.de",
+        "homepage": "http://www.stud.uni-karlsruhe.de/~uu9r/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

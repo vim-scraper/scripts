@@ -1,0 +1,42 @@
+{
+  "script_id": "208",
+  "name": "ctx",
+  "summary": "Describes your cursor's current scope or context when editing a C file.",
+  "script_type": "utility",
+  "description": "CTX is an attempt to help Vim users navigate in C\nprogram files with very large function definitions. Such\nfiles should generally not exist, but alas they do, and\nsometimes we need to make changes to them.\n\nThis script helps by opening a small window in your Vim\nsession and keeping up-to-date with a few lines of text\ndescribing your cursor's current scope or context in a C\nfile.\n\nhttp://www.bluweb.com/us/chouser/proj/ctx/",
+  "install_details": "To use, source the ctx.vim file in your ~/.vimrc.  You may also\nwant to reduce your updatetime to 1000 or so.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=933",
+      "filename": "ctx-1.17.vim",
+      "script_version": "1.17",
+      "date": "2002-06-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19",
+        "user_name": "chouser",
+        "first_name": "Chris",
+        "last_name": "Houser",
+        "email": "chouser at users.sourceforge.net",
+        "homepage": ""
+      },
+      "release_notes": "- Added support for last switch case or label; less consistant than other structures.\n- Added autoupdate setting and \"\\c\" toggle key mapping\n- Revamped context window finding/hiding/auto-closing\n- Added support for line continuations\n- Properly ignore strings\n- Automatically skip reloads to avoid error messages\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=569",
+      "filename": "ctx-1.16.vim",
+      "script_version": "1.16",
+      "date": "2002-02-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19",
+        "user_name": "chouser",
+        "first_name": "Chris",
+        "last_name": "Houser",
+        "email": "chouser at users.sourceforge.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

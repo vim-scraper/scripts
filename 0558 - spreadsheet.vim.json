@@ -1,0 +1,58 @@
+{
+  "script_id": "558",
+  "name": "spreadsheet.vim",
+  "summary": "SpreadSheet Functionality",
+  "script_type": "utility",
+  "description": "This script lets you use vim as a spreadsheet, adding arithmetic calculations to your text files.\n\nUseful for bills, expenses, ratings and other numeric text templates.\n\nIt provides three main functions:\n   Get(\"cell\")\n   Set(\"cell\", \"value\")\n   Calculate(\"operation\")\n\nDetailed instructions and examples are included in the script file.\n\nIt uses 'bc'  Linux OS comand for the Calculate function.",
+  "install_details": "Just copy spreadsheet.vim in your .vim/plugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1743",
+      "filename": "spreadsheet.vim",
+      "script_version": "0.1b",
+      "date": "2003-02-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1459",
+        "user_name": "mjaque",
+        "first_name": "Miguel",
+        "last_name": "Jaque Barbero",
+        "email": "mjaque at ilkebenson.com",
+        "homepage": "http://www.ilkebenson.com"
+      },
+      "release_notes": "Added functions to save and recover cursor position (even between windows)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1717",
+      "filename": "spreadsheet.vim",
+      "script_version": "0.1a",
+      "date": "2003-02-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1459",
+        "user_name": "mjaque",
+        "first_name": "Miguel",
+        "last_name": "Jaque Barbero",
+        "email": "mjaque at ilkebenson.com",
+        "homepage": "http://www.ilkebenson.com"
+      },
+      "release_notes": "Functionality added for quickly cell definition (command and key mapping)\nSupport for different number sintax other than bc's. By default, \",\" is used for decimal separation and \".\" for thousands."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1710",
+      "filename": "spreadsheet.vim",
+      "script_version": "0.1",
+      "date": "2003-02-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1459",
+        "user_name": "mjaque",
+        "first_name": "Miguel",
+        "last_name": "Jaque Barbero",
+        "email": "mjaque at ilkebenson.com",
+        "homepage": "http://www.ilkebenson.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

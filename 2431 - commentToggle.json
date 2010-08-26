@@ -1,0 +1,42 @@
+{
+  "script_id": "2431",
+  "name": "commentToggle",
+  "summary": "Yet another commenting script. Toggles comments on a per line basis.",
+  "script_type": "utility",
+  "description": "A little script for toggling commenting on a per line basis:\n toggling means that commenting is turned on and off with one shortcut (\"\\;\" by default), and\n per line basis means that it only uses single line comments (greater flexibility).\n\nIn theory, should work for all filetypes; in practice it probably won't. As of version 0.1, definitions are included for 56 languages, and for all the others, it attempts to guess the comment symbol.",
+  "install_details": "Copy to your plugins directory (probably ~/.vim/plugins) and restart Vim or place anywhere and :source it.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9481",
+      "filename": "commentToggle.vim",
+      "script_version": "0.2",
+      "date": "2008-11-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15489",
+        "user_name": "caminoix",
+        "first_name": "kamil",
+        "last_name": "stachowski",
+        "email": "kamil.stachowski at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "improved whitespace handling (now prettier than ever ;)\nadded 37 new languages (total 93)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9464",
+      "filename": "commentToggle.vim",
+      "script_version": "0.1",
+      "date": "2008-11-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "15489",
+        "user_name": "caminoix",
+        "first_name": "kamil",
+        "last_name": "stachowski",
+        "email": "kamil.stachowski at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

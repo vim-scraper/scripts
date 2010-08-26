@@ -1,0 +1,298 @@
+{
+  "script_id": "588",
+  "name": "JavaBrowser",
+  "summary": "Shows java file class, package in a tree as in IDEs. Java source browser.",
+  "script_type": "utility",
+  "description": "This script is modelled on TagList vim script. Thanks to Yegappan Lakshmanan for taglist.vim\nHowever, this script is SPECIFICALLY tailored for Java language. So, it shows structure of the Java file\nstarting with classes defined within it and NOT in a general tag structure. I found it useful and hope you all\nfind it useful too. It also has a nice syntax to show the class members in UML format.\n\nThe \"Java Browser\" plugin provides the following features:\n1. Opens details of Java file types (class, package etc) in a Tree structure in a separate vim window\ne.g: + package\n            java.util\n       + class\n       +   vector\n       +      field\n                  ....\n       +      method\n                  ....\n2. The tree has syntax highlighting as follows:\n    A. public members in green, protected in orange, private in red\n    B. static members are underlined and abstracts are shown in italics as per UML specs in addition to above highlighting.\ne.g:- If you have method that public static and abstract, it will shown in green color, in italic and underlined. You can think of all possible combinations.\n3. When you double click (configurable for a single click) or hit enter key in the browser window when on a member, it will take you to the definition of that member in the Java file window.\n4. It can show an arrow (=>) or an icon (ONLY for signs enabled VIM) showing the current position of the cursor in the java file.\n5. The browser window is updated automatically when you open any other Java file (or switch between buffers) in the Java file window. You can manually update browser window by typing 'u' in the browser window (when u change a class for example and you need that to be reflected).\n6. When you put the cursor (not the mouse pointer) on a member, it shows the prototype of the member declaration in the command window (like baloon popup in IDEs!)\n7. It understands the inner classes and are shown like HashMap.Iterator etc.\n8. It understands the overridden methods.\n9. Browser window opening can be configured for a vertically/horizontally split Vim window.\n10. Groups the tags by their type and displays them in a foldable tree.\n11. Automatically highlights the current tag name.\n12. The browser window contents can be sorted either by name or by line number.\n13. Runs in all the platforms where the exuberant ctags utility and Vim are\n     supported (this includes MS-Windows and Unix based systems).\n\n TODO:\n 1. To cache ctags output for a file to speed up displaying the taglist\n     window.\n \nThis plugin relies on the exuberant ctags utility to generate the tag\n listing. You can download the exuberant ctags utility from\n http://ctags.sourceforge.net. The exuberant ctags utility must be installed\n in your system to use this plugin. You should use exuberant ctags version\n 5.3 and above.  There is no need for you to create a tags file to use this\n plugin.\n\n This script relies on the Vim \"filetype\" detection mechanism to determine\n the type of the current file. To turn on filetype detection use\n\n               :filetype on\n\n This plugin will not work in 'compatible' mode.  Make sure the 'compatible'\n option is not set. This plugin will not work if you run Vim in the\n restricted mode (using the -Z command-line argument). This plugin also\n assumes that the system() Vim function is supported.",
+  "install_details": "1. Unzip and untar javabrowser.tgz to get javabrowser.vim and tagindicator.xpm files.\n2. Copy the javabrowser.vim script to the $HOME/.vim/plugin directory. Refer to\n    ':help add-plugin', ':help add-global-plugin' and ':help runtimepath' for\n    more details about Vim plugins.\n3. Copy tagindicator.xpm and tagindicator.bmp to $VIM/pixmaps directory. NOTE: This is optional.\n4. Set the JavaBrowser_Ctags_Cmd variable to point to the exuberant ctags utility\n    path.\n5. Set Javabrowser_Use_Icon = 1 in your .vimrc file if you want to use icon provided with the script. Note: VIM must be compiled with \"signs\" option for this. If it is not, it will automatically be disabled and normal search highlight will be used to highlight the current tag. You can also use Javabrowser_Use_Text_Icon = 1 if you like => to indicate your current tag. Even for this, VIM needs to be compiled with \"sign\" support. You can also set JavaBrowser_Use_Highlight_Tag = 1 in your .vimrc if you want the current tag to be highlighted along with the icon (text or tagindicator.xpm). By default, it is OFF.\n6. If you are running a terminal/console version of Vim and the terminal\n    doesn't support changing the window width then set the JavaBrowser_Inc_Winwidth\n    variable to 0.\n7. Restart Vim.\n8. You can use the \":JavaBrowser\" command to open/close the taglist window.\n9. NOTE: This script has fileformat (ff) of DOS. UNIX users, please change it to unix before using it (Use set ff=unix and save it). Thanks to Deepak for pointing that out. That's what I do for any script I find in DOS fileformat! ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6184",
+      "filename": "javabrowser.zip",
+      "script_version": "2.03",
+      "date": "2006-09-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Two small bug fixes\n1. When UML visibility indicators are enabled, they were also included in syntax highlighting\n2. Sort by order not supported. But the window showed Sort by order at top. Changed that to Sort by name"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6137",
+      "filename": "javabrowser.zip",
+      "script_version": "2.02",
+      "date": "2006-09-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "The zip file had lot of spurious files. Removed them."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6131",
+      "filename": "javabrowser.zip",
+      "script_version": "2.02",
+      "date": "2006-09-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Added back the nice icons (tagindicator.xpm) and (tagindicator.bmp) with the script. When the zip file is unzipped in the $VIM directory (say c:\\vim), it would put the images in the $VIM\\pixmaps directory and the javabrowser.vim under $VIM\\vimfiles\\plugin directory. I like browsing the Java Tree with the image icon and I hope you would like that too."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6123",
+      "filename": "javabrowser.vim",
+      "script_version": "2.02",
+      "date": "2006-08-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Automatic tag highlighting supported now. Depending where the cursor is in the java file, corresponding tag is automatically hightlighed in the JavaBrowser window\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6112",
+      "filename": "javabrowser.vim",
+      "script_version": "2.01",
+      "date": "2006-08-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Following bog fixes and one improvement\n1. Fixed error showing tooltip when mouse was over \"field\" or \"method\"\n2. The cache was not getting set for the tooltip correctly\n3. The tooltip was staring with the <TAB> character picked up from the ctags output. It has been removed now"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6110",
+      "filename": "javabrowser.vim",
+      "script_version": "2.0",
+      "date": "2006-08-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Overhauled the code for version 7.0 and is now faster\n2. Does not give errors for version 7.0 now when browsing (or opening) the class tree\n3. Added caching for ctags output, so, buffer switching is very fast for previously viewed buffers\nNOTE: The sort by order and tag position auto refresh in the browser tree when navigating Java file still do not work.\nHopefully will make that work pretty soon :)\nI have not tested it extensively. I would really appreciate it if you let me know about the bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5563",
+      "filename": "javabrowser.vim",
+      "script_version": "1.22",
+      "date": "2006-04-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Added function JavaBrowser_Set_Syntax_Highlighting().\n 2. Now, the syntax highlighting for the Class tree would automatically be set\n when a new window is opened or at the time of tag refersh. So, the user would\n always see the syntax highlighting set for JavaBrowser syntax groups even if\n the color scheme is changed in the middle of an editing session.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5474",
+      "filename": "javabrowser.vim",
+      "script_version": "1.21",
+      "date": "2006-03-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Added option JavaBrowser_Show_UML_Visibility. If set, which is the default, JavaBrowser uses UML visibility indicators. + => public, - => private, # => protected in addition to the syntax highlighting.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5454",
+      "filename": "javabrowser.vim",
+      "script_version": "1.20",
+      "date": "2006-03-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Bugfix to correct the typo for balloon_eval\n2. Now also checking if the version > 700 before setting the bexpr option\nThe script now does show an error if the verison < 7.0. However, to get the advantage of tooltip, verion >= 7.0 is needed.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5425",
+      "filename": "javabrowser.vim",
+      "script_version": "1.19",
+      "date": "2006-03-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Forgot to mention that the baloon_eval feature works for vim 7.0 onwards ONLY for any arbitrary tooltips. Sorry, if this caused any confusion. So, basically, to use this new feature, you need vim 7.0"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5411",
+      "filename": "javabrowser.vim",
+      "script_version": "1.19",
+      "date": "2006-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Added nice tool-tip when mouse is over a function/variable name in the tag list window. Uses the ballon_eval feature for this. If this feature is not there, the tool-tip would not be shown. Shows a nice prototype for each tag in the tool-tip. An update after a loooong time."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2495",
+      "filename": "javabrowser.tar.gz",
+      "script_version": "1.18",
+      "date": "2003-11-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fix when sorted by name. Fixed the tag position. Now it shows the arrow at correct position."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2340",
+      "filename": "javabrowser.tar.gz",
+      "script_version": "1.17",
+      "date": "2003-09-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Optimized so that when the cursor moves within a method/function, the tag\n is not rehighlighted, reducing the flicker on the screen.\n2. The sorting now works properly and correct tag is highlighted after the\n sorting.\n3. Set JavaBrowser_Expand_Tree_At_Startup = 1 so that the tree opens\n completely at :JavaBrowser command\n4. Bug fix: Now escaping the SPACES in $VIM so that sign will be read properly. If your $VIM looks like C:\\Program Files\\Vim, it will now work. Thanks to Doug McInns for feed back."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2339",
+      "filename": "javabrowser.tar.gz",
+      "script_version": "1.16",
+      "date": "2003-09-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Added tagindicator.bmp for windows. Vim on Windows does not understand the xpms. Arrgghhh! So, now Windows users can also have icon to show the current tag.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2311",
+      "filename": "javabrowser.tar.gz",
+      "script_version": "1.15",
+      "date": "2003-09-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Added various configurable ways to highlight current tag which include\n A. an icon or B. an arrow(=>) with highlight of Constant and/or C. normal\n search highlight\n 2. Added options to control all these. Added 'JavaBrowser_Use_Icon',\n 'JavaBrowser_Use_Text_Icon' and 'JavaBrowser_Use_Highlight_Tag'\n 3. All have default values"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2296",
+      "filename": "javabrowser.vim",
+      "script_version": "1.14",
+      "date": "2003-09-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Now automatically highlights the current tag."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1918",
+      "filename": "javabrowser.vim",
+      "script_version": "1.12",
+      "date": "2003-04-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Small bug fix to remove unwanted echo for visibility."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1916",
+      "filename": "javabrowser.vim",
+      "script_version": "1.11",
+      "date": "2003-04-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "98",
+        "user_name": "pradeep_unde",
+        "first_name": "Pradeep",
+        "last_name": "Unde",
+        "email": "pradeep_unde at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Now interface methods are highlighted as public, abstract. I missed  the abstract part in  the previous version.\n2. The visibility modifier (public/protected/private) can now be anywhere in the method/field declaration and it will be highlighted correctly."
+    }
+  ]
+}

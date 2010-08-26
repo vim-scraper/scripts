@@ -1,0 +1,106 @@
+{
+  "script_id": "2018",
+  "name": "ttags",
+  "summary": "Tag list browser (List, filter, preview, jump to tags)",
+  "script_type": "utility",
+  "description": ":TTags [KIND] [TAGS_RX] [FILE_RX]\nIn order to match any kind/rx, use *.\nE.g. TTags * * _foo.vim$\n\nFeatures:\n    - List tags\n    - Filter tags matching a pattern\n    - Jump/Preview tags\n    - Insert tags (and a template for the argument list if supported by \n      tSkeleton (vimscript #1160), which has to be installed for this)\n\nYou can use :echo keys(ttags#Kinds())<cr> to find out which kinds are defined.\n",
+  "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0, please make\nsure, you have the current version of vimball (vimscript #1502)\ninstalled.\n\nThis script requires tlib (vimscript #1863) to be installed.\n\nSuggested key maps:\n\n    noremap <Leader>g. :TTags<cr>\n    noremap <Leader>g# :call ttags#List(0, \"*\", tlib#rx#Escape(expand(\"<cword>\")))<cr>\n    noremap <Leader>g* :call ttags#List(0, \"*\", tlib#rx#Escape(expand(\"<cword>\")) .\".*\")<cr>\n    noremap <Leader>g? :call ttags#List(1, \"*\", tlib#rx#Escape(expand(\"<cword>\")))<cr>\n    for c in split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', '\\zs')\n        exec 'noremap <Leader>g'. c .' :TTags '. c .'<cr>'\n    endfor\n\n\nAlso available via git\nhttp://github.com/tomtom/ttags_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11511",
+      "filename": "ttags.vba.gz",
+      "script_version": "0.6",
+      "date": "2009-10-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Use pathshorten()\n- Require tlib >= 0.21\n- FIX: Use ListW()\n- Make sure tlib is loaded even if it is installed in a different rtp-directory.\n- temporarily set nomagic when running the tag command\n- Show tags in the current file: TTags * * .\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7939",
+      "filename": "ttags.vba.gz",
+      "script_version": "0.5",
+      "date": "2007-11-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- More compact view of tags (via |g:tlib_tag_substitute|)\n- When previewing tags, restore the original position when closing the tags list\n- g:ttags_match_front, g:ttags_match_end\n- Require tlib >= 0.20\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7884",
+      "filename": "ttags.vba.gz",
+      "script_version": "0.4",
+      "date": "2007-11-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- New: ttags#Select() that matches any field\n- New: TTagselect command that takes a key list as argument to match any \nfield.\n- New: [wbg]:ttags_constraints configuration variable (a dictionary with \nregexps).\n- If the commands TTags and TTagselect are called with [!], \ng:tlib_tags_extra is used to temporarily scan additional tag files.\n- If a variable [bg]:ttags_rewrite is defined, it is used as function \nname to rewrite tag filesname (eg to prevent name incompatibilities \nbetween cygwin ctag & windows vim).\n- \"[wbg]:ttags_tags_rx\" was renamed to \"[wbg]:ttags_name_rx\"\n- \"[wbg]:ttags_file_rx\" was renamed to \"[wbg]:ttags_filename_rx\"\n- g:ttags_display: Alternatively use \"locations\" or \"quickfix\" lists to \ndisplay the tags (default: \"tlib\").\n- Require tlib 0.19\n- Previously, all tags were retrieved and filtered only later on. The \nidea was to save time by caching the tags information. Now the initial \nfiltering by name is done by |taglist()| right away, which seems faster.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7730",
+      "filename": "ttags.vba.gz",
+      "script_version": "0.3",
+      "date": "2007-09-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Configuration via [wbg]:ttags_kinds, [wbg]:ttags_tags_rx, \n[wbg]:ttags_file_rx variables\n- The list includes the kind identifier and the entries are highlighted \n(see g:ttags_highlighting)\n- If tSkeleton (vimscript #1160) is installed and if g:tskelTypes \ncontains \"tags\", <c-t> will insert the tag in the buffer including (if \nsupported by tSkeleton for the current filetype) a template for the \nargument list.\n- g:ttags_world can be a normal dictionary (use tlib#input#ListD instead\nof #ListW)\n- Require tlib 0.14\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7655",
+      "filename": "ttags.vba.gz",
+      "script_version": "0.2",
+      "date": "2007-09-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- The kind argument was introduced (i.e. the argument list has changed)\n- * was defined as \"match any\".\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7654",
+      "filename": "ttags.vba.gz",
+      "script_version": "0.1",
+      "date": "2007-09-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "script_id": "729",
+  "name": "sudo.vim",
+  "summary": "Allows one to edit a file with prevledges from an unprivledged session.",
+  "script_type": "utility",
+  "description": "\"   sudo.vim:  A vim plugin by Rich Paul (vim@rich-paul.net)\n\"\n\"   This script eases use of vim with sudo by adding the ability to\n\"   edit one file with root privleges without running the whole\n\"   session that way.\n\"\n\"   Usage:  put it in the plugin directory, and\n\"       (command line): vim sudo:/etc/passwd\n\"       (within vim):   :e sudo:/etc/passwd\n\"\n\"   sudo will ask for your password if need be.\n\"\n",
+  "install_details": "\"   Usage:  put it in the plugin directory, and\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3477",
+      "filename": "sudo.vim",
+      "script_version": "2.0",
+      "date": "2004-09-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3081",
+        "user_name": "cxx_guy",
+        "first_name": "rich",
+        "last_name": "paul",
+        "email": "linguist-vim at rich-paul.net",
+        "homepage": "http://www.rich-paul.net/"
+      },
+      "release_notes": "removed \"'echo hi'\" from the script.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2213",
+      "filename": "sudo.vim",
+      "script_version": "1.0",
+      "date": "2003-08-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3081",
+        "user_name": "cxx_guy",
+        "first_name": "rich",
+        "last_name": "paul",
+        "email": "linguist-vim at rich-paul.net",
+        "homepage": "http://www.rich-paul.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "643",
+  "name": "WML Wireless Markup Language syntax",
+  "summary": "The title says it all",
+  "script_type": "syntax",
+  "description": "I found no syntax script for wml so I made a simple one.\n\nIt was made for WML 1.1. Other WML versions weren't taken into account, but I believe this file is very easy to change.",
+  "install_details": "Go to the vim syntax directory.\nBackup a wml.vim you might have, probably it stands for Website META Language, then put this one. Tada!\n\nBut to get things nice, edit menu.vim in vim's path, and replace:\nWebsite\\ MetaLanguage\nwith:\nWireless\\ Markup\\ Language\nOr simply, in a command:\n:%s/Website\\\\ MetaLanguage/Wireless\\\\ Markup\\\\ Language/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1986",
+      "filename": "wml.vim",
+      "script_version": "1.0",
+      "date": "2003-05-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2348",
+        "user_name": "Acelent",
+        "first_name": "Paulo",
+        "last_name": "Madeira",
+        "email": "acelent at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

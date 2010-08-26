@@ -1,0 +1,42 @@
+{
+  "script_id": "1591",
+  "name": "octave.vim",
+  "summary": "Another syntax highlighting file for octave",
+  "script_type": "syntax",
+  "description": "This script is based in the matlab syntax file, however it adds a few significant features:\n\n* Supports the octave syntax, including things like endwhile, the # comment, the strings delimited by ' and \", etc.\n\n* Highlights the predefined functions like normal_cdf, sqrt, etc...\n\n* Highlights any functions defined in the file being editted, for example if you are editting a file containing something like this:\n\nfunction my_function()\n  ...\nendfunction\n\nit will highlight appearances of my_function in the current file.",
+  "install_details": "The installation procedure is:\n\n1) mkdir -p ~/.vim/syntax\n2) Copy octave.vim to ~/.vim/syntax/\n3) Then add the following lines to your ~/.vimrc\n\n\" Copy from here\n\n\" Octave Syntax\naugroup filetypedetect\n  au! BufRead,BufNewFile *.m,*.oct setfiletype octave\naugroup END\n\n\" to here.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7322",
+      "filename": "octave.vim",
+      "script_version": "1.2",
+      "date": "2007-07-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10367",
+        "user_name": "fcr",
+        "first_name": "Francisco",
+        "last_name": "Castro",
+        "email": "fcr at adinet.com.uy",
+        "homepage": ""
+      },
+      "release_notes": "The version 1.1 couldn't handle a trailing backslash when defing a function. Now it's fixed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6369",
+      "filename": "octave.vim",
+      "script_version": "1.1",
+      "date": "2006-11-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10367",
+        "user_name": "fcr",
+        "first_name": "Francisco",
+        "last_name": "Castro",
+        "email": "fcr at adinet.com.uy",
+        "homepage": ""
+      },
+      "release_notes": "It fixes a typo and minor changes. Also it's tested with vim7 and works."
+    }
+  ]
+}

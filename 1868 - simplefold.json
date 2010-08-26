@@ -1,0 +1,26 @@
+{
+  "script_id": "1868",
+  "name": "simplefold",
+  "summary": "space-optimized, configurable folds, supports Ruby, Ocaml, Perl, PHP, Java...",
+  "script_type": "utility",
+  "description": "More info at http://eigenclass.org/hiki/simplefold\n\nsimplefold is a small plugin that improves (for some definition of \"improve\", see the explanation and screenshots at http://eigenclass.org/hiki/simplefold) on other folding methods (syntax, marker, indent, expr). It was originally written for Ruby, but now also supports Objective Caml, PHP, Perl and Java. It features:\n* optimized vertical space usage\n* sensible foldtext\n* top-level folds: one per interesting definition. No need to open a class fold to see which methods it contains. Get a quick overview of the classes/methods/functions (whatever applies in the current filetype) with zM.\n* optional nested folds for if/while and so on\n* easy to adapt to other filetypes; just by setting 2-3 regexps\n\nUsage\n---------\nUse <Leader>f (by default \\f) to fold.\n\nYou can also use \n :Fold UNQUOTED-REGEXP\n\nto create folds showing the lines matching the given regexp, leaving everything else hidden; e.g.\n\n :Fold \\vfoo(bar|baz)\n\nwill create folds starting at each line matching foo(bar|baz), so that these are the only lines you see in your buffer (it's effectively a sort of internal grep).\n\nSee also vimtip#77 and vimscript #158",
+  "install_details": "Just place the .vim file in the plugin directory (e.g. ~/.vim/plugin).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7003",
+      "filename": "SimpleFold.vim",
+      "script_version": "0.5.0",
+      "date": "2007-04-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8442",
+        "user_name": "mfp",
+        "first_name": "Mauricio",
+        "last_name": "Fernandez",
+        "email": "mfp at acm.org",
+        "homepage": "http://eigenclass.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

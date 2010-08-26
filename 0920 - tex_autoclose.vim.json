@@ -1,0 +1,74 @@
+{
+  "script_id": "920",
+  "name": "tex_autoclose.vim",
+  "summary": "TeX / LaTeX ftplugin to automatically close environments",
+  "script_type": "ftplugin",
+  "description": "Provides mappings to automatically close environments.\n\nPressing \"\\c\" in normal mode (or <C-\\>c in insert mode) will cause the last open environment to be closed. (If a fold is started on the \\begin{env} line, then it will be automatically closed on the \\close{env} line.)\n\nAlso pressing \"<C-\\>}\" in insert mode when the cursor is at the end of a \"\\begin{environment}\" will automatically generate a \"\\close{environment}\". It will leave the cursor at the end of the \"\\begin{environment}\" (in insert mode), so that the user can enter arguments [if any].\n\nSmall and functional. Suggestions welcome.",
+  "install_details": "drop the script into your $VIMRUNTIME/ftplugin directory for global instalation.\nPut it in ~/.vim/ftplugin for local installation.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10281",
+      "filename": "tex_autoclose.vim",
+      "script_version": "1.2",
+      "date": "2009-03-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3615",
+        "user_name": "gi1242",
+        "first_name": "gi1242",
+        "last_name": "gi1242",
+        "email": "gi1242 at gmail.com",
+        "homepage": "http://www.math.cmu.edu/~gautam"
+      },
+      "release_notes": "Disabled \"}\" auto closing environments by default. This ruined the change history (and didn't account for fold markers). Provided \"<C-\\>c\" to close the last open environment. (Also fix a UTF8 bug, thanks to Molin Pascal)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2929",
+      "filename": "tex_autoclose.vim",
+      "script_version": "1.1",
+      "date": "2004-04-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3615",
+        "user_name": "gi1242",
+        "first_name": "gi1242",
+        "last_name": "gi1242",
+        "email": "gi1242 at gmail.com",
+        "homepage": "http://www.math.cmu.edu/~gautam"
+      },
+      "release_notes": "Now pressing \"}\" in insertmode will show the matching \"{\". No other functionality has been modified."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2826",
+      "filename": "tex_autoclose.vim",
+      "script_version": "1.01",
+      "date": "2004-03-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3615",
+        "user_name": "gi1242",
+        "first_name": "gi1242",
+        "last_name": "gi1242",
+        "email": "gi1242 at gmail.com",
+        "homepage": "http://www.math.cmu.edu/~gautam"
+      },
+      "release_notes": "Disabled the mapping \"\\}\". To insert a literal \"}\" in latex, you have to use \"\\}\", which conflicts with this mapping. If you do NOT want \"}\" to automatically close an environment, use \"^V}\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2774",
+      "filename": "tex_autoclose.vim",
+      "script_version": "1.0",
+      "date": "2004-02-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3615",
+        "user_name": "gi1242",
+        "first_name": "gi1242",
+        "last_name": "gi1242",
+        "email": "gi1242 at gmail.com",
+        "homepage": "http://www.math.cmu.edu/~gautam"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "script_id": "1708",
+  "name": "FencView.vim",
+  "summary": "Autodetect multiple encodings",
+  "script_type": "utility",
+  "description": "Usage:                                                             \n              Commands:                                            \n               :FencAutoDetect                                     \n                   Auto detect the file encoding.                  \n                   Built-in detected encodings:                    \n                    Unicode:                                       \n                       UTF-8                                       \n                    Chinese Simplified:                            \n                       CP936 (GBK, EUC-CN)                         \n                    Chinese Traditional:                           \n                       CP950 (Big5)                                \n                       EUC-TW                                      \n                    Japanese:                                      \n                       CP932 (SJIS)                                \n                       EUC-JP                                      \n                    Korean:                                        \n                       CP949 (EUC-KR)                              \n               :FencView                                           \n                   Open the encoding list window,                  \n                   <up> and <down> to select an encoding,          \n                   enter to reload the file                        \n              Menu:                                                \n                Select a file encoding from the                    \n                Tools->Encoding menu just like what you do in      \n                firefox/IE.                                        \n              Options:                                             \n                Set these value in vimrc to config this            \n                plugin. Expmple:                                   \n                let g:fencview_autodetect = 1                      \n                                                                   \n                \"$FENCVIEW_TELLENC\"                                \n                  Now FencView allows the use of an external       \n                  program to determine the file encoding. It       \n                  may give you better performance, or better       \n                  accuracy, in some cases. Set the environment     \n                  variable FENCVIEW_TELLENC (or the vimrc          \n                  variable $FENCVIEW_TELLENC) to use this          \n                  feature. It is currently tested against          \n                  tellenc.                                         \n                  (default: 'tellenc')                             \n                  It means if tellenc is executable, it will       \n                  be used by default. If you still want to use     \n                  the detection mechanism of this script, set      \n                  the value to \"fencview\".                         \n                                                                   \n                \"g:fencview_autodetect\"                            \n                  Auto detect file encoding when you open a        \n                  file.                                            \n                  (default: 1)                                     \n                                                                   \n                \"g:fencview_auto_patterns\"                         \n                  Set this variable in your vimrc to decide        \n                  the pattern of file names to enable              \n                  autodetection.                                   \n                  (default: '*.txt,*.htm{l\\=}')                    \n                                                                   \n                \"g:fencview_checklines\"                            \n                  It checks first and last several lines of        \n                  current file, so don't set the value too         \n                  large.                                           \n                  (default: 10)                                    \n                                                                   \nTip:          1 \"+iconv\" feature is needed. If you are             \n                using Microsoft Windows, make sure you             \n                have iconv.dll in $PATH.                           \n                (http://mbbill.googlepages.com/iconv.dll)          \n                Use command \":echo has('iconv')\" to check it.      \n              2 Make sure there is no modeline at the end of       \n                current file.                                      \n              3 set encoding to utf-8 for better performance.      \n              4 No effect to Vim encrypted files.                  \n                                                                   \n",
+  "install_details": "Copy FencView.vim to your plugin directory.\n\nYou may want to try an external tellenc. One such program is available at http://wyw.dcweb.cn/download.asp?path=&file=tellenc.zip.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9649",
+      "filename": "fencview.vim",
+      "script_version": "4.6",
+      "date": "2008-12-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "Progress bar no longer used for better compatibility; one may use  g:fencview_checklines=0 to check all lines; do not change the current file encoding if no valid multi-byte encoding is detected."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9225",
+      "filename": "fencview.vim",
+      "script_version": "4.5",
+      "date": "2008-09-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "Add a workaround (UNIX only) for earlier Vim versions where shellescape() is not defined; avoid using `y$' to prevent issues when folding is used (contributed by Ingo Karkat)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8745",
+      "filename": "fencview.vim",
+      "script_version": "4.4",
+      "date": "2008-06-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "Fix two problems found under Unix:\n1) Big5 can be loosely used for CP950;\n2) g:legacy_encoding can be wrongly guessed (it should not be used)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7994",
+      "filename": "fencview.vim",
+      "script_version": "4.3",
+      "date": "2007-11-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "Make it run more smoothly under Windows with my gVim build (http://wyw.dcweb.cn/#download)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7166",
+      "filename": "fencview.vim",
+      "script_version": "4.2",
+      "date": "2007-05-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "update"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7149",
+      "filename": "fencview.vim",
+      "script_version": "4.1",
+      "date": "2007-05-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "some improvements"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7061",
+      "filename": "fencview.vim",
+      "script_version": "4.0",
+      "date": "2007-05-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "It merges functionality in multienc.vim: allows the use of an external program to determine the file encoding; use the http-equiv meta tag to help decide the file encoding; use the fileencoding modeline to help decide the file encoding; autodetect the encoding of .txt, .htm, and .html files; add a new command FencManualEncoding to override the encoding where autodetection affects the normal ++enc. Also some minor fixes are made."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6833",
+      "filename": "fencview.vim",
+      "script_version": "3.2",
+      "date": "2007-03-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "bug fix: set syntax on after auto detect"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6507",
+      "filename": "fencview.vim",
+      "script_version": "3.1",
+      "date": "2006-12-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "A lot of improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6476",
+      "filename": "fencview.vim",
+      "script_version": "2.3",
+      "date": "2006-11-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "Now it can auto detect the file encodings. You just need to select \"Auto detect\" from the menu or use :FencAutoDetect command to let it detect the fileencoding automatically.\nSupported encodings:\nutf-8\ncp936(GBK)\ncp950(big5)\ncp932(sjis)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6425",
+      "filename": "fencview.vim",
+      "script_version": "1.2",
+      "date": "2006-11-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "Some bug fix."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6422",
+      "filename": "fencview.vim",
+      "script_version": "1.1",
+      "date": "2006-11-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "Now, you can select a file encoding from the menu, just like what you did in Firefox/IE.\nScreenshot:\nhttp://mbbill.googlepages.com/fenc.png\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6417",
+      "filename": "fencview.vim",
+      "script_version": "1.0",
+      "date": "2006-11-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11083",
+        "user_name": "mbbill",
+        "first_name": "Ming",
+        "last_name": "Bai",
+        "email": "mbbill at gmail.com",
+        "homepage": "http://mbbill.googlepages.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

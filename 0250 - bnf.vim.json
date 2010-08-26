@@ -1,0 +1,58 @@
+{
+  "script_id": "250",
+  "name": "bnf.vim",
+  "summary": "Highlight BNFs",
+  "script_type": "syntax",
+  "description": "Pretty straight forward.  It highlights a BNF grammar definition.  Not too fancy, but it makes writing a BNF more pleasant.  You can see a screenshot of bnf.vim at http://students.cs.byu.edu/~mtb6/bnf_vim.png .  For more complex BNF grammar definitions, you may want to check out http://vim.sourceforge.net/script.php?script_id=545 which is an EBNF syntax file by Hans Fugal.",
+  "install_details": "Just put it in your ~/.vim/syntax directory and add an autocommand to load it up on all files ending with .bnf.  Something like \"au bufreadpre,bufnewfile *.bnf set ft=bnf\" will do nicely.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=712",
+      "filename": "bnf.vim",
+      "script_version": "1.2",
+      "date": "2002-03-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "210",
+        "user_name": "brailsmt",
+        "first_name": "Michael",
+        "last_name": "Brailsford",
+        "email": "brailsmt at yahoo.com",
+        "homepage": "http://students.cs.byu.edu/~mtb6"
+      },
+      "release_notes": "I forgot to add the proper syntax file starting stuff.  This adds it."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=707",
+      "filename": "bnf.vim",
+      "script_version": "1.1",
+      "date": "2002-03-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "210",
+        "user_name": "brailsmt",
+        "first_name": "Michael",
+        "last_name": "Brailsford",
+        "email": "brailsmt at yahoo.com",
+        "homepage": "http://students.cs.byu.edu/~mtb6"
+      },
+      "release_notes": "fixed a bug that did not quote string properly if they had the comment char '#' in the quoted string."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=706",
+      "filename": "bnf.vim",
+      "script_version": "1.0",
+      "date": "2002-03-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "210",
+        "user_name": "brailsmt",
+        "first_name": "Michael",
+        "last_name": "Brailsford",
+        "email": "brailsmt at yahoo.com",
+        "homepage": "http://students.cs.byu.edu/~mtb6"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

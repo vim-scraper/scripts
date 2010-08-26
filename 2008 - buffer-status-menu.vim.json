@@ -1,0 +1,26 @@
+{
+  "script_id": "2008",
+  "name": "buffer-status-menu.vim",
+  "summary": "Add modified/current status to Buffers menu",
+  "script_type": "utility",
+  "description": "Replacement for Vim's default buffers menu to add status display.\nNow adds a + before modified buffers, * before the current buffer.\n\nNote that Vim doesn't seem to have an autocmd event for a buffer\nbecoming modified, so the menu won't show this change until something\nelse causes it to refresh.\n\nOriginal code stolen from Vim 7.0-164",
+  "install_details": "Just drop it in the Vim plugins directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7614",
+      "filename": "buffer-status-menu.vim",
+      "script_version": "1.0",
+      "date": "2007-09-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13023",
+        "user_name": "paradon",
+        "first_name": "Thomas",
+        "last_name": "Matysik",
+        "email": "thomas at matysik.co.nz",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

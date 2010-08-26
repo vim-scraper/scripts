@@ -1,0 +1,26 @@
+{
+  "script_id": "310",
+  "name": "cream-sort",
+  "summary": "sort a file by lines",
+  "script_type": "utility",
+  "description": "\n:call Cream_sortfile() will sort the current file alphabetically by line. User is prompted to choose the column of the sort. The function uses the operating system's sort command (both Windows or Unix) for speed since our original use was for 7mb dictionary wordlists(!). (cream-sort actually creates and sorts a temp file copied from the current to preserve the original file since it would be destroyed by the OS during the process.) \n\nPlease notice three other sort libraries included within the script below the advertised first one. They were \"research\" during the project and may serve certain users better than ours!\n\nThis is one of the many custom utilities and functions for gVim from the Cream project (http://cream.sourceforge.net), a configuration of Vim in the vein of Apple and Windows software you already know.\n\n",
+  "install_details": "\nJust copy this file and paste it into your vimrc. Or you can drop the entire file into your plugins directory.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1201",
+      "filename": "cream-sort.vim",
+      "script_version": "1.3",
+      "date": "2002-09-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "* Quote path/filenames on Windows to handle spaces\n* Added requirement that file be named (external redirection methods\n  require it)\n* Added prompt to save modified file before proceeding\n"
+    }
+  ]
+}

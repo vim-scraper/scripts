@@ -1,0 +1,26 @@
+{
+  "script_id": "3030",
+  "name": "motpat.vim",
+  "summary": "create motion mappings defined by a pattern",
+  "script_type": "utility",
+  "description": "Create motion mappings defined by a pattern.\nThe resulting keys can be used in Normal, Visual and Operator-pending mode; and they accept a count.\n\nFunctions:\n\nmotpat#Map({buf-local}, {lhs-forw}, {lhs-back}, {rhs-pat}[, {excl}])\n\n    {buf-local}\t\tif non-zero, create buffer-local mappings, else global mappings\n    {lhs-forw}\t\tkey to be mapped for forward searching (not if empty)\n    {lhs-back}\t\tkey to be mapped for backward searching (not if empty)\n    {rhs-pat}\t\tpattern to define the motion, will be part of the resulting {rhs} of the mapping\n    {excl}\t\ttype of motion, one of \"e\" (default), \"i\" or \"l\", for exclusive, inclusive or linewise, makes use of |o_v|.\n\n\" the following two functions just omit one argument:\nmotpat#Fmap({buf-local}, {lhs-forw}, {rhs-pat}[, {excl}])\nmotpat#Bmap({buf-local}, {lhs-back}, {rhs-pat}[, {excl}])\n\n\nExamples:\n\nftplugin/vim.vim >\n\t\" simpler definition of ]], [[, ][, [], [\" and ]\"\n\n\t\" Move around functions.\n\tcall motpat#Map(1, ']]', '[[', '^\\s*fu\\%[nction]\\>')\n\tcall motpat#Map(1, '][', '[]', '^\\s*endf\\%[unction]\\>', 'l')\n\n\t\" Move around comments\n\tcall motpat#Fmap(1, ']\"', '\\%(^\\s*\".*\\n\\)\\%(^\\s*\"\\)\\@!', 'l')\n\tcall motpat#Bmap(1, '[\"', '\\%(^\\s*\".*\\n\\)\\@<!\\%(^\\s*\"\\)', 'l')",
+  "install_details": "extract to a runtimepath folder\n\nfiles in the archive:\nautoload/motpat.vim\nautoload/gvmap.vim (helper script)\ndoc/motpat.txt",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12721",
+      "filename": "motpat_0.1.zip",
+      "script_version": "0.1",
+      "date": "2010-03-28",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "8357",
+        "user_name": "anwo",
+        "first_name": "Andy",
+        "last_name": "Wokula",
+        "email": "anwoku at yahoo.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

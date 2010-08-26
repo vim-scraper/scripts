@@ -1,0 +1,106 @@
+{
+  "script_id": "2634",
+  "name": "SearchPosition",
+  "summary": "Show relation to search pattern matches in range or buffer. ",
+  "script_type": "utility",
+  "description": "DESCRIPTION\nThe mappings, command and operator provided by this plugin search a range or\nthe entire buffer for a pattern (defaulting to the current search pattern),\nand print a summary of the number of occurrences above, below and on the\ncurrent line, e.g.: \n    1 match after cursor in this line, 8 following, 2 in previous lines; total 10 for /\\<SearchPosition\\>/ \n    5 matches in this fold, 9 before, 6 following; total 21 for /endif/ \n    On sole match in this line, 40 in following lines for /let/ \n    :144,172 7 matches in this fold for /let/ \n\nThis provides better orientation in a buffer without having to first jump from\nsearch result to search result. \n\nMOTIVATION\nIn its simplest implementation\n    :nnoremap <A-n> :%s///gn<CR>\n    41 matches on 17 lines\nprints the number of matches for the current search pattern. This plugin\nbuilds on top of this by providing more context with regards to the current\ncursor position plus additional information. \n\nThis plugin is similar to IndexedSearch.vim (vimscript#1682) by Yakov\nLerner. \n\nUSAGE\n:[range]SearchPosition [{pattern}]\n\t\t\tShow position of the search results for {pattern} (or\n\t\t\tthe current search pattern (@/) if {pattern} is\n\t\t\tomitted). All lines in [range] (or the entire buffer\n\t\t\tif omitted) are considered, and the number of matches\n\t\t\tin relation to the current cursor position is echoed\n\t\t\tto the command line. \n\n<Leader><A-n>{motion}\tShow position for the current search pattern in the\n\t\t\tlines covered by {motion}. \n[count]<A-n>\t\tShow position for the current search pattern in the\n\t\t\tentire buffer, or [count] following lines. \n{Visual}<A-n>\t\tShow position for the current search pattern in the\n\t\t\tselected lines. \n\n[count]<A-m>\t\tShow position for the whole word under the cursor in the\n\t\t\tentire buffer, or [count] following lines. \n\t\t\tOnly whole keywords are searched for, like with the\n\t\t\t|star| command. \n[count]g<A-m>\t\tShow position for the word under the cursor in the\n\t\t\tentire buffer, or [count] following lines. \n\t\t\tAlso finds contained matches, like |gstar|. \n{Visual}<A-m>\t\tShow position for the selected text in the entire\n\t\t\tbuffer. ",
+  "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim SearchPosition.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.0 or higher. \n\nCONFIGURATION\nIf you want to use different mappings, map your keys to the\n<Plug>SearchPosition* mapping targets _before_ sourcing this script (e.g. in\nyour .vimrc): \n    nmap <silent> <Leader>,n <Plug>SearchPositionOperator\n    nmap <silent> <Leader>n <Plug>SearchPositionCurrent\n    vmap <silent> <Leader>n <Plug>SearchPositionCurrent\n    nmap <silent> <Leader>m <Plug>SearchPositionWholeCword\n    vmap <silent> <Leader>m <Plug>SearchPositionCword\n\nThe highlight group for the report message can be set via\n    let g:SearchPosition_HighlightGroup = 'ModeMsg'\n\nTo shorten the report message, the [range] and used search pattern can be\nomitted from the message; by default, both are included in the message text: \n    let g:SearchPosition_ShowRange = 1\n    let g:SearchPosition_ShowPattern = 1",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13087",
+      "filename": "SearchPosition.vba.gz",
+      "script_version": "1.11",
+      "date": "2010-06-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Appended \"; total N\" to evaluations that excluded the match on the cursor from the \"overall\" count, as it was misleading what \"overall\" meant in this context."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12033",
+      "filename": "SearchPosition.vba.gz",
+      "script_version": "1.10",
+      "date": "2010-01-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- Moved functions from plugin to separate autoload script.\n- BUG: Wrong reporting of additional occurrences when the current line is outside the passed range. \n- BUG: Catch non-existing items in evaluations that can be caused by e.g having \\%# inside the search pattern. Warn about \"special atoms have distorted the tally\" in such cases. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12018",
+      "filename": "SearchPosition.vba.gz",
+      "script_version": "1.03",
+      "date": "2010-01-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "ENH: Offering a whole-word ALT-M mapping in addition to the former literal search (which is now mapped to g_ALT-M), like the |star| and |gstar| commands. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11358",
+      "filename": "SearchPosition.vba.gz",
+      "script_version": "1.02",
+      "date": "2009-09-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "BUG: Cannot set mark \" in Vim 7.0 and 7.1; using mark z instead. This only affected the <Leader><A-n>{motion} command. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10876",
+      "filename": "SearchPosition.vba.gz",
+      "script_version": "1.01",
+      "date": "2009-06-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "The jumplist is not clobbered anymore by the :SearchPosition command. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10606",
+      "filename": "SearchPosition.vba.gz",
+      "script_version": "1.00",
+      "date": "2009-05-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

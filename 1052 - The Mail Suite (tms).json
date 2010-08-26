@@ -1,0 +1,74 @@
+{
+  "script_id": "1052",
+  "name": "The Mail Suite (tms)",
+  "summary": "Send, Receive and Organize mail from within VIM",
+  "script_type": "utility",
+  "description": "____________________________________________________________\nThe Mail Suite (TMS):  Send, Receive and Organize Mail\n                       via an Editable User Interface (EUI)\n                       using VIM As the Editor\n                       (on WINDOWS and on Unix)\n                       (relies on perl)\n____________________________________________________________\nMotivation    \n\nPeople who know VIM (especially those who have discovered\nexplorer.vim) are aware of the speed, the customized form\nand, once learned, the ease of issuing commands and\nprocessing the results of the commands while in VIM.  This\nplugin, The Mail Suite (tms), exploits that power of VIM in\nthe domain of electronic mail: for the tasks of sending,\nreceiving and organizing mail.\n\n____________________________________________________________\nThe Command Set (Overview) \n\nSince The Mail Suite builds on VIM's command set, there are\nonly a handful of new commands (or tasks):\n\n   - Get emails (from a POP3 server) and save in raw (.eml) format\n   - Send a buffer (even one without a file) or files as an email (via a SMTP server)\n   - Index (create a ''table of contents'' for) a folder of emails\n   - Open an email from the index (and then open the next or the previous email)\n   - Reply, Forward or Acknowledge an email\n   - Delete, Move or Copy emails\n\n____________________________________________________________\nContrast of Interfaces for Mail Clients \n\nHere's a contrast that makes an aspect of the power of VIM\nas a user interface clear:  other email clients need lots\nmore commands than the mail-specific commands listed above\nsince they need to provide a user interface;  and their\ninterface is restrictive (compared to that of VIM) in regard\nto the means for navigating and manipulating the stuff on\nthe screen and in not allowing keystroke customization.\n\n",
+  "install_details": "____________________________________________________________\nSystem Requirements \n\nTMS has been tested on Windows 98 and Linux.  It requires\nVIM with perl support.  The perl module libnet is required\n(and one easy way to provide this is to have external perl\ntoo).\n\n____________________________________________________________\nInstallation \n\nEssentially, extracting tms.tar.gz into the vimfiles\ndirectory (on Windows) or into the ~/.vim directory (on\nUnix) while preserving folder names; then regenerate the\nhelp-tags (using the command :helptags).\n\nExtracting deploys the following files below the vimfiles or\n.vim directory:\n\n       ftdetect/index.vim\n       ftplugin/index.vim\n       syntax/index.vim\n       plugin/tms.vim\n       mail/_tmsrc.example\n       mail/tms.vim\n       after/ftplugin/mail.vim\n       doc/tms.txt\n\nThe help-tags can be regenerated, for example, by executing\n'':helptags $vim\\vimfiles\\doc'' from within vim.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3432",
+      "filename": "tms_1_14.tar.gz",
+      "script_version": "1.14",
+      "date": "2004-09-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4518",
+        "user_name": "Suresh Govindachar",
+        "first_name": "Suresh",
+        "last_name": "Govindachar",
+        "email": "< initial>< last name>< at>< yahoo>",
+        "homepage": "http://www.govindachar.com"
+      },
+      "release_notes": " - Added requested \"custom completion\" feature to complete the mail-folder in commands such as :TMSMakeIndex\n\n - Hereby explicitly revealing existence of the command :TMSShowIndex <mail-folder>\n\n - Added test of perl version (require 5.8.0)\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3430",
+      "filename": "tms_1_13.tar.gz",
+      "script_version": "1.13",
+      "date": "2004-09-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4518",
+        "user_name": "Suresh Govindachar",
+        "first_name": "Suresh",
+        "last_name": "Govindachar",
+        "email": "< initial>< last name>< at>< yahoo>",
+        "homepage": "http://www.govindachar.com"
+      },
+      "release_notes": "See mail/release_notes:  The main new feature is an illustration of filtering, and the use of quickfix commands (:cn, :copen etc.) to visit mail folders which have new mail. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3333",
+      "filename": "tms_1_12.tar.gz",
+      "script_version": "1.12",
+      "date": "2004-08-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4518",
+        "user_name": "Suresh Govindachar",
+        "first_name": "Suresh",
+        "last_name": "Govindachar",
+        "email": "< initial>< last name>< at>< yahoo>",
+        "homepage": "http://www.govindachar.com"
+      },
+      "release_notes": "See mail/release_notes (minor updates including \nuse of VimEnter event to capture passwords).\nWelcome all feedback."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3316",
+      "filename": "tms_1_11.tar.gz",
+      "script_version": "1.11",
+      "date": "2004-08-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4518",
+        "user_name": "Suresh Govindachar",
+        "first_name": "Suresh",
+        "last_name": "Govindachar",
+        "email": "< initial>< last name>< at>< yahoo>",
+        "homepage": "http://www.govindachar.com"
+      },
+      "release_notes": "Automated method for getting the passwords\nfor the various mail servers didn't work since it\nwas run during VIM's start-up.  Have added a \nmanual method for setting passwords.  Needs to\nbe done only ONCE -- see mail/release_notes.\n(Do keep me informed of positive or negative \nexperience with using tms.)\n\n"
+    }
+  ]
+}

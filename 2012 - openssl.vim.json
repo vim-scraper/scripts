@@ -1,0 +1,42 @@
+{
+  "script_id": "2012",
+  "name": "openssl.vim",
+  "summary": "Turn Vim into a Password Safe and edit openssl encrypted files",
+  "script_type": "utility",
+  "description": "== Edit OpenSSL encrypted files and turn Vim into a Password Safe! ==\n\nThis plugin enables reading and writing of files encrypted using OpenSSL.\nThe file must have the extension of one of the ciphers used by OpenSSL. For\nexample:\n\n   .des3 .aes .bf .bfa .idea .cast .rc2 .rc4 .rc5\n\nThis will turn off the swap file and .viminfo log. The `openssl` command\nline tool must be in the path.\n\n== Install ==\n\nPut this in your plugin directory and Vim will automatically load it:\n\n   ~/.vim/plugin/openssl.vim\n\nYou can start by editing an empty unencrypted file. Give it one of the\nextensions above. When you write the file you will be asked to give it a new\npassword.\n\n== Simple Vim Password Safe ==\n\nIf you edit any file named '.auth.bfa' (that's the full name, not just the\nextension) then this plugin will add folding features and an automatic quit\ntimeout.\n\nVim will quit automatically after 5 minutes of no typing activity (unless\nthe file has been changed).\n\nThis plugin will fold on wiki-style headlines in the following format:\n\n    == This is a headline ==\n\nAny notes under the headline will be inside the fold until the next headline\nis reached. The SPACE key will toggle a fold open and closed. The q key will\nquit Vim. Create the following example file named ~/.auth.des3:\n\n    == Colo server ==\n\n    username: maryjane password: esydpm\n\n    == Office server ==\n\n    username: peter password: 4m4z1ng\n\nThen create this bash alias:\n\n    alias auth='view ~/.auth.des3'\n\nNow you can view your password safe by typing 'auth'. When Vim starts all\nthe password information will be hidden under the headlines. To view the\npassword information put the cursor on the headline and press SPACE.\n\nThanks to Tom Purl for the des3 tip.\n\nI release all copyright claims. This code is in the public domain.\nPermission is granted to use, copy modify, distribute, and sell this\nsoftware for any purpose. I make no guarantee about the suitability of this\nsoftware for any purpose and I am not liable for any damages resulting from\nits use. Further, I am under no obligation to maintain or extend this\nsoftware. It is provided on an 'as is' basis without any expressed or\nimplied warranty.\n",
+  "install_details": "Put this in your plugin directory and Vim will automatically load it:\n\n   ~/.vim/plugin/openssl.vim\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8564",
+      "filename": "openssl.vim",
+      "script_version": "3.2",
+      "date": "2008-04-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9349",
+        "user_name": "noah",
+        "first_name": "Noah",
+        "last_name": "Spurrier",
+        "email": "noah at noah.org",
+        "homepage": ""
+      },
+      "release_notes": "I added a feature to make a backup of an encrypted file before writing changes. This helps guard against the situation where you may edit a file and write changes with the wrong password. You can still go back to the previous backup version. The backup file will have the same name as the original file with .bak before the original extension. For example:\n\n    .auth.bfa  -->  .auth.bak.bfa\n\nTo turn on backups put the following global definition in your .vimrc file:\n\n    let g:openssl_backup = 1\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7628",
+      "filename": "openssl.vim",
+      "script_version": "3.0",
+      "date": "2007-09-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9349",
+        "user_name": "noah",
+        "first_name": "Noah",
+        "last_name": "Spurrier",
+        "email": "noah at noah.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

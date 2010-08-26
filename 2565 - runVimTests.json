@@ -1,0 +1,106 @@
+{
+  "script_id": "2565",
+  "name": "runVimTests",
+  "summary": "A testing framework for Vim. ",
+  "script_type": "utility",
+  "description": "Every script writer knows how tedious it is to update a published script. In\naddition to the basic functionality, many corner cases (empty line, last line,\netc.) and failures (invalid filename, nomodifiable buffer) need to be tested,\nand people use Vim on different platforms (Windows / Linux), UIs (Console /\nGUI), with different sets of settings (.vimrc) and other loaded plugins.\nThere already exist multiple unit test plugins and assertion facilities [1],\nwhich are good for checking invariants and verifying side effect-free\nimplementation functions, but it is still hard to verify the complete plugin\nfunctionality because custom commands and mappings typically change the buffer\ncontents, open additional windows, or produce other side effects. \n\nThis work aims to show that Vim, together with a shell script driver built\naround it, allows to write succinct, fully automated regression test suites\nthrough a combination of these verification methods:\n- Comparing buffer contents with a predefined nominal file. \n- Matching actual Vim message output with a set of expected messages. \n- Running unit tests or assertions inside Vim and evaluating the test results. \n\nWith this testing framework, Test-Driven Development can finally be practiced\nfor Vim plugins, too. If you have existing plugins, just add a couple of basic\ntest cases for a start. Soon, further updates and modifications can be done\nmuch more rapidly with reduced testing effort, and you can finally tackle that\nbig refactoring that you've been wanting to do all the time, but were too\nafraid of because of the testing effort. The author has been following both\napproaches with great success. \n\n[1]\n- vimUnit (by Staale Flock), vimscript #1125\n- tAssert (by Tom Link), vimscript #1730\n- VimTAP (by Meikel Brandmeyer), vimscript #2213\n- UT (by Luc Hermitte), http://code.google.com/p/lh-vim/wiki/UT\n\n\nEXAMPLE\nSpecify an expected output, e.g. in file 'test001.ok'\n    expected output\n    and more\n    expected output\nand/or specify expected messages in file 'test001.msgok'\n    /\\d\\+ lines changed/\nuse an input file 'test001.in'\n    ExPeCteD OuTpUt\n    AND MORE\n    ExPeCteD OuTpUt\nwrite a short test script 'test001.vim'\n    edit test001.in\n    normal! gg3gugu\n    write test001.out\n    quit!\ncall the test runner\n    $ runVimTests test001.vim\nand the framework invokes the test(s) [suites], compares the actual with the\nexpected output, checks that the messages match, and prints any failures and a\ntest summary:\n    1 file with 2 tests; 0 skipped, 2 run: 2 OK, 0 failures, 0 errors.\n\n\nDESCRIPTION\n\nrunVimTests implements a testing framework for Vim. \n\nSimilar to the tests that are part of Vim's source distribution, each test\nconsists of a testXXX.vim file which is executed in a a separate Vim instance.\nThe outcome of a test can be determined by a combination of the following\nmethods:\n\nSAVED BUFFER OUTPUT\nIf a testXXX.ok file is provided, the testXXX.vim should save a testXXX.out\nfile at the end of its execution. The contents of the testXXX.out test file\nmust be identical to the provided testXXX.ok file for the test to succeed. The\ntest can either generate the test output itself, or start by editing a\ntestXXX.in (or similar) file and doing modifications to it. \nUse this method to test commands or mappings that modify buffer contents. \n\nCAPTURED MESSAGES\nIf a testXXX.msgok file is provided, the testXXX.vim file should generate Vim\nmessages (from built-in Vim commands, or via :echo[msg]), which are captured\nduring test execution in a testXXX.msgout file. The testXXX.msgok file\ncontains multiple message assertions (separated by empty lines), each of which\nis compiled into a Vim regexp and then matched against the captured messages.\nEach assertion can match exactly once, and all assertions must match in the\nsame order in the captured Vim messages. (But there can be additional Vim\nmessages before, after and in between matches, so that you can omit irrelevant\nor platform-specific messages from the testXXX.msgok file.) \nThis method can verify that errors are reported correctly. Also use this\nmethod to test commands or mappings that print informational messages. \n\nTAP UNIT TESTS\t\nIf a testXXX.tap file exists at the end of a test execution, it is assumed to\nrepresent unit test output in the Test Anything Protocol [2], which is then\nparsed and incorporated into the test run. This method allows detailed\nverification of custom commands, mappings as well as internal functions; the\nentire determination of the test result is done in Vim script. Each TAP unit\ntest counts as one test, even though all those test results are produced by a\nsingle testXXX.vim file. If a plan announced more or less tests than what was\nfound in the test output, the test is assumed to be erroneous. \nUse this method to test the internal implementation functions, or to verify\nthings that can be checked easily with Vim script. \n\n[2]\nweb site: http://testanything.org,\noriginal implementation: http://search.cpan.org/~petdance/TAP-1.00/TAP.pm,\nTAP protocol for Vim: http://www.vim.org/scripts/script.php?script_id=2213\n\n\nUSAGE\n\nA test run is started through the \"runVimTests.(sh|cmd)\" script: \n    $ runVimTests [{options}] test001.vim|testsuite.txt|path/to/testdir/ [...]\n\nThe tests are specified through these three methods, which can be combined: \n- Directly specify the filespec of testXXX.vim test script file(s). \n- Specify a directory; all *.vim files inside this directory (except for an\n  optional special _setup.vim file) will be used as test scripts. \n- A test suite is a text file containing (relative or absolute) filespecs to\n  test scripts, directories or other test suites, one filespec per line.\n  (Commented lines start with #.) \n\nAfter test execution, a summary is printed like this:\n    20 files with 33 tests; 2 skipped, 27 run: 16 OK, 11 failures, 6 errors.\n    Tests with skips: test006\n    Skipped tests: test007\n        2 SKIP (tap): Need 'autochdir' option\n    Failed tests: test002, test012, test014, test022, test032, test033\n    Tests with errors: test003, test013, test023, test033",
+  "install_details": "INSTALLATION\nThis framework is packaged as a ZIP archive. You can unpack it directly into\nyour runtime directory (~/.vim), but you can also install the script executables\nsomewhere else. \n\nThe script executables are in the bin/ subdirectory: \n    bin/runVimTests.cmd\n    bin/runVimTests.sh\n    bin/runVimMsgFilter.vim\nThey can be put anywhere (preferably somewhere in $PATH for easy invokation).\nrunVimMsgFilter.vim must be in the same directory as the shell script. \n\nThe doc/ subdirectory contains the documentation. Put the files into\n~/.vim/doc and execute :helptags ~/.vim/doc to re-generate the help tags. \n\nThe autoload/ subdirectory contains optional convenience and helper functions.\nTheir use is not required, but they simplify the writing of tests. \n\nThe VimTAP plugin (vimscript #2213) needs to be installed separately. \n\nThe test/ subdirectory contains example test suites and a self-test of the\ntest framework. For a simple sanity check, execute: \n    $ runVimTests test/runVimTests/successful.suite\nwhich should print something like:\n    9 files with 19 tests; 0 skipped, 19 run: 19 OK, 0 failures, 0 errors.\nIf this is the case, you can start exploring the example tests (in the\ntest/example/ subdirectory) or just start writing your own\nrunVimTests-testscripts! \n\nDEPENDENCIES\n- Requires Vim 7.2 or higher as the default Vim found in $PATH (which is\n  always used for the matching of Vim message output against the captured\n  messages). You can use a different Vim version to execute the tests, but at\n  least Vim 7.0 is required to use captured messages (as this depends on the\n  'verbosefile' option) and TAP unit tests (vimtap.vim is an autoload script).\n\nThe Windows version requires (* = optional) these ported Unix tools:\n- grep, sed, diff, sort(*), uniq(*)\nWindows binaries can be downloaded from the GnuWin32 project: \n    http://gnuwin32.sourceforge.net/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10702",
+      "filename": "runVimTests.zip",
+      "script_version": "1.13",
+      "date": "2009-05-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "ENH: Now including SKIP reasons in the summary (identical reasons are\ncondensed and counted) when not running with verbose output. I always wanted\nto know why certain tests were skipped. (This requires GNU sort and uniq on\nWindows.) "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10208",
+      "filename": "runVimTests.zip",
+      "script_version": "1.12",
+      "date": "2009-03-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- Added quoting of regexp in runVimTests.sh, which is needed in bash 3.0 and 3.1. Thanks to Anders Thøgersen for the patch. \n- Now checking bash version. \n- Only exiting with exit code 1 in case of test failures; using code 2 for invocation errors (i.e. wrong command-line arguments) and code 3 for internal errors.  "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10190",
+      "filename": "runVimTests.zip",
+      "script_version": "1.11",
+      "date": "2009-03-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- TAP output is now parsed for SKIP and TODO directives, and the \"Bail out\" message. \n- TODO TAP tests are included in the test output like failing tests. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10177",
+      "filename": "runVimTests.zip",
+      "script_version": "1.10",
+      "date": "2009-03-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- runVimTests drivers now also count test files (*.vim). \n- ENH: Message output is now parsed for signals to the test driver. Implemented signals: BAILOUT!, ERROR, SKIP, SKIP(out), SKIP(msgout), SKIP(tap). "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10094",
+      "filename": "runVimTests.zip",
+      "script_version": "1.01",
+      "date": "2009-03-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Added annotated example tests. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10086",
+      "filename": "runVimTests.zip",
+      "script_version": "1.00",
+      "date": "2009-03-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

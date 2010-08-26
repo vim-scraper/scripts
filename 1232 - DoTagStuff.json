@@ -1,0 +1,58 @@
+{
+  "script_id": "1232",
+  "name": "DoTagStuff",
+  "summary": "Syntax Highlight based on tags",
+  "script_type": "syntax",
+  "description": "Extract information from a tags file (exuberant ctags), and generate syntax highlighting scripts for functions, globals, macros, etc.\n\nSomewhat \"raw\" extraction from my working environment; i.e., not particularly generic; e.g., hard-coded color settings for the various types of tokens identified (functions, macros, etc.).  Easily changed, but by editing the c.vim included that is intended to go in your \"after/syntax\" vim directory.\n\n*Not* very polished, but perhaps helpful.\n\nFor a sample of the results, see:  http://castandcrew.com/~gary/DoTagStuff/\n\nNOTE: You *must* include the --fields option to ctags that includes \"language of source file containing tag\" (i.e., \"--fields=l\" ; I use --fields=+Kl).  It's needed so that  the language type of each tag is included in the tags file.  This is needed to properly form syntax groups (e.g., cStaticFunction or perlExternalFunction -- to get the \"c\" or \"perl\" parts).",
+  "install_details": "Unzip the bundle; it will expand into a HighlightTags directory; see README for more info.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4004",
+      "filename": "HighlightTags.zip",
+      "script_version": "1.2.2",
+      "date": "2005-03-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "952",
+        "user_name": "Timeframed",
+        "first_name": "Gary",
+        "last_name": "Holloway",
+        "email": "gary at castandcrew dot com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed typo in README; added note that samples are intended only for gui (i.e., only set guifg/guibg)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3995",
+      "filename": "HighlightTags.zip",
+      "script_version": "1.2",
+      "date": "2005-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "952",
+        "user_name": "Timeframed",
+        "first_name": "Gary",
+        "last_name": "Holloway",
+        "email": "gary at castandcrew dot com",
+        "homepage": ""
+      },
+      "release_notes": "Added more debugging output (when run with -D).\n\nAdded note to README:  Must use --fields=l option to ctags to include the file language in the tag entries (needed for syntax names)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3975",
+      "filename": "HighlightTags.zip",
+      "script_version": "1.0",
+      "date": "2005-03-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "952",
+        "user_name": "Timeframed",
+        "first_name": "Gary",
+        "last_name": "Holloway",
+        "email": "gary at castandcrew dot com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

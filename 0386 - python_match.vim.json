@@ -1,0 +1,42 @@
+{
+  "script_id": "386",
+  "name": "python_match.vim",
+  "summary": "Extend the % motion and define g%, [%, and ]% motions for Python files",
+  "script_type": "ftplugin",
+  "description": "This script redefines the % motion so that (in addition to its usual behavior)\nit cycles through if/elif/else, try/except/catch, for/continue/break, and\nwhile/continue/break structures.  The script also\ndefines g% to cycle in the opposite direction.  Two other motions, [% and ]%,\ngo to the start and end of the current block, respectively.\n\nAll of these motions should work in Normal, Visual, and Operator-pending\nmodes.  For example, d]% should delete (characterwise) until the end of the\ncurrent block; v]%d should do the same, going through Visual mode so that\nyou can see what is being deleted; and V]%d makes it linewise.",
+  "install_details": "Copy the file to your ftplugin/ directory.  If, for some reason, you want to\nchange the name of the file, copy it to ftplugin/python/ or :source it from\nftplugin/python.vim .",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2366",
+      "filename": "python_match.vim",
+      "script_version": "0.5",
+      "date": "2003-10-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "I added support for for and while loops:  % and g% go between the start of the block and either break or continue lines.\n\nI reorganized the code and made several minor improvements.  For example, [% and ]% now accept a count,  `` goes back to where you started, and g% does nothing (insteadof acting like the default %) if the cursor starts on a line that does not begin with a recognized key word."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1138",
+      "filename": "python_match.vim",
+      "script_version": "0.4",
+      "date": "2002-08-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "script_id": "2706",
+  "name": "PA_ruby_ri",
+  "summary": "Plugin for getting `ri` documentation while you working with your ruby-like file",
+  "script_type": "utility",
+  "description": " So, you are working with any ruby-like document(.rb, .rhtml, .rjs, etc) and need get to know some information regarding any ruby entity.\n In normal mode, put cursor on the word and press ,ri buttons. The ruby ri documentation will appear in command screen.\n Or, in visual mode, select needed word and press ,ri buttons. The ruby ri documentation will appear in command screen.\n That's all.\n",
+  "install_details": "To install:\n  - Download the PA_ruby_ri.zip.\n  - Extract the zip archive into your runtime directory. The archive contains plugin/PA_ruby_ri.vim, and doc/PA_ruby_ri.txt.\n  - Start Vim or goto an existing instance of Vim.\n  - Execute the following command:\n\n      :helptag <your runtime directory/doc>\n\n    This will generate all the help tags for any file located in the doc directory.\n\nThis plugin is only available if 'compatible' is not set and your operating system has installed ruby `ri` program.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10959",
+      "filename": "PA_ruby_ri.zip",
+      "script_version": "0.0.1",
+      "date": "2009-07-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17141",
+        "user_name": "andrijpu",
+        "first_name": "Andrij",
+        "last_name": "Pukalskyy",
+        "email": "andrijpu at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

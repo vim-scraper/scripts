@@ -1,0 +1,26 @@
+{
+  "script_id": "2185",
+  "name": "git:file.vim",
+  "summary": "open any version of a file in git",
+  "script_type": "utility",
+  "description": "Allows for opening <branch>:<file> patters using a git repo.\n\nYou can open a file from the shell:\n\n    vim HEAD~10:filename\n\nor from inside vim:\n\n    :e branch:filename\n    :sp tag:filename\n\nyou could even check what changed between the current edits and another revision:\n\n    :diffthis\n    :vsp HEAD:%\n    :diffthis\n\nbut that's what gitdiff.vim (vimscript#1846) is for.",
+  "install_details": "copy to ~/.vim/plugins/git:file.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8416",
+      "filename": "git:file.vim",
+      "script_version": "0.1",
+      "date": "2008-03-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1186",
+        "user_name": "bartman",
+        "first_name": "Bart",
+        "last_name": "Trojanowski",
+        "email": "bart-vim at jukie.net",
+        "homepage": "http://www.jukie.net/~bart/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

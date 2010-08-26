@@ -1,0 +1,154 @@
+{
+  "script_id": "551",
+  "name": "Mines",
+  "summary": "Play Mines with vim",
+  "script_type": "game",
+  "description": "Mines is a Vim plugin, but you can also source it in.  Mines includes cecutil.vim and Rndm.vim (for screen restoration and for pseudo-random number generation).  The latest developments in Mines.vim will always be available at\n\n    http://mysite.verizon.net/astronaut/vim/index.html#MINES\n\n    Games:\n        \\mfe : play an easy mines game\n        \\mfm : play a  medium-difficulty mines game\n        \\mfh : play a  high-difficulty mines game\n        \\mfr : restore a game\n\nNote that using the \\mf_ maps above will save the files showing in all windows and save your session.  Although I've used the backslash in the maps as shown here, actually they use <Leader> so you may customize your maps using mapleader as you wish.\n\nMines.vim is a use-at-your-own-risk game.  However, an effort has been made to preserve your files.  The game does a \"windo w\" and uses mksession to both save your working files that are showing in your windows and to preserve your window layout for subsequent restoration.\n\nOn many terminals, all you need to do is to click with the left mouse (to see what's there, or maybe to go BOOM!) or to click with the rightmouse to flag what you think is a mine.\n\n    More Maps:\n\n     -Play-\n        x   move the cursor around the field;\n            pressing x is just like pressing a\n            <leftmouse> -- find out what's\n            hidden!\n\n        f   just like the <rightmouse>, flag\n            what's under the cursor as a mine\n\n     -Control-\n        s   suspend the game, restore the display\n            and session  (\\mfr will subsequently\n            restore the game)\n\n        q   quit the game, restore the display\n\n     -New Games-\n        E   starts up a new easy game \n            (only while an old game is showing)\n\n        M   starts up a new medium game\n            (only while an old game is showing)\n\n        H   starts up a new hard game\n            (only while an old game is showing)\n\nThe objective of the game is to flag all mines and to reveal all safe squares.  As soon as you click a <leftmouse> or x, the square under the cursor is revealed with either a count of the number of bombs around it or as a BOOM.\n\nIf you win Minnie will do a cartwheel for you!\n\nSigh -- there appears to be a problem with Sun Solarus dtterms -- Mines highlights several characters with the same foreground and background colors, and this action appears to turn the cursor off on dtterms.  I'm afraid I don't know how to work around this; does anyone know how to turn the cursor back on???\n\nThank you for rating Mines.vim -- good luck!\n",
+  "install_details": "1. Make sure you have at least v18 of vimball:\n   http://mysite.verizon.net/astronaut/vim/index.html#VIMBALL\n   -or-\n   vimscript#1502\n   (if you have vim 7.1a or later, you probably can skip this step)\n\n2. vim Mines.vba.gz\n   :so %\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11139",
+      "filename": "Mines.vba.gz",
+      "script_version": "17",
+      "date": "2009-08-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* Pressing \"x\" when atop an \"f\" now is a no-op; one must use an \"f\" to clear an \"f\"\n* Attempting to modify a completed minefield no longer produces not-modifiable error messages.\n* cecutil bug fix incorporated\n* bugfix: works with simple .vimrcs; I usually use (:set ve-all), and the lack of virtualedit was causing problems.\n\nEnjoy!  On easy mode, I win 51.7% of the time on Easy mode..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6764",
+      "filename": "Mines.vba.gz",
+      "script_version": "16",
+      "date": "2007-02-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "On wins, percentage won now shown to 3 decimal places.\nWorks with Rndm.vim to save seeds in $HOME/.seed to improve pseudo-random nature of games.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6619",
+      "filename": "Mines.vba.gz",
+      "script_version": "15",
+      "date": "2007-01-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "At end of game due to hitting a mine, empty squares mistakenly flagged as bombs are shown with a blue background\nNow includes cecutil to handle saving/restoring user maps\nInsures that it cleans up the -Mines- file\nFlickering flood bug fixed\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5881",
+      "filename": "Mines.vba.gz",
+      "script_version": "14",
+      "date": "2006-06-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Added \"Flags Used\" field while playing.\nNew commands for speedier play: pressing \"c\" changes corner, pressing 0,$,gg,G changes cursor position but stays inside the minefield.\nImproved playability: medium is now 15% mines on an 18x18 grid, hard is 18% mines.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4950",
+      "filename": "Mines.tar.gz",
+      "script_version": "13",
+      "date": "2006-01-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "When you win, Minnie will tell you your winning percentage to the nearest 1/10 percent.\nMines now uses cecutil to save/restore user maps.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4913",
+      "filename": "Mines.vim.gz",
+      "script_version": "12",
+      "date": "2005-12-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Mines's winning banner now includes a percentage of wins.\nWhen Rndm.vim is missing, Mines will issue a warning about it (and where to get Rndm.vim)\nAny players out there?  I've now got a 47% winning rate with Easy mode...\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3394",
+      "filename": "Mines.vim.bz2",
+      "script_version": "11",
+      "date": "2004-08-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "1: An X will now mark the bomb that went off\n2: Flipped the cterm=NONE and fg/bg specs about; some machines were showing all bold which equated to one color.\n3: bugfix: an \"f\" on a previously determined site (whether numbered or blank) will now have no effect\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3290",
+      "filename": "Mines.vim.bz2",
+      "script_version": "10",
+      "date": "2004-07-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Highlighting is now fixed after a colorscheme change.  The updatetime is now set to 200ms during the game (it gets restored) to facilitate the timing statistics and colorscheme handling.  Statistics are now kept separately for each size, and better streak statistics are kept, too.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3188",
+      "filename": "Mines.vim.bz2",
+      "script_version": "9",
+      "date": "2004-06-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "For some reason I didn't consider light backgrounds before -- Mines.vim now displays well on light as well as dark backgrounds.  To do so it uses the \"background\" option's setting, which colorschemes normally set (in the colorscheme sampler, only brown bw c dante delek\ndon't)."
+    }
+  ]
+}

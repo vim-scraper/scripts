@@ -1,0 +1,26 @@
+{
+  "script_id": "907",
+  "name": "html_umlaute",
+  "summary": "replaces german Umlaute with their HTML Encoding on saving",
+  "script_type": "ftplugin",
+  "description": "Useful for all people who edit german websites with Vim.\nOn loading a HTML file, this script replaces all the html-encoded german Umlaute (&*uml;) with their normal Ascii-Chars (ä,ö,ü, and ß) so they're more easily readable.\n\nWhen you save the file, all Ascii-Chars are replaced by the HTML Encoding. Could be extended to handle other chars as well (except for < > and \" which could only be replaced context-sensitive...) but I decided to use it only for these german letters...",
+  "install_details": "put it into your ~/.vim/plugin/ folder",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2740",
+      "filename": "html_umlaute.vim",
+      "script_version": "1.1",
+      "date": "2004-02-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4444",
+        "user_name": "tteifel",
+        "first_name": "Timo",
+        "last_name": "Teifel",
+        "email": "timo at teifel-net.de",
+        "homepage": "http://www.teifel.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

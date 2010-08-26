@@ -1,0 +1,42 @@
+{
+  "script_id": "2895",
+  "name": "PyPit",
+  "summary": "Python version of pitconfig.vim",
+  "script_type": "utility",
+  "description": "You can put configurations such as passwords or user names out of vimrc.\n\nWhen you want to backup vimrc into public repository service such as GitHub, you may put secret informations out of vimrc.\nBut how?\n\npypit.vim (and its parents, pitconfig.vim and rbpit.vim) can.\n\nAs pitconfig.vim requires Perl interface, and rbpit.vim requires Ruby interface, pypit.vim requires Python interface.",
+  "install_details": "1) Download zip archive and unzip it.\n\n2) Put doc and plugin directory in:\n- Windows: $HOME/vimfiles\n- UNIX (include Cygwin): $HOME/.vim\n\n3) install Pit Python module using easy_install:\n$ easy_install pit\n(if you are in Linux, you may use package manager such as apt or yum)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11946",
+      "filename": "pypit.zip",
+      "script_version": "0.0.2",
+      "date": "2009-12-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18635",
+        "user_name": "omasanori",
+        "first_name": "Masanori",
+        "last_name": "OGINO",
+        "email": "masanori.ogino at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix many bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11935",
+      "filename": "pypit.zip",
+      "script_version": "0.0.1",
+      "date": "2009-12-22",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18635",
+        "user_name": "omasanori",
+        "first_name": "Masanori",
+        "last_name": "OGINO",
+        "email": "masanori.ogino at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

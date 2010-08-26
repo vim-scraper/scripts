@@ -1,0 +1,122 @@
+{
+  "script_id": "1603",
+  "name": "tcl.vim",
+  "summary": "tcl syntax file",
+  "script_type": "syntax",
+  "description": "tcl.vim (syntax)\n\n    An updated and complete syntax coloring scheme for tcl. Uses the 12 syntax rules of tcl as a starting point.\n\nADDITIONS/CORRECTIONS:\n    \n    Line Continues can be optionally highlighted as Warnings.\n\n    [set set set] does the right thing.\n\n    [set ^canvas [canvas create ...]] does the right thing.\n\n    For [list ...], the subsequent expression is lit like a normal command. Also for [uplevel xx ...].\n\n    The improved interaction of comments with line continuation and braces based on user feedback.\n\n\nFEATURES:\n\n    Handles a wide variety of escaped expressions correctly.\n\n    Multi-line comments following a semi-colon.\n\n    Spell checking (when spell is enabled) for strings and comments.\n\n    8.5 syntax: apply, chan, dict, lassign, lrepeat, unload, {expand} and {*} and the new math expressions, all the new words.\n\n    Added error state to line continues that have trailing spaces, these are errors in a tcl script and now they are immediately visible. (thank you Ilya).\n\n    \"if {0} {}\" multi-line commenting idiom.\n\n    Smart syntax folding for procs, namespaces, and several itcl constructs - only folds the outer braces\n\n    Nested parens brackets braces and quotes.\n\n    Primary commands, secondary commands, and options.\n\n    Highlights implicit expressions, such as the first group after an 'if' statement, or the second group after a 'for' statement.\n\n    Colors expressions and math keyworks; but only inside expressions.\n\n    Easily extended to include other packages. \n\n    Current Extensions:\n        snit (vimscript #1715)\n        sqlite (vimscript #1716)\n        itcl (vimscript #1765)\n        togl (vimscript #1766)\n        critcl (vimscript #1775) \n\n    Highlight options to adjust the level of coloring. (default is most 'colorful').\n ",
+  "install_details": "place in ~/.vim/syntax/\n\nNote: This will override the tcl syntax file that is installed with vim. If you require the old file, remove or rename this one.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7049",
+      "filename": "tcl.vim",
+      "script_version": "0.5.1",
+      "date": "2007-05-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "additional syntax for tcl 8.5a6"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6732",
+      "filename": "tcl.vim",
+      "script_version": "0.5",
+      "date": "2007-02-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "The result of great feedback from M.Lemburg, J.Seal and R.Terry. See Read Me for full list of additions and corrections."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6715",
+      "filename": "tcl.vim",
+      "script_version": "0.4.5",
+      "date": "2007-02-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "minor changes to fconfigure and canvas keywords"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6648",
+      "filename": "tcl.vim",
+      "script_version": "0.4.3",
+      "date": "2007-01-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "minor corrections. In extensions like snit, namespace qualifiers color the same as their keywords. Also corrected an issue with the ';# comment' pattern."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6609",
+      "filename": "tcl.vim",
+      "script_version": "0.4",
+      "date": "2007-01-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved parsing of the sort of escaped expressions that are common in regexp (and used to kill the syntax coloring). Fixed a script error for vim6 users. See description for all the goodies."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6443",
+      "filename": "tcl.vim",
+      "script_version": "0.3",
+      "date": "2006-11-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "full 8.5 support. lots of corrections. lots of additions."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5929",
+      "filename": "tcl.vim",
+      "script_version": "0.1",
+      "date": "2006-07-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8950",
+        "user_name": "sm_smithfield",
+        "first_name": "sm",
+        "last_name": "smithfield",
+        "email": "sm.smithfield at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

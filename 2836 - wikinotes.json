@@ -1,0 +1,26 @@
+{
+  "script_id": "2836",
+  "name": "wikinotes",
+  "summary": "Wikipedia syntax with added functionality for taking notes",
+  "script_type": "syntax",
+  "description": "It is very practical to keep all kinds of notes in simple text files (as for example suggested in David Allen's \"Getting Things Done\" and blogs like joelonsoftware.com).\n\nCombining this with the editing mightiness of vim and some syntax highlighting for better structuring, you've got an easy but powerful tool for notes at your hand.\n\nI used the Wikipedia syntax as base, since it's proven simple human-readable syntax, that is well known.\nThen I added a few features like c-style commenting and html link highlighting.\n\nScreenshot: http://www.oxpal.com/downloads/vim/wikinotes_syntax.png\n\nIt's most practical when setting this syntax file as standard for .txt or .wiki files. It then can also be used for editing actual Wikipedia text using vim (you might want to check out the firefox \"it's all text\" extension).",
+  "install_details": "Copy into your syntax folder as usual and activate it with:\n:set syntax=wikinotes\n\nBy adding the following line to your filetypes.vim, you can make  vim open all .wiki files automatically with this syntax:\nau BufNewFile,BufRead *.wiki setf wikinotes\n(replace *.wiki if you prefer another file extension)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11647",
+      "filename": "wikinotes.vim",
+      "script_version": "1.0",
+      "date": "2009-11-02",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "3579",
+        "user_name": "Thomas",
+        "first_name": "Thomas",
+        "last_name": "Schmall",
+        "email": "ts_nowhere at yahoo.com",
+        "homepage": "http://www.oxpal.com/"
+      },
+      "release_notes": "Initial upload."
+    }
+  ]
+}

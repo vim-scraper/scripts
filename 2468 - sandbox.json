@@ -1,0 +1,58 @@
+{
+  "script_id": "2468",
+  "name": "sandbox",
+  "summary": "A vim script for managing subversion sandbox.",
+  "script_type": "utility",
+  "description": "After installing this plugin, ':Sandbox <sandbox_directory>' on the command line will create a new buffer\nwhich list the currnet status of the sandbox. In the buffer, a few handy mapping are available like diffing, commit, revert, etc. See the help at  the bottom of the buffer.\n\nScreenshot:\nhttp://files.myopera.com/wzhliang/albums/649613/sandbox.png\n\nLinux only!\n\nDepends on: svn, meld or tkdiff for GUI diffing.\n ---------- H E L P -----------\n c         Commit a single file or selected files.\n d         Diff the file specified in the current line.\n e         Open the file in question in a new tab.\n r         Revert a single file or selected files.\n t         Select/Unselect a single file.\n u, U    Update a single file or update all files.\n v        Resolved a single file or selected files.\n C-D     Reset selection.\n <F5>    Refresh the buffer.\n q       Quit\n",
+  "install_details": "This plugin will be distributed as a vimball. So simply edit the vimbal and :so it.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13270",
+      "filename": "sandbox_0.3.vba",
+      "script_version": "0.3",
+      "date": "2010-06-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3397",
+        "user_name": "lang2",
+        "first_name": "Wenzhi",
+        "last_name": "Liang",
+        "email": "wenzhi.liang at gmail.com",
+        "homepage": "http://vimcdoc.sf.net"
+      },
+      "release_notes": "Add F6 to switch between GUI tool and vcscommand.vim.\nBetter default behaviour.\nMore robust.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10613",
+      "filename": "sandbox_0.2.vba",
+      "script_version": "0.2",
+      "date": "2009-05-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3397",
+        "user_name": "lang2",
+        "first_name": "Wenzhi",
+        "last_name": "Liang",
+        "email": "wenzhi.liang at gmail.com",
+        "homepage": "http://vimcdoc.sf.net"
+      },
+      "release_notes": "Now svn 1.6 compatible. \nAdded support for using vcscommand.vim\nSupport multiple sandbox at the same time.\nAdded more commands.\nSpeed improvements.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9600",
+      "filename": "sandbox.vba",
+      "script_version": "0.1",
+      "date": "2008-12-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3397",
+        "user_name": "lang2",
+        "first_name": "Wenzhi",
+        "last_name": "Liang",
+        "email": "wenzhi.liang at gmail.com",
+        "homepage": "http://vimcdoc.sf.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

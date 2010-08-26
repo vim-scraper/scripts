@@ -1,0 +1,26 @@
+{
+  "script_id": "687",
+  "name": "VimTweak",
+  "summary": "The tweaking dll for GVim.exe.",
+  "script_type": "utility",
+  "description": "This should work on Win2k (or WinXP maybe)\n\nAlpha Window:\n  200/255 alpha\n  :call libcallnr(\"vimtweak.dll\", \"SetAlpha\", 200)\n  reset alpha\n  :call libcallnr(\"vimtweak.dll\", \"SetAlpha\", 255)\n\nMaximized Window:\n  Enable\n  :call libcallnr(\"vimtweak.dll\", \"EnableMaximize\", 1)\n  Disable\n  :call libcallnr(\"vimtweak.dll\", \"EnableMaximize\", 0)\n\nTopMost Window:\n  Enable\n  :call libcallnr(\"vimtweak.dll\", \"EnableTopMost\", 1)\n  Disable\n  :call libcallnr(\"vimtweak.dll\", \"EnableTopMost\", 0)\n",
+  "install_details": "copy vimtweak.dll to same directory with gvim.exe",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2103",
+      "filename": "vimtweak.zip",
+      "script_version": "0.1",
+      "date": "2003-06-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "103",
+        "user_name": "mattn",
+        "first_name": "Yasuhiro",
+        "last_name": "Matsumoto",
+        "email": "mattn.jp at gmail.com",
+        "homepage": "http://mattn.kaoriya.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

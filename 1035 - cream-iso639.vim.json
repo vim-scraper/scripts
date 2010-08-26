@@ -1,0 +1,26 @@
+{
+  "script_id": "1035",
+  "name": "cream-iso639.vim",
+  "summary": "Find ISO 639 language abbreviations and names",
+  "script_type": "utility",
+  "description": "Find the matching ISO 639 (http://www.loc.gov/standards/iso639-2/langcodes.html) language abbreviation or name when passed the other.\n\nUsage\n\n  Cream_iso639(word, ...)\n\no Test {word} for match of ISO639-compliant language name, 3- or 2-letter abbreviation:\n  * Returns name if {word} matches either abbreviation.\n  * Returns 3-letter if {word} matches name.\n  * Returns 0 if no match is made.\no Use {optional} argument to force a given return:\n  * Returns 3-letter if {optional} is \"3\" and {word} matches.\n  * Returns 2-letter if {optional} is \"2\" and {word} matches. (If no 2-letter exists, the 3-letter is returned.)\n  * Returns name if {optional} is \"name\" and {word} matches.\n  * Returns 0 if no match is made.\no Matching is case-insensitive. But return values are capitalized according to the standard. (Name is title case, abbreviations are lower case.)\no In a number of cases, ISO639-2 allows multiple descriptive names for a language. \n  * When passed the matching abbreviation, the function will return the preferred description (listed first in the ISO list). \n  * Conversely, any of the listed descriptions can be matched, not just the preferred.\n\nExamples\n\n  Condition where 2- and 3-letter abbreviations exist a language:\n\n  :echo Cream_iso639(\"abk\")                      returns \"Abkhazian\"\n  :echo Cream_iso639(\"ab\")                        returns \"Abkhazian\"\n  :echo Cream_iso639(\"Abkhazian\")           returns \"abk\"\n\n  :echo Cream_iso639(\"Abkhazian\", \"3\")    returns \"abk\"\n  :echo Cream_iso639(\"abk\", \"3\")                returns \"abk\"\n  :echo Cream_iso639(\"ab\", \"3\")                  returns \"abk\"\n  :echo Cream_iso639(\"Abkhazian\", \"2\")    returns \"ab\"\n  :echo Cream_iso639(\"abk\", \"2\")                returns \"ab\"\n  :echo Cream_iso639(\"ab\", \"2\")                  returns \"ab\"\n  :echo Cream_iso639(\"Abkhazian\", \"name\")  returns \"Abkhazian\"\n  :echo Cream_iso639(\"abk\", \"name\")        returns \"Abkhazian\"\n  :echo Cream_iso639(\"ab\", \"name\")          returns \"Abkhazian\"\n\n  Condition where a 2-letter abbreviation doesn't exist for language:\n\n  :echo Cream_iso639(\"Achinese\")             returns \"ace\"\n  :echo Cream_iso639(\"ace\")                       returns \"Achinese\"\n  :echo Cream_iso639(\"Achinese\", \"2\")      returns \"ace\"\n  :echo Cream_iso639(\"ace\", \"2\")               returns \"ace\"\n\n  Name or abbreviation unmatched:\n\n  :echo Cream_iso639(\"not-a-name\")         returns 0\n  :echo Cream_iso639(\"not\")                       returns 0\n\n",
+  "install_details": "\nSimply copy this file and paste it into your vimrc. Or you can drop the entire file into your plugins directory.\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3244",
+      "filename": "cream-iso639.vim",
+      "script_version": "1.0",
+      "date": "2004-07-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "430",
+        "user_name": "digitect",
+        "first_name": "Steve",
+        "last_name": "Hall",
+        "email": "digitect at mindspring.com",
+        "homepage": "http://cream.sourceforge.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

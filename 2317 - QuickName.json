@@ -1,0 +1,42 @@
+{
+  "script_id": "2317",
+  "name": "QuickName",
+  "summary": "The most convenient way navigating opened buffers, incremental search by name",
+  "script_type": "utility",
+  "description": "The most convenient way to navigate currently opened buffers.\n\nDefault hot key is F3.\n\nInitially, QuickName display the full list of opened buffers in a compact way (multi-column) inside command area. As you type, QuickName narrows the list to only buffers with matched name. Hit <Enter> to open selected buffer. Hit <Esc> or hot key (default F3) again to close QuickName.\n\nWhen QuickName is active, arrow keys and backspace function as expected.\n\nMatching rule: thefile.vim can be matched with any of thefil, thefi.vim, thfl.vm. Guess why!\n\nShould QuickName integrate with QuickBuf, and how?\nAny ideas and bug reports, please send to palnart@gmail.com.\n",
+  "install_details": "Put qname.vim in plugin directory, or source it via Vim startup script.\n\nTo set QuickName hot key to <key>, put this line in your Vim startup script:\n    let g:qname_hotkey = \"<key>\"\nBy default, hot key is <F3>, as if in your startup script has the line:\n    let g:qname_hotkey = \"<F3>\"\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11036",
+      "filename": "qname.vim",
+      "script_version": "1.1",
+      "date": "2009-07-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12520",
+        "user_name": "palnart",
+        "first_name": "pal",
+        "last_name": "nart",
+        "email": "palnart at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "ADD: Key Shift+Enter open buffer in a new horizontally split window. Thanks to contribution by Salman Halim\nADD: Key Ctrl+U reset input line and show all buffers\nFIX: If a buffer is already associated with a window, navigate to that window instead of opening in current window"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9047",
+      "filename": "qname.vim",
+      "script_version": "1.0",
+      "date": "2008-07-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12520",
+        "user_name": "palnart",
+        "first_name": "pal",
+        "last_name": "nart",
+        "email": "palnart at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

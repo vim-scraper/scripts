@@ -1,0 +1,42 @@
+{
+  "script_id": "1546",
+  "name": "perl_search_lib",
+  "summary": "update &l:path by tokens from perl \"use lib\" sentence",
+  "script_type": "ftplugin",
+  "description": "this is after plugin.",
+  "install_details": "put archive content to your vim after-directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5717",
+      "filename": "perl_search_lib.tar.bz2",
+      "script_version": "0.3",
+      "date": "2006-05-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10111",
+        "user_name": "Utvuk",
+        "first_name": "Afanasov",
+        "last_name": "Dmitry",
+        "email": "ender at atrus.ru",
+        "homepage": ""
+      },
+      "release_notes": "fixed bug with switching buffers: ftplugin/perl.vim is executed every time user switching buf and reset l:path.\n\nadded global variable perl_local_path"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5709",
+      "filename": "perl_search_lib.tar.bz2",
+      "script_version": "0.1",
+      "date": "2006-05-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10111",
+        "user_name": "Utvuk",
+        "first_name": "Afanasov",
+        "last_name": "Dmitry",
+        "email": "ender at atrus.ru",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

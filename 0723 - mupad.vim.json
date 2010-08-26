@@ -1,0 +1,90 @@
+{
+  "script_id": "723",
+  "name": "mupad.vim",
+  "summary": "Syntax file for MuPAD",
+  "script_type": "syntax",
+  "description": "This is a syntax file for MuPAD programs. \n\nhttp://www.mupad.de/contrib.shtml",
+  "install_details": "Just put it in your ~/.vim/syntax \nand add\n\nau BufNewFile,BufRead *.mu  exe \"source ~/.vim/syntax/mupad.vim\"\n\nto your ~/.vimrc\n\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3009",
+      "filename": "mupad.vim",
+      "script_version": "1.0",
+      "date": "2004-05-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3000",
+        "user_name": "stumbo",
+        "first_name": "Fabio",
+        "last_name": "Stumbo",
+        "email": "f.stumbo at unife.it",
+        "homepage": ""
+      },
+      "release_notes": "Small change in the way the names of procedures are highlighted. Moreover, they are highlighted also if the name is specified after the command \"name\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2712",
+      "filename": "mupad.vim",
+      "script_version": "0.4",
+      "date": "2004-02-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3000",
+        "user_name": "stumbo",
+        "first_name": "Fabio",
+        "last_name": "Stumbo",
+        "email": "f.stumbo at unife.it",
+        "homepage": ""
+      },
+      "release_notes": "Added Axiom, Category and Domain library"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2650",
+      "filename": "mupad.vim",
+      "script_version": "0.3",
+      "date": "2004-01-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3000",
+        "user_name": "stumbo",
+        "first_name": "Fabio",
+        "last_name": "Stumbo",
+        "email": "f.stumbo at unife.it",
+        "homepage": ""
+      },
+      "release_notes": "Corrected some bug \nRedefined all colors (see the colors section)\nAdded all builtin functions (mupad 2.5.3)\nAdded the Type library\nImproved sanity check"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2246",
+      "filename": "mupad.vim",
+      "script_version": "0.2",
+      "date": "2003-08-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3000",
+        "user_name": "stumbo",
+        "first_name": "Fabio",
+        "last_name": "Stumbo",
+        "email": "f.stumbo at unife.it",
+        "homepage": ""
+      },
+      "release_notes": "Added definition syntax with semicolon checking and made some clean up"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2192",
+      "filename": "mupad.vim",
+      "script_version": "0.1",
+      "date": "2003-07-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3000",
+        "user_name": "stumbo",
+        "first_name": "Fabio",
+        "last_name": "Stumbo",
+        "email": "f.stumbo at unife.it",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

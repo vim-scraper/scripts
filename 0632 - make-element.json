@@ -1,0 +1,42 @@
+{
+  "script_id": "632",
+  "name": "make-element",
+  "summary": "generic imap to make an xml element of any word you type",
+  "script_type": "utility",
+  "description": "In insert mode, typing anyword,,, gets translated to an xml element named 'anyword'\n\nExample 1:\n      anyword,,,<cr><tab>xsl:if,,, ==>\n      <anyword>\n            <xsl:if>\n            </xsl:if>\n      </anyword>\nwith the cursor after the element open tag. \n\nIf anyword is not on a line by itself, no newline is added.\n\nExample 2:\nThis is a bold,,, statement ==> This is a <bold>statement</bold>\n\nUse it all the time myself, in docbook and with some custom dtd's.\n\nSee vimtip #465",
+  "install_details": "just source it from ftplugin/xml.vim or ~/.vimrc or _vimrc",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3835",
+      "filename": "make-element.vim",
+      "script_version": "1.1",
+      "date": "2005-02-06",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "2229",
+        "user_name": "bvdeenen",
+        "first_name": "Bart",
+        "last_name": "van Deenen",
+        "email": "info at vandeenensupport.com",
+        "homepage": "http://www.vandeenensupport.com"
+      },
+      "release_notes": "This version also works with single character xml elements"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1956",
+      "filename": "make-element.vim",
+      "script_version": "1.0",
+      "date": "2003-05-01",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "2229",
+        "user_name": "bvdeenen",
+        "first_name": "Bart",
+        "last_name": "van Deenen",
+        "email": "info at vandeenensupport.com",
+        "homepage": "http://www.vandeenensupport.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

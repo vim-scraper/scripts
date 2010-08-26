@@ -1,0 +1,26 @@
+{
+  "script_id": "434",
+  "name": "Get UNC Path (Win32)",
+  "summary": "Get/Yank a UNC pathname using 'net share'",
+  "script_type": "utility",
+  "description": "The function GetUNCPathOf  tries to find a UNC pathname for a given file by searching the 'net share' list.\nIf it fails, it returns the filename it was passed.\n\nThe map <localleader>yf  yanks the filename into \"*  - the clipboard, for use in emails or browsers.\n\nUseful for placing filenames into intranet emails.\n\n//.ichael G.",
+  "install_details": "Install as a plugin - or source as required",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1271",
+      "filename": "uncpath.vim",
+      "script_version": "0.1",
+      "date": "2002-10-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

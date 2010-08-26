@@ -1,0 +1,90 @@
+{
+  "script_id": "2055",
+  "name": "ttagecho",
+  "summary": "Show current tag information",
+  "script_type": "utility",
+  "description": "This plugin is similar to echofunc (vimscript #1735) to which it owes \nmuch inspiration and two lines of code. echofunc is probably also better \ntested.\n\nIt displays some information about the tag under the cursor or mouse \npointer either in the echo area or as balloon help (see \n|g:ttagecho_balloon_patterns|). If there are more than one tags that \nmatch, you can loop through the tags by invoking the respective commands \nrepeatedly.\n\nIf hookcursormoved (vimscript #2037, version >= 0.4) is installed, for \ncertain filetypes (see |g:ttagecho_parentheses_patterns|) it will \ndisplay the information in the echo area also if the cursor moves over a \nround parenthesis.\n\nIf you don't like the default format for the tags, you can define the \nfunction TTagechoFormat_{&filetype}(a:tag) that should return some nicely \nformatted information.\n",
+  "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0, \nplease make sure, you have the current version of vimball (vimscript \n#1502) installed.\n\nSuggested maps (to be set in ~/.vimrc): >\n    noremap <Leader>g+ :TTagechoWord<cr>\n    noremap <Leader>g* :TTagechoWord!<cr>\n    noremap <Leader>g? :TTagechoWords!<cr>\n\nSuggested enhancement:\n    hookcursormoved (vimscript #2037)\n\n\nAlso available via git\nhttp://github.com/tomtom/ttagecho_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11544",
+      "filename": "ttagecho.vba.gz",
+      "script_version": "0.6",
+      "date": "2009-10-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- NEW: g:ttagecho_char_rx: custom keyword char regexp\n- Always use compact style when there is only one tag that matches and if many_lines < 0\n- Find the right keyword, when the current line contains more than one"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9311",
+      "filename": "ttagecho.vba.gz",
+      "script_version": "0.5",
+      "date": "2008-10-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Make sure tlib is loaded even if it is installed in a different rtp-directory (thanks to ... sorry, cannot find the e-mail)\n- Use tlib#notify#TrimMessage() (thanks to Erik Falor)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7981",
+      "filename": "ttagecho.vba.gz",
+      "script_version": "0.4",
+      "date": "2007-11-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Adapt for hookcursormoved >= 0.7\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7938",
+      "filename": "ttagecho.vba.gz",
+      "script_version": "0.3",
+      "date": "2007-11-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Customize display: g:ttagecho_tagwidth\n- g:ttagecho_matchbeginning\n- Check for has('balloon_eval')\n- Restore showmode only on InsertLeave events (not on CursorHold(I) events).\n- Check only opening parentheses (require hookcursormoved 0.5)\n- Use [bg]:tlib_tags_extra if defined.\n- Require tlib >= 0.20\n- g:ttagecho_substitute became g:tlib_tag_substitute\n- Removed support for: [bg]:ttagecho_more_tags (use [bg]:tlib_tags_extra \ninstead)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7843",
+      "filename": "ttagecho.vba.gz",
+      "script_version": "0.1",
+      "date": "2007-10-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}
