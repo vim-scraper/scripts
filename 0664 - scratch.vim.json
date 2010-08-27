@@ -4,6 +4,9 @@
   "summary": "Plugin to create and use a scratch Vim buffer",
   "script_type": "utility",
   "description": "Overview\n\nYou can use the scratch plugin to create a temporary scratch buffer to store\nand edit text that will be discarded when you quit/exit vim. The contents\nof the scratch buffer are not saved/stored in a file.\n\nInstallation\n\n1. Copy the scratch.vim plugin to the $HOME/.vim/plugin directory. Refer to\n   the following Vim help topics for more information about Vim plugins:\n\n      :help add-plugin\n      :help add-global-plugin\n      :help runtimepath\n\n2. Restart Vim.\n\nUsage\n\nYou can use the following command to open/edit the scratch buffer:\n\n      :Scratch\n\nTo open the scratch buffer in a new split window, use the following command:\n\n      :Sscratch\n\nWhen you close the scratch buffer window, the buffer will retain the\ncontents. You can again edit the scratch buffer by openeing it using one of\nthe above commands. There is no need to save the scatch buffer.\n\nWhen you quit/exit Vim, the contents of the scratch buffer will be lost.\nYou will not be prompted to save the contents of the modified scratch\nbuffer.\n\nYou can have only one scratch buffer open in a single Vim instance. If the\ncurrent buffer has unsaved modifications, then the scratch buffer will be\nopened in a new window\n",
+  "rating_total": "48",
+  "rating_votes": "39",
+  "downloads": "2428",
   "install_details": "1. Copy the scratch.vim plugin to the $HOME/.vim/plugin directory.\n2. Restart Vim",
   "versions": [
     {

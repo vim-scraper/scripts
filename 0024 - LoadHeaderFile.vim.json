@@ -4,6 +4,9 @@
   "summary": "load filename from an #include line",
   "script_type": "utility",
   "description": "Here are the mappings I use for this script (which I'll use in my description)\n\nmap <F12> :call LoadHeaderFile( getline( \".\" ), 0 )<CR>\nmap <C-F12> :call LoadHeaderFile( getline( \".\" ), 1 )<CR>\n\nTo use the script, just have your cursor on a #include line and hit F12 to load the .h file or C-F12 to load the corresponding .cpp file.  It splits the window when it loads the file.  If it can't find the file it just gives you an error that it can't find the file.\n\nYou have to have your path set up correctly for it to work.  If you don't know how to do that, simply add a \"se path=.,c:/path/**,c:/another path/**\" to you _vimrc.  Obviously there is a better explanation of paths in the help.\n\nThe code works on includes with <> or \"\".  It only checks for .h and .cpp, but you could modify it to do more.  I kept it simple so it's quicker.\n\nAnd as I'm typing this up I noticed that the #include has to be at the beginning of the line...can't have spaces or tabs.  I'll fix that in the next version :)\n\nIf you see any flaws or ways to improve this script, please let me know since I'm still learning how to script.",
+  "rating_total": "22",
+  "rating_votes": "9",
+  "downloads": "1135",
   "install_details": "If you're using Vim 6.0, just put it in the plugins directory.  Otherwise, just source it with all your other functions.",
   "versions": [
     {

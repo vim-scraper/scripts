@@ -4,6 +4,9 @@
   "summary": "a script that check the syntax of a python file by pyflakes",
   "script_type": "ftplugin",
   "description": "You can check the syntax of a python file if you install pyflakes module in you system. It call pyflakes function to check the current python file and display error messages in quickfix window in vim. You can browse the error by usual quickfix command like 'cc' ,'cn' etc.\n\nThere are two global variant which you maybe want to define in your .vimrc\n\ng:pcs_hotkey      # run the checker, the default is  <localleader>cs\ng:pcs_check_when_saving   # when true, the checker automaticlly run while saving, the default is true\n\nWARNING: \n\n1. Vim compiled with +python\n2. Must install pyflakes in your system. The note is that the old version(<=0.2.1) is too old to identify the new syntax of python2.5, 2.6, so svn version is recomend.",
+  "rating_total": "16",
+  "rating_votes": "6",
+  "downloads": "702",
   "install_details": "copy the python_check_syntax.vim into ~/.vim/ftplugin",
   "versions": [
     {

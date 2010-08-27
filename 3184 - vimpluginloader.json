@@ -4,6 +4,9 @@
   "summary": "Plugin that helps to create complicated vim scripts",
   "script_type": "utility",
   "description": "This plugin provides the ability to autoload other plugins on demand, create \nglobal functions and commands and share plugin's functionality.\n\nFeatures:\n    &#8729; Autoloading plugins on FuncUndefined event.\n    &#8729; Autoloading plugins when their command is called.\n    &#8729; Autoloading plugins when their mapping is used.\n    &#8729; Autoloading plugins when their functionality is required.\n    &#8729; Displaying plugins' status.\n    &#8729; Unloading and reloading plugins (useful for plugin developers).\n    &#8729; Searching for a function number through registered plugins.",
+  "rating_total": "4",
+  "rating_votes": "1",
+  "downloads": "39",
   "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"vimpluginloader\"]) and add ``call scriptmanager#Activate([\"vimpluginloader\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.",
   "versions": [
     {

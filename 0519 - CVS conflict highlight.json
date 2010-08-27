@@ -4,6 +4,9 @@
   "summary": "This script highlights conflicts marked by CVS",
   "script_type": "syntax",
   "description": "I've created VIM syntax file for files where CVS\nfound a conflict.\n\nSuch files may be detected as containing such patterns:\n\n^<<<<<<< .*\n^=======$\n^>>>>>>> .*\n\nThis syntax file highlights areas where CVS marked a\nconflict, resolve conflict until no highlighting is left :)\n",
+  "rating_total": "1",
+  "rating_votes": "1",
+  "downloads": "720",
   "install_details": "Put this file into your vim syntax file directory.\n\nto activate script, use \n\n:set syntax=cvs_cnfl",
   "versions": [
     {

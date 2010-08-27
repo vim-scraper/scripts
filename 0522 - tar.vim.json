@@ -4,6 +4,9 @@
   "summary": "A vim plugin for browsing tarfiles",
   "script_type": "utility",
   "description": "Once this script is installed, attempting to edit a tarfile will present the\nuser with a list of files contained in the tar archive.  By moving the cursor\nover a filename and pressing ENTER, the contents of a file can be viewed in\nread-only mode, in a new window.  Unfortunately, write support for tarfile\ncomponents is not currently possible.\n\nRequires GNU tar, or a tar implementation that supports the \"P\" (don't strip\nout leading /'s from filenames), and \"O\" (extract files to standard output)\noptions.  Additionally, gzip is required for handling *.tar.Z, *.tar.gz,\nand *.tgz compressed tarfiles, and bzip2 is required for handling *.tar.bz2\ncompressed tarfiles.  A unix-like operating system is probably also required.\n",
+  "rating_total": "74",
+  "rating_votes": "33",
+  "downloads": "1391",
   "install_details": "Place this file, tar.vim, in your $HOME/.vim/plugin directory, and\neither restart vim, or execute \":source $HOME/.vim/plugin/tar.vim\"\n",
   "versions": [
     {

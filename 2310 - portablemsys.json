@@ -4,6 +4,9 @@
   "summary": "Use msys as Portable GVim's shell",
   "script_type": "utility",
   "description": "This plugin automatically sets the shell option to point to msys location.\nIt lets you have both Portable GVim and msys+MinGW on your portable usb stick, without needing to set the path every time you plug in the usb stick, thus giving you portable compiling powers :-)\n",
+  "rating_total": "13",
+  "rating_votes": "4",
+  "downloads": "344",
   "install_details": "1. Place portablemsys.vim inside your Portable GVim's plugin folder\n2. Edit your vimrc file to include the line:\n        let Msys='PortableApps\\msys'\n    or wherever your msys is located at (in relation to GVim's drive letter).\n3. Remove the following line from your msys\\etc\\profile file:\n        cd $HOME\n    or any other directory changes.\n4. Enjoy.",
   "versions": [
     {

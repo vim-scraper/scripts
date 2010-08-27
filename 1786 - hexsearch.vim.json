@@ -4,6 +4,9 @@
   "summary": "search with a hexadecimal string",
   "script_type": "utility",
   "description": "This is a preprocessor to Vim's search command.\nIt converts a sequence of hex numbers into a usual search pattern\n(one char per hex-code).  Searching is literal.\n\nExample:\n    :HexSearch 56696d 20 72756c657a21\nfinds ... you know.\n\nIf 'fileformat' is unix or mac, there is (almost) no difference to searching\nfor a hex string in a hex-editor.\n\nHere is the \"almost\" case for 'ff=unix':\n    :HexSearch 0A\nfinds a linebreak at the end of the file, even if there isn't one.\n\nSee inside script for more details.",
+  "rating_total": "1",
+  "rating_votes": "1",
+  "downloads": "438",
   "install_details": ":source hexsearch.vim\n\nwhen needed or put script in plugin folder",
   "versions": [
     {

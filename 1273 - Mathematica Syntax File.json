@@ -4,6 +4,9 @@
   "summary": "Syntax highlighting file for Mathematica code",
   "script_type": "syntax",
   "description": "[ Note, as of May 2005,  this is included in Vim7 ]\n\nThis file greatly extends the old Mathematica syntax highlighting that has traditionally come with vim.  It has substantial support for Mathematica patterns, operators, and includes comments notation goodies, such as special function comments beginning with (**.  Try it out and let me know what you think.\n\nAdd autoindenting vimscript #1274, salt and pepper to taste.",
+  "rating_total": "4",
+  "rating_votes": "4",
+  "downloads": "464",
   "install_details": "Install instructions are also in the file.\n\nBasically:\n\n   * Drop mma.vim into $HOME/.vim/syntax/\n     (%HOME%\\vimfiles\\syntax\\ for Windows)\n \n   * Open a Mathematica file**\n\n**Note that both Mathematica and Matlab use .m file extensions, so if you are editing Mathematica .m files, you need to either manually :set ft=mma or edit your filetype.vim file.\n\nI use the following autocommand in filetype.vim:\n\n   au! BufRead,BufNewFile *.m      set ft=mma sw=2",
   "versions": [
     {

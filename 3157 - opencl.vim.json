@@ -4,6 +4,9 @@
   "summary": "Syntax file for OpenCL 1.1",
   "script_type": "syntax",
   "description": "Script provides syntax highlight for OpenCL (Open Computing Language) syntax files (*.cl).",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "54",
   "install_details": "Place file within /syntax\nEdit filetype.vim:\n\nadd lines -  \n\" OpenCL\nau BufNewFile,BufRead *.cl\t\t\tsetf opencl\n\nRemove- (stop vim from recognizing *.cl as common lisp)\n*.cl from Lisp \n",
   "versions": [
     {

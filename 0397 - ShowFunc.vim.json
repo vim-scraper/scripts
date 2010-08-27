@@ -4,6 +4,9 @@
   "summary": "Creates a list of all tags / functions from a window, all windows or buffers.",
   "script_type": "utility",
   "description": "This script creates a hyperlink list of all the tags (i.e. functions, subroutines, classes, macros or procedures) from a single buffer, all open windows or buffers and displays them in a dynamically sized cwindow.\n\nSupported File types with Exuberant Ctags version 5.5.4 (and newer):  Asm, Asp, Awk, Beta, C, C++, c#, Cobol, Eiffel, Erlang, Fortran, Java, Javascript, Lisp, Lua, Make, Pascal, Perl, PHP, Python, PL/SQL,  REXX, Ruby, Scheme, Shell, SLang, SML, SQL, Tcl, Vera, Verilog, Vim, YACC......and any user defined (i.e. --regex-lang=) types. \n\nDefault Key Mappings:\n<F1>    Run scan and open cwindow.\n              \nTo reassign add the following to your .vimrc:\n      map  NewKey   <Plug>ShowFunc\n      map! NewKey   <Plug>ShowFunc\nFor example to change the <F1> mapping to <F7>\n      map  <F7>   <Plug>ShowFunc\n      map! <F7>   <Plug>ShowFunc\n\nShowFunc Window commands:\nc       Close cwindow.\nh       Display help dialog.\nr        Refresh.\ns       Change file sort, results will appear in either alphabetical or file order.  (Default: file order)\nt       Change scan type, results will be from either the current file, all open windows or all open buffers.  (Default: all open buffers)",
+  "rating_total": "197",
+  "rating_votes": "90",
+  "downloads": "9746",
   "install_details": "Put this file in the vim plugins directory (~/.vim/plugin/) to load it automatically, or load it with :so ShowFunc.vim.\n\nYou need Exuberant CTags installed for this function to work.\nWebsite: http://ctags.sourceforge.net/\nDebian: apt-get install exuberant-ctags\n\nHistory:\nThis script grew from an idea posted by Flemming Madsen on vimtip #79.",
   "versions": [
     {

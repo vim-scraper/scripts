@@ -4,6 +4,9 @@
   "summary": "Adds a SQLWorksheet type interface to Oracle SQL*Plus",
   "script_type": "utility",
   "description": "This small hack requires Tcl to be compiled into your\ncopy of Vim.\n\nThe default settings will allow this hack to work on\nthe default SQL*Plus temp file, afiedt.buf, only.\n\nTo use simply highlight the query you would like to\nrun and press Enter.  You should drop back down to\nSQL*Plus.  Do the usual '/' and your good to go.\n\nHave not tried this hack with PL/SQL or multiple\nQuery's but I cannot see why it won't work, or why it\nwould for that matter.\n\nBUGS\n----\n1) :wq causes an error message about writing the file.\n   Safe to ignore but would be nice to get rid of this.\n\n2) No checks to make sure you have highlighted a valid\n   Query.  Hence all hell breaks loose if you don't.\n\n3) You *HAVE* to have a trailing ';' on your Query for\n   this hack to work.  Would be nice if you didn't have\n   to have that.  Would also be nice if you could run\n   a group of statements.\n",
+  "rating_total": "4",
+  "rating_votes": "1",
+  "downloads": "405",
   "install_details": "Copy the script to ~/.vimrc.tcl then add this to your ~/.vimrc\n\nau BufNewFile,BufRead afiedt.buf tc sqlplus_reload\nau BufNewFile,BufRead afiedt.buf set ft=sql\nau VimLeave           afiedt.buf tc sqlplus_force_save\nmap  <F11> :tc sqlplus_force_save<cr>\nvmap ^M    :tc sqlplus<cr>\n\nif has(\"tcl\")\n  tclfile ~/.vimrc.tcl\nendif\n",
   "versions": [
     {

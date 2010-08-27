@@ -4,6 +4,9 @@
   "summary": "a wrapper for the glark command (a grep-like utility)",
   "script_type": "utility",
   "description": "This plugin provides one wrapper command for the glark command:\n\n    :Glark <args>\n\nExample: Find occurrences of \"foo\" and \"bar\" within 3 lines and \ndisplay 2 lines context:\n\n    :Glark -r -C 2 --and=3 foo bar *\n\nThe arguments are passed to the glark command.\n\nIt displays the output of the glark command (see below) in a window, \ndoes some highlighting and provides some handy key maps.\n\nIf you don't want to display context information, you're probably better\noff by setting 'grepprg' to \"glark --grep\".\n\nBe also aware that this plugin doesn't use vim's quickfix functionality\nas most grep plugins do.",
+  "rating_total": "3",
+  "rating_votes": "4",
+  "downloads": "672",
   "install_details": "Unzip the archive to ~/.vim or %HOME%/vimfiles.\n\nYou also need the glark command of course. glark (a ruby-based, \ngrep-like utility) was made by Jeff Pace and can be downloaded from:\n\n    http://glark.sourceforge.net\n\nMake sure your version is >= 1.7.5.\n\n\nAlso available via git\nhttp://github.com/tomtom/vimtlib/tree/master\n",
   "versions": [
     {

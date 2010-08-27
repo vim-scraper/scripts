@@ -4,6 +4,9 @@
   "summary": "automatically set time-stamp on modification",
   "script_type": "utility",
   "description": "this (very) lightweight script automatically updates the time-stamp on a file when you :write it out.\nthe time-stamp is of the form:\n     Last Change: Sat Mar 30 04:00 PM 2002 PST\n\nThe script is similar to the example given in :help autocmd, the difference being that the time-stamp already\nthere is checked. If it is identical to the one being added, then nothing is done. Since the time-stamp\nis truncated to the last hour, this ensures that the undo buffer is changed only for :write's every hour.\n\nSet g:timeStampLeader in your ~/.vimrc to change 'Last Change: ' \n(to 'Last modified: ' for instance)\n\nUse :NOMOD to force the time-stamp to be not updated.\nUse :MOD to change it back.\n\nPS: The update only works if the string 'Last Change: ' is found somewhere\nin the first 20 lines of the file. Only the first found occurence is processed.\n",
+  "rating_total": "39",
+  "rating_votes": "23",
+  "downloads": "1302",
   "install_details": "drop in ~/vimfiles/plugin (DOS) or ~/.vim/plugin (UNIX)\n",
   "versions": [
     {

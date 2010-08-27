@@ -4,6 +4,9 @@
   "summary": "a easy config auto complete popup",
   "script_type": "utility",
   "description": " a easy config auto complete popup plugin\n\n\"             You can put a user auto popup table in you .vimrc like this:\n\"             let useTable[filetype] = [[auto_exec_complete1, key_word], ...]\n\"\n\"             This is a example for c file.\n\"             let usrTable = {}\n\"             let usrTable[\"c\"] = [\n\"                         \\ [\"\\<c-x>\\<c-o>\",'\\k.','\\k->',\n\"                         \\ 'gtk_\\k\\{2,\\}','GTK_\\k\\{1,\\}','Gtk\\k\\{1,\\}',\n\"                         \\ 'g_\\k\\{2,\\}', 'G_\\k\\{1,\\}'],\n\"                         \\ [\"\\<c-n>\",'\\k\\{3,\\}'],\n\"                         \\]\n\"             When you type . -> gtk_(>2char) GTK_(>1char) Gtk_(>1char) \n\"             g_(>2char) G_(>1char) than <c-x><c-o> exec.\n\"             When you type >3char <c-n> exec.\n\nBlow is default auto popup table\n\"defTable: {{{1\nlet s:defTable = {}\nlet s:defTable[\"*\"]    = [\n            \\ [\"\\<c-n>\",'\\k\\{3,\\}']\n            \\]\nlet s:defTable[\"c\"]    = [\n            \\ [\"\\<c-x>\\<c-o>\",'\\k.','\\k->'],\n            \\ [\"\\<c-n>\",'\\k\\{3,\\}'],\n            \\]\nlet s:defTable[\"tex\"]  = [\n            \\ [\"\\<c-n>\",'\\\\\\k\\{2,\\}','\\([\\|{\\)\\.\\*\\k\\{2,\\}'],\n            \\]\nlet s:defTable[\"html\"] = [\n            \\ [\"\\<c-x>\\<c-o>\",'<','</','<\\.\\*\\s\\+\\k','<\\.\\*\\k\\+\\s\\*=\"\\k'],\n            \\]\n\n",
+  "rating_total": "38",
+  "rating_votes": "11",
+  "downloads": "221",
   "install_details": "Put this file in your VIM plugin dir  \n",
   "versions": [
     {

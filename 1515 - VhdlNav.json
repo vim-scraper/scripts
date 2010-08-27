@@ -4,6 +4,9 @@
   "summary": "Keeps track of your position in a VHDL file",
   "script_type": "utility",
   "description": "VHDL is very repetitive in nature.  Often, when looking at only a small section of code that's visibile in the window, it's difficult to glean exactly where you are.  \n\nFor example, if you have four instances of a component, each 100 lines long.  It can be difficult to know which instance your in without navigating away from your current spot, which I find annoying.\n\nTo address this, I wrote a script which shows a window displaying snippits of code representing what I consider the major entry points of the source.  The script then determines where you are relative to the snippits, and highlights the snippit above your current location.\n\nSnippits currently include:\nentity declaration\ncomponent declaration\nfirst line of an instatiation \nfirst line of a process\nhorizontal lines created from comments (displays the next line as the snippit)\n\nAs an added bonus, you can also double-click (or hit enter) in the Vhdl_Nav window to jump to the section of code represented by the snippit.\n\nThis isn't the first script I've ever written, but it's the first I've attempted to write for others to use.  So, while it's been working great for me, you've been warned.  I welcome any feedback and suggestions.",
+  "rating_total": "14",
+  "rating_votes": "7",
+  "downloads": "324",
   "install_details": "place VhdlNav.vim in your plugins directory",
   "versions": [
     {

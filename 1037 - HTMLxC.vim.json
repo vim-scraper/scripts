@@ -4,6 +4,9 @@
   "summary": "Edit hex color codes in HTML files easily using rgb decimal; Perl req&#039d.",
   "script_type": "utility",
   "description": "I&#039ve found that the default installed programs on my platform include several that specify colors as decimal r,g,b but none offer to show the color as the hexadecimal triplet used in HTML. It got to be very annoying to have to use a color browser or other graphics tool, then manually convert a color I liked to hex, before being able to even try out a color in a Web page I was building.\n\nThis small plugin utility just identifies the hex color spec under the cursor and pop-up dialogs (on GUI Vim) or prompts on the Vim commandline (on console Vim) for a decimal r g b -style spec (space-separated) and then inserts it as hex in replacement of the existing hex string.",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "345",
   "install_details": "Requires that Vim have been compiled with support for Perl (embedded perl interpreter). Someone is likely to come along and say this can be written in Vim w/o Perl. That&#039s fine. I like programming in Perl. I like my Vim to have Perl.\n\nJust place the HTMLxC.vim file in a plugin/ dir in one of your $VIMRUNTIME locations. It then can be loaded with an \\\"au\\\" command from an initialization script or explicitly w/ \\\":runtime!\\\" or \\\":source\\\". It does a key mapping ... <leader>*  (literally asterix) to call the plugin function.",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "Simple script to save you from \"ciw<tab><tab><tab>\" to align text.",
   "script_type": "utility",
   "description": "Simple script that allows you to easily tab a section of spaces to a desired\ncolumn; I.e. if you want all your comments to line up on virt col 41 try\n\":FeralAlign 41\" when your cursor is in a position to \"ciw\"; I.e. saves you\nfrom \"ciw<tab><tab><tab>\"etc. But that is about all this does (=\n\nWorks with single lines or ranges. Ranges must be specified by a single column,\nblock-wise visual selection; (i.e. \"<ctrl-v>j\"). So to align 5 lines, place\nyour cursor in a good spot (where a \"ciw\" wont keel something important; i.e.\nspaces before the comment chars) and \"<ctrl-v>4j:FeralAlign 41\"; easy as that.\n\nLimitation: Aligns to the nearest tabstop.\n\nThis script is possibly of academic value as a way to get a range command to\npreserve the cursors column.",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "669",
   "install_details": "This is a normal vim60 plugin.  Just drop it in /plugin/",
   "versions": [
     {

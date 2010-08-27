@@ -4,6 +4,9 @@
   "summary": "improved perl syntax highlighting",
   "script_type": "syntax",
   "description": "This file is based on the perl.vim syntax definition that comes with vim, but with some heavy modifications intended to improve vim's perl highlighting.\n\nThe list of changes includes:\n* 'new' and 'croak' are not keywords and no longer highlighted as such\n* Special highlighting for pragmas (e.g. \"use warnings\") now applies to all pragmas coming with perl\n* Fixed number highlighting (\"0X\" is not a valid hex prefix, \"L\" is not a valid suffix)\n* Fixed escape sequence highlighting (\"\\X123\" is not a hex escape, \"\\123\" is limited to three octal digits)\n* Lots of improvements in the matching of quoted constructs:\n  - vim no longer thinks \"!\" is a quoting operator (so \"!!\" works right)\n  - support for arbitrary quoting delimiters (e.g. \"m%...%\" works)\n  - I've also tried to make nesting work (e.g. \"s[foo[bar]][b[a]z]g\")\n* Full support for subroutine definitions (parsing of prototypes and attributes)\n* Recognizes v-strings and statement labels\n* \"=>\" quotes its LHS, even if it's a keyword\n* Perl 5.10 support: new keywords ('given', 'when', 'default', 'state', 'break') and regexp control operators ('PRUNE', 'SKIP', 'COMMIT', etc.)\n",
+  "rating_total": "182",
+  "rating_votes": "68",
+  "downloads": "2161",
   "install_details": "Copy perl.vim into ~/.vim/syntax/ and vim will find it before the \"standard\" perl syntax file that comes with vim.",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "PHP Collection contains: compiler, ftplugin, script for K key, dicts",
   "script_type": "utility",
   "description": "PHP Collection contains 3 files and 2 links:\ncompiler, ftplugin, script for use with 'keywordprg' and PHP\nmanual, links to vim dictionaries of PHP functions and prototypes.\n\nI. PHP compiler (cphp.vim)\nRequirements:\n1. PHP compiled as cgi\n2. bash\n3. grep compatible tool :help grep\n4. standard message error from PHP (it doesn't use debugger) :help\ncompiler\nHelp:\n:make <file_name> <QUERY_STRING>\n\nII. PHP ftplugin (php.vim)\nInspired by Christopher Swingley I add some things and put it in\nftplugin file.\nFirst part is ``objective'' and contains only important(?) settings. In\nsecond are some useful options commented by default.\n\nIII. Bash script for 'keywordprg' option. (phpmanual.sh)\nWritten by Leszek Krupinski <leszek@php.net> for use with K.\nDefault settings points to lynx and directory where Mkd8.2 puts\nphp-manual rpm.\n\nIV. Links. Both dictionaries where created by Leszek Krupinski\nDictionary of PHP functions:\nhttp://www.leon.w-wa.pl/texts/phpfunclist\nDictionary of PHP prototypes:\nhttp://www.leon.w-wa.pl/texts/phpproto\n\nThanks for Doug Kearns, Leszek Krupinski and Christopher Swingley\n\nAll faults are only mine.\n\nMikolaj Machowski\n<mikmach@wp.pl>\n",
+  "rating_total": "56",
+  "rating_votes": "22",
+  "downloads": "3218",
   "install_details": "1. Rename cphp.vim as php.vim and place it in\n.vim/compiler/\n2. Place it in\n.vim/ftplugin/\n3. Make script executable and place it in eg.\n.vim/external/         (suggested in php.vim)\n4. You could place dictionaries in eg.\n.vim/dictionaries/     (suggested in php.vim)\n",
   "versions": [
     {

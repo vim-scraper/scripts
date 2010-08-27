@@ -4,6 +4,9 @@
   "summary": "use vim as an interpreter to write shell commands in vimscript like vimsh",
   "script_type": "utility",
   "description": "Experiment to enable vim being invoked as a script interpreter, even when the vimscript block in question is used within a  unix pipe.\n\nThis is basically my take on the original vimscript#1069 vimsh from 2004,  sufficiently mangled until it finally did mostly work again with unix pipes and using vim 7.2 (excluding the g//p issue, where the prints  get replicated all over the place - drop me a line if you have an idea). \n\nNote that vim still does some unnecessary screen redrawing if it is connected to a  tty, however I\nactually  managed  to run a vimscript even from a cronjob, much to  my surprise.\n\nFurther information and example vimscript blocks: see --help.\n\nI'll intend to keep this somewhat uptodate, at least until vim can be run non-interactively without the requirements for such a hack.\n\nThe current version is available from:\nhttp://jakobi.github.com/script-archive-doc/\nhttp://github.com/jakobi/script-archive/tree/master/vim/",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "155",
   "install_details": "Unix: just place the vimscript command in path.",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "syntax for Intel Network Processor Microcode",
   "script_type": "syntax",
   "description": "syntax color file for Intel Network Processor Microcode",
+  "rating_total": "1",
+  "rating_votes": "3",
+  "downloads": "381",
   "install_details": "in the distribution, place the downloaded uc.vim in your syntax directory (e.g. on windows vimfiles/syntax or on unix .vim/syntax).\n\nCreate a file \"filetype.vim\" which contains an autocommand for your filetype.\n(Autocommands were explained in section |40.3|.)  Example: >\n\n\taugroup filetypedetect\n\tau BufNewFile,BufRead *.uc setf uc\n\taugroup END",
   "versions": [
     {

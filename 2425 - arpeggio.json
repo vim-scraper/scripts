@@ -4,6 +4,9 @@
   "summary": "Key mappings for simultaneously pressed keys",
   "script_type": "utility",
   "description": "*arpeggio* is a Vim plugin to define another type of |key-mapping| called*arpeggio-key-mapping* -- it consists of 2 or more keys ({lhs}) and it will beexpanded to another key sequence ({rhs}) whenever all keys in {lhs} aresimultaneously pressed.  For example:\tArpeggio inoremap jk  <Esc>\t\" OR\tcall arpeggio#map('i', '', 0, 'jk', '<Esc>')With the above definition, you can input <Esc> in Insert mode by pressing \"j\"and \"k\" simultaneously, while you can move the cursor by pressing \"j\" or \"k\"solely.The concept of this plugin is derived from Emacs' key-chord.el (*1), but thereare the following differences:- Number of keys to be simultaneously pressed is unlimited.- Custom delay for each key is supported (see |g:arpeggio_timeoutlens|).  This is a generalization of space-chord.el (*2).(*1) http://www.emacswiki.org/emacs/key-chord.el(*2) http://www.emacswiki.org/emacs/space-chord.elRequirements:- Vim 7.2 or laterLatest version:http://github.com/kana/vim-arpeggioDocument in HTML format:http://kana.github.com/config/vim/arpeggio.html",
+  "rating_total": "51",
+  "rating_votes": "15",
+  "downloads": "782",
   "install_details": "...",
   "versions": [
     {

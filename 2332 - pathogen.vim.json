@@ -4,6 +4,9 @@
   "summary": "Easy manipulation of 'runtimepath', 'path', 'tags', etc",
   "script_type": "utility",
   "description": "Pathogen is a simple library for manipulating comma delimited path options. Add this to your vimrc:\n\n  call pathogen#runtime_append_all_bundles()\n\nAfter adding this, you can take any plugin, unzip/untar/svn-checkout/git-clone it to its own private directory in .vim/bundle, and it will be added to the runtime path.  This makes it easy to remove or update each plugin individually.\n\nThe full list of functions includes:\n\npathogen#split: convert a comma delimited option to an array\npathogen#join: convert an array to a comma delimited option\npathogen#glob: wrapper around glob() that returns an array\npathogen#runtime_prepend_subdirectories: prepend all subdirectories of a path to the runtimepath and append all after subsubdirectories\npathogen#runtime_append_all_bundles: for each directory in the runtime path, look for a \"bundle\" entry and add the subdirectories of it to the path, as with runtime_prepend_subdirectories\n\nhttp://github.com/tpope/vim-pathogen",
+  "rating_total": "128",
+  "rating_votes": "37",
+  "downloads": "2015",
   "install_details": "Install in ~/.vim/autoload (~\\vimfiles\\autoload on Windows).  The API is\ndocumented inline.  Use foldmethod=marker for maximum ease of reading.\n\nNote that you need to invoke the pathogen functions before invoking \"filetype plugin indent on\" if you want it to load ftdetect files. On Debian (and probably other distros), the system vimrc does this early on, so you actually need to \"filetype off\" before \"filetype plugin indent on\" to force reloading.",
   "versions": [
     {

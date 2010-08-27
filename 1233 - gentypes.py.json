@@ -4,6 +4,9 @@
   "summary": "Colorize types you use while editing code (Linux)",
   "script_type": "utility",
   "description": "While browsing Vim documentation I encountered a nice tip about how to get highlithing of user-defined types. I decided to extend it a little to also support types defined elsewhere, that the source file may use (i.e. included files).\n\nThe script is written in Python and also requires CPP preprocessor (tested with 3.3 and 3.4) as well as exuberant ctags program.",
+  "rating_total": "13",
+  "rating_votes": "4",
+  "downloads": "294",
   "install_details": "Download the script, make it executable, then put it to some directory in your PATH variable. Add the following lines to .vimrc file:\n\n\" load the types.vim highlighting file, if it exists\nautocmd BufRead,BufNewFile *.{c,h,C,H,cc,hh,cpp,hpp,cxx,hxx} let fname = expand('<afile>:p:h') . '/types.vim'\nautocmd BufRead,BufNewFile *.{c,h,C,H,cc,hh,cpp,hpp,cxx,hxx} if filereadable(fname)\nautocmd BufRead,BufNewFile *.{c,h,C,H,cc,hh,cpp,hpp,cxx,hxx}   exe 'so ' . fname\nautocmd BufRead,BufNewFile *.{c,h,C,H,cc,hh,cpp,hpp,cxx,hxx} endif\n\nNext, cd to the directory with your source files, and invoke the script on files you would like to generate highlighting for, e.g.\ngentypes.py foo.c bar.c\nIt should leave types.vim file in the directory. The next time you edit these files Vim should highlight types defined in them and in the files they include. ",
   "versions": [
     {

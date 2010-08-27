@@ -4,6 +4,9 @@
   "summary": "GHCi integration for VIM",
   "script_type": "utility",
   "description": "Superior Haskell Interaction Mode (SHIM) integrates GHCi with VIM, allowing you to quickly load files or individual lines into the interpreter, interact with the interpreter like you would in a normal terminal, and quickly pinpoint error locations. It was inspired by Emacs' Haskell mode.\n\nThe script uses Ruby to spawn a GHCi process and communicate with it through pipes, reading from VIM and writing the output into a dedicated GHCi window. It is integrated with quickfix to allow you to maintain a list of errors and move among them.\n\nRequires VIM with Ruby support, Ruby with pty extension (Unix), and GHCi.",
+  "rating_total": "61",
+  "rating_votes": "21",
+  "downloads": "1247",
   "install_details": "Put shim.vim into your VIM plugins directory or source the file manually. That's it.\n\nYou can map the functions \"GhciFile\", \"GhciRange <range>\", and \"GhciReload\" to key combinations of your preference for faster acess. Take a look at the source file for the options you may want to customize.",
   "versions": [
     {

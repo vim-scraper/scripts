@@ -4,6 +4,9 @@
   "summary": "Extend the % motion and define g%, [%, and ]% motions for Python files",
   "script_type": "ftplugin",
   "description": "This script redefines the % motion so that (in addition to its usual behavior)\nit cycles through if/elif/else, try/except/catch, for/continue/break, and\nwhile/continue/break structures.  The script also\ndefines g% to cycle in the opposite direction.  Two other motions, [% and ]%,\ngo to the start and end of the current block, respectively.\n\nAll of these motions should work in Normal, Visual, and Operator-pending\nmodes.  For example, d]% should delete (characterwise) until the end of the\ncurrent block; v]%d should do the same, going through Visual mode so that\nyou can see what is being deleted; and V]%d makes it linewise.",
+  "rating_total": "67",
+  "rating_votes": "27",
+  "downloads": "2754",
   "install_details": "Copy the file to your ftplugin/ directory.  If, for some reason, you want to\nchange the name of the file, copy it to ftplugin/python/ or :source it from\nftplugin/python.vim .",
   "versions": [
     {

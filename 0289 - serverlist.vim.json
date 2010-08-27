@@ -4,6 +4,9 @@
   "summary": "Switch between VIM windows quickly",
   "script_type": "utility",
   "description": "Script creates key mappings for each existing VIM window.  After sourcing the script, you can press \\a in normal mode to switch to window 1, \\b for window 2, etc.  The keys are broadcasted to each window, such that the same key always map to the same window.  \\. will show mapping for current window.",
+  "rating_total": "17",
+  "rating_votes": "9",
+  "downloads": "1676",
   "install_details": "to run, :source serverlist.vim\nVIM needs to be compiled with +clientserver\n\nyou can also place script in plugins directory to create shortcut keys automatically, but that will increase VIM startup time considerably (quadratic to number of windows), so be careful.",
   "versions": [
     {

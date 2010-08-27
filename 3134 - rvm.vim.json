@@ -4,6 +4,9 @@
   "summary": "RVM Integration",
   "script_type": "utility",
   "description": "Adds RVM (Ruby Version Manager http://rvm.beginrescueend.com/) integration to Vim.\n\nCurrently that is a function for adding the active Ruby to the status line.\n\nLatest and greatest is on github, also that is the place to report issues http://github.com/csexton/rvm.vim",
+  "rating_total": "8",
+  "rating_votes": "4",
+  "downloads": "72",
   "install_details": "Copy rvm.vim into your ~/.vim/plugin directory.\n\nTo add the active rvm ruby to the status line:\n\n    set statusline+=%{rvm#statusline()}\n\nOr you could get fancy and do something like this:\n\n    set statusline=[%n]\\ %<%.99f\\ %h%w%m%r%y%{exists('g:loaded_rvm')?rvm#statusline():''}%=%-16(\\ %l,%c-%v\\ %)%P\n\nHaving the \"exists\" check will degrade gracefully if you move your .vimrc around to computers that may not have the rvm.vim plugin installed.",
   "versions": [
     {

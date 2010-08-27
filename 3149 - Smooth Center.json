@@ -4,7 +4,10 @@
   "summary": "Smoothly centres display when you press Esc like zz, zt and zb",
   "script_type": "utility",
   "description": "Normal VIM lets you center the file based on the current cursor position when you press zz, zt and zb.  This is nice but wouldn't it be nicer if this centering took place smoothly, like panning across a scene of a movie.  This script tries to give you this.  Use Esc, SHIFT-Esc and SHIFT-F1 respectively for zz, zt and zb.  You can cancel this 'smooth centering' by pressing Esc again.   Script now correctly accounts for 'scrolloff' setting being non-zero, as it should.  Please leave a comment :) For a truly immersing experience try this too: http://www.vim.org/scripts/script.php?script_id=2658.  Note: you may not see anything if your updatetime  is to a default vim value like 4000 because it is too high.  With this rate it will take 4 seconds for each 'center' step.",
-  "install_details": "Add to your _vimrc file. Works best with a lower setting for updatetime, I use 650. The more you have it the longer it takes before the screen scrolls, but be careful not to decrease updatetime too much.",
+  "rating_total": "0",
+  "rating_votes": "4",
+  "downloads": "120",
+  "install_details": "Add to your _vimrc file. Works best with a lower setting for updatetime, I use as low as 650. You can go lower, but some keyboard commands become awkward like Ctrl-W - h/j/k/l to move between open windows.  However the lower you have it the faster the screen scrolls, but be careful not to decrease updatetime too much if you use swap files.",
   "versions": [
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13657",

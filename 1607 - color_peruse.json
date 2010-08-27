@@ -4,6 +4,9 @@
   "summary": "Peruse, compare, choose color schemes",
   "script_type": "utility",
   "description": "Peruse, compare, choose color schemes\n\nWhen the cursor is in the ColorPeruse window:   \n<kPlus>      :ColorPeruse 1             (next color)\n<kMinus>    :ColorPeruse -1            (prev color)\n<kMultiply> :ColorPeruse                 (original color)\n<kDivide>   :ColorPeruse 0              (color under cursor)\n     =             :call ColorPeruseDel() (remove duplicate lines)\n     +             :call ColorPeruseMerge() (append all :set rtp colors to list)\n     ?      Help\n     :q     quit\n \n\nYou are in vim when in the ColorPeruse window, so you can edit items you \ndon't like from the list, or place markers to return to re-view particular colorschemes.\nYou can cut/paste to put favorites or color/lightness groups together \nto compare more closely.\nAlso, since it is in vim, you can save the ColorPeruse list to a file, or \nload it from a previous perusal list.\n\n\n",
+  "rating_total": "7",
+  "rating_votes": "4",
+  "downloads": "482",
   "install_details": "copy to ~/.vim/plugin\n\nPut this mapping in .vimrc:\n    map <Leader>cp :ColorPeruse<Space>Mylist<CR>:echo g:colors_name<CR>\nThen \\cp will start it up.\nIf you once create this 'Mylist' file, it is suggested that you move it\ninto a directory in vim's runtimepath. Type :set rtp to see this path.\nThis 'Mylist' file does not have to exist.\nIn such a list, you may have comments beginning with \" which will be ignored,\nand you can sort the list in any order you choose.\n\n\n",
   "versions": [
     {

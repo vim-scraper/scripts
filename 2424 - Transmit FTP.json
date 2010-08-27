@@ -4,6 +4,9 @@
   "summary": "Integrates Transmit FTP (Mac) with Vim",
   "script_type": "utility",
   "description": "This script allows you to upload the current file via Transmit directly from Vim. For it to work, you need to be working on a file that's tied to a Transmit connection, and this connection must have \"DockSend\" enabled.\n\nThe default key combination is Control + U to upload the active file.\n\nSource is at http://github.com/tmallen/transmit-vim, but for the most part I'll be quick to push updates to this page.\n\nProject Integration\n------------------------\nTake a look at proj.vim, which includes a \"docksend\" option that uploads files immediately on save: http://www.vim.org/scripts/script.php?script_id=2719",
+  "rating_total": "33",
+  "rating_votes": "9",
+  "downloads": "186",
   "install_details": "Installation \n----------------------------\nUnzip TransmitFTP and then\n* Move the \"apple\" directory into your \"~/.vim\" folder.\n* Move \"transmitftp.vim\" from \"plugin\" to \"~/.vim/plugin\"\n\nKeymapping:\n----------------------------\nMap any keys to \"TransmitFtpSendFile\" like so:\nnnoremap <C-A> :call TransmitFtpSendFile()<CR>\n\nBy default, <C-U> (Control + U) uploads the current file.",
   "versions": [
     {

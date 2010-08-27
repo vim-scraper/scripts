@@ -4,6 +4,9 @@
   "summary": "Create ChangeLog entry fast",
   "script_type": "utility",
   "description": "The python script creates automatically a ChangeLog entry (GNU style).\n\n",
+  "rating_total": "0",
+  "rating_votes": "4",
+  "downloads": "259",
   "install_details": "1. Create a directory python_plugins in your vim home and add the script.\n2. Configure the script by setting the following python trickery up in\nyour $Home/.vimrc (thought thats an example!):\n\n  py << PY\n\n  import vim\n  import sys\n\n  # set the system path to the new directory\n  sys.path.append(&#039/home/roman/.vim/python-plugins&#039)\n\n  # now we can import the python module\n  from utils import *\n\n  # set the variables (you may want to leave alone the cvs_command and\n  # svn_command\n  name = \\\"Roman Joost\\\"\n  email = \\\"<romanofski@gimp.org>\\\"\n  cvs_command = &#039cvs update -dP 2>&1 | grep -v \\\"Updating\\\"&#039\n  svn_command = &#039svn st&#039\n\n  PY\n\n3. You may want to bind the script to a key like:\n\n  map <F2> :py make_cl_entry(name, email, cvs_command, svn_command)<CR>",
   "versions": [
     {

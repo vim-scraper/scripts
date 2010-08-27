@@ -4,6 +4,9 @@
   "summary": "Syntax file for Borlands Delphi/Kylix",
   "script_type": "syntax",
   "description": "This syntax file for Borlands ObjectPascal (Delphi,Kylix) is derived from the original pascal.vim.\nSome basic VCL-Classes are added and some keywords have new meanings (e.g. read/write, assign).\nIt also includes a different color scheme.\n",
+  "rating_total": "49",
+  "rating_votes": "31",
+  "downloads": "1950",
   "install_details": "1. Copy the file to $VIM/sytax.\n2. Add to $VIM/filetype.vim :\nCUT FROM HERE-->\n\" Pascal / Delphi\nif (1==1)\t\"change to \"1==0\" to use original syntax\n  au BufNewFile,BufRead *.pas,*.PAS\t\tset ft=delphi\nelse\n  au BufNewFile,BufRead *.pas,*.PAS\t\tset ft=pascal\nendif\n\" Delphi project file\nau BufNewFile,BufRead *.dpr,*.DPR\t\tset ft=delphi\n\" Delphi form file\nau BufNewFile,BufRead *.dfm,*.DFM\t\tset ft=delphi\nau BufNewFile,BufRead *.xfm,*.XFM\t\tset ft=delphi\n\" Delphi package file\nau BufNewFile,BufRead *.dpk,*.DPK\t\tset ft=delphi\n\" Delphi .DOF file = INI file for MSDOS\nau BufNewFile,BufRead *.dof,*.DOF\t\tset ft=dosini\nau BufNewFile,BufRead *.kof,*.KOF\t\tset ft=dosini\nau BufNewFile,BufRead *.dsk,*.DSK\t\tset ft=dosini\nau BufNewFile,BufRead *.desk,*.DESK\t\tset ft=dosini\nau BufNewFile,BufRead *.dti,*.DTI\t\tset ft=dosini\n\" Delphi .BPG = Makefile\nau BufNewFile,BufRead *.bpg,*.BPG\t\tset ft=make|setlocal makeprg=make\\ -f\\ %\n<--CUT UNTIL HERE\n",
   "versions": [
     {

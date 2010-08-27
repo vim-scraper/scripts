@@ -4,6 +4,9 @@
   "summary": "visual cvs diff utility for vim diffsplit, horizontal or vertical",
   "script_type": "utility",
   "description": "vim plugin to for visual display of cvs diff in vim using vim diffsplit\n\n1) used as vim command, format :Cvsdiff [v] [version #]\n    :Cvsdiff     \n       -- diff between opened file and lastest cvs version, \n           horizontal split\n    :Cvsdiff  v\n       -- diff between opened file and lastest cvs version, \n           vertical split\n    :Cvsdiff <version #>  example  :Cvsdiff 1.2\n       -- diff between opened file and cvs version #, horizontal split\n    :Cvsdiff v <version #>  example  :Cvsdiff v 1.2\n       -- diff between opened file and cvs version #, vertical split\n2) map to key \n    can create mapping in ~/.vimrc by adding following lines, examples\n    map <F8> <Plug>Cvsdiff\n        -- press F8 in vim, show diff to cvs last version, horizontal split\n    map <F7> <Plug>Cvsdiffv\n        -- press F7 in vim, show diff to cvs last version, vertical split\n\nerror report: \n    eji@yahoo-inc.com\n    feel free to customize it, distribute it or do whatever you want.\n\n",
+  "rating_total": "67",
+  "rating_votes": "19",
+  "downloads": "798",
   "install_details": "copy this file to your vim plugin directory, normally ~/.vim/plugin\nif not, can manally source this file in vim or add into ~/.vimrc\n   :source cvsdiff.vim",
   "versions": [
     {

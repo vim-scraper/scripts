@@ -4,6 +4,9 @@
   "summary": "Syntax for 8051 Assembly (some IAR specifics)",
   "script_type": "syntax",
   "description": "To my surprise I could not find a syntax file for 8051 assembly.  So I started with vimscript#966 (which was apparently derived from the asm68k syntax) and derived this syntax file.\n\nThe assembler directives and such are IAR specific b/c that is the toolset that I am currently using.  Feel free to expand with support for Keil and/or SDCC.\n",
+  "rating_total": "2",
+  "rating_votes": "2",
+  "downloads": "286",
   "install_details": "Place in the $VIMRUNTIME/syntax directory and set up the appropriate filetype commands (filetype.vim or other methods) to tell vim to use asm8051 syntax for your 8051 assembly files.\n",
   "versions": [
     {

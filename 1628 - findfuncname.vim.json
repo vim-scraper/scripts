@@ -4,6 +4,9 @@
   "summary": "Find the name of the function you are editing",
   "script_type": "utility",
   "description": "This is similar to the tip I posted previously, except I made a few fixes and made it self-contained as a plugin.\n\nThe script contains a function called 'FunctionName()' that returns the name of the function you are currently working in.  This is handy if you got there through a search, or are in a large function or small screen/window and can't see the function's name.  \n\nThis on-command (I've seen some that constantly display in the status line) function uses a search pattern to search for a pattern that matches every function declaration I've tried in C, Objective-C, C++, Perl, and Python with the caveat that the function declaration must start on the first character of the line.  I'll fix this one of these days, since Java files will break on that particular point.\n\n",
+  "rating_total": "20",
+  "rating_votes": "16",
+  "downloads": "675",
   "install_details": "download the script and place it in your plugin directory, or make sure that your .vimrc sources the script wherever you have saved it.\n\nAdd the following to your .gvim or .vimrc:\nmap \\func :echo FunctionName()<CR>\n\nNow, typing \\func displays the line number and declaration of the name of the function I am editing in.  ",
   "versions": [
     {

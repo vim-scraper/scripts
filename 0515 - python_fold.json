@@ -4,6 +4,9 @@
   "summary": "Folding expression for python",
   "script_type": "utility",
   "description": "This script uses the expr fold-method to create folds for python source code.\n\nFolds are created for:\n - Class definitions\n - def function definitions\n - Blocks between {{{, }}} markers (but not yet {{{n, etc.)\n\nThe fold level for each fold is equal to the indentation divided by the value of the 'shiftwidth' option, so make sure that 'shiftwidth' is set to the right value for your code.\n\nClass and function folds show a count of the number of lines in the fold and the documentation string when closed (contributed by Max Ischenko).\n\nCaveats:\n- The docstring is not shown when it is enclosed in single quotes (like '''comment'''); use double quotes instead (like \"\"\"comment\"\"\")\n- Newest version relies on a blank line following class or function definition if the next bit of code is not a new class or function definition.  If this doesn't suit your programming style, use the _nonblank version 2.2 (nb).  That version is buggier, however.  Do not install both files.\n\nBugs:\n- It occasionally inserts a bogus fold at complicated structures like conditionals that are followed by a blank line.  A work-around is to remove the blank line or to replace it with a line containing a comment (a single '#' will do)",
+  "rating_total": "5",
+  "rating_votes": "489",
+  "downloads": "9771",
   "install_details": "Choose either python_fold.vim or python_fold_nonblank.vim (do not use both at the same time!).\nEither save it in a file and source that file whenever you want to use the folding, or save it in your ftplugin directory (for example, ~/.vim/ftplugin) and it should load every time you edit python code.",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "Provides auto-balancing and some expansions for parens, quotes, etc.",
   "script_type": "utility",
   "description": "This plug-in provides automatic closing of quotes, parenthesis, brackets, etc., besides some other related features that should make your time in insert mode a little bit easier, like syntax awareness (will not insert the closing delimiter in comments and other configurable regions), visual wrapping, <CR> and <Space> expansions (off by default), and some more.\n\nMost of the features can be modified or disabled permanently, using global variables, or on a FileType basis, using :autocmd. With a couple of exceptions and limitations, this features don't brake undo, redo or history.\n\ni.e.: The following line in your vimrc would turn auto-completion off for the \"mail\" file type:\n\n        au FileType mail let b:delimitMate_autoclose = 0\n\nRead :help delimitMate for detailed information. You can also follow the \"Vim wiki\" link on the top to discuss about this script.",
+  "rating_total": "89",
+  "rating_votes": "29",
+  "downloads": "1336",
   "install_details": "This script is packaged as a vimball. If gnuzip is in your $PATH, simply edit delimitMate.vba.gz in Vim and then source the file; otherwise, decompress the archive first.\ne.g.:\n        vim delimitMate.vba.gz\n        :source %\n\nIf you want to remove this plugin, type the following inside Vim:\n\n        :RmVimball delimitMate\n\nIf you have GetLatestVimScripts configured, delimitMate will be automatically added the next time you run :GetScripts.\n\nIf you can't use the vimball source, download the zipped version here:\nhttp://github.com/Raimondi/delimitMate/downloads\n\nLeave bug reports and feature request here:\nhttp://github.com/Raimondi/delimitMate/issues",
   "versions": [
     {

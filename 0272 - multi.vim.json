@@ -4,6 +4,9 @@
   "summary": "using Greenhills Multi as C/C++ compiler for quickfix",
   "script_type": "utility",
   "description": "Script to use Greenhills Multi as C/C++ compiler from vim with ':make <project_build_file>'.\nSets compiler and errorformat for use with quickfix commands.\nNeeds a tool ('catch', not supported) on NT4 to catch stderr and stdout in my environment.\n(Probably not necessary under Unix).\n\nDoes not catch all error and warning formats (especially. no linker problems).",
+  "rating_total": "5",
+  "rating_votes": "2",
+  "downloads": "441",
   "install_details": "Drop multi.vim in c:\\vim\\vimfiles\\compiler and add the following autocommand to your _vimrc: \nau BufNewFile,BufRead *.c  compiler multi\n",
   "versions": [
     {

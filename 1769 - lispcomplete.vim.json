@@ -4,6 +4,9 @@
   "summary": "SLIME-like compound completion for Lisp",
   "script_type": "utility",
   "description": "*** Before using this script, you should check out Limp - http://mikael.jansson.be/hacking/limp/docs/\nIt gives an experience much closer to SLIME, and is most likely a better solution. ***\n\nAn omnifunc that provides SLIME style completion of compound keywords.\n\ne.g.   \\\"m-v-b<C-X><C-O>\\\" expands to \\\"multiple-value-bind\\\"\n\nThis isn&#039t anything close to a reimplementation of SLIME completion, but provides something closer to the default behavior. Most importantly, since there isn&#039t a connection to swank and a live lisp instance, you can only complete static keywords from the syntax file. (like syntaxcomplete.vim -- in fact this started out as a quick munging of that file, and still has lots of its code in there) Also, currently only \\\"simple\\\" and \\\"compound\\\" modes work, there is no support for \\\"fuzzy\\\" completion.",
+  "rating_total": "4",
+  "rating_votes": "1",
+  "downloads": "260",
   "install_details": "put lispcomplete.vim in runtime/autoload\nthen :setl omnifunc=lispcomplete#Complete",
   "versions": [
     {

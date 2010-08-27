@@ -4,6 +4,9 @@
   "summary": "Chimp talks to external interpreters from inside Vim",
   "script_type": "utility",
   "description": "Chimp uses screen to talk to external interpreters. The basic screen driver\nis language agnostic and is intended to be used as backend for filetype\nplugins, which comprise the intelligence of the system.\n\nAn example filetype plugin for Clojure is included. There are several ways\nto extract code and send it to a running Clojure in a screen.\n\nThe coupling is very loose on purpose! Eg. one can send from several Vims\nto the same screen. However this leads to a certain fragileness. The Clojure\nplugin takes care of automatically switching namespaces for the different\nfiles being edited. However, nothing prevents the user from interacting\nwith the REPL directly messing up the namespace sync between Chimp in Vim\nand Clojure.\n\nChimp should also work on Windows with Cygwin.\n\nYou will also need the VimClojure filetype plugin for\nthe Clojure frontend.\n\nhttp://kotka.de/projects/clojure/vimclojure.html\n\nSimilar scripts:\n - VILisp (vimscript #221)\n - Limp (vimscript #2219)\n - http://technotales.wordpress.com/2007/10/03/like-slime-for-vim/\n\n",
+  "rating_total": "10",
+  "rating_votes": "4",
+  "downloads": "674",
   "install_details": "For installation put the extracted subdirectory in your .vim directory.\nStart your interpreter with the chimp.sh wrapper from the bin/ subdir.\nIt tells you a \"Chimp Id\" in the bottom line of the screen. Supply this\nto the glue functions. The Clojure plugin will ask you the first time\nyou send data and will further cache the Id.\n\n",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "Defines parameter text objects",
   "script_type": "utility",
   "description": "This script defines a parameter text object. A parameter is the text between parentheses or commas, typically found in a function's argument list. \n\nSee: \n:help text-objects \n  for a description of what can be done with text objects. \n\nAlso See: \n:help a( \n  If you want to operate on the parentheses also. \n\nLike all the other text-objects, a parameter text object can be selected following these commands: 'd', 'c', 'y', 'v', etc. The script defines these operator mappings: \n\n   aP    \"a parameter\", select a parameter, including one comma (if there is one). \n\n   iP    \"inner parameter\", select a parameter, not including commas. \n\nThis is a slick version of argtextobj vimscript #2699; though mine is shorter and can handle counts (ie. c3aP).\n\nNOTE: Negative ratings don't help the script to improve. Instead, please send me an email (shown in my profile). Thank you.",
+  "rating_total": "6",
+  "rating_votes": "6",
+  "downloads": "106",
   "install_details": "Drop the vim script in your plugin directory.",
   "versions": [
     {

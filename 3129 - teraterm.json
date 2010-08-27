@@ -4,6 +4,9 @@
   "summary": "Teraterm MACRO syntax highlighting",
   "script_type": "syntax",
   "description": "Teraterm MACRO syntax highlighting. This script provides syntax highlighting for the Teraterm MACRO programming/scripting language.",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "55",
   "install_details": "1) Put the teraterm.vim into your vimfiles/syntax directory\n2) Edit your vimfiles/filetype.vim to include something like the lines below, which assumes that these files will end in *.ttl:\n\naugroup filetypedetect\n\n\\\" Teraterm MACRO files\nau BufNewFile,BufRead *.ttl\tsetf Teraterm\n\naugroup END",
   "versions": [
     {

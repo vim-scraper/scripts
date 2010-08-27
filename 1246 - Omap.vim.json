@@ -4,6 +4,9 @@
   "summary": "create user-defined operator mappings",
   "script_type": "utility",
   "description": "Omap.vim provides the :Omap command, among others, which creates user-defined operator commands (like y c d and g?, see :help operator for more info).\n\nTo demonstrate, this command can be used to add functionality to other scripts. You can use Omap.vim in conjuction with EnhancedCommentify.vim (vimscript #23) to create a commenting operator. Assuming both EnhancedCommentify.vim and Omap.vim are installed in your vim plugin directory, add the following commands to your .vimrc file:\n\n    let g:EnhCommentifyUserBindings = 'yes'\n    runtime plugin/Omap.vim\n    Omap <silent> <unique> <leader>c <Plug>Commentj\n    Omap <silent> <unique> <leader>u <Plug>DeCommentj\n\nThis will stop the default mappings being defined by EnhancedCommentify.vim and in their place create comment (\\c) and uncomment (\\u) operators.\n\nThis allows commenting to be carried out over areas defined by vim motions and text objects. For example: \n\n    \\cc  --  comments a line\n    .  --  comments the next line (repeats last command)\n    3\\cc  --  comments three lines\n    \\uu  --  uncomments a line\n    \\c4j  --  comments the current line and the four following lines\n    \\caB  --  comments a block of code\n\nNote that the dot (.) command (see :help .) works to repeat Omaps even though they are mappings. A command, :DotCommandSet, is defined by Omap.vim which allows other mappings to similarly be repeated using the dot command. \n\nFor more detailed help see the help documentation in the archive below.\n",
+  "rating_total": "24",
+  "rating_votes": "6",
+  "downloads": "239",
   "install_details": "To install, unzip Omap.zip placing Omap.vim in your vim plugins directory and Omap.txt in your vim doc directory. \n\nRun :helptags on your doc directory to install documentation into the vim help system.\n",
   "versions": [
     {

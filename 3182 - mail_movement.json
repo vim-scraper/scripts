@@ -4,6 +4,9 @@
   "summary": "Movement over email quotes with ]] etc. ",
   "script_type": "ftplugin",
   "description": "DESCRIPTION\nThis filetype plugin provides movement commands and text objects for email\nquotes. \n\nUSAGE\n\t\t\tMove around email quotes of a certain nesting level, as\n\t\t\tdetermined by the current line; if the cursor is not on\n\t\t\ta quoted line, any nesting level will be used. \n]]\t\t\tGo to [count] next start of an email quote. \n][\t\t\tGo to [count] next end of an email quote. \n[[\t\t\tGo to [count] previous start of an email quote. \n[]\t\t\tGo to [count] previous end of an email quote. \n\n\t\t\tMove to nested email quote (i.e. of a higher nesting\n\t\t\tlevel as the current line; if the cursor is not on a\n\t\t\tquoted line, any nesting level will be used). \n]+\t\t\tGo to [count] next start of a nested email quote. \n[+\t\t\tGo to [count] previous start of a nested email quote. \n\naq\t\t\t\"a quote\" text object, select [count] email quotes\niq\t\t\t\"inner quote\" text object, select [count] regions with\n\t\t\tthe same quoting level",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "21",
   "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command.\n    vim mail_movement.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.0 or higher. \n- Requires the CountJump plugin (vimscript #3130). ",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "fold away lines that don't match a given pattern",
   "script_type": "utility",
   "description": "This plugin provides commands that fold away lines that don't match a specific search pattern.  This pattern can be the word under the cursor, the last search pattern, a regular expression or spelling errors. There are also commands to change the context of the shown lines.\n\nCommands:\n\n:Fw [context*]\n  show lines which contain the word under the cursor. Default [context] is 0.\n \n:Fs [context*]\n  show lines which contain previous search pattern. Default [context] is 0.\n \n:Fp pattern\n  show the lines that contain the regular expression. Context is 0.\n\n:FS\n  show the lines that contain spelling errors.\n \n:Fl\n  fold again with the last used pattern\n\n:Fc [context*]\n  show context lines.\n \n:Fi\n  increment context by one line.\n \n:Fd\n  decrement context by one line.\n \n:Fe\n  set modified fold options to their previous value\n\n* context can consist of one or two numbers. A 'unsigned' number defines the context before and after the pattern. If a number has a '-' prefix, it defines only the context before the pattern. If it has a '+' prefix, it defines only the context after a pattern.\n\nMappings:\n\n<Leader>fs     FoldSearch()\n<Leader>fw     FoldCword()\n<Leader>fl     FoldLast()\n<Leader>fS     FoldSpell()\n<Leader>fi     FoldContextAdd(+1)\n<Leader>fd     FoldContextAdd(-1)\n<Leader>fe     FoldSearchEnd()",
+  "rating_total": "36",
+  "rating_votes": "12",
+  "downloads": "497",
   "install_details": "Copy the foldsearch.vim file to the $HOME/.vim/plugin directory. Refer to ':help add-plugin', ':help add-global-plugin' and ':help runtimepath' for more details about Vim plugins.",
   "versions": [
     {

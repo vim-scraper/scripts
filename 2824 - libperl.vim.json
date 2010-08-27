@@ -4,6 +4,9 @@
   "summary": "provide standard vim functions for perl code",
   "script_type": "utility",
   "description": "git repository:   http://github.com/c9s/libperl.vim\n\n\nyou can just call those function by:\n\nlet retsult = libperl#whatever_function(  arg , arg2 )\n\nfunctions:\n\nfun! libperl#echo(msg)\nfun! libperl#get_perl_lib_paths()\nfun! libperl#get_module_file_path(mod)\nfun! libperl#tab_open_module_file_in_paths(mod)\nfun! libperl#tab_open_tag(tag)\nfun! libperl#translate_module_name(n)\nfun! libperl#open_tag(tag)\nfun! libperl#open_module()\nfun! libperl#get_cursor_module_name()\nfun! libperl#get_cursor_method_name()\nfun! libperl#find_method(method_name)\nfun! libperl#edit_file(fullpath,method)\nfun! libperl#tab_edit_file(fullpath,method)\nfun! libperl#tab_open_module_from_cursor()\nfun! libperl#open_module_in_paths(mod)\nfun! libperl#get_inc()\nfun! libperl#find_perl_package_files()\nfun! libperl#install_module()\nfun! libperl#get_package_sourcelist_path()\nfun! libperl#find_base_classes(file)\nfun! libperl#grep_file_functions(file)\nfun! libperl#parse_base_class_functions(filepath)\nfun! libperl#get_method_comp_refer_start()\nfun! libperl#get_method_comp_refer_base()\nfun! libperl#get_method_comp_start()\nfun! libperl#get_method_comp_base()\nfun! libperl#clear_method_comp_base()\nfun! libperl#get_pkg_comp_start()\nfun! libperl#get_pkg_comp_base()\nfun! libperl#use_ok(pkg)\nfun! libperl#get_cpan_module_list(force)\nfun! libperl#get_installed_cpan_module_list(force)\nfun! libperl#get_currentlib_cpan_module_list(force)\nfun! libperl#get_current_lib_package_name()\n",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "152",
   "install_details": "just :\n\n$ make install",
   "versions": [
     {

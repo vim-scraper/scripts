@@ -4,6 +4,9 @@
   "summary": "Show changes made to current buffer since the last save",
   "script_type": "utility",
   "description": "Show changes made to current buffer since the last save. This plugin is based from an example in the Hacking Vim book. The differences are that this functionality is in the form of a plugin, is a bit more robust, and can be toggled.\n\nCOMMANDS\nDiffChangesDiffToggle -- toggles the side-by-side diff view\nDiffChangesPatchToggle -- toggles the patch view\n\nMAPPINGS (<leader> is set to '\\&#039, by default)\n<leader>dcd -- DiffChangesDiffToggle\n<leader>dcp -- DiffChangesPatchToggle\n\nYou can override the default mappings by creating mappings like this:\n\nnmap <F6> <Plug>DiffChangesDiffToggle\nnmap <F7> <Plug>DiffChangesPatchToggle\n\nOPTIONS\ng:diffchanges_patch_cmd -- The command that's used to generate the patch (default: 'diff -u').",
+  "rating_total": "64",
+  "rating_votes": "25",
+  "downloads": "1221",
   "install_details": "Place script in ~/.vim/plugin and start vim.",
   "versions": [
     {

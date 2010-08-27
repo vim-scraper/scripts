@@ -4,6 +4,9 @@
   "summary": "#ifdef highlighting in c/c++/idl",
   "script_type": "syntax",
   "description": "Provides highlighting for  #ifdef  #ifndef  #else  #endif  blocks, with the ability to mark a symbol as defined or undefined.\nHandles nesting of #ifdefs (and #if) as well, but does not handle  #if defined().\n\nSupports vim_ifdef:  modelines and .defines (_defines for win16/win32s) files to specify defined/undefined symbols.",
+  "rating_total": "87",
+  "rating_votes": "35",
+  "downloads": "3109",
   "install_details": "Call from a syntax file after c.vim/cpp.vim/idl.vim\n\nWith later vims, this can be done by appending .ifdef to your syntax. \neg with a modeline   vim: syntax=c.ifdef",
   "versions": [
     {

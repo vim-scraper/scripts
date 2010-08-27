@@ -4,6 +4,9 @@
   "summary": "An RPN calculator in an input() prompt",
   "script_type": "utility",
   "description": "Maynard is a (very) simple stack-based RPN calculator written in Python 2.5+ and featuring Python Decimal numbers.\n\nIt uses the Vim \"input()\" function to show the stack and to get input from the user. So if you enter \"2 3 *\" you'll get \"6\" on the stack. Etc. \nPress the = key to write the number at the top of the stack into the current buffer. Press <ESC> to exit. Look at the source for other commands.\n\nIf you have never used an RPN calculator this will probably annoy you, but if you have ever used an HP calculator then it should be reasonably familiar.  I'm keen to get feedback on this one, but please be kind: I'm new to both Vim and Python so it can probably be improved in all sorts of ways.\n\ntoby@cpan.org\n\nBrother Maynard is a Python reference by the way...",
+  "rating_total": "0",
+  "rating_votes": "2",
+  "downloads": "47",
   "install_details": "Unzip maynard.zip into any directory where you keep python files or VIM scripts.  It will create maynard.py and decimal_tools.py.  If you keep them together then Python will be able to find decimal_tools when it needs it. However you may still need to set $PYTHONPATH in your profile so point at the directory where you put \"python_tools.py\".  Try adding something like this to your .profile (assuming Mac or Linux):\n\nexport PYTHONPATH=.:<path-to-file>\n\nAdd a line something like this to your .vimrc file\n:command! -nargs=0 <name> pyfile <path-to-file>/maynard.py\n\nwhere <name> is whatever you want to use to call it, and <path-to-file> reflects where you unzipped it.",
   "versions": [
     {

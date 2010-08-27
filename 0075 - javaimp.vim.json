@@ -4,6 +4,9 @@
   "summary": "Open a Java source file from its import statement",
   "script_type": "utility",
   "description": "Set of functions to open a Java import statement as a file.\nMaintained by Darren Greaves http://boncey.org/showBlog.go?id=138\nSuggested stuff to add to your ~.vimrc:\nlet $JAVASOURCEPATH=\"$SERVLET_HOME/src/share,$JAVA_HOME/src,$XML_HOME/src\"\nmap H :call OpenJavaImport($JAVASOURCEPATH)<CR>\nThen press H while on a import line and the file should open (you'll need the\nsource files and the path to have been set already.\n\nThe paths in $JAVASOURCEPATH should have the source packages directly\nunderneath each path.  The script needs to be able to add the package to the\npath element and open a file.\n",
+  "rating_total": "15",
+  "rating_votes": "6",
+  "downloads": "1011",
   "install_details": "Vim 6:  Copy to ~/.vim/plugin or $VIM/plugin directory\nVim 5 : Copy to $VIM and\n- Add \"source $VIM/javaimp.vim\" to your vimrc ",
   "versions": [
     {

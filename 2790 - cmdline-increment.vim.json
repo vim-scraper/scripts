@@ -4,6 +4,9 @@
   "summary": "increment, decrement commandline number.",
   "script_type": "utility",
   "description": "Increment last appearing number in commandline-mode command with Control-a ,\nand decrement with Control-x .\n\n    <C-a> increment commandline last appearing number.\n    <C-x> decrement commandline last appearing number.\n\n\n------------------------------------------------------------------------------\n[Usage]\n\n1.  Enter commandline mode.\n2.  Enter next command.\n\n    :edit workfile_1.txt\n\n3.  And Press Control-a , or press Control-x .\n\n\n------------------------------------------------------------------------------\n[Customized Mapping]\n\nIf you will customize increment, decrement mapping,\nadd put these code to your vimrc .\n\n    \" (for example)\n    \" increment with Shift-Up\n    cmap <S-Up> <Plug>IncrementCommandLineNumber\n    \" decrement with Shift-Down\n    cmap <S-Down> <Plug>DecrementCommandLineNumber\n",
+  "rating_total": "1",
+  "rating_votes": "1",
+  "downloads": "122",
   "install_details": "copy cmdline-increment.vim to your plugin directory.",
   "versions": [
     {

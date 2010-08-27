@@ -4,6 +4,9 @@
   "summary": "Syntax highlighting for the Processing language",
   "script_type": "syntax",
   "description": "This is a syntax highlighting file and ftplugin for Processing.  \n\nProcessing is a system for programmatically creating images and animations.  See http://www.processing.org/ for more info.  The syntax highlighting file was made using lib/keywords.txt from the Processing 0135 BETA distribution.\n\nIntegration with the documentation:\n\nIf you have a Vim built with Python, the K key can be used to look up functions and variables in the documentation.  Note that words followed\nby an opening paren \"(\" are treated as functions, thus K pressed on frameRate() and frameRate goes to different documentation pages.\n\nIf there are highlighting errors while scrolling backwards, set the processing_minlines variable to a higher value.",
+  "rating_total": "42",
+  "rating_votes": "18",
+  "downloads": "919",
   "install_details": "1. Extract the archive into your Vim runtime directory (~/.vim on UNIX, $VIM\\vimfiles on Windows)\n2. Set the path to the Processing documentation in your vimrc, e.g.\n\n  let processing_doc_path=\"c:\\\\Programs\\\\Processing\\\\reference\"\n\n3. The ftplugin sets the shiftwidth, tabstop and expandtab.  Comment/remove these from ftplugin/processing.vim if you don't like them.\n4. Enjoy!",
   "versions": [
     {

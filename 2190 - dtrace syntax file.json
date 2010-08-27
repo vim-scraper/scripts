@@ -4,6 +4,9 @@
   "summary": "This provides excessive highlighting of dtrace script files",
   "script_type": "syntax",
   "description": "This file provides excessive syntax highlighting for files written in the D language that's used with dtrace. A description of the D file format can be found at http://docs.sun.com/app/docs/doc/817-6223.\n\nVersion 1.5 of this script is included in the official vim7.2 distribution.",
+  "rating_total": "12",
+  "rating_votes": "6",
+  "downloads": "431",
   "install_details": "Copy dtrace.vim to ~/.vim/syntax/ (on Unix or Mac OS X) or to .../vimfiles/syntax on windows.\n\nVim usually associates .d files with the D programming language by Digital Mars. To override this, add something like\n\n      autocmd BufNewFile,BufRead *.d setf dtrace\n\nto your ~/.vimrc or to ~/.vim/ftdetect/dtrace.vim (you probably have to create the latter).\n\n",
   "versions": [
     {

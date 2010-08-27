@@ -4,6 +4,9 @@
   "summary": "Undo the action of mswin.vim",
   "script_type": "utility",
   "description": "This undoes the actions of the mswin.vim described under :help :behave. It restores the changed options (except guioptions) to their default (which was not necessarily what they were set to before invoking mswin, but that can't be helped) and undoes the mappings (except Ctrl-Q and Alt-Space, which are not deemed harmful).",
+  "rating_total": "5",
+  "rating_votes": "4",
+  "downloads": "327",
   "install_details": "just drop the file in ~/.vim/macros (on Unix), or in ~/vimfiles/macros (on Windows, if $HOME exists -- in Dos/Windows parlance, that would be %HOME%\\vimfiles\\macros), or in $VIM/vimfiles/macros (for system-wide availability on any platform).\n\nInvoke it by doing :runtime macros/unmswin.vim",
   "versions": [
     {

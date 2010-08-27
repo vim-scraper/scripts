@@ -4,6 +4,9 @@
   "summary": "reverse (1st line becomes last ...) the lines in a file",
   "script_type": "utility",
   "description": "This file has a vim script to reverse the lines in the file.\n(line 1 swapped with last line say 5, line 2 swapped with line4 ...)\n\nI build it because I had such a requirement and could not \nthink of anything quicker on Windows. \n\nUnix people have lot better tricks-). \n\n\nHow to use :\nMethod 1: press <F2> if you wanna reverse all the lines\nMethod 2: select lines in visual mode and press <F2> \n                if you wanna swap only the highlighted lines\nMethod 3: To reverse line1 to line2 use :line1,line2 Reverse \n",
+  "rating_total": "1",
+  "rating_votes": "10",
+  "downloads": "290",
   "install_details": "simply source the file using \n:source <filepath>\\\\reverse.vim\nor source it in your vimrc file\nfor automatically sourcing this everytime \n\nCaution: This script maps <F2> key, so if you have already mapped <F2> \nkey you should change the mapping in this file to some other key\n",
   "versions": [
     {

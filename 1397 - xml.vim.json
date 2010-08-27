@@ -4,6 +4,9 @@
   "summary": "helps editing xml (and [x]html, sgml, xslt) files",
   "script_type": "ftplugin",
   "description": "A plugin for editing xml. I used xml.vim (http://www.vim.org/scripts/script.php?script_id=301)\nThe script does retain most of the functionality of the original xml.vim \n - closing tags while you type\n - optional adding attributes\n - and more\n - % matches end or begin tag\nit adds:\n - fold tags, comments and Cdata \n - add start tag\n - add end tags\n - add  tag around a visual blok or a tag,\n - join 2 adjacent same tags\n - delete tag\n - delete tag section\n - change a tag \n - visual mode  (blocks, listitems\nThe documentation will be created once the script is loaded e.g edit a xml file.\nRead the help documentation by typing from within vim  :help xml-plugin\n",
+  "rating_total": "233",
+  "rating_votes": "86",
+  "downloads": "8944",
   "install_details": "copy xml.vim to  ~/.vim/ftplugin/xml.vim)\noptionally link (or copy on windows) xml.vim in ~/.vim/ftplugin directory to docbk.vim, xsl.vim, html.vim, xhtml.vim\nwhen you have filetype indent on. Then create a ~/.vim/indent directory and for every link (copy) you made do\n      echo \"let b:did_indent = 1\" > ~/.vim/indent/xml.vim\nBecause standard vimXX/indent/xml.vim interferes with xml.vim",
   "versions": [
     {

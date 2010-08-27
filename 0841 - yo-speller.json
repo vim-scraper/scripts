@@ -4,6 +4,9 @@
   "summary": "NOTE: this only for russian users! Spell YO letter in the buffer.",
   "script_type": "utility",
   "description": "Russian home-page of this project is http://python.anabar.ru/yo.htm\nThere you can find analogous macros for XEmacs writen by me in ELisp.\n\nThis programs check russhian text to find words with E letter and chage to the YO letter if needed. For example: \"avtogidropod'emnik\" -> \"avtogidropodyomnik\". Words were letter yo must be, changed silently. And if this word may be with yo and may be without (vse-vsyo, chem-chyom) there are prompt a dialog.\n\nScript correctly work with case: \"Word\" change to \"Another\", \"word\" to \"another\" and \"WORD\" to \"ANOTHER\", \"wORd\" dont change, because it is no word :)\n\nExperiment show this if not very hard, because most of word chanded automatically. The database contain 60000 words (in all cases)",
+  "rating_total": "4",
+  "rating_votes": "1",
+  "downloads": "287",
   "install_details": "First step: install text.py utility from this site: vimscript#840\n\nSecond and last: open yo.py and change path in first line. There must be absolutly path to your yo.dat file, like this:\n\nyo_path = r\"...\\Vim\\python\\yo.dat\"    # FIXME here\n\nThen you can use it: open your russhian file and run the command\n:pyf <path_if_necessary>yo.py\n\nIf you need to change yo base, edit yo.txt file, changes are apply automatically",
   "versions": [
     {

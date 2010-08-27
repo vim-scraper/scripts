@@ -4,6 +4,9 @@
   "summary": "quick tip from synopsis section in man pages for words",
   "script_type": "utility",
   "description": "with default key binding enabled, move the cursor over a word, for example strcmp and press <leader>d\nthis will put the following line in the status line:\n\nSTRCMP(3) 1/2: int strcmp(const char *s1, const char *s2);\n(STCMP(3) - man page, 1/2 - first line of two lines)\n\npressing <leader>d again will show the next decelration:\n\nSTRCMP(3) 2/2: int strncmp(const char *s1, const char *s2, size_t n);\n\n<leader>D show the previous one, the list is cyclic\n\nuse <leader>1..9 to man specific sections\n\nsee code for more details\n",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "25",
   "install_details": "just put under ~/.vim/plugin\nto enable default key bindings put\nlet g:mantip_bindkeys=1\nin your ~/.vimrc\n",
   "versions": [
     {

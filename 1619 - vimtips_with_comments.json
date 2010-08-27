@@ -4,6 +4,9 @@
   "summary": "a package of all tips from vim's homesite with all comments",
   "script_type": "utility",
   "description": "   Yes, we can get a tarball of vimtips from http://vim.sf.net/tip_download.php, but there are several things missing, for example, there is no comments and no rate record. But they are really very helpful especially when there are many tips in the tip's comments inspired by the current tip. And the rate is also very useful when we need to review tons of tips. Sometime I want to sort all the tips based on the quotient of rating, usally I can find some very useful but not popular tips by this way :)\n   In fact, I think there are many other ways to make full use of vim tips, I think post tips about how to make full use of vim tips as a new vim tip will be interesting ;) \n   I make this tarball to make my life easier and hope it will be helpful to you. \n\n   In practice, I use the following script to grab all the scripts. It is not perfect but it works well. Feel free to modify it to make it more powerful and don't forget to tell about your progress :)\n\n==================================>8=========================================\n\n#! /usr/bin/env bash\n\nw3m -dump http://vim.sourceforge.net/tips/tip.php?tip_id=$1 |cut -c 28- | sed -ne '1i\\\n======================================================================\\\n\n1,4d\n/^\\s*\\[Add Note\\]/Q\np'\n\n===================================>8===========================================\n\n   TODO: \n        * add a colorscheme for tips with comments\n   \n\n",
+  "rating_total": "4",
+  "rating_votes": "1",
+  "downloads": "387",
   "install_details": "1. download the package\n2. untar the package by command: tar -xjvf vimtips_with_comments.tar.bz2\n3. open the vimtips_with_comments.txt by vim \nThat's all, enjoy! ",
   "versions": [
     {

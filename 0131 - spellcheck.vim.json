@@ -4,6 +4,9 @@
   "summary": "spell checker  for vim",
   "script_type": "utility",
   "description": "This script enables spell checking capabilities known from text \nprocessors:\n\n*SpellCheck: highlights all misspelled words\n*Propose: checks word under cursor - giving proposals for correcting\n*AddToDictionary: adds word under cursor to dictionary\n*SpchkNxt: jumps to next error\n*SpchkPrv: jumps to previous error\n*SetLanguageTag: which language to use (uk_UK | de_DE ...)\n*SpellAutoEnable: enables automatic higlighting of misspelled words\n  (this is done via CursorHold)\n*SpellAutoDisable: disables automatic check\n\nproblems:\n-syntax highlighting does not work correctly in every syntax-mode\n solution: set syntax=off and then do the spellcheck\n-to add a word to the list of known words, the skript has to know \n which private dictionary aspell is using (something like \n $HOME/.aspell.xxx.pws where xxx depends on the language tag)\n the current relation is: \n   uk_UK|us_US -> english (.aspell.english.pws)\n   de_DE -> de (.aspell.de.pws)\n to add entries or change existing ones, there is a little adjustment table.\n",
+  "rating_total": "38",
+  "rating_votes": "25",
+  "downloads": "3090",
   "install_details": "*you need aspell (plus dictionary ofcourse)\n*you need a ruby interpreter enabled\n*$LANG should be defined (echo $LANG on CLI prompt)\n\nSimply move the skript to your plugin directory. ",
   "versions": [
     {

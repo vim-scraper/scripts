@@ -4,6 +4,9 @@
   "summary": "Helper functions for looking through sip packet captures",
   "script_type": "ftplugin",
   "description": "Helper functions mapped to\n<Plug>SkipToMatchingRequest (standard <LocalLeader>sq)\n<Plug>SkipToMatchingResponse (standard <LocalLeader>sr)\nWhen used with cursor over a packet, they will find either following matching (by CSeq) response, or previous matching request.\n\nExpected format of sip capture is the same as produced by `ngrep -q -tt -W byline ....`\nWorks on the same captures as syntax sipngrep highlighter: vimscript #2296",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "123",
   "install_details": "Put the ftplugin in .vim/ftplugin/sipngrep.vim and use `:setf sipngrep`",
   "versions": [
     {

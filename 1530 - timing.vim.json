@@ -4,6 +4,9 @@
   "summary": "stopwatch timing of execution time of vim commands and command sequences",
   "script_type": "utility",
   "description": "This script provides the TIM command which measures execution time vim takes to execute given commands up to microsecond resolution (actual resolution depends on OS).\n\nExample:\n\n   TIM 2000 let x=0  \" How much time is takes to do 'x=0' 20000 times ?\n\nIf first argument after TIM is a number, it is treated as repetiion count. \nIf first argument is not a number, the command is executed once.\n\nMultiple commands, separated by bars(|) can be used under TIM command:\n\n     TIM 100 e xxx | bd  \"How much time it takes \n                                  \" to open and close the buffer 100 times\n\n",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "278",
   "install_details": "Copy file timing.vim into your .vim/plugin directory. \nOr simply source timing.vim: :so timing.vim\n",
   "versions": [
     {

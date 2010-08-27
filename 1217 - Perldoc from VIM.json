@@ -4,6 +4,9 @@
   "summary": "Perldoc from VIM",
   "script_type": "ftplugin",
   "description": "This script gives you direct access to perldoc documentation from inside VIM.\nPerldoc support is automatically activated when editing perl files.\n\nRequirements: \"perl\" v5.004 (or better) and \"perldoc\" must be accessible from your command line. Also, module Pod::Text::Termcap must be installed.\n\nUsage: After installing (see below), edit a perlfile, press <F3>, enter name of wanted perldoc-page.\nA new window is opened (presuming the wanted page exists), hopefully containing what you're looking for - a perldoc page, tuned up with some VIM syntaxhighlighting, generated from POD informations.\n\nPerldoc pages that have already been retrieved earlier are taken from cache.\nThis speeds up the search and avoids double generation of VIM's synhighlight-commands.\n\nYou'll need to specify a directory where the cached perldoc-pages will be stored. This is done in the 2nd line of pdoc4vim.vim (you'll be guided there automatically if a valid entry couldn't be found).\nOf course you can change the perldoc-key (default: F3) too, just check out the first lines from pdoc4vim.vim.",
+  "rating_total": "11",
+  "rating_votes": "8",
+  "downloads": "686",
   "install_details": "- Store pdoc4vim.vim somewhere it doesn't bother you, e.g. in $vim/vimfiles directory.\n- Add this line to the file $vim/vimfiles/ftplugin/perl.vim (create if it doesn't exist):\n  source <path to pdoc4vim.vim>\n  e.g.: source $vim/vimfiles/pdoc4vim.vim\n- Open an existing *.pl-file (or create a new one, starting with :set filetype=perl),\n  press F3. Follow instructions on screen.",
   "versions": [
     {

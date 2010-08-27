@@ -4,6 +4,9 @@
   "summary": "Allow to handle todo lists",
   "script_type": "syntax",
   "description": "Keyboard shotcuts\n=================\n\n,c\n    Create a task.\n,s\n    Create a subtask\n,d\n    Mark Done\n,r\n    Mark as cancel\n,1\n    Convert to OTL style\n,2\n    Convert to litle box style\n,3\n    Convert to single sytyle\n",
+  "rating_total": "3",
+  "rating_votes": "2",
+  "downloads": "139",
   "install_details": "cd ~/.vim\ntar xzf vimtl.tar.gz\n\nThen, open a new file and run the command:\n\n     :call Loadvimtl()\n\nOr set a common file extension like .otl o .tl:\n\n     autocmd BufWinEnter *.otl call Loadvimtl()\n     autocmd BufWinEnter *.tl call Loadvimtl()\n",
   "versions": [
     {

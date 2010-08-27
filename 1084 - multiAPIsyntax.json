@@ -4,6 +4,9 @@
   "summary": "Syntax for Qt, KDE, wxWidgets, GTK1, GTK2 libraries",
   "script_type": "syntax",
   "description": "This is a new version of former script vimscript #787.\nThis script scans Qt 3.x, KDE 3.x, wxWidgets, GTK 1.2.x and GTK 2.x headers, then creates vim syntax file (cType definitons for all classes/structs) for highlighting and plain list of classes for vim word-completion (for use with vimscript #213). multiAPIsyntax supports command line options like --qt, --kde, --wx, --gtk1, --gtk2, so you may choose which libraries to scan.",
+  "rating_total": "10",
+  "rating_votes": "4",
+  "downloads": "627",
   "install_details": "Requires Perl; no additional Perl modules are required. Uses pkg-config to obtain GTK2 location. Uses gtk-config and wx-config to obtain GTK 1.2.x and wxWidgets locations. Uses $QTDIR and $KDEDIR environment variables to obtain Qt and KDE locations. To create syntax file and completion-list for Qt and KDE (for cvim plugin) use:\nmultiAPIsyntax --qt --kde -s ~/.vim/after/syntax/c.vim -l ~/.vim/wordlists/qtkde.list",
   "versions": [
     {

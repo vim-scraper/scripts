@@ -4,6 +4,9 @@
   "summary": "Switch or watch diff between alternate files from child and parent workspaces",
   "script_type": "utility",
   "description": " This script provide a way to quickly switch between files from different workspaces (Child and Parent). And to see difference between them.\n\nSet variable g:aw_child_path and g:aw_parent_path to work with this script.\n\nExample of vimrc:\n\n   let g:aw_child_path = '/home/ni/branch'\n   let g:aw_parent_path = '/project/' \n   let g:aw_stop_word = 'src'\n\n   nnoremap \\wd :AWDiffMirror<CR>\n   nnoremap \\we :AWEditMirror<CR>\n\nEDIT MIRROR\n\nSuppose you have two files in different workspaces.\nYou edit now file from child workspace.\n\nyou are at line 100\nin that line is text 'int main()'\n\nin alternate file there is line 'int main()' too but in line 200\n\nafter command :AWEditMirrorFile you will be at line 200 in alternate file\nIt is very useful.\n\nif there is now such line in alternate file you'll be at line 100.\n\nSET WORKSPACES \n\nUse AWSetChild and AWSetParent commands to set workspaces directories (thanks to Sergey Popov).\n\nUse AWAutoSetChild and AWAutoSetParent commands - this commands will create child and parent path form current file name\nexample: \n    let g:aw_stop_word = 'src'\n    current file name = '/home/me/project/src/..../.../1.cpp'\n    after execution of AWAutoSetChild aw_child_path will be '/home/me/project/'\n\n:AWEditMirrorFile - edit alternate file\n:AWDiffMirrorFile - diff current and alternate file\n",
+  "rating_total": "24",
+  "rating_votes": "6",
+  "downloads": "366",
   "install_details": "Put alternate_workspace.vim in plugin directory",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "Yac (Yet Another Cheat)",
   "script_type": "syntax",
   "description": "== What's Yac\n Yet Another Cheet (Powered By Ruby)\n== What's the script\n the Syntax Highlight\n== How To Use The Yac\n\n=== To initialize repositories:\n    $ yac init\n=== To get a cheat sheet:\n    $ yac [cheatsheet]\n=== To edit a cheat sheet\n    $ yac edit [cheatsheet]\n=== To add a cheat sheet\n    $ yac add [cheatsheet]\n=== To rm a cheat sheet\n    $ yac rm [cheatsheet]\n=== Search according the sheets name\n    $ yac name [keyword]\n=== Search according the sheets content\n    $ yac content [keyword]\n=== Update repositories\n    $ yac update main  => Update main repository\n    $ yac update private => Update private repository\n    $ yac update => Update All\n=== Help\n    $ yac help\n=== Shell\n    $ yac shell main => Open the main repository's shell\n    $ yac shell => Open the private repository's shell\n=== Documents format\n   Use .ch as the suffix ,At the beginning of the row,plus N = for the N-class title\n   Use '#' at the beginning of a row to comment the line,You can use '\\#' to get '#'\n   Use three @ wrap some words to highlight it,for example: @@\\@ HI @@\\@ (remove the \\) will highlight HI\n=== Set the color of highlight\n   Default use .yacrc under home directory to set,, details, see the example file under the resources directory\n=== Others\n   Add @ before [cheatsheet]/[keyword] will only search the main depot\n   See also the source code to get more sexy ways\n\n== Author: Jinzhu Zhang : http://www.zhangjinzhu.com /  wosmvp (no-spam) gmail (no-spam) com\n\n",
+  "rating_total": "8",
+  "rating_votes": "2",
+  "downloads": "209",
   "install_details": "drop it to syntax directory\n\nadd below to vimrc\n\naugroup filetypedetect\nau! BufNewFile,BufRead *.ch setf cheat\naugroup END\n",
   "versions": [
     {

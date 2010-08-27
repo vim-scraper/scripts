@@ -4,6 +4,9 @@
   "summary": "Comment out blocks of C/C++ code using #if 0 #endif block",
   "script_type": "utility",
   "description": "Hi All,\n  Here is a script I use quite often when coding\nand I want to temporarily comment out a chunk\nof C/C++ source code.\n\nUsage:\nSelect the block of code you want to comment out\n(in visual mode) and invoke :call PComment().\n\nThis inputs\n#if 0\n<code block>\n#endif\n\nYou can also invoke it without the visual selection\nand it comments the current line.\n\nIt will also remove an #if 0 block as follows:\n\n#if 0\n<code block>\n#endif\n\nusing the above example, place the cursor anywhere\non the #if 0 line and invoke the function, voila \ncode block is restored and the #if 0 and #endif are gone.\n\nHeres a more advance example, suppose you have the\nfollowing:\n\n#if 0\n<code block>\n#else\n<code block>\n#endif\n\nif you invoke the command on the #if 0 the #else\nit will automatically be converted to #if 0 and the code \nblock above will be restored, like so:\n\n<code block>\n#if 0\n<code block>\n#endif\n\nAlso works with nested #if 0 #endif blocks:\n\nSuppose you have a large chunk of code that already\nhas some #if 0 blocks.  No problem, select all you want\nincluding the nested comment blocks and invoke the function,\nwhen you want to remove the comment the proper #endif\nis matched and removed.\n\nExample:\n\n<code block1>\n#if 0\n<code block2>\n#endif\n<code block3>\n<code block4>\n\nSelect all up to code block3 and invoke the function,\nwe get:\n\n#if 0\n<code block1>\n#if 0\n<code block2>\n#endif\n<code block3>\n#endif\n<code block4>\n\nMove to the first #if 0 and invoke the function, voila\nyou should be back to square one again.\n\nHope you all like it.\nHave fun.",
+  "rating_total": "81",
+  "rating_votes": "31",
+  "downloads": "1017",
   "install_details": "Copy COMMENT.vim to ~/.vim/plugin folder",
   "versions": [
     {

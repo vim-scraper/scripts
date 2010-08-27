@@ -4,6 +4,9 @@
   "summary": "syntax highlight file for the rc shell scripting language",
   "script_type": "syntax",
   "description": "This is a syntax file for the rc shell scripting language.  \n\nCredits\n\nMost of the work is done by Andy.  I have only made some minor changes to make this syntax highlight works with Byron Rakitzis' reimplementation.\n\nFor unix (not plan9) users, there are two slightly different rc available.  One is plan9port's version and the other is Byron Rakitzis' (as packaged by Debian and other *nix software distribution).  This syntax file is compatible with both versions.  (There is a minor tradeoff: less powerful `(ba)sh like substitution` syntax error detection. For a pure syntax file\" for p9p, see: http://lug.rose-hulman.edu/svn/misc/trunk/config/spenceal/vim/ )\n\nBug Report: http://bitbucket.org/weakish/weakishscripts/issues/\n\nTips for using rc shell in Vim (this is not related to syntax directly, but I think users who codes rc shell script in Vim may have interests):\n\nAdd the following lines to your .vimrc:\n\nset shell=/usr/bin/rc\\ -l\n\"  or /bin/rc or /usr/local/bin/rc or /opt/local /bin/rc, etc\nset shellcmdflag=-c\nset shellpipe=>[2=1]\\|\\ tee\nset shellredir=>%s\\ >[2=1]\n\n",
+  "rating_total": "2",
+  "rating_votes": "2",
+  "downloads": "164",
   "install_details": "Copy rc.vim to ~/.vim/syntax/rc.vim or c:\\program files\\vim\\vimfiles\\syntax\\rc.vim (if you are on Windows)\n\n(Optional) Add this line in your .vimrc:\n\nau BufRead,BufNewFile *.rc set filetype=rc\n",
   "versions": [
     {

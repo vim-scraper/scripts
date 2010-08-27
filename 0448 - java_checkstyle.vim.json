@@ -4,6 +4,9 @@
   "summary": "Integrates Checkstyle with Vim",
   "script_type": "ftplugin",
   "description": "The java_checkstyle.vim filetype plugin script integrates Checkstyle\nhttp://checkstyle.sourceforge.net/ with Vim.  \"Checkstyle is a\ndevelopment tool to help programmers write Java code that adheres to a\ncoding standard\" (from the Checkstyle home page).  This plugin allows a\nuser to run Checkstyle on the current Java file, putting the results in an\nerrorfile and jumping to the first Checkstyle error.\n",
+  "rating_total": "50",
+  "rating_votes": "26",
+  "downloads": "2581",
   "install_details": "The java_checkstyle.vim script should be copied to the right directory.\nOn UNIX, this is ~/.vim/ftplugin; see ':help ftplugins' and ':help\nadd-global-plugin' for more information.  You will likely need to specify\nthe location of the checkstyle-all jar file and your desired Checkstyle\nconfiguration file, which can be done either by editing the script itself\nor by adding the settings to your vimrc file (see the section in the\nscript called \"Configuration\").  If you have not already done so, you will\nalso need to turn on filetype plugin usage in Vim using the following\ncommand (you will probably want to put this in your vimrc file):\n\n    :filetype plugin on",
   "versions": [
     {

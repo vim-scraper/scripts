@@ -4,6 +4,9 @@
   "summary": "Sanitizes LaTeX error messages for Vim-LaTeX.",
   "script_type": "utility",
   "description": "# vimlatex: Script wrapper for TeX/LaTeX/etc. that sanitizes output to\n#           be compatible with Vim-LaTeX's errorformat. Prevents Vim\n#           from opening the wrong file after some errors.\n#\n#           This script is inspired by\n#\n# http://hermitte.free.fr/vim/ressources/vimfiles/compiler/vim-tex_sh.html\n#\n# and\n#\n# http://www.unix.com/shell-programming-scripting/20218-pipelining.html\n#\n# Original author: Ted Pavlic\n#                  ted@tedpavlic.com\n#                  http://www.tedpavlic.com/\n#\n# Mercurial source code repository for original author's version:\n#                  http://hg.tedpavlic.com/vimlatex/\n#\n# Copyright (c) 2008 Theodore P. Pavlic under MIT license (http://www.opensource.org/licenses/mit-license.php)\n#\n# Usage: vimlatex %command [%arguments]\n#\n#        where the command line:\n#\n#        %command %arguments\n#\n#        would texify as normal. In other words, the \"vimlatex\" command\n#        can simply be added before a given working command line.\n#\n# For more information (and history), see:\n#\n# http://phaseportrait.blogspot.com/2008/03/fixing-vim-latex-compiler-error.html\n#",
+  "rating_total": "12",
+  "rating_votes": "3",
+  "downloads": "655",
   "install_details": "Place script somewhere in PATH, like:\n\n/usr/local/bin/vimlatex\n\nand make it executable, like:\n\nchmod 0755 /usr/local/bin/vimlatex\n\nThen, add \"vimlatex\" before any tex or latex build command lines. \"vimlatex\" is a wrapper that processes the output while maintaining the same return code. For example:\n\nlatex myfile.tex\n\nand\n\nvimlatex latex myfile.tex\n\nboth run \"latex\" on \"myfile.tex\", but the output from the second line will have error messages that should all make sense to Vim-LaTeX's error format.",
   "versions": [
     {

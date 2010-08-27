@@ -4,6 +4,9 @@
   "summary": "OpenGL Shading Language syntax script",
   "script_type": "syntax",
   "description": "A syntax script for builtin functions, uniform variables, constants and types for the OpenGL Shading Language V1.1 (http://www.opengl.org/documentation/oglsl.html)\n",
+  "rating_total": "1",
+  "rating_votes": "1",
+  "downloads": "366",
   "install_details": "drop gls.vim into your ~/.vim/syntax/ directory and add something like:\n\n     autocmd BufNewFile,BufRead *.vp,*.fp,*.vert,*.frag,*.shd,*.gls set filetype=gls cindent comments=sr:/*,mbl:*,ex:*/,://\n\nto your .vimrc\n\nAlternatively install into the $VIMRUNTIME/syntax/ directory and add the above rule to $VIMRUNTIME/filetype.vim.",
   "versions": [
     {

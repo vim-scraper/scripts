@@ -4,6 +4,9 @@
   "summary": "Using MSWin Vim with MSWin SFU 3.5",
   "script_type": "utility",
   "description": "For MS Windows XP users with Windows Services for Unix (SFU) 3.5 installed, the vimksh script enables the MS Windows version of Vim to use SFU commands and utilities for its shell commands (e.g., \":shell\" and \":!...\") as well as for its filter commands (e.g., \"1G!Gwc -cl\" followed by a quick \"u\"). No more dealing with \"cmd.exe\" -- you get to deal with ksh instead. The script has been tested with Vim 7.0, but should work with earlier Vim versions and with other versions of MS Windows that run SFU 3.5.",
+  "rating_total": "1",
+  "rating_votes": "1",
+  "downloads": "216",
   "install_details": "The installation instructions are (1) put the script in a directory, (2) use SFU's chmod to make the script executable (\"chmod +x vimksh\"), and (3) add a \"set shell=...\" command to \"_vimrc\". That's basically it. It will be easier if the path to the script does not include embedded spaces, but that's just an escaping issue in the \"set shell\". As an example, if vimksh resides in \"c:\\home\", the \"_vimrc\" command (note the escaped spaces) would be:\n\n     set shell=c:\\windows\\system32\\posix.exe\\ /u\\ /c\\ /dev/fs/C/home/vimksh\n\nThe installation instructions are also in the header comments of the script. Ordinarily, vimksh logs the requests (not the results) that it performs to \"vimksh.log\", so the directory containing vimksh must to be writable. Comments in the script describe how logging can be turned off.\n\nIf you encounter slow performance on your first few shell and filter commands, keep at it. I was seeing slow performance at first on Windows XP, but as soon as prefetch (or something) kicked in, performance became really good.",
   "versions": [
     {

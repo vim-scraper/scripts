@@ -4,6 +4,9 @@
   "summary": "Jump to file from diff output",
   "script_type": "utility",
   "description": "Description:\nIf you are editing diff file and you want to jump quickly to corresponding source files, function DiffGoFile does that. Place cursor on the spot in diff file which interests you, call DiffGoFile and you will be presented with the source file exactly at the place you were looking at. Currently only unified diff is supported, but the script has framework for adding more types.\n\nInvocation:\nPlace cursor on the line you are interested in and\n:call DiffGoFile('X')\nWhere X is one of: n - open in New window\n                   v - open in Vertical split\n                   h - open in Horizontal split\n                   t - open in new Tab\n\nConfiguration:\nYou may wish to setup a hotkey, I'm using CTRL-] (:tag) for example\n\nautocmd FileType diff nnoremap <buffer> <C-]> :call DiffGoFile('n')<CR>\n",
+  "rating_total": "10",
+  "rating_votes": "6",
+  "downloads": "271",
   "install_details": "If you are upgrading from version 1\n  - remove ~/.vim/plugin/diffgofile.vim\n\nCopy the file to the proper location\n  - mkdir -p ~/.vim/ftplugin\n  - cp diff_gofile.vim ~/.vim/ftplugin\n\nMake sure that you are using ftplugins\n  - add \"filetype plugin on\" to your ~/.vimrc\n",
   "versions": [
     {

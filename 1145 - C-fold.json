@@ -4,6 +4,9 @@
   "summary": "Automates folding and unfolding C & C++ comments and code blocks.",
   "script_type": "ftplugin",
   "description": "Automatically folds all blocks (i.e. { } ) in C and C++ and defines a function that performs a command e.g. zo on all folds beginning with text that matches a given pattern.\n\nThis allows for the following mappings defined by the plugin:\n\n      z[ - Opens all doxygen-style comments\n      z] - Closes all doxygen-style comments\n      z{ - Opens all code blocks (i.e. {  })\n      z} - Closes all code blocks",
+  "rating_total": "12",
+  "rating_votes": "19",
+  "downloads": "1772",
   "install_details": "Extract the archive from your home directory. This will extract the following files:\n      .vim/plugins/cfold.vim\n      .vim/after/syntax/c.vim\n\nAlso requires the folding of Doxygen-style comments. This requires vimscript #5. This can be done easily by adding the 'fold' keyword to the end of the 'doxygenComment' region in the 'doxygen.vim' syntax file:\n\n      syn region doxygenComment start= ... keepend fold\n\nAdditional languages can be supported as appropriate (e.g. Java) by copying 'c.vim' and renaming to the syntax file for the language (e.g. java.vim).\n",
   "versions": [
     {

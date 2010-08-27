@@ -4,6 +4,9 @@
   "summary": "toggle words like:'true'=>'false', 'True'=>'False' etc",
   "script_type": "utility",
   "description": "\" Documentation: \n\"   The purpose of this plugin is very simple, it can toggle words among\n\"   'true'=>'false', 'True'=>'False', 'if'=>'elseif'=>'else'=>'endif' etc . \n\"\n\"   To use it, move the cursor on some words like 'true', 'False', 'YES', etc, \n\"   call command \n\"     :ToggleWord\n\"\n\"   It will toggle 'true'=>'false', 'False'=>'True', 'YES'=>'NO' etc. Yes,\n\"   this script will try to take the case into account when toggling words, so\n\"   'True' will be toggled to 'False' instead of 'false'. Currently the way to\n\"   check the case is very simple, but it works well for me.\n\"\n\"   You can define a map for 'ToggleWord' comand to make it easier: \n\"     nmap ,t :ToggleWord<CR>\n\"\n\"   This script can search the candicate words to toggle based on\n\"   current filetype, for example, you can put the following configuration\n\"   into your .vimrc to define some words for python:\n\"      let g:toggle_words_dict = {'python': [['if', 'elif', 'else']]}\n\"   \n\"   There are some default words for toggling predefined in the\n\"   script(g:_toogle_words_dict) that will work for all filetypes.\n\"   Any comment, suggestion, bug report are welcomed. \n",
+  "rating_total": "20",
+  "rating_votes": "10",
+  "downloads": "948",
   "install_details": "just put this script into YOUR_HOME_DIR/[._]vim/plugin folder.",
   "versions": [
     {

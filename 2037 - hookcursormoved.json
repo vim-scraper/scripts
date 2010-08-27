@@ -4,6 +4,9 @@
   "summary": "Facilitate definition of triggers on CursorMoved[I] events",
   "script_type": "utility",
   "description": "This experimental plugin provides some help with the definition of \nfunctions that should be called when the cursor position changed.\n\nWhen the cursor position changes, it first checks if a certain condition \nis met and then calls functions registered in \n[bg]:hookcursormoved_{CONDITION} (an array).\n\nPre-defined conditions:\n    linechange\n        The line-number has changed.\n    parenthesis\n        Cursor is over (), [], or {}.\n    syntaxchange\n        The syntax group under the cursor has changed (i.e. the cursor \n        has moved in/out of a syntax group.\n    syntaxleave\n        b:hookcursormoved_syntax (ARRAY) should contain the syntax names \n        which should run the hook code.\n    syntaxleave_oneline\n        Same as a above but check also for changes of the line number.\n\nIn order to define a new conditions, you have to define a function \n\"HookCursorMoved_{CONDITION}(mode)\", which returns true if the condition \nis met.\n\nFunctions are best registered using |hookcursormoved#Register()|.\nExample: >\n\n    function! WhatsGoingOn(mode) \"{{{3\n        if mode == 'i'\n            DoThis\n        elseif mode == 'n'\n            DoThat\n        endif\n    endf\n\n    call hookcursormoved#Register('b', 'syntaxchange', function('WhatsGoingOn'))\n\n",
+  "rating_total": "8",
+  "rating_votes": "2",
+  "downloads": "1399",
   "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0,\nplease make sure, you have the current version of vimball\n(vimscript #1502) installed.\n\n\nAlso available via git\nhttp://github.com/tomtom/hookcursormoved_vim",
   "versions": [
     {

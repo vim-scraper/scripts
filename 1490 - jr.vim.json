@@ -4,6 +4,9 @@
   "summary": "jr language syntax script",
   "script_type": "syntax",
   "description": "This script provides syntax highlighting for the JR programming language, available at http://www.cs.ucdavis.edu/~olsson/research/jr/",
+  "rating_total": "6",
+  "rating_votes": "3",
+  "downloads": "437",
   "install_details": "install in the syntax directory, et voila !  You will also need to edit the synmenu.vim and filetype.vim files, and add jr to the list of languages.\n\nThe line to add in symmenu.vim should look like this (you'll need to adjust the numbers):\n    an 50.40.410 &Syntax.HIJK.Jr :cal SetSyn(\"jr\")<CR>\n\nThe lines to add in filetype.vim:\n\n\" JR\nau BufNewFile,BufRead *.jr                      setf jr\n\n\n\n\n",
   "versions": [
     {

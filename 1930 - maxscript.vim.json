@@ -4,6 +4,9 @@
   "summary": "Syntax highlighting for MAXScript 8.0",
   "script_type": "syntax",
   "description": "This file will provide basic highlighting for MAXScript release 8.0. Comments, keywords, numbers, and strings are currently highlighted.",
+  "rating_total": "10",
+  "rating_votes": "4",
+  "downloads": "161",
   "install_details": "Save in vimfiles/syntax or in .vim/syntax, depending on platform.\n\nWrite the following to ftdetect/maxscript.vim:\n\n    augroup filetypedetect\n    au! BufRead,BufNewFile *.ms\t\tsetf maxscript\n    augroup END\n\nYou can also add *.mse, *.mcr, *.mzp, *.ds if you use those names.",
   "versions": [
     {

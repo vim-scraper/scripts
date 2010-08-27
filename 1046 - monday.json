@@ -4,6 +4,9 @@
   "summary": "Lets you use ctrl-a and ctrl-x on names of months and weekdays",
   "script_type": "utility",
   "description": "Monday.vim extends the normal-mode commands <ctrl-a> and <ctrl-x> so that they can be applied to the names of months and weekdays. For example, if you are standing on the word \"July\" and presses <ctrl-a>, the word is replaced by \"August\".\n\nThe script tries to preserve the case of the letters, and can handle the following three variants:\n\n(1) All lower-case (\"july\" becomes \"august\").\n(2) All upper-case (\"JULY\" becomes \"AUGUST\").\n(3) First letter upper-case, the rest lower-case (\"July\" becomes \"August\").\n\nTodo:\n\nOnly English is supported; although it's easy to add any word pairs you want, the script cannot yet handle words that have two or more possible successors/predecessors.  For example, the 4th month is called \"April\" in both English and Swedish, but its successor is called \"May\" and \"Maj\", respectively. So, if you add the Swedish months and then try to increment the word \"April\", the script won't be able to figure out which word (\"May\" or \"Maj\")  it should be replaced with.\n",
+  "rating_total": "102",
+  "rating_votes": "33",
+  "downloads": "1357",
   "install_details": "Just drop the script in your local plugin directory (e.g. ~/.vim/plugin).",
   "versions": [
     {

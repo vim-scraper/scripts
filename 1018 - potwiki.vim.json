@@ -4,6 +4,9 @@
   "summary": "Maintain a Wiki of plain text files",
   "script_type": "utility",
   "description": "If you like to keep notes in plain text files you might like this script.\npotwiki provides functions and mappings for conveniently maintaining \na Wiki of text files with vim.\n\nThe Wiki is a collection of text files in a single directory. These files\ncan contain hyper links to each other in the form of WikiWords.\n\nA WikiWord is a word which starts with an upper case letter and contains\nat least one lower case letter and another upper case letter in this\norder -- it's in 'camel case', e.g.\n\n  ThisIsAWikiWord\n\nSuch a WikiWord links to a file of exactly the same name in your\nWiki directory.\n\nWhen opening a Wiki file potwiki scans your Wiki directory to find\nwhich WikiWords are valid links. WikiWords without a corresponding\nfile are highlighted as errors (otherwise it doesn't matter).\n\nAfter installing the plugin see :help potwiki for further documentation.\n\n   The default mappings are defined as follow (By default, <Leader> stands\n   for '\\&#039. See |Leader| for more info) :\n\n   <Leader>ww   - open the Wiki HomePage\n   <Leader>wi   - open the Wiki index\n   <Leader>wf   - follow a WikiWord (can be used in any buffer!)\n   <Leader>we   - edit a Wiki file\n\n   The following mappings are present when editing a Wiki file:\n\n   <Leader><Leader> - close the file\n   <CR>             - follow the WikiWord under the cursor\n   <Tab>            - move to the next WikiWord\n   <BS>             - move to the previous WikiWord\n   <Leader>wr       - reload WikiWords\n",
+  "rating_total": "415",
+  "rating_votes": "123",
+  "downloads": "4400",
   "install_details": "Just drop potwiki.vim in your plugin directory (usually ~/.vim/plugin).\n\npotwiki automatically installs its documentation the next time you start vim.\n",
   "versions": [
     {

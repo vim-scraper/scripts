@@ -4,6 +4,9 @@
   "summary": "create new files from existing templates on-the-fly",
   "script_type": "utility",
   "description": "create new files from existing templates on-the-fly",
+  "rating_total": "10",
+  "rating_votes": "8",
+  "downloads": "199",
   "install_details": "download the source code, extract it to the directory. Reboot vim, input\n\n:NewTemplate xhtml\n\nto create XHTML template. there is another command for vim above 7.0:\n\n:NewTemplateTab xhtml\n\nby using this command you can create file in new tab. Of course, you can define key mapping to create\ncommon types of files, for instance,\n\nmap nn :NewTemplateTab xhtml<cr>\n\npress n twice under normal mode to create xhtml file in new tab.\n\nthe directory for this plugin is:\n\n$VIMRUNTIME/plugin/Template.vim\n\nand it has two default configure options\n\nlet g:TemplatePath=$VIM.'/vimfiles/template/'\nlet g:TemplateCursorFlag='#cursor#'\n\nAmong the 2 options, g:TemplatePath is the path for the templates, whereas the g:TemplatePathCursorFlag is the position for the mouse cursor to be moved to when the new template is built( moving to the bottom of the file by default).\n\nAdding templates\n\nCreating new template is supported by the script. First, find the path for the xhtml.tpl in g:TemplatePath. Then read the following content,\n\n<html>\n...\n    <body>\n        #cursor#\n    </body>\n</html>\n\nit is easy to understand. If you are to build a python template, you can create python.tpl in g:TemplatePath and add the #cursor# in the appropriate position.\n\nPlease do not hesitate to throw your comments and suggestions here: http://www.gracecode.com/Archive/Display/2414",
   "versions": [
     {

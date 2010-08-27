@@ -4,6 +4,9 @@
   "summary": "Syntax highlighting for simple to do lists.",
   "script_type": "syntax",
   "description": "Adds syntax highlighting for simple to do lists.\n\nThis is pretty rudimentary right now, but I've been using it for a while. Please send me comments/suggestions.\n\nThe file todo.vim lists known limitations/bugs.",
+  "rating_total": "63",
+  "rating_votes": "20",
+  "downloads": "551",
   "install_details": "Quick install:\n\n    o Extract todo.vim under the syntax directory.\n    o Add the following to your .vimrc (or to ftdetect/filetype.vim; sample filetype.vim is included)\n\n        au BufRead,BufNewFile *.todo setfiletype todo\n\nAny file of the form *.todo or any file whose filetype is set as 'todo' will now have syntax highlighting enabled. Read the comments in todo.vim and view the sample file sample.todo for details.\n\nOptional: Add the following to your .vimrc (or to scripts.vim file under the config directory; sample scripts.vim is included). This allows, in addition, for files starting with '#todo' in the first line to be marked as to do lists:\n\n        if getline(1) =~? '^#\\?TODO\\>'\n            setfiletype todo\n        endif",
   "versions": [
     {

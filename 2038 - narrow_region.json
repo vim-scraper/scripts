@@ -4,6 +4,9 @@
   "summary": "hide certain lines of a buffer",
   "script_type": "utility",
   "description": "This plugin provides a command which somewhat limits the buffer to a specified range of lines.\n\n...\n:[range]NarrowRegion\n\t\tThis command does the following, with [range] defaulting to\n\t\tthe current line :\n\t\t- store current folds, foldstates and foldoptions\n\t\t- delete all folds\n\t\t- setl foldopen=undo\n\t\t- setl foldclose=all\n\t\t- setl foldminlines=0\n\t\t- setl foldmethod=manual\n\t\t- fold all lines outside of range\n\t\t- setup the nice extras, see below\n...",
+  "rating_total": "2",
+  "rating_votes": "2",
+  "downloads": "207",
   "install_details": "As usual :\n\nvim narrow_region.vba\n:so %\n\n",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "PostgreSQL hightlighting.",
   "script_type": "color scheme",
   "description": "This sets up highlighting for *.psql files, which contain PostgreSQL SQL.\nYou may also need to make an entry for *.psql in your filetype.vim .",
+  "rating_total": "52",
+  "rating_votes": "29",
+  "downloads": "1671",
   "install_details": "Instructions for a global install.\nAdd psql.vim to your syntax directory. (/usr/share/vim/vim61/syntax/ under RH 7.3, your install location may vary). \nThen add these two lines to filetype.vim\n\" PostgreSQL\nau BufNewFile,BufRead *.psql                    setf psql\n\nPlease report bugs and desired features.\nCurrently, most keywords  seem to work.",
   "versions": [
     {

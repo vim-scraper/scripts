@@ -4,6 +4,9 @@
   "summary": "Syntax, Indent and Goodies for IBM's Mainframe-PLI",
   "script_type": "utility",
   "description": "Syntax-highlighting and indenting for IBM's PLI on mainframes (MVS; LE/390; z/OS etc.) when using the PLIOPT-Compiler.\nDoes recognize embedded SQL and CICS.\nSupports matchit-plugin\nSmart uppercasing (only source, no strings and/or comments)\n",
+  "rating_total": "2",
+  "rating_votes": "2",
+  "downloads": "569",
   "install_details": "1) copy the 3 pli.vim-files in the correct directories:\nftplugin\\pli.vim\nsyntax\\pli.vim\nindent\\pli.vim\n\n\n2) add into your runtime\\filetype.vim this lines:\n---BEG\n\" PLI\nau BufNewFile,BufRead *.PLI\t\tsetf pli\n---END\n\n3) add into your runtime\\synmenu.vim this lines (maybe you have to change the position-numbers):\n---BEG\nan 50.80.235 &Syntax.PQ.PLI :cal SetSyn(\"pli\")<CR>\n---END\n\n4) Be sure you use a color-schema which defines these highlights (or modify your schema or syntax\\pli.vim).\nItems marked by '*****' are very usually not in your environment!\n\n---BEG\nBuiltin   *****     \nCICS_Statement   *****\nComment\nError\nIdentifier\nIncludeFile   *****\nLabel\nNumber\nOperator\nPreProc   *****\nSQL_Statement   *****\nStatement\nString\nTodo\nType\n---END\n\n5) Vartabs\nTo have comfortable tabstops you should install vimscript #785 too, or you have to deactivate the corresponding line in runtime\\ftplugin\\PLI.vim.",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "Vim syntax file for Tensilica Xtensa TIE extension language",
   "script_type": "syntax",
   "description": "This is syntax highlighting file for TIE language that is used by Tensilica for xtensa processor tie extensions. For more information on xtensa and tensilica processors: see http://www.tensilica.com.\n",
+  "rating_total": "5",
+  "rating_votes": "4",
+  "downloads": "196",
   "install_details": "**All downloaders, please provide honest rating karmas to improve this script.**\n\nDo the following steps for installation:\n1. Copy the tie.vim file to the $VIMRUNTIME/syntax folder (the folder where vim is installed in your system).\n2. Add the following lines in your ~/.vimrc file (the vimrc script that will be located in your home folder).\n\nFile ~/.vimrc\n------ snip ----\n\" include tie file syntax\nau BufNewFile,BufRead *.tie\t\t\tsetf tie\nsyn on\n------ snap ----\nNote: The \"syn on\" above can be omitted if already present in your vimrc file.\n\nThats it! You are ready to use your vim editor with the tie syntax enabled for editing.\nI am happy to receive any bug reports/constructive comments/critisism from the users of tie.vim.\nIf there are any requests that you would have - do let me know; I will try my best to see what I can do ;) Happy tie vimming !\n\n",
   "versions": [
     {

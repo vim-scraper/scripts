@@ -4,6 +4,9 @@
   "summary": "Makes the delete key remove 'softtabspace' characters, similar to backspace",
   "script_type": "indent",
   "description": "I usually edit Python code that has a lot of whitespace indenting.\nThe backspace key works nicely, and I'm able to delete indents,\nbut I'm unable to do so with the <Del> key.\nI've searched the web, searched the scripts and tips, asked on the vim mailing list,\nasked on IRC and read a lot of documentation.\nIn the end, I found it easier to write a Python script that gave me the desired behaviour.\nSo, here it is. It works for me.",
+  "rating_total": "15",
+  "rating_votes": "7",
+  "downloads": "404",
   "install_details": "(for *nix)\nNote that you need Python-support compiled in to your Vim.\n(On Debian, just apt-get install vim-python)\nSave the script to your .vim/indent folder.\nAdd these two lines to your .vimrc:\ninoremap <silent> <Del> <ESC>:pyfile ~/.vim/indent/delete.py<CR>i\nnnoremap <silent> <Del> :pyfile ~/.vim/indent/delete.py<CR>\n",
   "versions": [
     {

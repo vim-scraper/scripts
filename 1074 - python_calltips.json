@@ -4,6 +4,9 @@
   "summary": "Display Python code calltips and allows you to auto-complete your Python code",
   "script_type": "utility",
   "description": "This script simualate code calltips in a new bottow window of Vim.\nIn fact, it display python help doc strings of word under the cursor\nby scanning the imported modules in the current file.\nthis file Reference :    http://vim.sourceforge.net/scripts/script.php?script_id=73 \n\nNote: Because Python language is dynamic and the type of object is certain \n         when running, the calltips is only displayed for the part of all object.   \n\nIt require Python and Vim compiled with \"+python\" \nand MAKE SURE \"set iskeyword+=.\"\n    \nIt work well in my box in Win2000/XP + Vim6.3 + python2.3. \nIt can also work in GNU/Linux.\nNote: as I know, Vim6.2 come into conflict with Python2.3, becase Vim6.2\n         is compiled with Python2.1. you can update vim version to 6.3.\n        Maybe yours not.\n\nMore detail is in the header of script file. \n\nI write a tip(vimtip #778) about the script for all Pythoner. I wish you enjoy it.",
+  "rating_total": "53",
+  "rating_votes": "36",
+  "downloads": "4728",
   "install_details": "Put the plugin into \"$VIMRUNTIME/ftplugin\" folder\n",
   "versions": [
     {

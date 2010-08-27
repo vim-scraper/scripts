@@ -4,6 +4,9 @@
   "summary": "Indenting for filetype dosbatch",
   "script_type": "indent",
   "description": "I couldn't find an indent script for DOS batch files so I wrote a simple one.  It just follows these rules:\n - generally keep the indent of the previous line \n - if previous line is not a comment and has ( and no matching ), increase indent\n - if this line starts with ), decrease indent\n\nI started by cutting down and modifying Erik Janssen's awk.vim.",
+  "rating_total": "1",
+  "rating_votes": "1",
+  "downloads": "118",
   "install_details": "Copy the file into one of the indent directories in your runtime path (see :help 'runtimepath'), personally I put it in c:\\program files\\vim\\vimfiles\\indent\\\n\nMake sure filetype-specific indenting is switched on (see :help filetype), personally I put this in my _vimrc file\n\n:filetype indent on",
   "versions": [
     {

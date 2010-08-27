@@ -4,6 +4,9 @@
   "summary": "syntax and a couple of useful commands for svk commit files",
   "script_type": "utility",
   "description": "Package includes syntax file for svk commit file and  two functions for adding files that are not under source control to commit (and vice-versa)",
+  "rating_total": "8",
+  "rating_votes": "2",
+  "downloads": "136",
   "install_details": "- Copy the svk.tar.gz to $HOME/.vim/ and run\n    tar xvfz svk.tar.gz \n\n- Make sure filetype plugin is ON by issuing :filetype command and if it's off put following line in the beginning of .vimrc: \n    filetype plugin on\n\n- Enable autodetection of svk commit files by adding following  \n    au BufNewFile,BufRead svk-commit*.tmp   setf svk",
   "versions": [
     {

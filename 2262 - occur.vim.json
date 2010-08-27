@@ -4,6 +4,9 @@
   "summary": "Show all lines in the buffer containing word (grep buffer)",
   "script_type": "utility",
   "description": "This script looks like 'occur' of emacs script.\n\nCreate a quickfix list using all lines in the buffer containing a match for regexp.\nSearch for regexp in the current buffer or all buffers.\n\nSearch current buffer:\n(1) Search the word by '/' command.\n(2)  :Occur\n\nSearch all buffers:\n(1) Search the word by '/' command.\n(2)  :Moccur\n\nSeach all buffers for occurrence of the word nearest to the cursor:\n(1) move the cursor to the word\n(2) :StarOccur\n\nYou can use keymappings of\n  <Leader>oc   - Occur\n  <Leader>mo   - Moccur\n  <Leader>*   - StarOccur\n\n# The default <Leader> is backslash. (ex: \\* = StarOccur) \n# (see :help mapleader)\n\n[QUICKFIX KEY-MAPPING]\nThis plugin enhances quickfix key-mapping.\n(when this plugin opens the quickfix window.)\n\n<Space> : Set current window height to highest.\nx : Display the occurence the current line.\nq : Quit the quickfix window.\n\nIf you want to disable this, then you can set the variable in the \"vimrc\".\n\n  let g:occur_no_quickfix_map = 1\n",
+  "rating_total": "35",
+  "rating_votes": "13",
+  "downloads": "732",
   "install_details": "Copy occur.vim to your plugin directory.\n \n\n",
   "versions": [
     {

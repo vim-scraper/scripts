@@ -4,6 +4,9 @@
   "summary": "A compiler plugin for the onsgmls (or nsgmls) SGML/XML validator",
   "script_type": "utility",
   "description": "Lets you validate XML and SGML documents with onsgmls (from the OpenSP suite) or nsgmls (from James Clark's SP suite).  According to Vim's documentation, \"The idea is to save the error messages from the compiler in a file and use Vim to jump to the errors one by one.  You can examine each problem and fix it, without having to remember all the error messages.\" \n  ",
+  "rating_total": "2",
+  "rating_votes": "2",
+  "downloads": "357",
   "install_details": "You must have either the onsgmls or nsgmls parser.  The OpenSP suite contains the onsgmls parser, and can be downloaded here: http://sourceforge.net/projects/openjade/\n\ncopy the plugin file to your compiler directory (usually ~/.vim/compiler/).  If you use nsgmls, just replace all the instances of \"onsgmls\" in the file with \"nsgmls\" (and rename the file to nsgmls.vim)\n\nTo use it, open an xml or sgml file and type \":compiler onsgmls\", followed by \":make\".  If there are errors, display all at the bottom of the screen with \":cw\".  From there, you can hit Enter on an error (or double click it in Gvim) to navigate to it.  \n\nFor more info on using  quickfix commands, type \":help quickfix\"\n\nImprovements and fixes are appreciated and encouraged.  Just email me.  Thanks.",
   "versions": [
     {

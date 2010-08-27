@@ -4,6 +4,9 @@
   "summary": "Folding expression for Java",
   "script_type": "utility",
   "description": "This script uses the expr fold-method to create folds for java source code.  Folds are created for methods, variables and nested classes with a javadoc comment (that is, at any line inside a class that starts with /**).  The fold will show a count of the number of lines contained in it and the first line of the variable or method declaration.\n\nThe fold level for each fold is equal to the indentation divided by the value of the 'shiftwidth' option, so make sure that 'shiftwidth' is set to the right value for your code.\n\nCaveats:\n- this doesn't work if you don't indent your code (properly) or if you don't use javadoc comments\n- the folds are \"greedy\": they start at a javadoc comment and run upto the next javadoc comment (they don't pay attention to syntax)\n- you can't see the javadoc comments in the folds",
+  "rating_total": "2",
+  "rating_votes": "2",
+  "downloads": "594",
   "install_details": "Either save the script in a file and source that file whenever you want to use the folding, or save it in your ftplugin directory (for example, ~/.vim/ftplugin) and it should load every time you edit java code.",
   "versions": [
     {

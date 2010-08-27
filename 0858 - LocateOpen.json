@@ -4,6 +4,9 @@
   "summary": "Open files without having to supply a path",
   "script_type": "utility",
   "description": "This script uses slocate (or a similar application) to allow the user to open a file without having to enter a path. If multiple files are found the user is given the choice of which file to open.\n\nUsage:\n\n:LocateEdit somefile.txt\n:LocateSplit somefile.txt\n:LocateSource somefile.vim\n:LocateRead somefile.txt\n\nOptions:\n\nTo enable case insensitive mode:\n:let g:locateopen_ignorecase = 1\n\nTo disable smart case mode:\n:let g:locateopen_smartcase = 0\n\nTo enable always prompt mode:\n:let g:locateopen_alwaysprompt = 1\n\nRequirements:\n\nYou need 'slocate' or a similar application. This probably means that you need to be on Linux, or possibly another Unix-like OS. Most Linux distributions seem to ship with slocate by default, so this probably isn't a problem. This script will almost certainly not work on Windows, sorry.\n\nAn up-to-date locate database helps, too. If you find that this script gives out of date information (eg doesn't list some files or still shows old files), you may want to consider putting updatedb on a cron...\n\nFinally, I've not tested on Vim below 6.2.\n\nPossible Todo List:\n\n* Help document\n* Less inefficient 'array' handling",
+  "rating_total": "43",
+  "rating_votes": "18",
+  "downloads": "1552",
   "install_details": "Install the .vim file to ~/.vim/plugins/ or your global plugins directory. No post-install configuration should be required, although you may want to edit the script if your distribution uses a strange locate version...",
   "versions": [
     {

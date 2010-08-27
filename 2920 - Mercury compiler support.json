@@ -4,6 +4,9 @@
   "summary": "Ftplugin, syntax and supplemental plugin for Mercury compiler",
   "script_type": "utility",
   "description": "This is a set of Vim plugins to simplify work with Mercury language compiler\n(http://www.mercury.csse.unimelb.edu.au)\nNative Mercury installer for Windows can be found here: \nhttp://code.google.com/p/winmercury\n\nFiletype plugin is a modified version of ftplugin from officical Mercury distribution. Syntax plugin is a copy of official plugin\n\nmercury_commands plugin provides convenience commands for Mercury compiler:\n\n:Mmc [arg1]... - Invoke compiler (mmc), using current file when no arguments passed.\n:Mmake [arg1]... - Invoke mmake (mmake.bat on Windows).\n:Mmerr - Show last output from :Mmc or :Mmake.\n:Mmod name [interface_imports]\n:Mmod name {interfaceimports} [implementation_imports] - Insert module template, interface_imports and implementation_imports are comma-separated lists of modules.\n:Mmain name [interface_imports]\n:Mmain name {interfaceimports} [implementation_imports] - Insert module template containing the `main' predicate",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "63",
   "install_details": "It is packed as a Vimball, so do steps below:\nvim Mercury.vba\n:so %\n:q\n",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "Syntax file for the Datascript modelling binary datatypes language",
   "script_type": "syntax",
   "description": "Syntax file for the Datascript modelling binary datatypes language.\n\nScreenshot of syntax highlighted datascript file with doxygen comments:\n  http://dominique.pelle.free.fr/pic/datascript-syntax.png\n\nFor more information about Datascript language, see:\n  http://datascript.berlios.de/ ",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "24",
   "install_details": "Save the file datascript.vim to your ~/.vim/syntax/ directory\n(or $VIM/vimfiles/syntax/ on Windows) \n\nUse  \":set filetype=datascript\" to activate datascript file type.\nOr you can use \":set filetype=datascript.doxygen\" to activate\nboth datascript and and doxygen file types.\n\nTo automatically set the datascript file type when opening\n*.ds files, create the following file ~/.vim/filetype.vim\n\nif exists(\"did_load_filetypes\")\n  finish\nendif\naugroup filetypedetect\n  au! BufRead,BufNewFile *.ds setfiletype datascript.doxygen\naugroup END",
   "versions": [
     {

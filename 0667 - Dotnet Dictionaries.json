@@ -4,6 +4,9 @@
   "summary": "Whole .NET Framework for auto-completion and use in scripts  (C#  Vb .Net)",
   "script_type": "utility",
   "description": "In the dictionary-files you find the whole .NET-Framework (v1.0.3705) for auto-completion or use in scripts. There are all namespaces, all classes and all functions - at least I hope so.\n\nThe entries are organized according to the main dlls. \nE.g. mscorlib.dll becomes mscorlib.dict.\n\nThe dictionaries:\nSystemData.dict\nMicrosoftVisualBasic.dict\nMicrosoftVsa.dict\nmscorlib.dict\nsystem.dict\nSystemConfigurationInstall.dict\ncscompmgd.dict\nSystemDesign.dict\nSystemDirectoryServices.dict\nSystemDrawing.dict\nSystemDrawingDesign.dict\nSystemEnterpriseServices.dict\nSystemManagement.dict\nSystemMessaging.dict\nSystemRuntimeRemoting.dict\nSystemSecurity.dict\nSystemWebServices.dict\nSystemWindowsForms.dict\nSystemXml.dict\n\nExample from mscorlib.dict:\nSystem.String.Length\nSystem.String.op_Equality(System.String,System.String)\nSystem.String.op_Inequalit(System.String,System.String)\nSystem.String.PadLeft(System.Int32)\nSystem.String.PadLeft(System.Int32,System.Char)\nSystem.String.PadRight(System.Int32)\nSystem.String.PadRight(System.Int32,System.Char)\nSystem.String.Remove(System.Int32,System.Int32)\nSystem.String.Replace(System.Char,System.Char)\nSystem.String.Replace(System.String,System.String)\nSystem.String.Split(System.Char[])\n...\n\nI hope someone invents a good possibilty to use theses entries. \nPlease let me know what you have done.\n\nRegards,\n\n--Klaus Horsten",
+  "rating_total": "28",
+  "rating_votes": "11",
+  "downloads": "782",
   "install_details": "Look into the vim-reference:\ntype :h ins-completion\n\nNote that for whole line completion you should turn hidden on; \ntype: :set hidden\nand you have to switch at least once into the buffer with the dictionary-file \n(e.g. with :bn  and :bp).",
   "versions": [
     {

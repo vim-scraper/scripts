@@ -4,6 +4,9 @@
   "summary": "Allow a read eval print loop and vim to play nicely together",
   "script_type": "utility",
   "description": "UNIX command-line only\n\n Usage : replvim.sh [options] replname code_type file\n\nRuns a screen/vim session on the given file so that one window\nholds a repl and another window holds vim. \nHit:\n<leader>e    to eval the current expression \n<leader>r     to evaluate the given marked range\n<leader>f     to evaluate the whole file\nctrl-a <TAB>  to switch windows to the repl \nctrl-a \\      to exit everything \nSet the leader in vim with \n:let mapleader = \",\" \nreplacing \",\" with the key you like the most\n\nArguments (wrap these in an alias or sh script):\n replname   The repl being used (ocaml, bigloo, chicken have been tested)\n code_type  Can be 'lisp' for lisp-like or 'ocaml' \n file               The file for vim to edit\n\nOptions:\n --lines n   Use n lines of screen space for the repl\n --nopipe   Use files instead of pipes. This can be used when vim 6.3\n                    gives FSYNC errors when writing to pipes on some OSes.\n --echo      Echo the commands being sent to the repl and allow access\n                   to them in the readline history\n\nRequires (on your PATH):\n  socat (http://www.dest-unreach.org/socat/)\n  screen (http://www.gnu.org/software/screen/)\nif you don't have these your life will be much richer for obtaining them\n\n(at saul (dot alien-science org)) welcomes your fixes and extensions\n\n",
+  "rating_total": "13",
+  "rating_votes": "6",
+  "downloads": "676",
   "install_details": "install screen\ninstall socat\nreplvim.sh replname code_type file",
   "versions": [
     {

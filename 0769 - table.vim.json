@@ -4,6 +4,9 @@
   "summary": "smarter table editing/navigation",
   "script_type": "utility",
   "description": "In vimtip#547 I described some functions that enable easier navigation\nand editing of tables. I have considerably enhanced the functionality\nand placed all the relevant code in a script file.\n\nThe idea of the script is to automatically extract fields from a table\nrow and use that information to create maps that aid in editing and\nnavigation of the table. The user first marks a table row as table\nheading. The line does not literally have to be the table heading, but\nit should be representative of the typical row of the table in\nquestion.\n\nAfter this step the script maps tab and shift-tab keys to move between\nfields. These mappings work in both insert and normal modes. The tab\nmapping is especially useful in insert mode as it inserts the correct\namount of padding to reach the start of the next field. \n\nThe script also has an alignment feature that aligns the fields of the\nrow with that of the heading. Editing a pre-existing table frequently\nleads to misaligned rows and this feature alleviates the need to\nmanually add/remove padding.\n\nFor more details about the script check the documentation in the script package. I also intend to post a tip documenting the use of the script. The tip will most likely be numbered vimtip #554",
+  "rating_total": "19",
+  "rating_votes": "9",
+  "downloads": "1319",
   "install_details": "To install the script, place table.vim in the vim macros directory \nand source it in your vimrc using:\nsource $VIMRUNTIME/macros/table.vim\n\nIf you simply want to check the functionality of the script, place\nthe script file in your current directory, open vim in the same \ndirectory and use \n:so table.vim\n",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "Automatically update vim scripts",
   "script_type": "utility",
   "description": "This Python script updates vim scripts listed in a watch list that you create.\nIt converts any script to a vimball, thus allowing for easier uninstallation with :RmVimball.\nYou can have multiple watch lists if you want to keep things sorted.\n\nIf you don't care about vimballs and prefer a script that is run from within Vim rather than in the terminal, you can use GetLatestVimScripts: vimscript#642\n\nWhen run, it parses a watch-list file, looks for updates on www.vim.org, asks for a confirmation to download updated scripts, converts them to vimballs and installs them, and commits changes to the watch list.\n\nThe script is quite new and still needs some debugging. Please report bugs to me.\n\nIf you use a watch list from the former bash implementation, the new Python version will need to redownload all the scripts once to upgrade the watch list format. I have rewritten the script in Python to get rid of the dependencies (xsltproc, curl, etc.) of the bash version.\n\n--------------------------------------------------------------------\n\nusage: ./vim-update-scripts.py watchlist\n\nwhere watchlist is a file containing one or more lines with the following syntax:\n\tscript ID\nor\n\tscript ID|prefix\n\nExample file:\n\t42\n\t1259|colors\n\t3096|plugin\n\t3108\n",
+  "rating_total": "7",
+  "rating_votes": "3",
+  "downloads": "99",
   "install_details": "1. Download the file vim-update-scripts.py\n2. Make it executable:\n        chmod +x vim-update-scripts.py\n3. Create a watch list:\n        echo -e \"42\\n1259|colors\\n3096|plugin\\n3108\" > watch-list\n4. Run the script once in a while:\n        ./vim-update-scripts.py watch-list\n\nNote: You can change the line VIM = 'vim' at the beginning of the script to suit your needs.",
   "versions": [
     {

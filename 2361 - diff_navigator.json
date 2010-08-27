@@ -4,6 +4,9 @@
   "summary": "Helps navigation in unified diffs",
   "script_type": "ftplugin",
   "description": "Simple script that helps navigation in unified diffs (patches).\n\nTogether with external utility filterdiff (part of patchutils) it provides DiffAnnotate command that tags all hunks with their number and name of the changed file.\n\nDiffShowHunk command displays annotation of the current hunk (useful when inside a big hunk).\n\nDiffNextFile and DiffPrevFile command can be used to quickly skip to next/previous changed file.\n\nDiffNextHunk and DiffPrevHunk quickly skips to next/previous hunk.\n\nSince the default (,),{ and } mappings are not much useful in diffs, the plugin remaps these in the following way:\n}  => DiffNextFile\n{  => DiffPrevFile\n)  => DiffNextHunk\n(  => DiffPrevHunk\n\n",
+  "rating_total": "5",
+  "rating_votes": "4",
+  "downloads": "189",
   "install_details": "Simply put the diff_navigator.vim to $VIM/ftplugin/ directory.\n\nAlso make sure that filterdiff (should be in patchutils package) program is installed somewhere in your $PATH.",
   "versions": [
     {

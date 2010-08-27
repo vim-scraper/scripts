@@ -4,6 +4,9 @@
   "summary": ":TEOL <string> and :TSOL <string>; toggles string at end/start of line(s)",
   "script_type": "utility",
   "description": "This is a vim remake of an old macro I had for Multi-Edit, handy it was though\nnot so necessary with VIM, given A and :s but this will not mess up your cursor\nposition, works on a range, etc. It has some use.\n\nThere are default/example mappings for both visual and normal modes:\n\nFor end of line toggling:\n\n<leader>;    toggles \";\" at end of line.\n<leader>,    toggles \",\" at end of line.\n<leader>:    toggles \":\" at end of line.\n\n\nFor start of line: (start of line for this is first non white space char, like\n^ as opposed to 0 )\n\n<leader>s,    toggles \", \" at start of line.\n<leader>s:    toggles \": \" at start of line.\n\n\nNOTE that you can toggle strings not just chars; I.e. \":TSOL --\", \":TEOL --\"\nand so on.",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "444",
   "install_details": "Just drop in plugins folder, nothing more nothing less.\nOptional: Edit file as desired for mappings; mappings could be placed elsewhere if wanted as they are in the style of: nnoremap    <leader>;    :TEOL;<cr>",
   "versions": [
     {

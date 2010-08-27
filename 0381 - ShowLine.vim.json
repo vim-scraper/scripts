@@ -4,6 +4,9 @@
   "summary": "Display line(s) in the command area (like echo), but syntax highlighted.",
   "script_type": "utility",
   "description": "Display a line or lines in the command area, like the builtin echo, but using the original lines' syntax highlighting.\n\nUseful to other scripts for displaying lines of text, highlighted as they appear in the editor window (e.g., see ShowBlockName.vim -- vimscript #382)",
+  "rating_total": "7",
+  "rating_votes": "3",
+  "downloads": "700",
   "install_details": "I put it in my autoload directory (~/vim/autoload), so the function is automagically loaded as needed via an autocommand:\n\nautocmd FuncUndefined *\texe 'runtime autoload/' . expand('<afile>') . '.vim'",
   "versions": [
     {

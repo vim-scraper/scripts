@@ -4,6 +4,9 @@
   "summary": "totalcommander-like two-panel tree file explorer for vim",
   "script_type": "utility",
   "description": "This is an adaptation of opsplorer (vimscript #362), intended to be more like the Total Comander (http://www.ghisler.com) file explorer.\n\nThis opens two panels of file explorers on the top half of the vim screen.\nTargets for moving and copying defaults to the other panel, like totalcmd. TAB switches between panels.\nVimcommander keys are mostly totalcommander's:\nF3 - view\nF4 - edit\nF5 - copy\nF6 - move\nF7 - create dir\nF8 - del\nOthers: C-U, C-Left/C-Right, C-R, BS, DEL, C-H, etc.\nSelection of files/dirs also works: INS, +, -. Then copy/move/del selected files.\n\nSuggested binding is\nnoremap <silent> <F11> :cal VimCommanderToggle()<CR>\n\nTested on Linux. I have reports that it doesn't work on Windows.\n\nIf you want to contribute, note that vimcommander is hosted at github: http://github.com/lpenz/vimcommander/.",
+  "rating_total": "369",
+  "rating_votes": "150",
+  "downloads": "9874",
   "install_details": "Drop vimcommander.vim in ~/.vim/plugin\nPut in you .vimrc a map to VimCommanderToggle():\nnoremap <silent> <F11> :cal VimCommanderToggle()<CR>\n",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "Syntax highlighting for SpamAssassin config files",
   "script_type": "syntax",
   "description": "* Regular expression highlighting (from perl)\n* Should work in all versions of vim, properly disabling the features for v7+\n* COMPLETE recognition of all settings with a good understanding of syntax\n* Settings recognized include all plugins shipped with SA plus a few 3rd-party plugins.\n\nSpell-check is enabled on various pieces for which it is appropriate (vim 7+, you must turn it on first).\n\nThis has also been posted to the spamassassin users mailing list.",
+  "rating_total": "25",
+  "rating_votes": "10",
+  "downloads": "432",
   "install_details": "Just like any syntax file.\n\nSave this file to ~/.vim/syntax/spamassassin.vim and add the following to your ~/.vim/filetype.vim:\n\naugroup filedetect\n    au BufRead,BufNewFile user_prefs,*.cf,*.pre setfiletype spamassassin\naugroup END\n\nTo install it system-wide, save the attached file as /usr/share/vim/vim[0-9]*/syntax/spamassassin.vim and edit\n/usr/share/vim/vim[0-9]*/filetype.vim in a manner similar to the local filetype.vim edit noted above (in my /usr/share/vim/vim71/fileytpe.vim for vim 7.1.314-3+lenny2, it would be added at line 2254, right above '\" Vim script').",
   "versions": [
     {

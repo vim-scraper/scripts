@@ -4,6 +4,9 @@
   "summary": "Drop-in replacement for vimdiff and gvimdiff featuring automatic CVS diff",
   "script_type": "utility",
   "description": "Full-blown support for CVS diffing.  Like vimscript #1209 (and unlike vimscript #90 ), this is a command-line program that merely figures out what to compare a file against.  Unlike both, this is a drop-in replacement that doesn't require getting used to a new command with different syntax.  it just works.\n\nIn addition to all vim flags, vimdiff+vcs supports the CVS revision denoting flags (-r, -D).  vimdiff+vcs also supports filesystem snapshots (e.g. those from a NetApp mountpoint), automatically parsing through the archives and comparing the specified file to the most recent version that differs.\n\nThe key useful feature here is that it's fully automatic; you just type \"gvimdiff mycode.c\" and it pops up the differences between mycode.c and the latest other copy available, be it the CVS HEAD or a more recent version from your snapshots.\n\nIf I ever do start using subversion with more regularity, this script will support that too.  It's even named \"vimdiff+vcs\" rather than \"vimdiff+cvs\" in anticipation of that (well, also for the .snapshot support).",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "189",
   "install_details": "Install to /usr/local/bin/vimdiff and symlink it from /usr/local/bin/gvimdiff\n\nYou can put it anywhere in your path as log as it is earlier (or in place of) than the official (g)vimdiff symlinks.",
   "versions": [
     {

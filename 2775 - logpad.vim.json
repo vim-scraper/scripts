@@ -4,6 +4,9 @@
   "summary": "Vim plugin for emulating Windows Notepad's logging functionality",
   "script_type": "utility",
   "description": "logpad.vim emulates Windows Notepad's logging feature.\n\nCreate a new file, write .LOG as the first line and save it. Every time you reopen the file, a new line with the current timestamp is added, so you can easily maintain a chronologic log of your tasks.\n\nBy default, this plugin works the same way as the original Notepad. You can modify certain aspects of it by setting the following variables:\n\nlet LogpadEnabled = [ 0 / 1 ]\n* enables/disables logpad\n* default value: 1\n\nlet LogpadInsert = [ 0 / 1 ]\n* automatically enables &insertmode when a new log entry is created\n* default value: 0\n\nlet LogpadLineBreak = [ 0 / 1 ]\n* adds an empty line before a new log entry\n* default value: 0 (Windows Notepad behavior)\n\nlet LogpadIgnoreNotes = [ 0 / 1 ]\n* allows adding notes before the first log entry\n* default value: 0\n\nlet LogpadIgnoreReadOnly = [ 0 / 1 ]\n* allows logpad to ignore a file's read-only flag\n* default value: 0",
+  "rating_total": "13",
+  "rating_votes": "4",
+  "downloads": "344",
   "install_details": "Download the logpad.vim file. Put it into your plugins directory. That's it, basically.",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "Simple, flexible commenting script",
   "script_type": "utility",
   "description": "This is yet another script to do some code commenting/uncommenting. It is simple and easy to use, and should work for almost any filetype.\n\nIt defines a command :CommentStyle which takes one argument, which can be either a comment prefix (\"# \" for shell) or a comment string (\"/* @ */\" for C) with a @ as a placeholder.\nIt also defines three mappings: >c to comment, <c to uncomment, and =c to change the CommentStyle.\n\nNested comments are handled correctly (this means that if you comment the following C code line:\nx /* comment */ ++;\nthen the inner comment will be protected).",
+  "rating_total": "21",
+  "rating_votes": "6",
+  "downloads": "692",
   "install_details": "Drop into 'runtimepath' and say :runtime comments.vim .\nIncluded are default settings for some filetypes. Add your own if needed.\n\nThis is an UTF-8 encoded file, but as non-ASCII characters are used only as placeholders, this should cause no problem.",
   "versions": [
     {

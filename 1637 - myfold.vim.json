@@ -4,6 +4,9 @@
   "summary": "make it easy to open/close fold and foldcolumn",
   "script_type": "utility",
   "description": "NOT MAINTAINED , I don't recommend you to use this script, this was script I created when I was vim newbee. \n\n\n\n\nThis plugin provide functionality to enable or disalbe\nfold more easier.\ntwo command wil added.\n\n:MyFoldEnable\n:MyFoldDisable\n\nParameters are based on my favorite setting( syntax base ), so please modify\nthese values directly in function if you need.\n\n\n",
+  "rating_total": "0",
+  "rating_votes": "4",
+  "downloads": "264",
   "install_details": "-----------------------------\n** Install\n-----------------------------\n1. put this file to $HOME/.vim/plugin folder or other.\n2. start vim and edit an source code.\n3. now, you can type two commands, from vim command mode.\n\n:MyFoldEnable\n:MyFoldDisable\n\n-----------------------------\n** My private hilight and keymap in ~/.vimrc\n-----------------------------\n# I don't like default fold hilight( I always use vim via SSH cterm ).\nhighlight Folded ctermfg=6 ctermbg=0\nhighlight FoldColumn ctermfg=6 ctermbg=0\n\n# set keyboard shortcut.\nnnoremap <silent> <F4> :MyFoldEnable<CR>\nnnoremap <silent> <F5> :MyFoldDisable<CR>\n\n-----------------------------\n** Short Tutorial\n-----------------------------\n1. edit program file( I like ruby ).\n  vim proglam.rb\n\n2. type <F4> key in normal mode.\n  you can see folded lines( by syntax )and foldcolumn.\n\n3. type <F4> key in normal mode.\n  hide foldcolumn. not change open/close state each fold.\n\n4. type <F5> key in normal mode.\n  open all fold and hide foldcolumn.",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "Dynamically set tags option by scanning directory structure",
   "script_type": "utility",
   "description": "There's two functions provided here.  The first is SetTags() which will scan all of the directories from your current working directory to the root directory for a file called \"jtags\" (who can rename it to just tags if you want).  If it finds a jtags file, it adds it to the tags option. \n\nI use SetTags() when switching back and forth between different projects that have different tags files at their root level.  \n\nThe second function is GenerateTags() which works similar to the above script.  It starts at your current working directory and scans all of the directories above it looking for a file called \"build.xml\" (you can use any file you want).  When it finds this file, it assumes that it is at the top of your directory structure and will run the ctags command to generate a new tags file.  By default it creates a tags file called \"jtags\" at that top level.  I use build.xml to indicate the top level because I generally use Ant and the ant build file is a good way to recognize the top of the project in the directory structure.\n\nThe two functions have been mapped to commands to save typing.  Those commands are:\n\nmap <unique> <Leader>tj <ESC>:call SetTags()<CR>\nmap <unique> <Leader>tg <ESC>:call GenerateTags()<CR>",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "375",
   "install_details": "Either source this script or put it into your vimfiles/plugins directory.  To try it out just run\n\n:source tagSetting.vim",
   "versions": [
     {

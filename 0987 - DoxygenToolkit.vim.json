@@ -4,8 +4,27 @@
   "summary": "Simplify Doxygen documentation in C, C++, Python.",
   "script_type": "utility",
   "description": "Currently five purposes have been defined :\n\nGenerates a doxygen license comment.  The tag text is configurable.\n\nGenerates a doxygen author skeleton.  The tag text is configurable.\n\nGenerates a doxygen comment skeleton for a C, C++ or Python function or class,\nincluding @brief, @param (for each named argument), and @return.  The tag\ntext as well as a comment block header and footer are configurable.\n(Consequently, you can have \\brief, etc. if you wish, with little effort.)\n\nIgnore code fragment placed in a block defined by #ifdef ... #endif (C/C++).  The\nblock name must be given to the function.  All of the corresponding blocks\nin all the file will be treated and placed in a new block DOX_SKIP_BLOCK (or\nany other name that you have configured).  Then you have to update\nPREDEFINED value in your doxygen configuration file with correct block name.\nYou also have to set ENABLE_PREPROCESSING to YES.\n\nGenerate a doxygen group (begining and ending). The tag text is\nconfigurable.\n\nUse:\n- Type of comments (C/C++: /// or /** ... */, Python: ## and # ) :\n  In vim, default C++ comments are : /** ... */. But if you prefer to use ///\n  Doxygen comments just add 'let g:DoxygenToolkit_commentType = \"C++\"'\n  (without quotes) in your .vimrc file\n\n- License :\n  In vim, place the cursor on the line that will follow doxygen license\n  comment.  Then, execute the command :DoxLic.  This will generate license\n  comment and leave the cursor on the line just after.\n\n- Author :\n  In vim, place the cursor on the line that will follow doxygen author\n  comment.  Then, execute the command :DoxAuthor.  This will generate the\n  skeleton and leave the cursor just after @author tag if no variable\n  define it, or just after the skeleton.\n\n- Function / class comment :\n  In vim, place the cursor on the line of the function header (or returned\n  value of the function) or the class.  Then execute the command :Dox.  This\n  will generate the skeleton and leave the cursor after the @brief tag.\n\n- Ignore code fragment (C/C++ only) :\n  In vim, if you want to ignore all code fragment placed in a block such as :\n    #ifdef DEBUG\n    ...\n    #endif\n  You only have to execute the command :DoxUndoc(DEBUG) !\n  \n- Group :\n  In vim, execute the command :DoxBlock to insert a doxygen block on the\n  following line.\n\nLimitations:\n- Assumes that the function name (and the following opening parenthesis) is\n  at least on the third line after current cursor position.\n- Not able to update a comment block after it's been written.\n- Blocks delimiters (header and footer) are only included for function\n  comment.\n- Assumes that cindent is used.\n- Comments in function parameters (such as void foo(int bar /* ... */, baz))\n  are not yet supported.\n\n\nExample:\nGiven:\nint\n  foo(char mychar,\n      int myint,\n      double* myarray,\n      int mask = DEFAULT)\n{ //...\n}\n\nIssuing the :Dox command with the cursor on the function declaration would\ngenerate\n\n/**\n * @brief\n *\n * @param mychar\n * @param myint\n * @param myarray\n * @param mask\n *\n * @return\n */\n\n\nTo customize the output of the script, see the g:DoxygenToolkit_*\nvariables in the script's source.  These variables can be set in your\n.vimrc.\n\nFor example, my .vimrc contains:\nlet g:DoxygenToolkit_briefTag_pre=\"@Synopsis  \"\nlet g:DoxygenToolkit_paramTag_pre=\"@Param \"\nlet g:DoxygenToolkit_returnTag=\"@Returns   \"\nlet g:DoxygenToolkit_blockHeader=\"--------------------------------------------------------------------------\"\nlet g:DoxygenToolkit_blockFooter=\"----------------------------------------------------------------------------\"\nlet g:DoxygenToolkit_authorName=\"Mathias Lorente\"\nlet g:DoxygenToolkit_licenseTag=\"My own license\"   <-- !!! Does not end with \"\\<enter>\"",
+  "rating_total": "278",
+  "rating_votes": "121",
+  "downloads": "7693",
   "install_details": "Copy to your '~/.vim/plugin' directory",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13675",
+      "filename": "DoxygenToolkit.vim",
+      "script_version": "0.2.11",
+      "date": "2010-08-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "5172",
+        "user_name": "mathiasl",
+        "first_name": "Mathias",
+        "last_name": "Lorente",
+        "email": "mathias_lorente at yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Remove trailing blank characters where they are not needed. (Thanks to Lukas Grässlin)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13524",
       "filename": "DoxygenToolkit.vim",

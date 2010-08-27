@@ -4,6 +4,9 @@
   "summary": "Plugin for easily translating single word or sentences without leaving your Vim",
   "script_type": "utility",
   "description": "   So, you are working with any document in foreign language and some word is unknown to you. In normal mode, put cursor on this word and press ,tr (in previous versions: <A-Space>) buttons. The translation of the word will appear in command screan. If word can not be translated you will receive message: 'The `your_word` can not be translated'.\n   To translate range of the words (sentences), go to visual mode by pressing <Esc>,<v> buttons. Select desired text, for instance, by <Shift-V>, and after that press ,tr (in previous versions: <A-Space>).\n",
+  "rating_total": "49",
+  "rating_votes": "13",
+  "downloads": "229",
   "install_details": "To install:\n  - Download the PA_translator.zip.\n  - Extract the zip archive into your runtime directory. The archive contains plugin/PA_translator.vim, and doc/PA_translator.txt.\n  - Start Vim or go to an existing instance of Vim.\n  - Execute the following command:\n\n      :helptag <your runtime directory/doc\n\n    This will generate all the help tags for any file located in the doc directory.\n  - By default plugin translate from English into Ukrainian (it is my native language). You can change them by adding to your .vimrc:\n\n       let g:PA_translator_from_lang = 'your_from_language_code'\n       let g:PA_translator_to_lang = 'your_to_language_code'\n\n    Language codes are google translator API language codes.\n\n   This plugin is only available if 'compatible' is not set and vim has been compiled with RUBY language support.\n    It also requires access to network.\n",
   "versions": [
     {

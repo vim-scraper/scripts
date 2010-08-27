@@ -4,6 +4,9 @@
   "summary": "This is a vim syntax file for NSIS script.",
   "script_type": "syntax",
   "description": "NSIS stands for 'NullSoft Installation System' and is a handy free scriptable installation system made by NullSoft ( the \nguys who made Winamp). For more information on this, see http://www.nullsoft.com/free/nsis/\nThis syntax is very straight forward as the syntax of the scripting language is simple. \n\nIf you use NSIS, please give it a try and tell me what you think as this is the first I actually write and vim syntax file.\nThanks,",
+  "rating_total": "3",
+  "rating_votes": "3",
+  "downloads": "297",
   "install_details": "Just put the .vim file into your syntax directory. The most easy(?) way to use it to do 'so ...../nsis.vim'. But you can \nmodify your filetypes.vim in the runtime directory and add the following:\nau BufNewFile,BufRead *.nsi\t\tsetf nsis\nAnd then anytime you open a .nsi file, the syntax will be turned on automatically.\n",
   "versions": [
     {

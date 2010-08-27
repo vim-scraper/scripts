@@ -4,6 +4,9 @@
   "summary": "syntax file for jifty web framework",
   "script_type": "syntax",
   "description": "syntax support of jifty web framework ( http://search.cpan.org/~sartak/Jifty-0.80408/ )\n\n  * template syntax , folding\n  * model / action schema syntax , folding\n  * schema keywords\n  * functions keywords\n  * syntax highlight for sql, js , html embedded hereDoc\n\nto turn on the syntax folding to fold template and schema columns:\n\n  set fdm=syntax\n\noptions: you can choose what you want to fold, append following lines to your .vimrc\n\n   let jifty_fold_schema = 1\n   let jifty_fold_schema_column = 1\n   let jifty_fold_template = 1\n   let jifty_fold_tags = 1\n   let jifty_fold_dispatcher = 1\n\nSupports sql,javascript,html embedded hereDoc string:\n  you can add prefix to the identifier like SQL.. , HTML... , JS...\n  e.g.\n\n  $sql =<<SQL123\n    select * from books\nSQL123\n  \n  or \n\n  $html =<<HTML123\n  <html>\n      <h1>Jifty</h1>\n  </html>\nHTML123\n\n\npatches are welcome.  :)\n\ncornelius.howl+vim {at} gmail.com\n",
+  "rating_total": "2",
+  "rating_votes": "2",
+  "downloads": "358",
   "install_details": "Download the tarball to your home , then untar it\n\ntar xvf jifty.tar.gz\n\nthis will extract files to \n\n  ~/.vim/after/syntax/perl/jifty.vim\n  ~/.vim/syntax/perl.vim\n\nmake sure that your files wont be overwrited.\n",
   "versions": [
     {

@@ -4,6 +4,9 @@
   "summary": "Use ViM as PAGER",
   "script_type": "utility",
   "description": "A slightly more sophisticated replacement for less.sh that also supports being set as the PAGER environment variable.\nDisplays man pages, perldocs and python documentation properly.\nDefinitely works on Linux, Solaris, OSX and Cygwin. Should work in most other places, if it detects your \"ps\" correctly.",
+  "rating_total": "221",
+  "rating_votes": "98",
+  "downloads": "2831",
   "install_details": "mkdir ~/bin\ncp vimpager ~/bin\nchmod +x ~/bin/vimpager\n\n# put these in your ~/.bashrc or ~/.zshrc\nexport PAGER=~/bin/vimpager\nalias less=$PAGER",
   "versions": [
     {

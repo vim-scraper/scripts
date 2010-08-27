@@ -4,6 +4,9 @@
   "summary": "indentation for vim script with support for embedded scripting language",
   "script_type": "indent",
   "description": "This script is for those of us who uses embedded scripting language in the here document form.\nsee :help perl, :help ruby, :help python, :help tcl\nif you embed a script in vim using the \nperl<<EOF\n#some perl code\nEOF\nor equivalent for other script languages, the scripts won't be correctly indented.\nWorse, if you write some python this way and reindent your file the whole script is trashed since\nthe indentation was meaningfull and it is lost.\n\nThis scripts add support for indenting the embedded script.\nPlease mail me any problems you encounter with this script",
+  "rating_total": "5",
+  "rating_votes": "2",
+  "downloads": "883",
   "install_details": "just put this script in an indent subdirectory somewhere in the runtimepath (:help runtimepath).\nThe runtime directory where you put it must be BEFORE the standard vim runtime directory, this\nallows this script to use the regular indent/vim.vim script for the non embedded part.\ne.g:\ndefault runtimepath on unix:\n$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after\nthe script must be copied in $HOME/.vim/indent\nor in $VIM/vimfiles",
   "versions": [
     {
