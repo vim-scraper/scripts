@@ -6,7 +6,7 @@
   "description": "If you've ever tried using the \".\" command after a plugin map you were likely disappointed to discover it only repeated the last native command inside that app, rather than the map as a whole.  That disappointment ends today.  Repeat.vim remaps \".\" in a way that plugins can tap into it.\n\nSupport is already present in the following plugins:\n\nsurround.vim (vimscript #1697)\nspeeddating.vim (vimscript #2120)\nabolish.vim (vimscript #1545)\nunimpaired.vim (vimscript #1590)\n\nAdding support to a plugin is generally as simple as the following command at the end of your map functions.\n\n  silent! call repeat#set(\"\\<Plug>MyWonderfulMap\",v:count)\n\nDetails are at the top of the file.  Let me know if you add support to a script on vim.org and I will link it here.\n\nhttp://github.com/tpope/vim-repeat",
   "rating_total": "74",
   "rating_votes": "26",
-  "downloads": "3310",
+  "downloads": "3311",
   "install_details": "Install in ~/.vim/autoload/repeat.vim (~\\vim\\autoload\\repeat.vim on Windows).",
   "versions": [
     {

@@ -6,7 +6,7 @@
   "description": "Usage: Using KeepCase or KeepCaseSameLen defined here, do a substitution like this:\n\n%s/\\u\\<old_word\\>/\\=KeepCaseSameLen(submatch(0), 'new_word')/g\n\n* KeepCase( original_word , new_word )  \n  returns the new word maintaining case \n  simply uses heuristics to work out some different common situations\n    given   NewWord\n    Word   \t--> Newword\n    WORD    --> NEWWORD\n    word    --> newword\n    WoRd    --> NewWord\n    woRd    --> newWord\n\n* KeepCaseSameLen( original_word , new_word )    \n\tReturns the new word maintaining case\n\t  Keeps the case exactly the same letter-for-letter\n\t  It does work if the words aren't the same length, as it truncates or\n\t  just coppies the case of the word for the length of the original word.\n\n* :SubstituteCase#\\ctoto\\(Titi\\)tata#\\1Tutu#g\n     totoTitiTata -> titiTutu\n     TotoTitiTata -> TitiTutu\n     tototititata -> tititutu\n     tototitiTata -> titiTutu\n     TototitiTata -> TitiTutu\n",
   "rating_total": "75",
   "rating_votes": "24",
-  "downloads": "1194",
+  "downloads": "1195",
   "install_details": "Place in plugin directory",
   "versions": [
     {

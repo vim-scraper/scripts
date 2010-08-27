@@ -6,7 +6,7 @@
   "description": "This is a (very) simple script to comment lines in a program. Currently supported languages are C, C++, the vim scripting language, python, and ox. Given the simplicity of the program it very easy to add support for new languages. The comments in the file should provide sufficient information on how to proceed.\n\n ",
   "rating_total": "109",
   "rating_votes": "51",
-  "downloads": "6261",
+  "downloads": "6263",
   "install_details": "You can put the functions in the attachment directly into your .vimrc or in a separate file to be sourced. If you choose for the latter option add a statement such as ...\n\nexecute \"source ~/vim/myVimFiles/ToggleCommentify.vim\"\n\n... to your .vimrc file\n\nTo call the functions add the following mappings in your .vimrc. \n \nmap <M-c>\t:call ToggleCommentify()<CR>j\nimap <M-c>\t<ESC>:call ToggleCommentify()<CR>j\n\nThe nice thing about these mapping is that you don't have to select a visual block to comment ... just keep the ALT-key pressed down and tap on 'c' as often as you need.",
   "versions": [
     {

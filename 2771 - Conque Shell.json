@@ -6,7 +6,7 @@
   "description": "Conque is a Vim plugin allowing users to execute and interact with programs, typically a shell such as bash, inside a buffer window. The goal is always to keep the terminal behavior as close as possible to its native interface, while adding the additional features of Vim on top.\n\n== WEBSITE ==\n\nFor more information http://code.google.com/p/conque/\n\n== SCREENSHOTS ==\n\nhttp://Conque.googlecode.com/svn/wiki/screenshot/colors.jpg\nhttp://Conque.googlecode.com/svn/wiki/screenshot/mysql.jpg\nhttp://Conque.googlecode.com/svn/wiki/screenshot/send.jpg\nhttp://Conque.googlecode.com/svn/wiki/screenshot/shells.jpg\n\n== USAGE ==\n\nType :ConqueTerm <command> to run your command in vim, for example:\n\n:ConqueTerm bash\n:ConqueTerm mysql -h localhost -u joe -p sock_collection\n:ConqueTerm ipython\n\nTo open ConqueTerm in a new horizontal or vertical buffer use:\n\n:ConqueTermSplit <command>\n:ConqueTermVSplit <command>\n:ConqueTermTab <command>\n\nAll text typed in insert mode will be sent to your shell. Use the <F9> key to send a visual selection from any buffer to the shell.\n\nFor more help type :help ConqueTerm\n",
   "rating_total": "726",
   "rating_votes": "194",
-  "downloads": "2256",
+  "downloads": "2258",
   "install_details": "== REQUIREMENTS ==\n\n   * Python-enabled Vim 7.1\n   * Linux, Mac or Cygwin. Windows support is not available in the latest version.\n\n== INSTALLATION ==\n\nvi conque_term.vba\n:so %\n:q\n\nOpen conque_term.vba and type the command `:so %` to install it with the Vimball utility. Alternatively, download the zip archive and copy the files by hand into your .vim directory.\n",
   "versions": [
     {

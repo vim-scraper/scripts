@@ -4,7 +4,7 @@
   "summary": "Generate C++ code templates based on the header file",
   "script_type": "ftplugin",
   "description": "Opens a template file and replaces various tags with values that are parsed from the header file.  The information parsed includes data members and their types, constructors including overloaded constructors and their parameters, methods declarations and their return types and parameter lists, as well as the class name.  This is then put into the source template in the proper format.  Data members are added to the constructors to relieve typing to initialize all your class variables.  The destructor is also added.  There is a little documentation in the ftpplugin/cpp/tmpl_gen.vim file.  It describes what tags that are currently supported so you can customize the template file that is included.  Feedback is needed, and very welcome.  Feel free to email me with any bug reports, feature requests, or if you need help getting it set up.\n\nNOTE!   This is currently broken.  I will fix it after the semester ends, but for the time being you can edit tmpl_gen.vim and change 'require \"tmpl_gen.rb\"' to 'require \"#{ENV['HOME']}/.vim/ftplugin/cpp/tmpl_gen.rb\".\n\nI would fix this now, but I am in the middle of making some major modifications, and I have finals coming up.",
-  "rating_total": "2",
+  "rating_total": "-2",
   "rating_votes": "4",
   "downloads": "1192",
   "install_details": "Untar the tmpl_gen.tar.gz file in your ~/.vim directory and then edit your .vimrc and add the following autocommand:\nau bufnewfile *.cpp call Make_cpp_template()\n\nEnjoy!",

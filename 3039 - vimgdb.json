@@ -6,7 +6,7 @@
   "description": "This script provides an emacs like GDB interface to vim. Woks in cygwin and unix terminals (no need for +clientserver).\n\nFind the screen shots at \"Vim Viki\"\n\nStart the program like this\n\nvimgdb <gdb-params> <exe-file> <exe-params>\n\nThis will open vim with two windows. Type the gdb commands in bottom window. The top window will show the current file line and breakpoints highlighted.\n\nYou can also jump to top window and use the following keys\n<F6> run\n<F5> continue\n<F7> step into\n<F8> step over\n<F9> toggle break point\nCtr-p Watch the variable under Cursor/Visual selection\n\nwatch the output/variables in bottom window.\n\nKnown Bugs:\nDon't use the quit gdb command (that will hang the vim), instead quit the vim.\n\nCredits:\nThis script is preliminarily based on Tomas Zellerin's gdbvim",
   "rating_total": "8",
   "rating_votes": "2",
-  "downloads": "361",
+  "downloads": "362",
   "install_details": "copy the vimgdb, vimgdb_msg to any directory in the system path\n\ncopy the vimgdb.vim to ~/.vim/misc directory\n\nNeeds perl & gdb\n",
   "versions": [
     {

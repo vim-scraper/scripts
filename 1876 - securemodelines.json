@@ -6,7 +6,7 @@
   "description": "Secure, user-configurable modeline support for Vim 7.\n\nVim's internal modeline support allows all sorts of annoying and potentially insecure options to be set. This script implements a much more heavily restricted modeline parser that permits only user-specified options to be set.\n\nThe g:secure_modelines_allowed_items array contains allowable options. By default it is set as follows:\n\n    let g:secure_modelines_allowed_items = [\n                \\ \"textwidth\",   \"tw\",\n                \\ \"softtabstop\", \"sts\",\n                \\ \"tabstop\",     \"ts\",\n                \\ \"shiftwidth\",  \"sw\",\n                \\ \"expandtab\",   \"et\",   \"noexpandtab\", \"noet\",\n                \\ \"filetype\",    \"ft\",\n                \\ \"foldmethod\",  \"fdm\",\n                \\ \"readonly\",    \"ro\",   \"noreadonly\", \"noro\",\n                \\ \"rightleft\",   \"rl\",   \"norightleft\", \"norl\"\n                \\ ]\n\nThe g:secure_modelines_verbose option, if set to something true, will make the script warn when a modeline attempts to set any other option.\n\nThe g:secure_modelines_modelines option overrides the number of lines to check. By default it is 5.\n\nIf g:secure_modelines_leave_modeline is defined, the script will not clobber &modeline. Otherwise &modeline will be unset.\n\nKeeping things up to date on vim.org is a nuisance. For the latest version, visit:\n\n    http://github.com/ciaranm/securemodelines",
   "rating_total": "51",
   "rating_votes": "21",
-  "downloads": "1031",
+  "downloads": "1032",
   "install_details": "Install into your plugin directory of choice.",
   "versions": [
     {
