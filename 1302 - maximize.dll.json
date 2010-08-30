@@ -6,7 +6,7 @@
   "description": "Maximizes gVim window on startup.\n\n\nReason:\n\n\"simalt ~x\" does not work in a Russian Win2000, although it did in WinME, with corresponding Russian letter instead of \"x\". Everything always works fullscreen on my computer, and Vim is the core part of my work, so I maximized its window by hands each time, and searched for an automated solution.\n\n\nDetails:\n\nThis can be done by a DLL, which must be called with libcallnr() function:\n\n    call libcallnr('maximize', 'Maximize', 1)\n\nIt takes one numeric parameter: 1 means maximize the window and 0 restores it back. It returns 1 on success, 0 on fault.\n\n\nZIP archive is 4.4 Kb.\nSource inside.",
   "rating_total": "36",
   "rating_votes": "17",
-  "downloads": "1046",
+  "downloads": "1047",
   "install_details": "Put maximize.vim and maximize.dll in $VIM\\vimfiles\\plugin\n\nFor Cream, you will also have to write:\n    let g:CREAM_WINPOS=0\nin your cream-conf.vim",
   "versions": [
     {

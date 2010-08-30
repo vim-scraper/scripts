@@ -6,7 +6,7 @@
   "description": "Context sensitive completion for XML.\nCompletes:\n * element names\n * attribute names (rejects already presented attributes)\n * attribute values (if defined as enumeration)\n * closing tag names\n * keywords in XML declaration\n\n1. Invoking\n\nThe completion function is XmlComplete() and is imapped on \\C-J.\n\n2. Completion in elements\n\nDistribution contains definition files (recipes) for DocBook 4.[234], XSL FO 1.0, XSLT 1.0, Relax NG 1.0, XML Schemas 1.0, SVG 1.1, XHTML 1.1, XInclude 1.0 and OpenOffice 1.0 XML format.\n\nIf g:xmlSubelements == \"yes\" (default \"no\"), completion of element names is restricted on subelements of parent element. This feature is new and momentarily works only for DocBook, XSLT and XML Schemas (the recipes must be modified).\n\nCompletion algorithm:\n1. If name of currently opened tag is prefixed, looks for respective xmlns mapping for its URN. If mapping exists, selects recipe associated with this URN.\n2. If name isn't prefixed, looks for implicit NS. If exists, ... (see above).\n3. Looks for Doctype decl. If found, tries first PUBLIC, then SYSTEM ident.\n4. If all fails, fires \\C-N for normal completion.",
   "rating_total": "-2",
   "rating_votes": "4",
-  "downloads": "889",
+  "downloads": "890",
   "install_details": "",
   "versions": [
     {

@@ -6,7 +6,7 @@
   "description": "Regard cflow's output as a new language, thus we could highlight it's output to analyze the source code. so the file name suffix should be \".cflow\", just like \"cflow -o xxx.cflow\" \n\n\nThe snapshot has been in the tarball \n\nSNAPSHOT: \ncyan\t--\tfunctions defined ourself \npurple\t--\tvariables defined ourself \nred\t--\tsystem functions \nblack\t--\tsystem symbols \nyellow\t--\tfile name \ngreen\t--\ttype keywords in C \nwhite\t--\tsomething else \norange(fg) --\tnumber \norange(bg) --\trecursive functions \n\n\nEnjoy it \n\n",
   "rating_total": "23",
   "rating_votes": "17",
-  "downloads": "145",
+  "downloads": "146",
   "install_details": "STEP 1: \nadd \"au BufNewFile,BufRead *.cflow setf cflow\" in u ~/.vimrc \n\nSTEP 2: \nmove cflow.vim to ~/.vim/syntax ",
   "versions": [
     {

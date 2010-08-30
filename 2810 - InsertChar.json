@@ -6,7 +6,7 @@
   "description": "Allows you to use <tab> <letter> to insert a single character (no need to press escape). You can also use 3<tab> <letter> to insert 3 characters.\n\nIf you install vimscript #2136, then the '.' command will also repeat the last insert.\n",
   "rating_total": "4",
   "rating_votes": "1",
-  "downloads": "117",
+  "downloads": "118",
   "install_details": "Step 1:\nPlace InsertChar.vim in the ~/.vim/plugin/ folder, or ~/.vim/autoload if your prefer.\n\nStep 2:\nSet up a mapping in your ~/.vimrc:\nnnoremap <TAB> :<C-U>call InsertChar#insert(v:count1)<CR>\n\nYou can change <TAB> to any other key you prefer, but the rest of the command must be the same.\n",
   "versions": [
     {

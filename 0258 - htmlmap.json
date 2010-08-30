@@ -6,7 +6,7 @@
   "description": "This script defines a number of macros, all for insert mode in HTML files. Once installed, it will automatically \"translate\" characters into their &...; strings: so for instance if you type \"ä\" the characters \" & a u m l ; \" will be inserted (without the intervening spaces). A mechanism similar to Vim's \"digraphs\" is also supported but with another key (F12, but you can replace it with something else if it doesn't suit you), so that e.g. \"<F12>oe\" inserts the numeric code for the oe ligature (above 255, some browsers know the numeric codes but not the symbolic entities such as &oelig;).\n\nThe script contains a lot of comments to make it largely self-explanatory.",
   "rating_total": "21",
   "rating_votes": "8",
-  "downloads": "1546",
+  "downloads": "1547",
   "install_details": "Add the line\n\n    source <path>/htmlmap.vim\n\n(where <path> is the directory where you downloaded this script) to the file ~/.vim/ftplugin/after/html.vim (for Unix) or ~/vimfiles/ftplugin/after/html.vim (for Windows). Create the file and the directories if they don't yet exist.\n\nOptionally, add\n\n    imap <F12> <C-K>\n\nto your vimrc if you want to use the same key as a digraph prefix for entities in HTML and for characters in other files.\n\nNote that if your vim does not support autocommands you can still make this script work by sourcing it manually in the buffer(s) where you need it.",
   "versions": [
     {

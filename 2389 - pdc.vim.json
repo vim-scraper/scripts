@@ -6,7 +6,7 @@
   "description": "Syntax file for Pandoc, file structure is similar to markdown, but it allows for LaTeX and other features. \n\nIt can read markdown and (subsets of) reStructuredText, HTML, and LaTeX, and it can write markdown, reStructuredText, HTML, LaTeX, ConTeXt, PDF, RTF, DocBook XML, OpenDocument XML, ODT, GNU Texinfo, MediaWiki markup, groff man pages, and S5 HTML slide shows.\n\nSee http://johnmacfarlane.net/pandoc/",
   "rating_total": "19",
   "rating_votes": "10",
-  "downloads": "876",
+  "downloads": "878",
   "install_details": "Save the file in your ~/.vim/syntax/ directory.\n\nIn vim use :set syntax=pdc \n\nor \n\nAdd create a file in ~/.vim/ftdetect/ called pdc.vim, that contains:\n\" Pandoc\nau! Bufread,BufNewFile *.pdc    set filetype=pdc",
   "versions": [
     {

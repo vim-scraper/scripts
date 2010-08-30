@@ -6,7 +6,7 @@
   "description": "Generates a doxygen comment skeleton for a C, C++,  or Java function, including @brief, @param (for each named argument), and @return.  The tag text as well as a comment block header and footer are configurable.  (Consequently, you can have \\brief, etc. if you wish, with little effort.)\n\nIt's definitely a little rough around the edges, but I hope you find it useful.\n\nTo use:  In vim with the cursor on the line of the function header that contains the parameters (if any), execute the command :Dox.  This will generate the skeleton and leave the cursor after the @brief tag.\n\nLimitations:\nAssumes that the function has a blank line above it and that all of the parameters are on the same line.  \nNot able to update a comment block after it's been written.\nWrites the @return tag for a void function.\n\nExample:\nGiven:\nint foo(char mychar, int yourint, double myarray[])\n{ //...\n}\n\nIssuing the :Dox command with the cursor on the function declaration would generate\n\n/**\n * @brief\n * \n * @param mychar\n * @param myint\n * @param myarray\n *\n * @returns\n **/",
   "rating_total": "85",
   "rating_votes": "39",
-  "downloads": "2810",
+  "downloads": "2811",
   "install_details": "Stick MakeDoxygenComment.vim in either your plugins or ftplugins/* directory. ",
   "versions": [
     {

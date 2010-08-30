@@ -1,0 +1,125 @@
+{
+  "script_id": "743",
+  "name": "svn.vim - McCoy",
+  "summary": "A simple svn utility for vim.",
+  "script_type": "utility",
+  "description": "A simple utility for using SVN within vim.  Mostly just aliases for combining writing your file, commiting and updating your repository within vim.  I use gvim, so the default editor ``Commit'' or ``Svn commit'' doesn't work.  For this reason, with a little bit of trickery I made my system open up the log addition inline.  This means with two simple commands, you've written your current file, commited your repository, and updated your changes...without leaving your vim window :)\n\nYou can also do this with key mappings, so makes it even easier.\n\nIts still somewhat primative, though its coming along.\nCheck back frequently for updates.\nSuggestions and Patches are always welcome!\n\nHappy Vimming!",
+  "rating_total": "25",
+  "rating_votes": "7",
+  "downloads": "1248",
+  "install_details": "cd ~/.vim\ntar zxvf svn-<version>.tgz\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2305",
+      "filename": "svn-vim-0.003002.tgz",
+      "script_version": "0.003002",
+      "date": "2003-09-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3195",
+        "user_name": "tag",
+        "first_name": "Scott",
+        "last_name": "McCoy",
+        "email": "tag at cpan.org",
+        "homepage": "http://www.blisted.org/"
+      },
+      "release_notes": "Just a bug fix.  \\\\l (:Svn log) was running through 'windo' (oops)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2289",
+      "filename": "svn-vim-0.003001.tgz",
+      "script_version": "0.003001",
+      "date": "2003-08-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3195",
+        "user_name": "tag",
+        "first_name": "Scott",
+        "last_name": "McCoy",
+        "email": "tag at cpan.org",
+        "homepage": "http://www.blisted.org/"
+      },
+      "release_notes": "Fixed an ugly bug that made it not play well with other plugins :)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2286",
+      "filename": "svn-vim-0.003.tgz",
+      "script_version": "0.003",
+      "date": "2003-08-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3195",
+        "user_name": "tag",
+        "first_name": "Scott",
+        "last_name": "McCoy",
+        "email": "tag at cpan.org",
+        "homepage": "http://www.blisted.org/"
+      },
+      "release_notes": "Added Documentation, fixed a few minor glitches, added Key Mappings...still waiting for feedback from people on more things this needs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2280",
+      "filename": "svn.vim",
+      "script_version": "0.002",
+      "date": "2003-08-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3195",
+        "user_name": "tag",
+        "first_name": "Scott",
+        "last_name": "McCoy",
+        "email": "tag at cpan.org",
+        "homepage": "http://www.blisted.org/"
+      },
+      "release_notes": "the \"SVN commit\" and Commit methods now open up a window inline, manually fetching the repository status and generating a little file exactly like the one svn generates, then a new 'Complete' command was added that wraps a small sh script around the commit information you provided, which is then given to svn commit as the editor, and then removed.  The window is then closed, and its all done quietly.  I also added 'Svn log' and 'Log' commands that open up the log in a new window and move your cursor to the top :)  This thing is almost cool now"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2279",
+      "filename": "svn.vim",
+      "script_version": "0.001003",
+      "date": "2003-08-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3195",
+        "user_name": "tag",
+        "first_name": "Scott",
+        "last_name": "McCoy",
+        "email": "tag at cpan.org",
+        "homepage": "http://www.blisted.org/"
+      },
+      "release_notes": "Added 'Add' keyword and handler.\nSome other stuff I forget...maybe I should put this thing under svn :)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2260",
+      "filename": "svn.vim",
+      "script_version": "0.001001",
+      "date": "2003-08-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3195",
+        "user_name": "tag",
+        "first_name": "Scott",
+        "last_name": "McCoy",
+        "email": "tag at cpan.org",
+        "homepage": "http://www.blisted.org/"
+      },
+      "release_notes": "Fixed a little bug where I should have been using a global variable and the only reason it worked without the global was my version of vim :-/  Sorry guys."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2259",
+      "filename": "svn.vim",
+      "script_version": "0.001",
+      "date": "2003-08-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "3195",
+        "user_name": "tag",
+        "first_name": "Scott",
+        "last_name": "McCoy",
+        "email": "tag at cpan.org",
+        "homepage": "http://www.blisted.org/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

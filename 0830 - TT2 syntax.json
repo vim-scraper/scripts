@@ -6,7 +6,7 @@
   "description": "* THIS SCRIPT WILL BE NO LONGER MAINTAINED *\nMaintainer was handed over. Please visit below to find updated version.\nhttp://github.com/petdance/vim-perl\n\nSyntax Highlight for Template-Toolkit 2.x\n( http://search.cpan.org/~abw/Template-Toolkit/ )\n Contain Perl code in PERL/RAWPERL directive. (runtime sytax/perl.vim)\n No fold.\n HTML syntax for including TT2 syntax. ( tt2html.vim / unfinished )\n Can define START_TAG/END_TAG for your style.\n",
   "rating_total": "230",
   "rating_votes": "115",
-  "downloads": "4004",
+  "downloads": "4007",
   "install_details": "Add this lines in your \"filetype.vim\":\n\nau BufNewFile,BufRead *.tt2 call s:AdjustTT2Type()\n\nfunc! s:AdjustTT2Type()\n    if ( getline(1) . getline(2) . getline(3) =~ '<\\chtml'\n              && getline(1) . getline(2) . getline(3) !~ '<[%?]' )\n       || getline(1) =~ '<!DOCTYPE HTML'\n        setf tt2html\n    else\n        setf tt2\n    endif \nendfunc\n\nTo define START_TAG and END_TAG you like, you can set any pair of tags to 'b:tt2_syn_tags':\n    \"ASP\"\n    :let b:tt2_syn_tags = '<% %>'\n    \"PHP\"\n    :let b:tt2_syn_tags = '<? ?>'\n    \"TT2 and HTML\"\n    :let b:tt2_syn_tags = '\\[% %] <!-- -->'\n",
   "versions": [
     {

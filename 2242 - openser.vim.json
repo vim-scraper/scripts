@@ -6,7 +6,7 @@
   "description": "Syntax file for Openser configuration. In version 1.00 it includes all core keywords as of version 1.3.X.\nWorks in Vim 7.1.",
   "rating_total": "25",
   "rating_votes": "16",
-  "downloads": "341",
+  "downloads": "342",
   "install_details": "Install script into vim syntax files directory. Switch to openser syntax either with \"setf openser\" or add filetype detection.\nThis detection works quite well if used instead of standard *.cfg:\n\nau BufNewFile,BufRead *.cfg   call s:cfgType()\n\nfunc! s:cfgType()\n   let max = line(\"$\") > 50 ? 50 : line(\"$\")\n   for n in range(1, max)\n      if getline(n) =~ '^\\s*modparam\\s*('\n         setf openser\n         return\n      elseif getline(n) =~ '^\\s*loadmodule\\s*\"[^\"]\\+.so\"\\s*$'\n         setf openser\n         return\n      elseif getline(n) =~ '^\\s*route\\s*{\\s*'\n         setf openser\n         return\n      endif\n   endfor\n   setf cfg\nendfunc\n",
   "versions": [
     {

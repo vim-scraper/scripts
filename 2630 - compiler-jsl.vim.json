@@ -6,7 +6,7 @@
   "description": "Compiler plugin for JavaScript Lint (http://www.javascriptlint.com), an (open\nsource) checker for JavaScript syntax and coding techniques based on the Mozilla\nFirefox JavaScript engine. \n\nThis is similar to vimscript #2578 and vimscript #2729, but this script uses\nVim's compiler infrastructure (so checks are triggered by the :make command),\nmaking its use consistent with syntax checkers for other languages. ",
   "rating_total": "6",
   "rating_votes": "3",
-  "downloads": "366",
+  "downloads": "367",
   "install_details": "JavaScript Lint must be installed and available through $PATH. \n\nPut the script into your user or system Vim compiler directory\n(e.g. ~/.vim/compiler). \n\nTo automatically select this compiler for all JavaScript files, put the\nfollowing snippet into ~/.vim/after/ftplugin/javascript.vim:\n\n\" Set JavaScript Lint as compiler. \nif ! exists('b:current_compiler')\n    compiler jsl\nendif\n\nCONFIGURATION\nThe optional jsl configuration must either reside in this script's directory as\n'jsl.conf', or its filespec can be specified in g:jsl_config.  ",
   "versions": [
     {

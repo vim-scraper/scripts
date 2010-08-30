@@ -4,9 +4,9 @@
   "summary": "Extra highlighting of typedefs, enumerations etc (based on ctags)",
   "script_type": "ftplugin",
   "description": "This set of scripts is designed to increase the number of highlighting groups used by Vim.  This makes it quicker and easier to spot errors in your code.  By using ctags and parsing the output, the typedefs, #defines, enumerated names etc are all clearly highlighted in different colours.\n\nThe idea was based on the comments in :help tag-highlight, but I wanted to take it a little further.\n\nThis is achieved through a little python script to interact with ctags and to parse the result and a small Vim script that makes Vim read the resulting files.  Finally, a new command (:UpdateTypesFile) is added (with optional ! for recursive operation) to keep the generated files up to date.\n\nAt present, the highlighter supports the following languages:\nC/C++\nJava\nPerl\nPHP (experimental)\nPython\nRuby (largely untested)\nVHDL\nAdding more languages is extremely simple.\n\nTo show the benefit of this plugin, there are some screenshots and a more detailed description at the following website:\n\nhttp://sites.google.com/site/abudden/contents/Vim-Scripts/ctags-highlighting",
-  "rating_total": "101",
-  "rating_votes": "34",
-  "downloads": "1350",
+  "rating_total": "105",
+  "rating_votes": "35",
+  "downloads": "1357",
   "install_details": "Requires python (but not a python-enabled vim).  A windows executable version, which doesn't require python, is available at:\n\nhttp://sites.google.com/site/abudden/contents/Vim-Scripts/ctags-highlighting\n\nIt also requires a few extra highlighting groups to be defined (using :highlight).  Run :UpdateTypesFile and look at the list at the bottom of the resulting types_*.vim files.  Alternatively, install the Bandit colour scheme from vimscript #2645: this provides all the groups by default.  The full list is also provided in the included documentation.",
   "versions": [
     {

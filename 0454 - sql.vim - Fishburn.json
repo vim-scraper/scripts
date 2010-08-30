@@ -1,0 +1,93 @@
+{
+  "script_id": "454",
+  "name": "sql.vim - Fishburn",
+  "summary": "ftplugin for SQL (Common for Oracle, Microsoft SQL Server, Sybase, ...)",
+  "script_type": "ftplugin",
+  "description": "This file should only contain values that are common to all SQL languages Oracle, Microsoft SQL Server, Sybase ASA/ASE, MySQL, and so on.\n\nAttention Vim7 users\n-----------------------------\nVersion 1.0 has been included with Vim7.0.  It adds additional functions to allow you to choose which SQL dialect to load by default, or per buffer.  See :h sql.txt for more details.\nVersion 0.04 is included with Vim 6.3.\n\nPatterns have been defined for the matchit plugin, to use the % command to match statements.  Supported patterns are:\n        begin\n        end\n                                   \n        if\n        elseif | elsif\n        else [if]\n        end if\n                                   \n        [while condition] loop\n            leave\n            break\n            continue\n            exit\n        end loop\n                                   \n        for\n            leave\n            break\n            continue\n            exit\n        end loop\n                                   \n        case\n        when \n        when\n        end case\n                                   \n        merge\n        when not matched\n        when matched\n                                   \n        EXCEPTION\n        WHEN column_not_found THEN\n        WHEN OTHERS THEN\n\nDefine how to find the macro definition of a variable using the various\n[d, [D, [_CTRL_D and so on features ( see :h [d )\n\nMatch these values ignoring case:\nie  DECLARE varname INTEGER\n\nAdded additional buffer mappings which work in both normal and visual mode:\n        ]] - next BEGIN\n        [[ - previous BEGIN\n        ][ - next END\n        [] - previous END\n\nThe following mappings also work in normal and visual mode.\nA global variable has been defined to control the behaviour of these maps.  You can override this variable in your vimrc file if it is not complete, or as new objects are added to other databases.\n    let g:ftplugin_sql_objects = 'function,procedure,event,' .\n                \\ '\\(existing\\\\|global\\s\\+temporary\\s\\+\\)\\?table,trigger' .\n                \\ ',schema,service,publication,database,datatype,domain' .\n                \\ ',index,subscription,synchronization,view,variable'\n\n        ]} - Next CREATE statement (of the above types)\n        [{ - Previous CREATE statement (of the above types)\n\nThese mappings also work in both normal and visual mode.\n        ]\" - Next comment\n        [\" - End of previous comment \n\n",
+  "rating_total": "19",
+  "rating_votes": "7",
+  "downloads": "2061",
+  "install_details": "Copy into your ftplugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3888",
+      "filename": "sql.vim",
+      "script_version": "0.08",
+      "date": "2005-02-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "Missed an = sign, <sigh>"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3886",
+      "filename": "sql.vim",
+      "script_version": "0.07",
+      "date": "2005-02-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "Very minor update.\n\nChanged this line:\nsetlocal cpo&vim\n\nTo:\nset cpo "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3883",
+      "filename": "sql.vim",
+      "script_version": "0.06",
+      "date": "2005-02-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "Added some additional visual maps, and now allow the user to customize part of the search strings with this global variable: g:ftplugin_sql_objects\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3659",
+      "filename": "sql.vim",
+      "script_version": "0.05",
+      "date": "2004-11-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "Added additional matchit.vim features.\nCreated additional buffer maps to assist in navigation:\n]] - next BEGIN\n[[ - previous BEGIN\n][ - next END\n[] - previous END\n\n]} - Next CREATE statement\n[{ - Previous CREATE statement\n\n]\" - Next comment\n[\" - End of previous comment\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2796",
+      "filename": "sql.vim",
+      "script_version": "0.04",
+      "date": "2004-03-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "Updated the IF...ELSE...END IF block to correct an error."
+    }
+  ]
+}

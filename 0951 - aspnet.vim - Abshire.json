@@ -1,0 +1,29 @@
+{
+  "script_id": "951",
+  "name": "aspnet.vim - Abshire",
+  "summary": "Provides ASP.NET syntax highlighting.",
+  "script_type": "syntax",
+  "description": "Provides ASP.NET syntax highlighting.  This is a modified version of the aspnet.vim file provided my Mark Feeney, to better handle a few things, such as the following:\n\n<img src=\"<%# DataBind.Eval(Container.DataItem, \"ImageFilePath\") %>\"/>",
+  "rating_total": "13",
+  "rating_votes": "14",
+  "downloads": "648",
+  "install_details": "Copy this script to ~/.vim/syntax\nCreate the file ~/.vim/ftdetect/aspnet.vim\n\n~/.vim/ftdetect/aspnet.vim\n-------------------------------------\nau BufRead,BufNewFile *.aspx,*.asmx,*.ascx      set filetype=aspnet\n-------------------------------------",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2906",
+      "filename": "aspnet.vim",
+      "script_version": "1.0",
+      "date": "2004-04-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4900",
+        "user_name": "sabshire",
+        "first_name": "Stacey",
+        "last_name": "Abshire",
+        "email": "vim.3.sabshire at xoxy.net",
+        "homepage": "http://abshire.webhop.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

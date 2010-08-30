@@ -4,9 +4,9 @@
   "summary": "Folded text is compressed on one line",
   "script_type": "ftplugin",
   "description": "/* one-line CSS (see http://neutroncreations.com/blog/single-line-vs-multi-line-css-plus-textmate-tips/) */\nheader h1 { float: left;  width: 155px; height: 50px;  }\n\n/* Multiline CSS */\nheader h1 {\n  float: left;\n  width: 155px;\n  height: 50px;\n}\n\nWhich to choose? One line CSS is easier to scan through and saves space, but multi-line CSS is easier to grep and edit.\n\nThis script sets you up so you edit and save multi-line CSS, but when you turn folding on, everything´s compressed on one line so you can scan through it easier.\n\nControls are vim´s standard for text folding:\nzo and zc: Open and Close fold (set multiline, set oneline)\nzR and zM: Reopen and Close all (globally set multiline, globally set oneline)\nzj, zk: go down and up a fold (CSS block).\n",
-  "rating_total": "126",
-  "rating_votes": "33",
-  "downloads": "70",
+  "rating_total": "130",
+  "rating_votes": "34",
+  "downloads": "71",
   "install_details": "Copy to ~/.vim/ftplugin/css_folding.vim",
   "versions": [
     {

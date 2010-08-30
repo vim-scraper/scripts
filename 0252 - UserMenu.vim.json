@@ -6,7 +6,7 @@
   "description": "\" For gvim.\n\" Registers are good for executing vim commands but not perfect for inserting\n\" longer parts of normal text. This menu for gvim help you easy creating,\n\" saving end editing eg. headers for various .tex and .html files.",
   "rating_total": "8",
   "rating_votes": "4",
-  "downloads": "1376",
+  "downloads": "1377",
   "install_details": "\" Installation:\n\" NOTE: libList.vim is necessary. It is great library for handling lists.\n\" http://vim.sourceforge.net/scripts/script.php?script_id=166\n\"\n\" 1. Simplest way is to put this file into your plugin directory or source it\n\" from vimrc (or gvimrc) file.\n\" 2. Also you need create special directories where\n\" your texts will be stored. In default configuration it is:\n\" $HOME/.vim/usermenu/ (for unices).\n\" 3. Configuration:\n\" Path to libList.vim . It isn't necessary when libList.vim is in your plugin\n\" directory.\nsource $HOME/.vim/scripts/libList.vim\n\n\" Path to usermenu (for unices)\nlet s:path = \"$HOME/.vim/usermenu/\"\n\n\" Name of the folder with `macros'\nlet s:localpath = \"usermenu\"\n\n\" Action. Default is read, but maybe you want to change that (eg. source).\nlet s:action = \"read\"",
   "versions": [
     {

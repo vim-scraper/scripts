@@ -6,7 +6,7 @@
   "description": "This plugin enables you to select a template on creating a new file.\nTemplates are typically placed in ~/.vim/template .\nOn creating a file, corresponding templates, if any, are listed up. You\ncan select one of them by k(up)/j(down). Press Enter to load the selected\ntemplate, or press 'q' to load no templates.\nYou can cancel the insertion of selected template by pressing 'u'(undo).\n\nThere is an optional global varialbe:\n  g:qts_templatedir : specifies the template dir\n                      (default: ~/.vim/template)\n\nTemplate search rules:\n  1) by filetype\n    filetype=python -> ~/.vim/template/python_*\n  2) by suffix\n    *.cpp           -> ~/.vim/template/*.cpp\n  3) by filename\n    Makefile        -> ~/.vim/template/Makefile_*\n\nNote that especially in case 3, 'Makefile_' is a legal template name\nbut 'Makefile' is not even if you have no other template file.\n\nNew in 1.1.0 - expression expansion:\n  String surrounded by '@{@' '@}@' in the template file is regarded as a vim\n  expression, and will be eval()ed on loading.\n  e.g.)\n    @{@expand('%:t')@}@          ->  newfile.py\n    @{@strftime('%Y-%m-%d')@}@   ->  2009-08-30",
   "rating_total": "1",
   "rating_votes": "1",
-  "downloads": "243",
+  "downloads": "244",
   "install_details": "Place this file in /usr/share/vim/vim*/plugin or ~/.vim/plugin/",
   "versions": [
     {

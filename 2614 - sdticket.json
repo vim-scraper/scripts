@@ -6,7 +6,7 @@
   "description": "this supports sd (peer-to-peer bug tracking system) ticket syntax.\n\nhttp://syncwith.us/ \nhttp://github.com/obra/sd",
   "rating_total": "4",
   "rating_votes": "1",
-  "downloads": "150",
+  "downloads": "151",
   "install_details": "put the sdticket.vim to ~/.vim/syntax/\n\nand add the below settings to your .vimrc\n\n au BufNewFile,BufRead *\n     \\ if getline(1) =~ \"required ticket metadata\" |\n     \\   setf sdticket |\n     \\ endif\n",
   "versions": [
     {

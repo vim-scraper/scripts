@@ -6,7 +6,7 @@
   "description": "This theme is based on Josh O'Rourke's Vim clone of the railscast\ntextmate theme ( vimscript #1995 ).  The key thing I have done here is\nsupply 256-color terminal equivalents for as many of the colors as\npossible, and fixed up a few of the funny tags for editing e-mails and\nsuch.\n\nYou can see a side-by-side comparison at http://zork.net/~nick/screenshots/colorcomparison.png\n",
   "rating_total": "526",
   "rating_votes": "146",
-  "downloads": "4491",
+  "downloads": "4507",
   "install_details": "To use for gvim:\n1: install this file as ~/.vim/colors/railscasts.vim\n2: put \"colorscheme railscasts\" in your .gvimrc\n\nIf you are using Ubuntu, you can get the benefit of this theme in your\ngnome-terminals by taking the following steps:\n\n1: sudo apt-get install ncurses-term\n2: put the following in your .vimrc\n    if $COLORTERM == 'gnome-terminal'\n        set term=gnome-256color\n        colorscheme railscasts\n    else\n        colorscheme default\n    endif\n3: if you wish to use this with screen, add the following to your .screenrc:\n    attrcolor b \".I\"\n    termcapinfo xterm 'Co#256:AB=\\E[48;5;%dm:AF=\\E[38;5;%dm'\n    defbce \"on\"\n    term screen-256color-bce\n",
   "versions": [
     {

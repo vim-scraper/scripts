@@ -6,9 +6,25 @@
   "description": "This plugin provides the ability to transform one sequence of symbols into-\nanother. The typical use case is transliteration of latin symbols into russian-\nsymbols for systems without russian keyboard.\n\nFeatures:\n    &#8729; transliteration of text, provided as function argument;\n    &#8729; transliteration of a selection or a line range;\n    &#8729; input transliteration;\n    &#8729; setting up the input transliteration in current buffer or in all opened\n      buffers;\n    &#8729; plugin system for transliteration function;\n    &#8729; plugin system for input transliteration;\n    &#8729; loading transliteration table from a file, a variable, a dictionary or\n      a function;\n    &#8729; displaying the transliteration table on the screen.\n\nThis plugin also provides Russian documentation. Add «ru» to option «helplang» in order to use it.\n\nYou can download new version of plugin from sourceforge.net: you will need the following projects:\n\nhttp://sourceforge.net/projects/translit3\nhttp://sourceforge.net/projects/vimcompcrtr\nhttp://sourceforge.net/projects/vimargumentchec\nhttp://sourceforge.net/projects/vimstuff\nhttp://sourceforge.net/projects/jsonvim\nhttp://sourceforge.net/projects/vimpluginloader\n\nAll projects' files are available only from mercurial repository.",
   "rating_total": "9",
   "rating_votes": "3",
-  "downloads": "61",
+  "downloads": "67",
   "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"translit3\"]) and add ``call scriptmanager#Activate([\"translit3\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself. First version present on this page needs no dependencies.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13718",
+      "filename": "translit3-2.0.6.tar.gz",
+      "script_version": "2.0.6",
+      "date": "2010-08-29",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added ConfigDir option, added tests, some bug fixes"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13697",
       "filename": "translit3-2.0.5.tar.gz",

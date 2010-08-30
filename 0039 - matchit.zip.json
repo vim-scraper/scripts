@@ -6,7 +6,7 @@
   "description": "The matchit.vim script allows you to configure % to match more than just\nsingle characters.  You can match words and even regular expressions.\nAlso, matching treats strings and comments (as recognized by the\nsyntax highlighting mechanism) intelligently.\nThe default ftplugins include settings for several languages:\nAda, ASP with VBS, Csh, DTD, Essbase, Fortran, HTML, JSP\n(same as HTML), LaTeX, Lua, Pascal, SGML, Shell, Tcsh, Vim, XML.\n(I no longer keep track, so there may be others.)\nThe documentation (included in the zip file) explains how to configure\nthe script for a new language and how to modify the defaults.\n\nSince vim 6.0, matchit.vim has been included in the standard vim distribution,\nunder the macros/ directory; the version here may be more recent.\n",
   "rating_total": "1735",
   "rating_votes": "537",
-  "downloads": "26723",
+  "downloads": "26764",
   "install_details": "Vim 5.x:  Make sure to download the correct version (1.0).  Add a line like\n\n:source path/to/matchit.vim\n\nto your vimrc file.  More details are in matchit.html (included).\n\nVim 6.x, 7.x:  Download the most recent version.\nUnpack the zip file in your personal vim directory (e.g. ~/.vim on *NIX):\nthis will put matchit.vim in your plugin/ directory and put matchit.txt into\nyour doc/ directory.  Then do\n\n:helptags ~/.vim/doc\n\nto rebuild the tags file.  For details, read\n\n:help add-local-help\n\nMake sure you have a line like\n\n:filetype plugin on\n\nin your vimrc file.  This enables filetype plugins, many of which tell\nmatchit.vim which matching pairs to use.",
   "versions": [
     {

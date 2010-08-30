@@ -6,7 +6,7 @@
   "description": "*altercmd* is a Vim plugin to provide an easy way to alternate built-in Ex\ncommands by user-defined Ex commands.  This plugin provides |:AlterCommand|\nfor this purpose.  For example, if you define :CD, a custom version of |:cd|,\nadd the following in your vimrc.\n\n\tAlterCommand cd  CD\n\nWith the above setting, you can use :cd as if it is :CD.  It means that :CD\nwill be automatically inserted if you type :cd as an Ex command, so you don't\nhave to type :CD to use :cd and you'll never encounter mistyping :cd and :CD.\n\n:AlterCommand also supports partial command names.  For example, |:help| can\nbe invoked with :h, :he, :hel or :help.\n\n\tAlterCommand h[elp]  HELP\n\nWith the above setting, you can use :h, :he, :hel and :help as if they are\n:HELP, your own version of :help.\n\n\nRequirements:\n- Vim 7.2 or later\n\nLatest version:\nhttp://github.com/kana/vim-altercmd\n\nDocument in HTML format:\nhttp://kana.github.com/config/vim/altercmd.html",
   "rating_total": "8",
   "rating_votes": "2",
-  "downloads": "251",
+  "downloads": "254",
   "install_details": "...",
   "versions": [
     {

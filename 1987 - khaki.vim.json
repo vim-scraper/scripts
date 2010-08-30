@@ -6,7 +6,7 @@
   "description": "This colour scheme was created primarily because there seems to be few\n(if any) that take the trouble to appear the same in gui and cterm environments.\n\nSecondly, most cterm colour schemes seem to use excessively strong colours\nin psychotic combinations compared to the gui schemes. This scheme\nstrives to follow the guidelines described in \"Color Theory for Developers\"\n       http://www.devsource.com/article2/0,1895,2069736,00.asp\nfor a softer appearance like more modern gui schemes.\n\nFinally, some terminals render bold and italic fonts badly, so those attributes have been avoided.\n\nFeatures:\n    - Optimized for 256 colour palette, then converted to gui.\n    - Identical colour rendition in both gui and cterm environments.\n    - Low-contrast colours keep it \"REAL\", avoiding psychotic edit sessions.\n    - Avoids use of terminal attributes {bold italic etc}, with the\n      exception of 'underline' used with the 'Underlined' group-name.\n\nTesting:\n    Tested with the following programs (256 colour versions), which render identically to gvim:-\n        gnu-screen (compiled with --enable-colors256 option)\n        xterm\n        gnome-terminal\n\n        konsole (version 1.6.5) renders slightly darker colours for some unknown reason.\n            See KDE Bug 138237: Color cube incorrect for xterm-256color mode (patch)\n",
   "rating_total": "19",
   "rating_votes": "9",
-  "downloads": "1016",
+  "downloads": "1018",
   "install_details": "  - Copy khaki.vim to ~/.vim/colors/\n\n  - Add following lines to ~/.vimrc\n        if !has(\"gui_running\")\n            set t_Co=256\n        endif\n        colorscheme khaki\n",
   "versions": [
     {

@@ -6,7 +6,7 @@
   "description": "Simple syntax highlight for RFC (Request For Comments) file.\nIt can highlight the contents, the titles and so on.\n\nA ftplugin is also provided to use <C-]> to jump from the contents or reference note ([1] like things).",
   "rating_total": "6",
   "rating_votes": "3",
-  "downloads": "127",
+  "downloads": "128",
   "install_details": "unzip the archive to your .vim (or vimfiles) directory.\n\nYou must add filetype detect by yourself. For example, add\n  if expand('%:t') =~? 'rfc\\d\\+'\n    setfiletype rfc\n  endif\nto your scripts.vim will make Vim recognize all files with name rfcXXXX as RFC file.\n",
   "versions": [
     {

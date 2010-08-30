@@ -6,7 +6,7 @@
   "description": "This plugin recursivelly sources the _vimrc_local.vim files present from $HOME to the directory of the current buffer every time we change buffer.\n\nExample: current dir is ~/a/b/c. Files are sourced in this order:\n~/_vimrc_local.vim, then ~/a/_vimrc_local.vim, ~/a/b/_vimrc_local.vim, and finally ~/a/b/c/_vimrc_local.vim\n\nNo messages issued if some of _vimrc_local.vim does not exist.",
   "rating_total": "9",
   "rating_votes": "3",
-  "downloads": "594",
+  "downloads": "595",
   "install_details": "0- Set g:local_vimrc in your .vimrc if you wish to use filenames other than '_vimrc_local.vim'\na- Drop this plugin into a {rtp}/plugin/ directory\nb- Define _vimrc_local.vim files into your directories\n\n   Ideally, each foo/bar/_vimrc_local.vim should be defined the same way as a ftplugin, i.e.:\n\n:::: foo/bar/_vimrc_local.vim:::\n\" Global stuff that needs to be updated/override\nlet g:bar = 'bar'  \" YES! This is a global variable!\n\n\" Local stuff that needs to be defined once for each buffer\nif exists('b:foo_bar_local_vimrc') | finish | endif\nlet b:foo_bar_local_vimrc = 1\nsetlocal xxx\nnnoremap <buffer> foo :call <sid>s:Foo()<cr>\nlet b:foo = 'foo'\n\n\" Global stuff that needs to be defined once only => functions\nif exists('g:foo_bar_local_vimrc') | finish | endif\nlet g:foo_bar_local_vimrc = 1\nfunction s:Foo()\n  ...\nendfunction\n::::::::::::::",
   "versions": [
     {

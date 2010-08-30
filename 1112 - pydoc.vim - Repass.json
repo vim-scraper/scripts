@@ -1,0 +1,29 @@
+{
+  "script_id": "1112",
+  "name": "pydoc.vim - Repass",
+  "summary": "Pulls external python documentation into a Vim window.",
+  "script_type": "utility",
+  "description": "This utility will invoke the external pydoc script (pydoc.py comes with the standard Python installation) and use it to retrieve relevant documentation. This information is displayed in a new Vim window just like the internal Vim help. Remaps the 'K' command to provide for easy access. For example, let's say you're editing a program that uses the 'os' module. Simply position the cursor over 'os' and hit K and a new window will appear (in Vim) with the full module documentation. As a cool side effect, the pydoc buffers are now candidates for text completion, so this script provides a quick and easy way of loading a module's identifiers into your completion list.\n\nAndre Kelpe has kindly emailed me to let me know he has a script vimscript #910 that does much the same thing. Unfortunately, it doesn't show up when you do a search for Python so I was unaware of it :-(. Apologies to Andre, but we are in discussion about possibly merging the two as they both have some cool features.\n\nEDIT\n10.25.2004 (mention the other pydoc script)",
+  "rating_total": "20",
+  "rating_votes": "7",
+  "downloads": "1110",
+  "install_details": "Please read the script for full installation details.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3570",
+      "filename": "pydoc.vim",
+      "script_version": "0.4",
+      "date": "2004-10-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6149",
+        "user_name": "synth",
+        "first_name": "Mike",
+        "last_name": "Repass",
+        "email": "mrepass at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

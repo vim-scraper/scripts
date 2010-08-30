@@ -6,7 +6,7 @@
   "description": "This script allows you to automatically add the #include statements at the top of you *.{cc,hh} files.\nTo use it, place the cursor on the type you need to include, then press <;;> and the corresponding #include statement will be added.\nIn *.cc files, the correct #include is added, and in *.hh files, the forward declaration is added.\n\nExample:\nvoid myfunc (Foo* x);\n-> if you place the cursor on \"Foo\" and press <;;> (just the 2 semicolons), the #include \"foo.hh\" will be added at the top of the file. (The insertion location is specified by a variable, see Install Details).\n\nThe naming standard used is \"Foo\" and \"FooBar\", for the FooBar class the #include will be: #include \"foo-bar.hh\".",
   "rating_total": "6",
   "rating_votes": "6",
-  "downloads": "293",
+  "downloads": "295",
   "install_details": "Just put the autoinclude.vim file in your ~/.vim/plugin directory.\nYou can specify the line where the #include will be added with the g:AutoIncludeLine variable.\nJust add this line to your ~/.vimrc file:\nlet g:AutoIncludeLine = 42 \nWhere 42 is the line number.",
   "versions": [
     {

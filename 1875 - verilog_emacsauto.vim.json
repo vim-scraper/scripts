@@ -6,7 +6,7 @@
   "description": "Two emacs verilog-mode functions are mapped.\n\\a expands all the verilog-mode autos (similar to C-c C-a in emacs).\n\\d collapses all the verilog-mode autos (similar to C-c C-d in emacs).\n\nPreviously if I wanted to update verilog-mode autos, I would\n   save and quit vim\n   fire up emacs\n   do the auto commands\n   save and close emacs\n   fire up vim.\nAnd in doing so, I would lose all the edit history in vim.\nWith this I can just type \\a and keep all the previous edit history for undos.\n\nThis is my first attempt at writing a vim plugin. Code should be simple enough for an average Verilog user to take and fix/enhance according to needs. Doing :he plugin, :he write-plugin, or :he plugin-details should reveal how simple this really is.",
   "rating_total": "33",
   "rating_votes": "15",
-  "downloads": "737",
+  "downloads": "739",
   "install_details": "Download this script and put it in your ~/.vim/ftplugin/ directory, creating the directories if necessary.\n\nYou need to get the verilog-mode.el file from the http://www.verilog.com/verilog-mode.html site.\nYou can follow the installation instruction there, but to use it with this script all you need to do is place the uncompressed file in your ~/elisp directory. You can also place the file in other locations as long as you change the path to the file in this script.",
   "versions": [
     {

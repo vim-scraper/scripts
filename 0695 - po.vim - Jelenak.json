@@ -1,0 +1,45 @@
+{
+  "script_id": "695",
+  "name": "po.vim - Jelenak",
+  "summary": "ftplugin for easier editing of GNU gettext PO files",
+  "script_type": "ftplugin",
+  "description": "This file is a Vim ftplugin for editing PO files (GNU gettext -- the GNU\ni18n and l10n system). It automates over a dozen frequent tasks that\noccur while editing files of this type.\n\n                                                                                    Key mappings\nAction (Insert mode)                                                GUI Vim     Vim\n===============================================================\nMove to an untransl. string forward                       <S-F1>      \\m\nMove to an untransl. string backward                   <S-F2>       \\p\nCopy the msgid string to msgstr                            <S-F3>      \\c\nDelete the msgstr string                                           <S-F4>      \\d\nMove to the next fuzzy translation                         <S-F5>       \\f\nMove to the previous fuzzy translation                 <S-F6>       \\b\nLabel the translation fuzzy                                       <S-F7>      \\z\nRemove the fuzzy label                                            <S-F8>      \\r\nShow msgfmt statistics for the file(*)                      <S-F11>     \\s\nBrowse through msgfmt errors for the file(*)         <S-F12>     \\e\nPut the translator info in the header                             \\t             \\t\nPut the lang. team info in the header                           \\l             \\l\n---------------------------------------------------------------\n(*) Only available on UNIX computers.\n\n\n                                                                                  Key mappings\nAction (Normal mode)                                           GUI Vim     Vim\n===============================================================\nMove to an untransl. string forward                      <S-F1>      \\m\nMove to an untransl. string backward                  <S-F2>      \\p\nMove to the next fuzzy translation                        <S-F5>      \\f\nMove to the previous fuzzy translation                <S-F6>      \\b\nLabel the translation fuzzy                                     <S-F7>      \\z\nRemove the fuzzy label                                          <S-F8>      \\r\nSplit-open the file under cursor                                  gf           gf\nShow msgfmt statistics for the file(*)                    <S-F11>     \\s\nBrowse through msgfmt errors for the file(*)       <S-F12>     \\e\nPut the translator info in the header                            \\t            \\t\nPut the lang. team info in the header                          \\l            \\l\n---------------------------------------------------------------\n(*) Only available on UNIX computers.\n\nRemarks:\n- \"S\" in the above key mappings stands for the <Shift> key and \"\\\" in\n  fact means \"<LocalLeader>\" (:help <LocalLeader>), which is \"\\\" by\n  Vim's default.\n- Information about the translator and language team is supplied by two\n  global variables: 'g:po_translator' and 'g:po_lang_team'. They should\n  be defined in the \".vimrc\" (UNIX) or \"_vimrc\" (Windows) file. If they\n  are not defined, the default values (descriptive strings) are put\n  instead.\n- Vim's \"gf\" Normal mode command is remapped (local to the PO buffer, of\n  course). It will only function on lines starting with \"#: \". Search\n  for the file is performed in the directories specified by the 'path'\n  option. The user can supply its own addition to this option via the\n  'g:po_path' global variable. Its default value for PO files can be\n  found by typing \":set path?\" from within a PO buffer. For the correct\n  format please see \":help 'path'\". Warning messages are printed if no\n  or more than one file is found.\n- Vim's Quickfix mode (see \":help quickfix\") is used for browsing\n  through msgfmt-reported errors for the file. No MO file is created\n  when running the msgfmt program since its output is directed to\n  \"/dev/null\". The user can supply command-line arguments to the msgfmt\n  program via the global variable 'g:po_msgfmt_args'. All arguments are\n  allowed except the \"-o\" for output file. The default value is\n  \"-vv -c\".\n\nBut there's even more!\n\nEvery time the PO file is saved, a PO-formatted time stamp is\nautomatically added to the file header.",
+  "rating_total": "258",
+  "rating_votes": "85",
+  "downloads": "3114",
+  "install_details": "    Put this file in a Vim ftplugin directory. On UNIX computers it is\n    usually either \"~/.vim/ftplugin\" or \"~/.vim/after/ftplugin\". On Windows\n    computers, the defaults are \"$VIM\\vimfiles\\ftplugin\" or\n    \"$VIM\\vimfiles\\after\\ftplugin\". For more information consult the Vim\n    help, \":help 'ftplugin'\" and \":help 'runtimepath'\".\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4159",
+      "filename": "po.vim",
+      "script_version": "1.2",
+      "date": "2005-04-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2766",
+        "user_name": "aleksandar",
+        "first_name": "Aleksandar",
+        "last_name": "Jelenak",
+        "email": "ajelenak at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "No major new features, mainly work under the hood to strengthen\ncurrent functionality.\n\nChanges:\n\n- Smarter handling of fuzzy translation marks\n- New key mappings for some commands in Normal mode\n- More commands available in Normal mode\n- gf mapping should hopefully be more useful now"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2138",
+      "filename": "po.vim",
+      "script_version": "1.11",
+      "date": "2003-07-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2766",
+        "user_name": "aleksandar",
+        "first_name": "Aleksandar",
+        "last_name": "Jelenak",
+        "email": "ajelenak at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor update to ver. 1.1: Running msgfmt statistics for the PO file does\nnot produce a 'message' output file anymore.\n"
+    }
+  ]
+}

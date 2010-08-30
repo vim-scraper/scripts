@@ -6,7 +6,7 @@
   "description": "V8 is Google's open source JavaScript engine.\n\nRequirements:\n  linux or windows.\n  Vim executable file with some exported symbol that if_v8 requires.\n    On linux:\n      Compile with gcc's -rdynamic option.\n    On windows (msvc):\n      Use vim_export.def and add linker flag \"/DEF:vim_export.def\".\n      nmake -f Make_mvc.mak linkdebug=/DEF:vim_export.def\n\nUsage:\n  :source /path/to/if_v8/init.vim\n  :V8 print('hello, world')\n  => hello, world\n  :V8 3 + 4\n  => 7\n  :V8 vim.execute('version')\n  => ... version message\n  :V8 var tw = vim.eval('&tw')\n  :V8 tw\n  => 78\n  :V8 vim.let('&tw', '40')\n  :echo &tw\n  => 40\n  :V8 load('foo.js')",
   "rating_total": "4",
   "rating_votes": "1",
-  "downloads": "603",
+  "downloads": "604",
   "install_details": "",
   "versions": [
     {

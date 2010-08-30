@@ -4,9 +4,9 @@
   "summary": "Unload/delete/wipe a buffer, keep its window(s), display last accessed buffer(s)",
   "script_type": "utility",
   "description": "Basic Usage:\nWhen you want to unload/delete/wipe a buffer, use:\n  :bun/:bd/:bw to close the window as well (vim command), or\n  :BUN/:BD/:BW to leave the window(s) intact (this script).\nMappings are also defined.\n\nDetailed Description: \nThis is a script to \na) unload, delete or wipe a buffer without closing the window (or windows) \n    it was displayed in\nb) in its place, display the buffer most recently used in each window \n    it was displayed in.  This selection is taken from the full list of \n    buffers ever displayed in each respective window (since vim was started)\nc) allow one level of undo in case you kill a buffer then change your mind\nd) allow various customisations via option variables\n\nThe inspiration for this script came from\na) my own frustration with vim's lack of this functionality\nb) the description of the emacs kill-buffer command in vimtip #622\n   (this script basically duplicates this command I believe,\n   not sure about the undo functionality)\nc) comments and many mails from Keith Roberts when the issue was \n   raised in the vim@vim.org mailing list.",
-  "rating_total": "119",
-  "rating_votes": "41",
-  "downloads": "1399",
+  "rating_total": "120",
+  "rating_votes": "42",
+  "downloads": "1402",
   "install_details": "The usual - drop the file into your $HOME/.vim/plugin directory (unix)\nor $HOME/vimfiles/plugin directory (Windows), etc.\nUse the commands/mappings defined to invoke the functionality \n(or redefine them elsewhere to what you want), and set the \nUser Configurable Variables as desired.  You should be able to make\nany customisations to the controls in your vimrc file, such that \nupdating to new versions of this script won't affect your settings.",
   "versions": [
     {
