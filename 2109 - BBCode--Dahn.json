@@ -1,0 +1,46 @@
+{
+  "script_id": "2109",
+  "display_name": "BBCode -- Dahn",
+  "summary": "Syntax highlighting for BBCode",
+  "name": "BBCode--Dahn",
+  "script_type": "syntax",
+  "description": "This script adds syntax highlighting for BBCode, which is an abbreviation for Bulletin Board Code, the markup language used to format posts in many message boards. At the moment it highlights all tags and links defined by the URL-tag, but also the text between B-tags, I-tags, and U-tags (nesting is allowed), too.\n\nTODO: I intended to highlight the text between QUOTE-Tags, too, but found no solution yet which worked for nested quotes.\n",
+  "rating_total": "36",
+  "rating_votes": "15",
+  "downloads": "579",
+  "install_details": "Just put it in \"~/.vim/syntax\" or in \"<your vim directory>\\vimfiles\\syntax\" on Windows. If you do \":set filetype=bbcode\", the syntax definition will be loaded automativcally.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8108",
+      "filename": "bbcode.vim",
+      "script_version": "0.9.2",
+      "date": "2008-01-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6642",
+        "user_name": "GDahn",
+        "first_name": "Georg",
+        "last_name": "Dahn",
+        "email": "gorgyd at yahoo.co.uk",
+        "homepage": ""
+      },
+      "release_notes": "Minor update: the enclosing quotes of a string may also be a ' "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8094",
+      "filename": "bbcode.vim",
+      "script_version": "0.9.1",
+      "date": "2007-12-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6642",
+        "user_name": "GDahn",
+        "first_name": "Georg",
+        "last_name": "Dahn",
+        "email": "gorgyd at yahoo.co.uk",
+        "homepage": ""
+      },
+      "release_notes": "Now the highlighting of bold, italic and underlined texts works (many thanks to Marv B. for his feedback!)."
+    }
+  ]
+}

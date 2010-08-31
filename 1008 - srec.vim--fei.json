@@ -1,0 +1,30 @@
+{
+  "script_id": "1008",
+  "display_name": "srec.vim -- fei",
+  "summary": "ftplugin for Motolora s-record, correct checksum",
+  "name": "srec.vim--fei",
+  "script_type": "ftplugin",
+  "description": "the ftplugin can detect whether the current record's format is\ncorrect,\nif the data count is wrong, it will produce a message:\n========================\n    The data count of this record(3) is wrong!\n========================\nin which the 3 is the line number of the record.\nif the checksum is absense, the message will be:\n========================\nThis record looks have no checksum, press <C-K> to generate checksum for it\n========================\nIf the checksum is present, but wrong, it will complain about:\n========================\nThe Check sum is wrong!, should be: 0x27, Press <C-K> to correct it\n========================\n the 0x27 is the right CheckSum for it.\n\nAnytime You can press <C-K> to correct the checksum of current record. regardless of whether the checksum is already contained in the recorder. but if the data count is incorrect, nothing will be done.\n\nWith this plugin, one can easily modify existing s-record file, and then re-generate the checksum.\n:%norm ^K\n",
+  "rating_total": "4",
+  "rating_votes": "1",
+  "downloads": "213",
+  "install_details": "Drop into $VIMRUNTIME/ftplugin.\nNote: You needn't modify file type detection line to filetype.vim. It's already there.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3118",
+      "filename": "srec.vim",
+      "script_version": "6.3b",
+      "date": "2004-06-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1884",
+        "user_name": "slimzhao",
+        "first_name": "zhao",
+        "last_name": "fei",
+        "email": "slimzhao at 21cn.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

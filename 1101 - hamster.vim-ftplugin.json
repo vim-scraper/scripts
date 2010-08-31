@@ -1,0 +1,30 @@
+{
+  "script_id": "1101",
+  "display_name": "hamster.vim ftplugin",
+  "summary": "Hamster (Classic | Playground) filetype plugin",
+  "name": "hamster.vim-ftplugin",
+  "script_type": "ftplugin",
+  "description": "Hamster (Classic | Playground)\n\nHamster is a local server for news and mail. It's a windows-32-bit-program. It allows the use of multiple news- and mailserver and combines them to one mail- and newsserver for the news/mail-client. It load faster than a normal newsreader because many threads can run simultaneous. It contains scorefile for news and mail, a build-in script language, the GUI allows translation to other languages, it can be used in a network and that's not all features...\nhttp://www.tglsoft.de/misc/hamster_en.htm\nhttp://www.elbiah.de/hamster/index.htm\n\nThe filetype plugin defines various behaviours and variables.\nAdds matchit.vim support.\nCreates standard motion mappings (i.e. [[,]],[],][,...).\nCase sensitivity.\nComment support.",
+  "rating_total": "5",
+  "rating_votes": "2",
+  "downloads": "373",
+  "install_details": "Copy hamster.vim into your .vim/ftplugin (Unix) or vimfiles/ftplugin (Windows) directory.\n\nEdit your .vim|vimfiles/filetype.vim and add the following entry:\n\n\" Hamster Classic | Playground files\n\" NNTP and Mail local server\nau BufNewFile,BufRead *.hsc,*.hsm setfiletype hamster\n ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3534",
+      "filename": "hamster.vim",
+      "script_version": "2.0.6.0",
+      "date": "2004-10-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

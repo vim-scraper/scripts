@@ -1,0 +1,78 @@
+{
+  "script_id": "411",
+  "display_name": "tex.vim -- Fisher",
+  "summary": "an updated version of the standard ftplugin/tex.vim",
+  "name": "tex.vim--Fisher",
+  "script_type": "ftplugin",
+  "description": "     This is an updated version of the file ftplugin/tex.vim included in the\nstandard vim distribution.  It sets options appropriately for editing TeX\n(especially LaTeX) files.  It is fairly conservative:  it may not do everything\nyou want, but it will probably not do anything to annoy you.\n\n     This will set the buffer-local variable b:tex_flavor to \"tex\" (for plain TeX)\n or \"latex\".  Other mappings, plugins, etc. may use this variable to modify\ntheir behavior.",
+  "rating_total": "39",
+  "rating_votes": "17",
+  "downloads": "3381",
+  "install_details": "Copy the file to $VIMRUNTIME/ftplugin/tex.vim .\nYou probably do not want to have this in your local ftplugin/ directory,\nsince you may get an even more recent version when you upgrade to\na new version of vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3016",
+      "filename": "tex.vim",
+      "script_version": "1.2",
+      "date": "2004-05-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Improve the 'includeexpr' option setting for systems where \"{\" and \"}\" are included in 'isfname'.  (Ajit Thakkar)\n\nThis version should be included in the vim 6.3 distribution."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2637",
+      "filename": "tex.vim",
+      "script_version": "1.1.1",
+      "date": "2003-12-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Oops.  I commented out the \"finish\" line for testing, then forgot to un-comment it."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2636",
+      "filename": "tex.vim",
+      "script_version": "1.1",
+      "date": "2003-12-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "I fixed some typos so that the 'define' option works better with plain TeX."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1198",
+      "filename": "tex.vim",
+      "script_version": "1.0",
+      "date": "2002-09-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "92",
+        "user_name": "benji",
+        "first_name": "Benji",
+        "last_name": "Fisher",
+        "email": "benji at member.AMS.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

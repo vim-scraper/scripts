@@ -1,0 +1,46 @@
+{
+  "script_id": "2580",
+  "display_name": "spec.vim -- Link",
+  "summary": "Behaviour-driven design/testing for VIM script",
+  "name": "spec.vim--Link",
+  "script_type": "utility",
+  "description": "This plugin provides a small set of commands to facilitate \nbehaviour-driven design of vim plugins. It basically consists of two \nparts:\n\n    spec   ... BDD-related commands\n    should ... Convenience functions for testing\n\nAccording to BDD theory, you are supposed to write a specification first \nand then make the code fulfill that specification. If you don't believe \nin BDD, you could also think of spec.vim as a more convenient approach \nto unit testing.\n\nAn example specification could look like this:\n\n    SpecBegin 'title': 'Foo', 'sfile': 'autoload/foo.vim'\n\n    It should add numbers.\n    Should be equal foo#Add(1, 2), 3\n    \n    It should not add values of incompatible types.\n    Should throw something 'foo#Add(\"1\", 2)'\n\nSpecification scripts basically are normal vim scripts but must be run \nby the |:Spec| command.\n\n    :Spec[!] [PATH]\n        Run one or more specification files.\n        PATH can be either a file or a directory.\n\nEach specification file should contain a :SpecBegin command that defines \nthe title, and optionally the script context, before/after commands, the \ncontents of a scratch buffer, option sets etc.\n\n    :SpecBegin [ARGUMENTS AS INNER DICTIONNARY]\n        Establish the environment for the current specification.\n        Known keys for ARGUMENTS:\n        \n          title   ... The test's title.\n          file    ... The script context.\n          before  ... Code to be run before each test\n          after   ... Code to be run after each test\n          scratch ... Run spec in scratch buffer\n          cleanup ... A list of function names that will be removed\n          options ... Run the spec against different option sets\n\nExamples:\nhttp://github.com/tomtom/vimtlib/tree/master/spec/\n",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "157",
+  "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0, \nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n\nOptional: Some \"should\"-functions require tlib (vimscript #1863) to be installed.\n\nAlso available via git\nhttp://github.com/tomtom/spec_vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12615",
+      "filename": "spec.vba",
+      "script_version": "0.2",
+      "date": "2010-03-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Display a message after having run all specs\n- Raise an error when :SpecBegin is not called in a spec context (i.e. via the :Spec command)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10173",
+      "filename": "spec.vba.gz",
+      "script_version": "0.1",
+      "date": "2009-03-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}
