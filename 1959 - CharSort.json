@@ -1,7 +1,8 @@
 {
   "script_id": "1959",
-  "name": "CharSort",
+  "display_name": "CharSort",
   "summary": "Functions and mappings to sort the characters in a string",
+  "name": "CharSort",
   "script_type": "utility",
   "description": "Mappings:\n <lead>so  --  sort, case sensitive\n <lead>si  --  sort, case insensitive\n\nThese mappings work in visual and normal mode--in normal mode they take a motion operator.  See \":help mapleader\"\n\nFunction:\n CharSort#Sort({string} [, {i/c}]) -- Sort {string}\n    {i/c} == c  -- match case (default)\n    {i/c} == i  -- ignore case",
   "rating_total": "0",

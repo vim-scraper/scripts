@@ -1,7 +1,8 @@
 {
   "script_id": "1846",
-  "name": "gitdiff.vim",
+  "display_name": "gitdiff.vim",
   "summary": "show git diff in a split window",
+  "name": "gitdiff.vim",
   "script_type": "utility",
   "description": "This script provides two functions to display git diffs in vim.\n\n:GITDiff [commitish]\n\n    Split the vim window vertically, display the HEAD, or some other changeset, version of the file in the split, then diff them.\n\n:GITChanges [commitish]\n\n    Highlight lines that were changed since the HEAD or some other changeset.\n\nSome examples:\n\n:GITDiff HEAD~10\n:diffoff\n\n:GITChanges origin/master\n:syntax on",
   "rating_total": "18",

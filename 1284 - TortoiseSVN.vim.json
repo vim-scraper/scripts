@@ -1,7 +1,8 @@
 {
   "script_id": "1284",
-  "name": "TortoiseSVN.vim",
+  "display_name": "TortoiseSVN.vim",
   "summary": "Support for TortoiseSVN (a subversion client for Windows)",
+  "name": "TortoiseSVN.vim",
   "script_type": "utility",
   "description": "TortoiseSVN.vim will commit the current buffer to your subversion \nrepository everytime you update the file or once per session (see \n|tortoiseSvnCommitOnce|). The advantage over using command line svn \ncommands is that you get the TortoiseSVN GUI for committing files, \nbrowsing the repository etc.\n\nSome aspects of this plugin can be configured by setting the following \nvariables in your |vimrc| file.\n\n    g:tortoiseSvnCmd :: The path to \"TortoiseProc.exe\".\n\n    g:tortoiseSvnCommitOnce, b:tortoiseSvnCommitOnce :: If true, the \n    buffer will be committed to the subversion repository only once \n    (i.e., when saving the file for the first time).\n\n    g:tortoiseSvnMenuPrefix :: If empty (''), no menu will be installed.\n\n    g:tortoiseSvnStartCmd :: A command for detaching TortoiseProc.exe \n    from the shell (e.g., start).\n\n    g:tortoiseSvnInstallAutoCmd :: If false, no autocmd will be \n    installed.\n",
   "rating_total": "18",

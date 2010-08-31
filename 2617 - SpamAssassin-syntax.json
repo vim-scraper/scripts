@@ -1,0 +1,158 @@
+{
+  "script_id": "2617",
+  "display_name": "SpamAssassin syntax",
+  "summary": "Syntax highlighting for SpamAssassin config files",
+  "name": "SpamAssassin-syntax",
+  "script_type": "syntax",
+  "description": "* Regular expression highlighting (from perl)\n* Should work in all versions of vim, properly disabling the features for v7+\n* COMPLETE recognition of all settings with a good understanding of syntax\n* Settings recognized include all plugins shipped with SA plus a few 3rd-party plugins.\n\nSpell-check is enabled on various pieces for which it is appropriate (vim 7+, you must turn it on first).\n\nThis has also been posted to the spamassassin users mailing list.",
+  "rating_total": "25",
+  "rating_votes": "10",
+  "downloads": "432",
+  "install_details": "Just like any syntax file.\n\nSave this file to ~/.vim/syntax/spamassassin.vim and add the following to your ~/.vim/filetype.vim:\n\naugroup filedetect\n    au BufRead,BufNewFile user_prefs,*.cf,*.pre setfiletype spamassassin\naugroup END\n\nTo install it system-wide, save the attached file as /usr/share/vim/vim[0-9]*/syntax/spamassassin.vim and edit\n/usr/share/vim/vim[0-9]*/filetype.vim in a manner similar to the local filetype.vim edit noted above (in my /usr/share/vim/vim71/fileytpe.vim for vim 7.1.314-3+lenny2, it would be added at line 2254, right above '\" Vim script').",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11655",
+      "filename": "spamassassin.vim",
+      "script_version": "2.0",
+      "date": "2009-11-04",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "17182",
+        "user_name": "khopesh",
+        "first_name": "Adam",
+        "last_name": "Katz",
+        "email": "vim at khopis.com",
+        "homepage": "http://khopesh.com/"
+      },
+      "release_notes": "Cleanup; no longer taking perl.vim wholesale (by require), now importing only the regexp matcher.  Also made other regexp tweaks.  Version bump to a .0-release to indicate pseudo-independence from perl syntax garbage (no more dependency and version mismatches), also indicating the parts newly implemented from scratch rather than free from perl.vim."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11653",
+      "filename": "spamassassin.vim",
+      "script_version": "1.11",
+      "date": "2009-11-03",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "17182",
+        "user_name": "khopesh",
+        "first_name": "Adam",
+        "last_name": "Katz",
+        "email": "vim at khopis.com",
+        "homepage": "http://khopesh.com/"
+      },
+      "release_notes": "Fixed syntax clearing bug found in 7.0 (but not 6.x or 7.1+)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11617",
+      "filename": "spamassassin.vim",
+      "script_version": "1.10",
+      "date": "2009-10-29",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "17182",
+        "user_name": "khopesh",
+        "first_name": "Adam",
+        "last_name": "Katz",
+        "email": "vim at khopis.com",
+        "homepage": "http://khopesh.com/"
+      },
+      "release_notes": "fix bug introduced in 1.9 (header regexps using just // weren't colored)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11616",
+      "filename": "spamassassin.vim",
+      "script_version": "1.9",
+      "date": "2009-10-29",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "17182",
+        "user_name": "khopesh",
+        "first_name": "Adam",
+        "last_name": "Katz",
+        "email": "vim at khopis.com",
+        "homepage": "http://khopesh.com/"
+      },
+      "release_notes": "Updates include fixed alt regexp handling, support for :name and the like, if-unset, SA pseudo-headers, better handling of exists and eval."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10917",
+      "filename": "spamassassin.vim",
+      "script_version": "1.8",
+      "date": "2009-07-01",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "17182",
+        "user_name": "khopesh",
+        "first_name": "Adam",
+        "last_name": "Katz",
+        "email": "vim at khopis.com",
+        "homepage": "http://khopesh.com/"
+      },
+      "release_notes": "Faster regexs using \\%(query\\) notation (equiv to perl's (?:query) notation) and other extremely minor tweaks like 'exists' no longer accepting functions.  I haven't touched this since 5/4/9, as reflected in internal release date, but I (wrongly) figured I'd tweak it more before another release.  It's pretty much done now, so I don't expect more releases.  There are two remaining TODO items:  one for reorganization (code cleanup) which is mostly unnecessary, and one assuming there is more perl highlighting to disable/tweak (though I haven't seen any evidence recently).  One more TODO is the recognition of regexs using alternate bounding characters like apostrophe instead of slash."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10504",
+      "filename": "spamassassin.vim",
+      "script_version": "1.7",
+      "date": "2009-05-01",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "17182",
+        "user_name": "khopesh",
+        "first_name": "Adam",
+        "last_name": "Katz",
+        "email": "vim at khopis.com",
+        "homepage": "http://khopesh.com/"
+      },
+      "release_notes": "Oops, there were some things unique to vim6+ and 7+ in there (removed perl syntax groups).  I've cleaned that up.  This has been tested with vim7.1, vim7.0, vim6.0, and vim6.0 with the perl.vim syntax from vim5.5."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10500",
+      "filename": "spamassassin.vim",
+      "script_version": "1.6",
+      "date": "2009-05-01",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "17182",
+        "user_name": "khopesh",
+        "first_name": "Adam",
+        "last_name": "Katz",
+        "email": "vim at khopis.com",
+        "homepage": "http://khopesh.com/"
+      },
+      "release_notes": "Fixed remaining known bugs.  Template Tags are now contained in the header-modifying portions only.  Functions are now colored properly, with known common ones showing a different color (but do we care?).  Arguments to functions are better handled.  Parentheses are now colored.  Operators in meta lines are now colored.  URIBL types are recognized."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10466",
+      "filename": "spamassassin.vim",
+      "script_version": "1.5",
+      "date": "2009-04-28",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "17182",
+        "user_name": "khopesh",
+        "first_name": "Adam",
+        "last_name": "Katz",
+        "email": "vim at khopis.com",
+        "homepage": "http://khopesh.com/"
+      },
+      "release_notes": "Added the missing two plugins, better clearing of unwanted perl bits, fixed path and IP address recognizing, better handling of spelling on overflowed describe lines, and support for 3rd-party plugins URICountry (thanks Stefan Luetje) and SAGrey."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10443",
+      "filename": "spamassassin.vim",
+      "script_version": "1.2",
+      "date": "2009-04-23",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "17182",
+        "user_name": "khopesh",
+        "first_name": "Adam",
+        "last_name": "Katz",
+        "email": "vim at khopis.com",
+        "homepage": "http://khopesh.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

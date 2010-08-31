@@ -1,0 +1,94 @@
+{
+  "script_id": "2418",
+  "display_name": "Format Helper",
+  "summary": "format functions: count doc-infor, add & del list and block, etc.",
+  "name": "Format-Helper",
+  "script_type": "utility",
+  "description": "    This script provides some format functions, such as, document information statistics, list addition and deletion, text block addition and deletion, head line and foot line addition, matched parenthesis auto-completion and omni-completion enhancement. Both this functions can be used for plain text, or process comment for programming file.\n\n\nMAINPAGE\n=========\n\n    http://franksun.blogbus.com/logs/30678478.html\n\n    Most of these functionss are illustrated by some screenshots in above page.\n\n\nFUNCTIONS OUTLINE\n==================\n\n1. Doc-info statistics\n----------------------------\n\n    A command is provided to calculate doc-info, such as, number of characters (both with space and no-space), words, and lines (both empty and nonempty) within your selected area.\n\n        ++++++++++++++++++++\n        +      :[range]Statistics      +\n        ++++++++++++++++++++\n\n* Detail:\n\n    [range] - same usage as in command line, such as, '%' (or \"0,$\") means whole file, '.' means current line, etc. If range field is empty, then it counts current line's information by default.\n\n* NOTE: \n\n    (1) It can handle wide (2 or 3 bytes) character languages (for instance, Chinese, Japanese, Korean, etc.). If &encoding=='utf-8', width of wide character is set to 3, otherwise 2.\n    (2) As my tests show, precision of this function is better than Win-Word's \"word count\" tool, which only identifies space as word-delimiter, meanwhile, this script takes all non-word characters ('\\W') into account. Unfortunately, it is not as efficient as win-word when handles large files (to handle a file with 30,000 lines, win-word costs about 3.5 seconds, and this script costs about 9 seconds).\n\n2. Number list addition and deletion\n-------------------------------------------------\n\n    This is a cute function:\n\n    (1) You can set the format of item head to any style as you wish, such as, (1), [1], {1}, 1., -1-, etc. And them can also be deleted by this script.\n    (2) It will acquire the head of the last item in previous number list, and make the first index of current list continue with the previous list's last index.\n\n    Two command are provided:\n\n        ++++++++++++++++++++++++++++++++\n        +      :[range]AddNumberList {format}      +\n        +      :[range]DelNumberList {format}       +\n        ++++++++++++++++++++++++++++++++\n\n* Detail:\n\n    [range] - same usage as Statistics.\n    {format} - includes three segments: a presegment, a number or a question mark ('?'), and a postsegment. You can set presegment and postsegment to any style you like. If a number is located in between presegment and postsegment, then the first index of number list is set to the number. Otherwise, if a qusetion mark is located there, script will automatically acquire the last index of previous number list and continue with it.\n\n* NOTE:\n\n    (1) If a question mark is neighboring with numbers in a style, the index will be continued with previous list.\n\n* Control parameters: some global variables to control format function\n\n    g:format_list_ceil (default 0): empty lines from above content to the first line of list.\n    g:format_list_floor (default 0): empty lines form the last line of list to below content.\n    g:format_list_indent (default 0): indent spaces from beginning of current line to the item head.\n    g:format_list_max_scope (default 100): max lines to search the last index of previous number list from assigned line number.\n\n* Example:\n\n    Here are selected lines:\n\n#line\n          ##############\n    1    #   this is line1    #\n    2    #   this is line2    #\n          #   ......                  #\n   10   #   this is line10  #\n          ##############\n\nIf you input a command:\n\n    :1,5 AddNumberList (1)\n\nthey will be changed to:\n\n#line\n         ################\n    1   #   (1) this is line1   #\n         #    ......                     #\n    5   #   (5) this is line2   #\n    6   #   this is line6         #\n         #    ......                     #\n   10  #   this is line10      #\n         ################\n\nIf you want to continue this list across 3 lines, add line 9 and line 10 to the number list, you have two approaches--first one, you can assign the index of new head manually, for instance, you've already remembered the last index of previous number list was '5', then you should input:\n\n    :9,10 AddNumberList (6)\n\nthe other one is to call script to automatically acquire a continuous index, here, you should use question mark '?':\n\n    :9,10 AddNumberList (?)\n\nboth of these two approaches will change file to below:\n\n#line\n         ################\n    1   #   (1) this is line1    #\n         #    ......                      #\n    5   #   (5) this is line2    #\n    6   #   this is line6          #\n    7   #   this is line7          #\n    8   #   this is line8          #\n    9   #   (6) this is line9    #\n   10  #   (7) this is line10  #\n         #################\n\nIf you want to cancel this number list, just input a command:\n\n    :1,10 DelNumberList (?)\n\n3. Auto-fit alignation\n---------------------------\n\n    Vim provide three command to align line, :left, :center and :right, but these command cannot align line to correct position. It is caused by some factors, such as, different size of users' screen, different size of gvim's window, and the most important factor--the 'textwidth' is equal to 80 by default. \n    Here provide three new commands that auto-fit different size of screen or window, and handle alignations correctly.\n\n        ++++++++++++++++++\n        +      :[range]Left           +\n        +      :[range]Center      +\n        +      :[range]Right         +\n        ++++++++++++++++++\n\n4. Enumerate list addition and deletion\n-----------------------------------------------------\n\n    Same usage as :AddNumberList and :DelNumberList, but I think these commands will be more useful than number list, as you can set comments for any programming language, means, set the head style to comment leader.\n\n        ++++++++++++++++++++++++++++++++\n        +      :[range]AddEnumerateList {style}      +\n        +      :[range]DelEnumerateList {style}       +\n        ++++++++++++++++++++++++++++++++\n\n* NOTE: \n\n    (1) This fucntion can be used to add or delete comments for any programming languages\n\n* Control parameters: some global variables to control format function\n\n    g:format_list_ceil (default 0): empty lines from above content to the first line of list.\n    g:format_list_floor (default 0): empty lines form the last line of list to below content.\n    g:format_list_indent (default 0): indent spaces from beginning of current line to the item head.\n \n* Example:\n\n    If you want to comment lines from line 19 to line 82 in a C++ file, just input:\n    \n    :19,82 AddEnumerateList //\n\ninput below command to cancel this enumerate list:\n\n    :19,82 DelEnumerateList //\n\n5. Text block addition and deletion\n-----------------------------------------------\n\n    Two commands are provided to add text block with selected lines and delete this block.\n\n        +++++++++++++++++++++++++++++++\n        +      :[range]AddTextBlock {symbol}      +\n        +      :[range]DelTextBlock {symbol}        +\n        +++++++++++++++++++++++++++++++\n\n* Detail:\n\n    [range] - same usage as Statistics.\n    {symbol} - script will use this character to construct broader of boundary.\n\n* NOTE: \n\n    (1) This fucntion can be commbined with enumerate list to add or delete comment for any programming language.\n\n* Control parameters: some global variables to control format function\n\n    g:format_block_ceil (default 0): empty lines from above content to the boundary of block.\n    g:format_block_floor (default 0): empty lines form the boundary of block to below content.\n    g:format_block_indent (default 0): indent spaces from beginning of current line to left boundary of block.\n    g:format_block_internal_ceil (default 0): empty lines form ceiling boundary to the first line of block contents.\n    g:format_block_internal_floor (default 0):  empty line form the last line of block contents to floor boundary.\n\n* Example:\n\n    Here are lines to add in text block:\n\n####################\n#      (above contents)      #\n#                                         #\n#      block contents          #\n#                                         #\n#      (below contents)       #\n####################\n\nIf you input a command (all parameters by default values):\n\n    :'<,'> AddTextBlock *\n\nthen we have:\n\n#########################\n#      (above contents)                 #\n#                                                    #\n#      **************************       #\n#      *      block contents      *      #\n#      **************************       #\n#                                                    #\n#      (below contents)                  #\n#########################\n\nif you input:\n\n    :'<,'> DelTextBlock *\n\nwe have:\n\n####################\n#      (above contents)      #\n#                                         #\n#                                         #\n#      block contents          #\n#                                         #\n#                                         #\n#      (below contents)       #\n####################\n\n6. Auto-complete matched pair parenthesis\n------------------------------------------------------------\n\n    Here provides a function to auto-complete match parenthesis in your insert mode. It completes matched pairs of (), [], {}, and <>, and immediately move cursor leftwards to the middle of pairs. If you input anti-parenthesis, it will erase the extra one.\n    \n7. Headline and footline addition\n--------------------------------------------\n\n    Do you see previous line? Yeah, it was made by command \":footlilne-\". It will draw head line or foot line whose length is equal to current line.\n\n\n        ++++++++++++++++++++++++++++++++\n        +      :[line number] HeadLine {symbol}      +\n        +      :[line number] FootLine {symbol}        +\n        ++++++++++++++++++++++++++++++++\n\n* Detail:\n\n    {symbol} - head line or foot line are made with this character.\n\n8. Enhance completion function\n-------------------------------------------\n    \n    Here provides a function to binding completion with <Tab> key. When you hit <Tab> in the insert mode, it will complete your content by your omni-function if you set your own omni-function, otherwise, the nearest known words or keywords of the dictionary you set (control by option 'dictionary') will be completed.\n\n\nUPGRADE\n=========\n\nBy default, GetLatestVimScripts plugin is included in Vim installation package, whose version is higher than v7. So you can use it to auto-download the newest package. Add below line into file \"GetLatestVimScripts.dat\":\n\n                           2418 1 format-helper\n\nand use this command \":GetLatestVimScripts\" to upgrade it.\n\n\n********************\n*      NOTICE      *\n********************\n\n      When you want to hack this script, please make sure that the option 'Tlist_Show_Menu' is closed (set its value as 0) if \"Taglist\" plugin was installed in your Vim. Otherwise, it will popup an annoyed message \"E792: Empty menu name\".",
+  "rating_total": "34",
+  "rating_votes": "10",
+  "downloads": "436",
+  "install_details": "(1) For Unix: Copy \"format_helper.vim\" script to $HOME/.vim/plugin/\n\n(2) For Windows: Copy \"format_helper.vim\" to $VIM\\vimfiles\\plugin\\",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9447",
+      "filename": "format-helper.zip",
+      "script_version": "1.7.8",
+      "date": "2008-11-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14764",
+        "user_name": "frank.sun.319",
+        "first_name": "Frank",
+        "last_name": "Sun",
+        "email": "frank.sun.319 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "+ Support to handle wide character language (such as Chinese, Japanese, etc): (1) \":HeadLine\" and \":FootLine\"; (2) \":AddTextBlock\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9436",
+      "filename": "format-helper.zip",
+      "script_version": "1.7.6",
+      "date": "2008-11-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14764",
+        "user_name": "frank.sun.319",
+        "first_name": "Frank",
+        "last_name": "Sun",
+        "email": "frank.sun.319 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "+ Enhance character counting and word counting of Statistics() to support wide character such as Chinese, Japanese, etc.\n+ Enhance Enumeratelist.Del(), Numberlist.Del() and Textblock.Del() to keep original indent width when their head were deleted.\n- Fix BUGs in Numberlist.Del()."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9411",
+      "filename": "format-helper.zip",
+      "script_version": "1.7.2",
+      "date": "2008-10-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14764",
+        "user_name": "frank.sun.319",
+        "first_name": "Frank",
+        "last_name": "Sun",
+        "email": "frank.sun.319 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "+ In order to enhance stability of script, change all global \"interval\" variables to script variables (remark with 's:').\n\n- Fixed BUGs in Numberlist.Del(), LastNumberList(), Enumeratelist.Del()."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9407",
+      "filename": "format-helper.zip",
+      "script_version": "1.7",
+      "date": "2008-10-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14764",
+        "user_name": "frank.sun.319",
+        "first_name": "Frank",
+        "last_name": "Sun",
+        "email": "frank.sun.319 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "+ Enhance AddNumberList to support assigned beginning index number or automatically continue with the last index of previous number list in above context."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9404",
+      "filename": "format-helper.zip",
+      "script_version": "1.51",
+      "date": "2008-10-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14764",
+        "user_name": "frank.sun.319",
+        "first_name": "Frank",
+        "last_name": "Sun",
+        "email": "frank.sun.319 at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Fixed a BUG in AddTextBlock to handle '\\t';\n+ Modified readme.txt;"
+    }
+  ]
+}

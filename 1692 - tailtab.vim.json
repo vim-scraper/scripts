@@ -1,7 +1,8 @@
 {
   "script_id": "1692",
-  "name": "tailtab.vim",
+  "display_name": "tailtab.vim",
   "summary": "View log files getting updated automagically",
+  "name": "tailtab.vim",
   "script_type": "utility",
   "description": "This is a plugin that lets you view multiple log files or any files of interest that are modified externally. The files are opened in read \nonly mode.\n\n:TailView /tmp/foo /var/log/bar ...\n\nwill open as many new tabs as files and you can update the file from disk using the \n<Ctrl-K> keypress in normal mode. Also when you swich tabs using the gt command the file gets updated from disk automatically.\n\nOf course you can use the TAB key to complete file names.\n\nNormal vim usage is not affected in any way. Only files opened with the TailView command are in read only mode and updated from disk\nautomatically when you enter that tab",
   "rating_total": "4",

@@ -1,0 +1,46 @@
+{
+  "script_id": "2339",
+  "display_name": "simple pairs",
+  "summary": "TextMate-like insert closing pair for brackets, parens, quotes (needs python)",
+  "name": "simple-pairs",
+  "script_type": "utility",
+  "description": "This is my first attempt at writing a vim script. It needs python support, and it's tested only in >7.1, but it should work in earlier versions as well. Drop me a line if it does and I'll update this description!\n\nIt will insert a closing pair when you type a quote (single and double), bracket, parenthesis, brace. It will also move over when you type the closing pair, and it will delete empty pairs when you hit backspace. This broadly mimics TextMate's behaviour for pairs of characters.\n\nIts main difference from all the others is that it is it not aggressive at all! It will try to do so only when it makes sense, that is:\n\n* at the end of the line\n* when the next character is one of: <space>,.: \n\nThat, simple as it looks, means that it will do its job when you're writing new code, but it will not mess up when you are editing code. \n\nIt's heavily biased towards Python, so if anybody has other use cases please send me an email!",
+  "rating_total": "28",
+  "rating_votes": "13",
+  "downloads": "699",
+  "install_details": "Put it in your .vim/plugin directory and it should work.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9107",
+      "filename": "simple_pairs.vim",
+      "script_version": "0.2",
+      "date": "2008-08-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14953",
+        "user_name": "orestis",
+        "first_name": "Orestis",
+        "last_name": "Markou",
+        "email": "orestis at orestis.gr",
+        "homepage": "http://orestis.gr"
+      },
+      "release_notes": "Version that actually works if it's the only python plugin you're using - sorry!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9105",
+      "filename": "simple_pairs.vim",
+      "script_version": "0.1",
+      "date": "2008-08-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14953",
+        "user_name": "orestis",
+        "first_name": "Orestis",
+        "last_name": "Markou",
+        "email": "orestis at orestis.gr",
+        "homepage": "http://orestis.gr"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

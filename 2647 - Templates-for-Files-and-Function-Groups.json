@@ -1,0 +1,30 @@
+{
+  "script_id": "2647",
+  "display_name": "Templates for Files and Function Groups",
+  "summary": "Yet another file template script.",
+  "name": "Templates-for-Files-and-Function-Groups",
+  "script_type": "utility",
+  "description": "This script is a modified version of the template plugin documented here: http://lucumr.pocoo.org/cogitations/2007/08/03/vim-file-templates/.\n\nKey features:\n\nMultiple templates (optionally with a default) for any file type; for example, you can have a template for a given file type and for each project you're working on or company you're working for.\n\nSupport for automatic population of certain parameters, such as the file name, the year, the date or an upper case version of the basename etc etc (more can be added very easily).\n\nOther parameters can be included and a dialog box will pop up to ask for the value.  The last-used value (from this Vim session) will be remembered as the default.\nSupport for fixed-width entries.\n\nA template is just a source file stored in ~/.vim/templates or vimfiles/templates (depending on OS) with some identifiers inserted in appropriate places.  An identifier starts with \"<+\" and ends with \"+>\".  In the identifier, there can be:\n\nKeywords surrounded by '$' signs: these are automatically expanded.  Supported keywords are (examples shown for file Flash.c):\n\n$BASENAME$ (e.g. Flash)\n$UBASENAME$ (e.g. FLASH)\n$LBASENAME$ (e.g. flash)\n$FILENAME$ (e.g. Flash.c)\n$YEAR$ (e.g. 2008)\n$DATE$ (e.g. 3/9/2008)\n\nKeywords surrounded by '#' signs: the user will be asked what these mean (the same replacement will be used for all entries in the file).  For example, you may want to have:\n\n#MODULE_TITLE#\n#PROJECT_TITLE#\n\nA semicolon followed by an 'R' and then zero or more '+' signs.  This provides a fixed-width entry.  See the included examples for details.\n\nThere are example C source and header templates included in the distribution.\n\nAfter creating a new file and setting the file name, the template is loaded with the command\n\n:LoadFileTemplate <TemplateName>\n\nWhere <TemplateName> should be replaced by the name of your template (e.g. \":LoadFileTemplate Example\" for the example template).  If you're editing a '.c' file, example.c will be loaded and if you're editing a '.h' file, example.h will be loaded.  If you add an entry in .vimrc to set the global variable g:file_template_default, it is then possible to simply run \":LoadFileTemplate\" and the default will be used.\n\nIn addition, you can use the command:\n\n:AddTemplate <TemplateName>\n\nto add a template at the current location in the current file.  I use this (for example) to add a circular buffer to an existing module.  Again, it will differentiate by extension, so you can have a template for the code implementation and the header definitions.\n\n\nMore details available at:\n\nhttps://sites.google.com/site/abudden/contents/Vim-Scripts/file-templates\n",
+  "rating_total": "5",
+  "rating_votes": "5",
+  "downloads": "177",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10650",
+      "filename": "file_templates.vba",
+      "script_version": "r233",
+      "date": "2009-05-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14627",
+        "user_name": "abudden",
+        "first_name": "Al",
+        "last_name": "Budden",
+        "email": "abudden at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

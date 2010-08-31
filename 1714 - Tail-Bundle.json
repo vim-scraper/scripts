@@ -1,0 +1,94 @@
+{
+  "script_id": "1714",
+  "display_name": "Tail Bundle",
+  "summary": "Yet another tail -f plugin",
+  "name": "Tail-Bundle",
+  "script_type": "utility",
+  "description": "This Tail plug-in combines the ideas from vimscript#1374 and vimscript#1692 into one plugin offereing both preview and tabed tail functionality. I also added shortcut mapping to \"set wrap\" and \"set number\" - which both can be useful when observing log files.\n\nLast not least I use the new Vim 7.0 autoload feature so this script should load faster and use less memory then there vimscript#1374 and vimscript#1692.\n\nAll in all: The best tail plugin you can get. If you still have ideas to improve visit our Google-Code page: http://code.google.com/p/vim-scripts/wiki/TailBundle\n\nReports errors to: http://code.google.com/p/vim-scripts/issues/list\nDiscuss improvements on: http://groups.google.com/group/vim_scripts\n",
+  "rating_total": "36",
+  "rating_votes": "17",
+  "downloads": "2103",
+  "install_details": "Use VimBall to install.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7685",
+      "filename": "tail-3.0.vba",
+      "script_version": "3.0",
+      "date": "2007-09-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "New features: Startup script:\n\nYou can now open one or more files for (tabbed) tailing using vim-tail.zsh\nwhich is provided in the macros directory. vim-tail.zsh will use a single\ngvim server and :TabTail to open the files.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6567",
+      "filename": "tail-2.2.vba",
+      "script_version": "2.2",
+      "date": "2007-01-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Another bug slipped in and needed fixing.\n\nOf course the \"checktime\" problem under windows is not yet fixed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6565",
+      "filename": "tail-2.1.vba",
+      "script_version": "2.1",
+      "date": "2006-12-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Some bug fixes. Vimball has been checked and should work Ok now.\n\nHowever, in windows \"checktime\" does not work and the \"pedit!\" workaround is problematic when used with tabs and therefore has been commented out. As it is Windows users need to manually reload - or uncomment the \"pedit!\" workaround and not use tabs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6519",
+      "filename": "tail-2.0.0.tar.bz2",
+      "script_version": "2.0",
+      "date": "2006-12-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Upload a tar.bz2 version for those who have problems with VimBall."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6438",
+      "filename": "tail-2.0.vba",
+      "script_version": "2.0",
+      "date": "2006-11-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

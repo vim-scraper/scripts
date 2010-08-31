@@ -1,7 +1,8 @@
 {
   "script_id": "2207",
-  "name": "Relativize",
+  "display_name": "Relativize",
   "summary": "quickly make a full path name relative to an index.html or tags file",
+  "name": "Relativize",
   "script_type": "utility",
   "description": "               Project with a tags file example:\n\n               Open a long full path name from some error log\n\n                vi /some/full/path/to/project/current_project/lib/module/file.ext\n               ...\n\n               :Relativize tags<cr>\n\n               if you type :pwd you should get\n\n               /some/full/path/to/project/current_project\n\n               assuming a tags file has been created in the current_project\n               file in the past.\n\n               So hopefully this means tag jumps will work and relative\n               include paths can be accessed via gf.\n\n               This could also be useful for other landmark files on the\n               system (eg. index.html, tags, .project,build.xml,README...etc). \n               In the above example\n               using the actual file.ext as the argument will make the\n               working directory the module directory\n\n               The function will prioritise the deepest tags file.\n\n                I have this in my vimrc to give you some ideas\n                \n                nnoremap ,pp :split<cr>:enew<cr>:r! tail -n 1000 /var/log/php_errorlog<cr>:set buftype=nofile<cr>Gf/\n                nnoremap gft gf:Relativize tags<cr>\n                nnoremap gfi gf:Relativize index.php<cr>\n\n\n\n\n         Bugs:\n\n               - Will probably not work with MS windows paths in current form.\n               It will probably cause an infinite loop you will need to\n               Ctrl-C out of.\n   ",
   "rating_total": "36",

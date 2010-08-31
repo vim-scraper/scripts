@@ -1,7 +1,8 @@
 {
   "script_id": "408",
-  "name": "beanshell.vim",
+  "display_name": "beanshell.vim",
   "summary": "Runs the current buffer using BeanShell.",
+  "name": "beanshell.vim",
   "script_type": "utility",
   "description": "This script invokes BeanShell ( see http://www.beanshell.org ) on the contents of the current buffer.\n\nThe script depends on java (needed to run BeanShell) as well as BeanShell itself.  The java executable should be in your PATH and the BeanShell jar should be in your CLASSPATH in order to use this script in its default configuration.\n\nPress \"<Leader>br\" and BeanShell will be invoked on the contents of the current buffer (the current buffer will not be written out).  The output from BeanShell will appear in a new window.\n\nBeanShell may also be invoked by entering the command \":BeanShell\" or by selecting the \"Invoke BeanShell\" item from the \"Plugin\" menu.\n\nStarting with version 1.2, a range may be supplied to the \"BeanShell\" command and the key command may be activated within a visual block.  Invoking BeanShell this way will cause it to act upon the specified lines rather than the entire buffer.",
   "rating_total": "12",

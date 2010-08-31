@@ -1,7 +1,8 @@
 {
   "script_id": "633",
-  "name": "Reindent",
+  "display_name": "Reindent",
   "summary": "Reindent a complete file based on indent information taken out of indent file.",
+  "name": "Reindent",
   "script_type": "utility",
   "description": "If you like well formatted files use this plugin to chage the indention of a complete file.\n\nAnnotations:\nThe indention information is taken out of the VIM Indent-files. This\nscript processes them in a little different way than vim itself, therefore\nit is possible that the indent-functions have to be rewritten before they \nwork.\nThis script tries to rewrite the indent functions automatically (during \nthis a file \"reindent.tmp\" will be created in your current working \ndirectory).\nThere may be indent functions out there that don't work with this script  because they are too complex to be rewriten automatically with my \ncode.\n                                                                                \nPreconditions:\n- A indent function has to exist for your current file (indentexpr is set)\n- Your current working directory has to be writable if Indent-function has to be rewritten.\n\nUsage:\n1. Copy this file to your plugin directory\n2. start vim with i.E. a HTML-File\n3. Hit <Lead>R (If you don't know what <Leader> is read :help leader \n    or press \\R to reindent).\n    If using menus you will find a new menu item \"Reindent\" in menu \n    \"Syntax\".\n4. Customize the Keystroke with an Entry in your .vimrc i.E.:\n    map ff <Plug>reindent \" call reindent by pressing ff",
   "rating_total": "14",

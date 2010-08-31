@@ -1,7 +1,8 @@
 {
   "script_id": "2376",
-  "name": "vl_sql",
+  "display_name": "vl_sql",
   "summary": "alias sensitive SQL completion (MySQL implemented)",
+  "name": "vl_sql",
   "script_type": "utility",
   "description": "The script uses some connection settings to get a list of tables.\nThen it gets the current sql command which is separated either by ; or by newlines from other sql commands. It gets a list of field names of all tables occuring within the command.\nBased on those tables it generates the completion list by getting data db scheme information from database.\nIf there are any aliases such as \"`foo` as f\" and you start completion after\nf. only the fields from that table will be listed.\nBefore AS or after FROM only the list of tables is used.\n\nOf course you can also execute the current command by defining a mapping such as\n  nnoremap <buffer> <F2> :echo b:db_conn.query(join(vl#dev#sql#sql#ThisCommand(),\"\\n\"))<cr>\n\nHowever this should be done the way dbext.vim does it (TODO)",
   "rating_total": "2",

@@ -1,7 +1,8 @@
 {
   "script_id": "2500",
-  "name": "toggle_unit_tests",
+  "display_name": "toggle_unit_tests",
   "summary": "plug-in for toggling between source and unit test files",
+  "name": "toggle_unit_tests",
   "script_type": "utility",
   "description": "Usage:\n\nUse this plug-in when you are doing Test-Driven Development [TDD] in any\nlanguage to quickly switch between unit-test and production code. To make this\nreally fast bind the Toggle function to a function key in your .vimrc:\n\n    \"   [F3]    toggles between (header, ) source and test files.\n    nnoremap    <F3> :<C-U>TUT<CR>\n\nThis plug-in assumes source and unit test files are in the same directory, as\nI believe this to be best practice.\n\nMappings:\n\n<Leader>tut   or   <Plug>ToggleUnitTestsToggle\n    Toggles betwixt source and unit test file\n\nCommands:\n\n:TUT\n\tToggles betwixt source and unit test file\n\nSettings:\n\nBy default, unit_test filenames are deemed to begin with 't_'. \n\nTell toggle_unit_tests.vim your own prefix by setting the following global\nvariable, perhaps in your .vimrc:\n\n    let g:unit_test_prefix='test_'\n",
   "rating_total": "10",

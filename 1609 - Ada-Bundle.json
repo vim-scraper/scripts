@@ -1,0 +1,318 @@
+{
+  "script_id": "1609",
+  "display_name": "Ada Bundle",
+  "summary": "Complete Ada-Mode as Vim-Ball or Tar.bz2",
+  "name": "Ada-Bundle",
+  "script_type": "ftplugin",
+  "description": "Contains all files for the new Ada mode. It also has a vim help file which you can call with\n\n:help ada.txt.\n\nIncluded is:\n\n - Syntax highlight\n - Auto indenting\n - Tag searching\n - Classic code completion\n - Omni code completion\n - Online help\n\nFor some functionality you need a ctags programm. You can user either \"gnat xref -v\" or a patched [1] version  of the  exuberant Ctags [2].\n\nDon't forget to actualy activate filetype and syntax support:\n\n:filetype plugin indent on\n:syntax enable\n\nThe Ada mode can be be further extened with the following Scripts:\n\n - backup.vim,\t\t\t\tvimscript#1537\n - rainbow_parenthsis.vim,\tvimscript#1561\n - nerd_comments.vim,\t\tvimscript#1218\n - matchit.vim,\t\t\t\tvimscript#39\n - taglist.vim,\t\t\t\tvimscript#273\n\nThe GNU Ada project [3] offers ready patched binary rpm's including the Ada-Mode, all the scripts mentioned above and Ada aware exuberant Ctags for easy installation.\n\nReports errors to: http://code.google.com/p/vim-scripts/issues/list\nDiscuss improvements on: http://groups.google.com/group/vim_scripts\n\n[1] vimscript#1535\n[2] http://ctags.sourceforge.net\n[3] http://gnuada.sourceforge.net",
+  "rating_total": "940",
+  "rating_votes": "452",
+  "downloads": "2395",
+  "install_details": "Install from whithin vim with:\n\n:source ada.vba\n\nThe Vim-Ball installation will install the following file:\n\n - ada_options.vim\n - autoload/decada.vim\n - autoload/gnat.vim,\t\t\tformer vimscript#1547\n - autoload/ada.vim\n - autoload/adacomplete.vim,\tformer vimscript#1554\n - compiler/gnat.vim,\t\t\tformer vimscript#1547\n - compiler/decada.vim,\n - ftdetect/ada.vim,\t\t\tformer vimscript#1565\n - ftplugin/ada.vim,\t\t\tformer vimscript#1548\n - indent/ada.vim,\t\t\tformer vimscript#137\n - syntax/ada.vim,\t\t\tformer vimscript#1353, vimscript#136\n - doc/ada.txt\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8904",
+      "filename": "ada-4.6.1.vba",
+      "script_version": "4.6.1-vba",
+      "date": "2008-07-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Bram did some nitpicking - this is the improved version for Vim 7.2."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8902",
+      "filename": "ada-4.6.1.tar.bz2",
+      "script_version": "4.6.1-tar",
+      "date": "2008-07-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Bram did some nitpicking - this is the improved version for Vim 7.2."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8900",
+      "filename": "ada-4.6.0.vba",
+      "script_version": "4.6.0-vba",
+      "date": "2008-07-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Mostly bug fixes. Also the version submitted for Vim 7.2."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8899",
+      "filename": "ada-4.6.0.tar.bz2",
+      "script_version": "4.6.0-tar",
+      "date": "2008-07-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Mostly bug fixes. Also the version submitted for Vim 7.2."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7686",
+      "filename": "ada-4.5.0.vba",
+      "script_version": "4.5",
+      "date": "2007-09-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Bug fixes in the areas of key mappings, indenting, "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7385",
+      "filename": "ada-4.4.0.vba",
+      "script_version": "4.4.0",
+      "date": "2007-07-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "If you did not set g:ada_default_compiler and g:ada_default_compiler the scripts would fail miserable. Thank's to Taylor Venable for providing a patch to this problem."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6461",
+      "filename": "ada-4.3.0.tar.bz2",
+      "script_version": "4.3.0",
+      "date": "2006-11-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "The VimBall is broken again. I like the VimBall idea if it only worked better. Anyway have a tar file in the meantime."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6435",
+      "filename": "ada-4.3.vba",
+      "script_version": "4.3.0",
+      "date": "2006-11-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Integrate Brams fixes. The Vim Ada Mode is not part of the standart runtime."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6388",
+      "filename": "ada-4.2.vba",
+      "script_version": "4.2.0",
+      "date": "2006-11-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "More bug Fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6387",
+      "filename": "ada.vba",
+      "script_version": "4.1.0",
+      "date": "2006-11-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "This version contains the latest fixed after suggestions from Bram. It does not provide new functionality but fixes quite a few hidden bugs.\n\nAda users should also get yourself a new Ctags as the Ctags Ada Mode has been updated as well. We used a snapshot from the Ctags Subversion archive which means the lates Vim-Script fixes are included as well.\n\nAs allways binary releases are available from the GNU Ada Project: http://gnuada.sf.net."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6272",
+      "filename": "ada.vba",
+      "script_version": "3.9",
+      "date": "2006-10-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Fixed Bugs reported by Roman Marchenko. Changes Licence to Vim for runtime integration."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6261",
+      "filename": "ada.vba",
+      "script_version": "3.8.1",
+      "date": "2006-10-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Identical to the last release - only the 3.8 Vimball is dammaged. You should also use the newest Vimball release as older version have problems with the fold markers which Vimball now uses."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6257",
+      "filename": "ada.vba",
+      "script_version": "3.8",
+      "date": "2006-10-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "This version improves folding support for files which have been pretty printed by the GNAT pretty printer.\n\nNote: This Vimball comes in Unix text format. It will not work if your Vim is not set up to correctly detect unix text files."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6155",
+      "filename": "ada.vba",
+      "script_version": "3.7",
+      "date": "2006-09-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Fixes for the compiler plugin and the session manager.\n\nAlso available as tar ball from the GNU Ada Project:\n\nhttp://sourceforge.net/project/showfiles.php?group_id=12974&package_id=191849"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6044",
+      "filename": "ada.vba",
+      "script_version": "3.5",
+      "date": "2006-08-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Significant improvement for GNAT project manager files:\n\n- Now a vim-session is attached to each project manager file - vim rembers now all files opened for the project.\n- If you open only a *.gpr file it automaticly becomes the active project - you can hit <F7> right away.\n- support for the gnat pretty printer added.\n\nIt's almost an IDE now ;-)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6039",
+      "filename": "ada.vba",
+      "script_version": "3.4",
+      "date": "2006-08-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Maintanance Release: Bugfixes, Cleanup, remove dead code and add fold markers to all files. This release should be easier to maintain and extend now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5990",
+      "filename": "ada.vba",
+      "script_version": "3.3",
+      "date": "2006-07-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "This version of the Ada mode improves key-mappings, user defined commands and pull down menus."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5978",
+      "filename": "ada.vba",
+      "script_version": "3.2",
+      "date": "2006-07-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "This release fixes quite a few bugs. Especially the GNAT compiler support and the help file where redone. This release also adds support for Dec Ada."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5959",
+      "filename": "ada.vba",
+      "script_version": "3.0",
+      "date": "2006-07-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

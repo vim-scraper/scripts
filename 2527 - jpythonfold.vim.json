@@ -1,7 +1,8 @@
 {
   "script_id": "2527",
-  "name": "jpythonfold.vim",
+  "display_name": "jpythonfold.vim",
   "summary": "A better python fold script",
+  "name": "jpythonfold.vim",
   "script_type": "syntax",
   "description": "This script allows automatically folding of Python code.\nIt completely rewritten from Jorrit Wiersma's script (vimscript #515; other competitors are vimscript#781 and vimscript#2002).\nThe folding and fold text are completely rewritten: the algorithm systematically set up, so it behaves as accurate as possible (at the cost of some speed).\nMain feature of this script is that it folds empty space, saving lots of screen space (although you can turn it off, see below).\nClasses and defs are folded, of course.\nIndent zero comments separating classes and defs are not folded, so you see the global divisions in your code.\nGlobal code is folded in blocks (separated by comments).\n\nThere are three options. To use them, check the script:\n- Keep empty lines out of a fold (giving more readable classes with folded functions, but using more screen space).\n- Ignore non-python files.\n- Allow for multiline class definitions (at the cost of folding comments starting with the word \"class\") or stricter def checking (missing multiline defs).\n\nKnown bug:\n- multiline strings that look like code are handled as such (basically unfixable, actually)\n\nExample: \n------------------------\n#unfolded comment\ndef foo:\n#folded comment\n    #also folded\n    bar = 5\n\n#unfolded, but the empty line above this one is folded with the function\n#code below will be folded\na = 5\nb = 6",
   "rating_total": "262",

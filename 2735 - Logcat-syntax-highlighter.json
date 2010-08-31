@@ -1,0 +1,46 @@
+{
+  "script_id": "2735",
+  "display_name": "Logcat syntax highlighter",
+  "summary": "Syntax highlighting for Android logcat files",
+  "name": "Logcat-syntax-highlighter",
+  "script_type": "syntax",
+  "description": "Highlights Android logcat files with extension *.logcat based on the log level\nPlease see http://developer.android.com/guide/developing/tools/adb.html#logcat for more information on Android logcat logs.\n",
+  "rating_total": "8",
+  "rating_votes": "7",
+  "downloads": "197",
+  "install_details": "The adb logcat file needs to have a .logcat extension.\n\nPlease place the logcat.vim file in your ~/.vim/syntax directory and add the following line to your ~/.vimrc (or _vimrc on Windows)\n\nau BufRead,BufNewFile *.logcat set filetype=logcat\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11179",
+      "filename": "logcat.vim",
+      "script_version": "1.1",
+      "date": "2009-08-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17815",
+        "user_name": "naseer_ahmed",
+        "first_name": "Naseer",
+        "last_name": "Ahmed",
+        "email": "naseer.ahmed at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed color to darkgreen for log.D logs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11171",
+      "filename": "logcat.vim",
+      "script_version": "1.0",
+      "date": "2009-08-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17815",
+        "user_name": "naseer_ahmed",
+        "first_name": "Naseer",
+        "last_name": "Ahmed",
+        "email": "naseer.ahmed at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

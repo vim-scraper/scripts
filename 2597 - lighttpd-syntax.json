@@ -1,0 +1,46 @@
+{
+  "script_id": "2597",
+  "display_name": "lighttpd syntax",
+  "summary": "syntax highlighting for lighttpd config files",
+  "name": "lighttpd-syntax",
+  "script_type": "syntax",
+  "description": "syntax highlighting for lighttpd config files.\n\nlighttpd (lighty) is lightweight open-source web server: http://www.lighttpd.net/\n\nalways recent version can be grabbed from: http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/packages/vim-syntax-lighttpd/lighttpd.vim",
+  "rating_total": "13",
+  "rating_votes": "4",
+  "downloads": "284",
+  "install_details": "- for local install \nPREFIX=~/.vim \n \n- for global install (requries root privileges) \nPREFIX=/usr/share/vim/vimfiles \n \n- and then run: \nmkdir -p $PREFIX/{syntax,ftdetect} \ncp lighttpd.vim $PREFIX/syntax/lighttpd.vim \ncat > $PREFIX/ftdetect/lighttpd.vim <<-EOF \n\" lighttpd config\nau BufNewFile,BufRead /etc/lighttpd/*.conf,lighttpd.conf set filetype=lighttpd\nEOF \n   ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11697",
+      "filename": "lighttpd.vim",
+      "script_version": "1.16",
+      "date": "2009-11-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9628",
+        "user_name": "glen",
+        "first_name": "Elan",
+        "last_name": "Ruusamäe",
+        "email": "glen at alkohol.ee",
+        "homepage": "http://glen.alkohol.ee/"
+      },
+      "release_notes": "update with new keywords"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10332",
+      "filename": "lighttpd.vim",
+      "script_version": "1.11",
+      "date": "2009-04-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9628",
+        "user_name": "glen",
+        "first_name": "Elan",
+        "last_name": "Ruusamäe",
+        "email": "glen at alkohol.ee",
+        "homepage": "http://glen.alkohol.ee/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

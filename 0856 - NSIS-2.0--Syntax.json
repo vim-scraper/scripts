@@ -1,0 +1,62 @@
+{
+  "script_id": "856",
+  "display_name": "NSIS 2.0+ Syntax",
+  "summary": "Syntax highlighting for NSIS 2.0 and above",
+  "name": "NSIS-2.0--Syntax",
+  "script_type": "syntax",
+  "description": "Syntax highlighting for NSIS 2.0 and above, which added many new instructions and attributes since the 1.x tree, not supported by the previous scripts.",
+  "rating_total": "10",
+  "rating_votes": "4",
+  "downloads": "676",
+  "install_details": "Drop it in your syntax folder, and overwrite your existing nsis.vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2591",
+      "filename": "nsis.vim",
+      "script_version": "1.3",
+      "date": "2003-12-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "633",
+        "user_name": "sdbarker",
+        "first_name": "Scott",
+        "last_name": "Barker",
+        "email": "scott at redrubberball.ten (fix the ten to net)",
+        "homepage": "http://www.redrubberball.net/software"
+      },
+      "release_notes": "1.3:\n-\tAdded:\nDirVerify, UninstPage, GetInstDirError\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2590",
+      "filename": "nsis.vim",
+      "script_version": "1.1",
+      "date": "2003-12-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "633",
+        "user_name": "sdbarker",
+        "first_name": "Scott",
+        "last_name": "Barker",
+        "email": "scott at redrubberball.ten (fix the ten to net)",
+        "homepage": "http://www.redrubberball.net/software"
+      },
+      "release_notes": "1.1:\t\n-\tAdded:\nNop, LangString, SetBrandingImage, the /a switch for File, the /e switch for SubSection,\nthe /o switch for Section, $PLUGINSDIR, !ifmacrodef, !ifmacrondef, IDD_LICENSE_FSRB, IDD_LICENSE_FSCB,\nthe /FINAL switch for SetCompressor and the /SD switch for MessageBox.\n-\tChanged:\nInitPluginsDir, IfSilent, CreateFont and SetCtlColors are not attributes, they're commands.\nEnabledBitmap and DisabledBitmap are obselete.\nLoadLanguageFile is an instruction, it's... hmm... atrribute?\nUninstaller now has un.onMouseOverSection and un.onSelChange too.\nThere is no un.onInstSuccess and un.onInstFailed, it's un.onUninstSuccess and un.onUninstFailed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2589",
+      "filename": "nsis.vim",
+      "script_version": "1.0",
+      "date": "2003-12-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "633",
+        "user_name": "sdbarker",
+        "first_name": "Scott",
+        "last_name": "Barker",
+        "email": "scott at redrubberball.ten (fix the ten to net)",
+        "homepage": "http://www.redrubberball.net/software"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

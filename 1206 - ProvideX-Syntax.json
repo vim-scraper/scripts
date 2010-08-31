@@ -1,0 +1,46 @@
+{
+  "script_id": "1206",
+  "display_name": "ProvideX Syntax",
+  "summary": "The language blows.  But working with it doesn&#039t have to.",
+  "name": "ProvideX-Syntax",
+  "script_type": "syntax",
+  "description": "ProvideX is a Business Basic dialect used within the popular Mas90/200 accounting product lines, as well as many other business software products.\n\nI do not advocate the use of providex.  I only hope to aide those who have found themselves in the position of working with it as I have :-)\n\nPointers were taken from many syntax files, mainly the basic.vim syntax file from Allan Kelly. <allan@fruitloaf.co.uk>\n\nUpdate: I no longer work with ProvideX!  Congratulations are welcome :-)",
+  "rating_total": "3",
+  "rating_votes": "2",
+  "downloads": "587",
+  "install_details": "Install the file to $VIMRUNTIME/syntax/  and add the lines\n\n\" ProvideX\nau BufNewFile,BufRead *.pvs           call <SID>FTVB(\"providex\")\n\nto your $VIMRUNTIME/filetype.vim file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4204",
+      "filename": "providex.vim",
+      "script_version": "1.1",
+      "date": "2005-04-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6923",
+        "user_name": "lclark",
+        "first_name": "Leonard",
+        "last_name": "Clark",
+        "email": "lclark at 2bdx.net",
+        "homepage": "http://www.2bdx.net/"
+      },
+      "release_notes": "A little cleanup.\nRemoved annoying parens brain-child I thought was cool at first.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3866",
+      "filename": "providex.vim",
+      "script_version": "1.0",
+      "date": "2005-02-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6923",
+        "user_name": "lclark",
+        "first_name": "Leonard",
+        "last_name": "Clark",
+        "email": "lclark at 2bdx.net",
+        "homepage": "http://www.2bdx.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

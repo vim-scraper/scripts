@@ -1,7 +1,8 @@
 {
   "script_id": "3144",
-  "name": "hgrev",
+  "display_name": "hgrev",
   "summary": "Display Mercurial revision info in the Vim statusline.",
+  "name": "hgrev",
   "script_type": "utility",
   "description": "HGRev is a small plugin that can find the current buffer's revision ID from a Mercurial (http://mercurial.selenic.com/) repository.\n\nIt is intended for use in the Vim statusline - here's an example to enable it:\n\n   set statusline=[r%{HGRev()}] \n\nHGRev exports the \"HGRev()\" function (for use in the statusline), and\na command called \":RefreshMercurialRev\", which you can use to manually\nupdate the revision information for the current buffer.  If you've added\nHGRev() to your statusline, you'll see the file revision, branch, tags,\nand file status reflected -- if you used the statusline example above,\nyou should see something like this:\n\n   [r192+ default tip M]\n\nThe information displayed can be easily customized, and HGRev can also\nautomatically update the status line on file changes.  (This behavior is\ndisabled by default -- see the documentation for details.)\n\nOnce installed, HGRev has built-in help.  Access it via \":help HGRev\".\n",
   "rating_total": "6",

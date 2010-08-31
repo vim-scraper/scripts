@@ -1,0 +1,494 @@
+{
+  "script_id": "1245",
+  "display_name": "cvsmenu.vim (updated)",
+  "summary": "CVS(NT) integration plugin (Script #58 continued since 2005)",
+  "name": "cvsmenu.vim-updated",
+  "script_type": "utility",
+  "description": "Supports most cvs commands and adds some extended functions. It also works with CVSNT quite well and has some support for multiple encodings. Part of the top-level menus are as follows (screen shot: http://wyw.dcweb.cn/download.asp?path=vim&file=vim_session.png):\n\n- Info\n- Setting (switches and update)\n- Keyword\n- Directory (directory operations; screen shot: http://wyw.dcweb.cn/download.asp?path=vim&file=cvs_localstatus.png)\n- Extra (operations on a specific revision, etc.)\n- Diff (in the split-window style of Vim; screen shot: http://wyw.dcweb.cn/download.asp?path=vim&file=cvs_diff.png)\n- Annotate (screen shot: http://wyw.dcweb.cn/download.asp?path=vim&file=cvs_annotate.png)\n- History\n- Log (screen shot: http://wyw.dcweb.cn/download.asp?path=vim&file=cvs_log.png)\n- Status\n- Local status (offline: displays status and version info)\n- Check out\n- Query update (like WinCVS/gCVS)\n- Update (conflicts will be highlighted)\n- Add\n- Commit\n\nThe output can be sorted and is often clickable: it is easy to open conflicting files, etc. It works on single files as well as on whole directories, when called from fileexplorer. It also includes highlighting / mappings to navigate through cvs output or show conflicts.\n\nThe menu is displayed in GUI versions of Vim. However, it is useful even in text-only Vim. --- You may choose to use `wildmenu', or you can use key sequences similar to the hot keys in menu. E.g. `alt-c, i' is used to commit with the GUI menu; so `,ci' could be used in text-mode Vim to commit. The leader key, currently `,', can be easily modified in the script.\n\nThis is the re-release of Mr Thorsten Maerz's original script (vimscript #58), which was last updated in 2002. It now includes many bug fixes and enhancements. The latest revision of the cvsmenu script can also be found in the SourceForge CVS:\n\n:pserver:anonymous@ezytools.cvs.sourceforge.net:/cvsroot/ezytools/VimTools/cvsmenu.vim\n\nCvsMenu is able to update itself using this anonymous CVS. Find the menu items under `CVS > Settings > Install'.",
+  "rating_total": "119",
+  "rating_votes": "40",
+  "downloads": "3730",
+  "install_details": "Copy to the Vim plugin directory: generally ~/.vim/plugin in UNIXs, and $VIM\\vimfiles\\plugin (or $HOME\\vimfiles\\plugin) in Windows.\n\nChoose `CVS > Settings > Install > Install updates' in the menu, or the shortcut `,cgii', to checkout and install the latest script and documentation.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11423",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.150",
+      "date": "2009-09-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Fix the issue that \"CVS > Revert changes\" discards tag/branch information;\nFix some issues related to fileencoding."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8868",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.147",
+      "date": "2008-06-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Fix the issue that the global fileencoding can be accidentally changed by \"let &fileencoding=\"; fix the problem that the log message is not converted to the CVScmdencoding."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8101",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.145",
+      "date": "2007-12-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Fix the bug that the local status is not automatically refreshed when committing a file not in the current directory."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7839",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.144",
+      "date": "2007-10-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Fix the bug that shortcut keys cannot be created in Unix when the path of cvsmenu.vim contains spaces.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7737",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.143",
+      "date": "2007-10-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Fix the bug that the file path cannot contain spaces (in Unix and Cygwin)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7088",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.142",
+      "date": "2007-05-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Shorten `CVScvsoutputencoding' to `CVScmdencoding';\nAdd a new control variable g:CVSfileencoding to ensure the result of CVS-Diff and CVS-Annotate is correct;\nSet the appropriate fileencoding in CVSDoCommand."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6316",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.140",
+      "date": "2006-10-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Re-enable password piping on Windows (tested to work with CVSNT 2.5.02 Build 2115) to make update cvsmenu.vim smoother; Change the name pattern of temporary log message file to make CVSeasylogmessage work with different versions of CVS (tested with more than 4 different CVS clients); Make some minor bug fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6311",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.136",
+      "date": "2006-10-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "When vimming a CVS log message, ensure there is an empty line at the beginning, make editing start in insert mode, and make a normal-mode ENTER finish editing (can be disabled by put `let g:CVSeasylogmessage=0' in (.|_)vimrc)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6304",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.135",
+      "date": "2006-10-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Display a message and cease to CVS diff if the file is newly added; allow using `q' to close the CVS history window."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6286",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.133",
+      "date": "2006-10-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Use the corresponding version instead of the most recent version in the repository to Diff, as the command line `cvs diff ...' does."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6280",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.132",
+      "date": "2006-10-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Fix the display problem of `Directory > Local status'; clean up the code a little."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6264",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.127",
+      "date": "2006-10-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Fix the bug that `Checkout to' does not work."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6159",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.126",
+      "date": "2006-09-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Allow non-ASCII filename to be used when encoding=utf-8."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6134",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.125",
+      "date": "2006-09-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Truncate the Vim title after the file name so that the file name is always visible when the directory name is long."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6082",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.124",
+      "date": "2006-08-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Map `q' to quickly close the buffer opened by cvs annotate and cvs log."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5734",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.123",
+      "date": "2006-05-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Update broken links and make self-update work again."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5687",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.122",
+      "date": "2006-05-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Update CVS info due to the SourceForge site change to make updating itself continue to work."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4770",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.121",
+      "date": "2005-11-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "- Use extracted cvs command (w/o `-q' etc.) to match with CVSdontconvertfor; - Ensure correct message escaping on Windows when shell=cmd.exe (regardless of shellxquote); - Documentation is updated to reflect my changes: be sure to use `CVS - Settings - Install - Install updates' (or `Download updates' followed by `Install buffer as help' on the help file buffer) to get it."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4725",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.118",
+      "date": "2005-11-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "- Deal with \"`\" correctly under Unix;\n- Make no-reload-prompt trick work when the committed file is not in the current directory."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4713",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.116",
+      "date": "2005-11-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "- Do not allow to commit if the current file has not a name;\n- Fix a bug when executing `:w file' on an unsaved named buffer."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4673",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.114",
+      "date": "2005-10-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "- Work around a problem that unedit of CVSNT may prompt to revert changes;\n- Allow the ouput encoding of cvs be different from the Vim encoding (e.g., to make Chinese in annotate and the error message of CVSNT display correctly, one may now use `let CVScvsoutputencoding=\"gbk\"' in .vimrc)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4612",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.112",
+      "date": "2005-09-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "- Rename CVSaddspaceafterannotate to CVSspacesinannotate;\n- Display two missing parameters in CVS - Info;\n- Avoid the reload prompt after commit;\n- Do not allow to commit if the current buffer is modified."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4414",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.109",
+      "date": "2005-07-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Fix problems with CVS annotation highlighting."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4351",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.107",
+      "date": "2005-06-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "- Allow space adjustment of output of \"CVS - Annotate\"  (assign a positive value to g:CVSaddspaceafterannotate) so that files that use TABs can align better.\n- Output of \"CVS - Annotate\" is now highlighted."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4207",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.104",
+      "date": "2005-04-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "- Do not remap keys for new buffers output by cvs annotate, history, and log.\n- Correct the help message for output buffer."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4184",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.102",
+      "date": "2005-04-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Make menu commands like \"CVS - Directory - Update\" work in insert mode."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4175",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.100",
+      "date": "2005-04-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Do not reload-after-commit after a directory commit (to avoid an error).\n\nFix CVSInstallAsPlugin and CVSInstallAsHelp so that the plugin and its help are installed to where the script is currently installed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4121",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.97",
+      "date": "2005-04-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Fix the broken key mapping. Now it is possible to use key sequences similar to the menu hot keys. E.g. `alt-c, i' is used to commit when the GUI menu exists; so `,ci' could be used in text-mode Vim to commit."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4089",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.96",
+      "date": "2005-03-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Make sure the special characters \"&\", \"<\", \">\", \"|\", and \"^\" are handled correctly if shell is cmd.exe and shellxquote is \\\" (there will be miscellaneous gotchas if the shell is command.com or shellxquote is empty).\n\nChange the prefixing spaces in menu items to appending spaces to make wildmenu users happier (when wim includes longest)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4058",
+      "filename": "cvsmenu.vim",
+      "script_version": "1.94",
+      "date": "2005-03-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6184",
+        "user_name": "adah",
+        "first_name": "Yongwei",
+        "last_name": "Wu",
+        "email": "wuyongwei at gmail.com",
+        "homepage": "http://wyw.dcweb.cn/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

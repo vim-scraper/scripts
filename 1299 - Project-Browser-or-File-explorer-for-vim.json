@@ -1,0 +1,62 @@
+{
+  "script_id": "1299",
+  "display_name": "Project Browser or File explorer for vim",
+  "summary": "Easy project navigation by listing the files",
+  "name": "Project-Browser-or-File-explorer-for-vim",
+  "script_type": "utility",
+  "description": "Emulates the project file browser similar to some popular code browsers.      \nThis will list all the files in the project in a new window and allow user to open any file by mouse click/<CR>/O/V/H. This will come very handy when you are dealing with huge number of files and you really dont want to worry about the project directory structure, but just about the filename you are working on.  \n\nMore information about the key maps and configuration can be found in the fileexplorer.vim file.\n\nFeel free to contact me, in case you have any questions/feedback.",
+  "rating_total": "23",
+  "rating_votes": "8",
+  "downloads": "1555",
+  "install_details": "Copy this file in your .vim/plugin folder. I have tried this on free BSD. This should also work on linux and cygwin. ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4390",
+      "filename": "fileexplore.vim",
+      "script_version": "1.2",
+      "date": "2005-06-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7740",
+        "user_name": "pradeep",
+        "first_name": "Pradeep",
+        "last_name": "Kudethur",
+        "email": "pradeeppp_k at yahoo.com",
+        "homepage": "http://profiles.yahoo.com/pradeeppp_k"
+      },
+      "release_notes": "1. \"More faster than before.................... We need not do the find operation every time we open the vim, since new file addition is not very frequent to the source base. When one opens the vim, he can just do \"ctrl-p\", which will get the file list from the local database (by default stored in \"filelist\"). If new file/files are added then one can type 'R' in the file explorer, which will execute the find command from the project root folder and update the file list database. \nOne can also rebuild the file list database, while opening the file explorer by pressing F5 (similar to the older versions) \nNOTE: All the key mappings can be tuned according to the convenience \n\n2. Removed duplicate file names from the file explorer. The project might have duplicate file names but in different folders, we can just display one name for all those duplicate and the back end Csope will always support getting the right file (it will give suggestion for duplicate filename). But one advantage of having duplicate files in the file explorer is to know the number of duplicate files, even before selecting/clicking. There is a knob in the script to enable duplicate files displayed \"fileExplorerDuplicateRemove\". \n\n3. Also there were some junk files starting with '.' character in my project, by default filenames starting with . character is filtered from the file explorer. If you wish to turn of this filtering feature, then you can change \"fileExplorerDotRemove\"\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4368",
+      "filename": "fileexplore.vim",
+      "script_version": "1.1",
+      "date": "2005-06-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7740",
+        "user_name": "pradeep",
+        "first_name": "Pradeep",
+        "last_name": "Kudethur",
+        "email": "pradeeppp_k at yahoo.com",
+        "homepage": "http://profiles.yahoo.com/pradeeppp_k"
+      },
+      "release_notes": "Some minor enhancement for keys <CR> and mouse left button double click. In version 1.0 these keys were responsible for opening the file in the new window (split was based on 'splitBehavior' in the script). But I felt, that everytime opening in a new window might not scale/be the requirement. Hence I have mapped these two keys to open the file in the previous window. Previous window is the one, you were before going to the file explorer.\n\nNote: \n1. This implementation has a minor problem, which I faced. You are working on a split window session, you close the same and later switch to file explorer for opening a desired file. If you press the <CR> or double click left mouse button, then the file will be opened in the file explorer window itself (which might not be desired).\n\nWork around: Make sure the previous window exists, before you goto file explorer for opening file using <CR> or mouse click option. In the above case you can just switch to a valid window and then go to the file explorer for file selection using <CR> or mouse click option.\n\n2. The key 'O' (capital 'o' and not zero) still holds the same old mapping, i.e opening file in new window( the split was based on 'splitBehavior' in the script)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4355",
+      "filename": "fileexplore.vim",
+      "script_version": "1.0",
+      "date": "2005-06-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7740",
+        "user_name": "pradeep",
+        "first_name": "Pradeep",
+        "last_name": "Kudethur",
+        "email": "pradeeppp_k at yahoo.com",
+        "homepage": "http://profiles.yahoo.com/pradeeppp_k"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

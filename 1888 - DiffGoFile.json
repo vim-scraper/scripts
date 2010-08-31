@@ -1,7 +1,8 @@
 {
   "script_id": "1888",
-  "name": "DiffGoFile",
+  "display_name": "DiffGoFile",
   "summary": "Jump to file from diff output",
+  "name": "DiffGoFile",
   "script_type": "utility",
   "description": "Description:\nIf you are editing diff file and you want to jump quickly to corresponding source files, function DiffGoFile does that. Place cursor on the spot in diff file which interests you, call DiffGoFile and you will be presented with the source file exactly at the place you were looking at. Currently only unified diff is supported, but the script has framework for adding more types.\n\nInvocation:\nPlace cursor on the line you are interested in and\n:call DiffGoFile('X')\nWhere X is one of: n - open in New window\n                   v - open in Vertical split\n                   h - open in Horizontal split\n                   t - open in new Tab\n\nConfiguration:\nYou may wish to setup a hotkey, I'm using CTRL-] (:tag) for example\n\nautocmd FileType diff nnoremap <buffer> <C-]> :call DiffGoFile('n')<CR>\n",
   "rating_total": "10",

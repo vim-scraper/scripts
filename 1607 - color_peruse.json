@@ -1,7 +1,8 @@
 {
   "script_id": "1607",
-  "name": "color_peruse",
+  "display_name": "color_peruse",
   "summary": "Peruse, compare, choose color schemes",
+  "name": "color_peruse",
   "script_type": "utility",
   "description": "Peruse, compare, choose color schemes\n\nWhen the cursor is in the ColorPeruse window:   \n<kPlus>      :ColorPeruse 1             (next color)\n<kMinus>    :ColorPeruse -1            (prev color)\n<kMultiply> :ColorPeruse                 (original color)\n<kDivide>   :ColorPeruse 0              (color under cursor)\n     =             :call ColorPeruseDel() (remove duplicate lines)\n     +             :call ColorPeruseMerge() (append all :set rtp colors to list)\n     ?      Help\n     :q     quit\n \n\nYou are in vim when in the ColorPeruse window, so you can edit items you \ndon't like from the list, or place markers to return to re-view particular colorschemes.\nYou can cut/paste to put favorites or color/lightness groups together \nto compare more closely.\nAlso, since it is in vim, you can save the ColorPeruse list to a file, or \nload it from a previous perusal list.\n\n\n",
   "rating_total": "7",

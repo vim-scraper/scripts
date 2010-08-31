@@ -1,7 +1,8 @@
 {
   "script_id": "1748",
-  "name": "toggle_word.vim",
+  "display_name": "toggle_word.vim",
   "summary": "toggles words, ie. turn on into off, true into false, etc.",
+  "name": "toggle_word.vim",
   "script_type": "utility",
   "description": "Toggles words and preserves case. The words will get converted like this:\n\n  on -> off\n  On -> Off\n  ON -> OFF\n \nany other case gets converted to lowercase, e.g.:\n\n  tRUe -> false\n\nInspired from vimscript #1676\nAll I really wanted besides what that script did, was the ability to\npreserve the case of words.\n\nUsage:\nOnce installed it will give you a ToggleWord() command and will map it by\ndefault to \"<leader>t\". All you need to do is position the cursor over the word\nyou want to toggle and press \\t in normal or visual mode.\n",
   "rating_total": "21",

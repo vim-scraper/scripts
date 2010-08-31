@@ -1,7 +1,8 @@
 {
   "script_id": "31",
-  "name": "a.vim",
+  "display_name": "a.vim",
   "summary": "Alternate Files quickly (.c --> .h etc)",
+  "name": "a.vim",
   "script_type": "utility",
   "description": "A few of quick commands to swtich between source files and header files quickly.\n\n:A switches to the header file corresponding to the current file being edited (or vise versa)\n:AS splits and switches\n:AV vertical splits and switches\n:AT new tab and switches\n:AN cycles through matches\n:IH switches to file under cursor\n:IHS splits and switches\n:IHV vertical splits and switches\n:IHT new tab and switches\n:IHN cycles through matches\n<Leader>ih switches to file under cursor\n<Leader>is switches to the alternate file of file under cursor (e.g. on  <foo.h> switches to foo.cpp)\n<Leader>ihn cycles through matches\n\nE.g. if you are editing foo.c and need to edit foo.h simply execute :A and you will be editting foo.h, to switch back to foo.c execute :A again. \n\nCan be configured to support a variety of languages. Builtin support for C, C++ and ADA95",
   "rating_total": "2521",

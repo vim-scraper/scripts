@@ -1,7 +1,8 @@
 {
   "script_id": "3180",
-  "name": "diff_movement",
+  "display_name": "diff_movement",
   "summary": "Movement over diff hunks with ]] etc. ",
+  "name": "diff_movement",
   "script_type": "ftplugin",
   "description": "DESCRIPTION\nThis filetype plugin provides movement commands and text objects for diff hunks.\nSupports traditional, context and unified diff formats. \n\nUSAGE\n\t\t\tMove around diff hunks: \n]]\t\t\tGo to [count] next start of a diff hunk. \n][\t\t\tGo to [count] next end of a diff hunk. \n[[\t\t\tGo to [count] previous start of a diff hunk. \n[]\t\t\tGo to [count] previous end of a diff hunk. \n\nih\t\t\t\"inner hunk\" text object, select [count] hunk contents. \nah\t\t\t\"a hunk\" text object, select [count] hunks, including\n\t\t\tthe header. ",
   "rating_total": "1",

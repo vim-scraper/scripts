@@ -1,0 +1,62 @@
+{
+  "script_id": "2979",
+  "display_name": "Parameter Text Objects",
+  "summary": "Defines parameter text objects",
+  "name": "Parameter-Text-Objects",
+  "script_type": "utility",
+  "description": "This script defines a parameter text object. A parameter is the text between parentheses or commas, typically found in a function's argument list. \n\nSee: \n:help text-objects \n  for a description of what can be done with text objects. \n\nAlso See: \n:help a( \n  If you want to operate on the parentheses also. \n\nLike all the other text-objects, a parameter text object can be selected following these commands: 'd', 'c', 'y', 'v', etc. The script defines these operator mappings: \n\n   aP    \"a parameter\", select a parameter, including one comma (if there is one). \n\n   iP    \"inner parameter\", select a parameter, not including commas. \n\nThis is a slick version of argtextobj vimscript #2699; though mine is shorter and can handle counts (ie. c3aP).\n\nNOTE: Negative ratings don't help the script to improve. Instead, please send me an email (shown in my profile). Thank you.",
+  "rating_total": "6",
+  "rating_votes": "6",
+  "downloads": "106",
+  "install_details": "Drop the vim script in your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12640",
+      "filename": "parameter_objects.vim",
+      "script_version": "0.2a",
+      "date": "2010-03-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "801",
+        "user_name": "bluebottle",
+        "first_name": "David",
+        "last_name": "Larson",
+        "email": "david at thesilverstream DOT com",
+        "homepage": "http://www.thesilverstream.com"
+      },
+      "release_notes": "The script can handle counts now (eg. 2daP). Implementation suggestion by David Kotchan (thanks David!)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12439",
+      "filename": "parameter_objects.vim",
+      "script_version": "0.1d",
+      "date": "2010-02-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "801",
+        "user_name": "bluebottle",
+        "first_name": "David",
+        "last_name": "Larson",
+        "email": "david at thesilverstream DOT com",
+        "homepage": "http://www.thesilverstream.com"
+      },
+      "release_notes": "Added <Plug> mappings so that the user can easily remap the commands. Suggested by Kana Natsuno"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12406",
+      "filename": "parameter_objects.vim",
+      "script_version": "0.1c",
+      "date": "2010-02-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "801",
+        "user_name": "bluebottle",
+        "first_name": "David",
+        "last_name": "Larson",
+        "email": "david at thesilverstream DOT com",
+        "homepage": "http://www.thesilverstream.com"
+      },
+      "release_notes": "Ignores strings and comments"
+    }
+  ]
+}

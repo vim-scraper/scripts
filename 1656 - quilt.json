@@ -1,7 +1,8 @@
 {
   "script_id": "1656",
-  "name": "quilt",
+  "display_name": "quilt",
   "summary": "Enable quilt usage in vim",
+  "name": "quilt",
   "script_type": "utility",
   "description": "(from the help of the plugin: :help quilt-intro ) :\n\n\nQuilt is a project initiated by Andrew Morton to work with patches sent on the\nLKML. It is quite stable now, and really usefull to deal with stacked patches.\n\nFirst of all, before using this plugin, you must install quilt on your\nstation, for, under debian distribution, type in a command shell:\n\n\taptitude install quilt\n\nNow that you have your station setuped, let's speak a little about Quilt\nitself, more information can be found in man quilt shell command.\n\nThe idea behind quilt is that you work on patches, not on sources directly, so\nall your productions are patches. You create a patch to track your\nmodifications and send this patch to a work group so they can valiadate/accept\nor integrate your modifications.\n\nNow you need a tool to help you maintain your patches, and that's exacltly\nwhat quilt does. Quilt let you apply a patch, modify your files (and thus the\npatch), unapply the patch. But it also allows you to do that on several\npatches at a time (one patch applied after the other ...) that's what we call\nthe stacked patches. (or the patch stack). \n\nYou can go to a level on the patch stack, modify the patch, and come back to\nanother patch stack level.\n\nThis plugin helps you handle all those boring operations with simple vim\ncommands ;)\n\nTo sum up the workflow :\n\n|:QuiltSetup| <patchdir>\n\n then:\n\n|:QuiltNew|   <patchname>\n\n ... open a file ...\n\n|:QuiltAdd|\n\n ... work on the file ...\n ... save your modifiations ...\n\n |:QuiltRefresh|\n\n and so on ... \n\n:help quilt-usage",
   "rating_total": "21",

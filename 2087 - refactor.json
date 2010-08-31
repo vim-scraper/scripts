@@ -1,7 +1,8 @@
 {
   "script_id": "2087",
-  "name": "refactor",
+  "display_name": "refactor",
   "summary": "C/C++ refactoring tool",
+  "name": "refactor",
   "script_type": "utility",
   "description": "This plugin contains some basic refactoring commands for C/C++.\nFor the complexity of C++, instead of really parse the source code, I used \nregular expression matches. But it works well as I tested. \n\nNOTE: It doesn't work for old style parameter declaratoins! And I admit that it may mess up your code sometime if you occasionally forget the rules. Thanks for the kind man who point out this.\n\n\nThe refactor commands and their default key map currently are:\n\t1. <A-r>e \tExtract method\n\t2. <A-r>p \tlocal variable to Parameter\n\t3. <A-r>r \t Rename local variable\n\t4. <A-r>d \tDelete parameter\n\t5. <A-r>o \treOrder parameters\n\t6. <A-r>c \tintroduce Constant\n\nBiDongliang \tbidongliang_2000@126.com 2007/12/4",
   "rating_total": "22",

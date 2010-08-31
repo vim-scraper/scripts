@@ -1,7 +1,8 @@
 {
   "script_id": "727",
-  "name": "local_vimrc.vim",
+  "display_name": "local_vimrc.vim",
   "summary": "Load local vimrs's from $HOME to the current directory",
+  "name": "local_vimrc.vim",
   "script_type": "utility",
   "description": "This plugin recursivelly sources the _vimrc_local.vim files present from $HOME to the directory of the current buffer every time we change buffer.\n\nExample: current dir is ~/a/b/c. Files are sourced in this order:\n~/_vimrc_local.vim, then ~/a/_vimrc_local.vim, ~/a/b/_vimrc_local.vim, and finally ~/a/b/c/_vimrc_local.vim\n\nNo messages issued if some of _vimrc_local.vim does not exist.",
   "rating_total": "9",

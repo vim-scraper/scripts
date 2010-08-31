@@ -1,0 +1,174 @@
+{
+  "script_id": "1966",
+  "display_name": "Ruby Snippets",
+  "summary": "Some abbreviations to use with Ruby",
+  "name": "Ruby-Snippets",
+  "script_type": "utility",
+  "description": "This script have some abbreviations to use in insert mode while writing Ruby code. The goal is to speed up (more!) code writing.\nThere are \"triggers\" when typing def, for, begin, inject, class, module, collect, detect, each, find, find_all, map, reject, select, attr_reader, attr_writer, attr_accessor. For example, when typing \"class\" you get\n\nclass ClassName\nend\n\nand the cursor is positioned on \"ClassName\", where you can use cw to replace it to the name you want on the class.\n\nThere's a little video on http://eustaquiorangel.com/blog/show/438 about the script. Non-portuguese readers, please just click on play.\n",
+  "rating_total": "30",
+  "rating_votes": "28",
+  "downloads": "1455",
+  "install_details": "Just unzip the package to your $HOME/.vim directory and source it when editing Ruby files, like this:\n\nautocmd BufNewFile,BufRead *.rb source ~/.vim/scripts/rubysnippets.vim\n\nIf you want to make it works on some Rails files also, just insert the file extensions with a comma after *.rb (ex: *.rhtml).\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7457",
+      "filename": "rubysnippets.zip",
+      "script_version": "0.1.0",
+      "date": "2007-08-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "Fixed the behaviour of keywords after an equal sign is typed. Added search on the online docs at Rollyo.com."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7440",
+      "filename": "rubysnippets.zip",
+      "script_version": "0.0.9",
+      "date": "2007-08-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "A lot of refactoring to allow methods like like select, map, collect and keywords like class, module and def to create the blocks only when they are on the correct scope. So, if you have a comment like \n// def a module class for each object \nthey will not expand to the blocks."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7428",
+      "filename": "rubysnippets.zip",
+      "script_version": "0.0.8",
+      "date": "2007-07-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "Defined signs. They can be simple text strings (>>) or a little Ruby icon when using GUI, and can be inserted on Normal Mode with \"is\" (insert sign) and removed with \"rs\" (remove sign).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7421",
+      "filename": "rubysnippets.zip",
+      "script_version": "0.0.7",
+      "date": "2007-07-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "Fixed some problems about indentation, spaces and tabs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7418",
+      "filename": "rubysnippets.zip",
+      "script_version": "0.0.6",
+      "date": "2007-07-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "Added a configuration variable to skip the insertion of some structures (def, class, module) default names (method_name,ClassName,ModuleName)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7417",
+      "filename": "rubysnippets.zip",
+      "script_version": "0.0.5",
+      "date": "2007-07-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "Fixed some problems with indentation. Now if you don't use some keywords like class, module and for on the start of the line, they will not expand to its structures. Changed the way to make hashes, they are created checking the nearest cursor position { and } pair."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7415",
+      "filename": "rubysnippets.zip",
+      "script_version": "0.0.4",
+      "date": "2007-07-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "Changed the way to create hashes. Now it works on Insert and Normal modes,  with <C-H> formatting the content of a string like { key value } to the Ruby hash format. Added some documentation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7414",
+      "filename": "rubysnippets.zip",
+      "script_version": "0.0.3",
+      "date": "2007-07-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "Added some features to create for loops and hashes with parameters from the current line."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7402",
+      "filename": "rubysnippets.vim",
+      "script_version": "0.0.2",
+      "date": "2007-07-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "Created some onliners and made some fixes regarding this tip, which I use a lot:\nhttp://www.vim.org/tips/tip.php?tip_id=153\nIs tested if some chars (like {) are mapped, if so the close pair is not inserted."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7399",
+      "filename": "rubysnippets.vim",
+      "script_version": "0.0.1",
+      "date": "2007-07-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "301",
+        "user_name": "TaQ",
+        "first_name": "Eustaquio",
+        "last_name": "Rangel de Oliveira Jr.",
+        "email": "eustaquiorangel at gmail.com",
+        "homepage": "http://eustaquiorangel.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

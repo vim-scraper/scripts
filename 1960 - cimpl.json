@@ -1,7 +1,8 @@
 {
   "script_id": "1960",
-  "name": "cimpl",
+  "display_name": "cimpl",
   "summary": "Generates implimentations for C/C++ function prototypes",
+  "name": "cimpl",
   "script_type": "utility",
   "description": "This script generates empty implementations for C/C++ functions from specified header file. For following header file\n\n#ifndef TEST_H\n#define TEST_H\nclass Test\n{\n    public:\n        explicit Test(int val = 0);\n        int getVal() const\n        {\n            return m_val;\n        }\n        void setVal(int val);\n\n        friend const Test operator +(const Test& a, const Test& b);\n\n    private:\n         int m_val;\n};\n\nconst Test operator + ( const Test &a, const Test & b );\n#endif\n\noutput will be\n\nTest::Test(int val)\n{\n    \n}\n\nvoid Test::setVal(int val)\n{\n    \n}\n\nconst Test operator +(const Test& a, const Test& b)\n{\n    \n}\n",
   "rating_total": "18",

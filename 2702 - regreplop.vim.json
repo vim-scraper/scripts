@@ -1,7 +1,8 @@
 {
   "script_id": "2702",
-  "name": "regreplop.vim",
+  "display_name": "regreplop.vim",
   "summary": "operator to replace motion/visual with a register",
+  "name": "regreplop.vim",
   "script_type": "utility",
   "description": "This plugin provides a operator to replace something(motion/visual) with a\nspecified register.\nBy default, the operator is mapped at\n  <Plug>ReplaceMotion  \" for normal mode\n  <Plug>ReplaceLine    \" for normal mode (replace a line)\n  <Plug>ReplaceVisual  \" for visual mode\nand if there are no key mapping for <C-K>, <C-K> is mapped to these\noperators. (and <C-K><C-K> for ReplaceLine)\n\nIf you want to map them to another keys, add like below in your vimrc.\n  nmap YOURKEY <Plug>ReplaceMotion\n  nmap YOURKEY <Plug>ReplaceLine\n  vmap YOURKEY <Plug>ReplaceVisual\n\n----------------------------------------------------------------------------\nExamples:\n  in normal mode:\n     <C-K>iw     \" replace inner word with default register\n     \"a<C-K>iw   \" replace inner word with register a\n     <C-K>$      \" replace whole text right the cursor\n     <C-K><C-K>  \" replaces the line under cursor\n\n  in visual mode:\n     <C-K>       \" replace visual selection with default register\n     \"a<C-K>     \" replace visual selection with register a\n",
   "rating_total": "5",

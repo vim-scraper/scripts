@@ -1,7 +1,8 @@
 {
   "script_id": "2043",
-  "name": "VimPdb",
+  "display_name": "VimPdb",
   "summary": "Integrated Python debugging within Vim",
+  "name": "VimPdb",
   "script_type": "utility",
   "description": "    * Tired of debugging Python using print statements? \n    * Don't like the cumbersome PDB (Python debugger) console? \n    * Prefer using Vim for coding your Python programs? \n\nVimPdb is the solution - allows debugging Python in an IDE-fashion, right within the Vim editor.\n\nFeatures:\n    * Highlighting of currently debugged line and breakpoint lines.\n    * F5 - Run/continue running.\n    * F2 - Toggle breakpoint at current line\n    * Ctrl-F2 / Shift-F2 - Toggle conditional/temporary breakpoint.\n    * F7 / F8 - Step into/over\n    * F12 - Print stack trace\n    * F3 / Ctrl-F3 - Eval/Exec a given statement (in the current debugging context)\n    * Save/load breakpoints into session files.\n    * Cross-platform\n    * And many more... See readme.txt for details \n\nCheck out http://code.google.com/p/vimpdb/ for a screenshot.\n\nImportant Notes\n\n    * It's still considered Beta, so I'm not too sure about its stability or lack of bugs. However, I do appreciate if you could report bugs, suggest features or help out with the known issues (see \"Known Issues\" section in readme.txt). Email me at vimpdb@gmail.com\n    * It's possible to easily implement the debugging capabilities for another editor (e.g. Emacs) - you could write a Python class of your own, which inherits from the PdbIDE class, and implements editor-specific functionalities (such as highlighting). ",
   "rating_total": "25",

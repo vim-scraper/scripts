@@ -1,7 +1,8 @@
 {
   "script_id": "1885",
-  "name": "scmCloseParens",
+  "display_name": "scmCloseParens",
   "summary": "Lets you easily close all open parens up to the cursor line.",
+  "name": "scmCloseParens",
   "script_type": "utility",
   "description": "Lets you easily close all open parens up to the cursor line.\n\nI tested it quickly with Scheme, but it should also work with Lisp.\n\n(define foo\n  (lambda(x)\n    (+ x 1\n\nPut your cursor on the last line (or below), and type <Leader>p\nIt will become\n\n(define foo\n  (lambda(x)\n    (+ x 1)))\n\nI chose \"p\" as in \"parens\", for it is easy to remember. I would have preferred \"c\" as in \"close\", but <leader>c is already taken by the good EnhancedCommentify :D\n\n\nI apologize for this script beeing a dirty quick hack, but writing in vim's script language is a real pain, and this script is enough useful to me to choose to share it.\nI should at least clean it by the following weeks.",
   "rating_total": "12",

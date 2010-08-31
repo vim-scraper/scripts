@@ -1,7 +1,8 @@
 {
   "script_id": "2374",
-  "name": "dokuwiki.vim",
+  "display_name": "dokuwiki.vim",
   "summary": "A simple syntax file for DokuWiki.",
+  "name": "dokuwiki.vim",
   "script_type": "syntax",
   "description": "A simple syntax file for DokuWiki.\n\nThis consists completely of slight modifications to wikipedia.vim, vimscript #1787, so you'll need to get\nthat script too, or not much will happen.\n\nI'm no expert, so do let me know if you find any mistakes. My email is in both files. Thanks. :)\n\nThis file also provides a few mappings for doing those pesky headers.\n\n,,h1 through ,,h6 will give you a header. This should allow you to press \",,h1\" in INSERT mode, then type your header, then press <C-j> to \njump to the next line. \n\n(If <C-j> doesn't jump for you, let me know; this may require latex-suite\n(http://vim-latex.sf.net), but that would be a hefty thing to download just for this.)\n\nYou can also use ,,hd to demote a header, and ,,hp to promote it.",
   "rating_total": "5",

@@ -1,7 +1,8 @@
 {
   "script_id": "455",
-  "name": "php_abb",
+  "display_name": "php_abb",
   "summary": "abbreviations for php functions",
+  "name": "php_abb",
   "script_type": "ftplugin",
   "description": "php_abb is a ftplugin for php, mostly providing insert mode abbreviations\nfor php builtin functions and control structures.  These abbreviations\nexpand to function stubs and should help you remember the syntax in\naddition to speeding typing.  A map-like function that does a number of\npossibly obtuse things is also included.\n\nThe insert mode abbreviations come in two falvors: those using the raw\nphp function name (these can be disabled) and those prefixed with g:phpLeader.  \nSee the help file for details.\n\nThe phpActOnVariable function performs a number of activities on the php\nvariable under your cursor at the time the function is executed.  You should\ncreate a map to this function.  As an example of how you would use this, say you\nhave mapped it to <leader>m and you have your cursor on any letter in the word\ntest in the following code:\n\n     $test = \"FooBaR\";\n\nIf you then type <leader>m and strtl<cr> a new line will be opened underneath\nand the following code will be inserted:\n\n     $test = strtolower($test);\n\nYou can see a list of all the mappings for this function by executing the\nfunction and entering '?' when prompted.",
   "rating_total": "19",

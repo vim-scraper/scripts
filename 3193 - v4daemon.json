@@ -1,7 +1,8 @@
 {
   "script_id": "3193",
-  "name": "v4daemon",
+  "display_name": "v4daemon",
   "summary": "Send vim buffer lines to your background daemon (i.e. netcat)",
+  "name": "v4daemon",
   "script_type": "utility",
   "description": "This script eases sending lines to the ahead-started daemon. I needed and tested it for creating a test server with netcat and send the pre-recorded sentences to the clients:\n\n:V4dStart nc -l -p 10010\n\nStarts netcat listening on port 10010. Then you start a client somewhere.\nFrom the buffer you are working:\n\n[Select by v,V,ctrl-v] :V4dSendLine\n[Select by v] :V4dSendWord\n\nSends the line(s) you are on/selected to the daemon (and pushed to clients in my case).\n\n:V4dStop\n\n(-:njoy!\n",
   "rating_total": "1",

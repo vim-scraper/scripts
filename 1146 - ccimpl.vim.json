@@ -1,7 +1,8 @@
 {
   "script_id": "1146",
-  "name": "ccimpl.vim",
+  "display_name": "ccimpl.vim",
   "summary": "Generates a skeleton implementation of classes defined in a C++ header file.",
+  "name": "ccimpl.vim",
   "script_type": "ftplugin",
   "description": "This script defines a function Implement(), that when called from a C++ header file generates a skeleton implementation of the classes defined in the header, in a new vertical window.\n\nThis is great for defining and documenting the interface to a class and then using this function to generate a skeleton implementation to be filled in.\n\nTODO: Handle functions outside of classes and thus C compatibility.\n            Implement static member initialization.",
   "rating_total": "14",

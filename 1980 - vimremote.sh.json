@@ -1,7 +1,8 @@
 {
   "script_id": "1980",
-  "name": "vimremote.sh",
+  "display_name": "vimremote.sh",
   "summary": "script to use gvim from IDE",
+  "name": "vimremote.sh",
   "script_type": "utility",
   "description": "I wanted to use vim from the Xilinx ide, and I like the following actions to occur from the IDE\n\n\n1) open every file in a split window in one gvim session\n2) when opening the same file again from the IDE, don't cause a new split window if there is already one\n3) use the line numbers provided by the ide.\n\nIn Xilinx you would define the external editor call \n\n/path/to/vimremote.sh XILINX $1 $2\n\nThe XILINX is just a name so that one particular gvim session is used for it, and not any others you might have hanging around\n\nYou need a decent shell. Don't know how that works in Windows. This script could be useful in many other ide's that allow calls to external editors",
   "rating_total": "1",

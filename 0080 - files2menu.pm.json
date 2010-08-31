@@ -1,7 +1,8 @@
 {
   "script_id": "80",
-  "name": "files2menu.pm",
+  "display_name": "files2menu.pm",
   "summary": "add all files recursively as menu entry",
+  "name": "files2menu.pm",
   "script_type": "utility",
   "description": "DESCR     finds files according to predefined file masks in all subdirs starting in parent dir (default).\n\tcreates menu commands for gvim for each file found (creates submenues automatically after 40 menu entries).\n\tfilemasks and other settings may be easily changed within the perl script for your needs.\n\n\tUsage: \tfiles2menu.pm <options>\n\toptions:\n\t                    \tgenerate file list on stdout (default)\n\t -o <filelist>      \tgenerate filelist in file <filelist>\n\t -v                 \tgenerate VIM scriptfile\n\t -v <scriptfile>    \tgenerate VIM Scriptfile <scriptfile>\n\t -f <patternlist>   \tuse search pattern <patternlist>\n\t\t                predefined pattern lists:   CPP, EXE, MAK, GL, DOC, VIM\n\t -m                 \tcreate menu entry <menuEntry> for each found file  (blanks allowed in name)\n\t -c                 \tcreate submenu after <n> entries\n\t -d                 \tdebug mode\n\t -s <startdir>      \tstart in CWD (default) or parent dir ('..') or <startdir>\n\n\nI used 'ls' because any other tools had trouble with that genious system of long file names under Windows and Novell.",
   "rating_total": "5",

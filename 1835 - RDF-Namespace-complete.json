@@ -1,0 +1,46 @@
+{
+  "script_id": "1835",
+  "display_name": "RDF Namespace-complete",
+  "summary": "RDF Vocabulary/Model Omni-Completion for Vim 7+",
+  "name": "RDF-Namespace-complete",
+  "script_type": "utility",
+  "description": "In a file with namespace prefix declarations similar to XML, Turtle/Notation3 or SPARQL, call\n\n  :RDF\n\nto turn on completion on terms within a namespace using the preceding prefix. This will load all RDF/XML and n3-files found in one of the following dirs:\n\n  - $RDF_MODEL_FILES (environment variable)\n  - ~/rdfmodels/\n  - ~/Documents/rdfmodels/\n  - /usr/local/share/rdfmodels/\n\nCall\n\n  :RDF reload\n\nto reload model files, and\n\n  :RDF quit\n\nto restore the original omnifunc (if any).\n",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "719",
+  "install_details": "Copy to $HOME/.vim/plugins/ to have it loaded from startup.\n\nRequires Vim compiled with Python and RDFLib installed for Python.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6904",
+      "filename": "rdfnscomplete.vim",
+      "script_version": "1.0.1",
+      "date": "2007-03-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "577",
+        "user_name": "neuron",
+        "first_name": "Niklas",
+        "last_name": "Lindström",
+        "email": "lindstream at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Minor change - improved prefix handling (better prefix completion, refreshes prefix dict)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6900",
+      "filename": "rdfnscomplete.vim",
+      "script_version": "1.0",
+      "date": "2007-03-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "577",
+        "user_name": "neuron",
+        "first_name": "Niklas",
+        "last_name": "Lindström",
+        "email": "lindstream at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

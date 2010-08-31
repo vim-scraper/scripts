@@ -1,7 +1,8 @@
 {
   "script_id": "1151",
-  "name": "globalreplace.vim",
+  "display_name": "globalreplace.vim",
   "summary": "Prompted global search and replace",
+  "name": "globalreplace.vim",
   "script_type": "utility",
   "description": "Instead of typing %s/foo/bar/gc every time you want to search and replace in a file simply call this function and get prompted for the text to find and what to replace it with.\n\nI looked for something like this, but didn't find it, hope it's useful (my first, and admittedly unimpressive script)\n\np.s.\n\nYou might want to tack \"I\" onto the regexp to make it case sensitive, so it'll look like this:\nexecute \"%s/\".l:find.\"/\".l:replace.\"/gcI\"\n",
   "rating_total": "11",

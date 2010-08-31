@@ -1,7 +1,8 @@
 {
   "script_id": "662",
-  "name": "xml_cbks",
+  "display_name": "xml_cbks",
   "summary": "Extends xmledit package to provide schema-specific attribute callbacks easily",
+  "name": "xml_cbks",
   "script_type": "utility",
   "description": "This script extends the functionality of the excellent xmledit plugin.\nxmledit gives you a single global callback for inserting attributes,\nXmlAttribCallback.  The suggestion is that this method will dispatch based\non which tag is received.  The script provides a hook that will set the\nvariable b:xml_doctype when loaded (via the function XmlFindDocType).  Then\nit provides a generic XmlAttribCallback which does the following:\n  1.  Looks for a file called $VIMXMLEDITCALLBACKS/{b:xml_doctype}.vim\n  2.  If that file exists and hasn&#039t already been loaded, it is sourced\nThis file is expected to provide a function called\nXmlAttribCallback_{b:xml_doctype}.  This function is called if it exists,\npassing the xml_tag as the argument.\n\nThe intent is so that you can have a different callback for each doctype (schema) which will automatically be available when you edit an XML file of a\nspecified type.  The plugin also provides a way to provide any doctype\nspecific functionality automatically (you can put anything in the sourced\nscript).   It is almost like a secondary ftplugin for xml.\n\nNote:  This is my first vim script (I&#039ve been using vim for less than 3 weeks) so any suggestions for improvement are very welcome.",
   "rating_total": "8",

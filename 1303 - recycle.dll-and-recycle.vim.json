@@ -1,0 +1,30 @@
+{
+  "script_id": "1303",
+  "display_name": "recycle.dll and recycle.vim",
+  "summary": "Backup directly into Recycle Bin on Win32",
+  "name": "recycle.dll-and-recycle.vim",
+  "script_type": "utility",
+  "description": "The idea is stolen from Aditor (http://aditor.swrus.com/). When backuping, the file is dropped to Recycle Bin instead of a temporary directory. As multiple files from one place may be deleted and will be stored in the bin, the bin may serve as a kind of versioning system.\n\nCall the DLL with\n    libcallnr('recycle', 'Recycle', 'd:\\path\\file.ext')\n\nReturns 1 on ok, 0 on error, -1 on user cancel (although the latter has little chance to happen, as the DLL deletes the file silenly).\n\nThere was a version that just deleted the file specified. Nothing wrong with it, but Vim said \"New\" when writing to the file, which is not true. So, for now, the DLL copies the file, adding the ~ suffix to it, and then deletes the copy. It overwrites any file~ that may occur to exist. And when restored from the bin, the original file is not overwritten, but a copy with ~ appears in the same directory.\n\nA .vim plugin is there, too. It adds an autocommand which backups the file to the Recycle Bin on each write, and disables Vim's own backup procedure. If the recycle fails, normal backup is enabled.\n\nIt does not honor the 'patchmode' option for now, does not load at all when it is set.\n\nPlanned:\n- honor 'patchmode'.\n- use the 'backupext' option instead of ~. The same with 'patchmode'.\n\nDecide:\n- copy the file with \"~\" or 'backupext' added (like now) or just delete the file (like it was)?\n- add an autocommand on FileWritePre?\n\nZIP archive is 2.4 Kb.\nThe DLL is 2.5 Kb.\nSource inside.",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "567",
+  "install_details": "Put the recycle.dll and recycle.vim in $VIM\\vimfiles\\plugin.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4365",
+      "filename": "recycle.zip",
+      "script_version": "1.0",
+      "date": "2005-06-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7775",
+        "user_name": "kAtremer",
+        "first_name": "kAtremer",
+        "last_name": "",
+        "email": "katremer at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

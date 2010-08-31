@@ -1,0 +1,30 @@
+{
+  "script_id": "1205",
+  "display_name": "Java Syntax & Folding",
+  "summary": "Java Syntax & Folding",
+  "name": "Java-Syntax-and-Folding",
+  "script_type": "syntax",
+  "description": "Modified from the original syntax/java.vim to support syntax folding. I also removed a lot of unncessary syntax defs including error detection, standard classes, etc.\n\n\nKnown issues:\n\n- Method declaration is also folded currently, this is very ugly...",
+  "rating_total": "9",
+  "rating_votes": "5",
+  "downloads": "920",
+  "install_details": "Replace the original syntax/java.vim with this file. Following is my folding setting in vimrc:\n\nset foldclose=all\nset foldcolumn=1\nset foldenable\nset foldmethod=syntax\nset foldopen=all\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3864",
+      "filename": "java.vim",
+      "script_version": "0.9",
+      "date": "2005-02-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "5744",
+        "user_name": "aquila_deus",
+        "first_name": "Aquila",
+        "last_name": "Deus",
+        "email": "aquila_deus at yahoo.co.uk",
+        "homepage": "http://aquila-deus.myweb.hinet.net/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

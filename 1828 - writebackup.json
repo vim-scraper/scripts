@@ -1,7 +1,8 @@
 {
   "script_id": "1828",
-  "name": "writebackup",
+  "display_name": "writebackup",
   "summary": "Write backups of current file with date file extension.",
+  "name": "writebackup",
   "script_type": "utility",
   "description": "DESCRIPTION\nThis is a poor man's revision control system, a primitive alternative to CVS,\nRCS, Subversion, etc., which works with no additional software and almost any\nfile system. \nThe :WriteBackup command writes subsequent backups of the current file with a\n'current date + counter' file extension (format '.YYYYMMDD[a-z]'). The first\nbackup of a day has letter 'a' appended, the next 'b', and so on. (So that a\nfile can be backed up up to 26 times on any given day.) \n\nBy default, backups are created in the same directory as the original file,\nbut they can also be placed in a directory relative to the original file, or\nin one common backup directory for all files (similar to Vim's 'backupdir'\noption), or even in a file-specific location that is determined via a\nuser-provided callback function. \n\nUSAGE\n:WriteBackup[!]\n\t\t\tWrite the whole current buffer to the next available\n\t\t\tbackup file with a '.YYYYMMDD[a-z]' file extension. \n\t\t\tIf the last backup is identical with the current\n\t\t\tbuffer contents, no (redundant) backup is written. \n\t\t\tWith [!], creation of a new backup file is forced: \n\t\t\t- even if the last backup is identical\n\t\t\t- even when no more backup versions (for this day) are\n\t\t\t  available (the last '.YYYYMMDDz' backup gets\n\t\t\t  overwritten, even if it is readonly)\n\nPS: In addition to this Vim script, I also provide the basic writebackup\nfunctionality outside of Vim as VBScript and Korn Shell script versions at\nhttp://ingo-karkat.de/downloads/tools/writebackup/index.html",
   "rating_total": "40",

@@ -1,0 +1,78 @@
+{
+  "script_id": "2059",
+  "display_name": "matchparen++",
+  "summary": "Improvement over standard matchparen plugin",
+  "name": "matchparenpp",
+  "script_type": "utility",
+  "description": "Improves over standard matchparen.vim plugin by echoing line containing matching bracket in the status line so you can quickly see which block is terminated by this paren.  Also scans for braces/parens which are off-screen.\n\nIf you write functions or blocks like this:\nif (condition)\n{\n    ...\n}\nthe plugin will echo the line \"if (condition)\" and not the lone \"{\".\nBy default, the plugin scans the line containing the opening brace and the two lines above that, looking for the statement that begins the block, be it a loop or function definition.  If you want more or less, set it in the variable g:MP_stmt_thresh.\n",
+  "rating_total": "25",
+  "rating_votes": "13",
+  "downloads": "730",
+  "install_details": "Copy file to $HOME/.vim/plugin or $HOME/vimfiles/plugin.  Since your local plugins directory is searched before the one in $VIM, it will disable loading of the standard matchparen.vim plugin.  If you install it somewhere else, the standard plugin could be found before this one and be loaded instead.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8542",
+      "filename": "matchparen++.vim",
+      "script_version": "1.0.2",
+      "date": "2008-04-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "DoMatchParen command re-loads this plugin instead of matchparen.vim.\nThanks to James Marshall for this idea.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8466",
+      "filename": "matchparen++.vim",
+      "script_version": "1.0.1",
+      "date": "2008-03-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Using timeout feature of searchpairpos() to avoid a long delay while \nfinding a matching paren.  Borrowed from Bram's patch #7.1.269.\nAlso accommodates Vim users who don't have the latest patches compiled."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7881",
+      "filename": "matchparen++.vim",
+      "script_version": "0.1.99",
+      "date": "2007-11-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Using Bram's matchparen.vim plugin from standard distribution as starting point for this version.  \n                                                                                 \nPrint line containing matching brace with echo instead of echomsg so as to not fill message history with non-message items.\n                                                                                 \nTruncate matching brace line when it's gonna be too long - this avoids the dreaded \"Press ENTER or type command to continue\" message that would be so disruptive to workflow.\n                                                                                 \nTo do this, the plugin must take the &showcmd, &ruler and &laststatus options into consideration.  If you use a custom &rulerformat, you will want to set the global variable g:MP_rulerwidth to the width of your ruler.\n                                                                                 \nThe variable g:MP_stmt_thresh lets the user specify how far back the plugin may scan for a statement beginning a code block.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7857",
+      "filename": "matchparen++.vim",
+      "script_version": "0.1",
+      "date": "2007-11-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 {
   "script_id": "2778",
-  "name": "gui2term.py",
+  "display_name": "gui2term.py",
   "summary": "script that converts GUI only colorschemes to support 256-color terminal",
+  "name": "gui2term.py",
   "script_type": "utility",
   "description": "This is a python2 script that converts GUI only colorschemes to support 256-color terminal.\n\nRequirement: python2.6 (other python2.x may also work)\n\nUsage:\ninvoke it like this in commandline.\n./gui2term.py sourcefile newfile\nor\npython gui2term.py sourcefile newfile\n\nNote:\nIt searches and processes lines in a vim colorscheme that matches the regular expression '^\\s*hi\\w*\\s+[A-Z]\\w+' (in Python or Perl, not Vim regex), so it does not work with all the colorscheme.\nApply it to *GUI only* colorscheme only.\nSome GUI only colorschemes may use the default scheme if it found itself under a terminal. You need to manually remove these lines.",
   "rating_total": "11",

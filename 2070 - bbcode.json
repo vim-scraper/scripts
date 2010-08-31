@@ -1,7 +1,8 @@
 {
   "script_id": "2070",
-  "name": "bbcode",
+  "display_name": "bbcode",
   "summary": "bbcode syntax and code templates",
+  "name": "bbcode",
   "script_type": "utility",
   "description": "This plugin includes a syntax highlighting for bbcode and some code \nskeletons for use with tSkeleton (vimscript #1160).\n\nIf viki (vimscript #861) >= 304 is installed, tex regions will be \nproperly highlighted too.\n\nIf you use tSkeleton < 403, you might also want to set these variables:\n\n    let g:tskelKeyword_bbcode = '\\(\\[\\*\\|[\\[\\\\][*[:alnum:]]\\{-}\\)'\n    let g:tskelBitGroup_bbcode = ['bbcode', 'tex']\n\nThe basic syntax file can also be used without any of these add-ons.\n\n",
   "rating_total": "5",

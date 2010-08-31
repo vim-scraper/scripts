@@ -1,7 +1,8 @@
 {
   "script_id": "1911",
-  "name": "SuperPre",
+  "display_name": "SuperPre",
   "summary": "syntax for the text that contains several programming language",
+  "name": "SuperPre",
   "script_type": "syntax",
   "description": "The spre (SuperPre) is a syntax plugin for the text that contains several programing language.  The text can be converted to HTML.  This is useful for writing programming notes or creating web pages.\n\nspre syntax is like a C macro.  Example to make HTML:\n<html>\n<head>\n<title>example</title>\n</head>\n<body>\n#macro\n\" You can use Vim script as embedded macro.\nreturn \"<h1>Example to make HTML</h1>\"\n#end\n\n## comment is removed from result.\n\n#pre c {\"colorscheme\":\"evening\"}\n/* This section will be <pre class=\"c\">...</pre> */\nint func(int n) {\n  return func(n);\n}\n#end\n\n#macro\nlet s:attr = {}\nlet s:attr.colorscheme = \"desert\"\nlet s:attr.tag = \"div\"\nlet s:attr.class = \"c main\"\nlet s:attr.modeline = \"list number\"\n#end\n#pre c s:attr\n/* This section will be <div class=\"c main\">...</div> */\nint main(int argc, char **argv) {\n  return 0;\n}\n#end\n\n#macro\nreturn readfile(expand(\"%:p:h\") . \"/footer.txt\")\n#end\n</body>\n</html>\n\nIf you want to highlight HTML tag outside of spre macro:\n  :set ft=html.spre\nSpre will work as additional syntax.\n\ncolored example:\nhttp://yukihiro.nakadaira.googlepages.com/spre_example.html",
   "rating_total": "1",

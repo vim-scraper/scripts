@@ -1,7 +1,8 @@
 {
   "script_id": "578",
-  "name": "allfold",
+  "display_name": "allfold",
   "summary": "View selected lines by folding away the rest",
+  "name": "allfold",
   "script_type": "utility",
   "description": "The allfold scripts implement a feature set which allows VIM users to view ALL interesting lines in a buffer and FOLD the rest away.  Lines are selected to be interesting in one of the two following ways: \n\n1. They match a regular expression pattern.\n2. They are in a block of lines delimited inclusively by a line that matches\n   a beginning RE pattern and a line that matches an ending RE pattern.\n\nSets of lines matching different selection criteria can be combined using logical \"and\" and \"or\" operations. The selections may be inverted so that lines not matching the selection criteria are actually selected.\n\nBeyond these basics other features do such things as manipulating lists of selection commands and using the raw selection \"bit-map\" directly to enhance the capabilities and ease of use of the scripts.\n",
   "rating_total": "127",

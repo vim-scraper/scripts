@@ -1,7 +1,8 @@
 {
   "script_id": "2917",
-  "name": "tplugin",
+  "display_name": "tplugin",
   "summary": "A plugin loader/runtimepath manager with autoload capabilities",
+  "name": "tplugin",
   "script_type": "utility",
   "description": "This plugin helps users to deal with plugins that are distributed via \nsource code repositories. Usually, you would make those plugins \navailable to vim by adding the local copies of those repositories to \n|runtimepath|. The disadvantage of this approach is that the value of \n|runtimepath| becomes unnecessarily complex and that the plugins are \nloaded on startup.\n\ntplugin scans those plugins for commands and functions. It then amends \nthe |runtimepath| only if a respective command/function/map is called \n(similar to the AsNeeded plugin). This helps to keep your |runtimepath| \nsimple and to improve startup time.\n\nIn order to achieve this goal, plugins are installed in an alternative \ndirectory structure where each plugin (consequently referred to as \n\"repo\") is installed in a subdirectory. tplugin takes care of modifying \n'runtimepath' and of loading the vim script files as necessary.\n\nAlternative directory layout:\n\n    ROOT/\n      repo1/\n        after/\n        autoload/\n        doc/\n        plugin/\n      repo2/\n        after/\n        autoload/\n        doc/\n        plugin/\n      ...\n\nRepos can be enabled (i.e. added to 'runtimepath') either explicitly \nwith the |:TPlugin| command or automatically by calling a command, \nfunction, or by requesting a filetype plugin/syntax/indent file defined \nin a repo -- this is done similar to how AsNeeded autoloads files.\n\nFull docs:\nhttp://github.com/tomtom/vimtlib/raw/master/doc/tplugin.txt\n",
   "rating_total": "0",

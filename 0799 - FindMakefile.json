@@ -1,7 +1,8 @@
 {
   "script_id": "799",
-  "name": "FindMakefile",
+  "display_name": "FindMakefile",
   "summary": "Change directory to one containing a Makefile",
+  "name": "FindMakefile",
   "script_type": "utility",
   "description": "Change directory to the directory containing the current file and then repeatedly \"cd ..\" until ./Makefile exists.\nYou run it by enterning :call FindMakefile()\nI've mapped <F4> to a function that calls FindMakefile () and then does \"mak %<.o\"\nI needed this because using tags to jump to a source file sometimes left me with the wrong current working directory for this to work.",
   "rating_total": "4",

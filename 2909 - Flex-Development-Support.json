@@ -1,0 +1,62 @@
+{
+  "script_id": "2909",
+  "display_name": "Flex Development Support",
+  "summary": "Flex development support, ftplugin, indent, syntax, code completion, ...",
+  "name": "Flex-Development-Support",
+  "script_type": "utility",
+  "description": "Adobe Flex is a highly productive, free open source framework for building and maintaining expressive web applications that deploy consistently on all major browsers, desktops, and operating systems.  Flex applications can be built using the free Flex SDK (http://www.adobe.com/cfusion/entitlement/index.cfm?e=flex3sdk).\n\nHere is a snippet from :h flex.txt (after installing).\n\nThis document outlines the various features the Vim Flex Development Support suite provides and how to interact with it to enhance the Vim development experience for Flex applications.\n\n1. Overview\n2. Filetypes\n3. Navigation\n    3.1 Matchit\n    3.2 Text Object Motions\n    3.3 Macros\n    3.4 Imports\n4. OMNI MXML Completion\n5. Compilation\n    5.1 mxmlc\n    5.2 Ant \n6. Indenting\n7. Syntax Highlighting\n8. Flex Tutorial\n    8.1 Code Completion\n    8.2 Imports\n    8.3 Compiling\n        8.3.1 mxmlc\n        8.3.2 Ant\n\nEssentially, this suite provides:\n    file type support\n    indent\n    syntax\n    compiler\n    code completion\n    \nSince this is a new project, please post to vim_use with comments and suggestions.  Especially if you are having difficultly getting things working as expected.\n\n\nIf someone knows how to generate a list of classes and the associated methods for ActionScript, please let me know.  I will add code completion for it in addition to the MXML code completion.\n\n",
+  "rating_total": "27",
+  "rating_votes": "9",
+  "downloads": "380",
+  "install_details": "The zip file contains the necessary path structure.\n\nOn *nix, unzip into:\n$HOME/.vim/\n\nOn Windows unzip into:\n$VIM/vimfiles/ \n\nTo update the Vim Help, run:\n:helptags $HOME/.vim/doc  (Unix)\n:helptags $VIM/vimfiles/doc  (Windows)\n ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12966",
+      "filename": "flex_dev_30.zip",
+      "script_version": "3.0",
+      "date": "2010-05-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "Updated the syntax files.\nUpdated the indent files (Ingo Karkat).\nThere were apparently some issues unzipping this file on *nix platforms related to the XML completion files.\nAll files now use the unix fileformat (:set ff=unix) so there shouldn't be issues using this on *nix.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12085",
+      "filename": "flex_dev_20.zip",
+      "script_version": "2.0",
+      "date": "2010-01-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "The autoload/mxmlcomplete.vim file was missing.\nMinor update to the documentation.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11986",
+      "filename": "flex_dev_10.zip",
+      "script_version": "1.0",
+      "date": "2009-12-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "837",
+        "user_name": "fishburn",
+        "first_name": "David",
+        "last_name": "Fishburn",
+        "email": "dfishburn dot vim at gmail dot com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

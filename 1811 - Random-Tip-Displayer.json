@@ -1,0 +1,46 @@
+{
+  "script_id": "1811",
+  "display_name": "Random Tip Displayer",
+  "summary": "display random of \"Best Vim tips\"",
+  "name": "Random-Tip-Displayer",
+  "script_type": "utility",
+  "description": "This Vim script allows: viewing, downloading, and displaying random position of \"Best Vim Tips\" from the page:\nhttp://rayninfo.co.uk/vimtips.html (see: vimtip #305)\n\n\nUsage:\n\n<Leader>gt (or :call GetVimTips()) - download and parse \"Best Vim Tips\". File is saved in ~/.vim/vimtips.txt (~/vimfiles/vimtips.txt under windows)\n\n<Leader>dt (or :call DisplayVimTips()) - display \"Best Vim Tips\" in separate buffer (download it, if the file is not present)\n   \n<Leader>rt (or :call DisplayRandomTip()) - display random position in vimtips.txt (download if necessary)\n",
+  "rating_total": "6",
+  "rating_votes": "4",
+  "downloads": "491",
+  "install_details": "After unpacking archive, copy files vimtips.vim and random.vim into ~/.vim/plugins (~/vimfiles/plugins)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6888",
+      "filename": "rndtips-0.2.tar.gz",
+      "script_version": "0.2",
+      "date": "2007-03-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11886",
+        "user_name": "mikolaj",
+        "first_name": "Mikolaj",
+        "last_name": "Sitarz",
+        "email": "sitarz at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- improved parsing\n- added possibility of using python to download file instead of netrw"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6823",
+      "filename": "rndtips-0.1.tar.gz",
+      "script_version": "0.1",
+      "date": "2007-03-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11886",
+        "user_name": "mikolaj",
+        "first_name": "Mikolaj",
+        "last_name": "Sitarz",
+        "email": "sitarz at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

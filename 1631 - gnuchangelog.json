@@ -1,7 +1,8 @@
 {
   "script_id": "1631",
-  "name": "gnuchangelog",
+  "display_name": "gnuchangelog",
   "summary": "Changelog support like Emacs/GNU",
+  "name": "gnuchangelog",
   "script_type": "utility",
   "description": "Enhances the default changelog support with a global mapping that opens and adds an entry in the appropriate ChangeLog file.  The entry now includes the edited filename and if configured, the class/method/function name.  The function that finds the class/method/function name can be configured with filetype plugins so that one can use different tag searchers for different languages.\n\nThe ChangeLog file is only edited if it already exists, which  is searched upwards starting in the directory where the  edited file is located.  If the corresponding ChangeLog file is already opened, the script either splits the window to edit the buffer or switches to the window where the buffer is already opened.\n\nThis behavior is identical to how emacs handles ChangeLog  files with the change-log-mode provided by C-x 4 a.\n\nSee also:\n\nhttp://gnudist.gnu.org/software/emacs/manual/html_node/Change-Log.html\nhttp://www.gnu.org/prep/standards/html_node/Change-Log-Concepts.html\n",
   "rating_total": "10",

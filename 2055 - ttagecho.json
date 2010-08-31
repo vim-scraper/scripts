@@ -1,7 +1,8 @@
 {
   "script_id": "2055",
-  "name": "ttagecho",
+  "display_name": "ttagecho",
   "summary": "Show current tag information",
+  "name": "ttagecho",
   "script_type": "utility",
   "description": "This plugin is similar to echofunc (vimscript #1735) to which it owes \nmuch inspiration and two lines of code. echofunc is probably also better \ntested.\n\nIt displays some information about the tag under the cursor or mouse \npointer either in the echo area or as balloon help (see \n|g:ttagecho_balloon_patterns|). If there are more than one tags that \nmatch, you can loop through the tags by invoking the respective commands \nrepeatedly.\n\nIf hookcursormoved (vimscript #2037, version >= 0.4) is installed, for \ncertain filetypes (see |g:ttagecho_parentheses_patterns|) it will \ndisplay the information in the echo area also if the cursor moves over a \nround parenthesis.\n\nIf you don't like the default format for the tags, you can define the \nfunction TTagechoFormat_{&filetype}(a:tag) that should return some nicely \nformatted information.\n",
   "rating_total": "2",

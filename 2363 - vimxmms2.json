@@ -1,7 +1,8 @@
 {
   "script_id": "2363",
-  "name": "vimxmms2",
+  "display_name": "vimxmms2",
   "summary": "An XMMS2 client for Vim.",
+  "name": "vimxmms2",
   "script_type": "utility",
   "description": "This script will not be updated anymore. Please see vimscript #2369.\n\nRequire:\n    vim with +python support.\n    xmms2 with the python interface.\n\nUsage:\n    Using <leader>x to toogle the play window.\n\n    Also the following keyshorts are avaiable. Most key maps start with\n    c(Contrl) or l(playList).\n\n      <space>    Play the song under cursor.\n      <cr>       Same as <space>.\n      cs         Stop.\n      cp         Pause.\n      cr         Select a repeat mode, repeat one track or all.\n      -          Decrease volume.\n      =          Increase volume.\n      r          Refresh window manually.\n      la         Add a file or directory to playlist.\n      lc         Clear the playlist.\n      ld         Remove the song under cursor from current playlist.\n      lf         Shuffer the list.\n      ll         Load a playlist.\n      ln         Create a new playlist, and save current contents to it.\n      ls         Sort the playlist, by artist, title or filename.\n\nCustomize:\n    Specify the id3's encoding. For example:\n        let g:xmms_id3_encoding=\"gbk\"\n\n    Specify the play window's width:\n        let g:xmms_window_width=30\n\n    Specify the playlist format, default is \"%artist - %title\", %album is also avaiable.\n        let g:xmms_playlist_format=\"%title\"\n\nTips:\n    When adding music file or directory, you can use Ctrl-D to show all \n    candidates. Also, you can use arrow keys to navigate the historys.\n\nLeave your comments in following link, or just mail me. :)\nhttp://danran.72pines.com/vimxmms2\n",
   "rating_total": "9",

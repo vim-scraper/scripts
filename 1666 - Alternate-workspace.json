@@ -1,0 +1,62 @@
+{
+  "script_id": "1666",
+  "display_name": "Alternate workspace",
+  "summary": "Switch or watch diff between alternate files from child and parent workspaces",
+  "name": "Alternate-workspace",
+  "script_type": "utility",
+  "description": " This script provide a way to quickly switch between files from different workspaces (Child and Parent). And to see difference between them.\n\nSet variable g:aw_child_path and g:aw_parent_path to work with this script.\n\nExample of vimrc:\n\n   let g:aw_child_path = '/home/ni/branch'\n   let g:aw_parent_path = '/project/' \n   let g:aw_stop_word = 'src'\n\n   nnoremap \\wd :AWDiffMirror<CR>\n   nnoremap \\we :AWEditMirror<CR>\n\nEDIT MIRROR\n\nSuppose you have two files in different workspaces.\nYou edit now file from child workspace.\n\nyou are at line 100\nin that line is text 'int main()'\n\nin alternate file there is line 'int main()' too but in line 200\n\nafter command :AWEditMirrorFile you will be at line 200 in alternate file\nIt is very useful.\n\nif there is now such line in alternate file you'll be at line 100.\n\nSET WORKSPACES \n\nUse AWSetChild and AWSetParent commands to set workspaces directories (thanks to Sergey Popov).\n\nUse AWAutoSetChild and AWAutoSetParent commands - this commands will create child and parent path form current file name\nexample: \n    let g:aw_stop_word = 'src'\n    current file name = '/home/me/project/src/..../.../1.cpp'\n    after execution of AWAutoSetChild aw_child_path will be '/home/me/project/'\n\n:AWEditMirrorFile - edit alternate file\n:AWDiffMirrorFile - diff current and alternate file\n",
+  "rating_total": "24",
+  "rating_votes": "6",
+  "downloads": "366",
+  "install_details": "Put alternate_workspace.vim in plugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6525",
+      "filename": "alternate_workspace.vim",
+      "script_version": "2.0",
+      "date": "2006-12-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10706",
+        "user_name": "Ni",
+        "first_name": "Mykola",
+        "last_name": "Golubyev",
+        "email": "golubev.nikolay at gmail.com",
+        "homepage": "http://www.railmoon.com"
+      },
+      "release_notes": "AWEditMirrorFile command not only open alternate file but moves to position where is same line (current line) is present. \nYou can easily change workspaces by new commands:\n:AWAutoSetChild\n:AWAutoSetParent\nExample:\nif you have current file name \"/home/me/project/src/...../.cpp\"\nyou can set variable g:aw_stop_word = \"src\" and after execution of command :AWAutoSetChild\nchild path will be \"/home/me/project\"\n\nRemoved mappings for EditMirrorFile and DiffMirrorFile (\nAdd \nnnoremap key1 :AWEditMirrorFile<CR>\nnnoremap key2 :AWDiffMirrorFile<CR>\n..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6229",
+      "filename": "alternate_workspace.vim",
+      "script_version": "1.1",
+      "date": "2006-09-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10706",
+        "user_name": "Ni",
+        "first_name": "Mykola",
+        "last_name": "Golubyev",
+        "email": "golubev.nikolay at gmail.com",
+        "homepage": "http://www.railmoon.com"
+      },
+      "release_notes": "Added AWSetChild and AWSetParent commands."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6223",
+      "filename": "alternate_workspace.vim",
+      "script_version": "1",
+      "date": "2006-09-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10706",
+        "user_name": "Ni",
+        "first_name": "Mykola",
+        "last_name": "Golubyev",
+        "email": "golubev.nikolay at gmail.com",
+        "homepage": "http://www.railmoon.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

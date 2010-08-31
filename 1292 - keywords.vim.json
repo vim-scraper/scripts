@@ -1,7 +1,8 @@
 {
   "script_id": "1292",
-  "name": "keywords.vim",
+  "display_name": "keywords.vim",
   "summary": "mappings to move and quote iskeyword text",
+  "name": "keywords.vim",
   "script_type": "utility",
   "description": "This scripts provides two functionalities that use the iskeyword setting of\nthe current buffer.\n\nThe following mappings are provided for moving keywords in normal mode:\n\n    <C-Up>   : exchange the current keyword with the previous one.\n    <C-Down> : exchange the current keyword with the next one.\n\nThese mappings can be changed by changing the value of the following variables.\n\n    let g:keywords_MoveWordL = '<C-Up>'\n    let g:keywords_MoveWordR = '<C-Down>'\n\nAlso there exists mappings for adding/deleting \"quotes\" to/from a keyword or a\nvisually selected area. The mappings are as follows:\n\n   qw, q\"  : double quote\n   qs, q'  : single quote\n   qe, q`  : quote execute\n   q[, q]  : quote with square brackets\n   q{, q}  : quote with brackets\n   q(, q)  : quote with parantheses\n   q<, q>  : quote with xml style tag.\n\nIf you wish to provide a different map leader than 'q' use this variable:\n\n   let g:keywords_MapLeader = 'q'\n\nThere is one normal mode mapping for removing quotes from a keyword:\n\n   wq  :  removes non iskeyword material around the current keyword.\n\nConsider sending an email if you have any comments or suggestions :-)\n",
   "rating_total": "7",

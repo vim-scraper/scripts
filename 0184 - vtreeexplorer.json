@@ -1,7 +1,8 @@
 {
   "script_id": "184",
-  "name": "vtreeexplorer",
+  "display_name": "vtreeexplorer",
   "summary": "tree based file explorer - the original",
+  "name": "vtreeexplorer",
   "script_type": "utility",
   "description": "Creates a tree based file explorer within vim.\n\nThis is like the directory explorer plugin that ships with vim, but instead of presenting just one directory at a time, this plugin present portions of the filesystem hierarch in a tree view.  This type of view should be familiar from modern graphical file managers.  This explorer persents navigation, exploration, and opening of files only -  unlike the standard directory explorer that allow you to delete and rename files.   This a handy tool for becoming familiar with source trees.\n\n\nFeature summary:\n- directories are foldable (fold markers are highlighted invisible)\n- directories and links are syntax highlighted\n- open a file in a new window\n- mappings for naviagation (keyboard and mouse) - goto parent, change dir, go up, cd to home, refesh, etc\n- lazy loading of directory structure - one directory at a time.  Recursive expansion also available.\n\nCaveats:\nMay not work well for obscure systems - unix and windows work well.  Please send bugs or patches.\n\nThis is a reimplementation of the treeexplorerer (see http://vim.sourceforge.net/scripts/script.php?script_id=183 ) that doesn't require perl or the tree command - it's pure vim.\n\nScott",
   "rating_total": "702",

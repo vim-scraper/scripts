@@ -1,7 +1,8 @@
 {
   "script_id": "1730",
-  "name": "tAssert",
+  "display_name": "tAssert",
   "summary": "Simple assertions, poor man's contracts for vim script",
+  "name": "tAssert",
   "script_type": "utility",
   "description": "This plugin defines a command |:TAssert| that takes an expression as \nargument and throws an exception if this expression evaluates to \n|empty()|. You can insert these comments throughout your code whenever \nsomething could potentially go wrong. The exception is then thrown right \nwhere the problem occurs. You could think of it as a poor man's \ndesign-by-contract substitute.\n\nOne goal of this plugin is to allow users to quickly switch on or off \nassertions depending on the context. This can be done either by:\n\n    1. Turning assertions off so that they are not evaluated. This can \n       be achieved by setting g:TASSERT to 0 or by calling the command \n       |:TAssertOff|.\n\n    2. Commenting out assertions in the current buffer by calling the \n       commmand |:TAssertComment|.\n\n\nExample:\n\n    fun! Test(a, b)\n        TAssertType a:a, 'string'\n        TAssertType a:b, 'number'\n        TAssert !empty(a:a)\n        return repeat(a:a, a:b)\n    endf\n\n\nLogging:\n\nTAssert also includes a few convenience commands for logging. The \nvariable g:TLOG controls where messages are written to:\n\n    echom ... Print messages in the echo area.\n    file  ... Print messages to a file; syntax \"file:FILENAME\"\n    Decho ... Print messages via Decho (vimscript#642)\n",
   "rating_total": "1",

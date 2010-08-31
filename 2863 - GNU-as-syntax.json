@@ -1,0 +1,94 @@
+{
+  "script_id": "2863",
+  "display_name": "GNU as syntax",
+  "summary": "GNU as (AT&T) syntax for *86 CPUs",
+  "name": "GNU-as-syntax",
+  "script_type": "syntax",
+  "description": "This file defines a (almost) complete syntax for GNU as assembler.\n\nMy motivation in writing this was the lack of a complete, working syntax for this\ncommon assembler.\n\nFor now the basic as directives as well as the Intel / AMD instruction sets are included.\nOpcodes supporting a size suffix are recognized plain as well as suffixed with b/w/l/q.\n\n== Supported instructions a per version 0.6:\n\n-- X86 common instruction set (8086 - 686)\n-- Katmai Streaming SIMD instructions (SSE -- a.k.a. KNI, XMM, MMX2)\n-- Introduced in Deschutes but necessary for SSE support\n-- XSAVE group (AVX and extended state)\n-- Generic memory operations\n-- New MMX instructions introduced in Katmai\n-- AMD Enhanced 3DNow! (Athlon) instructions\n-- Willamette SSE2 Cacheability Instructions\n-- Willamette MMX instructions (SSE2 SIMD Integer Instructions)\n-- Willamette Streaming SIMD instructions (SSE2)\n-- Prescott New Instructions (SSE3)\n-- VMX Instructions\n-- Extended Page Tables VMX instructions\n-- Tejas New Instructions (SSSE3)\n-- AMD SSE4A\n-- New instructions in Barcelona\n-- Penryn New Instructions (SSE4.1)\n-- Nehalem New Instructions (SSE4.2)\n-- AMD SSE5 instructions\n-- Intel SMX\n-- Geode (Cyrix) 3DNow! additions\n-- Intel AES instructions\n-- Intel AVX AES instructions\n-- Intel AVX instructions\n-- Intel Carry-Less Multiplication instructions (CLMUL)\n-- Intel AVX Carry-Less Multiplication instructions (CLMUL)\n-- Intel Fused Multiply-Add instructions (FMA)\n-- VIA (Centaur) security instructions\n-- AMD XOP, FMA4 and CVT16 instructions (SSE5)\n-- Systematic names for the hinting nop instructions\n\nYou can set different highlighting for each set listed above by adding a line like this to you .vimrc:\n\nhi def link gasOpcodeX86_PENT_SSE  <some_highlighting>\n\nscreenshot here: http://skitch.com/shirkrin/neq8c/gnu-as-syntax-for-vim\n\n== per-file opcode enable / disable\n\nSince version 0.6 it is possible to disable sets of opcodes by either CPU they where introduced in or by their extension name.\nThis is done by setting a special variable recognized by gas.vim to the list of disabled opcodes.\n\nE.g.\n\n\" globally disable all x86_64 opcodes\n:let g:gasDisableOpcodes='x86_64'\n\n\" disable SSE and SSE2 for this buffer\nlet b:gasDisableOpcodes='sse sse2'\n\nDisabled opcodes will be highlighted as errors.\n\nrecognized CPU groups:\n           186, 286, 386, 3862, 486, 8086, amd, future, ia64, katmai, nehalem,\n            p6, pentium_m, pentium, prescott, sandybridge, x64, x642, x86_64\n\nrecognized extension groups:\n           base, 3dnow, mmx, mmx2, sse, sse2, sse3, ssse3, sse4.1, sse4.2, sse4a,\n           sse5, avx, fma, vmx\n\n\nI hope this syntax file will be useful to other people \n  - but don't blame me if it doesn't suit your needs.\n",
+  "rating_total": "38",
+  "rating_votes": "11",
+  "downloads": "401",
+  "install_details": "Copy to .vim/syntax/ in your home folder.\nAdd this line to the end of your file: \n\n/* vim: ft=gas :\n*/\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11980",
+      "filename": "gas.vim",
+      "script_version": "0.8",
+      "date": "2009-12-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8088",
+        "user_name": "Shirk",
+        "first_name": "René",
+        "last_name": "Köcher",
+        "email": "shirk at bitspin.org",
+        "homepage": "http://www.bitspin.org"
+      },
+      "release_notes": "Implemented some enhancements suggested by M. Herrmann:\n\n- add *inc* as keyword (not inc[bwlq])\n- add '#' as comment character (without loosing C preprocessor support)\n- fix a few mnemonics which don't comply with b/w/l/q suffixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11816",
+      "filename": "gas.vim",
+      "script_version": "0.7",
+      "date": "2009-11-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8088",
+        "user_name": "Shirk",
+        "first_name": "René",
+        "last_name": "Köcher",
+        "email": "shirk at bitspin.org",
+        "homepage": "http://www.bitspin.org"
+      },
+      "release_notes": "minor tweaks / fixes (popfl, stosl, typos in a few registers)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11815",
+      "filename": "gas.vim",
+      "script_version": "0.6",
+      "date": "2009-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8088",
+        "user_name": "Shirk",
+        "first_name": "René",
+        "last_name": "Köcher",
+        "email": "shirk at bitspin.org",
+        "homepage": "http://www.bitspin.org"
+      },
+      "release_notes": "Redone all opcodes - they where generated from a static opcode table and <b,w,l,q> suffixes are now recognized only \nfor opcodes that really support them. \n\nNew feature to disable opcodes (highlighted as Error) by either CPU or extension type. \nSet g:gasDisableOpcodes or b:gasDisableOpcodes to a space-separated list of CPU's or Extensions: \n\nE.g. leg b:gasDisableOpcodes='x86_64 sse sse2' \n\nCPUs: \n           186, 286, 386, 3862, 486, 8086, amd, future, ia64, katmai, nehalem, \n            p6, pentium_m, pentium, prescott, sandybridge, x64, x642, x86_64 \n\nExtensions: \n           base, 3dnow, mmx, mmx2, sse, sse2, sse3, ssse3, sse4.1, sse4.2, sse4a, sse5, avx, fma, vmx "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11811",
+      "filename": "gas.vim",
+      "script_version": "0.5",
+      "date": "2009-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8088",
+        "user_name": "Shirk",
+        "first_name": "René",
+        "last_name": "Köcher",
+        "email": "shirk at bitspin.org",
+        "homepage": "http://www.bitspin.org"
+      },
+      "release_notes": "- improved syntax synchronizing\n- fixed strings with nested quotes\n- support for c-style pre-processor tags (via c.vim)\n\nKnown Bugs: \n\nPre-processor tokens require an extra blank line to not                        mix up the following assembler statement. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11780",
+      "filename": "gas.vim",
+      "script_version": "0.4",
+      "date": "2009-11-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8088",
+        "user_name": "Shirk",
+        "first_name": "René",
+        "last_name": "Köcher",
+        "email": "shirk at bitspin.org",
+        "homepage": "http://www.bitspin.org"
+      },
+      "release_notes": "Fixed an issue where braces and brackets would be shown as part of symbols."
+    }
+  ]
+}

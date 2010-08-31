@@ -1,7 +1,8 @@
 {
   "script_id": "2843",
-  "name": "FlipLR",
+  "display_name": "FlipLR",
   "summary": "Flips left hand side and right hand side.",
+  "name": "FlipLR",
   "script_type": "utility",
   "description": "This script flips left hand side and right hand side.\n'lhs {operator} rhs' => 'rhs {operator} lhs'\n\nUsage:\n  1. In visual mode, select left hand side, operator and right hand side.\n  2. execute ':FlipLR operator'\n  2'. execute ':FlipLR /operator/' to flip with regexp\n\n  This mapping may help you.\n      noremap \\f :FlipLR <C-R>=g:FlipLR_detectPivot()<CR>\n\nScreencast:\n  http://bitbucket.org/shu/fliplr/downloads/fliplr.htm\n\nRepository:\n  http://bitbucket.org/shu/fliplr/",
   "rating_total": "6",

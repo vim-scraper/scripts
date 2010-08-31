@@ -1,7 +1,8 @@
 {
   "script_id": "3061",
-  "name": "VxLib",
+  "display_name": "VxLib",
   "summary": "Some utility functions packed in a library",
+  "name": "VxLib",
   "script_type": "utility",
   "description": "Initially developed for vimuiex (vimscript#2606)\nUsed by manuals (vimscript#3061)\n\nContains a Vim Plugin Generator that parses files in autoload directories and creates \nplugin initialization code for the plugin directory - a single file for all plugins. \nIt searches for specially marked sections in vim files (see vimuiex, manuals).\n\nSee http://vimuiex.sourceforge.net/vimdoc/vxlib_plugin.html for details.\n\nThe command :VxRegen will start the plugin generator, create the plugin \ninitialization code and update the plugin configuration file (plugins/vxplugin.conf).  \n:VxRegen will execute a Python script using an existing Python installation, so \nPython must be in your system PATH. \n\nThe configuration file can be edited with :VxConfig. It is a simple win-ini-type \nfile. Currently it is only possible to include/exclude the plugins from the \ninitialization code. To exclude a plugin, put 'generate=0' in the appropriate \nsections. By default initialization code for all found plugins is generated.\n\nGenerated plugins can also be disabled from .vimrc. Each plugin processed by the \nplugin generator has a unique ID. When the plugins are loaded, this ID is used to \ncheck if the plugin should be loaded or not. To disable a plugin with \nid='vimuiex#textmenu', add 'let g:vxenabled_vimuiex_textmenu=0' to .vimrc.\n\nRelated scripts: genutils(vimscript#197), lh-vim-lib(vimscript#214), \ntlib(vimscript#1863), vim-addon-manager(vimscript#2905), \ntplugin(vimscript#2917),\n",
   "rating_total": "0",

@@ -1,7 +1,8 @@
 {
   "script_id": "1947",
-  "name": "outline",
+  "display_name": "outline",
   "summary": "Create your own custom view of the file based on regex",
+  "name": "outline",
   "script_type": "utility",
   "description": "Vim has many possibilites to let you find the code you want to have a look at.\nThis script shows all matches of a regular expression in another buffer together with line numbers. The cursor will be placed where you have been.\nSo you won't loose orientation.\n\nI think a small example will help you much to illustrate what this script can do for you\n\nThe script is called autoload/vl/ui/navigation/jump_to_code_by_regex.vim\n\nand looks like :\n==============================\n[...]\nfunction! vl#ui#navigation#jump_to_code_by_regex#Outline(regex, ...)\n  exec vl#lib#brief#args#GetOptionalArg('try_higlight', string(0))\n[...]\nendfunction\n[...]\nfunction ...\n==============================\n\nAfter using the mapping you'll get \n==============================\n   17  function! vl#ui#navigation#jump_to_code_by_regex#Outline(regex, ...)\n   66  function! vl#ui#navigation#jump_to_code_by_regex#JumpToPos()\n   75  function! vl#ui#navigation#jump_to_code_by_regex#AddOutlineMappings(regex)\n==============================\nPressing enter will take you to line 17 / 66 etc..\n\nOf course you can also find definitions this way (use let as regex and you'll get)\n====================\n   19    let ft = &filetype\n   20    let file = expand('%')\n   21    let window = winnr()\n[...]\n=====================\nPressing <c-o> will take you back\n\nI'v put some minor effort into higlighting the regular expression match. Thus you can use \\zs and \\ze to higlight special words.\nHow nice this works depends on the already existing syntax definitions. This can be improved much",
   "rating_total": "1",

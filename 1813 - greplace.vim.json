@@ -1,7 +1,8 @@
 {
   "script_id": "1813",
-  "name": "greplace.vim",
+  "display_name": "greplace.vim",
   "summary": "Replace a pattern across multiple files interactively",
+  "name": "greplace.vim",
   "script_type": "utility",
   "description": "Overview\n\nThe Global Replace plugin allows you to search and replace a pattern\nacross multiple files. The lines containing a specified pattern in multiple\nfiles are displayed in a buffer. You can edit the lines in this buffer and \nmake the desired modifications to them. The plugin can then \nincorporate these changes back into the corresponding files interactively.\n\nThe following commands are provided by this plugin:\n\n:Gsearch         Search for a given pattern in the specified group of\n                 files and display the matches in the replace buffer.\n:Gbuffersearch   Search for a given pattern in all the buffers\n                 in the Vim buffer list.\n:Gargsearch      Search for a given pattern in all the files in the\n                 Vim argument list.\n:Gqfopen         Use the results from the quickfix list.\n:Greplace        Incorporate the modifications from the replace buffer\n                 into the corresponding files.\n\nRefer to the greplace.txt help file for more information (available with the\nplugin).\n\nThis plugin will run only on Vim version 7.0 and above.\n",
   "rating_total": "108",

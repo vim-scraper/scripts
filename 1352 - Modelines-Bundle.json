@@ -1,0 +1,78 @@
+{
+  "script_id": "1352",
+  "display_name": "Modelines Bundle",
+  "summary": "Insert Modelines from current settings",
+  "name": "Modelines-Bundle",
+  "script_type": "utility",
+  "description": "Inserts two modelines with the currently active filetype and tabulator settings.\n\nCan be used for:\n\n - a quick overview of the file settings (like is the file dos or unix format). \n - to set the file setting (just change the settings which are wrong).\n - to make shure the file settings stay put when the file is saved and loaded.\n\nCan be easily exdended for more settings - just as you want it.\n\nReports errors to: http://code.google.com/p/vim-scripts/issues/list\nDiscuss improvements on: http://groups.google.com/group/vim_scripts\nFor Support see: http://code.google.com/p/vim-scripts/wiki/ModelinesBundle",
+  "rating_total": "46",
+  "rating_votes": "13",
+  "downloads": "603",
+  "install_details": "Just install using vimball (vimscript#1502)\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7683",
+      "filename": "modelines-2.0.vba",
+      "script_version": "2.0",
+      "date": "2007-09-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Now as a bundle. The new version will use autoload to conserve memory and start-up time.\n\nNew features: Uses NERD_Commenter when available, fallback to &commentstring when not."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6437",
+      "filename": "modelines.vim",
+      "script_version": "1.4",
+      "date": "2006-11-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "When integrating the Ada Mode into the standart runtime Bram enlightent me on which modeline settings are usefull and which are not. The result is this fixed version.\n\nIt also uses not the \"vim: set ... :\" syntax so it will work fine with languages using something like \"/* */\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5307",
+      "filename": "modelines.vim",
+      "script_version": "1.1",
+      "date": "2006-02-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "This version does not need the NERD Commenter any more. It used the &commentstring instead."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4574",
+      "filename": "modelines.vim",
+      "script_version": "1.0",
+      "date": "2005-09-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "script_id": "1537",
+  "display_name": "plugin/backup.vim",
+  "summary": "Numbered Backups.",
+  "name": "pluginbackup.vim",
+  "script_type": "utility",
+  "description": "Holds numered backups inside a seperate directory.\n\nAutomaticly purges old backups. Standart is to hold the last 10 versions.\n\nTested with Linux, MS-Windows and OpenVMS.\n\nIMORTANT: Creating this plugin was only possible because vim 7 offers new file management functions - namely :mkdir, finddir() delete() and the new List datatype. This plugin won'g work with vim 6.x.\n\nReports errors to: http://code.google.com/p/vim-scripts/issues/list\nDiscuss improvements on: http://groups.google.com/group/vim_scripts\nFor Support see: http://code.google.com/p/vim-scripts/wiki/NumberedBackups",
+  "rating_total": "88",
+  "rating_votes": "28",
+  "downloads": "1462",
+  "install_details": "Copy to plugin directory and set the following global variables:\n\n g:backup_directory\tname of backup directory local to edited file\n\t\t\tused for non VMS only. Since non VMS operating-\n\t\t\tsystems don't know about version we would get\n\t\t\tugly directory listings. So all backups are\n\t\t\tmoved into a hidden directory.\n\n  g:backup_purge\tcount of backups to hold - purge older once.\n\t\t\tOn VMS PURGE is used to delete older version\n\t\t\t0 switched the feature off\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7386",
+      "filename": "backup.vim",
+      "script_version": "2.2",
+      "date": "2007-07-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "There was a bug for windows in conjunction with spaces in file names. It did not affect Unix like OS. And it's fixed now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6434",
+      "filename": "backup.vim",
+      "script_version": "2.1",
+      "date": "2006-11-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "bug fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5760",
+      "filename": "backup.vim",
+      "script_version": "2.0",
+      "date": "2006-05-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "New coordinated release for all Ada plugins. Binary releases which are patched with all Ada plugins is available from the GNU Ada project [1]\n\n[1] http://gnuada.sourceforge.net"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5711",
+      "filename": "backup.vim",
+      "script_version": "1.1",
+      "date": "2006-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Fixed two bugs:\n\nVMS: \"press key to continue\" is gone.\nnon VMS: set of backup directory to user defined variable fixed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5670",
+      "filename": "backup.vim",
+      "script_version": "1.0",
+      "date": "2006-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7818",
+        "user_name": "krischik",
+        "first_name": "Martin",
+        "last_name": "Krischik",
+        "email": "krischik at users.sourceforge.net",
+        "homepage": "http://ada.krischik.com/index.php/VIM/HomePage"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

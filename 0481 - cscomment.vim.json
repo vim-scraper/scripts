@@ -1,7 +1,8 @@
 {
   "script_id": "481",
-  "name": "cscomment.vim",
+  "display_name": "cscomment.vim",
   "summary": "Automates creation of /// comments for C# methods",
+  "name": "cscomment.vim",
   "script_type": "utility",
   "description": "This script will generate the /// comment blocks for csharp for methods and constructors.  Simply place the cursor anywhere on the first line of the function prototype and hit <c-t>.  It also works on properties, constructors and classes.\n\nAdds summary, remarks, params (for all the params in the function), value (if its a property), and returns (if the function returns something.)\n\nWhile in comment mode you can tab and shift-tab through the tags, and return and backspace work as they should (enter inserts /// on the new line and backspace erases /// in one bs)\n\nYou can get back into comment mode by hitting <c-t> on an existing doc comment.\n\nQuestions, comments, concerns, bugs, ideas, etc, drop me an email.\n",
   "rating_total": "18",

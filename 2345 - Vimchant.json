@@ -1,7 +1,8 @@
 {
   "script_id": "2345",
-  "name": "Vimchant",
+  "display_name": "Vimchant",
   "summary": "Fast on-the-fly spell-checker based on Enchant",
+  "name": "Vimchant",
   "script_type": "utility",
   "description": "Vim 7.0 introduced excellent spell-checking features which made external spell-checker plugins pretty much obsolete. Unfortunately not all languages can be supported through Vims dictionary format. Either the language is morphologically too complex or better custom solutions exist already for some languagessolutions which are not compatible with Vims spelling checker. Finnish, for example, is a language which doesnt currently benefit from Vims spell-checking features.\n\nThis plugin (Vimchant) provides a simple but fast on-the-fly spelling checker which uses Enchant as its back-end program. Enchant is a spell-checker library and utility included in modern GNU/Linux systems. Enchant itself is only a front-end for many different spell-checkers, including Voikko, Zemberek, Hunspell, Hspell, Uspell, Myspell, Aspell and Ispell. All the spell-checkers and languages which can be supported through Enchant are available to Vim through this plugin.\n\nManual for Vimchant is included, just type\n\n    :help vimchant.txt\n\nThe most interesting commands are \\ss (spell-checker on/off) and \\sl (change language). The default interval period before running the spell-check is rather long (4 seconds). To make the spell-checker respond faster (1 second, for example) add the following line to your .vimrc file:\n\n    set updatetime=1000\n\nSee the manual for more info. See also the Enchant homepage:\n\n    http://www.abisource.com/projects/enchant/\n",
   "rating_total": "22",

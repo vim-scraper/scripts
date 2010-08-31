@@ -1,0 +1,62 @@
+{
+  "script_id": "853",
+  "display_name": "File-local variables",
+  "summary": "Set/let per-file-variables à la Emacs",
+  "name": "File-local-variables",
+  "script_type": "utility",
+  "description": "This plugin tries to mimic Emacs's file local variables feature. File local \nvariables are kept in a section in the last g:localVariablesRange \n(default=30) lines of a file (this variable also defines the maximum number \nof file local variables). E.g., in this example >\n\n    Local Variables:\n    foo:1\n    bar:\"bla\"\n    End:\n\nthe variable b:foo will be set to \"1\" (which, in vim, equals 1), b:bar \nto \"bla\" after opening the file.\n\nThe beginning of the section is marked with g:localVariablesBegText \n(default=\"Local Variables:\"), the end with g:localVariablesEndText \n(default=\"End:\"). These markers can be surrounded by arbitrary prefix and \nsuffix markers. These (optional) prefixes and suffixes must be consistent for \nthe whole section. The prefix and suffix are defined by the end-marker. \nExample: >\n\n    ### Local Variables: ###\n    ### foo:1 ###\n    ### bar:\"bla\" ###\n    ### End: ###\n<\n                                                    *g:localVariablesDownCaseHyphenedNames*\n                                                    *localvariables-hyphens*\nIf a variable name contains a hyphen (\"-\"), the variable name will be \ntranslated into a buffer local variable in camel case, i.e. \"comment-start\" \nbecomes \"b:commentStart\". A hyphendized variable's scope is always \"b\". If \ng:localVariablesDownCaseHyphenedNames (default=1) is true, then the variable \nname will be downcased first for compatibility reasons -- as (emacs) lisp is \ncase insensitive. I.e., \"COMMENT-START\" becomes \"b:commentStart\", too.\n\n\n                                                    *localvariables-values*\nA small note on value handling: For security reasons, all normal values \n(i.e., anything but |localvariables-special|) are put in quotes unless \nthe value already matches \"^\\\\([\\\"']\\\\)[^\\\"]*\\\\1$\".\n\n\n                                                    *localvariables-transpose*\nIn order to be \"compatible\" with, e.g, Emacs's file local variables, it might be \nnecessary to translate some variable names.\n\nYou can use also variables with the prefix \"g:localVariableX\" for \ntranslating variable names without scope definitions. Example: >\n\n    let g:localVariableXtabWidth = \"&tabstop\"\n    ---\n    ### Local Variables: ###\n    ### tab-width:4 ###\n    ### End: ###\n\nThis would set the buffer-local option |tabstop| to 4. (Which could of course \nbe achieved with a vim line, too.)\n\nAs an alternative, you can also define a function with the prefix \n\"LocalVariableX\" which will be called with the value as single argument.  \nThis provides a controlled way for executing commands when loading/editing \na file. By defining a function \"LocalVariableXmode\", this can be used to \nreuse Emacs's mode annotations for files that don't match the usual file \npatterns. Example: >\n\n    fun! LocalVariableXfoo(arg)\n        if a:arg == \"0\"\n            GoFoo\n        elseif a:arg == \"1\"\n            GoBar\n        endif\n    endfun\n    ---\n    ### Local Variables: ###\n    ### foo:0 ###\n    ### End: ###\n\nThis example would execute GoFoo or GoBar depending on the value of the file \nlocal variable foo.\n\n\n                                                    *localvariables-definition*\nA variable definition has the form (as regexp): >\n\n\t((scope char:)?(variable|special name)|hyphened name):value\n\nIf no scope character is given, the variable is buffer local (\"b\"-scope).\n\nIf the scope character is \"&\", |setlocal| will be used to set the variable.\n\n                                                      *localvariables-special*\nIf the scope is \":\", the variable name is interpreted as a special name:\n\n                                                      *localvariables-execute*\n- execute: The value of s:localVariablesAllowExec can't be changed by this \n  script. (The first 4 letters of \"execute\" are essential.)\n\n                                                      *localvariables-events*\n                                                      *LocalVariablesRegisterHook*\n- On{event}: The value is registered for execution when the denoted \n  autocommand event occurs. You have to register LocalVariables for use with \n  this event by using the command >\n\n  \t:LocalVariablesRegisterHook EVENT\n<\n  Use this feature, e.g., for recompiling some files after saving.\n\n                                                      *s:localVariablesAllowExec*\nThe value of s:localVariablesAllowExec (default=1) defines if the execution \nof special variables is allowed. Values: >\n\n\t0 ... disable\n\t1 ... query user, default = no\n\t2 ... query user, default = yes\n\t3 ... allow\n\nNOTE: You most likely have to edit the plugin to change this variable.\n\nNOTE: A change from 0 to [1-3] takes effect only after reloading the plugin!\n\nNOTE: |input()| appears to make problems when opening a file - vim (6.2) \nappears to hang. When a gui is running, use |inputdialog()| for querying \nthe user. I don't know if |input()| works on a terminal.\n\n                                                      *localvariables-security-risks*\nCAVEAT: Be aware that \"special values\" are evaluated with |execute|.  \nThis potentially pushes vim ahead in the era of computer viruses/worms. \nTake care.\n\nExample:\nExecute >\n\n\tLocalVariablesRegisterHook! BufWritePre\n\t\nand put something like this at the end of a file: >\n\n\t### Local Variables: ###\n\t### b:variable1:1 ###\n\t### g:variable2:\"2\" ###\n\t### variable3:\"three\" ###\n\t### tab-width:4 ###\n\t### ::exec:echo \"Got it!\" ###\n\t### ::OnBufWritePre:call inputdialog(\"You shouldn't have written this text\") ###\n\t### End: ###\n",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "831",
+  "install_details": "1. Extract the archive to your vimfiles directory. Run |helptags| on this directory.\n\n2. Insert something like this into your .vimrc: >\n\n\tautocmd BufReadPost * call LocalVariablesCheck()\n\t\nOr rather: >\n\n\tautocmd BufEnter    * call LocalVariablesCheck()\n\n3. Optionally, read |localvariables-security-risks| and register some events as in: >\n\n\tLocalVariablesRegisterHook! BufWritePre\n\nWhen calling LocalVariablesCheck(), the buffer will only be scanned once.  \nForce an re-evaluation of file local variables by calling \nLocalVariablesReCheck().\n\nAlso available via git\nhttp://github.com/tomtom/vimtlib/tree/master\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2834",
+      "filename": "localvariables.zip",
+      "script_version": "2.0",
+      "date": "2004-03-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Security fixes; support for autocmd events"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2616",
+      "filename": "localvariables.vim",
+      "script_version": "183",
+      "date": "2003-12-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fixes. You can now define a function of the name LocalVariableX{name} for translating variable names. This is useful for handling Emacs's \"mode\" pseudo-variable."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2578",
+      "filename": "localvariables.vim",
+      "script_version": "143",
+      "date": "2003-12-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 {
   "script_id": "2703",
-  "name": "ReplaceWithRegister",
+  "display_name": "ReplaceWithRegister",
   "summary": "Replace text with the contents of a register. ",
+  "name": "ReplaceWithRegister",
   "script_type": "utility",
   "description": "DESCRIPTION:\nReplacing an existing text with the contents of a register is a very common\ntask during editing. One typically first deletes the existing text via the\nd, D or dd commands, then pastes the register with p or P. \nMost of the time, the unnamed register is involved, with the following\npitfall: If you forget to delete into the black-hole register (\"_), the\nreplacement text is overwritten! \n\nThis plugin offers a two-in-one command that replaces text covered by a\n{motion}, entire line(s) or the current selection with the contents of a\nregister; the old text is deleted into the black-hole register. \n\nThe replacement mode (characters or entire lines) is determined by the\nreplacement command / selection, not by the register contents. This avoids\nsurprises like when the replacement text was a linewise yank, but the\nreplacement is characterwise: In this case, no additional newline is\ninserted. \n\nUSAGE:\n[\"x][count]gr{motion}\n\t\t\tReplace {motion} text with the contents of register x. \n\t\t\tEspecially when using the unnamed register, this is\n\t\t\tquicker than \"_d{motion}P or \"_c{motion}<C-R>\"\n[\"x][count]grr\n\t\t\tReplace [count] lines with the contents of register x. \n\t\t\tTo replace from the cursor position to the end of the\n\t\t\tline use [\"x]gr$ \n{Visual}[\"x]gr\n\t\t\tReplace the selection with the contents of register x. ",
   "rating_total": "29",

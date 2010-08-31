@@ -1,0 +1,686 @@
+{
+  "script_id": "1213",
+  "display_name": "Vim JDE",
+  "summary": "Vim - Just a Development Envirement (Java/C++)",
+  "name": "Vim-JDE",
+  "script_type": "utility",
+  "description": "Just  a  Development Environment  for VIM . (VJDE)\nAnd now , It's support C++/C by ctags\n(VIM>=700  , +ruby future is on , JDK 1.5 support , JDK1.4 (maybe, not tested))\n\nIt's Had  been tested on Leopard 10.5.1 .\n\nuse <c-space> as the Code completion key!\nchange it by \n:let g:vjde_completion_key='<c-space>'\n\ndoc http://media.cqic.com.cn/vjde-tut/index.htm .\nA quick refrence create by Andrea Spadaccini http://media.cqic.com.cn/vjde-tut/vJDE_qr.pdf\n\nEnglish Version will coming soon.\nJust work for :\n       Project manager (load/store  your VJDE settings)\n       Code completion ( working for java and jsp,taglib,html,xml,xsl,xsd) (VIM 7.0 required)\n       Source tools( variable extract local, member,argument,  extract number or String to constance , fix build\n                             unreported exception error ( depends on getqflist() )\n        Source tools ( Override methods, implements interface,extract import, sort import)\n       Create javadoc (depends on jcommentor.vim)\n       Create getter/setter stub.\n       Generate constructor of class which has all member;\n(2009-04-03\n      Support for annotation completion.\nNew(2005-09-08)\n       Use readtags for tags parse.\n       Bug fix.\nNew(2005-09-02)\n       Code completion for more language available .(require ctags)\n       let g:vjde_ctags_exts='vim;rb'\n       Code template more powerfull!\n      Put your own definition file , such as c.iab,vim.iab,cpp.iab ruby.iab to ~/.vim/vjde/\n       let g:vjde_iab_exts='c;vim;cpp;rb'\n      in you c/c++/vim/ruby file, you can use <c-j>\n      \nNew(2005-09-01)\n       More beautiful document viewer. ^_^\n       C++/C Code completion support for both GUI and Console\n       C++/C parameter information support for both GUI and Console\n       use:\n       ctags --c++-kinds=+px -R .\n       For search speed , Befor your use Code completion,\n      use:\n       :call VjdeCppGenerateIdx()\n      to generate a index file for your every tag file.\n      see vcde.txt for detail\nNew (2005-08-27)\n       Add JAVA document preview in GUI mode\n       Add code template like (for block...) in console mode.\n       Improved Preview window.\nNew (2005-09-01)\n        More beautiful document window.^_^\n        C++/C preview support\n       C++/C parameter information support.\n\nNew (2005-08-22)\n         Add import statement for classes .\n         Add code template like (for block, while block...)\n         Create javadoc (depends on jcommentor.vim)\n         Create getter/setter stub.\n         Generate constructor of class which has all member;\n         Allow    write your own template file in: ~/vim/.vjde/iab.vjde\n                                see vimfile/plugin/vjde/tlds/iab.vjde for detail.\n         Bugfix for vim install on a folder like : c:\\program files\\vim..\n         Add menu shortcut.\nNew (2005-04-30) Add sensitive java code support for dot '.' , '@',\n       Add sensitive Jsp code support for '<' ':' and space.\nNew . Code completion support for packages.\n         import java.net.<CTR>-x<CTR>-u\n\n         or in coding:\n               java.io.<CTR>-x<CTR>-u\n\n        Code completion      \n\t\tThis future is depends on JDK, the java reflect API.\n               available for\n                System.<CTR>-x<CTR>-u\n                System.o<CTR>-x<CTR>-u\n                System.out.<CTR>-x<CTR>-u\n            \n               a[+-*/%&|^=] str.<CTR>-x<CTR>-u\n              \n               return str.<CTR>-x<CTR>-u\n                \n                new Something(str.<CTR>-x<CTR>-u\n         Use it , enjoy it.\n         Completion for jsp\n                <jsp:<CTR>-x<CTR>-u\n                <jsp:include <CTR>-x<CTR>-u\n                <jsp:include flush=\"<CTR>-x<CTR>-u\n                <jsp:us<CTR>-x<CTR>-u\n         Completion for taglib (ie. STL)\n           <%@ taglib prefix=\"c\" uri=\"http://java.sun.com/jsp/jstl/core&quot;;%>\n             :XMLns stl_c c\n             <c:<CTR>-x<CTR>-u\n             <c:out <CTR>-x<CTR>-u\n             .....\n \n         Completion for xml ....(See doc for detail...)\n\n\n        Definition search ( User Command    :Vjdei)\n                you can list a class or a field or a method detail\n                For example:\n                 System.out.println(str.toUpperCase().tr....\n                Place cursor on the class System, the detail of System  would be shown , Constructor, fields\n,methods, inner class ...\n\n            \nTODO list :\n\n\nTanks for every one who's name is occurred in my source code. ^_^ \n\n",
+  "rating_total": "642",
+  "rating_votes": "212",
+  "downloads": "24123",
+  "install_details": "unzip this file\n         tar -xzf vjde.tgz  /usr/share/vim/vimfiles\n         chmod +x /usr/share/vim/vimfiles/plugin/vjde/readtags\n\nstart vim\n          :helptags /usr/share/vim/vimfiles/doc\n          :h vjde\n\nTo use VJDE GUI preview , add the preview.dll of old version for the latest version.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10992",
+      "filename": "vjde.tgz",
+      "script_version": "2.16.2",
+      "date": "2009-07-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "bug fix for LINUX and MAC OS . "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10894",
+      "filename": "vjde.tgz",
+      "script_version": "2.16.1",
+      "date": "2009-06-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "completion bug fix for something like javax.naming.* \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10098",
+      "filename": "vjde.tgz",
+      "script_version": "2.16.0",
+      "date": "2009-03-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Support for annotation completion.\nLine completion support :\nI just support for one line\n@Actions ( { @Action ( results={@Result \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10014",
+      "filename": "vjde.tgz",
+      "script_version": "2.15.2",
+      "date": "2009-02-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "bug fix for java code completion in jsp."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10012",
+      "filename": "vjde.tgz",
+      "script_version": "2.15.1",
+      "date": "2009-02-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "improve for taglib completion in jsp file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10000",
+      "filename": "vjde.tgz",
+      "script_version": "2.15.0",
+      "date": "2009-02-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "add completion support for taglib, It's automaticaly enabled for JSTL,JSF.\nonce your input <%@ taglib prefix=\"<c-x><c-u> , you can select your taglib\n<c:<c-x><c-u>\n:h g:vjde_taglib_uri"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9806",
+      "filename": "vjde.tgz",
+      "script_version": "2.14.6",
+      "date": "2009-01-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "bug fix for package completion. tested on jdk.1.6.0_01,\ncompiled with ant , options target=\"1.4\" source=\"1.4\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8448",
+      "filename": "vjde.tgz",
+      "script_version": "2.14.4",
+      "date": "2008-03-13",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "compile with JDK1.5"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8060",
+      "filename": "vjde.tgz",
+      "script_version": "2.14.2",
+      "date": "2007-12-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix completion for this.<c-x><c-u> \nFix for VjdeDtd2Data"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7489",
+      "filename": "vjde.tgz",
+      "script_version": "2.14.1",
+      "date": "2007-08-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "bug fix for linux system."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7411",
+      "filename": "vjde.tgz",
+      "script_version": "2.14",
+      "date": "2007-07-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "completion for parameters of a constructor \ncompletion for name of the package which is come from JDK."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6520",
+      "filename": "vjde.tgz",
+      "script_version": "2.13.3",
+      "date": "2006-12-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Buf fix for parameter preview.\n    System.arraycopy(<c-x><c-u>\nAfter a \"(\", use <c-x><c-u> would show the parameter info of this function."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6191",
+      "filename": "vjde.tgz",
+      "script_version": "2.13.2",
+      "date": "2006-09-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix a bug of document viewer : Once  vim lost the focus, the document viewer can't be found , can't be closed .^_^"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6178",
+      "filename": "vjde.tgz",
+      "script_version": "2.13.1",
+      "date": "2006-09-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fix for cast statement.\nAdd JavaDoc viewer. During your completion, use the <f1> to call the JavaDoc Viewer. Setup your JavaDoc Path in vimrc:\nlet g:vjde_javadoc_path='e:/downloads/java/docs/api'\n\nAdd Function to remove all import statement which is not used.\nUse the command <leader>ri . Remove Import.\n\nA clear version."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6085",
+      "filename": "vjde.tgz",
+      "script_version": "2.12.5",
+      "date": "2006-08-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fix for code template.\nTake affect on code template completion . For example  i<alt-.>\nto generate if () { \n} "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6084",
+      "filename": "vjde.tgz",
+      "script_version": "2.12.4",
+      "date": "2006-08-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "&#20462;&#25913;&#20102; &#20195;&#30721;&#27169;&#26495; &#25552; &#31034;&#30340; bug.\n&#29992;&#20110; if<alt-.> &#36825;&#26679;&#30340;&#25552;&#31034;&#65294;"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5960",
+      "filename": "vjde.tgz",
+      "script_version": "2.12.3",
+      "date": "2006-07-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fix for java package completion. Thanks for Attila Piros. ^_^"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5890",
+      "filename": "vjde.tgz",
+      "script_version": "2.12.2",
+      "date": "2006-06-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "remove stl_fn.vim from autoload/xml.\n\nyou can remove this file by yourself."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5875",
+      "filename": "vjde.tgz",
+      "script_version": "2.12.1",
+      "date": "2006-06-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Use the xml completion for java taglib completion.\nSome Bug fix"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5706",
+      "filename": "vjde.tgz",
+      "script_version": "2.12.0",
+      "date": "2006-05-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fix for vim7.0 \nUse popup menu to select code template.\nIf your want to use the old version,\nadd following in your .vimrc\ng:vjde_iab_old=1"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5536",
+      "filename": "vjde.tgz",
+      "script_version": "2.11.4",
+      "date": "2006-04-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix a minor bug.\nAdd a simple auto completion for ruby.\n:h vjde-ruby\nfor detail."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5520",
+      "filename": "vjde.tgz",
+      "script_version": "2.11.3",
+      "date": "2006-04-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "bug fix for Project menu.\nremove ruby require for taglib completion."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5514",
+      "filename": "vjde.tgz",
+      "script_version": "2.11.2",
+      "date": "2006-04-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add a dtd to xmldata ruby script.\nAdd a taglib define (TLD) to xmldata ruby script.\n:h vjde-xmldata\n\nMove html , taglib completion to htmlcomplete#CompleteTags\nxmlcomplete#CompleteTags\nAdd command \nVjdeTld2Data \nVjdeDtd2Data\n\nsee \n:h vjde-taglib\n:h vjde-xml"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5495",
+      "filename": "vjde.tgz",
+      "script_version": "2.11.1",
+      "date": "2006-03-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Java completion improved.\nUsing JDK 1.4 compiled.\nUse <c-x><c-u> to start completion in popupmenu.\nA simple c# support added.\n\nRemove My own Preview GUI support!!!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5470",
+      "filename": "vjde.tgz",
+      "script_version": "2.11.0",
+      "date": "2006-03-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Support the latest Vim .\nRemove html suport , Should use omni xhtml to instead ."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4983",
+      "filename": "vjde.tgz",
+      "script_version": "2.10.01",
+      "date": "2006-01-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add fix tools for other language.\nBug fix for c++ reference ."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4949",
+      "filename": "vjde.tgz",
+      "script_version": "2.10.00",
+      "date": "2006-01-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add <c-l> for console completion key in insert mode.(c++/c/java users,)\nFix a minor bug for corperation of taglist plugin.\nAdd auto_ptr<T t> code completion support.\nWhile use following coding:\n \tauto_ptr<MyClass> MyClassPtr;\n        MyClassPtr ptr1 = new ...;\n        ptr1->\n           \nVJDE will completion for MyClass , not for auto_ptr.\nFor use this new function , your had to add a file:\n\t~/.vim/vjde/ptr.lst\n\nThis file contains all of your used something like auto_ptr\nMy own file looks like:\n\tIceInternal::Handle\n\tIceInteranl::ProxyHandle\n\tstd::auto_ptr\n\tauto_ptr"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4656",
+      "filename": "vjde.tgz",
+      "script_version": "2.02.09",
+      "date": "2005-10-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Since the VIM autoload the script from the sub-directory , So, the loading order\nmust be correctly. \nFix it for VIM70aa-154"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4595",
+      "filename": "vjde.tgz",
+      "script_version": "2.02.08",
+      "date": "2005-09-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Change the API structure to fit the latest VIM.\nchange VjdeCompletionFun(line,base,col,findstart)\nto VjdeCompletionFun0(findstart,base)\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4564",
+      "filename": "vjde.tgz",
+      "script_version": "2.02.07",
+      "date": "2005-09-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add gtk tags for window version.\nAdd more power full struct support which ctags not supported!\nlike \n   typedef struct {\n        int a;\n        int b;\n   } SA;\n   SA sa;\n   sa.<c-space>\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4561",
+      "filename": "vjde.tgz",
+      "script_version": "2.02.07",
+      "date": "2005-09-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "I forget to remove the ruby require for cpp completion.^_^\nYou can remove  it by your self . \nplugin/vjde/vjde_cpp_completion.vim  line 3 and line 4"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4560",
+      "filename": "vjde.tgz",
+      "script_version": "2.02.06",
+      "date": "2005-09-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add pure vim ctags support ( use vim +readtags) . \nIt's slowly than ruby+readtags\nTo  use this feature , for your vimrc , add this line\ng:vjde_ctags_ruby=0"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4559",
+      "filename": "vjde.tgz",
+      "script_version": "2.02.05",
+      "date": "2005-09-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Use readtags instead of ruby parser for tags parsing.(more quickly)\nLinux GUI version bug fixed.\nsee vcde.txt for detail.\nuse : gcc -static -o plugin/vjde/readtags src/readtags.c -DREADTAGS_MAIN\ncompile readtags on win32 and mandrake"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4555",
+      "filename": "vjde.tgz",
+      "script_version": "2.02.04",
+      "date": "2005-09-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Improve the seach speed for a member of a function.\nImprove for the complex defination of c++ variable, like:\n   boost::multi_index<string,char>::index idx;\n   idx.<c-space>\n   boost::multi_index<string,char>::index::<c-space>\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4551",
+      "filename": "vjde.tgz",
+      "script_version": "2.02.03",
+      "date": "2005-09-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fix . ^_^"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4549",
+      "filename": "vjde.tgz",
+      "script_version": "2.02.02",
+      "date": "2005-09-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Some bugfix for linux user.\nI found that sometimes I will crash your GVIM under linux.\nSo, It's recommened use preview in console mode is usefull for LINUX user."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4546",
+      "filename": "vjde.tgz",
+      "script_version": "2.02.01",
+      "date": "2005-09-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "All of ctags supported language is supported for code completion .\nsetup variable:  \ng:vjde_ctags_exts='rb;vim' \ncan be used for VJDE self. Then , I can use <c-space> in vim and\nruby file to popup a completion preview window or in console.\n\nIabbr support Every language with filetype can be detected by VIM\nput something like ruby.iab and vim.iab to ~/.vim/vjde/ , then , setup:\ng:vjde_iab_exts='rb;vim'\nThen, I can use <c-j> in ruby or vim file to select code template .\n\nAnd , add ruby.vjde to ~/.vim/vjde/, the menu Vim JDE->Wizard->ruby\nWorld be append, and , in a ruby file, select a template ...."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4543",
+      "filename": "vjde.tgz",
+      "script_version": "2.02.00",
+      "date": "2005-09-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "More beautifull docment window for Java . ^_^\nc++ preview supported ! \nc++ parameter info preview supported .\nsee http://www.publicinfo.com.cn/wfc/index.html for snapshot\n\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4531",
+      "filename": "vjde.tgz",
+      "script_version": "2.01.00",
+      "date": "2005-08-27",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add a document preview window for Java code .\nhttp://www.publicinfo.com.cn/wfc/index_g.html\nAdd code block template (iab) for console user.\nhttp://www.publicinfo.com.cn/wfc/index_c.html"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4508",
+      "filename": "vjde.tgz",
+      "script_version": "2.00.13",
+      "date": "2005-08-22",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "minor changed"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4500",
+      "filename": "vjde.tgz",
+      "script_version": "2.00.12",
+      "date": "2005-08-18",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "mirror bugfix for 2.00.12. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4498",
+      "filename": "vjde.tgz",
+      "script_version": "2.00.11",
+      "date": "2005-08-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "fix for bugs . when the vim home is contains a space , VJDE is not avaliable.\nAdd menu shortcut for menu.\n\nThanks for any advice."
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 {
   "script_id": "2128",
-  "name": "symfony.vim",
+  "display_name": "symfony.vim",
   "summary": "Useful editing tip for Symfony PHP Framework",
+  "name": "symfony.vim",
   "script_type": "utility",
   "description": "DESCRIPTION\n\nUsefull commands for symfony projects editing\n\n* Switch between template view / module view ( <F8> key )\n\n  While editing a module method, press <F8>. It will switch to the appropriate template view\n  Press <F8> again to go back to the module method .\n\n  It works with Actions and Components :\n\n    function executeMyAction() < > myActionSuccess.php\n    function executeMyComponent() < > _myComponent.php \n\nTODO \n\n* Support for xxxError, handleXXX, validateXXX\n* Shortcuts to the layout template of an action/view\n* Support for empty action files and missing templates\n\nFeedbacks mostly appreciated : email.de.nicolas.martin@gmail.com\n",
   "rating_total": "19",

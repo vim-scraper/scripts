@@ -1,0 +1,30 @@
+{
+  "script_id": "1712",
+  "display_name": "Test::Base syntax",
+  "summary": "Test::Base spec syntax hilighting",
+  "name": "Test.Base-syntax",
+  "script_type": "syntax",
+  "description": "testbase.vim is Test::Base spec syntax hilighting.\n\nScreenShot: http://f.hatena.ne.jp/images/fotolife/s/secondlife/20061117/20061117163415.png\n  \n: installation\n   This script cp ~/.vim/syntax/testbase.vim\n   and write file detect file ~/.vim/ftdetect/testbase.vim\n      au BufNewFile,BufRead *_test.rb set filetype=ruby | unlet b:current_syntax | syn include @rubyTestBase syntax/testbase.vim | syn region rubyTestBase matchgroup=rubyData start=\"^__END__$\" keepend end=\"\\%$\" contains=@rubyTestBase\n      au BufNewFile,BufRead *.t set filetype=perl | unlet b:current_syntax | syn include @perlTestBase syntax/testbase.vim | syn region perlTestBase matchgroup=perlData start=\"^__\\(DATA\\|END\\)__$\" keepend end=\"\\%$\" contains=@perlTestBase\n",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "270",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6428",
+      "filename": "testbase.vim",
+      "script_version": "0.1",
+      "date": "2006-11-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10400",
+        "user_name": "secondlife",
+        "first_name": "yuichi",
+        "last_name": "tateno",
+        "email": "hotchpotch at gmail.com",
+        "homepage": "http://rails2u.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

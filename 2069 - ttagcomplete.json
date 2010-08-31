@@ -1,7 +1,8 @@
 {
   "script_id": "2069",
-  "name": "ttagcomplete",
+  "display_name": "ttagcomplete",
   "summary": "Context-sensitive tags-based completion and code skeletons",
+  "name": "ttagcomplete",
   "script_type": "utility",
   "description": "In theory, this plugin provides a framework for context-sensitive \ntags-based completion and code skeletons (requires tSkeleton vimscript \n#1160). I.e. the completion function checks the context and filters the \navailable tags accordingly. You should thus get only those tags included \nin the list that are actually useful in a given context (eg because the \nare valid methods of a certain class).\n\nIn practice, the context sensitivity is currently only implemented for \nJava and requires a tags file for the JDK sources to be created (see the \nnotes on |tlib#tag#Retrieve()| for details). It also makes certain \nassumption about how variable declarations look like, e.g. the \nclass/type name should be in the same line as the variable name; class \nnames start with an upper-case letter etc.\n\nLimitation: you have to type g:ttagecho_min_chars = 1 chars before\ncompletion is allowed.\n\nIt shouldn't be too difficult to adapt this for other statically typed \nlanguages with formal variable declarations. As the source code isn't \nactually parsed or anything, there is little chance to use this \nefficiently with dynamically typed languages like ruby where the \ntype/class is only known at run-time.\n",
   "rating_total": "0",

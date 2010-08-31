@@ -1,0 +1,30 @@
+{
+  "script_id": "2020",
+  "display_name": "Gettext PO file compiler",
+  "summary": "This is a compiler for gettext files (*.po)",
+  "name": "Gettext-PO-file-compiler",
+  "script_type": "utility",
+  "description": "This compiler plugin compiles the gettext po files to mo files and checks the errors.",
+  "rating_total": "3",
+  "rating_votes": "3",
+  "downloads": "428",
+  "install_details": "Put this into your compiler directory and set this in your vimrc:\n\naugroup PO\n        autocmd FileType po compiler po\naugroup END\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7672",
+      "filename": "po.vim",
+      "script_version": "1.0",
+      "date": "2007-09-14",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13074",
+        "user_name": "raszi",
+        "first_name": "István",
+        "last_name": "Karaszi",
+        "email": "vim at spam.raszi.hu",
+        "homepage": "http://raszi.hu/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

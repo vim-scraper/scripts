@@ -1,0 +1,30 @@
+{
+  "script_id": "433",
+  "display_name": "Get Win32 Short Name",
+  "summary": "Works out the 8.3 short-name of an existing file",
+  "name": "Get-Win32-Short-Name",
+  "script_type": "utility",
+  "description": "Since writing this, I've discovered heaps about short names.  There are many caveats, but the biggest 3 are:\n1) After the first 4 similar names, windows uses a hash algorithm to work out the 3rd-6th letters of the name.\n2) Samba uses a different hash algorithm to work out the short name\n3) There is a Win32 API function call to set the short name of a file.\n\nThis script contains a function that works out only simple win32 8.3 short versions of a filename.  It will\nwork unless there are more than 4 files with the same name.\n\nI have since written a patch for Vim6.1 which will allow windows users acces to the short-filename via the api call... expect it soon.. (via fnamemodify and probably using the modifier :8 )\n\nNOTE: This is part of Vim 6.1 - \n     echo fnamemodify( 'c:\\vim\\plugins\\shortname.vim', ':8') \n\nEg\necho GetWin32ShortName('c:\\vim\\plugins\\shortname.vim')\n\nshould produce:  c:\\vim\\plugins\\shortn~1.vim\nor something like that.\n\n",
+  "rating_total": "10",
+  "rating_votes": "4",
+  "downloads": "846",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1258",
+      "filename": "shortname.vim",
+      "script_version": "1.0",
+      "date": "2002-09-29",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

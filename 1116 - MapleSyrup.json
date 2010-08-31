@@ -1,7 +1,8 @@
 {
   "script_id": "1116",
-  "name": "MapleSyrup",
+  "display_name": "MapleSyrup",
   "summary": "indenting, autoalign, and matchit support for Maple V",
+  "name": "MapleSyrup",
   "script_type": "ftplugin",
   "description": "This package contains support for writing Maple V code:\n\n * indent/maple.vim: indenting support for Maple V\n * ftplugin/AutoAlign.vim: auto-align support for :=\n   (needs Align.vim from vimscript#294; to learn more about AutoAlign, see vimscript#884)\n * ftplugin/maple.vim: and matchit support (matchit.vim is available via vimscript#39).\n * plugin/cecutil.vim: \n * It contains tags for GetLatestVimScripts support which promote maintaining up-to-date copies (see vimscript#642).\n\nThe indenting support works with\n\n\tif for while else elif od end fi\n\nand indents the code appropriately as you type.  Indents are taken using the current setting of the vim's shiftwidth option (see :he shiftwidth).\n\nAutoAlignment keeps your := lined up in blocks, thereby promoting legibility.\n\nThe Matchit expression supports  (see vimscript#39)\n\n   if     elif    else  fi\n   for    od\n   while  od\n   proc   RETURN  end\n\nI usually prefer to have (at least) two windows open; the top one with vim editing Maple V code (file.mv) and the bottom one running Maple V itself.  I then work with Maple (using Windows) by changing the file as needed in Vim, putting the cursor at the end of the following statement, then pressing <cr>.\n\n\tread `c:\\\\some\\\\path\\\\to\\\\Maple\\\\file.mv`;\n\nThat causes the worksheet to be updated according to the <file.mv> instructions.  Of course, I can always maximize Maple when I need to so as to see more at one time.\n\nWhy \"maplesyrup\"?  I just couldn't resist the name!  :)\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#MAPLESYRUP)\n",
   "rating_total": "10",

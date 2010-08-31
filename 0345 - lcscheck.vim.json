@@ -1,7 +1,8 @@
 {
   "script_id": "345",
-  "name": "lcscheck.vim",
+  "display_name": "lcscheck.vim",
   "summary": "check 'listchars' for valid eol byte for utf-8. (Not needed for Vim 6.2)",
+  "name": "lcscheck.vim",
   "script_type": "utility",
   "description": "Under utf-8, characters 128 and over become multi-byte. Therefore, under  Vim 6.1 or earlier, they should not be used for the option values in 'listchars'. This script takes care of the \"eol:\" sub-option, the only one which gave me problems. If you use characters >= 128 for other sub-options, similar scripts can easily be written (based on this one) to take care of them.\n\nThis script has intentionally been abundantly commented to make it understandable.\n\nSee vimtip#246 for a related tip.",
   "rating_total": "4",

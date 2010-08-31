@@ -1,7 +1,8 @@
 {
   "script_id": "1041",
-  "name": "CodeReviewer.vim",
+  "display_name": "CodeReviewer.vim",
   "summary": "Utility for code reviews (using quickfix)",
+  "name": "CodeReviewer.vim",
   "script_type": "utility",
   "description": "If you do code reviews on a regular basis, this script could be of help to you. This tip is about - \n1. Helping the reviewer review code \n2. Helping the author in collating reviews from various peers \n3. Helping the author in fixing the review comments\n\nTypical review session: \n1. A reviewer open the code to review, positions the cursor on the line he/she wants to comment on and types \"\\ic\" - this puts the file name, the line number, the reviewer's initials and the defect type in the review file\n2. The comment is typed next to the line number and can span multiple lines\n3. Send the comments to the author of the code \n4. The author collates the inputs from various reviewers into one file (by simply concatenating them) and sorts it. Now the comments are arranged per file, in the order of line numbers (in a file called say, all_comments.txt) \n5. Using the :cfile all_comments.txt (or :CheckReview) the author can now navigate through all the comments.\n\nThis script is based on vimtip #761. Thanks to all for feedback! Specifically to Salman for providing an implementation for automating the step between saving position in the file being reviewed and inserting a comment in the review file.",
   "rating_total": "67",

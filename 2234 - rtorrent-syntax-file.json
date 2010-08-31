@@ -1,0 +1,30 @@
+{
+  "script_id": "2234",
+  "display_name": "rtorrent syntax file",
+  "summary": "Syntax highlighting for rtorrent.rc files",
+  "name": "rtorrent-syntax-file",
+  "script_type": "syntax",
+  "description": "Highlighting for the rtorrent.rc file.   Simple and effective.",
+  "rating_total": "9",
+  "rating_votes": "3",
+  "downloads": "195",
+  "install_details": "Just put the file in $HOM/.vim/syntax.   You will also need to add the following line to $VIMRUNTIME/filetype.vim, or first copy filetype.vim file to $HOME/.vim, and edit:\n\nau BufNewFile,BufRead *rtorrent.rc* setf rtorrent\n\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8669",
+      "filename": "rtorrent.vim",
+      "script_version": "0.1",
+      "date": "2008-05-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14392",
+        "user_name": "ccarpita",
+        "first_name": "chris",
+        "last_name": "carpita",
+        "email": "ccarpita at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

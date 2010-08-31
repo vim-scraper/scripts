@@ -1,0 +1,46 @@
+{
+  "script_id": "1826",
+  "display_name": "Hints for C Library Functions",
+  "summary": "while typing a C function, a prototype is shown (man3 based)",
+  "name": "Hints-for-C-Library-Functions B",
+  "script_type": "ftplugin",
+  "description": "This script may be manually sourced or, if placed in .vim/ftplugin/c, will be automatically sourced whenever a C file is edited (which is where vimball will put it).  The prototypes within it are based on gcc's /usr/share/man/man3 directory.\n\nThis plugin is truly simple to use: after one has typed a function name, a protype \"hint\" will be shown.\n \nex.    printf(\n\n       will result in\n\n          int printf(const char * format, ...)\n\n       being echo'd at the bottom of the display.\n\nYou'll probably want your cmdheight option set to at least two (ie.  set ch=2).\n\n(see vimscript#1825 for man-2 function hints)\n\n",
+  "rating_total": "39",
+  "rating_votes": "18",
+  "downloads": "1342",
+  "install_details": "1. Make sure you have and are using an up-to-date version of vimball (see vimscript#1502)\n   (if you have vim 7.1a or later, you probably can skip this step)\n2. vim hints_man3.vba.gz\n     :so %\n     :q\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6878",
+      "filename": "hints_man3.vba.gz",
+      "script_version": "2",
+      "date": "2007-03-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Improvements to the prototype from manpage extraction scripts yielded some more function prototypes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6872",
+      "filename": "hints_man3.vba.gz",
+      "script_version": "1",
+      "date": "2007-03-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

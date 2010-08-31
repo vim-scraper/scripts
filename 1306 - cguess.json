@@ -1,7 +1,8 @@
 {
   "script_id": "1306",
-  "name": "cguess",
+  "display_name": "cguess",
   "summary": "C and C++ identifier completion",
+  "name": "cguess",
   "script_type": "utility",
   "description": "Cguess is a (Yet another?) C/C++/Java syntax auto-completer meant to be used as a plugin for VIM text editor or others. See its homepage: http://www.zabor.org/cguess and the README file for details.\n\nThis is an early version and is quite limited. It works the \"intellisense\"-style way but the interface is quite primitive in this version. It maps several key combinations in insert mode and will show a list of members in a splitted window, function prototypes or the list of enumerators in comparisons (after typing == or !=) whenever possible.\n\nCguess is based on a true C++ language parser (like the compilers) and understands even the most complex syntactic constructs (but it will refuse to parse programs that contain errors). The parser supports several GNU extensions to C and C++ and some ISO and ANSI specific ideas.\n\nJava is not supported.\n\nIf you use cguess, help Uganda.",
   "rating_total": "12",

@@ -1,7 +1,8 @@
 {
   "script_id": "1691",
-  "name": "IndentConsistencyCopAutoCmds",
+  "display_name": "IndentConsistencyCopAutoCmds",
   "summary": "autocmds for IndentConsistencyCop.vim",
+  "name": "IndentConsistencyCopAutoCmds",
   "script_type": "utility",
   "description": "DESCRIPTION:\n  The autocmds in this script automatically trigger the IndentConsistencyCop\n  for certain, configurable filetypes (such as c, cpp, html, xml, which\n  typically contain lots of indented lines) once when you load the file in\n  VIM. The entire buffer will be checked for inconsistent indentation, and you\n  will receive a report on its findings. With this automatic background check,\n  you'll become aware of indentation problems before you start editing. \n\nUSAGE:\n  Triggering happens automatically; of cause, you can still start the\n  IndentConsistencyCop ex command to re-check the buffer after changes. \n\n  For very large files, the check may take a couple of seconds. You can abort\n  the script run with CTRL-C, like any other VIM command. ",
   "rating_total": "0",

@@ -1,7 +1,8 @@
 {
   "script_id": "2153",
-  "name": "RecentFiles",
+  "display_name": "RecentFiles",
   "summary": "Plugin that allows you to easily access recently opened files.",
+  "name": "RecentFiles",
   "script_type": "utility",
   "description": "This script allows you to easily access recently opened files.\nFunction RecentFilesList() (with default key binding ',f') displays list of files, and allow you to open one by entering its number.\nThe list is empty at the begining, it's updated when you open/write files.\n\nScreenshot:\nhttp://s258.photobucket.com/albums/hh246/otokan/?action=view&current=vim-RecentFilesList-plugin.png\n\nScript sets (by default) following key bindings and autocommands:\n nmap ,f :call RecentFilesList()<cr>\n au BufReadPost,BufWritePost * call RecentFilesAdd()\n\nEnjoy!\n",
   "rating_total": "13",

@@ -1,7 +1,8 @@
 {
   "script_id": "1877",
-  "name": "voodu.vim",
+  "display_name": "voodu.vim",
   "summary": "Framework for implementing Object Oriented Programming with Vim Scripts",
+  "name": "voodu.vim",
   "script_type": "utility",
   "description": "This is an implementation of OOP with a decisively Perl flavor utilizing Vim 7.0's dictionary representation of objects.  More extensive documentation will be added at a later date.  I'm also aware of vimscript #1034 but it was pre-7.0 and thus doesn't utilize many of the features involved with Voodu.  For now, you can do the following:\n\nlet s:AD = tv#series#comedy#New('Arrested Development')\nlet s:TO = tv#series#comedy#New('The Office')\n\necho s:AD.name()\necho s:AD.type()\necho s:TO.name().\" is a \".s:TO.type()\n\nlet s:SS = tv#series#comedy#New('The Simpsons')\n\n\" An example of Class Method accessing Class Data\necho tv#series#Names()\n\nlet s:dailyshow = tv#New('News Parody')\necho s:dailyshow.type()\n\n--------------------------------------- Future Plans ---------------------------------------\n\nI want to demonstrate the usefulness of this utility plugin by implementing generic tab/window/buffer classes that can hide a lot of the work I see plugin authors performing, e.g. wincommander, WinWalker, SideBar.\n\nAdditionally, I believe I can add functionality similar to Perl's Class::Accessor or Ruby's attr_reader:, namely automatic provision of simple accessor methods.",
   "rating_total": "5",

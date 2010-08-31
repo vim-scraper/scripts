@@ -1,7 +1,8 @@
 {
   "script_id": "3057",
-  "name": "vimsizer",
+  "display_name": "vimsizer",
   "summary": "A vim global plugin that allows for quick window sizing",
+  "name": "vimsizer",
   "script_type": "utility",
   "description": "Vimsizer is a simple plugin that was inspired by the\nFiresizer (https://addons.mozilla.org/en-US/firefox/addon/5792) extension\nfor Firefox. This plugin gives you the ability to define a re-usable set of\nwindow dimensions.\n\nThere are two default sizes that are defined with the\nvs_window_sizes variable:\n\n    let vs_window_sizes = {\"normal\": \"150 40\", \"bigger\": \"210 50\"}\n\nYou can define your own set of sizes. Example:\n\n    let vs_window_sizes = {\"miniscule\": \"25 10\", \"magiscule\": \"200 60\"}\n\nOnce the window sizes have been defined then you can use the\nVSSelectWindowSize command to switch. Example:\n\n    :VSSelectWindowSize bigger\n    :VSSelectWindowSize normal\n\nYou can also quickly switch to any specific size you like with the\nVSWindowSize command:\n\n    :VSWindowSize 100 20\n\nYou can use the autogroup command to set the window size on startup.\nExample:\n\n    au VimEnter * exe 'VSSelectWindowSize normal'\n\nThis would set the window size to normal upon entering vim for the first\ntime.\n\nYou could also map a shortcut key to a window size. Example:\n\n    map <leader>1 :VSSelectWindowSize normal<CR>\n    map <leader>2 :VSSelectWindowSize bigger<CR>\n\nThe latest code is available on Github: http://github.com/claytron/vimsizer",
   "rating_total": "1",

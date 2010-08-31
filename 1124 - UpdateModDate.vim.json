@@ -1,7 +1,8 @@
 {
   "script_id": "1124",
-  "name": "UpdateModDate.vim",
+  "display_name": "UpdateModDate.vim",
   "summary": "Updates a date stamp within a file whenever it is saved.",
+  "name": "UpdateModDate.vim",
   "script_type": "utility",
   "description": "This script uses an autocmd hook to run a function whenever a file is saved.\nThe function then looks if it finds a special token (by default %DATE_TAG%) within the file, and if it's found, a datestamp on the same line is updated to the current date.\n\nThis script will run on all systems that provide date(1), so it should work on unix systems, as well as on cygwin.\n\nIf no special token is found, nothing is done at all.\nIf there are multiple tokens within the file, only the first one from the beginning of the buffer will be updated.\n\nThe date format and the special token are fully configureable.",
   "rating_total": "16",

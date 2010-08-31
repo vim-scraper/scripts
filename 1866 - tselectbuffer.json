@@ -1,7 +1,8 @@
 {
   "script_id": "1866",
-  "name": "tselectbuffer",
+  "display_name": "tselectbuffer",
   "summary": "A quick buffer selector/switcher",
+  "name": "tselectbuffer",
   "script_type": "utility",
   "description": "This plugin provides a simple buffer selector. It doesn't have all the \nfeatures other buffer selectors have but can be useful for quickly \nswitching to a different buffer or for deleting buffers.\n\nThe idea is to view the buffer list, to do something, and to close the \nbuffer list. If you really want to permanently watch the buffer list to \nsee whether it's changed, you might want to use a different plugin.\n\nFeatures:\n    - list buffers, dynamically filter buffers matching a pattern\n    - switch to a buffer\n    - rename a buffer (you may need to use :saveas! or :w! when writing \n    the renamed buffer to disk)\n    - delete one or more buffer(s)\n\n:[N]TSelectBuffer[!]\n    List buffers. With a count or a !, show also hidden buffers.\n    Keys:\n    <cr>  ... Select (close the buffer list)\n    <c-s> ... Open in split window\n    <c-v> ... Open in vertically split window\n    <c-t> ... Open in new tab\n    <c-w> ... Show in original window (continue with the buffer list)\n    <c-d> ... Delete a buffer\n    <c-u> ... Rename a buffer\n    <     ... Jump to opened buffer in window/tab\n\nSuggested keymaps (put something like this into ~/.vimrc):\n    noremap <m-b> :TSelectBuffer<cr>\n    inoremap <m-b> <c-o>:TSelectBuffer<cr>\n",
   "rating_total": "876",

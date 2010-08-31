@@ -1,0 +1,62 @@
+{
+  "script_id": "236",
+  "display_name": "SourceSafe Integration",
+  "summary": "Fairly complete file-based SourceSafe Integration",
+  "name": "SourceSafe-Integration",
+  "script_type": "utility",
+  "description": "This package is now deprecated.  Use Source Control  ( vimscript #770 ) instead.\n",
+  "rating_total": "39",
+  "rating_votes": "16",
+  "downloads": "1724",
+  "install_details": "Use as Plugin or source from _vimrc.\nDon't forget to add a '.project' file containing the sourcesafe project you are working with in the physical directory where your project is.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2195",
+      "filename": "srcsafe.vim",
+      "script_version": "1.16",
+      "date": "2003-07-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "- Use 'cat' if &shell contains 'sh'\n- Explain $SSDIR & #include in doco.\nFixes for William D. Bartholomew\n- Add ssDeployFile for the ability to deploy a file by default instead of a directory\n- Fix space in historybuffer temp name.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1595",
+      "filename": "srcsafe.vim",
+      "script_version": "1.14",
+      "date": "2003-01-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": " - Fix up system call with $VIMRUNTIME containing spaces. -Zak Beck\n - Make Get prompt to overwrite a read-only file.\n - Remove calls to ShortName where possible. (VSS shortname is not\n   always the same as M$oft shortname anyway!)\n - Prevent Diff against project - causes wacky behaviour.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1367",
+      "filename": "srcsafe.vim",
+      "script_version": "1.13",
+      "date": "2002-11-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "14",
+        "user_name": "mgeddes",
+        "first_name": "Michael",
+        "last_name": "Geddes",
+        "email": "vimmer at frog.wheelycreek.net",
+        "homepage": ""
+      },
+      "release_notes": "Add interactive mode for answering multiple questions.\nFix up checking of modified status & automatic reloading of status's\n"
+    }
+  ]
+}

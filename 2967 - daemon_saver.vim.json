@@ -1,7 +1,8 @@
 {
   "script_id": "2967",
-  "name": "daemon_saver.vim",
+  "display_name": "daemon_saver.vim",
   "summary": "Vim version of FreeBSD daemon_saver",
+  "name": "daemon_saver.vim",
   "script_type": "game",
   "description": "This is a Vim version of daemon_saver from FreeBSD.\nThe script adds :Daemon command, which starts screensaver.\nDaemon speed is adjustable through g:daemon_saver_speed variable. Default is '80' (ms).\n\nTo start the screensaver automatically after some time put this to your .vimrc:\n\nau CursorHold * Daemon\nset updatetime=60000\n\nThis will start Daemon after 60 seconds of vim being idle.",
   "rating_total": "40",

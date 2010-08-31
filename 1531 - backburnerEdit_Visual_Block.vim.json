@@ -1,0 +1,30 @@
+{
+  "script_id": "1531",
+  "display_name": "[backburner]Edit_Visual_Block.vim",
+  "summary": "Edit text from Visual Block as if a virtual window.",
+  "name": "backburnerEdit_Visual_Block.vim",
+  "script_type": "utility",
+  "description": " ---------------------------------------------------------------------------\n\n Edit_Visual_Block.vim :   Edit the text in a Visual Block as \n                           if it were in a virtual window.\n\n   Description:\n   \n       Creates a virtual 'edit window' inside the visual selection area.\n       Once the boundary box is drawn, you can insert/replace/cut/paste as\n       normal, and it will try to maintain the boundary box in some\n       reasonable fashion.\n\n   Usage:\n\n       i   Select a Visual Block (with ^V or ^Q), and type 'i' (default\n           mapping).  It will draw a box around the visual area, and return\n           you to Vim Normal mode.  Begin editing.  See Notes for things\n           not to do.\n\n       <ESC>\n           Hitting escape while in Vim Normal mode will terminate the\n           Edit Visual Block mode, and return to the visual block\n           selection.\n\n   Notes:\n\n   -   While this mode is in effect, for the lines that are part of\n       the seletion, characters outside of the visual block selection\n       cannot be changed,.  It needs these strings as markers for the\n       boundaries of the virtual edit window.\n\n       If changes are made, the boundary strings will be restored, with\n       other text moved inwards, if possible.\n       \n   -   Deleting or adding lines in the selected area is not handled or\n       recommended.\n\n   -   Pasting simple block-wise(\"^V\"), or line-wise (\"V\") text will\n       generally do something useful, but pasting multi-line char-wise\n       (\"v\"), will generally do something messy.\n           \n   -   Until I can decypher 'undojoin', you will have use more than one\n       'undo' at a time, i.e.  '2u' or '3u' or whatever, to undo the last\n       change while the mode is in effect.\n\n",
+  "rating_total": "1",
+  "rating_votes": "1",
+  "downloads": "312",
+  "install_details": "   Setup:\n\n       -   Put into your plugin directory, or source as desired.\n\n       -   Decide what key to map.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5624",
+      "filename": "Edit_Visual_Block.vim",
+      "script_version": "1.0",
+      "date": "2006-04-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

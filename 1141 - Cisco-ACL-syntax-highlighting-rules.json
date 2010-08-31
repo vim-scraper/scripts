@@ -1,0 +1,30 @@
+{
+  "script_id": "1141",
+  "display_name": "Cisco ACL syntax highlighting rules",
+  "summary": "provides highlighting for files with Cisco ACLs",
+  "name": "Cisco-ACL-syntax-highlighting-rules",
+  "script_type": "color scheme",
+  "description": "This syntax highlighting script can be used for files which contain Cisco ACL rules. This is particulary usefull for Cisco ACL framework administration. (e.g. keeping ACLs in cvs, editing them and loading to Cisco boxes automatically)\n\nThis script can be used with aclcheck (http://techie.devnull.cz/aclcheck)",
+  "rating_total": "16",
+  "rating_votes": "9",
+  "downloads": "974",
+  "install_details": "copy ciscoacl.vim to your ~/.vim/syntax directory and add following lines to your ~/.vimrc file:\n\naugroup filetype\n        au! BufRead,BufNewFile *.crules     set filetype=ciscoacl\n        au! BufRead,BufNewFile *.acl        set filetype=ciscoacl\naugroup END\n\nEvery file with .crules or .acl suffix will be displayed in vim using Cisco ACL highlighting rules.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3651",
+      "filename": "ciscoacl.vim",
+      "script_version": "0.1",
+      "date": "2004-11-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "6336",
+        "user_name": "vladak",
+        "first_name": "Vladimir",
+        "last_name": "Kotal",
+        "email": "vlada at devnull.cz",
+        "homepage": "http://techie.devnull.cz"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

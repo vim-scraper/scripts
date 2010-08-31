@@ -1,7 +1,8 @@
 {
   "script_id": "1290",
-  "name": "LogiPat",
+  "display_name": "LogiPat",
   "summary": "Boolean-Logic Patterns",
+  "name": "LogiPat",
   "script_type": "utility",
   "description": "LogiPat takes Boolean logic arguments and produces a regular expression which is used to search for a line satisfying the logic.  The search register (@/) is initialized with the resulting regular expression, so repeating such searches is as easy as repeating any search.  A series of examples follows:\n\n:LogiPat \"abc\"\n\t\twill search for lines containing the string \"abc\"\n\n:LogiPat !\"abc\"\n\t\twill search for lines which don't contain the string \"abc\"\n\n:LogiPat \"abc\"|\"def\"\n\t\twill search for lines which contain either the string \"abc\" or the string \"def\"\n\n:LogiPat !(\"abc\"|\"def\")\n\t\twill search for lines which don't contain either of the strings \"abc\" or \"def\"\n\n:LogiPat \"abc\"&\"def\"\n\t\twill search for lines which contain both of the strings \"abc\" and \"def\"\n\n:let pat= LogiPat('!\"abc\"')\n\t\twill return the regular expression which will match all lines not containing \"abc\".  The double quotes are needed to pass normal patterns to LogiPat, and differentiate such patterns from boolean logic operators.\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#LOGIPAT)\n",
   "rating_total": "57",

@@ -1,7 +1,8 @@
 {
   "script_id": "2890",
-  "name": "slurper.vim",
+  "display_name": "slurper.vim",
   "summary": "Provides vim features for .slurper files.",
+  "name": "slurper.vim",
   "script_type": "utility",
   "description": "slurper.vim (http://github.com/alowe/vim-slurper) was written as a companion to the slurper gem. The slurper gem allows you compose stories in a plain text file and then slurp them into Pivotal Tracker (http://www.pivotaltracker.com) through the api in bulk. For more information on the gem check out its homepage (http://github.com/hashrocket/slurper).\n\nslurper.vim provides macros for generating chore, feature, release, and bug story templates in the correct format to speed up your story writing even further. It also provides basic syntax highlighting for .slurper files.\n\nUsage\n\nCTRL-h generates a new chore and puts you in insert mode on the name line.\n\n  ==\n  story_type:\n    chore\n  name:\n\n  description:\n\n  labels:\n\nCTRL-j generates a new feature and puts you in insert mode on the name line.\n\n  ==\n  story_type:\n    feature\n  name:\n\n  description:\n    In order to\n    As a\n    I want\n\n    -\n\n  labels:\n\nCTRL-k generates a new release and puts you in insert mode on the name line.\n\n  ==\n  story_type:\n    release\n  name:\n\n  description:\n\n  labels:\n\nCTRL-l generates a new bug and puts you in insert mode on the name line.\n\n  ==\n  story_type:\n    bug\n  name:\n\n  description:\n\n  labels:\n\nThe macros work the same in insert or edit modes. ",
   "rating_total": "16",

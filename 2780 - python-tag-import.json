@@ -1,0 +1,78 @@
+{
+  "script_id": "2780",
+  "display_name": "python tag import",
+  "summary": "guesses the import path of a python tag",
+  "name": "python-tag-import",
+  "script_type": "ftplugin",
+  "description": "repo: http://github.com/mjbrownie/Python-Tag-Import/tree/master. bugs/suggestions welcome\n\nvisual example here http://ttyshare.com/rec/michael/77604285/\n\nThis is for when you remember the name of a library function/class but not the module.path it is under\n\nEg. on a new line type. (control-b in insert mode is the default key but can be changed. see below)\n\nfuncname<c-b>\nto get complete import  options eg \n\nfrom foo.bar.module import funcname\nimport foo.bar.module as module\n\netc.\n\nIn normal mode <leader>i will create an import for the current word\n\nYou can customise the import statements to your style preferences in your .vimrc eg\n\nlet g:pythontagimport_from = 0\nturns off \nfrom  foo.bar.module import funcname\n\nlet g:pythontagimport_from_mod = 0\nturns off \nfrom foo.bar import module #module.funcname\n\nlet g:pythontagimport_as = 0\nturns off \nimport foo.bar.module as module #module.funcname\n\nlet g:pythontagimport_full  = 0\nturns off\nimport foo.bar.module #foo.bar.module.funcname\n\n\n\" Usage:\n\"\n\"           You need a ctags file with the --fields=+i\n\"           option set\n\"\n\"           on a new line type the function you want to import\n\"           then hit the complete key\n\"           \n\"           eg. type on a line\n\"           \n\"           some_func\n\"           hit <c-b>in insert mode and get\n\"           from some.app.module.path import some_func\n\"\n\"           hotkey:\n\"               insert mode map.\n\"               <c-b> is the current default.\n\"\n\"           variables:\n\"\n\"               g:pythontagimportkey\n\"                   the key used to complete function\n\"                   parameters and key words.\n\"\n\"Limitations:\n\"\n\"           This plugin is only as smart as your tags file.\n\"           Completion is created through inspecting the filename\n\"           in the tags file so functions that are rereferenced will not be\n\"           picked up. I put this out there in the hope someone can do \n\"           some fancy introspective alternative.\n\"\n\"Options:\n\"           Setting the path can keep options relevant. At tht moment\n\"           it defaults to sys.path. It can come up with some bad guesses\n\"           Eg.\n\"           let g:python_path = ['/usr/lib/python2.4/site-packages/']\n\n",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "373",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12499",
+      "filename": "python_tag_import.vim",
+      "script_version": "0.3.1",
+      "date": "2010-02-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13886",
+        "user_name": "mjbrownie",
+        "first_name": "Michael",
+        "last_name": "Brown",
+        "email": "mjbrownie at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Uses getline for better expansion. Added a normal mode mapping to get the import statement forthe <cword>"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11710",
+      "filename": "python_tag_import.vim",
+      "script_version": "0.3",
+      "date": "2009-11-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13886",
+        "user_name": "mjbrownie",
+        "first_name": "Michael",
+        "last_name": "Brown",
+        "email": "mjbrownie at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for variations in python import statements. Eg. from ? import ?, import ? as ?, etc"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11353",
+      "filename": "python_tag_import.vim",
+      "script_version": "0.1.1",
+      "date": "2009-09-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13886",
+        "user_name": "mjbrownie",
+        "first_name": "Michael",
+        "last_name": "Brown",
+        "email": "mjbrownie at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug introduced affecting relative directories"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11347",
+      "filename": "python_tag_import.vim",
+      "script_version": "0.1",
+      "date": "2009-09-09",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "13886",
+        "user_name": "mjbrownie",
+        "first_name": "Michael",
+        "last_name": "Brown",
+        "email": "mjbrownie at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

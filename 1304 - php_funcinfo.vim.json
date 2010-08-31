@@ -1,7 +1,8 @@
 {
   "script_id": "1304",
-  "name": "php_funcinfo.vim",
+  "display_name": "php_funcinfo.vim",
   "summary": "Quick help on PHP functions",
+  "name": "php_funcinfo.vim",
   "script_type": "ftplugin",
   "description": "A filetype plugin file for PHP. Displays a list of built-in PHP functions, their prototypes and short descriptions.\n\nIntended to be quick-reference-under-hand while editing a PHP script. You hit a hotkey, it opens a list of all PHP functions and displays a short synopsis for the word under cursor, if that is found.\n\nThe plugin is =UNFINISHED=, so there are some bugs:\n- Some bugs in function list updating. Flicker. And somewhere in moving back-and-forth, wrong entries begin to show up.\n- Syntax highlighting of the function prototype is quite messy.\n- No mappings to put the selected function call back into the text.\n- Speedup might help.\n\nAlso planned:\n- Parse the XML source of the manual thoroughly, including predefined constants and variables, dividing functions into sections, etc.\n- Kind of integration with external help, like Vim format by Jörn Horstmann (http://planetxml.de/vim-php-manual.php), or HTML format (will probably have to write a Vim browser) or CHM.\n\nAnybody who cares, feel free to take over the development of this plugin.\n\nZIP file is 80 Kb.",
   "rating_total": "3",

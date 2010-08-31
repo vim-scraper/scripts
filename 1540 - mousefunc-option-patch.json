@@ -1,0 +1,62 @@
+{
+  "script_id": "1540",
+  "display_name": "mousefunc option patch",
+  "summary": "Patch set to create a mousefunc option",
+  "name": "mousefunc-option-patch",
+  "script_type": "utility",
+  "description": "When compiled with this patch set, gvim will have a new option, \"mousefunc\" which will call a user script function for every mouse event.\n\nThe zip file contains a test script which demonstrates how to do things like:\n\n\n\" This script tests various aspects of the \"mousefunc\" option:\n\"\n\" - demonstrate having the mouse move tabs in the tabline.\n\"\n\" - text hotspots:\tHere is mouseover |tag1| and here is |tag2|\n\"\n\" - verbose option which shows all mouse info.\n\"\n\" - mouse-follow highlighting (set s:show_bullseye)\n\"\n\" - associate actions with clicking on statusline words\n\n\n\n\n\nFrom the options.txt doc file:\n\n\n'mousefunc' 'mfn'\tstring\t(default empty)\n\t\t\tglobal\n\t\t\t{not in Vi}\n\tWhen nonempty, this option calls the given function when mouse events\n\t(click, drag, move, etc.) are detected.  The function should accept\n\tthese arguments:\n>\n\t\tMouseFunc(\tmouse_key, \n\t\t\t\t\\ buf_row, buf_col, buf_vcol, \n\t\t\t\t\\ mouse_row, mouse_col, \n\t\t\t\t\\ x, y,\n\t\t\t\t\\ area, screen_line )\n<\n\t\"mouse_key\" is a string containing up to 6 chars.  It will match\n\tagainst a string like:   a:mouse_key == \"\\<LeftMouse>\".\n\t\"mouse_key\" can be empty, particularly when cursor-move-only events\n\tare delivered.  \n\n\t\"buf_row/col/vcol\" should match line(\".\") and col(\".\") if you were\n\tto click in a buffer at that point.\n\n\t\"mouse_row/col\" are independent of windows and buffers.\n\t\n\tThe \"x\" and \"y\" are in pixels, and can be negative, when that\n\tinformation isn't available (see also |mousefocus| to have \"x\" and\n\t\"y\" track the mouse cursor).  \n\n\t\"area\" is Vim's idea of where the mouse is.  Values can be:\n\t\"IN_BUFFER\", \"IN_UNKNOWN\", \"IN_SEP_LINE\", \"IN_STATUS_LINE\".\n\n\t\"screen_line\" contains the literal characters in \"mouse_row\" which\n\thave been written to the screen, rather than any buffer.  Useful to\n\tread what's on the statusline, tabline, and command line areas.\n\t\n\tThe function should return 0 to consume the mouse click, or 1 to\n\tpass it on transparently.\n\n\tThe |mousefunc| option is set empty for the duration of the call to\n\tprevent recursion.  Setting it again during the call could have\n\tunexpected problems.\n\n\tIt intercepts the mouse events at a low level, which has its good\n\tand bad points.  The good is that you get the mouse events before\n\tother restrictions like statusline, tabline, empty regions, etc.,\n\tand receive mouse events while in any mode.  The bad is that you\n\thave to watch out for things like recursion errors (i.e.  calling\n\tgetchar() from a script function while |mousefunc| is set).\n\n\tThis function is called often when the mouse is moving, so attention\n\tshould be given to returning early out of as many cycles as\n\tpossible.\n\n\tAt the moment, drag and release events are approximated based on the\n\tlast primary event (i.e. <leftmouse> or <rightmouse> ).\n\n",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "358",
+  "install_details": "The zip contains the patch files to be applied to the corresponding Vim7 source files.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5695",
+      "filename": "mousefunc.zip",
+      "script_version": "1.2",
+      "date": "2006-05-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Now tst script fully uses tabline indexes and resize wrapping spots for TabLineSet.vim"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5693",
+      "filename": "mousefunc.zip",
+      "script_version": "1.1",
+      "date": "2006-05-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Smoother tab move code in test script."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5684",
+      "filename": "mousefunc.zip",
+      "script_version": "1.0",
+      "date": "2006-05-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2467",
+        "user_name": "earnold",
+        "first_name": "Eric",
+        "last_name": "Arnold",
+        "email": "eric_p_arnold at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

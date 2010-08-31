@@ -1,0 +1,30 @@
+{
+  "script_id": "2035",
+  "display_name": "F6_Comment (old)",
+  "summary": "Auto commenting that accepts Visual range",
+  "name": "F6_Comment-old",
+  "script_type": "utility",
+  "description": "******************************************************************\nNB.  I accidentally uploaded this script twice, this instance needs to be deleted,\n         and the copy listed under Vim 7.0 should be kept.\n         I just don't know how to do this ... sorry.\n******************************************************************\n\n\nDescription:\nI don't know for sure that something like this does not already exist in Vim, but if it does, I can't find it.\n\nI recall Cream having this kind of functionallity mapped to <F6>,\nso to maintain consistency I've kept the convention.\n\nThis uses the current value of &cms / &commentstring to comment and uncomment code.\nIt works for ranges selected in Visual mode, or for the current line in all modes.\nNB. Comment strings may not include '@' or '+'\n(I don't know of any languages that use these characters).\n\nHelp:\nUse <F6> to comment, and <S-F6> to uncomment\n",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "228",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7741",
+      "filename": "F6_Comment.vim",
+      "script_version": "1.0",
+      "date": "2007-10-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13180",
+        "user_name": "dmaclay",
+        "first_name": "David",
+        "last_name": "Maclay",
+        "email": "dmaclay at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

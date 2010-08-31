@@ -1,7 +1,8 @@
 {
   "script_id": "1313",
-  "name": "bwftmenu.vim",
+  "display_name": "bwftmenu.vim",
   "summary": "help you make a menu only for buffers with a certain filetype",
+  "name": "bwftmenu.vim",
   "script_type": "utility",
   "description": "Description:\n  You can use This script to help you make a menu which only appears when  you are editing buffers with a certain filetype. You can use this script  to make menus in your ftplugin scripts.\n\n  The menu is automatically made once you enter a buffer whose  filetype is specified. And if you switch to another buffer with a  different filetype, the revious menu is automatically deleted.\n\nUsage:\n  In your ftplugin scripts, follow these steps:\n  1. write a function which creates a menu. The function should not\n     start with s: or <SID>.\n  2. call BW_RegisterFTMenu function which is the only function provided by this script\n  That's all.\n\n  Here is an example. I want to create a menu only for python files,  so I create a function in my ftplugin/python.vim:\n\n  function MakeFTMenu_python\n    amenu 8000.11 Python.check :echo 'check python script'\n    amenu 8000.12 Python.run :echo 'run python script'\n  endfunction\n\n  and then, add this statement to the same .vim file:\n\n  call BW_RegisterFTMenu('python','Python','MakeFTMenu_python')\n\n  Note: the second parameter MUST be the same with the name of the menu\n        which you created in MakeFTMenu_python function.\n",
   "rating_total": "0",

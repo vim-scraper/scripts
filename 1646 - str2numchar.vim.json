@@ -1,7 +1,8 @@
 {
   "script_id": "1646",
-  "name": "str2numchar.vim",
+  "display_name": "str2numchar.vim",
   "summary": "String convert to Numeric Character Reference",
+  "name": "str2numchar.vim",
   "script_type": "utility",
   "description": "Author:       secondlife <hotchpotch@NOSPAM@gmail.com>\nLast Change:  2006 Sep 02\nVersion: 0.1, for Vim 7.0\n\nDESCRIPTION:\n This plugin is String convert to Numeric Character Reference\n and String convert to Hex Literal\n\nfor example:\n:echo Str2HexLiteral('abcd')\n\\x61\\x62\\x63\\x64\n:echo Str2NumChar('abcd')\n&#97;&#98;&#99;&#100;\n\n==================== file str2numchar.vimrc ====================\nvmap <silent> sn :Str2NumChar<CR>\nvmap <silent> sh :Str2HexLiteral<CR>\n==================== end: str2numchar.vimrc ====================\n",
   "rating_total": "0",

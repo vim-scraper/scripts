@@ -1,7 +1,8 @@
 {
   "script_id": "2341",
-  "name": "postmail.vim",
+  "display_name": "postmail.vim",
   "summary": "mail message posting plugin. (python required)",
+  "name": "postmail.vim",
   "script_type": "utility",
   "description": "Send 'current editing buffer', or 'selected area of text' with email.\nMost simplest usage is to execute :Mail command.\n\nSupported Mail Auth type is\n    - basic SMTP password Auth\n    - POP before STMP Auth\n    - Outbound Port 25 Blocking\n    - GMail\n\nThis plugin needs '+python', '+iconv', '+multi_byte' and\nPython is installed, and $PATH is appropriately set.\n\nUSAGE\nYou can use :Mail command to send email.\nSee also postmail-example .\n\n:[range]Mail\n        send mail message.\n        if [range] is selected, send selected text.\n        if [range] is not selected, send current buffer.\n\n:[range]Mail {to_mailaddress}\n        send mail message to {to_mailaddress}.\n        if [range] is selected, send selected text.\n        if [range] is not selected, send current buffer.\n\n:[range]Mail {to_mailaddress1} {to_mailaddress2}, {to_mailaddress3}\n        send mail message to {to_mailaddress1}, {to_mailaddress2}, and\n        {to_mailaddress2}.\n        if [range] is selected, send selected text.\n        if [range] is not selected, send current buffer.\n\nCOMMAND USAGE EXAMPLE\n:Mail\n        send mail message.\n        message is current buffer text.\n\n:Mail mail@nanasi.jp\n        send current buffer text to 'mail@nanasi.jp' address.\n\n:6,20Mail mail@nanasi.jp\n        send from line 6 to line 20 text to 'mail@nanasi.jp' address.\n",
   "rating_total": "5",

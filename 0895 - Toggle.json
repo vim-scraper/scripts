@@ -1,7 +1,8 @@
 {
   "script_id": "895",
-  "name": "Toggle",
+  "display_name": "Toggle",
   "summary": "allows you to toggle bool (true/false) and other words with a shortcut",
+  "name": "Toggle",
   "script_type": "utility",
   "description": "In this version, the script can toggle:\n    true     <->     false\n    on       <->     off\n    yes      <->     no\n    define  <->     undef\n    +        <->     -\n    >        <->     <\n    positive and negative numbers\n\nMove the cursor on the word/char/number to be toggled and press <C-T> (Ctrl-T).\nThis shortcut can be modified in the script file - of course...\n\nIf the cursor is positioned on a number, the script looks for a corresponding + or - sign for that number. \nIf it's found, it will be replaced by the other one. If none is found, a - sign is inserted before the number.",
   "rating_total": "76",

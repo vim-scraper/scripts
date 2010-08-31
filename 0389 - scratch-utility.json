@@ -1,0 +1,142 @@
+{
+  "script_id": "389",
+  "display_name": "scratch utility",
+  "summary": "A simple utility to create scratch buffers",
+  "name": "scratch-utility",
+  "script_type": "utility",
+  "description": "This is a simple plugin that creates a scratch buffer for your\nvim session and helps to access it when you need it.  \n                                                                 \nIf you like the custom mapping provided in the script - hitting\n<F8> should create a new scratch buffer. You can do your scribes\nhere and if you want to get rid of it, hit <F8> again. If you want to \nget back to the scratch buffer hit <F8> again.\n",
+  "rating_total": "62",
+  "rating_votes": "37",
+  "downloads": "2058",
+  "install_details": "This script will only work on Vim 6.0 and higher. Just dump the script in your plugin directory and let vim do the rest!\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4652",
+      "filename": "scratch.vim",
+      "script_version": "0.7",
+      "date": "2005-10-05",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "947",
+        "user_name": "akoneri",
+        "first_name": "Abhilash",
+        "last_name": "Koneri",
+        "email": "abhilash_koneri at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Includes VimLeavePre hook to dump the contents of the scratch buffer to a file before exiting.  Set the global variable g:scratchBackupFile to a file path to enable the feature. See comments in the plugin file.\n \n(Once again , Thanks to Hari Krishna Dara (hari_vim at yahoo dot com) for the useful enhancement!)\n "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4437",
+      "filename": "scratch.vim",
+      "script_version": "0.6",
+      "date": "2005-07-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "947",
+        "user_name": "akoneri",
+        "first_name": "Abhilash",
+        "last_name": "Koneri",
+        "email": "abhilash_koneri at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixes a bug in the script that does not handle the scratch buffer deleted using :bwipeout!  This version simply re-creates the an empty buffer."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2445",
+      "filename": "scratch.vim",
+      "script_version": "0.5",
+      "date": "2003-11-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "947",
+        "user_name": "akoneri",
+        "first_name": "Abhilash",
+        "last_name": "Koneri",
+        "email": "abhilash_koneri at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Included the (yet another) patch sent by Hari Krishna Dara. This patch adds extra escapes when shellslash is set (Unix shells).\n\nThanks Hari!\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1749",
+      "filename": "scratch.vim",
+      "script_version": "0.4",
+      "date": "2003-02-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "947",
+        "user_name": "akoneri",
+        "first_name": "Abhilash",
+        "last_name": "Koneri",
+        "email": "abhilash_koneri at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed the scratch buffer name to [scratch] (from the ghastly -scratch-). Thanks to Hari Krishna Dara once again!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1621",
+      "filename": "scratch.vim",
+      "script_version": "0.3",
+      "date": "2003-01-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "947",
+        "user_name": "akoneri",
+        "first_name": "Abhilash",
+        "last_name": "Koneri",
+        "email": "abhilash_koneri at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Friendlier key mappings. Hitting F8 should create , hide and navigate to the scratch buffer during a vim session. Thanks to Hari Krishna Dara for enhancing the script."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1446",
+      "filename": "scratch.vim",
+      "script_version": "0.2",
+      "date": "2002-11-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "947",
+        "user_name": "akoneri",
+        "first_name": "Abhilash",
+        "last_name": "Koneri",
+        "email": "abhilash_koneri at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add more friendly mappings. Thanks to Charles E. Campbell for his suggestions. The old mappings were removed. The defaults now use <F8> to open the scratch buffer and <s-F8> to close the buffer"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1352",
+      "filename": "scratch.vim",
+      "script_version": "0.1",
+      "date": "2002-10-30",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "947",
+        "user_name": "akoneri",
+        "first_name": "Abhilash",
+        "last_name": "Koneri",
+        "email": "abhilash_koneri at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed the problem with opening scratch buffer -- Thanks to Thomas Regner <regner@dievision.de> for spotting the problem "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1144",
+      "filename": "scratch.vim",
+      "script_version": "0.0",
+      "date": "2002-08-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "947",
+        "user_name": "akoneri",
+        "first_name": "Abhilash",
+        "last_name": "Koneri",
+        "email": "abhilash_koneri at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

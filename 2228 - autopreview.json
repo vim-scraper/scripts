@@ -1,7 +1,8 @@
 {
   "script_id": "2228",
-  "name": "autopreview",
+  "display_name": "autopreview",
   "summary": "a light script to immediately preview definitions like source insight",
+  "name": "autopreview",
   "script_type": "utility",
   "description": "The \"autopreview\" plugin is a light script plugin for Vim that could automatically preview the definition of variables or functions in a preview window like source insight.\nI think this script should be helpful when you're insighting a lot of code files and wanna to see the definition of a new variable or function in the source codes immediately without having to input \"ptag\" each time.\nTaglist plugin is needed for this plugin which is alreasy integrated into the latest version of Gvim.\n\n#Usage\nIf you add \"let g:AutoPreview_enabled = 1\" into your vimrc file, the autopreview window will be open when vim is started; otherwise add \"let g:AutoPreview_enabled = 0\" (which is default if you do not set this value) into your vimrc file, the autopreview window will be open only after you press your mapped hotkey.\nAny time you press your mapped hotkey, you could enable or disable the autopreview window\n",
   "rating_total": "59",

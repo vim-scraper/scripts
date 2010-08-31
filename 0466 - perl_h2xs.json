@@ -1,7 +1,8 @@
 {
   "script_id": "466",
-  "name": "perl_h2xs",
+  "display_name": "perl_h2xs",
   "summary": "Automate creating perl modules via h2xs",
+  "name": "perl_h2xs",
   "script_type": "ftplugin",
   "description": "The Perl_h2xs.vim plugin is a plugin that allows you to automate the process of perl module creation. Writing Perl modules with the recommended structure can be time consuming so this ftplugin automates the process by involking h2xs when you edit a non-existant .pm file. I.e.\n\n  vim Test::Bob.pm\n\nWill invoke h2xs -XAn Test::Bob, and if the module skeleton is created, will swap the edited file to Test/Bob/Bob.pm.\n\nThrough the use of variables, you can also set the plugin to create a MANIFEST.SKIP to exclude the CVS directories (and update the MANIFEST to include this new file) and to use CVS to import (or add) the newly created tree to a respository.\n\nIt works under windows and unix and you can even create .pm trees in another directory by specifying a directory name and module name in one. I.e.\n\n vim /usr/local/src/Test/Bob.pm\n\nwould create the module:\n\n /usr/local/src/Test/Bob/Bob.pm\n\nSee the readme file and help docs for detalis.\n\nEnjoy, this is me being lazy :)",
   "rating_total": "1",

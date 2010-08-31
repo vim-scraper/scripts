@@ -1,7 +1,8 @@
 {
   "script_id": "1359",
-  "name": "SmartCase",
+  "display_name": "SmartCase",
   "summary": "replacing words while keeping original lower/uppercase style",
+  "name": "SmartCase",
   "script_type": "utility",
   "description": "An example, you may want to replace any FileSize appears in your program into LastModifiedTime. Since it appears everywhere as both uppercases and lowercases, you have to write it several times:\n\n  :%s/FileSize/LastModifiedTime/g      \" function names\n  :%s/file_size/last_modified_time/g   \" variable names\n  :%s/FILE_SIZE/LAST_MODIFIED_TIME/g   \" macros\n  :%s/File size/Last modified time/g   \" document/comments\n  ......\n\nThis script copes with the case style for you so that you need write just one command:\n\n  :%s/file\\A\\?size/\\=SmartCase(\"LastModifiedTime\")/ig\n\nAn alternative way:\n  first search for the string:  /\\cfile\\A\\?size\n  then run a command:  :%SmartCase \"LastModifiedTime\"\n\nBy the way, SmartCase can also cope with the circumstance where you want to replace the string's case style while keeping its words. For example:\n  FileSize => file_size\n  LastModifiedTime => last_modified_time\n  ......\nThis can be done with the following command:\n\n  :%s/\\(\\u\\l\\+\\)\\{2,}/\\=SmartCase(0,\"reference_style\")/g\n\nTo sum up: the first argument to SmartCase is the reference words, the secend argument is the reference styles, if the second argument omitted, it's submatch(0).",
   "rating_total": "-326",

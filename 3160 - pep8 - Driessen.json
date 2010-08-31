@@ -1,7 +1,8 @@
 {
   "script_id": "3160",
-  "name": "pep8 - Driessen",
+  "display_name": "pep8",
   "summary": "Vim filetype plugin for running PEP8 on Python files",
+  "name": "pep8 - Driessen",
   "script_type": "ftplugin",
   "description": "Usage\n-----\n1. Open a Python file\n2. Press `<F6>` to run `pep8` on it\n\nIt shows the errors inside a quickfix window, which will allow your to quickly\njump to the error locations by simply pressing [Enter].\n\nCustomization\n-------------\nIf you don't want to use the `<F6>` key for PEP8-checking, simply remap it to\nanother key.  It autodetects whether it has been remapped and won't register\nthe `<F6>` key if so.  For example, to remap it to `<F3>` instead, use:\n\n    autocmd FileType python map <buffer> <F3> :call Pep8()<CR>\n",
   "rating_total": "5",

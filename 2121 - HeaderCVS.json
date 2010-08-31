@@ -1,7 +1,8 @@
 {
   "script_id": "2121",
-  "name": "HeaderCVS",
+  "display_name": "HeaderCVS",
   "summary": "Auto generate CVS Header before current cursor",
+  "name": "HeaderCVS",
   "script_type": "utility",
   "description": "\"\n\" This plugin adds CVS Header before current cursor.\n\"\n\" The CVS Header will automatically reflect current file name, current date and\n\" your description beside a standard CVS Header.\n\"\n\" (Note: This plugin is only tested on **Linux**.)\n\nFor example:\nIf you type \":HeaderCVS This is my file description.\" when editing file \"Demo.sh\",\nthis plugin will add the following CVS Header before current cursor.\n\n########################################################################\n#  Copyright MyCompany Inc.  All Rights reserved\n########################################################################\n#\n#  File                :  Demo.sh\n#  Creator           :  AyuanX ( ayuanx#163.com )\n#  Creation Date  :  2008-01-11\n#  Description      :  This is my file description.\n#\n########################################################################\n#    $Author$\n#    $Source$\n#    $Revision$\n#    $Date$\n#    $Id$\n########################################################################\n#    $Log$\n########################################################################\n\nTIP:\nCompany Name and Creator are customizable, File Name and Date are auto generated.\n\nWARNING:\nThis script is written with shell comment character '#' by default, you may need some workarounds manually to comment out the added header with other corresponding comment character.",
   "rating_total": "5",

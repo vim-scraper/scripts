@@ -1,0 +1,30 @@
+{
+  "script_id": "1608",
+  "display_name": "Chrome syntax script",
+  "summary": "Syntax script for RemObjects Software's Chrome compiler",
+  "name": "Chrome-syntax-script",
+  "script_type": "syntax",
+  "description": "This is a syntax script for RemObjects Software's Chrome compiler. That is, for those, who don't know, a compiler for the .NET-Framework or Mono-Framework (which should be almost the same, except for the OS). I just wrote it from the chm help file shipped with the compiler. I just used attributes for color terminals because I got the Windows version without gui so I can't use any other attributes. Maybe the script is not compatible to your shell (though an 8 color terminal is a rather rare sight in these days). And I don't know anything about the least vim version (I asumed 6.0 because it is one major version before the today's, I got 6.4 and it works fine.)\nI'm not opposed to feedback from users, so don't be afraid to make my POP3 server work. The address is nullplanwichmann@web.de, and the preferred language is german (my mother tongue) because all the spam I get is english, so I can filter easily. Don't worry: A handwritten mail won't see the dephts of my spam directory. At least I think so.",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "152",
+  "install_details": "Just copy (or move, if you don't want to waste that 1 KB of diskspace) the script (chrome.vim) to your $VIMRUNTIME/syntax directory (replace the foreslash with whatever your OS uses as directory separator). When you want to use it, open a chrome source file (or a new file that intends to be a chrome source file) and execute in your vim box the following command:\n  :set syntax=chrome\nIf no error occured anything was done right. If one occured you most likely moved the file to the wrong directory, or you have a pre-6 version of vim. In the first case copy again, this time with the right destination. In the second case update your vim. You need to do. really. (Although I heard there were problems with the year 2000 in programs from the sixties (!) I do not think software should last more than ten years on a hard disk without update if there is one available.)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5957",
+      "filename": "chrome.tar.gz",
+      "script_version": "0.1",
+      "date": "2006-07-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "10471",
+        "user_name": "nullplan",
+        "first_name": "Markus",
+        "last_name": "Wichmann",
+        "email": "nullplanwichmann at web.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

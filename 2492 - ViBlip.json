@@ -1,7 +1,8 @@
 {
   "script_id": "2492",
-  "name": "ViBlip",
+  "display_name": "ViBlip",
   "summary": "ViBlip allows to use Blip! (polish microblogging service)",
+  "name": "ViBlip",
   "script_type": "game",
   "description": "Read and write to Blip! (polish microblogging service) with ViBlip!\nAfter installing, run vim, and type:\n:Blip some blip status\nor:\n:Blip >recipient: some message\n\nto create new status. If you want to read 20 last statuses from your dashboard, just type:\n:DBlip\nIf you rather want to read your friend statuses:\n:DBlip friend_name\nYou can specify how many statuses from dashboard want to download. From your dashboard:\n:DBlip 5\nFrom friend's dashboard:\nDBlip friend_name/5\n\nTo read private messages:\n:PBlip\n:PBlip 10\nDefault PBlip read 5 last Private Messages, second line will download 10 messages.\n\nTo read single status:\n:MBlip id\nWhere id is single status id. You can also specify what type of status want to read:\n:MBlip id/st\n:MBlip id/dm\n:MBlip id/pm\n\nFirst line read normal statuses, second - directed messages, and third - private messages.\n\nSometimes you may have some problems with network connection, and connection to Blip is lost - in this case you can now reconnect:\n:RBlip",
   "rating_total": "7",

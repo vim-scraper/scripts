@@ -1,7 +1,8 @@
 {
   "script_id": "3162",
-  "name": "tabops",
+  "display_name": "tabops",
   "summary": "A collection of miscellaneous functionalities operating tabs.",
+  "name": "tabops",
   "script_type": "utility",
   "description": "Description:\n  This script provides tab operation functionalities.\n  Going to some tab, moving some tab, sorting tabs and reopening closed tabs.\n                                                                                      \nUsage:\n  1. (optional) set prefix if you want to change. (let g:Tabops_prefix)\n     default: <Tab>\n  2. (optional) let g:Tabops_use??? variables 0 if you want to disable some features.\n  3. start editing\n                                                                                      \nFeature:\n\n  * the default prefix is <Tab>\n\n  if g:Tabops_useGoto == 1 then ...\n      <C-Tab>  : goto the next tab.\n      <S-C-Tab>: goto the prev tab.\n                                                                                      \n      {prefix}1: goto the 1st tab.\n      {prefix}2: goto the 2nd tab.\n         :\n      {prefix}8: goto the 8th tab.\n      {prefix}9: goto the LAST tab.\n                                                                                      \n  if g:Tabops_useMove == 1 then ...\n      {prefix}l: swap the current tab with the right one.\n      {prefix}h: swap the cerrent tab with the left one.\n                                                                                      \n  :TabopsSortByPath\n      sort tabs comparing their paths.\n                                                                                      \n  :TabopsSortByBufnr\n      sort tabs comparing their internal numbers.\n                                                                                      \n  :TabopsSortByLastChange\n      sort tabs comparing their recently-changed timestamps.\n      the most recent tab comes to left.\n",
   "rating_total": "4",

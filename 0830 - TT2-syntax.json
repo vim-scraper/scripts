@@ -1,0 +1,94 @@
+{
+  "script_id": "830",
+  "display_name": "TT2 syntax",
+  "summary": " Syntax Highlight for Template-Toolkit 2.x",
+  "name": "TT2-syntax",
+  "script_type": "syntax",
+  "description": "* THIS SCRIPT WILL BE NO LONGER MAINTAINED *\nMaintainer was handed over. Please visit below to find updated version.\nhttp://github.com/petdance/vim-perl\n\nSyntax Highlight for Template-Toolkit 2.x\n( http://search.cpan.org/~abw/Template-Toolkit/ )\n Contain Perl code in PERL/RAWPERL directive. (runtime sytax/perl.vim)\n No fold.\n HTML syntax for including TT2 syntax. ( tt2html.vim / unfinished )\n Can define START_TAG/END_TAG for your style.\n",
+  "rating_total": "230",
+  "rating_votes": "115",
+  "downloads": "4007",
+  "install_details": "Add this lines in your \"filetype.vim\":\n\nau BufNewFile,BufRead *.tt2 call s:AdjustTT2Type()\n\nfunc! s:AdjustTT2Type()\n    if ( getline(1) . getline(2) . getline(3) =~ '<\\chtml'\n              && getline(1) . getline(2) . getline(3) !~ '<[%?]' )\n       || getline(1) =~ '<!DOCTYPE HTML'\n        setf tt2html\n    else\n        setf tt2\n    endif \nendfunc\n\nTo define START_TAG and END_TAG you like, you can set any pair of tags to 'b:tt2_syn_tags':\n    \"ASP\"\n    :let b:tt2_syn_tags = '<% %>'\n    \"PHP\"\n    :let b:tt2_syn_tags = '<? ?>'\n    \"TT2 and HTML\"\n    :let b:tt2_syn_tags = '\\[% %] <!-- -->'\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6881",
+      "filename": "tt2.tar.gz",
+      "script_version": "0.1.3",
+      "date": "2007-03-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "568",
+        "user_name": "four",
+        "first_name": "atsushi",
+        "last_name": "moriki",
+        "email": "4woods+vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed fileformat from 'dos' to 'unix'\nDeleted 'echo' that print obstructive message"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6880",
+      "filename": "tt2.zip",
+      "script_version": "0.1.3",
+      "date": "2007-03-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "568",
+        "user_name": "four",
+        "first_name": "atsushi",
+        "last_name": "moriki",
+        "email": "4woods+vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed fileformat from 'dos' to 'unix'\nDeleted 'echo' that print obstructive message"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2647",
+      "filename": "tt2.tar.gz",
+      "script_version": "0.1.2",
+      "date": "2004-01-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "568",
+        "user_name": "four",
+        "first_name": "atsushi",
+        "last_name": "moriki",
+        "email": "4woods+vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "full-directive comment, lower case reserved words."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2646",
+      "filename": "tt2.zip",
+      "script_version": "0.1.2",
+      "date": "2004-01-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "568",
+        "user_name": "four",
+        "first_name": "atsushi",
+        "last_name": "moriki",
+        "email": "4woods+vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "full-directive comment, lower case reserved words, upload zip-archive."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2519",
+      "filename": "tt2.tar.gz",
+      "script_version": "0.1.1",
+      "date": "2003-11-25",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "568",
+        "user_name": "four",
+        "first_name": "atsushi",
+        "last_name": "moriki",
+        "email": "4woods+vim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 {
   "script_id": "2007",
-  "name": "greplist.vim",
+  "display_name": "greplist.vim",
   "summary": "vimgrep location list manager",
+  "name": "greplist.vim",
   "script_type": "utility",
   "description": "This plug-in is for someone who often does multi-file search in multiple locations and these locations often change when for example you work on several different projects.  It helps to maintain a list of frequently used vimgrep locations and defines commands to edit a list and to perform a search in the selected locations.\n\n:GrepListConfig command loads a list for editing.  A list is kept in\n\"$HOME/_vimgrep\" file or in \"$VIM/_vimgrep\" file if $HOME is not defined.  If \"_vimgrep\" file does not exist or empty, a sample list is created.  Status line shows useful normal mode mappings:\n  'q' - abandon any changes and wipe the buffer\n  's' - save the changes and wipe the buffer\n  ' ' - select/deselect current line (selected lines start with '+')\n\n:GrepListFind(mode) command prompts for the string to find and starts the vimgrep search in the selected locations.  The default value for the search string is either the current visual selection (mode != 0) or the current word (mode == 0).  Plug-in automatically surrounds the search string with '/' and adds 'j' option.\n\nAs usual, it is more convenient to create mappings for these commands.  For example:\nnoremap <F8> :GrepListFind 0<CR>\ninoremap <F8> <C-O>:GrepListFind 0<CR>\nvnoremap <F8> <C-C>:GrepListFind 1<CR>\n\nFor more information please see the source code -- it is small and easy to read.\n",
   "rating_total": "0",

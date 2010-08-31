@@ -1,0 +1,30 @@
+{
+  "script_id": "2401",
+  "display_name": "Russian PLansliterated",
+  "summary": "Transliterated Russian without breaking normal-mode",
+  "name": "Russian-PLansliterated",
+  "script_type": "utility",
+  "description": "Check out translit.vim (vimscript #2469), which should be considered as a successor of this plugin.\n\n-------------------------------\n\nThis plug-in allows you to write transliterated Russian (Cyrillic alphabet)\nin insert and replace mode. Other modes are unaffected and just work (which\nmakes it superior to relying on GTK's input methods).\n                                                                                      \nTransliteration is heavily biased towards Polish orthography and phonetics,\neg. \"&#1095;\" is spelled as \"cz\" (not \"ch\"), \"&#1071;\" is \"Ja\", not 'Ya', etc. This is\nwhy it's called PLansliterated :) It's quite trivial to turn this plug-in\ninto english transliteration, CZransliteration, FRansliteration, etc. If\nyou do so for your 'source' language of choice, feel free to post your work\non vim.org or just drop me a line.\n                                                                                      \nUsage:\nTurn transliteration on and off by :RussianOn, :RussianOff or :ToggleRussian\ncommands. You can also use CTRL+q (both in insert and normal mode) for\ntoggling.\n                                                                                      \nMost of characters should be quite intuitive (at least if you're Polish).\nI decided to make both \"e\" and \"je\" represent Cyrillic \"&#1077;\".\nUse \"e'\" to get '&#1101;'. \"'\" stands for \"&#1100;\" and \"`\" is for \"&#1098;\". Prefix with\ntilde to get uppercase variants of &#1090;&#1074;&#1077;&#1088;&#1076;&#1099;&#1081; and &#1084;&#1103;&#1075;&#1082;&#1080;&#1081; &#1079;&#1085;&#1072;&#1082;, eg. \"~`\" for \"&#1066;\".\n\nIf you need several Latin letters for one uppercase Cyrillic, you can use\nboth all-uppercase, or only the first one capitalised, like \"SZCZ\" or \"Szcz\" for \"&#1065;\".\n                                                                                      \nSet g:cursor_follows_alphabet to make cursor color change when alphabet is\nswitched.\n                                                                                      \nUse the source when in doubt.\n                                                                                      \nBlablabla:\nHave fun using this plug-in!\nComments are welcome.",
+  "rating_total": "8",
+  "rating_votes": "2",
+  "downloads": "271",
+  "install_details": "Put it into ~/.vim/plugin",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9338",
+      "filename": "russian_plansliterated.vim",
+      "script_version": "1.0",
+      "date": "2008-10-12",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "14328",
+        "user_name": "goj",
+        "first_name": "Krzysiek",
+        "last_name": "Goj",
+        "email": "bin-krzysiek at poczta.gazeta.pl",
+        "homepage": "http://krzysiek-goj.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

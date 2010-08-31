@@ -1,7 +1,8 @@
 {
   "script_id": "1931",
-  "name": "svndiff.vim",
+  "display_name": "svndiff.vim",
   "summary": "vim plugin to for visual display of svn diffs in two vim windows",
+  "name": "svndiff.vim",
   "script_type": "utility",
   "description": "1) used as vim command, format :D [v] [version #]\n   :D h    \n      -- diff between opened file and lastest svn version, horizontal split\n   :D      \n      -- diff between opened file and lastest svn version, vertical split\n   :D h <version #>  example  :D 1.2\n      -- diff between opened file and svn version #, horizontal split\n   :D <version #>  example  :D v 1.2\n      -- diff between opened file and svn version #, vertical split\n2) map to key \n   can create key mapping by adding the following lines in ~/.vimrc, example\n   a. map <F8> <Plug>D\n        -- press F8 in vim, show diff to svn last version, horizontal split\n   b. map <F7> <Plug>Dh\n        -- press F7 in vim, show diff to svn last version, vertical split\n3) return from diff mode to normal mode\n   :set nodiff\n\nexample:\n  a) open a file in vim\n  b) use vim command line, :D <enter> to see two windows with diffs\n  c) :close to close tmp window\n  d) :set nodiff to expand the compressed view, or press a on '+' sign to expand \n\nversion updates:\n0.2 -- merged Tom Ziomek's fix",
   "rating_total": "16",

@@ -1,7 +1,8 @@
 {
   "script_id": "2619",
-  "name": "textobj-function",
+  "display_name": "textobj-function",
   "summary": "Text object for a function",
+  "name": "textobj-function",
   "script_type": "utility",
   "description": "*textobj-function* is a Vim plugin to provide universal text objects for\nvarious kinds of functions.  For example, you can select any function with\n|<Plug>(textobj-function-a)| / |<Plug>(textobj-function-i)| (default key\nbindings: af / if).\n\nThe definition of a \"function\" is usually differed depending on what you are\nediting, so at first, you have to tell the definition of what kind of function\nyou want to select to textobj-function.  By default, textobj-function knows\nabout functions in the following languages:\n\t\t\t\t\t    *textobj-function-known-languages*\n- C language\t\t|textobj-function-c|\n- Vim script\t\t|textobj-function-vim|\n\nIf you want to tell about more functions in other languages, see\n|textobj-function-customizing| for how to tell and\nafter/ftplugin/*/textobj-function.vim for the samples.\n\nRequirements:\n- Vim 7.2 or later\n- |textobj-user| 0.3.7 or later (vimscript#2100)\n\nLatest version:\nhttp://github.com/kana/vim-textobj-function\n\nDocument in HTML format:\nhttp://kana.github.com/config/vim/textobj-function.html",
   "rating_total": "5",

@@ -1,7 +1,8 @@
 {
   "script_id": "2992",
-  "name": "SaveSigns",
+  "display_name": "SaveSigns",
   "summary": "Save and Restore your Signs",
+  "name": "SaveSigns",
   "script_type": "utility",
   "description": "This plugin was written to allow you to save your |signs| easily. Signs can be\nused to specific highlight certains rows in a buffer. This might be useful\nwhen using a debugger or display a |mark|. Note however, that this works only\nwhen the signs feature has been compiled into your vim.\n\nIf you have defined signs in your file, you might want to save these signs to\nbe able to reload these signs later on (e.g. with a |Session|). Therefore this\nplugin defines the |:SaveSigns| command, which will store all defined signs in\na file in such a way that reloading that file will restore all defined signs.\n\nWhen saving Signs, the plugin creates a Vim Script, that can be read in using\n|:source| It will save Sign Definitions (see |:sign-define|), Sign placements\n(see |:sign-place|) and the Sign hilighting (see |hl-SignColumn|).\n\nSince signs are usually associated with a buffer or a file, sourcing this file\nusing |:source| will only restore those signs whose buffers are loaded in that\nvim session. Note: All Signs that were defined before reloading this file will\nbe lost.\n\n2.1 :SaveSigns\t\t\t\t\t\t\t*:SaveSigns*\n\n:SaveSigns\t\tStore all currently defined signs in a temporary file.\n\t\t\tThis file will be opened in a new split window and you\n\t\t\tcan edit it further. Note: This file won't be saved.\n\t\t\tYou need to explicitly save it.\n\n:SaveSigns[!] {name}\tStore all currently defined signs in a file called\n\t\t\t{name}. If this file exists, it won't be used a new\n\t\t\ttemporary file will be created. Use ! to force storing\n\t\t\tthe info in that file. This will however erase the\n\t\t\tfile {name}. So use with caution.\n\nKeywords: Signs, Save, Restore",
   "rating_total": "1",

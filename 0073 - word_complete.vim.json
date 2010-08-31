@@ -1,7 +1,8 @@
 {
   "script_id": "73",
-  "name": "word_complete.vim",
+  "display_name": "word_complete.vim",
   "summary": "automatically offers word completion as you type",
+  "name": "word_complete.vim",
   "script_type": "utility",
   "description": "Each time you type an alphabetic character, the script attempts\nto complete the current word.  The suggested completion is selected\nin Select mode, so you can just type another character to keep going.\nOther options:  <Tab> to accept, <BS> to get rid of the completion,\n<Esc> to leave Insert mode without accepting the completion, <C-N>\nor <C-P> to cycle through choices, <C-X> to enter <C-X> mode.\n\nLimitations:\nThe script works by :imap'ping each alphabetic character, and uses\nInsert-mode completion (:help i_ctrl-p).  It is far from perfect.  For example, the :imap's mean that you are constantly switching out of Insert mode, which means that undo only works a few characters at a time.  This also messes up any abbreviations you may have defined.  Since Select mode uses the same mappings as Visual mode, the special keys mentioned above may conflict with what you are used to in Visual mode.  I have received one report that mswin.vim interferes with this script.\n\nEvery second character you type is in Select mode, so with versions of vim before 6.2, completions are offered only half the time.",
   "rating_total": "339",

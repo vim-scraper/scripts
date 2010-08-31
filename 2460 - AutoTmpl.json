@@ -1,7 +1,8 @@
 {
   "script_id": "2460",
-  "name": "AutoTmpl",
+  "display_name": "AutoTmpl",
   "summary": "Plugin for using templates when editing new files",
+  "name": "AutoTmpl",
   "script_type": "utility",
   "description": "The purpose of this script is to automatically load predefined template files\nwhen editing new files.\n\nThe templates can contain fields that are dynamically filled in order to customize\nthem at creation time (e.g. date of creation).\n\nCurrently, templates are provided for:\n - C\n - C++\n - C/C++ headers\n - Python\n - Shell scripts\n - Vim plugins\n\nThe plugins use some variables that can be defined in your .vimrc:\n - let g:author = \"your name\"\n - let g:email = \"your email\"\n - let g:footer = \"the footer you want vim to use for your files (e.g. tabstop=4 textwidth=100)\"\n\nPlease send me an email with any improvements you think are worth.",
   "rating_total": "20",

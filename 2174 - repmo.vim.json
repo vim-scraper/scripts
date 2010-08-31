@@ -1,7 +1,8 @@
 {
   "script_id": "2174",
-  "name": "repmo.vim",
+  "display_name": "repmo.vim",
   "summary": "repeat motions for which a count was given",
+  "name": "repmo.vim",
   "script_type": "utility",
   "description": "Usage by example:\n\n  Type \"5j\" (without quotes) and then \";\" to repeat \"5j\".\n  Type \"hjkl\" and then \";\", it still repeats \"5j\".\n  Type \",\" to do \"5k\" (go in reverse direction).\n  Type \"4k\" and then \";\" to repeat \"4k\".\n\n  The following motions (and scroll commands) are mapped per default:\n      j,k, h,l, Ctrl-E,Ctrl-Y, zh,zl\n\nCheck out:\n\n  Visual mode, e.g. \"V5j;;;;\"\n  \"f{char}\" followed by \";,\" -- it should still work\n  Operator pending mode with \";\" and \",\"\n\nCommands:\n\n  :RepmoMap {motion}|{reverse-motion} ...\n\n      Map {motion} to be repeatable with \";\".  Use {reverse-motion} for \",\".  Key notation is like in mappings.\n\nOptions, with defaults:\n\n  \" keys to be used for repeating (notation like in mappings), checked frequently:\n  :let repmo_key = \";\"\n  :let repmo_revkey = \",\"\n\n  \" map some default motions (argument string for :RepmoMap):\n  :let g:repmo_mapmotions = \"j|k h|l <C-E>|<C-Y> zh|zl\"\n\nNotes:\n\n  Your own remapping of a motion is silently discarded.\n  Your own remappings for \"f\", \"F\", \"t\" and \"T\" are kept.\n\n2009 Jun 03",
   "rating_total": "31",

@@ -1,7 +1,8 @@
 {
   "script_id": "2470",
-  "name": "smartword",
+  "display_name": "smartword",
   "summary": "Smart motions on words",
+  "name": "smartword",
   "script_type": "utility",
   "description": "*smartword* is a Vim plugin to provide {motion}s on |word|s which are smarter\nthan the built-in ones in some sense.  For example, |w| moves the cursor to\nthe next word as follows (here \"#\" means a position to which |w| moves the\ncursor for each time):\n\n\t<a href=\"http://www.vim.org/\">www.vim.org</a&gt;\n\t # #   # #   #  #  ##  ##  #  #  ##  ##  # #\n\nBecause there are two types of words and |w| moves to the next word which can\nbe the both types.  Let's call \"L\" for a type of words and \"P\" for another\ntype of words, where \"L\" means a word which consists of a sequence of letters\n(which are defined by 'iskeyword' option) and \"P\" means a word which consists\nof a sequence of other non-blank characters.\n\nIn many cases, you might want to move to the next \"L\", not \"P\".  This plugin\nprovides {motion}s to behave so.  For example, |<Plug>(smartword-w)| which is\ncorresponding to |w| moves the cursor as follows:\n\n\t<a href=\"http://www.vim.org/\">www.vim.org</a&gt;\n\t # #     #      #   #   #     #   #   #    #\n\nSee also |smartword-examples| for customization.\n\nSee also the following image if the above figures aren't correctly displayed:\nhttp://gyazo.com/bc7887d9bb0f6aa3eee1e67b0d756b2e.png\n\n\nRequirements:\n- Vim 7.2 or later\n\nLatest version:\nhttp://github.com/kana/vim-smartword\n\nDocument in HTML format:\nhttp://kana.github.com/config/vim/smartword.html",
   "rating_total": "43",

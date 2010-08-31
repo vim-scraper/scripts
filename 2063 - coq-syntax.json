@@ -1,0 +1,78 @@
+{
+  "script_id": "2063",
+  "display_name": "coq syntax",
+  "summary": "syntax colouring for coq files",
+  "name": "coq-syntax",
+  "script_type": "syntax",
+  "description": "All is in the title: syntax colouring for the coq proof assistant files (*.v).\n\nAlso check http://www.vim.org/scripts/script.php?script_id=2079 for indentation.\n\nSome people asked me if I planned to do something to interact between vim and coq. I answered that yes and that I had started it. The plugin is usable but not publishable\" :) However I now have many other things to do and am not using Coq at that time. So if I publish such a thing some day it may be in quite a long time. Apologies.",
+  "rating_total": "23",
+  "rating_votes": "8",
+  "downloads": "993",
+  "install_details": "1. Put the file in your ~/.vim/syntax directory.\n\n2. Create the file ~/.vim/ftdetect/coq.vim and put the following line inside:\n\n  au BufRead,BufNewFile *.v   set filetype=coq\n\n(Notice that *.v files are also used for verilog sources. This will make vim recognize *.v files as coq ones. VERILOG FILES WON'T BE RECOGNIZED ANYMORE.)\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=9597",
+      "filename": "coq.vim",
+      "script_version": "1.4.3",
+      "date": "2008-12-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "13128",
+        "user_name": "Vincent Aravantinos",
+        "first_name": "Vincent",
+        "last_name": "Aravantinos",
+        "email": "vincent.aravantinos at gmail.com",
+        "homepage": "http://membres-lig.imag.fr/aravantinos"
+      },
+      "release_notes": "Added Program and Obligations constructs of Coq v8.2."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=8187",
+      "filename": "coq.vim",
+      "script_version": "1.4",
+      "date": "2008-01-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13128",
+        "user_name": "Vincent Aravantinos",
+        "first_name": "Vincent",
+        "last_name": "Aravantinos",
+        "email": "vincent.aravantinos at gmail.com",
+        "homepage": "http://membres-lig.imag.fr/aravantinos"
+      },
+      "release_notes": "- Changed the colours. It should now be more uniform and more readable. Tell me if you prefer the way it was before. \n- Improved the way things are coloured : in previous versions, the plugin often had to wait until you finish the current sentence before colouring it. Quite inconvenient. Now, it will colour things as you type them (for almost all constructions). Colouring is also more robust."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7892",
+      "filename": "coq.vim",
+      "script_version": "1.0",
+      "date": "2007-11-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13128",
+        "user_name": "Vincent Aravantinos",
+        "first_name": "Vincent",
+        "last_name": "Aravantinos",
+        "email": "vincent.aravantinos at gmail.com",
+        "homepage": "http://membres-lig.imag.fr/aravantinos"
+      },
+      "release_notes": "Complete refactoring. Highlighting is now much more accurate. Oh, and the code is not ugly anymore."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7885",
+      "filename": "coq.vim",
+      "script_version": "0.01",
+      "date": "2007-11-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13128",
+        "user_name": "Vincent Aravantinos",
+        "first_name": "Vincent",
+        "last_name": "Aravantinos",
+        "email": "vincent.aravantinos at gmail.com",
+        "homepage": "http://membres-lig.imag.fr/aravantinos"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

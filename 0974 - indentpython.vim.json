@@ -1,0 +1,62 @@
+{
+  "script_id": "974",
+  "display_name": "indent/python.vim",
+  "summary": "An alternative indentation script for python",
+  "name": "indentpython.vim",
+  "script_type": "indent",
+  "description": "This indentation script for python tries to match more closely what is suggested in PEP 8 (http://www.python.org/peps/pep-0008.html).  In particular, it handles continuation lines implied by open (parentheses), [brackets] and {braces} correctly and it indents multiline if/for/while statements differently.\n\nComments are welcome!\n",
+  "rating_total": "1175",
+  "rating_votes": "344",
+  "downloads": "11437",
+  "install_details": "Drop the script in your ~/.vim/indent directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4316",
+      "filename": "python.vim",
+      "script_version": "0.3",
+      "date": "2005-05-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2913",
+        "user_name": "mcsween",
+        "first_name": "Eric",
+        "last_name": "Mc Sween",
+        "email": "em at tomcom.de",
+        "homepage": ""
+      },
+      "release_notes": "Changes:\n- Update one shiftwidth instead of aligning with parens that stand at the end of a line."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=3105",
+      "filename": "python.vim",
+      "script_version": "0.2",
+      "date": "2004-06-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2913",
+        "user_name": "mcsween",
+        "first_name": "Eric",
+        "last_name": "Mc Sween",
+        "email": "em at tomcom.de",
+        "homepage": ""
+      },
+      "release_notes": "Changes:\n- Fix: skip parentheses in strings and comments.\n- Line up elif/else and except/finally with the most probable corresponding if or try statement.\n- Dedent after 'pass'. (Jeffrey Collins)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2981",
+      "filename": "python.vim",
+      "script_version": "0.1",
+      "date": "2004-04-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "2913",
+        "user_name": "mcsween",
+        "first_name": "Eric",
+        "last_name": "Mc Sween",
+        "email": "em at tomcom.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

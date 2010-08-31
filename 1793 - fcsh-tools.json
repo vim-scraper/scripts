@@ -1,0 +1,46 @@
+{
+  "script_id": "1793",
+  "display_name": "fcsh tools",
+  "summary": "you can compile .as and .mxml files from vim via fcsh : Flex Comipler SHell",
+  "name": "fcsh-tools",
+  "script_type": "utility",
+  "description": "fcsh can compile actionscript 3 and mxml files.\nincluded are fcshserv.sh and fcshcmp.sh.\nfcshserv.sh should be launched manually before you edit\n.as or .mxml files.\nthen, you can execute fcshcmp.sh from vim to compile and optionally run .swf file.\n",
+  "rating_total": "18",
+  "rating_votes": "8",
+  "downloads": "737",
+  "install_details": "requirements:\n- fcsh ( http://labs.adobe.com/wiki/index.php/Flex_Compiler_Shell )\n- bash\n\nTested only on GNU/Linux. Might work on *nix or cygwin.\n\n1) tar xvjf fcshtools.tar.bz2\n\n2) cd fcshtools\n\n3) cp *.sh <wherever you want>\nit's recommended to put  the files to $HOME/bin.\n\n4) set FCSH_VIM_ROOT = $<wherever you want>\nif you don't set this environment variable, it'll look at $HOME/bin.\n\n5) edit ~/.vimrc\nif you put the files to $HOME/bin, then add these:\n    autocmd BufNewFile,BufRead *.mxml,*.as :nmap <C-B> :!bash ~/bin/fcshcmp.sh %:p\n    autocmd BufNewFile,BufRead *.mxml,*.as :nmap <C-A> :!bash ~/bin/fcshcmp.sh %:p run\n\n<C-B> will just compile the current file being edited.\n<C-A> will compile and run the .swf on flashplayer.\n\n6) bash $FCSH_VIM_ROOT/fcshserv.sh\nthis runs fcsh and creates a named pipe so fcshcmp.sh can send messages to.\nCtrl+C quits the server.\n\n7) vim hello.as\n\n8) <C-B> or <C-A>\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6744",
+      "filename": "fcshtools.tar.bz2",
+      "script_version": "0.2",
+      "date": "2007-02-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11738",
+        "user_name": "quhaha",
+        "first_name": "mike",
+        "last_name": "rowe",
+        "email": "skynare at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "added more quotes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=6717",
+      "filename": "fcshtools.tar.bz2",
+      "script_version": "0.1",
+      "date": "2007-02-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11738",
+        "user_name": "quhaha",
+        "first_name": "mike",
+        "last_name": "rowe",
+        "email": "skynare at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

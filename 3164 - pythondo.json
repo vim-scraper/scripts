@@ -1,7 +1,8 @@
 {
   "script_id": "3164",
-  "name": "pythondo",
+  "display_name": "pythondo",
   "summary": "Add ",
+  "name": "pythondo",
   "script_type": "utility",
   "description": "This plugin adds a command \":Pythondo\", which is rather like \":perldo\" or\" \":rubydo\".\n\n  :[range]Pythondo {cmd}\n  :[range]Pyd {cmd}\n          Execute Python command {cmd} for each line in the\n           [range], with variable \"s\" being set to the text of each line in\n           turn, and variable \"n\" being the corresponding line number.  \n           Setting variable \"s\" will change the text, but note that it \n           is not possible to add or delete lines using this command.\n           The default for [range] is the whole file: \"1,$\".\n           Setting variable \"n\" will set the text to line of number n, not\n           the current line. It's better not to set variable \"n\".\n  \n\nHere are some things you can try: >\n  :Pythondo s = str(n+1) + ' ' + s  # Add line number to each line\n  :py import time\n  :.Pythondo s = time.ctime()\n",
   "rating_total": "0",

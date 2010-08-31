@@ -1,0 +1,30 @@
+{
+  "script_id": "1461",
+  "display_name": "syntax/m4.vim",
+  "summary": "Improved m4.vim",
+  "name": "syntaxm4.vim",
+  "script_type": "syntax",
+  "description": "This is an improved version of m4.vim.\n\nIf you are using the changequote() and changecom(), you can specify\nthe quote and comment delimiters just like vim modelines in the\nfollowing way:\n\n<BLANK>vim-m4-syntax: quote=[,] comment=<!--,-->:\n\nYou can specify your default delimiters at your vimrc:\n\n:let g:m4_default_quote=\"`,'\"\n:let g:m4_default_comment='#'\n\nAfter the file read, you can change them in the following way:\n\n:let b:m4_quote='<<,>>'\n:let b:m4_comment=''\n:call M4UpdateSyntax()\n",
+  "rating_total": "1",
+  "rating_votes": "1",
+  "downloads": "197",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=5158",
+      "filename": "m4.vim",
+      "script_version": "1.0",
+      "date": "2006-02-12",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9414",
+        "user_name": "shinra",
+        "first_name": "Shinra",
+        "last_name": "AIDA",
+        "email": "shinra at j10n.org",
+        "homepage": "http://www.j10n.org/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

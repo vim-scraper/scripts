@@ -1,7 +1,8 @@
 {
   "script_id": "361",
-  "name": "snippet.vim",
+  "display_name": "snippet.vim",
   "summary": "Replace a word with any text",
+  "name": "snippet.vim",
   "script_type": "utility",
   "description": "Snippets are fragments of code, usually related to keywords . \nFor example the C language defines \"for\" and \"do\" as keywords, \namong others.  Since \"for\" is usually written\n    as : \n         for (...;...;...) {\n                 //code here\n         }\nMost users will create an abbreviation for the keyword \"for\" to add the\nparenthesis and curly-braces such as : \n         iabb xFor for<space>(<space>;<space>;<space>)<space>{<cr><cr>}\n\nTo accomplish this using snippets, create a file with these lines :\n\n for ( <#cursor#>; ; ) {\n\n }\n\nNow when editing a 'c' file, when you type 'for<C-S>' ,for is replaced by the\nsnippet of code you placed in the file.  Additionally the cursor is placed \nbetween the opening ( and the first ; ... ready for you to begin typing.\n",
   "rating_total": "31",

@@ -1,7 +1,8 @@
 {
   "script_id": "2292",
-  "name": "linglang",
+  "display_name": "linglang",
   "summary": "Dynamically switch languages/settings in multi-lingual documents",
+  "name": "linglang",
   "script_type": "utility",
   "description": "The command |:Linglang| installs a buffer-local autocommand that checks \nthe current line's language. I.e. enabling linglang for the current \nbuffer won't affect other buffers. If the language of the line under the \ncursor changes, a user-defined action (e.g., set spelllang) will be \nexecuted.\n\n:Linglang[!] [LANGS ...]\n    Toggle linglang support for the current buffer.\n    With [!], suppress message.\n\nCurrently supported:\n- English\n- German (latin1, utf8)\n\nIn order to add a new language, you'll have to come up with some good \nwords/regexps to identify it.\n\nLanguage data is stored in .../autoload/linglang/LANGUAGE.ENCODING\nThe fileformat is simple:\n\n- one word per line (these will be matched against word borders)\n- arbitrary regular expressions: /REGEXP/\n",
   "rating_total": "0",

@@ -1,7 +1,8 @@
 {
   "script_id": "885",
-  "name": "FormatBlock",
+  "display_name": "FormatBlock",
   "summary": "Format (i.e., gqq) a block of lines above/below the current line",
+  "name": "FormatBlock",
   "script_type": "utility",
   "description": "\" Format (i.e., gqq) a block of lines above/below the current line from the\n\" line matching <beg_pattern> to the line matching <end_pattern>; intervening\n\" lines of the block should match <in_pattern>, if given.\n\"\n\n\" EXAMPLE SETUP\n\" Format block (do a 'gq' format) on a C-style statement (i.e., from cursor's\n\" line to line ending with ';'):\n\"\n\"\tmap gqs :call FormatBlock('', ';$', '')<CR>\n\nPrimarily used as a \"helper\" function to FormatComment ( vimscript #886 )",
   "rating_total": "0",

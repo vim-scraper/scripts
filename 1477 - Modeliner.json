@@ -1,7 +1,8 @@
 {
   "script_id": "1477",
-  "name": "Modeliner",
+  "display_name": "Modeliner",
   "summary": "Generates modeline according to the current settings.",
+  "name": "Modeliner",
   "script_type": "utility",
   "description": "[How to use it?]\n\nexecute ':Modeliner'.\n\n\n[And, what will happen?]\n\nIf your current settings are like below:\n  - setl fenc=utf-8\n  - setl et\n  - setl sts=4\n\nthen you will get a modeline like:\n  - for 'c' filetype:\n      /* vim: set fenc=utf-8 et sts=4 : */\n  - for 'xml' filetype:\n      <!-- vim: set fenc=utf-8 et sts=4 : -->\n\n\n[How to include my favorite options?]\n\nModify  g:Modeliner_format.  It is a simple format.\n\nAn example:\n    let g:Modeliner_format = 'fenc=  tw=  et  ts=  sts=  sw=  backup wrap'",
   "rating_total": "12",

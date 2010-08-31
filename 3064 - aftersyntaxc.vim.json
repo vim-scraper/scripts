@@ -1,0 +1,62 @@
+{
+  "script_id": "3064",
+  "display_name": "after/syntax/c.vim",
+  "summary": "C Syntax Extensions",
+  "name": "aftersyntaxc.vim",
+  "script_type": "syntax",
+  "description": "This file, instead of replacing the normal c.vim file, incorporates and improves upon some of the changes added in vimscript #1201, \"Extended original c.vim.\" Because this file goes in $VIMRUNTIME/after/syntax, it appends these additional definitions to whatever c.vim file comes with the version of Vim you use.\n\nThe main additions identify operators, delimiters, and user-defined functions/function calls. Also included is a wealth of standard ANSI C function names as keywords. This makes C files look significantly richer, especially if your colorscheme includes color variants for the additional syntax groups.\n\nThe Match regexps for user-defined functions have been improved. The rest is mostly just selective porting from the c.vim in vimscript #1201.",
+  "rating_total": "23",
+  "rating_votes": "19",
+  "downloads": "421",
+  "install_details": "Place c.vim in $VIMRUNTIME/after/syntax.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12892",
+      "filename": "c.vim",
+      "script_version": "0.3",
+      "date": "2010-04-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19518",
+        "user_name": "mywolfson",
+        "first_name": "Mikhail",
+        "last_name": "Wolfson",
+        "email": "mywolfson at gmail.com",
+        "homepage": "http://web.mit.edu/wolfsonm"
+      },
+      "release_notes": "updates and fixes to cUserFunctionPointer, thanks to Alexei <lxmzhv@gmail.com>"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12876",
+      "filename": "c.vim",
+      "script_version": "0.2",
+      "date": "2010-04-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19518",
+        "user_name": "mywolfson",
+        "first_name": "Mikhail",
+        "last_name": "Wolfson",
+        "email": "mywolfson at gmail.com",
+        "homepage": "http://web.mit.edu/wolfsonm"
+      },
+      "release_notes": "changed [] from cDelimiter to cOperator."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12856",
+      "filename": "c.vim",
+      "script_version": "0.1",
+      "date": "2010-04-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19518",
+        "user_name": "mywolfson",
+        "first_name": "Mikhail",
+        "last_name": "Wolfson",
+        "email": "mywolfson at gmail.com",
+        "homepage": "http://web.mit.edu/wolfsonm"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

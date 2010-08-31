@@ -1,7 +1,8 @@
 {
   "script_id": "1200",
-  "name": "namazu.vim",
+  "display_name": "namazu.vim",
   "summary": "A frontend to the namazu command-line client.(not mknmz)",
+  "name": "namazu.vim",
   "script_type": "utility",
   "description": "Namazu is a full text search engine.\nSee http://www.namazu.org/.\n\nnamazu.vim has the following features.\n   - searching from the namazu index.\n   - open a file from search result. (now, only a plain text file)\n\n\" Options:\n\"\n\"   let g:namazu_cmd   = '/path/to/namazu'\n\"                        (default: namazu)\n\"\n\"   let g:namazu_index = '/path/to/indexdirectory'\n\"                        (Can be a space-separated list)\n\"\n\"   let g:namazu_range = NUMBER\n\"                        Set the number of documents shown to NUMBER.\n\"                        (default: 30)\n\"\n\"   let g:namazu_color = NUMBER\n\"                        Set this to zero to disable syntax\n\"                        highlighting.  (default: 1)\n\"\n\" Usage:\n\"\n\"   Type :Namazu<CR> to start searching.\n\"\n\"   <enter> : Open a selected file.\n\"   r       : Research.\n\"   s       : Set a sort METHOD (score, date)\n\"   k       : Move to a previous result.\n\"   j       : Move to a next result.\n\"   h       : Move to a previous page.\n\"   l       : Move to a next page.\n\"   q       : Close the namazu window.\n\"",
   "rating_total": "0",

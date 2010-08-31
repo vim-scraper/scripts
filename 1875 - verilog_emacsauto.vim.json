@@ -1,7 +1,8 @@
 {
   "script_id": "1875",
-  "name": "verilog_emacsauto.vim",
+  "display_name": "verilog_emacsauto.vim",
   "summary": "verilog filetype plugin to enable emacs verilog-mode autos",
+  "name": "verilog_emacsauto.vim",
   "script_type": "ftplugin",
   "description": "Two emacs verilog-mode functions are mapped.\n\\a expands all the verilog-mode autos (similar to C-c C-a in emacs).\n\\d collapses all the verilog-mode autos (similar to C-c C-d in emacs).\n\nPreviously if I wanted to update verilog-mode autos, I would\n   save and quit vim\n   fire up emacs\n   do the auto commands\n   save and close emacs\n   fire up vim.\nAnd in doing so, I would lose all the edit history in vim.\nWith this I can just type \\a and keep all the previous edit history for undos.\n\nThis is my first attempt at writing a vim plugin. Code should be simple enough for an average Verilog user to take and fix/enhance according to needs. Doing :he plugin, :he write-plugin, or :he plugin-details should reveal how simple this really is.",
   "rating_total": "33",

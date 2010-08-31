@@ -1,7 +1,8 @@
 {
   "script_id": "2982",
-  "name": "jumphl.vim",
+  "display_name": "jumphl.vim",
   "summary": "Highlight cursor line after cursor jump",
+  "name": "jumphl.vim",
   "script_type": "utility",
   "description": "The script highlights the cursor line after a jump. This makes it easy to\nspot the new cursor position. The highlight will be removed automatically\nwhen you move the cursor within the current line, or down or up by one line.\n\nThis is a modification of\nhttp://vim.wikia.com/wiki/Highlight_cursor_line_after_cursor_jump\n\n\nCOMMANDS\n\n:DoJumpHl\n:NoJumpHl\nenable or disable the script.  The script is disabled per default.\n\n\nVARIABLES\n\n:let g:jumphl_ignore_bufpat = '_NERD_tree_\\C'\nDo nothing for buffers where the bufname matches this pattern.\n",
   "rating_total": "1",

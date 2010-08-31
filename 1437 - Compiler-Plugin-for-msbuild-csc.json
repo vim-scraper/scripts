@@ -1,0 +1,30 @@
+{
+  "script_id": "1437",
+  "display_name": "Compiler Plugin for msbuild csc",
+  "summary": "Build your msbuild file and visual studio .net 2005 csharp projects in vim.",
+  "name": "Compiler-Plugin-for-msbuild-csc",
+  "script_type": "utility",
+  "description": "Msbuild is an easy way to building visusal studio's solution without the IDE. It's very cool using vim to work with your \"IDE team members\". So this is msbuild plugin.\n\nMsbuild use csc internally to build .csproj project file. Normally we build .sln file, which is in the parent directory of .csproj file. So the csc's output is relative to .csproj directory, not the .sln directory. Vim can't find the error source file. To solve this, you must enable \"GenerateFullPaths\" option in your .csproj project file.",
+  "rating_total": "16",
+  "rating_votes": "4",
+  "downloads": "610",
+  "install_details": "1. copy the msbuild.vim to your vimfiles/compilers directory. \n2. After vim started, select the msbuild as your compiler, or in your _vimrc file.\n3. Add Follow line to your .csproj file's common PropertyGroup\n    <GenerateFullPaths>True</GenerateFullPaths>\n\n<Project DefaultTargets=\"Build\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\"&gt;\n  <PropertyGroup>\n    <ProjectType>Local</ProjectType>\n    <ProductVersion>8.0.50727</ProductVersion>\n    <SchemaVersion>2.0</SchemaVersion>\n    <ProjectGuid>{F684BBEC-2818-48B8-B84E-5D736979ECEE}</ProjectGuid>\n    <Configuration Condition=\" '$(Configuration)' == '' \">Debug</Configuration>\n    <Platform Condition=\" '$(Platform)' == '' \">AnyCPU</Platform>\n    <OutputType>Library</OutputType>\n    <GenerateFullPaths>True</GenerateFullPaths>\n    ...\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=4920",
+      "filename": "msbuild.vim",
+      "script_version": "1.0",
+      "date": "2005-12-24",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9102",
+        "user_name": "redforks",
+        "first_name": "Red",
+        "last_name": "Forks",
+        "email": "redforks at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

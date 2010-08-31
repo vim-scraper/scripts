@@ -1,7 +1,8 @@
 {
   "script_id": "2157",
-  "name": "altfile",
+  "display_name": "altfile",
   "summary": "easy switching between related files",
+  "name": "altfile",
   "script_type": "utility",
   "description": "Screenshot: http://altfile.googlecode.com/files/shot1.png\nProject site: http://code.google.com/p/altfile/\n\n-----\n\nSuppose we have a project which resides in a \"proj\" directory. Content of that directory might look like this:\n\n  proj/classes/Class1.php\n  proj/classes/Class2.php\n  proj/classes/Namespace/Class3.php\n  proj/tpl/Class1.html\n  proj/tpl/Class2.html\n  proj/tpl/Namespace/Class3.html\n  proj/tests/Class1.phpt\n  proj/tests/Class2.phpt\n  proj/tests/Namespace/Class3.phpt\n\nCreate \"proj/.altfile\" and put these lines inside:\n\n  class: classes/{MATCH}.php\n  template: tpl/{MATCH}.html\n  test: tests/{MATCH}.phpt\n\nNow load \"proj/classes/Class1.php\" and hit the hot key. Menu will\nappear:\n\n  class  [template]  test\n\nNow you can use it as any other wild menu: cursor keys, <CR>, <Esc>.\n\nBy default previously active item is highilighted (works like Alt-Tab for Windows or Cmd-Tab for Mac OS X). So, to quickly switch between two files all you have to do is <M-Tab><CR>.\n\nNow load \"proj/tpl/Class4.html\" - it does not exist, and you'll get empty window. Hit <M-Tab>, select \"class\" and hit <CR> - VIM will create new buffer for (still non-existing) \"proj/classes/Class4.php\". Ta-dah! Actually, this is my main reason for creating this plugin.\n\nNote that it DOES NOT matter what is your current directory: you can cd to whatever place you want. But it DOES matter where \".altfile\" is, becase patterns inside it are relative to its placement.\n\nTo show visual file selector hit <F3>. Use movement/cursor keys to highlight a file; <CR> loads file; <Tab> switches between labels.\n",
   "rating_total": "1",

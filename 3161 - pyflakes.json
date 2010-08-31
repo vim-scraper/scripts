@@ -1,7 +1,8 @@
 {
   "script_id": "3161",
-  "name": "pyflakes",
+  "display_name": "pyflakes",
   "summary": "Vim filetype plugin for running pyflakes on Python files",
+  "name": "pyflakes",
   "script_type": "ftplugin",
   "description": "Usage\n-----\n1. Open a Python file\n2. Press `<F7>` to run `pyflakes` on it\n\nIt shows the errors inside a quickfix window, which will allow your to quickly\njump to the error locations by simply pressing [Enter].\n\nCustomization\n-------------\nIf you don't want to use the `<F7>` key for pyflakes-checking, simply remap it to\nanother key.  It autodetects whether it has been remapped and won't register\nthe `<F7>` key if so.  For example, to remap it to `<F3>` instead, use:\n\n    autocmd FileType python map <buffer> <F3> :call Pyflakes()<CR>\n",
   "rating_total": "0",

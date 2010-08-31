@@ -1,7 +1,8 @@
 {
   "script_id": "1899",
-  "name": "FindFile",
+  "display_name": "FindFile",
   "summary": "Open file quickly by using autocomplete",
+  "name": "FindFile",
   "script_type": "utility",
   "description": "Somewhat similar to locate on Unix, FindFile allows you open a file quickly by typing in its file name.  You can use :FC to generate the cache of all files in a directory recursively, then using :FF will open a buffer that can autocomplete on the filenames that are cached.  Pressing <Enter> will open the file.  \n\nThis is a pure vim implementation and the cache is stored in memory using a vim dictionary.  It should work on both Windows and Unix.\n\nSee http://wlee.net/FindFile.swf.html for details.",
   "rating_total": "77",

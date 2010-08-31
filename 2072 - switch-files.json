@@ -1,0 +1,30 @@
+{
+  "script_id": "2072",
+  "display_name": "switch files",
+  "summary": "switch between .c and .h files or different path and same filename easily",
+  "name": "switch-files",
+  "script_type": "utility",
+  "description": "Call \nfunction! vl#lib#files#switch_files#SwitchFileUI()\n  map <m-s><m-b> :call vl#lib#files#switch_files#SwitchFile()<cr>\nendfunction\nsomewhere to get the default mapping.\n\nThen use lines like this\ncall vl#lib#files#switch_files#SwitchFileRegisterLocalRegexSwap('.h$', ['.cpp', '.cc' ])\nautocmd BufRead,BufNewFile /pr/*nix,/pr/*nix/*.sh call vl#lib#files#switch_files#SwitchFileRegisterLocalRegexSwap('/pr/mynix/','/pr/svnnix/')\n\nfor each buffer to tell the script how to find alternates.\n\nThere is also some support to add custom functions. Drop me an email if you want to know more",
+  "rating_total": "-4",
+  "rating_votes": "4",
+  "downloads": "279",
+  "install_details": "Just source the file and follow the instructions. \nYou'll be asked before any action is taken. \n\nIf you don't feel comfortable installing to .vim insntall to another arbitrary directory and add it to your runtimepath \n(let runtimepath+= ..)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=7956",
+      "filename": "vimlib_switch_File_support_installer_sourceme.zip",
+      "script_version": "0.1",
+      "date": "2007-11-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10341",
+        "user_name": "MarcWeber",
+        "first_name": "Marc",
+        "last_name": "Weber",
+        "email": "marco-oweber at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

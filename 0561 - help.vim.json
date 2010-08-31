@@ -1,7 +1,8 @@
 {
   "script_id": "561",
-  "name": "help.vim",
+  "display_name": "help.vim",
   "summary": "help subsystem (create buffer with context-dependent help page)",
+  "name": "help.vim",
   "script_type": "utility",
   "description": "This plugin can help you call man or perldoc -f or many other help system in dependent from context.\n\nChanges:\n      * 1.18-1 now support perdoc in win32 OS...\n      * 1.18     several bugfixes, added call apropos if man page not found.\n      * 1.17     support fvwm, muttrc filetype, many fixes...\n      * 1.17g   new, extended implementation of help.vim (http://www.vim.org/scripts/script.php?script_id=561)\n      * 1.17b   forked by help.vim,v 1.16 2002/01/05 19:58:38 from Slava Gorbanev, added support tcl/tk and many fixes\n\nUsage:\n          use <F1> by default or other key (if you remap it) to call Help(expand(\"<cword>\"))\n          this function creating in half window buffer with contex-dependent\n          manual (or other) page about word under corsor.\n \n    By default in help-buffer set key-mapping:\n    q           for exit (and ``Esc'' in GUI mode)\n    o           for command :only\n    D           for go to DESCRIPTION section\n    S           for go to SYN section\n    (and other --- see source code by detail)\n\nYou can mapping go to any other section:\nfor example for go to NAME section by N key call next command:\nmap N :call GoToSection('NAME')\n\nNow support: sh, vim, perl, tcl/tk, C/C++, fvwm, muttrc and many other.\n\n TODO nicier documentation (oh, my terrible english)...\n TODO support many other language",
   "rating_total": "31",

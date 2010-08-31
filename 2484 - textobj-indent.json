@@ -1,7 +1,8 @@
 {
   "script_id": "2484",
-  "name": "textobj-indent",
+  "display_name": "textobj-indent",
   "summary": "Text objects for indented blocks of lines",
+  "name": "textobj-indent",
   "script_type": "utility",
   "description": "*textobj-indent* is a Vim plugin to provide text objects to select a block of\nlines which are similarly indented to the current line.\n\nFor example, if the content of a buffer as follows:\n(here \">\" means the current line under the cursor,\nand \"_\" means a space to indent)\n\n\t  if some_condition_is_satisfied\n\t> __if another_condition_is_satisfied\n\t  ____call s:do_x()\n\t  __endif\n\n\t  __...\n\t  __endif\n\t  else\n\t  __...\n\t  endif\n\n|<Plug>(textobj-indent-a)| will select lines as follows:\n(here \"|\" indicates the selected line)\n\n\t  if some_condition_is_satisfied\n\t>|__if another_condition_is_satisfied\n\t |____call s:do_x()\n\t |__endif\n\t |\n\t |__...\n\t |__endif\n\t  else\n\t  __...\n\t  endif\n\n|<Plug>(textobj-indent-i)| will select lines as follows:\n\n\t  if some_condition_is_satisfied\n\t>|__if another_condition_is_satisfied\n\t |____call s:do_x()\n\t |__endif\n\n\t  __...\n\t  __endif\n\t  else\n\t  __...\n\t  endif\n\nMore variants are also available.  See |textobj-indnet-mapping| for the\ndetails.\n\n\nRequirements:\n- Vim 7.2 or later\n- |textobj-user| 0.3.8 or later (vimscript#2100)\n\nLatest version:\nhttp://github.com/kana/vim-textobj-indent\n\nDocument in HTML format:\nhttp://kana.github.com/config/vim/textobj-indent.html",
   "rating_total": "18",

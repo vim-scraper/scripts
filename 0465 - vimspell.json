@@ -1,7 +1,8 @@
 {
   "script_id": "465",
-  "name": "vimspell",
+  "display_name": "vimspell",
   "summary": "ispell or aspell based spell checker with fly-spelling",
+  "name": "vimspell",
   "script_type": "utility",
   "description": "***** note to VIM 7 users ! *****\nVersion 7 of vim integrates a native spellchecker which outperforms  vimspell script.\nAs such I will not maintain anymore vimspell script, and you are advised to delete all\nrelated files from your plugin/ and doc/ directory, and use the native spellchecker instead.\n******************************\n\nThis script is based on Claudio Fleiner's spell checker and uses ispell (or aspell) \nto highlight spelling errors, and provides mappings (including a popup menu opened \nby right clicking on a mispelled word) to correct them, with suggestions. \n\nIt is possible to set up the script to do automatic spellchecking (à la\nword --- the current visible window is checked, and errors are highlighted on the fly).\nFor that, just redefine the spell_auto_type variable (let spell_auto_type=\"tex,doc,mail\") in such a maner \nthat all the filetypes for which you want on the fly spell check are listed (\"none\", and \"all\" token are treated).\n     \nMuch more documentation on all options can be found at the beginning of the script, or \nafter having install it, by typing the command \":help vimspell\".\n\nFeedback (suggestions, bug report, questions,...) is welcome .... \n\nYou can subscribe to a mailing list to receive annoucement for new versions by sending a mail\nhere at vimspell.announce-request@ml.free.fr  with subscribe in the subject.",
   "rating_total": "1907",

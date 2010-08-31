@@ -1,0 +1,30 @@
+{
+  "script_id": "894",
+  "display_name": "Viewing Procmail Log",
+  "summary": "Seeing only the interesting parts of procmail log",
+  "name": "Viewing-Procmail-Log",
+  "script_type": "syntax",
+  "description": "Here is a syntax file for viewing Procmail log.  The syntax works at least w/ vim 6.2.\n\nI have commented [out] my preferred colors; otherwise did my best to have reasonable colors wrt dark background.\n\nRefer to http://www103.pair.com/parv/comp/unix/cf/vim/procmail.vim for any updates.  Before you replace the syntax file from here, mind that the one exeternally available is not as generous regarding other syntax.  For one, the external one starts w/ \"syn clear\" unconditionally.",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "219",
+  "install_details": "Associate it just like any other syntax/highlight file.  If your log file is named \"procmail.log*\", then...\n\n  au BufNewFile,BufRead procmail.log* so /path/to/procmail-log.vim\n  au BufNewFile,BufRead procmail.log* set syn=procmail-log",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=2709",
+      "filename": "procmail-log.vim",
+      "script_version": "0.2",
+      "date": "2004-02-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "4440",
+        "user_name": "parv",
+        "first_name": "parv",
+        "last_name": ".",
+        "email": "parv_ at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

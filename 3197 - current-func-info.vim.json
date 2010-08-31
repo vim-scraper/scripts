@@ -1,7 +1,8 @@
 {
   "script_id": "3197",
-  "name": "current-func-info.vim",
+  "display_name": "current-func-info.vim",
   "summary": "Get current function name",
+  "name": "current-func-info.vim",
   "script_type": "utility",
   "description": "current-func-info shows current function's name to statusline, tabline,\nanywhere.\n|cfi#get_func_name()| to get function's name.\n\nSupported languages: C, Perl, Ruby, Python, Vim\n\n\ncfi#load()\t\t\t\t*cfi#load()*\n\tLoad \"autoload/cfi.vim\" and \"plugin/cfi.vim\".\n\ncfi#get_func_name([{filetype}])\t\t\t\t*cfi#get_func_name()*\n\tReturns function's name.\n\tInclude this expression to |'statusline'| or |'tabline'| and so on.\n\ncfi#format({fmt}, {default})\t\t\t*cfi#format()*\n\tReturns formatted string. >\n    let &statusline = '%{cfi#format(\"[%s()]\", \"no function\")}'\n<\tThis returns \"no function\" if cfi#get_func_name() returns empty string.\n\tOr returns \"[func()]\" if cfi#get_func_name() returns \"func\".\n\ncfi#create_finder({filetype})\t\t\t\t*cfi#create_finder()*\n\tReturns Dictionary of instance for finder.\n\n\tTo create finder, implement |s:finder.find()| or\n\timplement |s:finder.get_func_name()|, |s:finder.find_begin()|,\n\t|s:finder.find_end()|.\n\n\t(TODO: Write more descriptions)\n\n\tSee ftplugin/*.vim for the details.\n\ncfi#supported_filetype({filetype})\t\t\t\t*cfi#supported_filetype()*\n\tReturn boolean value if {filetype} is supported.",
   "rating_total": "5",

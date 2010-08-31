@@ -1,7 +1,8 @@
 {
   "script_id": "2183",
-  "name": "smoothPageScroll.vim",
+  "display_name": "smoothPageScroll.vim",
   "summary": "smooth page scroll",
+  "name": "smoothPageScroll.vim",
   "script_type": "utility",
   "description": "Yet another smooth page scroll implementation.\nI found scrolling the number of winheight() is not always correct, because the file could have wrapped lines. Let's say if your window height is 40, but you only see 35 actual lines because you have 5 wrapped lines. Then by scrolling the number of winheight(), 5 lines would be over-scrolled. This script won't skip the extra lines for having wrapped lines.\n\nThis script also emualtes one of VIM's normal <PageDown> or <PageUp> behaviors: which is to display first or last 2 lines from the previous screen after scrolling, unless it reaches first or last line, or the current window is showing 3 lines or less. \n\nSee other implementation - vimscript #1601, :help scroll-smooth",
   "rating_total": "11",

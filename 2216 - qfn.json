@@ -1,7 +1,8 @@
 {
   "script_id": "2216",
-  "name": "qfn",
+  "display_name": "qfn",
   "summary": "quickfixnotes: file annotation with quickfix",
+  "name": "qfn",
   "script_type": "utility",
   "description": "QuickFixNotes, or QFN, is a quick hack that allows file annotation\nbased on |quickfix| functionality.  In particular, this plugin allows the user\nto tie comments to a specific source file, line number, and column number\nwithout modifying the file being reviewed.  The goal of the plugin is to\nprovide a simple and useful mechanism for tracking notes when reviewing any\nsort of text file -- from documents and book drafts to source code and\nconfiguration files.  Paired with xxd, you can even annotate binary formats\nwith it.  qfn is useful any place where inserting comments into the\nfile being reviewed is impractical.\n\nGiven its simplicity, this plugin only supplies a simple set of features:\n\n    * Add a comment for the given line and column number to the |quickfix| list\n    * Save the current |quickfix| list an expected format\n    * Provide all functionality without external scripting dependencies\n\nIn the future, QFN may support more advanced interfaces to the |quickfix|.\n\nTo use, just map <Plug>QuickFixNote and <Plug>QuickFixSave to keys.  \nWhen called, QuickFixNote will add an entry to the quickfix list with a user\nsupplied comment for the current cursor's line number, column, and buffer\nname. ",
   "rating_total": "22",

@@ -1,7 +1,8 @@
 {
   "script_id": "3182",
-  "name": "mail_movement",
+  "display_name": "mail_movement",
   "summary": "Movement over email quotes with ]] etc. ",
+  "name": "mail_movement",
   "script_type": "ftplugin",
   "description": "DESCRIPTION\nThis filetype plugin provides movement commands and text objects for email\nquotes. \n\nUSAGE\n\t\t\tMove around email quotes of a certain nesting level, as\n\t\t\tdetermined by the current line; if the cursor is not on\n\t\t\ta quoted line, any nesting level will be used. \n]]\t\t\tGo to [count] next start of an email quote. \n][\t\t\tGo to [count] next end of an email quote. \n[[\t\t\tGo to [count] previous start of an email quote. \n[]\t\t\tGo to [count] previous end of an email quote. \n\n\t\t\tMove to nested email quote (i.e. of a higher nesting\n\t\t\tlevel as the current line; if the cursor is not on a\n\t\t\tquoted line, any nesting level will be used). \n]+\t\t\tGo to [count] next start of a nested email quote. \n[+\t\t\tGo to [count] previous start of a nested email quote. \n\naq\t\t\t\"a quote\" text object, select [count] email quotes\niq\t\t\t\"inner quote\" text object, select [count] regions with\n\t\t\tthe same quoting level",
   "rating_total": "0",

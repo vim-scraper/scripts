@@ -1,7 +1,8 @@
 {
   "script_id": "2468",
-  "name": "sandbox",
+  "display_name": "sandbox",
   "summary": "A vim script for managing subversion sandbox.",
+  "name": "sandbox",
   "script_type": "utility",
   "description": "After installing this plugin, ':Sandbox <sandbox_directory>' on the command line will create a new buffer\nwhich list the currnet status of the sandbox. In the buffer, a few handy mapping are available like diffing, commit, revert, etc. See the help at  the bottom of the buffer.\n\nScreenshot:\nhttp://files.myopera.com/wzhliang/albums/649613/sandbox.png\n\nLinux only!\n\nDepends on: svn, meld or tkdiff for GUI diffing.\n ---------- H E L P -----------\n c         Commit a single file or selected files.\n d         Diff the file specified in the current line.\n e         Open the file in question in a new tab.\n r         Revert a single file or selected files.\n t         Select/Unselect a single file.\n u, U    Update a single file or update all files.\n v        Resolved a single file or selected files.\n C-D     Reset selection.\n <F5>    Refresh the buffer.\n q       Quit\n",
   "rating_total": "3",

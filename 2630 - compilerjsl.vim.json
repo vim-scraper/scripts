@@ -1,0 +1,30 @@
+{
+  "script_id": "2630",
+  "display_name": "compiler/jsl.vim",
+  "summary": "Compiler plugin for JavaScript Lint. ",
+  "name": "compilerjsl.vim",
+  "script_type": "ftplugin",
+  "description": "Compiler plugin for JavaScript Lint (http://www.javascriptlint.com), an (open\nsource) checker for JavaScript syntax and coding techniques based on the Mozilla\nFirefox JavaScript engine. \n\nThis is similar to vimscript #2578 and vimscript #2729, but this script uses\nVim's compiler infrastructure (so checks are triggered by the :make command),\nmaking its use consistent with syntax checkers for other languages. ",
+  "rating_total": "6",
+  "rating_votes": "3",
+  "downloads": "367",
+  "install_details": "JavaScript Lint must be installed and available through $PATH. \n\nPut the script into your user or system Vim compiler directory\n(e.g. ~/.vim/compiler). \n\nTo automatically select this compiler for all JavaScript files, put the\nfollowing snippet into ~/.vim/after/ftplugin/javascript.vim:\n\n\" Set JavaScript Lint as compiler. \nif ! exists('b:current_compiler')\n    compiler jsl\nendif\n\nCONFIGURATION\nThe optional jsl configuration must either reside in this script's directory as\n'jsl.conf', or its filespec can be specified in g:jsl_config.  ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10576",
+      "filename": "jsl.vim",
+      "script_version": "1.00.003",
+      "date": "2009-05-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Initial upload (2) - Added license and modeline. "
+    }
+  ]
+}

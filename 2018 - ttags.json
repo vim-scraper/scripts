@@ -1,7 +1,8 @@
 {
   "script_id": "2018",
-  "name": "ttags",
+  "display_name": "ttags",
   "summary": "Tag list browser (List, filter, preview, jump to tags)",
+  "name": "ttags",
   "script_type": "utility",
   "description": ":TTags [KIND] [TAGS_RX] [FILE_RX]\nIn order to match any kind/rx, use *.\nE.g. TTags * * _foo.vim$\n\nFeatures:\n    - List tags\n    - Filter tags matching a pattern\n    - Jump/Preview tags\n    - Insert tags (and a template for the argument list if supported by \n      tSkeleton (vimscript #1160), which has to be installed for this)\n\nYou can use :echo keys(ttags#Kinds())<cr> to find out which kinds are defined.\n",
   "rating_total": "889",

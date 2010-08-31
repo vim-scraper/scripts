@@ -1,7 +1,8 @@
 {
   "script_id": "2291",
-  "name": "skeleton",
+  "display_name": "skeleton",
   "summary": "Skeleton for newly created buffers",
+  "name": "skeleton",
   "script_type": "utility",
   "description": "*skeleton* is a Vim plugin to set up a skeleton for a newly created buffer.\nOnce you put skeleton files into specific directories, appropriate ones will\nbe automatically expanded for newly created buffers.\n\n- Skeleton files must be put in a directory named \"xtr/skeleton/\" which is\n  under any directory listed in 'runtimepath'.\n\n  For example: ~/.vim/xtr/skeleton/\n\n- The name of a skeleton file should be \"{filetype}\" or \"{filetype}-{suffix}\",\n  where {filetype} is the 'filetype' for a newly created buffer and {suffix}\n  is an arbitrary string.\n\n  The former \"{filetype}\" is used as the default skeleton file for that\n  'filetype'.  The latter \"{filetype}-{suffix}\" is used to override the\n  default one for some cases which are speicifed by user.\n\n  For example: ~/.vim/xtr/skeleton/vim ~/.vim/xtr/skeleton/vim-plugin\n\n- Whenever user starts to edit a file that doesn't exists:\n\n  1) Skeleton publish a |User:plugin-skeleton-detect| event.  This event can\n     be used to |:SkeletonLoad| a special skeleton file other than the default\n     one.\n\n  2) If |:SkeletonLoad| is not done for the previous step, Skeleton executes\n     the following command:\n\n\texecute 'SkeletonLoad' &l:filetype\n\n     This means a skeleton file named \"{filetype}\" in a directory\n     \"xtr/skeleton/\" which is under any directory listed in 'runtimepath' is\n     loaded as a skeleton file.\n\n     If there is no such skeleton file, nothing will be happened.\n\n\nRequirements:\n- Vim 7.1 or later\n\nLatest version:\nhttp://github.com/kana/vim-skeleton\n\nDocument in HTML format:\nhttp://kana.github.com/config/vim/skeleton.html",
   "rating_total": "2",

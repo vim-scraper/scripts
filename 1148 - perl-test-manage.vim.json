@@ -1,7 +1,8 @@
 {
   "script_id": "1148",
-  "name": "perl-test-manage.vim",
+  "display_name": "perl-test-manage.vim",
   "summary": "Keep Track of the Number of Tests in a Perl Test File",
+  "name": "perl-test-manage.vim",
   "script_type": "utility",
   "description": "This script helps keeping track of the number of tests in a Perl test\nfile (t/*.t) by counting '# TEST' comments.\n\nIn order to keep track of the number of tests you need to have a statement\nlike:\n\n    use Test::More tests => 20\n\nat the beginning of the test file. Then you need to make sure, every test\nhas a corresponding '# TEST' comment. If you run several tests in a loop,\nyou can append asterisks plus number to the comment. So for example the \ncomment:\n\n    # TEST*3*5\n\nwill add 15 tests to the test number.\n\n",
   "rating_total": "2",

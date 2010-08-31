@@ -1,0 +1,46 @@
+{
+  "script_id": "2928",
+  "display_name": "Vimrc Version Numbering",
+  "summary": "automatic vimrc version numbering",
+  "name": "Vimrc-Version-Numbering",
+  "script_type": "utility",
+  "description": "Automatically increments and displays version number stored inside  vimrc file itself. Version number is automatically updated when a modified vimrc file is saved.\n\nDisplays version number  of vimrc in use when vim is started. This makes it easy to ensure that you have your latest copy of vimrc on different computers.\n\nAlso useful if someone you know uses your vimrc wholesale, or if there are a few versions of \"standard\" versions of vimrc going around in your environment.",
+  "rating_total": "-2",
+  "rating_votes": "4",
+  "downloads": "107",
+  "install_details": "insert code into your vimrc file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12332",
+      "filename": "vimrc_version.vim",
+      "script_version": "1.1",
+      "date": "2010-02-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8022",
+        "user_name": "zlel",
+        "first_name": "eiji",
+        "last_name": "kumiai",
+        "email": "greensleeves13 at hotmail.com",
+        "homepage": "http://sourceforge.net/projects/taskmenu/"
+      },
+      "release_notes": "- Added debug mode to stop version number from incrementing.\n\nEdit as follows to allow incrementation.\n:let g:debugmode=0\n\nEdit as follows to disallow incrementation\n:let g:debugmode=1\n\n- Removed map \",it\" to clean up code\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=12112",
+      "filename": "vimrc_version.vim",
+      "script_version": "1.0",
+      "date": "2010-01-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "8022",
+        "user_name": "zlel",
+        "first_name": "eiji",
+        "last_name": "kumiai",
+        "email": "greensleeves13 at hotmail.com",
+        "homepage": "http://sourceforge.net/projects/taskmenu/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

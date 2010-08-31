@@ -1,0 +1,30 @@
+{
+  "script_id": "530",
+  "display_name": "Mixed source/assembly syntax (objdump)",
+  "summary": "Syntax for Mixed C source and assembly dump.",
+  "name": "Mixed-sourceassembly-syntax-objdump",
+  "script_type": "syntax",
+  "description": "This is a syntax file for mixed C source and assembly dump, disassembled by gnu \"objdump\" utility. It does not recognize processor instructions so, it can be used on any platform. Here are the commands to generate the mixed disassembly. Make sure the source file is in the same directory as the object file.\ngcc -g -c xxx.c                       /*output is xxx.o*/\nobjdump -S xxx.o > xxx.dis  /* creates disassembly mixed with source */\n",
+  "rating_total": "34",
+  "rating_votes": "16",
+  "downloads": "500",
+  "install_details": "One method:\nCopy the  syntax file to your syntax directory. \n\n1.Create a file \"myfiletypes.vim\" in your $VIM directory with the following\n\" myfiletypefile\n    augroup filetype\n        au! BufRead,BufNewFile *.dis\tset filetype=mixed\n    augroup END\n\n2.Create another file in the same directory named \"mysyntax.vim\" with\n\nau! Syntax mixed  so $vim\\syntax\\cmix.vim\n\" path shown above should be the directory you saved the syntax file in.\n\" change the direction of the slash for *nix platforms\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=1635",
+      "filename": "cmix.vim",
+      "script_version": "0.1",
+      "date": "2003-01-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1381",
+        "user_name": "oxcrete",
+        "first_name": "Vihar",
+        "last_name": "Rai",
+        "email": "oxcrete at yahoo.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 {
   "script_id": "2695",
-  "name": "EnhancedJumps",
+  "display_name": "EnhancedJumps",
   "summary": "Enhanced jump list navigation commands. ",
+  "name": "EnhancedJumps",
   "script_type": "utility",
   "description": "DESCRIPTION\nThis plugin enhances the built-in CTRL-I / CTRL-O jump commands: \n- After a jump, the line, column and text of the next jump target are printed: \n    next: 3,9 ENHANCED JUMPS    by Ingo Karkat\n- An error message and the valid range for jumps in that direction is printed\n  if a jump outside the jump list is attempted: \n    Only 8 older jump positions.\n- In case the next jump would move to another buffer, only a warning is\n  printed at the first attempt:\n    next: EnhancedJumps.vim\n  The jump to another buffer is only done if the same jump command is repeated\n  once more immediately afterwards; like this: Pressing CTRL-O, noticing the\n  warning, then quickly pressing CTRL-O again to overcome the warning. \n  With this, you can eagerly jump around the current buffer. Because you will\n  be warned when a jump would move to another buffer, you're much less likely\n  to get lost. \n\nUSAGE\nSimply use the CTRL-O and CTRL-I commands to go to an older / newer cursor\nposition in the jump list. When a warning \"next: {file}\" is echoed, quickly\nrepeat the jump command to move to that buffer (a [count] need to not be\ntyped again; if you do include the [count], it must be the same as before). \nIf you do not want to move to that buffer, just ignore the warning, and\ncontinue browsing the current buffer. On the next jump attempt, the warning\nwill be repeated. ",
   "rating_total": "19",
