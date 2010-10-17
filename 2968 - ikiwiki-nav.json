@@ -1,15 +1,31 @@
 {
   "script_id": "2968",
   "display_name": "ikiwiki-nav",
-  "summary": "loads the buffer associated to a WikiLink when hitting enter over its text",
+  "summary": "several helpers for editing ikiwiki pages",
   "name": "ikiwiki-nav",
   "script_type": "ftplugin",
-  "description": "This ftplugin eases the editing of IkiWiki wikis, by letting you \"follow\" the wikilinks on your file (page), and loading the file associated with a given wikilink in vim. The plugin takes care of following the ikiwiki linking rules to figure out which file a wikilink points to\n\nThe plugin also includes commands (and mappings) to make the cursor jump to the previous/next wikilink in the current file\n\n#  Jumping to pages\n\nTo open the file associated to a wikilink, place the cursor over its text, and hit Enter (<CR>). This functionality is also available through the :IkiJumpToPage command\n\n# Moving to next/previous wikilink in current file\n\nCtrl-j will move the cursor to the next wikilink. Ctrl-k will move it to the previous wikilink. This functionality is also available through the :IkiNextWikiLink command. This command takes one argument, the direction to move into\n\n  * :IkiNextWikiLink 0 will look forward for the wikilink\n  * :IkiNextWikiLink 1 will look backwards for the wikilink\n\n# Current issues:\n\n  * The plugin only works for wikilinks contained in a single text line; multiline wikilinks are not (yet) seen as such\n\n# Notes\n\nThe latest version of this script can be found in the following location\n\nhttp://git.devnull.li/cgi-bin/gitweb.cgi?p=ikiwiki-nav.git;a=blob;f=ftplugin/ikiwiki_nav.vim;hb=HEAD\n\nAny feedback you can provide is appreciated; the contact details can be found inside the plugin",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "70",
-  "install_details": "copy the ikiwiki_nav.vim file to your .vim/ftplugin directory",
+  "description": "This ftplugin eases the editing of IkiWiki wikis by providing the following features:\n\n  * Wikilink autocompletion through omnicompletion.\n  * Jump to previous/next wikilink\n  * Open the file corresponding to the wikilink under the cursor in the current window/a new window/a new tab page\n  * Create the file corresponing to the wikilink under the cursor in the current window/a new window/a new tab page\n\nFor the usage details, mappings defined and other stuff, see :help ikiwiki-intro after you install the plugin\n\nThere is a git repo for the plugin in  http://git.devnull.li/ikiwiki-nav.git/. The master branch always has the latest stable version, and the dev branch has the latest version of the plugin.\n\nFeel free to contact the author (see the AUTHORS file in the package) with bug reports/suggestions/whatever :)",
+  "rating_total": "4",
+  "rating_votes": "1",
+  "downloads": "87",
+  "install_details": "unzip the zip file and move all the files in the ikiwiki-nav_2.0 folder to your .vim directory.\n\nfrom inside vim, run the command:\n\n    helptags $HOME/.vim/doc",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13814",
+      "filename": "ikiwiki-nav_2.0.zip",
+      "script_version": "2.0",
+      "date": "2010-09-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18931",
+        "user_name": "jerojasro",
+        "first_name": "Javier",
+        "last_name": "Rojas",
+        "email": "jerojasro at devnull.li",
+        "homepage": "http://devnull.li/~jerojasro/blog"
+      },
+      "release_notes": "Added capabilities for creating wiki pages, and for wikilink completion through the omnicompletion framework"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12342",
       "filename": "ikiwiki_nav.vim",

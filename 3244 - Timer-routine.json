@@ -1,0 +1,46 @@
+{
+  "script_id": "3244",
+  "display_name": "Timer routine",
+  "summary": "Does a 'timer' for vimscript like there is on other languages",
+  "name": "Timer-routine",
+  "script_type": "utility",
+  "description": "Most programming environments give you some sort of a timer callback facility you can attach to one of your functions to do a thing periodically.  This is missing in VIM.  This script 'emulates' one by doing a quick series of un-obstrusive kepresses that cause the key pressed timeout to reset continually.  Normally this happens every for seconds.  This can be changed.  The updatetimer is used to achive this.  A value of 1000 will cause the 'timer' to be called every one second.  When you want to hook something up to this timer, simply create an autocommand for on update wait or something, I forget what it is called.  It looks something similar to: au * onUpdateTimeout * do something, but this is not right.  More later :)",
+  "rating_total": "1",
+  "rating_votes": "4",
+  "downloads": "60",
+  "install_details": "Paste it in your _vimrc somewhere.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13872",
+      "filename": "Timer.vim",
+      "script_version": "1.0",
+      "date": "2010-09-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17391",
+        "user_name": "Pablos544",
+        "first_name": "Paul",
+        "last_name": "Contreras",
+        "email": "pablo at ezrider.co.uk",
+        "homepage": "http://www.paulcontreras.co.uk"
+      },
+      "release_notes": "Just modified the tail 'END TIMER' comment to make it dead obvious to you when you read it where this script ends."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13867",
+      "filename": "Timer.vim",
+      "script_version": "1.0",
+      "date": "2010-09-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17391",
+        "user_name": "Pablos544",
+        "first_name": "Paul",
+        "last_name": "Contreras",
+        "email": "pablo at ezrider.co.uk",
+        "homepage": "http://www.paulcontreras.co.uk"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

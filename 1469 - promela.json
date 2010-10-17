@@ -7,7 +7,7 @@
   "description": "This is my first attempt at writing an indent file for VIM.\nIt seems to work OK for at least basic stuff.",
   "rating_total": "2",
   "rating_votes": "2",
-  "downloads": "224",
+  "downloads": "228",
   "install_details": "Just put it in $HOME/.vim/indent and make sure that the PROMELA file type is recognized by VIM.\nIf VIM does not recognize PROMELA either add this to your existing $HOME/.vim/filetype.vim:\n\" Promela\nau BufNewFile,BufRead *.prom,*.prm,*.promela,*.pml              setf promela\n\nor create a filetype.vim looking like this:\naugroup filetypedetect\nau BufNewFile,BufRead *.prom,*.prm,*.promela,*.pml              setf promela\naugroup END",
   "versions": [
     {

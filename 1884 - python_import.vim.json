@@ -7,7 +7,7 @@
   "description": "This plugin defines a function for automatically cleaning up the imports\nin a python module or program. It does two things:\n\n - removes unused imports\n - sorts and formats the remaining imports\n\nThis function is mapped to <LocalLeader>i (for \"import\") in two contexts.\nIn Normal mode, it operates on the current paragraph.\nIn Visual mode, it operates on the selected range.\n\nThe python 'tokenize' module is used to determine which symbols are used\nin the current buffer, so the script is pretty good at identifying unused imports.\n\nThe import formatting style was chosen to work well with grep - the name of\nthe module and the symbols imported from it are guaranteed to always\nappear on the same line.",
   "rating_total": "8",
   "rating_votes": "2",
-  "downloads": "309",
+  "downloads": "313",
   "install_details": "Just drop the file in ~/.vim/ftplugin.\n\nvim must be compiled with +python.",
   "versions": [
     {

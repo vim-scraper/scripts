@@ -1,0 +1,62 @@
+{
+  "script_id": "3251",
+  "display_name": "RubyProxy",
+  "summary": "Makes most of vims functions available to ruby via a proxy. ",
+  "name": "RubyProxy",
+  "script_type": "utility",
+  "description": "RubyProxy\nRubyProxy acts as a proxy between ruby and vim, so that most of vims functions are usable in ruby. Only the functions, which accepts lists and dictionary won't work. And functions, which returns Dictionaries. It can work with functions that return lists now (including depth n with n > 1).  Floats are a problem, because the string function won't accept it in VIM 7.2. \n\nThere is a example added in  RubyProxy.vim, to show to use this class.\n\nUSAGE\n\nYou need to prefix every vim function with the letter V (from VIM). E.g:\n\nwithProxy:\n\nwithProxy accepts a block and makes the proxy available in the scope of the block. \n\nEvery function from :help functions can be called. \nIf you want to use a certain function, the function name must be prefixed with V to avoid clashes with ruby's functions. \n\nEXAMPLE: \n\nruby withProxy { |p| puts p.Vconfirm(\"Test\",\"&Yes\\n&No\")}\n\nThis will show you a dialog box and return one if someone clicked Yes and 2 where someone clicked No.\n\nAnother example (with a function, which returns lists):\n\nwithProxy {|p| p.Vgetbufline(1,1,10).each {|x| puts (\"hello\" + x)}}\n\nThis appends hello to the first 10 lines from buffer 1 and echo the lines.\n\nTODO:\n\nAdding support for dictionaries. \nAdding support for floats. (It is built in, but the string function won't accept floats) \nAdding data conversions from Ruby to Vim. Now it only accepts list, strings or numbers. \n\nThis approach would probably be pretty easy to adopt for other languages, so create more plugin for different languages. \n\nSee the wiki for more information. Or for some information in Dutch, see here: http://www.i-bytes.nl/code",
+  "rating_total": "17",
+  "rating_votes": "5",
+  "downloads": "25",
+  "install_details": "Just put it into your plugin directory. \nYou need if_ruby enabled, otherwise you cannot use the plugin. \nYour ruby installation needs yaml installed.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13911",
+      "filename": "RubyProxy.vim",
+      "script_version": "0.21",
+      "date": "2010-09-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "21484",
+        "user_name": "eklerks",
+        "first_name": "Edgar",
+        "last_name": "Klerks",
+        "email": "e.klerks at i-bytes.nl",
+        "homepage": "http://www.i-bytes.nl"
+      },
+      "release_notes": "Added support for multilevel lists.\nCleaned up script (make use of script variables.)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13904",
+      "filename": "RubyProxy.vim",
+      "script_version": "0.2",
+      "date": "2010-09-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "21484",
+        "user_name": "eklerks",
+        "first_name": "Edgar",
+        "last_name": "Klerks",
+        "email": "e.klerks at i-bytes.nl",
+        "homepage": "http://www.i-bytes.nl"
+      },
+      "release_notes": "Added support for data conversion from Ruby to Vim, currently supports: List, String, Number. Dictionary and Floats coming soon. This version is not yet fully tested. But it seems to support multidepth lists. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13896",
+      "filename": "RubyProxy.vim",
+      "script_version": "0.1",
+      "date": "2010-09-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "21484",
+        "user_name": "eklerks",
+        "first_name": "Edgar",
+        "last_name": "Klerks",
+        "email": "e.klerks at i-bytes.nl",
+        "homepage": "http://www.i-bytes.nl"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

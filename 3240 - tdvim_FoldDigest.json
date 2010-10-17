@@ -1,0 +1,30 @@
+{
+  "script_id": "3240",
+  "display_name": "tdvim_FoldDigest",
+  "summary": "Creates an outline view from folds in the current buffer",
+  "name": "tdvim_FoldDigest",
+  "script_type": "utility",
+  "description": "This plugin creates a new buffer with an outline view of all folds in the current buffer.\nIt is based on vimscript #732.\nUsage:\n\t:FoldDigest\n\n   Transform all folds in the current buffer into digest tree form, and\n   show it in another buffer.  The buffer is called ==FOLDDIGEST==.  It shows\n   not only all fold start positions, but also a tree depended on original\n   folds hierarchy.\n\n   In a FOLDDIGEST, you can move around the cursor, and when type <CR> jump\n   to fold at under it.  If you enter FOLDDIGEST window from other windows,\n   when depended buffer is availabeled, it will be synchronized\n   automatically.  If you want to force synchronize, type \"r\" in a\n   FOLDDIGEST buffer.\n   It is also possible to jump to the folsd under the cursor with a double\n   click.\n   The FOLDDIGEST window is updated when entering in a new buffer.\n\n   :FoldDigestToggle\n\n   Toggles FOLDDIGEST window\n\n   :FoldDigestClose\n\n   close FOLDDIGEST window\n\n   You can also map your own keys to these commands",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "34",
+  "install_details": "Extract the file at one of your vim directories.\n  ex. $HOME/.vim/\n  ex. $HOME\\vimfiles\\\n  ex. $VIM\\vimfiles\\",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13843",
+      "filename": "tdvimFoldDigest_0.1.tgz",
+      "script_version": "0.1",
+      "date": "2010-09-16",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "19594",
+        "user_name": "lisux",
+        "first_name": "Pablo",
+        "last_name": "Gimenez",
+        "email": "pablogipi at gmail.com",
+        "homepage": "http://www.lisux.es"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

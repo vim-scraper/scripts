@@ -7,7 +7,7 @@
   "description": "As I know little about vim scripts, this was just a thought which proved convenient for me. But I just noticed there's a new plugin called 'gnupg.vim' after this which is much better. Please download that instead. I tried to delete this from the server.\n\nThis little plugin helps to edit \"gpg\" encrypted files. I use this because it's more convenient when you do not have GUI encrypt tools.\n\nHow to use:\njust name the file with .gpg suffix, e.g. \"something.gpg\" and \nvi -u ~/.vim/gpg.vim something.gpg",
   "rating_total": "12",
   "rating_votes": "15",
-  "downloads": "378",
+  "downloads": "380",
   "install_details": "1. download and setup \"gpg\" ( see docs for gpg )\n2. setup your key for gpg, get the user name for the key, e.g. \"user@domain\"\n2. create two little scripts called \"dgpg\" and \"egpg\" and put them in your PATH.\n   in \"dgpg\":\n    \n   #!/bin/sh\n   gpg -d 2>/dev/null\n\n   in \"egpg\":\n   #!/bin/sh\n   gpg -e -r user@domain\n   # where user@domain is the user specified when you create your gpg key\n\n 3. drop gpg.vim in your ~/.vim/ directory",
   "versions": [
     {

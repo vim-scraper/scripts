@@ -7,7 +7,7 @@
   "description": "This is a script that uses a grep-like regex to find a function declaration in the current file/buffer that matches a given regular expression.\n\nIf called like: Fdgrep(-1) the function will ask the user for a pattern to search for.  It will then search the current file buffer for function declarations that contain the given pattern.  If no pattern is given, it will prompt the user again.  If no pattern is given the second time, it will do a search that should match any function declaration.\n\nIf called like: Fdgrep(0) the function will ask search for the last-used pattern (like hitting n after a normal search). If there is no last-used pattern in memory it will prompt the user for a pattern, which can be ignored as stated above to match any function declaration.\n\nThis will work with most C, C++, Objective-C, and Python function declarations that I have seen in my own code or at my job (we have a _very_ large C codebase).",
   "rating_total": "4",
   "rating_votes": "1",
-  "downloads": "185",
+  "downloads": "190",
   "install_details": "place the file in your plugin directory.\n\nI use mappings in my .vimrc to make it easier to use, like so:\n\nmap \\fdg :call Fdgrep(-1)<CR>  \" calls Fdgrep with -1 to get a pattern prompt\nmap \\fdn :call Fdgrep(0)<CR> \" calls Fdgrep with 0 to use last pattern",
   "versions": [
     {

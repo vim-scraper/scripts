@@ -7,7 +7,7 @@
   "description": "This plugin allows browse Java package system.\n\nrequirments:\n  1. exuberant ctags ( or at least tags file )\n  2. grep,sed,uniq - utility ( sorry widnows folk)\n  3. maltvals.vim && tree.vim   plugins for vim\n  \nJExplorer command  opens window with explorer in it.\n<SPACE> - pressed on a class or a member will show a prototype of the thing\nO  - pressed on a class or a member will try to open file with the tag and take you to the tag (currently it works only for tag files generated with relative paths).\ni  - pressed on a packge or  a class will generate import statment.\ni  - pressed on a function will import (write an empty function) this function.\n     (for last to cases visual selection allowed)\n\nBUGS and LIMITATION:\n    1. currently works only for unix-like systems\n    2.  Rather slow: on a 15Mb tag file (jdk src) it take 8s to open defalul package\n           for ather packages it is a bit faster (no more then 2s)\n    3. opens java files only in case tag file was generated with relative paths.\n \nWITHOUT YOUR FEEDBACK IT WON'T BE IMPROVED,\nso let me know if yuo have some thoughts about it.\n\n    \n",
   "rating_total": "20",
   "rating_votes": "5",
-  "downloads": "331",
+  "downloads": "336",
   "install_details": "1. unpack archive to your vimfile directory (~/.vim for unix-like systemes) \n2. Add paths to tag files to your 'tags' option\n       a) set global tags option\n       b)  create jexplorer.vim file under \"ftplugin\" directory ( see :h ftplugin) and wite :\n            setlocal tags=/user/home/Sonic/java/jdksrc/tags\n            this will set tags option locally to a JExplorer buffer.\n\n",
   "versions": [
     {

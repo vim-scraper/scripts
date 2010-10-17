@@ -5,9 +5,9 @@
   "name": "ragtag.vim",
   "script_type": "utility",
   "description": "This plugin started out as a set of personal mappings, but there was enough enjoyment among those I shared it with for me to clean it up and release it.\n\nFeatures:\n\nWhile there are several HTML and XML scripts on vim.org, I have found none that share a significant amount of functionality with allml.vim.\n\nA huge variety of filetypes are supported:  html, xhtml, wml, xml, xslt, xsd, jsp, php, aspperl, aspvbs, cf, mason, htmldjango, and eruby.  (Let me know if I missed any).  Some features take note of the filetype and adapt to it.\n\nMaps for editing tags.  This includes a couple of \"make last word into a tag pair\" maps, a doctype map (inserts <?xml ...?> in XML), a \"close last tag\" map, and a few extra goodies.\n\nFor templating languages (ASP, PHP, etc.), there are maps for inserting template code.  The maps are dependent on the filetype: in ASP, you get <% %> and <%= %>, in PHP, <?php ?> and <?php print ?>, etc.  If said template language has a comment syntax, there is a map for it, otherwise, that map points to <!-- -->.\n\nMaps for XML/HTML escaping and URL encoding have been moved to unimpaired.vim, vimscript #1590.\n\nEnhances surround.vim, vimscript #1697.\n\nhttp://github.com/tpope/vim-ragtag",
-  "rating_total": "74",
-  "rating_votes": "26",
-  "downloads": "2724",
+  "rating_total": "78",
+  "rating_votes": "27",
+  "downloads": "2890",
   "install_details": "Extract in ~/.vim or ~\\vimfiles (Windows).  If you want a few general purpose mappings available globally, add the following to your vimrc:\n\nlet g:ragtag_global_maps = 1\n",
   "versions": [
     {

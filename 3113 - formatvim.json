@@ -4,12 +4,28 @@
   "summary": "Convert current file to colored HTML, BBCode or whatever",
   "name": "formatvim",
   "script_type": "utility",
-  "description": "There are some things that included out-of-the-box 2html.vim plugin does not support, so I ended in writing my own format.vim script:\n\n - 'list' and 'listchars'\n - Foreground colors for lines with differencies\n - Normal special character coloring\n - Background color for the whole line with differencies and folds, not just for   text\n - Tags linked to their definition (slow, HTML only, but partially on by default)\n - Side-by-side diff (also present in latest 2html version)\n - My killer feature: exporting to any format you can write specification for. (for example, bbcode; bbcode specification for unixforum.org is included in the distribution)\n\nExamples:\nhttp://kp-pav.narod2.ru/formatvim-2.2.1-side-by-side-diff.html\nhttp://kp-pav.narod2.ru/formatvim-2.2.1-diff.html\nhttp://kp-pav.narod2.ru/formatvim-2.2.1-AllFolds.html (if you want to open/close fold permanently, not only at hover, either click anywhere inside the fold or click its header)\nhttp://kp-pav.narod2.ru/formatvim-2.3.2-formatconcealed-1.html\nhttp://kp-pav.narod2.ru/formatvim-2.3.2-formatconcealed-2.html (hover to see actual text present in the line)\n\nYou can download new version of plugin from sourceforge.net: you will need the following projects: \n\nhttp://sourceforge.net/projects/formatvim\nhttp://sourceforge.net/projects/vimcompcrtr \nhttp://sourceforge.net/projects/vimargumentchec \nhttp://sourceforge.net/projects/vimstuff \nhttp://sourceforge.net/projects/vimpluginloader ",
+  "description": "There are some things that included out-of-the-box 2html.vim plugin does not support, so I ended in writing my own format.vim script:\n\n - 'list' and 'listchars' (tab, trail, eol, conceal, including the case when 'list' is on and 'lcs' does not contain tab)\n - Foreground colors for lines with differencies (if I am not mistaking, implemented in latest 2html)\n - Normal special character coloring\n - Background color for the whole line with differencies and folds, not just for text\n - Tags linked to their definition (slow, HTML only (unless you write specification by yourself), but partially on by default, also implemented by vimscript #2252 for 2html)\n - Side-by-side diff (also present in latest 2html version)\n - Full conceal support, including 'cole', 'lcs:conceal' and saving information about actual text present\n - Foldcolumn support (2html generates foldcolumn only if dynamic_folds is on, and this foldcolumn is different from what Vim actually displays)\n - My killer feature: exporting to any format you can write specification for. (for example, bbcode; bbcode specification for unixforum.org is included in the distribution)\n\nExamples:\nhttp://kp-pav.narod2.ru/formatvim-2.2.1-side-by-side-diff.html\nhttp://kp-pav.narod2.ru/formatvim-2.2.1-diff.html\nhttp://kp-pav.narod2.ru/formatvim-2.2.1-AllFolds.html (if you want to open/close fold permanently, not only at hover, either click anywhere inside the fold or click its header)\nhttp://kp-pav.narod2.ru/formatvim-2.3.2-formatconcealed-1.html\nhttp://kp-pav.narod2.ru/formatvim-2.3.2-formatconcealed-2.html (hover to see actual text present in the line)\n\nDocumentation: http://kp-pav.narod2.ru/vim/doc/format.txt.html\n\nYou can download new version of plugin from sourceforge.net: you will need the following projects: \n\nhttp://sourceforge.net/projects/formatvim\nhttp://sourceforge.net/projects/vimcompcrtr \nhttp://sourceforge.net/projects/vimargumentchec \nhttp://sourceforge.net/projects/vimstuff \nhttp://sourceforge.net/projects/vimpluginloader ",
   "rating_total": "4",
   "rating_votes": "1",
-  "downloads": "149",
+  "downloads": "191",
   "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"formatvim\"]) and add ``call scriptmanager#Activate([\"formatvim\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13788",
+      "filename": "formatvim-2.3.4.tar.gz",
+      "script_version": "2.3.4",
+      "date": "2010-09-09",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added %!{cmd}!% format specification, added lcs:conceal support, added support for the case when 'lcs' does not have tab and 'list' is on, lots of bugfixes"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13707",
       "filename": "formatvim-2.3.3.tar.gz",

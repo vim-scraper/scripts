@@ -7,7 +7,7 @@
   "description": "The purpose of this script is to automatically load predefined template files\nwhen editing new files.\n\nThe templates can contain fields that are dynamically filled in order to customize\nthem at creation time (e.g. date of creation).\n\nCurrently, templates are provided for:\n - C\n - C++\n - C/C++ headers\n - Python\n - Shell scripts\n - Vim plugins\n\nThe plugins use some variables that can be defined in your .vimrc:\n - let g:author = \"your name\"\n - let g:email = \"your email\"\n - let g:footer = \"the footer you want vim to use for your files (e.g. tabstop=4 textwidth=100)\"\n\nPlease send me an email with any improvements you think are worth.",
   "rating_total": "20",
   "rating_votes": "5",
-  "downloads": "203",
+  "downloads": "205",
   "install_details": "To install it for the first time, download the plugin and\ndecompress it into your local vim directory (~/.vim).\n\nOnce installed you can update it with vimscript #642.\n\nIn order to update your help tags you have to run >\n        :helptags ~/.vim/doc\n<\n\nYou can see this help with >\n        help AutoTmpl\n>",
   "versions": [
     {

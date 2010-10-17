@@ -5,16 +5,16 @@
   "name": "skk.vim-B",
   "script_type": "utility",
   "description": "* This script is an implementation of the Japanese SKK (Simple Kana to Kanji\nconversion program).\n\n* Get older versions from vimscript#1589.\n(Thanks to Noriaki Yagi for inventing this script!)\n\n* This plugin works under vim6, vim7.\n\n* Repository\nhttp://github.com/tyru/skk.vim/",
-  "rating_total": "8",
-  "rating_votes": "2",
-  "downloads": "93",
+  "rating_total": "12",
+  "rating_votes": "3",
+  "downloads": "150",
   "install_details": "REQUIREMENT: SKK-JISYO.[SML]\nSet two global variables if necessary.\n  let skk_jisyo = \"path to private dictionary\"\n  let skk_large_jisyo = \"path to SKK-JISYO.[SML]\"\n:so skk.vim or put this script into your plugin directory.\nTo start SKK-mode, press <C-j> in Insert-mode or Commandline-mode. ",
   "versions": [
     {
-      "url": "http://www.vim.org/scripts/download_script.php?src_id=13725",
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13747",
       "filename": "skk.zip",
-      "script_version": "0.26",
-      "date": "2010-08-30",
+      "script_version": "0.26.2",
+      "date": "2010-09-03",
       "vim_version": "6.0",
       "author": {
         "user_id": "16618",
@@ -24,7 +24,7 @@
         "email": "tyru.exe (at) gmail.com",
         "homepage": "http://tyru.sakura.ne.jp/"
       },
-      "release_notes": "- Applied super blooper's JLOD patch. Thanks.\n-- Added g:skk_enable_jlod_layout"
+      "release_notes": "NOTE: Removed v0.26.0 from vim.org\n\nv0.26.2:\n- Fix fatal bug: g:skk_henkan_point_keys default value was wrongly changed\n- Fix bug: Several keys in normal mode mapped by skk.vim do not accept [count]. Thanks Toshiki Kataoka for reporting the bug.\n\nv0.26.0:\n- Applied super blooper's JLOD patch. Thanks.\n-- Added g:skk_enable_jlod_layout"
     },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13368",

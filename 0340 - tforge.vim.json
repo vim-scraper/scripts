@@ -7,7 +7,7 @@
   "description": "This is the syntax file for Text::Forge templates. See http://text-forge.sf.net/ for more info on what Text::Forge is. This depends on a good html and perl syntax file, which comes with the default vim distribution.",
   "rating_total": "1",
   "rating_votes": "1",
-  "downloads": "345",
+  "downloads": "347",
   "install_details": "1) Move tforge.vim to your syntax directory (usually at $VIMRUNTIME/syntax/).\n\n2) Add a few line to your filetype.vim script (usually at $VIMRUNTIME/filetype.vim):\n\\\" Text::Forge\nau BufNewFile,BufRead *.tf setf tforge\n\nIf you are editing a file that doesn&#039t have \\\".tf\\\" on the end, then you can just do this to get the highlighting:\n:setf tforge\n",
   "versions": [
     {

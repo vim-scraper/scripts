@@ -5,11 +5,27 @@
   "name": "tselectbuffer",
   "script_type": "utility",
   "description": "This plugin provides a simple buffer selector. It doesn't have all the \nfeatures other buffer selectors have but can be useful for quickly \nswitching to a different buffer or for deleting buffers.\n\nThe idea is to view the buffer list, to do something, and to close the \nbuffer list. If you really want to permanently watch the buffer list to \nsee whether it's changed, you might want to use a different plugin.\n\nFeatures:\n    - list buffers, dynamically filter buffers matching a pattern\n    - switch to a buffer\n    - rename a buffer (you may need to use :saveas! or :w! when writing \n    the renamed buffer to disk)\n    - delete one or more buffer(s)\n\n:[N]TSelectBuffer[!]\n    List buffers. With a count or a !, show also hidden buffers.\n    Keys:\n    <cr>  ... Select (close the buffer list)\n    <c-s> ... Open in split window\n    <c-v> ... Open in vertically split window\n    <c-t> ... Open in new tab\n    <c-w> ... Show in original window (continue with the buffer list)\n    <c-d> ... Delete a buffer\n    <c-u> ... Rename a buffer\n    <     ... Jump to opened buffer in window/tab\n\nSuggested keymaps (put something like this into ~/.vimrc):\n    noremap <m-b> :TSelectBuffer<cr>\n    inoremap <m-b> <c-o>:TSelectBuffer<cr>\n",
-  "rating_total": "876",
-  "rating_votes": "221",
-  "downloads": "1353",
+  "rating_total": "880",
+  "rating_votes": "222",
+  "downloads": "1422",
   "install_details": "vimscript #1863 is required.\n\nCopy the vim file to ~/.vim/plugin/\n\n\nAlso available via git\nhttp://github.com/tomtom/tselectbuffer_vim",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13974",
+      "filename": "tselectbuffer.vba",
+      "script_version": "0.7",
+      "date": "2010-10-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Moved the definition of some variables from plugin/tselectbuffer.vim to autoload/tselectbuffer.vim\n- Delete buffer: New options: None, all\n- Support for g:tselectbuffer#order = \"basename\"\n- Require tlib 0.40\n"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=9596",
       "filename": "tselectbuffer.vim",

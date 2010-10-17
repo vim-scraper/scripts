@@ -4,12 +4,60 @@
   "summary": "Simple project tool",
   "name": "Proj",
   "script_type": "utility",
-  "description": "Proj lets you save settings for your project in a simple file.\n\nSource is at http://github.com/tmallen/proj-vim, but for the most part I'll be quick to push updates to this page.\n\nCommands:\n    :Proj <project> - Open project named <project> (tab-completes)\n    :ProjAdd <name> - Add the project \"name\" to the project file and reload\n    :ProjFile - Open the project file in a split\n    :ProjInfo - Show all of the current project's settings in the status line\n    :ProjNotes - Open the project notes file in a split\n    :ProjRefresh - Reload the current project\n    :ProjReload - Reload the project file\n    :ProjVim - Open the project's vim settings file in a split\n\n\nFile Syntax:\n    DOS .ini\n\nAvailable Settings:\n    browser - A custom command for the filebrowser\n    notes - Path to a text file with project notes\n    path - Path to the project root directory\n    vim - Path to a file with vim commands\n    docksend - Upload all files in the project on save if the TransmitFtp\n      plugin is available\n\nSample Project File:\n    ; This is a comment\n    [project]\n    path = /path/to/project\n    vim = /path/to/settings_file.vim\n    docksend ; boolean option\n\n    [path-with-spaces]\n    path = /path/to/my\\ project ; Escape spaces with \\\n\nGlobal Options:\n    g:ProjFileBrowser (default: 'NERDTree') - The filebrowser command. Set to \n        'off' to not open a filebrowser.\n    g:ProjFile (default: '~/.vimproj') - Path to the project file.  \n    g:ProjNoteFile (default: 'notes.txt') - Path to the project notes file\n    g:ProjSplitMethod (default: 'vsp') - Command to use when opening a file \n        with a Proj command such as ProjFile.\n    g:ProjDisableMappings (default: 0) - Set to 1 to turn off all mappings\n        defined by this plugin\n    g:ProjMapLeader (default: '<Leader>p') - The prefix for default mappings\n\n    Default maps: These are all prefixed with g:ProjMapLeader by default.\n        g:ProjOpenMap (default: 'o') - Calls :Proj\n        g:ProjAddMap (default: 'a') - Calls :ProjAdd\n        g:ProjInfoMap (default: 'i') - Calls :ProjInfo\n        g:ProjNotesMap (default: 'n') - Calls :ProjNotes",
-  "rating_total": "79",
-  "rating_votes": "28",
-  "downloads": "373",
+  "description": "Proj lets you save settings for your project in a simple file.\n\nhttp://github.com/tmallen/proj-vim\n\nCommands:\n    Note that the easiest way to use Proj is with the key mappings bound \n    to the commands below. <Leader>pt is the default mapping to open a \n    tab-specific project, for instance.\n\n    :ProjAdd\n     Prompts to add a new project in the current directory.\n\n    :ProjFile\n     Open the project file in a split.\n\n    :ProjInfo\n     Show all of the current project's settings in the status line.\n\n    :ProjMenu\n     Open a menu with all of these commands.\n\n    :ProjNotes\n     Open the project notes file in a split.\n\n    :ProjOpen\n     Prompt to open a project.\n\n    :ProjOpenTab\n     Prompt to open a project for the open tab. Projects opened this way will\n     only be active in the opened tab, so that each tab can contain a project.\n\n    :ProjRefresh\n     Reload the current project.\n\n    :ProjReload\n     Reload the project file.\n\n    :ProjVim\n     Open the project's vim settings file in a split.\n\nFile Syntax:\n    DOS .ini\n\nAvailable Settings:\n    browser - A custom command for the filebrowser\n    notes - Path to a text file with project notes\n    path - Path to the project root directory\n    vim - Path to a file with vim commands\n    docksend - Upload all files in the project on save if the TransmitFtp\n      plugin is available\n\nSample Project File:\n    ; This is a comment\n    [project]\n    path = /path/to/project\n    vim = /path/to/settings_file.vim\n    docksend ; boolean option\n\n    [path-with-spaces]\n    path = /path/to/my\\ project ; Escape spaces with \\\n\nGlobal Options:\n    * g:ProjDisableMappings (default: 0) - Set to 1 to turn off all\n        mappings defined by this plugin\n    * g:ProjFile (default: '~/.vimproj') - Path to the project file.\n    * g:ProjFileBrowser (default: 'NERDTree') - The filebrowser command.\n        Set to 'off' to not open a filebrowser.\n    * g:ProjMapLeader (default: '<Leader>p') - The prefix for default mappings\n    * g:ProjNoteFile (default: 'notes.txt') - Path to the project notes file\n    * g:ProjSplitMethod (default: 'vsp') - Command to use when opening a file\n        with a Proj command such as ProjFile.\n\n    Default maps: These are all prefixed with g:ProjMapLeader by default.\n        g:ProjAddMap (default: 'a') - Calls :ProjAdd\n        g:ProjFileMap (default: 'f') - Calls :ProjFile\n        g:ProjInfoMap (default: 'i') - Calls :ProjInfo\n        g:ProjMenuMap (default: 'm') - Calls :ProjMenu\n        g:ProjNotesMap (default: 'n') - Calls :ProjNotes\n        g:ProjOpenMap (default: 'o') - Calls :ProjOpen\n        g:ProjOpenTabMap (default: 't') - Calls :ProjOpenTab\n        g:ProjReloadMap (default: 'r') - Calls :ProjReload\n        g:ProjVim (default: 'v') - Calls :ProjVim",
+  "rating_total": "231",
+  "rating_votes": "66",
+  "downloads": "446",
   "install_details": "1. Extract the downloaded proj.tgz file\n2. Copy proj/doc/proj.txt to .vim/doc/proj.txt\n3. Copy proj/plugin/proj.vim to .vim/plugin/proj.vim\n4. Run :helptags ~/.vim/doc to load the documentation\n5. Create a file at ~/.vimproj or your custom g:ProjFile location with your projects",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14001",
+      "filename": "proj.tgz",
+      "script_version": "1.5.1",
+      "date": "2010-10-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15449",
+        "user_name": "tmallen",
+        "first_name": "Thomas",
+        "last_name": "Allen",
+        "email": "tmallen at 703designs.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed incorrect ProjOpenTab menu action."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14000",
+      "filename": "proj.tgz",
+      "script_version": "1.5",
+      "date": "2010-10-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15449",
+        "user_name": "tmallen",
+        "first_name": "Thomas",
+        "last_name": "Allen",
+        "email": "tmallen at 703designs.com",
+        "homepage": ""
+      },
+      "release_notes": "Tab-specific projects."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13903",
+      "filename": "proj.tgz",
+      "script_version": "1.4",
+      "date": "2010-09-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15449",
+        "user_name": "tmallen",
+        "first_name": "Thomas",
+        "last_name": "Allen",
+        "email": "tmallen at 703designs.com",
+        "homepage": ""
+      },
+      "release_notes": "Cleanup, more mappings, menu, basic prompts."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13379",
       "filename": "proj.tgz",

@@ -7,7 +7,7 @@
   "description": "Required: Vim 6.2\n\nUsage:\n        :call FoldDigest()\n\n    Transform all folds in the current buffer into digest tree form, and\n    show it in another buffer.  The buffer is called FOLDDIGEST.  It shows\n    not only all fold start positions, but also a tree depended on original\n    folds hierarchy.\n\n    In a FOLDDIGEST, you can move around the cursor, and when type <CR> jump\n    to fold at under it.  If you enter FOLDDIGEST window from other windows,\n    when depended buffer is availabeled, it will be synchronized\n    automatically.  If you want to force synchronize, type \"r\" in a\n    FOLDDIGEST buffer.\n\nOptions:\n\n    'folddigest_options'\n                string (default \"\")\n        Set string flag which you need.  If you want to use more than two,\n        join by comma.\n\n          flexnumwidth  Narrow line number width as possible.\n          nofoldclose   don't close folds after \":call FoldDigest()\".\n          vertical      Use :vsplit for FOLDDIGEST. (default :split)\n\n    'folddigest_size'\n                number (default 0)\n        FOLDDIGEST window size.  When 'folddigest_options' has \"vertical\"\n        flag, this value is interpretted as window height, and doesn't then\n        as window width.  If zero was specified height/width become half of\n        current window.\n\n    ex:\n        :let folddigest_options = \"vertical,flexnumwidth\"\n        :let folddigest_size = 30",
   "rating_total": "17",
   "rating_votes": "8",
-  "downloads": "808",
+  "downloads": "823",
   "install_details": "Put the file at one of your plugin directories. \n  ex. $HOME/.vim/plugin/ \n  ex. $HOME\\vimfiles\\plugin\\ \n  ex. $VIM\\vimfiles\\plugin\\",
   "versions": [
     {

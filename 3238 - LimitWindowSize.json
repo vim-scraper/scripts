@@ -1,0 +1,30 @@
+{
+  "script_id": "3238",
+  "display_name": "LimitWindowSize",
+  "summary": "Reduce the current window size by placing an empty padding window next to it. ",
+  "name": "LimitWindowSize",
+  "script_type": "utility",
+  "description": "DESCRIPTION\nText files that do not have \"hard\" word wrapping via embedded line breaks can\nbe cumbersome to edit in a wide editor window, as it is strenuous on the eyes\nto jump back and forth between begin and end of the soft-wrapped lines. \nThe simplest solution is to resize the editor window (:set columns=80), but\none may still want to have the large editor size for other edited buffers that\nbenefit from the large screen real estate. \n\nThis plugin places an empty padding window next to the current window, thereby\nreducing its size while maintaining the overall editor size. \n\nUSAGE\n:LimitWindowWidth [{width}]\n\t\t\tLimit the window width of the current window by placing\n\t\t\tan empty padding window to the right. If there already\n\t\t\tis a padding window, its size is adapted according to\n\t\t\t'textwidth' / {width}, or removed if the width is so\n\t\t\tlarge that no padding is needed. ",
+  "rating_total": "1",
+  "rating_votes": "1",
+  "downloads": "21",
+  "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim LimitWindowSize.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.0 or higher. ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13830",
+      "filename": "LimitWindowSize.vba.gz",
+      "script_version": "1.00",
+      "date": "2010-09-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

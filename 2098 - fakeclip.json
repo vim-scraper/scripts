@@ -4,12 +4,28 @@
   "summary": "pseudo clipboard register for non-GUI version of Vim",
   "name": "fakeclip",
   "script_type": "utility",
-  "description": "*fakeclip* is a Vim plugin to provide pseudo clipboard register (|quotestar|or |quoteplus|) for non-GUI version of Vim on the following platforms:- Cygwin- Mac OS X- X Window System (by xclip <http://sourceforge.net/projects/xclip/&gt;)fakeclip also provides a pseudo register for \"paste buffer\" if one of thefollowing applications is available:- GNU screen- tmuxFAQ: If you can't copy/paste multibyte characters with the clipboard     on Mac OS X, see |fakeclip-multibyte-on-mac|.Requirements:- Vim 7.0 or laterLatest version:http://github.com/kana/vim-fakeclipDocument in HTML format:http://kana.github.com/config/vim/fakeclip.html",
-  "rating_total": "949",
-  "rating_votes": "244",
-  "downloads": "1430",
+  "description": "*fakeclip* is a Vim plugin to provide a pseudo |clipboard| register forseveral versions of Vim without |+clipboard| support, especially for non-GUIversion of Vim on the following platforms:- Cygwin- Mac OS X- X Window System (by xclip <http://sourceforge.net/projects/xclip/&gt;)fakeclip also provides a pseudo register to access a \"paste buffer\" if one ofthe following applications is available:- GNU screen- tmuxFAQ: If you can't copy/paste multibyte characters with the clipboard     on Mac OS X, see |fakeclip-multibyte-on-mac|.Note for Mac OS users: Though Vim supports clipboard for the console versionsince version 7.3, fakeclip is still useful to access a \"paste buffer\".Requirements:- Vim 7.0 or laterLatest version:http://github.com/kana/vim-fakeclipDocument in HTML format:http://kana.github.com/config/vim/fakeclip.html",
+  "rating_total": "1014",
+  "rating_votes": "261",
+  "downloads": "1526",
   "install_details": "...",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13733",
+      "filename": "vim-fakeclip-0.2.8.zip",
+      "script_version": "0.2.8",
+      "date": "2010-08-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13595",
+        "user_name": "kana",
+        "first_name": "Kana",
+        "last_name": "Natsuno",
+        "email": "whileimautomaton+vim at gmail.com",
+        "homepage": "http://whileimautomaton.net/"
+      },
+      "release_notes": "- |:FakeclipDefaultKeyMappings|: Fix to regard a given bang."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12770",
       "filename": "vim-fakeclip-0.2.7.zip",

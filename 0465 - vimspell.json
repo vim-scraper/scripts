@@ -5,9 +5,9 @@
   "name": "vimspell",
   "script_type": "utility",
   "description": "***** note to VIM 7 users ! *****\nVersion 7 of vim integrates a native spellchecker which outperforms  vimspell script.\nAs such I will not maintain anymore vimspell script, and you are advised to delete all\nrelated files from your plugin/ and doc/ directory, and use the native spellchecker instead.\n******************************\n\nThis script is based on Claudio Fleiner's spell checker and uses ispell (or aspell) \nto highlight spelling errors, and provides mappings (including a popup menu opened \nby right clicking on a mispelled word) to correct them, with suggestions. \n\nIt is possible to set up the script to do automatic spellchecking (à la\nword --- the current visible window is checked, and errors are highlighted on the fly).\nFor that, just redefine the spell_auto_type variable (let spell_auto_type=\"tex,doc,mail\") in such a maner \nthat all the filetypes for which you want on the fly spell check are listed (\"none\", and \"all\" token are treated).\n     \nMuch more documentation on all options can be found at the beginning of the script, or \nafter having install it, by typing the command \":help vimspell\".\n\nFeedback (suggestions, bug report, questions,...) is welcome .... \n\nYou can subscribe to a mailing list to receive annoucement for new versions by sending a mail\nhere at vimspell.announce-request@ml.free.fr  with subscribe in the subject.",
-  "rating_total": "1907",
-  "rating_votes": "691",
-  "downloads": "28013",
+  "rating_total": "1909",
+  "rating_votes": "695",
+  "downloads": "28218",
   "install_details": "Copy vimspell.vim into your ~/.vim/plugin directory\nThe help file shall be automagically installed when launching VIM.",
   "versions": [
     {
@@ -22,7 +22,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "- UTF-8 bug workaroud (hack from Huidae Cho),\n- Ability to type 01 to 09 to select one of the first 9 alternatives (patch\n  from M.Sureshkumar),\n- Suppression of some debugging output,\n- Some corrections to better work under windows and notably, addition of   default shell handlling for windows thanks to Wojciech Pietron.\n- Silent some warnings.\n"
     },
@@ -38,7 +38,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "- Correcting spell errors when typechecking lines with ` inside.\n- Apply patch from Olaf Conradi to manage the cases when mapping already \n  exists for <Space>, '.' and so one in insert mode.\n- Correction to use the new aspell command line interface\n- workaround inoremap preventing abbreviations expensions in vim 6.3 (however, \n  there are still some unwanted behaviour).\n- Better language recognition for mail filetypes.\n- Include some longstanding patches from Alex Efros. (Use of \\k instead of \\w \n  in regexp, and better usage of language specific iskeyword.)\n- Take csh into account. Addition of 'spell_shell' variable and associated \n  documentation.\n- Correction of line quoting bug which appeared in tex/latex file (bug \n  reported by Yann  Golanski).\n- Add Hugo Hass patch : spell_guess_max_lines\n- Addition of filetype \"text\" and \"\" to spell_markup_ft option.\n- Add some FAQ documentation, improve the documentation about spell_markup_ft\n"
     },
@@ -54,7 +54,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Add mail to the default content of 'spell_markup_ft' variable (errors where not highlighted anymore during mail composition)."
     },
@@ -70,7 +70,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Bug correction - highlighting inside cluster was badly set, depending on when SpellSetupBuffer was calledAddition fo auto jump option (jump to next error after correction).Correction of a bug where cursor was jumping when on the last line of a file.Correction of html file highlightings.Correction of spell_guess_language_ft usage (wasn't taken into account).Performance issue : check of @Spell cluster existence in syntax highlightings was removed, and replaced by heuristic and manula configuration. see spell_markup_ft variable.Many thanks to  Paul Jolly, Tomas Hoger, Michaeljohn Clement, Hugo Haas and Markus Braun. "
     },
@@ -86,7 +86,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "- Add a language auto-detection function.- Corrects a bug which causes delays during buffer switching (function SpellTuneCommentSyntax).- Correction for bug wich prevents use of alternatives number 10 and 20- Use of alternatives usable even when spellchecking is not automatically done- Samm optimization to improve buffer switching latency."
     },
@@ -102,7 +102,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "- at most 20 alternatives are now proposed (was 10)- 'r'eplace choice was remove (was broken, and of no much use)."
     },
@@ -118,7 +118,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "- Correction of a performance issue (syntax match was continuously append, which slow down vim after some times).- Correction of a bug, which cause unwanted behavior when the user hit another key than those proposed to correct spell errors."
     },
@@ -134,7 +134,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "- Spell checking in insert mode does not break undo stack anymore, thanks to  Hari Krishna Dara.- Jumping to next error now works, even if some text is not spellchecked  (like comments).- Bug with /si and aspell corrected- Use @Spell cluster to spell specific region according to the highlighting  definitions (Idea from vim@vim.org discussion and from engspchk.vim. Thanks  to Mr.Campbell)- Suppress menu bug, when changing language by calling directly  :SpellChangeLanguage.- Some minor documentation improvement."
     },
@@ -150,7 +150,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "- Remove \"silent\" keyword which (for some unknown reason) prevent mapping to  replaceword (1,2,..) to be removed,- Bug workaround to prevent coma to be added to 'iskeyword' option (thanks to  Mark Waggoner)- Bug correction when line contained \\,- Bad filetype recognition bug correction,- SpellCheckLine correction. Spell checked was not done after each word,- aunmenu warning correction...- more menus,- more bugs to be corrected :("
     },
@@ -166,7 +166,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "previous upload failed..."
     },
@@ -182,7 +182,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "New function: popup menu with <RightMouse> to select alternative.Make spell_filter option working.Ensure usage of /bin/sh instead of [t]csh variants (problem with doublequotes).Include Sandra schrödter patch for SpellCaseAccept problem.Add a map to '.' as a hook to spell check current line in insert mode.Documentation update.Cleaning of help autoinstallation functions (Guo Peng Wen)."
     },
@@ -198,7 +198,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "- Include patch of Philippe Sum to make vimspell work with windows (untested).- Disable hlsearch when doing <leader>sp and <leader>sn.- Save and restore backspace option when spell_insert_mode is set.- Do not check current window if spell_auto_enable is not set or set to 0.- In insert mode, do not check current line when no new words were inserted (fastest operation when typing several spaces).- Correct bug where error highlighting vanished when reentering a buffer already checked (as a result, less computation are done when switching).Add Markus Braun patch to remove SpellProposeAlternatives mapping when hitting ESC key."
     },
@@ -214,7 +214,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Include Guopeng Wen to  - fix error in SpellCheckLanguage when there is no menu. - fix SpellSetupBuffer behaviuor when autocommand are enables."
     },
@@ -230,7 +230,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Some escaping bug corrections.Documentation updated.Escape Space in filename.Cursor position restoring in SpellCheckWindow.Iskeyword is now set globally. LoadIsKeyword function is suppress. SpellSaveIskeyword is only call when setting up buffer.Inclusion of Guopeng Wen  patch to minimize overheadof vimspell use when no menu are used and when no autospell is done.Add faq about minimizing vimspell overhead.Inclusion of Markus Braun patch:- s:SpellSetupBuffer() call s:SpellSetSpellchecker() only when it was not called before- Right calculation of the window top and bottom position, even if fold are  present (idea from Mark Hillebrand, who used this in his FirstWinLine() and  LastWinLine())Verify that mapleader is defined before being used.Add language and filetype dependant 'iskeyword' options...Minor menu enhancment.Bug ands todolist update."
     },
@@ -246,7 +246,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Bug correction: SpellCheckLine didn't work when the line contained quotes."
     },
@@ -262,7 +262,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "  - Experimental on the fly spell checking in insert mode. Thanks to Mikolaj Machowski   (new options spell_insert_mode).  - Addition of \"none\" and \"all\" token for the spell_auto_type    variable.  - FAQ section in documentation.  - Beginning of a solution for auto help installation bug (the help    file was not installed when vimspell was not in a user writeable    directory. Thanks to Peter Kaagman  - Some documentation addition and correction.  - Some code cleaning and ordering."
     },
@@ -278,7 +278,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Apply patches from Markus Braun (many thanks to him): - removed the need of sed, sort, awk external tools - removed the spell_fly_error variables - fixed small bug when proposing alternatives.Fix small bug when manually calling SpellSetLanguage. Kindly reported by JF L.Remove highlighting when changing language or spell checker.Minor cosmetic changes.Add Markus Braun Patch which display spell check stats.Do not load vimspell when 'compatible' is set.Small bug when unletting undefined variable.Language menu initialization is now correct.Update TODO list."
     },
@@ -294,7 +294,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "New feature : auto-installation of vimspell help file Documentation correction and polishing (it now follows the help format).Add <Leader>sA map for SpellAutoDisableRework of vimspell option documentation.Correct Spellexit function.<Leader>sq now call SpellAutoDisable instead of SpellExit.SpellChecker is call in auto mode when window loose focus."
     },
@@ -310,7 +310,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Add preliminary support of spell errors highlighting in comments.Correct nasty bug, which causes lost of data when auto spell check wasselected and the number of lines of the text was less than the window height.Correct bug when serching for next or previous errors.Cursor position is now restored after a spell check.Thanks to Markus Braun <Markus.Braun@krawel.de> and Igor Goldenberg<igold@igold.pp.ru>."
     },
@@ -326,7 +326,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Add parameters to tune vimspell menu position.Correct bug, which prevents user defined spell_language_list to be used.Correct a bug, which reactivate auto-spell when entering a buffer, even if itwas previously disable."
     },
@@ -342,7 +342,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Small patch to 'spell_auto_type' usage (all buffer with no filetype were spellchecked by default).Add credits."
     },
@@ -358,7 +358,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Correct spell_auto_type behaviour. There was a bug which made AutoSpell enable for all file types."
     },
@@ -374,7 +374,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Correct bug with aspell (add word to local dictionary didn't work), kindly reported by Andrew McCarthy <andrewmc-vim@celt.dias.ie> and Alberto Ornaghi <alor@sikurezza.org>"
     },
@@ -390,7 +390,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Add (requested) documentation about setting up on-the-fly spell check,add spell_auto_type and spell_no_readonly variables to tune when on-the-flyspell checking is done.Still on bug about highlighting (see TODO list in documentation section), if someone wants to tackle it...."
     },
@@ -406,7 +406,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Bug correction : Spellcheck on the fly for the visible window now preserveinformations from previous global spellcheck (<Leader>ss).Dictionnaries are rescan whenever the spellchecker is changed."
     },
@@ -422,7 +422,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Documentation and minor modifications.Add  filetype and spell checker dependant options (support by default tex,html,sgml, and nroff or email modes).English corrections.Make several variables bufferwise (language, spell_executable,...)Add functions and menu to change spellcheckerCorrect bugs.Add a better dictionaries detection for aspell."
     },
@@ -438,7 +438,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Correct a bug when applying suggestion on a word at the beginning of the buffer.Thanks to Markus Braun."
     },
@@ -454,7 +454,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Add credits,Use update instead of write,Replace <ESC> default mapping by <Leader>Correct nasty bug (SpellIgnore)Improve menus.Improve dictionnaries auto-detection."
     },
@@ -470,7 +470,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Much more parametrization (see documentation at the beginning of the script).Use aspell or ispell.Use as many language as available. Auto detect availables dictionnaries.More functionnal menu.Bug correction."
     },
@@ -486,7 +486,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Comments and a bit of documentation.Some cleaning.need some more parametrization and cleaning."
     },
@@ -502,7 +502,7 @@
         "first_name": "Mathieu",
         "last_name": "Clabaut",
         "email": "mathieu.clabaut at free.fr",
-        "homepage": ""
+        "homepage": "http://ontoblogie.clabaut.net"
       },
       "release_notes": "Initial upload"
     }

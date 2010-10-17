@@ -7,7 +7,7 @@
   "description": "method to simply an quickly post expand a cmd.  \"index ff<c-cr>\" for example.\n(<c-cr> being mapped to this cmd.)\n\nNOTE this is a QUICKY!\nFor what it is worth, hopefully useful to someone :)\n\nThe reason for this over a basic mapping, or DrC.Stubs is the ability to\nspecify the variable(s) to work on.\n\nI.e.\n  iInd < m_array.size() for<c-cr>\n\n  for    (    iInd = 0; iInd < m_array.size(); iInd++)\n  {\n      <cursor>\n  }\n\nor\n  m_array ff<c-cr>\n\n  for(int i=0;i<m_array.length; i++){\n      <cursor>\n  }//end for loop over array m_array[i]\n\nNOTE that the command function shold leave the cursor in a position that a\nnormal mode `o` will place the cursor at the desired location. Kind of a HACK\nbut good enough for now.",
   "rating_total": "-1",
   "rating_votes": "3",
-  "downloads": "501",
+  "downloads": "508",
   "install_details": "Drop in ~/.vim/plugin or the like.",
   "versions": [
     {

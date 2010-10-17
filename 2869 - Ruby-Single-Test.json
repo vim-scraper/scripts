@@ -7,7 +7,7 @@
   "description": "When a ruby test file with your cursor within a test block, hit\n<leader>.\n(that's <leader><period>) and that test, and only that test, will run in quickfix.\nThat's it!\n\nCurrently only supports Test::Unit and Rspec.  If run on an Rspec describe block it will run all the tests in that block (just using existing spec command-line functionality for that one).\n\nThe script is also hosted on GitHub:\nhttp://github.com/dmcinnes/ruby_single_test",
   "rating_total": "0",
   "rating_votes": "0",
-  "downloads": "94",
+  "downloads": "99",
   "install_details": "Just drop the script in your .vim/plugins folder.\n\nIf you're having problems using rspec, be sure the makeprg is set to your spec executable.  To test this type:\n:echo &makeprg\nWhile in an rspec file.  It should output \"spec\".\nFor more information read Vim's documentation on makeprg (:h makeprg).\n\nThe Specky! plugin adds lots of goodness that makes working with rspecs nice, like filetype detection and syntax highlighting:\nhttp://www.vim.org/scripts/script.php?script_id=2286\n\nTo remap the command, to <leader>t for instance, add something like this to your .vimrc:\nnmap <silent> <leader>t <Plug>ExecuteRubyTest\n\nRuby Single Test defaults to using make! (with the bang).  To disable this behavior drop this in your .vimrc:\nlet g:ruby_single_test_no_bang = 1\n",
   "versions": [
     {

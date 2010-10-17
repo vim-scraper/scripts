@@ -7,7 +7,7 @@
   "description": "DESCRIPTION\nThis filetype plugin provides movement commands and text objects for diff hunks.\nSupports traditional, context and unified diff formats. \n\nUSAGE\n\t\t\tMove around diff hunks: \n]]\t\t\tGo to [count] next start of a diff hunk. \n][\t\t\tGo to [count] next end of a diff hunk. \n[[\t\t\tGo to [count] previous start of a diff hunk. \n[]\t\t\tGo to [count] previous end of a diff hunk. \n\nih\t\t\t\"inner hunk\" text object, select [count] hunk contents. \nah\t\t\t\"a hunk\" text object, select [count] hunks, including\n\t\t\tthe header. ",
   "rating_total": "1",
   "rating_votes": "1",
-  "downloads": "31",
+  "downloads": "45",
   "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command.\n    vim diff_movement.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.0 or higher. \n- Requires the CountJump plugin (vimscript #3130). ",
   "versions": [
     {

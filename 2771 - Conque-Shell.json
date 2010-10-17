@@ -5,11 +5,43 @@
   "name": "Conque-Shell",
   "script_type": "utility",
   "description": "Conque is a Vim plugin allowing users to execute and interact with programs, typically a shell such as bash, inside a buffer window. The goal is always to keep the terminal behavior as close as possible to its native interface, while adding the additional features of Vim on top.\n\n== WEBSITE ==\n\nFor more information http://code.google.com/p/conque/\n\n== SCREENSHOTS ==\n\nhttp://Conque.googlecode.com/svn/wiki/screenshot/colors.jpg\nhttp://Conque.googlecode.com/svn/wiki/screenshot/mysql.jpg\nhttp://Conque.googlecode.com/svn/wiki/screenshot/send.jpg\nhttp://Conque.googlecode.com/svn/wiki/screenshot/shells.jpg\n\n== USAGE ==\n\nType :ConqueTerm <command> to run your command in vim, for example:\n\n:ConqueTerm bash\n:ConqueTerm mysql -h localhost -u joe -p sock_collection\n:ConqueTerm ipython\n\nTo open ConqueTerm in a new horizontal or vertical buffer use:\n\n:ConqueTermSplit <command>\n:ConqueTermVSplit <command>\n:ConqueTermTab <command>\n\nAll text typed in insert mode will be sent to your shell. Use the <F9> key to send a visual selection from any buffer to the shell.\n\nFor more help type :help ConqueTerm\n",
-  "rating_total": "730",
-  "rating_votes": "195",
-  "downloads": "2287",
+  "rating_total": "802",
+  "rating_votes": "213",
+  "downloads": "2735",
   "install_details": "== REQUIREMENTS ==\n\n   * Python-enabled Vim 7.1\n   * Linux, Mac or Cygwin. Windows support is not available in the latest version.\n\n== INSTALLATION ==\n\nvi conque_term.vba\n:so %\n:q\n\nOpen conque_term.vba and type the command `:so %` to install it with the Vimball utility. Alternatively, download the zip archive and copy the files by hand into your .vim directory.\n",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14041",
+      "filename": "conque_1.2.vba",
+      "script_version": "1.2",
+      "date": "2010-10-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17950",
+        "user_name": "nicoraffo",
+        "first_name": "Nico",
+        "last_name": "Raffo",
+        "email": "nicoraffo at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Mostly bugfixes. New features include:\n \n * New API functions (BETA)\n * New ConqueTerm_CloseOnEnd? option\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14040",
+      "filename": "conque_1.2.zip",
+      "script_version": "1.2",
+      "date": "2010-10-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17950",
+        "user_name": "nicoraffo",
+        "first_name": "Nico",
+        "last_name": "Raffo",
+        "email": "nicoraffo at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Mostly bugfixes. New features include:\n \n * New API functions (BETA)\n * New ConqueTerm_CloseOnEnd? option\n"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13071",
       "filename": "conque_1.1.vba",

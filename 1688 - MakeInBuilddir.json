@@ -7,7 +7,7 @@
   "description": "Let's consider a libtool/autoconf project where source and build directories are separeted:\n  source_dir\n  source_dir/build\n\nIf you're editing a file in source_dir/src and type Make then\n  1/ the name of the build directory will be asked (here 'build') (it is asked only once)\n  2/ :make will be run in source_dir/build/src\n\nsource_dir is found by searching for configure.ac, configure.in or configure\n\nThe following additional commands are defined:\n   Compile - compiles the current file by calling the libtool-specific\n           :make basename.lo\n   MakeAll - runs :make in source_dir regardless of the directory of the current file\n   Reconfigure - runs \"config.status --recheck\" in source_dir/build\n   RegenAll - runs \"config.status\" in source_dir/build\n   Run execname - starts execname instead of :make\n   Debug execname - start a libtool-wrapped gdb (for libtool generated executables)\n",
   "rating_total": "1",
   "rating_votes": "1",
-  "downloads": "332",
+  "downloads": "336",
   "install_details": "copy makeinbuilddir.vim in .vim/plugin",
   "versions": [
     {

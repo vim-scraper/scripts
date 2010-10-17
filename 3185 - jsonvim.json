@@ -4,10 +4,10 @@
   "summary": "Library that makes vim able to safely load JSON files",
   "name": "jsonvim",
   "script_type": "utility",
-  "description": "This plugin provides the ability to load JSON encoded data from files and dump \nVim variables to files. Data loaded is cached in order to speed up the \nplugin.",
+  "description": "This plugin provides the ability to load JSON encoded data from files and dump \nVim variables to files. Data loaded is cached in order to speed up the \nplugin.\n\nThis plugin also provides Russian documentation. Add «ru» to option «helplang» in order to use it.\n\nDocumentation: http://kp-pav.narod2.ru/vim/doc/json.txt.html\nRussian documentation: http://kp-pav.narod2.ru/vim/doc/json.rux.html",
   "rating_total": "1",
   "rating_votes": "1",
-  "downloads": "45",
+  "downloads": "66",
   "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"jsonvim\"]) and add ``call scriptmanager#Activate([\"jsonvim\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.\n\nIt is recommended to use vim with python support and install demjson python package: this will speed up this plugin.",
   "versions": [
     {

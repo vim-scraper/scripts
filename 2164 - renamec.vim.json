@@ -7,7 +7,7 @@
   "description": "I have not used or modified this script in a long time. Christophe-Marie Duquesne has published a script that is based on this script here, you will probably want to have a look at http://www.vim.org/scripts/script.php?script_id=3028\n\nOriginal description:\nA simple function to rename a C (and possibly C++) symbols (functions/variables) in multiple files using cscope information. Maybe just a starting point to adapt to your own needs, but at least works for me. \n\nWith the mapping below, one can start the renaming with \\r, enter the new name and it will be renamed (using a simple substitution on the lines returned by cscope) in all files. Needs an up to date cscope reference file (see below). \n\n",
   "rating_total": "15",
   "rating_votes": "7",
-  "downloads": "382",
+  "downloads": "387",
   "install_details": "Put renamec.vim in your plugin directory. I use the following mapping\nnoremap <Leader>r :call Renamec()<cr>\nto start the renaming with \\r and\nmap <F12> :!cscope -R -k -b<CR>:cs reset<CR>\nto update the cscope reference file.",
   "versions": [
     {

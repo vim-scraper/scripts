@@ -7,7 +7,7 @@
   "description": "This plugin allows Mac OS X users to send e-mails from Vim using the Mail.app application.\n\nIt provides syntax highlighting, auto-completion for header name, e-mail and attachment.\n\nTo start a new e-mail, use the command :NewMailApp, which will open a new buffer where you can start writing. To send the e-mail, use the command :SendMailApp.",
   "rating_total": "4",
   "rating_votes": "5",
-  "downloads": "184",
+  "downloads": "193",
   "install_details": "Mac OS X 10.5 or later is required for this plug-in and Mail.app must be configured to send messages. To install it, unzip the MailApp.zip file and place every file in the respective folder inside your \"~/.vim\" folder, keeping the same folder structure, except for MailApp.bundle that should go inside your \"Documents\" folder.\n\n ~/\n   |-.vim/\n   |    |-doc/mailapp.txt\n   |    |-ftplugin/mailapp.vim\n   |    |-plugin/MailApp.vim\n   |    |-syntax/mailapp.vim\n   |-/Documents/MailApp.bundle\n\nIf you place MailApp.bunlde somewhere else, you need to set the 'MailApp_bundle' option in your vimrc so MailApp.vim can find it.\n\nAfter you placed the files in their place, run \":helptags ~/.vim/doc\" to update the help files tags.\n",
   "versions": [
     {

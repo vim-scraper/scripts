@@ -7,9 +7,25 @@
   "description": "DESCRIPTION\nInsert mode abbreviations and snippets can dramatically speed up editing, but\nhow does one remember all those shortcuts that are rarely used? You can list\nall insert mode abbreviations via :ia to break out of this vicious circle,\nbut switching to command mode for that is cumbersome. \n\nThis plugin offers a context-sensitive insert mode completion to quickly list\nand complete defined abbreviations directly while typing. \n\nUSAGE\ni_CTRL-X_]\t\tFind matches for abbreviations that start with the\n\t\t\ttext in front of the cursor. \n\n\t\t\tThere are three types of abbreviations (full-id,\n\t\t\tend-id and non-id), which can consist of different\n\t\t\tcharacters. Thus, there can be more than one candidate\n\t\t\tfor the existing completion base, e.g. \"pre@c\" can\n\t\t\texpand into a full-id abbreviation starting with \"c\"\n\t\t\tor into a non-id one starting with \"pre@c\". The\n\t\t\tcompletion indicates such a ambiguity through the\n\t\t\tmessage \"base n of m; next: blah\", and you can cycle\n\t\t\tthrough the different completion bases by repeating\n\t\t\tthe i_CTRL-X_] shortcut. \n\n\t\t\tMatches are selected and inserted as with any other\n\t\t\tins-completion, see popupmenu-keys. If you use\n\t\t\t<Space> or i_CTRL-] to select an abbreviation, it'll\n\t\t\tbe expanded automatically. ",
   "rating_total": "1",
   "rating_votes": "1",
-  "downloads": "87",
+  "downloads": "103",
   "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim SnippetComplete.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.0 or higher. \n\nCONFIGURATION\nIf you want to use a different mapping, map your keys to the\n<Plug>SnippetComplete mapping target _before_ sourcing this script (e.g. in\nyour vimrc). \nFor example, to use CTRL-X <Tab>, use this: \n    imap <C-x><Tab> <Plug>SnippetComplete\n\nINTEGRATION\nIt is planned to extend the completion to snippets for the snipMate plugin\n(vimscript #2540) and offer an extension point for other snippet plugins. ",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13931",
+      "filename": "SnippetComplete.vba.gz",
+      "script_version": "1.01",
+      "date": "2010-09-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Using separate autoload script to help speed up Vim startup."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12091",
       "filename": "SnippetComplete.vba.gz",

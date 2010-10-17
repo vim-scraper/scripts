@@ -1,0 +1,30 @@
+{
+  "script_id": "3229",
+  "display_name": "stem-search",
+  "summary": "StmSrch is a reverse-stem searching script",
+  "name": "stem-search",
+  "script_type": "utility",
+  "description": "Source and associated data files for testing hosted at:\nhttp://github.com/msbmsb/stem-search.vim\n\nStmSrch is a reverse-stem searching script. It implements the Porter stemming algorithm, by Martin Porter. It also handles irregular verbs and noun pluralizations.\n\nThis script can be useful for searching or scanning through corpus files.\n\nEach word input to the :StmSrch command will be stemmed and then formulated in such a way as to match possible conjugations or pluralizations. Without any word given for input, it will attempt to stem the current word under the cursor. The matching is done using word boundaries so not just any substring will match.\n\nFor example: \n- :StmSrch search \nwill match any of: \n- search, searching, searches, searchers, searched, ...\nand a string of words will work as well, matching in order: \n- :StmSrch thieves are running from bunnies \nwill match strings of words like: \n- thief was ran from bunny \n- thieves be run from bunnies\n\nSearch hits are highlighted, and the highlight color can be modified by\nediting the color in the s:StmSrchInit() function. The matches will stay \nhighlighted even if you search again using the normal &#039/&#039 key. This is\nuseful for cases where you are browsing through a large corpus file, for \nexample and want to see the relative location of matches. \n\nUse :ClrStmSrch to clear the highlighting for the StmSrch group.\n\nFor stemmed words, the search is greedy and may over match. This was useful \nfor my purposes. If more exact word endings are required, this can be added.\n\n----\nTo use this vim script, add it to ~/.vim/plugin/\n\nSee doc/stem-search.vim.txt for more information about the script.\n\n----\n",
+  "rating_total": "2",
+  "rating_votes": "2",
+  "downloads": "28",
+  "install_details": "To use this vim script, add it to ~/.vim/plugin/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13758",
+      "filename": "stem-search.vim",
+      "script_version": "0.1",
+      "date": "2010-09-04",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "19750",
+        "user_name": "msb",
+        "first_name": "Mitchell",
+        "last_name": "Bowden",
+        "email": "mitchellbowden at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -7,7 +7,7 @@
   "description": ":TTags [KIND] [TAGS_RX] [FILE_RX]\nIn order to match any kind/rx, use *.\nE.g. TTags * * _foo.vim$\n\nFeatures:\n    - List tags\n    - Filter tags matching a pattern\n    - Jump/Preview tags\n    - Insert tags (and a template for the argument list if supported by \n      tSkeleton (vimscript #1160), which has to be installed for this)\n\nYou can use :echo keys(ttags#Kinds())<cr> to find out which kinds are defined.\n",
   "rating_total": "889",
   "rating_votes": "228",
-  "downloads": "1482",
+  "downloads": "1512",
   "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0, please make\nsure, you have the current version of vimball (vimscript #1502)\ninstalled.\n\nThis script requires tlib (vimscript #1863) to be installed.\n\nSuggested key maps:\n\n    noremap <Leader>g. :TTags<cr>\n    noremap <Leader>g# :call ttags#List(0, \"*\", tlib#rx#Escape(expand(\"<cword>\")))<cr>\n    noremap <Leader>g* :call ttags#List(0, \"*\", tlib#rx#Escape(expand(\"<cword>\")) .\".*\")<cr>\n    noremap <Leader>g? :call ttags#List(1, \"*\", tlib#rx#Escape(expand(\"<cword>\")))<cr>\n    for c in split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', '\\zs')\n        exec 'noremap <Leader>g'. c .' :TTags '. c .'<cr>'\n    endfor\n\n\nAlso available via git\nhttp://github.com/tomtom/ttags_vim",
   "versions": [
     {

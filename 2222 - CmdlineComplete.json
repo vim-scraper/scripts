@@ -7,7 +7,7 @@
   "description": "When editing the command-line (: / etc.), press Ctrl-P or Ctrl-N to complete the word before the cursor, using keywords in the current file. E.g: you want to search for \"elephant\" in the buffer, just type /ele and press Ctrl-P. So long as \"elephant\" is in the buffer, you will get \"ele\" completed into \"elephant\".\n\nThis script is functional similar with (but far more better than) SearchComplete vimscript #474 (version 1.1).",
   "rating_total": "117",
   "rating_votes": "40",
-  "downloads": "1213",
+  "downloads": "1242",
   "install_details": "Just drop the script file \"cmdline-complete.vim\" into the plugin directory. Restart VIM.\n\nIf you want to use other keys instead of default <c-p> <c-n>, you may say in your .vimrc\ncmap <c-y> <Plug>CmdlineCompleteBackward\ncmap <c-e> <Plug>CmdlineCompleteForward\nthis will use Ctrl-Y for search backward and Ctrl-E for search forward.\n\nNote: I don't think it's good to use Tab and Shift-Tab for completion, since it will disable vim's original cmdline-completion.\n\nWithout python, speed will be a bit slow with large file (e.g. > 100K). Compile your vim with python is recommended.",
   "versions": [
     {

@@ -5,9 +5,9 @@
   "name": "OMNeTpp-NED-syntax-file",
   "script_type": "syntax",
   "description": "I didn't find a syntax file for the network description language of the OMNeT++ network simulator. Its files are called *.ned.\n\nThis syntax file just does basic highlighting and doesn't know any regions or areas. I will maybe change this when I learned how to do it ;)\n\nIf somebody has a better syntax file for this filetype, please tell me!",
-  "rating_total": "2",
-  "rating_votes": "2",
-  "downloads": "390",
+  "rating_total": "3",
+  "rating_votes": "3",
+  "downloads": "393",
   "install_details": "copy to ~/.vim/syntax\nadd to your ~/.vimrc:\n   au BufNewFile,BufRead *.ned set syntax=ned\nthat should be all.\nPreviously, I had the line \n   au Filetype ned set syntax=ned\nBut I found out that this doesn't work with every installation, so use the one above...",
   "versions": [
     {

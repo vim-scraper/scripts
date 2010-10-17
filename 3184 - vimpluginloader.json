@@ -4,12 +4,92 @@
   "summary": "Plugin that helps to create complicated vim scripts",
   "name": "vimpluginloader",
   "script_type": "utility",
-  "description": "This plugin provides the ability to autoload other plugins on demand, create \nglobal functions and commands and share plugin's functionality.\n\nFeatures:\n    ∙ Autoloading plugins on FuncUndefined event.\n    ∙ Autoloading plugins when their command is called.\n    ∙ Autoloading plugins when their mapping is used.\n    ∙ Autoloading plugins when their functionality is required.\n    ∙ Displaying plugins' status.\n    ∙ Unloading and reloading plugins (useful for plugin developers).\n    ∙ Searching for a function number through registered plugins.",
+  "description": "This plugin provides the ability to autoload plugins on demand, create \nglobal functions and commands and extend mksession with plugin support.\n\nFeatures:\n    â Autoloading plugins on FuncUndefined event.\n    â Autoloading plugins when their command is called.\n    â Autoloading plugins when their mapping is used.\n    â Autoloading plugins when their functionality is required.\n    â Displaying plugins' status.\n    â Unloading and reloading plugins (useful for plugin developers).\n    â Searching for a function number through registered plugins.\n    â Checking function arguments before running a function.\n    â Create a session file with plugin's data.\n\nDocumentation: http://kp-pav.narod2.ru/vim/doc/load.txt.html",
   "rating_total": "4",
   "rating_votes": "1",
-  "downloads": "39",
+  "downloads": "85",
   "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"vimpluginloader\"]) and add ``call scriptmanager#Activate([\"vimpluginloader\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13933",
+      "filename": "vimpluginloader-1.3.2.tar.gz",
+      "script_version": "1.3.2",
+      "date": "2010-09-27",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Improved load#LoadFuncdict function, added load#SetOption and load#CreateDictFunction functions"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13921",
+      "filename": "vimpluginloader-1.3.1.tar.gz",
+      "script_version": "1.3.1",
+      "date": "2010-09-26",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Fixed some mapping bugs"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13918",
+      "filename": "vimpluginloader-1.3.tar.gz",
+      "script_version": "1.3",
+      "date": "2010-09-25",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Provided a way to register different plugin types and place plugin file not directly under plugin directoryAdded support for autoloading external dependenciesMade plugin reload itself without errors"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13809",
+      "filename": "vimpluginloader-1.2.tar.gz",
+      "script_version": "1.2",
+      "date": "2010-09-11",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added session creation"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13808",
+      "filename": "vimpluginloader-1.1.4.tar.gz",
+      "script_version": "1.1.4",
+      "date": "2010-09-11",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Improved findnr action (now it takes a list of numbers separated by anything except spaces), improved autocmd[!] action (now it does not force you to escape spaces), improved error messages, some bug fixes"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13664",
       "filename": "vimpluginloader-1.1.3.tar.gz",

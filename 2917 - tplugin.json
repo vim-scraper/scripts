@@ -4,12 +4,28 @@
   "summary": "A plugin loader/runtimepath manager with autoload capabilities",
   "name": "tplugin",
   "script_type": "utility",
-  "description": "This plugin helps users to deal with plugins that are distributed via \nsource code repositories. Usually, you would make those plugins \navailable to vim by adding the local copies of those repositories to \n|runtimepath|. The disadvantage of this approach is that the value of \n|runtimepath| becomes unnecessarily complex and that the plugins are \nloaded on startup.\n\ntplugin scans those plugins for commands and functions. It then amends \nthe |runtimepath| only if a respective command/function/map is called \n(similar to the AsNeeded plugin). This helps to keep your |runtimepath| \nsimple and to improve startup time.\n\nIn order to achieve this goal, plugins are installed in an alternative \ndirectory structure where each plugin (consequently referred to as \n\"repo\") is installed in a subdirectory. tplugin takes care of modifying \n'runtimepath' and of loading the vim script files as necessary.\n\nAlternative directory layout:\n\n    ROOT/\n      repo1/\n        after/\n        autoload/\n        doc/\n        plugin/\n      repo2/\n        after/\n        autoload/\n        doc/\n        plugin/\n      ...\n\nRepos can be enabled (i.e. added to 'runtimepath') either explicitly \nwith the |:TPlugin| command or automatically by calling a command, \nfunction, or by requesting a filetype plugin/syntax/indent file defined \nin a repo -- this is done similar to how AsNeeded autoloads files.\n\nFull docs:\nhttp://github.com/tomtom/vimtlib/raw/master/doc/tplugin.txt\n",
+  "description": "This plugin helps users to deal with plugins that are distributed via \nsource code repositories. Usually, you would make those plugins \navailable to vim by adding the local copies of those repositories to \n|runtimepath|. The disadvantage of this approach is that the value of \n|runtimepath| becomes unnecessarily complex and that the plugins are \nloaded on startup.\n\ntplugin scans those plugins for commands and functions. It then amends \nthe |runtimepath| only if a respective command/function/map is called \n(similar to the AsNeeded plugin). This helps to keep your |runtimepath| \nsimple and to improve startup time.\n\nIn order to achieve this goal, plugins are installed in an alternative \ndirectory structure where each plugin (consequently referred to as \n\"repo\") is installed in a subdirectory. tplugin takes care of modifying \n'runtimepath' and of loading the vim script files as necessary.\n\nAlternative directory layout:\n\n    ROOT/\n      repo1/\n        after/\n        autoload/\n        doc/\n        plugin/\n      repo2/\n        after/\n        autoload/\n        doc/\n        plugin/\n      ...\n\nRepos can be enabled (i.e. added to 'runtimepath') either explicitly \nwith the |:TPlugin| command or automatically by calling a command, \nfunction, or by requesting a filetype plugin/syntax/indent file defined \nin a repo -- this is done similar to how AsNeeded autoloads files.\n\nFull docs:\nhttp://github.com/tomtom/tplugin_vim/blob/master/doc/tplugin.txt",
   "rating_total": "0",
   "rating_votes": "0",
-  "downloads": "240",
+  "downloads": "287",
   "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0, \nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n\nGetting started:\n\n    1. Add this to your vimrc file:\n\n        runtime macros/tplugin.vim\n        \" Only necessary if you use a non-standard root directory\n        TPluginRoot /home/x/src/repos\n\n    2. Install your plugins/repos in the root directory.\n\n    3. After restarting vim, type :TPluginScan!\n\nAlso available as git repository:\nhttp://github.com/tomtom/tplugin_vim",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13976",
+      "filename": "tplugin.vba",
+      "script_version": "0.10",
+      "date": "2010-10-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Make helptags of repositories that weren't yet loaded available to the user.\n- Renamed variables: g:tplugin#autoload_exclude, g:tplugin#scan\n- Custom autoload definitions for some 3rd party plugins (PoC)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13660",
       "filename": "tplugin.vba",

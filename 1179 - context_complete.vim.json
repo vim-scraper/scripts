@@ -7,7 +7,7 @@
   "description": "The focus of this script is to provide context-sensitive word completion - taking advantage of the popular ctags utility and Vim's built-in perl features. \n\nSuppose you have an instance of an object (o), and you've typed:\n\no.set_\n\nWhile you are still in insert mode, press CTRL-J, and this script will then look up the first member of that object that starts with \"set_\" and complete it for you, like this:\n\no.set_range(integer max, integer min)\n\nIf this isn't the completion that you want, then press CTRL-J again for the next member that starts with \"set_\":\n\no.set_name(string name)\n\nand again for the next one:\n\no.set_value\n\nIf you've gone too far then you can go back with CTRL-K. After each completion you are left in insert mode - so you can just continue typing when you've found the one you want.\n\nThe object can also be replaced with a struct, class, 'this', or 'super'.\n\nCompletions can also be made after the open parentheses to complete the list of parameters:\n\no.set_range(<c-j>\n\nOr after the function:\n\no.get_name().compar<c-j>\n\nPressing CTRL-S will skip through the function parameters, visually selecting each in turn - useful for filling in the parameters after completing a function.",
   "rating_total": "30",
   "rating_votes": "15",
-  "downloads": "1141",
+  "downloads": "1145",
   "install_details": "Unpack the tar file into ~/.vim. Then from any vim window type :helptags ~/.vim/doc. You can read the installation details at :help context_complete-setup",
   "versions": [
     {

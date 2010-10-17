@@ -7,7 +7,7 @@
   "description": "CL is the programming language of stored procedures embedded in the Polyhedra database.\nFor more information about Polyhedra, see: http://www.enea.com/templates/Extension____259.aspx\n\nThis script provides syntax highlighting and folding for this language.\n\nSee also vimscript#1799: Polyhedra configuration syntax",
   "rating_total": "0",
   "rating_votes": "0",
-  "downloads": "320",
+  "downloads": "323",
   "install_details": "Save into your personnal syntax directory: $HOME/{.vim|vimfiles}/syntax ({Unix|Windows}).\n\nTo manually colorize a file:\n  :syntax on\n  :filetype on\n  :set filetype=polycl\n\nTo assign CL syntax to a particular file, put this line at the beginning or end of your code:\n  -- vim: set filetype=polycl :\n\nTo assign CL syntax to files *.cl, add this to your ~/{.vim|vimfiles}/filetype.vim:\n  augroup filetypedetect\n    au! BufNewFile,BufRead *.cl setf polycl\n  augroup END\n\nSee also the built-in help in Vim:\n    :help 'filetype'\n    :help 'modeline'\n    :help filetype-plugin\n    :help mysyntaxfile\n",
   "versions": [
     {

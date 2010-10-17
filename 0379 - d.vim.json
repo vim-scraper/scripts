@@ -5,11 +5,43 @@
   "name": "d.vim",
   "script_type": "syntax",
   "description": "Syntax file for the D programming language.\n\nNote that the new maintainer for versions > 0.18 is Jesse Phillips. New versions will still be published to this page for the foreseeable future.",
-  "rating_total": "222",
-  "rating_votes": "79",
-  "downloads": "3859",
+  "rating_total": "246",
+  "rating_votes": "85",
+  "downloads": "3994",
   "install_details": "d.vim is now included in the official vim distribution, v6.3 and later, although it may not always be up to date. To override the default version included in the distribution, place the downloaded d.vim in your syntax directory. On windows, copy to $VIM/vimfiles/syntax or $HOME/vimfiles/syntax. On Linux copy to $HOME/.vim/syntax or $VIM/vimfiles/syntax.\n\nIn older versions of vim (< v6.3), add\n  autocmd! BufRead,BufNewFile *.d setfiletype d\nto your .vimrc or filetype.vim file. See :help filetype and :help new-filetype.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13889",
+      "filename": "d.vim",
+      "script_version": "0.22",
+      "date": "2010-09-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "949",
+        "user_name": "jason.mills",
+        "first_name": "Jason",
+        "last_name": "Mills",
+        "email": "jasonmills at nf.sympatico.ca",
+        "homepage": ""
+      },
+      "release_notes": "* Fixed issue with highlighting version statement inside block.\n\nNote: Jesse Phillips is the new maintainer and is responsible for this version."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13812",
+      "filename": "d.vim",
+      "script_version": "0.21",
+      "date": "2010-09-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "949",
+        "user_name": "jason.mills",
+        "first_name": "Jason",
+        "last_name": "Mills",
+        "email": "jasonmills at nf.sympatico.ca",
+        "homepage": ""
+      },
+      "release_notes": "* Fixed some highlighting bugs (Ellery Newcomer).\n* #! highlighting (Steven N. Oliver).\n\nNote: Jesse Phillips is the new maintainer and is responsible for this version."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13674",
       "filename": "d.vim",

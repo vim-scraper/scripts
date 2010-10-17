@@ -1,0 +1,94 @@
+{
+  "script_id": "3230",
+  "display_name": "TeX-PDF",
+  "summary": "Lightweight \"stay-out-of-your-way\" TeX-to-PDF development support",
+  "name": "TeX-PDF",
+  "script_type": "ftplugin",
+  "description": "Description\n===========\n\nThis plugin provides support for specialized lightweight \"stay-out-of-your-way\"\nTeX-to-PDF compilation and viewing.  In contrast to some of the other more\ncomprehensive TeX/LaTeX suites, it provides nothing else but two commands, and\nleaves the rest of your Vim platform undisturbed, except for a few key maps to\ninvoke the commands.\n\nFeatures\n========\n\n    - Runs \"make\" if a Makefile is found, otherwise invokes Rubber (if\n      installed) or pdflatex (otherwise) on the current file.\n    - Successful builds will result in PDF being opened/refreshed in the\n      default external viewer.\n    - Unsuccessful builds will result in the QuickFix buffer being opened and\n      to list the errors, with line numbers, description etc.\n\nUsage\n=====\nOnce the plugin is installed (see below), when you have a TeX or LaTeX document\nopen in the buffer, type '\\r' or <Shift-F9> to compile the document and open\n(or refresh) the resulting PDF in your system's default PDF viewer. To just\ncompile the document to PDF without opening it, type '\\m' or <F9>.  If there\nare any compile errors, a window will open and list all the problematic lines.\nAs usual, you can navigate forward and backward through this list using the\n':cnext' and ':cprev' commands, and you will automatically be taken to the\ncorresponding line in the source document.\n\nWorking with Rubber\n===================\n\nThis plugin will work quite happily with the stock TeX/LaTeX tools found on\nmost systems. As described above, for example, this plugin will run \"make\" if a\nMakefile is found in the current working directory (by-passing Rubber, even if\ninstalled), and fall back to the standard \"pdflatex\" if Rubber is not\ninstalled.\n\nHowever, installation of \"Rubber\" (https://launchpad.net/rubber) in conjunction\nwith this plugin makes Vim a *very* powerful, yet highly ergonomic and\nnon-intrusive, LaTeX IDE, making Makefiles unneccessary for many document\nprojects. Rubber takes care of the multiple TeX compile passes required to get\nthe the bibliographies, references, cross-references, etc. correctly built,\nwhile this plug-in takes care of opening/refreshing the PDF view on successful\nbuilds, as well as providing for a *clean* view of the errors on an\nunsuccessful build.\n\nOperation\n=========\n\nThis plugin provides two commands: \"BuildAndViewTexPdf\" and \"BuildTexPdf\".\n\n\"BuildAndViewTexPdf\" will build the PDF from the TeX source, and, if\nsuccessful, will open the resulting PDF for viewing in an external viewer (or\nrefresh the PDF if already opened).\n\n\"BuildTexPdf\" will build the PDF from the TeX source without opening/refreshing\nthe PDF.\n\nThe build logic is:\n\n    (1) If a Makefile is found in the current directory, then \"make\" will be\n        invoked.\n    (2) If there is no Makefile in the current directory, but \"Rubber\"\n        (https://launchpad.net/rubber) is installed and available, then this will\n        invoked on the current buffer file.\n    (3) If Rubber is not installed, then \"pdflatex\" will be invoked on the\n        current buffer file.\n\nIf the build is unsuccessful, the QuickFix buffer is populated with the\n(parsed, cleaned, and filtered) error messages and automatically opened,\nshowing, for each error, the line number and description of the error. You can\nthen used \":cnext\", \":cprev\", etc. to visit each of the error lines.\n\nKey Mapping\n===========\n\nBy default, '<Leader>r' (mnemonic: 'run') and '<S-F9>' are mapped to\n\"BuildAndViewTexPdf\", while '<Leader>m' (mnemonic: 'make') and '<F9>' are\nmapped to \"BuildTexPdf\"\n\nIf you prefer not to have any of the above keys mapped, then include the\nfollowing in your '~/.vimrc':\n\n    let g:tex_pdf_map_keys = 0\n\nIf you prefer not to have the '\\r' and '\\m' leader keys mapped but keep the\nfunction key mapping, you can include the following in your '~/.vimrc':\n\n    let g:tex_pdf_map_leader_keys = 0\n\nAlternatively, you can keep the leader keys mapped but by-pass the function key\nmapping by including the following in your '~/.vimrc':\n\n    let g:tex_pdf_map_func_keys = 0\n\nYou can, of course, map any keys that you want to the commands. For example,\nby including the following in your '~/.vimrc', you will map Command-V to the\n\"compile and view\" command and Command-T to the \"just compile\" command in\nboth normal and insert modes:\n\n    noremap <silent> <D-V> <Esc>:BuildAndViewTexPdf<CR>\n    inoremap <silent> <D-V> <Esc>:BuildAndViewTexPdf<CR>\n    noremap <silent> <D-T> <Esc>:BuildTexPdf<CR>\n    inoremap <silent> <D-T> <Esc>:BuildTexPdf<CR>\n",
+  "rating_total": "8",
+  "rating_votes": "2",
+  "downloads": "77",
+  "install_details": "Unarchive the file while in your Vim home directory: this will result in  the bundled file, \"tex_pdf.vim\" being copied to \"~/.vim/ftplugin/tex\". Alternatively, you can just unpack and copy the file to this location yourself manually.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13845",
+      "filename": "tex_pdf.tar.gz",
+      "script_version": "1.3A",
+      "date": "2010-09-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19500",
+        "user_name": "jeetsukumaran",
+        "first_name": "Jeet",
+        "last_name": "Sukumaran",
+        "email": "jeetsukumaran at gmail.com",
+        "homepage": "http://jeetworks.org"
+      },
+      "release_notes": "Correct compression protocol used (previous upload was actually bzip2)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13793",
+      "filename": "tex-pdf.tar.gz",
+      "script_version": "1.3",
+      "date": "2010-09-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19500",
+        "user_name": "jeetsukumaran",
+        "first_name": "Jeet",
+        "last_name": "Sukumaran",
+        "email": "jeetsukumaran at gmail.com",
+        "homepage": "http://jeetworks.org"
+      },
+      "release_notes": "Fixed failure to redraw in console Vim when running external make/rubber."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13785",
+      "filename": "tex-pdf.tar.gz",
+      "script_version": "1.2",
+      "date": "2010-09-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19500",
+        "user_name": "jeetsukumaran",
+        "first_name": "Jeet",
+        "last_name": "Sukumaran",
+        "email": "jeetsukumaran at gmail.com",
+        "homepage": "http://jeetworks.org"
+      },
+      "release_notes": "On successful compiles, cursor is restored to original position. On compile error, smarter jumping to location of first error."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13782",
+      "filename": "tex-pdf.tar.gz",
+      "script_version": "1.1",
+      "date": "2010-09-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19500",
+        "user_name": "jeetsukumaran",
+        "first_name": "Jeet",
+        "last_name": "Sukumaran",
+        "email": "jeetsukumaran at gmail.com",
+        "homepage": "http://jeetworks.org"
+      },
+      "release_notes": "Better handling of compile errors, automatically jumping to first error line."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13775",
+      "filename": "tex-pdf.tar.gz",
+      "script_version": "1.0",
+      "date": "2010-09-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19500",
+        "user_name": "jeetsukumaran",
+        "first_name": "Jeet",
+        "last_name": "Sukumaran",
+        "email": "jeetsukumaran at gmail.com",
+        "homepage": "http://jeetworks.org"
+      },
+      "release_notes": "Re-upload."
+    }
+  ]
+}

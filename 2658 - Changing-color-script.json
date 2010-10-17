@@ -4,12 +4,108 @@
   "summary": "Syntax highlight colors change gradually based on minutes of hour",
   "name": "Changing-color-script",
   "script_type": "color scheme",
-  "description": "Tested with PHP, HTML, ActionScript (with 'actionscript.vim', also available in this site), AutoIt 3.0, and Javascript. Indicates time by changing syntax colours. Background color changes at brightness at an even rate and with it colors syntax elements (Constant, Identifier, ..) adjust to stay optimally visible in sync with the background color. Background gets brightest at the hour boundary and darkest at the half-hour. Color changes every 1.5 minutes to not become too annoying. (This can be changed.) Slightly different color tint every half-hour-run, e.g. cream, lime, rose.  Nice side-effect whatever command you last typed using : gets erased with the color change.\n\nBenefits of script are:\n* reduce eye-strain and headaches caused by staring at code on-screen\n* reduce dis-orientation by keeping user informed of passing time\n* reduce boredom by stimulating right side of the brain\n\nOnly affects GVIM. Nothing happens in VIM.\n\nThere are a couple of tricks/strategies to compensate for the side-effect of the cursor blinking slightly un-evenly. My video demo explains how you can overcome these 'glitches' and hence make Changing Color script work better for you: http://www.youtube.com/watch?v=F9aFT5PdLe8\n\nAuthors note: thanks to this script have been able to stop using glasses!\n\nAlso note once in a blue moon  'out of memory' error occurs inside ExtraSetHighlight() function'. Not sure why but it is nothing serious. Press a key and it will go away.\n",
-  "rating_total": "23",
-  "rating_votes": "31",
-  "downloads": "1987",
-  "install_details": "Paste changing-color.vim somewhere in vimrc. Replace if previously there. It's obviously marked.",
+  "description": "Tested and works well with Java, Javascript, HTML, CSS, PHP, ActionScript (with 'actionscript.vim', available elsewhere in Vim.org), AutoIt and AutoHotKey.  Gradually changes changing syntax colours over the hour. Works well with time script to speech script: http://www.vim.org/scripts/script.php?script_id=3257\n\nBenefits of script are:\n* reduce eye-strain and headaches caused by staring at code on-screen\n* reduce dis-orientation by keeping user informed of passing time\n* reduce boredom by stimulating right side of the brain\n\nOnly affects GVIM. Nothing happens in VIM.",
+  "rating_total": "26",
+  "rating_votes": "33",
+  "downloads": "2216",
+  "install_details": "Paste changing-color.vim somewhere in vimrc. Replace obviously if it is already there. It is obviously marked.  You should have this Timer script somewhere in your vimrc, because otherwise this script will not work very well.  Download it from here: http://www.vim.org/scripts/script.php?script_id=3244",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14030",
+      "filename": "ChangingColor.vim",
+      "script_version": "16.3",
+      "date": "2010-10-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17391",
+        "user_name": "Pablos544",
+        "first_name": "Paul",
+        "last_name": "Contreras",
+        "email": "pablo at ezrider.co.uk",
+        "homepage": "http://www.paulcontreras.co.uk"
+      },
+      "release_notes": "Cleared out a lot of the junk, like removing the two levels of calls to the main fnunction, now there's one, and no parameter, and pulled out all the logic for a gimicky effect based on this param."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13970",
+      "filename": "ChangingColor.vim",
+      "script_version": "16.3",
+      "date": "2010-10-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17391",
+        "user_name": "Pablos544",
+        "first_name": "Paul",
+        "last_name": "Contreras",
+        "email": "pablo at ezrider.co.uk",
+        "homepage": "http://www.paulcontreras.co.uk"
+      },
+      "release_notes": "Made Javascript a bit more sharp dressed by removing some of the background artefacts to Identifier and Special."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13868",
+      "filename": "ChangingColor.vim",
+      "script_version": "16.2",
+      "date": "2010-09-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17391",
+        "user_name": "Pablos544",
+        "first_name": "Paul",
+        "last_name": "Contreras",
+        "email": "pablo at ezrider.co.uk",
+        "homepage": "http://www.paulcontreras.co.uk"
+      },
+      "release_notes": "Removed the timer function from here and made it into a separate script.  This script needs that script in to work properly, so you should install that in your _vimrc if you have not already done so.  Download it from here: http://www.vim.org/scripts/script.php?script_id=3244"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13861",
+      "filename": "ChangingColor.vim",
+      "script_version": "16.1",
+      "date": "2010-09-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17391",
+        "user_name": "Pablos544",
+        "first_name": "Paul",
+        "last_name": "Contreras",
+        "email": "pablo at ezrider.co.uk",
+        "homepage": "http://www.paulcontreras.co.uk"
+      },
+      "release_notes": "Made Folded look exactly the same as LineNr and Foldcolumn.  This makes code 'extra' stuff on the screen look different but the same.  Makes it look a bit more professional."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13854",
+      "filename": "ChangingColor.vim",
+      "script_version": "16.0",
+      "date": "2010-09-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17391",
+        "user_name": "Pablos544",
+        "first_name": "Paul",
+        "last_name": "Contreras",
+        "email": "pablo at ezrider.co.uk",
+        "homepage": "http://www.paulcontreras.co.uk"
+      },
+      "release_notes": "Forgot to update the foreground in FoldColumn so in practice it remained like a non-moving color scheme. Now updates using the same color scheme as LineNr, both background and foreground. Sorry about that, it was a strain to see at times!!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13849",
+      "filename": "ChangingColor.vim",
+      "script_version": "15.9",
+      "date": "2010-09-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17391",
+        "user_name": "Pablos544",
+        "first_name": "Paul",
+        "last_name": "Contreras",
+        "email": "pablo at ezrider.co.uk",
+        "homepage": "http://www.paulcontreras.co.uk"
+      },
+      "release_notes": "Made FoldedColumn look the same as LineNr.  Obviously it was not looking good as a static-style color scheme.  It blends in at least."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12675",
       "filename": "changing-color.vim",

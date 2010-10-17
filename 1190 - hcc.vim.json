@@ -7,7 +7,7 @@
   "description": "Syntax file for the Handel-C language. Extends the standard C syntax file with the special types and statements found in Handel-C. ",
   "rating_total": "13",
   "rating_votes": "7",
-  "downloads": "400",
+  "downloads": "403",
   "install_details": "Place hcc.vam in .vim/syntax or the Windows equivalent. \n\nTo auto-detect handel-c files based on extensions .hcc and .hch write the following (or add the relevant parts) to .vim/filetype.vim\n\nif exists(\"did_load_filetypes\")\nfinish\nendif\naugroup filetypedetect\nau! BufRead,BufNewFile *.hcc setfiletype hcc\nau! BufRead,BufNewFile *.hch setfiletype hcc\naugroup END",
   "versions": [
     {

@@ -4,12 +4,28 @@
   "summary": "Smoothly centres display when you press Esc like zz, zt and zb",
   "name": "Smooth-Center",
   "script_type": "utility",
-  "description": "Normal VIM lets you center the file based on the current cursor position when you press zz, zt and zb.  This is nice but wouldn't it be nicer if this centering took place smoothly, like panning across a scene of a movie.  This script tries to give you this.  Use Esc, SHIFT-Esc and SHIFT-F1 respectively for zz, zt and zb.  You can cancel this 'smooth centering' by pressing Esc again.   Script now correctly accounts for 'scrolloff' setting being non-zero, as it should.  Please leave a comment :) For a truly immersing experience try this too: http://www.vim.org/scripts/script.php?script_id=2658.  Note: you may not see anything if your updatetime  is to a default vim value like 4000 because it is too high.  With this rate it will take 4 seconds for each 'center' step.",
+  "description": "Normal VIM lets you center the file based on the current cursor position when you press zz, zt and zb.  This is nice but wouldn't it be nicer if this centering took place smoothly, like panning across a scene of a movie.  This script gives you this: Esc, SHIFT-Esc and SHIFT-F1 in Normal mode work like for zz, zt and zb respectively.  You can cancel by re-pressing Esc.   Script correctly accounts for 'scrolloff' setting.  Note: the default updatetime should be lowered to see this or else it will not appear to do anything.  The default is 4000 but I use 650.  There are some glitches in the Center (Normal mode / ESC) like the scrolling keeps going back in on itself when there are folds present, and the scrolling tries to continue if you are at the bottom of the buffer.  These do not affect S-Esc / S-F1, (zb and zt equivs. respectively) and works ok if there are no folds or you are not at the bottom of the script.  Working on these!! :)",
   "rating_total": "0",
   "rating_votes": "4",
-  "downloads": "122",
-  "install_details": "Add to your _vimrc file. Works best with a lower setting for updatetime, I use as low as 650. You can go lower, but some keyboard commands become awkward like Ctrl-W - h/j/k/l to move between open windows.  However the lower you have it the faster the screen scrolls, but be careful not to decrease updatetime too much if you use swap files.",
+  "downloads": "151",
+  "install_details": "Paste it in your _vimrc file. Replace obviously if it is already there.  It is obviously marked.    If you see no scrolling happen, do set ut=1000, because sometimes having a low ut makes the timer not work. Speaking of which, you should have this Timer somewhere in your vimrc, because this makes automatic scrolling possible.  http://www.vim.org/scripts/script.php?script_id=3244",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13848",
+      "filename": "SmoothCenter.vim",
+      "script_version": "1.7",
+      "date": "2010-09-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17391",
+        "user_name": "Pablos544",
+        "first_name": "Paul",
+        "last_name": "Contreras",
+        "email": "pablo at ezrider.co.uk",
+        "homepage": "http://www.paulcontreras.co.uk"
+      },
+      "release_notes": "Made improvements to scroll till cursor is on top and cursor is at bottom cases.  These work very reliably when in folded mode.  The center case is not quite stable but kind of works, there are still some glitches in folded mode and when the buffer is scrolled near the bottom."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13657",
       "filename": "SmoothCenter.vim",

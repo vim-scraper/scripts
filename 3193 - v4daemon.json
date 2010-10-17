@@ -7,7 +7,7 @@
   "description": "This script eases sending lines to the ahead-started daemon. I needed and tested it for creating a test server with netcat and send the pre-recorded sentences to the clients:\n\n:V4dStart nc -l -p 10010\n\nStarts netcat listening on port 10010. Then you start a client somewhere.\nFrom the buffer you are working:\n\n[Select by v,V,ctrl-v] :V4dSendLine\n[Select by v] :V4dSendWord\n\nSends the line(s) you are on/selected to the daemon (and pushed to clients in my case).\n\n:V4dStop\n\n(-:njoy!\n",
   "rating_total": "1",
   "rating_votes": "1",
-  "downloads": "26",
+  "downloads": "37",
   "install_details": "Untar v4daemon into $HOME/.vim\nA helper program will be extracted in .vim/v4d_sendcmd.sh. Change the path if you want to:\n\nlet g:v4d_sendcmd_directory = \"somewhere\"\n\nTodo: - show output from the background process\n          - use other utilities (sh, python) as daemon if it is possible\n",
   "versions": [
     {

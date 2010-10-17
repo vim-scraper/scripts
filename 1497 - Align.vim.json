@@ -7,7 +7,7 @@
   "description": "  Map keys ')' and ']' to perform automatic formatting of parentheses content, i. e., insert spaces in all proper positions.\n   Currently spaces are inserted:\n   a)After and before '(', ')', '[', ']', '+', '-', '*', '/', '%', '=', '&', '|', '^'\n   b)After and before '==', '+=', '-=', '*=', '%=', '/=', '|=', '&=', '!=','^=', '<<', '>>', '>=', '<=', '&&', '||' (and never in the middle!)\n   c)Only after (and not before) ',', '++', '--'\n\n   If syntax highlighting is enabled, script correctly handles string literals, i.e, do not change their content.\n\n   If you have nested parentheses, their content will not be formatted. It is implied that the source is edited continuously, so content of each pair of pare\n   ntheses is formatted after closing parenthesis is printed.\n\n   Bugs:\n   a) Unary '*', '&' and '-' are not handled correctly(i. e., spaces are inserted before and after no matter of context)\n   b) Final position of cursor is not always proper\n",
   "rating_total": "5",
   "rating_votes": "2",
-  "downloads": "393",
+  "downloads": "403",
   "install_details": "Copy file into $VIMRUNTIME/plugin directory",
   "versions": [
     {

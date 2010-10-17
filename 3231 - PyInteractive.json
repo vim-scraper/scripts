@@ -1,0 +1,30 @@
+{
+  "script_id": "3231",
+  "display_name": "PyInteractive",
+  "summary": "Simple python read-eval-print loop inside Vim",
+  "name": "PyInteractive",
+  "script_type": "utility",
+  "description": "This plugin is a simple realization of read-eval-print loop for Python in Vim command window. It requires Python support (see +python) and at least version 2.5 of Python interpreter (you can check python version by running :py import sys; print(sys.version) ). \n\nDemonstration (ver 0.5): http://www.youtube.com/user/clericJ?feature=mhsn\nProject home: http://code.google.com/p/vim-pyinteractive-plugin/\n\n\nCommands:\n\n :PyInteractiveREPL\n     Opens an interactive Python console in vim. If you want to finish working with the interpreter, \n      press <esc>. Interpreter states are saved between PyInteractive sessions (but not between vim\n     sessions), so that if you use PyInteractiveREPL, type x=1 here, close it and then reopen again, \n     variable x will still have value 1. \n\n :PyInteractiveHistory [options]\n     Echoes session history. Possible options:\n               -r Print history without any formatting (mnemonic: raw)\n               -i Print only input history (mnemonic: input)\n               -f {FILE} Write history to file {FILE} \n\n :PyInteractiveEval {code}\n    Evaluate given code in the interpreter. Command is useful for quickly testing results\n    and for scripting purposes (for example, in context menu). Example:\n            :PyInteractiveEval def inc(x): return x+1\n            :PyInteractiveEval inc(1)\n            2\n            :PyInteractiveREPL\n            >>> inc(10)\n            11\n\nAutocompletion is defined for PyInteractiveEval command and for input() opened by PyInteractiveREPL command and can be accessed by pressing <tab> key (default, see wildchar if you want to change this). \n\n\nExamples:\n\n:PyInteractiveREPL\n>>> def inc_10(x):\n...     return x+10\n...\n>>> inc_10(7)\n17\n>>>  import sys\n>>> sys.ex<tab> # codecompletion (see pyinteractive-autocompletion)\n<built-in function exit>\n\n<ESC>\n\n:PyInteractiveEval inc_10(11) +1\n22\n:PyInteractiveHistory\n in[1]: def inc_10(x):\n in[2]:     return x+10\n in[3]:\n in[4]: inc_10(7)\nout[1]: 17\n in[5]: import sys\n in[6]: sys.exit\nout[2]: <built-in function exit>\n in[7]: inc_10(11) +1\nout[3]: 22",
+  "rating_total": "8",
+  "rating_votes": "2",
+  "downloads": "47",
+  "install_details": "Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is \\\"~/.vim\\\" on UNIX and \\\"%USERPROFILE%\\\\vimfiles\\\" on Windows), restart Vim and execute the command \\\":helptags ~/.vim/doc\\\" (use \\\":helptags ~\\\\vimfiles\\\\doc\\\" instead on Windows).\nOr use vim-addon-manager (http://www.vim.org/scripts/script.php?script_id=2905)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13778",
+      "filename": "pyinteractive-vim.zip",
+      "script_version": "0.5.3",
+      "date": "2010-09-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19317",
+        "user_name": "clericJ",
+        "first_name": "Almaz",
+        "last_name": "Karimov",
+        "email": "py.cleric at gmail.com",
+        "homepage": "http://lazycleric.blogspot.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

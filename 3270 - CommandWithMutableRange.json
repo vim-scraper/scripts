@@ -1,0 +1,30 @@
+{
+  "script_id": "3270",
+  "display_name": "CommandWithMutableRange",
+  "summary": "Execute commands which may add or remove lines for each line in the range. ",
+  "name": "CommandWithMutableRange",
+  "script_type": "utility",
+  "description": "DESCRIPTION\nThis plugin offers enhanced versions of the :[range]normal[!] and :[range]call\ncommands which allow for additions and deletions of lines during iteration,\nand adapt the initially supplied [range] accordingly. \n\nThe built-in :normal[!] and :call commands can take a [range], and are then\nexecuted for each line in the range. If the supplied command / function\nmodifies the number of lines in the buffer, the iteration continues over the\ninitially supplied range of line numbers, totally oblivious to the changes.\nThus, if you want to apply modifications that add or delete lines before or\ninside the [range], this built-in Vim functionality isn't much of a help. (You\ncan work around this by recording a macro and then manually repeating it over\neach line, until you reach the end of the range, but you need to do the\nchecking.)  \n\nRELATED WORKS\n- RangeMacro.vim (vimscript #3271) executes macros repeatedly until the end of\n  a range is reached, also taking addition / removal of lines into account.\n\nUSAGE\nThe plugin provides enhanced versions of the :call, :normal and :execute\nVim commands: \n\n:[range]CallWithMutableRange {name}([arguments])\n\t\t\tCall a function (that does not need to accept a range)\n\t\t\tonce for every line in [range]. \n\n:[range]NormalWithMutableRange[!] {commands}\n\t\t\tExecute Normal mode commands {commands} for each line\n\t\t\tin the [range]. \n\n:[range]ExecuteWithMutableRange {expr1} ...\n\t\t\tExecute the string that results from the evaluation of\n\t\t\t{expr1} as an Ex command, once for every line in\n\t\t\t[range]. {expr1} is re-evaluated on each line. \n\t\t\tNormally, (custom) commands that can operate over\n\t\t\tmultiple lines should take an optional [range], but\n\t\t\tsometimes this wasn't implemented, and the command\n\t\t\tonly operates on the current position. In these cases,\n\t\t\t(in addition to ad-hoc expressions) this command is\n\t\t\tuseful, and also handles (most) deletions and\n\t\t\tinsertions gracefully. \n\nFor each iteration, the cursor is positioned in the first column of that line.\nFolding is temporarily disabled. The cursor is left at the last line (possibly\nmoved by the last invocation). The arguments are re-evaluated for each line. ",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "17",
+  "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim CommandWithMutableRange.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.0 or higher. \n\nCONFIGURATION\nBy default, the commands try to find 3 unused marks in the current buffer, and\nwill refuse to work if no unused marks can be found. Alternatively, you can\nreserve any number of marks (but a maximum of 3 will be used) for use by the\ncommands by setting a global variable (either temporarily in a user function,\nor permanently in your vimrc file): \n    let g:CommandWithMutableRange_marks = 'abc'",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14020",
+      "filename": "CommandWithMutableRange.vba.gz",
+      "script_version": "1.00",
+      "date": "2010-10-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo at karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

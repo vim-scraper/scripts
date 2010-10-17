@@ -7,7 +7,7 @@
   "description": "This plugin uses 'Tie::Handle' mechanism to create two output handles: VIMOUT and VIMERR. Then standard output is\nassociated with VIMOUT. This allows normal use of 'print' and 'printf' operators:\n\n\t:perl << EOP\n\t\tprint 'Line:', $curwin->(Cursor())[0];\n\t\tprintf '%d:%d\", $curwin->Cursor();\n\t\tprint VIMERR \"Error: $!\";\n\tEOP\n\nValue in $, is handled correctly:\n\t\n\t:perl $, = '; ';\n\t:perl print 'a' .. 'e'; # prints 'a; b; c; d; e'\n\nValue in $\\ is ignored and  there is no buffering, so it works as if $\\ was set to \"\\n\":\n\n\t:perl print 'one'; print 'two' \n\t\nprints same as \n\t\n\t:perl print \"one\\ntwo\"\n",
   "rating_total": "13",
   "rating_votes": "4",
-  "downloads": "399",
+  "downloads": "401",
   "install_details": "Drop in your plugin directory.",
   "versions": [
     {

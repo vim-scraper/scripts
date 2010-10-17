@@ -7,7 +7,7 @@
   "description": "This plugin maps (by default) <S-CR> to add a filetype's provided \"line ending\"\nto the end of the current line if it is not already present. For instance, a ';'\nwould be added to the end of a line of JavaScript source.\n\nThis is similar to a feature provided by TextMate, mapped to\nCommand-Option-Return in that application.\n\nUsage:\n\nSomewhere in your .vimrc (or equivalent), provide a global dict mapping filetype\nnames to line endings, like so:\n\nlet g:Endlines = {\n  &#039erlang': '.',\n  &#039java': ';',\n  &#039javascript': ';',\n  &#039ocaml': ';;',\n  &#039perl': ';',\n  &#039php': ';',\n  &#039python': ':',\n  &#039sml': ';'\n\\}\n\nBy default, <S-CR> is mapped in both insert and normal mode. In insert mode, a\nnew line is added as well.\n\nGlobal Options:\n\ng:EndlineMapping ('<S-CR>'): The default endline mapping.\ng:EndlineInsertMapping (g:EndlineMapping): The insert mode mapping.\ng:EndlineNormalMapping (g:EndlineMapping): The normal mode mapping.\ng:EndlineInsert (1): 0 to disable the insert mode mapping.\ng:EndlineNormal (1): 0 to disable the normal mode mapping.\ng:Endlines ({}): See \"Usage\"",
   "rating_total": "0",
   "rating_votes": "0",
-  "downloads": "23",
+  "downloads": "32",
   "install_details": "1. Extract the downloaded endline.tgz file\n2. Copy endline/doc/endline.txt to .vim/doc/endline.txt\n3. Copy endline/plugin/endline.vim to .vim/plugin/endline.vim\n4. Run :helptags ~/.vim/doc to load the documentation\n5. Map your filetype line-endings (see \"Usage\" above, or :h Endline-usage)",
   "versions": [
     {

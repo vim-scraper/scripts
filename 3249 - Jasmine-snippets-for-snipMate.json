@@ -1,0 +1,30 @@
+{
+  "script_id": "3249",
+  "display_name": "Jasmine snippets (for snipMate)",
+  "summary": "A set of snippets for the Jasmine JavaScript BDD Framework",
+  "name": "Jasmine-snippets-for-snipMate",
+  "script_type": "utility",
+  "description": "Jasmine (http://pivotal.github.com/jasmine/) is a behavior-driven-development framework for JavaScript with some very nice features. This set of snipMate snippets aims to make developing tests with Jasmine quicker and easier.\n\nFor example, rather than typing out the full:\n\n\"description('Description Here', function() {});\"\n\nYou can type \"des<TAB>\". This will create the full description block, with convenient tab stops. Tre magnifique!\n\nList of Included Snippets (this is actually just the file):\n\n# After Each\nsnippet aft\n\tafterEach(function() { \n\t\t${1} \n\t}\n\n# Any\nsnippet any\n\tjasmine.any(${1})\n\n#\tBefore Each\nsnippet bef\n\tbeforeEach(function() {\n\t\t${1}\n\t});\n\n# Describe\nsnippet des\n\tdescribe(\"${1:description}\", function() {\n\t\t${2}\n\t});${3}\t\n\n# Expect not to be defined\nsnippet notd\n\texpect(${1:target}).not.toBeDefined();${2}\n\n# Expect not to be falsy\nsnippet notf\n\texpect(${1:target}).not.toBeFalsy();${2}\n\n# Expect not to be null\nsnippet notn\n\texpect(${1:target}).not.toBeNull();${2}\n\n# Expect to be truthy\nsnippet nott\n\texpect(${1:target}).not.toBeTruthy();${2}\n\n# Expect not to contain\nsnippet notc\n\texpect(${1:target}).not.toContain(${2:value});${3}\n\n# Expect not to equal\nsnippet note\n\texpect(${1:target}).not.toEqual(${2:value});${3}\n\n# Expect not to match\nsnippet notm\n\texpect(${1:target}).not.toBeDefined();${2}\n\n# Expect not\nsnippet notx\n\texpect(${1:target}).not;${2}\n\n# Expect to be defined\nsnippet ed\n\texpect(${1:target}).toBeDefined();${2}\n\n# Expect to be falsy\nsnippet ef\n\texpect(${1:target}).toBeFalsy();${2}\n\n# Expect to be null\nsnippet en\n\texpect(${1:target}).toBeNull();${2}\n\n# Expect to be truthy\nsnippet et\n\texpect(${1:target}).toBeTruthy();${2}\n\n# Expect to contain\nsnippet ec\n\texpect(${1:target}).toContain(${2:value});${3}\n\n# Expect to equal\nsnippet ee\n\texpect(${1:target}).toEqual(${2:value});${3}\n\n# Expect to match\nsnippet em\n\texpect(${1:target}).toMatch(${2:pattern});${3}\n\n# Expect was called with\nsnippet escw\n\texpect(${1:target}).wasCalledWith(${2:arguments});${3}\n\n# Expect was called\nsnippet esc\n\texpect(${1:target}).wasCalled();${2}\n\n# Expect was not called with\nsnippet notscw\n\texpect(${1:target}).wasNotCalledWith(${2:arguments});${3}\n\n# Expect was not called\nsnippet notsc\n\texpect(${1:target}).wasNotCalled();${3}\n\n# Expect\nsnippet ex\n\texpect(${1:target});${2}\n\n# It\nsnippet it\n\tit(\"${1:description}\", function() {\n\t\t${2}\n\t});${3}\n\n# Runs\nsnippet ru\n\truns(function() {\n\t\t${1}\n\t});${2}\n\n# Spy on and call fake\nsnippet scf\n\tspyOn(${1:object}, \"${2:method}\").andCallFake(${3:function});${4}\n\n# Spy on and call through\nsnippet sct\n\tspyOn(${1:object}, \"${2:method}\").andCallThrough();${3}\n\n# Spy on and return\nsnippet sr\n\tspyOn(${1:object}, \"${2:method}\").andReturn(${3:arguments});${4}\n\n# Spy on and throw\nsnippet st\n\tspyOn(${1:object}, \"${2:method}\").andThrow(${3:exception});${4}\n\n# Spy on\nsnippet s\n\tspyOn(${1:object}, \"${2:method}\");${3}\n\n# Waits (wa)\nsnippet wa\n\twaits(${1});${2}",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "24",
+  "install_details": "First, install snipMate if you do not have it installed (http://www.vim.org/scripts/script.php?script_id=2540)\n\nThen, copy javascript-jasmine.snippets to $VIMRUNTIME/snippets/.\n\nLaunch a new instance of Vim, and play with the magic!",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13887",
+      "filename": "javascript-jasmine.snippets",
+      "script_version": "0.1.0",
+      "date": "2010-09-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "21464",
+        "user_name": "brino",
+        "first_name": "Brian",
+        "last_name": "Egan",
+        "email": "brian at brianegan.com",
+        "homepage": "http://brianegan.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

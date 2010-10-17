@@ -7,7 +7,7 @@
   "description": "If you have many projects with different coding styles (indent settings), then use this plug-in",
   "rating_total": "10",
   "rating_votes": "5",
-  "downloads": "264",
+  "downloads": "279",
   "install_details": "1. Create `~/.coding_style.ini' (default value of `g:coding_style_ini') with format: \n[filetype] \nname1 = path1 # comment \nname2 = path2 \n\n`name1' and `name2' are common indent files. \n`path1' and `path2' are your paths of projects. \n\n2. Create `~/.vim/coding_styles/name1.vim', `~/.vim/coding_styles/name2.vim' and etc.\n`~/.vim/coding_styles' is default value of `g:coding_style_dir'.\n\nNow, you can choose coding style by file path :-) \n\nFor example: \n[cpp] \ndefaultcpp = /home/pitman/ \ngooglecpp = /home/pitman/work/project1 \n\n[c] \nlinuxstyle = /home/pitman/work/kernels/ \ngnustyle = /home/pitman/work/hurd \n\nAnd create indent files (`defaultcpp.vim', `googlecpp.vim' and etc) into `~/.vim/coding_styles/'. \n\nNB: disable `filetype indent'. See `:help filetype'. \n\nNB2: You can use more informative status line: \nset statusline=%<%f%h%m%r%=style=%{CodingStyle()}\\ %15(L%l,C%c%V%)\\ %3P",
   "versions": [
     {

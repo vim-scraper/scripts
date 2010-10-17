@@ -7,7 +7,7 @@
   "description": "these are updates for Sam Ghods script\nhttp://www.vim.org/scripts/script.php?script_id=1929\n\nbased on Seung Woo Shin script\nhttp://www.vim.org/scripts/script.php?script_id=1152\n\nbasically just I add tab-page editing support to the original plugin which based on vim 6.0 below is list of changes made to the python script.\n\n- when multiple tab-page loaded, it will remember the initial tab-page \n  which start the debugging session. every debugging command will \n  make sure that you are debugging on that initial tab, \n  so debugging session wont mess other tab.\n- when debugging session ends on multi tab-page window, other \n  tab-page is no longer being duplicated, it will only restore debugging tab\n\nI've send sam a diff's for this plugin, it seems he's a bit busy, and can't reply my email (yet), it's ok anyway cause I'm planning to add more common feature to the script, \n\nplease if you find any bug, made a patch, diffs, etc, let me know...\n\n\n ",
   "rating_total": "20",
   "rating_votes": "5",
-  "downloads": "590",
+  "downloads": "626",
   "install_details": "just copy the debugger.py and debugger.vim to the plugin directory in your home directory\n\n$ tar -xzvf debugger.tar.gz\n$ cp plugin/debugger.*  ~/.vim/plugin/",
   "versions": [
     {

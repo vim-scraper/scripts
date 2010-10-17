@@ -5,11 +5,43 @@
   "name": "delimitMate.vim",
   "script_type": "utility",
   "description": "This plug-in provides automatic closing of quotes, parenthesis, brackets, etc., besides some other related features that should make your time in insert mode a little bit easier, like syntax awareness (will not insert the closing delimiter in comments and other configurable regions), visual wrapping, <CR> and <Space> expansions (off by default), and some more.\n\nMost of the features can be modified or disabled permanently, using global variables, or on a FileType basis, using :autocmd. With a couple of exceptions and limitations, this features don't brake undo, redo or history.\n\ni.e.: The following line in your vimrc would turn auto-completion off for the \"mail\" file type:\n\n        au FileType mail let b:delimitMate_autoclose = 0\n\nRead :help delimitMate for detailed information. You can also follow the \"Vim wiki\" link on the top to discuss about this script.",
-  "rating_total": "89",
-  "rating_votes": "29",
-  "downloads": "1344",
-  "install_details": "This script is packaged as a vimball. If gnuzip is in your $PATH, simply edit delimitMate.vba.gz in Vim and then source the file; otherwise, decompress the archive first.\ne.g.:\n        vim delimitMate.vba.gz\n        :source %\n\nIf you want to remove this plugin, type the following inside Vim:\n\n        :RmVimball delimitMate\n\nIf you have GetLatestVimScripts configured, delimitMate will be automatically added the next time you run :GetScripts.\n\nIf you can't use the vimball source, download the zipped version here:\nhttp://github.com/Raimondi/delimitMate/downloads\n\nLeave bug reports and feature request here:\nhttp://github.com/Raimondi/delimitMate/issues",
+  "rating_total": "101",
+  "rating_votes": "34",
+  "downloads": "1553",
+  "install_details": "Unzip the files to your ~/.vim dir:\n\n    unzip -d ~/.vim /path/to/delimitMate.zip\n\nor to your bundle dir if you use pathogen:\n\n    unzip -d ~/.vim/bundle/delimitMate /path/to/delimitMate.zip\n\nLeave bug reports and feature request here:\nhttp://github.com/Raimondi/delimitMate/issues",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13963",
+      "filename": "delimitMate.vba",
+      "script_version": "2.5.1",
+      "date": "2010-09-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "- Remove visual wrapping. Surround.vim offers a much better implementation.\n- Minor mods to DelimitMateTest."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13910",
+      "filename": "delimitMate.zip",
+      "script_version": "2.5",
+      "date": "2010-09-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15099",
+        "user_name": "Raimondi",
+        "first_name": "Israel",
+        "last_name": "Chauca Fuentes",
+        "email": "israelvarios at fastmail.fm",
+        "homepage": "http://cachivaches.chauca.net/"
+      },
+      "release_notes": "- Better handling of mappings.\n- Add report for mappings in :DelimitMateTest.\n- Allow the use of \"|\" and multi-byte characters in 'delimitMate_quotes' and 'delimitMate_matchpairs'.\n- Allow commands to be concatenated using |."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13447",
       "filename": "delimitMate.vba.gz",

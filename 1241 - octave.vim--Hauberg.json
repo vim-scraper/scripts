@@ -5,9 +5,9 @@
   "name": "octave.vim--Hauberg",
   "script_type": "syntax",
   "description": "Syntax highlighting for GNU Octave. It inherits the Matlab syntax highlighting and adds a few extra things like endif etc.",
-  "rating_total": "64",
-  "rating_votes": "35",
-  "downloads": "1171",
+  "rating_total": "72",
+  "rating_votes": "40",
+  "downloads": "1205",
   "install_details": "Installation details from Paul Laub - thanks Paul!\nHere's what to do to get octave.vim working. \n\n1. Put octave vim in vim's syntax subdirectory. \n\n2. Directory above this subdirectory is the main vim directory. Find\nthe file named filetype.vim. Change \"matlab\" to \"octave\". With that,\nfiles with the *.m extension will be associated with octave.vim. Test\nby opening an octave file in vim. Keywords like endfunction should be\nhighlighted.\n\n3. (Optionally) modify the file synmenu.vim to include an Octave item\nin the syntax menu of the GUI version of vim. [I don't use menus so I\ncan't say more about how to do this.]\n\nAlso, since your script inherits formatting done by the matlab.vim\nfile, I'd advise people NOT  to delete matlab.vim and rename\noctave.vim to matlab.vim.\n\nAn alternative is to copy octave.vim to ~/.vim/syntax and add the following to ~/.vimrc:\n\" Octave Syntax\naugroup filetypedetect\n     au! BufRead,BufNewFile *.m setfiletype octave\naugroup END\n",
   "versions": [
     {

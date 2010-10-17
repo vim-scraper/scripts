@@ -1,0 +1,62 @@
+{
+  "script_id": "3242",
+  "display_name": "Open associated programs",
+  "summary": "Open files and web pages in associated programs from Vim",
+  "name": "Open-associated-programs",
+  "script_type": "utility",
+  "description": "This plug-in knows how to open files, directories, URLs and e-mail addresses from inside Vim using the associated programs. It should work on Windows, Mac OS X and most Linux installations. For more information about the plug-in please refer to its homepage or the project page on GitHub:\n\n  http://peterodding.com/code/vim/open-associated-programs/\n  http://github.com/xolox/vim-open-associated-programs\n\nIf you have questions, bug reports, suggestions, etc. the author can be contacted at peter@peterodding.com. If you like this plug-in please vote for it below!",
+  "rating_total": "4",
+  "rating_votes": "1",
+  "downloads": "45",
+  "install_details": "Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is \"~/.vim\" on UNIX and \"%USERPROFILE%\\vimfiles\" on Windows), restart Vim and execute the command \":helptags ~/.vim/doc\" (use \":helptags ~\\vimfiles\\doc\" instead on Windows).\n\nNote that on Windows a command prompt window pops up when either of the functions is called. If this bothers you then you can install my shell.vim plug-in (see vimscript #3123) which includes a DLL that works around this issue. Once youve installed both plug-ins it should work out of the box!",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13855",
+      "filename": "open-associated-programs.zip",
+      "script_version": "1.2",
+      "date": "2010-09-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Renamed plug-in from Open external location to Open associated programs:\nhttp://github.com/xolox/vim-open-associated-programs/commit/71111c7e19ae02368a5f"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13852",
+      "filename": "open-external-location.zip",
+      "script_version": "1.1",
+      "date": "2010-09-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Fixed reference to vim.org, added GLVS header:\nhttp://github.com/xolox/vim-open-external-location/commit/c706b115c4"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13851",
+      "filename": "open-external-location.zip",
+      "script_version": "1.0",
+      "date": "2010-09-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

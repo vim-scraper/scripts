@@ -7,7 +7,7 @@
   "description": "Simply switches between .c/.cpp and .h/.hpp files, suitable for one-keystroke switching.\nOrder of priority when looking for corresponding files:\n1) if .h file, seeks for .c first, then .cpp\n2) otherwise, seeks for .h first, then .hpp\nInspired by vimtip #384. Not as complex as vimscript #31, but if you need only small amount of code ...",
   "rating_total": "1",
   "rating_votes": "4",
-  "downloads": "311",
+  "downloads": "315",
   "install_details": "Drop into ~/vimfiles/plugin\nAdd source ~/vimfiles/plugin/switch_headers.vim to your c.vim/cpp.vim after/syntax files\nUse mapping such as:\nnmap <F9> :call SwitchHeader()<cr>",
   "versions": [
     {

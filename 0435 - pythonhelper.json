@@ -5,9 +5,9 @@
   "name": "pythonhelper",
   "script_type": "utility",
   "description": "Vim script to help moving around in larger Python source files. It displays current class, method or function the cursor is placed in in the status line for every python file. It's more clever than Yegappan Lakshmanan's taglist.vim because it takes into account indetation and comments to determine what tag the cursor is placed in and from version 0.80 doesn't need exuberant ctags utility.\n\nNote: The script displays current tag on the status line only in NORMAL mode. This is because CursorHold event in VIM is fired up only in this mode. However if you'd like to know what tag you are in even in INSERT or VISUAL mode, contact me (email specified in the script) and I'll send you a patch that enables firing up CursorHold event in those modes as well.",
-  "rating_total": "453",
-  "rating_votes": "128",
-  "downloads": "2920",
+  "rating_total": "466",
+  "rating_votes": "132",
+  "downloads": "3002",
   "install_details": "1. Make sure your Vim has python feature on (+python). If not, you will need to recompile it with --with-pythoninterp option to the configure script\n2. Copy script pythonhelper.vim to the $HOME/.vim/plugin directory\n3. Run Vim and open any python file.",
   "versions": [
     {

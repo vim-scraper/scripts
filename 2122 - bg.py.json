@@ -7,7 +7,7 @@
   "description": "Tested on windows only.\nRequirements:  \n 1. python \"http://python.org&quot; installed.\n 2. Google Data APIs -  \"http://code.google.com/p/gdata-python-client/\" &nbsp; gdata-python-client\n  can be downloaded from here : \"http://gdata-python-client.googlecode.com/files/gdata.py-1.0.10.latest.zip&quot;\n",
   "rating_total": "4",
   "rating_votes": "5",
-  "downloads": "264",
+  "downloads": "266",
   "install_details": "Installation :\n 1.Install python \n 2.Download gdata-python-client  unpack and run \"setup.py install\" \n 3.download bg01.zip unpack bg.py and place in any folder mentioned in %PATH%  \n 4. add this line to your _vmrc file :\n\nnnoremap <Leader>blog :! bg.py --f %:p --u my@email.com  --p inline<cr>\n\n where my@email.com is your email registered on blogger.com  \n \n --p inline - means that password will be asked on every posting to blog , you can specify it in this line if you want.\n Than script will not be asking every time.\nnnoremap <Leader>blog :! bg.py --f %:p --u my@email.com  --p mypassword<cr>\n\nUsing:\n When you want to post current file to blog : just hit '\\blog' enter password and new blog entry will be created.\n I added post \nhttp://sourcefield.blogspot.com/2008/01/how-to-blog-from-source-code-from-vim_09.html\n how to create  blog with syntax-highlighted source code. \n Please leave a word or question,concern,comment,jockes,bugs  http://sourcefield.blogspot.com/2008/01/post-to-your-blog-at-bloggercom-from.html\n",
   "versions": [
     {

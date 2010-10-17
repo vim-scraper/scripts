@@ -7,7 +7,7 @@
   "description": "This script may be manually sourced or, if placed in .vim/ftplugin/c, will be automatically sourced whenever a C file is edited (which is where vimball will put it).  The prototypes within it are based on gcc's /usr/share/man/man2 directory.\n\nThis plugin is truly simple to use: after one has typed a function name, a protype \"hint\" will be shown.\n \nex.    select(\n\n       will result in\n\n          int select(int nfds, fd_set * readfds, fd_set * writefds, fd_set * exceptfds, struct timeval * utimeout)\n\n       being echo'd at the bottom of the display.\n\nYou'll probably want your cmdheight option set to at least two (ie.  set ch=2). \n\n(see vimscript#1826 for man-3 based function hints)",
   "rating_total": "17",
   "rating_votes": "5",
-  "downloads": "697",
+  "downloads": "715",
   "install_details": "1. Make sure you have and are using an up-to-date version of vimball (see vimscript#1502)\n    (if you have vim 7.1a or later, you probably can skip this step)\n2. vim hints_man3.vba.gz\n     :so %\n     :q\n",
   "versions": [
     {

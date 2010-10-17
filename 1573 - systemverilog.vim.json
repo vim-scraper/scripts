@@ -5,9 +5,9 @@
   "name": "systemverilog.vim",
   "script_type": "syntax",
   "description": "Since there didn't seem to be a SystemVerilog syntax file yet for Vim, I wrote this.\nIt's based on the existing Verilog mode from Vim 6.3.\nAll language keywords are defined, as are most builtin method/task/function names.",
-  "rating_total": "116",
-  "rating_votes": "61",
-  "downloads": "1909",
+  "rating_total": "120",
+  "rating_votes": "62",
+  "downloads": "2000",
   "install_details": "Put it in your runtime directory as per normal syntax files.\nI use the following ~/.vim/filetype.vim to make it recognise any *.sv file as systemVerilog.\n\naugroup filetypedetect\nau BufNewFile,BufRead *.sv      setf systemverilog\naugroup END\n",
   "versions": [
     {

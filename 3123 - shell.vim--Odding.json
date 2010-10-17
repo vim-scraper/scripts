@@ -4,12 +4,44 @@
   "summary": "Improved integration between Vim and its environment (fullscreen, open URL, etc)",
   "name": "shell.vim--Odding",
   "script_type": "utility",
-  "description": "This plug-in aims to improve the integration between Vim and its environment by providing functions to switch to full-screen (see the screenshots at http://peterodding.com/code/vim/shell/screenshots), open URLs in the user's default web browser and execute external commands in the background without opening a command prompt window. A DLL is included to perform these things on Windows, while on UNIX external commands are used.\n\nFor more information about the plug-in please refer to its homepage or the project page on GitHub:\n\n  http://peterodding.com/code/vim/shell\n  http://github.com/xolox/vim-shell\n\nIf you have questions, bug reports, suggestions, etc. the author can be contacted at peter@peterodding.com. If you like this plug-in please vote for it below!\n\nALTERNATIVES\nAfter publishing this plug-in I found that vimscript #687 and vimscript #2596 also implement full-screen on Windows using a similar approach. I prefer the effect of my plug-in because it seems to hide window decorations more effectively. Also note that my plug-in was developed independently of the other two.",
-  "rating_total": "27",
-  "rating_votes": "9",
-  "downloads": "270",
+  "description": "This plug-in aims to improve the integration between Vim and its environment by providing functions to switch to full-screen (see the screenshots at http://peterodding.com/code/vim/shell/screenshots), open URLs in the user's default web browser and execute external commands in the background without opening a command prompt window. A DLL is included to perform these things on Windows, while on UNIX external commands are used.\n\nFor more information about the plug-in please refer to its homepage or the project page on GitHub:\n\n  http://peterodding.com/code/vim/shell/\n  http://github.com/xolox/vim-shell\n\nIf you have questions, bug reports, suggestions, etc. the author can be contacted at peter@peterodding.com. If you like this plug-in please vote for it below!\n\nALTERNATIVES\nAfter publishing this plug-in I found that vimscript #687 and vimscript #2596 also implement full-screen on Windows using a similar approach. I prefer the effect of my plug-in because it seems to hide window decorations more effectively. Also note that my plug-in was developed independently of the other two.",
+  "rating_total": "43",
+  "rating_votes": "13",
+  "downloads": "389",
   "install_details": "Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is \"~/.vim\" on UNIX and \"%USERPROFILE%\\vimfiles\" on Windows), restart Vim and execute the command \":helptags ~/.vim/doc\" (use \":helptags ~\\vimfiles\\doc\" instead on Windows). Now try it out:\n\n  Press <F11> or execute :Fullscreen to switch to full-screen mode and back;\n\n  Press <F6> or execute :Open to open files, directories, URLs and e-mail addresses using their associated default programs. By default the filename/URL/etc. under the text cursor is used, but you can also give an argument to the :Open command, for example:\n\n    :Open $VIMRUNTIME\n    :Open http://www.vim.org/scripts/script.php?script_id=3123",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13866",
+      "filename": "shell.zip",
+      "script_version": "0.8.2",
+      "date": "2010-09-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Bug fix: %s/xolox#open#shell/xolox#open#file/:\n   http://github.com/xolox/vim-shell/commit/452e951e2fcc4c7afa5a\n\n  Truncate expand() result to one pathname:\n   http://github.com/xolox/vim-shell/commit/dc3448ec7f3a66b17199\n\n  Bug fix: Open either file or directory, but never both!\n   http://github.com/xolox/vim-shell/commit/de1303de9b9317affe10"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13853",
+      "filename": "shell.zip",
+      "script_version": "0.8",
+      "date": "2010-09-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "http://github.com/xolox/vim-shell/commit/4d2313b6508c26a1a843:\n  Moved openurl() & open_with() to dedicated plug-in (included in ZIP archive)\n  Simplified Mac OS X support\n  Support command line web browsers in s:open_at_cursor()"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13721",
       "filename": "shell.zip",

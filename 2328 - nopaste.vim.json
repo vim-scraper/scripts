@@ -7,7 +7,7 @@
   "description": "This is a simple interface to http://www.rafb.net/ which need vim's python interface as a dependency. Edit a file, then issue the command \n:Paste \nand it will post the whole file on rafb. The link will come in your clipboard(* and +) as default, so you can post it with Ctrl + v or middle mouse button somewhere on IRC, browsers, etc. I also have that map in my ~/.vimrc\nvnoremap <leader>paste y:call Paste('<C-R>\"')<cr><cr>\nwith which you can paste just a snippet from the file. Just select the block/text in VISUAL mode and hit <leader>paste this will copy the text to the site, note <leader> is \\ as default in vim.\n",
   "rating_total": "4",
   "rating_votes": "1",
-  "downloads": "230",
+  "downloads": "232",
   "install_details": "Put the vim file in your ~/.vim/plugin on Unix and ~/vimfiles/plugin on Windows.\nYou should also set g:nickname to your nickname with something like this\nlet g:nickname = \"nikolavp\"",
   "versions": [
     {

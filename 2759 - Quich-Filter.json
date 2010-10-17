@@ -5,11 +5,43 @@
   "name": "Quich-Filter",
   "script_type": "utility",
   "description": "This plug-in provides filtering/search functionality to Vim, similar to e.g.\nPSPad. This plug-in offers a number of additional features:\n\n- Further filtering/searching inside the filtered results.\n- Syntaxt highlighting in the filtered results.\n- Show context line around found matches. You can dynamically change the number of lines.\n- Easy jumping to and from the filter buffers.\n\nThe search results are presented in a seperate buffer (and window) and\nthe script offers a number of convenience key-mappings to navigate from one\nresult to the next.\n\nThe default key mappings are as follows:\n\n-------------------------------------------------------------------------------\n    KEY        Description\n-------------------------------------------------------------------------------\nAny buffer:\n    ,f         Filter the current buffer using the line pattern found in\n               register @/, that is the search buffer (your last search).\n    ,F         Ask for a line pattern and filters using that string.\n    ,g         Go to the newest filter window associated with the current\n               buffer. If the current buffer is also a filter window, go to\n               the next associated filter window that is the newest after the\n               current one.\n-------------------------------------------------------------------------------\nFilter buffer:\n    <Enter>    Go to the selected line in the original buffer and keep the filter\n               window open. \n    <S-Enter>  Same as <Enter> but also closes the filter buffer.\n    c/C        Increase/decrease the number of context lines around matches.\n    o          Jump to the currently selected line in the original buffer, but\n               keep the cursor in the filter window.\n    a          Toggle auto follow. If auto follow is on, the original buffer\n               will automatically jump to the line your cursor is on (i.e.\n               it's the same effect as pressing o each time you move the\n               cursor).\n    j/k        Jump to next/previous search result.\n-------------------------------------------------------------------------------\n\n",
-  "rating_total": "210",
-  "rating_votes": "56",
-  "downloads": "478",
+  "rating_total": "226",
+  "rating_votes": "60",
+  "downloads": "517",
   "install_details": "Drop this file in your plug-in directory, e.g. $HOME/vimfiles/plugin or\nC:\\Program Fles\\vim\\vimfiles\\plugin, and it should be automatically sourced\nduring start-up.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13996",
+      "filename": "filtering.vim",
+      "script_version": "1.0.6.1",
+      "date": "2010-10-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12839",
+        "user_name": "nielsadb",
+        "first_name": "Niels",
+        "last_name": "Aan de Brugh",
+        "email": "nielsadb at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed strange resize behavior when refreshing results, and made resizing more robust for when search and/or original buffer are hidden."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13995",
+      "filename": "filtering.vim",
+      "script_version": "1.0.6",
+      "date": "2010-10-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12839",
+        "user_name": "nielsadb",
+        "first_name": "Niels",
+        "last_name": "Aan de Brugh",
+        "email": "nielsadb at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This version features:\n\n- Defaults for configuration have been moved to global variables so you specify them without changing the plug-in source.\n- Filter a match only if it followed by another match (within a given number of lines). For example, aap|5|noot will match  \"aap\",  but only if it's followed by \"noot\" within 5 lines.\n- Showing all context lines up to the second match can be switched on/off (regardless of the number of context lines showing already).\n- The window size is by default no more than the minimum of the number of matches and half the window size. The maximum can also be configured (absolute or as a percentage of the original window size).\n\nPress ? in a filter window to show all default binding.\n\nI should probably write up some documentation for this some day. For now please refer to the topmost section of the source."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13436",
       "filename": "filtering.vim",

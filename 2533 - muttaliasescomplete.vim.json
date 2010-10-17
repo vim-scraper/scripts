@@ -7,7 +7,7 @@
   "description": "This script adds an omnicompletion function that gets completion entries from a mutt aliases file. I tested only on GNU/Linux with vim 7.2, but it should work on other systems.\n\nPlease send comments, suggestions and patches to \"dotfiles at kb dot ccchl dot de\".",
   "rating_total": "9",
   "rating_votes": "3",
-  "downloads": "194",
+  "downloads": "197",
   "install_details": "Edit the following line in script:\nlet g:aliases_file = glob('~/.mutt/aliases')\n\nYour .vimrc:\nautocmd FileType mail set omnifunc=muttaliasescomplete#Complete\nsource path/to/muttaliasescomplete.vim",
   "versions": [
     {

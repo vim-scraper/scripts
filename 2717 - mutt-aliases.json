@@ -7,7 +7,7 @@
   "description": "I either wasn't happy with or unable to operate the mutt aliases scripts I found on this site, so I wrote my own.  It reads your aliases from g:mutt_aliases_file (global var), or from the file indicated in ~/.muttrc, or from ~/.aliases.\n\nIt stores them in a complete function, which can be activated with either\n\n    i_CTRL-X-CTRL-U  (see :help i_CTRL-X-CTRL-U)\n\nor via an insert mode macro \"@@\".",
   "rating_total": "2",
   "rating_votes": "2",
-  "downloads": "188",
+  "downloads": "192",
   "install_details": "To install this script, put it somewhere in your ~.vim/ directory, or heck, any other place you'd like.  Then add lines to source the script at appropriate times, e.g:\n\n    au BufRead /tmp/mutt-* source ~/.vim/scripts/mutt-aliases.vim\n    au BufRead ./example.file source ./mutt-aliases.vim\n",
   "versions": [
     {

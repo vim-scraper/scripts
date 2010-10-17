@@ -7,7 +7,7 @@
   "description": "Based on keyword list in O'Reilly scarab beetle book (Oracle SQL*Loader ISBN 1-56592-948-9). Derived from sql.vim.",
   "rating_total": "7",
   "rating_votes": "4",
-  "downloads": "653",
+  "downloads": "656",
   "install_details": "copy to $VIMRUNTIME/syntax. in addition, you can modify filetype.vim so  that, e.g., *.ctl and *.control files are recognized as SQL*Loader files.\n\n< au BufNewFile,BufRead *.vbs,*.dsm,*.ctl setf vb\n---\n> au BufNewFile,BufRead *.vbs,*.dsm setf vb\n---\n> \" SQL*Loader (Oracle)\n> au BufNewFile,BufRead *.ctl,*.control setf sqlldr\n\n",
   "versions": [
     {

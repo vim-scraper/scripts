@@ -7,7 +7,7 @@
   "description": "This is for Wildfire 2.  I doubt there are big changes in 3, but let me know.\n\nI prefixed syntax items with \"mk_\" because Pro/E files are largely used for 'Mapkeys'.\nHowever, some of the syntax items here apply to general Pro/E syntax.\n\nThere is no vocabulary built in.  I was unable to download a good list of commands.  This documentation for Wildfire 2 is in PDF form, and translating to text and HTML both fail miserably for me.\n http://www.cad-resources.com/WF2_configuration_options.pdf\n\nI'm confused as to why the tildes ~ and the 'mapkey(continued) ' markings were necessary to the syntax... thoughts, anyone?\n",
   "rating_total": "1",
   "rating_votes": "1",
-  "downloads": "151",
+  "downloads": "154",
   "install_details": "Place proe.vim in your syntax folder with all the rest of the syntax files.\n\nAuto detection conflicts with IDL because of the file extension.  Find this line in your filetype.vim and comment it out (with a quote \"):\n\nau BufNewFile,BufRead *.pro\t\t\tsetf idlang\n\nIf you need to use that type of file, I hope you can think of your own solution.",
   "versions": [
     {

@@ -5,11 +5,43 @@
   "name": "easytags.vim",
   "script_type": "utility",
   "description": "This plug-in automatically creates a global tags file and keeps it up-to-date as you edit files in Vim. The tags are also used to perform dynamic syntax highlighting of user-defined functions and types. For more information about the plug-in please refer to its homepage or the project page on GitHub:\n\n  http://peterodding.com/code/vim/easytags/\n  http://github.com/xolox/vim-easytags\n\nIf you have questions, bug reports, suggestions, etc. the author can be contacted at peter@peterodding.com. If you like this plug-in please vote for it below!",
-  "rating_total": "67",
-  "rating_votes": "18",
-  "downloads": "633",
+  "rating_total": "75",
+  "rating_votes": "20",
+  "downloads": "831",
   "install_details": "Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is \"~/.vim\" on UNIX and \"%USERPROFILE%\\vimfiles\" on Windows), restart Vim and execute the command \":helptags ~/.vim/doc\" (use \":helptags ~\\vimfiles\\doc\" instead on Windows). Now try it out: Edit any file type supported by Exuberant Ctags and within ten seconds the plug-in should create/update your tags file (\"~/.vimtags\" on UNIX, \"~/_vimtags\" on Windows) with the tags defined in the file you just edited! This means that whatever file you're editing in Vim (as long as its on the local file system), tags will always be available by the time you need them!\n\nAdditionally if the file you just opened is a C, C++, Objective-C, Java, Lua, Python, PHP or Vim source file you should also notice that the function and type names defined in the file have been syntax highlighted.\n\nIf the plug-in warns you that ctags isn't installed you can download it from its homepage http://ctags.sourceforge.net/ or if you're running Debian/Ubuntu you can install it by executing the following shell command:\n\n    sudo apt-get install exuberant-ctags\n\nNote that on Windows a command prompt window pops up whenever Exuberant Ctags is run as an external process. If this bothers you then you can install my shell.vim plug-in (see vimscript #3123) which includes a DLL that works around this issue. Once youve installed both plug-ins it should work out of the box!",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13915",
+      "filename": "easytags.zip",
+      "script_version": "2.1.7.2",
+      "date": "2010-09-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Bug fix for duplicate help tag in easytags.txt (no associated commit because easytags.txt is generated from README.md  I just fixed the conversion script and regenerated easytags.txt)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13763",
+      "filename": "easytags.zip",
+      "script_version": "2.1.7",
+      "date": "2010-09-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter at peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Documented :HighlightTags tags file format requirements:\n   http://github.com/xolox/vim-easytags/commit/738d7508181423e1633e4d5d6014e8ad2acb4595\n\n  Remove no longer needed PublishPre automatic command:\n   http://github.com/xolox/vim-easytags/commit/3735a5c31b94cb575d6821e697d867fe475d73cf\n\n  Fixed easytags#update() to overcome argument limit:\n   http://github.com/xolox/vim-easytags/commit/0d0fac667e38114324d1a90f848f49a5af71f859\n\n  Bug fix: Canonicalize arguments to :UpdateTags:\n   http://github.com/xolox/vim-easytags/commit/5efb2c7ee0d6926aaa0ad3080a53857ec910d4d3"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13551",
       "filename": "easytags.zip",

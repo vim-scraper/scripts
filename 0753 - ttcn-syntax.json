@@ -7,7 +7,7 @@
   "description": "I couldn't find any syntax file for TTCN-3, so I made my own. The file is based on ETSI document no. ES 201 873-1 (V2.2.1 2003-02).\n\nFor information about TTCN-3, see http://www.etsi.org.\n\nFolds: If the variable \"g:ttcn_fold\" is defined (e.g. by \":let g:ttcn_fold = 1\" in your .vimrc file), folds will automatically be defined for each {...} block.\n",
   "rating_total": "112",
   "rating_votes": "34",
-  "downloads": "1208",
+  "downloads": "1230",
   "install_details": "Just drop the file in your local syntax directory (e.g. ~/.vim/syntax). \n\nIf you want Vim to automatically detect the file type *.ttcn, you should edit your \"filetype.vim\" file (on linux it should be located in ~/.vim). For example, my filetype.vim looks like this:\n\nif exists(\"did_load_filetypes\")\n    finish\nendif\naugroup filetypedetect\n    au BufNewFile,BufRead *.ttcn  setf ttcn    << This is the line!\n    au BufNewFile,BufRead *.antlr setf antlr\naugroup END\n\n\n",
   "versions": [
     {

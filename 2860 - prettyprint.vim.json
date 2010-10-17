@@ -5,11 +5,27 @@
   "name": "prettyprint.vim",
   "script_type": "utility",
   "description": "*prettyprint* is a Vim plugin to prettyprint vim variable for debug.\n\nExample:\nWhen g:prettyprint_width = 78, you run the following command,\n    :PP {'triangular':[3,6,9,12,15],'squares':[1,4,16,25,36],'pentagonal':[1,5,12,22,35]}\n\nYou get the following display as a result.\n    {\n      'pentagonal': [1, 5, 12, 22, 35],\n      'squares': [1, 4, 16, 25, 36],\n      'triangular': [3, 6, 9, 12, 15]\n    }\n\n\nExample of usage: You try the following command to view the all global variables.\n\n    :PP g:\n\n\nLatest Version:\nhttp://github.com/thinca/vim-prettyprint",
-  "rating_total": "11",
-  "rating_votes": "5",
-  "downloads": "85",
+  "rating_total": "15",
+  "rating_votes": "6",
+  "downloads": "103",
   "install_details": "",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13769",
+      "filename": "vim-prettyprint-0.3.1.zip",
+      "script_version": "0.3.1",
+      "date": "2010-09-06",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18219",
+        "user_name": "thinca",
+        "first_name": "thinca",
+        "last_name": " ",
+        "email": "thinca+vim at gmail.com",
+        "homepage": "http://d.hatena.ne.jp/thinca/"
+      },
+      "release_notes": "- Added the buffer local version of options.\n  - b:prettyprint_indent\n  - b:prettyprint_width\n- :PrettyPrint accepts \"!\" for saving the output.\n"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=11772",
       "filename": "vim-prettyprint-0.3.0.zip",

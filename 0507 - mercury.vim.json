@@ -7,7 +7,7 @@
   "description": "A rather colorful vim syntax file for the Mercury language.",
   "rating_total": "7",
   "rating_votes": "4",
-  "downloads": "420",
+  "downloads": "424",
   "install_details": "Put it in ~/.vim/syntax/.\n\nThen use \n:setf mercury\nin vim or set an autocommand\n\naugroup filetype\n   au BufRead *.m        set ft=mercury\naugroup END\n\nor add something like this to filetype.vim\nwhere it tries to determine the filetype of .m files(grep for matlab).\n\n    if getline(n) =~ '^:-'\n      setf mercury\n      return\n    endif",
   "versions": [
     {

@@ -7,7 +7,7 @@
   "description": "\nInsert an ASCII character from a dialog box. See the screenshot at http://cream.sourceforge.net/screenshot-ascii.png.\n\nThis is one of many custom utilities and functions for gVim from the Cream project (http://cream.sourceforge.net), a configuration of Vim for those of us familiar with Apple and Windows software. \n\n",
   "rating_total": "30",
   "rating_votes": "12",
-  "downloads": "974",
+  "downloads": "980",
   "install_details": "Just copy this file and paste it into your vimrc. Or you can drop the entire file into your plugins directory.\n\nTwo cream ASCII menu items attempt to load into the bottom of the default Tools menu. (If you have customized your menus and Tools has been removed or altered, this could fail, obviously.)\n\nIf you choose not to use the menus, you can also call the Cream_ascii() function directly from the command line. Options are as follows:\n\n  :call Cream_ascii()  -- No argument inserts a complete ASCII table into the current document\n\n  :call Cream_ascii(\"dialog\")  -- The argument \"dialog\" calls the dialog version of the program\n\n  :call Cream_ascii([32-255])  -- You can also use a number 32-255 to insert that decimal character with Vim's nr2char()\n\n",
   "versions": [
     {

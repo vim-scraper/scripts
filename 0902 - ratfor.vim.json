@@ -7,7 +7,7 @@
   "description": "RATFOR is a dialect of FORTRAN made by\nthe creators of C. RATFOR is a preprocessor that provides C like control flow to FORTRAN.\n  \nSo ratfor.vim implements this idea.\n ",
   "rating_total": "3",
   "rating_votes": "3",
-  "downloads": "284",
+  "downloads": "286",
   "install_details": "Put ratfor.vim where vim could see it.\n\nUsualy ratfor scripts use .r as name extension. So add the next lines in filetype.vim\n\n\" RATFOR (Rational Fortran)\naugroup filetypedetect\nau BufNewFile,BufRead *.r       setf ratfor\nau BufNewFile,BufRead *.ratfor  setf ratfor\naugroup END\n",
   "versions": [
     {

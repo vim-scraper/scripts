@@ -7,7 +7,7 @@
   "description": "Glimpse is a powerful indexing and query system, free for personal use.\n\thttp://www.webglimpse.net\n\nVimGlimpse is a basic Glimpse interface within Vim, based on a Vim Tip from\nJean-Rene David. \n\thttp://vim.wikia.com/wiki/Use_glimpse_from_within_Vim\n\nVimGlimpse retains normal Vim :grep functionality, and provides\nadditional Glimpse features outside of what :grepprg can allow.  By\ndefault, VimGlimpse only searches within your current working directory,\nmaking it ideal for near instantaneous searches across a project.\n\nExamples:\n\n    :Glimpse porksausage\n\n\t\tFind porksausage across all files in the current working directory.\n\n    :Glimpse needle haystack.h$\n\n\t\tFinds all needles in all haystack.h's files.\n\n\t:let g:glimpseFlags = \"-iny -2\"\n\t:Glimpse Anestesiology html \n\n\t\tOutputs all occurrences of  Anestesiology  with  two  errors  in\n\t\tfiles with html somewhere in their full name.\n\n\t:Glimpse windsurfing;Arizona mail;1993\n\n\t\tFinds  all lines containing windsurfing and Arizona in all files\n\t\thaving `mail' and '1993' somewhere in their full name.\n\nResults are placed into the |quickfix| window.  Additionally, the 'q' key is\nbound to the window so you can close it again quickly. \n\n",
   "rating_total": "21",
   "rating_votes": "6",
-  "downloads": "307",
+  "downloads": "318",
   "install_details": "Install the VimBall plugin (vimscript #1502) if you don't already have it.\n\nThen open glimpse.vba from within vim.\n\n    :so %\n\nRestart vim, read the the docs (:help glimpse), and enjoy.",
   "versions": [
     {

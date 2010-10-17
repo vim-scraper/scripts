@@ -7,7 +7,7 @@
   "description": "The JIAC framework is the Java-based Intelligent Agent Componentware [http://www.jiac.de/] developed at the DAI-Labor [http://www.dai-labor.de/] at the Technical University of Berlin [http://www.tu-berlin.de/].\n\nThis script provides syntax highlighting for the *.jadl and *.onto files which are used to program agents in the framework.\n\nThe official homepage of the script can be found at\nhttp://user.cs.tu-berlin.de/~makunze/vim-jiac.html",
   "rating_total": "4",
   "rating_votes": "1",
-  "downloads": "212",
+  "downloads": "214",
   "install_details": "Download the script file (jadl.vim)\n\nYou have to edit your ~/.vimrc file and add the following lines:\n\nau BufRead,BufNewFile *.jadl set filetype=Jadl\nau BufRead,BufNewFile *.onto set filetype=Jadl\nau! Syntax Jadl source PATH_TO_JADL.VIM/jadl.vim\n\nReplace the PATH_TO_JADL.VIM with the path to your jadl.vim. That's it, now you should have syntax highlighting if you edit *.jadl or *.onto files.",
   "versions": [
     {

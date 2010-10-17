@@ -7,7 +7,7 @@
   "description": "Just as the name implies, this script will add auto-complete functionality for email addresses in vim. This is very handy for those who use vim with mutt. Enjoy.\n\nFor those of you who would rather just look at the code through your browser:\nhttp://www.itodd.org/~itodd/email.vim\n\nThanks to Luc Hermitte for writing a much more advanced autocomplete script [ vimscript #46 ] which helped me create this one.\n\n-- \nTodd Boland\nhttp://www.itodd.org/\n\n:wq",
   "rating_total": "18",
   "rating_votes": "9",
-  "downloads": "1033",
+  "downloads": "1036",
   "install_details": "Note: This script depends on the following basic unix tools: grep, sort, uniq, wc and xargs. Feel free to hack it up for other OSs\n\nFirst create a ~/.addresses file. In this file put a list of addresses separated by new lines. Duplicates will be automatically ignored.\n\nLoad the script:\n:source /path/to/email.vim\n\nIf you'd like the script to automatically load when editing a mutt email, add the following line to your ~/vimrc:\nau BufRead /tmp/mutt* source /path/to/email.vim\n\nThen on a new line type:\nTo: start_of_emai<tab>\n\nwhere \"start_of_emai\" is the begining of an email address listed in ~/.addresses",
   "versions": [
     {

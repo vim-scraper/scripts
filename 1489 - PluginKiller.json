@@ -5,9 +5,9 @@
   "name": "PluginKiller",
   "script_type": "utility",
   "description": "The PluginKiller helps Vim plugin writers to determine which options that users might set that will cause problems with their plugin before their users do!\n\nTo do this, the PluginKiller utilizes two instantiations of vim.  The first one is the pluginkiller server; it keeps a copy of the current potential trouble-making options.  The second vim is your working vim; in it you exercise your plugin.  Whenever your plugin works with the currently active trouble-makers, type :PKg (for PluginKiller-good).  This tells the PluginKiller server about the nice set of options it selected, and it responds with a new set.\n\nOn the other hand, whenever your plugin isn't performing up to your exacting specifications, type :PKb (for PluginKiller-bad).  This command tells the PluginKiller server about the trouble it caused, and the PluginKiller responds with a smaller set of potential troublemakers.\n\nYou'll need to repeat trying out your plugin and typing :PKg or :PKb until the PluginKiller has found the culprit option.  Its OK to quit the second vim and to use :PK to resume working with the PluginKiller server -- whether you need to quit and resume depends on how your plugin operates -- :PK just reloads the current settings that the PluginKiller wants to have tried out.\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#PLUGINKILLER)\n",
-  "rating_total": "8",
-  "rating_votes": "2",
-  "downloads": "819",
+  "rating_total": "16",
+  "rating_votes": "4",
+  "downloads": "835",
   "install_details": "(NOTE: you need vimball v18 or later; see vimscript#1502; vim 7.1a or later should already be ok)\n\n    vim pluginkiller.vba.gz\n     :so %\n     :q\n\n The directions under |pluginkiller-steps| give detailed information on how to use the pluginkiller.\n\n\n\t",
   "versions": [
     {

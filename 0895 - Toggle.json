@@ -4,12 +4,44 @@
   "summary": "allows you to toggle bool (true/false) and other words with a shortcut",
   "name": "Toggle",
   "script_type": "utility",
-  "description": "In this version, the script can toggle:\n    true     <->     false\n    on       <->     off\n    yes      <->     no\n    define  <->     undef\n    +        <->     -\n    >        <->     <\n    positive and negative numbers\n\nMove the cursor on the word/char/number to be toggled and press <C-T> (Ctrl-T).\nThis shortcut can be modified in the script file - of course...\n\nIf the cursor is positioned on a number, the script looks for a corresponding + or - sign for that number. \nIf it's found, it will be replaced by the other one. If none is found, a - sign is inserted before the number.",
-  "rating_total": "76",
-  "rating_votes": "27",
-  "downloads": "916",
+  "description": "In this version, the script can toggle:\n    true     <->     false\n    on       <->     off\n    yes      <->     no\n    define  <->     undef\n    +        <->     -\n    >        <->     <\n    &&    <->     ||\n    &     <->      |\n    positive and negative numbers\n\nMove the cursor on the word/char/number to be toggled and press\n      <C-T>  in insert mode \nor\n      +     in normal / insert mode.\n\nThis shortcut can be modified in the script file - of course...\n\nIf the cursor is positioned on a number, the script looks for a corresponding + or - sign for that number. \nIf it's found, it will be replaced by the other one. If none is found, a - sign is inserted before the number.",
+  "rating_total": "77",
+  "rating_votes": "28",
+  "downloads": "969",
   "install_details": "put this plugin into your ~/.vim/plugin folder or source it in your ~/.vimrc",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13834",
+      "filename": "toggle.vim",
+      "script_version": "0.5",
+      "date": "2010-09-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4444",
+        "user_name": "tteifel",
+        "first_name": "Timo",
+        "last_name": "Teifel",
+        "email": "timo at teifel-net.de",
+        "homepage": "http://www.teifel.net"
+      },
+      "release_notes": "- Keeps the keyword case when toggling (thanks to Jan Christoph Ebersbach for this code)\n- bugfix for && and || toggling"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13821",
+      "filename": "toggle.vim",
+      "script_version": "0.4",
+      "date": "2010-09-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4444",
+        "user_name": "tteifel",
+        "first_name": "Timo",
+        "last_name": "Teifel",
+        "email": "timo at teifel-net.de",
+        "homepage": "http://www.teifel.net"
+      },
+      "release_notes": "default mapping uses + in normal and visual mode instead of <C-T>\nadded toggle entries: && <--> ||   and & <--> | \ninternal optimizations"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=2727",
       "filename": "toggle.vim",

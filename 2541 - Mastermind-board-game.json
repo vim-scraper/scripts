@@ -7,7 +7,7 @@
   "description": "Mastermind, if you are not familiar, is a game of guesses. You have to guess a N-digit (N selectable from 1-9, 5 being the default) code based on clues. After you have entered a line, the clue is shown with characters 'X' and 'x'. X means the number (or color) and position is right. x means number is right but position is incorrect.\n\nPlease note that, the position of X/x in the clue area has no correspondence with the actual numbers. In other words a X in the clue box means one of the numbers you have guessed is right and in the correct position. It does not tell you which one; that is where the fun is!\n\nHere is some more info about the game.\nhttp://en.wikipedia.org/wiki/Mastermind_(board_game)",
   "rating_total": "12",
   "rating_votes": "6",
-  "downloads": "222",
+  "downloads": "228",
   "install_details": "drop the file under the plugin directory (unix, it is $HOME/.vim/plugin)\n\nHit \\mm to start the game (<mapleader>mm)\n\nPress q to stop.\n\nHere are the key mappings:\n\n\"     <keys 1-9> : Enters respective key\n\"        <enter> : Press this, when done with the current line\n\"        <space> : Skip to enter next number\n\"    <backspace> : Skip to enter previous number\n\"          <c-r> : Restart the game\n\"          <c-n> : Change the number of digits to guess (1-9)\n\"          <c-g> : Change the number of guesses (1-20)\n\"              q : To quit the game\n\"              b : Boss Key (switches b/w first buffer and game)\n",
   "versions": [
     {

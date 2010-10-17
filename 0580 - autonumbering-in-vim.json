@@ -7,7 +7,7 @@
   "description": "\"Description: This script auto-numbers a list.\n\"\n\"General recommended settings for editing \"*.txt\" files\n\"set nocp et ts=4 sw=4 tw=80 ai\n\"\n\"HOW TO INSTALL (requires vim 7.0):\n\" - Drop the plugin under $HOME/.vim/plugin or\n\" - :source autonum.vim\n\"\n\"HOW TO USE:\n\" 1. Edit a file and type \\as to activate autonumbering\n\" 2. Insert a number in the below-explained manner (1. )\n\" 3. Hit enter (A number is automatically inserted for you)\n\" 4. Hit ctrl-t, line is indented and numbered\n\" 5. If there are several levels of numbers, ctrl-d and ctrl-t could\n\"    be used to insert the next number in sequence at the indent level\n\"    your cursor is in.\n\" 6. Hit ctrl-g to remove the inserted number\n\" 7. Hit ctrl-l to forcefully autonumber\n\"\n\"Number format expected: \"\\<\\(\\d\\+\\|\\a\\)\\>\\W \"\n\" In words: <word-boundary><(numerals or alphabets)><non-word-char><space>\n\" eg: \"1. \",     \"32) \",         \"a] \",     \"D> \"\n\"\n\" keymappings: ENTER, ctrl-d, ctrl-t, ctlr-l & ctrl-g all in insert mode\n\"  \\as   : To start AutoNumbering\n\"  \\as   : To stop AutoNumbering (yeah, it toggles :)\n\"  ENTER : start with next number (add 1 to previous)\n\"  ctrl-d: indent one level back and try to autonumber\n\"  ctrl-t: indent one level forward and try to autonumber\n\"  ctrl-l: autonumber.\n\"  ctrl-g: remove numbering on the line\n",
   "rating_total": "-1",
   "rating_votes": "3",
-  "downloads": "694",
+  "downloads": "704",
   "install_details": "drop it under ~/.vim/plugin\nOR\n:source autonum.vim\ninside vim session",
   "versions": [
     {

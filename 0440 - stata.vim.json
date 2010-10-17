@@ -5,9 +5,9 @@
   "name": "stata.vim",
   "script_type": "syntax",
   "description": "stata.vim is a syntax file for Stata do and ado programs.\n\nThis syntax file will help identify:\n\n* some common Stata programming commands\n* Stata functions\n* local and global macro expansions\n* regular (\"\") and compound (`\"\"') double quotes\n* numeric and string formats \n* Stata comments\n* errors in parens, brackets, ...\n",
-  "rating_total": "21",
-  "rating_votes": "9",
-  "downloads": "654",
+  "rating_total": "25",
+  "rating_votes": "10",
+  "downloads": "662",
   "install_details": "I keep stata.vim in $HOME/.vim/syntax/ and associate Stata programs in\n$HOME/.vim/filetypes.vim using the following: \n\naugroup filetypedetect\n        autocmd! BufRead,BufNewFile *.ado       set filetype=stata\n        autocmd! BufRead,BufNewFile *.class    set filetype=stata\n        autocmd! BufRead,BufNewFile *.do         set filetype=stata\naugrougp END\n",
   "versions": [
     {

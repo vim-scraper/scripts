@@ -7,7 +7,7 @@
   "description": "Provides mappings to automatically close environments.\n\nPressing \"\\c\" in normal mode (or <C-\\>c in insert mode) will cause the last open environment to be closed. (If a fold is started on the \\begin{env} line, then it will be automatically closed on the \\close{env} line.)\n\nAlso pressing \"<C-\\>}\" in insert mode when the cursor is at the end of a \"\\begin{environment}\" will automatically generate a \"\\close{environment}\". It will leave the cursor at the end of the \"\\begin{environment}\" (in insert mode), so that the user can enter arguments [if any].\n\nSmall and functional. Suggestions welcome.",
   "rating_total": "52",
   "rating_votes": "22",
-  "downloads": "1266",
+  "downloads": "1281",
   "install_details": "drop the script into your $VIMRUNTIME/ftplugin directory for global instalation.\nPut it in ~/.vim/ftplugin for local installation.",
   "versions": [
     {

@@ -7,7 +7,7 @@
   "description": "This syntax file supports the REDCODE '88 or '94 (with or without Pspace extensions) languages as defined in the ICWS'94 Draft (extended).\n\n     http://www.koth.org/info/pmars-redcode-94.txt\n\nThe language was first popularized in a March 1984 Scientific American article, Core War Guidelines, by A. K. Dewdney and D. G. Jones.\n\nThis implementation can be configured to flag elements of Redcode '94 when used in coding Redcode '88 warriors. It also highlights line-continuations (responsible for a well-known problem with the program Marcia Trionfale 1.3).\n\n",
   "rating_total": "18",
   "rating_votes": "6",
-  "downloads": "327",
+  "downloads": "333",
   "install_details": "These instructions assume a linux|unix type system. Similar steps apply for MS Windows users.\n\nTo use the syntax file copy it into the directory ~/.vim/syntax (create the direcory path if not already present).\n\nCreate a file named red.vim in ~/.vim/ftdetect (again creating the directory if not already present).\nThis file defines .red as the filetype of REDCODE source files. It should contain:\n\n                augroup filetypedetect\n                au BufRead,BufNewFile *.red setf redcode\n                augroup END\n            \n\nThe following options can be used in your .vimrc initialization file to control the degree of syntax checking:\nThey are all commented out by default.\n\n                \"Remove quote characters on subsequent lines to enable options\n\n                \"let redcode_88_only = 1\n                \"let redcode_94_only = 1\n                \"let redcode_highlight_numbers=1\n            \n\nThe default behaviour is to accept '88 '94 and Pspace syntax and to not highlight numbers. ",
   "versions": [
     {

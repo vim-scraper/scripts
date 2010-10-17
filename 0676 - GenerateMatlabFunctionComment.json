@@ -7,7 +7,7 @@
   "description": "Generates a comment skeleton for a matlab function. \n\nFor example:\nfunction xs = get_slantx(x, y, angle)\nWhen the script (VERSION 0.3) is run on this line the output is like:\nfunction xs = get_slantx(x, y, angle)\n% get_slantx  \n% \n% Input:\n% ^^^^^^\n% . x\n% . y\n% . angle\n%\n% Output:\n% ^^^^^^^\n% . xs\n%% AUTHOR  Author Name\n\nThis format is compatible with Matdoc. See version comments below to know more about Matdoc.\n\nFor previous versions the output looks similar to:\n% get_slantx   \n% function xs = get_slantx(x, y, angle)\n% PARAM xs [OUT] \n% PARAM x [IN] \n% PARAM y [IN] \n% PARAM angle [IN] \n% AUTHOR  Author Name\n\nThis script is derived from MakeDoxygenComment by Leif Wickland.\n\nAfter the installation you can run the script simply by hitting <ALT+c> when the cursor is on function line.\n\n",
   "rating_total": "11",
   "rating_votes": "7",
-  "downloads": "592",
+  "downloads": "594",
   "install_details": "Copy the script in vim61/macros/ and add these lines to your _vimrc.\n\nsource $VIMRUNTIME/macros/MakeMatlabComment.vim\n \nmap <M-c> :call MakeMatlabComment()<CR>\nimap <M-c> <ESC>:call MakeMatlabComment()<CR>",
   "versions": [
     {

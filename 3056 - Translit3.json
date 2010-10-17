@@ -4,12 +4,60 @@
   "summary": "Transliterate a string or your input",
   "name": "Translit3",
   "script_type": "utility",
-  "description": "This plugin provides the ability to transform one sequence of symbols into-\nanother. The typical use case is transliteration of latin symbols into russian-\nsymbols for systems without russian keyboard.\n\nFeatures:\n    ∙ transliteration of text, provided as function argument;\n    ∙ transliteration of a selection or a line range;\n    ∙ input transliteration;\n    ∙ setting up the input transliteration in current buffer or in all opened\n      buffers;\n    ∙ plugin system for transliteration function;\n    ∙ plugin system for input transliteration;\n    ∙ loading transliteration table from a file, a variable, a dictionary or\n      a function;\n    ∙ displaying the transliteration table on the screen.\n\nThis plugin also provides Russian documentation. Add «ru» to option «helplang» in order to use it.\n\nYou can download new version of plugin from sourceforge.net: you will need the following projects:\n\nhttp://sourceforge.net/projects/translit3\nhttp://sourceforge.net/projects/vimcompcrtr\nhttp://sourceforge.net/projects/vimargumentchec\nhttp://sourceforge.net/projects/vimstuff\nhttp://sourceforge.net/projects/jsonvim\nhttp://sourceforge.net/projects/vimpluginloader\n\nAll projects' files are available only from mercurial repository.",
+  "description": "This plugin provides the ability to transform one sequence of symbols into-\nanother. The typical use case is transliteration of latin symbols into russian-\nsymbols for systems without russian keyboard.\n\nFeatures:\n    â transliteration of text, provided as function argument;\n    â transliteration of a selection or a line range;\n    â input transliteration;\n    â setting up the input transliteration in current buffer or in all opened\n      buffers;\n    â plugin system for transliteration function;\n    â plugin system for input transliteration;\n    â loading transliteration table from a file, a variable, a dictionary or\n      a function;\n    â displaying the transliteration table on the screen.\n\nThis plugin also provides Russian documentation. Add «ru» to option «helplang» in order to use it.\n\nDocumentation: http://kp-pav.narod2.ru/vim/doc/translit3.txt.html\nRussian documentation: http://kp-pav.narod2.ru/vim/doc/translit3.rux.html\n\nYou can download new version of plugin from sourceforge.net: you will need the following projects:\n\nhttp://sourceforge.net/projects/translit3\nhttp://sourceforge.net/projects/vimcompcrtr\nhttp://sourceforge.net/projects/vimargumentchec\nhttp://sourceforge.net/projects/vimstuff\nhttp://sourceforge.net/projects/jsonvim\nhttp://sourceforge.net/projects/vimpluginloader\n\nAll projects' files are available only from mercurial repository.",
   "rating_total": "9",
   "rating_votes": "3",
-  "downloads": "67",
+  "downloads": "105",
   "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"translit3\"]) and add ``call scriptmanager#Activate([\"translit3\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself. First version present on this page needs no dependencies.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13886",
+      "filename": "translit3-2.2.tar.gz",
+      "script_version": "2.2",
+      "date": "2010-09-22",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added replacements for r, t, T, f and F normal mode commands: so now if you want to replace character under cursor with ÃÂ«, you will need to type \\tr<< in normal mode (works only for single character replacements)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13836",
+      "filename": "translit3-2.1.1.tar.gz",
+      "script_version": "2.1.1",
+      "date": "2010-09-15",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug with multicharacter source strings (like ÃÂ«ch Ã¢ÂÂ ÃÂÃÂ»)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13823",
+      "filename": "translit3-2.1.tar.gz",
+      "script_version": "2.1",
+      "date": "2010-09-14",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added WriteFunc option (allows to override method used to send strings to buffer), added Conque Shell plugin support, fixed behavior when backspace option is not set"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13718",
       "filename": "translit3-2.0.6.tar.gz",

@@ -7,7 +7,7 @@
   "description": "By default, (g)vim displays a splash screen when starting with no editfile, or in response to the \":intro\" command. This plugin makes the splash screen appear at startup in all cases, even when started with one or more \"filename\" arguments.",
   "rating_total": "2",
   "rating_votes": "3",
-  "downloads": "236",
+  "downloads": "241",
   "install_details": "Just drop this file in the after/plugin subdirectory of the directory named *last* in the 'runtimepath' option. For instance, its full path will typically become (as seen by the shell)\n\n- on Linux: ~/.vim/after/plugin/zzsplash.vim\n\n- on Windows: %HOME%\\vimfiles\\after\\plugin\\zzsplash.vim\n\netc.\n\n\n-------\nNote: If you want it to work even on versions of Vim with no expression evaluation, add the following at the very end of your vimrc:\n\nif 1\n  finish\nendif\n\" come here only if expression evaluation is not compiled-in\nruntime! plugin/zzsplash.vim",
   "versions": [
     {

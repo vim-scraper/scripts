@@ -7,9 +7,25 @@
   "description": "Converts a number (such as -1234) to English (negative one thousand two hundred thirty four); handles the biggest integer Vim can work with (billions).\n\nThis actually figures out the English value by crunching the numbers (not through abbreviations) and thus doesn't have any startup overhead.\n\nUsage: call the function NumberToEnglish and pass it the number; optionally, a second parameter can be passed in which, if not 1, will cause the return\nvalue's first letter to be capitalized (Two hundred thirty four vs. two hundred thirty four).\n\nTwo insert-mode mappings have been provided for convenience to make this happen on the currently typed number while typing.\n\n<Plug>NumberToEnglish: converts the (positive only) number to English\n\n<Plug>CNumberToEnglish: converts the (positive only) number to English, capitalizing the first letter\n\nTwo identical version of these mappings that start with a D (for \"Detailed\") will append the original number in parentheses after the expansion.",
   "rating_total": "4",
   "rating_votes": "1",
-  "downloads": "203",
+  "downloads": "215",
   "install_details": "Just drop it into your plugin directory and, if you like, set up the mappings; for example:\n\nimap <leader>ne <Plug>NumberToEnglish\nimap <leader>nd <Plug>DNumberToEnglish\nimap <leader>nE <Plug>CNumberToEnglish\nimap <leader>nD <Plug>DCNumberToEnglish\n\nSee the notes for version 1.3 if the introduction of another language is desired; the system isn't perfect, but should work for most Indo-European languages that follow the same basic numbering scheme as English (French is provided as an example).\n\nNote: Requires the use of GetVar (http://vim.sourceforge.net/scripts/script.php?script_id=353).",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13994",
+      "filename": "NumberToEnglish.vim",
+      "script_version": "1.4",
+      "date": "2010-10-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim at hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Version 1.4\n\nAdded an option to put in the word \"and\" (nine hundred AND twenty); off by default to retain old behavior:\n\nlet g:numberToEnglish_useAnd = 1\n\nAdded another configuration variable (French, in this example):\n\nlet g:numberToEnglish_and = \"et\"\n\nSections are now separated by commas; for example, \"12345\" becomes \"twelve thousand, three hundred and forty five\""
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=10133",
       "filename": "NumberToEnglish.vim",

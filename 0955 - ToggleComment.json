@@ -7,7 +7,7 @@
   "description": "This utility draws heavily from vimtip #271 and additional note 2002-07-06.\nYet it's different in one or more aspects from other tips and scripts I'm\naware off.\n\nFeatures:\n\n- de-/commtify lines in normal mode (with count) and visual mode\n- use the same keys for commenting and decommenting\n- language independent, you define different mappings for various languages\n  and/or one comment-command for different filetypes\n- simple and flexibel, to change the comment characters from '#' to '# ' e.g.,\n  just change a mapping in your .vimrc, not the script\n- comment-style: comments are indented like the uncommented line\n- no hlsearch problem, last search pattern and .-command are preserved\n- inserted comment characters are protected from further expansion\n- might be adapted to other comment styles (first column comments, ...)\n\nExample:\n\nCommented text looks like this:\n\n    #if uncommented:\n        /* comment the line */\n    <!-- else: -->\n        // uncomment the\n        // lines\n        no comment\n\nYou would put or remove this comments (cursor on the first line), by typing:\n    ,# ,* ,< 2,/\n",
   "rating_total": "42",
   "rating_votes": "18",
-  "downloads": "1032",
+  "downloads": "1049",
   "install_details": "Put the file ToggleComment.vim in your plugin directory or just copy/paste\nthe two functions in your .vimrc file.\n\nThen define mappings in your .vimrc, like for example:\n\nmap ,# :call CommentLineToEnd('#')<CR>+\nmap ,* :call CommentLinePincer('/* ', ' */')<CR>+\n\nand/or map Meta-c (Alt-c) and Meta-Shift-C for different FileTypes.\n\nFor more detailed description and installation instructions see the README file.\n",
   "versions": [
     {

@@ -7,7 +7,7 @@
   "description": "Under utf-8, characters 128 and over become multi-byte. Therefore, under  Vim 6.1 or earlier, they should not be used for the option values in 'listchars'. This script takes care of the \"eol:\" sub-option, the only one which gave me problems. If you use characters >= 128 for other sub-options, similar scripts can easily be written (based on this one) to take care of them.\n\nThis script has intentionally been abundantly commented to make it understandable.\n\nSee vimtip#246 for a related tip.",
   "rating_total": "4",
   "rating_votes": "1",
-  "downloads": "402",
+  "downloads": "406",
   "install_details": "Paste or source this script text immediately before switching over to unicode, inside the statement\n\nif has(\"multi_byte\")\n\nif you use it, but otherwise before setting 'tenc' 'enc' 'fencs' etc. to the values used for Unicode editing.",
   "versions": [
     {

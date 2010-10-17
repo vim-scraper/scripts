@@ -1,0 +1,62 @@
+{
+  "script_id": "3269",
+  "display_name": "open_file_from_clip_board",
+  "summary": "open file path that is copied in clipboard",
+  "name": "open_file_from_clip_board",
+  "script_type": "utility",
+  "description": "Note this script need clipboard supported \n\nhttp://vim.wikia.com/wiki/Accessing_the_system_clipboard\n\nspecifically, it use the * register to get the text in the clipboard\n\nthis little script define a function call OpenFilesFromClipboard()\n\nIf you, for example, execute some command from the terminal (maybe a grep) and get result like this:\n\n/Users/me/myfile:23:something something\n/Users/me/anotherfile: 34 I am a file\n/Users/me/yetanotherone hello\n\nwhat you can do with this plugin is: highlight the text and copy it into your system clipboard (Cmd-c in MacOSX and Ctrl-c in Windows)\n\nAssuming you have a mapping in your .vimrc\nmap <LEADER>jc :call OpenFilesFromClipboard()\n\nthen open your vim and type <LEADER>jc will open that each file into a new tab\nI hard code to tabnew for now, check back later version for more flexibility\n\nNote:\n just reallize that support different program on different environment is impossible. If it works for you, great, otherwise, please read the code, the idea and code it up for your usage",
+  "rating_total": "0",
+  "rating_votes": "2",
+  "downloads": "31",
+  "install_details": "copy the .vim file to your vim space/plugin\nmap a key to function OpenFilesFromClipboard() e.g:\n\nmap jcb :call OpenFilesFromClipboard()\n\nenjoy!!",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14043",
+      "filename": "clipboard_file_open.vim",
+      "script_version": "1.2",
+      "date": "2010-10-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "21776",
+        "user_name": "vinhtiensinh",
+        "first_name": "Vinh",
+        "last_name": "Tran",
+        "email": "qvinh.tran at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Included a patch by Martin Lemburg (martin.lemburg@gmx.net) for support on window."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14025",
+      "filename": "clipboard_file_open.vim",
+      "script_version": "1.1",
+      "date": "2010-10-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "21776",
+        "user_name": "vinhtiensinh",
+        "first_name": "Vinh",
+        "last_name": "Tran",
+        "email": "qvinh.tran at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix the bug that fail to jump to the line number"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14019",
+      "filename": "clipboard_file_open.vim",
+      "script_version": "1.0",
+      "date": "2010-10-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "21776",
+        "user_name": "vinhtiensinh",
+        "first_name": "Vinh",
+        "last_name": "Tran",
+        "email": "qvinh.tran at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -7,7 +7,7 @@
   "description": "Vim global plugin for running Python scripts\nVersion: 1.1\nMaintainer: Frederick Young <lordfyb@hotmail.com>\nLast change: 2001 Oct 30 \n--Pressing the \"F12\" key will run the Python script in the current buffer\n \n--Pressing the \"F11\" key will designate the Python script in the current\n  buffer as the script to run when pressing F12\"\n   \n--Pressing \"Shift-F11\" will remove the designation performed by pressing \"F11\"\n  and will allow pressing \"F12\" to run the script in the current buffer\n   \n--Typing the Ex command \"Rs\" will also allow you to run a Python script but\n  with the benefit of allowing you to pass up to 20 parameters to the script.\n   \n   Sample syntax...\n\n   \t:rs -xy 800 600\n\n  The above will run the script in the current buffer or the one designated\n  to run when pressing \"F11\" and pass to it the parameters \"-xy 800 600\"\n\n--Pressing \"F9\" will toggle the display of a buffer containing the output\n  produced when running the Ex command \"Rs\" or pressing \"F12\".\n\nAlso, the value of the variable s:PathToExecutable in the script may need to be changed to reflect the location of Python on your system.\n\n  With some minor modifications, it should be possible to run other scripts\n  like perl, vbscript, or even executables compiled with the Ex command\n  \"make\".",
   "rating_total": "46",
   "rating_votes": "35",
-  "downloads": "6402",
+  "downloads": "6542",
   "install_details": "Just copy into the plugin folder",
   "versions": [
     {

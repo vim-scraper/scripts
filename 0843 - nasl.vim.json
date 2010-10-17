@@ -7,7 +7,7 @@
   "description": "Performs syntax highlighting for Nessus Attack Scripting\nLanguage (NASL) scripts.\n\nThis is still in rapid development, and by no means finished.  But, it's already useful, so I thought I would share it.",
   "rating_total": "10",
   "rating_votes": "8",
-  "downloads": "517",
+  "downloads": "523",
   "install_details": "Put the script in the same place where your other syntax scripts are located (on my Debian Linux system that would be /usr/share/vim/vim61/syntax).   If you don't have access to that directory, then you can put it somewhere in your ~/.vim directory, not sure where...\n\nTo have the nasl files be automatically recognized by the .nasl filename, you will need to edit the filetype.vim file on your system, adding an entry like this:\n\n\" Nasl script file\nau BufNewFile,BufRead *.nasl                    setf nasl\n\nThat way, the nasl.vim file will load automatically upon running :syntax enable, as long as you're editing a file which ends in .nasl (I'll work on having .inc files recognized as well).",
   "versions": [
     {

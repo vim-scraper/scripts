@@ -7,7 +7,7 @@
   "description": "testbase.vim is Test::Base spec syntax hilighting.\n\nScreenShot: http://f.hatena.ne.jp/images/fotolife/s/secondlife/20061117/20061117163415.png\n  \n: installation\n   This script cp ~/.vim/syntax/testbase.vim\n   and write file detect file ~/.vim/ftdetect/testbase.vim\n      au BufNewFile,BufRead *_test.rb set filetype=ruby | unlet b:current_syntax | syn include @rubyTestBase syntax/testbase.vim | syn region rubyTestBase matchgroup=rubyData start=\"^__END__$\" keepend end=\"\\%$\" contains=@rubyTestBase\n      au BufNewFile,BufRead *.t set filetype=perl | unlet b:current_syntax | syn include @perlTestBase syntax/testbase.vim | syn region perlTestBase matchgroup=perlData start=\"^__\\(DATA\\|END\\)__$\" keepend end=\"\\%$\" contains=@perlTestBase\n",
   "rating_total": "0",
   "rating_votes": "0",
-  "downloads": "270",
+  "downloads": "272",
   "install_details": "",
   "versions": [
     {

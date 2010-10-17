@@ -7,7 +7,7 @@
   "description": "DESCRIPTION:\n  Re-sources a VIM script. The script may use a multiple inclusion guard\n  variable g:loaded_{scriptname} (with {scriptname} having either the same\n  case as specified or all lowercase.) \n  If you specify the bare scriptname (without .vim extension), the script must\n  reside in $VIMRUNTIME/plugin/{scriptname}.vim. Otherwise, the passed\n  filespec is interpreted as the file system location of a VIM script and\n  sourced as-is. \n  If you execute :ReloadScript without passing a scriptname, the current\n  buffer is re-sourced. \n\nUSAGE:\n  :ReloadScript Re-sources the current buffer. \n  :ReloadScript {scriptname} Re-sources the passed plugin script. \n  :ReloadScript {path/to/script.vim} Re-sources the passed file. \n\nASSUMPTIONS:\n  Not every script supports reloading. There may be error messages like\n  \"function already exists\". To support reloading, the script should use the\n  bang (!) variants of :function! and :command!, which will automatically\n  override already existing elements. \n\n  Ensure that the script uses a multiple inclusion guard variable that\n  conforms to the conventions mentioned above. The :ReloadScript command will\n  issue a warning if it cannot find the inclusion guard variable. ",
   "rating_total": "17",
   "rating_votes": "7",
-  "downloads": "700",
+  "downloads": "729",
   "install_details": "INSTALLATION:\n  Put the script into your user or system VIM plugin directory (e.g.\n  ~/.vim/plugin). \n\nDEPENDENCIES:\n  - Requires VIM 7.0 or higher. ",
   "versions": [
     {

@@ -7,7 +7,7 @@
   "description": "This script is basically just three functions:\n  ConvertToBase(int, base)\n  ConvertFromBase(str, base)\n  ConvertBases(str, base1, base2)\n\nAnd two example functions that are commented out.\n\nThe following mappings may also be useful:\n\" Translate the character under the cursor to a decimal value:\nnmap <M-a>d i<C-R>=char2nr(getline(line(\".\"))[col(\".\") - 1])<CR><ESC>lx\n\" ... hexadecimal value:\nnmap <M-a>h ix<C-R>=ConvertToBase(char2nr(getline(line(\".\"))[col(\".\") - 1]),16)<CR><ESC>lx\n\" ... octal value:\nnmap <M-a>o i<C-R>=ConvertToBase(char2nr(getline(line(\".\"))[col(\".\") - 1]),8)<CR><ESC>lx",
   "rating_total": "20",
   "rating_votes": "8",
-  "downloads": "986",
+  "downloads": "993",
   "install_details": "Source the script or place it in your plugin directory.",
   "versions": [
     {

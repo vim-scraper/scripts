@@ -7,7 +7,7 @@
   "description": "Based intially on Gavin Sinclair's Java script (vimscript #266), these are mappings to facilitate coding in VBScript ASP.\n\nExamples of use:\n\nTo get:\n<%\nResponse.Write \"SomeText\"\n%>\nIn insert mode you type:\n,%,r,wSomeText\n\nTo get:\nIf Trim(Request.QueryString(\"option\")) then\nEnd If\nIn insert mode you type:\n:i<Ctrl+f>t,R,qoption\n\nYou have:\nstrOption = Request(\"option\")\nAnd you want:\nstrOption = Trim(Request(\"option\"))\nYou mark Request(\"option\") in visual mode and press <Ctrl+f>t\n\n\n\nI will be adding more soon.",
   "rating_total": "0",
   "rating_votes": "0",
-  "downloads": "540",
+  "downloads": "544",
   "install_details": "just drop the file in your ftplugin dir.",
   "versions": [
     {

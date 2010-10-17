@@ -4,12 +4,28 @@
   "summary": "Provides vim features for .slurper files.",
   "name": "slurper.vim",
   "script_type": "utility",
-  "description": "slurper.vim (http://github.com/alowe/vim-slurper) was written as a companion to the slurper gem. The slurper gem allows you compose stories in a plain text file and then slurp them into Pivotal Tracker (http://www.pivotaltracker.com) through the api in bulk. For more information on the gem check out its homepage (http://github.com/hashrocket/slurper).\n\nslurper.vim provides macros for generating chore, feature, release, and bug story templates in the correct format to speed up your story writing even further. It also provides basic syntax highlighting for .slurper files.\n\nUsage\n\nCTRL-h generates a new chore and puts you in insert mode on the name line.\n\n  ==\n  story_type:\n    chore\n  name:\n\n  description:\n\n  labels:\n\nCTRL-j generates a new feature and puts you in insert mode on the name line.\n\n  ==\n  story_type:\n    feature\n  name:\n\n  description:\n    In order to\n    As a\n    I want\n\n    -\n\n  labels:\n\nCTRL-k generates a new release and puts you in insert mode on the name line.\n\n  ==\n  story_type:\n    release\n  name:\n\n  description:\n\n  labels:\n\nCTRL-l generates a new bug and puts you in insert mode on the name line.\n\n  ==\n  story_type:\n    bug\n  name:\n\n  description:\n\n  labels:\n\nThe macros work the same in insert or edit modes. ",
+  "description": "Description\nslurper.vim was written as a companion to the slurper gem (http://github.com/hashrocket/slurper). The slurper gem allows you compose stories in a plain text file and then slurp them into Pivotal Tracker through the api in bulk. You will need to install the slurper gem for slurper.vim to be useful.\n\nslurper.vim turns on spell check and provides macros for generating story templates in the correct format to speed up your story writing even further. It also provides syntax highlighting and indenting for .slurper files.\n\nIf you find slurper.vim useful or have suggestions please let me know. Constructive input is greatly appreciated.\n\nInstallation\nDownload the packaged file from www.vim.org/scripts/script.php?script_id=2890 extract and copy the slurper.vim files into their corresponding folders within your .vim directory.\n\nAlternately my preferred method of installing vim plugins is to use Tim Pope's pathogen.vim plugin (http://www.vim.org/scripts/script.php?script_id=2332) and git clone plugins into my ~/.vimbundles directory.\n\nUsage\nCTRL-h generates a new chore and puts you in insert mode on the name line.\n\n==\nstory_type:\n  chore\nname:\n\ndescription:\n\n\nlabels:\nCTRL-j generates a new feature and puts you in insert mode on the name line.\n\n==\nstory_type:\n  feature\nname:\n\ndescription:\n  In order to\n  As a\n  I want\n\n  -\n\nlabels:\n\n\nCTRL-k generates a new release and puts you in insert mode on the name line.\n\n==\nstory_type:\n  release\nname:\n\ndescription:\n\n\nlabels:\n\n\nCTRL-l generates a new bug and puts you in insert mode on the name line.\n\n==\nstory_type:\n  bug\nname:\n\ndescription:\n\n\nlabels:\n\n\nThe macros work the same in insert or edit modes. They also work anywhere in a story file.\n\nStory Folding\nWe found that frequently we wanted to see just a list of all of the features in our file. To do this you can use the built in code folding key strokes.\n\nClose all folds (Show just story names)\n\nzM\nOpen all folds (Show full stories)\n\nzR\nFor more on folding in Vim check out\n\n:help folding",
   "rating_total": "16",
   "rating_votes": "4",
-  "downloads": "292",
+  "downloads": "312",
   "install_details": "Copy slurper.vim files into their corresponding folders within your .vim directory.\n\nor my preferred method of installing vim plugins is to use Tim Pope's pathogen.vim plugin.\n\nhttp://www.vim.org/scripts/script.php?script_id=2332",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13772",
+      "filename": "vim-slurper.tar.gz",
+      "script_version": "1.0.0",
+      "date": "2010-09-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18608",
+        "user_name": "alowe",
+        "first_name": "Adam",
+        "last_name": "Lowe",
+        "email": "adam at adamlowe.me",
+        "homepage": "http://www.adamlowe.me"
+      },
+      "release_notes": "Add auto indenting, updated macros to work anywhere in a story, and story folding."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12569",
       "filename": "vim-slurper.tar.gz",

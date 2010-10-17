@@ -5,9 +5,9 @@
   "name": "coq-syntax",
   "script_type": "syntax",
   "description": "All is in the title: syntax colouring for the coq proof assistant files (*.v).\n\nAlso check http://www.vim.org/scripts/script.php?script_id=2079 for indentation.\n\nSome people asked me if I planned to do something to interact between vim and coq. I answered that yes and that I had started it. The plugin is usable but not publishable\" :) However I now have many other things to do and am not using Coq at that time. So if I publish such a thing some day it may be in quite a long time. Apologies.",
-  "rating_total": "23",
-  "rating_votes": "8",
-  "downloads": "993",
+  "rating_total": "24",
+  "rating_votes": "9",
+  "downloads": "1021",
   "install_details": "1. Put the file in your ~/.vim/syntax directory.\n\n2. Create the file ~/.vim/ftdetect/coq.vim and put the following line inside:\n\n  au BufRead,BufNewFile *.v   set filetype=coq\n\n(Notice that *.v files are also used for verilog sources. This will make vim recognize *.v files as coq ones. VERILOG FILES WON'T BE RECOGNIZED ANYMORE.)\n",
   "versions": [
     {

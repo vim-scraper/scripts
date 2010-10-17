@@ -7,7 +7,7 @@
   "description": "This file defines an alternative to the macro :\n\n                          map ,kqs G?^> *-- $dG \n\n\nIt comes as a command. This time, VIM won't complains about not found ^> *-- $ pattern. BTW, It also deletes all the empty lines (quoted or not) just above the signature to delete.\n\nOlder versions (for VIM 5.7) of the file define the function Erase_Sig(). \nThe latest version (for VIM 6.x) defines the command :EraseSignature. \n\nIt can also delete up to two signatures -- some mailing lists add another dashes-delimited\nsignature. And it keeps our signature that may be automatically inserted by some MUAs \nlike Mutt.\n\n\nSince v1.4: the operator-pending mode mapping '--' is defined. Hitting d--, c-- or y--\nwill delete, change or yank lines until our own signature (if present) or the end of the file.\n",
   "rating_total": "18",
   "rating_votes": "6",
-  "downloads": "1233",
+  "downloads": "1245",
   "install_details": "Drop the file wherever you want ; {rtp}/ftplugin/mail beeing, IMO, the best place. \n\nAnd uncomment the call to the command at the end of the file if you don't want the \noperation to be automatic ; you may want define a mapping (like ,kqs for instance) \nthat will invoke :EraseSignature.\n",
   "versions": [
     {

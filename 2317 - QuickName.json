@@ -5,9 +5,9 @@
   "name": "QuickName",
   "script_type": "utility",
   "description": "The most convenient way to navigate currently opened buffers.\n\nDefault hot key is F3.\n\nInitially, QuickName display the full list of opened buffers in a compact way (multi-column) inside command area. As you type, QuickName narrows the list to only buffers with matched name. Hit <Enter> to open selected buffer. Hit <Esc> or hot key (default F3) again to close QuickName.\n\nWhen QuickName is active, arrow keys and backspace function as expected.\n\nMatching rule: thefile.vim can be matched with any of thefil, thefi.vim, thfl.vm. Guess why!\n\nShould QuickName integrate with QuickBuf, and how?\nAny ideas and bug reports, please send to palnart@gmail.com.\n",
-  "rating_total": "35",
-  "rating_votes": "13",
-  "downloads": "354",
+  "rating_total": "36",
+  "rating_votes": "14",
+  "downloads": "371",
   "install_details": "Put qname.vim in plugin directory, or source it via Vim startup script.\n\nTo set QuickName hot key to <key>, put this line in your Vim startup script:\n    let g:qname_hotkey = \"<key>\"\nBy default, hot key is <F3>, as if in your startup script has the line:\n    let g:qname_hotkey = \"<F3>\"\n",
   "versions": [
     {

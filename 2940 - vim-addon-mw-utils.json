@@ -7,7 +7,7 @@
   "description": "* cached file contents\n  get some information from files and cache the result.\n  Reparse the file when it has changed automatically.\n\n* tiny-cmd : Never get the \"Press ENTER or type command to continue\"\n   message again\n\n* funcref:\n  - poor man's closures for Vim.\n  - Create function objects calling autoload function without sourcing that file\n  - (be lazy, do the work when it has to be done)\n  - get rid of the \"Use upper case letters for custom functions\" annoyance\n\n   Example:\n  let myFun = funcref#Function(\"return ARGS[0]\")\n  let result = funcref#Call(myFun, [2])\n\n  let myFun2 =  funcref#Function(\"foo#bar#Baz\")\n  \n  \" pass arguments (kind of simple closure):\n  let myFun2 =  funcref#Function(\"return ARGS\", {args: [1]} )\n  echo funcref#Call(myFun, [2])\n\n  echoes [1,2]\n\n  \" bind function to an object:\n  let myFun2 =  funcref#Function(\"return SELF.myvalue\", {self: {\"a\": \"myvalue\"} } )\n\netc..\n\nThis library is used by many of my plugins\n\nIf something doesn't work it's a bug. So tell me to fix it!\n\nReuse this code if you like it!",
   "rating_total": "0",
   "rating_votes": "2",
-  "downloads": "87",
+  "downloads": "100",
   "install_details": "git repo: http://github.com/MarcWeber/vim-addon-mw-utils\n\nI recommend using the vim-addon-manager to install this plugin.\n-> http://www.vim.org/scripts/script.php?script_id=2905\n\nPut this into your .vimrc and be done:\ncall scriptmanager#Activate([\"vim-addon-mw-utils\"])",
   "versions": [
     {

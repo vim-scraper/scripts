@@ -7,7 +7,7 @@
   "description": "This is essentially TextMate's \"Insert Matching Start Bracket\" feature implemented in vim script. Makes it a lot more pleasant to write Objective-C.\n\nJust type ] in insert mode after an object or method you want to wrap in brackets and this will wrap it appropriately; to escape out of it once you're finished, simply type ] again.\n\nFor instance, where | is the cursor:\n\n\"foo|\" becomes \"[foo |]\" after ] is pressed.\n\"foo bar|\" becomes \"[foo bar]|\"\n\"foo: bar|\" becomes \"foo: [bar |]\"\n\"foo bar: baz|\" becomes \"[foo bar: baz]|\"\n\nCertain useful keywords are also wrapped intelligently, for example:\n\"return foo|\" becomes \"return [foo ]|\"\n\"@selector: foo|\" becomes \"[@selector: foo]|\"\n\nHope you like it!",
   "rating_total": "39",
   "rating_votes": "12",
-  "downloads": "562",
+  "downloads": "589",
   "install_details": "Move objc_matchbracket.vim to ~/.vim/ftplugin or equivalent.",
   "versions": [
     {

@@ -5,9 +5,9 @@
   "name": "AddIfndefGuard",
   "script_type": "utility",
   "description": "When one writes a header file for C/C++, compile errors will occur if the same header script is included more than once. A common solution is to add\n     #ifndef FILENAME_H\n     #define FILENAME_H\nto the start of a file, and\n     #endif\nto the end. This solves the problem.\n\nHowever this is mechanical and routine. So the computer should do it. So here's a script to do it.\n\nIt will add those lines to the top of the file you call it in. It will change FILENAME to be the uppercase name of that file, ommiting the file extension. It will not (yet) check to see if a #define/#ifndef/#endif black has already been added. It will not check the filename, so it can be called on anyfile.",
-  "rating_total": "6",
-  "rating_votes": "8",
-  "downloads": "524",
+  "rating_total": "7",
+  "rating_votes": "9",
+  "downloads": "529",
   "install_details": "Unzip the file. Read the README (if you want). Place AddIfndefGuard.vim to the plugins directory. (On UNIX it's ~/.vim/plugins/)",
   "versions": [
     {

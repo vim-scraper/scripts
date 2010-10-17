@@ -7,7 +7,7 @@
   "description": "Extract information from a tags file (exuberant ctags), and generate syntax highlighting scripts for functions, globals, macros, etc.\n\nSomewhat \"raw\" extraction from my working environment; i.e., not particularly generic; e.g., hard-coded color settings for the various types of tokens identified (functions, macros, etc.).  Easily changed, but by editing the c.vim included that is intended to go in your \"after/syntax\" vim directory.\n\n*Not* very polished, but perhaps helpful.\n\nFor a sample of the results, see:  http://castandcrew.com/~gary/DoTagStuff/\n\nNOTE: You *must* include the --fields option to ctags that includes \"language of source file containing tag\" (i.e., \"--fields=l\" ; I use --fields=+Kl).  It's needed so that  the language type of each tag is included in the tags file.  This is needed to properly form syntax groups (e.g., cStaticFunction or perlExternalFunction -- to get the \"c\" or \"perl\" parts).",
   "rating_total": "5",
   "rating_votes": "5",
-  "downloads": "558",
+  "downloads": "566",
   "install_details": "Unzip the bundle; it will expand into a HighlightTags directory; see README for more info.",
   "versions": [
     {
