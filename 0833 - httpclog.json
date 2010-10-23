@@ -5,9 +5,6 @@
   "name": "httpclog",
   "script_type": "syntax",
   "description": "This syntax file highlights apache logs, specifically the \"combined\" format ones.  The \"combined\" format includes the user agent and the referrer in the logfile.  This version is very basic.",
-  "rating_total": "10",
-  "rating_votes": "9",
-  "downloads": "349",
   "install_details": "Upload the script to your vimfiles/syntax directory.\nAdd the following to your .vimrc or filetype.vim:\n\naugroup filetypedetect\n\tau BufNewFile,BufRead access.log*\tsetf httpclog\naugroup END",
   "versions": [
     {

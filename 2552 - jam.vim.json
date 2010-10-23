@@ -5,9 +5,6 @@
   "name": "jam.vim",
   "script_type": "syntax",
   "description": "I love Jam, but I hated staring at plain text.  I based this off of something by Matt Armstrong (see source).  This is best effort only.  Jam is also known as bjam and Boost.Jam.",
-  "rating_total": "6",
-  "rating_votes": "3",
-  "downloads": "296",
   "install_details": "To install, I put it in ~/.vim/syntax and put the following to ~/.vim/filetype.vim:\n\nif exists(\"did_load_filetypes\")\n        finish\nendif\n\n\" jam detection\naugroup filetypedetect\n        au! BufRead,BufNewFile Jamroot        setfiletype jam\naugroup END",
   "versions": [
     {

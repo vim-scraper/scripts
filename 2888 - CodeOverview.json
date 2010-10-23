@@ -5,9 +5,6 @@
   "name": "CodeOverview",
   "script_type": "utility",
   "description": "Demonstration video : http://www.youtube.com/watch?v=vQqeAk__vvE\n\n/!\\ /!\\\nThis plugin is tested on vim 7.2 with patches up to 264,\nit may not work with previous versions!\nup-to-date compiled vim versions for windows can be found here :\nhttp://sourceforge.net/projects/cream/files/Vim\n/!\\ /!\\\n\nTo use this plugin, you must :\n- Be running on Windows with .net Framework >= 3.0\n- use gVim version >= 7.2 (possibly with some patches)\nthen launch gvim and type the following commands to start the plugin :\n:ShowCodeOverview\n:CodeOverviewAuto \n:SnapshotFile\n\nBy default the automatic overview generation is deactivated to avoid\nhurting performances. If you always want CodeOverview, put the first two\ncommands in your .vimrc. The last command is just to force refresh for\nyour current file.\n\nUsage :\n======\n:ShowCodeOverview \n    Start the overview panel.\n\n:HideCodeOverview \n    Hide the overview panel\n    Also stop automatic overview generation.\n\n:CodeOverviewNoAuto \n    Disable automatic overview generation.\n\n:CodeOverviewAuto \n    Setup automatic overview generation.\n\n:SnapshotFile \n    Refresh your current overview.\n\nAs some requested, Here's the code source of binary parts, it's a little messy, sorry :\nhttp://github.com/Twinside/CodeOverview\n\nKnown problems :\n==============\n- View doesn't really track vim scrolling\nIt's the current trade-off between performance and functionality.",
-  "rating_total": "23",
-  "rating_votes": "19",
-  "downloads": "351",
   "install_details": "uncompress the archive and put in your ~/vimfiles/plugin folder.",
   "versions": [
     {

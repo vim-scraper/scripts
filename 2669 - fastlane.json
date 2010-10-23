@@ -5,9 +5,6 @@
   "name": "fastlane",
   "script_type": "utility",
   "description": "what is ?\na tool to help you quick edit and save abbreviation, snippets .etc\n\nhow to install?\nmaybe you  want install snippetEmu first.\n\nunzip the file of you down, copy fastlane.vim to plugin directory, copy example_snippets.vim to you snippets directory if the file is not exist. write \"let g:iwn_snippet_dir = your snippets directory\"  to your  .vimrc file .  you are done!\n\noptions you can set the  .vimrc for a example:\nlet iwn_default_module = 'php'\nlet iwn_include_modules = {'php': ['javascript'], 'symfony': ['javascript', 'php']}\n\nhow to use?\n:IwnCreateModule test\ncreate a module named test\n\n:IwnUseModule test\nuse the  test module\n\n:IwnAddAbb hello hello, world\ncreate a abbreviation for \"hello, world\", try input \"hello<space>\" \n\ninput these text:\n  hello,world\n  yes\n  no <sni>hello</sni>\n  hello <sni></sni>  \nselect these text, and execute :IwnAddSnippet hello\nyou will create a snippet named hello, try input \"hello<tab>\"\n\nsome examples fo other command:\nIwnRemoveModule test\nIwnRemoveAbb hello\nIwnRemoveSnippet hello\n\nthat's all, fun happing!\n\n\n\n",
-  "rating_total": "1",
-  "rating_votes": "1",
-  "downloads": "237",
   "install_details": "",
   "versions": [
     {

@@ -5,9 +5,6 @@
   "name": "vfp.vim",
   "script_type": "syntax",
   "description": "\n     This file builds on the FoxPro for DOS v2.x syntax file maintained by Powing Tse <powing@mcmug.org> and the Clipper 5.2 & FlagShip syntax file maintained by C R Zamana <zamana@zip.net>.\n\n     This syntax file should work with Visual Foxpro versions 3.0 - 6.0 and OS platforms Windows, Mac, and Unix.  The best fit will be VFP 6 (which is Windows only).  Older versions may have things highlighted that aren't actually available in that version.  For example, GETHOST() is new in VFP 6, but would show up in a VFP 3 program as a reserved word.  Consider this as a future-proofing feature and not a bug.  ;-)\n\n     Because of the messy nature of the Visual FoxPro documentation *and* the language itself, I've had to combine reserved word lists from several, slightly different, sources.  This means I might have missed a reserved word here or there.  If you find one, please let me know so I can add it to this file.\n\n",
-  "rating_total": "8",
-  "rating_votes": "2",
-  "downloads": "383",
   "install_details": "\n     1)  Copy the vfp.vim file to your syntax directory.\n\n     2)  Add the line \"SynAu vfp\" to your synload.vim file.\n\n     3)  If you are using gvim and want to have this syntax file to show up in the menus, add the line \"am 50.80.395 &Syntax.TUV.Visual\\ Foxpro :cal SetSyn(\"vfp\")<CR>\" to your menu.vim file.\n\n     4)  Optionally, if you are using the myfiletypes.vim file you can add the following 2 lines to make all prg files and fpw files automatically use the VFP syntax file:\n\tau! BufRead,BufNewFile *.prg    set filetype=vfp\n\tau! BufRead,BufNewFile *.fpw    set filetype=vfp\n\n",
   "versions": [
     {

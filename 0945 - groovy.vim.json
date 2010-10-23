@@ -5,9 +5,6 @@
   "name": "groovy.vim",
   "script_type": "syntax",
   "description": "Syntax file for the Groovy programming language. It relies on the java.vim syntax file.\nI was inspired by java.vim and ruby.vim syntax definition, so I thank the authors of those scripts.\n",
-  "rating_total": "112",
-  "rating_votes": "64",
-  "downloads": "3869",
   "install_details": "1) copy the file in the (global or user's $HOME/.vim/syntax/) syntax folder\n\n2) add this line to recognize groovy files by filename extension:\n  au BufNewFile,BufRead *.groovy  setf groovy\n\n  in the global vim filetype.vim file or inside $HOME/.vim/filetype.vim\n  [groovy is still not recognized by vim! :-( ]\n\n3) add this part to recognize by content groovy script (no extension needed :-)\n  if did_filetype()\n    finish\n  endif\n  if getline(1) =~ '^#!.*[/\\\\]groovy\\>'\n    setf groovy\n  endif\n\n  in the global scripts.vim file or in $HOME/.vim/scripts.vim\n\n\n 4) open/write a .groovy file or a groovy script :-)\n",
   "versions": [
     {

@@ -5,9 +5,6 @@
   "name": "CSV-delimited-field-jumper",
   "script_type": "utility",
   "description": "I wrote these simple functions to easily jump to specific fields in CSV (and tildle delimited) data/text files.  There are two functions: one tells you the current field number the cursor is on, and the other prompts you for the field number to move to on the current line.\n\nAt work, all of our data files are CSV, so this has saved me countless hours verifying data.\n\nAt the bottom of mmfield.vim, you can specify which keys to map to the functions.",
-  "rating_total": "15",
-  "rating_votes": "9",
-  "downloads": "957",
   "install_details": "In your .vimrc file, add a line:\nautocmd BufRead *.dat,*.dme source mmfield.vim\n\nThis will source the mmfield.vim functions for when you edit files with extensions of .dat or .dme.",
   "versions": [
     {

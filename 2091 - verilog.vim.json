@@ -5,9 +5,6 @@
   "name": "verilog.vim",
   "script_type": "indent",
   "description": "\" Title:        Verilog HDL/SystemVerilog HDVL indent file\n\" Maintainer:\tMingzhi Li <limingzhi05@mail.nankai.edu.cn>\n\" Last Change:\t2007-12-16 20:10:57 CST\n\"\n\" Buffer Variables:\n\"     b:verilog_indent_width   : indenting width(default value: shiftwidth)\n\"\n\" Install:\n\"     Drop it to ~/.vim/indent \n\"\n\" URL:\n\"    http://www.vim.org/scripts/script.php?script_id=2091\n\"\n\" Revision Comments:\n\"     Mingzhi Li  2007-12-16 20:09:39 CST Version 1.2      \n\"        Bug fixes\n\"     Mingzhi Li  2007-12-13 23:47:54 CST Version 1.1      \n\"        Bug fix, improve performance and add introductions\n\"     Mingzhi Li  2007-12-7  22:16:41 CST Version 1.0  \n\"        Initial version\n\"       \n\" Known Limited:\n\"     This indent file can not work well, when you break the long line into\n\"     multi-line manually, such as:\n\"      always @(posedge a or posedge b \n\"          or posedge c ) begin\n\"         //...\n\"      end \n\"     Recommend to use the coding style(wraped by vim automatically) as following:\n\"       always @(posedge a or posedge b or posedge c ) begin\n\"         //...\n\"       end ",
-  "rating_total": "28",
-  "rating_votes": "12",
-  "downloads": "1327",
   "install_details": "Drop it to ~/.vim/indent",
   "versions": [
     {

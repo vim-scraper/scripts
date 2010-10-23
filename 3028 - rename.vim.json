@@ -5,9 +5,6 @@
   "name": "rename.vim",
   "script_type": "utility",
   "description": "This script is a fork of renamec.vim from Bastian Mathes\n\nIt features two functions:\n:call Renamec() renames the variable under the cursor. Cscope is called to get the references to the corresponding C symbol.\n:call Renamef() renames the file under the cursor. The references to this files (like #include\"path/to/file\") are updated.\n\n- When renaming a variable or a file, the quickfix list is updated, so you can jump in the code to modified parts (for example to check if the comments need an update).\n- The buffers where the modifications occured are not unloaded and changes are joined so that they can be canceled easily with ':bufdo undo'\n",
-  "rating_total": "11",
-  "rating_votes": "4",
-  "downloads": "196",
   "install_details": "open the vimball archive with vim and source it with ':so %'",
   "versions": [
     {

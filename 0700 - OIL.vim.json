@@ -5,9 +5,6 @@
   "name": "OIL.vim",
   "script_type": "syntax",
   "description": "This is the first version of a syntax file for OSEK Implementation Language (OIL) and OSEK Run Time Interface (ORTI). \nSee \"http://www.osek-vdx.org&quot; for more information about OIL and ORTI.",
-  "rating_total": "3",
-  "rating_votes": "3",
-  "downloads": "239",
   "install_details": "1.) Copy the file to $VIM/syntax. \n\n2.) Add to your $VIM/filetype.vim : \nCUT FROM HERE--------> \nau BufEnter,BufRead,BufNewFile *.oil                 setfiletype oil\nau BufEnter,BufRead,BufNewFile *.OIL               setfiletype oil\nau BufEnter,BufRead,BufNewFile *.oilbase\t        setfiletype oil\nau BufEnter,BufRead,BufNewFile *.orti                setfiletype oil\nau BufEnter,BufRead,BufNewFile *.ORTI             setfiletype oil\n<--------CUT UNTIL HERE ",
   "versions": [
     {

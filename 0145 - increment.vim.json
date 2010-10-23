@@ -5,9 +5,6 @@
   "name": "increment.vim",
   "script_type": "utility",
   "description": "Sometimes you want to search for a string in the text \nand add an auto incremented number to each occurence of the string. \nLet's say, you want to make a numbered list. \nYou write something like:\nqwerty: The first line\nqwerty: the second one\nqwerty: and so on ...\nThen you type a command\n:let I=0\nfollowed by a replace command\n:%s/qwerty/\\=INC(1)/\nThe first 'qwerty' is replaced by number 1, \nthe second by number 2, and so on... .\nSometimes you might want to generate numbers with a leadimg zeroes. \nYou simply initialize global variable I to value like \n:let I=99890000\nthen you make the replacement \n:%s/my_token_word/\\=INC(1)/g\nfollowed by\n:%s/9989//g\n\nYou have to initialize a global variable I \nbefore the first use of INC() function,\nothervise the numbering will continue where it stopped \nduring the last replace.\n\nText Pad has a very similar metacharacter for replacement - \\i.",
-  "rating_total": "82",
-  "rating_votes": "33",
-  "downloads": "1586",
   "install_details": "Put increment.vim into a plugin directory.\nUse in replacement strings\n:%s/my_token_word_to_be_replaced_by_the_auto_incremented_numbers/\\=INC(1)/g",
   "versions": [
     {

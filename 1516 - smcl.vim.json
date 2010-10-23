@@ -5,9 +5,6 @@
   "name": "smcl.vim",
   "script_type": "syntax",
   "description": "smcl.vim is a syntax file for Stata's smcl- and hlp-files\n\nThis syntax file will help identify: \n\n* most smcl codes\n* errors in parens, brackets, ...\n",
-  "rating_total": "4",
-  "rating_votes": "1",
-  "downloads": "226",
   "install_details": "I keep smcl.vim in $HOME/.vim/syntax/ and associate smcl- and hlp-files in$HOME/.vim/filetypes.vim using the following:\n\naugroup filetypedetect\n        autocmd! BufRead,BufNewFile *.hlp       set filetype=smcl\n        autocmd! BufRead,BufNewFile *.ihlp      set filetype=smcl\n        autocmd! BufRead,BufNewFile *.smcl    set filetype=smcl\naugrougp END ",
   "versions": [
     {

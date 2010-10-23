@@ -5,9 +5,6 @@
   "name": "bufmap.vim",
   "script_type": "utility",
   "description": "A script that automatically maps buffers to function keys.\n\nKeys:\nF<n>\n        Switch to window 1 through 12.\nSHIFT-F<n>\n        Switch to window 13 through 24.\nALT-1 through ALT-0\n        Switch to window 1 through 10.\nCTRL-W, F<n>\n        Swap the buffer in the current window with the one\n        in window n, and activate window n.\nCTRL-W, SHIFT-F<n>\n        Swap the buffer in the current window with the one\n        in buffer n+12, and activate window n+12.\nCTRL-W, ALT-<n>\n        Swap the buffer in the current window with the one\n        in window n, and activate window n.\nCTRL-W, c\n        Close the current buffer. This does \":bdelete\",\n        so it will not work when there are unsaved changes.\n        Use \":bd!\" in this case if you want to discard them.\nCTRL-W, .\n        Move buffers along to lower numbered windows\n        (useful after closing a buffer)\nCTRL-W, /\n        List all Windows.\n",
-  "rating_total": "15",
-  "rating_votes": "5",
-  "downloads": "297",
   "install_details": "Put in your plugin dir.\n",
   "versions": [
     {

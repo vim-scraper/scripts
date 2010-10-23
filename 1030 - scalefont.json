@@ -5,9 +5,6 @@
   "name": "scalefont",
   "script_type": "utility",
   "description": "Sometimes you want to change the font size without changing the window \ngeometry. This plugin tries to set the 'guifont', 'columns', and 'lines' to \nappropriate values in order to achieve this goal. You can define modes to \nquickly switch between your favourite gui configuration: fonts, window \nposition and size, guioption settings etc.\n",
-  "rating_total": "7",
-  "rating_votes": "3",
-  "downloads": "1021",
   "install_details": "It is important to correctly configure the plugin because it will set \nthe font and the window size when being loaded unless the \ng:scaleFontDontSetOnStartup variable was defined.\n\nEdit the vba file and type: >\n\n    :so %\n\n<   See :help vimball for details. If you have difficulties or use vim 7.0, \n    please make sure, you have the current version of vimball\n    (vimscript #1502) installed.\n\nEdit |vimrc|:\n\n    Set g:scaleFontSize, g:scaleFontWidth, and g:scaleFont according to your \n    likings. \"#{SIZE}\" and \"#{WIDTH}\" will be replaced with the appropriate \n    values. On non-Windows systems you also have to define \n    ScaleFontMaximizeWindow().\n\n    Examples: >\n\n        let g:scaleFontSize  = 11\n        let g:scaleFontWidth = 8\n      \n<   Unix: >\n\n        let g:scaleFont = \"-misc-fixed-medium-r-semicondensed-*-#{SIZE}-120-*-*-c-*-iso8859-15\"\n\n<   Windows: >\n\n        let g:scaleFont = \"Lucida_Console:h#{SIZE}:cANSI\"\"\n\nCheck if ScaleFontMaximizeWindow() function is functional on your \nsystem. If not, redefine the function in |vimrc|.\n\nRestart vim.\n\n\nAlso available via git\nhttp://github.com/tomtom/scalefont_vim",
   "versions": [
     {

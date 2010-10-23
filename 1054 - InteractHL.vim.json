@@ -5,9 +5,6 @@
   "name": "InteractHL.vim",
   "script_type": "utility",
   "description": "Commands:\n  Syncolor\n    creates syncolor.vim file\n  ColorScheme bg name\n    creates <name>.vim file with colorscheme header setting background='<bg>' [dark|light] and\n    colors_name='<name>'\n  IactHl\n    creates Hilite.vim file\n\nFiles are created in g:HiliteFilesDir, default '~'\n\nUtility to interactively create highlight commands file (syncolor.vim|<name>.vim|Hilite.vim) which can be copied to appropriate  runtimepath directory as for automatic execution at Vim startup.  Previous settings are saved in a file named 'yymmddhhmmssHilite.vim'.\nUse: ?? for online key mapping reference.\n\nThe utility opens 3 windows, the top window displays the major highlight groups with their names highlighted according to the current settings.  The middle window lists the highlight commands currently in effect to produce the output shown in the top window.  The bottom window lists the RGB names available for the current Vim release.\n\nPlace the cursor on the line you wish to modify in the middle window.  Place the cursor on the RGB value you want in the bottom window.  Use the mapped key sequences to set the line.  The key sequences are:\n\nfg   Set foreground to RGB value\nbg  Set background to RGB value\nno  Set attributes to 'NONE'\nbo  Add 'bold' to attributes\nit    Add 'italic' to attributes\nre   Add 'reverse' to attributes\nst   Add 'standout' to attributes\nun  Add 'underline' to attributes",
-  "rating_total": "1",
-  "rating_votes": "1",
-  "downloads": "656",
   "install_details": "NOTE:  REQUIRES vsutil_vim.zip http://www.vim.org/scripts/script.php?script_id=1056\nunzip into vimfiles.",
   "versions": [
     {

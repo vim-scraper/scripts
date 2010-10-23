@@ -5,9 +5,6 @@
   "name": "htip",
   "script_type": "utility",
   "description": "with default key binding enabled, move the cursor over a word, for example \"map\" and press <leader>ht \nthis will put the following line in the status line: \n\n\n1/1: map :: (a->b) -> [a] -> [b]\n(1/1 - first line of, well, a single line) \n\npressing <leader>hh will show the next line, if any.\n\n<leader>hH show the previous one, the list is cyclic \n\nthere are also <leader>hi for info, <leader>hb for browse, <leader>hk for kind.\n\nsee code for more details ",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "30",
   "install_details": "just put under ~/.vim/plugin \nto enable default key bindings put \nlet g:htip_bindkeys=1 \nin your ~/.vimrc ",
   "versions": [
     {

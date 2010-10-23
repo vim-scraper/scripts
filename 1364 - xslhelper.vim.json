@@ -5,9 +5,6 @@
   "name": "xslhelper.vim",
   "script_type": "ftplugin",
   "description": "Very basic helper abbreviations for writing xslt stylesheets. Like vivek Venugopalan's dbhelper.vim, uses the format \",<abbrev>\", as in:\n,tm ==> <xsl:template match=\"\"></xsl:template>\n,at ==> <xsl:apply-templates/>\n\nIt helps me a ton, hope it helps you too. Please send feedback to andrews AT oreilly.com.\n\nCheers.",
-  "rating_total": "16",
-  "rating_votes": "6",
-  "downloads": "557",
   "install_details": "I added it to my ftplugin directory, and put the following in my vimrc file:\naugroup BEGIN\n   au! BufRead,BufNewFile *.xsl source $VIM\\vim63\\ftplugin\\xslhelper.vim\naugroup END\n",
   "versions": [
     {

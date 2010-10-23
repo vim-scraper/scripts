@@ -5,9 +5,6 @@
   "name": "ProjectCTags",
   "script_type": "utility",
   "description": "ProjectCTags is a plugin that enables you to generate CTags for a project which is under version control. Currently the plugin recognizes git, CVS and SVN version control systems. When you have opened a file, the plugin may either automatically update the corresponding tagfiles or it does this on your command (optional). It creates two tagfiles: One in the current folder, which contains detailed informations such as tags for local variables, and one tagfile in the project folder, which contains a less detailed overview of the globally visible tags in all source files in the versioned tree.",
-  "rating_total": "5",
-  "rating_votes": "2",
-  "downloads": "43",
   "install_details": "Just move projectCTags.vim to ~/.vim/plugin\n\n\nTo generate and set the CTags you can then use :GenerateProjectCTags( \"Tag Setting Name\", \"ctags options\" ). It is useful to map this to a key like\n\nmap  <F3>  :call GenerateProjectCTags( \"Standard\", \"\" )<CR>\nmap  <F4>  :call GenerateProjectCTags( \"Exclude Stuff\", \"--languages=C,C++ --exclude=folder1 --exclude=folder2\" )<CR>\n\n\nFor want further options, see the .vim file. A useful option, which should be set inside the ~/.vimrc, is:\n\nlet g:projectCTagsAutogenerateTags = 1\n\nThis will let ProjectCTags automatically regenerate the tag files when you open a C/C++ file if you have already created the tags once manually by invoking :GenerateProjectCTags() before.",
   "versions": [
     {

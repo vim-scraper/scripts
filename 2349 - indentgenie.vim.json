@@ -5,9 +5,6 @@
   "name": "indentgenie.vim",
   "script_type": "indent",
   "description": "A vim indent script for the genie programming language. http://live.gnome.org/Genie \n\nThe script is derived from the python indent script.",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "172",
   "install_details": "copy genie.vim to ~/.vim/indent/. Add:\n\naugroup setgenie\n  au!\n  au BufNewFile *.gs setlocal filetype=\"genie\"\n  au BufRead *.gs setlocal filetype=\"genie\"\naugroup END\n\nto your ~/.vimrc file.\n\n",
   "versions": [
     {

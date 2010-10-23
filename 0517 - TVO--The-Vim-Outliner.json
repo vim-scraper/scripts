@@ -5,9 +5,6 @@
   "name": "TVO--The-Vim-Outliner",
   "script_type": "ftplugin",
   "description": "TVO (The Vim Outliner) is my solution for text outlining in Vim.\n\nIt works a lot like Word's outline support, but is much more vim-compatible.\nIt has syntax highlighting, embedded text blocks, shortcut mappings using both  LocalLeader and arrow keys, and works reasonably well with Vim Easy.\nThere is a toolbar that will be familiar to you if you've used Word's outliner.\n\nYou can extract just text, or just headings if you wish; there's also some converters (to HTML, Perl POD, and to RTF) included.\n\nPlease email me with bug reports, improvements, comments or more documentation (badly needed!).\n\nEarlier versions are available at http://bike-nomad.com/vim/vimoutliner.html",
-  "rating_total": "2743",
-  "rating_votes": "735",
-  "downloads": "10581",
   "install_details": "Installing in a local or global .vim directory\n\nYou will want to install TVO into a directory in your Vim\nruntimepath (:he 'runtimepath'). Type the command\n\n:set runtimepath\n\nTo find out what it is set to. This will display a list of\ndirectories separated by commas. On my Linux system, these\ndirectories are:\n\n~/.vim\n/usr/local/share/vim/vimfiles\n/usr/local/share/vim/vim60\n/usr/local/share/vim/vimfiles/after\n~/.vim/after\n\nI installed TVO into my ~/.vim directory.\n\nI could have also installed it so it would be available to all the\nusers on my system by putting it into either the\n/usr/local/share/vim/vimfiles or /usr/local/share/vim/vim60\ndirectories.\n\nInstalling the binaries\n\nI've included some scripts in Perl and Ruby that I use for\nconversion of .otl files to HTML, RTF, and Perl POD. There is also\na pod2otl converter.\nYou can move these to a directory on your path (you may also have\nto change the shebang (#!) lines).\n",
   "versions": [
     {

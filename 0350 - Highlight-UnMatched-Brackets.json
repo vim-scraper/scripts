@@ -5,9 +5,6 @@
   "name": "Highlight-UnMatched-Brackets",
   "script_type": "utility",
   "description": "Its really irksome when your compiler\ncomplains for any unmatched \"{\" or \"(\" or \"[\".\nWith this plugin you can highlight all\nthose unmatched \"{\" or \"(\"  or  \"[\" as you type.\nThis helps you to keep track of where\nthe exact closing bracket should come.\n\nThis plugin also warns you of any extra \"}\" or \")\" or \"]\" you typed.\n\nCustomization:   \n\t\t   - Specifying Additional Bracket-pairs.\n         \t\t   \t  User can specify additional matching pairs in\n                     the global option 'matchpairs', see :help 'matchpairs'\n                     For eg: set mps+=<:> (to include <> pair)\n                     put the above setting in .vimrc file and restart vim.\n                  - To get rid of highlighting when you quit insert\n                     mode, add this mapping in your vimrc\n                           noremap! <Esc> <Esc>:match NONE<CR>\n\nTo test how this plugin works type something like\n{\n  (     ) [ ]\n  ( ( ( ) ) )\n}\n\nHappy vimming.\n\n-ncr",
-  "rating_total": "149",
-  "rating_votes": "81",
-  "downloads": "4247",
   "install_details": "Drop this in your plugins directory or\nmanually source this file using \n :so UnMtchBracket.vim",
   "versions": [
     {

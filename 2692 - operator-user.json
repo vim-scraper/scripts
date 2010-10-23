@@ -5,9 +5,6 @@
   "name": "operator-user",
   "script_type": "utility",
   "description": "*operator-user* is a Vim library plugin to provide an easy way to define your\nown |operator|.  Though there are several pitfalls to define operators, you\ndon't have to take care of them with |operator#user#define()| which are\nprovided by this library plugin.\n\nFor example, the following code defines operator \"_\" to adjust the height of\nthe current window to the same as the target range:\n\n\tmap _  <Plug>(operator-adjust)\n\tcall operator#user#define('adjust', 'Op_adjust_window_height')\n\tfunction! Op_adjust_window_height(motion_wiseness)\n\t  execute (line(\"']\") - line(\"'[\") + 1) 'wincmd' '_'\n\t  normal! `[zt\n\tendfunction\n\nYou can use this operator as follows:\n\n\t10__\tAdjust to 10 lines and show the current line at the top.\n\t_ip\tAdjust to the same height of the paragraph under the cursor.\n\nThis operator is useful to adjust the visible content in the current window.\n\nSee also |operator-user-exmaples| for more examples and explanations.\n\n\nRequirements:\n- Vim 7.2 or later\n\nOptionals:\n- |grex| (vimscript#2773)\n- |operator-replace| (vimscript#2782)\n- |wwwsearch| (vimscript#2785)\n\nLatest version:\nhttp://github.com/kana/vim-operator-user\n\nDocument in HTML format:\nhttp://kana.github.com/config/vim/operator-user.html",
-  "rating_total": "4",
-  "rating_votes": "1",
-  "downloads": "447",
   "install_details": "...",
   "versions": [
     {

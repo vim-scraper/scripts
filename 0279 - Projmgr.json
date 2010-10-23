@@ -5,9 +5,6 @@
   "name": "Projmgr",
   "script_type": "utility",
   "description": "This plugin provides a more easy to use interface for the Vim session\nfeature.\n\nI wrote it first only for my own needs. I have a bunch of small\nprojects lying around on my hard disk. I would like to load a whole\nproject, play around with it, switch to another if I like, or simply\nunload it.\n\nThis plugin provide a menu system for 'Load', 'Unload' 'Switch to' a\nproject(session). None-menu-driven version is not available at the\nmoment.\n\nThis version is for Linux only. I am still struggling to get a Win32 version done.\n\nA screenshot (333879 in size) at:\nhttp://www.geocities.com/wzhliang/vim/image/fullscreen1.png\n\n",
-  "rating_total": "15",
-  "rating_votes": "6",
-  "downloads": "824",
   "install_details": "1. Automatic: \n   Simply use the install.sh script and following the instruction. \n   Requires:\n   bash, Perl.\n2. Manual:\n   You don't need to do this ideally. But if for whatever reason the \n   install shell script is not working for you, try to following these\n   steps:\n   a) Copy the projmgr.vim into your plugin directory or\n      $HOME/.vim/plugin.\n   b) Copy the Perl script to somewhere. E.g plugin/perl.\n   c) Copy this documentation into the corresponding doc directory.\n   d) Make a directory: $HOME/.vim/projects. This where the vim session\n      files will be stored.\n   e) Modify the script and change the s:projmgr_dir to the plugin\n      directory where you installed projmgr.vim.\n   f) Copy all (if you have any) your session files into the directory\n      mentioned in d).",
   "versions": [
     {

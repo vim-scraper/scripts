@@ -5,9 +5,6 @@
   "name": "IDLATL-Helper",
   "script_type": "ftplugin",
   "description": "NB: This is designed for Microsoft idl files.  Suggestions for extending it are welcome.\n\n* Create idl files - adds guids (using guidgen)\n   - Add interfaces,enums (with guids)\n   - Coclass wizard to create cpp files for ATL  (some support for comet)\n* Easy Method and property creation\n   change  \n        long MyFunc( string arg1, bool *arg2)\n  to\n        HRESULT MyFunc( [in] BSTR arg1, [in,out] VARIANT_BOOL *arg2, long *ret);\n* Convert IDL functions to their c++ equivalents.\n    - Change helpstring() to comments\n\n* Modify guids quickly!\n* add a unique id()  to methods and properties.\n\n",
-  "rating_total": "8",
-  "rating_votes": "4",
-  "downloads": "1157",
   "install_details": "Recommend using buffermenu vimscript #246 for menus\nAdd as a filetype plugin for both cpp and idl files.\n(Source it from after/ftplugin/cpp.vim and after/ftplugin/idl.vim)",
   "versions": [
     {

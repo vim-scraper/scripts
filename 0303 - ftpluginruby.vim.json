@@ -5,9 +5,6 @@
   "name": "ftpluginruby.vim",
   "script_type": "ftplugin",
   "description": "This is a pretty complete Ruby filetype script.\nIt provides for the use of matchit.vim, as well as setting the include path correctly (by calling ruby if you have it). It also deals with the possibility of :: in identifiers, both for tags and for finding keywords.",
-  "rating_total": "30",
-  "rating_votes": "14",
-  "downloads": "2751",
   "install_details": "Copy the script to your local (or global) ftplugin directory. This should be on your 'runtimepath'. On Unix systems, this could be in your ~/.vim/ftplugin directory.\nThe current stock ruby.vim shouldn't get in the way.\n\nTo get matchit.vim to work, you have to move it from the stock $VIMRUNTIME/macros to the $VIMRUNTIME/plugin directory. Or at least you have to have matchit.vim in a plugin directory on your runtimepath.\n\nIf you want to tweak the settings any, just make another ruby.vim in an ftplugin directory at the end of the runtimepath. On Unix systems, this would ordinarily be ~/.vim/after/ftplugin",
   "versions": [
     {

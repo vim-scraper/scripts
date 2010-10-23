@@ -5,9 +5,6 @@
   "name": "Syntastic",
   "script_type": "utility",
   "description": "Syntastic is a syntax checking plugin that runs buffers through external syntax\ncheckers as they are saved and opened. If syntax errors are detected, the user\nis notified and is happy because they didn't have to compile their code or\nexecute their script to find them.\n\nThe following functionality is provided and must be enabled/activated as\nindicated in the help file:\n    * A statusline flag appears when syntax errors are detected\n    * |signs| are placed beside lines with syntax errors, where a different\n      sign is used for errors and warnings.\n    * The :Errors command is provided to open a |location-list| for\n      the syntax errors in the current buffer\n\nSyntastic comes in two parts: the syntax checker plugins, and the core script\n(i.e. syntastic.vim). The syntax checker plugins are defined on a per-filetype\nbasis where each one wraps up an external syntax checking program. The core\nscript delegates off to these plugins and uses their output to provide the\nsyntastic functionality. Currently, syntax checking plugins exist for eruby,\nhaml, html, javascript, php, python, ruby and sass.\n\nIf your language is not supported then see |syntastic-syntax-checkers| for\ndetails on how to implement a syntax checking plugin, and be sure to send me a\npatch ;-)\n\nThis plugin is currently only recommended for *nix users. It is functional on\nWindows, but since the syntax checking plugins shell out, the command window\nbriefly appears whenever one is executed.\n",
-  "rating_total": "73",
-  "rating_votes": "30",
-  "downloads": "987",
   "install_details": "Extract the zip file in your ~/.vim.\nRun :helptags ~/.vim/doc.",
   "versions": [
     {

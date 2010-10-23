@@ -5,9 +5,6 @@
   "name": "VimIRC.vim",
   "script_type": "utility",
   "description": "This is an IRC client which runs on Vim.  It has some of the features\nIRC users might expect, such as multiple servers connectivity, DCC\nSEND/CHAT features etc..  Read the plugin file for more feature info and\nusage instructions.\n\nFor those who are unfamiliar with IRC in general, I recommend visiting\nthis site first: http://www.irchelp.org/\n\nIf you have any questions, problems, or suggestions etc., /query or\ne-mail the maintainer.  Do not direct them to the channel #vim please.\n\nScreenshots:\n  http://www.dd.iij4u.or.jp/~madokam/img/vimirc04.png\n  http://www.dd.iij4u.or.jp/~madokam/img/vimirc05.png (invoking web browser)\n\nHere is a minimum set of knowledge required to start/exit the script:\n\nTo start it, type\n\n:VimIRC<CR>\n\nThen you'll be prompted for some user info (nick, full name etc.).\n\nUpon successfull connection, try some normal commands you're familiar\nwith (\"j\", \"k\", \"<C-W>-\"things and so on).  Typing \"i\" or \"I\" will let\nyou in to the IRC-command mode, where you can enter commands such as\n\"/join #vim\" and messages.\n\nTo quit, just press \"Q\".\n\nAnother method of quitting: get out of the loop with \"<C-C>\", then type\n\n:VimIRCQuit<CR>\n\nIf you change your mind and want to get online again, press \"<Space>\" on\nany of the VimIRC windows.\n\nHave fun!",
-  "rating_total": "256",
-  "rating_votes": "113",
-  "downloads": "9304",
   "install_details": "Just drop the file into your plugin directory.\n\nRequirements:\n  Vim 6.2 or later with perl interface enabled\n  Perl 5.6 or later (5.8 or later if you want multibyte support)",
   "versions": [
     {

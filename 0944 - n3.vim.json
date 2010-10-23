@@ -5,9 +5,6 @@
   "name": "n3.vim",
   "script_type": "syntax",
   "description": "This is a syntax file to highlight Notation 3 documents for describing RDF (meta-)data.\n\nIt handles basic highlighting, but has not currently any complex error detecting features (e.g. for non-closed statements etc), nor any fold regions defined.\n\nAbout Notation 3 (excerpt from: http://www.w3.org/DesignIssues/Notation3.html):\n\n\"This is a langauge which is a compact and readable alternative to RDF's XML syntax, but also is extended to allow greater expressiveness.\"\n\nThat said, download this and see if it helps you in semantic endeavours.\n\nComments, suggestions and assistance are all welcome!\n",
-  "rating_total": "46",
-  "rating_votes": "19",
-  "downloads": "1175",
   "install_details": "Drop in your syntax directory (\"~/.vim/syntax/\" on unix-style systems).\n\nTo add as a filetype, add this in your \"~/.vim/filetype.vim\":\n    \" RDF Notation 3 Syntax\n    augroup filetypedetect\n        au BufNewFile,BufRead *.n3  setfiletype n3\n    augroup END\n\nSee also the built-in help in Vim:\n    :help mysyntaxfile\n    :help usr_43.txt\n",
   "versions": [
     {

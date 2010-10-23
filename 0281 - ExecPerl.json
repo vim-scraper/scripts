@@ -5,9 +5,6 @@
   "name": "ExecPerl",
   "script_type": "utility",
   "description": "Provides the following commands:\n\n:ExecPerl script_name\n\tThis will execute script_name using the perl\n\tinterpreter.\n\n:ExecPerlMore\n\tThis will execute script_name using the perl\n\tinterpreter.  If the output would scroll past the end\n\tof the screen, execution pauses and waits for a\n\tkeystroke before continuing.\n\n:ExecPerlDump\n\tThis will ask you for an output file and then\n\texecute script_name using the perl interpreter.  The\n\toutput from the script is dumped to the file that you\n\tentered when you were prompted.  You may press enter\n\tinstead of entering a file name to accept the default\n\tfilename.\n\nAlso, The following keys are mapped by default.  You'll have to\ncomment them if you don't want this behavior:\n\n\t<F5>:    ExecPerl the current file being edited\n\t<C-F5>:  ExecPerlMore the current file being edited\n\t<S-F5>:  ExecPerlDump the current file being edited\n\n",
-  "rating_total": "36",
-  "rating_votes": "17",
-  "downloads": "1914",
   "install_details": "Place it in your plugin/ directory or source it at runtime.",
   "versions": [
     {

@@ -5,9 +5,6 @@
   "name": "checksum.vim",
   "script_type": "utility",
   "description": "Compute MD5 or SHA1 checksum of entire file or range of lines.\nStore checksum in buffer variable or in user-specified\nregister.  Uses external programs to compute checksums;\ncurrently supports GNU md5sum, GNU sha1sum, and OpenSSL.\nIf you are a Windows user, you should install GNU CoreUtils\nfor Windows\n(http://gnuwin32.sourceforge.net/downlinks/coreutils.php)\nor Win32 OpenSSL\n(http://www.slproweb.com/products/Win32OpenSSL.html)\n\nUsage:\n:{range}Md5 [register] - displays MD5 checksum for given range\nof lines (default is entire file) and stores in b:md5sum and\nthe register named as an argument.\n:{range}Sha1 [register] - displays SHA1 checksum for given\nrange of lines (default is entire file) and stores in\nb:sha1sum and the register named as an argument.\n<Leader>md - displays MD5 checksum for entire file or visual\nselection and stores in b:md5sum\n<Leader>sh - displays SHA1 checksum for entire file or visual\nselection and stores in b:sha1sum\n\n",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "354",
   "install_details": "Place checksum.vim in your $HOME/.vim/plugin directory.\n($HOME/vimfiles/plugin if you are a Windows Vimmer).",
   "versions": [
     {

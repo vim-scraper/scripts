@@ -5,9 +5,6 @@
   "name": "GOBject-Builder-gob2",
   "script_type": "syntax",
   "description": "Vim syntax and indent files for GObject Builder (gob2)\n\nIt works well with gtk-vim-syntax (vimscript #1000) package. \n\nBasically, it depends on c.vim, so change in c.vim will also affect it.\n",
-  "rating_total": "4",
-  "rating_votes": "1",
-  "downloads": "269",
   "install_details": "For Unix:\n1. Extract the package to ~/.vim\n2a. If ~/.vim/filetype.vim exists then insert something like:\n   augroup filetypedetect\n   ............\n     au! BufRead,BufNewFile *.gob setfiletype gob\n   ...........\n   augroup END\n\n   in ~/.vim/filetype.vim\n\n2b. If not, then:\n   cd ~/.vim;\n   cp filetype.vim.example filetype.vim\n\n========================================================   \nFor Windows:\n1. Extract the package to $HOME/vimfiles\n2a. If $HOME/vimfiles/filetype.vim exists then insert something like:\n   augroup filetypedetect\n   ............\n     au! BufRead,BufNewFile *.gob setfiletype gob\n   ...........\n   augroup END\n\n   in $HOME/vimfiles/filetype.vim\n\n2b. If not, then:\n   cd $HOME/vimfiles\n   copy filetype.vim.example filetype.vim\n",
   "versions": [
     {

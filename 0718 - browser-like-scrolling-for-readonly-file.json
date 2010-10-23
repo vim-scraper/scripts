@@ -5,9 +5,6 @@
   "name": "browser-like-scrolling-for-readonly-file",
   "script_type": "utility",
   "description": "If, when viewing readonly files in vim, you wish that up/down arrows behaved like in web browser (each down arrow scrolls the view 1 line down, except near end of file; each arrow-up scrolls the view 1 line up, except near beginning of file) \n-- then this plugin does it.\n\nTo check the difference, just source the script (':so ro_positioning.vim' if not installed) and try the help (:he) and\ntry arrows down. You'll notice that up/down arrows behave more conveniently. \n\nThis plugin remaps arrow-up and arrow-down in readonly files to behave more conveniently. No remappings are done for non-readonly files.\n\nIf you want to enable this mode for arbitrary writable file, do:\n     :set ro\n     :e\n",
-  "rating_total": "6",
-  "rating_votes": "4",
-  "downloads": "541",
   "install_details": "Just copy the included file (ro_positioning.vim) into either personal plugin directory (~/.vim/plugin/.), or into global plugin directory ($VIMRUNTIME/plugin/.)\n\nTo copy into the personal plugin directory:\n\n  mkdir -p ~/.vim/plugin; cp ro_positioning.vim ~/.vim/plugin/.\n\nTo copy into the global plugin directory:\n\n  cp ro_positioning.vim $VIMRUNTIME/plugin/.\n\nParameters: no parameters.\n\nCommands and keys: arrow up, arrow down\n",
   "versions": [
     {

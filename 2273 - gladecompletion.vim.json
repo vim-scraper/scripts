@@ -5,9 +5,6 @@
   "name": "gladecompletion.vim",
   "script_type": "utility",
   "description": "WHAT IS IT?  Provides an Insert mode completion function which completes names\nfrom a .glade file as produced by the Glade UI designer.\nhttp://glade.gnome.org/\n\nHOW DOES IT WORK?  The plugin defines a function which scans .glade files in\ncurrent buffer's current directory.  The function adds Gtk objects and event\nhandlers to the insert mode completion menu\n\nThe menu is invoked by pressing <C-x><C-u> in insert mode.  Read all about it\nat |i_CTRL-X_CTRL-U|.\n\nEach time the completion function is invoked, it looks at the .glade files in\nthe current directory and compares the filesystem's modification timestamp\nwith the timestamp value from the previous invocation.  Thus, if you\nadd/change a widget in Glade and save the file, those changes are reflected\nimmediately in Vim.\n\n",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "246",
   "install_details": "To turn it on for all files, all the time, put it in your $HOME/.vim/plugins directory.\nIf you don't use Glade project files for all of your projects and don't want this plugin\nto take up precious memory, put it in your $HOME/.vim/macros directory, and add\nthis command to any of your ftplugins which you do use with Glade:\n:runtime macros/gladecompletion.vim\n",
   "versions": [
     {

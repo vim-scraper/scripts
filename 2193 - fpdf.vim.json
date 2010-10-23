@@ -5,9 +5,6 @@
   "name": "fpdf.vim",
   "script_type": "utility",
   "description": "fpdf.vim is a port of FPDF.\n\nAbout FPDF:\n  FPDF is a PHP class which allows to generate PDF files with pure PHP.\n  See http://www.fpdf.org/\n\n\nRequirement:\n  :set encoding=utf-8 and iconv() feature for non-ascii text.\n  xxd for image/font embedding.\n  xxd and gzip for compression.\n\n\nUsage:\n  :set runtimepath+=/path/to/fpdf-vim\n  :let FPDF = fpdf#import()\n  :let pdf = FPDF.new()\n  :call pdf.AddPage()\n  :call pdf.SetFont('Arial','B',16)\n  :call pdf.Cell(40,10,'Hello World!')\n  :let pdfout = pdf.Output()\n  :put =pdfout\n\n\nReference:\n  See FPDF site.\n",
-  "rating_total": "5",
-  "rating_votes": "2",
-  "downloads": "648",
   "install_details": "",
   "versions": [
     {

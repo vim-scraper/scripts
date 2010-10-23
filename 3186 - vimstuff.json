@@ -5,9 +5,6 @@
   "name": "vimstuff",
   "script_type": "utility",
   "description": "This plugin contains some functions that can be useful for plugin developers and one command that may be useful to all users:\n\n     :SE command (:e replacement with zsh-like completion and multiple file arguments support)\n     Pure vimscript base64 decoder\n     Bitwise OR and AND functions (slow and unsigned integer only)\n     Some escaping and quoting functions\n     Function that prints table with higlighted header\n     Failsafe builtin `string()' replacement (for representation purposes only)\n     ...\n\nProject page: http://sourceforge.net/projects/vimstuff\nDependencies (you do not need to install them by yourself, see installation details):\nvimscript #3184, http://sourceforge.net/projects/vimpluginloader",
-  "rating_total": "3",
-  "rating_votes": "2",
-  "downloads": "111",
   "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"vimstuff\"]) and add ``call scriptmanager#Activate([\"vimstuff\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.\n\nNote for plugin developers: it is better to copy frequently used functions to your plugin as almost all functions define argument checker which is slow.",
   "versions": [
     {

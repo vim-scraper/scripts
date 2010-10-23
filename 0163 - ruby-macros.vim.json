@@ -5,9 +5,6 @@
   "name": "ruby-macros.vim",
   "script_type": "ftplugin",
   "description": "This plugin is for editing ruby files.\n\nTyping \"for\" on a blank line will result in\n\nfor  in  \nend\n\nwith the cursor positioned before the \"in\".  \nThe same will happen with \"while\", \"until\", \nand so on.  But if the line is not blank,\n\"for\" will just insert itself.\n\nAlso, symbols like \" are inserted in matching\npairs, with the cursor in between.\n\n\"K\" runs ruby on the current buffer, and \nthe \"F1\" function key puts a line\n#!/usr/math/bin/ruby\non the first line.  (You will have to edit \nthis part).\n",
-  "rating_total": "47",
-  "rating_votes": "23",
-  "downloads": "3088",
   "install_details": "Put something like the following line in your .vimrc file:\n\nautocmd Filetype ruby source ~/.Vim/ruby-macros.vim\n\nor put this in an ftplugin directory in your runtime path.",
   "versions": [
     {

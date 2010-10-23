@@ -5,9 +5,6 @@
   "name": "calibre.vim",
   "script_type": "syntax",
   "description": "This is a syntax highlight file for Mentor Graphics Physical Extraction and Verification tool suite, Calibre.  It highlights Calibre's rules language SVRF - Standard Verification Rules Format.  Mentor Graphics Corporation is an Electronic Design Automation (EDA) company.\n\nI am no longer allowed to freely distribute this file as the SVRF language belongs to Mentor Graphics.  Please contact your Mentor Sales representative for further assistance.",
-  "rating_total": "68",
-  "rating_votes": "26",
-  "downloads": "1032",
   "install_details": "1. place into $HOME/.vim/syntax\n\n2. for gvim :cal SetSyn(\"calibre\")  for vim :set filetype=calibre\nor\n2. put the following in $HOME/.vimrc to autoload depending on filetype (in this case ends with .rules and .rul)\n____________________________________________________________\naugroup filetype\n    au!\n    au! BufRead,BufNewFile *.rules  set filetype=calibre\n    au! BufRead,BufNewFile *.rul     set filetype=calibre\naugroup END\n____________________________________________________________\n:help autocmd for more info",
   "versions": [
     {

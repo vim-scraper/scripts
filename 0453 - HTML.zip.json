@@ -5,9 +5,6 @@
   "name": "HTML.zip",
   "script_type": "utility",
   "description": "This is a set of HTML/XHTML mappings and menus for Vim 7 or later. The mappings will be local to the buffer so they won't interfere if you edit other files in the same Vim session.\n\nThe macros are automatically insert a tag and position the cursor at the logical insert point.  For example, in insert the mapping \";ah\" inserts <A HREF=\"\"></A> and leaves the cursor between the double quotes.  If you were to visually highlight some text then type \";ah\" it would wrap the tag around the text.  For example:\n        some text\nBecomes:\n        <A HREF=\"\">some text</A>\nWith the cursor positioned between the double quotes in insert mode. Or if you used \";aH\" instead:\n        <A HREF=\"some text\"></A>\nWith the cursor positioned between the > and the < in insert mode.\n\nThere are many other features, such as a configurable template inserted with the \";html\" normal mode macro, browser remote control mappings, etc.\n\nSee http://christianrobinson.name/vim/HTML/faq.shtml for frequently asked questions.\n\nSee http://christianrobinson.name/vim/HTML/HTML.html to preview the help file.",
-  "rating_total": "323",
-  "rating_votes": "121",
-  "downloads": "9488",
   "install_details": "Put \":filetype plugin on\" in your vimrc, then extract HTML.zip in your runtime directory (~/.vim for Unix; see \":help 'runtimepath'\"). Then run \":helptags <directory>/doc\" within vim. \n\nSee http://christianrobinson.name/vim/HTML/ for more information, other archive formats, newer versions, and extra files.",
   "versions": [
     {

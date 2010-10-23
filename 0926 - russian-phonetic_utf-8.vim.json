@@ -5,9 +5,6 @@
   "name": "russian-phonetic_utf-8.vim",
   "script_type": "utility",
   "description": "A \"phonetic\" keymap for Cyrillic, for use under UTF-8 encoding.\n\nThis is the keymap I use when I type Russian in gvim; it may or may not suit you. For instance, it uses several \"dead keys\" which might take some getting used to. Or you might want to use it as a starting point, then alter it to suit your tastes.\n\nSee also, among others\n    :help 'keymap'\n    :help keymap-file-format\n    vimtip #246\n    vimscript #789\n\nand for a Bulgarian keymap (no ery, no eh-oborotnoye) using a slightly different but similar approach, see vimscript#1109\n\nVersion history:\n\n2004-10-17    1.1     Enhancement: combining acute accent added\n                                  (for explicit stress, e.g. bólshaya \"bigger\" vs. bolsháya \"big\")\n2004-03-01    1.01    Bugfix: Normal mode version of mapping\n2004-02-29    1.0     Initial release\n",
-  "rating_total": "17",
-  "rating_votes": "7",
-  "downloads": "441",
   "install_details": "Just drop this file into $VIM/vimfiles/keymap (for system-wide availability) or into ~/.vim/keymap [on Unix] or ~/vimfiles/keymap [on Windows] (for private use by a single user).\n\nThis keymap changes the cursor color to bright red when it is active; to change that, or disable it, change or comment-out the line (near the top) setting the lCursor highlight.\n\nThere are three other lines you may want to change: mappings defining the <F8> key to toggle the keymap on or off in all modes including Normal. (My Belgian keyboard doesn't AFAIK include a Ctrl-^ key.) Change the {lhs} to anything that suits you, or comment them away.\n\nHappy Vimming!\nTony.",
   "versions": [
     {

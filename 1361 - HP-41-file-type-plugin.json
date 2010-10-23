@@ -5,9 +5,6 @@
   "name": "HP-41-file-type-plugin",
   "script_type": "ftplugin",
   "description": "This ftplugin has the following features:\n\nAuto-line-numbering: Upon pressing <CR> after a line, the next line has the correct line number. It even renumbers the whole file automatically. So, if you add new lines in the middle of a program, it renumbers the whole file. If you delete a line, just press <M-+> to renumber the file (either in Normal or Insert mode)\n\nAlso, shortcuts to usual commands:\n<M-L> LBL\n<M-l> LBL'    (note: lower case L)\n<M-G> GTO\n<M-T> RTN\n<M-O> STOP\n<M-I> ISG\n<M-D> DSE\n<M-R> RCL\n<M-S> STO\n<M-X> XEQ\n<M-E> ENTER\n<M-Y> X<>Y\n<M-P> PROMPT\n<M-V> VIEW\n<M-A> AVIEW\n<M-C> CLX\n<M-W> Strips the file so that it is ready to be converted to a .RAW file \n\nThere is a matching syntax file here:\nhttp://vim.sourceforge.net/scripts/script.php?script_id=1360",
-  "rating_total": "64",
-  "rating_votes": "16",
-  "downloads": "622",
   "install_details": "Drop the hp41.vim syntax file into your .vim/ftplugin/ directory and register the file globally or add to your .vimrc file:\n\nautocmd BufRead,BufNewFile *.41 :source ~/.vim/ftplugin/hp41.vim\n\nand you are ready for easy HP-41 program writing.",
   "versions": [
     {

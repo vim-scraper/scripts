@@ -5,9 +5,6 @@
   "name": "cream-keytest",
   "script_type": "utility",
   "description": "\nTest and interpret individual keyboard characters. Useful to see exactly what code your hardware and software combination returns for a given keystroke. Where our interpretation table isn't complete, the actual decimal values for the key pressed are returned.\n\nNotes:\n\n* The interpretation table is currently unfinished. There are literally between 400 and 700 possible keystroke combinations on the average keyboard. Please look at the complete Ctrl/Shift/Alt combination interpretations of the Ins, Del, Home, End, PgUp, PgDn keys for an example of a full test.\n\n* This has only been tested with &encoding=latin1.\n\n* If you take the time to develop the script further, please forward your explorations or improvements them back to us! (Besides, that's what the GPL is all about. ;)\n\n\nThis is one of many custom utilities and functions for gVim from the Cream project (http://cream.sourceforge.net), a configuration of Vim for those of us familiar with Apple and Windows software.\n\n",
-  "rating_total": "17",
-  "rating_votes": "5",
-  "downloads": "637",
   "install_details": "\nJust drop this file into your plugins directory, and start Vim.\n\n* Call \"Cream_keytest()\" to get feedback about each key pressed.\n\n* Call \"Cream_keyinterpret()\" to return only the interpretation. An empty return means character not yet in the table.\n\n",
   "versions": [
     {

@@ -5,9 +5,6 @@
   "name": "oasis.vim",
   "script_type": "syntax",
   "description": "This file provides syntax definitions for OASIS-CC.\n\nNote that this syntax file only fully defines the statements commonly used in configuring the OASIS-CC database (i.e. if blocks and insert/delete/update commands).  The full range of CSTOL commands have not been taken into consideration by this script.",
-  "rating_total": "8",
-  "rating_votes": "2",
-  "downloads": "289",
   "install_details": "Place in your personal syntax directory (e.g. ${HOME}/.vim/syntax), and either add a modeline to all OASIS-CC files (\"vim:ft=oasis\") or associate an extention such as .prc with the oasis file type:\n\nif exists (\"oasis_filetypes\")\n    finish\nendif\naugroup filetypedetect\n    \" associate OASIS-CC Procedures with the oasis file type\n    au! BufRead,BufNewFile *.prc        setfiletype oasis\n    \" associate OASIS-CC Macros with the oasis file type\n    au! BufRead,BufNewFile *.mac        setfiletype oasis\naugroup end",
   "versions": [
     {

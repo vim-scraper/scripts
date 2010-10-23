@@ -5,9 +5,6 @@
   "name": "autoproto.vim",
   "script_type": "utility",
   "description": "The \"autoproto\" plugin displays the function parameter/prototypes\nin the preview window if you type a left parenthesis behind a function name.\nWith this plugin it is not necessary to memorize large parameter lists.\nYou do not need to leave insert mode. Typing is almost not affected. ",
-  "rating_total": "33",
-  "rating_votes": "15",
-  "downloads": "1472",
   "install_details": "* Drop autoproto.vim into your plugin directory. \n\n* The script need a tag file to work:\n   - for your project: \":!ctags -R .\" (or use the gvim button)\n   - for library functions: \n     run: \"ctags -R -f ~/.vim/systags --c-kinds=+p /usr/include /usr/local/include\"\n     put  \"set tags+=~/.vim/systags\" in your .vimrc file.\n\n* Open some *.c file and write for example: \"XCreateWindow (\"\n   (or \"XCreateWindow(\").\n   If the tag exist it will be shown in the preview window.\n   Note: only *.c files are supported ! The file must exist.   ",
   "versions": [
     {

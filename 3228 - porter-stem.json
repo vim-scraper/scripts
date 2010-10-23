@@ -5,9 +5,6 @@
   "name": "porter-stem",
   "script_type": "utility",
   "description": "Source and associated data files for testing hosted at:\nhttp://github.com/msbmsb/porter-stem.vim\n\nPorterStem is a vim script that implements the Porter stemming algorithm, by Martin Porter, details of which can be found at: http://tartarus.org/~martin/PorterStemmer/\n\nThe main function outputs the single string of the stem, and the script only\nechoes the output to the screen. This script, while it can be used as-is\nif you want to know what the stem for a word is, is mostly a container for \nthe algorithm implementation in vim script.\n\nPorterStem command syntax:\n-  :PorterStem (<word>)*\n\nEach word input to the :PorterStem command will be stemmed and processed by\nthe ProcessStem function, that by default simply echoes to the screen.\nWithout any word given for input, it will attempt to stem the current word \nunder the cursor via expand('<cword>').\n\nFor example:\n-  :PorterStem searching\nwill output:\n-  search\nand a string of words will work as well, matching in order:\n-  :PorterStem thieves are running from the bunny\nwill output:\n-  thiev are run from bunni\n\nRunning :PorterTest <test-file> <expected-results-file> will run each \nword in <test-file> and match the stem result to the same line in the \n<expected-results-file>, showing if any are incorrect stem matches.\nProvided in the github repository are two files voc.txt and output.txt \nfrom Martin Porter's site providing a set of test words.\n\n----\nTo use this vim script, add it to ~/.vim/plugin/\n\nSee doc/porter-stem.vim.txt for more information about the script.\nSee http://github.com/msbmsb/stem-search.vim for a script that uses this method for reverse-stem searching in a file.\n\n----",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "22",
   "install_details": "To use this vim script, add it to ~/.vim/plugin/",
   "versions": [
     {

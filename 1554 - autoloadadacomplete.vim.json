@@ -5,9 +5,6 @@
   "name": "autoloadadacomplete.vim",
   "script_type": "ftplugin",
   "description": "This plugin is superseded by vimscript#1609.\n\nOmnicompletions which uses tags database created by \"gnat xref -v >tags\".\n\nIt is a lot simpler then the other omnicompletion plugins which is quite helpfull if you plan to write your own.\n\nNOTE: \"gnat xref -v\" is very tricky to use as it has almost no diagnostic output - If nothing is printed then usualy the parameters are wrong. Here some important tips:\n\n1) You need to compile your code first and use the \"-aO\" option to point to your .ali files.\n2) \"gnat xref -v ../Include/adacl.ads\" won't work - use  the \"gnat xref -v -aI../Include adacl.ads\" instead.\n3) \"gnat xref -v -aI../Include *.ad?\" won't work - use \"cd ../Include\" and then \"gnat xref -v *.ad?\"\n4) Project manager support is completely broken - don't even try \"gnat xref -Padacl.gpr\".\n5) VIM is faster when the tags file is sorted - use \"sort --unique --ignore-case --output=tags tags\" .\n6) Remember to insert \"!_TAG_FILE_SORTED\t2\t%sort ui\" as first line.\n\nReports errors to: http://code.google.com/p/vim-scripts/issues/list\nDiscuss improvements on: http://groups.google.com/group/vim_scripts\n",
-  "rating_total": "21",
-  "rating_votes": "6",
-  "downloads": "647",
   "install_details": "Into the autoload with it.\nInstall a current ftplugin for ada as well.\nCreate a tags file using \"gnat xref -v >tags\".\n\nUse together with:\n\nvimscript#1554 autoload/adacomplete.vim\nvimscript#1548 ftplugin/ada.vim\nvimscript#1353 syntax/ada.vim",
   "versions": [
     {

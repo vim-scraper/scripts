@@ -5,9 +5,6 @@
   "name": "smartmove.vim",
   "script_type": "utility",
   "description": "1. Jump to next tag on screen in a help file.\n\nWhen the cursor is at or after the last tag on the screen continue the search\nat the top of the screen.\n\nmapped to: <tab>, <s-tab> in normal mode\ndisable with: let g:loaded_smartmove_nexthelptag=-1\n\nThe mapping is created on BufEnter when buftype=help or the buffer is readonly\nand filetype=help.\n\n2. Use H and L instead of ctrl-f and ctrl-b\n\nWhen the cursor is at the top of the screen and H is pressed the screen is\nscrolled up. When count is given or the cursor is not at the top of the screen,\nthe default function of H is executed (Home). Similar for L.\n\nmapped to: H, L in normal and visual mode\ndisable with: let g:loaded_smartmove_smartscreen=-1",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "69",
   "install_details": "Unpack into vim runtime directory (eg. ~/.vim)",
   "versions": [
     {

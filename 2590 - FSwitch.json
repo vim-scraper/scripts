@@ -5,9 +5,6 @@
   "name": "FSwitch",
   "script_type": "utility",
   "description": "This script is designed to switch between companion files much like vimscript #31 (a.vim).\n\nOut of the box it will support C and C++ for most usages, unless you've got an interesting setup I haven't guessed.\n\nYou can:\n\n  - switch the file and keep it in the current window with :FSHere\n\n  - switch the file and put it in the window to the left with :FSLeft\n  - switch the file, split the window to the left and put it there with :FSSwitchLeft\n\n  - the same can be done with Right, Above and Below.\n\nThe switch function should be easy enough to call in different ways that give you more exotic behaviour.\n\nUsing the location directive, you can be quite specific about how the companion file is resolved and, more importantly how it's created when it doesn't exist.  This latter bit was apparently a sore point with a.vim and I hope that it's acceptable in FSwitch.\n\nYou can state locations as being the result of\n\n- a regular expression substitution\n- a globbed match\n- a relative path (either unconditionally or only if the current buffer's path matches a required pattern)\n- an absolute path (either unconditionally or only if the current buffer's path matches a required pattern)\n\nUsing an autocmd to set the buffer-local variables allows you great flexibility in specializing the behaviour of FSwitch.\n\nThere are also a couple of public functions you can use to retrieve the companion file for use in your own functions as well.",
-  "rating_total": "57",
-  "rating_votes": "23",
-  "downloads": "819",
   "install_details": "I've put this in a format that's easiest to use with pathogen (vimscript #2332).  Just unzip it in the right spot (say, ~/.vim/bundle) or unzip it and copy the 'plugin' and 'doc' directories into the right spot in the runtime path (say, ~/.vim).",
   "versions": [
     {

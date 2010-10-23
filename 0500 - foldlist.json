@@ -5,9 +5,6 @@
   "name": "foldlist",
   "script_type": "utility",
   "description": "Overview\n--------\nThis is inspired by the taglist plugin.  The \"Fold List\" plugin \nprovides the following features:\n                                                                  \n1. Opens a vertically split Vim window with a list of folds in \n   the current file.\n2. Moving through the fold list with the j, k, l, h, moves to the\n   associated fold in the file.\n3. <CR> jumps between file and fold list.\n\nUsage\n-----\nYou can open the foldinst window from a source window by using the \":Flist\"\ncommand.\n              nnoremap <silent> <F9> :Flist<CR>\n                                                                            \nAdd the above mapping to your ~/.vimrc file.\n                                                                            \nYou can close the taglist window from the taglist window by pressing 'q' or\nusing the Vim \":q\" command. \n",
-  "rating_total": "12",
-  "rating_votes": "10",
-  "downloads": "1179",
   "install_details": "Installation\n------------\n1. Copy the foldlist.vim script to the $HOME/.vim/plugin directory.  Refer to\n   ':help add-plugin', ':help add-global-plugin' and ':help runtimepath' for\n   more details about Vim plugins.\n2. Restart Vim.\n3. You can use the \":Flist\" command to open the foldlist window. \n",
   "versions": [
     {

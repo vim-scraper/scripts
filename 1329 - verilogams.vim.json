@@ -5,9 +5,6 @@
   "name": "verilogams.vim",
   "script_type": "syntax",
   "description": "We're in 6.4 now, but unfortunately, Bram used the 1.0 version I sent him initially. I'll let him know that he can grab the latest version here for the 7.0 release.\n\nSo for the best highlighting experience, you should keep your own copy of 1.2 installed.",
-  "rating_total": "19",
-  "rating_votes": "7",
-  "downloads": "828",
   "install_details": "Put verilogams.vim in ~/.vim/syntax/.\n\nCreate ~/.vim/filetype.vim (or edit it if you already have one) and add these lines:\n\naugroup filetypedetect\nau BufNewFile,BufRead *.va setf verilogams\nau BufNewFile,BufRead *.vams setf verilogams\naugroup END",
   "versions": [
     {

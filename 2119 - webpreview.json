@@ -5,9 +5,6 @@
   "name": "webpreview",
   "script_type": "utility",
   "description": "support preview edit pages in outer web browser, included file types like php,html,jsp and so on.\nYou can just give a  browser, web server  in .vimrc like :\n\" let g:Default_WebBrowser='c:\\Program Files\\Maxthon2\\Maxthon.exe'\n\" let g:Second_WebBrowser=''\n\" let g:Default_WebDomain='http://weiye.cn'\n\" let g:Default_WebRoot='D:/www' \n\nOr give a server list  and browser list like:\n\" let g:WebList = [\n\"            \\ {'domain' : 'http:// * .blog.weiye.cn','rootdir' : 'D:/www/blog/ * '},\n\"            \\ {'domain' : 'http://blog.weiye.cn','rootdir' : 'D:/www/blog'},\n\"            \\ {'domain' : 'http://weiye.cn','rootdir' : 'D:/www'},\n\"            \\ {'domain' : 'http://aa.bb.cn','rootdir' : 'ftp://user@192.168.202.110/www/xx'}\n\"            \\ ]\n\n\" let g:BrowserList = {\n\"            &#039default' : 'c:\\Program Files\\Maxthonsecond\\Maxthon.exe' ,\n\"            &#039second'  : 'c:\\Program Files\\Mozilla Firefox\\firefox.exe' ,\n\"            &#039ie'      : 'c:\\Program Files\\Internet Explorer\\iexplore.exe' ,\n\"            &#039ff'      : 'c:\\Program Files\\Mozilla Firefox\\firefox.exe' \n\"            \\}\n\nsupport wildcard * in server list.support remote ftp server.\nIn default, use \",bd\" to preview the current edited page in the default web browsers and \",bs\" in the second web \nserver.\nRead the webpreview.vim document for more details \n",
-  "rating_total": "0",
-  "rating_votes": "2",
-  "downloads": "283",
   "install_details": "put the webpreview.vim into $vim/vimfiles/plugin/ (win32) or $vim/.vim/plugin/(linux)",
   "versions": [
     {

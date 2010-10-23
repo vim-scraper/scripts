@@ -5,9 +5,6 @@
   "name": "sqlserver.vim",
   "script_type": "syntax",
   "description": "This is a syntax file for SQL Server 2005/2008.  All TSQL and ODBC keywords are included, as well as a comprehensive list of functions, system variables, system stored procedures, server options, and future keywords (as defined by Microsoft).\n\nFor complete source history or to file a bug report/issue (please use Wiki tab for this), please visit:\nhttp://github.com/hoffstein/vim-tsql/tree/master",
-  "rating_total": "27",
-  "rating_votes": "12",
-  "downloads": "718",
   "install_details": "1)  Put the sqlserver.vim file in your syntax directory.\n\nOn Windows, this is $VIM/vimfiles/syntax or $HOME/vimfiles/syntax.\nOn Linux, this is $HOME/.vim/syntax or $VIM/vimfiles/syntax.\n\n2) If you want to make this your default syntax file for .sql files, add the following to your vimrc:\n    \n    let g:sql_type_default = \"sqlserver\"\n\n3) If you want to associate this syntax file with another extension, add the following to your vimrc (replace \"ext\" with the desired extension):\n\n    au BufNewFile,BufRead *.ext set filetype=sqlserver\n\n4) The file contains instructions for enabling/disabling several highlighting options (for example, system stored procedures).  By default, all syntax is highlighted.",
   "versions": [
     {

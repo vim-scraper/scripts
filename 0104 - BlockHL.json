@@ -5,9 +5,6 @@
   "name": "BlockHL",
   "script_type": "syntax",
   "description": "Blockhl.vim supports block-oriented highlighting of leading white space for C/C++.\n\nFor dark backgrounds, as one gets deeper into curly braces, the leading indentation will change to ever lighter colors (up to 7 such levels, then it cycles).\n\nFor light backgrounds, increasing curly brace depths will cause ever darker colors to be used (again, 7 levels).\n\nYou will need to source the <blockhl.vim> file in if you change colorschemes.\n\n\tRequired: gvim\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#BLOCKHL)\n",
-  "rating_total": "36",
-  "rating_votes": "29",
-  "downloads": "4487",
   "install_details": "1. In your <.vimrc> you'll need\n   filetype plugin on\n\n2. Put the <blockhl.vim> file into:\n    .vim/after/syntax/c.vim\n-or-\n2. put the <blockhl.vim> file into\n   .vim/after/syntax/c/\n   and use vimscript#1023\n\nvimscript#1023 also contains some help for non-Unix users\n\n\n",
   "versions": [
     {

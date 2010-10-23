@@ -5,9 +5,6 @@
   "name": "Visual-Studio-.NET-compiler-file",
   "script_type": "utility",
   "description": "I use big Visual Studio .NET projects at work.  With .NET microsoft no longer supports exported project make files so nmake is dead for my purpoeses and I have to call devenv ( like so set makeprg=devenv\\ project.vcproj\\ -build\\ debug). \n\nThe errorformat of devenv is a bit different from the old vc6 build tool, so here's a script with the error format in.\n\nThis could actually get more elaborate, a buildproject script that took a project name as a parameter and build the apropiate  set makeprg= command and executes it could be done, but I'm in a hurry.",
-  "rating_total": "13",
-  "rating_votes": "10",
-  "downloads": "1201",
   "install_details": "Copy it to vim's compilers directory. Make sure you invoke devenv.com and not devenv.exe -- the latter seems to crash when invoked from the command line.",
   "versions": [
     {

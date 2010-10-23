@@ -5,9 +5,6 @@
   "name": "FormatBlock",
   "script_type": "utility",
   "description": "\" Format (i.e., gqq) a block of lines above/below the current line from the\n\" line matching <beg_pattern> to the line matching <end_pattern>; intervening\n\" lines of the block should match <in_pattern>, if given.\n\"\n\n\" EXAMPLE SETUP\n\" Format block (do a 'gq' format) on a C-style statement (i.e., from cursor's\n\" line to line ending with ';'):\n\"\n\"\tmap gqs :call FormatBlock('', ';$', '')<CR>\n\nPrimarily used as a \"helper\" function to FormatComment ( vimscript #886 )",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "390",
   "install_details": "I put this in my autoload directory (~/vim/autoload), so the function is automagically loaded as needed via an autocommand:\n\nautocmd FuncUndefined * exe 'runtime autoload/' . expand('<afile>') . '.vim'",
   "versions": [
     {

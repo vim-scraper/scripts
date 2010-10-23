@@ -5,9 +5,6 @@
   "name": "command-list",
   "script_type": "utility",
   "description": "Command list allowed you to define a list(group) of command\nDefine a shortcut to display the list, from there you can choose a command to execute. Command list is written in ruby so your vim need +ruby supported\n\nScreenshot:\n\nhttp://vim.wikia.com/wiki/File:Screen_shot.png\n\nFor any question please put it on this script's wiki page\n\nhttp://vim.wikia.com/wiki/Script:3268\n",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "33",
   "install_details": "unzip it in to you vim space. please read the doc/command-list.txt for how to set up the command list.\n\nIf you set up the map for the list, you can use the map shortcut to display\nthe shortcut or you can do it manually in your .vimrc as follow\n\nmap mapkey :ruby CommandList::display_command_list('Jump')<CR>\n\nyou can add multiple list into a single display by adding it to the parameters\nof the display_command_list call. For example:\n\nmap mapkey :ruby CommandList::display_command_list('Jump', 'Format')<CR>\n\nIf no parameters is given, all the list will be displayed\n\nThere is a sample file: plugin/command-list.rb.sample for your reference.\n\n*Updated*: you could also use the line number to choose the command, but only from 1 - 9 :D",
   "versions": [
     {

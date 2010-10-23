@@ -5,9 +5,6 @@
   "name": "switch-files",
   "script_type": "utility",
   "description": "Call \nfunction! vl#lib#files#switch_files#SwitchFileUI()\n  map <m-s><m-b> :call vl#lib#files#switch_files#SwitchFile()<cr>\nendfunction\nsomewhere to get the default mapping.\n\nThen use lines like this\ncall vl#lib#files#switch_files#SwitchFileRegisterLocalRegexSwap('.h$', ['.cpp', '.cc' ])\nautocmd BufRead,BufNewFile /pr/*nix,/pr/*nix/*.sh call vl#lib#files#switch_files#SwitchFileRegisterLocalRegexSwap('/pr/mynix/','/pr/svnnix/')\n\nfor each buffer to tell the script how to find alternates.\n\nThere is also some support to add custom functions. Drop me an email if you want to know more",
-  "rating_total": "-4",
-  "rating_votes": "4",
-  "downloads": "290",
   "install_details": "Just source the file and follow the instructions. \nYou'll be asked before any action is taken. \n\nIf you don't feel comfortable installing to .vim insntall to another arbitrary directory and add it to your runtimepath \n(let runtimepath+= ..)",
   "versions": [
     {

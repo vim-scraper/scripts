@@ -5,9 +5,6 @@
   "name": "x12-syntax",
   "script_type": "syntax",
   "description": "A simple syntax highlighter for EDI X12 files -\nIt does not validate the correctness of X12s. Just highlights the file. \nCurrently only Healthcare 270/271s are tested.",
-  "rating_total": "3",
-  "rating_votes": "3",
-  "downloads": "222",
   "install_details": "Copy the file to\n$VIMRUNTIME/syntax/  (Windows)\nor \n~/.vim/syntax/                      (*nix)\n\nPut an entry to $VIMRUNTIME/filetype.vim like:\n\n\" X12\nau BufNewFile,BufRead *.x12\t\tsetf x12\n\nTo auto load the syntax.\n\n",
   "versions": [
     {

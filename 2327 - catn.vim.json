@@ -5,9 +5,6 @@
   "name": "catn.vim",
   "script_type": "utility",
   "description": "Insert formatted text with number at selected area.\nYou can select \"text format\", \"starting number\", and \"insert area\".\n\nDefault value of option are\ntext format     : \"%d \"\nstarting number : 1\ninsert area     : current line only\n\n------------------------------------------------------------------------------\n\n[command format]\n\n:'<,'>Catn {text format} {starting number}\n\n:'<,'>Catn [{starting number}]\n\n({text format} ... see \":help printf()\", available format is written there.)\n\n------------------------------------------------------------------------------\n\n[command example]\n\n(Insert number at selected area. 1, 2, 3, ....)\n:'<,'>Catn\n\n(Insert number at selected area. 1000, 1001, 1002, ....)\n:'<,'>Catn 1000\n\n(Insert formatted number text at selected area. 0000500, 0000501, 0000502, ....)\n:'<,'>Catn %08d\\  500\n\n",
-  "rating_total": "1",
-  "rating_votes": "1",
-  "downloads": "212",
   "install_details": "1. Copy the catn.vim script to\n   $HOME/vimfiles/plugin or $HOME/.vim/plugin directory.\n   Refer to ':help add-plugin', ':help add-global-plugin' and\n   ':help runtimepath' for more details about Vim plugins.\n\n2. Restart Vim.\n\n",
   "versions": [
     {

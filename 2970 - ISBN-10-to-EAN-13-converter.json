@@ -5,9 +5,6 @@
   "name": "ISBN-10-to-EAN-13-converter",
   "script_type": "utility",
   "description": "Allows conversions between ISBN-10 >> 978 prefix EAN-13s, and 978 prefix EAN-13s >> ISBN-10 \n\nThere are three methods of converting ISBNs and EANs: \n\n:ReplaceLineIsbnEan \n    If the entirety of the current line is a valid ISBN-10, replaces it with the converted 978 prefix \n    EAN-13 \n:ReplaceLineEanIsbn \n    If the entirety of the current line is a valid EAN-13 with a 978 prefix, replaces it with the \n    converted ISBN-10 \n\n:ReplaceSelectedIsbnEan \n    If the selected text is a valid ISBN-10, replaces that text with the converted 978 prefix EAN-13 \n:ReplaceSelectedEanIsbn \n    If the selected text is a valid EAN-13 with a 978 prefix, replaces it with the converted ISBN-10 \n\n:ReplaceAllIsbnEan \n    Searches for any 10 digit number, of 9 digit number followed by x or X. For each match, if it is \n    a valid ISBN-10, then it replaces that match with the converted 978 prefix EAN-13 \n:ReplaceAllEanIsbn \n    Searches for any 13 digit number. For each match, if it is a valid 978 prefix EAN-13, then it \n    replaces that match with the converted ISBN-10.",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "88",
   "install_details": "Copy ean13.vim to your plugins directory.",
   "versions": [
     {

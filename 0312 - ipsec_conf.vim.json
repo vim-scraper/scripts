@@ -5,9 +5,6 @@
   "name": "ipsec_conf.vim",
   "script_type": "syntax",
   "description": "Highlights keywords, IP addresses, numbers, and strings in FreeS/WAN's (http://www.freeswan.org/) ipsec.conf configuration file.\n\nSomewhat validating: it flags unknown constructs as errors in red.",
-  "rating_total": "2",
-  "rating_votes": "2",
-  "downloads": "476",
   "install_details": "Copy to ~/.vim/syntax and add the following to ~/.vim/filetype.vim:\n\n    au! BufRead,BufNewFile ipsec.conf\tsetfiletype ipsec_conf",
   "versions": [
     {

@@ -5,9 +5,6 @@
   "name": "Django-helper-utils",
   "script_type": "utility",
   "description": "repo here: http://github.com/mjbrownie/django_helper.vim/tree/master\n\n#note. This is only tested on linux with python support. in my ~/.bashrc I have the following line which allows django modules to be imported \n\nexport DJANGO_SETTINGS_MODULE=settings\n\nResolve a url to a tag \n\nUsage\n\nfor a given django url path\n\nurlpatterns(\n '/some/url/path', 'some.django.view.function_name'\n)\n\n:DUrlTag /some/relative/path/\n\nwill resolve the path to the function and then call\n:tag function_name\n\nYou need to have an up to date tags file and the command might choke on\ncomplicated views with lots of decorators etc.\n\n\n:DClient /some/relative/path/\n\nwill dump the html in a scratch window split\n\nif settings.py is in the root  of the path this script will :set path+= all template directories including INSTALLED_APPS, \n\nso you can 'gf' to template files",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "116",
   "install_details": "",
   "versions": [
     {

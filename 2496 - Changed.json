@@ -5,9 +5,6 @@
   "name": "Changed",
   "script_type": "utility",
   "description": "Description:\n  Displays signs on changed lines.\nRequirements:\n  * +signs (appears in :version)\n  * diff command\n  * setting &termencoding\nUsage:\n  [Settings]\n                                                                                                         \n  1. Setting &termencoding\n      Set &termencoding option according to your terminal encoding. \n      Its default value is same as &encoding.\n      example:\n          set termencoding=cp932\n                                                                                                         \n  2. Changing signs\n      To change signs, re-define signs after sourcing this script.\n      example (changing text):\n          sign define SIGN_CHANGED_DELETED_VIM text=D texthl=ChangedDefaultHl\n          sign define SIGN_CHANGED_ADDED_VIM   text=A texthl=ChangedDefaultHl\n          sign define SIGN_CHANGED_VIM         text=M texthl=ChangedDefaultHl\n      example (changin highlight @gvimrc):\n          highlight ChangedDefaultHl cterm=bold ctermbg=red ctermfg=white gui=bold guibg=red guifg=white\n                                                                                                         \n  [Usual]\n                                                                                                         \n  Edit a buffer and wait seconds or execute :Changed.\n  Then signs appear on changed lines.\n",
-  "rating_total": "17",
-  "rating_votes": "8",
-  "downloads": "588",
   "install_details": "Just source this file. (Put this file into the plugin directory.)",
   "versions": [
     {

@@ -5,9 +5,6 @@
   "name": "cvsdiff",
   "script_type": "utility",
   "description": "You can use this script to invoke vimdiff for comparing two files between CVS repository and local copy, or any two difference CVS revision in repository.\n\nUsage: cvsdiff [-rrevision1] [-rrevision2] file\nExamples:\n  cvsdiff test.c                           show difference between cvs (in your branch) and local copy.\n  cvsdiff -r1.3 test.c                  show difference between revision 1.3 and local copy.\n  cvsdiff -rHEAD test.c            show difference between HEAD and local copy.\n  cvsdiff -r1.3 -r1.4 test.c         show difference between revision 1.3 and revision 1.4.\n  cvsdiff -rHEAD -r1.4 test.c   show difference between HEAD and revision 1.4.\n",
-  "rating_total": "2",
-  "rating_votes": "2",
-  "downloads": "293",
   "install_details": "1. Download it and add throw it in a directory which included by PATH.\n2. Add execution permission.\n    chmod +x cvsdiff\n3. Run it.",
   "versions": [
     {

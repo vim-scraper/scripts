@@ -5,9 +5,6 @@
   "name": "tcmdbar.vim",
   "script_type": "utility",
   "description": "This script is only for users of Total Commander and Win32 (maybe Win16).\n\nAfter proper installation:\nStart Total Commander, select one or more files, then click the GVim button.\nGVim will create an argument list from the selected files so you can edit them.\nSounds trivial, but it is not.\n\nWorks with Ctrl-B (show flattened file list).\n\n\nCustomization for _vimrc (optional)\n\nOpen files in windows, tab pages or in diff mode:\n    :let Tcmdbar_OpenIn = \"Windows\"\n    :let Tcmdbar_OpenIn = \"Tabs\"        \" ignored in Vim6\n    :let Tcmdbar_OpenIn = \"Diff Mode\"\n\nValues may be abbreviated to \"win\", \"tab\" and \"diff\".\n\n\nYou will get an error if you want to open too many files.  In this case\nVim will only open windows/tabs for as many files as possible.\n\n-- Please report errors if the script does not work for you! --\n\n2007 Sep 17\nIf the first argument is always the file list, the plugin actually isn't needed!\nYou can define the button this way:\n    Command: <path>\\gvim.exe \"+n `=readfile(argv(0))`\"\n    Parameters: %L\nIn the help:\n    :h `=\n    :h next_f",
-  "rating_total": "22",
-  "rating_votes": "11",
-  "downloads": "517",
   "install_details": "1. Put script in any directory where it is _not_ sourced automatically\n    for example, ~\\vimfiles is a good choice\n2. Create a button for GVim in TC's button bar (see inside script for details)\n    Command: <path>\\gvim.exe -S ~\\vimfiles\\tcmdbar.vim\n    Parameters: %L dummy\n\nNotes:\n-   The \"dummy\" argument is a required dummy file name, its name is fixed!\n    You should not run into problems if this is an existing file.\n-   You can also set a variable in the Command Textbox:\n    <path>\\gvim.exe +\"let Tcmdbar_OpenIn='Tabs'\" -S ~\\vimfiles\\tcmdbar.vim",
   "versions": [
     {

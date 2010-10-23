@@ -5,9 +5,6 @@
   "name": "upf.vim",
   "script_type": "syntax",
   "description": "UPF provides the ability for electronic systems to be designed with \npower as a key consideration early in the process.\nThe current Working Groups website address is  www.accellera.org/activities/upf\n\nThe latest version of the script is maintained at http://kher.org/blog/vim_syntax_for_UPF.html",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "328",
   "install_details": "Following steps are valid for UNIX. For windows, suitable equivalents need to be used\n\nStep 1: Untar the archive upf.tar.gz\n \n If you already have ~/.vim ~/.vim/syntax and ~/.vim/filetype.vim then skip  Step 2\n \n Step 2: If you don't have ~/.vim then\n         % mv upf_syntax ~/.vim\n         Skip Step 3\n \n Step 3: Append the lines from upf_syntax/filetype.vim to ~/.vim/filetype.vim\n             or  Drop upf_syntax/syntax/upf.vim in ~/.vim/syntax/\n\n          if exists(\"did_load_filetypes\")\n          finish\n          endif\n          augroup filetypedetect\n          au! BufRead,BufNewFile *.upf setfiletype upf\n          augroup END \n\n\nHappy vimming!!\n",
   "versions": [
     {

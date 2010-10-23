@@ -5,9 +5,6 @@
   "name": "loadtags",
   "script_type": "utility",
   "description": "When you open a file, it searches for tags files in all ancestor directories and loads them. This is useful when you work on several projects and have different set of tags for each of them.\n\nLet's say that you open file /home/user/projects/my_proj/lib/hello.pm. Loadtags plugin looks for files \n\n/home/user/projects/my_proj/lib/tags, \n/home/user/projects/my_proj/tags, \n/home/user/projects/tags, \n/home/user/tags, \n/home/tags, \n/tags \n\nand calls setlocal tags+= on those that exist.",
-  "rating_total": "9",
-  "rating_votes": "3",
-  "downloads": "116",
   "install_details": "Store the loadtags.vim into your ~/.vim/plugins directory.\nCreate tags file for every your project and store it in the project's root directory (see :help tags).\n\nI don't know if it works on Windows.",
   "versions": [
     {

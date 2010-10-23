@@ -5,9 +5,6 @@
   "name": "snippet.vim",
   "script_type": "utility",
   "description": "Snippets are fragments of code, usually related to keywords . \nFor example the C language defines \"for\" and \"do\" as keywords, \namong others.  Since \"for\" is usually written\n    as : \n         for (...;...;...) {\n                 //code here\n         }\nMost users will create an abbreviation for the keyword \"for\" to add the\nparenthesis and curly-braces such as : \n         iabb xFor for<space>(<space>;<space>;<space>)<space>{<cr><cr>}\n\nTo accomplish this using snippets, create a file with these lines :\n\n for ( <#cursor#>; ; ) {\n\n }\n\nNow when editing a 'c' file, when you type 'for<C-S>' ,for is replaced by the\nsnippet of code you placed in the file.  Additionally the cursor is placed \nbetween the opening ( and the first ; ... ready for you to begin typing.\n",
-  "rating_total": "31",
-  "rating_votes": "21",
-  "downloads": "1117",
   "install_details": "place plugin/snippet.vim in your ~/.vim/plugin directory\nplace syntax/snippet.vim in your ~/.vim/syntax directory\nplace doc/snippet.txt in your ~/.vim/doc \nsee :he add-local-help for details on adding plugin help.\nmkdir ~/.vim/snippets ( read help for alternatives )\nmkdir ~/.vim/snippets/<syntax>\n\nto use the snippet syntax file, add : \n\naugroup filetypedetect \n  au! BufRead,BufNewFile *.spt setfiletype snippet \naugroup END \n\nto your filetype.vim \n\n",
   "versions": [
     {

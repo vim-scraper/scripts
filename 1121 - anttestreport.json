@@ -5,9 +5,6 @@
   "name": "anttestreport",
   "script_type": "syntax",
   "description": "My plugin tries to color  Test reports created by ant  the following way :\nIt colors all good things in green and bad things in red or some kind of. Also It shadows meaningless things. \nAnd yet I tried to fold long stack traces. So take a look. Comments are welcome.",
-  "rating_total": "2",
-  "rating_votes": "2",
-  "downloads": "254",
   "install_details": " To install add anttestreport.vim to any syntax directory and add the following lines to the filetype.vim :\n\\\" Ant Test Report\nau BufNewFile,BufRead TEST-*.txt\t\t\tsetf anttestreport\n",
   "versions": [
     {

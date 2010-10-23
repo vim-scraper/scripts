@@ -5,9 +5,6 @@
   "name": "listmaps.vim",
   "script_type": "utility",
   "description": ":verbose set <option> will tell you where an option was set.\nUnfortunately it's not so easy to find out where a map was\ndefined.\n\nThis script will open a new window with a list of\nall sourced scripts. If maps are defined in the script then\nthey will list below the script name. Initially this will\nappear folded.\n\nYou can then inspect the maps in a script or search for a\nmap to find out where it was defined. \n\nTo use\n\n   :Listmaps\n\nIt pulls out just about anything that looks like it might be\na map for completeness. There will be a few a lines that the\nscript mistakes for a map, but which aren't. And it may be a\nlittle slow.\n",
-  "rating_total": "23",
-  "rating_votes": "10",
-  "downloads": "708",
   "install_details": "save the file in .vim/plugin (unix) or vimfiles/plugin (win)",
   "versions": [
     {

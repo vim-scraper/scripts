@@ -5,9 +5,6 @@
   "name": "ora-workbench",
   "script_type": "utility",
   "description": "The ORA-Workbench is a VIM plugin to use VIM a development environment for\nORACLE databases. \n\nThe ORA-Workbench shows the typical layout of modern development environment consiting\nof:\n\t- the object tree on the left side\n\t- a editing area in upper right \n\t- a \"log\" window in the lower right\n\nThe workbench requires a Oracle Client installation (I'm calling SQLPLUS). The\nprogram \"sqlplus\" must be in the \"path\". \n\nThis plugin has been tested with:\n\t- vim*7.2\n\t- ORACLE*10.2\n\t- MS Windows 2000\n\t- SUSE Linux*10\n",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "23",
   "install_details": "- create the directory \".vim\" (for linux systems) or \"vimfiles\"\n\t  (MS-Windows system) in your home directory.\n- create the sub-directory \"plugin\"\n- copy the file \"orawb.vim\" into the \"plugin\" directory\n- create the sub-directory \"doc\"\n- copy the file \"orawb.txt\" into the \"dic\" directory.\n- start vim\n- execute the command \":helptags ~/.vim/doc\" (linux) or \n  \":helptags ~/vimfiles/doc\" (Windows)\n- make sure that \"sqlplus\" is in your operation system PATH.",
   "versions": [
     {

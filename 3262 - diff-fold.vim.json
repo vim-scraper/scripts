@@ -5,9 +5,6 @@
   "name": "diff-fold.vim",
   "script_type": "ftplugin",
   "description": "View patches or pipe various Mercurial diff output to vim and see changesets, files, and hunks folded nicely together.\n\nSome examples:\n       hg in --patch | vim - -c \"setlocal ft=diff\"\n       hg diff | gvim -\n       hg diff -r 12 -r 13 | vim -\n\nRight now, this pretty much just works with Mercurial diff output.  Because Hg can use Git style patches, it does work with some Git output but it is not 100% reliable or useful.\n\nEventually, I hope to make this work with more version control systems and just about anything that can produce unified diff output.\n\nThe script can also be found on my bitbucket repo: https://bitbucket.org/thetoast/vimstuff",
-  "rating_total": "1",
-  "rating_votes": "3",
-  "downloads": "40",
   "install_details": "Drop it in your ~/.vim/ftplugin folder.",
   "versions": [
     {

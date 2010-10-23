@@ -5,9 +5,6 @@
   "name": "incfiles.vim",
   "script_type": "utility",
   "description": "This script generates menu entries for each include file within the actual edited C/C++ file.\nAfter executing it, you can enter any of the include files by selecting them via menu.\n\nThe script is just quick and (hope not very) dirty written, but working (only short tests up to now)\nunder GVIM 5.8, NT4.0, Novell network\n",
-  "rating_total": "2",
-  "rating_votes": "2",
-  "downloads": "613",
   "install_details": "- create menu entry for include file (to enter it) within C/C++ files\n- adds menu entries under main menu 'Proj'\ne.g. enter ':% call CreateIncFileMenu()' within your C/C++ file.\nThen you can enter any include file by selecting it in the menu.\nCreate a menu entry in your _gvimrc to source in and call this script:\n($VIM_SYNTAX must contain the path to this script file)\n'menu 12.10 Proj.Add\\ include\\ files\t\t:so $VIM_SYNTAX/incfiles.vim<CR>:% call CreateIncFileMenu()<CR>'\n",
   "versions": [
     {

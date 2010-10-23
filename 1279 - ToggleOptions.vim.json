@@ -5,9 +5,6 @@
   "name": "ToggleOptions.vim",
   "script_type": "utility",
   "description": "This allows \"toggling\" of more complex operations, like switching off \"diffthis\".  It also reduces the number of key mappings used overall by placing the operations under a key activated command window menu, i.e. if the key map is <leader>o  and <leader> is \",\":\n     ,o\ndisplays an option list in the command window:\n     wrap, Wrapscan, list, binary, modifiable, diff, virtualedit, uhex\nso the full command\n    ,od\ntoggles \"diff\" mode on/off for a window (including foldcolumn=0)\n    ,om\ntoggles \"modifiable\" and \"readonly\" together.\n\nYou should edit the script to add what want.  E.g.  add your item to the menu call string:\n\n    let l:char = s:Char_menu( \"{w}rap, {W}rapscan, {l}ist, {b}inary, {m}odifiable, {d}iff, {v}irtualedit, uhe{x}\" )\n\nwhere {text} is in a different color, then add an elseif clause:\n\n    elseif l:char ==# 'm'\n        if &modifiable && !&readonly\n            set nomodifiable\n            set readonly\n        else\n            set modifiable\n            set noreadonly\n        endif\n        set readonly?\n        set modifiable?\n",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "327",
   "install_details": "Put it in the plugin directory.  Change the <leader>o  key map as desired.",
   "versions": [
     {

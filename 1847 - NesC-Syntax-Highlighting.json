@@ -5,9 +5,6 @@
   "name": "NesC-Syntax-Highlighting",
   "script_type": "syntax",
   "description": "nesC is an extension to the C programming language designed to embody the structuring concepts and execution model of TinyOS. TinyOS is an event-driven operating system designed for sensor network nodes that have very limited resources.\nThis script is the Syntax Highlighting for the programming files written in NesC.\nDetailed can found from here: http://www.amingsite.info/aming/archives/?arch=vi_nesc",
-  "rating_total": "86",
-  "rating_votes": "40",
-  "downloads": "1280",
   "install_details": "Version 1.0\nMake a folder for the script if not existed\nmkdir ~/.vim/syntax\nput the script in ~/.vim/syntax\nadd the following into the end of ~/.vimrc\naugroup filetypedetect\n  au! BufRead,BufNewFile *nc setfiletype nc\naugroup END\n\nVersion 2.0\nuntar the the files to ~/.vim/\ntar zxvf vim.tar.gz\nadd the following into the end of ~/.vimrc\naugroup filetypedetect\n  au! BufRead,BufNewFile *nc setfiletype nc\naugroup END",
   "versions": [
     {

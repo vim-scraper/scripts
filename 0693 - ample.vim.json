@@ -5,9 +5,6 @@
   "name": "ample.vim",
   "script_type": "syntax",
   "description": "This is a syntax highlight file for the AMPLE (Another Mentor Programming Language) programming language.  AMPLE is part of Mentor Graphics' Falcon Framework, a user interface framework.  Mentor Graphics Corporation is an EDA (Electronic Design Automation) company.  ",
-  "rating_total": "18",
-  "rating_votes": "8",
-  "downloads": "365",
   "install_details": "1. place into $HOME/.vim/syntax \n\n2. :cal SetSyn(\"ample\") \nor \n2. put the following in $HOME/.vimrc to autoload depending on filetype (in this case ends with .ample and .ascii) \n____________________________________________________________ \naugroup filetype \n    au! \n    au! BufRead,BufNewFile *.ample  set filetype=ample\n    au! BufRead,BufNewFile *.ascii     set filetype=ample\naugroup END \n____________________________________________________________ \n:help autocmd for more info",
   "versions": [
     {

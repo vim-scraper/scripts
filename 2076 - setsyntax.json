@@ -5,9 +5,6 @@
   "name": "setsyntax",
   "script_type": "utility",
   "description": "This plugin sets options/variables according to the syntax under the \ncursor. It was originally created in response to \nhttp://groups.google.com/group/vim_use/browse_frm/thread/ff624d5a68f0a562 \nand to solve a similar problem. While this plugin solves that other \nrelated problem it doesn't seem to work properly for tex files.\n\nConfiguration:\n\ng:setsyntax_options            (default: {})\n    This variable is a dictionary of dictionaries of dictionaries.\n    {FILETYPE => {SYNREGEXP => {OPTION/VARIABLE: VALUE}}}\n    \n    Example:\n      let g:setsyntax_options['tex'] = {'^texMathZone': {'&l:tw': 0}}\n\n\n:SetSyntax SYNTAX,... VAR VALUE ...\n:SetSyntax /REGEXP/ VAR VALUE ...\n    Set syntax-specific options for the current buffer. When using a \n    REGEXP, the syntax names have to be already defined, i.e. you can use \n    the REGEXP only after the syntax file was loaded.\n    \n    VAR must be a variable name (see |:let| and |:let-&| for details). \n    I.e., if you want to set a option, e.g. spelllang, don't use\n\n        SetSyntax /^texMath/ spelllang \"\"\n\n    but instead use:\n\n      SetSyntax /^texMath/ &l:spelllang \"\"\n    \n    VALUE actually is an expression that will be evaluated when setting \n    the variable.\n    \n    NOTE: Blanks in VALUE must be escaped with a backslash. See the help \n    page on <f-args> for details.\n\n",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "364",
   "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0, \nplease make sure, you have the current version of vimball (vimscript \n#1502) installed.\n\nThis script requires hookcursormoved (vimscript #2037) and tlib \n(vimscript #1863) to be installed.\n\n\nAlso available via git\nhttp://github.com/tomtom/setsyntax_vim",
   "versions": [
     {

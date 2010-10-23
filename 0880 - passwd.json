@@ -5,9 +5,6 @@
   "name": "passwd",
   "script_type": "syntax",
   "description": "This is highlighting syntax for the /etc/passwd file.",
-  "rating_total": "9",
-  "rating_votes": "9",
-  "downloads": "625",
   "install_details": "Drop it into your syntax directory:\n  1. mkdir -p ~/.vim/syntax\n  2. mv passwd.vim ~/.vim/syntax/.\n\nThen, use\n       :setf passwd\n\n, or add this to your ~/.vim/filetypes.vim to enable auto-detection:\n  augroup filetypedetect\n  au BufNewFile,BufRead passwd   setf passwd\n  augroup END ",
   "versions": [
     {

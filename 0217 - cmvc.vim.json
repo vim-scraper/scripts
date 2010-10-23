@@ -5,9 +5,6 @@
   "name": "cmvc.vim",
   "script_type": "utility",
   "description": "This script integrates using the IBM Configuration Management Version Control (CMVC) application from within Vim.  It provides keyboard shortcuts as well as a menu to access common functions such as checking files in and out, viewing and responding to defects, etc.\n\nCurrently, only the functions I use regularly (Defect, File, Track, and VerifyCm) are implemented.  If you want to add others, the API should be fairly straightforward to do so.  Of course, I would appreciate receiving any changes you make, so that I can incorporate it into the next version (and avoid duplicating the work myself).\n\nNOTE:  This script currently requires Vim 6.  If there is interest in making it 5.x compatible, let me know and I will see what I can do.\n\nTODO:\t    Here are some other things I want to add when I get around to it:\n    -\tImplement more functions, like Report, to get a list of available defects / files / etc., which you can then view or\n\tcheckout.\n    -\tMake the script more \"plugin-ized\", like allowing users to override the default mappings and use their own.\n    -\tKeep a history of releases, components, and families used, then present them in a \"confirm\" dialog so the user\n\tcan just pick one instead of retyping it.  Inlcude an \"other\" button to bring up an \"inputdialog\" so the user can still\n\tenter an unlisted / new value.\n    -\tAdd commands to let the functions be used in Command mode.",
-  "rating_total": "4",
-  "rating_votes": "1",
-  "downloads": "943",
   "install_details": "Just drop this file into your plugin directory, and it will automatically be loaded when you start Vim.  Otherwise, just put it in a directory of your choice and :source it as needed.  The syntax file should go into your syntax directory.\n",
   "versions": [
     {

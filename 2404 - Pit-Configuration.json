@@ -5,9 +5,6 @@
   "name": "Pit-Configuration",
   "script_type": "utility",
   "description": "pitconfig.vim can load vim's variables from pit configurations. you can hide secret variables(ex: password) in your vimrc. pitconfig.vim set variable into vim's global scope.\n\nex)\n# vim\n:echo mypassword\nxxxxxx\n:PitAdd mypassword\n:e ~/.vimrc\n\" remove mypassword setting in your vimrc\n:wq!\n\n# vim\n:echo mypassword\nxxxxxx\n\n\n---------------------------------\n:PitReload\n  reload pit config named as g:pitconfig_default\n\n:PitLoad profile\n  load pit config named as 'profile'\n\n:PitShow\n  show current pit config named as g:pitconfig_default\n:PitShow profile\n  show current pit config named as 'profile'\n\n:PitSave\n  save current variables to pit config which named as g:pitconfig_default\n:PitSave profile\n  save current variables to pit config which named as 'profile'\n\n:PitAdd varname\n  add variable to current pit config.\n\n:PitDel varname\n  delete variable from current pit config.\n",
-  "rating_total": "2",
-  "rating_votes": "2",
-  "downloads": "241",
   "install_details": "copy pitconfig.vim to your plugin directory. pitconfig.vim require perl interface and Config::Pit module on cpan.\n",
   "versions": [
     {

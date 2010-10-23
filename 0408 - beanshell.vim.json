@@ -5,9 +5,6 @@
   "name": "beanshell.vim",
   "script_type": "utility",
   "description": "This script invokes BeanShell ( see http://www.beanshell.org ) on the contents of the current buffer.\n\nThe script depends on java (needed to run BeanShell) as well as BeanShell itself.  The java executable should be in your PATH and the BeanShell jar should be in your CLASSPATH in order to use this script in its default configuration.\n\nPress \"<Leader>br\" and BeanShell will be invoked on the contents of the current buffer (the current buffer will not be written out).  The output from BeanShell will appear in a new window.\n\nBeanShell may also be invoked by entering the command \":BeanShell\" or by selecting the \"Invoke BeanShell\" item from the \"Plugin\" menu.\n\nStarting with version 1.2, a range may be supplied to the \"BeanShell\" command and the key command may be activated within a visual block.  Invoking BeanShell this way will cause it to act upon the specified lines rather than the entire buffer.",
-  "rating_total": "12",
-  "rating_votes": "7",
-  "downloads": "1089",
   "install_details": "Either drop beanshell.vim into your plugins directory or :source it as needed.\n\nThe command to execute BeanShell may be configured by setting the variable \"BeanShell_Cmd\".  This defaults to \"java bsh.Interpreter\", but may be set to anything so you can (for example) forego having java in your path and specify it in this variable.\n\nThe key command to invoke BeanShell may be configured by mapping some key to <Plug>BeanShell.  For example, to have Shift-F3 invoke BeanShell, enter the command \":map <S-F3> <Plug>BeanShell\" (or place this command in your vimrc).",
   "versions": [
     {

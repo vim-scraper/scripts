@@ -5,9 +5,6 @@
   "name": "IncRoman.vim",
   "script_type": "utility",
   "description": "Increase or decrease a Roman number found under the cursor, with [count].\nIf a decimal number is found it is converted into its corresponding Roman\nnumber, ignoring the [count].  Any other word is converted to the Roman\nnumber that [count] corresponds to.\n\nRange: I .. MMMCMXCIX (1..3999)\nHigher numbers result in more than three \"M\"s.\n\nThere are interface mappings: <plug>IncRoman and <plug>DecRoman .\nThey can be mapped globally or local to buffer, the latter is the default.\nFrom the script:\n    nmap <unique><buffer> <C-A> <plug>IncRoman\n    nmap <unique><buffer> <C-X> <plug>DecRoman\n\nTherefore if you want to use the script as a plugin, you should define\nglobal keys in your .vimrc:\n    nmap <C-A> <plug>IncRoman\n    nmap <C-X> <plug>DecRoman\n\nOther scripts with support for Roman numbers:\nvimscript #197 genutils : General utility functions\n    genutils#Roman2Decimal(str)\nvimscript #431 VimFootnotes : Insert various types of footnotes\nvimscript #670 VisIncr : Produce increasing/decreasing columns of numbers, dates, or daynames\nvimscript #2120 speeddating.vim : Use CTRL-A/X to increment dates, times, and more\n\nLast Change: 2007 Jan 11",
-  "rating_total": "1",
-  "rating_votes": "1",
-  "downloads": "349",
   "install_details": "Three options: (v2 of the script)\n(1) Activate for current buffer:\n:source incroman.vim\n\n(2) Use as a plugin.  Then you need global mappings (see description).\n\n(3) Source from an ftplugin.\n",
   "versions": [
     {

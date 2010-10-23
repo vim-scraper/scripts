@@ -5,9 +5,6 @@
   "name": "TIMEIT",
   "script_type": "utility",
   "description": "\" Time execution of vim command(s) with subsecond resolution,\n\" For example:\n\"      :TIM sleep 100m\n\" prnits\n\"      Execution took   0.100301 sec.\n\" With counter, TIMEIT times that many repetitions of the command:\n\"      :10TIM sleep 100m\n\" prints:\n\"      10 repetitions took   1.039352 sec.\n\" You can use sequence of |-separated commands under TIM:\n\"      :10TIM syntax off | syntax on\n\" This will time ten repetitions of (syntax off | syntax on)\n\" sequence, not 10 repetitions of \"syntax off\" followed by\n\" one untimes \"syntax on\".\n",
-  "rating_total": "6",
-  "rating_votes": "3",
-  "downloads": "291",
   "install_details": "Download the script from the link below and \ncopy it into your ~/.vim/plugin directory.\nCreate this directory if it does not yet exist.\nRestart vim. That's it. \n",
   "versions": [
     {

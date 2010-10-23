@@ -5,9 +5,6 @@
   "name": "xpcomplete",
   "script_type": "utility",
   "description": "This file provides the ability to handle a better completion with the XP-Framework. This file is based on the original version from phpcomplete.vim delivered by a standard vim installation.\n\nXP-Framework: http://xp-framework.net/\n\nRequirements:\n\nctags:\nUse absolute paths and --PHP-kinds=+cfidv for your ctag files\n\nExample:\nctags -f $HOME/devel/xp.ctags/tags \\\\\n--langmap=\\\"php:+.inc\\\" \\\\\n-h \\\".php.inc\\\" -R --totals=yes \\\\\n--PHP-kinds=+cfidv \\\\\n--fields=+iaS \\\\\n$HOME/devel/xp.public/trunk/skeleton \\\\\n$HOME/devel/xp.public/trunk/ports/classes \\\\\n$HOME/devel/xp.projects/**/src\n\nTODO:\nScreenshots\nBetter description\n",
-  "rating_total": "8",
-  "rating_votes": "2",
-  "downloads": "78",
   "install_details": "save xpcomplete.vim in ~/.vim/autoload/\n\nadd follogwing to your vimrc:\nautocmd FileType php set omnifunc=xpcomplete#CompletePHP\nset tags+=$HOME/devel/xp.ctags/tags\n\nIf ctags isn&#039t installed you can download it from its homepage http://ctags.sourceforge.net/ or if you&#039re running Debian/Ubuntu you can install it by executing the following shell command:\n\n    sudo apt-get install exuberant-ctags",
   "versions": [
     {

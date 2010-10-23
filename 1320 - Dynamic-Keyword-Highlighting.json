@@ -5,9 +5,6 @@
   "name": "Dynamic-Keyword-Highlighting",
   "script_type": "utility",
   "description": "When inspecting text, often highlighting the current search keyword isn't enough. \nThis script allows you to highlight keywords and search patterns in different colors.\nThere are a few ways to use this functionality.\n\n1) visual mode keyword selection\nUse visual mode to select text and press <CTRL>h\nThe next available color will be used to highlight the keyword.\n<CTRL>h without a visual mode highlight releases the last highlight.\n\n2) search pattern selection\nPerform a regular \"/\" search, and the press <CTRL>j\nThe next available color will be used to highlight matches.\n<CTRL>h without a visual mode highlight releases the last highlight.\n\n3) search pattern backtracking\nThe last highlighted word is set as the current search pattern.\nThis allows you to backtrack searches easily. For example,\n- search \"keyword\" \n/keyword\n- remember search \n<CTRL>j\n- search \"pattern\"\n/pattern\n- remember search\n<CTRL>j\n- At this point, repeating search with just \"/\" will search \"pattern\".\n   Use <CTRL>h without any visual highlight to backtrack.\n  Repeating search with just \"/\" will now search \"keyword\".\n",
-  "rating_total": "5",
-  "rating_votes": "10",
-  "downloads": "471",
   "install_details": "Copy code into your .vimrc",
   "versions": [
     {

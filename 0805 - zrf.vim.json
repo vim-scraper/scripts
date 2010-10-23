@@ -5,9 +5,6 @@
   "name": "zrf.vim",
   "script_type": "syntax",
   "description": "This is a syntax file for proper highlighting of Zillions Rule Files (ZRF) which are used to describe games in Zillions of Games. Zillions of Games is a universal gaming environment that allows the definition of new games by the user. For more details simply visit http://www.zillionsofgames.com.",
-  "rating_total": "3",
-  "rating_votes": "3",
-  "downloads": "344",
   "install_details": "See file zrf_vim.txt contained in the ZIP file. Basically just add\n\n    au BufNewFile,BufRead *.zrf    setf zrf  (for vim 6.x)\n\nor\n\n    au BufNewFile,BufRead *.zrf    call s:StarSet('zrf')  (for vim 7.x)\n\nto your $VIMRUNTIME/filetype.vim file and enjoy.",
   "versions": [
     {

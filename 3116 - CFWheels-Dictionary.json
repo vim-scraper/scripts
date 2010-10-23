@@ -5,9 +5,6 @@
   "name": "CFWheels-Dictionary",
   "script_type": "syntax",
   "description": "Functions where taken from http://cfwheels.org/docs/function and placed into a vim dictionary file for code completion.\n\nThis was created for use at http://www.peaksystems.com, we hope you find use for it as well.",
-  "rating_total": "4",
-  "rating_votes": "1",
-  "downloads": "52",
   "install_details": "place CFWheels.dict in ~/.vim/dic/\n\n------Then place the following lines in your .vimrc-------\nau BufRead,BufNewFile *.cfm,*.cfc set dictionary+=~/.vim/dic/CFWheels.dict\n\"set completion matching on\nset complete-=k complete+=k\n\"case insensitive\nset ignorecase\n\n-------->end\n \nYou can then reload the changes with \n     :so % \nor \n     :source $MYVIMRC\ndepending on what global variables you have access to.",
   "versions": [
     {

@@ -5,9 +5,6 @@
   "name": "pyflakes.vim",
   "script_type": "ftplugin",
   "description": "IMPORTANT: Your vim must have Python 2.5, at least. Enter \":python import sys; print sys.version\" to see which version you have.  The newest version of Vim, 7.3, comes bundled with Python 2.7 support.\n\npyflakes-vim highlights common Python errors like misspelling a variable name on the fly. It also warns about unused imports, redefined functions, etc.\n\nThis plugin is fast enough that it registers itself with vim hooks for leaving insert mode and saving a buffer, so that the warnings are always up to date. See pyflakes.vim if you want to change this behavior.\n\nNOTES:\n * an improved pyflakes module is INCLUDED with this plugin, so you don't need to install it separately\n * quickfix entries are created for each error, so you can use commands like :cc to jump to errors.\n * this plugin uses the SpellBad highlight to show errors. if you'd like to change the color or style of this highlight, you can do something like this in your .vimrc:\n\n      if has(\"gui_running\") \n          highlight SpellBad term=underline gui=undercurl guisp=Orange \n      endif \n\nTo stay up on development, you can watch the public repos at\n\nhttp://github.com/kevinw/pyflakes-vim\nhttp://github.com/kevinw/pyflakes\n\nKNOWN ISSUES\n\n- The highlighting for syntax errors is often way off, and results in no other errors being detected.\n- In Python 2.5, typing a with statement before you have from __future__ import with results in a vim error\n",
-  "rating_total": "387",
-  "rating_votes": "110",
-  "downloads": "4137",
   "install_details": "1. Make sure your vimrc has \"filetype plugin indent on\" so that pyflake-vim's ftplugin files are loaded automatically when you open a Python buffer.\n2. Drop extracted files in ~/.vim/ftplugin/python.\n3. That's it!\n\nSee the README for more info.\n",
   "versions": [
     {

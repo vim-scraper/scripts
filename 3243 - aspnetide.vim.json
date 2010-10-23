@@ -5,9 +5,6 @@
   "name": "aspnetide.vim",
   "script_type": "ftplugin",
   "description": "Turns VIM into an asp.net IDE!\n\nFeatures\n-------------\n* ASPHelp - F1: Jump to online help based on selected word.\n* ASPBuild - <leader>ab: Find a solution file for the project and build. Errors shown in quickfix.\n* ASPAltFile - <leader>af: Navigate to alternate files (ASPX <-> code-behind).\n* ASPRun - F5: Run app in local webserver and navigate to selected page.\n* ASPGoTo - <leader>ag: Go to class file based on name.\n\nScreencast of how to use this plugin:\nhttp://www.youtube.com/watch?v=9lYgblj1tc0\n\nNotes:\n--------\n*For those new to vim, <leader> is a backslash by default.\n*You may need to have VS.NET installed for ASPRun to work. Not sure if the local web server gets installed with just the framework.\n*The  ASPBuild and ASPRun features only work on windows. With a few tweaks this could work nicely for mono on linux though...\n\nPatches welcome, github location:\ngit://github.com/bryanthankins/vim-aspnetide.git",
-  "rating_total": "4",
-  "rating_votes": "1",
-  "downloads": "71",
   "install_details": "Extract the zip file to ~/.vim (or vimfiles on Windows).  To use the help, see :help add-local-help.  In a nutshell, :helptags ~/.vim/doc. (or :helptags $VIM/vimfiles/doc on windows)\n\nFor details, see :help aspnetide",
   "versions": [
     {

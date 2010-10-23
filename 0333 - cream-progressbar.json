@@ -5,9 +5,6 @@
   "name": "cream-progressbar",
   "script_type": "utility",
   "description": "\nA function that, when called, draws a progress bar in the command line:\n\n    Loading file... [####################             ] 65%\n\nDisplays and allows options to:\n  1. Display the progress through RPM-like characters\n  2. Display an initial description string\n  3. Allows selection of the character used for the bar\n  4. Optionally, allows any bar length (default is window width)\n\nJust use a call such as:\n  call ProgressBar( 65, \"Loading file...\", \"#\", 0 )\n\n\nThis is one of many custom utilities and functions for gVim from the Cream project (http://cream.sourceforge.net), a configuration of Vim for those of us familiar with Apple and Windows software. \n\n",
-  "rating_total": "28",
-  "rating_votes": "11",
-  "downloads": "896",
   "install_details": "\nSimply copy this file and paste it into your vimrc. Or you can drop the entire file into your plugins directory. Or you can place it into another vim file you intend on loading before calling it.\n\n",
   "versions": [
     {

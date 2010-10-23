@@ -5,9 +5,6 @@
   "name": "commenter",
   "script_type": "utility",
   "description": "Usage：\n   In normal mode，press <Leader>c to comment/uncomment current line.\n   If current line is blank line and no non-blank line before it, insert file header comment. The file header comment use template files. These templates should be placed to  ~/.vim/plugin/templates/ directory. template file name is same as cvim plugin.\n   If current line is function declaration line, and if g:DoxygenFuncDesc is set to 1, insert Doxygen style function comment. Else use function comment template file.\n   In visual mode, press <Leader>c to comment/uncomment blocks. This only applies to c source or header files.\n\nMainly targeted:  c,h,cpp file modification\nAlso applicable：   java,sh,vim,awk,sed,perl,python file modification",
-  "rating_total": "16",
-  "rating_votes": "13",
-  "downloads": "1227",
   "install_details": "Linux: Copy commenter.vim to $HOME/.vim/plugin/",
   "versions": [
     {

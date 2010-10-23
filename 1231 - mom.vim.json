@@ -5,9 +5,6 @@
   "name": "mom.vim",
   "script_type": "syntax",
   "description": "Syntax highlighting for mom, a troff macro package, or as mom's homepage (http://faustus.dyn.ca/mom/mom.html) states: \"mom is a typesetting and formatting package used to create high-quality, PostScript documents for printing.\"\n\nThis script is specialized for mom, although that is a troff macro package, this script does only have limited troff highlighting capabilities.\n",
-  "rating_total": "5",
-  "rating_votes": "2",
-  "downloads": "242",
   "install_details": "Vim knows mom files (extension .mom), but highlights them as simple troff files. So you have to overwrite this behavior in your ~/vim/filetype.vim file, as described in the vim online help for \"filetype\". Add the following line to that file, as described in the vim help:\n\n        au! BufRead,BufNewFile *.mom    setfiletype mom\n",
   "versions": [
     {

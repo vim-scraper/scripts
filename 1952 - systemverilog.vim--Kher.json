@@ -5,9 +5,6 @@
   "name": "systemverilog.vim--Kher",
   "script_type": "syntax",
   "description": "IEEE 1800 SystemVerilog is the industry's first unified hardware description and verification language (HDVL) standard. SystemVerilog is a major extension of the established IEEE 1364 Verilog language.\nThe latest version of this package can always be found at http://kher.org/blog/technical_stuff/vim_syntax_for_systemverilog.html\ncheers!",
-  "rating_total": "14",
-  "rating_votes": "10",
-  "downloads": "1157",
   "install_details": "Step 1: drop the file in ~/.vim/syntax (if the directory does not exist then create it)\n             Note: If you are using vim 7.0 or better, you can source SV.vba to autoinstall it regardless of which flavor of\n             operating system you are using VIM on!!\nStep 2: Append following lines in ~/.vim/filetype.vim\n\n if exists(\"did_load_filetypes\")\n          finish\n        endif\n        augroup filetypedetect\n          au! BufRead,BufNewFile *.sv    setfiletype SV\n          au! BufRead,BufNewFile *.svi   setfiletype SV\n        augroup END\n",
   "versions": [
     {

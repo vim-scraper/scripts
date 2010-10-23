@@ -5,9 +5,6 @@
   "name": "php_console.vim",
   "script_type": "ftplugin",
   "description": "This is for windows.\n\nFor unix see http://vim.sourceforge.net/scripts/script.php?script_id=326.\n(But you can adapt this also for unix. Just the path-reference to the php.exe is different.)\n\nGo into your php-file and :call ParsePhpFile().\n\nWrite a mapping to automat this. E.g. \nmap <F5> :call ParsePhpFile()<cr>\nimap <F5> <esc>:call ParsePhpFile()<cr>\n\nNow you can debug your php-file without leaving vim. \n\nYou can jump to the error lines by clicking on the compiler output in the window that opens below.\n\nAfter finishing removing the errors you can open your php-file in the browser.\n\nAdvantages:\n* You do not rely on apache. This means:\n* You can open the php-files everywhere in the filesystem (also outside of htdocs).\n* There is no difference between the console and the browser output. (When there is no error output you see the normal html output.)\n* Roundtrip error checking is possible without leaving vim.\n",
-  "rating_total": "18",
-  "rating_votes": "6",
-  "downloads": "1022",
   "install_details": "Put it in the ftplugin directory. \nTo do this you can create a \"php\" directory there and drop it into it.\nBut vim should also recognize it in this form \"php_XXXXXX.vim\".\nGo into the environment variables of windows and set a path to the php.exe.\nIf you do not see a complete compiler output check the errorformat.",
   "versions": [
     {

@@ -5,9 +5,6 @@
   "name": "halfmove",
   "script_type": "utility",
   "description": "Vim script to move the cursor half way down/up the screen. This can be\nthought of as a binary search for a line that is visible in the window by\neither moving up or down.\n\nCreated:\t2007 Aug 05\nLast Change:\t2007 Aug 05\nAuthor:\tAndy Spencer <andy753421 at gmail dot com>\nThanks To:\t#vim@irc.freenode.net\n\nUsage:\n  Press <C-K> to jump half way to the top of the screen\n  Press <C-J> to jump half way to the bottom of the screen\n  Pressing <C-[KJ]> several times in a row will jump halfway to the\n  top/bottom or half way to a previous jump location.\n  Example: To jump 3/8 of the way to the bottom of the screen press\n    <C-J><C-K><C-J>\n  \nCustomization:\n  map <silent> <YOUR-DOWN-KEY> :call HM_Move(\"down\")<CR>\n  map <silent> <YOUR-UP-KEY>   :call HM_Move(\"up\")<CR>\n\nProblems:\n  <C-J> and <C-K> will not be mapped over existing mappings. If other\n  scripts map <C-J> or <C-K> then you will need to manually override those.",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "148",
   "install_details": "Add this file to $RUNTIME/plugins",
   "versions": [
     {

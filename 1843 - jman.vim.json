@@ -5,9 +5,6 @@
   "name": "jman.vim",
   "script_type": "ftplugin",
   "description": "* About\n\nThs \"jman.vim\" plugin is jman browser plugin for vim and jman user.\nJman is \"on-line manual pages for japanese\".\nJman is seen so that you may just use man.vim for man.\n\n* Need \"jman\" command.\n\nIt need \"jman\" command!\nIf you use FreeBSD, you can install jman program as root user,\n\n   cd /usr/ports/japanese/man && make install clean\n\njman.vim use /usr/local/bin/jman.\n\n* Usage\n\nIf you want to know ls(1), you can type following command.\n:Jman ls\n\nWant to know printf(3)\n:Jman 3 printf\n\n\n* see also\n\n- /usr/local/share/vim/vim*/ftplugin/man.vim\n",
-  "rating_total": "-6",
-  "rating_votes": "6",
-  "downloads": "237",
   "install_details": "1. Download the jman.vim script file.\n2. And copy to the $HOME/.vim/ftplugin directory.\n\n# version 1.0\n mkdir -p $HOME/.vim/ftplugin/\n fetch -o $HOME/.vim/ftplugin/jman.vim 'http://www.vim.org/scripts/download_script.php?src_id=6920'\n",
   "versions": [
     {

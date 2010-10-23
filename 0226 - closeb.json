@@ -5,9 +5,6 @@
   "name": "closeb",
   "script_type": "utility",
   "description": "This plugin closes complex brackets / tags.\nIt is an extended version of closetag, (http://vim.sourceforge.net/scripts/script.php?script_id=13)\n\nIt comes with configuration for closing XML/SGML tags and LaTeX environments but is easily configured for other filetypes.\n\nClosing a bracket / tag also (optionally) inserts a newline and / or indentation, but only if the matching bracket / tag stood on a line of its own.\n\nIf, during scanning for the bracket / tag to close, mismatching brackets are found, they are optionally highlighted.\n\nA path function is provided, which displays all open tags. For example, this function may be used in the status line for a constant display of location in an XML file.\n",
-  "rating_total": "77",
-  "rating_votes": "34",
-  "downloads": "2338",
   "install_details": "Put this into your plugin directory ~/.vim/plugin.\nIt will map CTRL-_ to closing a tag in insert mode (as closetag.vim did). The :Path command displays the \"path\".\n",
   "versions": [
     {

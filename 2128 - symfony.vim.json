@@ -5,9 +5,6 @@
   "name": "symfony.vim",
   "script_type": "utility",
   "description": "DESCRIPTION\n\nUsefull commands for symfony projects editing\n\n* Switch between template view / module view ( <F8> key )\n\n  While editing a module method, press <F8>. It will switch to the appropriate template view\n  Press <F8> again to go back to the module method .\n\n  It works with Actions and Components :\n\n    function executeMyAction() < > myActionSuccess.php\n    function executeMyComponent() < > _myComponent.php \n\nTODO \n\n* Support for xxxError, handleXXX, validateXXX\n* Shortcuts to the layout template of an action/view\n* Support for empty action files and missing templates\n\nFeedbacks mostly appreciated : email.de.nicolas.martin@gmail.com\n",
-  "rating_total": "24",
-  "rating_votes": "12",
-  "downloads": "1919",
   "install_details": "- copy the symfony.vim in your plugin directory and run Vim.\n\n- optionnaly map <F8> or any key to the switching command by typing : silent map <F8> :SfSwitchView <CR>\n\nYou can now easily switch between Action view / Template view of an action.\n\nNote : When entering a buffer, the plugin detects the symfony root dir from the current working directory ( getpwd() ) \n\n",
   "versions": [
     {

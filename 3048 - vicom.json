@@ -5,9 +5,6 @@
   "name": "vicom",
   "script_type": "utility",
   "description": "Vicom uses the [Ctrl X] and [Ctrl Y] keys to comment or uncomment lines of code in a program.\nIt does this by examining the filename entered on the command line. It automatically writes\nsuitable key maps to a small r/w buffer located in the .vimrc file. Allowing the same pair of\nkeys to perform the comment or uncomment function for different comment styles.\nVicom's purpose is to rapidly comment out or restore blocks of source code whilst testing and\ndebugging. Used with the Vimake package it turns Vim in to a powerful programmers workbench.\nVicom once installed runs as an alias to both Vim and Gvim. So if you normally start a Vim\nsession such as:\n        vi newprog.cc   or gvim newprog.cpp\nVicom first examines the command line and determines that the comment and uncomment maps should\nbe for a cpp program. It then writes these maps to a small buffer then passes control on to Vim\nto perform its normal loading of the file. Now when you press <Ctl+X> or <Ctl+Y> the correct\ncomments occur in your program. If you load a file type that Vicom does not recognize the keymap\nbuffer is cleared.\nVicom recognizes the following file types. Gnu gcc,g++,Nasm,AT&T(gas)as,ruby,perl,python and bash.\n",
-  "rating_total": "0",
-  "rating_votes": "4",
-  "downloads": "64",
   "install_details": "copy package to your home directory\nrun    tar -zxvf vicom-1.05.tar.gz        (vers 1.04 had a bug in automake script)\ncd to ./vicom-1.05\nrun  .configure\nrun   make install\nrun  vcominst.\n\nFull installation and usage instruction are in the doc directory.",
   "versions": [
     {

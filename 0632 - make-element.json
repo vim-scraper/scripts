@@ -5,9 +5,6 @@
   "name": "make-element",
   "script_type": "utility",
   "description": "In insert mode, typing anyword,,, gets translated to an xml element named 'anyword'\n\nExample 1:\n      anyword,,,<cr><tab>xsl:if,,, ==>\n      <anyword>\n            <xsl:if>\n            </xsl:if>\n      </anyword>\nwith the cursor after the element open tag. \n\nIf anyword is not on a line by itself, no newline is added.\n\nExample 2:\nThis is a bold,,, statement ==> This is a <bold>statement</bold>\n\nUse it all the time myself, in docbook and with some custom dtd's.\n\nSee vimtip #465",
-  "rating_total": "85",
-  "rating_votes": "25",
-  "downloads": "1055",
   "install_details": "just source it from ftplugin/xml.vim or ~/.vimrc or _vimrc",
   "versions": [
     {

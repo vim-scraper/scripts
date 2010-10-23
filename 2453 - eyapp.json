@@ -5,9 +5,6 @@
   "name": "eyapp",
   "script_type": "syntax",
   "description": "Parse::Eyapp and Parse::Yapp (see http://search.cpan.org/dist/Parse-Eyapp/) are\nyacc-like parser generators for Perl. \nThe syntax file eyapp.vim provides syntax highlighting for the yapp and eyapp languages \n(see http://search.cpan.org/dist/Parse-Eyapp/)",
-  "rating_total": "4",
-  "rating_votes": "1",
-  "downloads": "259",
   "install_details": "Just add to your ~/.vim/filetype the lines that associate *.eyp and *.yp files with the eyapp language:\n\n ~/.vim$ cat filetype.vim\n\" my filetype file\nif exists(\"did_load_filetypes\")\nfinish\nendif\naugroup filetypedetect\n  \"eyapp and yapp programs\n  au BufRead,BufNewFile *.yp           setfiletype eyapp\n  au BufRead,BufNewFile *.eyp         setfiletype eyapp\naugroup END\n",
   "versions": [
     {

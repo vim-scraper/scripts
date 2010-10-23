@@ -5,9 +5,6 @@
   "name": "smart_cr",
   "script_type": "utility",
   "description": "Deprecated, use vimscript#1957\n\nExample\n-------\nPerhaps you editing C file:\n  #include <stdlib.h*>\n(* - cursor position)\nIf you hit Enter, new include directive will be inserted:\n  #include <stdlib.h>\n  #include <*>\n\nConfiguration\n-------------\nYou must create new hash g:smart_cr\n  let g:smart_cr = {}\nHash must contain arrays for different filetypes:\n  let g:smart_cr.c = [['^#include <', '^>$', \"#include \\<@@@>\"],\n                     \\['^#include \"', '^\"$', \"#include \\\"@@@\\\"\"]]\nWhen you hit Enter, line is divided on two parts - before and above\nthe cursor. First two strings are regular expressions for left and\nright parts of line. If they matched, third string will be inserted in\nnew line.\n\"@@@\" is marker where to place cursor. You may redefine it by setting\nglobal variable:\n  let g:smart_cr_marker = '<here>'\n\nAnother example\n---------------\nThis for Embedded ruby:\n  let g:smart_cr.eruby = [['<%[^=]', '^\\s*%>',  \"<% @@@ %>\"],\n                         \\['<%[^=]', '^\\s*-%>', \"<% @@@ -%>\"],\n                         \\['<%=',    '^\\s*%>',  \"<%= @@@ %>\"],\n                         \\['<%=',    '^\\s*-%>', \"<%= @@@ -%>\"]]",
-  "rating_total": "6",
-  "rating_votes": "3",
-  "downloads": "256",
   "install_details": "Place file into plugin folder",
   "versions": [
     {

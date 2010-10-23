@@ -5,9 +5,6 @@
   "name": "sablecc.vim",
   "script_type": "syntax",
   "description": "This file provides syntax highlighting for sablecc grammar. For windows compatible the \ngrammar should end with .scc\n",
-  "rating_total": "0",
-  "rating_votes": "0",
-  "downloads": "40",
   "install_details": "I have not try in windows. This instruction is for Linux\n1) Copy the file in syntax directory\n$ mkdir -p ~/.vim/syntax\n$ cp sablecc.vim ~/.vim/syntax\n\n2) Associate *.scc file with the script\ngvim ~/.vimrc\n\nput these line in the script:\n\naugroup filetypedetect\n\tau BufNewFile,BufRead *.scc setf sablecc\naugroup END\n\n",
   "versions": [
     {

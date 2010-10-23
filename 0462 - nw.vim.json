@@ -5,9 +5,6 @@
   "name": "nw.vim",
   "script_type": "syntax",
   "description": "\"nw.vim\" provides a simple syntax highlighting for NOWEB source files.\n\nNOWEB is a collection of tools for \"Literate Programming\". Unlike WEB or CWEB it is not bound to a specific programming language like PASCAL or C.\n\nFor more informations about NOWEB, the sources or binary distributions\nhave a look at\n\nhttp://www.eecs.harvard.edu/~nr/noweb\n\nFor informations about \"Literate Programming\" in general\n\nhttp://www.literateprogramming.com\n\ncould be a place to start.\n",
-  "rating_total": "4",
-  "rating_votes": "1",
-  "downloads": "483",
   "install_details": "Follow the instructions of \"new-filetype\" in the\nVIM manual, to edit/create your local version of\n`filetype.vim'. The line for NOWEB files should\nread\n\n  au! BufRead,BufNewFile *.nw   setfiletype nw\n\nCopy `nw.vim' to your local syntax file directory\n(see \"mysyntaxfile\" in the VIM manual) and add\na copy of `tex.vim' from your VIM installation,\nsuch that `nw.vim' can find it.\n\nThat's it! (Remember to restart VIM...)\n",
   "versions": [
     {

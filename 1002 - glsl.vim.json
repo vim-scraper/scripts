@@ -5,9 +5,6 @@
   "name": "glsl.vim",
   "script_type": "syntax",
   "description": "Syntax file for the OpenGL Shading Language.  The following is highlighted (as defined in the\nOrange Book):\n\n  - All gl_ variables\n  - All built-in functions\n  - All keywords\n\nThe syntax file was modified from c.vim, so you can expect that your GLSL shaders\nwill be highlighted similar to C files.\n\nAll reserverd keywords (that GLSL currently does not use) are highlighted as errors.\n\nKeywords: glsl glslang opengl shading language",
-  "rating_total": "105",
-  "rating_votes": "50",
-  "downloads": "1881",
   "install_details": "Place glsl.vim in your syntax directory:\n\ncp glsl.vim $HOME/.vim/syntax/.\n\nEnable highlighting with glsl.vim in your .vimrc with:\n\nau BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl\n\nor explicitly set the syntax with:\n\nset syntax=glsl",
   "versions": [
     {

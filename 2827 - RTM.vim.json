@@ -5,9 +5,6 @@
   "name": "RTM.vim",
   "script_type": "utility",
   "description": "============\nProject info\n============\n\nAuthor: Kosei Kitahara <surgo.jp@gmail.com>\nProject host: http://bitbucket.org/Surgo/rtm.vim/\n\n=====\nUsage\n=====\n\nAdd Task\n--------\n\n * add current line to task\n   `:C[RTM] -a` command\n * add current buffer to task\n   `:B[RTM] -a` command\n\n====\nTODO\n====\n\n * set tag, location, priority to task\n * complete task\n * delete task",
-  "rating_total": "0",
-  "rating_votes": "2",
-  "downloads": "92",
   "install_details": "=======\nInstall\n=======\n\n * get and set path to cURL (no need SSL)\n   http://curl.haxx.se/download.html\n   if windows, put curl.exe to vim home directory\n * get md5.vim plugin and put vim plugin directory\n   http://www.vim.org/scripts/script.php?script_id=2806\n * put rtm.vim to vim plugin directory\n\n==========\nActivation\n==========\n\n * get ur RTM (Non-commercial use) API key and shared secret\n   https://www.rememberthemilk.com/services/api/keys.rtm\n * set .vimrc file\n  * `let rtm_api_key='<ur api key>'`\n  * `let rtm_shared_secret='<ur shared secret>'`\n * get allow api access url via `:RTM -a` command\n * allow api access\n * get token via: `:RTM -t` command\n * token put .vimrc file\n  * `let rtm_token='<ur token>'`",
   "versions": [
     {

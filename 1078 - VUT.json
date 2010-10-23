@@ -5,9 +5,6 @@
   "name": "VUT",
   "script_type": "utility",
   "description": "VUT - Vim Universal Templates are direct continuation\nof VHT Script #988. Difference is you can define comment\nstrings and use editable or library tags in every type of\nfile (html, xhtml, css, javascript, cpp, tex, vim, etc.).\n\nWhen migrating from VHT - \nHAVE TO CHANGE\n- change name of core file from *.htmlmain into *.vutmain\n- default comment strings are /*, */, script package\n  is providing configuration for popular types of files:\n\txhtml, html, tex, vim\n\nNOT HAVE TO CHANGE\n- extensions of files are still the same (vhl, vht)\n\nOld commands are saved for backwards compatibility but added new set of\ncommands beginning with VUT or VUL. Note - VH commands may be dropped in\nfuture.\n\nAdditional changes:\n- VULupdate/VUTupdate can take name of library as an argument. Example:\n\t:VULupdate panel.vhl\n\tThis will update contents of LibraryItem panel.vhl regardless of cursor\n\tposition. Superuseful in connection with :argdo family. Argument had be\n\ta full path with .vhl extension.\n- added: use ~/Library/ for global library items for VULshow.  \n- fixed: VUTcommit.\n",
-  "rating_total": "10",
-  "rating_votes": "4",
-  "downloads": "1297",
   "install_details": "copy zip archive to you vimfiles/.vim directory. unzip it.\nGLVS AutoInstall compatible.\n\nInstall help with :helptags ~/doc\n",
   "versions": [
     {

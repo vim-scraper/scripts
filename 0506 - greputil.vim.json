@@ -5,9 +5,6 @@
   "name": "greputil.vim",
   "script_type": "utility",
   "description": "This script simplifies usage of the :grep-command and the navigation\nthrough search results and search history.\n\nTo start search for the word under the cursor or for the visually\nselected text press <Leader>gr. If there is no word under the cursor,\nyou will be prompted for a search-string. To be prompted for a\nsearch-string anyway pressing <Leader>ga will do it.\n\nFiles will be searched in the actual directory. The file pattern\ncan be defined by a global variable, its default is\n\"*.c *.h *.cpp *.hpp\" (yes, this script is primarily for\nprogrammers :-) )\n\nTo show search-results open quickfix-window with :copen.\nTo navigate through the occurrences press <F6> or <F7>.\nTo bring back results of older or newer search-sessions press\n<S-F6> or <S-F7>.",
-  "rating_total": "70",
-  "rating_votes": "34",
-  "downloads": "1465",
   "install_details": "To use this script copy it into your local plugin-directory\n(Unix: ~/.vim/plugin). After starting VIM this script is sourced\nautomatically.",
   "versions": [
     {
