@@ -7,7 +7,7 @@
   "description": "a very basic python compiler script. The last line of errorformat \n              \\%-G%.%#\nis meant to suppress all  further error messages after the traceback has been dealt with so that it will be possible to use :clast to go to the last error location which in most cases in Python is the one that has caused the error to happen. \nPlease note that if python is not in the path you have to edit the line \nsetlocal makeprg=python\nso that it contains the path of the python interpreter (e.g. c:\\python22\\python).\nAlso, if you want always to make the current file you may wish to add  a\n\\ %\nto the same line, so that:\nsetlocal makeprg=python\nshould then look like:\nsetlocal makeprg=python\\ %\n(Thanks to Guy Oliver for this tip).\n\nIf you want to syntaxcheck the current python file without executing it, you could use the following function (from python_box.vim):\n\nfunction! CheckPythonSyntax()\n  let curfile = bufname(\"%\")\n  exec \":make \" . \"-c \" . \"\\\"import py_compile; py_compile.compile(r'\" . bufname(\"%\") . \"')\\\"\"\nendfunction\n",
   "rating_total": "25",
   "rating_votes": "14",
-  "downloads": "1783",
+  "downloads": "1787",
   "install_details": "just add to the compiler plugin directory",
   "versions": [
     {

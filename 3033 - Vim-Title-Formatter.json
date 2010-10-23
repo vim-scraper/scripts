@@ -7,7 +7,7 @@
   "description": "This simple script formats the title string of the gvim/vim instance in the following format:\n\n<servername/user-defined title> | <current filename> (<filepath>)\n\nA user-defined title will take precedence over the servername. If the servername and user-defined title are both not defined or blank, then the title is simply \n\n<filename> (<filepath>)\n\nIf you ever work on multiple projects (each with its files open in a single gvim instance), then using this script, a glance will tell you which instance you're looking at (based on servername or user-defined title)\n\n:SetVimTitleString <titlestring>\n\nwill set the title of the window.\n\n:ClearVimTitleString\n\nwill clear the title of the window.",
   "rating_total": "3",
   "rating_votes": "5",
-  "downloads": "110",
+  "downloads": "113",
   "install_details": "Simply copy the file into your .vim/plugin directory. \n\n:SetVimTitleString <titlestring>\n\nwill set the title of the window.\n\n:ClearVimTitleString\n\nwill clear the title of the window.",
   "versions": [
     {

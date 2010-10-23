@@ -7,7 +7,7 @@
   "description": "The WhereFrom and WF commands search the runtimepath (see |'runtimepath'|) to determine where the setting, function, map, or command was defined.  With the \"!\", WhereFrom will continue looking for more than one instance.\n\n    WhereFrom[!] functionname(s)      WF[!] functionname(s)\n    WhereFrom[!] map(s)               WF[!] map(s)\n    WhereFrom[!] setting(s)           WF[!] setting(s)\n    WhereFrom[!] command(s)           WF[!] command(s)\n\n\nWF-style commands are available only if the command has not been previously defined, and are provided as a shorthand.\n\nA search is undertaken only for functions, commands, and maps, and then only if the function, command, or map is known to the currently running vim.  Determining where settings are set is done using vim's built-in method.\n\nThese commands don't search all *.vim files that you may have; it only examines those that lie on your runtimepath in the common directories plugin, ftplugin, colors, compilier, indent, syntax, and the after/ variants.  In addition, it also searches the AsNeeded directory (see vimscript#915)\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#WHEREFROM)\n",
   "rating_total": "11",
   "rating_votes": "5",
-  "downloads": "710",
+  "downloads": "711",
   "install_details": "* As usual with plugins: install it into your .vim/plugin (Windows: vimfiles\\plugin) directory.\n\n* gunzip WhereFrom.vim.gz\n\nThe next time you run vim, the embedded HelpExtractor (vimscript#748) will make the help for WhereFrom available (and remove itself from the WhereFrom script).",
   "versions": [
     {

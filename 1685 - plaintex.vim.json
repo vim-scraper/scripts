@@ -7,7 +7,7 @@
   "description": "ftplugin/plaintex.vim\ncompiler/plaintex.vim\ndoc/ft-plaintex.txt\n\nThis package provides a compiler plugin and a filetype plugin for editing plain TeX documents ('ft' = plaintex).  It is intended to be used in addition to the default ftplugin for plaintex, which I also maintain.\n\nThe compiler plugin enables you to run tex (or pdftex) on your file with\n  :make\nand then correct errors using quickfix mode.\n\nThe filetype plugin maps \" (double quote mark) to insert `` (open quotes) at the start of a quotation, then '' (close quotes) at the end.  It also maps <C-B> to insert \"{\\bf }\" and <C-T> to insert \"{\\it \\/}\".  Both of these keys work in Normal, Insert, and Visual modes.",
   "rating_total": "2",
   "rating_votes": "2",
-  "downloads": "515",
+  "downloads": "516",
   "install_details": "Copy the zip archive to your vim directory (e.g., ~/.vim on *NIX) and\n  $unzip plaintex.zip\nto unpack the three files.  From within vim, use\n  :helptags ~/.vim/doc\n(or whatever other directory you use) to install the help file.\n\nConfiguration:  There is a section of the ftplugin file that you can edit to change the key mappings and the menu location.  If you have already edited this section, then write it out to a separate file, plaintex.vimrc, in the ftplugin directory before you install a new version.",
   "versions": [
     {

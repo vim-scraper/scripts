@@ -7,7 +7,7 @@
   "description": "ERM is a script language, the design is similar to most assembler language such as ARM assembler. \n\nBut the source code is extremely difficult to read without syntax highlight due to it's obfuscated syntax.\n\nNow you can edit ERM in Vim, bear in mind that ERM script must always be saved in Unix format even in MacOS and Windows. If anything does go wrong, open the script in ERM_S and save it.\n\nEnjoy!",
   "rating_total": "11",
   "rating_votes": "6",
-  "downloads": "325",
+  "downloads": "326",
   "install_details": "copy the file into your ~/vimfiles/syntax/erm.vim for windows, or ~/.vim/syntax/erm.vim for other OS.\n\nthen edit $VIMRUNTIME/filetype.vim to add the following:\n\" Event Related Model\nau BufNewFile,BufRead *.erm\t\t\tsetf erm\n\nif you use modeline then you don't need to edit filetype.vim\n\nNote: the file was saved in dos format by mistake, if you use it on Linux you must convert the erm.vim into Unix format, though I expect most users will use erm on Windows.\n",
   "versions": [
     {

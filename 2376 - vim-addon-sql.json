@@ -7,7 +7,7 @@
   "description": "KISS implementation of SQL completion for Vim:\n\nFirst you have to connect to a database. Examples:\n\n  MySQL:\n  call tovl#ft#sql#Connect('mysql',{'host':'127.0.0.1','database':'DATABASE', 'user':'USER', 'password' : 'PASSWORT'})\n\n  SQLITE:\n  call tovl#ft#sql#Connect('mysql',{'database':'filepath'})\n\n  Postgresql (see code)\n\nA connection only initializes b:db_conn which is a Vim object providing\nfunctions for querying the database.\n\nSetup mappings by calling this function:\n  call vim_addon_sql#UI()\n\nIn non visual mode the query start / end is determined by either ; or empty lines.\nIn visual mode the selection will be executed\n\nExecution is done by command line tools (psql, mysql, sqlite(3))\nThe result of those queries is parsed by Vim to fill alias aware completion.\n\nExample:\n\n1)\n  SELECT *, CURSOR FROM table1, table2\n  Now CURSOR will only contain fields found in either table1 or table2\n\n2)\n  SELECT *, a.CURSOR FROM table1 as a, table2\n  Now the completion will only contain fields of table1\n\nExpect some minor bugs - however this it works quite nicely in practise.\n\ncamel case like completion is also supported. eg d_u -> db_users\n\nIf you have any questions contact me.\n",
   "rating_total": "2",
   "rating_votes": "2",
-  "downloads": "203",
+  "downloads": "204",
   "install_details": "The *info* file in the top level directory contains all dependencies. I recommend using vim-addon-manager to install them all at once",
   "versions": [
     {

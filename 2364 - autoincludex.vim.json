@@ -7,7 +7,7 @@
   "description": "Place the cursor on the type you need to include. If it is your class,\nfor example MyClass, enter in Normal mode:\n       :call AutoIncludeCC()\nThe string #include \"myclass.h\" will be inserted in file.\nFor type from library, for example STL, enter:\n       :call AutoIncludeLib(\"stl\")\n At first time you well be prompted to enter the correct header. You\nshould enter full text for include statement, i.e. with < >. In next\ntime this header will be inserted automatically even after reloading of   vim.\nYou can also place the special marks into file. For you types this is\nthe \"project headers\". In this case #include will be inserted after\nline with this text:\n   //project headers\n   #include \"myclass.h\"\nFor type from the libraries this text is the \"libname headers\", where libname\nis name of library:\n   //stl headers\n   #include <vector>\n\n   //wx headers\n   #include <wx/menu.h>\n\n Of course, you can create map for calling of this function:\nmap ;; :call AutoIncludeCC()<cr>\nmap ;;w :call AutoIncludeLib(\"wx\")<cr>",
   "rating_total": "4",
   "rating_votes": "1",
-  "downloads": "235",
+  "downloads": "236",
   "install_details": "Put autoincludex.vim file in your ~/.vim/plugin. Create directory \n ~/.vim/includesdb where databases of headers will be saved. You can use\n any directory, but in this case you should set the variable\n g:dict_inc_db_path in correct value.\n",
   "versions": [
     {

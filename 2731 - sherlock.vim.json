@@ -7,7 +7,7 @@
   "description": "sherlock.vim add completion from current buffer for command line mode ':' after a '/', and in command line mode '/' and '?'.\n\nBy default, it use <C-Tab> for forward completion, and <C-S-Tab> for backward completion.\n\nFor example:\n:%s/tes<C-Tab> list all word which begin with 'tes' after current cursor position;\n:%s/tes<C-S-Tab> list all word which begin with 'tes' before current cursor position;\n/tes<C-Tab> list all word which begin with 'tes' after current cursor position;\n/tes<C-S-Tab> list all word which begin with 'tes' before current cursor position;\n?tes<C-Tab> list all word which begin with 'tes' after current cursor position;\n?tes<C-S-Tab> list all word which begin with 'tes' before current cursor position;\n\nIn ':' mode, completion is available only after a '/'.\n\nWhen the right string is in command line, you can:\n1) Validate it with <Enter>, or type <Esc> to go away from command line if you are in '?' or '/' mode;\n2) Validate it with <Enter> or '/', or type <Esc> to go away from command line if you are in ':' mode.\n\nYou can override the default mapping with something like that in your .vimrc:\ncnoremap <Whatever you want here> <C-\\>esherlock#completeBackward()<CR>\ncnoremap <Whatever you want here> <C-\\>esherlock#completeForward()<CR>\n\nYou can disable this plugin with this line in your .vimrc:\nlet sherlock#disable = 1\n\nPlease, report any bug to sherlock.vim[..at..]mageekbox.net.",
   "rating_total": "26",
   "rating_votes": "8",
-  "downloads": "480",
+  "downloads": "482",
   "install_details": "Download vimball, open it with vim, and do :so %. ",
   "versions": [
     {

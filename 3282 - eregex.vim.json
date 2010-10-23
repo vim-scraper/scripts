@@ -1,0 +1,30 @@
+{
+  "script_id": "3282",
+  "display_name": "eregex.vim",
+  "summary": "Perl/Ruby style regular expression",
+  "name": "eregex.vim",
+  "script_type": "utility",
+  "description": "# Introduction\n\n\"http://vim.wikia.com/wiki/Perl_compatible_regular_expressions&quot;\n\nIn this tip. I introduced a plugin to help you use Perl style regular expression in Vim.\nBut the maintainer is disappear. And the default package is not easy to install.\nSo I start to maintain it.\n\nRepo: http://github.com/othree/eregex.vim\n\n\n# Quick Start\n\nAdd the following code to .vimrc file.\n\nnnoremap / :M/\nnnoremap ,/ /\n\nNow you can use / to use Perl style regexp to find.\n:S (uppercase S) to use Perl style regexp to replace. \n\n\n# Attribute\n\nAuthor : 安久津\n",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "4",
+  "install_details": "Release using vimball package.\nOpen it with Vim and execute :so % .\n\nOr you can clone the repo and execute make install.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14076",
+      "filename": "eregex.vim-2.56.vba",
+      "script_version": "2.56",
+      "date": "2010-10-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "21172",
+        "user_name": "othree",
+        "first_name": "wei ko",
+        "last_name": "kao",
+        "email": "othree at gmail.com",
+        "homepage": "http://blog.othree.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

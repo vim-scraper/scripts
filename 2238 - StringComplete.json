@@ -7,7 +7,7 @@
   "description": "This script allows you to auto-complete quoted strings (\"...\" and '...') in the same way that you can complete keywords or filenames.\n\nIf you have any trouble installing or using, email me toomuchphp-vim at yahoo.com.",
   "rating_total": "7",
   "rating_votes": "7",
-  "downloads": "333",
+  "downloads": "336",
   "install_details": "Put StringComplete.vim into ~/.vim/autoload/ or c:\\Program Files\\vim\\vimfiles\\autoload\\\n\nTo map a keystroke such as CTRL-J to get the list of strings, add the following command to\nyour .vimrc:\n\n  inoremap <C-J> <C-O>:set completefunc=StringComplete#GetList<CR><C-X><C-U>\n\nAfter pressing CTRL-J in insert mode, the first matching string will be inserted. Then, use\nCTRL-N and CTRL-P to cycle through the completion list.\n",
   "versions": [
     {

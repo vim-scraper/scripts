@@ -1,13 +1,13 @@
 {
   "script_id": "3065",
   "display_name": "mayansmoke",
-  "summary": "Pleasant and ergonomic light-background color scheme.",
+  "summary": "Ergonomic light-background color scheme.",
   "name": "mayansmoke",
   "script_type": "color scheme",
   "description": "This is a pleasant and ergonomic light-background color scheme, designed for long hours of coding and working. The UI elements are muted without being drab, the syntax elements are colorful without being garish, and the background is relaxing without being soporific. It is of a low-enough contrast so as not to cause eye-burn, but high-enough contrast so as not to cause eye-strain. The syntax coloration offers just a little higher resolution than most, distinguishing between class names vs. functions, strings and numbers vs. other constants, etc. Many of the colors in this color scheme are drawn from Mayan murals, paintings and codices, and thus the name.\n\nScreenshots:\n==========\n\n    - Python: http://jeetworks.org/files/images/mayansmoke-python1.png\n    - C++: http://jeetworks.org/files/images/mayansmoke-cpp1.png\n\nCustomization:\n==============\n\nIf any of the following highlights are defined (e.g., in your \"~/.vimrc\"), these will override the default highlight definitions:\n\n    MayanSmokeCursorLine    (will be applied to: CursorColumn and CursorLine)\n    MayanSmokeSearch        (will be applied to: Search and IncSearch)\n    MayanSmokeSpecialKey    (will be applied to: SpecialKey)\n\nFor example, you can set the following in your \"~/.vimrc\" to select your own colors for these items:\n\n    hi MayanSmokeCursorLine     guifg=NONE   guibg=yellow  gui=NONE\n    hi MayanSmokeSearch         guifg=white  guibg=blue    gui=NONE\n    hi MayanSmokeSpecialKey     guifg=NONE   guibg=green   gui=NONE\n\nAlternatively, you can define one or more of the following values in your \"~/.vimrc\" to select different pre-defined levels of visibility for the above highlights:\n\n    let g:mayansmoke_cursor_line_visibility = 0  \" lower visibility\n    let g:mayansmoke_cursor_line_visibility = 1  \" medium visibility\n    let g:mayansmoke_cursor_line_visibility = 2  \" higher visibility\n\n   let g:mayansmoke_search_visibility = 0 \" low visibility\n   let g:mayansmoke_search_visibility = 1 \" medium visibility (default)\n   let g:mayansmoke_search_visibility = 2 \" high visibility\n   let g:mayansmoke_search_visibility = 3 \" very high visibility\n   let g:mayansmoke_search_visibility = 4 \" highest visibility\n\n    let g:mayansmoke_special_key_visibility = 0  \" lower visibility\n    let g:mayansmoke_special_key_visibility = 1  \" medium visibility\n    let g:mayansmoke_special_key_visibility = 2  \" higher visibility\n\n\n",
-  "rating_total": "90",
-  "rating_votes": "30",
-  "downloads": "1348",
+  "rating_total": "91",
+  "rating_votes": "31",
+  "downloads": "1405",
   "install_details": "Download/save/copy/move the file \"mayansmoke.vim\" to your \"$VIMRUNTIME/colors\" directory (e.g., \"~/.vim/colors\"). Activate the color scheme by entering the command, \":colors mayansmoke\".",
   "versions": [
     {

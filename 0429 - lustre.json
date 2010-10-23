@@ -7,7 +7,7 @@
   "description": "this script compiles and runs a lustre program \nthere are 2 maps that hace been;\n<m-c>    compile \n<m-r>     run\nto run it u must first compile it succesfully...run does not make compilation\n\nfor each case the action is for the current node and for that the file must be of the format \nnode nodename",
   "rating_total": "0",
   "rating_votes": "0",
-  "downloads": "352",
+  "downloads": "353",
   "install_details": "put it in the ftplugins directory...\n\nprobably u'll need a file \"filetype.vim\"\ncontaining the below (for the recognision of the lustre file type)\n\nfiletype.vim:\n\n\" Lustre file\naugroup filetypedetect\n  au! BufRead,BufNewFile *.lus  setfiletype lustre\naugroup END\n\n\n\n",
   "versions": [
     {

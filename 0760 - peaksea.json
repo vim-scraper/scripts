@@ -7,7 +7,7 @@
   "description": "The peak sea color (peaksea.vim) is the new version of the well-known colorscheme ps_color.\n\nNow the color contains light-background scheme for gui and 256 color term, with dark-background scheme supporting gui and 256 and 16 color term.\n\nYou can fire any issues at http://code.google.com/p/peaksea/issues/list\n",
   "rating_total": "788",
   "rating_votes": "278",
-  "downloads": "17813",
+  "downloads": "17856",
   "install_details": "put the peaksea.vim in your $HOME/.vim/colors/ (or %HOME%\\vimfiles\\colors for Windows)\n\nTo enable the scheme, you can put in ~/.vimrc the following:\n\nif ! has(\"gui_running\")\n    set t_Co=256\nendif\n\" feel free to choose :set background=light for a different style\nset background=dark\ncolors peaksea\n\nThe newest version of most modern terminal emulators have 256 color support, the following has been tested:\nworks great: xterm, konsole 4.2+, gnome-terminal, xfce4-terminal, putty for windows, \nworks after some tweaks: screen (recompile and add a .screenrc, google for details.), konsole 3.x (I had provided a patch at https://bugs.kde.org/show_bug.cgi?id=169013)\nworks with issue: rxvt (no 256-color by default, needs hack for 256-color support)\n\nThe 16-color support has no difference from the ps_color.vim, you'll need to tune color codes for 16-color to work, the instructions can be found inside the old ps_color.vim. There are predefined konsole and xfce4-terminal profile at http://code.google.com/p/peaksea/source/browse/trunk\n\nNote: if you don't like the dark-black background and want it be pure black: simply search for the following line\nhi Normal guifg=#d0d0d0 guibg=#202020 gui=NONE\nand change #202020 into #000000.\n",
   "versions": [
     {

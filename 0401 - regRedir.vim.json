@@ -7,7 +7,7 @@
   "description": "\" Description: This plugin defines a 'Redir' command that takes a register\n\" and one or more {bar} separated commands. This command will execute \n\" these commands and collect their output into the specified register.\n\" The resulting register could than be inserted anywhere with a :put\n\" The register must always be specified, and is the first character \n\" of the command argument. The remainder of the argument is the command\n\" to be captured. This command may be separated from the register with \n\" a space. Several commands can be specified, but have to be separated\n\" with a bar:\n\"\n\" :Redir {reg} {cmd} [ | {cmd} [ | {cmd} ... ] ]\n\" \n\" Examples:\n\" 1) Simple case of one command (e.g. :version) to be captured into \n\"    register v\n\"\t    :Redir vversion\n\"\t or\n\"\t    :Redir v version\n\" 2) Example of two commands (ls and set) to be collected into \n\"\t register p\n\"\t    :Redir p ls | set\n\"\t or\n\"\t    :Redir pls|set\n\" 3) Example of a command (g/exe) to be appended to register x\n\"\t    :Redir Xg/exe\n\"\t or\n\"\t    :Redir X g/exe\n\"\n",
   "rating_total": "3",
   "rating_votes": "3",
-  "downloads": "436",
+  "downloads": "437",
   "install_details": "\" Installation: Just unzip and copy this file into your ~/vim/plugin \n\"\t\tor corresponding directory\n",
   "versions": [
     {

@@ -7,7 +7,7 @@
   "description": "A simple syntax file for DokuWiki.\n\nThis consists completely of slight modifications to wikipedia.vim, vimscript #1787, so you'll need to get\nthat script too, or not much will happen.\n\nI'm no expert, so do let me know if you find any mistakes. My email is in both files. Thanks. :)\n\nThis file also provides a few mappings for doing those pesky headers.\n\n,,h1 through ,,h6 will give you a header. This should allow you to press \",,h1\" in INSERT mode, then type your header, then press <C-j> to \njump to the next line. \n\n(If <C-j> doesn't jump for you, let me know; this may require latex-suite\n(http://vim-latex.sf.net), but that would be a hefty thing to download just for this.)\n\nYou can also use ,,hd to demote a header, and ,,hp to promote it.",
   "rating_total": "5",
   "rating_votes": "4",
-  "downloads": "523",
+  "downloads": "525",
   "install_details": "First get Wikimedia.vim (vimscript #1787).\n\nThen, just copy dokuwiki.vim to your $HOME/.vim/syntax/ directory.\n\nAt present, you have to activate this highlighting manually.\n\n:se ft=dokuwiki\n\nbecause there isn't a canonical extension for DokuWiki files (at least, that I know of). However, you can set all *.txt files to automatically be set to DokuWiki if you wish.\n\nMake or edit $HOME/.vim/ftdetect/txt.vim:\n\n\" Taken from http://en.wikipedia.org/wiki/Wikipedia:Text_editor_support#Vim\n\" \tIan Tegebo <ian.tegebo@gmail.com>\n\naugroup filetypedetect\n\tau BufNewFile,BufRead *.txt,*.wiki setf dokuwiki\naugroup END\n\nNow any *txt or *wiki file should open as dokuwiki.",
   "versions": [
     {

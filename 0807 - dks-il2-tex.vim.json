@@ -7,7 +7,7 @@
   "description": "Central European chars in latin2 (cp1250, pl2) and TeX encoding\n\nThe most of Central European accented characters are defined,\nalso in TeX encoding. Changing encoding between these codes. I used to work\nwith:\n\n- 'digraphs', but not all CTRL-K {char1} {char2} work the way that I want;\n  it does not work in command-line mode and in search also.\n- 'keymap' (see 'loadkeymap') but it does not works to me anyway, and in\n  $vim/keymap/accents.vim there are no all CZ, HU and SK chars from\n  mentioned encodings (I think there are just East European characters).\n  \nThis 'keymap' shows more MSWord \"compatibility\" for Central Europe (I\nthink), for those who works half-time with Word it is very useful :-) \n\nUsage: Use [=+:;.,^] + <char> to write an accented character: <char> with\nacute, ve, etc.\n\n- <leader>at - convert the file from accents to TeX and map TeX deadkeys\n- <leader>ta - convert the file from TeX to accents and map accent dedakeys\n- <leader>da - map accent dedakeys\n- <leader>dt - map TeX deadkeys\n- <leader>du - unmap deadkeys\n\n<leader> is usually a '\\&#039",
   "rating_total": "0",
   "rating_votes": "0",
-  "downloads": "307",
+  "downloads": "308",
   "install_details": "Put one of the files into $HOME/.vim/plugin/.",
   "versions": [
     {

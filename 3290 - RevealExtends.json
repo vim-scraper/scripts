@@ -1,0 +1,30 @@
+{
+  "script_id": "3290",
+  "display_name": "RevealExtends",
+  "summary": "A plugin to reveal extended URLs from the buildout cache",
+  "name": "RevealExtends",
+  "script_type": "utility",
+  "description": "Developers can use zc.buildout to manage the build of a software project. It\nis most commonly used in the Zope and Plone world, but has been gaining\ntraction in other communities like Django.\n\nOne of the nice things about buildout is the ability to define the\nconfiguration via ini style files. You can extend a local file or a URL. In\nversion 1.4.0 of buildout, the option to cache the URL locally was added along\nwith the new download API.\n\nHere is an example: >\n\n    [buildout]\n    versions = versions\n    extends = \n       http://dist.example.org/versions.cfg\n       versions.cfg\n\n>\n\nThis allows you to pull in a list of versions from example.org. If you have\nyour default.cfg setup to cache the URL then you could find that file\nmanually. This requires that you know the md5 hash of the URL string. Not the\nmost convenient way to find the file. This is where the plugin comes in\nhandy.\n\nThe plugin allows you to use the current line, a visual selection or a string\npassed in to get the contents of the extended URL using the :RevealExtends command.\n\nSee the included docs for more information.\n\nPython support is required for retrieving the URL from the internet if it can't\nbe found in the cache.\n\nSee the code on github: http://github.com/claytron/RevealExtends",
+  "rating_total": "0",
+  "rating_votes": "0",
+  "downloads": "3",
+  "install_details": "Use pathogen (vimscript #2332) for easiest install experience.\n\nOtherwise, place RevealExtends.vim into your ~/.vim/plugin folder and the accompanying RevealExtends.txt into your ~/.vim/doc folder.\n\nThen run :helptags ~/.vim/doc to get the help doc into vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14101",
+      "filename": "RevealExtends-1.0.zip",
+      "script_version": "1.0",
+      "date": "2010-10-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18115",
+        "user_name": "claytron",
+        "first_name": "Clayton",
+        "last_name": "Parker",
+        "email": "clayton at sixfeetup.com",
+        "homepage": "http://claytron.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

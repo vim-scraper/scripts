@@ -7,7 +7,7 @@
   "description": "With the introduction of the autoload directory, plugins were often \nsplit into several separate files. The downside is that it isn't always \nthat obvious which files are actually loaded on startup.\n\nThis macro creates a CSV file including a list of loaded files during \nstartup and some indicators (number of lines/bytes, timing). You can \nopen this (semicolon-separated) CSV in any spreadsheet application, sort \nthe data etc.\n\nIn order to activate the macro, check the value of g:startup_profile_csv \nin the source code and temporarily insert the following line(s) at the \nbeginning of your |vimrc| file: >\n\n    \" Setting g:startup_profile_csv is optional.\n    let g:startup_profile_csv = \"...\"\n    runtime macros/startup_profile.vim\n\nThe list can serve as a starting point for optimizing your startup time, \ne.g. by delaying certain calls to functions in autoload files or by \nmaking use of the AsNeeded (vimscript #915) or the tplugin (vimscript #2917) \nplugins.\n\nDepending on your system configuration and the speed of your hard drive, \nseeking for files or, e.g., creating menu entries may prove to be costly \nwith respect to startup time.\n",
   "rating_total": "10",
   "rating_votes": "4",
-  "downloads": "201",
+  "downloads": "203",
   "install_details": "startup_profile requires vim 7.2.\n\nEdit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details.\n\nAdd \"runtime macros/startup_profile.vim\" to your |vimrc| file but see \nabove.\n\nAlso available via git: http://github.com/tomtom/startup_profile_vim\n\nNOTE. The script category (see above) is wrong. This is a utility/macro,\nno patch.",
   "versions": [
     {

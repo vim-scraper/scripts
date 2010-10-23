@@ -7,7 +7,7 @@
   "description": "This script has a number of maps that intercept various motions and cause the current line to be highlighted.  It is a variant of <HiMtchBrkt.vim> (vimtip#177).\n\n    \\hcli : initiate HiCurLine operation\n    \\hcls : stop HiCurLine operation\n\n(see vimtip#411 to have HiCurLine automatically begin highlighting)\n\nHiCurLine.vim uses the HL_HiCurLine highlighting group (by default) to specify the highlighting of the current line.  One may change the highlighting group HiCurLine uses with the g:HL_HiCurLine variable.  By default,\n\n\tlet g:HL_HiCurLine= \"HL_HiCurLine\"\n\nand <HiCurLine.vim> will specify that group internally.  Otherwise, one may change the group used to whatever one wishes:\n\n\tlet g:HL_HiCurLine= \"Search\"\n\tlet g:HL_HiCurLine= \"Function\"\n\netc.  The default highlighting is: (background is a setting, see :he 'bg')\n\n\tbackground == dark : blue text on cyan background\n\tbackground == light: cyan text on blue background\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#HICURLINE)\n",
   "rating_total": "84",
   "rating_votes": "64",
-  "downloads": "3483",
+  "downloads": "3484",
   "install_details": "1. Put into your .vim/plugin or\n   _vimfiles\\plugin directory (Unix/Windows)\n2. \\hcli (actually <Leader> hcli) will\n   begin the highlighting.\n3. \\hcls will terminate HiCurLine activity, restoring any previous maps, etc. (actually <Leader>hcls)\n   (see :he mapleader for more on how to customize the leading characters of mappings)\n\n",
   "versions": [
     {

@@ -7,7 +7,7 @@
   "description": "If you want to scroll backward (and forward) and search within long output of the vim command (such as :au, :let), execute command with prefix VO. \n\nVO (viewoutput) will place output of vim command in new buffer where you can search and view it using vim commands. Example:\n\n      :VO au\n      :VO let",
   "rating_total": "20",
   "rating_votes": "11",
-  "downloads": "887",
+  "downloads": "890",
   "install_details": "Drop viewoutput.vim into your ~/.vim/plugin directory.\n\nTo change the command that creates the preview window (the default is \"new\"),\nyou can edit definition of g:viewoutput_newbuffer variable at the beginning of\nscript:\n\nlet g:viewoutput_newbuffer=\"5new\"     | \" create preview window 5 lines high\nlet g:viewoutput_newbuffer=\"bot 5new\" | \" bottom preview window 5 lines high\n",
   "versions": [
     {

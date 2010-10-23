@@ -7,7 +7,7 @@
   "description": "This script loads Vim configuration files at startup beginning\nfrom the root directory down to the current working directory.\n\nThis is useful when you want to to set up a specific configuration that\nis only loaded when you edit files within a certain directory.\n \nLet's look at a common situation. To configure Vim depending on your\nproject, your tree would look like this:\n\n~/projects  .................................. Your programming projects\n~/projects/.vim  .......................... Vim settings for all your projects\n~/projects/c-projects  ................ Your C projects\n~/projects/c-projects/.vim  ........ Vim settings for your C projects\n~/projects/php-projects  ........... Your PHP projects\n~/projects/php-projects/.vim  ... Vim settings for your PHP projects\n\nWhen you open the file ~/projects/c-projects/main.c the plugin loads\nthis files in the given order:\n\n~/projects/.vim\n~/projects/c-projects/.vim\n\nThe scripts autoloads files with the name\n\n      _vimrc\n      _vim\n      .vimrc\n      .vim\n\n",
   "rating_total": "27",
   "rating_votes": "8",
-  "downloads": "214",
+  "downloads": "215",
   "install_details": "Copy \"perdirvimrc.vim\" to your local plugin folder.",
   "versions": [
     {

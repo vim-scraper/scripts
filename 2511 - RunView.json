@@ -7,7 +7,7 @@
   "description": "RunView runs user-selected lines, selected either via a range provided to the RunView command or by visual-line selection (V), through a filter.  By default, the filter is ksh; however, the runview-filtcmd can be set (let g:runview_filtcmd=\"someotherfilter\") in your <.vimrc> to override this.  The RunView command lets you specify the filter on the command line, too.\n\nThe output is placed in a separate window; it is horizontally or vertically placed.  Source code is left unchanged and visible.\n\nWithout the !, the RunView command uses horizontally adjacent windows.  With the !, the RunView command uses vertically stacked windows.\n\nAs an example, consider the file:\n\techo \"one\"\n\techo \"two\"\n\techo \"three\"\nUsing\n\t:%RunView! ksh\nthe source code window is left on top, but the results of filtering the three lines is shown below it: \n\techo \"one\"\n\techo \"two\"\n\techo \"three\"\n\t-------------\n\tRunView ksh Output Window\n\t=== 01/02/05 06:07:08 ===\n\tone\n\ttwo\n\tthree\nRunView provides a title and a separator.  Subsequent applications of RunView will append a new separator line plus the new filter output.\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#RUNVIEW)\n",
   "rating_total": "12",
   "rating_votes": "3",
-  "downloads": "375",
+  "downloads": "376",
   "install_details": "vi RunView.vba.gz\n:so %\n\n(you need to have   filetype plugin on   in your .vimrc, too)",
   "versions": [
     {

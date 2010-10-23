@@ -7,7 +7,7 @@
   "description": "http://github.com/MarcWeber/vim-addon-ocaml\n\nThis collection includes well known scripts I was pointed to such as ocaml\nindentation, annot support as well as omni completion support\n\nI modified the indenting slightly so that the args  \"..\" and x y are not\nindented at all. (Using vim indentation they are indented the same as Printf\nwhich is annoying)\n\nlet f x =\n  let y = x + 1 in\n  Printf.printf\n    \"%d + 1 = %d\"\n    x y\n\ncompletion details:\n====================\n\nAll completion is based on .mli files found in all tag files.\nIf you don't have tags, tell Vim which .mli files to use:\n\nlet g:vim_addon_ocaml = { 'provide_additional_mlis': function('name of function returning a list of .mli files') }\n\na) name completion:\n  all .mli files are grepped for the name\n  Additionally all let bindings found in current buffer are taken into account\n\nb) type completion:\n\n  con:str           finnds concat : string -> string\n\n  :^int->string$    finds string_of_int\n\nc) var based completion (not that well tested)\n\n  x:conc\n\n  the type of x is looked up by .annot files (you must have created the musing ocamlc or ocamelopt)\n  Then b) completion is used using the type of x.\n",
   "rating_total": "0",
   "rating_votes": "0",
-  "downloads": "37",
+  "downloads": "38",
   "install_details": "Recommended way of installation: use vim-addon-manager because it depends on a set of other plugins. See http://github.com/MarcWeber/vim-addon-manager\n\nIf you have any trouble don't blame - send me a message instead. Thanks",
   "versions": [
     {

@@ -7,7 +7,7 @@
   "description": "Syntax highlighting for the XML User interface Language (XUL) a.k.a. eXtensible User interface Language.  Based on Nicolai Nespor's xul.vim v0.5.  Follows XUL's reference at http://developer.mozilla.org/en/docs/XUL_Reference.\n\nAlso available at http://bioinf.ibun.unal.edu.co/~miguel/?id=5",
   "rating_total": "40",
   "rating_votes": "13",
-  "downloads": "697",
+  "downloads": "698",
   "install_details": "Just place file into syntax folder.  To tell vim detect *.xul files automatically, just put the following line into filetype.vim (into the vim configuration dir) before the XML line:\nau BufNewFile,BufRead *.xul  setf xul\nIf you want to disable the attributes syntax, put let nohl_xul_atts = 1 in your ./[g]vim.\n<script/> is not the better way, it's better <script></script>; but, if you want <script/> form support, just place into your ./[g]vim file: let xul_noclose_script = 1.  If you do so, it's possible to damage the <script></script> performance, in the case you use any \"/\" char into the <script>, for example: <script type=\"application/x-javascript\">.  It's up to you.",
   "versions": [
     {

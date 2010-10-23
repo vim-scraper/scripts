@@ -7,7 +7,7 @@
   "description": "Switch to a different buffer in the current window by incrementally typing the name.\n\nUsage:\n\n(1) Define a normal key mapping to :IncBufSwitch or leave the default of <C-S>\n(2) In normal mode, start typing the name of the buffer you want to switch to.\n(3) Press <BS> if make an error\n(4) Press <TAB> to find the next matching buffer\n(5) Press either <CR> or <ESC> when you are done\n\nFor example, if you have the following files in memory:\n\nfoo.c, bar.c, baz.c, structs.h\n\nand you are currently editing foo.c.\n\nExample 1: You press <C-S> and type s<CR>.  You are now editing structs.h.\nExample 2: You press <C-S> and type b.  Buffer switches to bar.c.  If you press <TAB> baz.c enters the window.\n\nThe project I work on has a LOT of files.  It is not uncommon to have 20-30 files in memory at any given time.  I find that this allows me to switch amongst them much faster.\n\nLet me know of any ideas or problems.",
   "rating_total": "38",
   "rating_votes": "12",
-  "downloads": "1038",
+  "downloads": "1040",
   "install_details": "(1) Drop in your plugin directory\n\n(2) The default key mapping of <C-S> will get you started.  If you like, define your own mapping and the script will use that.  See the script header for details.",
   "versions": [
     {

@@ -5,9 +5,9 @@
   "name": "RltvNmbr.vim",
   "script_type": "utility",
   "description": "The RltvNmbr plugin uses the signs feature to display the line numbering relative to the current line.  A number of commands take [count] arguments for which this is helpful.\n\n:RltvNmbr\n    This command turns relative line numbering on.\n\n:RltvNmbr!\n    This command turns relative line numbering off.\n\nCAVEAT:\n    Your vim must have the signs feature compiled in!  This typically means that your vim has been configured and compiled to be \"huge\":\n        configure --with-features=huge\n        compile\n        install\n\n\tTo check this:\n\t\t:echo has(\"signs\")\n\tshould show a \"1\".  Alternatively, look at the output of  :version  and see if you have +signs listed.\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#RLTVNMBR)\n",
-  "rating_total": "52",
-  "rating_votes": "18",
-  "downloads": "868",
+  "rating_total": "53",
+  "rating_votes": "19",
+  "downloads": "875",
   "install_details": "vim RltvNmbr.vba.gz\n:so %\n\n(assuming you have vim 7.1 or later; with vim 7.0, you'll need to upgrade your vimball plugin)",
   "versions": [
     {

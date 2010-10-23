@@ -7,7 +7,7 @@
   "description": "Syntax highlighting for RELAX NG Compact Syntax: http://www.oasis-open.org/committees/relax-ng/compact-20020607.html\n\nThis is currently very helpful (a little color goes a long way), but not quite fully mature. I am happy to add the feature you want most, and incrementally it will grow into a mature syntax file.",
   "rating_total": "43",
   "rating_votes": "22",
-  "downloads": "2779",
+  "downloads": "2783",
   "install_details": "1. Save rnc.vim in ~/.vim/syntax (create the directories if necessary)\n2. Edit ~/.vim/filetype.vim, and put the following line in it:\n\n\" RELAX NG Compact Syntax\naugroup filetypedetect\n  au! BufRead,BufNewFile *.rnc\tsetfiletype rnc\naugroup END\n\nOn windows systems, use your vimfiles directory instead of ~/.vim",
   "versions": [
     {

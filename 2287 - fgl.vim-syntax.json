@@ -7,7 +7,7 @@
   "description": "fgl.vim is Informix 4GL syntax file. \n\n",
   "rating_total": "0",
   "rating_votes": "0",
-  "downloads": "317",
+  "downloads": "318",
   "install_details": "Drop this script in &#039syntax&#039 directory under your vim installation directory.\n\nPersonally I have the following settings in .vimrc as well\n- To set an initial folding level (how much to fold upon opening a 4GL program)\n- To map SPACEBAR to toggle between folding and unfolding\n- To change a defult vim text on folded line\n\nFor this, copy the following section to your .vimrc. Folding/Unfolding is just as easy as pressing SPACEBAR\n - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \nset foldlevel=1  \" change the number to set initial folding level\nset foldtext=MyFoldText()\nnoremap <space> :call ToggleFold() <cr>\n\nfunction MyFoldText()\n   let line = getline(v:foldstart)\n   let sub = substitute(line, '/\\*\\|\\*/\\|{{{\\d\\=', '', 'g')\n   return strpart(v:folddashes, 2, strlen(v:folddashes) - foldlevel(line(\".\"))*3) . sub . \n             \\  \" ------ [\" .  (v:foldend - v:foldstart) . \" lines] \"\nendfunction\n\nfun! ToggleFold()\n  if foldlevel('.') == 0\n      normal! l\n  else\n     if foldclosed('.') < 0\n        .  foldclose\n     else\n        . foldopen\n     endif\n  endif\n \"  Clear status line\n  echo\nendfun\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n\n",
   "versions": [
     {

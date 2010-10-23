@@ -4,12 +4,28 @@
   "summary": "Run a command and show its result quickly.",
   "name": "quickrun.vim",
   "script_type": "utility",
-  "description": "*quickrun* is Vim plugin to execute whole/part of editing file and show the result.\nIt provides :QuickRun command for it.\n\nDefault is set in the following languages:\n\n- awk\n- bash\n- c\n- cpp\n- dosbatch\n- eruby\n- go\n- groovy\n- haskell\n- io\n- java\n- javascript\n- llvm\n- lua\n- ocaml\n- perl\n- php\n- python\n- r\n- ruby\n- scala\n- scheme\n- sed\n- sh\n- vim\n- zsh\n\nYou can add settings for other languages and situations.\n\nLatest Version:\nhttp://github.com/thinca/vim-quickrun\n",
+  "description": "*quickrun* is Vim plugin to execute whole/part of editing file and show the result.\nIt provides :QuickRun command for it.\n\nDefault is set in the following languages:\n\n- awk\n- bash\n- c\n- cpp\n- dosbatch\n- eruby\n- go\n- groovy\n- haskell\n- io\n- java\n- javascript\n- llvm\n- lua\n- ocaml\n- perl\n- perl6\n- php\n- python\n- r\n- ruby\n- scala\n- scheme\n- sed\n- sh\n- vim\n- zsh\n\nYou can add settings for other languages and situations.\n\nLatest Version:\nhttp://github.com/thinca/vim-quickrun\n",
   "rating_total": "13",
   "rating_votes": "4",
-  "downloads": "132",
+  "downloads": "142",
   "install_details": "",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14082",
+      "filename": "vim-quickrun-0.4.2.zip",
+      "script_version": "0.4.2",
+      "date": "2010-10-20",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18219",
+        "user_name": "thinca",
+        "first_name": "thinca",
+        "last_name": " ",
+        "email": "thinca+vim at gmail.com",
+        "homepage": "http://d.hatena.ne.jp/thinca/"
+      },
+      "release_notes": "- Added \"_\" to the default type name.\n- Added perl6 support as default.\n- Expand |quickrun-option-output|.\n- Fixed a bug that \"split\" option doesn't work in twice or later.\n- Changed g:quickrun_default_config to g:quickrun#default_config.\n- Added the following values to |quickrun-option-runmode|.\n  - \"async:vimproc\"\n  - \"async:python\"\n  - These are experimental.\n- Check hasmapto() before <Leader>r is defined.\n- Improve the reading and writing of a file."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13321",
       "filename": "vim-quickrun-0.4.1.zip",

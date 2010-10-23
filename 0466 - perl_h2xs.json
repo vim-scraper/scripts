@@ -7,7 +7,7 @@
   "description": "The Perl_h2xs.vim plugin is a plugin that allows you to automate the process of perl module creation. Writing Perl modules with the recommended structure can be time consuming so this ftplugin automates the process by involking h2xs when you edit a non-existant .pm file. I.e.\n\n  vim Test::Bob.pm\n\nWill invoke h2xs -XAn Test::Bob, and if the module skeleton is created, will swap the edited file to Test/Bob/Bob.pm.\n\nThrough the use of variables, you can also set the plugin to create a MANIFEST.SKIP to exclude the CVS directories (and update the MANIFEST to include this new file) and to use CVS to import (or add) the newly created tree to a respository.\n\nIt works under windows and unix and you can even create .pm trees in another directory by specifying a directory name and module name in one. I.e.\n\n vim /usr/local/src/Test/Bob.pm\n\nwould create the module:\n\n /usr/local/src/Test/Bob/Bob.pm\n\nSee the readme file and help docs for detalis.\n\nEnjoy, this is me being lazy :)",
   "rating_total": "1",
   "rating_votes": "3",
-  "downloads": "695",
+  "downloads": "696",
   "install_details": "The tarball contains the files:\n  README_perl_h2xs.txt\n  ftplugin/perl_h2xs.vim\n  doc/perl_h2xs.txt\n\nso you can just untar'gzip the tarball in your local vim directory. I.e. .vim or vim61\\vimfiles and all of the files will go into place. Start vim and rebuild your local help docs tags file using\n\n :helptags {docdir}\n\nI.e.\n\n :helptags ~/.vim/doc\n :helptags c:\\vim61\\vimfiles\n\nContact me if you have problems (with the module that is :-)",
   "versions": [
     {

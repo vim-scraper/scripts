@@ -7,7 +7,7 @@
   "description": "Gmsh (http://www.geuz.org/gmsh) is an automatic 3D finite element mesh generator (primarily Delaunay) with build-in CAD and post-processing facilities.This simple script helps vim users in daily work providing color and syntax support.",
   "rating_total": "6",
   "rating_votes": "3",
-  "downloads": "274",
+  "downloads": "275",
   "install_details": "The GMSH community uses .geo files to store their problems, so adding this lines in filetype.vim will help\n\n\" GMSH (Meshing Facilities)\naugroup filetypedetect\nau BufNewFile,BufRead *.geo     setf gmsh\naugroup END\n\nFor other GMSH file add the following comment at the end of the file \n\n// vim: set filetype=gmsh :  //\n",
   "versions": [
     {

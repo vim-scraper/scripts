@@ -7,7 +7,7 @@
   "description": "Vim supports unicode since version 6. This means it's possible to display many mathmatical symbols in vim. Writing LaTeX texts can now be much easier. To display unicode symbols while editing LaTeX documents, I've written a plugin for vim.\n\nScreenshot:\nhttp://www.fenk.wau.nl/~oever/software/vim/\n\nWhat does the plugin do?\n\n- Convert all symbols like \\alpha to the unicode symbol α when reading a LaTeX file.\n- Convert these commands when typing them.\n- Convert the unicode symbols back to LaTeX when saving the document.",
   "rating_total": "44",
   "rating_votes": "19",
-  "downloads": "1461",
+  "downloads": "1462",
   "install_details": "You can download it an save it in ~/.vim/ftplugin/tex/ to use it. \nFiletype plugin must be turned on. Just add the next line to your .vimrc or .gvimrc file:\n    filetype plugin on\nThe encoding must be set to utf-8:\n    set encoding=utf-8\n\nAlso, you must use gvim with a font that support unicode. Just add something like this to your file .gvimrc:\n    set guifont=-misc-fixed-medium-r-normal-*-*-120-*-*-c-*-iso10646-1\nAlternatively, you can use vim in a unicode terminal.\n",
   "versions": [
     {

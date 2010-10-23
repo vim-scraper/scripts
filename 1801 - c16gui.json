@@ -7,7 +7,7 @@
   "description": "c16gui is a GUI color scheme composed of the sixteen colors, which simulates\nthe default scheme.\n\nscreen shots: http://www.geocities.jp/e27874/",
   "rating_total": "-3",
   "rating_votes": "5",
-  "downloads": "406",
+  "downloads": "407",
   "install_details": "The zip archive contains two files, colors/c16gui.vim and syntax/c16gui.vim.\nLocate the \"colors/c16gui.vim\" in your \"$HOME/.vim/colors\" directory.\nLocate the \"syntax/c16gui.vim\" in your \"$HOME/.vim/syntax\" directory.\nNow, you've got two files in your computer, the \"$HOME/.vim/colors/c16gui.vim\"\nand the \"$HOME/.vim/syntax/c16gui.vim\".\n\n- You might have to set the 'background' option explicitly before loading the\n  color scheme.\n- When you change highlightings for some groups, the \"syntax/c16gui.vim\" will\n  help you.  It is an auto-highlighting syntax file.  You can see the sixteen\n  colors by browsing that file itself.  Type \":set syn=c16gui\" after entering\n  the file if the 'modeline' option is off.  The \":syntax enable\" will also be\n  needed to make it work.\n\nExample of the \"$HOME/.gvimrc\":\n  set bg=light\n  colorscheme c16gui\n  hi DiffText guifg=#ffffff\n  hi DiffChange guifg=fg\n\nFor Win32, the directory \"$HOME/.vim\" is \"%HOME%\\vimfiles\", and the file\n\"$HOME/.gvimrc\" is \"%HOME%\\_gvimrc\".  See \":help 'runtimepath'\" for details.",
   "versions": [
     {

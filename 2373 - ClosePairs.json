@@ -7,7 +7,7 @@
   "description": "Autocloses pairs of chararacters as seen in TextMate or Scribes.\n\nI couldn't find a script that worked as I liked, so here's my very simple attempt :)\n\nPairs are (), [], {}, '', \"\"\n\nFeatures\n=======\n\n1) in INSERT mode, typing the closing character let the cursor \"escape\" the pair \n\ne.g.: (cursor represented with a pipe, on the left what you type, on the right what you get)\n\" -> \"|\"\nsome text -> \"some text|\"\n\" -> \"some text\"|\n\n* useful when typing an open/close bracket pair as in foo()\n\n* works with already existing text\ne.g.:\n(move cursor) -> \"this is a string|\"\n\" -> \"this is a string\"|\n\n\n2) \"atomic\" deletion of a pair\n()|<bs> -> |\n(|)<bs> -> |\n* won't work with <del> (use <del> when you don't want the closing bracket/quote)\n\n3) experimental support for visual mode\n\nselect abc \ntype <leader>\" -> \"abc\"\n\n\ntested with vim 7; might work with earlier versions, though\nhope you'll like it, let me know!\nyou can comment here: http://www.flatpress.org/home/?entry=entry080910-135006\n\n\nUPDATE: since you made me notice, here's the other scripts dealing with the same problem\n\n* vimscript #1849 - AutoClose by Karl Guertin\n* vimscript #2009 - AutoClose by Thiago Alvares\n\nthey all differs for little, the first is a bit simpler; the latter is probably the most configurable.\n\nPick your favorite :)\n\n\n",
   "rating_total": "16",
   "rating_votes": "7",
-  "downloads": "631",
+  "downloads": "634",
   "install_details": "",
   "versions": [
     {

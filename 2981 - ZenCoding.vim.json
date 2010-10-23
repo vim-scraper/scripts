@@ -5,9 +5,9 @@
   "name": "ZenCoding.vim",
   "script_type": "utility",
   "description": "This is vim script support expanding abbreviation like zen-coding.ref: http://code.google.com/p/zen-coding/There is a movie using zencoding.vimref: http://mattn.github.com/zencoding-vimSource Repository.ref: http://github.com/mattn/zencoding-vimType abbreviation   +-------------------------------------   | html:5_   +-------------------------------------\"_\" is a cursor position. and type \"<c-y>,\" (Ctrl + y and Comma)NOTE: Don't worry about key map. you can change it easily.   +-------------------------------------   | <!DOCTYPE HTML>   | <html lang=\"en\">   | <head>   |     <title></title>   |     <meta charset=\"UTF-8\">   | </head>   | <body>   |      _   | </body>   | </html>   +-------------------------------------Type following   +-------------------------------------   | div#foo$*2>div.bar   +-------------------------------------And type \"<c-y>,\"   +-------------------------------------   |<div id=\"foo1\">   |    <div class=\"bar\">_</div>   |</div>   |<div id=\"foo2\">   |    <div class=\"bar\"></div>   |</div>   | _   +-------------------------------------Tutorial:  http://github.com/mattn/zencoding-vim/raw/master/TUTORIALHow work this:  http://mattn.github.com/zencoding-vimTips:You can customize behavior of expanding with overriding config.This configuration will be marged at loading plugin.   let g:user_zen_settings = {  \\  'indentation' : '  ',  \\  'perl' : {  \\    'aliases' : {  \\      'req' : 'require '  \\    },  \\    'snippets' : {  \\      'use' : \"use strict\\nuse warnings\\n\\n\",  \\      'warn' : \"warn \\\"|\\\";\",  \\    }  \\  }  \\}  let g:user_zen_expandabbr_key = '<c-e>'  let g:use_zen_complete_tag = 1You can set language attribute in html using zen_settings['lang'].",
-  "rating_total": "390",
-  "rating_votes": "112",
-  "downloads": "4390",
+  "rating_total": "391",
+  "rating_votes": "113",
+  "downloads": "4487",
   "install_details": "copy zencoding.vim to your plugin directory.",
   "versions": [
     {

@@ -7,7 +7,7 @@
   "description": "Vim filetype plugin enhancement\nLanguage: skill (cadence extension language)\n\nType \");\" in Insert mode to insert the word located before the matching \"(\".\nFor selected keywords this also adds the argument (following the keyword).\nTo work properly, keyword and argument must be found on the same line.\n\nExample:\n\nprocedure( vscCheckpointHier( @key lib cell view message inclibs )\n    let(( ddCVs )\n        vscPrint0(sprintf( nil \"Hierarchy for %s,%s,%s ...\" lib cell view ))\n        when( ddCVs = vscGetHierarchyDDs( ?lib lib ?cell cell ?view view\n                                          ?inclibs inclibs )\n            vscPrint0(sprintf( nil \"  %d cellviews.\" length(ddCVs) ))\n            vscCheckpoint( ddCVs ?message message)\n        ); when ddCVs\n    ); let\n); procedure vscCheckpointHier\n",
   "rating_total": "7",
   "rating_votes": "4",
-  "downloads": "330",
+  "downloads": "331",
   "install_details": "Copy the file to  ~/.vim/ftplugin  -- or  vimfiles\\ftplugin (Win)\n\nHow come ...?\nVim will detect that the script belongs to the skill filetype, because the\nfilename matches \"skill_*.vim\".\n\nMake sure your vimrc contains\n    filetype plugin on\nelse the script won't be loaded automatically.\n\n2007 Oct 10",
   "versions": [
     {

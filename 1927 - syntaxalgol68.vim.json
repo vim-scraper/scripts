@@ -7,7 +7,7 @@
   "description": "First version... looking for ideas.\n\nAlternate download location: http://3ttechnology.com/vim/syntax/algol68.vim\n\nCurrently does fully handle unicode/htm4 characters, eg &divide; for ÷ AND &perp; for ⊥\n\nTargeted toward the ALGOL-68G version from:\nhttp://www.xs4all.nl/~jmvdveer/algol.html#obtaining\nAnd includes extensions.\n\nHas SOME reserved words/extensions from ALGOL-68R and ALGOL-68C\n\nCurrently cannot parse code with BOLDED HTML.\n\nSome pascal syntax remains.",
   "rating_total": "7",
   "rating_votes": "4",
-  "downloads": "200",
+  "downloads": "202",
   "install_details": "copy algol68.vim to /usr/share/vim/vim64/syntax/ directory - ($VIMRUNTIME/syntax directory)\n\nUpdate the following files:\n\n1. /usr/share/vim/vim64/filetype.vim:\n \" Algol68 (also *.a68)\nau BufNewFile,BufRead *.a68                   setf algol68\n\n2. /usr/share/vim/vim64/synmenu.vim:\nan 50.80.135 &Syntax.PQ.Algol68 :cal SetSyn(\"algol68\")<CR>\n",
   "versions": [
     {

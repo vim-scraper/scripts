@@ -1,0 +1,46 @@
+{
+  "script_id": "3285",
+  "display_name": "looks",
+  "summary": "Manage various looks/settings of vim",
+  "name": "looks",
+  "script_type": "utility",
+  "description": "This is a vim plugin I created for myself to help me manage various *looks* of vim. Each look is dictionary of settings and options that makes vim get a unique look.\n\nThese looks are defined in vimrc (or somewhere else but are source-d) like the following,\n\n    let g:looks = {}\n    let g:looks.dark = {\n        \\ '_map': \"d\",\n        \\ ':colorscheme': \"lucius\",\n        \\ '&guifont': \"Inconsolata\\\\ Medium\\\\ 15\",\n        \\ '&cursorline': 1\n        \\ }\n    let g:looks.light = { \":colorscheme\": \"tango\" }\n\nand the looks can be loaded with :Look command, like so\n\n    :Look dark\n\nTab completion is also available on the command line for all available looks.\n\nPlugin hosted over at bitbucket.org, https://bitbucket.org/sharat87/vim-looks\n\nFor more details, see \":h looks\".",
+  "rating_total": "4",
+  "rating_votes": "1",
+  "downloads": "14",
+  "install_details": "Contains plugin/looks.vim and doc/looks.txt.\nPlace them in &rtp or make a folder in bundle directory if using pathogen.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14093",
+      "filename": "looks.tar.gz",
+      "script_version": "0.3",
+      "date": "2010-10-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17907",
+        "user_name": "sharat87",
+        "first_name": "Shrikant Sharat",
+        "last_name": "Kandula",
+        "email": "shrikantsharat.k at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for virtually all options and settings in vim. Breaks compatibility with the way looks are defined in previous versions. Command keys need to be prefixed with `:` and options are to be prefixed with `&`."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14090",
+      "filename": "looks.tar.gz",
+      "script_version": "0.2",
+      "date": "2010-10-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17907",
+        "user_name": "sharat87",
+        "first_name": "Shrikant Sharat",
+        "last_name": "Kandula",
+        "email": "shrikantsharat.k at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

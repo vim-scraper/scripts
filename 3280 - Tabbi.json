@@ -1,0 +1,46 @@
+{
+  "script_id": "3280",
+  "display_name": "Tabbi",
+  "summary": "Aligns text as a table",
+  "name": "Tabbi",
+  "script_type": "utility",
+  "description": "A simple vim plugin that aligns text separated with tabs or two or more whitespaces, so that each part starts in the same column as in the other lines. Just like a table, but without lines.\nBefore:\npart one        part two     part three\n another part one              another part two    another part three\n\nAfter:\npart one                  part two                 part three\nanother part one    another part two   another part three\n\n(would be more observable with monospace type)\n\n\nUsage: to align the whole buffer, type :Tabbi, for aligning parts type e.g. :10,20Tabbi or use visual mode.",
+  "rating_total": "1",
+  "rating_votes": "3",
+  "downloads": "57",
+  "install_details": "Put tabbi.vim in the plugin folder (e.g. ~/.vim/plugin/).\nVim 7.0 required (not 6.0, as mentioned below).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14068",
+      "filename": "tabbi.vim",
+      "script_version": "1.1",
+      "date": "2010-10-17",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "21950",
+        "user_name": "Günther",
+        "first_name": "Daniel",
+        "last_name": "Schemala",
+        "email": "sehrpositiv at web.de",
+        "homepage": ""
+      },
+      "release_notes": "Works now also with two or more whitespaces as separator, and aligns with tabs or whitespaces according to the setting of expandtab."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14065",
+      "filename": "tabbi.vim",
+      "script_version": "1.0",
+      "date": "2010-10-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "21950",
+        "user_name": "Günther",
+        "first_name": "Daniel",
+        "last_name": "Schemala",
+        "email": "sehrpositiv at web.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

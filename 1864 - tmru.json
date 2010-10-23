@@ -7,7 +7,7 @@
   "description": "This plugin provides a simple most recently used files facility.\n\n:TRecentlyUsedFiles ... open one or more recently used file(s)\n:TRecentlyUsedFilesEdit ... edit the mru list\n\nIf viminfo contains \"!\", the data is stored as global variable. Otherwise,\ntlib#cache is used -- which saves the data in ${vimfiles}/cache/tmru/files\nby default.",
   "rating_total": "5",
   "rating_votes": "2",
-  "downloads": "1013",
+  "downloads": "1016",
   "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0,\nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n\nvimscript #1863 is required.\n\nCopy tmru.vim to ~/.vim/plugin/\n\nSuggested keymaps (put something like this into ~/.vimrc):\n    noremap <m-r> :TRecentlyUsedFiles<cr>\n\nIn order to disable the sub-menu, set g:tmruMenu to \"\" in your vimrc file.\n\nAlso available via git\nhttp://github.com/tomtom/tmru_vim",
   "versions": [
     {

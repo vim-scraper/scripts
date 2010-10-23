@@ -7,7 +7,7 @@
   "description": "This plugin is used for Java code completion. It's depends on ctags , \nvim which +ruby future is enabled.\nFor generate tags :\n         ctags --fileds=+ai   .....\nFor  generate tags Index file:\n         :ruby generateIndex(\"/usr/java/jdk/src/tags\",2)\nThe second parameter which value is 2  is recommand.\n\nOnce you vim version is 7.00aa \n         :set cfu=OocompleteFun\nYou can use <CTRL>-x<CTRL>-u for this samle:\n        String str=\"\";\n        str.to\n                ^<CTRL>-X<CTRL>-U\nFor c++ user:\n         SomeClass * abc;\n         abc->So\n                        ^<CTRL>-X<CTRL>-U\nBoth java and c++\n         Abc::So\n                        ^<CTRL>-X<CTRL>-U\nThen toByteArray, toUpperCase...  would be selectable.\n\nvim version is 6.xx\n         :Oofun String to\nFirst parameter is name of the class , the second is the function name ( partly)\nThen toByteArray, toUpperCase...  would be show in command window.\n\nOne command is added, It's used to check variable type\n         :Ootype varname\n\nTODO list :\n         ctags's support for jdk1.5 , something incorrectly. like ,java.util.Vector\n         Advanced varible define selector. Something lik normal command gd\n\n         The last, my poor document  and my poor English, \n\n",
   "rating_total": "4",
   "rating_votes": "1",
-  "downloads": "746",
+  "downloads": "747",
   "install_details": "tar -xzf oocomplete.tgz -C$VIMFILES\n\nVIMFILES is your vim script dir , for Mandrake10.1  is\n        /usr/share/vim/vimfiles\n\nFor windows: may be\n        d:\\vim\\vimfiles",
   "versions": [
     {

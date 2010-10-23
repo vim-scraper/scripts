@@ -7,7 +7,7 @@
   "description": "This is a simple syntax for noweb. Basically, it is a nice way to view code and documentation with separate syntax highlighting. Also, it can autofold code blocks.\n\nThe script uses the following options:\n\nnoweb_backend\nnoweb_language\nnoweb_fold_code\n\nSet noweb_backend to the basename of the syntax file you want to use, minus the \\\".vim\\\" extension. So, for TeX, you would:\n\nlet noweb_backend = \\\"tex\\\"\n\nnoweb_language is similar, but is used to highlight the contents of code blocks. So, for example:\n\nlet noweb_language = \\\"cpp\\\"\n\nMakes the syntax for code snippets = C++.\n\nFinally, there is noweb_fold_code, which sets whether or not code blocks should be automatically folded. If 1, then they will be folded. Otherwise, not.",
   "rating_total": "0",
   "rating_votes": "0",
-  "downloads": "100",
+  "downloads": "103",
   "install_details": "Just copy the script to your ~/.vim/syntax directory.\n\nOptionally, add something like this to your ~/.vimrc:\n\nfiletype on\nfiletype plugin on\n\nau BufRead,BufNewFile *.nw    set filetype=noweb\n\nlet noweb_backend = \\\"tex\\\"\nlet noweb_language = \\\"cpp\\\"\nlet noweb_fold_code = 1\n\nThis will set the script to run for .nw files, assuming a documentation backend of TeX, a code language of C++, and turns on automatic code chunk folding.",
   "versions": [
     {

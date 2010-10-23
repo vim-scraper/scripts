@@ -7,7 +7,7 @@
   "description": "A friend and I found that there were no acceptable vim syntax files for smarty, so we took the only one we could find and added everything from the smarty documentation (http://smarty.php.net/manual/en) to it.  If nothing else, this is a very good start on a complete smarty syntax file.  We have even used vimtip #498 to use autocomplete with this syntax and so far it seems to work well.",
   "rating_total": "23",
   "rating_votes": "17",
-  "downloads": "1226",
+  "downloads": "1235",
   "install_details": "just drop it in your ~/.vim/syntax directory, then put this somewhere in your vimrc file: \n\nau BufRead,BufNewFile *.tpl set filetype=smarty\n\nadditionally, if you would like dictionary completion, feel free to add something like this:\n\nau Filetype smarty exec('set dictionary=/home/user/.vim/syntax/smarty.vim')\nau Filetype smarty set complete+=k\n\nThis will allow <Control-x><Control-k> for dictionary autocomplete. \nWe have a mapping that makes it a bit easier:\n\nimap <S-Space><S-Space> <C-X><C-K>\n\nYou could use imap <C-Space> <C-X><C-K>, but we have that mapped for normal omni (auto) completion.",
   "versions": [
     {

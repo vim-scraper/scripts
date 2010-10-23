@@ -7,7 +7,7 @@
   "description": "Use this script to enable syntax coloring when using a mix of html and php or with template engines like those used by CakePHP, Symfony, SolarPHP and others\n\nTo use xmledit (vimscript #301) with phtml files change line 105 to:\n\nif &filetype == 'xml' || (!exists (\"g:did_xhtmlcf_inits\") && exists (\"g:xml_use_xhtml\") && (&filetype == 'html' || &filetype == 'xhtml' || &filetype == 'php' || &filetype == 'phtml' || &filetype == 'rhtml'))\n\nAnd line 168 to:\n\nif (&filetype == 'html' || &filetype == 'php' || &filetype == 'phtml') && (!exists (\"g:xml_no_html\"))\n\nAnd symlink:\n\ncd $HOME/.vim/ftplugin\nln -s xml.vim phtml.vim",
   "rating_total": "13",
   "rating_votes": "4",
-  "downloads": "683",
+  "downloads": "686",
   "install_details": "Just drop into .vim/syntax\n\nTo enable a better identation symlink the default html.vim to phtml.vim:\n\nln -s $VIMRUNTIME/indent/html.vim $HOME/.vim/indent/phtml.vim",
   "versions": [
     {

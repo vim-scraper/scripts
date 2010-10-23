@@ -7,7 +7,7 @@
   "description": "This script generates menu entries for each C/C++ function definition within the actual edited C/C++ file.\nAfter executing it, you can move to any of the functions by selecting them via menu.\n\n- adds a menu entry under a main menu 'Proj'\n- creates a file cfunctags.vim as script for generating the menu entries\n\nBUGS: does not handle references ('&') and destructors (~) correctly.\n           If anyone would add these, please let me know.\n\nThe script is just quick and (hope not very) dirty written, but working (only short tests up to now)\nunder GVIM 5.8, NT4.0, Novell network\n\n",
   "rating_total": "1",
   "rating_votes": "5",
-  "downloads": "795",
+  "downloads": "796",
   "install_details": "Create a menu entry in your _gvimrc to source in and call this script:\n\"($VIM_SYNTAX must contain the path to this script file)\n'menu 12.10 Proj.Add\\ local\\ functions\t:so $VIM_SYNTAX/functags.vim<CR>'\n",
   "versions": [
     {

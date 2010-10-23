@@ -7,7 +7,7 @@
   "description": "switch between \"Relative\" and \"Absolute\" line number is easy with command\n''':set nu'''\nand\n''':set rnu'''\n\nit could be more easier by a vim script:\n\nfunction! g:ToggleNuMode()\n\tif(&rnu == 1)\n\t\tset nu\n\telse\n\t\tset rnu\n\tendif\nendfunc\n\nand a Ctrl+L key map\nnnoremap <C-L> :call g:ToggleNuMode()<cr>\n\nthis is exactly what the script does, you can just put the code into your vimrc if you don't want install a plugin :)",
   "rating_total": "0",
   "rating_votes": "0",
-  "downloads": "45",
+  "downloads": "50",
   "install_details": "put it into your vimfiles/plugin",
   "versions": [
     {

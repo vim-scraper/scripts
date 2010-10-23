@@ -7,7 +7,7 @@
   "description": "Holds numered backups inside a seperate directory.\n\nAutomaticly purges old backups. Standart is to hold the last 10 versions.\n\nTested with Linux, MS-Windows and OpenVMS.\n\nIMORTANT: Creating this plugin was only possible because vim 7 offers new file management functions - namely :mkdir, finddir() delete() and the new List datatype. This plugin won'g work with vim 6.x.\n\nReports errors to: http://code.google.com/p/vim-scripts/issues/list\nDiscuss improvements on: http://groups.google.com/group/vim_scripts\nFor Support see: http://code.google.com/p/vim-scripts/wiki/NumberedBackups",
   "rating_total": "89",
   "rating_votes": "29",
-  "downloads": "1485",
+  "downloads": "1487",
   "install_details": "Copy to plugin directory and set the following global variables:\n\n g:backup_directory\tname of backup directory local to edited file\n\t\t\tused for non VMS only. Since non VMS operating-\n\t\t\tsystems don't know about version we would get\n\t\t\tugly directory listings. So all backups are\n\t\t\tmoved into a hidden directory.\n\n  g:backup_purge\tcount of backups to hold - purge older once.\n\t\t\tOn VMS PURGE is used to delete older version\n\t\t\t0 switched the feature off\n",
   "versions": [
     {

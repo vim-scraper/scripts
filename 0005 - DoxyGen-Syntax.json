@@ -7,7 +7,7 @@
   "description": "This Script has been moved into Vim7.\n\n:set syntax=cpp.doxygen\n\nProvides DoxyGen Highlighting on top of c/c++/idl/java.  DoxyGen is close to JavaDoc that it should be fine for JavaDoc as well.  It supports most of the keywords in DoxyGen in one way or another.\n\nThere may be some problems where doxygen tags need to be included in exclusion groups of the c/c++/java/idl files.\n\nAt the moment, it uses non-conventional colours, which I think is good, as it differentiates it from the source-code.  Please let me know if your opinion differs, especially if you have a set of standard defaults that would be appropriate.\n",
   "rating_total": "213",
   "rating_votes": "92",
-  "downloads": "8766",
+  "downloads": "8775",
   "install_details": "Needs to be sourced after the language files.\n To detect *.doxygen files as being doxygen, make the file\n ---------8<----------- .vim\\ftdetect\\doxygen.vim -----------\n  au BufNewFile,BufRead *.doxygen setfiletype doxygen\n ------------------------------------------------------------\n There are a few ways to add doxygen syntax hilighting to c,cpp,idl files,\n 1: create files .vim/syntax/c.vim  .vim/syntax/cpp.vim .vim/syntax/ which\n load the original syntax before loading doxygen.vim syntax hilighting.\n                                                                           \n 2: Before :syntax on in your _vimrc, put\n let mysyntaxfile='<some_path>/doxygen_load.vim'\n and then create the following file.\n -----------8<--------- <some_path>/doxygen_load.vim --------\n au! Syntax {cpp,c,idl}\n au Syntax {cpp,c,idl} runtime syntax/doxygen.vim\n ------------------------------------------------------------",
   "versions": [
     {

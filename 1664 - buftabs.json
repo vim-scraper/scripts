@@ -7,7 +7,7 @@
   "description": "[Screeshot available at  http://zevv.nl/play/code/vimscripts/]\n\n\nIntroduction\n------------\nThis is a simple script that shows a tabs-like list of buffers in the bottom\nof the window. The biggest advantage of this script over various others is\nthat it does not take any lines away from your terminal, leaving more space\nfor the document you're editing. The tabs are only visible when you need\nthem - when you are switchin between buffers.\n\nUsage\n-----\nThis script draws buffer tabs on vim startup, when a new buffer is created\nand when switching between buffers.\n\nIt might be handy to create a few maps for easy switching of buffers in your\n.vimrc file. For example, using F1 and F2 keys:\n\n  noremap <f1> :bprev<CR> \n  noremap <f2> :bnext<CR>\n\nor using control-left and control-right keys:\n\n  :noremap <C-left> :bprev<CR>\n  :noremap <C-right> :bnext<CR>\n\n\nSome configuration options are available for styling and layout, check the top of the plugin file for instructions.\n",
   "rating_total": "255",
   "rating_votes": "83",
-  "downloads": "3731",
+  "downloads": "3750",
   "install_details": "Copy the script into your plugin directory, and optionally define configuration items for styling the buftabs layout.",
   "versions": [
     {

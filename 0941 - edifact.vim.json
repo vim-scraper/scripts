@@ -7,7 +7,7 @@
   "description": "This syntax script will colorize UN/EDIFACT messages.\nAll formatting errors are reported with the \"Error\" highlighting.\n\nHooks are provided for extensibility (including EDIFACT messages in another syntax) and to define a more specific syntax (coloring known tags, checking segment definitions with mandatory/conditionnal data...).\n\n\nFor more information about EDIFACT:\n- http://www.unece.org/trade/untdid/\n- http://www.gefeg.com/jswg/index.htm",
   "rating_total": "16",
   "rating_votes": "7",
-  "downloads": "432",
+  "downloads": "433",
   "install_details": "Drop into your personnal syntax directory: $HOME/{.vim|vimfiles}/syntax ({Unix|Windows}).\n\nTo manually colorize a file:\n  :syntax on\n  :set syntax=edifact\n\nTo assign edifact syntax to files, add this to your ~/{.vim|vimfiles}/filetype.vim:\n  augroup filetypedetect\n    au! BufNewFile,BufRead *.edifact,*.edi,*.EDIFACT,*.EDI set filetype=edifact\n  augroup END\n\nSee also the built-in help in Vim:\n    :help 'filetype'\n    :help mysyntaxfile\n    :help filetype-plugin\n",
   "versions": [
     {
