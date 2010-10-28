@@ -4,9 +4,25 @@
   "summary": "Tool to help create skeleton implementations of c++ function prototypes",
   "name": "ProtoDef",
   "script_type": "utility",
-  "description": "Requires:\n- ctags 5.7 or greater\n- PERL (just PERL, you don't need to have Vim compiled with PERL support)\n- FSwitch Vim utility (vimscript #2590)\n\nCheck out the video demo at: http://www.vimeo.com/4448265\n\nYou've got a C++ header file and you've got some prototypes declared in there.  Now you need to create some definitions in a C++ implementation file.  What do you do?  Yank and paste?  Naw :)  Use this plugin instead...\n\nThe concept is pretty simple: while in the implementation file, you hit a key and all of the currently undefined function prototypes in the header file are automatically pulled in to the implementation file and inserted at the current cursor position.\n\n- Pure virtual functions are ignored\n- Functions that are already defined in the header file are ignored\n- Free functions are brought in\n- Class name is automatically prefixed to member functions\n- Constructors and Destructors sort first\n- Only the missing items are pulled in so you can use this utility to bring the implementation file up to match the contents of the header file\n- However you format the prototype shouldn't really make a difference.  ProtoDef endeavours to reduce all declarations to a canonical form.\n\n",
+  "description": "Requires:\n- ctags 5.7 or greater\n- PERL (just PERL, you don't need to have Vim compiled with PERL support)\n- FSwitch Vim utility (vimscript #2590)\n\nCheck out the video demo at: http://www.vimeo.com/4448265\n\nYou've got a C++ header file and you've got some prototypes declared in there.  Now you need to create some definitions in a C++ implementation file.  What do you do?  Yank and paste?  Naw :)  Use this plugin instead...\n\nThe concept is pretty simple: while in the implementation file, you hit a key and all of the currently undefined function prototypes in the header file are automatically pulled in to the implementation file and inserted at the current cursor position.\n\n- Pure virtual functions are ignored\n- Functions that are already defined in the header file are ignored\n- Free functions are brought in\n- Class name is automatically prefixed to member functions\n- Constructors and Destructors sort first\n- Only the missing items are pulled in so you can use this utility to bring the implementation file up to match the contents of the header file\n- However you format the prototype shouldn't really make a difference.  ProtoDef endeavours to reduce all declarations to a canonical form.\n\nProtoDef can now be found on GitHub: http://github.com/ewiplayer/vim-protodef",
   "install_details": "- Extract the archive.\n- put doc/protodef.txt into ~/.vim/doc\n- put plugin/protodef.vim into ~/.vim/plugin\n- :helptags ~/.vim/doc\n- read protodef.txt and follow what's in the Setup section to understand what to do with the pullproto.pl file.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14138",
+      "filename": "protodef-0.9.5.zip",
+      "script_version": "0.9.5",
+      "date": "2010-10-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17010",
+        "user_name": "Derek Wyatt",
+        "first_name": "Derek",
+        "last_name": "Wyatt",
+        "email": "derek at derekwyatt.org",
+        "homepage": "http://derekwyatt.org"
+      },
+      "release_notes": "Fixed up a regular expression so it matches pointers and references better (pointers and references attached to the name instead of the type, which is hideous).  (Paolo Capriotti)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14048",
       "filename": "protodef-0.9.4.zip",

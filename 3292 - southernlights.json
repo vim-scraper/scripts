@@ -1,0 +1,27 @@
+{
+  "script_id": "3292",
+  "display_name": "southernlights",
+  "summary": "A 256 colors scheme",
+  "name": "southernlights",
+  "script_type": "color scheme",
+  "description": "A 256 colors scheme with identical colors in both Vim and GVim.\n\nscreenshots: http://sites.google.com/site/jalvesaq/vimrplugin",
+  "install_details": "copy southernlights.vim to ~/vim/colors\n\nIf are using Linux, put the following in your .vimrc:\n\nif $DISPLAY != \"\" || &term =~ \"xterm\"\n  let &t_Co = 256\n  colorscheme southernlights\nendif\n\nIf you are using Windows, put in your vimrc:\n\ncolorscheme southernlights\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14108",
+      "filename": "southernlights.vim",
+      "script_version": "0.1",
+      "date": "2010-10-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

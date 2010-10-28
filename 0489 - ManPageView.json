@@ -4,9 +4,25 @@
   "summary": "Viewer for manpages, gnu info,  perldoc, and php (unix/linux/cygwin)",
   "name": "ManPageView",
   "script_type": "utility",
-  "description": "(Unix/Linux)\n\nThe <manpageview.vim> script allows vim to be used as a manpage viewer while one is inside vim.  Coupled with the tip \"Using vim as a man-page viewer under Unix\", available by clicking on vimtip#167, <manpageview.vim> gives a complete manpage viewing solution using vim!\n\nThe Man command will accept four formats for looking up a man page:\n\n    :Man topic\n    :Man topic booknumber\n    :Man booknumber topic\n    :Man topic(booknumber)\n\nIn addition, while in normal mode and with the cursor on some topic (system function) that you wish to look up, press the \"K\" key to invoke the manpage viewer.\n\nThe tip vimtip#167 addresses setting up man so that it invokes vim from the command line.\n\nManPageView supports display of info, perldoc (both system and embedded) help and php files.\n\n    INFO\n        :Man info.i\n\n    PERL  (requires the perldoc program)\n        :Man printf.pl\n        :Man cos.pl\n        :Man sprintf.pl\n\n    PHP  (requires the links program)\n        :Man printf.php\n\nManPageView \"knows\" what display tool to invoke by examining the suffix.  For perl, for example, g:manpageview_pgm_pl is (by default) initialized to perldoc.  Similar support is available for custom initialization, overriding the K map, providing a standard prefix or suffix, and specialized syntax highlighting.\n\n\nThank you for rating this script!\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#MANPAGEVIEW)\n\n\n\n",
+  "description": "(Unix/Linux)\n\nThe <manpageview.vim> script allows vim to be used as a manpage viewer while one is inside vim.  Coupled with the tip \"Using vim as a man-page viewer under Unix\", available by clicking on vimtip#167, <manpageview.vim> gives a complete manpage viewing solution using vim!\n\nThe Man command will accept four formats for looking up a man page:\n\n    :Man topic\n    :Man topic booknumber\n    :Man booknumber topic\n    :Man topic(booknumber)\n\nIn addition, while in normal mode and with the cursor on some topic (system function) that you wish to look up, press the \"K\" key to invoke the manpage viewer.\n\nThe tip vimtip#167 addresses setting up man so that it invokes vim from the command line.\n\nManPageView supports display of info, perldoc (both system and embedded), php, and python help:.\n\n    INFO\n        :Man info.i\n\n    PERL  (requires the perldoc program)\n        :Man printf.pl\n        :Man cos.pl\n        :Man sprintf.pl\n\n    PHP  (requires the links program)\n        :Man printf.php\n\n   PYTHON: (requires pydoc)\n       :Man pprint.py\n\nManPageView \"knows\" what display tool to invoke by examining the suffix.  For perl, for example, g:manpageview_pgm_pl is (by default) initialized to perldoc.  Similar support is available for custom initialization, overriding the K map, providing a standard prefix or suffix, and specialized syntax highlighting.\n\n\nThank you for rating this script!\n\n(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#MANPAGEVIEW)\n\n\n\n",
   "install_details": " vim manpageview.vba.gz\n   :so %\n   :q            ",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14117",
+      "filename": "manpageview.vba.gz",
+      "script_version": "23",
+      "date": "2010-10-25",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip at campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "python help via pydoc \nbug fixes: K mapping for php, tex; handles :manpageview_iconv"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=9573",
       "filename": "manpageview.vba.gz",

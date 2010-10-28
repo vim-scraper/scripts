@@ -1,0 +1,27 @@
+{
+  "script_id": "3291",
+  "display_name": "openurl.vim",
+  "summary": "open a url in a default browser",
+  "name": "openurl.vim",
+  "script_type": "utility",
+  "description": " Summary\n =======\n The OprnUrl function opens a url which is a first one in a line.\n\n Require\n =======\n You need a python interface.\n\n Usage\n =====\n If there is a line such that\n\n Sample line. http://aaa http://bbb\n\n You use ':OpenUrl' command in this line, \n then you can open http://aaa in a default web browser.\n\n\n\n I set a command for OpenUrl function, such that\n\n command OpenUrl :call OpenUrl()\n \n You can change command name by changing above command ame 'OpenUrl'.\n\n example)\n command AnotherOpenUrlName :call OpenUrl()\n",
+  "install_details": "1. Download openurl.vim\n2. Move the file to \n        HOME/.vim/plugin/\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14104",
+      "filename": "openurl.vim",
+      "script_version": "0.1.0",
+      "date": "2010-10-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "22189",
+        "user_name": "kenko",
+        "first_name": "Kenko",
+        "last_name": "Abe",
+        "email": "kenko.py at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

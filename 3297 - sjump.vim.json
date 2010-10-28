@@ -1,0 +1,43 @@
+{
+  "script_id": "3297",
+  "display_name": "sjump.vim",
+  "summary": "Display labels in the sign area and jump to selected label",
+  "name": "sjump.vim",
+  "script_type": "utility",
+  "description": "When executed the plugin will display labels in the sign area and wait\nfor the user to enter a label. Then it will jump to the line with the\nentered label and hide the labels (by removing the signs).\n\nThe plugin is mapped to the sequence gl. The mapping can be disabled with:\n   let g:sjump_enable_keymap = 0\n\nTo put the mapping on another key:\n   nmap <F9> :call sjump#JumpToLabel()<cr>\n\nMore configuration options are in help (:help sjump).\n\nRequires: +signs\nUse :version to see if +signs is enabled.",
+  "install_details": "Unpack into vim runtime directory (eg. ~/.vim/).\n\nTo generate the help tags open the installed file doc/sjump.txt in Vim and execute\n   :helptags %:p:h",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14133",
+      "filename": "sjump.zip",
+      "script_version": "0.5.1",
+      "date": "2010-10-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17122",
+        "user_name": "markomahnic",
+        "first_name": "Marko",
+        "last_name": "Mahnič",
+        "email": "marko.mahnic at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* Jump to label with 2 chars didn't work (reported by Jun Yamagiwa)\n* Invalid entries caused an error"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14124",
+      "filename": "sjump.zip",
+      "script_version": "0.5",
+      "date": "2010-10-26",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17122",
+        "user_name": "markomahnic",
+        "first_name": "Marko",
+        "last_name": "Mahnič",
+        "email": "marko.mahnic at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -8,6 +8,22 @@
   "install_details": "===========================================================\nFor newer versions that are packaged as Vimball archives, open the vba file and then source it. \n\n    vim twitvim.vba\n    :source %\n\nThen see :help TwitVim-install for further instructions.\n===========================================================\n\nThe instructions below are for older non-vba versions:\n\nFirst, you need to install cURL if it isn't already installed. Download cURL from here: http://curl.haxx.se/\n\nNext, add the script to your Vim plugins directory. The location is platform-dependent. See :help add-plugin for details.\n\nNext, add the following to your .vimrc or _vimrc:\n\n      let twitvim_login = \"USER:PASS\"\n\nReplace USER and PASS with your Twitter username and password.\n\nIf you access the web through a HTTP proxy, add the following line:\n\n      let twitvim_proxy = \"proxyhost:proxyport\"\n\nReplace proxyhost and proxyport with your HTTP proxy address and port number.\n",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14136",
+      "filename": "twitvim-0.6.0.vba",
+      "script_version": "0.6.0",
+      "date": "2010-10-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8120",
+        "user_name": "pcheah",
+        "first_name": "Po Shan",
+        "last_name": "Cheah",
+        "email": "morton at mortonfox.com",
+        "homepage": "http://mortonfox.livejournal.com"
+      },
+      "release_notes": "* Added :FollowingTwitter, :FollowersTwitter.\n* Added :MembersOfListTwitter, :SubsOfListTwitter, :OwnedListsTwitter, :MemberListsTwitter, :SubsListsTwitter, :FollowListTwitter, :UnfollowListTwitter.\n* Added support for goo.gl :Googl and Rga.la. :Rgala\n* Extended TwitVim-Leader-g to support Name: lines in user profile and following/followers lists.\n* Added history stack for info buffer.\n* Added :BackInfoTwitter, :ForwardInfoTwitter, :RefreshInfoTwitter, :NextInfoTwitter, :PreviousInfoTwitter for the info buffer. Also added support for TwitVim-C-PageDown and TwitVim-C-PageUp in info buffer.\n* Added twitvim filetype for user customization via autocommands.\n* Changed display of retweets to show the full version instead of the truncated version when the retweeted status is near the character limit.\n* :ProfileTwitter with no argument now shows info on logged-in user.\n* Made TwitVim-Leader-@ work on new-style retweets by showing the retweeted status as the parent.\n"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13924",
       "filename": "twitvim-0.5.6.vba",
       "script_version": "0.5.6",
