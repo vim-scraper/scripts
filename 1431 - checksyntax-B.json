@@ -4,9 +4,25 @@
   "summary": "Check for syntax erros when saving a file (php, ruby, tex ...)",
   "name": "checksyntax-B",
   "script_type": "utility",
-  "description": "This plugin is based on Klaus Horsten's php_console (vimscript #779) and \nit is the successor of php_check_syntax.vim (vimscript #1272). In \nopposition to php_console, it is not a php ftplugin but a general \nsolution for checking the syntax when saving a file (using the \nappropriate interpreter, lint or whatsoever).\n\nBy default, :CheckSyntax is mapped to <F5>. The :CheckSyntax takes one \noptional argument: the mode (default: &filetype). The following modes \nare pre-defined (and some more):\n\n    javascript :: Check syntax via jsl\n    lua :: Parse file (luac -p)\n    php  :: Check syntax (php -l)\n    phpp :: Parse a file (php -f)\n    ruby :: Check syntax (ruby -c; no auto-checks)\n    tex, latex :: Parse file (chktex -q -v0; no auto-checks)\n\nUse vimscript #2584 to mark syntax errors with signs.\n",
-  "install_details": "Save checksyntax.vim in ~/.vim/plugin/.\n\nAlso available via git\nhttp://github.com/tomtom/checksyntax_vim",
+  "description": "http://github.com/tomtom/checksyntax_vim\n\nThis plugin is based on Klaus Horsten's php_console (vimscript #779) and \nit is the successor of php_check_syntax.vim (vimscript #1272). In \nopposition to php_console, it is not a php ftplugin but a general \nsolution for checking the syntax when saving a file (using the \nappropriate interpreter, lint or whatsoever).\n\nBy default, :CheckSyntax is mapped to <F5>. The :CheckSyntax takes one \noptional argument: the mode (default: &filetype). The following modes \nare pre-defined (and some more):\n\n    javascript :: Check syntax via jsl\n    lua :: Parse file (luac -p)\n    php  :: Check syntax (php -l)\n    phpp :: Parse a file (php -f)\n    ruby :: Check syntax (ruby -c; no auto-checks)\n    tex, latex :: Parse file (chktex -q -v0; no auto-checks)\n\nUse vimscript #2584 to mark syntax errors with signs.\n",
+  "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14146",
+      "filename": "checksyntax.vba",
+      "script_version": "1.0",
+      "date": "2010-10-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- checksyntax_compiler_{&ft} & checksyntax_cmd_{&ft} variables can be buffer local\n- The info maintained as g:checksyntax_* variables is now kept in a dictionary named g:checksyntax\n- Support for gjslint\n- Some bug fixes (e.g. tidy)\n"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=11435",
       "filename": "checksyntax.vba.gz",

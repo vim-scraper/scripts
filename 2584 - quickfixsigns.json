@@ -4,8 +4,8 @@
   "summary": "Mark quickfix & location list items with signs",
   "name": "quickfixsigns",
   "script_type": "utility",
-  "description": "Mark items in the quickfix and location lists with signs -- those lists \nare filled by, e.g., the :make command. Other lists can be configured \nvia the |g:quickfixsigns_lists| variable. By default, quickfixsigns also \ndisplays signs for the marks a-zA-Z.\n\nThe attached text is displayed in a balloon when hovering with the mouse \nover the sign.\n",
-  "install_details": "Requirements: has('signs')\n\nEdit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0,\nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n\n\nAlso available via git\nhttp://github.com/tomtom/quickfixsigns_vim",
+  "description": "http://github.com/tomtom/quickfixsigns_vim\n\nMark intersting lines with signs:\n\n    - items in the quickfix and location lists (e.g. compilation errors)\n    - marks a-zA-Z\n    - relative line numbers\n    - changes (with respect to the version in the VCS)\n\nOther lists can be configured via the |g:quickfixsigns_lists| variable.\n\nThe attached text is displayed in a balloon when hovering with the mouse \nover the sign.\n",
+  "install_details": "Requirements: has('signs')\n\nEdit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0,\nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n",
   "versions": [
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13975",

@@ -1,0 +1,43 @@
+{
+  "script_id": "3201",
+  "display_name": "trailing-whitespace",
+  "summary": " Highlights trailing whitespace in red and offers:FixWhitespace",
+  "name": "trailing-whitespace",
+  "script_type": "utility",
+  "description": "This plugin causes all trailing whitespace to be highlighted in red.\n\nTo fix the whitespace errors, just call :FixWhitespace.  By default it\noperates on the entire file.  Pass a range (or use V to select some lines)\nto restrict the portion of the file that gets fixed.\n\nThe repo is at http://github.com/bronson/vim-trailing-whitespace\n\nBased on http://vim.wikia.com/wiki/Highlight_unwanted_spaces\n",
+  "install_details": "Install trailing-whitespace.vim in ~/.vim/plugin and trailing-whitespace.txt in ~/.vim/doc.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13839",
+      "filename": "trailing-whitespace-1.0.tar.gz",
+      "script_version": "1.0",
+      "date": "2010-09-16",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "20810",
+        "user_name": "bronson",
+        "first_name": "Scott",
+        "last_name": "Bronson",
+        "email": "brons_vimorg at rinspin.com",
+        "homepage": "http://github.com/bronson"
+      },
+      "release_notes": "Don't modify the cursor position or search highlight when fixing whitespace."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=13577",
+      "filename": "trailing-whitespace.tar.gz",
+      "script_version": "0.1",
+      "date": "2010-08-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "20810",
+        "user_name": "bronson",
+        "first_name": "Scott",
+        "last_name": "Bronson",
+        "email": "brons_vimorg at rinspin.com",
+        "homepage": "http://github.com/bronson"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

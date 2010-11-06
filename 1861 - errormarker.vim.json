@@ -8,6 +8,22 @@
   "install_details": "Copy the file errormarker.vim into ~/.vim/plugin. The help file will be automatically installed the next time VIM is launched.\n\nTo distinguish between warnings and errors for gcc messages, place sth. like this in your .vimrc:\n        let &errorformat=\"%f:%l:%c: %t%*[^:]:%m,%f:%l: %t%*[^:]:%m,\" . &errorformat\nIf you use a different locale than English, this may be also needed:\n        set makeprg=LANGUAGE=C\\ make",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14142",
+      "filename": "errormarker.vim",
+      "script_version": "0.1.13",
+      "date": "2010-10-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12220",
+        "user_name": "mh21",
+        "first_name": "Michael",
+        "last_name": "Hofmann",
+        "email": "mh21 at piware.de",
+        "homepage": "http://mh21.de/"
+      },
+      "release_notes": "- shortcut can be disabled (thanks Michael Jansen)"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13041",
       "filename": "errormarker.vim",
       "script_version": "0.1.12",

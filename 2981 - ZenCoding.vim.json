@@ -5,8 +5,40 @@
   "name": "ZenCoding.vim",
   "script_type": "utility",
   "description": "\nThis is vim script support expanding abbreviation like zen-coding.\nref: http://code.google.com/p/zen-coding/\n\nThere is a movie using zencoding.vim\nref: http://mattn.github.com/zencoding-vim\n\nSource Repository.\nref: http://github.com/mattn/zencoding-vim\n\nType abbreviation\n   +-------------------------------------\n   | html:5_\n   +-------------------------------------\n\"_\" is a cursor position. and type \"<c-y>,\" (Ctrl + y and Comma)\nNOTE: Don't worry about key map. you can change it easily.\n   +-------------------------------------\n   | <!DOCTYPE HTML>\n   | <html lang=\"en\">\n   | <head>\n   |     <title></title>\n   |     <meta charset=\"UTF-8\">\n   | </head>\n   | <body>\n   |      _\n   | </body>\n   | </html>\n   +-------------------------------------\nType following\n   +-------------------------------------\n   | div#foo$*2>div.bar\n   +-------------------------------------\nAnd type \"<c-y>,\"\n   +-------------------------------------\n   |<div id=\"foo1\">\n   |    <div class=\"bar\">_</div>\n   |</div>\n   |<div id=\"foo2\">\n   |    <div class=\"bar\"></div>\n   |</div>\n   | _\n   +-------------------------------------\n\nTutorial:\n\n  http://github.com/mattn/zencoding-vim/raw/master/TUTORIAL\n\nHow work this:\n\n  http://mattn.github.com/zencoding-vim\n\nTips:\n\nYou can customize behavior of expanding with overriding config.\nThis configuration will be marged at loading plugin. \n\n  let g:user_zen_settings = {\n  \\  'indentation' : '  ',\n  \\  'perl' : {\n  \\    'aliases' : {\n  \\      'req' : 'require '\n  \\    },\n  \\    'snippets' : {\n  \\      'use' : \"use strict\\nuse warnings\\n\\n\",\n  \\      'warn' : \"warn \\\"|\\\";\",\n  \\    }\n  \\  }\n  \\}\n\n  let g:user_zen_expandabbr_key = '<c-e>'\n\n  let g:use_zen_complete_tag = 1\n\nYou can set language attribute in html using zen_settings['lang'].\n",
-  "install_details": "copy zencoding.vim to your plugin directory.",
+  "install_details": "# cd ~/.vim# unzip zencoding-vim.zipor if you install pathogen.vim:# cd ~/.vim/bundle # or make directory# unzip /path/to/zencoding-vim.zipif you get sources from repository:# cd ~/.vim/bundle # or make directory# git clone http://github.com/mattn/zencoding-vim.git",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14184",
+      "filename": "zencoding-vim.zip",
+      "script_version": "0.47",
+      "date": "2010-11-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "103",
+        "user_name": "mattn",
+        "first_name": "Yasuhiro",
+        "last_name": "Matsumoto",
+        "email": "mattn.jp at gmail.com",
+        "homepage": "http://mattn.kaoriya.net/"
+      },
+      "release_notes": "This is an upgrade for ZenCoding.vim:[drastic changes] enable autoload. you should whole replace older files.package was empty. upload again."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14183",
+      "filename": "zencoding-vim.zip",
+      "script_version": "0.46",
+      "date": "2010-11-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "103",
+        "user_name": "mattn",
+        "first_name": "Yasuhiro",
+        "last_name": "Matsumoto",
+        "email": "mattn.jp at gmail.com",
+        "homepage": "http://mattn.kaoriya.net/"
+      },
+      "release_notes": "This is an upgrade for ZenCoding.vim:[drastic changes] enable autoload. you should whole replace older files."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14026",
       "filename": "zencoding.vim",

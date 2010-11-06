@@ -8,6 +8,22 @@
   "install_details": "To install open the vimball archive in Vim:\n\n  vim command-t.vba\n\nThen source it:\n\n  :so %\n\nThe C extension must also be then compiled; for instance, if Vimball installs your plugin files in ~/.vim, then you would do this:\n\n  cd ~/.vim/ruby/command-t\n  ruby extconf.rb\n  make\n\nNote that Command-T requires a version of VIM with Ruby support enabled, and it must be compiled using the same version of Ruby that Vim itself links against. For more details see the documentation:\n\n  http://git.wincent.com/command-t.git/blob_plain/HEAD:/README.txt",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14186",
+      "filename": "command-t-1.0b.vba",
+      "script_version": "1.0b",
+      "date": "2010-11-05",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win at wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- work around platform-specific Vim 7.3 bug seen by some users (wherein\n  Vim always falsely reports to Ruby that the buffer numbers is 0)\n- re-use the buffer that is used to show the match listing, rather than\n  throwing it away and recreating it each time Command-T is shown; this\n  stops the buffer numbers from creeping up needlessly"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13820",
       "filename": "command-t-0.8.1.vba",
       "script_version": "0.8.1",

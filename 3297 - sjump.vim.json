@@ -4,7 +4,7 @@
   "summary": "Display labels in the sign area and jump to selected label",
   "name": "sjump.vim",
   "script_type": "utility",
-  "description": "When executed the plugin will display labels in the sign area and wait\nfor the user to enter a label. Then it will jump to the line with the\nentered label and hide the labels (by removing the signs).\n\nThe plugin is mapped to the sequence gl. The mapping can be disabled with:\n   let g:sjump_enable_keymap = 0\n\nTo put the mapping on another key:\n   nmap <F9> :call sjump#JumpToLabel()<cr>\n\nMore configuration options are in help (:help sjump).\n\nRequires: +signs\nUse :version to see if +signs is enabled.",
+  "description": "When executed the plugin will display labels in the sign area and wait\nfor the user to enter a label. Then it will jump to the line with the\nentered label and hide the labels (by removing the signs).\n\nThe plugin is mapped to the sequence gl (Goto Line). The mapping can\nbe disabled with:\n   let g:sjump_enable_keymap = 0\n\nTo put the mapping on another key:\n   nmap <F9> :call sjump#JumpToLabel()<cr>\n\nMore configuration options are in help (:help sjump).\n\nRequires: +signs\nUse :version to see if +signs is enabled.",
   "install_details": "Unpack into vim runtime directory (eg. ~/.vim/).\n\nTo generate the help tags open the installed file doc/sjump.txt in Vim and execute\n   :helptags %:p:h",
   "versions": [
     {

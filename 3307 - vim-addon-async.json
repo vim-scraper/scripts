@@ -1,0 +1,43 @@
+{
+  "script_id": "3307",
+  "display_name": "vim-addon-async",
+  "summary": "asynchronous communication for Vim",
+  "name": "vim-addon-async",
+  "script_type": "utility",
+  "description": "start external processes using VimL, write to their stdin and get notified when they produce output or kill the process when you're done.\n\nThis plugin also implements an experimental minimalistic terminal like interface so that you can run you favourite interpreter (irb, python, /bin/sh, sbt, scala, ...) inside a simple Vim buffer.\n\nThe API is non blocking and should be strong enough to enterface with debuggers etc.\n\nImplementation details: You have to compile an external c helper application which interfaces with the external process notifying Vim about arriving stdout blocks by using the client-server feature.\n\nIts used in production by me. Interface may still change slightly in the future. Under some conditions Vim crashes although it shouldn't. Try it and report how well it works for you.\n\nIf you've trouble getting started contact me.",
+  "install_details": "This plugin can be used on its own. Because some more (optional) dependencies may be added I recommend using vim-addon-manager for installing. See README file",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14178",
+      "filename": "vim-addon-async-0.1.zip",
+      "script_version": "0.1",
+      "date": "2010-11-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10341",
+        "user_name": "MarcWeber",
+        "first_name": "Marc",
+        "last_name": "Weber",
+        "email": "marco-oweber at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "signal support, scala REPL completion, pid fix"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14157",
+      "filename": "initial.zip",
+      "script_version": "0.0",
+      "date": "2010-10-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10341",
+        "user_name": "MarcWeber",
+        "first_name": "Marc",
+        "last_name": "Weber",
+        "email": "marco-oweber at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

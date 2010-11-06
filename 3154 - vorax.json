@@ -8,6 +8,22 @@
   "install_details": "VoraX follows the standard procedure of installing a Vim plugin. However, you need to take care of some dependencies VoraX relies on:\n\n   1. your vim must have ruby support enabled. In order to check this you may execute :version and look for +ruby.\n   2. ruby 1.8 (1.8.7 is the recommended version)\n   3. rubygems (on Debian systems is as simple as: sudo apt-get install rubygems)\n   4. the antlr3 ruby gem. You may install it using: gem install antlr3 -r\n   5. for Windows OS, besides ruby, you'll also need the win32-api gem. You may install it using: gem install win32-api -r\n   6. a working Oracle client with sqlplus, which has to be available in the environment $PATH variable. The instant client with sqlplus should be just fine.\n   7. optionally, if you want to securely store passwords for your Oracle connections then the openssl ruby extension must be available. On Ubuntu/Debian systems you may use the following command to install it: sudo apt-get install libopenssl-ruby1.8 \n\nPlease notice that only ruby 1.8 is supported for the moment therefore be careful not to install ruby 1.9 instead.\n\nOptionally, you may install the following plugins VoraX integrates with:\n\n    * NERDTree: http://www.vim.org/scripts/script.php?script_id=1658\n    * XpTemplate: http://www.vim.org/scripts/script.php?script_id=2611 \n    * TagList: http://www.vim.org/scripts/script.php?script_id=273\n    * FuzzyFinder: http://www.vim.org/scripts/script.php?script_id=1984\n\nAfter the installation is done it is advisable to index the documentation using the following commands:\n\n    * :helptags $VIM/.vim/doc (Unix)\n    * :helptags $VIM/vimfiles/doc (Windows) ",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14147",
+      "filename": "vorax-2.5.zip",
+      "script_version": "2.5",
+      "date": "2010-10-29",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "20487",
+        "user_name": "talek",
+        "first_name": "Alexandru",
+        "last_name": "Tica",
+        "email": "alexandru.tica at gmail.com",
+        "homepage": "http://oracle-cookies.blogspot.com"
+      },
+      "release_notes": "    * display the results of a query using a vertical column layout (thanks to Spratek)\n    * the ability to browse materialized views from dbExplorer (thanks to Ingo Olbrich)\n    * the possibility to define whenever or not after executing a statement the focus should return automatically to the originating window (thanks to koelner.r)\n    * command/shortcut to toggle the results window\n    * basic matchit functionality for plsql buffers\n    * bug fix: error when connecting to the default local database (thanks to marcin.wroblewski)\n    * bug fix: plsql packages comments are incorrectly removed\n    * bug fix: Issuing exit in Vorax disconnects from db, but \"hangs\" vorax (thanks to Ingo Olbrich)\n    * bug fix: Providing a complete connection string at \"User: \" prompt does not work\n    * bug fix: invalid behavior of dbms_xplan.display_cursor() (thanks to koelner.r) "
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13977",
       "filename": "vorax-2.4.zip",
       "script_version": "2.4",

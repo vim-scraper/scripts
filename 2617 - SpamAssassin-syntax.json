@@ -4,9 +4,41 @@
   "summary": "Syntax highlighting for SpamAssassin config files",
   "name": "SpamAssassin-syntax",
   "script_type": "syntax",
-  "description": "* Regular expression highlighting (from perl)\n* Should work in all versions of vim, properly disabling the features for v7+\n* COMPLETE recognition of all settings with a good understanding of syntax\n* Settings recognized include all plugins shipped with SA plus a few 3rd-party plugins.\n\nSpell-check is enabled on various pieces for which it is appropriate (vim 7+, you must turn it on first).\n\nThis has also been posted to the spamassassin users mailing list.",
-  "install_details": "Just like any syntax file.\n\nSave this file to ~/.vim/syntax/spamassassin.vim and add the following to your ~/.vim/filetype.vim:\n\naugroup filedetect\n    au BufRead,BufNewFile user_prefs,*.cf,*.pre setfiletype spamassassin\naugroup END\n\nTo install it system-wide, save the attached file as /usr/share/vim/vim[0-9]*/syntax/spamassassin.vim and edit\n/usr/share/vim/vim[0-9]*/filetype.vim in a manner similar to the local filetype.vim edit noted above (in my /usr/share/vim/vim71/fileytpe.vim for vim 7.1.314-3+lenny2, it would be added at line 2254, right above '\" Vim script').",
+  "description": "* Regular expression highlighting (from perl)\n* COMPLETE recognition of all settings with a good understanding of syntax\n* Settings recognized include all plugins shipped with SA plus a few 3rd-party plugins.\n\nSpell-check is enabled on various pieces for which it is appropriate (vim 7+, you must turn it on first).\n\nThis has also been posted to the spamassassin users mailing list.",
+  "install_details": "Just like any syntax file.\n\nSave this file to ~/.vim/syntax/spamassassin.vim and add the following to your ~/.vim/filetype.vim:\n\naugroup filedetect\n    au BufRead,BufNewFile user_prefs,*.cf,*.pre setfiletype spamassassin\naugroup END\n\nNote that this will override Postfix's main.cf and Sendmail's sendmail.cf ... I'm not sure how to rectify that.\n\nTo install it system-wide, save the attached file as /usr/share/vim/vim[0-9]*/syntax/spamassassin.vim and edit\n/usr/share/vim/vim[0-9]*/filetype.vim in a manner similar to the local filetype.vim edit noted above.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14169",
+      "filename": "spamassassin.vim",
+      "script_version": "3.1",
+      "date": "2010-11-03",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17182",
+        "user_name": "khopesh",
+        "first_name": "Adam",
+        "last_name": "Katz",
+        "email": "vim at khopis.com",
+        "homepage": "http://khopesh.com/"
+      },
+      "release_notes": "Extensive use of syn-cluster makes this more easily abstracted for additional plugins.  Plugin section broken into how it ships; enabled, disabled, not (third-party).  Each plugin section is fully independent and therefore can easily be deactivated or used as a model for a new plugin.  Rewrapped to wider view since lines were way over the 80-col size anyway.  Things are more properly contained now as well.  Removed abstraction for highlighting due to increased version dependency.  Added support for sa3.3 plugins and the remaining missing shipped plugins, plus iXhash.  Fixed regex detection (m// and friends were broken in 3.0)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14164",
+      "filename": "spamassassin.vim",
+      "script_version": "3.0",
+      "date": "2010-11-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17182",
+        "user_name": "khopesh",
+        "first_name": "Adam",
+        "last_name": "Katz",
+        "email": "vim at khopis.com",
+        "homepage": "http://khopesh.com/"
+      },
+      "release_notes": "MAJOR efficiency increase.  This is now usable on large files.  \n\nRemoved most \\%(inefficient zero-width lookbehind\\)\\@<= portions in favor of using nextgroup since \\%(this zero-width lookbehind can't contain ANY highlighting\\)\\zs  also fixed several outstanding minor bugs and added a few new highlighted areas (specifically for meta rules).  \n\nNow that I've tested this with a genuine vim 5.8, I'm pretty sure it never worked.  Required vim version bumped to 6.0.  \n\nOffline edits put this at 2.8 before 3.0, though 2.6+ were all very minor and I tend to err on the side of bumping up the version when my systems are out of sync."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=11655",
       "filename": "spamassassin.vim",

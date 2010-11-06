@@ -4,9 +4,25 @@
   "summary": "snake_case -> SnakeCase, CamelCase -> camel_case",
   "name": "operator-camelize",
   "script_type": "utility",
-  "description": "*operator-camelize* is a Vim plugin to provide an operator\nto camelize/decamelize a specified text.\n\nRequirements:\n- |operator-user| (vimscript#2692)",
+  "description": "*operator-camelize* is a Vim plugin to provide an operator\nto camelize/decamelize a specified text.\n\nRequirements:\n- |operator-user| (vimscript#2692)\n\nRepository:\nhttp://github.com/tyru/operator-camelize.vim",
   "install_details": "...",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14153",
+      "filename": "operator-camelize.zip",
+      "script_version": "0.0.3",
+      "date": "2010-10-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "- Fix bug: When selected in blockwise visual mode,\n  unnecessary newline is inserted at the bottom.\n- Fix bug: If there are two more than words in selected range,\n  head character is not camelized.\n- A lot of internal changes."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13806",
       "filename": "operator-camelize.zip",

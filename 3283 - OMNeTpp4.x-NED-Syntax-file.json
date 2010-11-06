@@ -5,7 +5,7 @@
   "name": "OMNeTpp4.x-NED-Syntax-file",
   "script_type": "syntax",
   "description": "I find the syntax file for ned, but it is just for OMNeT++ 3.x network simulator and was not updated for a long time. Now, The OMNeT++ 4.x network simulator is released, I wish the ned.vim file can help users work easily.\n\nThe syntax file include:\n* highlight all functions keywords\n* highlight the number, float, double types and so on\n* highlight the properties(such as: @loose, @prompt, @unit and so on)\n* code folding\n    you can set this by edit the .vimrc, for examples \"let ned_fold=1\" or \"let ned_nofold_blocks=1\" or \"let ned_nofold_packages=1\"\n* highlight the document keywords, TODO, FIXME and so on\n\nmore information in the ned.vim, enjoy it.",
-  "install_details": "copy to ~/.vim/syntax (if there is not that directory, you can execute the command \"mkdir -p ~/.vim/syntax\")",
+  "install_details": "copy to ~/.vim/syntax (if there is not that directory, you can execute the command \"mkdir -p ~/.vim/syntax\")\nadd to your ~/.vimrc: \n   au BufNewFile,BufRead *.ned set syntax=ned ",
   "versions": [
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14077",
