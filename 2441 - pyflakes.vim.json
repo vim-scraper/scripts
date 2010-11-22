@@ -8,6 +8,38 @@
   "install_details": "1. Make sure your vimrc has \"filetype plugin indent on\" so that pyflake-vim's ftplugin files are loaded automatically when you open a Python buffer.\n2. Drop extracted files in ~/.vim/ftplugin/python.\n3. That's it!\n\nSee the README for more info.\n",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14288",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "3.0",
+      "date": "2010-11-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Upgraded the included pyflakes module to trunk r17946 from http://divmod.org/trac/wiki/DivmodPyflakes, which adds support for Python 2.7 constructs like set comprehensions and dict comprehensions.  Modified pyflakes 0.4.0 to retain column information.\n\nModified pyflakes.vim to be compatible with \"stock\" PyFlakes.\n\nChanges in pyflakes.vim: https://github.com/kevinw/pyflakes-vim/commit/8a7e19b6578b0986cb7a88a6c10d6cd907af2057\n\nChanges to stock PyFlakes 0.4.0: https://github.com/kevinw/pyflakes/commit/8f62656c96b7cf66b7ad6cac0d9e3881e55f389f#"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14215",
+      "filename": "pyflakes-vim.zip",
+      "script_version": "2.02",
+      "date": "2010-11-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15504",
+        "user_name": "kilowatt",
+        "first_name": "@kevinwatters",
+        "last_name": " ",
+        "email": "kevin.watters at gmail.com",
+        "homepage": "http://symbolsystem.com"
+      },
+      "release_notes": "Avoid a \"Press ENTER\" prompt when showing long error messages in narrow windows by truncating them to the number of columns. \n\nhttps://github.com/kevinw/pyflakes-vim/commit/ddeb0bf2d7db7916a62339f42c18c7a12468cd37"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14045",
       "filename": "pyflakes-vim.zip",
       "script_version": "2.01",

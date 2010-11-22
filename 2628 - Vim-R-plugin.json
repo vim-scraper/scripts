@@ -4,9 +4,57 @@
   "summary": "Plugin to work with R",
   "name": "Vim-R-plugin",
   "script_type": "ftplugin",
-  "description": "This plugin improves Vim's support for editing R code and makes it possible to integrate Vim with R. The functionality is similar to what you can find in Tinn-R and ess mode of emacs. This filetype plugin uses either screen or Conque Shell plugin (Linux, OS X, or other Unix) or python (Microsoft Windows) to communicate with R. \n\nScreenshots and Debian package: http://sites.google.com/site/jalvesaq/vimrplugin\n\nMAIN FEATURES:\n\n\n  * Syntax highlighting for R syntax, including:\n      - Special characters in strings.\n      - Functions of all installed packages (must be updated manually).\n      - Special highlighting for R output (.Rout files).\n  * Smart indentation for R syntax.\n  * Integrated communication with R:\n      - Start/Close R.\n      - Send lines, selection, paragraphs, functions, blocks, entire file.\n      - Send commands with the object under cursor as argument: help, args, plot, print, str, summary, example, names.\n      - Send to R the Sweave and pdflatex commands.\n      - Run R inside a Vim's buffer (with Conque Shell plugin; currently available only on Unix -- Linux or OS X).\n  * Omni completion (auto-completion) for R objects (.GlobalEnv and installed packages. The list of installed packages must be updated manually.\n  * Ability to see R's documentation in a Vim's buffer:\n      - Automatic calculation of the best layout of the R documentation buffer (split the window either horizontally or vertically according to the available room).\n      - Automatic formating of the text to fit the panel width.\n      - Send code and commands to R (useful to run examples).\n      - Jump to another R documentation.\n      - Syntax highlighting of R documentation.\n  * Object browser (.GlobalEnv and loaded packages; must be updated manually):\n      - Send commands with object under cursor as argument.\n      - Call R's help() with object under cursor as argument.\n      - Syntax highlighting of the object browser.\n  * Most of the plugin's behavior is customizable.\n\n\n\nUSE: Please, read the plugin's documentation.\n\nFILES:\n   autoload/rcomplete.vim\n   autoload/rplugin.vim\n   bitmaps/RClearAll.bmp\n   bitmaps/RClearAll.png\n   bitmaps/RClear.bmp\n   bitmaps/RClear.png\n   bitmaps/RClose.bmp\n   bitmaps/RClose.png\n   bitmaps/ricon.png\n   bitmaps/ricon.xbm\n   bitmaps/RListSpace.bmp\n   bitmaps/RListSpace.png\n   bitmaps/RSendBlock.bmp\n   bitmaps/RSendBlock.png\n   bitmaps/RSendFile.bmp\n   bitmaps/RSendFile.png\n   bitmaps/RSendFunction.bmp\n   bitmaps/RSendFunction.png\n   bitmaps/RSendLine.bmp\n   bitmaps/RSendLine.png\n   bitmaps/RSendParagraph.bmp\n   bitmaps/RSendParagraph.png\n   bitmaps/RSendSelection.bmp\n   bitmaps/RSendSelection.png\n   bitmaps/RStart.bmp\n   bitmaps/RStart.png\n   doc/r-plugin.txt\n   ftdetect/r.vim\n   ftplugin/rhelp.vim\n   ftplugin/rnoweb.vim\n   ftplugin/r.vim\n   ftplugin/rbrowser.vim\n   indent/r.vim\n   r-plugin/build_omni_list.R\n   r-plugin/etags2ctags.R\n   r-plugin/functions.vim\n   r-plugin/omnilist\n   r-plugin/vimbrowser.R\n   r-plugin/vimhelp.R\n   r-plugin/rpager.sh\n   r-plugin/rperl.vim\n   r-plugin/rpython.vim\n   r-plugin/specialfuns.R\n   r-plugin/vimActivate.js\n   syntax/rbrowser.vim\n   syntax/rdoc.vim\n   syntax/rout.vim\n   syntax/r.vim\n",
+  "description": "This plugin improves Vim's support for editing R code and makes it possible to integrate Vim with R. The functionality is similar to what you can find in Tinn-R and ess mode of emacs. This filetype plugin uses either screen (Linux, OS X, or other Unix, optionally with the Screen plugin, vimscript #2711) or Python (Microsoft Windows) or Conque Shell plugin (all platforms, vimscript #2771) to communicate with R. \n\nScreenshots and Debian package: http://sites.google.com/site/jalvesaq/vimrplugin\n\nMAIN FEATURES:\n\n  * Syntax highlighting for R syntax, including:\n      - Special characters in strings.\n      - Functions of all installed packages (must be updated manually).\n      - Special highlighting for R output (.Rout files).\n      - Spell check only strings and comments.\n      - Fold code when foldmethod=syntax.\n  * Smart indentation for R syntax.\n  * Integrated communication with R:\n      - Start/Close R.\n      - Send lines, selection, paragraphs, functions, blocks, entire file.\n      - Send commands with the object under cursor as argument: help, args,\n\tplot, print, str, summary, example, names.\n      - Send to R the Sweave and pdflatex commands.\n      - Run R inside a Vim's buffer.\n  * Omni completion (auto-completion) for R objects (.GlobalEnv and installed\n    packages. The list of installed packages must be updated manually.\n  * Ability to see R's documentation in a Vim's buffer:\n      - Automatic calculation of the best layout of the R documentation buffer\n\t(split the window either horizontally or vertically according to the\n\tavailable room).\n      - Automatic formating of the text to fit the panel width.\n      - Send code and commands to R (useful to run examples).\n      - Jump to another R documentation.\n      - Syntax highlighting of R documentation.\n  * Object Browser (.GlobalEnv and loaded packages; must be updated manually):\n      - Send commands with the object under cursor as argument.\n      - Call R's help() with the object under cursor as argument.\n      - Syntax highlighting of the Object Browser.\n  * Most of the plugin's behavior is customizable.\n\n\nUSE: Please, read the plugin's documentation.\n\nFILES:\n\n   autoload/rcomplete.vim\n   bitmaps/RClearAll.bmp\n   bitmaps/RClearAll.png\n   bitmaps/RClear.bmp\n   bitmaps/RClear.png\n   bitmaps/RClose.bmp\n   bitmaps/RClose.png\n   bitmaps/ricon.png\n   bitmaps/ricon.xbm\n   bitmaps/RListSpace.bmp\n   bitmaps/RListSpace.png\n   bitmaps/RSendBlock.bmp\n   bitmaps/RSendBlock.png\n   bitmaps/RSendFile.bmp\n   bitmaps/RSendFile.png\n   bitmaps/RSendFunction.bmp\n   bitmaps/RSendFunction.png\n   bitmaps/RSendLine.bmp\n   bitmaps/RSendLine.png\n   bitmaps/RSendParagraph.bmp\n   bitmaps/RSendParagraph.png\n   bitmaps/RSendSelection.bmp\n   bitmaps/RSendSelection.png\n   bitmaps/RStart.bmp\n   bitmaps/RStart.png\n   doc/r-plugin.txt\n   ftdetect/r.vim\n   ftplugin/rhelp.vim\n   ftplugin/rnoweb.vim\n   ftplugin/r.vim\n   ftplugin/rbrowser.vim\n   indent/r.vim\n   indent/rnoweb.vim\n   r-plugin/build_omniList.R\n   r-plugin/common_buffer.vim\n   r-plugin/common_global.vim\n   r-plugin/etags2ctags.R\n   r-plugin/functions.vim\n   r-plugin/omniList\n   r-plugin/vimbrowser.R\n   r-plugin/vimhelp.R\n   r-plugin/r.snippets\n   r-plugin/rpager.sh\n   r-plugin/rsyntax.vim\n   r-plugin/specialfuns.R\n   r-plugin/tex_indent.vim\n   r-plugin/vimActivate.js\n   r-plugin/windows.py\n   syntax/rbrowser.vim\n   syntax/rout.vim\n   syntax/r.vim\n",
   "install_details": "GENERAL INSTRUCTIONS\n\nYou need to activate plugins and indentation according to 'filetype'. You should have at least the following options in your vimrc:\n\n  set nocompatible\n  syntax enable\n  filetype plugin on\n  filetype indent on\n\nMake a backup of your ~/.vim directory because existing files will be replaced.\n\nOPERATING SYSTEM SPECIFIC INSTRUCTIONS\n\nLINUX/UNIX\n\nCreate your ~/.vim directory if you do not have it yet:\n\n  mkdir -p ~/.vim\n\nUncompress the archive:\n\n  unzip vim-r-plugin-*.zip -d ~/.vim\n\nStart Vim and build the tags file for this document (and others that eventually are in at the same directory):\n\n  :helptags ~/.vim/doc\n\nRead the plugin's documentation to finish the installation:\n\n  :h r-plugin-installation\n\n\nWINDOWS\n\nCreate your vimfiles directory if you do not have it yet. Its path will be similar to one of the following:\n\n  C:\\Documents and Settings\\yourlogin\\vimfiles\n  C:\\Users\\yourlogin\\vimfiles\n\nUncompress the archive. Right click on the plugin's zip file and choose \"Extract all\". Then choose ~/vimfiles as the destination directory.\n\nStart Vim and build the tags file for this document (and others that eventually are in the same directory):\n\n  :helptags ~\\vimfiles\\doc\n\nRead the plugin's documentation to finish the installation:\n\n  :h r-plugin-installation\n\n",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14337",
+      "filename": "vim-r-plugin-101121.zip",
+      "script_version": "101121",
+      "date": "2010-11-21",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* Fix for when whoami returns domain name on Windows (thanks to \"Si\" for fixing the bug).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14296",
+      "filename": "vim-r-plugin-101118.zip",
+      "script_version": "101118",
+      "date": "2010-11-18",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* New command:  :RUpdateObjListAll.\n* New option: vimrplugin_allnames.\n* Allow the use of Python 3.1 on Windows.\n* Minor improvements in indentation of R code.\n* The file r-plugin/omni_list was renamed to r-plugin/omniList because its field separator changed to \";\".\n* Fixed bug that was causing ^H to be exhibited in the R documentation in some systems. (Thanks to Helge Liebert for reporting the problem).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14203",
+      "filename": "vim-r-plugin-101107.zip",
+      "script_version": "101107",
+      "date": "2010-11-07",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17232",
+        "user_name": "jalvesaq",
+        "first_name": "Jakson",
+        "last_name": "Aquino",
+        "email": "jalvesaq at gmail.com",
+        "homepage": "http://jalvesaq.googlepages.com"
+      },
+      "release_notes": "* New feature: complete chunk block when '<' is pressed in rnoweb files.\n* New option: vimrplugin_rnowebchunk.\n* New key bindings in Normal mode for Rnoweb files: gn (go to next R code chunk) and gN (go to previous R code chunk).\n* New command:  :RBuildTags.\n* Added fold capability to syntax/r.vim.\n* Improved indentation of rnoweb files: thanks to Johannes Tanzler for writing the tex.vim indent script and for permitting its inclusion in the Vim-R-plugin.\n* R CMD BATCH now is called with --no-restore --no-save (key binding \\ro).\n* The file r-plugin/omnilist now has an additional field and was renamed as omni_list.\n* Use 64 bit version of R by default on Windows if the directory bin/x64 exists.\n* New Windows only option: vimrplugin_i386.\n"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14115",
       "filename": "vim-r-plugin-101025.zip",

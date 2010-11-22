@@ -1,0 +1,43 @@
+{
+  "script_id": "3321",
+  "display_name": "VimCoder.jar",
+  "summary": "The TopCoder Arena editor plugin with Vim integration.",
+  "name": "VimCoder.jar",
+  "script_type": "utility",
+  "description": "The TopCoder Arena is a Java applet providing access to free programming\nchallenges and competitions.  The applet contains a built-in editor for\nsolving the algorithm problems, but coding in Vim is much easier.  This is\na plugin for the arena providing support for using Vim as your editor.  You\ncan learn about TopCoder at their site: http://www.topcoder.com/tc\n\nSome features of this plugin:\n\n- Use Vim to edit your TC Arena problems.\n- Keeps track of your code files locally so you'll always have a copy.\n- Works with any language supported by TC.\n- Downloads and stores a copy of the problem statement with your code for\n    off-line viewing.\n- Support for templates (default templates provided only for C++ and Java).\n- Test-case \"drivers\" can be generated locally with the example test-case\n    data (currently C++ only).\n\nRequirements:\n\nYou need to have client/server support compiled into Vim.  This is usually\nthe case.  You also need to have a recent Java runtime implementation in\norder to run the arena applet and editor plugin.\n\nYou can also use Vim's :make command to build the C++ test cases, but\nof course you'll need the make utility and a C++ compiler.\n\nA more detailed description of this plugin is available on the project page:\nhttp://www.dogcows.com/vimcoder\n\nThis software is not endorsed by TopCoder and is provided as-is.\n",
+  "install_details": "1. Launch the TC Arena applet.\n2. Click the \"Options\" menu and select \"Editor\" to show the editor preferences.\n3. Click the \"Add\" button to bring up a new window for adding plugins.\n4. In the \"Name\" field, type \"Vim\" or whatever you want. This is used for identifying the plugin.\n5. In the \"EntryPoint\" field, type \"com.dogcows.VimCoder\" without the quotes.\n6. For the \"ClassPath\" field, click on \"Browse\" and locate the VimCoder jar file you downloaded.\n7. Click \"OK\" to close the plugin adding window.\n8. Click \"Save\" in the editor preferences window.\n\nYou should now be able select \"Vim\" (or whatever you entered in the first field) in the problem statement window to use Vim!",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14283",
+      "filename": "VimCoder-0.3.jar",
+      "script_version": "0.3",
+      "date": "2010-11-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "22922",
+        "user_name": "onefriedrice",
+        "first_name": "Charles",
+        "last_name": "McGarvey",
+        "email": "onefriedrice at brokenzipper.com",
+        "homepage": "http://www.dogcows.com/"
+      },
+      "release_notes": "\nChanges:\n\n * User-customizable templates (add them to the \"storage\" directory).\n * Default Vim command for Windows now C:\\WINDOWS\\gvim.bat; if you don't have this executable, you may need to tell VimCoder how to invoke Vim.\n * Documentation now available: https://www.dogcows.com/vimcoder/wiki/Manual\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14248",
+      "filename": "VimCoder-0.2.jar",
+      "script_version": "0.2",
+      "date": "2010-11-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "22922",
+        "user_name": "onefriedrice",
+        "first_name": "Charles",
+        "last_name": "McGarvey",
+        "email": "onefriedrice at brokenzipper.com",
+        "homepage": "http://www.dogcows.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -4,9 +4,41 @@
   "summary": "indexing all files in project with ctags (can work as add-on for project.tar.gz)",
   "name": "indexer.tar.gz",
   "script_type": "utility",
-  "description": "PLEASE NOTE that in version 1.3 default name of project settings directory has been changed from \".vim\" to \".vimprj\" to avoid conflicts with standard ~/.vim directory. If you are using this feature and your project settings dir is \".vim\", please rename it.\n--------------------------------------------------------------\n\nYou can use this plugin to automatically index your project files using ctags. This can be very useful when it's used together with plugins omnicppcomplete (for c, c++ development), code_complete.vim and other plugins that using tags.  You also will be able to jump from function call to its definition just by pressing Ctrl-] or g]\n\nThis plugin can work as add-on for project.tar.gz plugin ( http://www.vim.org/scripts/script.php?script_id=69 ). Indexer reads project file, parses it and builds tags for all files in project. But it also works fine without project.tar.gz.\n\n\nActually, if you are using project.tar.gz plugin and your projects file is default (~/.vimprojects), then setting Indexer up is very easily: you can just copy indexer.vim to your plugins directory, start Vim and open any file from your project.  The indexer plugin will detect that opened file is a file from project and automatically start ctags for each file in this project.  It also set &path and &tags options for Vim.\n\nIf you are using project.tar.gz, but you have another projects file, you should set option g:indexer_projectsSettingsFilename in your vimrc.\n\nIf you don't use project.tar.gz then you can use \".indexer_files\" to define projects and files to index.  Default location of this file is \"~/.indexer_files\". You can change it by modifying variable g:indexer_indexerListFilename\n\nSyntax of this file is simple, propably the best way to explain it is to show an example:\n--------------------- example ~/.indexer_files -----------------------\n[CoolProject] \n \n/home/user/myproject/src/*.c \n/home/user/myproject/src/*.h \n/home/user/myproject/inc/*.h \n \n[AnotherProject] \n \n/home/user/myproject2**/*.c \n/home/user/myproject2**/*.h \n-------------------------------------------------------------------------------\n\nIf you have many projects and you are lazy to put every project in\nthis file, you can put in your ~/.indexer_files something like this:\n\n--------------------- example ~/.indexer_files -----------------------\n[PROJECTS_PARENT filter=\"*.c *.h *.cpp\"]\n~/workspace\n-------------------------------------------------------------------------------\n\nThe keyword is PROJECTS_PARENT.\nIn this way, every directory in ~/workspace will be interpreted as separate\nproject, and you can open any file from any project in ~/workspace, and the \nwhole proper project will be indexed.\n\n\nAnd, finally, it can autodetect project root. So, you can move your project to another place in filesystem, and all files will be indexed anyway.  More detailed help see in options, variable \"g:indexer_lookForProjectDir\".\n\nYou need ctags to be installed to make this plugin work. http://ctags.sourceforge.net/\n\nI have tested it both on Linux and Windows, in Vim 7.3\nIf you have any troubles using this plugin, please email me.\n",
+  "description": "IMPORTANT! You need patched version of ctags (5.8.1) to make this plugin work correctly (starting from Indexer version 2.0), because of bug in ctags 5.8. You can read detailed info about this bug and download pathed version here: http://dfrank.ru/ctags581/en.html\n\nPLEASE NOTE that in version 1.3 default name of project settings directory has been changed from \".vim\" to \".vimprj\" to avoid conflicts with standard ~/.vim directory. If you are using this feature and your project settings dir is \".vim\", please rename it.\n--------------------------------------------------------------\n\nThis plugin automatically indexes your project files using ctags and keeps tags up-to-date (at every save of file from project tags will be updated). This can be very useful when it's used together with plugins omnicppcomplete (for c, c++ development), code_complete.vim and other plugins that using tags.  You also will be able to jump from function call to its definition just by pressing Ctrl-] or g]\n\nThis plugin can work as add-on for project.tar.gz plugin ( http://www.vim.org/scripts/script.php?script_id=69 ). Indexer reads project file, parses it and builds tags for all files in project. But it also works fine without project.tar.gz.\n\n\nActually, if you are using project.tar.gz plugin and your projects file is default (~/.vimprojects), then setting Indexer up is very easily: you can just copy indexer.vim to your plugins directory, start Vim and open any file from your project.  The indexer plugin will detect that opened file is a file from project and automatically start ctags for each file in this project.  It also set &path and &tags options for Vim.\n\nIf you are using project.tar.gz, but you have another projects file, you should set option g:indexer_projectsSettingsFilename in your vimrc.\n\nIf you don't use project.tar.gz then you can use \".indexer_files\" to define projects and files to index.  Default location of this file is \"~/.indexer_files\". You can change it by modifying variable g:indexer_indexerListFilename\n\nSyntax of this file is simple, propably the best way to explain it is to show an example:\n--------------------- example ~/.indexer_files -----------------------\n[CoolProject] \n \n/home/user/myproject/src/*.c \n/home/user/myproject/src/*.h \n/home/user/myproject/inc/*.h \n \n[AnotherProject] \n \n/home/user/myproject2**/*.c \n/home/user/myproject2**/*.h \n-------------------------------------------------------------------------------\n\nIf you have many projects and you are lazy to put every project in\nthis file, you can put in your ~/.indexer_files something like this:\n\n--------------------- example ~/.indexer_files -----------------------\n[PROJECTS_PARENT filter=\"*.c *.h *.cpp\"]\n~/workspace\n-------------------------------------------------------------------------------\n\nThe keyword is PROJECTS_PARENT.\nIn this way, every directory in ~/workspace will be interpreted as separate\nproject, and you can open any file from any project in ~/workspace, and the \nwhole proper project will be indexed.\n\n\nAnd, finally, it can autodetect project root. So, you can move your project to another place in filesystem, and all files will be indexed anyway.  More detailed help see in options, variable \"g:indexer_lookForProjectDir\".\n\nYou need PATCHED ctags to be installed to make this plugin work. http://dfrank.ru/ctags581/en.html\n\nYou also need SED for better result. If you're using Unix-like system, then SED is already in your system (99.99%), if you're using Windows, then the best way is to install Cygwin ( http://cygwin.org ). NOTE that i tested this Windows version of SED: ( http://gnuwin32.sourceforge.net/packages/sed.htm ), it is not work correctly. Cygwin's SED works fine.\n\nI have tested it both on Linux and Windows, in Vim 7.3\nIf you have any troubles using this plugin, feel free to email me.\n",
   "install_details": "Decompress and untar in your ~/.vim directory (or \nequivalent).  Inside Vim, enter this: \n   :helptags ~/.vim/doc \n(or equivalent directory) \n(Enter \":help add-global-plugin\" to determine the directory to \nuntar it into.) \n\nThen enter \n  :help indexer \nfor information",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14270",
+      "filename": "indexer-2.01.tar.gz",
+      "script_version": "2.01",
+      "date": "2010-11-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20962",
+        "user_name": "dimonomid",
+        "first_name": "Dmitry",
+        "last_name": "Frank",
+        "email": "dimon.frank at gmail.com",
+        "homepage": "http://dfrank.ru/en.html"
+      },
+      "release_notes": "The only thing changed is that maximum command length on Windows systems decreased from 8186 to 8000, because of on some systems 8186 is too large, i don't know, why. I hope 8000 will work at all Windows systems (XP or later).\nThanks to Dan Price again."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14234",
+      "filename": "indexer-2.0.tar.gz",
+      "script_version": "2.0",
+      "date": "2010-11-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20962",
+        "user_name": "dimonomid",
+        "first_name": "Dmitry",
+        "last_name": "Frank",
+        "email": "dimon.frank at gmail.com",
+        "homepage": "http://dfrank.ru/en.html"
+      },
+      "release_notes": "IMPORTANT! You need patched version of ctags (5.8.1) to make this version of plugin work correctly, because of bug in ctags 5.8. You can read detailed info about this bug and download pathed version here: http://dfrank.ru/ctags581/en.html \n\n* Solved trouble with large projects: if there's very many files in your project and command to ctags is too long, then ctags calling several times with \"-a\" key. (Again: to make this work you need patched version of ctags); \n* option \"DontSpecifyFilesIfPossible\" working with .vimprojects file too now \n* when using append at filesave, old tags removing from tags file by SED. (this is needed to exclude garbage in tags file)\nThanks to Dan Price for ideas and inspiration :)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13919",
       "filename": "indexer-1.8.tar.gz",
@@ -19,7 +51,7 @@
         "first_name": "Dmitry",
         "last_name": "Frank",
         "email": "dimon.frank at gmail.com",
-        "homepage": ""
+        "homepage": "http://dfrank.ru/en.html"
       },
       "release_notes": "* Fixed some bugs (thanks to Julian Kooij)"
     },
@@ -35,7 +67,7 @@
         "first_name": "Dmitry",
         "last_name": "Frank",
         "email": "dimon.frank at gmail.com",
-        "homepage": ""
+        "homepage": "http://dfrank.ru/en.html"
       },
       "release_notes": "* Fixed bug that caused not all comments in .vimprojects was parsed correctly (thanks to Alexander Q).\n* Fixed some little bugs."
     },
@@ -51,7 +83,7 @@
         "first_name": "Dmitry",
         "last_name": "Frank",
         "email": "dimon.frank at gmail.com",
-        "homepage": ""
+        "homepage": "http://dfrank.ru/en.html"
       },
       "release_notes": "* For every projects creating unique tags file to avoid conflicts (thanks to Torkve)"
     },
@@ -67,7 +99,7 @@
         "first_name": "Dmitry",
         "last_name": "Frank",
         "email": "dimon.frank at gmail.com",
-        "homepage": ""
+        "homepage": "http://dfrank.ru/en.html"
       },
       "release_notes": "* Fixed bug that caused paths with spaces wasn't parsed correctly. \n* Added PROJECTS_PARENT .indexer_files feature (possibility to define directory with many projects inside)."
     },
@@ -83,7 +115,7 @@
         "first_name": "Dmitry",
         "last_name": "Frank",
         "email": "dimon.frank at gmail.com",
-        "homepage": ""
+        "homepage": "http://dfrank.ru/en.html"
       },
       "release_notes": "Fixed bug that caused paths with \"~\" wasn't parsed correctly (thanks Makoto Nokata)"
     },
@@ -99,7 +131,7 @@
         "first_name": "Dmitry",
         "last_name": "Frank",
         "email": "dimon.frank at gmail.com",
-        "homepage": ""
+        "homepage": "http://dfrank.ru/en.html"
       },
       "release_notes": "* Fixed some bugs\n* Default name of project settings directory has been changed from \".vim\" to \".vimprj\" to avoid conflicts with standard ~/.vim directory. If you are using this feature and your project settings dir is \".vim\", please rename it."
     },
@@ -115,7 +147,7 @@
         "first_name": "Dmitry",
         "last_name": "Frank",
         "email": "dimon.frank at gmail.com",
-        "homepage": ""
+        "homepage": "http://dfrank.ru/en.html"
       },
       "release_notes": "Initial upload"
     }

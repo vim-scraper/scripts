@@ -1,0 +1,27 @@
+{
+  "script_id": "3326",
+  "display_name": "stakeholders",
+  "summary": "Pimp up your old templates with dynamic place-holders",
+  "name": "stakeholders",
+  "script_type": "utility",
+  "description": "Experimental.\n\nOlder templating plugins for VIM often used simple markup for placeholders (e.g. <+VARIABLE_NAME+>). A placeholder was simply a pattern you could easily search for. Some newer templating plugins support dynamic replacement of placeholders with the same name.\n\nThe stakeholders plugin turns your old templating system into a high  potential overachiever. It provides dynamic replacement of placeholders with the same name/ID for older templating plugins. By default, it assumes placeholders match /<+\\([[:alpha:]_]\\+\\)+>/ since this pattern is used in several templating systems (e.g., vimscript #1160). You can easily change that pattern by setting |g:stakeholders#def| or b:stakeholders_def.\n\n\nUsage~\n\nThe tskeleton templating plugin provides a parameter (|g:tskeleton#enable_stakeholders|) that enables integration with the stakeholders plugin. For other templating plugins, you have to enable stakeholders by calling either |stakeholders#EnableBuffer()| or |stakeholders#EnableInRange()|.\n\nDemo: \nhttp://vimsomnia.blogspot.com/2010/11/tskeleton-and-stakeholders-vim-plugins.html\n\nAlso available via git: http://github.com/tomtom/stakeholders_vim/",
+  "install_details": "In order to install the vba, open the vba file in VIM and type: >\n\n    :so %\n\nSee :help vimball for details.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14265",
+      "filename": "stakeholders.vba",
+      "script_version": "0.1",
+      "date": "2010-11-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

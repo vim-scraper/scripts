@@ -1,0 +1,27 @@
+{
+  "script_id": "3315",
+  "display_name": "vim-addon-json-encoding",
+  "summary": "make Vim read and write JSON objects",
+  "name": "vim-addon-json-encoding",
+  "script_type": "utility",
+  "description": "I think JSON is the preferred way to make Vim communicate with external tools because it can speak it (almost) natively using eval / string.\n\nstring serialization encodes strings using &#039 instead of \\\". This the encoding has been rewritten using VImL\n\ntrue, false, null can&#039t be represented in VimL. Thus they are encoded by unique function values (See code)\n\nThis plugin is used by the ensime plugin (and similar code is used by the scion plugin).\nIn both cases Vim sends small commands and receives completion data or the like.\nBecause native eval is used for reading JSON data you can&#039t be faster.\n",
+  "install_details": "You can install this plugin using vim-addon-manager (recommended). It does not have any dependencies.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14218",
+      "filename": "initial.zip",
+      "script_version": "0.1",
+      "date": "2010-11-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10341",
+        "user_name": "MarcWeber",
+        "first_name": "Marc",
+        "last_name": "Weber",
+        "email": "marco-oweber at gmx.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

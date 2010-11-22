@@ -8,6 +8,22 @@
   "install_details": "Copy minibufexpl.vim into your plugin directory. Or :source minibufexpl.vim. That is all you need to get started. \n\nIf you want to enable extra functionality (documented in the source) you might want to add the following to your .vimrc: \n\n  let g:miniBufExplMapWindowNavVim = 1 \n  let g:miniBufExplMapWindowNavArrows = 1 \n  let g:miniBufExplMapCTabSwitchBufs = 1 \n  let g:miniBufExplModSelTarget = 1 \n\nThese are options that I expect most user will enjoy. \n\nYou can configure things like how tabs wrap, how big or small the explorer window is, if the explorer window is horizonal or vertical, the use of single or double click for buffer selection, what colors are used for the tabs in different states, how many buffers need to be open before the explorer window opens, etc. There are also some commands that you can use in your own key bindings for simple buffer manipulation. All of these options and more are documented at the top of the source file.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14207",
+      "filename": "minibufexplpp.vim",
+      "script_version": "6.3.4",
+      "date": "2010-11-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "20699",
+        "user_name": "OliverUv",
+        "first_name": "Oliver",
+        "last_name": "Uvman",
+        "email": "oliver.uvman at gmail.com",
+        "homepage": "http://www.uvman.se"
+      },
+      "release_notes": "Now returns to augroup NONE after setting augroup commands. Big thanks to Maciej Łaszcz for the bug report!\n"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13838",
       "filename": "minibufexplpp.vim",
       "script_version": "6.3.3",

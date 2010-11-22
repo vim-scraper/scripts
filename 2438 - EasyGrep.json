@@ -8,6 +8,22 @@
   "install_details": "Copy EasyGrep.vim and EasyGrepFileAssociations to your plugin directory; copy EasyGrep.txt to your doc directory.  Run helptags on your doc directory.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14198",
+      "filename": "EasyGrep.zip",
+      "script_version": "0.98",
+      "date": "2010-11-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15016",
+        "user_name": "danprice",
+        "first_name": "Daniel",
+        "last_name": "Price",
+        "email": "vim at danprice.fastmail.net",
+        "homepage": ""
+      },
+      "release_notes": "Highlight: The Replace and ReplaceUndo commands were reimplemented.  The granularity of matches inside of a Replace call were improved so that you can now decide replacements individually per line.\n    Additionally, Complex operations such as replacing x[i][j][k] with x(i,j,k) and following it up with a ReplaceUndo are now possible.\n\n    e.g.\n    :Replace /x\\[\\([^]]\\+\\)\\]\\[\\([^]]\\+\\)\\]\\[\\([^]]\\+\\)\\]/x(\\1,\\2,\\3)/\n    :ReplaceUndo\n\n    Please report any regressions with either of these functions.\n\nFeature: Added count command line option (-m 4 or -4)\nFeature: Improved Grep options window keybindings; searching within the options explorer window is now possible\nFeature: Expanded searches to include all of the active buffers' directories\nBugfix:  Fixed recursive operation and expanded search from reporting duplicate results\nBugfix:  Fixed <C-e> and <C-y> in replace mode\nFeature: Added EasyGrepWindowPosition for specifying where the error list window will be opened\nFeature: Added FilterErrorlist command for filtering the results within the quickfix or location list windows\nFeature: Improved printout when no matches are found\nFeature: Improved searching when an entire line is selected"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=11717",
       "filename": "EasyGrep.zip",
       "script_version": ".96",

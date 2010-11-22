@@ -1,0 +1,27 @@
+{
+  "script_id": "3311",
+  "display_name": "savemap.vim",
+  "summary": "savemap is the library to save current mapping(s)/abbreviation(s)",
+  "name": "savemap.vim",
+  "script_type": "utility",
+  "description": "Repository: http://github.com/tyru/savemap.vim\n\nRequirements:\n- Vim 7.3 or higher\n\n\n|savemap| is the library to provide a way\nto restore current mapping(s)/abbreviation(s) \"perfectly\".\n\n...But remember, you can always use |:map-<buffer>| for \"simple\" case.\n\n>\n    nmap foo blahblahblah\n\n    let foo_nmap = savemap#save_map('n', 'foo')\n    if empty(foo_nmap)\n        echoerr 'your vim version is lower than 7.3.032!'\n    endif\n\n    nmap foo bar\n    \" Execute 'bar'.\n    normal foo\n\n    call foo_nmap.restore()\n    \" Execute 'blahblahblah'.\n    normal foo\n\n\nOmit 2nd arg of |savemap#save_map()| to save all mappings of the mode.\n>\n    let normal_mappings = savemap#save_map('n')\n    if empty(normal_mappings)\n        echoerr 'your vim version is lower than 7.3.032!'\n    endif\n\n   \" Clear!\n    nmapclear\n\n    \" Map own mappings.\n    nnoremap a b\n    nnoremap c d\n    ...\n\n    try\n        ... \" Do it\n    finally\n        call normal_mappings.restore()\n    endtry",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14200",
+      "filename": "savemap.zip",
+      "script_version": "0.0.0",
+      "date": "2010-11-07",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

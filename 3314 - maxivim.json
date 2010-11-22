@@ -1,0 +1,27 @@
+{
+  "script_id": "3314",
+  "display_name": "maxivim",
+  "summary": "Maximize/unmaximize gvim without window manager",
+  "name": "maxivim",
+  "script_type": "utility",
+  "description": "In some environments (for example, KDE 3), gvim is unable to properly maximize or unmaximize itself, due to interactions with window managers or other issues.\n\nMaxivim bypasses window managers, allowing you to maximize gvim vertically, horizontally, or both, and restore it from having maximized it.\n\nMaxivim also allows you to set the initial size of your gvim windows by setting environment variables ($GVIM_LINES and $GVIM_COLUMNS).\n\n(This used to work with Vim 6, but I've only recently tested on Vim 7).",
+  "install_details": "Put maxivim.vim into your vim plugins directory.\n\nIf desired, add one or more of the following to your ~/.gvimrc:\n\nif has(\"gui_running\")\n        \" Enable keybindings for [F5], [F6], [F7], and [Shift+F6].\n        let g:maxivim_should_map_keys = 1\n        \" Ask maxivim to resize your gvim windows to the default size.\n        let g:maxivim_should_resize_to_default = 1\n        \" These override the values of $GVIM_COLUMNS and $GVIM_LINES. \n        let g:maxivim_default_columns = 100\n        let g:maxivim_default_lines = 50\nendif\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14217",
+      "filename": "maxivim.vim",
+      "script_version": "0.101001",
+      "date": "2010-11-09",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "22778",
+        "user_name": "jmknoble",
+        "first_name": "Jim",
+        "last_name": "Knoble",
+        "email": "jmknoble at pobox.com",
+        "homepage": "http://www.pobox.com/~jmknoble/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -8,6 +8,22 @@
   "install_details": "Just like any syntax file.\n\nSave this file to ~/.vim/syntax/spamassassin.vim and add the following to your ~/.vim/filetype.vim:\n\naugroup filedetect\n    au BufRead,BufNewFile user_prefs,*.cf,*.pre setfiletype spamassassin\naugroup END\n\nNote that this will override Postfix's main.cf and Sendmail's sendmail.cf ... I'm not sure how to rectify that.\n\nTo install it system-wide, save the attached file as /usr/share/vim/vim[0-9]*/syntax/spamassassin.vim and edit\n/usr/share/vim/vim[0-9]*/filetype.vim in a manner similar to the local filetype.vim edit noted above.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14189",
+      "filename": "spamassassin.vim",
+      "script_version": "3.2",
+      "date": "2010-11-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17182",
+        "user_name": "khopesh",
+        "first_name": "Adam",
+        "last_name": "Katz",
+        "email": "vim at khopis.com",
+        "homepage": "http://khopesh.com/"
+      },
+      "release_notes": "Fixed saFunction (it needs to be in a cluster after all, I was previously highlighting /anything/ that looked like a function).  Added support for new 'reuse' option."
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14169",
       "filename": "spamassassin.vim",
       "script_version": "3.1",

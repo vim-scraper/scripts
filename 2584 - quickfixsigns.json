@@ -8,6 +8,38 @@
   "install_details": "Requirements: has('signs')\n\nEdit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0,\nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14264",
+      "filename": "quickfixsigns.vba",
+      "script_version": "0.11",
+      "date": "2010-11-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Don't check the buffer number in s:ClearBuffer()- Improved handling of scopes (vim, buffer)- Always include the bufnr in the ID- FIX: upper case marks- Increase g:quickfixsigns_max = 500MD5 checksum: 6fa3a5dd60e62af094f7f7fe41d8695f"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14238",
+      "filename": "quickfixsigns.vba",
+      "script_version": "0.10",
+      "date": "2010-11-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- quickfixsigns#vcsdiff#GuessType(): use b:git_dir if set (by fugitive)- vcsdiff: Support for hg, svn- run qfl/loc checks more also on CursorHold & QuickfixCommandPost events- Experimental support for icons (currently assumes that gnome icons 16x16 are ok)- Support for sign classes that affect all buffers (all_buffers != 0)- Avoid unnecessary updates- Simplify handling of ids (construct a global id based on the sign definition)- Include icons from the open icon library- marks: Don't use own ID generator- s:PruneRegister()- Don't display icons on windowsMD5 checksum: 2ba95f98307ea61db8de28d6e60fb61b"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13975",
       "filename": "quickfixsigns.vba",
       "script_version": "0.9",

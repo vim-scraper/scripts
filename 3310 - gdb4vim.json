@@ -1,0 +1,43 @@
+{
+  "script_id": "3310",
+  "display_name": "gdb4vim",
+  "summary": "This script give you some ability to use gdb",
+  "name": "gdb4vim",
+  "script_type": "utility",
+  "description": "This is actually my first script, so please give me your feedbacks and say whatever you like and whenever you want to!\n\nWritten with python, this script implements few basic functions in debugging, such as:\n1. Add a variable display\n2. Set/clear breakpoint\n3. step/next\n4. edit the value of a variable (since 0.023)\n\nYou can find this project at:\nhttp://code.google.com/p/gdb4vim/\n\nEMail me if you'd like to participate!",
+  "install_details": "First your VIM should be compiled with PYTHON.\nThen you need python-dbus which I used to connect with GDB via a server script.\nPut the plugin and doc folder in your $HOME/.vim\nPut the gdb_dbus folder wherever you want.\nIn your VIMRC file, please specify the following:\nlet g:gdb_dbus_server_path = 'YOUR PATH TO gdb_dbus/gdb_dbus_server.py'\n\nSet other settings as you like and for detailed information, please read the doc.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14205",
+      "filename": "gdb4vim-0.023.zip",
+      "script_version": "0.023",
+      "date": "2010-11-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "22654",
+        "user_name": "kkspeed",
+        "first_name": "Bruce",
+        "last_name": "Li",
+        "email": "leilmyxwz at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Enable you to edit value of a variable by hitting its line in the display window."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14199",
+      "filename": "gdb4vim-0.021.zip",
+      "script_version": "0.021",
+      "date": "2010-11-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "22654",
+        "user_name": "kkspeed",
+        "first_name": "Bruce",
+        "last_name": "Li",
+        "email": "leilmyxwz at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

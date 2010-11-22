@@ -1,0 +1,43 @@
+{
+  "script_id": "3335",
+  "display_name": "VIP",
+  "summary": "Special copy and paste for VHDL entities, components and instances of components",
+  "name": "VIP",
+  "script_type": "utility",
+  "description": "VIP (VHDL Interface Plug-in) is a script for VIM text editor which provides some facilities to copy paste entities, components and instances of components.\n\nFor example you can copy the component :\n\ncomponent mux is   -- place the cursor on this line and enter the command :Viy (Vhdl Interface Yank)\n   port (  \n     INPUT  : in  std_logic_vector (15 downto 0);  \n     SEL    : in  std_logic;   \n     OUTPUT : out std_logic    \n   );  \nend component mux;\n\nand paste it as an instance :\n\nmux_0 : mux   -- place the cursor here and enter the command :Vii (Vhdl Interface Instance)\n   port map (  \n      INPUT   => s_INPUT,  \n      SEL     => s_SEL,  \n      OUTPUT  => s_OUTPUT  \n  );\n\nVIP can :\n\n  - copy an entity and paste it as\n          - an entity\n          - a component\n          - an instance\n\n  - copy a component and paste it as\n          - an entity\n          - a component\n          - an instance\n\n  - copy a instance and paste it as\n          - an instance (with auto-incrementation of the suffix number)\n\nVIP tries to respect your indentation as much as possible (spaces, tabs, spaces + tabs).\nIt can work with many different styles of writing entities, components and instances but not all of them. See documentation.\n\nContact, feedback : http://www.microreflexion.com/?page_id=9\nSource : http://gitorious.org/vip\n",
+  "install_details": "Put the plugin/vip.vim file into your ~/.vim/plugin (or $HOME\\\\vimfiles\\\\plugin) directory.\nPut the doc/vip.txt into your ~/.vim/doc (or $HOME\\\\vimfiles\\\\doc) directory.\n\nRun \\\":helptags ~/.vim/doc\\\" (\\\":helptags $HOME/vimfiles/doc\\\")\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14340",
+      "filename": "vip.zip",
+      "script_version": "1.0.1",
+      "date": "2010-11-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23034",
+        "user_name": "JPR75",
+        "first_name": "Jean-Paul",
+        "last_name": "Ricaud",
+        "email": "microvip at microreflexion.com",
+        "homepage": "http://www.microreflexion.com"
+      },
+      "release_notes": "Fixed missing argument when pasting an entity as an instance"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14309",
+      "filename": "vip.zip",
+      "script_version": "1.0.0",
+      "date": "2010-11-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23034",
+        "user_name": "JPR75",
+        "first_name": "Jean-Paul",
+        "last_name": "Ricaud",
+        "email": "microvip at microreflexion.com",
+        "homepage": "http://www.microreflexion.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

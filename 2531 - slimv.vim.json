@@ -8,6 +8,38 @@
   "install_details": "Note for users of pre-0.5.0 versions: Slimv is now a Lisp+Clojure filetype plugin, which means that it went through a major reorganization. Please delete the old version before installing the new one. See details in the documentation.\n\nExtract the zip archive into your vimfiles or runtime directory. The archive contains the following files:\n    *  doc/slimv.txt\n    *  ftdetect/clojure.vim\n    *  ftplugin/metering.lisp\n    *  ftplugin/slimv.py\n    *  ftplugin/slimv.vim\n    *  ftplugin/slimv-clhs.vim\n    *  ftplugin/slimv-cljapi.vim\n    *  ftplugin/slimv-javadoc.vim\n    *  ftplugin/clojure/slimv-clojure.vim\n    *  ftplugin/lisp/slimv-lisp.vim\n    *  indent/clojure.vim\n    *  plugin/paredit.vim\n    *  syntax/clojure/slimv-syntax-clojure.vim\n\nSlimv works on Windows, Linux and Mac OS X (via Terminal.app), Cygwin is not supported. The script requires the following programs installed on your system:\n    *  Lisp (any console Common Lisp should be OK) or Clojure\n    *  Python 2.4 or later\n    *  Pywin32 is recommended on Windows\nSlimv tries to autodetect your Lisp/Clojure and Python installation directories. If it fails to determine the correct directories, then you need to enter path definitions into your vimrc file:\n    let g:slimv_python = 'C:/MyPythonDir/python.exe'\n    let g:slimv_lisp = 'C:/MyLispDir/mylisp.exe'\n\nShould the autodetection for Clojure fail, set the Lisp path to the complete Clojure REPL startup command, something like:\n    let g:slimv_lisp = '\"java -cp /myclojuredir/clojure.jar clojure.main\"'\n\nLinux users using terminal emulator other than xterm should define the complete command to run the Slimv client + server. Here follows an example with konsole and clisp:\n    let g:slimv_client = 'python ~/.vim/plugin/slimv.py -r \"konsole -T Slimv -e @p @s -l clisp -s\"'\n\nSee the included documentation for more complete installation and customization instructions.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14276",
+      "filename": "Slimv072.zip",
+      "script_version": "0.7.2",
+      "date": "2010-11-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16470",
+        "user_name": "kovisoft",
+        "first_name": "Tamas",
+        "last_name": "Kovacs",
+        "email": "kovisoft at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added autodetection for /usr/local/bin/clojure on Linux, added special characters to Lisp keyword selection (iskeyword), run Vim's original ftplugin/lisp.vim for Clojure filetype, bugfixes: PareditWrap error when g:paredit_shortmaps=1 (thanks to Jon Thacker), buffer selection problems in case of three of more buffers (thanks to Philipp Marek), conflicting keybindings for SlimvGenerateTags, unmap error messages when g:paredit_mode=0."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14202",
+      "filename": "Slimv071.zip",
+      "script_version": "0.7.1",
+      "date": "2010-11-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16470",
+        "user_name": "kovisoft",
+        "first_name": "Tamas",
+        "last_name": "Kovacs",
+        "email": "kovisoft at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added option g:slimv_browser_cmd for opening hyperspec in a custom webbrowser (on behalf of Andreas Salwasser), added paredit handling for d<motion>, c<motion>, p and P commands: keep paren balance when deleting and pasting text, Paredit Toggle function removes and re-adds paredit keybindings, bugfix: D and C deleted till beginning of line if () or [] found, handle escaped \\\" characters inside string."
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13980",
       "filename": "Slimv070.zip",
       "script_version": "0.7.0",

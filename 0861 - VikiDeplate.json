@@ -8,6 +8,22 @@
   "install_details": "Open the vba file and type:\n\n    :so %\n\nSee :help vimball for details. Also, make sure to read |viki-customization|. If you have difficulties to install this plugin or if you use vim 7.0, please make sure to use the current version of vimball (vimscript #1502).\n\nRequirements:\n- tlib (vimscript #1863)\n\nOptional enhancements:\n- hookcursormoved (vimscript #2037): Enhanced detection of hyperlinks to inexistent destinations.\n\nThis plugin relies on the use of filetype plugins. Your .vimrc file should thus contain these lines:\n\n    set nocompatible\n    filetype plugin indent on\n    syntax on\n\nBy default, vim doesn't allow to |abandon| a modified buffer unless |hidden| is set. If get a \"cannot abandon buffer\"-message, please read the help on |g:vikiHide| and |abandon| to find out how to avoid this problem.\n\n\nThere is also a ruby-based tool for converting viki markup to html, latex, or docbook. Download deplate from the sourceforge project site: http://sourceforge.net/projects/deplate/\n",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14236",
+      "filename": "viki.vba",
+      "script_version": "3.19",
+      "date": "2010-11-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Use tlib#balloon#Register() if available- viki#Edit(): Switch to homepage only if we are in a viki-enabled buffer- Run VimEnter command immediately if !has('vim_starting')- Transcode balloon text (guess the file encoding based on the value of &fenc)- Don't rely on g:vikiEnabled to be set when loading syntax/viki.vim- Removed g:vikiEnabled variable (use g:viki#quit for checking when to quit)- Act more graciously if g:vikiHomePage is emptyMD5 checksum: 64ebd14609764e98b91f1e233e121e32"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12755",
       "filename": "Viki.vba",
       "script_version": "3.18",

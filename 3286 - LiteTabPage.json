@@ -4,9 +4,41 @@
   "summary": "A Tab Page extension plugin",
   "name": "LiteTabPage",
   "script_type": "utility",
-  "description": "\nScreenshot: http://ayuanx.files.wordpress.com/2010/10/litetablabel.jpg\n\nThis is an (extremely) simple plugin, which makes VIM Tab Page functions more user-friendly. \n\n<> Features:\n1. \":E %FILNAME%\"\t\t\tOpen the file in a new tab instead of in current window.\n\n2. \"<Alt-H> / <Alt-L>\"\t\tToggle current tab forward/backword.\n\n3. \"<ALt-1>, <Alt-2> to <Alt-0>\"\tSwitch to tab 1/2/3/4/5/6/7/8/9/10.\n\n4. Show GUI Tab Labels in format: \"[Tab Number]:[+][Buffer Name]\"\n\tPS: [+] stands for one or more buffer in that tab has been modified.\n\n<> Feedback:\n     You are always encouraged to modify this plugin freely to suit your own needs!\n",
-  "install_details": "Simply put \"LiteTabPage.vim\" into path \"~/.vim/plugin/\" (unix) or \"$VIM/vimfiles/plugin/\" (windows).",
+  "description": "Use the built-in Tab Pages of VIM 7.0 to replace \"TabBar / BufferExplorer / MiniExplorer\", no multi-window conflicts/issues any more!\n\nScreenshot: http://ayuanx.files.wordpress.com/2010/10/litetablabel.jpg\n\n This is a simple plugin, which makes VIM Tab Page functions more user-friendly. \n\n <> Features:\n 1. \":E filename\"\t\t\t        Open the file in a new tab page instead of in current window.\n\n 2. \"<Alt-1>, <Alt-2> to <Alt-0>\"\tSwitch to tab page 1/2/3/4/5/6/7/8/9/10.\n\n 3. \"<Alt-h> / <Alt-l>\"\t\t        Switch to previous/next tab page.\n\n 4. \"<Alt-H> / <Alt-L>\"\t\t        Move current tab page left/right.\n\n 5. Show GUI Tab Labels in format: \"[Tab Number]:[+][Buffer Name]\"\n \tPS: [+] stands for one or more buffer in that tab page has been modified.\n\n <> Feedback:\n    You are always encouraged to modify this plugin freely to suit your own needs!\n",
+  "install_details": "Simply put \"LiteTabPage.vim\" into path \"~/.vim/plugin/\" (*nix) or \"$VIM/vimfiles/plugin/\" (Windows).",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14310",
+      "filename": "LiteTabPage.vim",
+      "script_version": "1.2",
+      "date": "2010-11-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13730",
+        "user_name": "AyuanX",
+        "first_name": "AyuanX",
+        "last_name": " ",
+        "email": "ayuanx at gmail.com",
+        "homepage": "http://ayuanx.web.fc2.org/"
+      },
+      "release_notes": "Explicitly disable Alt key for menu in case it hasn't been done by user."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14297",
+      "filename": "LiteTabPage.vim",
+      "script_version": "1.1",
+      "date": "2010-11-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "13730",
+        "user_name": "AyuanX",
+        "first_name": "AyuanX",
+        "last_name": " ",
+        "email": "ayuanx at gmail.com",
+        "homepage": "http://ayuanx.web.fc2.org/"
+      },
+      "release_notes": "Added shortcuts for quick moving tab pages."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14091",
       "filename": "LiteTabPage.vim",
@@ -19,7 +51,7 @@
         "first_name": "AyuanX",
         "last_name": " ",
         "email": "ayuanx at gmail.com",
-        "homepage": "http://ayuanx.go.3322.org/"
+        "homepage": "http://ayuanx.web.fc2.org/"
       },
       "release_notes": "Initial upload"
     }

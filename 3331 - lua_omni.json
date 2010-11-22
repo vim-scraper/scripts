@@ -1,0 +1,43 @@
+{
+  "script_id": "3331",
+  "display_name": "lua_omni",
+  "summary": "preliminary omni completion for Lua plus few extras",
+  "name": "lua_omni",
+  "script_type": "ftplugin",
+  "description": "This is preliminary version of my omni completion plugin for Lua. It works by\nscanning _G. Nested tables are supported so you can type:\n:lua foobar = {numbers = {one = 1, two = 2, three = 3}}\n\n\nThen inserting in lua file \"foo\" will be completed by CTRL-X CTRL-O. Adding\n\".\" and using CTRL-X CTRL-O will result in \"numbers\". Adding another \".\"\nand repeating completion will show list of \"one, two, three\" numbers'\nmembers.\n\nSome other functions are supported like listing defined Lua functions in\ncurrent buffer.\nThere are common Lua abbreviation defined in lua_omni.vim too.\n                                                                       \nMappings:\n\nCTRL-X CTRL-O\n\tCalling the omni completion function.\n\n<Leader>fl\tor\t<Plug>PrintFunctionList\n\tPrints list of defined Lua functions in current buffer. They are listed in\n\tascending line numbers order. Luadoc titles (if defined) are showed too.\n                                                                       \n<Leader>lf\tor\t<Plug>WriteAndLuaFile\n\tJust a shortcut to call:\n\t\t:w\n:luafile %\n\n\n<Leader>sli or\t<Plug>SetLuaIabbrevs\n\tSets few common and useful insert mode abbreviations.\n\n<Leader>cli or\t<Plug>ClearLuaIabbrevs\n\tClear any insert mode abbreviations set by previous shortcut.\n",
+  "install_details": "Just extract and copy files from lua_omni.zip into local .vim/ftplugin and\n.vim/doc directories. Then execute in Vim:\n\t:helptags ~/.vim/doc\n\nTo get a help type:\n\t:help lua_omni\n\nBeware! Vim 7.3 is needed with enabled Lua support.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14333",
+      "filename": "lua_omni_011.zip",
+      "script_version": "0.11",
+      "date": "2010-11-20",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "22992",
+        "user_name": "Radek",
+        "first_name": "Radek",
+        "last_name": "Kowalski",
+        "email": "rk at bixbite.pl",
+        "homepage": ""
+      },
+      "release_notes": "---------------------------------------------------------------------------------------\n  RELEASE NOTES FOR VERSION 0.11\n---------------------------------------------------------------------------------------\n\t+ fixed error in abbreviations \n\t+ added abbreviation for string.len\n\t+ expanded omnifunc functionality to scan local function variables (works\n\t  for the most part)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14285",
+      "filename": "lua_omni.zip",
+      "script_version": "0.1",
+      "date": "2010-11-17",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "22992",
+        "user_name": "Radek",
+        "first_name": "Radek",
+        "last_name": "Kowalski",
+        "email": "rk at bixbite.pl",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

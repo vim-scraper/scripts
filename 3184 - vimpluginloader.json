@@ -4,9 +4,41 @@
   "summary": "Plugin that helps to create complicated vim scripts",
   "name": "vimpluginloader",
   "script_type": "utility",
-  "description": "This plugin provides the ability to autoload plugins on demand, create \nglobal functions and commands and extend mksession with plugin support.\n\nFeatures:\n     Autoloading plugins on FuncUndefined event.\n     Autoloading plugins when their command is called.\n     Autoloading plugins when their mapping is used.\n     Autoloading plugins when their functionality is required.\n     Displaying plugins' status.\n     Unloading and reloading plugins (useful for plugin developers).\n     Searching for a function number through registered plugins.\n     Checking function arguments before running a function.\n     Create a session file with plugin's data.\n\nDocumentation: http://kp-pav.narod2.ru/vim/doc/load.txt.html\nProject page: http://sourceforge.net/projects/vimpluginloader\nDependencies (you do not need to install them by yourself, see installation details):\nvimscript #3187, http://sourceforge.net/projects/vimargumentchec\nvimscript #3188, http://sourceforge.net/projects/vimcompcrtr\nvimscript #3190, http://sourceforge.net/projects/yamlvim",
+  "description": "This plugin provides the ability to autoload plugins on demand, create \nglobal functions and commands and extend mksession with plugin support.\n\nFeatures:\n     Autoloading plugins on FuncUndefined event.\n     Autoloading plugins when their command is called.\n     Autoloading plugins when their mapping is used.\n     Autoloading plugins when their functionality is required.\n     Displaying plugins' status.\n     Unloading and reloading plugins (useful for plugin developers).\n     Searching for a function number through registered plugins.\n     Checking function arguments before running a function.\n     Create a session file with plugin's data.\n\nDocumentation: http://vimpluginloader.sourceforge.net/doc/load.txt.html\nProject page: http://sourceforge.net/projects/vimpluginloader\nDependencies (you do not need to install them by yourself, see installation details):\nvimscript #3187, http://sourceforge.net/projects/vimargumentchec\nvimscript #3188, http://sourceforge.net/projects/vimcompcrtr\nvimscript #3190, http://sourceforge.net/projects/yamlvim",
   "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"vimpluginloader\"]) and add ``call scriptmanager#Activate([\"vimpluginloader\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14325",
+      "filename": "vimpluginloader-1.3.3.tar.gz",
+      "script_version": "1.3.3",
+      "date": "2010-11-20",
+      "vim_version": "9999",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Reposting bundle due to core plugins update"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14263",
+      "filename": "vimpluginloader-1.3.3.tar.gz",
+      "script_version": "1.3.3",
+      "date": "2010-11-14",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav at yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added DisableOptionChecks and _disable_option_checks options"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13933",
       "filename": "vimpluginloader-1.3.2.tar.gz",

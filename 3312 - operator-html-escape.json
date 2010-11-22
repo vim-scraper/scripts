@@ -1,0 +1,27 @@
+{
+  "script_id": "3312",
+  "display_name": "operator-html-escape",
+  "summary": "operator-html-escape provides operator to escape HTML entities.",
+  "name": "operator-html-escape",
+  "script_type": "utility",
+  "description": "Repository: http://github.com/tyru/operator-html-escape.vim\n\n\n|operator-html-escape| provides |operator| to escape HTML entities.\n>\n\tnmap <c-h> <Plug>(operator-html-escape)\n\tnmap <c-u> <Plug>(operator-html-unescape)\n\nThis has similar feature with this wiki page:\n\thttp://vim.wikia.com/wiki/HTML_entities\n\nBut the fact is that it is certainly NOT the same\nbecause this is operator.\nso this can work with |text-objects|.\nYou can also enhance |text-objects| by |textobj-user|.\n\nRequirements:\n- Vim 7.2 or later\n- |operator-user| 0.0.5 or later (vimscript#2692)",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14201",
+      "filename": "operator-html-escape.zip",
+      "script_version": "0.0.0",
+      "date": "2010-11-07",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}
