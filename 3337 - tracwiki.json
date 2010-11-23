@@ -1,0 +1,27 @@
+{
+  "script_id": "3337",
+  "display_name": "tracwiki",
+  "summary": "Vim syntax file for Trac wiki syntax",
+  "name": "tracwiki",
+  "script_type": "syntax",
+  "description": "Vim syntax file for Trac wiki syntax. Most of Trac 0.11 wiki syntax is supported.\n\n(Modified from the more general purpose wiki.vim, by Andreas Kneib, http://www.vim.org/scripts/script.php?script_id=725)\n",
+  "install_details": "Put the file in your syntax directory, e.g. ~/.vim/syntax, $HOME/vimfiles/syntax (see :help syntax).\n\nEnable file type detection. One method is to add the following to your filetype.vim file, which is usually located in ~/.vim or $HOME/vimfiles (create it if not present, see :help filetype):\n\n      augroup tracwiki\n          au! BufRead,BufNewFile *.tracwiki   setfiletype tracwiki\n      augroup END\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14352",
+      "filename": "tracwiki.vim",
+      "script_version": "0.4",
+      "date": "2010-11-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23243",
+        "user_name": "caleb",
+        "first_name": "Caleb",
+        "last_name": "Constantine",
+        "email": "cadamantine at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}
