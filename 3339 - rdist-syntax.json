@@ -5,8 +5,24 @@
   "name": "rdist-syntax",
   "script_type": "syntax",
   "description": "Provides syntax coloring for Rdist's \"distfile\" configuration files.\n\nhttps://github.com/tangledhelix/vim-rdist",
-  "install_details": "copy rdist.vim to ~/.vim/syntax/",
+  "install_details": "mkdir -p ~/.vim/syntax ~/.vim/ftplugin ~/.vim/ftdetect\ncp syntax/rdist.vim ~/.vim/syntax\ncp ftdetect/rdist.vim ~/.vim/ftdetect\ncp ftplugin/rdist.vim ~/.vim/ftplugin\n\n",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14393",
+      "filename": "vim-rdist.zip",
+      "script_version": "1.1",
+      "date": "2010-11-29",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "23254",
+        "user_name": "tangledhelix",
+        "first_name": "Dan",
+        "last_name": "Lowe",
+        "email": "dan at tangledhelix.com",
+        "homepage": "http://tangledhelix.com"
+      },
+      "release_notes": "added ftdetect, ftplugin modules"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14355",
       "filename": "rdist.vim",

@@ -1,0 +1,27 @@
+{
+  "script_id": "3346",
+  "display_name": "screen_line_jumper",
+  "summary": "move to a visible line that end with a certain number ",
+  "name": "screen_line_jumper",
+  "script_type": "utility",
+  "description": "Assuming your vim window is like this:\n\n15 Some text\n16 Some other text here\n17 more Text                        | cursor here\n18 and some more text\n19 even more text\n20 more and more text\n21 more and more and more text\n22 more and more and more and more text\n23 text text text\n24 more text text and text\n25 more text\n26 even more text\n...\n\nwhere the numbers are the line number, and your cursor is currently on line 17\nLet say I want to jump to line 21 I either have to\n 1. press 21G - thats 4 key stroke\n 2. press j 4 times\n 3. press 4j (which is fast, but I have to do some extra calculation)\n \nThis script define a function to easily jump to a line that is visible on the vim window\n\n-----\n\nThis script defind 2 functions\n\nMoveLineNumberEndWith(number)\nMoveLineNumberEndWithBackward(number)\n\nthe first one will move to the first line where line number t end with <number> *and is currently visible*\n\nfor the above example if your cursor is on line 15 call\nMoveLineNumberEndWith(6) will move to line 16\ncall MoveLineNumberEndWith(6)  again will move to line 26\ncall MoveLineNumberEndWith(6) again will move back to line 16 if line 36 is not visible on your window\n\nThe backword version of the function works similarly but it jump backward.\n\nI have comment out some recommendation mapping in the file.\n\n\n",
+  "install_details": "put it in your .vim/plugin/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14410",
+      "filename": "screen_line_jumper.vim",
+      "script_version": "1.0",
+      "date": "2010-12-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "21776",
+        "user_name": "vinhtiensinh",
+        "first_name": "Vinh",
+        "last_name": "Tran",
+        "email": "qvinh.tran at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

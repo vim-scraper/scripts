@@ -1,0 +1,43 @@
+{
+  "script_id": "3350",
+  "display_name": "lastchange.vim -- Adams",
+  "summary": "automatically set time-stamp on modification ",
+  "name": "lastchange.vim--Adams",
+  "script_type": "utility",
+  "description": "Modified http://www.vim.org/scripts/script.php?script_id=259 and incorporated the following.\n\n* Fixed for VIM 7.X\n* Adjusted formatting of date\n* No longer truncate minutes to 00",
+  "install_details": "Drop file in ~/.vim/plugins/ and at the following within the top 20 lines of your code. The comment character depends on what you are working in. I used a VIM script comment in the example.\n\n\" Last Change: ?\n\nSave the file and re-open it. It should populate with a timestamp.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14447",
+      "filename": "lastchange.vim",
+      "script_version": "1.0.2",
+      "date": "2010-12-06",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "23730",
+        "user_name": "technogeek",
+        "first_name": "Jesse",
+        "last_name": "Adams",
+        "email": "jesse at techno-geeks.org",
+        "homepage": "http://techno-geeks.org"
+      },
+      "release_notes": "Mixed minutes (was using month on accident)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14446",
+      "filename": "lastchange.vim",
+      "script_version": "1.0.1",
+      "date": "2010-12-06",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "23730",
+        "user_name": "technogeek",
+        "first_name": "Jesse",
+        "last_name": "Adams",
+        "email": "jesse at techno-geeks.org",
+        "homepage": "http://techno-geeks.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

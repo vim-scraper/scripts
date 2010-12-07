@@ -4,9 +4,41 @@
   "summary": "Syntax file for Arduino .PDE files",
   "name": "Arduino-syntax-file",
   "script_type": "syntax",
-  "description": "This syntax file provides syntax highlighting like the Arduino IDE. That is, Arduino specific names like digitalWrite is highlighted in addition to C++ syntax.\n\nI've bascially just implemented Richard Bronosky's idea from the arduino mailing list: http://arduino.cc/pipermail/developers_arduino.cc/2009-January/000398.html",
-  "install_details": "Just put the file in your vimfiles/syntax folder. To automatically use it on PDE files, add the following line to your vimrc file (or e.g filetype.vim to install it for all users) :\n\nau BufNewFile,BufRead *.pde setf arduino",
+  "description": "This syntax file provides syntax highlighting like the Arduino IDE. That is, Arduino specific names like digitalWrite is highlighted in addition to C++ syntax.\n\nI've bascially just implemented Richard Bronosky's idea from the arduino mailing list: http://arduino.cc/pipermail/developers_arduino.cc/2009-January/000398.html\n\nLicensed under the vim license: http://groups.google.com/group/vim_use/browse_thread/thread/bdb036cd8acda1ba/75b353c598a0cd6f?lnk=gst&q=license#75b353c598a0cd6f",
+  "install_details": "Just put the file in your vimfiles/syntax folder. To automatically use it on PDE files, add the following line to your vimrc file (or e.g filetype.vim to install it for all users) :\n\nautocmd! BufNewFile,BufRead *.pde setlocal ft=arduino",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14412",
+      "filename": "arduino.vim",
+      "script_version": "5",
+      "date": "2010-12-01",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17373",
+        "user_name": "johs",
+        "first_name": "Johannes",
+        "last_name": "Hoff",
+        "email": "johannes at johanneshoff.com",
+        "homepage": "http://johanneshoff.com"
+      },
+      "release_notes": "Add a license (the vim license)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14379",
+      "filename": "arduino.vim",
+      "script_version": "4",
+      "date": "2010-11-26",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "17373",
+        "user_name": "johs",
+        "first_name": "Johannes",
+        "last_name": "Hoff",
+        "email": "johannes at johanneshoff.com",
+        "homepage": "http://johanneshoff.com"
+      },
+      "release_notes": "Updated keywords to Arduino version 21 (thanks Adam Obeng)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12993",
       "filename": "arduino.vim",

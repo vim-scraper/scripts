@@ -1,0 +1,43 @@
+{
+  "script_id": "3343",
+  "display_name": "stackoverflow.vim",
+  "summary": "Stackoverflow&#039s code highlights (gui)",
+  "name": "stackoverflow.vim",
+  "script_type": "color scheme",
+  "description": "Scheme emulating StackOverflow&#039s code highlights.\n\nWorks for most languages (python, html, css, c++)\n\nScreenshot:\nhttp://www.flickr.com/photos/28853165@N05/5216106911/\n\nScreenshot with syntax matching (some additional highlights closer to stackoverflow.com) patterns:\nhttp://www.flickr.com/photos/28853165@N05/5216654746/",
+  "install_details": "drop file into your vim/colors directory\n\nadd the following line to your vimrc (if you want additional syntax matching to work):\nau BufRead *.java,*.py,*.cpp,*.m,*.h,*.js runtime! colors/stackoverflow.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14391",
+      "filename": "stackoverflow.vim",
+      "script_version": "1.1",
+      "date": "2010-11-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19193",
+        "user_name": "pfylim",
+        "first_name": "Paul",
+        "last_name": "L",
+        "email": "pfylim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "some more accurate highlighting with syntax matching patterns"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14382",
+      "filename": "stackoverflow.vim",
+      "script_version": "1",
+      "date": "2010-11-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19193",
+        "user_name": "pfylim",
+        "first_name": "Paul",
+        "last_name": "L",
+        "email": "pfylim at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

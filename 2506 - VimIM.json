@@ -4,9 +4,25 @@
   "summary": "Vim Input Method -- Vim 中文输入法",
   "name": "VimIM",
   "script_type": "utility",
-  "description": "The VimIM is a Vim plugin designed as an independent\nIM (Input Method) to support the input of Chinese at will.\n \nVimIM 是一个专门为 vim 玩家开发的嵌入式中文输入法。\n                                                           \n不换模式，也可以输入中文。不出菜单，就可以搜索汉字。\n不用鼠标，不用快捷键，不等于不能进入连续中文输入模式。\n不会输入法，照样敲中文：给自己做个词库，就是自己的输入法。\n\n\n错误报告：http://code.google.com/p/vimim/issues/entry\n民间词库：http://vimim-data.googlecode.com\n自己的云：http://pim-cloud.appspot.com\n新闻论坛：http://groups.google.com/group/vimim\n最新主页：http://vimim.googlecode.com/svn/vimim/vimim.html\n最新程式：http://vimim.googlecode.com/svn/vimim/vimim.vim.html",
-  "install_details": "　　　　　\nVimIM 概述\n\n一个文本文件，构成一个中文输入法。插上联网就可以云输入。\n如果再加上一个文件或目录，无需联网照样敲打中文，随心所欲。\n\n程式文件用的是 Vimscript, 天生跨平台（Windows, Mac, Linux）\n词库文件就是自己的输入法（拼音，無蝦米，倉頡，英文，DIY）\n\n所谓安装，就是把文件或目录扔到 vim 的 plugin 目录之下。\n\n插上【拼音】词库，就是vim拼音输入法（全拼或六种双拼）。\n插上【五笔】词库，就是vim五笔输入法。\n\n〖目录词库〗可以是海量，大小无限制。不占内存，不耗CPU\n【四角号码】可以当作【拼音】动态辅助码，不用数字键而用 hjkl\n\n不设选项，不换模式，点<C-6>就可以上汉字，是谓〖点石成金〗。\n不用快捷键，也可以自动进入中文输入模式，如果文件后缀名是 vimim\n不需要输入窗口，也可以搜索汉字：先敲 / 上英文，再敲 n 找中文。\n\n所谓卸载，就是删除文件或目录。\n\n\nVimIM 构架总结\n\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n前端　　　后端　　　　　关系　　　　　优点　　　　　　缺点\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\nVimIM　〖搜狗云〗　　　外挂　创新前端，六种双拼　　依赖联网\nVimIM　〖自己的云〗　　外挂　自己的云，自己的梦　　需先启动\nVimIM　【内码】　　　　天生　无需词库，无需联网　　记忆量大\nVimIM　【数据库词库】　内挂　词库管理，自成体系　　需SQLite\nVimIM　【文件词库】　　内嵌　即插即用，想删就删　　占内存\nVimIM　【目录词库】　　内嵌　海量词库，不耗内存　　占磁盘\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n\n\nWelcome to VimIM Chapter two!\n以上功能业已安装完毕。\n欢迎测试VimIM准备上市前的最後版本：\nhttp://vimim.googlecode.com/svn/trunk/plugin/vimim.vim\n\n\n",
+  "description": "The VimIM is a Vim plugin designed as an independent\nIM (Input Method) to support the input of Chinese at will.\n 　\nVimIM 是一个专门为 vim 玩家开发的嵌入式中文输入法。\n\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n　　　\n不启动输入法，不敲中文，就可以搜索中文。\n不启动输入法，不换模式，也可以输入中文。\n　　　　　\n不用浏览器，不设选项，就可以云输入，包括六种双拼。\n不耗内存/CPU，不依赖外挂程式，也可以使用海量词库。\n　　　　　\n不用鼠标，不用快捷键，不等于不能进入中文输入模式。\n不懂输入法的规矩，不等于不能给自己的输入法定规矩。\n　　　　　\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n　　　　　\n错误报告：http://code.google.com/p/vimim/issues/entry\n民间词库：http://vimim-data.googlecode.com\n自己的云：http://pim-cloud.appspot.com\n新闻论坛：http://groups.google.com/group/vimim\n最新主页：http://vimim.googlecode.com/svn/vimim/vimim.html\n最新程式：http://vimim.googlecode.com/svn/vimim/vimim.vim.html",
+  "install_details": "　　　　　\nVimIM 概述\n\n一个文本文件，就是一个中文输入法的客户端。缺省后端是外挂搜狗云输入。\n同一个文本文件，也是中文输入法的独立后端。支持文件词库和目录词库。\n\n程式文件用的是 Vimscript, 天生跨平台（Windows, Mac, Linux）\n词库文件就是自己的输入法（拼音，無蝦米，倉頡，英文，DIY）\n\n所谓安装，就是把文本文件扔到 vim 的 plugin 目录之下。\n\n插上【拼音】词库，就是vim拼音输入法。包括无菜单搜索：/meng　n　=>　梦\n插上【五笔】词库，就是vim五笔输入法。包括无菜单搜索：/ssqu　 n　=>　梦\n\n〖目录词库〗可以是海量，大小无限制。不占内存，不耗CPU\n【四角号码】可以当作【拼音】动态辅助码，用hjkl敲出〖施氏食狮史〗\n\n不设选项，不换模式，点<C-6>就可以上汉字，是谓〖点石成金〗。\n不用快捷键，也可以自动进入中文输入模式，只要文件后缀名是 vimim\n\n搜索中文，不需要输入中文，不需要启动输入法，不需要中文菜单。\n搜索沿用vi经典正斜杠。先找英文（编码），找不到英文，就找中文。\n 　　　\n所谓卸载，就是删除文本文件。\n\n\nVimIM 构架总结\n\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n前端　　　后端　　　　　关系　　　　　优点　　　　　　缺点\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\nVimIM　〖搜狗云〗　　　外挂　创新前端，六种双拼　　依赖联网\nVimIM　〖自己的云〗　　外挂　自己的云，自己的梦　　需先启动\nVimIM　【内码】　　　　天生　无需词库，无需联网　　记忆量大\nVimIM　【数据库词库】　内挂　词库管理，自成体系　　需SQLite\nVimIM　【文件词库】　　内嵌　即插即用，想删就删　　占内存\nVimIM　【目录词库】　　内嵌　海量词库，不耗内存　　占磁盘\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n　\n　\nVimIM 输入模式总结\n　　　\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n中文输入模式　　　　设置　　缺省键　　　　　　功能\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n【OneKey】　　　　　缺省　　 <C-6>　　〖点石成金〗无模式转化\n【经典动态模式】　　缺省　　<C-\\>　　　输入过程中一直出选择项目\n【经典静态模式】　　static　　<C-\\>　　　输入完后按空格出选择项目\n【OneKeyNonStop】　 onekey　  <C-\\>　　　支持 hjkl　支持连续输入\n【正斜杠/搜索】　　　缺省　　　n　　　  正斜杠无菜单中文搜索\n【点vimim文件】　　　缺省　　　　　　　自动启动中文輸入\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ \n　\n　\n",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14419",
+      "filename": "vimim.vim",
+      "script_version": "0.9.7",
+      "date": "2010-12-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1690",
+        "user_name": "maxiangjiang",
+        "first_name": "Vim",
+        "last_name": "IM",
+        "email": "maxiangjiang at gmail.com",
+        "homepage": "http://code.google.com/p/vimim"
+      },
+      "release_notes": "Welcome to VimIM Chapter 2.\nhttp://vimim.googlecode.com/svn/vimim/vimim.html#what-is-new"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13043",
       "filename": "vimim.vim",

@@ -5,8 +5,40 @@
   "name": "pep8",
   "script_type": "utility",
   "description": "You need to install this tool: http://github.com/cburroughs/pep8.py\nIt's a simple program that just checks if your python code is pep-8 compliant.\n\nPressing F5 will run it using the \"quickfix\" feature.\nThis way you can \"navigate\" through errors using :cn and other standard commands.\n\nThis is mostly copied from http://www.vim.org/scripts/script.php?script_id=891",
-  "install_details": "just put the file in your ~/.vim/ftplugin/python directory (if that doesn't exist, create it)",
+  "install_details": "just put the file in your ~/.vim/ftplugin/python directory (if that doesn't exist, create it)\n\nThe default mapping is F5, you can change it putting\nlet g:pep8_map='whatever'\nin your fstab",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14366",
+      "filename": "pep8.vim",
+      "script_version": "0.3.1",
+      "date": "2010-11-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18725",
+        "user_name": "boyska",
+        "first_name": "Davide",
+        "last_name": "Lo Re",
+        "email": "boyska at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "The \"PEP8 correct\" message is now highlighted in green (as in makegreen)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14365",
+      "filename": "pep8.vim",
+      "script_version": "0.3",
+      "date": "2010-11-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18725",
+        "user_name": "boyska",
+        "first_name": "Davide",
+        "last_name": "Lo Re",
+        "email": "boyska at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* Allow to choose the mapping\n* If there are no errors, just print \"PEP8 correct\" (a-la makegreen)\n(thanks Adrien LEMAIRE for the suggestions)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14168",
       "filename": "pep8.vim",

@@ -1,0 +1,43 @@
+{
+  "script_id": "3344",
+  "display_name": "preview",
+  "summary": "Plugin for previewing markup files(markdown,rdoc,textile,html)",
+  "name": "preview",
+  "script_type": "utility",
+  "description": "Preview plugin is a tool developed to help you to preview markup files such as *.markdown, *.rdoc, *.textile and *.html when you are editing them. It builds html files and opens them in your browser.\n\nThe plugin requires a builtin ruby interpreter. It means that your Vim should be compiled with '--enable-rubyinterp' option. To find out does you Vim have builtin ruby interpreter you can do the next:\n    :echo has('ruby')\nIf output is '1' the ruby interpreter is builtin. The second thing you should verify is that you have installed all necessary ruby gems. \n\nSupported formats and dependecies:\n    * markdown(md, mkd, mkdn, mdown) - depends on 'bluecloth' ruby gem\n    * rdoc -  depends on 'github-markup' ruby gem\n    * textile - depends on 'RedCloth' ruby gem\n    * html(htm) - no dependecies\n\nhttps://github.com/greyblake/vim-preview\n\n\n",
+  "install_details": "Unzip in ~/.vim (~\\vimfiles on Windows). Use :helptags ~/.vim/doc to enable :help.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14390",
+      "filename": "vim-preview.zip",
+      "script_version": "0.2",
+      "date": "2010-11-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23420",
+        "user_name": "greyblake",
+        "first_name": "Sergey",
+        "last_name": "Potapov",
+        "email": "blake131313 at gmail.com",
+        "homepage": "http://github.com/greyblake"
+      },
+      "release_notes": "Added more options for customizing.\nNew commands are available for mapping.\nFixed a little bug."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14389",
+      "filename": "vim-preview.zip",
+      "script_version": "0.1",
+      "date": "2010-11-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23420",
+        "user_name": "greyblake",
+        "first_name": "Sergey",
+        "last_name": "Potapov",
+        "email": "blake131313 at gmail.com",
+        "homepage": "http://github.com/greyblake"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -4,9 +4,25 @@
   "summary": "Syntax highlight colors change gradually based on minutes of hour",
   "name": "Changing-color-script",
   "script_type": "color scheme",
-  "description": "Tested and works well with Java, Javascript, HTML, CSS, PHP, ActionScript (with 'actionscript.vim', available elsewhere in Vim.org), AutoIt and AutoHotKey.  Gradually changes changing syntax colours over the hour. Works well with time script to speech script: http://www.vim.org/scripts/script.php?script_id=3257\n\nBenefits of script are:\n* reduce eye-strain and headaches caused by staring at code on-screen\n* reduce dis-orientation by keeping user informed of passing time\n* reduce boredom by stimulating right side of the brain\n\nOnly affects GVIM. Nothing happens in VIM.",
+  "description": "Tested and works well with Java, Javascript, HTML, CSS, PHP, ActionScript (with 'actionscript.vim', available elsewhere in Vim.org), AutoIt and AutoHotKey.  Gradually changes changing syntax colours over the hour. Works well with time script to speech script: http://www.vim.org/scripts/script.php?script_id=3257\n\nBenefits of script are:\n* reduce eye-strain and headaches caused by staring at code on-screen\n* reduce dis-orientation by keeping user informed of passing time\n* reduce boredom by stimulating right side of the brain\n\nOnly affects GVIM. Nothing happens in VIM.\n\nWARNING: running this script uses many Windows resources. Remember GDI % readings on Win98? XP has vastly more of these but they are still limited (*). Because of the way Vim works, a new GDI resources are guzzled when the script 'changes color'.  You may not notice this but that's what happens because VIM creates a new font every update of a color so the script ends up taking many resources it does not need.  You may notice glitches in Windows. If so then this might be the cause. Sorry I couldn't do a better job.  :/\n* if anything they use memory",
   "install_details": "Paste changing-color.vim somewhere in vimrc. Replace obviously if it is already there. It is obviously marked.  You should have this Timer script somewhere in your vimrc, because otherwise this script will not work very well.  Download it from here: http://www.vim.org/scripts/script.php?script_id=3244",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14371",
+      "filename": "ChangingColor.vim",
+      "script_version": "16.4",
+      "date": "2010-11-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17391",
+        "user_name": "Pablos544",
+        "first_name": "Paul",
+        "last_name": "Contreras",
+        "email": "pablo at ezrider.co.uk",
+        "homepage": "http://www.paulcontreras.co.uk"
+      },
+      "release_notes": "Made improvements to visibility adjustments of Normal and Constant because it is very important that they remain strong. The default 'color change' frequency is now ~15 seconds, not 1.5 mins.  I thought it was a bit more exciting and seems to work ok. Have been testing it for months on four computers running XP. Made Cursor a bit more visible too."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14030",
       "filename": "ChangingColor.vim",
@@ -1990,22 +2006,6 @@
         "homepage": "http://www.paulcontreras.co.uk"
       },
       "release_notes": "Added a pleasant (i hope not too bad at least) selection of background (shades) along with the one that was there before. Now, on hour 1 the back- ground sticks to a normal (looking from dark-light) blue to light-yellow scheme, and on hour 2 as usual in reverse (same but going from light to dark), then on hour 3 going to light again the background shades green to light-blue, then in reverse on hour 4, then finally on 5 going to light the background shades green to light-pink, then in reverse in reverse on hour 6."
-    },
-    {
-      "url": "http://www.vim.org/scripts/download_script.php?src_id=11073",
-      "filename": "changing-colour.vim",
-      "script_version": "4.1",
-      "date": "2009-07-28",
-      "vim_version": "6.0",
-      "author": {
-        "user_id": "17391",
-        "user_name": "Pablos544",
-        "first_name": "Paul",
-        "last_name": "Contreras",
-        "email": "pablo at ezrider.co.uk",
-        "homepage": "http://www.paulcontreras.co.uk"
-      },
-      "release_notes": "For some reason i missed that at the very darkest background Search was indistinguishable from the background - messed this up, my own fault i apologise. I focussed to narrowly on 'dark' and didn't go right down all the way down to black where Search got invisble (or indistinguishable from the background at any rate.) This is now fixed.\n"
     }
   ]
 }

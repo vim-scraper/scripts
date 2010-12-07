@@ -1,0 +1,75 @@
+{
+  "script_id": "3342",
+  "display_name": "VimOrganizer",
+  "summary": "An Emacs' Org-mode clone for Vim",
+  "name": "VimOrganizer",
+  "script_type": "ftplugin",
+  "description": "I've been working on a clone of Emacs' Org-mode and wanted to announce\nan early version of it that's available (for the adventurous) at\nGithub:\nhttps://github.com/hsitz/VimOrganizer\n\n******************************************************************************************\nIMPORTANT:  This is not yet  a polished plugin that you can just install and use!  It's a big project in a very early state, in a constant state of major change, with lots of work left to be done.  A lot of it works, and works well, but there are plenty of bugs and it's not yet a plugin that \"plays well\" with other plugins.  So many people may not want to bother with it at this point.  If you have some interest but not enough to tinker at this point, check back in a month or two to see if things have changed, say around January 2011.\n\nMost recent version (0.12) has many changes to make installation easier and explain it better, see comments in the sample vimrc and sample colorscheme (org_dark.vim).  Thanks especially to ZyX and Marko Mahnič  for suggestions on making the plugin cooperate with other plugins in Vim's plugin scheme,  to Chelsea Dijkstra for suggestions on how to improve colorscheme for terminal users, and Stephen Sugden for suggestions on how to streamline settings in the vimrc file    \n************************************************************************************\n\nThere are also a bunch of videos illustrating some of the\nfunctionality here:\nhttp://vimeo.com/user5149406/videos\n\nFor those who don't know what Org-mode is you can read about it at the\nOrg-mode site:\nhttp://orgmode.org/\n\nIt's hard to describe exactly what Org-mode is and what it can do.\nSome people think it's just an outliner with some task management capability.  And it is\nthat.  But it can do much more, with uses mostly limited by your imagination.  E.g, it can\nbe used as a high quality document authoring system that exports nicely formatted docs to LaTeX/\nPDF.  Or it can be used as a literate programming environment.  The Emacs\nOrg-mode  feature set is broad and deep; I think there are few people who even\nknow everything it can do, much less who use a large percentage of its features.  It's\nvery usable and many people use it just as a simple and easy-to-use outliner.  But if you want to go beyond\nthat the features are there to use.\n\nI've got a good start on implementing a lot of the major features and\npeople who are the \"early adopter\" type may be interested in giving it a spin\nright now.  I'd be happy to hear feedback.\n\n-- Herb Sitz ",
+  "install_details": "To install place the package files in the corresponding directory of your /vimfiles or .vim directory, then look at sample vimrc to see what changes to make to your own vimrc or just substitute sample one in temporarily to test.\n\nNote that this ftplugin does outlining using Vim's folding feature.  Best experience can be obtained by patching Vim72 or Vim73 with the appropriate patch that is found in the 'contrib' directory of the package or at github.  This enables Vim to assign different highlights to folds of different levels, without it all folds are same color regardless of level.  (You can run the ftplugin without patching Vim, but to do so you must comment out the several lines referencing 'v:foldhighlight' in the org.vim file found in the ftplugin directory.)  If you do install patch fold highlight will still work fine for all files, though you would want to put this line in your vimrc to make sure fold highlingting uses the same highlight color as before:\n:let v:foldhighlight=hlID('Folded')\n\nIf you're just taking a look at the plugin best idea is to substitute the sample _vimrc in for your usual one.  You can incorporate the relevant sections into your own vimrc if you want.  This will be changed shortly to be more install friendly, with config that requires minimal change to an existing vimrc.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14428",
+      "filename": "hsitz-VimOrganizer-01201.zip",
+      "script_version": "0.1201",
+      "date": "2010-12-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23015",
+        "user_name": "hsitz",
+        "first_name": "Herbert",
+        "last_name": "Sitz",
+        "email": "hesitz at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "fix to todo setup string in sample vimrc"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14400",
+      "filename": "VimOrganizer-012.zip",
+      "script_version": "0.12",
+      "date": "2010-11-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23015",
+        "user_name": "hsitz",
+        "first_name": "Herbert",
+        "last_name": "Sitz",
+        "email": "hesitz at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixes to make plugin cooperate with other plugins (i.e., make most settings and variables local to VimOrganizer buffers) and to simplify and explain installation better (in vimrc and org_dark.vim color file)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14384",
+      "filename": "VimOrganizer.zip",
+      "script_version": "0.11",
+      "date": "2010-11-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23015",
+        "user_name": "hsitz",
+        "first_name": "Herbert",
+        "last_name": "Sitz",
+        "email": "hesitz at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed backslash reference in syntax vim that caused problems on non-Windows machines."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14378",
+      "filename": "VimOrganizer.zip",
+      "script_version": "0.10",
+      "date": "2010-11-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23015",
+        "user_name": "hsitz",
+        "first_name": "Herbert",
+        "last_name": "Sitz",
+        "email": "hesitz at gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

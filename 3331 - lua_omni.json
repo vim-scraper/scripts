@@ -4,9 +4,25 @@
   "summary": "preliminary omni completion for Lua plus few extras",
   "name": "lua_omni",
   "script_type": "ftplugin",
-  "description": "This is preliminary version of my omni completion plugin for Lua. It works by\nscanning _G. Nested tables are supported so you can type:\n:lua foobar = {numbers = {one = 1, two = 2, three = 3}}\n\n\nThen inserting in lua file \"foo\" will be completed by CTRL-X CTRL-O. Adding\n\".\" and using CTRL-X CTRL-O will result in \"numbers\". Adding another \".\"\nand repeating completion will show list of \"one, two, three\" numbers'\nmembers.\n\nSome other functions are supported like listing defined Lua functions in\ncurrent buffer.\nThere are common Lua abbreviation defined in lua_omni.vim too.\n                                                                       \nMappings:\n\nCTRL-X CTRL-O\n\tCalling the omni completion function.\n\n<Leader>fl\tor\t<Plug>PrintFunctionList\n\tPrints list of defined Lua functions in current buffer. They are listed in\n\tascending line numbers order. Luadoc titles (if defined) are showed too.\n                                                                       \n<Leader>lf\tor\t<Plug>WriteAndLuaFile\n\tJust a shortcut to call:\n\t\t:w\n:luafile %\n\n\n<Leader>sli or\t<Plug>SetLuaIabbrevs\n\tSets few common and useful insert mode abbreviations.\n\n<Leader>cli or\t<Plug>ClearLuaIabbrevs\n\tClear any insert mode abbreviations set by previous shortcut.\n",
+  "description": "This is preliminary version of my omni completion plugin for Lua. It works by\nscanning _G for names and parsing Vim buffers. There are some abbreviations\nand Lua function list option added too.\nNested tables are supported so you can type:\n:lua foobar = {numbers = {one = 1, two = 2, three = 3}}\n\n\nThen inserting in lua file \"foo\" will be completed by CTRL-X CTRL-O. Adding\n\".\" and using CTRL-X CTRL-O will result in \"numbers\". Adding another \".\"\nand repeating completion will show list of \"one, two, three\" numbers'\nmembers.\n\nSome other functions are supported like listing defined Lua functions in\ncurrent buffer.\nThere are common Lua abbreviation defined in lua_omni.vim too.\n                                                                       \nMappings:\n\nCTRL-X CTRL-O\n\tCalling the omni completion function.\n\n<Leader>fl\tor\t<Plug>PrintFunctionList\n\tPrints list of defined Lua functions in current buffer. They are listed in\n\tascending line numbers order. Luadoc titles (if defined) are showed too.\n                                                                       \n<Leader>lf\tor\t<Plug>WriteAndLuaFile\n\tJust a shortcut to call:\n\t\t:w\n:luafile %\n\n\n<Leader>sli or\t<Plug>SetLuaIabbrevs\n\tSets few common and useful insert mode abbreviations.\n\n<Leader>cli or\t<Plug>ClearLuaIabbrevs\n\tClear any insert mode abbreviations set by previous shortcut.\n",
   "install_details": "Just extract and copy files from lua_omni.zip into local .vim/ftplugin and\n.vim/doc directories. Then execute in Vim:\n\t:helptags ~/.vim/doc\n\nTo get a help type:\n\t:help lua_omni\n\nBeware! Vim 7.3 is needed with enabled Lua support.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14392",
+      "filename": "lua_omni_012.zip",
+      "script_version": "0.12",
+      "date": "2010-11-29",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "22992",
+        "user_name": "Radek",
+        "first_name": "Radek",
+        "last_name": "Kowalski",
+        "email": "rk at bixbite.pl",
+        "homepage": ""
+      },
+      "release_notes": "+ improved Lua search_assignments1 function to search variable names in \"for in\" and function statements\n"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14333",
       "filename": "lua_omni_011.zip",
