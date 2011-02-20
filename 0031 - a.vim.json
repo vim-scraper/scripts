@@ -18,7 +18,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Recent versions since 2.16 broke user defined alternate specifications. This patch fixes that."
@@ -34,7 +34,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Fix a bug were spaces in filenames and/or directory names would prevent the alternate file being openned. Thanks to Nathan Stien (for the bug report and patch) and Soeren Sonnenburg (for the bug report)."
@@ -50,7 +50,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Recent patches broke the script in some area, mainly in the area of file extensions which contain a dot...e.g. aspx.cs. Switched to using a dictionary instead of the curly brace variable things."
@@ -66,7 +66,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Docs for 2.15"
@@ -82,7 +82,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Initial support for jumping to files under the cursor. New commands IH, IHS, IHV, IHT and IHN. Added sample macros for jumping to the source file corresponding to the header file under the cursor (e.g. jumping on #include <myfile.h> will find myfile.cpp).\n\nSee documentation for more details."
@@ -98,7 +98,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Added new :AN command which cycles through all matches after switching to a new file. E.g. vi a.c, :A switches to a.h, :AN might switch to a.hpp if a.h and a.hpp exist. Will only likely be an issue in a big project with with same named source/header files around the place. Will likely only be an issue if you are using the search path and regex features of a.vim."
@@ -114,7 +114,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Documentation for a.vim v2.14. Drop it in your doc directory and run helptags."
@@ -130,7 +130,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Added new \"AT\" command which finds the alternate file and opens in a new tab. Similarly to the \"A\" and \"AS\" commands, if the buffer is already open it simply switches to that buffer in the corresponding tab/window. This script will only work with VIM7 from this version forward."
@@ -146,7 +146,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Added alternate mappings for OCaml. Nothing more. No reason to upgrade...unless you use OCaml."
@@ -162,7 +162,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Fix a minor bug when adding alternate extensions. Thanks ilya."
@@ -178,7 +178,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Fix some bugs which have recently crept in. I gave this some regression testing...so I hope all are fixed now. Mot notably, vim foo/a.c would not alternate to foo/a.h. Not sure how that broke...but it is fixed now. Other features still appear to work. Let me know if there are issues."
@@ -194,7 +194,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Added a new variable (g:alternateNoDefaultAlternate) which can be set in the .vimrc/_vimrc file to prevent a.vim from creating new files. This is useful when it is not desired to have a.vim to alternate to the default alternation for a particular extension. E.g. if a.c is being editted and a.h does not exist anywhere and :A is done then if g:alternateNoDefaultAlternate is non-zero a.h will not be created. By default the value of g:alternateNoDefaultAlternate is 0 to maintain existing behaviour."
@@ -210,7 +210,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Allow the extension of a file to be more than the text after the last dot. E.g. adding settings like\n\nlet g:alternateExtensions_{'aspx'} = \"aspx.cs,aspx.CS\"\nlet g:alternateExtensions_{'aspx.cs'} = \"aspx,ASPX\"\n\nwill allow a.vim to alternate between foo.aspx and foo.aspx.cs and vice versa. Previous versions would not accept .aspx.cs as an exstension. This version is ok with that."
@@ -226,7 +226,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "[CORRECTION]More enhancements from Bindu Wavell. A new search path type \nof \"reg:\" wasadded. This version allows alternation of files based on regxes. E.g.\n\"reg:/inc/src/g/\" will replace every instance of 'inc' with 'src' in the source\nfile path. This is useful for alternating between /some/path/inc/project/foo.h\nto /some/path/src/project/foo.c. Similarly \"reg:/src/inc/g/\" is the opposite\nalternation. See the comments for ExpandAlternatePath() for more information.\nSoon I will produce some formal documentation for this...until then the script\nis reasonably well commented."
@@ -242,7 +242,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Reworked all the logic for finding alternate files. The files in memory are prefered to files on disk now too. When there are multiple matches for a file found the file in memory is favour, files in the current directory are favoured over files on the path. Hopefully this fixes the inconsistencies in previous versions. Hopefully everything still works too."
@@ -258,7 +258,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Remove reference to Decho which was accidentally left in after previous debuging. Sorry all."
@@ -274,7 +274,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Implemented a fix from Matt Perry, vi test.cc junktest.h and the :A would alternate to junktest.h and not test.h. Also some minor clean up of the directory search code. \n"
@@ -290,7 +290,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Fixed an inconsistency. In 2.4 :A would always switch to the alternate file, regardless of whether unsaved changes were in the current file. In some cases it was possible to lose changes. This update changes :A back to 2.3 behaviour, but with a nicer error message, and provides support for a :A! command which will force the switch. This seems more consistent with the builtin vim/vi commands. Please let me know if there are any problems. "
@@ -306,7 +306,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Fix error which occured when alternating from a file which had not been saved."
@@ -322,7 +322,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Added support provided by Bindu Wavell to search for the alternate file across directories."
@@ -338,7 +338,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "minor clean up. Remove repeated code used to \nsetup the default alternate file mappings. No changes in functionality. No reason to upgrade."
@@ -354,7 +354,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "simplified the config using vim's curly brace variables. Should behave the same way version 2.0X behaves....no huge reason to upgrade."
@@ -386,7 +386,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Added support for Ada95 extensions\nminor bug fixed too."
@@ -402,7 +402,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "bug fix. handle the cases were the is no alternate file."
@@ -418,7 +418,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Complete rewrite. Now the supported extensions are configurable instead of being part of the code.\nNotes on how to configure are in the comments in the file. Expect bugs, please be brave. Will fix reported issue quickly."
@@ -434,7 +434,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Added support for .hpp/.HPP files. "
@@ -450,7 +450,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Take care of some issues with case-sensitivity of the extension on windows platforms."
@@ -466,7 +466,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Minor changes to cater for \"files\" which are in vim buffers but not on disk (yet)."
@@ -498,7 +498,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Added copyright information.\nSupport .cc, .cxx, .C extensions for C++ too.\n"
@@ -514,7 +514,7 @@
         "user_name": "feline",
         "first_name": "Mike",
         "last_name": "Sharpe",
-        "email": "feline at irendi.com",
+        "email": "feline@irendi.com",
         "homepage": "http://www.irendi.com"
       },
       "release_notes": "Corrected vim version. The script works with 5.7, but should work with 6.0 too. "

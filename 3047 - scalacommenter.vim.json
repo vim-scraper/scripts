@@ -18,7 +18,7 @@
         "user_name": "rme",
         "first_name": "richard",
         "last_name": "emberson",
-        "email": "richard.n.emberson at gmail.com",
+        "email": "richard.n.emberson@gmail.com",
         "homepage": ""
       },
       "release_notes": "Minor correction: could not handle parameters with templates with commas: \n  def getAtomicVars(atomicMethods: List[XMethodInfo], methods: HashMap[global.Symbol, XMethodInfo], vars: HashMap[global.Symbol, XVarInfo]) : List[XVarInfo] = {\n  }\n"
@@ -34,7 +34,7 @@
         "user_name": "rme",
         "first_name": "richard",
         "last_name": "emberson",
-        "email": "richard.n.emberson at gmail.com",
+        "email": "richard.n.emberson@gmail.com",
         "homepage": ""
       },
       "release_notes": "Very minor: Method recognition failed for the List methods: '::', ':::' and 'reverse_:::'.\n"
@@ -50,7 +50,7 @@
         "user_name": "rme",
         "first_name": "richard",
         "last_name": "emberson",
-        "email": "richard.n.emberson at gmail.com",
+        "email": "richard.n.emberson@gmail.com",
         "homepage": ""
       },
       "release_notes": "Refactored comment generation code using Self.vim, the Vim\n  dictionary-base object prototype system. Unified the code that\n  generated output for both the writing and re-formatting of\n  comments.\nThrow tags are now sorted in alphabetical order\nUnified the comment writing code so that comment formatting,\n  first comment generation, and subsequent generation all\n  use the came code.\nText associated with an existing comment tag is no longer lost.\nAdd b:scommenter_top_level_tparams_only which controls if all\n  template parameters have @tparam tags generated or only those\n  at the top-level have tags generated.\nFixed scanning parameters, now scans past qualifiers like 'val',\nSupports curried notations func(a: A)(b: B). \n'var' or 'private var', etc.\nAdded b:scommenter_extra_line_text_offset allowing the user to control\n  the offset of any additional text associated with a tag.\nThere is now a b:scommenter_user_tags configuration variable allowing\n  the user to register in their .vimrc file third-party tags.\nAdded b:scommenter_warning_message_enable which controls the printing\n  of warning messages (if any)\nAdded b:scommenter_line_between_user_unknown_and_std_tags which \n  controls if a single comment line is printed between the \n  user/unknown tags and the standard tags. \nAdded b:scommenter_user_unknown_before_std_tags which controls the\n  order of formatting of the user/unknown tags and the standard tags.\nAdded b:scommenter_warn_deleted_tags which allows the user to\n  save the text from tags deleted during re-formatting.\nSupports capturing parameter template @specialized information\n  in comments.\nThe @deprecated(text) annotation now becomes a ScalaDoc @deprecated\n   tag (just as the @throws annotation does).\n"
@@ -66,7 +66,7 @@
         "user_name": "rme",
         "first_name": "richard",
         "last_name": "emberson",
-        "email": "richard.n.emberson at gmail.com",
+        "email": "richard.n.emberson@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

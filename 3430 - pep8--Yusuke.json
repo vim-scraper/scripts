@@ -1,0 +1,59 @@
+{
+  "script_id": "3430",
+  "display_name": "pep8 -- Yusuke",
+  "summary": "A Python filetype plugin to check pep8 convention.",
+  "name": "pep8--Yusuke",
+  "script_type": "ftplugin",
+  "description": "Before use, please make sure below.\n\n- vim is compiled with python.\n- put pep8 somewhere to be visible from this.\n\nURL: http://github.com/jbking/vim-pep8\n\nThanks to pyflakes.vim (http://www.vim.org/scripts/script.php?script_id=2441). Almost inspired from you.",
+  "install_details": "1. Put this plug-in into your plug-in directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14941",
+      "filename": "pep8.zip",
+      "script_version": "0.3",
+      "date": "2011-02-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "26034",
+        "user_name": "jbking",
+        "first_name": "MURAOKA",
+        "last_name": "Yusuke",
+        "email": "yusuke@jbking.org",
+        "homepage": ""
+      },
+      "release_notes": "- Caching pep8 report. So, checking at unchanged must be fast finished. Thanks to OrderedDict.\n- Share a checker instance over buffers.\n- Simplify code..."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14929",
+      "filename": "pep8.zip",
+      "script_version": "0.2",
+      "date": "2011-01-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "26034",
+        "user_name": "jbking",
+        "first_name": "MURAOKA",
+        "last_name": "Yusuke",
+        "email": "yusuke@jbking.org",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a bug related to display pep8 error message.\nSplit python code of this plug-in into a module from vim-script."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14915",
+      "filename": "pep8.vim",
+      "script_version": "0.1",
+      "date": "2011-01-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "26034",
+        "user_name": "jbking",
+        "first_name": "MURAOKA",
+        "last_name": "Yusuke",
+        "email": "yusuke@jbking.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

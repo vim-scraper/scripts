@@ -18,7 +18,7 @@
         "user_name": "hemlock8",
         "first_name": "Salman",
         "last_name": "Halim",
-        "email": "salmanhalim at hotmail.com",
+        "email": "salmanhalim@hotmail.com",
         "homepage": ""
       },
       "release_notes": "Version 1.4\n\nAdded an option to put in the word \"and\" (nine hundred AND twenty); off by default to retain old behavior:\n\nlet g:numberToEnglish_useAnd = 1\n\nAdded another configuration variable (French, in this example):\n\nlet g:numberToEnglish_and = \"et\"\n\nSections are now separated by commas; for example, \"12345\" becomes \"twelve thousand, three hundred and forty five\""
@@ -34,7 +34,7 @@
         "user_name": "hemlock8",
         "first_name": "Salman",
         "last_name": "Halim",
-        "email": "salmanhalim at hotmail.com",
+        "email": "salmanhalim@hotmail.com",
         "homepage": ""
       },
       "release_notes": "Made the plugin accept global values for overriding the returned string; useful for changing the language, for example. Place the following in your _vimrc for\nFrench:\n\nlet g:numberToEnglish_digits = [ \"\", \"un\",   \"deux\",  \"trois\",  \"quatre\",   \"cinq\",      \"six\",      \"sept\",         \"huit\",         \"neuf\" ]\nlet g:numberToEnglish_teens  = [ \"\", \"onze\", \"douze\", \"treize\", \"quatorze\", \"quinze\",    \"seize\",    \"dix-sept\",     \"dix-huit\",     \"dix-neuf\" ]\nlet g:numberToEnglish_tens   = [ \"\", \"dix\",  \"vingt\", \"trente\", \"quarante\", \"cinquante\", \"soixante\", \"soixante dix\", \"quatre vingt\", \"quatre vingt dix\" ]\n\nlet g:numberToEnglish_scale = [ \"\", \"mille\", \"million\", \"billion\" ]\n\nlet g:numberToEnglish_hundred = \"cent\"\n\nThis change necessitates the use of GetVar (http://vim.sourceforge.net/scripts/script.php?script_id=353). Technically, the usage of GetVar allows the setting\nof any combination of these variables on a per-window, buffer or tab level (allowing different languages, capitalizations, etc., depending upon the buffer\ntype, for example).\n"
@@ -50,7 +50,7 @@
         "user_name": "hemlock8",
         "first_name": "Salman",
         "last_name": "Halim",
-        "email": "salmanhalim at hotmail.com",
+        "email": "salmanhalim@hotmail.com",
         "homepage": ""
       },
       "release_notes": "Added two new mappings:\n\n<Plug>DNumberToEnglish and <Plug>DCNumberToEnglish -- the D is short for \"Detailed\".\n\nDiffers from the versions without the D in that it places the original number at the end of the expanded version:\n\nThus, 12341234 becomes twelve million three hundred forty one thousand two hundred thirty four (12341234).\n\nVersion 1.1 (not uploaded):\n\nTook the hard-coded values out of the functions into script-local variables -- no sense defining them every time.\n"
@@ -66,7 +66,7 @@
         "user_name": "hemlock8",
         "first_name": "Salman",
         "last_name": "Halim",
-        "email": "salmanhalim at hotmail.com",
+        "email": "salmanhalim@hotmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

@@ -8,6 +8,214 @@
   "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"vimpluginloader\"]) and add ``call scriptmanager#Activate([\"vimpluginloader\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14943",
+      "filename": "vimpluginloader-1.4.5.tar.gz",
+      "script_version": "1.4.5",
+      "date": "2011-02-03",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added `autocmd' constructed function (it is replacement for :autocmd command which has the only advantage: autocommands defined by autocmd() will get automatically removed on plugin unload)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14883",
+      "filename": "vimpluginloader-1.4.4.tar.gz",
+      "script_version": "1.4.4",
+      "date": "2011-01-27",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added `operator' mapping option (defines operator mapping), some documentation improvements"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14791",
+      "filename": "vimpluginloader-1.4.3.tar.gz",
+      "script_version": "1.4.3",
+      "date": "2011-01-19",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added `remap' mapping optionAdded possibility to specify multiple mapping modesSome buf fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14755",
+      "filename": "vimpluginloader-1.4.2.tar.gz",
+      "script_version": "1.4.2",
+      "date": "2011-01-15",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Some bug fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14747",
+      "filename": "vimpluginloader-1.4.1.tar.gz",
+      "script_version": "1.4.1",
+      "date": "2011-01-14",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added `bufdict' reginfo function"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14742",
+      "filename": "vimpluginloader-1.4.tar.gz",
+      "script_version": "1.4",
+      "date": "2011-01-13",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added `getc' and `nochars' mapping dictionaries"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14704",
+      "filename": "vimpluginloader-1.3.11.tar.gz",
+      "script_version": "1.3.11",
+      "date": "2011-01-08",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added function and breakadd actions, some fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14676",
+      "filename": "vimpluginloader-1.3.10.tar.gz",
+      "script_version": "1.3.10",
+      "date": "2011-01-03",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Fixed an issue with using load#LoadFuncdict().getfunctions from vimrc"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14669",
+      "filename": "vimpluginloader-1.3.7.tar.gz",
+      "script_version": "1.3.7",
+      "date": "2011-01-01",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added load#Setup function, made error messages a bit more verbose"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14640",
+      "filename": "vimpluginloader-1.3.6.tar.gz",
+      "script_version": "1.3.6",
+      "date": "2010-12-28",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added sesreload action, some session and event fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14571",
+      "filename": "vimpluginloader-1.3.5.tar.gz",
+      "script_version": "1.3.5",
+      "date": "2010-12-18",
+      "vim_version": "9999",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Reposting bundle due to core plugins update"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14533",
+      "filename": "vimpluginloader-1.3.5.tar.gz",
+      "script_version": "1.3.5",
+      "date": "2010-12-16",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Fixed reloading of chk plugin"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14490",
+      "filename": "vimpluginloader-1.3.4.tar.gz",
+      "script_version": "1.3.4",
+      "date": "2010-12-12",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Improved nrof completion, replaced echo with echomsg in eerror, fixed preload check"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14325",
       "filename": "vimpluginloader-1.3.3.tar.gz",
       "script_version": "1.3.3",
@@ -18,7 +226,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Reposting bundle due to core plugins update"
@@ -34,7 +242,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added DisableOptionChecks and _disable_option_checks options"
@@ -50,7 +258,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Improved load#LoadFuncdict function, added load#SetOption and load#CreateDictFunction functions"
@@ -66,7 +274,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Fixed some mapping bugs"
@@ -82,7 +290,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Provided a way to register different plugin types and place plugin file not directly under plugin directoryAdded support for autoloading external dependenciesMade plugin reload itself without errors"
@@ -98,7 +306,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added session creation"
@@ -114,7 +322,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Improved findnr action (now it takes a list of numbers separated by anything except spaces), improved autocmd[!] action (now it does not force you to escape spaces), improved error messages, some bug fixes"
@@ -130,7 +338,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added lazygetfunctions() and run() functions useful for cyclic dependency resolution"
@@ -146,7 +354,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Fixed completion for vim7.3"
@@ -162,7 +370,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added `autocommands'"
@@ -178,7 +386,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Initial upload"

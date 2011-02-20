@@ -1,12 +1,28 @@
 {
   "script_id": "2636",
-  "display_name": "indent/cpp.vim",
+  "display_name": "google.vim",
   "summary": "Indent file for Google C++ Coding Style",
-  "name": "indentcpp.vim",
+  "name": "google.vim",
   "script_type": "indent",
   "description": "Inspired by Google C++ Coding Style (http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml)",
-  "install_details": "Move cpp.vim to ~/.vim/indent simply.",
+  "install_details": "Move google.vim to ~/.vim/indent as cpp.vim\n\nIf you use csindent plug-in (vimscript #2633), then move google.vim to ~/.vim/csindent/cpp/",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14772",
+      "filename": "google.vim",
+      "script_version": "1.1.0",
+      "date": "2011-01-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14087",
+        "user_name": "pitman",
+        "first_name": "Konstantin",
+        "last_name": "Lepa",
+        "email": "konstantin.lepa@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Refactored source code.\nSome fixes."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13033",
       "filename": "cpp.vim",
@@ -18,7 +34,7 @@
         "user_name": "pitman",
         "first_name": "Konstantin",
         "last_name": "Lepa",
-        "email": "konstantin.lepa at gmail.com",
+        "email": "konstantin.lepa@gmail.com",
         "homepage": ""
       },
       "release_notes": " Added some changes. Thanks to Eric Rannaud <eric.rannaud@gmail.com>"
@@ -34,7 +50,7 @@
         "user_name": "pitman",
         "first_name": "Konstantin",
         "last_name": "Lepa",
-        "email": "konstantin.lepa at gmail.com",
+        "email": "konstantin.lepa@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

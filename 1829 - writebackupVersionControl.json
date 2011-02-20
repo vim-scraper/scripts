@@ -18,7 +18,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "- ENH: Define a local 'du' mapping to quickly update the diff (of the same version and with the same options as this time), unless [count] is given, which sets a different version). \n- :WriteBackupViewDiffWithPred not just checks for empty scratch buffer, but also considers the diff command exit code. \n- BUG: :WriteBackupViewDiffWithPred can cause E121: Undefined variable: l:predecessor. Similar issue with a:filespec showing scratch buffer name in place of the original file name. Now using l:oldFile and l:newFile instead. \n- BUG: WriteBackupViewDiffWithPred didn't always go back to the original window when no differences, but fell back to the next one."
@@ -34,7 +34,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "ENH: :WriteBackupRestoreFromPred now takes an optional [count] to restore an earlier predecessor. "
@@ -50,7 +50,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "BF: escapings#shellescape() caused E118 on Vim 7.1. Enhanced wrapper function. "
@@ -66,7 +66,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "- Replaced simple filespec quoting with built-in shellescape() function (or emulation for Vim 7.0 / 7.1) via escapings.vim wrapper. \n- Keeping cursor position when only refreshing the diff scratch buffer. \n- Window position of the diff scratch buffer can now be configured. \n- ENH: Now issuing a warning that there are no differences and closing the useless diff scratch buffer if it is empty. \n- BF: Forgot {special} in shellescape() call for writebackupVersionControl#ViewDiffWithPred(); the scratch buffer uses the ! command. "
@@ -82,7 +82,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "ENH: Added :WriteBackupViewDiffWithPred command to show the diff output in a scratch buffer. With this, one can get a quick overview of what has changed since the last backup without performing a diffsplit within Vim. "
@@ -98,7 +98,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "ENH: :WriteBackupDiffWithPred now takes an optional [count] to diff with an\nearlier predecessor. "
@@ -114,7 +114,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Replaced simple filespec escaping with built-in fnameescape() function (or\nemulation for Vim 7.0 / 7.1) via escapings.vim wrapper."
@@ -130,7 +130,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Backup versions are now opened read-only (through :WriteBackupGoPrev/Next and\n:WriteBackupDiffWithPred commands) to prevent the user from accidentally\nediting the backup instead of the original. "
@@ -146,7 +146,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "- Using separate autoload script to help speed up VIM startup. This is an\n  incompatible change that also requires the corresponding writebackup plugin\n  version. *** PLEASE UPDATE writebackup (vimscript #1828), too ***\n- BF: :WriteBackupListVersions now handles (and reports) backup files with a\n  future date.\n- ENH: Allowing to configure compare shell command via\n  g:WriteBackup_CompareShellCommand. \n- ENH: Added :WriteBackupDeleteLastBackup command. \n- ENH: Added [!] to the following commands to disable confirmation dialog and\n  override readonly target files: :WriteBackupRestoreFromPred, \n  :WriteBackupRestoreThisBackup, :WriteBackupOfSavedOriginal, \n  :WriteBackupDeleteLastBackup"
@@ -162,7 +162,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Split off documentation into separate help file. Now packaging as VimBall. "
@@ -178,7 +178,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Renamed configuration variable from g:writebackup_DiffVertSplit to g:WriteBackup_DiffVertSplit. *** PLEASE UPDATE YOUR CONFIGURATION *** \nENH: Added :WriteBackupGoPrev, :WriteBackupGoNext and :WriteBackupGoOriginal commands. \nENH: :WriteBackupListVersions now includes backup dirspec if backups aren't done in the original file's directory. \nBF: :WriteBackupDiffWithPred failed to open the predecessor with the ':set autochdir' setting if the CWD has been (temporarily) changed. Now using absolute path for the :split command. \n:WriteBackupDiffWithPred doesn't jump to the predecessor window; it now moves the cursor back to the originating window; this feels more natural. \n:WriteBackupDiffWithPred now avoids that a previous (open) fold status at the cursor position is remembered and obscures the actual differences. \nAdded Windows detection via has('win64'). "
@@ -194,7 +194,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Minor change: Added -bar to all commands that do not take any arguments, so that these can be chained together."
@@ -210,7 +210,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Small Enhancement: :WriteBackupListVersions and :WriteBackupDiffWithPred claimed \"no backups exist\" if option 'wildignore' hides the backup files. Now temporarily resetting the option before glob().  "
@@ -226,7 +226,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "ENH: Added support for writing backup files into a different directory (either one static backup dir or relative to the original file). Now requires writebackup.vim version 1.20 or later. \nCommand :WriteBackupOfSavedOriginal now checks that the file is an original one. \nBF: :WriteBackupIsBackedUp doesn't deal correctly with filenames that contain special ex characters [%#!]. "
@@ -242,7 +242,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Initial upload"

@@ -1,0 +1,27 @@
+{
+  "script_id": "3352",
+  "display_name": "auto_mkdir",
+  "summary": "Allows you to save files into directories that do not exist yet.",
+  "name": "auto_mkdir",
+  "script_type": "utility",
+  "description": "This plugin automatically creates parent directories for the current file if they don't exist yet.\n\n\nExample:\n    If you're currently in an empty directory, without the plugin, the command\n        :w foo/bar/baz.txt\n    will fail with with E212 (\"Can't open file for writing.\")\n\n    The plugin will automatically create the directories foo/ and foo/bar/ for you before Vim saves \n    the file, so you don't have to remember to do it manually.\n\n\nAlso available via git:\n    https://github.com/DataWraith/auto_mkdir",
+  "install_details": "Save auto_mkdir.vim into the plugin/ directory of your runtime-path.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14454",
+      "filename": "auto_mkdir.vim",
+      "script_version": "1.0.0",
+      "date": "2010-12-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23789",
+        "user_name": "DataWraith",
+        "first_name": "Johannes",
+        "last_name": "Holzfuß",
+        "email": "DataWraith@web.de",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "script_id": "3351",
+  "display_name": "qthelp",
+  "summary": "Allows you to open Qt help pages in browser from your C++ source code.",
+  "name": "qthelp",
+  "script_type": "utility",
+  "description": "This plugin would allow you to open Qt help pages in browser from your C++ source code. Currently it can show help if the word underneath your cursor is a class name, a variable name or a class-member name.\n\nExamples:\n\nQStr|ing trackTitle, artistName;\nQString track|Title, artistName(\\\"Unknown\\\");\ntrack|Title = \\\"Unknown\\\";\nRunning command :QHelpOnThis will open help on QString.\n\ntrackTitle.ri|ght(10);\nRunning command :QHelpOnThis will open help on QString::right.\n\nRunning command :QHelp QPixmap::QPixmap will open help on\nQPixmap constructor.\n\nConfiguring:\n\ng:qthelp_browser - command to run your browser\ndefault: &#039&#039 (so an error message will be printed if your try to use plugin)\nNote: on Windows use something like (notice &#039start&#039 at the beginning)\n&#039start c:\\\\Program files\\\\Mozilla Firefox\\\\firefox.exe&#039\nor Vim will be waiting until you close your browser.\n\nUsing:\n\n1. Make tags-file for your html-qthelp.\n2. Add that tags-file into your &#039tags&#039 option (WARNING: doing this in your .vimrc file can slow down and pollute completion list for not Qt-projects).\n3. Setup g:qthelp_browser variable with the command to run your browser.\n4. Map command QHelpOnThis on some hotkey.\n5. Use QHelp from command-line for faster navigating through help (to escape manual searching of needed section).\n\nLimitation:\n\nI didn&#039t found a way to determine inheritance hierarchy using tags so trying\nQStringList strlst;\nstrlst.in|sert(\\\"String\\\");\nwill open reference for QString, not for QList::insert.\n\nWarning:\n\nIn some cases it can take a while for searching definition (for example when it doesn&#039t exist) if this happens hit Ctrl-C to break searching.\n\nAdvice:\n\nYou may be interesting in inccomplete (vimscript #3345) plugin, that can help to find header file you need.\n\nYou could always find the latest version on github: http://github.com/xaizek/vim-qthelp\nFeel free to contact me if you have any question or suggestions.",
+  "install_details": "Just extract the archive into your ~/.vim/ or ~/vimfiles/ (~/.vim/bundle/ or ~/vimfiles/bundle/ if you use Pathogen (vimscript #2332)).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14453",
+      "filename": "vim-qthelp-v1.0.0.zip",
+      "script_version": "1.0.0",
+      "date": "2010-12-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23504",
+        "user_name": "x_aizek",
+        "first_name": "x",
+        "last_name": "aizek",
+        "email": "xaizek@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

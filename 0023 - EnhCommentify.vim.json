@@ -18,7 +18,7 @@
         "user_name": "mikesh",
         "first_name": "Meikel",
         "last_name": "Brandmeyer",
-        "email": "Brandels_Mikesh at web.de",
+        "email": "Brandels_Mikesh@web.de",
         "homepage": ""
       },
       "release_notes": "Still alive! Yeah! :-D\n\nFinally a new release....\n\nThis is mainly a bugfix release:\n* Fixed a typo in the apache detection. (thanks to Brian Neu)\n* Fixed handling of nested comment escape strings. (thanks to Samuel Ferencik)\n* Fixed broken keyboard mappings when wcm is set to <Tab>. (thanks to xpatriotx)\n\n* Added support for viki & deplate (thanks to Thomas Link)\n* Added support xslt, xsd & mail (thanks to Stefano Zacchiroli)\n* Added callback-functionality to enable extension of the script without actually modifying the script.\n"
@@ -34,7 +34,7 @@
         "user_name": "mikesh",
         "first_name": "Meikel",
         "last_name": "Brandmeyer",
-        "email": "Brandels_Mikesh at web.de",
+        "email": "Brandels_Mikesh@web.de",
         "homepage": ""
       },
       "release_notes": "New features:\n * Keybindings may be turned off in the different modes. (eg. no bindings in insert mode)\n * Keybindings may be local to the buffer now.\n * Keybindings may be turned off in case of an unknown filetype.\n\nBugfixes:\n * Fixed a problem with UseSyntax. (thanks to Pieter Naaijkens)\n * Fixed Ocaml support. (thanks to Zhang Le)"
@@ -50,7 +50,7 @@
         "user_name": "mikesh",
         "first_name": "Meikel",
         "last_name": "Brandmeyer",
-        "email": "Brandels_Mikesh at web.de",
+        "email": "Brandels_Mikesh@web.de",
         "homepage": ""
       },
       "release_notes": "This is version 2.1 of the EnhancedCommentify Script.\nNew features:\n * one-block commenting for multipart comments\n * if possible, use commentstring option in order to determine the comment strings.\n * moved autocmd to BufWinEnter in order to fix modeline usage\n * experimental parsing of comments option to find out middle string for new one-block feature.\n\nBugfixes:\n * fixed problems with tabs if align-right option is used\n * fixed case sensitive check for overrideEL (thanks to Steve Hall)\n * fixed problems with javascript filetype (thanks to Brian Neu)\n * changed init-autocmd to BufWinEnter to fix usage of modeline\n"
@@ -66,7 +66,7 @@
         "user_name": "mikesh",
         "first_name": "Meikel",
         "last_name": "Brandmeyer",
-        "email": "Brandels_Mikesh at web.de",
+        "email": "Brandels_Mikesh@web.de",
         "homepage": ""
       },
       "release_notes": "Version 2.0 is finally out. With a whole bunch of changes. Most important:\nThe script is now released under BSD license. But this should be no restriction I think.\nBugfixes:\n * '&#039' is an invalid expression (thanks to Zak Beck)\n * AltOpen/Close set to '' could cause problems (thanks to Ben Kibbey)\n * bug in keybinding code (thanks to Charles Campbell)\n * trouble with 'C' in cpo (thanks to Luc Hermitte)\nNew features:\n * produces now block comments, eg:\n    /*int a;\n    char b;*/\n * option to add ident string only at opener\n * options may now be set on a per buffer basis.\n\nI can only recommend (again!) to read the help file for new options and explanations for old ones.\nThis release contains script und helpfile in a tar.gz.\n"

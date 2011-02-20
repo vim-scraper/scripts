@@ -18,7 +18,7 @@
         "user_name": "danprice",
         "first_name": "Daniel",
         "last_name": "Price",
-        "email": "vim at danprice.fastmail.net",
+        "email": "vim@danprice.fastmail.net",
         "homepage": ""
       },
       "release_notes": "Highlight: The Replace and ReplaceUndo commands were reimplemented.  The granularity of matches inside of a Replace call were improved so that you can now decide replacements individually per line.\n    Additionally, Complex operations such as replacing x[i][j][k] with x(i,j,k) and following it up with a ReplaceUndo are now possible.\n\n    e.g.\n    :Replace /x\\[\\([^]]\\+\\)\\]\\[\\([^]]\\+\\)\\]\\[\\([^]]\\+\\)\\]/x(\\1,\\2,\\3)/\n    :ReplaceUndo\n\n    Please report any regressions with either of these functions.\n\nFeature: Added count command line option (-m 4 or -4)\nFeature: Improved Grep options window keybindings; searching within the options explorer window is now possible\nFeature: Expanded searches to include all of the active buffers' directories\nBugfix:  Fixed recursive operation and expanded search from reporting duplicate results\nBugfix:  Fixed <C-e> and <C-y> in replace mode\nFeature: Added EasyGrepWindowPosition for specifying where the error list window will be opened\nFeature: Added FilterErrorlist command for filtering the results within the quickfix or location list windows\nFeature: Improved printout when no matches are found\nFeature: Improved searching when an entire line is selected"
@@ -34,7 +34,7 @@
         "user_name": "danprice",
         "first_name": "Daniel",
         "last_name": "Price",
-        "email": "vim at danprice.fastmail.net",
+        "email": "vim@danprice.fastmail.net",
         "homepage": ""
       },
       "release_notes": "Feature: Expanded upon the list of file associations \nFeature: Expanded searches to the current buffer's directory in addition to the current working directory \nFeature: Added command line arguments to :Grep and :Replace for recursive searches and case sensitivity \nFeature: Added toggle for window replace mode \nFeature: Added toggle for showing file associations list in options explorer \nBugfix: Case insensitivity would fail in replacing some patterns"
@@ -50,7 +50,7 @@
         "user_name": "danprice",
         "first_name": "Daniel",
         "last_name": "Price",
-        "email": "vim at danprice.fastmail.net",
+        "email": "vim@danprice.fastmail.net",
         "homepage": ""
       },
       "release_notes": "Update to 0.95: Fixed an error in calling ReplaceCurrentWord identified by Eric Ho.\n\nFeature: Added search and replace on visual selections. \nFeature: Improved Grepping for items that can be interpreted as regular expressions.  Selections are assumed to be literal, whereas explicit commands are assumed to be regular expressions. \nFeature: Removed option g:EasyGrepNoDirectMappings in favor of g:EasyGrepOptionPrefix, which allows the option prefix to be changed. \nBugfix:  The tracked extension would sometimes fail to be updated when switching between buffers \nDocumentation: Split the documentation into its own file; greatly expanded upon its contents. \nChange: Activating a mode that is already activated will no longer deactivate it. \nChange: GrepOptions no longer accepts an argument; use user mode instead. \nChange: Clarified mapping names; custom mappings will need to be reset."
@@ -66,7 +66,7 @@
         "user_name": "danprice",
         "first_name": "Daniel",
         "last_name": "Price",
-        "email": "vim at danprice.fastmail.net",
+        "email": "vim@danprice.fastmail.net",
         "homepage": ""
       },
       "release_notes": "Feature: Added forward slash delineated pattern to the Replace command\ne.g. :Replace /target/replacement/\nthat allows more complicated replacements; you can now work with\npatterns that have spaces in them.\nBugfix: If cursorline is off at the start of a replace, now ensuring that cursorline is turned off for all buffers, and not just the last one\nBugfix: fixed an issue with an extra tab being opened during a replacement"
@@ -82,7 +82,7 @@
         "user_name": "danprice",
         "first_name": "Daniel",
         "last_name": "Price",
-        "email": "vim at danprice.fastmail.net",
+        "email": "vim@danprice.fastmail.net",
         "homepage": ""
       },
       "release_notes": "Implemented case sensitivity that is independent of ignorecase; thanks to Doro Wu for contributing to this functionality\nChanged shortcut key for hidden files from 'i' to 'h'"
@@ -98,7 +98,7 @@
         "user_name": "danprice",
         "first_name": "Daniel",
         "last_name": "Price",
-        "email": "vim at danprice.fastmail.net",
+        "email": "vim@danprice.fastmail.net",
         "homepage": ""
       },
       "release_notes": "Expanded search of EasyGrepFileAssociations list to every component of 'runtimepath'.  This solves a starting message for those who placed EasyGrepFileAssociations in a location other than the first location in 'runtimepath'."
@@ -114,7 +114,7 @@
         "user_name": "danprice",
         "first_name": "Daniel",
         "last_name": "Price",
-        "email": "vim at danprice.fastmail.net",
+        "email": "vim@danprice.fastmail.net",
         "homepage": ""
       },
       "release_notes": "Fixed paths with spaces in them\nFolds will now be disabled where replacements are to be made\nFixed an error with checking for extra warnings\nBetter highlighting while replacing\nRecursive mode can no longer be activated when Buffers mode is activated"
@@ -130,7 +130,7 @@
         "user_name": "danprice",
         "first_name": "Daniel",
         "last_name": "Price",
-        "email": "vim at danprice.fastmail.net",
+        "email": "vim@danprice.fastmail.net",
         "homepage": ""
       },
       "release_notes": "Fixed an issue with tracking the file extension where sometimes the desired extension wouldn't be registered.\nBetter reporting when no files match.\nNow warning when searching from a working directory that doesn't match the current file's directory.\nAdded g:EasyGrepExtraWarnings option."
@@ -146,7 +146,7 @@
         "user_name": "danprice",
         "first_name": "Daniel",
         "last_name": "Price",
-        "email": "vim at danprice.fastmail.net",
+        "email": "vim@danprice.fastmail.net",
         "homepage": ""
       },
       "release_notes": "Improved Replace and ReplaceUndo\nAdded two configurable modes for how the windows operate when doing a global replace.\nFixed an issue with linked filetypes."
@@ -162,7 +162,7 @@
         "user_name": "danprice",
         "first_name": "Daniel",
         "last_name": "Price",
-        "email": "vim at danprice.fastmail.net",
+        "email": "vim@danprice.fastmail.net",
         "homepage": ""
       },
       "release_notes": "Added experimental :Replace and :ReplaceUndo commands; keymapped <leader>vr for :Replace\nImproved response when no matches"
@@ -178,7 +178,7 @@
         "user_name": "danprice",
         "first_name": "Daniel",
         "last_name": "Price",
-        "email": "vim at danprice.fastmail.net",
+        "email": "vim@danprice.fastmail.net",
         "homepage": ""
       },
       "release_notes": "Added option to toggle showing fewer or more options; showing fewer options by default.\nAdded option '?' to print the current configuration and save it to a register.\nNow creating direct mapping by default; see g:EasyGrepNoDirectMappings to turn this off.\n"
@@ -194,7 +194,7 @@
         "user_name": "danprice",
         "first_name": "Daniel",
         "last_name": "Price",
-        "email": "vim at danprice.fastmail.net",
+        "email": "vim@danprice.fastmail.net",
         "homepage": ""
       },
       "release_notes": "Initial upload"

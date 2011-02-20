@@ -8,6 +8,54 @@
   "install_details": "Requires python (but not a python-enabled vim).  A windows executable version, which doesn't require python, is available at:\n\nhttp://sites.google.com/site/abudden/contents/Vim-Scripts/ctags-highlighting\n\nIt also requires a few extra highlighting groups to be defined (using :highlight).  Run :UpdateTypesFile and look at the list at the bottom of the resulting types_*.vim files.  Alternatively, install the Bandit colour scheme from vimscript #2645: this provides all the groups by default.  The full list is also provided in the included documentation.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15027",
+      "filename": "ctags_highlighting.vba",
+      "script_version": "r442",
+      "date": "2011-02-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14627",
+        "user_name": "abudden",
+        "first_name": "Al",
+        "last_name": "Budden",
+        "email": "abudden@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved type prioritisation for object-oriented languages."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15026",
+      "filename": "ctags_highlighting.vba",
+      "script_version": "r440",
+      "date": "2011-02-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14627",
+        "user_name": "abudden",
+        "first_name": "Al",
+        "last_name": "Budden",
+        "email": "abudden@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added better support for different C++ extensions and to avoid conflicts with C# files."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14737",
+      "filename": "ctags_highlighting.vba",
+      "script_version": "r435",
+      "date": "2011-01-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14627",
+        "user_name": "abudden",
+        "first_name": "Al",
+        "last_name": "Budden",
+        "email": "abudden@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Changed default to not include syntax matches unless either g:TypesFileIncludeSynMatches or b:TypesFileIncludeSynMatches is set to 1 (this makes the highlighting much faster for large projects)."
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14422",
       "filename": "ctags_highlighting.vba",
       "script_version": "r431",
@@ -18,7 +66,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Better support for paths with spaces in them.  Added support for Android SDK and Java JDK (requires latest gui_types_and_tags from the website).  Optional local variable highlighting (see caveats on the website) for Java, C# and C++ as well as C."
@@ -34,7 +82,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added support for ctags 'import' type in python."
@@ -50,7 +98,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Significantly improved support for languages other than C.  Factored out redundant ctags_* intermediate highlight groups."
@@ -66,7 +114,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Better support for different languages including support for C# (thanks to Aleksey Baibarin)."
@@ -82,7 +130,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed bug in new vimfiles location operation."
@@ -98,7 +146,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Improvements to VIMFILESDIR identification.  Re-architecture of type definitions to make them more sensitive to different ctags \"kinds\" for different languages.  Note that Enumerator has been renamed to EnumerationValue: the latest Bandit Colour Scheme supports this.  Fixed escaping of paths and operation of ReadTypes when not in an autocommand."
@@ -114,7 +162,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added missing winrestview() call (thanks to Yongwei Wu for reporting this)."
@@ -130,7 +178,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added experimental PHP support and a lot more documentation."
@@ -146,7 +194,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added shellescape() to GUI types and tags files and moved them out of the main distribution (see update 7th August 2009 on the website)."
@@ -162,7 +210,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed bug with (optional) cscope database generation."
@@ -178,7 +226,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fix for Linux spaced paths (Mikhail Stepura)."
@@ -194,7 +242,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added support for ctags being stored in a path with spaces and other odd characters (thanks to Mikhail Stepura)."
@@ -210,7 +258,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Changed some of the defaults to the python script (so fewer options need to be passed by UpdateTypesFile).  It should now be possible to generate the types file simply by running \"mktypes.py\" or \"mktypes.py -r\" in the project directory.  Of course, UpdateTypesFile still works too.  Added UpdateTypesFileOnly command for projects in which the tags file is updated externally (e.g. the Linux kernel source).  Removed regular expression matches by default: this is much quicker for large projects.  Also added more screenshots to the website."
@@ -226,7 +274,7 @@
         "user_name": "abudden",
         "first_name": "Al",
         "last_name": "Budden",
-        "email": "abudden at gmail.com",
+        "email": "abudden@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

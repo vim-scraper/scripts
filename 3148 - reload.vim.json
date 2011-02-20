@@ -8,6 +8,22 @@
   "install_details": "Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is \"~/.vim\" on UNIX and \"%USERPROFILE%\\vimfiles\" on Windows), restart Vim and execute the command \":helptags ~/.vim/doc\" (use \":helptags ~\\vimfiles\\doc\" instead on Windows). Now try it out: Edit any Vim script that's already loaded and check that the script is reloaded when you save it (the reload.vim plug-in will print a message to confirm when a script is reloaded).",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14956",
+      "filename": "reload.zip",
+      "script_version": "0.6",
+      "date": "2011-02-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter@peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Support for generic file type plug-ins (thanks to Britton Kerin for the suggestion):\nhttps://github.com/xolox/vim-reload/commit/b6b3952940e00c2f010e"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14072",
       "filename": "reload.zip",
       "script_version": "0.5.2",
@@ -18,7 +34,7 @@
         "user_name": "xolox",
         "first_name": "Peter",
         "last_name": "Odding",
-        "email": "peter at peterodding.com",
+        "email": "peter@peterodding.com",
         "homepage": "http://peterodding.com/"
       },
       "release_notes": "Bug fix for case insensitive filenames (reported by Jeff Bevis):\nhttp://github.com/xolox/vim-reload/commit/138e64dcc3770f3fb008"
@@ -34,7 +50,7 @@
         "user_name": "xolox",
         "first_name": "Peter",
         "last_name": "Odding",
-        "email": "peter at peterodding.com",
+        "email": "peter@peterodding.com",
         "homepage": "http://peterodding.com/"
       },
       "release_notes": "Bug fix: Forgot that color scheme reloading can fail:\nhttp://github.com/xolox/vim-reload/commit/e2443ff27a07e15a94d7935ae202d69894b1ab50"
@@ -50,7 +66,7 @@
         "user_name": "xolox",
         "first_name": "Peter",
         "last_name": "Odding",
-        "email": "peter at peterodding.com",
+        "email": "peter@peterodding.com",
         "homepage": "http://peterodding.com/"
       },
       "release_notes": "  Simplified ftplugin/syntax/indent reloading, fixed E325 workaround:\n   http://github.com/xolox/vim-reload/commit/b703505c93f24f27c973b37836257c1cacda011d\n\n  Shortened code by moving xolox#timer#stop() calls:\n   http://github.com/xolox/vim-reload/commit/cd36d10f1f92a3b7e7d6c765e149af623772b3aa"
@@ -66,7 +82,7 @@
         "user_name": "xolox",
         "first_name": "Peter",
         "last_name": "Odding",
-        "email": "peter at peterodding.com",
+        "email": "peter@peterodding.com",
         "homepage": "http://peterodding.com/"
       },
       "release_notes": "The plug-in now clears inclusion guards before reloading plug-in scripts: http://github.com/xolox/vim-reload/commit/8fb0c8585c95056873bc2f4b4178cf874d97da20"
@@ -82,7 +98,7 @@
         "user_name": "xolox",
         "first_name": "Peter",
         "last_name": "Odding",
-        "email": "peter at peterodding.com",
+        "email": "peter@peterodding.com",
         "homepage": "http://peterodding.com/"
       },
       "release_notes": "Automatic update support using GLVS and README updates:\nhttp://github.com/xolox/vim-reload/commit/5fc2712cede6af6ab27911e02142a0b26bae6620"
@@ -98,7 +114,7 @@
         "user_name": "xolox",
         "first_name": "Peter",
         "last_name": "Odding",
-        "email": "peter at peterodding.com",
+        "email": "peter@peterodding.com",
         "homepage": "http://peterodding.com/"
       },
       "release_notes": "Initial upload"

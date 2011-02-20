@@ -4,9 +4,25 @@
   "summary": "A collection of miscellaneous functionalities operating tabs.",
   "name": "tabops",
   "script_type": "utility",
-  "description": "Description:\n  This script provides tab operation functionalities.\n  Going to some tab, moving some tab, sorting tabs and reopening closed tabs.\n                                                                                      \nUsage:\n  1. (optional) set prefix if you want to change. (let g:Tabops_prefix)\n     default: <Tab>\n  2. (optional) let g:Tabops_use??? variables 0 if you want to disable some features.\n  3. start editing\n                                                                                      \nFeature:\n\n  * the default prefix is <Tab>\n                                                                           \n  if g:Tabops_useGoto == 1 then ...\n      <C-Tab>  : goto the next tab.\n      <S-C-Tab>: goto the prev tab.\n                                                                           \n      {prefix}1: goto the 1st tab.\n      {prefix}2: goto the 2nd tab.\n         :\n      {prefix}8: goto the 8th tab.\n      {prefix}9: goto the LAST tab.\n                                                                           \n  if g:Tabops_useMove == 1 then ...\n      {prefix}l: swap the current tab with the right one.\n      {prefix}h: swap the cerrent tab with the left one.\n                                                                           \n  :TabopsSortByPath\n      sorts tabs comparing their paths.\n                                                                           \n  :TabopsSortByBufnr\n      sorts tabs comparing their internal numbers.\n                                                                           \n  :TabopsSortByLastChange\n      sorts tabs comparing their recently-changed timestamps.\n      the most recent tab comes to left.\n                                                                           \n  :TabopsUniq\n      closes duplicate tabs.\n                                                                           \n  :TabopsCloseRight\n  :TabopsCloseLeft\n      closes right/left tabs except a current tab.\n                                                                           \n  :TabopsOpenSiblings [LOADED]\n      scans buffers that are in the same directory, and open them in tabs.\n      with LOADED, only loaded buffers are read in tabs. (not globbed)\n",
+  "description": "Description:\n                                                                                      \n  This script provides tab operation functionalities.\n  Going to some tab, moving some tab and sorting tabs.\n                                                                                      \nMaintainer: Shuhei Kubota <kubota.shuhei+vim@gmail.com>\n                                                                                      \nUsage:\n  1. (optional) set prefix if you want to change. (let g:Tabops_prefix)\n     default: <Tab>\n  2. (optional) let g:Tabops_use??? variables 0 if you want to disable some features.\n  3. start editing\n                                                                                      \n  X. execute :Tabops command with some parameters (see Feature section)\n                                                                                      \nFeature:\n                                                                                      \n  * the default prefix is <Tab>\n                                                                                      \n  if g:Tabops_useGoto == 1 then ...\n      <C-Tab>  : goto the next tab.\n      <S-C-Tab>: goto the prev tab.\n                                                                                      \n      {prefix}1: goto the 1st tab.\n      {prefix}2: goto the 2nd tab.\n         :\n      {prefix}8: goto the 8th tab.\n      {prefix}9: goto the LAST tab.\n                                                                                      \n  if g:Tabops_useMove == 1 then ...\n      {prefix}l: swap the current tab with the right one.\n      {prefix}h: swap the cerrent tab with the left one.\n                                                                                      \n                                                                                      \n  :Tabops [Close | Open | ...]\n      Close\n          Right\n          Left\n              closes right/left tabs except the current tab.\n      Open\n          Siblings [LOADED]\n              scans buffers that are in the same directory, and open them in tabs.\n              with LOADED, only loaded buffers are read in tabs. (not globbed)\n          WndInNewTab\n              (in splitted window) closes the current window and opens it in new tab.\n      Reopen\n          re-opens a closed tab.\n      Sort\n          ByPath\n              sorts tabs comparing their paths.\n          ByBufnr\n              sorts tabs comparing their internal numbers.\n          ByLastChange\n              sorts tabs comparing their recently-changed timestamps.\n              the most recent tab comes to left.\n      Uniq\n          closes duplicate tabs.\n",
   "install_details": "Just source this file. (Put this file into the plugin directory.)",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14506",
+      "filename": "tabops.vim",
+      "script_version": "0.5",
+      "date": "2010-12-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "7032",
+        "user_name": "ShuheiKubota",
+        "first_name": "Shuhei",
+        "last_name": "Kubota",
+        "email": "kubota.shuhei+vim@gmail.com",
+        "homepage": "http://chimachima-site.infoseek.ne.jp/"
+      },
+      "release_notes": "1. Parameterized commands (:TabopsSortByBufnr -> :Tabops Sort ByBufnr) \n2. Added command :Tabops Open WndInNewTab (reopens the current window in a new tab)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13844",
       "filename": "tabops.vim",
@@ -18,7 +34,7 @@
         "user_name": "ShuheiKubota",
         "first_name": "Shuhei",
         "last_name": "Kubota",
-        "email": "kubota.shuhei+vim at gmail.com",
+        "email": "kubota.shuhei+vim@gmail.com",
         "homepage": "http://chimachima-site.infoseek.ne.jp/"
       },
       "release_notes": "Added command :TabopsCloseRight/Left"
@@ -34,7 +50,7 @@
         "user_name": "ShuheiKubota",
         "first_name": "Shuhei",
         "last_name": "Kubota",
-        "email": "kubota.shuhei+vim at gmail.com",
+        "email": "kubota.shuhei+vim@gmail.com",
         "homepage": "http://chimachima-site.infoseek.ne.jp/"
       },
       "release_notes": "1. fixed reopening closed tab behavior. (:TabopsReopenClosedTab)\n2. added command :TabopsUniq (closes duplicate tabs)\n3. added command :TabopsOpenSiblings (scan buffers that are in the same directory, and open them in tabs)"
@@ -50,7 +66,7 @@
         "user_name": "ShuheiKubota",
         "first_name": "Shuhei",
         "last_name": "Kubota",
-        "email": "kubota.shuhei+vim at gmail.com",
+        "email": "kubota.shuhei+vim@gmail.com",
         "homepage": "http://chimachima-site.infoseek.ne.jp/"
       },
       "release_notes": "fixed reopening closed tab behavior. (:TabopsReopenClosedTab)"
@@ -66,7 +82,7 @@
         "user_name": "ShuheiKubota",
         "first_name": "Shuhei",
         "last_name": "Kubota",
-        "email": "kubota.shuhei+vim at gmail.com",
+        "email": "kubota.shuhei+vim@gmail.com",
         "homepage": "http://chimachima-site.infoseek.ne.jp/"
       },
       "release_notes": "Initial upload"

@@ -4,7 +4,7 @@
   "summary": "Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more",
   "name": "rails.vim",
   "script_type": "utility",
-  "description": "TextMate may be the latest craze for developing Ruby on Rails applications, but Vim is forever.  This plugin offers the following features for Ruby on Rails application development.\n\n1. Automatically detects buffers containing files from Rails applications, and applies settings to those buffers (and only those buffers).  You can use an autocommand to apply your own custom settings as well.\n\n2. Unintrusive.  Only files in a Rails application should be affected; regular Ruby scripts are left untouched.  Even when enabled, the plugin should keep out of your way if you're not using its features.\n\n3. Easy navigation of the Rails directory structure.  gf considers context and knows about partials, fixtures, and much more.  There are two commands, :A (alternate) and :R (related) for easy jumping between files, including favorites like model to migration, template to helper, and controller to functional test.  For more advanced usage, :Rmodel, :Rview, :Rcontroller, and several other commands are provided.\n\n4. Enhanced syntax highlighting.  From has_and_belongs_to_many to distance_of_time_in_words, it's here.  For easy completion of these long method names, 'completefunc' is set to enable syntax based completion on CTRL-X CTRL-U.\n\n5. Interface to rake.  Use :Rake to run the current test, spec, or feature.  Use :.Rake to do a focused run of just the method, example, or scenario on the current line.  :Rake can also run arbitrary migrations, load individual fixtures, and more.\n\n6. Interface to script/*.  Generally, use \":Rscript about\" to call \"script/about\" or \"script/rails about\".  Many commands have wrappers with additional features: \":Rgenerate controller Blog\" generates a blog controller and edits app/controllers/blog_controller.rb.\n\n7. Partial extraction and migration inversion.  :Rextract {file} replaces the desired range (ideally selected in visual line mode) with \"render :partial => '{file}'\", which is automatically created with your content.  The @{file} instance variable is replaced with the {file} local variable.  :Rinvert takes a self.up migration and writes a self.down.e\n\n8. Integration with other plugins.  :Rproject spawns  NERDTree (vimscript #1658) or creates a new project.vim (vimscript #69) project.  :Rdbext loads database settings from database.yml for dbext.vim, vimscript #356 (and this happens by default under most situations).  Cream users get some additional keybindings, and all GUI users get a menu.\n\nIf you like rails.vim and use Git, please Watch the repository on Github at http://github.com/tpope/vim-rails, and try my Git wrapper fugitive.vim: vimscript #2975 http://github.com/tpope/vim-fugitive",
+  "description": "TextMate may be the latest craze for developing Ruby on Rails applications, but Vim is forever.  This plugin offers the following features for Ruby on Rails application development.\n\n1. Automatically detects buffers containing files from Rails applications, and applies settings to those buffers (and only those buffers).  You can use an autocommand to apply your own custom settings as well.\n\n2. Unintrusive.  Only files in a Rails application should be affected; regular Ruby scripts are left untouched.  Even when enabled, the plugin should keep out of your way if you're not using its features.\n\n3. Easy navigation of the Rails directory structure.  gf considers context and knows about partials, fixtures, and much more.  There are two commands, :A (alternate) and :R (related) for easy jumping between files, including favorites like model to migration, template to helper, and controller to functional test.  For more advanced usage, :Rmodel, :Rview, :Rcontroller, and several other commands are provided.\n\n4. Enhanced syntax highlighting.  From has_and_belongs_to_many to distance_of_time_in_words, it's here.  For easy completion of these long method names, 'completefunc' is set to enable syntax based completion on CTRL-X CTRL-U.\n\n5. Interface to rake.  Use :Rake to run the current test, spec, or feature.  Use :.Rake to do a focused run of just the method, example, or scenario on the current line.  :Rake can also run arbitrary migrations, load individual fixtures, and more.\n\n6. Interface to script/*.  Generally, use \":Rscript about\" to call \"script/about\" or \"script/rails about\".  Many commands have wrappers with additional features: \":Rgenerate controller Blog\" generates a blog controller and edits app/controllers/blog_controller.rb.\n\n7. Partial extraction and migration inversion.  :Rextract {file} replaces the desired range (ideally selected in visual line mode) with \"render :partial => '{file}'\", which is automatically created with your content.  The @{file} instance variable is replaced with the {file} local variable.  :Rinvert takes a self.up migration and writes a self.down.\n\n8. Integration with other plugins.  :Rtree spawns NERDTree.vim.  If dbext.vim is installed, it will be transparently configured to reflect database.yml.  Cream users get some additional mappings, and all GUI users get a menu.\n\nIf you like rails.vim and use Git, please Watch the repository on Github at http://github.com/tpope/vim-rails, and try my Git wrapper fugitive.vim: vimscript #2975 http://github.com/tpope/vim-fugitive",
   "install_details": "Extract the zip file to ~/.vim (or vimfiles on Windows).  To use the help, see :help add-local-help.  In a nutshell, :helptags ~/.vim/doc.\n\nFor details, see :help rails\n\nIf you have issues with crashing on tab complete, upgrade Vim to 7.1.147 or newer.  Ubuntu had a release that included a Vim version with this bug.",
   "versions": [
     {
@@ -18,7 +18,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Support :Rails new app for Rails 3.\nAdd support for CoffeeScript, LESS CSS, and SCSS.\nSyntax highlighting updates for Rails 3 and RSpec 2.\nSupport for RSpec 2's spec/requests.\nSupport :.Rake in test 'foo' do ... end.\n:Rake in quickfix window reruns last rake task.\n:Rake - reruns last rake task.\n:Rake in views runs view specs.\nSupport test/unit/helpers.\n:A from app/weird/foo.rb to spec/weird/foo_spec.rb.\nEnable omnicomplete in Haml views.\nAlso create :RD commands with :Rnavcommand.\nFix gf on \"include Namespaced::Module\".\nFix Windows \"C:\" versus \"c:\" issue.\nChange cookies abbreviation from co to coo (so one can type co.uk)."
@@ -34,7 +34,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Default :Rlib to db/seeds.rb.\nDefault :Rplugin to Gemfile.\n:Renvironment prefers Rails 3's config/application.rb.\nSupport script/rails from Rails 3.\nUpdate generator completion for Rails 3.\nSyntax highlighting and gf support in Rails 3 routes.\nUpdate syntax highlighting for assorted Rails 3 changes.\nAdd support for Rails 3 mailers.\nAdd :Rmailer navigation command.\nAdd abbreviations for ActiveModel/ActionDispatch.\nExpose pluralization as abolish.vim (vimscript #1545) coercions t and l.\nAdd support for allml.vim replacement ragtag.vim (vimscript #1896).\nHighlight its, expect, and double from RSpec.\nFix parsing of Test::Unit failures.\nAdd support for tmux (like GNU screen) [Will Gray].\nDisable menu in MacVim by default to eliminate weird terminal output.\nEliminate g:rails_expensive, g:rails_dbext, and g:rails_default_database.\n"
@@ -50,7 +50,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Completely eliminate usage of if_ruby.\nHighlight *_via_redirect in tests and raw in views.\nSupport gf on stylesheets/javascripts when extension is given.\nLicense clarification to enable distribution in Debian.\nExplain that donations on Github through Pledgie are matched and given to ICCF."
@@ -66,7 +66,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Remove all deprecated commands.\nUpdate syntax highlighting for Rails 2.3.4.\nFix bug when path to application contains whitespace.\n:Rtree spawns NERDTree. :Rproject is deprecated.\nIgnore all Javascript with :Rtags.\nAssorted changes to dbext support.\nClean up verbosity in statusline.\nFix bugs in :Rfixtures.\n:Rlocale navigation command.\n:Rintegrationtest knows about integration specs.\n:RD family of commands for reading in a file.\n:R in model is now schema definition (die, annotated_models).\n:A in view now always tries for a spec or test, not a helper.\n:R/:A jump to next/previous timestamped migration.\n:1R filename calls :Rfind filename.\n:0R is the same as :A and :.A is the same as :R.\nCease setting makeprg.\n:Rake opens error window (:cwindow).\n:Rake in db/seeds.rb runs rake db:seed.\n:.Rake in controller runs rake routes CONTROLLER=.\nDocument :Rake default tasks."
@@ -82,7 +82,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Load rake stats, routes, notes, etc into quickfix window.\n:Rake! doesn't jump to first error.\n:Rmetal navigation command.\n:Rintegrationtest edits cucumber features.\n:Rstylesheet edits sass if present.\nPreserve case with :Rjavascript and :Rstylesheet.\nOption for :Rtags to override ctags arguments.\nRails 2.3 gf support: render 'foo', ApplicationController.\nRails 2.3 and additional rspec syntax highlighting."
@@ -98,7 +98,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": ":Rtags ignores jquery plugins (can trip up ctags).\n:Rtags indexes .rake, .rjs, and .builder files [Mark Wilden].\n:Rproject is more robust against missing directories [Mark Wilden].\n:Rproject uses NERDTree if project.vim not present.\nHighlight #default_scope in models; setup/teardown/test in tests [Daniel Schierbeck].\n:.Rake in a migration method runs db:migrate:up or db:migrate:down.\nGracefully ignore leading underscore in :Rextract _foo.\nNavigation commands accept a line number (:Redit Rakefile:5).\n:Rmigration with no argument always jumps to latest migration.\n:Renvironment and :Rinitializer navigation commands."
@@ -114,7 +114,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Fix :Rview when the cwd isn't the rails root.\nFix edge case with :Rscript family on Windows.\nUse new autocmd interface of dbext 8.00.\nFix :Rp, :Rpp, :Ry.\nMiscellaneous tab complete fiddling.\n:Rake in a cucumber feature runs that feature.\nPluralization for alias, status, index, and vertex."
@@ -130,7 +130,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Update helpers to Edge Rails.\n:Rmigration 0 edits db/schema.rb.\n:Rake now defaults to full test/spec (:.Rake for a focused run).\nRemove Vim 7 clauses from documentation.\n:Redit . edits Rails root.\nFix tab completion bugs.\nFix :Rails command.\n"
@@ -146,7 +146,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Major refactoring to take advantage of Vim 7 features (please report any regressions).\nSmart, app dependent menus for generators and rake tasks.\nSmart, app dependent tab completion for generators, rake tasks, and environments.\nCrude fuzzy tab complete: :Rmodel um<Tab> could expand to user_mailer.\n:Rlib with no argument is now a shortcut to config/routes.rb.\n:Rintegrationtest with no argument now a shortcut to test/test_helper.rb.\n:Rspec navigation command.\n:Runittest also navigates to model specs.\n:Rfunctionaltest also navigates to controller specs.\n:Rfixtures finds extensionless rspec fixtures.\n:Rake line number argument. :8Rake to run the test on line 8.\n:0Rake forces all tests to run.\n:Rake in a spec scopes by line number.\n:Rake in an app/ file runs the corresponding spec (if no test exists).\n:Rake in config/routes.rb runs rake routes.\n:Rake in a fixtures file runs db:fixtures:identify LABEL=identifier.\n:0Rake in a fixtures file runs db:fixtures:load FIXTURES=name.\n:Rtags now creates tags file in tmp (for easier SCM ignoring).\nFix :Rgenerate migration to properly jump to timestamped migrations."
@@ -162,7 +162,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Syntax highlighting updates.\nTweaks to gf algorithm to find views and add include/extend support.\n:Rcd and :Rlcd tab completion.\n:Rake in a spec scopes by line number.\nFix :A for lib/view/nested-controller specs.\nDetect model name in object daddy exemplars (for use with :Rmodel, etc)\nPoint docs at github repository."
@@ -178,7 +178,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "New git friendly versioning scheme.\nExtract rails_tabstop feature to vimscript #2253.\nTab completion of timestamped migrations.\nWork around nonzero exit status on Leopard.\nMinor bug fixes."
@@ -194,7 +194,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Added an autoload file, greatly reducing the code loaded at startup.\nHighlight omitted assert_tag and assert_no_tag methods in tests.\nOS X now more liberally detected when choosing a browser.\nHandle plain files with gf."
@@ -210,7 +210,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Miscellaneous Rails 2.0 related tweaks.\nCommands like :Rconsole now work with Cygwin Ruby.\nRudimentary HAML support."
@@ -226,7 +226,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": ":Rake runs rake spec inside a spec.\nRails 2.0 cleanups and tweaks"
@@ -242,7 +242,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Refactoring.  Please report any regressions.\n:Rpreview utilizes \"# GET /foos/1\" style comments.\n:Rake in a migration defaults to migrating to the currently edited version."
@@ -258,7 +258,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Anniversary edition:\nGreatly enhanced documentation.\nProper gf support for named route helpers (edit_post_url).\nSyntax highlighting for custom assertions from test_helper.rb."
@@ -274,7 +274,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": ":Rails works again.\n:R jumps between config/database.yml and config/environments/*.rb"
@@ -290,7 +290,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Partial support for nested extensions from edge (index.html.erb)\n:Rpp and Ry evaluate ruby and pretty print/YAML dump the result.\n:Rplugin navigation command.\nFixed multiple bugs peculiar to Vim 6.2.\nOther small bug fixes and enhancements."
@@ -306,7 +306,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": ":Rtask now additionally looks in the currently edited plugin's task directory.\n:Rlib navigation command looks for files in the lib directory and the current plugin's lib directory.\n:Rcommand creates custom navigation commands.\n:Rrefresh clears certain cached data. :Rrefresh! reloads rails.vim.\nAdded a browsefilter (for win32 file dialogs)."
@@ -322,7 +322,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Highlight user classes (models, etc.) with the railsUserClass group.\nStatic list of highlighted helper methods (speeds up initialization).\nHTML highlighting occurs inside string literals like %Q<Hello <b>world</b>>.\nRecognize .erb and .builder extensions from edge Rails.\n:Rtask navigation command."
@@ -338,7 +338,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Prototype syntax highlighting.\nImproved errorformat, and an alternate format on :Rake! for backtraces.\nMore robust database.yml loading for dbext."
@@ -354,7 +354,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Fixed stack overflow when used in conjunction with rubycomplete.vim.\nImproved speed in certain setups on network file systems.\nMore Rails 1.2 goodies, including limited gf on url helpers."
@@ -370,7 +370,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Syntax highlighting for routes.\nUpdates for Ruby on Rails 1.2 (primarily syntax highlighting, and a few abbreviations).\nTiny little bug fixes."
@@ -386,7 +386,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": ":Rstylesheet and :Rjavascript commands.\nBetter tab completion for some file editing commands.\nGUI menu for recently edited projects.\nCertain expensive operations now enabled by default.  See :help rails-slow if you have any noticable delays."
@@ -402,7 +402,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "\":Rmodel .\" will open app/models.  Other commands follow suit.\nSupport for surround.vim, vimscript#1697.\nMiscellaneous bug fixes and cleanups."
@@ -418,7 +418,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Improved documentation.\nMinor bug fixes.\nDeprecated :Rpartial in favor of :Rextract."
@@ -434,7 +434,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Quieter error messages (less \"Press ENTER\").\nFully functional modelines, including method local modelines.\n:Rmodel, :Rview, :Rcontroller, plus 9 other similar commands."
@@ -450,7 +450,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Bugfix for error messages in 6.x (apparently string() was added in 7.0)"
@@ -466,7 +466,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Abbreviations.\n:Rinvert to write a self.down migration.\n:Rset for per-app/buffer/method configuration.\nPreliminary modelines (disabled by default)."
@@ -482,7 +482,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": ":Rserver to start a new server, :Rserver! to kill old server first.\nOther new commands.\nImproved 'errorformat'.\nIntegration with dbext.vim.\nGUI menu.\nRobustness, robustness, robustness.\nMiscellaneous bug fixes and tweaks.\nAnd as always, more..."
@@ -498,7 +498,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "rails_level now defaults to 3.\na.vim compatible commands (:A et al).\nautocmds for specific file types (e.g. models)\nminimal syntax based user completion function (^X^U).\n:Rlog and log syntax highlighting.\n:Rproject - create/find a project.vim project.\nand more..."
@@ -514,7 +514,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Lots of new features:\nEasy configuration with g:rails_level.\n:Rgenerate controller Foo generates and edits foo_controller.rb.\n<LocalLeader>rm and <LocalLeader>ra for good clean fun.\nSmarter partial extraction with :Rpartial.\nAnd more..."
@@ -530,7 +530,7 @@
         "user_name": "tpope",
         "first_name": "Tim",
         "last_name": "Pope",
-        "email": "vimNOSPAM at tpope.org",
+        "email": "vimNOSPAM@tpope.org",
         "homepage": "http://tpo.pe/"
       },
       "release_notes": "Initial upload"

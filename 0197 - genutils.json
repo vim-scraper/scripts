@@ -18,7 +18,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Re-uploading the zip file with the correct name.\n- Improved genutils#CleanupFileName() to expand \"~\" and environment\n  variables. It also works more reliably now.\n- More user friendly version of genutils#UserFileComplete() function\n  added as genutils#UserFileComplete2(). It can now be used directly as\n  the custom or customlist function in commands (so saves trouble for\n  users, as no wrapper needs be written), and also offer various\n  customizations via passing params.\n- New function genutils#UserDirComplete2(), which is a customization on\n  top of genutils#UserFileComplete2() for the sake of restricting the\n  completions to directories only.\n- Minor improvements in genutils#PathIsAbsolute() and\n  genutils#GetVimCmdOutput() "
@@ -34,7 +34,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Fixed some corner cases in RelPathFromDir()/RelPathFromFile().\n- Made the default comparators sort() function friendly.\n"
@@ -50,7 +50,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- SilentSubstitute() and SilentDelete() should preserve cursor position.\n- CleanupFileName() should also remove any leading or trailing\n  whitespace.\n"
@@ -66,7 +66,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- EscapeCommand() now supports Lists as arguments.\n- CrUnProtectedCharsPattern() now accepts an optional \"capture\"\n  argument.\n- Renamed PromptForElement2 to PromptForElement. It was a typo.\n"
@@ -82,7 +82,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Fixed a typo in AddNotifyWindowClose() in the previous release.\n- Added BinSearchList() function. \n(uploading again to correct the Vim compatibility information, sorry to bump up)"
@@ -98,7 +98,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "genutils 2.0 release for Vim7.0.\nThis release is not backwards compatible with previous genutils or Vim\nversions, so download this version only when a plugin explicitly\ndepends on this version. If you want to use plugins that use both the\nold and new version of genutils, then you need to follow the below\nprocedure so that both can co-exist:\n- Install the latest version of genutils first. Overwriting all existing\n  files.\n- Open the plugin/genutils.vim file and note the value set to\n  loaded_genutils variable.\n- Install the older version of genutils (non autoload version) in to\n  plugin directory, overwriting the existing file.\n- Open the plugin/genutils.vim again and change the value of\n  loaded_genutils variable to the value you noted before and save it.\n\nThis version has the following changes:\n- No longer depends on multvals plugin. Inherits some useful functions\n  from multvals to make way for it to be retired (in favor of Vim7\n  arrays). New functions are:\n  CrUnProtectedCharsPattern\n  PromptForElement/GetSelectedIndex\n- Fix for Save/RestoreHardPosition() not working right when there are\n  wrapped lines in the window.\n- Dropped the AddToFCShell and RemoveFromFCShell functions as these\n  can't be implemented in Vim7 because of new restrictions on\n  FileChangedShell autocommand. Use AddToFcShellPre and\n  RemoveFromFCShellPre functions instead.\n"
@@ -114,7 +114,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Release 1.20 for fixing an issue with my previous release. Thanks to\nNiels, Delphin and Craig for reporting the problem. If you downloaded the latest selectbuf, please download this version of genutils.\n"
@@ -130,7 +130,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Now Vim7 compatible, no functionality change."
@@ -146,7 +146,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- New functions OpenWinNoEa() and CloseWinNoEa() which open and close\n  windows with minimal side effects (such as minimizing the impact on\n  the current window sizes, restoring the cursor to the original window\n  and even restoring the current-previous-window). This is a good\n  alternative to using the existing Save/RestoreWindowSettings()\n  method.\n- GetShellEnvType() is now public. Useful in conjunction with the\n  EscapeCommand() function.\n"
@@ -162,7 +162,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Minor corrections to the FindBufferForName() function to work well\n  with filenames containing backslashes (see doc)."
@@ -178,7 +178,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Fast BinInsertSort() based on the BISort() by Peit Delport's.\n- Slightly improved QSort().\n"
@@ -194,7 +194,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "New functions:\n- CloseWindow()\n- MarkActiveWindow()\n- RestoreActiveWindow()\nNew overloaded function for:\n- SilentDelete()\n\n- Fixed IsOnlyVerticalWindow() and IsOnlyHorizontalWindow() to use\n  MarkActiveWindow() and RestoreActiveWindow() to avoid corrupting the\n  \"previous-window\".\n"
@@ -210,7 +210,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- New functions: GetNextWinnrInStack, GetLastWinnrInStack, MoveCursorToNextInWinStack, MoveCursorToLastInWinStack based on Dr. Chip's WinStackMv() function.\n- New functions: SaveVisualSelection, RestoreVisualSelection.\n- FIxed a possible issue with my earlier change. You can't add to 'eventignore'  if its current value is \"all\".\n- Some improvement to RestoreWindowSettings(). It is still not working perfectly. Actually, there are no commands available in Vim to accurately resize windows in all circumstances.\n- Save/Restore functions for cursor positions now create marks in the buffer context. This means, you can use the same name to create marks in different buffers, without overwriting each other. This is how Vim works for lowercase marks anyway.\n- Misc. other improvements/bugfixes."
@@ -226,7 +226,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Now requires Vim 6.3\n\n- More documentation. I now added a section with all the supported functions at one place so it is easy to lookup.\n- New function GetBufNameForAU().\n- New functions to help write custom completion functions, UserFileComplete() and UserFileExpand()\n- Some clarifications on EscapeCommand().\n- Improved CleanFileName() to work with Windows UNC paths."
@@ -242,7 +242,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- New function EscapeCommand() extracted from my perforce.vim plugin. This\n  makes it simpler for plugins to execute external commands passing\n  arguments literally.\n- New functions IsOnlyHorizontalWindow(), IsOnlyVerticalWindow(),\n  QuoteStr(), SilentSubstitute(), SilentDelete()\n- More documentation on GetPreviewWinnr(), DefFileChangedShell(),\n  MakeArgumentString(), MakeArgumentList(), UnEscape(), GetSpacer()\n"
@@ -258,7 +258,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Most important change is a lot of documentation with function prototypes. Now it is not necessary to look into the code to see the help and usage information. I also documented a lot of functions that lacked documentation earlier.\n- A few minor fixes to bugs/inconsistencies and other improvements in Escape(), RestoreSoftPosition, Notify window close related functionality. Also added a patch from Bram for persistence related funcationality."
@@ -274,7 +274,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Fixed bugs in the RelPathFromFile and RelPathFromDir functions.\n- The g:loaded_genutils variable now contains the version number for dependency checking (see \":help v:version\" for format). If your plugin depends on genutils.vim, it is now easy and safe to check if the user has at least the minimum base version."
@@ -290,7 +290,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Misc. functions added: GetSpacer, GetPreviewWinnr, ExtractFuncListing, UnEscape, GetLine/ColPosition. Removed undocumented IsPreviewWindowOpen function. See description for more details."
@@ -306,7 +306,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "When disabling persistence feature using g:genutilsNoPersist, it is possible for the plugins that depend on it to fail. Fixed it."
@@ -322,7 +322,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Misc. changes, see script for more details.\n- The scriptlets g:makeArgumentString g:makeArgumentList have been replaced with new function MakeArgumentString() and MakeArgumentList() and the usage now is more concise. The old usage is now deprecated.\n- New functions Escape(), GetVimCmdOutput() and OptClearBuffer()\n- New utility functions for signs, CurLineHasSign() and ClearAllSigns().\n- Fixed bugs in FindWindowForName().\n- The FindWindowForBuffer() function is now redundant and is deprecated, use bufwinnr(FindBufferForName(fileName)) for the same purpose.\n- Some improvements for Vim6.2, but it should still work with Vim6.0.\n- Fixed a few bugs."
@@ -338,7 +338,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Minor fixes/updates. Fixed a bug in restoring line position with respect to window. Users of FileChangedShell functionality provided by the plugin (and thus the perforce plugin), should download this version only if the 6.1.220 patch is installed."
@@ -354,7 +354,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "My earlier version was using :normal instead of :normal! command, so user's mapping will interfere with it. If you have downloaded 1.4 earlier, please download it again. Thanks to David Rennalls for reporting the problem."
@@ -370,7 +370,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Some bugfixes and improvements.\n- New UnEscape() which is more close to escape() than the old DeEscape().\n- ExecMap() is separated as a new plugin. That is the better place for it as it is not really useful as a library function.\n- The sort compare methods were made public as they are very useful in writing new compares.\n- Some update on doc.\n- Now CreateArgString() can be used with an arbitrary pattern.\n- Fixed some bugs in MoveCurLineToWinLine(). It works better now.\n- Added a functions to handle FileChangedShell autocommand and emulate the default vim behavior."
@@ -386,7 +386,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "GPLed it for the use by Cream project. See http://cream.sf.net for information on Cream for Vim."
@@ -402,7 +402,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Generalized Quick sort function. The sort routine is no longer tied to the\n  buffer contents (multvals.vim uses this function to sort arrays).\n- A binary search function that can be used to incrementally update sorted\n  buffer contents (like buffer lists, tag lists etc), and a generalized variant\n  of this function which is no tied to the buffer contents.\n- A new comparator to sort Java imports first by name and then by their length.\n  This groups the imports from the same package pretty well together.\n- Minor fixes in FindWindowForBuffer() and FindBufferForWindow()\n"
@@ -418,7 +418,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "New functions \n  - CenterWordInSpace(), useful if you use Align.vim and want to center the text horizontally in the boxes.\n  - Improved ShiftWordInSpace().\n  - New collection from list, CommonPath() with minor improvements. Added RelPathFromFile() and RelPathFromDir() functions.\n  - New persistence functions, PutPersistenceVar() and GetPersistenceVar() functions to save and retrieve your script variables across vim sessions without stepping on another script's name space.\n  -- Minor fixes in CleanupFileName() function."
@@ -434,7 +434,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "New function, AlignWordWithWordInPreviousLine(). Improved ExecMap(), it is now much more useful. Added new scriptlet, g:makeArgumentList and its companion function, CreateArgString()."
@@ -450,7 +450,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed a typo in ResetWindowSettings(). Update the previous version to fix an error while quitting selectbuf or perforce help window."
@@ -466,7 +466,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Minor changes. Fixed FindWindowForBuffer and other functions to take care of the extra backslashes in the filenames protecting the spaces etc. Save/RestoreWindowSettings functions now have a variant that takes in a key. This key can be used to call these function from multiple scripts at the same time without overwriting each other's settings. Some new functions."
@@ -482,7 +482,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Fixed minor issues with makeArgumentString.\n- New functions to do quick sort on the current window contents. A command to sort lines by their length.\n- A Basic help/description is added at the start of the script."
@@ -498,7 +498,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "New utility to pass variable number of arugments to other functions. Ex usage:\n   fu! s:IF(...)\n     exec g:makeArgumentString\n     exec \"call Impl(\" . argumentString . \")\"\n   endfu\n\nNew OnMS() function to check for any windoze OS. New utility ShiftWordInSpace() and SetupScratchBuffer() functions. Add the following mappings to move words in the white space:\n\nnoremap <silent> <C-Space> :call ShiftWordInSpace(1)<CR>\nnoremap <silent> <C-BS> :call ShiftWordInSpace(-1)<CR>\n"
@@ -514,7 +514,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Improved the save/restore position to even save/restore the line position in the window. Take a look at the set of Save/Restore/ResetSoft/HardPosition() functions."
@@ -530,7 +530,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

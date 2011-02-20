@@ -18,7 +18,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "Fix an extra space in the check for exctags. Refresh the taglist window\nfolds after entering a tab. Escape special characters like backslash in\nthe tag name when saving a session file. Add an internal function to get\nand detect file types.\n"
@@ -34,7 +34,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "The following fixes are made in this release:\n1. If multiple Vim plugins register for the BufEnter autocmd, then sometimes\n    the buffer name supplied to the autocmd is incorrect. Use the buffer number\n    instead of buffer name in the BufEnter autocmd.\n2. Add the filename to the tags menu only for valid file names.\n"
@@ -50,7 +50,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "1. Added support for jumping to a tag/file in a new or existing tab\n   from the taglist window (works only with Vim7 and above).\n2. Added support for opening a tag in the previous window.\n3. With the Tlist_File_Fold_Auto_Close variable set, when opening a\n   file from the file explorer window, the folds in the taglist window\n   are not closed correctly.  Fixed this problem.\n"
@@ -66,7 +66,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "1. After opening a file with no tags defined in it with the\n   Tlist_Compact_Format option set, if the tags are updated, the folds\n   used for the files following the empty tags file are affected.\n2. On MS-Windows, use a \"taglist.cmd\" temporary file to run exuberant\n   ctags. This is to handle space characters in the file names and\n   in the exuberant ctags path name.\n3. In the taglist window, when a file is re-sorted or updated open the\n   fold for the file.\n4. When the 'shellxquote' option is set to double quotes, escape\n   double quotes in the command executed for exuberant ctags.\n5. On FreeBSD, exuberant ctags is installed as exctags, look for\n   exctags in the PATH.\n6. If two taglist plugins are present (one in the system Vim directory\n   and another in the user's .vim/plugin directory), then the plugin\n   in the users's .vim directory overrides the version in the system\n   vim directory.\n7. When the :TlistMessages command is issued display the debug\n   messages in a taglist.txt buffer.\n8. Clear the readonly option for the taglist buffer\n9. When opening a selected file, don't use the preview window, if\n   present.\n"
@@ -82,7 +82,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "When the Tlist_File_Fold_Auto_Close variable is set to 1, jumping to the taglist window closes all the folds. Modified the plugin to not close the fold for the currently active file. When the TlistLock and TlistUnlock commands are invoked, an error message is displayed. This problem is fixed."
@@ -98,7 +98,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "Fixes:\nFix the problems in using the taglist plugin with Vim7 tabs. When\nTlist_File_Fold_Auto_Close is set, close the tag fold when leaving a\nbuffer.  When jumping to a selected tag, if the file is opened in more\nthan one window, use the previous window from which the user entered\nthe taglist window.\nNew features:\nSupport for displaying the tag prototype as a tooltip.  Support for\nspecifying additional commands after the taglist commands using the\nbar separator.\n"
@@ -114,7 +114,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "Fixes:\n1. When 'Tlist_Show_One_File' is set, after few files are opened,\n   unable to select tags from the taglist window.\n2. When the taglist plugin is stored in a directory with space characters\n   in the name, the autoloading of taglist plugin fails.\nNew features:\n1. Support for moving cursor to the taglist window when using the\n   \":TlistToggle\" command.\n2. When all the tags in a file are of the same type, in the taglist\n   menu, don't display the tag type.\n3. Changed the '?' help key to 'F1' in the taglist window.\n4. Set the filetype for the taglist buffer to 'taglist'\n5. In Vim7, set the 'winfixwidth' option for the taglist window.\n6. When jumping between files using the ]] or <Tab> and [[ or <Backspace>\n   keys, wrap around at the first and last file.\n"
@@ -130,7 +130,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "The following changes are made in this version:\n\n1. Delay loading of the taglist plugin to reduce the Vim startup time.\n2. Support for recursively adding multiples files to the taglist using the\n   ':TlistAddFilesRecursive' command.\n3. New ':TlistOpen' command to open and jump to the taglist window.\n4. New ':TlistToggle' command to supersede the ':Tlist' command.\n5. New 'Tlist_Close_On_Select' option for closing the taglist window\n   when a file is selected.\n6. New 'Tlist_Auto_Update' option to enable/disable processing of newly\n   edited files.\n7. New ':TlistLock' and ':TlistUnlock' commands to lock and unlock the\n   taglist.\n8. New 'Tlist_Highlight_Tag_On_BufEnter' option to enable/disable\n   highlighting of the current tag on entering a buffer.\n9. When the taglist buffer is created from a Vim session file, update\n   the taglist with the files from the session file.\n10. Change the background color used for highlighting file names in the\n    taglist window.\n11. When <Space> is pressed on a file name or a tag type name in the\n    taglist window, display information about the number of tags.\n12. Set the 'foldlevel' option to a high value in the taglist window.\n13. When refreshing the taglist window, process all the opened buffers.\n14. When moving between windows, disable and enable autocommands.\n15. When a file is selected from the taglist window, use a non-plugin\n    window to edit the file.\n16. If 'Tlist_Exit_OnlyWindow' is set and when exiting Vim, make sure\n    the '0 mark is set to the previous buffer.\n17. When using the taglist plugin with the winmanager plugin and\n    'Tlist_Process_File_Always' is set or the taglist menu is enabled,\n    sometimes, it is not possible to jump to other windows from the\n    taglist window using the keyboard. Fixed this problem.\n18. While opening files in a new window, use filenames instead of buffer\n    numbers.\n"
@@ -146,7 +146,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "1. Added the TlistAddFiles command to add multiple files to the taglist window without opening them.\n2. Maintain the taglist window width and height across Vim window layout changes.\n3. Restore the Vim window location after the taglist window is closed.\n4. Use a simpler regular expression for parsing tags output.\n5. When a closed fold is selected in the taglist window, open the fold and jump to the file.\n6. When the Tlist_Auto_Open variable is set, open the taglist window only when a supported type of file is opened.\n7. When displaying tags for a single file, center the current tag line when opening a file.\n8. When jumping to a tag, add the previous location to the jump list.\n9. Fixed a problem with recording timestamps in the debug messages on MS-Windows.\n10. Set the ' mark when jumping to a selected tag.\n"
@@ -162,7 +162,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "Added support for optionally displaying the tags in the drop-down/popup menu. Performance enhancments, various bug fixes and debug support."
@@ -178,7 +178,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "1. Introduced a new option 'Tlist_Show_One_File\" to display the tags for only the current buffer in the taglist window.\n2. Support for not displaying the tags for a user-deleted file in the taglist window.\n3. Fix for sharing the mouse single click map with other plugins"
@@ -194,7 +194,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "1. If Tlist_Ctags_Cmd variable is not set, on startup, check for the\n   presence of exuberant-ctags or ctags or tags in the PATH and set\n   Tlist_Ctags_Cmd variable accordingly. If none of the executable is\n   found, then the taglist plugin will not be not loaded.\n2. Added a new configuration variable Tlist_Enable_Fold_Column to\n   enable or disable fold columns in the taglist window.\n3. Added support for setting the taglist application name used by the\n   winmanager plugin and the cream package.\n4. Two new key mappings ([[ and ]]) are added to the taglist window to\n   move between files.\n5. When a file is modified, the taglist window will be automatically\n   updated (after going to some other window or buffer and then coming\n   to the modified buffer).\n6. Made the Tlist_Update_File_Tags() function as a global function.\n   This function can be used to add or update the tags for a new file.\n7. Updated the Tlist_Get_Tag_Prototype_By_Line() and the \n   Tlist_Get_Tagname_By_Line() functions to get the tag name and tag\n   prototype for the specified line in a file.\n"
@@ -210,7 +210,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "Added support for closing the tags tree for inactive files, removing the tags tree for deleted buffers, processing the tags when the taglist window is not opened, disabling the automatic highlighting of the current tag, displaying name of the current tag."
@@ -226,7 +226,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "Added support for saving and restoring taglist sessions. Separated the taglist documentation into a separate file in Vim help format."
@@ -242,7 +242,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "Added support for displaying tags defined in multiple files."
@@ -258,7 +258,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "Added information about the taglist mailing list."
@@ -274,7 +274,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "1. Added TlistUpdate command to update the taglist window.\n2. Made the taglist highlight groups user configurable.\n3. Fixed a problem in the taglist integration with the winmanager plugin"
@@ -290,7 +290,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "1. Added support for previewing a tag.\n2. Added the TlistClose command to close the taglist window\n3. Added the Tlist_Exit_OnlyWindow option to close the taglist window if only that window is open."
@@ -306,7 +306,7 @@
         "user_name": "yega",
         "first_name": "Yegappan",
         "last_name": "Lakshmanan",
-        "email": "yegappan at yahoo.com",
+        "email": "yegappan@yahoo.com",
         "homepage": ""
       },
       "release_notes": "Added support for highlighting the tag scope. Added support for displaying namespaces in C++ files. Updated the comments."

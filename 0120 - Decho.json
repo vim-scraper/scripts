@@ -18,7 +18,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "* DechoSep() can now be externally called (and :Dsep  makes it easy to use).  Creates an easy-to-find separator in the debugging output.\n* bug fixes (Cyan, Magenta highlighting; improved DechoTab's tab search, unwanted DechoRemOn staircasing)\n"
@@ -34,7 +34,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "Various bugfixes and improvements...\nDredir now takes optional strings first instead of last.\nThe :Decho and :Dredir commands now take <args> instead of <q-args>, which allows them to act more like the function calls do.\nDechoRemOn's remote vim no longer will have formatoptions' a or t suboptions set even if the user has specified something like fo+=at in his/her .vimrc.\nIf the user interposes a new tab (or deletes the \"Decho Tab\"), Decho finds the \"Decho Tab\" tab or creates a new one when called.\n"
@@ -50,7 +50,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "Decho now handles list arguments, works around ignorecase setting, and no longer uses bt=nofile (makes it easier to save)."
@@ -66,7 +66,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "The \"Decho Tab\" buffer now is syntax highlighted, plus bugfixes.\n"
@@ -82,7 +82,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "For vim 7.0 users: DechoTabOn/Off changed to reflect changes in vim 7.0's :tab, :tabn, :tabnew commands.  (Decho still works fine for vim 6.0, BTW)"
@@ -98,7 +98,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "Decho now supports use of vim7.0aa's \"tab\" feature -- with :DechoTabOn, subsequent debugging output goes to its own tab."
@@ -114,7 +114,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "Decho has a new pair of commands: DechoRemOn and DechoRemOff.  With these, debugging output can be sent to a remote gvim.  Really helps with debugging plugins that use events and control window layout.\n"
@@ -130,7 +130,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "* DechoOn/Off now also turns on/off DechoVarOn/Off\n* DechoMsgOn and DechoMsgOff installed; debugging messages will use the |echomsg| command.\n* DechoVarOn and DechoVarOff installed; debugging messages will be appended to the variable specified by g:dechovarname, which by default is \"g:dechovar\".  These two commands toggle the variable \"g:dechovar_enabled\".\n* Now includes a GetLatestVimScripts line for cecutil.vim\n* Decho now does \"runtime plugin/cecutil.vim\" if that plugin hasn't been loaded yet.  It will also try the AsNeeded subdirectory if g:loaded_asneeded exists.\n* with DechoMsgOn, Decho(\"doesn't\") now works\n* Dredir() now accepts multiple arguments (cmd and output)\n"
@@ -146,7 +146,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "* New function: call Dredir(\"command\") will redirect the command's output to the DBG buffer.\n* Decho now uses keepjumps to avoid altering the jumplist table (requires vim6.3)\n* Decho's appending to the DBG buffer no longer flags it as modified.\n* One may have Decho ignore BufEnter events if g:decho_bufenter exists.\n"
@@ -162,7 +162,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "Decho now has :Dhide and :Dshow commands for toggling the visibility of the DBG buffer\n"
@@ -178,7 +178,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "With g:decho_hide=1, Decho will keep its DBG buffer hidden, thereby allowing window-manipulating scripts their natural behavior.  Use :ls! to see the DBG buffer, and you may use :b [nmbr] to see it.\nIn additon, Decho's DBG window's is silently created, and Dfunc/Decho/Dret will always resize the DBG window to the number of lines specified by g:decho_winheight.\n"
@@ -194,7 +194,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "Now, along with Decho(), is\n  Dfunc(\"funcname(...)\") -- for tracking entry to function funcname\n  Dret(\"funcname ...\") -- for tracking return from function funcname\nIncludes special syntax highlighting for Dfunc/Decho/Dret files, too.\n"

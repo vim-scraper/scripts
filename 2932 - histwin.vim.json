@@ -8,6 +8,22 @@
   "install_details": "edit the file histwin.vba with vim. From within vim simply load this file:\n:so %\n\nVim will automatically install this plugin.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14555",
+      "filename": "histwin-0.21.vba",
+      "script_version": "21",
+      "date": "2010-12-18",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb@256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "- more standard like help files- make sure, the autoload script is only called when needed  (and not on startup)"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14086",
       "filename": "histwin-0.20.vba",
       "script_version": "20",
@@ -18,7 +34,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "-Enable storing the tags as Dicionary in .viminfo  (this might not work as expected, cause we are storing a nested  Dictionary)- Show a diff in the preview window when pressing P (or on autocommand  CursorHold if enabled)- a little bit code cleanup (as always ;))- correctly catch E830 and give an error message (reported by D.  Fishburn)(automatically uploaded)"
@@ -34,7 +50,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "Make sure the first entry will be tagged 'Start Editing'"
@@ -50,7 +66,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "don't leave the buffer in nomodifiable state (reported by D. Doran)"
@@ -66,7 +82,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "the initial entry should be visible for Vim < 7.3.005"
@@ -82,7 +98,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "-more bugfixing. :UB throws errors in Vim before 7.3.005 fix that"
@@ -98,7 +114,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "Fixed bug when no undo-tree was available (partly by Ben Boeckel. Thanks!)-More error handling (when the cursor is not on a list item)-Commenting out the entry to store the histdict in a global variable, that should be written to the .viminfo file (but is not yet supported by plain vim)"
@@ -114,7 +130,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": " (experimental version):- don't fix the width of the histwin window- now use the undotree() function by default (if patch 7.3.005 is  included)- display save states in the detailed view- display the 'rehash' when a state is not accessible anymore- fixed an annoying bug, that when jumping to a particular undo state,  the plugin would jump to the wrong state (I hate octal mode)- Make displaying the time much more reliable and also don't display  the time, if the change happened more than 24h ago (instead, display  the date, when this change was done).- slightly improved error handling.- prepare plugin, to permantly store the undotags in the viminfo file  (this isn't supported by a plain vanilla vim and requires a patch)- A major rewrite (code cleanup, better documentation)"
@@ -130,7 +146,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- New version that uses Vim 7.3 persistent undo features |new-persistent-undo|- Display saved counter in detailed view- Display indicator for saved branches.- in diff mode, don't set the original buffer to be nomodifiable (so you can always merge chunks).- Check for Vim Version 7.3 (the plugin won't work with older versions of Vim)"
@@ -146,7 +162,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- Small extension to the help file\n- generate help file with 'et' set, so the README at github looks better\n- Highlight the key binding using |hl-SpecialKey|\n- The help tag for the color configuration was wrong."
@@ -162,7 +178,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- Set old buffers read only (disable the setting via the g:undo_tree_nomod variable\n- Make sure, Warning Messages are really displayed using :unsilent"
@@ -178,7 +194,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- Fixed annoying Resizing bug\n- linebreak tags, if they are too long\n- dynamically grow the histwin window, for longer tags (up\n   to a maximum)\n- Bugfix: Always indicate the correct branch\n- Added a few try/catch statements and some error handling"
@@ -194,7 +210,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "BF: Error handling for Replaying (it may not work always)\nNF: Finally added Documentation (see :h histwin.txt)\nBF: Use syntax highlighting\nBF: Tagging finally works (you can now tag additional states)\n"
@@ -210,7 +226,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- NF: make speed of the replay adjustable. Use g:undo_tree_speed to set time in milliseconds\n- BF: code cleanup\n- BF: highlighting should work better now.\n"
@@ -226,7 +242,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- BF: Check undolevel Settings\n- BF: make sure when switching to a different undo branch, that the undo-tree will be updated"
@@ -242,7 +258,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "BF: fixed a problem with mapping the keys which broke the Undo-Tree keys (I guess I don't fully understand, when to use s: and <sid>)"
@@ -258,7 +274,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- NF: created autoloadPlugin (patch by Charles Campbell) Thanks!\n- NF: enabled GLVS (patch by Charles Campbell) Thanks!\n- NF: made Plugin available as histwin.vba\n- NF: Check for availability of :UB before defining it\n- BF: cleaned up old comments\n- BF: deleted :noautocmd which could cause trouble with other plugins\n- BF: small changes in coding style (<sid> to s:, fun instead of fu)"
@@ -274,7 +290,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "BF: fix missing bufname() when creating the undo_tree window\nNF: make undo_tree window a little bit smaller (size is adjustable via g:undo_tree_wdth variable)"
@@ -290,7 +306,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "NF: Allow diffing with selected branch\nNF: highlight current version\nNF: Use changenr() to determine undobranch\nNF: <C-L> updates view\nNF: allow switching to initial load state, before buffer was edited\nBF: Fix annoying bug, that displays --No lines in buffer--\nBF: fix several small annoying bugs"
@@ -306,7 +322,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "Initial upload"

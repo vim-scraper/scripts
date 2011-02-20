@@ -18,7 +18,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "This is an \"I'm really sorry\" fixes release:\n* Contrary to what I've said previously, erroneous nickname still caused endless loop when loggin-on.\n* When receiving chat messages or something, Vim would cause this error: \"Usage: VIBUF::Append(vimbuf, lnum, @lines)\"."
@@ -34,7 +34,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "New maps and some fixes.\n* Maps: \"r\" / \"R\".  They do just the opposite of \"q\" / \"Q\": reconnect to disconnected servers.\n* When someone tried to contact (query) you but with different case, the message was totally discarded.\n* When you tried to logon with erroneous nickname, it resulted in endless loop.\n* Port number was not reused when reconnecting manually with command \"/server\" (i.e., without arg), failing to reconnect if it was other than the default 6667.\n* Global commands (e.g. \"/gquit\") could not be executed on disconnected servers.\n* Window resizing (\"<C-L>\") should perform a bit better now.\n* Added tips for opening hidden buffers."
@@ -50,7 +50,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Small fixes:\n* When updating hidden buffers, \"E19: Mark has invalid line number\" could occur (quite rarely, I believe).\n* NOTICE messages sent from the one you were chatting with could not be displayed in the chat buffer."
@@ -66,7 +66,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "* VimIRC now uses stacks for putting messages.  You'll notice the efficiency of it especially when updating channels-lists.\n* Some multi-key commands (\"<C-W>t\", etc.) weren't handled properly.\n* User mode couldn't be set after auto-reconnecting servers (after disconnect).\n* You can now omit your nick or the current channel for the command \"/MODE\".  E.g.: Entering \"/MODE +w\" on a non-channel buffer will set the specified mode on you.\n* Added abbrev: \"/MO[DE]\"\n* The manner of beeping has become a bit modest."
@@ -82,7 +82,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Some trivial fixes (I'm only listing a few):\n* For some unknown reason (to me), cursor position could not be restored sometimes when re-opening hidden channels.  The issue itself might still remain for the time being.\n* Nick and command windows could embarrassingly remain open after parting channels with \"q\" key, for some event-related reason."
@@ -98,7 +98,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "This contains rather big improvements:\n* Messages can now be received even while offline (i.e., out of the main-loop).  Note that you have to move cursor around periodically for this functionality to be triggered.  The same applies to the next item.\n* Timer-related functions (displaying the current time, auto-pinging to keep alive, etc.) will be executed while offline, too.\n* Fix on normal mode commands: \"@\" commands (\"@:\" etc.) weren't implemented; two-key commands (\"f\", \"t\", etc.) could not accept count."
@@ -114,7 +114,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Trivial fixes release:\n* Window configuration could get corrupted if you received server messages when the server buffer was hidden and the channels-list was open.\n* While typing count for a normal mode command, entering two consecutive zeros nullified the entire input.\n* While offline, count for normal mode commands (i.e., maps) could not be handled.\n* Really trivial, but \"<C-W><C-P>\" now opens the previous channel ABOVE the current window, which you would find more intuitive.\n* When opening hidden channels, cursor was moved to the bottom, which was bad for grasping the flow of conversation.\n* \"/PART\"ing channels with some particular multibyte characters could fail."
@@ -130,7 +130,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "* Commands \"<C-N>\" / \"<C-P>\" now accepts count: \"3<C-N>\" opens the third next channel or server as seen on the info-bar from the current one.\n* Also, commands starting with \"<C-W>\" can now accept count before and/or after it.\n* Nicks window could become empty for some unknown reason.  I still don't know why, but tried to fix it.\n* Hitting \"i\" after key-prompt could result in insert mode on a non-command buffer."
@@ -146,7 +146,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "* Nick window could be embarrassingly left open, if you sent/received query message while on a buffer other than the chat buffer.\n* Command \"/ACTION\" didn't work as described in the help message.  Let me replace the command with \"/DES[CRIBE]\".\n* Added a small new command \"/WHOA[MI]\".  Might be useful when you forgot who you were after changing nicks several times.\n* Changed abbrev: \"/T[OPIC]\" => \"/TO[PIC]\", \"/MS[G]\" => \"/M[SG]\"\n* Added abbrev: \"/T[IME]\", \"/WH[O]\", \"/WHOI[S]\""
@@ -162,7 +162,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "* Many IRC commands are made abbreviatable, e.g.: \"/server\" can now be typed as \"/s\".  See Tip 8 for more.\n* Could not obtain your host address (required when doing DCC sessions) upon logon, if you logged in with a nick containing some special characters.\n* statusline message was inappropriate for chat buffers.\n* Cursor scrolled to the bottom when you executed \"/list\", which was not what I intended.\n* Made \"/help\" message not to disappear automatically."
@@ -178,7 +178,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "* If you logged in servers with nick longer than what they accept, VimIRC failed to recognize you as the user.\n* It is now possible to open, internally or externally, IRC server-like strings by hitting \"<CR>\" / \"<C-CR>\" / \"<S-CR>\" on them.\n* Channel-like strings in buffers other than channels-list are also made accessible with \"<CR>\" etc.."
@@ -194,7 +194,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Some fixes on normal-mode commands:\n* If you hit special keys after \"<C-W>\" or number, you could get stuck.\n* When keys like \"jk\" were typed fast, the second key could not be processed.\n* If you (casually) kept pressing \"<CR>\" for a few seconds, the same URL was opened many many times."
@@ -210,7 +210,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "* \"auto-join\"ing could fail if you logged in multiple servers simultaneously.\n* DCC-chat buffers were not treated as such.\n* Subtle fixes/improvements have been done on buffer/window manipulation (closing command window quietly, etc.)."
@@ -226,7 +226,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Design change, and new commands:\n* Abolished multi-window mode, which was the default mode, but wasn't very useful.  Therefore, \"g:vimirc_winmode\" has no meaning now.  (The original design was done because I couldn't think of any way to update hidden buffers.  The problem was solved long time ago.)\n* Instead of the above, added a new command prefix \"SPLIT\".  Prepend it to commands such as \"/JOIN\", \"/LIST\", like this: \"/split join #chan\".  See Tip 6 & 7 for more.\n* Added normal-mode commands: \"<C-W><C-N>\", \"<C-W><C-P>\".  They do the same thing as \"<C-N>\" and \"<C-P>\" (walking through channels), with windows split open."
@@ -242,7 +242,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Small fixes release:\n* Pressing <F1> caused an error.\n* When closing channels etc., newly active one sometimes didn't get highlighted properly.\n* Key prompts could not accept key after special keys such as \"<S-CR>\" were hit.\n* (single-window mode) Hitting \"<C-W><CR>\" / \"<C-CR>\" / \"<S-CR>\" on channels list now opens the channel in a new window."
@@ -258,7 +258,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "This contains an important fix:\n* Nicks including \"_\" or \"|\" were not considered to be nicks, which could lead to various troubles/misbehaviors.\n* (single-window mode) Hitting \"<C-W><CR>\" on the info-bar opened the specified channel etc. in a new window, but with bad window configuration."
@@ -274,7 +274,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "* \"/help\" wasn't working.\n* Added a timeout feature to the \"hit any key\" prompt.  Prompts with rotating cursor automatically disappear after a few seconds if you give no response to them.  (This might save you from getting disconnected from servers.)\n* (GUI) When hiding Vim cursor, attributes such as underline still remained, which was annoying."
@@ -290,7 +290,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "* Added a small new feature to \"autojoin\".  If you wish to display list of channels upon logon, add the word \"list\" to g:vimirc_autojoin.  See the doc for detail.\n* Special-key commands preceded by count (\"10<BS>\" etc.) could not be executed.\n* Forgot to map \"ZZ\" and \"ZQ\" to VimIRC's quit function.\n* Quit keys could direct the quit command to a wrong server."
@@ -306,7 +306,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Important fixes for normal mode key-handling issues.\n* Added a `shocmd' functionality for multi-key commands.  This might prevent that you get stuck in a pending mode without noticing it, being unable to get new messages.\n* Added several normal commands I've forgotten to do (\",\", \"''\", etc.).\n* Added new quit commands: \"ZZ\" and \"ZQ\".  (Equivalent to \"q\" and \"Q\" respectively.)\n* Special keys (\"<BS>\" etc.) are now safely handled (I should have read \":h getchar()\" much earlier)."
@@ -322,7 +322,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Sorry for updating so often.  As always, I've introduced a new problem to the previous release.\n* (Main-loop issue) Pressing the same key for a long time (well, less than a dozen seconds) could make Vim to crash.\n* (Ditto) Pressing \"<F1>\" opened Vim's help file, which was not what I expected.\n* Made Vim's cursor invisible while you are online.  The Annoying blinks now totally disappear (GUI only)."
@@ -338,7 +338,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "* Hitting keys such as \"<C-CR>\" while in VimIRC's main-loop caused endless recursion (E132).\n* Re-sorted key-handling order slightly, to achieve faster movement of motion commands.  (I'm not sure I did well.)\n* Added some error-handling, so as not to get thrown out of the loop for simple errors (e.g., pattern not found)."
@@ -354,7 +354,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Quick fix release.\n* Hitting \"q\" on command buffers sometimes failed to quit VimIRC.\n* \"/WHOIS\" command seems to have failed sometimes."
@@ -370,7 +370,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "* URLs starting with \"www\" couldn't be opened properly.\n* Added maps \"q\" and \"Q\".  Pressing \"Q\" will quit VimIRC, whereas \"q\" will just close chat/channel, if the cursor is on one."
@@ -386,7 +386,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "This is a bug fix release, with some minor improvements:\n* Undefined subroutine (&find_channel) was called.  This caused several misbehaviours including the one below.\n* (single window) Highlights in the info-bar couldn't be cleared after bringing hidden channels (with new messages) to the foreground.\n* (single window) Attempts to highlight the current channel/server in the info-bar, so that you can easily locate where you are in (see the 3rd screenshot)."
@@ -402,7 +402,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Fixes for the following items:\n* Paste commands (p and P) have been disabled in command buffers by mistake.\n* Single-window mode: channels-list didn't show up in the info-bar.\n* DCC chat: Multibyte (Japanese) characters had not been decoded."
@@ -418,7 +418,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "This is a buf fix release, with a tiny new command:\n* Command: \"/UNSET option\".  Clears the current setting of an option.\n* In the previous release, maps for the key \"<CR>\" were made invalid on some types of buffers.\n* Hitting \"i\" after hit-any-key prompt to (re)enter the command mode resulted in a strange, non-insert mode.\n* Slightly changed the behavior of \"i\".  It now opens a new input line when typed on an already open command buffer (formerly it left the cursor on the same line, which wasn't very useful).\n* Removed the command \"/SEARCH\", which was not meaningful and had been made available probably by accident.  The functionality itself is available as a normal mode search command (/ or ?)."
@@ -434,7 +434,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Minor fix, and an experimental new feature.\n* Hitting <CR> near a URL-like string may open it with external web browser.  The relevant option is \"vimirc_browser\".  See the doc for detail.\n\nThis is not much tested.  Feel free to notify me of any errors/misbehaviours you encounter with this feature."
@@ -450,7 +450,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Several minor fixes/improvements:\n* (GUI) File selector dialog now pops up for DCC SEND.  Omit filename argument to use this feature, when executing from the command buffer (see \"/dcc help\" for syntax).\n* Tries to fix the annoying window scrolling you might have suffered when opening command buffers."
@@ -466,7 +466,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "I've added authenticated logon feature (apparently most users won't need this, only for completeness).  You can specify password for servers in any of the following ways:\n  1. (on Vim's command line) :VimIRC -p password\n  2. (in VimIRC's command buffer) /server irc.server.com password\n  3. (in .vimrc) let vimirc_pass = 'password' or 'password1@server1,...'"
@@ -482,7 +482,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "* Due to the previous (0.8.11) change to argument handling, \"/[G]AWAY\" and \"/[G]QUIT\" commands have been made to treat arguments (comment) improperly, resulting in awaying impossibility etc..\n* I've made channels lists to be cached by default.  The variable \"vimirc_listexpire\", defaulting to a week, defines the longevity of them.  See the doc in the source for detail.\n* Added a window-size restoration functionality.  Hit <C-L> in normal mode when any window has got a bad width/height."
@@ -498,7 +498,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "* The previous (0.8.10) fix with the main-loop issue seems to have introduced another one: you would have no way re-entering the loop if you had been gotten out of it by Vim errors, which shouldn't normally happen though.\n* As in Vim, key pressed after the 'Hit any key to continue' prompt will now be utilized as a normal mode command.\n* Added a mechanism of argument expansion, which currently expands only '%', into the current channel.  See Tip 5 in the source for usage."
@@ -514,7 +514,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "In a recent update, I introduced a bug which could cause some difficulty in getting out of the main-loop (for writing messages etc.).  This has been fixed, I hope.\nAlso, sending multiple messages at a time is now made possible.  See Tip 3 in the source."
@@ -530,7 +530,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Again, several tiny fixes/improvements:\n* VimIRCQuit didn't actually quit when executed from inside VimIRC's main-loop.\n* Operations (typing <CR>) on nicks window could have been directed to other servers erroneously.\n* Repetitive normal mode commands (such as jjjjjjjjj) might now work slightly faster (unnoticeably perhaps).\n* Chat windows now have nicks window.\n* etc."
@@ -546,7 +546,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Bug Fix: Horribly enough, sending \"/ME\" messages has been unable for quite some time (sorry!).\nNo new features and no big improvements this time (sorry again!)."
@@ -562,7 +562,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Trivial fixes with single window mode:\n1. Channel-list buffers were not visited upon in the <C-P> / <C-N> walkthru.\n2. Cursor stayed on the command window after you finished sending messages/commands, which wasn't useful."
@@ -578,7 +578,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Only small fixes this time.\n1. The command :VimIRCQuit was causing an error.\n2. Warnings on the usage of shift() function were seen on some perl versions. (Thanks to alexander for notifying this, also for the above.)\n3. Mode strings on channels were not handled properly (I didn't understand the syntax).\n4. You could not enter channels with correct keys (/join #chan key) after you first failed in entering."
@@ -594,7 +594,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Fix: VimIRC was eating too much (around 90% all the time) of CPU-time (shudder!).  Thanks to alexander for pointing this out.\nNew commands: [DE]OP and [DE]VOICE.  See /help if you don't know of these commands.\nChange: g:vimirc_server and '-s' startup option can now have multiple server name, separated by commas.  Thanks again to alexander, by whom it was suggested."
@@ -610,7 +610,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "New commands: GQUIT and GAWAY.  Sends QUIT/AWAY commands to all the connected servers at once.\n\nBug fixes:\n1. topics etc. for not joined channels were displayed in newly, undesirably created channel buffers.\n2. Manual reconnection with \"/server\" (without arg) wasn't possible sometimes if multiple connections to servers had been opened."
@@ -626,7 +626,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Bug fixes/Improvements:\n1. Server-specific auto-join settings were not processed properly.\n2. Characters other than alpha-numerics and underscore could not be used in command aliases.\n3. Command \"ALIAS\" will now accept definitions with and without leading slashes: \"/alias /j /join\", \"/alias j join\"."
@@ -642,7 +642,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "New commands: ALIAS/UNALIAS, with which you'll be able to define/undefine aliases of commands.  Example: /alias /j /join.  Definitions will be saved in a config file, and restored automatically on startup."
@@ -658,7 +658,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Bug fixes:\n1. Since its implementation, timer functionality hasn't been working as expected: the direction of comparison operator was wrong and timers have been executed instantly (silly!).\n2. netsplit handling wasn't working as expected.\n3. search() function caused an error with some special patterns such as \"\\z\"."
@@ -674,7 +674,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "A rather big change:\nSingle-window mode (g:vimirc_winmode == 'single') has become much useful.  Each channel/server will now take its own window, and updates for hidden buffers will be done in the background.  See the 2nd screenshot for an idea how it will work.\n\nNew commands:\n1. SET: Use this command to set or show the values of internal options.  Usage: \"/SET option value\".  Omit arguments to see the list of settable options.\n2. <C-N> / <C-P> (Normal mode): Cycle through channels/servers.  Useful in single-window mode.\n\nA Fix: \"/JOIN 0\" was not working."
@@ -690,7 +690,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Small change/improvement in logging:\n1. Timestamps are added to separate each session.\n2. Logs for channels/chats will now be taken safely (well, in most cases) if those windows have been closed abnormally, i.e. with commands other than \"/(QUIT|PART|QUERY)\"."
@@ -706,7 +706,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Added a logging feature.  Logs will be taken for each channel separately.  See \"Options\" section for how to enable this feature.\n\nSome minor fixes/improvements have also been done."
@@ -722,7 +722,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "WARNING: You might encounter \"Missing endfunction\" error while sourcing this version (I haven't confirmed it myself), which should mean, VimIRC is unusable.  If you do see the error, you'll have to compile vim yourself with patches at least up to 6.2.412, or stick to the older version for some time untill 6.3 is out.\n\nAdded a significant internal working: timer.  New/improved features related to this include: auto-away.  See \"Options\" section for how to enable this feature.\n\nAdded a command: CTCP.  Usage: /CTCP nick COMMAND.\n\nBug fixes:\n1. \"/AWAY message\" was sending \"1\" instead of \"message\".\n2. When a CTCP message was encountered which VimIRC didn't know of, ERRMSG response was always sent back to the originator, even if it was directed to channels."
@@ -738,7 +738,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Change: I rather improved the auto-join (channels on logon) feature to enable server-specific channel settings.  See \"Options\" section in the plugin for detail.\n\nBug fixes:\n1. \"/QUIT\"ting caused an error when channels-list window was open.\n2. Quit messages like \"Client Quit\" was regarded as netsplit (silly!)"
@@ -754,7 +754,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "0.6.5 (already removed) contained a serious bug: You cannot login to server!\nPlease replace it with this one if you downloaded it.  Sorry.\n\nHere's a copy of the release note for that version:\n\nA new feature: Auto-reconnect and rejoin.  This is not much tested.  Please let me know if you find any cases where VimIRC doesn't start reconnecting when it should.\n\nFixes:\n1. On terminal vim without \"Cursor\" highlight group defined, VimIRC was unusable due to the \"No such highlight\" error.  Thanks to morbuz, who notified me of this and tested the fixed version.\n2. :VimIRCQuit could cause an endless loop.\n3. (Fixed in the previous ver.) Cooperation of vim and perl failed, if strings to be passed to vim contained double-quotes or backslashes."
@@ -770,7 +770,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "New features: \n1. Auto-joining channels upon logon\n2. Auto-idetification of nicks.\nThe settings are \"vimirc_autojoin\", \"vimirc_nickpass\" respectively.  See the source for details.\n\nA change: the way nicks are displayed has been changed: newly entered, and actively speaking figures will now be displayed on top.  I did this partly for efficiency reason, among others.  If you prefer the older behavior though, wait for some time till I make it configurable."
@@ -786,7 +786,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "A fix: \"/me message\" wasn't sending proper ACTION.  Sorry.\nA new feature: Direct conversation over IRC network (/query nick) will now be displayed in a separate window as with DCC Chat."
@@ -802,7 +802,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Some fixes/improvements:\n1. Added normal-mode commands: some characterwise motions, search (* / #) and jumplist movement (<C-O> / <C-I>).\n2. Fixed an issue of recursive call of the main-loop, which caused pressing i/I lead to a strange non-insert mode.\n3. When connected to multiple servers, \"/quit\"ting from one server resulted in all other windows but one being closed."
@@ -818,7 +818,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "A small bug-fix: Currently active window was not restored when someone joined/parted channels."
@@ -834,7 +834,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "New features added:\n1. DCC CHAT/SEND.  Type \"/dcc help\" for the usage.  Also look into the plugin file for the .vimrc settings.  This is not much tested, so if you find any misbehaviors, or incompatibilities with other clients, let me know via e-mail.\n2. Single window mode.  .vimrc setting is: let vimirc_winmode = 'single'"
@@ -850,7 +850,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "A new feature:\nAdded a map (<CR>) to the nicks window, with which you can operate some action with selected nick(s), such as querying, changing privileges.\n\nFixes:\n1. The issue of inaccessibility to Japanese channels.\n2. Older nick was still used internally when you had to change nicks when logging on.\n3. Could not parse mode commands like \"+vv nick1 nick2\".  Characters @/+ will now be added/removed properly."
@@ -866,7 +866,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "1. Removed the \"plugin_\" part from the global variables, just to keep them short.  Please change your settings accordingly.  Sorry for the inconvenience.\n2. Japanese text input/output.  Thanks go to Yasuhiro Matsumoto & Taro Muraoka, who have been helpful on this.  This is still incomplete: you cannot join channels with Japanese characters.\n3. Made command windows appear just below the current window.  This is a tentative feature.\n4. And some other fixes/changes too trivial to mention."
@@ -882,7 +882,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Fixed some bugs:\n1. When you connected to a new server with /server command, the old command window remained open.\n2. While connected to multiple servers, [iI] sometimes opened a command window for a wrong server.\n3. /list command did not open a list window on some servers."
@@ -898,7 +898,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Added a new feature: /list command will now open up a separate buffer, where you can sort the list by keys 'o' or 'O'.  Also, you can select a channel to join\nby hitting <CR>. \n\nDid some minor fixes inculding: handle operator and voice privileges properly."
@@ -914,7 +914,7 @@
         "user_name": "Madoka Machitani",
         "first_name": "Madoka",
         "last_name": "Machitani",
-        "email": "madokam at zag.att.ne.jp",
+        "email": "madokam@zag.att.ne.jp",
         "homepage": ""
       },
       "release_notes": "Initial upload"

@@ -4,9 +4,25 @@
   "summary": "Fast mappings for performing substitutions",
   "name": "substitute.vim",
   "script_type": "utility",
-  "description": " Visual and normal mode mappings for easy access to substitutions with the\n s/// command.\n\n This script will make it easy to replace the word under the cursor, or the\n visually selected text across the whole file. If more than one line is\n selected the substitution will only occur on the selected lines.\n\nDefault key mappings:\n\n   ;;  Perform substitution across the whole file.\n\n   ;'  The same, but prompt for each substitution.\n\n Pressing <C-R><C-R> will insert the text being replaced into the command line\n window.\n\n When the search and replace has completed the cursor can be returned to where\n the search started by jumping to mark ' (pressing '' or `').\n\nNote:\n\n - The contents of a register (default \"9) is overwritten\n\n",
+  "description": " Visual and normal mode mappings for easy access to substitutions with the\n s/// command.\n\n This script will make it easy to replace the word under the cursor, or the\n visually selected text across the whole file. If more than one line is\n selected the substitution will only occur on the selected lines.\n\nsubstitute.vim provides the following two mappings for both visual and normal\nmode:\n\n   ;;  Run :substitute on the current buffer without prompting.\n\n   ;'  The same, only prompt for each.\n\n   ';  Perform substitution on the lines that match a multi-repeat\n       expression, prompting for each.\n\nThese mappings can be changed as specified in the following section.\n\nIt is also possible to press <C-R><C-R> while in command line mode to insert\nthe text that is replaced into the commandline.\n\n When the search and replace has completed the cursor can be returned to where\n the search started by jumping to mark ' (pressing '' or `').\n\n github: https://github.com/aklt/vim-substitute \n\nNote:\n - The contents of a register (default \"9) is overwritten\n\n",
   "install_details": "Place substitute.vim into the plugin directory, or source it from within vim.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14654",
+      "filename": "substitute.vba.gz",
+      "script_version": "1.2",
+      "date": "2010-12-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4354",
+        "user_name": "aklt",
+        "first_name": "Anders",
+        "last_name": "Thøgersen",
+        "email": "anderslt@gmail.com",
+        "homepage": "http://bladre.dk"
+      },
+      "release_notes": "Added GlobalMap mapping, SingleWordSize option.\n\nCan now also be found at http://github.com"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=10093",
       "filename": "substitute.vba.gz",
@@ -18,7 +34,7 @@
         "user_name": "aklt",
         "first_name": "Anders",
         "last_name": "Thøgersen",
-        "email": "anderslt at gmail.com",
+        "email": "anderslt@gmail.com",
         "homepage": "http://bladre.dk"
       },
       "release_notes": "Use VimBall and GetLatestVimscripts"
@@ -34,7 +50,7 @@
         "user_name": "aklt",
         "first_name": "Anders",
         "last_name": "Thøgersen",
-        "email": "anderslt at gmail.com",
+        "email": "anderslt@gmail.com",
         "homepage": "http://bladre.dk"
       },
       "release_notes": "Added a separate helpfile and the possibility of changing\nmappings and the register that the script uses.\n"
@@ -50,7 +66,7 @@
         "user_name": "aklt",
         "first_name": "Anders",
         "last_name": "Thøgersen",
-        "email": "anderslt at gmail.com",
+        "email": "anderslt@gmail.com",
         "homepage": "http://bladre.dk"
       },
       "release_notes": "Changed the meaning of the ;' mapping, and added <unique> to the map\ndefinitions.  Added the Escape function so $ and ^ are only escaped when they\nappear at the beginning, or at the end.\n"
@@ -66,7 +82,7 @@
         "user_name": "aklt",
         "first_name": "Anders",
         "last_name": "Thøgersen",
-        "email": "anderslt at gmail.com",
+        "email": "anderslt@gmail.com",
         "homepage": "http://bladre.dk"
       },
       "release_notes": "The check to see if the mappings already exist has been removed.  It is probably better to let the user add his or her preferred mappings by modifying the script."
@@ -82,7 +98,7 @@
         "user_name": "aklt",
         "first_name": "Anders",
         "last_name": "Thøgersen",
-        "email": "anderslt at gmail.com",
+        "email": "anderslt@gmail.com",
         "homepage": "http://bladre.dk"
       },
       "release_notes": "Initial upload"

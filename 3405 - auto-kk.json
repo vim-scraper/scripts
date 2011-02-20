@@ -1,0 +1,43 @@
+{
+  "script_id": "3405",
+  "display_name": "auto-kk",
+  "summary": "from auto.vim",
+  "name": "auto-kk",
+  "script_type": "utility",
+  "description": "1.Normal mode\n    <c-e>   to compile and debug\n    <c-f> search clipboard\n    <c-z> undo\n2.Insert mode\n    <c-z> undo\n    <c-e>   to compile and debug\n    <Alt-j>  Down\n    <Alt-k> Up\n    <Alt-h> Left\n    <Alt-l>  Right\n3.When writing c, cpp ,... code, the code is automatically formatted\n    For example:   If you input a==3;\n    auto.vim                             a  ==  3;\n4.Both ruby , c, cpp, python,shell,perl code, F2 key or \"mm\" to compile and debug\n\nmodify from this: \nhttp://www.vim.org/scripts/script.php?script_id=3341\n",
+  "install_details": "copy to  plugin/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14891",
+      "filename": "auto-kk.vim",
+      "script_version": "1.2",
+      "date": "2011-01-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16971",
+        "user_name": "sevk",
+        "first_name": "sevk",
+        "last_name": "k",
+        "email": "Sevkme@gmail.com",
+        "homepage": "http://linuxfire.com.cn/~sevk/"
+      },
+      "release_notes": "change mm to <c-e>\nm是mark的热键\n\ndel ;; and nn , because ; is find f :help ;\n去掉;;和nn , 因为;是 find f 的热键. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14768",
+      "filename": "auto-kk.vim",
+      "script_version": "1.0",
+      "date": "2011-01-17",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "16971",
+        "user_name": "sevk",
+        "first_name": "sevk",
+        "last_name": "k",
+        "email": "Sevkme@gmail.com",
+        "homepage": "http://linuxfire.com.cn/~sevk/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -18,7 +18,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed a bug when the working 'tags' file was created with the commands 'ctags -L cscope.files'. In this case, the plugin could not change the relative path to the absolute one. Thank Trevor Brown for reporting this bug."
@@ -34,7 +34,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "Bug fixed: In Linux or other *UNIX OS, Source Explorer v4.1 would change the 'current work directory' to '~/' when updating the tags file. Thanks to Ozan Sener for the bug-report."
@@ -50,7 +50,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed a bug in Version 4.0 which would make you jump into a empty file when listing multi-tags information. "
@@ -66,7 +66,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "In this version, the taglist() interface do the binary searching in the exact tags file instead of a linear search, so each tagging responses much more quickly than before even though the tags file of the source code project is so large. All we have to do is add an option in your ctags ultility (--sort=foldcase)."
@@ -82,7 +82,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "New features: --- The 1st anniversary \n1\\ Manually updating or creating the 'tags' file using a new custom key named g:SrceExpl_updateTagsKey when you browse the source code without closing the Source Explorer window. \n2\\ Dynamically loading the tags database from one source code project to another without closing the Source Explorer window. "
@@ -98,7 +98,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "I've implemented a local mark-stack mechanism using variable type of dictionary in this version, so you can trace into the source code more deeply without warring about the limit of 'A-Z' level using Vim's mark before.\n"
@@ -114,7 +114,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "In this version, We do not try to tag something when we got the invalid symbol (only 0-9, a-z, A-Z, and '_' are valid) under the current cursor. So we should not feel unfrequently when we explore the huge source code project using \"HJKL\" to jump from a word to another."
@@ -130,7 +130,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "Let all the folds opened in order to avoid opening and closeing each fold every time."
@@ -146,7 +146,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "1\\ Add one new feature: Update different 'tags' file dynamically on different project PATH when opening the Source Explorer each time. \n2\\ Add one user interface variable named g:SrcExpl_updateTagsCmd, which can be set to execute particular 'ctags' utility program, \"ctags -R *\" as default. "
@@ -162,7 +162,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "Bug fixed: Make \"Source_Explorer\" not display on the buffers list and menu."
@@ -178,7 +178,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "Bug fixed: The string of EX command is set to be case sensitive, so it is more accurate when excuting the EX command."
@@ -194,7 +194,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "1\\ Added one user interface variable named g:SrcExpl_jumpKey, which can be mapped to jump into the exact definition context, \"<ENTER>\" as default.\n2\\ Delete one user interface variable named g:SrcExpl_refreshKey, because it is almost not be used actually according to feedbacks from users.\n3\\ Added the protect mechanism when running multiple tab pages.\n4\\ Avoid additional refresh operation when the cursor had jumped into the definition context.\n5\\ Fixed a bug that setting a error mark on the [Jump List] line without judgement.\n\n"
@@ -210,7 +210,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "Two bugs fixed:\n1\\ Avoid highlight the whole EX command when previewing the definition.\n2\\ Not update the Popup menu when the current word under the cursor\n   had been tagged already, or it would be changed on the UNIXs platform."
@@ -226,7 +226,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "New feature: Local definition searching and preview using the interface of 'gd' command in VIM. Note that this is not guaranteed to work, the Source Explorer does not check the syntax for now, it only searches for a match with the keyword according to the command 'gd' when you enable the new variable named g:SrcExpl_searchLocalDef.\nImprovement: Reimplement the jump mechannism when going back from the preview context using the mark stack with 'A-Z' (26 depth actually). It is more accurate than using the 'Ctrl-o' command."
@@ -242,7 +242,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "Update the mechanism and process when the Source Explorer work with other plugins, such as Taglist, NERD tree, etc. Of course, you must tell the Source Explorer what plugins are using the split windows according to a new MMI setting: g:SrcExpl_pluginList"
@@ -258,7 +258,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "  In this version, I add a prompt line which contain the tag name and its counts when we do the multi-definition searching. A bug about folding in VIM is fixed. In srcexpl.vim, I desrcibed that how the Source Explorer works with the Taglist and the MiniBufExplorer on my platform."
@@ -274,7 +274,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "    In version 2.4, the srcexpl plugin should work more stable and more efficient than before.\n    Firstly, I implemented the method of getting tags list without traversaling the 'tags' file. So parsing and showing the tags of whole project is more quickly, espacially in a large project. (e.g. The size of tags file in \"Linux-2.4.0\" is 19 MBytes which including more than 248000 lines data.)\n    Secondly, it is more accurate to find the symbol definition because of the regular expression. \n    Finally, I handled a potential problem of deleting buffers, and it may become a bug when changing the tags list in WIN32 platform.\n\n"
@@ -290,7 +290,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "Bugfixed: When the current file which you are editing is not saved, the Source Explorer would not jump to the definition of the symbol under the cursor. This mechanism can handle the 'one-file-multi-buffers' situation very well."
@@ -306,7 +306,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "In this version(V2.2), I added a feature, which supported 'tags' file auto-updateing when you open the Source Explorer every time. And if the tags file  were not found, the Source Explorer would create one in the current directory according your choice. Besides, I fixed a bug of tags file loading on the mac OS X running enviorment. Thank Larry and Maqi for their freebacks and suggestions. :-)"
@@ -322,7 +322,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "In this version, I implemented the method to do the recursion for searching the 'tags' file from the current directory to the root directory. In addition, the mechanism for vim version inspection is added. Finally, I rewrote the function named g:SrcExpl_OtherPluginAdapter() in order to adapt the privious postion of the editor window when using the Taglist and MiniBufExpl Plugins."
@@ -338,7 +338,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added an important feature, that is, multi-definitions list and explore. \nWhen the symbol under the cursor is defined in several places, the Source Explorer window will list them one by one. You can select one of them by a double-click or a <Enter> key onto the exact line, and then we jump to the place that match the definition.\nThis feature is so important that you can only use one hand ( the one using the mouse :-) ) to explore the source code conveniently, and avoid the number selection when tagging a mulit-definition by <Left-Mouse> or <Ctrl-]>."
@@ -354,7 +354,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "Add one feature and two user interfaces.\nYou can use your own map key to force to complete one refreshing operation. And it will take a less waiting time sometimes.\nAdditionally, users can set update time interval by themselves in this version."
@@ -370,7 +370,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "Inthis version(v1.1), I added the following features\n1\\ add the 'SrcExplGoBack' item in popup menu when you click right button of your mouse. You will see that when you use srcexpl.vim for exploring the source code.\n2\\ add an interface for users who want to map their own key for do the 'SrcExplGoBack' function.\n3\\ 'SrcExplGoBack' is such a feature that it make user go back from 'definition contexts' in editor. When you click the 'SrcExplGoBack' item, it jump the privious place which your have explored just now."
@@ -386,7 +386,7 @@
         "user_name": "chewenlong",
         "first_name": "Wenlong",
         "last_name": "Che",
-        "email": "wenlong.che at gmail.com",
+        "email": "wenlong.che@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

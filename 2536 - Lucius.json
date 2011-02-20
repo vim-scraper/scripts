@@ -1,12 +1,76 @@
 {
   "script_id": "2536",
   "display_name": "Lucius",
-  "summary": "Composite dark color scheme (GUI and 256 color terminal)",
+  "summary": "Dark and light color scheme (GUI and 256 color terminal)",
   "name": "Lucius",
   "script_type": "color scheme",
-  "description": "This started out by combining parts of several dark color schemes, including oceandeep (vimscript #368), peaksea (vimscript #760), wombat (vimscript #1778), moria (vimscript #1464), and zenburn (vimscript #415). Since then, it has been tweaked to what it is today and works well in both light and dark environments.\n\nFor the 256 color terminal support, guicolorscheme.vim (vimscript #1809) was used. The settings were further modified to match the GUI version as best possible.\n\nFor v3.5, colorsupport.vim (vimscript #2682) was applied to this color scheme. Some of the results from this were merged in with the other color choices from before to make the cterm version more like the gui.",
-  "install_details": "Copy the file to your vim colors directory and then :colorscheme lucius",
+  "description": "This started out by combining parts of several dark color schemes, including oceandeep (vimscript #368), peaksea (vimscript #760), wombat (vimscript #1778), moria (vimscript #1464), and zenburn (vimscript #415). Since then, it has been tweaked to what it is today and works well in both light and dark environments.\n\nFor the 256 color terminal support, guicolorscheme.vim (vimscript #1809) was used. The settings were further modified to match the GUI version as best possible.\n\nFor v3.5, colorsupport.vim (vimscript #2682) was applied to this color scheme. Some of the results from this were merged in with the other color choices from before to make the cterm version more like the gui.\n\nA light color scheme was added in v4.0. The default is still to use the dark version, but users can choose which to use by setting the g:lucius_style variable to either \"light\" or \"dark\".",
+  "install_details": "Copy the file to your vim colors directory and then :colorscheme lucius. You can choose to use the light or dark scheme by setting g:lucius_style to either \"light\" or \"dark\". The default is to use the dark scheme.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15028",
+      "filename": "lucius.vim",
+      "script_version": "5.02",
+      "date": "2011-02-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Tweaked the colors some more and refreshed the 256 term colors to match the new settings (for the light version only)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15008",
+      "filename": "lucius.vim",
+      "script_version": "5.01",
+      "date": "2011-02-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Some changes to colors in the light version"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14971",
+      "filename": "lucius.vim",
+      "script_version": "5.0",
+      "date": "2011-02-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a light colorscheme option. This still defaults to the dark version, but you can set g:lucius_style to \"light\" for a light background scheme. More tweaks will come as I continue to use it."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14531",
+      "filename": "lucius.vim",
+      "script_version": "4.0",
+      "date": "2010-12-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14963",
+        "user_name": "jfilip1024",
+        "first_name": "Jonathan",
+        "last_name": "Filip",
+        "email": "jfilip1024@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "This version is tweaked a bit. I muted the colors a little and also eliminated some of the lower spectrum highlighting in favor of more blues and greens. This seems to be easier to look at, in my opinion. I also added some custom highlights for the vimwiki script (vimscript #2226).\n"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13588",
       "filename": "lucius.vim",
@@ -18,7 +82,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added ColorColumn for Vim 7.3"
@@ -34,7 +98,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Changed the cursor line/column to be a little more visible\n- Updated the fold line"
@@ -50,7 +114,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "Updated some of the cterm colors after applying colorsupport.vim to the scheme."
@@ -66,7 +130,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "A few minor updates (SpecialKey, Identifier, PreProc)"
@@ -82,7 +146,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "Got rid of bold for CursorLine and Pmenu stuff"
@@ -98,7 +162,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "This version has a lot of small changes. The colors are toned down some more and new colors exist for diffs, status line, popup menu, wild menu, cursor line and column, error, line numbers, splits, folds, etc. Many of the new colors are similar to what they were before, but work a little better with the scheme now."
@@ -114,7 +178,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "Toned down the saturation of some of the colors; other minor things"
@@ -130,7 +194,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "Minor tweak to VertSplit"
@@ -146,7 +210,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "Modified CursorColumn, CursorLine, and CursorIM"
@@ -162,7 +226,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "Changed the search highlight to something more visible."
@@ -178,7 +242,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "Made the normal GUI text slightly brighter"
@@ -194,7 +258,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Fixed the normal fg and bg for cterm \n- Removed yellow tint from normal text\n- Fixed status line in cterm"
@@ -210,7 +274,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added 256 color terminal support."
@@ -226,7 +290,7 @@
         "user_name": "jfilip1024",
         "first_name": "Jonathan",
         "last_name": "Filip",
-        "email": "jfilip1024 at gmail.com",
+        "email": "jfilip1024@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

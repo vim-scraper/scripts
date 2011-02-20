@@ -1,0 +1,43 @@
+{
+  "script_id": "3386",
+  "display_name": "JumpToLastOccurrence",
+  "summary": "f{char} motions that count from the end of the line. ",
+  "name": "JumpToLastOccurrence",
+  "script_type": "utility",
+  "description": "DESCRIPTION\nThe f{char}, F, t and T family of motions are often more effective\nthan the more general l, w and W motions. However, there are situations\nwhere they are difficult to apply. \nTake a long file system path like /var/opt/foo/a/very/long/path/to/filename.\nImagine you are on the beginning / and want to change the entire directory\npath, but keep the filename. You'd either have to count occurrences (e.g. c8f/\nor c2tf), do multiple moves ($T/cB), use visual mode (veeeeeeeelc), or a\nsearch (c/filen<CR>). \n\nThis plugin extends the built-in f/F/t/T motions with counterparts that move\nto the last occurrence of {char} in the line. For the above example, that\nwould be a short c,f/ to jump to the last slash in the line. \n\nUSAGE\n,f{char}\t\tTo [count]'th occurrence of {char}, counting from the\n\t\t\tend of the line. The cursor is placed on {char}. \n,F{char}\t\tTo the [count]'th occurrence of {char}, counting from\n\t\t\tthe beginning of the line. The cursor is placed on\n\t\t\t{char}. \n,t{char}\t\tTill before [count]'th occurrence of {char}, counting\n\t\t\tfrom the end of the line. The cursor is placed on the\n\t\t\tcharacter left of {char}. \n,T{char}\t\tTill after [count]'th occurrence of {char}, counting\n\t\t\tfrom the beginning of the line. The cursor is placed\n\t\t\ton the character right of {char}. \n\n\t\t\tAll motions can be repeated with ; and ,. However,\n\t\t\tthe ,t and ,T motions will jump to, not until, the\n\t\t\tnext {char}. ",
+  "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim JumpToLastOccurrence.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.0 or higher. \n\nCONFIGURATION\nFor a permanent configuration, put the following commands into your vimrc: \n\nBy default, all mappings start with , (comma) as the map leader instead of\nusing <Leader. I personally find the default <Leader key too far off the\nkeyboard to be useful for custom motions (which also cannot be repeated via\nthe . (dot) command, so they should be very fast to type repeatedly), but\nquite suitable for general, less frequently used custom mappings. \nTo avoid losing the (rarely used) , mapping (which repeats latest f, t, F or\nT in opposite direction), you can remap it to ,,: \n    nnoremap ,, ,\n    xnoremap ,, ,\n    onoremap ,, ,\n\nIf you don't agree with this and want all motions to start with <Leader> (or\nany other key), you can do this (before sourcing this script): \n    let g:JumpToLastOccurrence_Leader = '<Leader>'\n\nIf you want to use completely different or only a few of the mappings, map\nyour keys to the <Plug>JumpToLastOccurrence_? mapping targets _before_\nsourcing this script (e.g. in your vimrc). ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14659",
+      "filename": "JumpToLastOccurrence.vba.gz",
+      "script_version": "1.10",
+      "date": "2010-12-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo@karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- Moved functions from plugin to separate autoload script. \n- Made mappings configurable, both via the customary <Plug> mappings and alternatively in bulk through the g:JumpToLastOccurrence_Leader setting. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14651",
+      "filename": "JumpToLastOccurrence.vba.gz",
+      "script_version": "1.00",
+      "date": "2010-12-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo@karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

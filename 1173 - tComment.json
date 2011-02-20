@@ -8,6 +8,22 @@
   "install_details": "Edit the vba file and type:\n\n    :so %\n\nSee :help vimball for details. If you use vim 7.0, you may need to \nupdate your vimball installation first.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14811",
+      "filename": "tcomment.vba",
+      "script_version": "2.04",
+      "date": "2011-01-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Support for fstab- g:tcommentOptions: Other key-value options used by |tcomment#Comment()|.- Support for django (thanks to Jim Tinsky)- g:tcomment#syntax_substitute: Rewrite syntax names- django support: minor correctionMD5 checksum: 994e5886d185857848b5472d5457b232"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14452",
       "filename": "tcomment.vba",
       "script_version": "2.03",
@@ -18,7 +34,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- s:PrintF(): Silently ignore malformed format strings- Deal with major.minor pseudo-filetypes- go-lang- Remove s:SPrintF() since vim now has printf()MD5 checksum: 4a13ffb1b1d46bbd2dc8dcee77507983"
@@ -34,7 +50,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "Minor bug fix."
@@ -50,7 +66,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Support for erlang (thanks to Zhang Jinzhu)\n- Support for x86conf\n- Changed comment string for eruby (proposed by Vinicius Baggio)\n- NEW: Enabled key=value pairs to configure commenting\n- CHANGE: Moved the definition of some variables from plugin/tComment.vim to autoload/tcomment.vim\n- CHANGE: Renamed the file plugin/tComment.vim to plugin/tcomment.vim\n- CHANGE: Renamed certain global functions to tcomment#...\n"
@@ -66,7 +82,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- tcomment#Operator defines w:tcommentPos if invoked repeatedly\n- s:GuessFileType: use len(getline()) instead of col()"
@@ -82,7 +98,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Fix left offset for inline comments (via operator binding)\n"
@@ -98,7 +114,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "The file autoload/tcomment.vim was packed as autoload/tComment.vim. If you installed 1.8, please rename that file or remove autoload/tComment.vim and use this vimball."
@@ -114,7 +130,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Definitly require vim7\n- Split the plugin into autoload & plugin.\n- g:TCommentFileTypes is a list (this could cause problems when updating in certain situations)\n- Fixed some block comment strings\n- Removed extraneous newline in some block comments.\n- Maps for visal mode (thanks Krzysztof Goj)\n"
@@ -130,7 +146,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- gc{motion} (see g:tcommentMapLeaderOp1) functions as a comment toggle \noperator (i.e., something like gcl... works, mostly); gC{motion} (see \ng:tcommentMapLeaderOp2) will unconditionally comment the text.\n- TCommentAs takes an optional second argument (the comment level)\n- New \"n\" map: TCommentAs &filetype [COUNT]\n- Defined mail comments/citations\n- g:tcommentSyntaxMap: Map syntax names to filetypes for buffers with \nmixed syntax groups that don't match the filetypeEmbeddedsyntax scheme (e.g.  \n'vimRubyRegion', which should be commented as ruby syntax, not as vim \nsyntax)\n- FIX: Comments in vim*Region\n- TComment: The use of the type argument has slightly changed (IG -> i, \nnew: >)\n"
@@ -146,7 +162,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Ignore sql when guessing the comment string in php files; tComment \nsometimes chooses the wrong comment string because the use of sql syntax \nis used too loosely in php files; if you want to comment embedded sql \ncode you have to use TCommentAs\n- Use keepjumps in commands.\n- Map <c-_>p & <L>_p to vip:TComment<cr>\n- Made key maps configurable via g:tcommentMapLeader1 and \ng:tcommentMapLeader2\n"
@@ -162,7 +178,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- \"Inline\" visual comments (uses the &filetype_inline style if \navailable; doesn't check if the filetype actually supports this kind of \ncomments); tComment can't currently deduce inline comment styles from \n&comments or &commentstring (I personally hardly ever use them); default \nmap: <c-_>i or <c-_>I\n- In visual mode: if the selection spans several lines, normal mode is \nselected; if the selection covers only a part of one line, inline mode \nis selected\n- Fixed problem with lines containing ^M or ^@ characters.\n- It's no longer necessary to call TCommentCollectFileTypes() after \ndefining a new filetype via TCommentDefineType()\n- Disabled single <c-_> mappings\n- Renamed TCommentVisualBlock to TCommentRight\n- FIX: Forgot 'x' in ExtractCommentsPart() (thanks to Fredrik Acosta)\n"
@@ -178,7 +194,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Fixed problem when &commentstring was invalid (e.g. lua)\n- perl_block\n- <c-_>s mapped to :TCommentAs <c-r>=&ft<cr>"
@@ -194,7 +210,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- slightly improved recognition of embedded syntax\n- if no commentstring is defined in whatever way, reconstruct one from \n&comments\n- The TComment... commands now have bang variants that don't act as toggles \nbut always comment out the selected text\n- fixed problem with commentstrings containing backslashes\n- comment as visual block (allows commenting text to the right of the main \ntext, i.e., this command doesn't work on whole lines but on the text to the \nright of the cursor)\n- enable multimode for dsl, vim filetypes\n- added explicit support for some other file types I ran into\n"
@@ -210,7 +226,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Fixed uncommenting of non-aligned comments\n- improved support for block comments (with middle lines and indentation)\n- using TCommentBlock for file types that don't have block comments creates \nsingle line comments\n- the default key bindings have slightly changed\n- removed the TCommentAsBlock command (TCommentAs provides its functionality)\n- removed g:tcommentSetCMS"
@@ -226,7 +242,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

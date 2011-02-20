@@ -8,6 +8,22 @@
   "install_details": "Copy the zip archive  cvim.zip to $HOME/.vim/ (Linux/Unix) or $HOME/vimfiles (Windows) and run \n      unzip cvim.zip \nIf you have already an older version of this plugin and you have modified the \ntemplate files you may want to save your templates first or copy the files from the \narchive by hand. See also the file README.csupport within the zip file.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14859",
+      "filename": "cvim.zip",
+      "script_version": "5.13",
+      "date": "2011-01-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner@fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- New hotkeys \\rmc (run 'make clean') and \\rme (executable to run).\n- Hotkeys for make are working when in a makefile.\n- Linker errors and errors during a make will be shown in a quickfix buffer.\n- Bugfix: detection of a systemwide installation can fail.\n- Bugfix: preprocessor directive '#if 0 #endif' not working."
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14305",
       "filename": "cvim.zip",
       "script_version": "5.12",
@@ -18,7 +34,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "- New hotkeys \\+\" .\n- Windows: user installation now possible.\n- Bugfixe: for-idiom shows part of type definition as variable name in some cases.\n- Bugfixe: wrong cursor position for some templates."
@@ -34,7 +50,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "- New tag {CURSOR} to avoid indent problems in a few cases.\n- Three hotkeys renamed \\rg -> \\rma , \\ri -> \\rpa ,  \\re -> \\rka (better to remember).\n- 'long long' added to the for-idioms.\n- Bugfixes: for-idiom shows type as variable name if no variable name was given.\n- Bugfixes: for-idiom inserts standard types with 2+ words wrong.\n- Bugfixes: multiline end-of-line comments have wrong position in some cases.\n- Bugfixes: local installation looks like a system-wide installation in seldom cases."
@@ -50,7 +66,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "- The plugin now handles different template styles without editing and reloading the main template file.\n- The number of template styles is not limited. \n- New hotkey and ex-command to switch template styles.\n- Template styles can automatically be related to file extensions.\n- indent(1) errors will be presented in a quickfix error window.\n- Comment alignment improved.\n- Minor improvements."
@@ -66,7 +82,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Two additional hotkeys (+ ex commands) for preprocessor statements.\n+ Compile-link-run: improved error detection.\n+ Menu Run: hardcopy can print any buffer.\n+ Several minor improvements and bugfixes."
@@ -82,7 +98,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Hotkeys are shown in the menus.\n+ File browser for code snippets and templates choosable (2 global variables).\n+ Two new hotkeys: include file description (implementation, header).\n+ New menu item: namespace alias\n+ Bugfix: wrapper script for use of a xterm could not handle parameters containing blanks.\n+ Several minor improvements."
@@ -98,7 +114,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ 4 new hotkeys : insert file section comments (C/C++/H), special comments,\n  keyword comments.\n+ End-of-line comment adjustment improved."
@@ -114,7 +130,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Jump targets (templates) and mapping Ctrl-j can be switched off.\n+ Yet unused jump targets will be highlighted after a file is opened.\n+ Statements menu: else block (key mapping \\se).\n+ Handling of <SPLIT> improved (templates).\n+ Minor improvements."
@@ -130,7 +146,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Additional plugin-tags (jump targets in templates): <+text+>, <-text->.\n+ Additional mapping Ctrl-j : jump to these new targets.\n+ Template-file: additional macro |STYLE| and IF-ENDIF-construct to easily\n  choose between sets of templates.\n+ Additional mapping: auto-complete classical C comment (also multi-line).\n+ Additional mapping: auto-complete open block starting with {<CR> .\n+ Visual mode for date and time insertion (menu 'Comments').\n+ Visual mode for tags (submenu 'Comments->tags (plugin)').\n+ Bugfix: hotkey \\ica not working\n+ Bugfix: hotkey Shift-F2 for the alternate-plugin disappeared. "
@@ -146,7 +162,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ New hotkey \\+co inserts ' cout <<  << endl;'\n+ New menu item C++-menu: 'cout' replaces 'cout variable' and 'cout string'.\n+ Hotkey \\c/ removed ( \\cc does the same).\n+ Bugfix: after an unsuccessful compilation screen sometimes garbled."
@@ -162,7 +178,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Insertions work properly when folding is used.\n+ Menu items Idioms->for(...) : type declaration for loop variable possible (tab completion).\n+ Specification of command line arguments (Run->cmd. line arg.): filename completion active.\n+ New main menu item 'show manual' (hotkey \\hm): read manual for word under cursor. \n+ One hotkey renamed: \\h -> \\hp (help plugin)"
@@ -178,7 +194,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Bugfix: stray characters whith three dialogs\n+ Bugfix: Missing parameter in 2 internal function calls\n+ Menu items 'Snippets->edit local/global templates' start an file browser (convenience)."
@@ -194,7 +210,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Superfluous control characters for mode switching (menus, hotkeys) removed. Caused beeps.\n+ Template files (local/global) can be opened from the snippet menu.\n+ Three new preprocessor statements.\n+ v-mode for RTTI-entries."
@@ -210,7 +226,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Definition and implementation of classes have now different templates and menu entries.\n+ Accessor methods (get/set) can be generated.\n+ New templates: everything other than language keywords comes from a template (and is user changeable)."
@@ -226,7 +242,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Bugfix: on a few systems doubling of path components in the run command (F9).\n  Skip this upgrade if you do not have this problem."
@@ -242,7 +258,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Format for the macros |DATE|, |TIME|, and |YEAR| can be defined by the user.\n+ Help text improved."
@@ -258,7 +274,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Code snippets can now be used in the console mode (Vim without GUI).\n+ Bugfix: Possible conflict with 'indent' removed when inserting templates."
@@ -274,7 +290,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Bugfix: Prototype picker did not alway delete no longer used prototypes.\n+ Bugfix: Prototype picker removed template specializations from parameter lists."
@@ -290,7 +306,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Bugfix: autocmd setting can influence autocmd settings of OTHER plugins."
@@ -306,7 +322,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ New template system. Now every menu item is user definable.\n+ Changes to allow a system-wide installation.\n+ A few hotkeys added and renamed.\n\n"
@@ -322,7 +338,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ New global variable to control the filetype of *.h header files (default is now 'cpp').\n+ Bugfix: properly resetting 'compiler' after using make, splint, and CodeCheck."
@@ -338,7 +354,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ New insert mode mappings (comments, statements, preprocessing, idioms, C++).\n+ Some mappings renamed (easier to remember). \n+ New tag (basename of a file reduced to characters allowed in names)."
@@ -354,7 +370,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ New menu item and hotkey for the (re)alignement of end-of-line comments.\n+ Hotkey \\cn removed. Only one menu item for end-of-line comments left.\n+ Changed hotkeys: \\ce -> \\cl and \\cl -> \\cs .\n+ Three new tags (giving the basename of a file) for writing template files.\n+ Prototype picker handles template methods.\n+ Bugfix: splint works now under Windows.\n+ Minor improvements."
@@ -370,7 +386,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ PLUGIN DIRECTORIES REARRANGED.\n+ main- and for-idiom have a visual mode now.\n+ Four new commands (command line) to control the comment style.\n+ Comment style (C/C++) can automatically follow the filetype.\n+ Bugfix: empty new file after removing the header template can't be closed.\n+ Bugfix : Tools entry missing when root menu not shown from the start.\n+ Minor improvements."
@@ -386,7 +402,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ New key mappings for preprocessor statements. \n+ Source code analysing tool CodeCheck (Trademark) integrated\n+ New preprocessor menu.\n+ Bugfix: indent under Windows.\n+ Minor improvements.\n"
@@ -402,7 +418,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Bugfix: change needed for some menu names after patch 7.0.054 ."
@@ -418,7 +434,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Setting the starting column for trailing comments improved.\n+ Small bug in block uncommenting fixed.\n+ Mac OS X : circumvent a Vim bug which caused a crash when loading plugin version 4.1\n+ File syntax/c.vim removed (but see help in csupport.txt)."
@@ -434,7 +450,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ A complete switch statement can be made from a list of labels.\n+ Additional cases can be made from a list of labels.\n+ Small bug in line end commenting fixed.\n+ Minor improvements."
@@ -450,7 +466,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Kernighan & Ritchie style for block statements can be enabled.\n+ Changes to make plugin compatible with Vim 7.\n+ Set C/C++ file type for source files which should not be preprocessed (*.i, *.ii).\n+ Some minor improvements."
@@ -466,7 +482,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Hotkeys and an accompanying reference card added.\n+ Preparation for syntax based folding.\n+ Some minor improvements."
@@ -482,7 +498,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Remove \"#if 0 ... #endif\" from the inside. \n+ Change C comments to C++ comments and vice versa.\n+ try..catch / catch / catch(...)  now can be set surround a marked area.\n+ Prototype picking improved (for C++).\n+ A hardcopy shows the localized date and time in the header line.\n+ New help menu entry in the main menu of this plugin (shows the plugin documentation).\n+ Switch between corresponding source and header files with <S-F2> if the plugin a.vim\n  is present.\n+ Plugin can be used with autocompletion for (, [, and { ."
@@ -498,7 +514,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Doubling of file header for new c- and h-files under Windows fixed (Thanks to Fabricio C A Oliveira).\n+ Tiny bug in the file open idioms fixed."
@@ -514,7 +530,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Formatter 'indent' integrated.\n+ Bugfix in the automatic header insertion.\n+ Assert idiom added.\n+ #if 0 ... #endif statement for blocking out code added.\n+ Minor stylistic improvements in some idioms."
@@ -530,7 +546,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Screen update problem solved: color inversion under FC4 (Thanks to Bernie Barton).\n+ RTTI menu : additional v-mode.\n+ Statement menu and C++ menu rearranged.\n+ Include guard : name generation improved.\n+ File header templates will be included for additional file extensions (cp, cxx, c++, ...)."
@@ -546,7 +562,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ More C++ output manipulators; manipulator insertion more intuitive.\n+ Output into buffer: cursor goes to top of file.\n+ Makefile template improved (code snippet).\n+ Some minor improvements."
@@ -562,7 +578,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Windows support. Most features are available under Windows now."
@@ -578,7 +594,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Run buffer through splint (A tool for statically checking C programs; see\n  http://www.splint.org). An error window will be opened; quickfix commands can be used.\n+ Set buffer related command line arguments for splint.\n+ Line end comments start in a fixed column (can be set from the menu).\n+ Spaces in path names and file names are now possible.\n+ Template files and snippet files are no longer kept in the list of alternate files.\n+ Some minor improvements."
@@ -594,7 +610,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Bug fixed (comand line arguments not passed to the executable).\n+ File extension for executables can be set.\n+ Minor improvements."
@@ -610,7 +626,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Running a program:\n  (1) Run program from the gVim command line.\n  (2) Run program and direct the output into a window with name \"C-Output\". \n  (3) Run program in an xterm.\n+ Command line arguments are now buffer related (each buffer can have its own arguments).\n+ Code snippets can be protected from being indented during insertion. \n+ Picked up prototypes will be deleted after insertion.\n+ A code snippet with the file name extension \"ni\" or \"noindent\" will not be\n  indented on insertion.\n+ for- and calloc-/malloc-idioms improved.\n+ Bug fixed (word list handling)."
@@ -626,7 +642,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Installation simplified. + for-loop-idiom asks for control variable, initial value, ...+ malloc-idiom asks for pointer variable and size.+ Toggling the comment style works correct again.+ Empty error windows will be closed.+ Prototype picker removes trailing parts of the function body if marked.+ The dialog windows (GUI) have been replaced by more flexible command line inputs.+ The undocumented and unnecessary hot key F12 has been removed.+ Extension to ctags + taglist shows makefile targets and qmake targets."
@@ -642,7 +658,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ Aligned line end comments for consecutive lines.\n+ Improved prototype picker removes comments.\n+ Picked up prototypes can be shown.\n+ Uncomment more than one block at once.\n+ 3 new idioms.\n+ Help file improved ."
@@ -658,7 +674,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ The following constructs are now read as templates from files:    class, class using new, template class, template class using new, error class+ The preprocessor statements #if... and the function idiom include marked lines when invoked in visual mode.+ All hotkeys are only defined for C/C++ files (file type plugin added).+ Only one C/C++ entry in the gVim root menu (can be disabled).+ Two new global variables: C_Dictionary_File, C_MenuHeader .+ Install script added.+ Customization improved. + Documentation improved (help file added).+ Bug fix (template file handling)"
@@ -674,7 +690,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ When the comment style \"C\" is active the menu entry \"Comments.code->comment\"   turns a marked region in one multiline C-comment.+ The menu entry \"Comments.comment->code\"  turns marked multiline C-comment   back into code.+ A marked region can be surrounded by a for-, if, if-else, while-, do-while-statement  (with indentation).+ The menu entry \"Snippets.make prototype\" makes a C- or C++-prototype from   the current line or marked region and puts it in an internal buffer.+ The menu entry \"Snippets.add prototype\" also makes a C- or C++-prototype from   the current line or a marked region and adds it to the internal buffer.+ The menu entry \"Snippets.put prototype\" inserts all gathered prototypes    below the current line. + Tag substitution rewritten (Some characters in a substitution text for a tag   prevented the tag from being substituted)."
@@ -690,7 +706,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "+ C-style comments AND C++-style comments are supported now.+ The menu entry 'Comments->Comment style ..' switches the styles (toggle).+ Block comments are now read as templates or skeletons from files:    Frame Block,        Function Description,  Method Description,    Class Description,  H+file header,         C/C++-file header+ These templates can contain tags like |FILENAME|, |AUTHOR| etc. which are replaced  after reading (KDevelop templates can be used without any change).+ indentation: multiline inserts and code snippets will be indented after insertion.+ Most menu entries are now also active in normal mode.+ new menu items:  includes for the C99 header,   includes for the standard C++ header,   includes for the C++ version of the Standard C Library header,  multiline C comment,  vim modeline+ Reading the templates is done in one function which can be called in an autocmd.+ Code cleanup: register z no longer used. Most function calls are silent now."
@@ -706,7 +722,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "- menus appear immediately after loading the plugin- additional word lists for keyword completion (optional):    C/C++ -keywords    German words (for commenting sources)    K&R-Book: Words from the table of content (for commenting sources)    Standard Template Library (STL):  method names and type names    XFORMS library: macro and function names- additional settings for .vimrc and .gvimrc (optional)"
@@ -722,7 +738,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "- code snippet support: read, write, edit code snippets in a separate directory- specify command line arguments for make- hardcopy: print whole buffer or a highlighted part of it into a file (Postscript)- new menu entry  \"fscanf( infile, \"\", & );\"  after code for opening a file with pointer \"infile\" is inserted- new menu entry  \"fprintf( outfile, \"\\n\",  );\"  after code for opening a file with pointer \"outfile\" is inserted"
@@ -738,7 +754,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "- separation of file section comments in 2 new submenus   'C-File-Sections' and 'H-File-Sections'- class comment- method comment- keyword comments and special comments are now in submenus- new hot key to run make- word list for C/C++ word completion (optional)- some optional vimrc- and gvimrc-entries in two files (optional)- minor improvements and corrections"
@@ -754,7 +770,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "- include all file section headers at once- insert empty block- 2 additional loops- includes for all Standard C Library header files- minor internal improvements"
@@ -770,7 +786,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "(1) 4 new keyword comments\n(2) code->comments does no longer mark  the first character in all lines"
@@ -786,7 +802,7 @@
         "user_name": "mehner",
         "first_name": "Fritz",
         "last_name": "Mehner",
-        "email": "mehner at fh-swf.de",
+        "email": "mehner@fh-swf.de",
         "homepage": ""
       },
       "release_notes": "Initial upload"

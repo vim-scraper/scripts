@@ -18,7 +18,7 @@
         "user_name": "culley",
         "first_name": "culley",
         "last_name": "harrelson",
-        "email": "vim at culley.fastmail.fm",
+        "email": "vim@culley.fastmail.fm",
         "homepage": ""
       },
       "release_notes": "Added 3 new settings: g:phpNewlineBeforeBrace, g:phpFoldMarkerFunctions, g:phpRequireIncludeParens.  I also added support for the following php functions: is_null, is_numeric, empty"
@@ -34,7 +34,7 @@
         "user_name": "culley",
         "first_name": "culley",
         "last_name": "harrelson",
-        "email": "vim at culley.fastmail.fm",
+        "email": "vim@culley.fastmail.fm",
         "homepage": ""
       },
       "release_notes": "Complete rewrite.  The theme of this rewrite was: quit polluting the mapping namespace, allow for most everything to be customized, remove all personal stuff from the script and write documentation.  All maps have been wrapped into a function and all abbreviations are now prefixed with g:phpLeader so you can change this variable and change the prefix for every abbreviation.  Abbreviations are now created in a more modular fashion so it should be much easier to maintain the script.  I have bumped the version to 1.0-- the structure should *finally* be mostly set so I can now focus on extending the script to cover additional php functions."
@@ -50,7 +50,7 @@
         "user_name": "culley",
         "first_name": "culley",
         "last_name": "harrelson",
-        "email": "vim at culley.fastmail.fm",
+        "email": "vim@culley.fastmail.fm",
         "homepage": ""
       },
       "release_notes": "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\nscript version .4\nUloaded to vim.org 2003-05-03\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n--------------------------------------------------------------\nphp functions added\n--------------------------------------------------------------\nbool array_key_exists ( mixed key, array search)\nint count ( mixed var)\nstring htmlspecialchars ( string string [, int quote_style [, string charset]])\nstring strstr ( string haystack, string needle)\nint strcasecmp ( string str1, string str2)\nstring substr ( string string, int start [, int length])\nvoid trigger_error ( string error_msg [, int error_type])\n\n--------------------------------------------------------------\nnew PEAR DB stuff\n--------------------------------------------------------------\nphpgr -- $data = $dbh->getRow($sql);<cursor>\nphpgcol -- $dbh->getCol($sql);<cursor>\nphpni -- $<cursor> = $dbh->nextId('php~x', false);\n\n--------------------------------------------------------------\nmisc new stuff\n--------------------------------------------------------------\nphptodo -- //TODO:\n"
@@ -66,7 +66,7 @@
         "user_name": "culley",
         "first_name": "culley",
         "last_name": "harrelson",
-        "email": "vim at culley.fastmail.fm",
+        "email": "vim@culley.fastmail.fm",
         "homepage": ""
       },
       "release_notes": "Complete rewrite.  The new format should allow me to continue through the built in php functions till I die.  See the script header for details.\n\nNew items:\n\necho\nexplode\nrequire_once()\nstrlen\nstrcmp\nstr_replace\nstrtolower\nstrtoupper\nunset\nwordwrap\n\nThere are about 6 or 7 other new things that I can't remember...\n\n"
@@ -82,7 +82,7 @@
         "user_name": "culley",
         "first_name": "culley",
         "last_name": "harrelson",
-        "email": "vim at culley.fastmail.fm",
+        "email": "vim@culley.fastmail.fm",
         "homepage": ""
       },
       "release_notes": "new abbreviations:\n\nphplv     - look up the last value from a postgresql sequence\nphpserver - output $_SERVER['<cursor']\nphpgassoc - output $data = $dbh->getAssoc($sql);\nphpwhile  - output while structure\n\nnew maps:\n\n<leader>ap  - when on an array variable open a line under cursor and output an array_push function\n<leader>ae  - when on an array variable open a line under cursor and output the extract function\n<leader>apr - when on an array variable open a line under cursor and output the print_r function\n\n\n"
@@ -98,7 +98,7 @@
         "user_name": "culley",
         "first_name": "culley",
         "last_name": "harrelson",
-        "email": "vim at culley.fastmail.fm",
+        "email": "vim@culley.fastmail.fm",
         "homepage": ""
       },
       "release_notes": "Initial upload"

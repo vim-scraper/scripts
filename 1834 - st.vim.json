@@ -18,7 +18,7 @@
         "user_name": "neparasti",
         "first_name": "Jānis",
         "last_name": "Rūcis",
-        "email": "parasti at gmail.com",
+        "email": "parasti@gmail.com",
         "homepage": ""
       },
       "release_notes": "Changed the way temporary variables are matched.  Should be less broken now.\n"
@@ -34,7 +34,7 @@
         "user_name": "neparasti",
         "first_name": "Jānis",
         "last_name": "Rūcis",
-        "email": "parasti at gmail.com",
+        "email": "parasti@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Underscore is now recognized in identifiers.\n- Added support for Smalltalk/X-style end-of-line comments (comment starting with \"/ and ending at a newline).  For these to be recognized you have to set (:let) the st_stx_style_end_of_line_comments internal variable to any value in your .vimrc or wherever it is you usually set them.\n- For name spaces in addition to the dot a double-colon is now recognized in the #methodFor: statement.\n- Support for three-character binary selectors can be activated by setting the st_three_character_binary_selectors internal variable to any value.\n- Made the white-space before an argument identifier optional for keyword and binary selectors in message patterns.  \"doSomethingTo:anObject\" and \"==anObject\" won't be highlighted as errors. \n- Added support for Smalltalk/X-style primitives, sort of.  #primitiveDefinitions and #primitiveFunctions chunks are recognized, as well as %{ and %}-delimited regions.  (Contained C code is also highlighted.  Might be an overkill, though.)  For these to be recognized, set the st_stx_style_primitives variable.\n- Re-added support for GNU Smalltalk-style sign-after-radix numbers.  Actived with st_sign_after_radix.\n- Sign is now everywhere highlighted as part of the number.\n- Assignment operator is only highlighted if preceded by an identifier.\n- Some other stuff like, say, a new completely arbitrary script versioning system..."
@@ -50,7 +50,7 @@
         "user_name": "neparasti",
         "first_name": "Jānis",
         "last_name": "Rūcis",
-        "email": "parasti at gmail.com",
+        "email": "parasti@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added a check to make sure there's white-space separating\nmessage pattern from the body of the method.  Makes\nerrors somewhat easier to spot.\n\nAdded a fix to allow use of line continuation.  Script will no\nlonger fail when 'compatible' is set.\n\nAdded support for spell checking.  It's now performed only\nin comments and strings.\n\nNumbers are now handled separately as integers, floats and\nscaled decimals.  The patterns now conform to the\ndraft ANSI Smalltalk standard which means that some\nGNU Smalltalk specific constructs are no longer supported.\nIt's planned to reintroduce those in a different fashion\nsome time \"in the future\".  Which is soon, hopefully.\n\nTemporarily removed error highlighting from array literals.  This is a\nside effect of the change above.\n\nSymbol handling was also changed for conformance.  In\nparticular, Symbol literals that aren't strings must\nbe valid selectors.  This isn't quite true in\nGNU Smalltalk, but it's also something that I'll add back\nlater.\n"
@@ -66,7 +66,7 @@
         "user_name": "neparasti",
         "first_name": "Jānis",
         "last_name": "Rūcis",
-        "email": "parasti at gmail.com",
+        "email": "parasti@gmail.com",
         "homepage": ""
       },
       "release_notes": "Don't treat comments in Array and ByteArray literals as error."
@@ -82,7 +82,7 @@
         "user_name": "neparasti",
         "first_name": "Jānis",
         "last_name": "Rūcis",
-        "email": "parasti at gmail.com",
+        "email": "parasti@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

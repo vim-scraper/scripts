@@ -1,0 +1,59 @@
+{
+  "script_id": "3406",
+  "display_name": "update_perl_line_directives",
+  "summary": "automatically add/update line directives in perl embedded in vim scripts",
+  "name": "update_perl_line_directives",
+  "script_type": "ftplugin",
+  "description": "WARNING: if your vim links to (or dlopen()'s) a libperl earlier than 5.12, perl may end up lying to you about the line number by one (or maybe more, but one is what I've seen).\n\nThis script eases development of vim scripts that use embedded perl code by automatically adding or updating line directives to perl code blocks.  So for example:\n\n     perl <<EOF\n\nwill automagically become\n\n     perl <<EOF\n     # line 42 /some/file.vim\n\nwhen you save /some/file.vim.  You can use other valid here-document terminators, not just 'EOF'.\n\nNow your error messages that come from perl will have correct file names and line numbers.\n\nSee also http://www.vim.org/scripts/script.php?script_id=3411 if you want to automatically catch perl syntax errors when vim scripts are saved.",
+  "install_details": "Its a standard vimball so all you need to do is:\n\n     vim update_perl_line_directives.vba\n     :so %",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14931",
+      "filename": "update_perl_line_directives.vba",
+      "script_version": "0.3",
+      "date": "2011-01-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25501",
+        "user_name": "bkerin",
+        "first_name": "Britton",
+        "last_name": "Kerin",
+        "email": "britton.kerin@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug which caused last line of files to get nuked"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14796",
+      "filename": "update_perl_line_directives.vba",
+      "script_version": "0.2",
+      "date": "2011-01-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25501",
+        "user_name": "bkerin",
+        "first_name": "Britton",
+        "last_name": "Kerin",
+        "email": "britton.kerin@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed off-by-one error in line number settings"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14784",
+      "filename": "update_perl_line_directives.vba",
+      "script_version": "0.1",
+      "date": "2011-01-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25501",
+        "user_name": "bkerin",
+        "first_name": "Britton",
+        "last_name": "Kerin",
+        "email": "britton.kerin@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

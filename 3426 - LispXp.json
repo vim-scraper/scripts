@@ -1,0 +1,187 @@
+{
+  "script_id": "3426",
+  "display_name": "LispXp",
+  "summary": "Lisp snippets for xptemplate",
+  "name": "LispXp",
+  "script_type": "utility",
+  "description": "These are some Common Lisp snippets for xptemplate.\n\nScreenshot of various snippets with placeholders activated (before most\nof the placeholders have been filled in):\n\n  http://img703.imageshack.us/img703/7780/screenshot10x.png\n\nOf course, as usual, you can use your own colors and colorscheme.\n\nNOTE:\n\n  As of version 1.10, LispXp requires the newest version of xptemplate\n  from SVN or git.\n\nKnown issues:\n\n  Due to the limitations of the current version of xptemplate, I've had to use\n  the name \"dostar\" instead of \"do*\", \"letstar\" instead of \"let*\", etc.  Also,\n  the indentation of certain complex snippets like \"defstruct\" is not correct.\n\nNOTE:\n\n  I'm new to Lisp, and new to xptemplate, so don't expect the most\n  sophisticated snippets, a religious adherence to the Hyperspec, or even a\n  full set of snippets for every function and macro documented in the\n  Hyperspec.\n\n  These snippets are really mostly just for my own use, but if someone else\n  finds them useful, then that's great.\n\nAs of version 1.10, these are the snippets that are included:\n\n+                describe        mapc            readbase\n-                divide          mapcan          remf\n*                do              mapcar          remhash\n/                documentation   mapcon          remove\n=                dolist          maphash         remove-if\n/=               dostar          mapl            remove-if-not\n<                dotimes         maplist         remprop\n<=               eighth          member          rest\n>                elt             minus           return\n>=               endp            multiply        reverse\nabs              eq              nconc           rplaca\nacons            eql             nintersection   rplacd\nand              equal           ninth           second\nappend           eval            not             set\napply            fboundp         nreverse        setf\naref             fifth           nsublis         setq\narray-total-size finish-output   nsubst          seventh\nash              first           nth             sixth\nassoc            force-output    nthcdr          stringp\natom             format          null            sublis\nboundp           fourth          numberp         subst\nbyte             fresh-line      open            symbolfunction\nbyte-position    funcall         or              symbolp\nbyte-size        functionp       pairlis         symbolvalue\ncar              get             plus            tenth\ncdr              getf            pop             terpri\nclear-output     gethash         prin1           third\ncond             if              prin1-to-string typep\ncons             intersection    princ           union\nconsp            lambda          princ-to-string vector\ncopy-alist       last            print           vector-pop\ncopy-list        ldb             printbase       vector-push\ncopy-tree        length          printlength     when\ndefconstant      let             printlevel      write\ndefmacro         letstar         progn           write-byte\ndefparameter     list            push            write-char\ndefstruct        listp           pushnew         write-line\ndefun            liststar        quote           write-sequence\ndefvar           load            rassoc          write-string\ndelete           macroexpand     rassoc-if       write-to-string\ndelete-if        make-array      rassoc-if-not   zerop\ndelete-if-not    make-hash-table read\n\nFor more information on this script follow the vim wiki link at the top right of this page.\n\nFor more information on xptemplate, see:\n\nhttp://www.vim.org/scripts/script.php?script_id=2611\n\n",
+  "install_details": "To install these snippets:\n\n - get xptemplate from SVN or git (important!  xptemplate from vim.org will **not** work!)\n - install and configure xptemplate\n - download these snippets\n - rename the downloaded snippet file as \"lisp.xpt.vim\"\n - move it in to one of the paths you've chosen according to\n      :help xpt-personal-folder\n - quit and restart vim\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15033",
+      "filename": "lisp.xpt-1.10.vim",
+      "script_version": "1.10",
+      "date": "2011-02-17",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos@spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Note: This version of LispXp requires the newest version of xptemplate from SVN or git.  New snippets: ash, byte, byte-position, byte-size, defstruct, dostar, ldb, maphash, prin1-to-string, princ-to-string, write, write-byte, write-char, write-line, write-sequence, write-string, write-to-string."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15003",
+      "filename": "lisp.xpt-1.9.vim",
+      "script_version": "1.9",
+      "date": "2011-02-14",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos@spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Many new snippets, along with a few improvements and bug fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14955",
+      "filename": "lisp.xpt-1.8.vim",
+      "script_version": "1.8",
+      "date": "2011-02-04",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos@spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Added new snippets: \"aref\", \"get\", \"listp\", \"remprop\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14928",
+      "filename": "lisp.xpt-1.7.vim",
+      "script_version": "1.7",
+      "date": "2011-01-31",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos@spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Added new snippets: \"endp\", \"setf\", \"when\".  Now all the basic arithmetic function snippets (+,-,/,*) have a minimum of two number place holders."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14919",
+      "filename": "lisp.xpt-1.6.vim",
+      "script_version": "1.6",
+      "date": "2011-01-30",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos@spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed buggy \"cond\" snippet.  Made \"let\" and \"letstar\" a bit more readable.  Added new snippets: \"clear-output\", \"finish-output\", \"force-output\", and \"return\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14912",
+      "filename": "lisp.xpt-1.5.vim",
+      "script_version": "1.5",
+      "date": "2011-01-30",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos@spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved readability of a placeholder in the \"setq\" snippet, and added the following snippets:  \"=\", \"/=\", \"<\", \"<=\", \">\", \">=\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14911",
+      "filename": "lisp.xpt-1.4.vim",
+      "script_version": "1.4",
+      "date": "2011-01-30",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos@spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Added new snippets (\"dolist\" and \"dotimes\").  Fixed bugs in \"eq\", \"eql\", and \"equal\" snippets.  Removed parenthesis around the test in the \"if\" snippet."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14910",
+      "filename": "lisp.xpt-1.3.vim",
+      "script_version": "1.3",
+      "date": "2011-01-29",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos@spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Corrected spacing when \"stepper\" placeholder is skipped in the \"do\" snippet."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14909",
+      "filename": "lisp.xpt-1.2.vim",
+      "script_version": "1.2",
+      "date": "2011-01-29",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos@spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Took out parenthesis from around the bodies of defmacro, defun, and lambda, since you're likely to use snippets there and they already have parenthesis around them."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14905",
+      "filename": "lisp.xpt-1.1.vim",
+      "script_version": "1.1",
+      "date": "2011-01-29",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos@spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Improved the \"do\" snippet to make it handle skipped placeholders more gracefully."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14900",
+      "filename": "lisp.xpt-1.0.vim",
+      "script_version": "1.0",
+      "date": "2011-01-29",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17428",
+        "user_name": "gnosis",
+        "first_name": "Gnosis",
+        "last_name": "Ouroubouros",
+        "email": "vim.20.noos@spamgourmet.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -8,6 +8,38 @@
   "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"yamlvim\"]) and add ``call scriptmanager#Activate([\"yamlvim\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14723",
+      "filename": "yamlvim-1.5.3.tar.gz",
+      "script_version": "1.5.3",
+      "date": "2011-01-10",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bugs with loading diacritics and modifying opts dictionary passed to dumper"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14565",
+      "filename": "yamlvim-1.5.2.tar.gz",
+      "script_version": "1.5.2",
+      "date": "2010-12-18",
+      "vim_version": "9999",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Reposting bundle due to core plugins update"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14318",
       "filename": "yamlvim-1.5.2.tar.gz",
       "script_version": "1.5.2",
@@ -18,7 +50,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Reposting bundle due to core plugins update"
@@ -34,7 +66,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Minor fix: removed escaping of `[' inside a collection"
@@ -50,7 +82,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added scalar style chooser that is able to use any scalar styleAdded ability to dump strings with non-utf charactersImproved pyyaml compatibilityNeither dumper nor loader depends on vim's `\\p' pattern (improved standart conformance)Some bug fixes"
@@ -66,7 +98,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Some bug fixes. Known bug: it is not able to dump strings with invalid (non-utf8) characters"
@@ -82,7 +114,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added all_flow dumper option, made memory leak much less huge"
@@ -98,7 +130,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Fixed some dumper errors"
@@ -114,7 +146,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added YAML syntax file"
@@ -130,7 +162,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Lots of bugfixes, improved tests"
@@ -146,7 +178,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added ability to sort dictionary keys before dumping"
@@ -162,7 +194,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added locked variables dumping/loading (it means saving and restoring locks information), added dumping with custom tags, some bug fixes"
@@ -178,7 +210,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added documentation, added add_*constructor and del_*constructor functions, some bug fixes"
@@ -194,7 +226,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "More bug fixes"
@@ -210,7 +242,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added load_all function, some bug fixes"
@@ -226,7 +258,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Initial upload"

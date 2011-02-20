@@ -18,7 +18,7 @@
         "user_name": "FromtonRouge",
         "first_name": "Vissale",
         "last_name": "NEANG",
-        "email": "fromtonrouge at gmail.com",
+        "email": "fromtonrouge@gmail.com",
         "homepage": ""
       },
       "release_notes": "-   It's recommended to update ctags to version 5.7 or higher\n-   The plugin is now activated for C files\n-   New value for OmniCpp_SelectFirstItem when the option is equal to\n    2 the first item is selected without inserting it to \n    the text (patch from Marek Olszewski)\n-   Bug when completing union members fixed with ctags 5.7 \n    (reported by Willem-Jan de Hoog) \n-   New option OmniCpp_LocalSearchDecl (patch from Roland Kuck)\n-   Bug when tags=something,,somethingelse (reported by Tobias Pflug)\n-   Bug with nested structure (reported by Mikhail Daen)\n-   Bug where the script fails to detect the type of a variable when \n    the ignorecase option is on (reported by Alexey Vakhov)\n-   Error message when trying to use completion on a not yet saved \n    Vim buffer (reported by Neil Bird)\n-   Error message when trying to use completion on an file opened from \n    a tselect command (reported by Henrique Andrade)\n\n"
@@ -34,7 +34,7 @@
         "user_name": "FromtonRouge",
         "first_name": "Vissale",
         "last_name": "NEANG",
-        "email": "fromtonrouge at gmail.com",
+        "email": "fromtonrouge@gmail.com",
         "homepage": ""
       },
       "release_notes": "WARNING1: Please uninstall the previous version (remove at least autoload/cppomnicomplete.vim)\nWARNING2: Option names have changed, don't forget to update your .vimrc\nWARNING3: It's recommended to update ctags to the latest version (5.6)\nWARNING4: Default value for OmniCpp_NamespaceSearch option is now 1\n\n-   The script is renamed to OmniCppComplete according to the library\n    script directory structure.        \n-   OmniCpp_ClassScopeCompletionMethod renamed to OmniCpp_DisplayMode\n-   Fixed a bug where the quickfix list is modified after a completion.\n-   OmniCpp_ShowPrototypeInAbbr option added. It allows to show the\n    function signature in the abbreviation.\n-   OmniCpp_ShowAccess option added. It allows to hide the access\n    information in the popup menu.\n-   The tags database format must be a ctags 5.6 database if you want to \n    complete anonymous types.\n-   Fixed current scope detection not working properly in destructors.\n-   Don't show protected and private members according to the current scope. \n-   Overloaded functions are now filtered properly.\n-   New cache system using less memory.\n-   The class scope of a method is now resolved properly with \"using\n    namespace\" declarations.\n-   OmniCpp_SelectFirstItem option added. It allows to not select the first\n    item in the popup menu when 'completeopt' does not contain \"longest\".\n-   Fixed the bug where a \"random\" item in the popup menu is selected\n    by default when 'completeopt' does not contain \"longest\" option.\n-   The script is now split in library scripts.\n-   Cache added for 'using namespace' search in included files\n-   Default value for OmniCpp_NamespaceSearch is now 1 (search only in the\n    current buffer).\n-   Namespace search automatically disabled for C files even if \n    OmniCpp_NamespaceSearch != 0.\n-   To avoid linear search in tags files, the ignorecase option is now \n    disabled when getting tags datas (the user setting is restored after).\n-   Fixed a bug where friend functions may crash the script and also crash vim."

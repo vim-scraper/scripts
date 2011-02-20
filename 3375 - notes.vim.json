@@ -1,0 +1,91 @@
+{
+  "script_id": "3375",
+  "display_name": "notes.vim",
+  "summary": "Easy note taking in Vim",
+  "name": "notes.vim",
+  "script_type": "utility",
+  "description": "The notes.vim plug-in makes it easy to manage your notes in Vim by providing several (automatic) commands and an advanced syntax mode. For more information about the plug-in please refer to its homepage or the project page on GitHub:\n\n  http://peterodding.com/code/vim/notes/\n  http://github.com/xolox/vim-notes\n\nIf you have questions, bug reports, suggestions, etc. the author can be contacted at peter@peterodding.com. If you like this plug-in please vote for it below!",
+  "install_details": "Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is \"~/.vim\" on UNIX and \"%USERPROFILE%\\vimfiles\" on Windows), restart Vim and execute the command \":helptags ~/.vim/doc\" (use \":helptags ~\\vimfiles\\doc\" instead on Windows). To get started execute \":Note\" or \":edit note:\", this will start a new note that contains instructions on how to continue from there (and how to use the plug-in in general).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14703",
+      "filename": "notes.zip",
+      "script_version": "0.8.2",
+      "date": "2011-01-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter@peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Enable naming new notes with :NewNote arguments:\n   https://github.com/xolox/vim-notes/commit/94e10b3bbdc2b609bcbf\n\n  Rename :NewNote to :Note, make it edit existing notes:\n   https://github.com/xolox/vim-notes/commit/8274b26e48212cb75577\n\n  Simplify automatic renaming (now more reliable):\n   https://github.com/xolox/vim-notes/commit/9d0a9dd7f9746525c875\n\n  Completion for :Note command:\n   https://github.com/xolox/vim-notes/commit/21c8699880876d3f584f"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14701",
+      "filename": "notes.zip",
+      "script_version": "0.7.20",
+      "date": "2011-01-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter@peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Compatibility with Pathogen by using relative paths:\n   https://github.com/xolox/vim-notes/commit/9aa85d093a4515930ac4\n\n  Bug fix for URL highlighting (trailing punctuation):\n   https://github.com/xolox/vim-notes/commit/79eea085d726ba9f9864\n\n  Bug fix: Always keep cached note names up to date:\n   https://github.com/xolox/vim-notes/commit/9a044fbd479f87c1e864\n\n  Dynamically update note name highlighting:\n   https://github.com/xolox/vim-notes/commit/a30b997ea2ad7042abd0\n\n  Only update note name highlighting when necessary:\n   https://github.com/xolox/vim-notes/commit/46e29787ed9f4ee749d6\n\n  Forget about notes that are never saved:\n   https://github.com/xolox/vim-notes/commit/2a1a704c81520d45f64b\n\n  Bug fix: Restore highlighting of URL schemes:\n   https://github.com/xolox/vim-notes/commit/e8d694bd292cf0385797\n\n  Bug fix: Restore note name highlighting after reload:\n   https://github.com/xolox/vim-notes/commit/e47ca92357efd98150f6\n\n  Bug fix: Update note name highlighting when reloading syntax:\n   https://github.com/xolox/vim-notes/commit/3e4ec8fe4b2f68cdedc7\n\n  Change remaining \":hi link\" commands to \":hi def link\":\n   https://github.com/xolox/vim-notes/commit/507aaac7960cfe958c6d\n\n  Highlighting for line numbers in filenames:\n   https://github.com/xolox/vim-notes/commit/7a476d8e29cc023424a8\n\n  Highlighting for FIXME markers:\n   https://github.com/xolox/vim-notes/commit/3e4f5a34f0cfb880b397\n\n  Remove BufWritePost automatic commands:\n   https://github.com/xolox/vim-notes/commit/16f46000a0caf430a88d"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14604",
+      "filename": "notes.zip",
+      "script_version": "0.7.7",
+      "date": "2010-12-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter@peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Document the `:edit note:' shortcut:\n   https://github.com/xolox/vim-notes/commit/bd9b7920bfb9f3e1e0bf\n\n  Automatically rename notes when their title is changed:\n   https://github.com/xolox/vim-notes/commit/26741868c3b576afdeb7"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14601",
+      "filename": "notes.zip",
+      "script_version": "0.7.6",
+      "date": "2010-12-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter@peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Download & Vim scripts links in README, support automatic updates with GLVS:\n   https://github.com/xolox/vim-notes/commit/c16227bbf3855c27344e\n\n  Ignore punctuation after URLs:\n   https://github.com/xolox/vim-notes/commit/72ea4edd8f9c3cf8fe40\n\n  Bug fix for italic highlighting:\n   https://github.com/xolox/vim-notes/commit/e5e60d755a48acb3bce8"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14600",
+      "filename": "notes.zip",
+      "script_version": "0.7.4",
+      "date": "2010-12-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter@peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

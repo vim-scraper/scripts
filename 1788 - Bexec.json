@@ -8,6 +8,22 @@
   "install_details": "Edit bexec-vX.Y.vba in vim and run:\n\n:so %",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14953",
+      "filename": "bexec-0.5.vba",
+      "script_version": "0.5",
+      "date": "2011-02-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11653",
+        "user_name": "fboender",
+        "first_name": "Ferry",
+        "last_name": "Boender",
+        "email": "f.boender@electricmonk.nl",
+        "homepage": "http://www.electricmonk.nl"
+      },
+      "release_notes": "Bugfix in argument handling in Visual mode execution. Range is appended to argument-string, which is wrong. (Mostly affected Zsh users).\n\nLeader-mappings <leader>bx and <leader>bc are now mapped regardless of previously existing (custom) mappings to Bexec() functions."
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=6727",
       "filename": "bexec-v0.3.vba",
       "script_version": "0.3",
@@ -18,7 +34,7 @@
         "user_name": "fboender",
         "first_name": "Ferry",
         "last_name": "Boender",
-        "email": "f.boender at electricmonk.nl",
+        "email": "f.boender@electricmonk.nl",
         "homepage": "http://www.electricmonk.nl"
       },
       "release_notes": "A bexec_interpreter setting was added which overrides all other ways of finding an interpreter. A (requested) function BexecCloseOut() was added which closes the output window.\n"
@@ -34,7 +50,7 @@
         "user_name": "fboender",
         "first_name": "Ferry",
         "last_name": "Boender",
-        "email": "f.boender at electricmonk.nl",
+        "email": "f.boender@electricmonk.nl",
         "homepage": "http://www.electricmonk.nl"
       },
       "release_notes": "The <F5> mapping has been removed in favour of <leader>bx. Custom filters where added (see :help bexec-customizing) and it is now possible to add your own known interpreters and custom filters from your .vimrc.\n"
@@ -50,7 +66,7 @@
         "user_name": "fboender",
         "first_name": "Ferry",
         "last_name": "Boender",
-        "email": "f.boender at electricmonk.nl",
+        "email": "f.boender@electricmonk.nl",
         "homepage": "http://www.electricmonk.nl"
       },
       "release_notes": "Initial upload"

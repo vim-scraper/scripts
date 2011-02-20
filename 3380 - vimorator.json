@@ -1,0 +1,27 @@
+{
+  "script_id": "3380",
+  "display_name": "vimorator",
+  "summary": "the simple tnsnames.ora parser",
+  "name": "vimorator",
+  "script_type": "utility",
+  "description": "The simple tnsnames.ora parser presenting the list of service names as a\ndropdown menu capable of executing the contents of the current buffer by\nmeans of sqlplus utility.\n\nRequirements:\n  * linux\n  * vim >= 7.0.0\n  * sqlplus >= 0.0.0\n\nUsage:\n  * Open menu by pressing the hot key (<F2> by default) \n  * Select the required (j and k keys) service name and press Enter\n  * If global variables g:vimorator_user and  g:vimorator_pass are not defined,\n    the username and password will be requested\n\nLicense:\n  This plugin is licensed under the same terms as Vim itself. No warranties,\n  expressed or implied.\n\nSpecial thanks to:\n  * Pal Nart (palnart(at)gmail.com) for the great QuickBuf plugin\n  * All those who didnt mess around\n\nSend all your proposals or error notifications to rezwyi(at)gmail.com.",
+  "install_details": "  * Download the plugin from http://www.vim.org/scripts/script.php?script_id=3380 and save it to the plugin\n    folder vim (usualy ~/.vim/plugin/)\n  * Or from git repository:\n        git clone git://github.com/rezwyi/vimorator.git\n        cd vimorator/\n        ln -s vimorator.vim /path/to/vim's/plugins/vimorator.vim\n  * It is possible to redefine several global variables in your .vimrc:\n        \"Hot key (<F2> by default)\n        let g:vimorator_hotkey = <F3>\n\n        \"tnsnames.ora file ($TNS_ADMIN by default)\n        let g:vimorator_tns_admin = $HOME . \"/.sqlplus/\"\n\n        \"Username and password for executing commands\n        let g:vimorator_user = \"scott\"\n        let g:vimorator_pass = \"scott\"",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14622",
+      "filename": "vimorator.vim",
+      "script_version": "1.0",
+      "date": "2010-12-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "24209",
+        "user_name": "rezwyi",
+        "first_name": "Sergey",
+        "last_name": "Rezvanov",
+        "email": "rezwyi@gmail.com",
+        "homepage": "http://rezwyi.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

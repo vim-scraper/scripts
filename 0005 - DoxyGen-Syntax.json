@@ -18,7 +18,7 @@
         "user_name": "mgeddes",
         "first_name": "Michael",
         "last_name": "Geddes",
-        "email": "vimmer at frog.wheelycreek.net",
+        "email": "vimmer@frog.wheelycreek.net",
         "homepage": ""
       },
       "release_notes": "1.  Words like `Class#Member' is highlighted together as a link in my\n    version.\n2.  I used `doxygenHyperLink' instead of `doxygenHttpLink' and\n    highlighted http, https, and ftp protocols.\n3.  I added the missing `doxygenSpecialArgumentWord' to make `\\a' (not\n    the word after) appear the same way as `\\c'.\n4.  I made some adjustments in font choosing on non-Windows platforms.\n5.  The `Last Change' date is not updated in your file.\n6.  There are some trailing spaces in your file."
@@ -34,7 +34,7 @@
         "user_name": "mgeddes",
         "first_name": "Michael",
         "last_name": "Geddes",
-        "email": "vimmer at frog.wheelycreek.net",
+        "email": "vimmer@frog.wheelycreek.net",
         "homepage": ""
       },
       "release_notes": "Fixed up  \\c words ending in )  (Wu Yongwei)\n - With auto-brief //!< followed by /** shouldn't supress the auto-brief in   the /**. (Reported by Markus Trenkwalder)\n - Allow numbers in @link linkwords (Reporeted by Wu Yongwei)\n- Don't treat # preceded by a word-end as a Hash-special (Reported by Wu Yongwei)\n- include # (@c #include) in the small-specials allowed chars. (Wu  Yongwei)\n - Highlight http[s] links (Wu Yongwei)\n - Various (Wu Yongwei)"
@@ -50,7 +50,7 @@
         "user_name": "mgeddes",
         "first_name": "Michael",
         "last_name": "Geddes",
-        "email": "vimmer at frog.wheelycreek.net",
+        "email": "vimmer@frog.wheelycreek.net",
         "homepage": ""
       },
       "release_notes": "- Fixed up ending of brief lines with respect to line @ commands and  end-comment. Not ending a brief no longer produces an error-comment.\n\n"
@@ -66,7 +66,7 @@
         "user_name": "mgeddes",
         "first_name": "Michael",
         "last_name": "Geddes",
-        "email": "vimmer at frog.wheelycreek.net",
+        "email": "vimmer@frog.wheelycreek.net",
         "homepage": ""
       },
       "release_notes": "   - Allow doxygen comments inside brackets (Suggested by Zygmunt Krynicki)\n   - Restore correct font selection (Wu Yongwei)\n   - Don't end brief when encountering ? or ! as this isn't what happens with doxygen.\n   - Make punctuation an option.\n   - Make short words end with a , eg \\c word,  (Wu Yongwei)\n1.11\n   - Thanks to Joseph Barker for pointing out that I had a syntax error in  1.10\n"
@@ -82,7 +82,7 @@
         "user_name": "mgeddes",
         "first_name": "Michael",
         "last_name": "Geddes",
-        "email": "vimmer at frog.wheelycreek.net",
+        "email": "vimmer@frog.wheelycreek.net",
         "homepage": ""
       },
       "release_notes": "Thanks to Toby Allsopp for this version:\n - Allow javadoc style auto-brief to be disabled\n - Move various definitions from single to multiline definitions \nAlso added the .txt help file.\n"
@@ -98,7 +98,7 @@
         "user_name": "mgeddes",
         "first_name": "Michael",
         "last_name": "Geddes",
-        "email": "vimmer at frog.wheelycreek.net",
+        "email": "vimmer@frog.wheelycreek.net",
         "homepage": ""
       },
       "release_notes": " - Fix up some regions not marked as contained (code, verbatim, dot being highlighted outside of the doxygen region) (Toby Allsopp) - Only mark recognised HTML tags (Suggested by Mike Anderson)"
@@ -114,7 +114,7 @@
         "user_name": "mgeddes",
         "first_name": "Michael",
         "last_name": "Geddes",
-        "email": "vimmer at frog.wheelycreek.net",
+        "email": "vimmer@frog.wheelycreek.net",
         "homepage": ""
       },
       "release_notes": "  - Ignore Errors when loading from idl.\n  - Try and match # and \\c &c support to match what really happens. (Reported by Wu Yongwei)\n  - Don't go into doxygen mode for /**/\n  - Fix up syncing of brief after a \\def or similar line - character\n    immediately following a leading asterisk were being hilighted long.\n  - Try and work out a better default font for \\c\n  - add support for \\code \\endcode \\verbatim \\endverbatim (no contained elements) (suggested Yongwei)\n  - add contained support for dot (\\dot \\enddot)\n  - support html <!-- --> comments.\n  - support for params inside \\c \\ref brackets (can contain spaces?).\n  - highlight closing */ as error when found inside \\code, \\verbatim sections as well as \\c, \\ref sections with\n    unmatched brackets. \n"
@@ -130,7 +130,7 @@
         "user_name": "mgeddes",
         "first_name": "Michael",
         "last_name": "Geddes",
-        "email": "vimmer at frog.wheelycreek.net",
+        "email": "vimmer@frog.wheelycreek.net",
         "homepage": ""
       },
       "release_notes": " - Fix up # support.\n - Highlight \\\\endlink properly.\n - Don&#039t mark */ as an error where there is no brief, or @{ is used.\n"
@@ -146,7 +146,7 @@
         "user_name": "mgeddes",
         "first_name": "Michael",
         "last_name": "Geddes",
-        "email": "vimmer at frog.wheelycreek.net",
+        "email": "vimmer@frog.wheelycreek.net",
         "homepage": ""
       },
       "release_notes": "- Make sure @c \\c and friends are equivalent for the start of a brief section.- Allow @c \\c and friends to cross lines. (Caveat, they can't be hard up  against a continuation '*' - it just gets tooo difficult).- Highlight a missing \\endlink as an error.- Fix multiline description without a '*' "
@@ -162,7 +162,7 @@
         "user_name": "mgeddes",
         "first_name": "Michael",
         "last_name": "Geddes",
-        "email": "vimmer at frog.wheelycreek.net",
+        "email": "vimmer@frog.wheelycreek.net",
         "homepage": ""
       },
       "release_notes": "- Patches from Wu Yongwei\n  * Include '-' in inline \\c \\e maching.\n  * \\see, \\return are multiline desc.\n  * \\throw can now handle std::alloc (colons were confusing it)\n- Fixed support for <a href=> links.\n- Reported by Wu Yongwei\n  * Handle [in,out] in \\param.\n  * Handle non-terminating . in a brief description (eg A.B)\n  * allow leading asterix inside HTML marks.\n  * Fix up <a> link hilighting when interupted by new-lines and comment\n  continuations.\n  * Handle the case where \\c \\ref etc are used at the beginning of a 'brief'\n  line.\n- Fixed termination of multiline at start of new command.\n- Include John McGehee's instructions.\n"

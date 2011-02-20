@@ -1,0 +1,27 @@
+{
+  "script_id": "3411",
+  "display_name": "syntax_check_embedded_perl.vim",
+  "summary": "automatically check the syntax of embedded perl code in vim scripts on save",
+  "name": "syntax_check_embedded_perl.vim",
+  "script_type": "ftplugin",
+  "description": "This script eases development of vim scripts that use embedded perl code by automatically checking the embedded perl code for compile-time errors when the scripts are saved.\n\nSo if you save a file with a syntax error you will get a message something like this:\n\n     :!~/.vim/syntax_check_embedded_perl.perl /some/file.vim /tmp/BjPcoMnIoe\n     Global symbol \"$syn_error_var\" requires explicit package name at /some/file.vim line 42.\n     BEGIN not safe after errors--compilation aborted at /some/file.vim line 46.\n     \n     /some/file.vim has embedded perl compilation errors.  The file has been saved anyway, but a copy of the old (pre-save) version of the file is available in /tmp/BjPcoMnIoe\n     \n     shell returned 1\n\n     Press ENTER or type command to continue\n\nThis supports a style of programming where source files are kept  with\nvalid syntax.  This is a particularly useful approach when embedding perl\nin vim as error propagation up through vim can get a bit wild.\n\nSee also http://www.vim.org/scripts/script.php?script_id=3406 for better\nrun-time error diagnostics.\n",
+  "install_details": "Its a standard vimball so all you need to do is:\n\n     vim update_perl_line_directives.vba\n     :so %",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14797",
+      "filename": "syntax_check_embedded_perl.vba",
+      "script_version": "0.1",
+      "date": "2011-01-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25501",
+        "user_name": "bkerin",
+        "first_name": "Britton",
+        "last_name": "Kerin",
+        "email": "britton.kerin@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

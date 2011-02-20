@@ -1,0 +1,75 @@
+{
+  "script_id": "3373",
+  "display_name": "blockle.vim",
+  "summary": "Toggle ruby block styles",
+  "name": "blockle.vim",
+  "script_type": "utility",
+  "description": "This plugin allows rapid toggling between the two different styles of ruby\nblocks, namely do/end and brackets {}. To use, simply move the cursor to the\nbeginning or end of a block, and type <Leader>b. As a mnemonic, remember 'b'\nfor 'block'.\n\nNote: You must have your cursor on the do, end, {, or } for the plugin to work\ncorrectly.\n\nWhen moving from a do/end to a bracket-style block, the plugin with attempt to\nmove to a one-liner if appropriate:\n\nFor example, if have the following ruby code:\n\n  ['one', 'two'].each do |number|\n    puts number + \"!\"\n  end\n\nAfter invoking <Leader>b, the resulting code would be:\n\n  ['one', 'two'].each { |number| puts number + \"!\" }\n\n",
+  "install_details": "Extract to ~/.vim, or ~\\vimfiles (Windows)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14827",
+      "filename": "blockle.tar.gz",
+      "script_version": "0.4",
+      "date": "2011-01-22",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "24194",
+        "user_name": "jgdavey",
+        "first_name": "Joshua",
+        "last_name": "Davey",
+        "email": "josh@joshuadavey.com",
+        "homepage": ""
+      },
+      "release_notes": "Bugfixes: save clipboard settings and content, preserve anonymous register"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14595",
+      "filename": "blockle.tar.gz",
+      "script_version": "0.3",
+      "date": "2010-12-21",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "24194",
+        "user_name": "jgdavey",
+        "first_name": "Joshua",
+        "last_name": "Davey",
+        "email": "josh@joshuadavey.com",
+        "homepage": ""
+      },
+      "release_notes": "Better detection when inside of a block"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14580",
+      "filename": "blockle.tar.gz",
+      "script_version": "0.2",
+      "date": "2010-12-20",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "24194",
+        "user_name": "jgdavey",
+        "first_name": "Joshua",
+        "last_name": "Davey",
+        "email": "josh@joshuadavey.com",
+        "homepage": ""
+      },
+      "release_notes": "Lots of bugfixes. Better support for nested inline blocks."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14559",
+      "filename": "blockle.tar.gz",
+      "script_version": "0.1",
+      "date": "2010-12-18",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "24194",
+        "user_name": "jgdavey",
+        "first_name": "Joshua",
+        "last_name": "Davey",
+        "email": "josh@joshuadavey.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

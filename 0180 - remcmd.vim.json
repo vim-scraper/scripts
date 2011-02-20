@@ -18,7 +18,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added register sharing capability with some limitations. You can specify a list of comma separated local registers to be synced to remote registers. You can even specify a different remote register than the local one. The following is very useful:\n\n  let g:remcmdRegisters='\"'\n  let g:remcmdRemoteRegisters='r'\n\nThis makes whatever you copy in whichever Vim window always available in the r (for remote) register of other vim windows. However there are some limitations, it doesn't automatically sync when the yank (or delete) command starts with y (or d), such as y'a. Use RCmdSyncRegisters or the SyncRegisters menu (if menu is enabled) to force a sync. You can enable the main menu or popup menu by setting the following variables:\n\n    let g:remcmdAddToMenu=1\n    let g:remcmdAddToPopupMenu=1\n\nPlease see the script for more features, sorry I don't have time to write a help page. Please send in your feedback."
@@ -34,7 +34,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added RCmdPresetServer command that takes in a server name to be used for all the operations. Until you call the same command passing an empty string \"\", you will not prompted to select the server, which makes it easy to execute repeated remote commands in the same remote session.\n\nAlso added two new commands \\sf and \\sb to search forward and backward for the current word in the remote session."
@@ -50,7 +50,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

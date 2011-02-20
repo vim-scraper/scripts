@@ -18,7 +18,7 @@
         "user_name": "diffusor",
         "first_name": "Steven",
         "last_name": "Mueller",
-        "email": "diffusor at ugcs.caltech.edu",
+        "email": "diffusor@ugcs.caltech.edu",
         "homepage": ""
       },
       "release_notes": "Bugfix release: Changed function names to be script-local to avoid conflicts with other scripts' stack implementations.\n"
@@ -34,7 +34,7 @@
         "user_name": "diffusor",
         "first_name": "Steven",
         "last_name": "Mueller",
-        "email": "diffusor at ugcs.caltech.edu",
+        "email": "diffusor@ugcs.caltech.edu",
         "homepage": ""
       },
       "release_notes": "Added synID()-based comment awareness:\nComment checking is now handled by vim's internal syntax checking.  Closing tags outside comments only matches non-commented tags.  Closing tags in comments matches only tags within comments, skipping blocks of normal code (wee!).  Can be really slow if syn sync minlines is large.  Set the b:closetag_disable_synID variable to disable comment contexts if it's too slow.\n\nNormal mode closetag now uses <C-R> in insert mode rather than p in normal mode:  Tag closing no longer clobbers the unnamed register, and (for vim 6.0) Doesn't modify the undo buffer when no change was made.  Made closetag_html_style variable buffer-local.  Improved documentation (hopefully).\n\nConfiguration Variables rundown:\n- b:unaryTagsStack            Buffer local string containing a whitespace seperated list of element names that should be ignored while finding matching closetags.  Checking is done according to the current setting of the ignorecase option.\n- b:closetag_html_style       Define this (as with let b:closetag_html_style=1) and source the script again to set the unaryTagsStack to its default value for html.\n- b:closetag_disable_synID    Define this to disable comment checking if tag closing is too slow.\n"
@@ -50,7 +50,7 @@
         "user_name": "diffusor",
         "first_name": "Steven",
         "last_name": "Mueller",
-        "email": "diffusor at ugcs.caltech.edu",
+        "email": "diffusor@ugcs.caltech.edu",
         "homepage": ""
       },
       "release_notes": "Initial upload"

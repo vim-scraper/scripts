@@ -1,0 +1,27 @@
+{
+  "script_id": "3452",
+  "display_name": "mxl.vim",
+  "summary": "MaxL script syntax file",
+  "name": "mxl.vim",
+  "script_type": "syntax",
+  "description": "MaxL script syntax file, should be up-to-date with all features of Essbase 9.  If anything is missing, broken, not working well on your setup, or an inconvenience for you, please let me know, all feedback is welcome: <yyq123 at gmail.com>.\n\nScreenshots:\n-------------\nhttp://www.flickr.com/photos/yyq123/5435807280/",
+  "install_details": "1. Copy csc.vim to: ~/.vim/syntax/mxl.vim or c:\\program files\\vim\\vimfiles\\syntax\\mxl.vim\n2. Add the following three lines of commands to $VIMHOME\\filetype.vim\n   augroup filetypedetect\n   au BufNewFile,BufRead *.mxl\t\t\tsetf mxl\n   augroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15010",
+      "filename": "mxl.vim",
+      "script_version": "0.1",
+      "date": "2011-02-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "24594",
+        "user_name": "yyq123",
+        "first_name": "Anthony",
+        "last_name": "Yuan",
+        "email": "yyq123@gmail.com",
+        "homepage": "http://yyq123.blogspot.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

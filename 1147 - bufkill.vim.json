@@ -4,9 +4,41 @@
   "summary": "Unload/delete/wipe a buffer, keep its window(s), display last accessed buffer(s)",
   "name": "bufkill.vim",
   "script_type": "utility",
-  "description": "Basic Usage:\nWhen you want to unload/delete/wipe a buffer, use:\n  :bun/:bd/:bw to close the window as well (vim command), or\n  :BUN/:BD/:BW to leave the window(s) intact (this script).\nMappings are also defined.\n\nDetailed Description: \nThis is a script to \na) unload, delete or wipe a buffer without closing the window (or windows) \n    it was displayed in\nb) in its place, display the buffer most recently used in each window \n    it was displayed in.  This selection is taken from the full list of \n    buffers ever displayed in each respective window (since vim was started)\nc) allow one level of undo in case you kill a buffer then change your mind\nd) allow various customisations via option variables\n\nThe inspiration for this script came from\na) my own frustration with vim's lack of this functionality\nb) the description of the emacs kill-buffer command in vimtip #622\n   (this script basically duplicates this command I believe,\n   not sure about the undo functionality)\nc) comments and many mails from Keith Roberts when the issue was \n   raised in the vim@vim.org mailing list.",
+  "description": "Basic Usage:\nWhen you want to unload/delete/wipe a buffer, use:\n  :bun/:bd/:bw to close the window as well (vim command), or\n  :BUN/:BD/:BW to leave the window(s) intact (this script).\nTo move backwards and forwards through the chronological \nlist of buffers accessed, use :BB and :BF, respectively.\nMappings are also defined.\n\nDetailed Description: \nThis is a script to \na) unload, delete or wipe a buffer without closing the window (or windows) \n    it was displayed in\nb) in its place, display the buffer most recently used in each window \n    it was displayed in.  This selection is taken from the full list of \n    buffers ever displayed in each respective window (since vim was started)\nc) allow one level of undo in case you kill a buffer then change your mind\nd) allow various customizations via option variables\n\nSince the script maintains a list of buffer access order for each window, \ncommands are also provided to move backwards and forwards between \nthe buffers in this order, similar to going backwards and forwards in a\nweb browser.\n\nThe inspiration for this script came from\na) my own frustration with vim's lack of this functionality\nb) the description of the emacs kill-buffer command in vimtip #622\n   (this script basically duplicates this command I believe,\n   not sure about the undo functionality)\nc) comments and many mails from Keith Roberts when the issue was \n   raised in the vim@vim.org mailing list.",
   "install_details": "The usual - drop the file into your $HOME/.vim/plugin directory (unix)\nor $HOME/vimfiles/plugin directory (Windows), etc.\nUse the commands/mappings defined to invoke the functionality \n(or redefine them elsewhere to what you want), and set the \nUser Configurable Variables as desired.  You should be able to make\nany customisations to the controls in your vimrc file, such that \nupdating to new versions of this script won't affect your settings.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14660",
+      "filename": "bufkill.vim",
+      "script_version": "1.9",
+      "date": "2010-12-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6380",
+        "user_name": "John Orr",
+        "first_name": "John",
+        "last_name": "Orr",
+        "email": "john undersc0re orr yah00 c0m",
+        "homepage": ""
+      },
+      "release_notes": "Remove unnecessary mapping delays, and a debug message"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14658",
+      "filename": "bufkill.vim",
+      "script_version": "1.8",
+      "date": "2010-12-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6380",
+        "user_name": "John Orr",
+        "first_name": "John",
+        "last_name": "Orr",
+        "email": "john undersc0re orr yah00 c0m",
+        "homepage": ""
+      },
+      "release_notes": "Improved mapping handling, and robustness"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13169",
       "filename": "bufkill.vim",

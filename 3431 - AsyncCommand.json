@@ -1,0 +1,27 @@
+{
+  "script_id": "3431",
+  "display_name": "AsyncCommand",
+  "summary": "Execute commands and have them send their result to vim when they complete",
+  "name": "AsyncCommand",
+  "script_type": "utility",
+  "description": "AsyncCommand allows you to execute shell commands without waiting for them\nto complete. When the application terminates, its output can be loaded into\na vim buffer. AsyncCommand is written to be compatible with Windows and\nLinux (tested on Win7 and Ubuntu 10.10).\n\nCurrently three types of commands are supported:\nAsyncGrep   -- grep for files and load results in quickfix\nAsyncShell  -- run any program and load results in a split\nand three cscope commands: AsyncCscopeFindSymbol, AsyncCscopeFindCalls, AsyncCscopeFindX\n\nYou can define your own commands commands by following the same format:\nDefine the launch function that passes the external command and result\nfunction to AsyncCommand (like AsyncHello), define the complete function\n(like OnCompleteLoadFile).\n\nExample:\nfunction! AsyncHello(query)\n    \" echo hello and the parameter\n    let hello_cmd = \"echo hello \".a:query\n    \" just load the file when we're done\n    let vim_func = \"OnCompleteLoadFile\"\n\n    \" call our core function to run in the background and then load the\n    \" output file on completion\n    call AsyncCommand(hello_cmd, vim_func)\nendfunction\n\nNote that cscope functions require these variables:\n  let g:cscope_database = **full path to cscope database file**\n  let g:cscope_relative_path = **folder containing cscope database file**\nThese variables are set by tagfilehelpers.vim -- https://github.com/pydave/daveconfig/blob/master/multi/vim/.vim/plugin/tagfilehelpers.vim\n\n\nPlease report bugs to https://github.com/pydave/daveconfig/issues",
+  "install_details": "Add to your ~/.vim/plugin/ directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14916",
+      "filename": "asynccommand.vim",
+      "script_version": "1.0",
+      "date": "2011-01-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "26033",
+        "user_name": "pydave",
+        "first_name": "David",
+        "last_name": "Briscoe",
+        "email": "pydave+vim@gmail.com",
+        "homepage": "http://0sense.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

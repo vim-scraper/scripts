@@ -1,0 +1,59 @@
+{
+  "script_id": "3407",
+  "display_name": "headerGatesAdd.vim",
+  "summary": "automatic inser C/C++ header gates",
+  "name": "headerGatesAdd.vim",
+  "script_type": "utility",
+  "description": "C/C++ header files should be guarded against multiple inclusions using preprocessor directives, e.g.:\nlet g:HeaderGatesAdd_suffix=\"_H\"   is default  \n1.\nfoo_n.h  or  FooN.h  or  foo n.h  ...\n#ifndef FOO_N_H\n#define FOO_N_H\n\n#endif   /*FOO_N_H*/\n\nif you set  let g:HeaderGatesAdd_suffix=\"__\"\nit could be   FOO_N__\n2.\nif add let g:insert_extern_c_flag=1 in .vimrc or _vimrc\nwhen you create a new file name foo_h.h  it look like this:\n#ifndef FOO_N_H\n#define FOO_N_H\n\n#ifdef __cplusplus\nextern \"C\" {\n#endif\n\n\n#ifdef __cplusplus\n}\n#endif\n\n#endif  /*FOO_N_H*/\n\n3.\n:HeaderGatesAdd\nthis command will change \n/**\n * @file        foo_n.h\n * @version     0.1.00\n */\n\nvoid test();\n\nto:\n/**\n * @file        foo_n.h\n * @version     0.1.00\n */\n#ifndef FOO_N_H\n#define FOO_N_H\n\n#ifdef __cplusplus\nextern \"C\" {\n#endif\n\nvoid test();\n\n#ifdef __cplusplus\n}\n#endif\n\n#endif  /*FOO_N_H*/\n\n4.\nlet g:HeaderGatesAdd_prefix=\"__\"    \nfoo_n.h ---------> __FOO_N\n5.\nlet g:HeaderGatesAdd_suffix=\"_SUFFIX\"\nfoo_n.h ---------> FOO_N_SUFFIX\n\n6.\nin case of suffix and prefix both null:\nlet g:HeaderGatesAdd_gate_type=0 is default\naTestFile.h  ---------> A_TEST_FILE\n\nlet g:HeaderGatesAdd_gate_type=1\naTestFile.h  ---------> ATESTFILE\n\nlet g:HeaderGatesAdd_gate_type=2\naTestFile.h  --------->aTestFile\n\nmay be you have other style,  u can send email to me.\nthe end please forgive my poor english",
+  "install_details": " python required\ncopy the script file into to the plugin directory of Vimfiles, such as ~/.vim/plugin/ ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14800",
+      "filename": "headerGatesAdd.vim",
+      "script_version": "1.2",
+      "date": "2011-01-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25515",
+        "user_name": "zengming",
+        "first_name": "帅",
+        "last_name": "得不敢出门",
+        "email": "tczengming at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "add   let g:HeaderGatesAdd_gate_type\nand  default   let g:HeaderGatesAdd_suffix=\"_H\"   "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14786",
+      "filename": "headerGatesAdd.vim",
+      "script_version": "1.1",
+      "date": "2011-01-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25515",
+        "user_name": "zengming",
+        "first_name": "帅",
+        "last_name": "得不敢出门",
+        "email": "tczengming at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "add   g:HeaderGatesAdd_prefix    g:HeaderGatesAdd_suffix"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14785",
+      "filename": "headerGatesAdd.vim",
+      "script_version": "1.0",
+      "date": "2011-01-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25515",
+        "user_name": "zengming",
+        "first_name": "帅",
+        "last_name": "得不敢出门",
+        "email": "tczengming at 163.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

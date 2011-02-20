@@ -4,7 +4,7 @@
   "summary": "XP's Snippet Template engine for vim",
   "name": "xptemplate",
   "script_type": "utility",
-  "description": "Code snippets engine for Vim, with snippets library.\nXPTemplate let you write codes in a smooth, quick and comfortable way.\n\n=======================   Usage   =======================\n\nvim xpt.c\n// Type  \"for<C-\\>\" :\nfor (i = 0; i < len; ++i) {\n   /* cursor */\n}\nPress <tab>,<tab>.. to navigate through \"i\", \"0\", \"len\". Cursor will finally stops at \"/* cursor */\".\n\n\n=======================   Features   =======================\n\n* Live update while typing\n* Navigate forward and backward. <Tab> and <S-Tab>\n* Embed language support like JAVASCRIPT in HTML. Or HTML in PHP\n* Wrapper\n* Smart indent\n* Spacing and line-break of snippet can be easily changed to fit your coding style\n* Pop up menu friendly\n\n\n=======================   Resources   =======================\n\nScreencast : 0.3.9 :  http://code.google.com/p/xptemplate/wiki/ScreenCasts;\n\nGet the latest trunk from svn : http://xptemplate.googlecode.com/svn/trunk/dist;\nProject Home : http://code.google.com/p/xptemplate;\nDiscuss, Bug report, Feature request : http://groups.google.com/group/xptemplate;\nFollow me: http://twitter.com/xptemplate;\n\n*** Troubleshoot / supertab support / bracket complete / other question ***\nhttp://code.google.com/p/xptemplate/wiki/FAQ\n\n\n=======================   Compatibilities   =======================\n\nSupported platform:  Linux, WinXP, // [g]vim 7.2\nSupported Language:  ada c cabal cpp cs css dot erlang gitconfig gnuplot haskell html java javascript lex lua make ocaml perl php ps1 python r ruby(eruby) scheme sh tcl tex vim xml xpt xslt yacc\n\n**Bundles: c_autoimplem cpp_autoimplem javascript_jquery\n\n\nSpecial Thanks to ^0^ : \nChristian.Coutinho  Vincent Berthoux  Fabio  Simon Ruderich",
+  "description": "Code snippets engine for Vim, with snippets library.\nXPTemplate let you write codes in a smooth, quick and comfortable way.\n\n=======================   Usage   =======================\n\nvim xpt.c\n// Type  \"for<C-\\>\" :\nfor (i = 0; i < len; ++i) {\n   /* cursor */\n}\nPress <tab>,<tab>.. to navigate through \"i\", \"0\", \"len\". Cursor will finally stops at \"/* cursor */\".\n\n\n=======================   Features   =======================\n\n* Live update while typing\n* Navigate forward and backward. <Tab> and <S-Tab>\n* Embed language support like JAVASCRIPT in HTML. Or HTML in PHP\n* Wrapper\n* Smart indent\n* Spacing and line-break of snippet can be easily changed to fit your coding style\n* Pop up menu friendly\n\n\n=======================   Resources   =======================\n\nScreencast : 0.3.9 :  http://code.google.com/p/xptemplate/wiki/ScreenCasts;\n\nGet From SVN: http://xptemplate.googlecode.com/svn/trunk/dist;\nGet From GIT(/dist ): git://github.com/drmingdrmer/xptemplate.git;\nProject Home : http://code.google.com/p/xptemplate;\nDiscuss, Bug report, Feature request : http://groups.google.com/group/xptemplate;\nFollow me: http://twitter.com/xptemplate;\n\n*** Troubleshoot / supertab support / bracket complete / other question ***\nhttp://code.google.com/p/xptemplate/wiki/FAQ\n\n\n=======================   Compatibilities   =======================\n\nSupported platform:  Linux, WinXP, // [g]vim 7.2\nSupported Language:  ada c cabal cpp cs css dot erlang gitconfig gnuplot haskell html java javascript lex lua make ocaml perl php ps1 python r ruby(eruby) scheme sh tcl tex vim xml xpt xslt yacc\n\n**Bundles: c_autoimplem cpp_autoimplem javascript_jquery\n\n\nSpecial Thanks to ^0^ : \nChristian.Coutinho  Vincent Berthoux  Fabio  Simon Ruderich",
   "install_details": "copy files(xpt/*) into runtime path(.vim/).\n:helptags path_to_xpt/doc\n:help xpt\n\nAnd you need at least turn on these 2 settings in \".vimrc\" :\nset nocompatible\nfiletype plugin  on\n\n",
   "versions": [
     {
@@ -18,7 +18,7 @@
         "user_name": "drdr.xp",
         "first_name": "drdr",
         "last_name": "xp",
-        "email": "drdr.xp at gmail.com",
+        "email": "drdr.xp@gmail.com",
         "homepage": ""
       },
       "release_notes": "fix bug that with \"fo+=ta\" xpreplace messes up text. Reported by koelner.r"
@@ -34,7 +34,7 @@
         "user_name": "drdr.xp",
         "first_name": "drdr",
         "last_name": "xp",
-        "email": "drdr.xp at gmail.com",
+        "email": "drdr.xp@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fix: bug of converting space to tab"
@@ -50,7 +50,7 @@
         "user_name": "drdr.xp",
         "first_name": "drdr",
         "last_name": "xp",
-        "email": "drdr.xp at gmail.com",
+        "email": "drdr.xp@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fix: mistakingly using SPop as SParg in bracket completion. "
@@ -66,7 +66,7 @@
         "user_name": "drdr.xp",
         "first_name": "drdr",
         "last_name": "xp",
-        "email": "drdr.xp at gmail.com",
+        "email": "drdr.xp@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fix: bracket following multi-bytes char breaks the previous char"
@@ -82,7 +82,7 @@
         "user_name": "drdr.xp",
         "first_name": "drdr",
         "last_name": "xp",
-        "email": "drdr.xp at gmail.com",
+        "email": "drdr.xp@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fix bug that xpreplace sometimes removes chars if folding enabled.\n\nFix nav-key issue with selection set to be exclusive.\n"
@@ -98,7 +98,7 @@
         "user_name": "drdr.xp",
         "first_name": "drdr",
         "last_name": "xp",
-        "email": "drdr.xp at gmail.com",
+        "email": "drdr.xp@gmail.com",
         "homepage": ""
       },
       "release_notes": "fix problem that pressing <Tab> with pum unclosed gets chars lost"
@@ -114,7 +114,7 @@
         "user_name": "drdr.xp",
         "first_name": "drdr",
         "last_name": "xp",
-        "email": "drdr.xp at gmail.com",
+        "email": "drdr.xp@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fix: brace completion bug with pop up menu opened. Thanks to yeskky reporting this issue.\n\nAdd: 3 new filetypes : gitconfig, gnuplot, r. Simple and useful. Thanks to Vicent B"
@@ -130,7 +130,7 @@
         "user_name": "drdr.xp",
         "first_name": "drdr",
         "last_name": "xp",
-        "email": "drdr.xp at gmail.com",
+        "email": "drdr.xp@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fix some mistakes in doc. \nFix but with repetition started at the first char.\nFix <expr> mapping bug"
@@ -146,7 +146,7 @@
         "user_name": "drdr.xp",
         "first_name": "drdr",
         "last_name": "xp",
-        "email": "drdr.xp at gmail.com",
+        "email": "drdr.xp@gmail.com",
         "homepage": ""
       },
       "release_notes": "Add: autoimplemen bundle for c and cpp.\nFix: cross-line place holder is created incorrectly.\n\nPlenty Thanks to  Vincent B and Simon Ruderich."
@@ -162,7 +162,7 @@
         "user_name": "drdr.xp",
         "first_name": "drdr",
         "last_name": "xp",
-        "email": "drdr.xp at gmail.com",
+        "email": "drdr.xp@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fix: auto-indent bug"
@@ -178,7 +178,7 @@
         "user_name": "drdr.xp",
         "first_name": "drdr",
         "last_name": "xp",
-        "email": "drdr.xp at gmail.com",
+        "email": "drdr.xp@gmail.com",
         "homepage": ""
       },
       "release_notes": "fix: improve non-word char snippet name support\nfix: when <tab> pressed to go to next, pum does not close and it swallows some chars\nfix: removes all XPTemplateDef command\nfix: supertab does not work well\nfix: pum bug mess text.\nfix: edges with quotes are wrongly evaluated.\n"
@@ -194,7 +194,7 @@
         "user_name": "drdr.xp",
         "first_name": "drdr",
         "last_name": "xp",
-        "email": "drdr.xp at gmail.com",
+        "email": "drdr.xp@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fix : vim halts when XPT searching for keywords"

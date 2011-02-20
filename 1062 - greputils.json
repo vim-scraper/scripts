@@ -18,7 +18,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Support for inversing the search pattern. You can pass \"!\" to built-in grep commands.\n- Fixed broken GrepBufs command.\n"
@@ -34,7 +34,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed broken Cfile command.\n"
@@ -50,7 +50,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Just added support for specifying range for all the built-in grep commands. Useful mainly for GrepBufs command.\n"
@@ -66,7 +66,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Better handling of unsaved and unnamed buffers while doing built-in grep.\n- New setting g:greputilsPreserveAllResults to be able to undo over\n  several search results, as far as Vim allows you to do.\n- Better integration with selectbuf so that the built-in grep performs\n  better, if both plugins are installed (need to get the latest\n  selectbuf).\n- Much better handling of opening and closing preview window. Requires\n  the latest version genutils.vim.\n- Misc. bug fixes. Update documentation.\n"
@@ -82,7 +82,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Augmented the built-in grep (:WinGrep, :ArgGrep, :BufGrep)\n  functionality with the new command :GrepBufs to grep specified\n  buffers only. This is very similar to unix :grep command with given\n  filenames.\n- New commands :GOpen, :GClose and :GWindow on the lines of :copen,\n  :cclose and :cwindow to work with the preview window. The existing\n  commands :GNext, :GPrev and :GG commands now work globally, just like\n  the :cnext, :cprev and :cc commands.\n- Fixed misc. bugs.\n"
@@ -98,7 +98,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "\t- Misc. improvements for Grep Preview window.\n\t  - The Grep Preview window now implements undo functionality to be able\n\t    to undo and recover the previous result set.\n\t  - When you add results to the existing results, the results sets are\n\t    folded such that you can easily distinguish them.\n\t  - Preview window shouldn't be resized if it is already visible.\n\t- The grep commands that utilize the Vim's built-in grep functionality\n\t  are refined and are more useful than ever.\n\t  - They now have command-line completion enabled to complete tags.\n\t  - <cword> and <cWORD> were not being expanded for Vim-grep\n\t    commands.\n\t  - Cleanup the grep window for \"pattern not found\" error messages and\n\t    such.\n\t  - The current buffer is restored at the end of the operation.\n\t  - Vim event generation is disabled. This provides a significant\n\t    improvement in the speed as well as avoid side effects. This along\n\t    with the above improvement also makes the grep operation look\n\t    completely tranparent.\n\t- New useful GrepPreviewSetup command.\n\t- On windows, setting multiple ID files in IDPATH doesn't work, as it\n\t  does on *NIX. The plugin works around this problem by invoking lid on\n\t  individual ID files and gathering all the results.\n\t- If you use findstr on windows, grepping on a single file doesn't\n\t  generate the results in the right format (no filename prefix etc.).\n\t  The plugin now works around this issue.\n\t- See help on new settings g:greputilsVimGrepSepChar,\n\t  g:greputilsPreviewCreateFolds and g:greputilsPreserveLastResults.\n"
@@ -114,7 +114,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Added BufGrep, WinGrep and ArgGrep commands that use the Vim's built-in g/re/p command with :bufdo, :windo and :argdo respectively to do search. This is an experimental feature, please try it and give feedback.\n- Also fixed a couple or more of minor bugs.\n"
@@ -130,7 +130,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Requires Vim 6.3\n- Added support for running GNU find command and open the files from preview or through quickfix result.\n- Basic quickfix like commands have been added to the [Grep Preview] window. This is very useful if you want to quickly reach one or two files by running \"find\" or \"lid\" and don't care about the full results.\n- The default completion mode for grep has been changed to \"file\" from \"tag\", which is what is more useful.\n- Fixed :Cfile and :Cgetfile to work correctly if the current directory has changed since the results are generated.\n"
@@ -146,7 +146,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "This is an enhanced version of idutils.vim, made more generic and supports regular :grep command too. See description for information on the new version. Needs Vim 6.3\n"

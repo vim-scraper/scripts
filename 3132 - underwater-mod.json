@@ -4,9 +4,25 @@
   "summary": "Eye-pleasing dark blue scheme based on Underwater colorscheme",
   "name": "underwater-mod",
   "script_type": "color scheme",
-  "description": "Underwater-mod is a tweak of a favorite theme, Underwater [1]. Colors for NERDTree, Ruby, ERB, HAML and HTML elements were assigned. Tweaks to general colors, like vertical split, give Vim a simpler appearance.  See screenshot [2] which uses Consolas font.\n\nThe MacVim downloadable from [3] does not render accurate colors. To see the difference, compare your MacVim using this theme against my screenshot. Subtle themes like Zenburn look really washed out. The fix is to compile MacVim [4], or better yet install with the excellent Homebrew package manager [5]. \n\n[1] http://www.vim.org/scripts/script.php?script_id=2977\n[2] http://img193.imageshack.us/img193/8104/screenshot20100623at319.png\n[3] http://code.google.com/p/macvim/\n[4] http://code.google.com/p/macvim/wiki/Building\n[5] http://mxcl.github.com/homebrew/",
-  "install_details": "Dowload. From terminal, copy the file to colors folder:\n    cp ~/Downloads/underwater-mod.vim ~/.vim/colors\n\nUsing pathogen? Here's the github URL.\n  git://github.com/mgutz/vim-colors-mgutz.git\n\nIn vim, use the color scheme:\n  :colo underwater-mod",
+  "description": "Underwater-mod is a mod of Underwater [1]. Colors for NERDTree, Ruby, ERB, HAML and HTML elements are assigned. Tweaks to general colors, like vertical split, give Vim a simpler appearance.  See screenshot [2] which uses Consolas font.\n\n[1] http://www.vim.org/scripts/script.php?script_id=2977\n[2] http://img193.imageshack.us/img193/8104/screenshot20100623at319.png",
+  "install_details": "Dowload. From terminal, copy the file to colors folder:\n  cp ~/Downloads/underwater-mod.vim ~/.vim/colors\n\nUsing pathogen? https://github.com/mgutz/vim-colors\n\nIn vim, use the color scheme:\n  :colo underwater-mod",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14657",
+      "filename": "underwater-mod.vim",
+      "script_version": "0.3",
+      "date": "2010-12-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16507",
+        "user_name": "mgutz",
+        "first_name": "Mario",
+        "last_name": "Gutierrez",
+        "email": "nextmario@hotmail.com",
+        "homepage": "http://mgutz.com"
+      },
+      "release_notes": "many color tweaks"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13273",
       "filename": "underwater-mod.vim",
@@ -18,7 +34,7 @@
         "user_name": "mgutz",
         "first_name": "Mario",
         "last_name": "Gutierrez",
-        "email": "nextmario at hotmail.com",
+        "email": "nextmario@hotmail.com",
         "homepage": "http://mgutz.com"
       },
       "release_notes": "* private/public Ruby access\n* less overpowering TODO\n* help documents fix \n* markdown changes for syntax: http://www.vim.org/scripts/script.php?script_id=1242\n* HAML tag\n* Tab colors\n"
@@ -34,7 +50,7 @@
         "user_name": "mgutz",
         "first_name": "Mario",
         "last_name": "Gutierrez",
-        "email": "nextmario at hotmail.com",
+        "email": "nextmario@hotmail.com",
         "homepage": "http://mgutz.com"
       },
       "release_notes": "Initial upload"

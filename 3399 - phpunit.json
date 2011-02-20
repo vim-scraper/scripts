@@ -1,0 +1,27 @@
+{
+  "script_id": "3399",
+  "display_name": "phpunit",
+  "summary": "Plugin to run phpunit test inside vim",
+  "name": "phpunit",
+  "script_type": "utility",
+  "description": "USAGE\n------------\n\nScript provide three command\n\n:PhpUnit [path]\n\nrun phpunit with path. Path is not manadatory. If Path is not defined it vim-phpunit use <g:phpunit_tests> variable\n\n:PhpUnitSwitchFile\n\nOpen testfile for current file. Name of testfile is taken from curent path in following way:\n<g:phpunit_testroot>/<current path>/<file name>Test.php\nand vice versa for testing file (if you are on test file, it will open source file complementary to testfile)\n\nversion 0.1 doesn't care about path existence - it's your responsibility\n(maybe in next version)\n\n:PhpUnitFile\n\nrun phpunit for current file. There is heuristic like :PhpUnitSwitchFile\neg. \n[file] dir/file.php => [test] <g:phpunit_testroot>/dir/fileTest\n[file] <g:phpunit_testroot>/dir/fileTest => [test] <g:phpunit_testroot>/dir/fileTest\n\nKEYMAPPING\n-----------------------\n\n<Leader>t   :PhpUnit                           \" hint: test\n<Leader>tf  :PhpUnitFile                      \" hint: test file\n<Leader>ts :PhpUnitSwitchFile            \" hint: test swich (swap)\n\n\nHOMEPAGE\n------------------- \nhttps://github.com/klokane/vim-phpunit\n\n\nYour suggestions are welcomed (best way: issue request tracker on github)\n\n",
+  "install_details": "just save into you plugins directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14722",
+      "filename": "phpunit.vim",
+      "script_version": "0.1",
+      "date": "2011-01-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25102",
+        "user_name": "klokane",
+        "first_name": "Jiri",
+        "last_name": "Kratochvil",
+        "email": "kratochvil@klok.cz",
+        "homepage": "http://klok.cz"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "script_id": "3404",
+  "display_name": "Google translator",
+  "summary": "Ajax Google translator",
+  "name": "Google-translator",
+  "script_type": "utility",
+  "description": "This plugin uses Ajax Google Translator (\"http://ajax.googleapis.com/&quot;)\n\nDescription:\nThis plugin allows you to translate text using the google online translator.\nYou can translate as single words and whole blocks using visual-mode.\n\nNote: \nWith a large number of text program can take some time\n\nDepending:\n1) Ruby                  (Ubuntu: sudo apt-get install ruby)\n2) Ruby gem json (Ubuntu: sudo gem install json)\n\nUse:\n:Translate Hello World\n",
+  "install_details": "Put file in Vim plugin directory (.vim/plugin)\nAdd your .vimrc file string [ let g:langpair=\"en|ru\" ] whre \"en\" <-  form English,  to Russian ->\"ru\"\n\nTo use the translation selected text in visual-mode. You must define in your .vimrc  'g:vtranslate'.\nexample: $>let g:vtranslate=\"T\" note: where \"T\" is shortcut key in visual-mode \n\nYou can change the color of the translated text using the command  :echohl\n\nlanguage code iso 639-1",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14841",
+      "filename": "gtranslate.vim",
+      "script_version": "1.2.3",
+      "date": "2011-01-24",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "25325",
+        "user_name": "maksimr",
+        "first_name": "Maksim",
+        "last_name": "Ryzhikov",
+        "email": "rv.maksim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix bug  \"Request-URI Too Large\"\nAdded possibility to change the color translate text"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14831",
+      "filename": "gtranslate.vim",
+      "script_version": "1.21b",
+      "date": "2011-01-22",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "25325",
+        "user_name": "maksimr",
+        "first_name": "Maksim",
+        "last_name": "Ryzhikov",
+        "email": "rv.maksim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New implementation of the translation of the selected block of text.\nadd ruby require CGI."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14808",
+      "filename": "gtranslate.vim",
+      "script_version": "1.1",
+      "date": "2011-01-20",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "25325",
+        "user_name": "maksimr",
+        "first_name": "Maksim",
+        "last_name": "Ryzhikov",
+        "email": "rv.maksim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added auto-completion"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14753",
+      "filename": "gtranslate.vim",
+      "script_version": "1.0",
+      "date": "2011-01-15",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "25325",
+        "user_name": "maksimr",
+        "first_name": "Maksim",
+        "last_name": "Ryzhikov",
+        "email": "rv.maksim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

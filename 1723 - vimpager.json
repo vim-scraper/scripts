@@ -4,9 +4,25 @@
   "summary": "Use ViM as PAGER",
   "name": "vimpager",
   "script_type": "utility",
-  "description": "A slightly more sophisticated replacement for less.sh that also supports being set as the PAGER environment variable.\nDisplays man pages, perldocs and python documentation properly.\nDefinitely works on Linux, Solaris, OSX and Cygwin. Should work in most other places, if it detects your \"ps\" correctly.",
+  "description": "A slightly more sophisticated replacement for less.sh that also supports being set as the PAGER environment variable.\nDisplays man pages, perldocs and python documentation properly.\nDefinitely works on Linux, Solaris, OSX and Cygwin. Should work in most other places, if it detects your \"ps\" correctly.\n\nOn github:\nhttp://github.com/rkitover/vimpager",
   "install_details": "mkdir ~/bin\ncp vimpager ~/bin\nchmod +x ~/bin/vimpager\n\n# put these in your ~/.bashrc or ~/.zshrc\nexport PAGER=~/bin/vimpager\nalias less=$PAGER",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14694",
+      "filename": "vimpager",
+      "script_version": "1.4",
+      "date": "2011-01-07",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11267",
+        "user_name": "Caelum",
+        "first_name": "Rafael",
+        "last_name": "Kitover",
+        "email": "rkitover@io.com",
+        "homepage": ""
+      },
+      "release_notes": "* fix for python2 docs on archlinux from Ivan S. Freitas"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13024",
       "filename": "vimpager",
@@ -18,7 +34,7 @@
         "user_name": "Caelum",
         "first_name": "Rafael",
         "last_name": "Kitover",
-        "email": "rkitover at io.com",
+        "email": "rkitover@io.com",
         "homepage": ""
       },
       "release_notes": "* added 'set nonu'"
@@ -34,7 +50,7 @@
         "user_name": "Caelum",
         "first_name": "Rafael",
         "last_name": "Kitover",
-        "email": "rkitover at io.com",
+        "email": "rkitover@io.com",
         "homepage": ""
       },
       "release_notes": "* fix for FreeBSD\n* add esc-u mapping to turn off hlsearch"
@@ -50,7 +66,7 @@
         "user_name": "Caelum",
         "first_name": "Rafael",
         "last_name": "Kitover",
-        "email": "rkitover at io.com",
+        "email": "rkitover@io.com",
         "homepage": ""
       },
       "release_notes": "Fix bug where it wouldn't move on searches at launch without moving the cursor first"
@@ -66,7 +82,7 @@
         "user_name": "Caelum",
         "first_name": "Rafael",
         "last_name": "Kitover",
-        "email": "rkitover at io.com",
+        "email": "rkitover@io.com",
         "homepage": ""
       },
       "release_notes": "Fix for perldoc on Cygwin"
@@ -82,7 +98,7 @@
         "user_name": "Caelum",
         "first_name": "Rafael",
         "last_name": "Kitover",
-        "email": "rkitover at io.com",
+        "email": "rkitover@io.com",
         "homepage": ""
       },
       "release_notes": "Fix for filenames with spaces."
@@ -98,7 +114,7 @@
         "user_name": "Caelum",
         "first_name": "Rafael",
         "last_name": "Kitover",
-        "email": "rkitover at io.com",
+        "email": "rkitover@io.com",
         "homepage": ""
       },
       "release_notes": "Turn off folds (correctly this time.)"

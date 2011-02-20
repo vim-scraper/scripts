@@ -4,9 +4,41 @@
   "summary": "Vim Outliner of Markers -- two-pane outliner and related utilities",
   "name": "VOoM",
   "script_type": "utility",
-  "description": "VOoM (Vim Outliner of Markers) is a plugin for Vim that emulates a two-pane text outliner.\n\nScreenshots and an animation: http://vim-voom.webs.com/\n\nVOoM was originally written to work with start fold markers with level numbers, that is {{{1, {{{2, {{{3, etc. This is the most versatile outline markup -- it is suitable for organizing all kinds of files, including source code, and it allows features not possible with other markups. See :help fold-marker. Markers are specified by option 'foldmarker'. (End fold markers with levels, }}}3, }}}2, etc. are not supported.)\n\nCurrent VOoM version can also work with several other markup formats that have headlines and support an outline structure. (Headlines are also called headings, headers, section headers, titles.) The following markup modes are available:\n        wiki  MediaWiki, headlines are surrounded by '='\n        vimwiki  vimwiki plugin (script_id=2226)\n        viki  Viki/Deplate plugin (script_id=861), Emacs Org-mode\n        rest  reStructuredText section titles\n        html  HTML heading tags, single line only\n        thevimoutliner  The Vim Outliner plugin (script_id=517)\n        vimoutliner  VimOutliner plugin\n        python  Python code class browser\n\nMAIN FEATURES:\n        - Works with Vim buffers, not with files on disk as ctags-based tools.\n        - Automatic outline update on entering the Tree buffer.\n        - Not a 'filetype' plugin. Has (almost) no side effects on the buffer being outlined.\n        - Fast and efficient enough to handle MB-sized files with >1000 headlines. (Some modes can be slower.)\n        - Outline structure manipulation: move nodes Up/Down, Promote/Demote, Copy/Cut/Paste, Insert New Headline, Sort in various ways.\n\n\n=========================================\n    OVERVIEW\n=========================================\nThere are four main Ex commands: Voom, Voomhelp, Voomexec, Voomlog.\n\n:Voom\n        Create outline of the current buffer. Outline is constructed from lines with start fold markers with level numbers, which become headlines. Outline is displayed in a special buffer in separate window which emulates the tree pane of a two-pane outliner. Such buffers are referred to as Tree buffers. The current buffer becomes a Body buffer.\n\n:Voom {MarkupMode}\n        Create outline for headline markup other than start fold markers with levels. See above for available markup modes.\n\n:Voomhelp\n        Open help file voom.txt as outline in a new tabpage.\n\n:Voomexec [vim|py]\n        Execute text in the current node or fold as Vim script or Python script. This is useful for testing code snippets and for organizing scripts by segregating them into nodes or folds. This command can be used independently of the outlining functionality provided by the command :Voom.\n\n:Voomlog\n        Create scratch buffer __PyLog__ and redirect Python stdout and stderr to that buffer. This is useful when developing Python scripts and when scripting Vim with Python. This feature is completely independent from the rest of the plugin.\n\nNOTE: commands Voomexec and Voomlog attempt to emulate similar features of Leo outlining editor.\n\n\n=========================================\n    REQUIREMENTS\n=========================================\nThis plugin uses Python and requires Python-enabled Vim 7.x, that is Vim compiled with the Python interface. Your Vim is Python-enabled if it can do\n        :py print 2**0.5\n        :py import sys; print sys.version\n\nPython version should be 2.4-2.7. Python 3 is not supported.\n\nVim version 7.2 or above is preferred. Version 7.1 should also work. Versions 7.0 might work as well but has not been tested. Vim should be compiled using normal or bigger feature set.\n\n\n=========================================\n    QUICK DEMO (no installation needed)\n=========================================\nExtract VOoM archive to any folder. Open \"plugin/voom.vim\" in Vim and do\n        :so %\n        :Voom\nThis will create Tree buffer for voom.vim, which will become a Body buffer.\n\nAll VOoM mappings, except Return and Tab, are for Tree buffers only.\n\n<Up>, <Down>, <Left>, <Right> arrow keys move around the Tree and select new node (Normal mode).\n\n<Return> selects node the cursor is on and then cycles between Tree and Body. So, to select another node, move to it with h, j, etc. and hit Return.\n\n<Tab> cycles between Tree and Body windows without selecting node.\n\n<Space> expands/contracts node without selecting it. Standard Vim folding command (zo, zc, zR, zM, etc.) can be used as well.\n\nLeft mouse click in the Tree selects node. If the click is outside of headline text, the node's expanded/contracted status is toggled.\n\nEdit a headline (line with a numbered fold marker) in voom.vim and go back into the Tree: the outline will be updated.\n\n<C-Up>, <C-Down> move node or a range of sibling nodes Up/Down.\n<C-Left>, <C-Right> move nodes Left/Right (promote/demote).\n(If the above CTRL mappings are not recognized by your Vim, you can also move nodes Up/Down/Left/Right with <LocalLeader>u/d/l/r .)\n\nExecute the command :Voomhelp to see all commands and mappings.\n\n\nTo create outline for another buffer, execute the command :Voom for it\n        :tab h netrw\n        :Voom\nFolder \"voom_samples\" contains some outlines to experiment with. File \"calendar_outline.txt\" is a rather large outline for stress-testing purposes: 3.1 MB, 56527 lines, 4160 headlines.\n\n\nTo outline the most common Wiki format (headlines are marked by strings of = on both sides)\n        :Voom wiki\n\n\nTo try Python Log Buffer feature:\n        :Voomlog\n        :py assert 2==3\n        :py print u'\\u2248 \\u2260'\n        :py import this\n",
+  "description": "VOoM (Vim Outliner of Markers) is a plugin for Vim that emulates a two-pane text outliner.\n\nScreenshots and an animation: http://vim-voom.webs.com/\n\nVOoM was originally written to work with start fold markers with level numbers, that is {{{1, {{{2, {{{3, etc. This is the most versatile outline markup -- it is suitable for organizing all kinds of files, including source code, and it allows features not possible with other markups. (See :help fold-marker. Markers are specified by option 'foldmarker'. End fold markers with levels, }}}3, }}}2, etc. are not supported.)\n\nCurrent VOoM version can also work with several other markup formats that have headlines and support an outline structure. (Headlines are also called headings, headers, section headers, titles.) The following markup modes are available:\n        wiki  -- MediaWiki, headlines are surrounded by '='\n        vimwiki  -- vimwiki plugin (script_id=2226)\n        viki  -- Viki/Deplate plugin (script_id=861), Emacs Org-mode\n        rest  -- reStructuredText section titles\n        markdown  -- Markdown, both header styles\n        html  -- HTML heading tags, single line only\n        thevimoutliner  -- The Vim Outliner plugin (script_id=517)\n        vimoutliner  -- VimOutliner plugin\n        python  -- Python code class browser\n        **Please email me if you would like support for your favorite lightweight markup language.**\n\nFEATURES:\n        - Works with Vim buffers, not with files on disk as ctags-based tools.\n        - Automagic outline update on entering the Tree buffer.\n        - Not a 'filetype' plugin. Not tied to a particular outline format. Has (almost) no side effects on the buffer being outlined.\n        - Fast and efficient enough to handle MB-sized files with >1000 headlines. (Some modes can be slower.)\n        - Outline structure manipulation: move nodes Up/Down, Promote/Demote, Copy/Cut/Paste, Insert New Headline, Sort in various ways.\n        - Command to search nodes, boolean AND/NOT search.\n\n\n=========================================\n    OVERVIEW\n=========================================\nThere are four main Ex commands: Voom, Voomhelp, Voomexec, Voomlog.\n\n:Voom\n        Create outline of the current buffer. Outline is constructed from lines with start fold markers with level numbers (specified by option &foldmarker). Outline is displayed in a special buffer in separate window which emulates the tree pane of a two-pane outliner. Such buffers are referred to as Tree buffers. The current buffer becomes a Body buffer.\n\n:Voom {MarkupMode}\n        Create outline from headlines in format defined by markup mode. See above for available modes.\n\n:Voomhelp\n        Open help file voom.txt as outline in a new tabpage.\n\n:Voomexec [vim|py]\n        Execute text in the current node or fold as Vim script or Python script. This is useful for testing code snippets and for organizing scripts by segregating them into nodes or folds. This command can be used independently of the outlining functionality provided by the command :Voom.\n\n:Voomlog\n        Create scratch buffer __PyLog__ and redirect Python's stdout and stderr to it. This is useful when developing Python scripts and when scripting Vim with Python. This feature is completely independent from the rest of the plugin.\n\nNOTE: commands Voomexec and Voomlog attempt to emulate similar features of Leo outlining editor. A Python file with code snippets organized via fold markers, plus the command :Voomexec, plus the PyLog buffer is an alternative to Python's interactive interpreter.\n\n\n=========================================\n    REQUIREMENTS\n=========================================\nThis plugin uses Python and requires Python-enabled Vim 7.x, that is Vim compiled with the Python interface. Your Vim is Python-enabled if it can do\n        :py print 2**0.5\n        :py import sys; print sys.version\n\nPython version should be 2.4-2.7. Python 3 is not supported.\n\nVim version 7.2 or above is preferred. Version 7.1 should also work. Versions 7.0 might work as well but has not been tested. Vim should be compiled using normal or bigger feature set.\n\n\n=========================================\n    QUICK DEMO (no installation needed)\n=========================================\nExtract VOoM archive to any folder. Open \"plugin/voom.vim\" in Vim and do\n        :so %\n        :Voom\nThis will create Tree buffer for voom.vim, which will become a Body buffer.\n\nAll VOoM mappings, except Return and Tab, are for Tree buffers only.\n\n<Up>, <Down>, <Left>, <Right> arrow keys move around the Tree and select new node (Normal mode).\n\n<Return> selects node the cursor is on and then cycles between Tree and Body. So, to select another node, move to it with h, j, etc. and hit Return.\n\n<Tab> cycles between Tree and Body windows without selecting node.\n\n<Space> expands/contracts node without selecting it. Standard Vim folding command (zo, zc, zR, zM, etc.) can be used as well.\n\nLeft mouse click in the Tree selects node. If the click is outside of headline text, the node's expanded/contracted status is toggled.\n\nEdit a headline (line with a numbered fold marker) in voom.vim and go back into the Tree: the outline will be updated.\n\n<C-Up>, <C-Down> move node or a range of sibling nodes Up/Down.\n<C-Left>, <C-Right> move nodes Left/Right (promote/demote).\n(If the above CTRL mappings are not recognized by your Vim, you can also move nodes Up/Down/Left/Right with <LocalLeader>u/d/l/r .)\n\n\nExecute the command :Voomhelp to see all commands and mappings.\n\n\nTo create outline for another buffer, execute the command :Voom for it\n        :tab h netrw\n        :Voom\nFolder \"voom_samples\" contains some outlines to experiment with. File \"calendar_outline.txt\" is a rather large outline for stress-testing purposes: 3.1 MB, 56527 lines, 4160 headlines.\n\n\nTo outline the most common Wiki format (headlines are marked by strings of = on both sides)\n        :Voom wiki\n\n\nTo try Python Log Buffer feature:\n        :Voomlog\n        :py assert 2==3\n        :py print u'\\u2248 \\u2260'\n        :py import this\n",
   "install_details": "Copy content of the plugin folder (file \"voom.vim\", folder \"voom\" with .py files) to your local Vim plugin folder. Copy help file \"doc/voom.txt\" to your local doc folder. This will make commands Voom, Voomhelp, Voomexec, Voomlog available from any buffer.\nTo update help tags (see :help add-local-help):\n        :helptags $HOME/vimfiles/doc    (Windows)\n        :helptags $HOME/.vim/doc         (*nix)\n\nNOTE 1: In version 2.0 this plugin was renamed from VOOF (Vim Outliner Of Folds/Foldmarkers) to VOoM (Vim Outliner of Markers). \"voom\" is used everywhere instead of \"voof\", case of letters preserved: all commands start with \"Voom\" instead of \"Voof\", user options start with \"g:voom_\", etc. If you are upgrading from previous versions, please delete old \"voof\" files (voof.vim, voof.py, voof.pyc, voof.txt), delete file \"voofScript.py\" if any, edit user options in vimrc if you have any, run :helptags.\n\nNOTE 2: Since version 4.0 all Python files are located in folder plugin/voom. If you are upgrading from previous versions you should delete old files in plugin folder: plugin/voom.py, plugin/voom.pyc, plugin/voomScript.py (if any).\n",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14922",
+      "filename": "VOoM-4.0b4.zip",
+      "script_version": "4.0b4",
+      "date": "2011-01-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* New Tree mappings for navigating outline:\n    P (go to parent node),\n    c (go to parent and contract it),\n    C (contract siblings or everything in Visual selection),\n    o (go to first child),\n    O (expand siblings or everything in Visual selection),\n    K/J/U/D (go to previous/next/uppermost/downmost sibling),\n    s (show headline text), S (show UNL).\n* Fixed some bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14681",
+      "filename": "VOoM-4.0b3.zip",
+      "script_version": "4.0b3",
+      "date": "2011-01-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17268",
+        "user_name": "vlad.irnov",
+        "first_name": "Vlad",
+        "last_name": "Irnov",
+        "email": "vlad.irnov@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* Added mode for Markdown markup.\n* Fixed severe bug in reST mode.\n* Sorting can now be done for any range of sibling nodes."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14109",
       "filename": "VOoM-4.0b2.zip",
@@ -18,7 +50,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "* Added support for the following markups: reStructuredText, Python code, The Vim Outliner, VimOutliner.\n* BUG FIX: indiscriminate use of 'noautocmd' was screwing up some autocommands.\n* Option g:voom_verify_oop is now enabled by default.\n* Option g:voom_rstrip_chars (dictionary) has been removed. Instead there are options g:voom_rstrip_chars_{filetype} for each filetype of interest.\n* See CHANGELOG for other changes.\n"
@@ -34,7 +66,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "* Added support for headline markups other than start fold markers with levels. Available markup modes: wiki, vimwiki, viki, html.\n\n* Changed plugin directory structure. All Python files are now located in folder plugin/voom. You should delete old files in plugin folder: plugin/voom.py, plugin/voom.pyc, plugin/voomScript.py."
@@ -50,7 +82,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "* New command :VoomSort [options] for sorting outline.\n\n* Outline buffer (Tree) is no longer automatically wiped out when the source buffer (Body) is unloaded, deleted, or wiped out. Instead, outline is locked until the source buffer is loaded again. This change was necessary to eliminate crashes after :q, :q! and similar problems. This can also make working with outlines easier when buffers routinely get unloaded, as when 'hidden' or 'bufhidden' are not set.\n\n* Option 'bufhidden' for Tree and PyLog buffers is set to \"wipe\" instead of \"hide\".\n\n* Various glitches fixed. Memory usage reduced, especially when outlining large buffers.\n"
@@ -66,7 +98,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "* It's now possible to customize how Tree headline text is constructed for individual filetypes:\n - 'commentstring' and new user option g:voom_rstrip_chars control which characters are stripped from the right side of headlines when default procedure is used.\n - The default procedure for Tree headline text construction can be replaced with user-defined functions via an add-on. Sample add-on is included.\n\n* Fixed bug in PyLog buffer: original sys.stdout and sys.stderr could be lost after some actions.\n"
@@ -82,7 +114,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "- This plugin was renamed from VOOF to VOoM. All commands start with \"Voom\" instead of \"Voof\", files were renamed, and so on. Please see Install section for instructions on how to upgrade from previous versions.\n- Added rudimentary support for add-ons, a sample add-on. Fixed probable bug in mouse click mapping."
@@ -98,7 +130,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "Improved performance of several outline operations when working with very large outlines. Optimized some code."
@@ -114,7 +146,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "Voofgrep can perform boolean AND and NOT searches."
@@ -130,7 +162,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "It's now possible to save and restore Tree buffer folding.\nCommand \"Voofrun\" was renamed \"Voofexec\".\nSeveral other small changes."
@@ -146,7 +178,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed bug in mappings.\nAdded highlighting for warnings and other messages.\nDistribution now follows Vim directory structure: there are plugin and doc folders.\nChanged license to WTFPL, version 2.\n"
@@ -162,7 +194,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "more foolproofing"
@@ -178,7 +210,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added defensive measures that prevent data corruption when outline update fails for any reason.\nFixed some bugs."
@@ -194,7 +226,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "New commands: Voofgrep, Voofunl.\nFixed bug in \"Move Down\" outline operation.\nVarious improvements."
@@ -210,7 +242,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "New Tree navigation commands: go to next/previous marked node. Various small changes and fixes."
@@ -226,7 +258,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added support for non-default start fold markers specified by 'foldmarker' option. Various other small improvements and fixes."
@@ -242,7 +274,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "Minor bug fixes and edits. See CHANGELOG node in voof.txt."
@@ -258,7 +290,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "Bug fix involving nomodifiable and readonly buffers."
@@ -274,7 +306,7 @@
         "user_name": "vlad.irnov",
         "first_name": "Vlad",
         "last_name": "Irnov",
-        "email": "vlad.irnov at gmail.com",
+        "email": "vlad.irnov@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

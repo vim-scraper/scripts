@@ -18,7 +18,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "There were a few issues with the 4.0 version, and this version tries to resolve them, and adds a few features.\n\n- Fixed broken handling of <SHOW DIFF> in describe windows. But it is\n  better than before, as you can now describe multiple changelists and\n  show diffs selectively.\n- For newer perforce servers, <Enter> on a pending change (in\n  changelist) showed the file list twice. Removed special handling for\n  this, which means for older perforce servers, you will see no file\n  list.\n- Force a file status update on auto checkout.\n- File status handling has in general been improved.\n- Now executing command on multiple files that result in changing the\n  file statuses (such as add, edit, revert etc.) will correctly result\n  in their file statuses getting reset.\n- While create a new changelist or submitting a change, the Files:\n  section is examined and the file statuses for all of them will be\n  reset. This also works for most of the cases of modifying a changelist\n  to remove/add files.\n- This will also solve a long standing issue that reload during submit\n  doesn't update its file status.\n- All windows are getting navigatation commands mapped (like in help\n  window)\n- Workaround for one of the E788 errors (originating from the plugin)\n  during the auto-checkout. This part of the code has been cleaned up\n  and simplified. During the auto-checkout, if there are other users\n  editing the same file, it now results in the plugin echoing the output\n  as a |WarningMsg|. If you missed to read the output (because you\n  pressed <Enter> in advance), you can see it again using the\n  |PFLastMessage| command. The other E788 originating from Vim code\n  can't be fixed/workedaround, it has to be fixed by Bram.\n- Fixed broken submit from changelist.\n- When you create changelists, you can now safely undo to make any\n  further changes, and save them. This also works for submissions (to\n  edit description only), though you may have to remove the Files\n  section before saving the change description.\n"
@@ -34,7 +34,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Uploading again, the previous attempt had a a file missing in the zip.\n\n- Using Vim7 features, so it is no longer backwards compatible with\n  older Vim releases. All the logic using multvals has been changed to\n  take advantage of the Vim7 Lists, so it should be a lot more cleaner\n  and flexible.\n- No longer depends on multvals plugin.\n- It is now autoloaded on demand, which means it will help your vim\n  session load faster. Read the impact on the installation due to this\n  change, |perforce-installation|.\n- A new Cancel option for checkout prompt, see\n  |perforce-automatic-checkout|. The default for checkout prompt is now\n  \"Cancel\".\n- The perforce/perforcemenu.vim needs to be loaded from your vimrc if\n  you want menu to be enabled. See |perforce-installation|.\n- The plugin no longer removes the global user setting variables but you\n  still need to call |:PFInitialize| for effect of some settings to\n  propogate further. This should have no user visible impact (except in\n  rare cases).  This will only make it easier to deal with settings. You\n  can still use |:PFSettings| command conveniently for its prompting or\n  completion features.\n- Setting a preset to the g:p4DefaultPreset directly now works fine.\n- Most settings can now be overridden at the buffer/window/tab level.\n- Bug: PFRefreshActivePane doesn't work well on the diff windows (especially\n  when the ++c option is used). "
@@ -50,7 +50,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Release 3.2 for vim7 compatibility. There are a few enhancements too. This is probably the last version that will work in Vim 6.3/6.4.\n- Fixed PVDiff to work with two filenames. The problem was only with\n  PVDiff command, as \"PF vdiff\" worked fine.\n- PFDiffOff command is a lot more flexible now, see |PFDiffOff|.\n- New command PPasswd for changing passwords.\n- Don't confirm revert if -a or -n option is passed.\n- Avoid accidentally loosing existing buffers while opening new ones\n  from diff and other windows.\n- Recognize additional p4 commands as valid.\n- You can now pass multiple codeline modifiers, see\n  |perforce-alternative-codeline-modifier|.\n- Misc. tuneups for peforce diff hyperlinking feature.\n- Misc. bugfixes in the menu.\n"
@@ -66,7 +66,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- This version introduces the concept of overriding settints at the\n  buffer/window level (an extension of the existing support for\n  b:p4Options). Makes it easier to work with multiple clients from a single\n  vim instance. Currently only the p4Client/p4Port/p4User/clientRoot can be\n  set at buffer/window level.\n- Now view mappings are maintained separately for each client. This allows\n  us to easily work with multiple clients at once. Also see\n  |perforce-buffer-local-options|.\n- For diff hyperlinking, avoid refreshing the depot file if it already\n  visible.\n- Now supports <pfitem> tag to mean the current list item. See |:<pfite>|\n- New :PExec command to make it easier to execute exeternal perforce\n  commands directly, when plugin can't do what you want. See |PExec|.\n- PFDiffLink and PFDiffVLink commands couldn't handle \"diff -r\" output.\n- If the current directory is not same as the directory of file being\n  resolved PFShowConflicts didn't work.\n- PItemOpen in describe window now opens the local file, as PItemDescribe\n  can be used to open the depot file.\n- Misc. bug fixes:\n    - Negative revisions are not working any more. E.g., PP #-1\n    - PW is not using the custom completion, so revision specifier (#1)\n      still needs to be escaped.\n    - While rerunning a command that opens up a new buffer (such as PD),\n      unexpected warning messages about matching an existing buffer.\n      Instead, it should silently refresh the output.\n    - Diff hyperlinking, prints the depot file everytime, this causes\n      unnecessary delays.\n    - PFRefreshActivePane would fail if there are filename special\n      characters in the command.\n"
@@ -82,7 +82,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Now requires Vim 6.3 and the latest versions of genutils and multvals plugins.\n\nToo many changes to be listed here, read the |perforce-version-changes| section for details.\n\nTakes advantage of some of the new Vim 6.3 features.\n\nI recommend reading |perforce-troubleshooting|, |perforce-known-issues|, |perforce-tips| sections. Many of the other sections also have been updated, which are cross referenced from the version changes section.\n\nPlease report issues using the new PFBugReport command."
@@ -98,7 +98,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "There are too many changes to mention here. Most notable ones being, the new online help for the plugin and the perforce ruler feature from Tom's perforce plugin which is now integrated into this with some improvements. Regenerate help tags after extracting the zip. I highly recommend reading through at least the installation, changes, troubleshooting and tips sections of the help. I also recommend at least glancing through the rest of the help to have an idea of what the plugin is capable of doing. I appreciate feedback.\n\nDownload the new versions of multvals.vim and genutils.vim."
@@ -114,7 +114,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- You need genutils.vim version (1.0.24)\n- Now the PSubmit and PDiff2 commands are enhanced. PSubmit can now take arguments that are directly passed to POpened to generate the list of files to submit. So it is possible to say \"PSubmit % #\" to open the template with only the current and alternate files or \"PSubmit //depot/branch/...\" to open the template with all the opened files under the given branch. \n- You can now pass in filters at the end of the commands. Just make sure you have a white space before the pipe. Ex: \n\n  PChanges -s pending | grep hari \n\n- I added ^X^P command line mapping which works like the \"E\" command but provides more flexibility. I also added ^X^I command line mapping for list windows (such as PF changes), which inserts the current item name on to the command line. Try them, they are very useful. \n- New commands for clients, labels windows to create a new item from the current item as a template (type P). \n- In the filelist windows, you can now press p to print the current file and S to sync to the current file. \n- Another major change is improved command line parsing. \n- Also the syntax highlighting has been improved to cover more cases."
@@ -130,7 +130,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Earlier, I have uploaded a wrong file as a zip file, I apologize for the mistake. I have deleted the old upload and am trying again.\n\nThis is just a minor patch release. Added useful WQ command which is same as the W command but will also quit the window if there is no error. Speeds up making changes to labels, jobs etc. You might still want to use W for submits, as you can copy the output into your integration plans or something like that. Also I made a typo in my previous release notes about the variable name for passing default diff options. The correct name is g:p4DefaultDiffOptions. Please use the latest version of genutils.vim which fixes a typo resulting in an error message while quitting help windows."
@@ -146,7 +146,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Perforce help window is now much better. It reuses the same window for all the help commands and maximizes too like the vim built-in window. It even restores the windows when you quit the help. Also navigating in the help window is much better as the cursor positions are remembered.\n- New command: PJobspec\n- g:p4DefaultChangesSize to pass in default diff options to all the diff operations. Set it to '-dc' to get diff with context.\n- Renamed g:p4DefaultChangesSize to g:p4DefaultListSize. This is now used even for jobs command.\n- g:p4MaxLinesInDialog to limit the number of lines that should be shown in the dialogs. Commands that normally show dialogs (such as PE) open a new window if this limit is exceeded. This avoids showing too many lines in the dialogs (such as PF edit ...)\n- Fixed labelsync command.\n- Fixed the delete in the list view. Now pressing D in the labels, changes etc. works.\n- <SHOW DIFFS> option on the describe window. Pressing <Enter> on this line expands it to show diff.\n- Some basic formatting options in the edit windows.\n- You need the 1.0.19 version of genutils.vim"
@@ -162,7 +162,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed it to work on Unix, thanks to Kevin McCarthy for reporting the problem and a solution. I also added a basic syntax highlighting for the perforce windows (not complete yet). Extract the perforce.zip in your runtime directory."
@@ -178,7 +178,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Minor patch release. Fixed PLabels command. Now O in PChanges correctly edits the current change instead of showing the opened list. The opened list can be viewed by using the o (small case) command. Updated the usage header in the file."
@@ -194,7 +194,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "More featured, more robust, with more predictable results. Lots of bugs have been fixed. Now, a command executed through PF or its shortcut are identical, so no more surprises (PF change and PChange are same). Thanks for the suggestion, Man. The code is also much more cleaner now. I have also improved the help header in the file, so read the first few lines for a good overview of the script's capabilities."
@@ -210,7 +210,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

@@ -4,9 +4,41 @@
   "summary": "Background compilation, completion, bib serch, toc and other nice features.",
   "name": "AutomaticTexPlugin",
   "script_type": "ftplugin",
-  "description": "If you have any question, ideas, or suggestion please do not hesitate to write, it is always nice to get some feedback ...\nand many THANKS for RATES, :).\n\nThe plugin is known to not work on MS Windows, a help with porting it is welcome.\n\nThis is a file type plugin for vim to comfortably write LaTeX (TeX) documents, which provides functionality not met in other such file type plugins.  It makes you FREE from compiling procedure, making this process automatic using autocommands. Features include (this is not a complete list):\n\nCompilation Features:\n             * Background tex processing\n             * Making LaTeX documents with just one command \n                          / bibliography, makeindex, table of contents, lists of: figures, tables, theorems [with ntheorem package] /\n             * various debug modes: silent/debug/verbose.\n                          / automatically close debug window (:copen) if there are no errors /\n             * show errors, warnings, citation/reference warnings, \n                font warnings, files used ...\n                          / error file is automatically read after compilation /\n             * open log function, in log file you can sync the tex source with the log file (then errors in the source file will be higlighted!) or the xpdf viewer with the log file. There are also maps to go to next/previous error/warning/info/... message.\n\nEditing Features:\n             * indentation\n             * selection tools for environments (vie, vae) , in line math (vim, vam)\n             * toggling the environment name \n                        / and changes the label if you use the labeling system; this needs activation /   \n             * toggling the star (add remove a star from environment)\n\nCompletions:\n             * completion for commands (also user defined in associate files), \n                environments, citations, references, tikz commands, keywords, provided abbreviations, and much more\n                        / there are two completion modes: when you know what you want with <Tab> \n                         and when you search for a command with <S-Tab> /\n                                          Some completion features:\n                                                            + math commands are completed only in math mode\n                                                            + tikz commands are completed only in tikz environments\n                                                            + completion of \\ref, \\eqref by numbers from the output (\\ref{1.3<Tab> ...)\n                                                            + completion is connected to closing last environment/bracket functions\n                                                               so that you have all under one key <Tab> by default\n                                                            + completion for \\usefont{}{}{}{}, \\fonttype{}, .... commands\n                                                                       / finds completions in font definition files /\n                                                            + completion for \\cite{ supports regular expression which are\n                                                               passed to the searching tool in bibliography files\n             * closing brackets and environments (preserves nested environments in  100%)\n                         / which is included into completion with <Tab> key)\n             * many usefull maps\n             * abbreviations for environments (with tab completion)\n            \nMoving Tools:\n             * table of contents\n                         / which allows moving through files, chapters, sections, opening a preview window /      \n             * list of labels\n                         / as with toc, you can see the context of the label in a preview window /\n             * moving commands to next environment\n                         / configured with vim commands: 'n' and 'N' for repeating / the vim commands: 'n' and 'N' for repeating /\n                         / also to next [inline/displayed] math environment /\n                         / support of project files /\n             * % operates on $:$ (in plain tex also on $$:$$), brackets and \n                \\begin:\\end pairs /which also get highlighted/\n             * (TeX/LaTeX) oriented normal gf map\n                         / gf = go to file under cursor, if there is no file under the cursor gives a recursive list input files /\n                                               + with nice indentation for the list of files to chose\n                                               + with g:atp_developer = 1 you can easily open package (.sty) and classes (.cls) files\n\nSearching Tools:\n             * reverse/inverse searching for xdvi\n             * search for definitions ( \\def ) declared in input files\n                            / like [D command but works with multiple line definitions /\n             * extended search in bib files\n             * query amsref web page for bibliography data  \n             * a function which toggles a command map of <space> to \\_s\\+\n                            / this is a handy way to search in text which is broken into lines /\n\nSupport for Projects\n             * project script which restores project specific variables ( for example: b:atp_MainFile, b:ListOfFiles - the list of files included in the project, ...) \n                            / The project script name is <MainProjectFile>.project.vim /\n                            / It is possible to store many projects in one directory! /\n             * GotoFile function (replace vim gf map), which list all the input files for the main project file and let you go to one of them (it also sets the main file variable for the new buffer to correct value automaticaly).\n             * A command to search in project files (like it would be just one long file)\n                                       + supports flags: bceswW of vim search() function and the \n                                                                 vim 'wrapscan' option.\n            * :Labels command (which list all defined labels) support project files.\n            * :TOC command (Table of Contents) almost supports project files (work in progress).\n            * :NInput/:PInput commands : to go to next/previous input file.\n\nThis plugin includes: vimscript#3109  (LatexBox by David Munger).\n\nProject Web Page:  https://launchpad.net/automatictexplugin\nBUG tracker:       https://bugs.launchpad.net/automatictexplugin",
+  "description": "If you have any question, ideas, or suggestion please do not hesitate to write, it is always nice to get some feedback ...\nand many THANKS for RATES, :).\n\nThe plugin is known to not work on MS Windows, a help with porting is welcome.\n\nThis is a file type plugin for vim to comfortably write LaTeX (TeX) documents, which provides functionality not met in other such file type plugins.  It makes you FREE from compiling procedure, making this process automatic using autocommands. Features include (this is not a complete list):\n\nCompilation Features:\n             * Background tex processing\n             * Making LaTeX documents with just one command \n                          / bibliography, makeindex, table of contents, lists of: figures, tables, theorems [with ntheorem package] /\n             * various debug modes: silent/debug/verbose.\n                          / automatically close debug window (:copen) if there are no errors /\n             * show errors, warnings, citation/reference warnings, \n                font warnings, files used ...\n                          / error file is automatically read after compilation /\n             * open log function, in log file you can sync the tex source with the log file (then errors in the source file will be higlighted!) or the xpdf viewer with the log file. There are also maps to go to next/previous error/warning/info/... message.\n\nEditing Features:\n             * indentation\n             * selection tools for environments (vie, vae) , in line math (vim, vam)\n             * toggling the environment name \n                        / and changes the label if you use the labeling system; this needs activation /   \n             * toggling the star (add remove a star from environment)\n\nCompletions:\n             * completion for commands (also user defined in associate files), \n                environments, citations, references, tikz commands, keywords, provided abbreviations, and much more\n                        / there are two completion modes: when you know what you want with <Tab> \n                         and when you search for a command with <S-Tab> /\n                                          Some completion features:\n                                                            + math commands are completed only in math mode\n                                                            + tikz commands are completed only in tikz environments\n                                                            + completion of \\ref, \\eqref by numbers from the output (\\ref{1.3<Tab> ...)\n                                                            + completion is connected to closing last environment/bracket functions\n                                                               so that you have all under one key <Tab> by default\n                                                            + completion for \\usefont{}{}{}{}, \\fonttype{}, .... commands\n                                                                       / finds completions in font definition files /\n                                                            + completion for \\cite{ supports regular expression which are\n                                                               passed to the searching tool in bibliography files\n             * closing brackets and environments (preserves nested environments in  100%)\n                         / which is included into completion with <Tab> key)\n             * many usefull maps\n             * abbreviations for environments (with tab completion)\n            \nMoving Tools:\n             * table of contents\n                         / which allows moving through files, chapters, sections, opening a preview window /      \n             * list of labels\n                         / as with toc, you can see the context of the label in a preview window /\n             * moving commands to next environment\n                         / configured with vim commands: 'n' and 'N' for repeating / the vim commands: 'n' and 'N' for repeating /\n                         / also to next [inline/displayed] math environment /\n                         / support of project files /\n             * % operates on $:$ (in plain tex also on $$:$$), brackets and \n                \\begin:\\end pairs /which also get highlighted/\n             * (TeX/LaTeX) oriented normal gf map\n                         / gf = go to file under cursor, if there is no file under the cursor gives a recursive list input files /\n                                               + with nice indentation for the list of files to chose\n                                               + with g:atp_developer = 1 you can easily open package (.sty) and classes (.cls) files\n\nSearching Tools:\n             * reverse/inverse searching for xdvi\n             * search for definitions ( \\def ) declared in input files\n                            / like [D command but works with multiple line definitions /\n             * extended search in bib files\n             * query amsref web page for bibliography data  \n             * a function which toggles a command map of <space> to \\_s\\+\n                            / this is a handy way to search in text which is broken into lines /\n\nSupport for Projects\n             * project script which restores project specific variables ( for example: b:atp_MainFile, b:ListOfFiles - the list of files included in the project, ...) \n                            / The project script name is <MainProjectFile>.project.vim /\n                            / It is possible to store many projects in one directory! /\n             * GotoFile function (replace vim gf map), which list all the input files for the main project file and let you go to one of them (it also sets the main file variable for the new buffer to correct value automaticaly).\n             * A command to search in project files (like it would be just one long file)\n                                       + supports flags: bceswW of vim search() function and the \n                                                                 vim 'wrapscan' option.\n            * :Labels command (which list all defined labels) support project files.\n            * :TOC command (Table of Contents) almost supports project files (work in progress).\n            * :NInput/:PInput commands : to go to next/previous input file.\n\nThis plugin includes: vimscript#3109  (LatexBox by David Munger).\n\nProject Web Page:  https://launchpad.net/automatictexplugin\nBUG tracker:       https://bugs.launchpad.net/automatictexplugin",
   "install_details": "To install open the vimball file and source it ':so %' or ':source %'. You can use $HOME/.atp.vim configuration file to set the atp variables, which is handy for local-buffer settings.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14840",
+      "filename": "AutomaticTexPlugin_8.6.vba",
+      "script_version": "8.6",
+      "date": "2011-01-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "See the help file for changes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14503",
+      "filename": "AutomaticTexPlugin_8.5.vba",
+      "script_version": "8.5",
+      "date": "2010-12-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "* AMSRef : bang has opposite meaning now.\n* Many small fixes. \n"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14338",
       "filename": "AutomaticTexPlugin_8.4.vba",
@@ -18,7 +50,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* Small fixes."
@@ -34,7 +66,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* Abbreviations (see :h atp-news) and fixes of vip."
@@ -50,7 +82,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": " * Some fixes. As usual, check :h atp-news"
@@ -66,7 +98,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "Some fixes in the new command AMSRef, completion for :GotoFile, :EditIntpuFile commands."
@@ -82,7 +114,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "Filetype plugin for bib files added.\nCommand to obtain bib data from amsref web page interface (for both bib files and bibliography environments)\nFor lots of other new stuff read :h atp-news"
@@ -98,7 +130,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "See :h atp-news (:DefiSearch fixed, but also more)"
@@ -114,7 +146,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "A bug fixed reported by B. Garcia Carreras."
@@ -130,7 +162,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "Licence: GPL v3+.\nSee :h atp-news"
@@ -146,7 +178,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "Read :h atp-news."
@@ -162,7 +194,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* See :h atp-news"
@@ -178,7 +210,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "A bug fixed in SyncTex (log file tool)."
@@ -194,7 +226,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "Bug fixes."
@@ -210,7 +242,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "See help file for release notes (:h atp-news). There are several new features!"
@@ -226,7 +258,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* A bug fixed in :BibChoose command\n* and in tex_atp.vim file"
@@ -242,7 +274,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* <NEW FEATURE> TexAlign wrapper command around Align command (vimscript#884) see :h atp-news \n* TeXDoc -> TexDoc \n* History feature reviewed, now every file has separate history file (like for vim view files) see :h atp-news\n"
@@ -258,7 +290,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* Some fixes in GotoFile command and function which generates tree of project files (hopefully it will also work in plaintex files, but this is not tested).\n* Now the history feature stores only two variables b:atp_MainFile and atp_History. Storing more in one file was not the best idea (shortly time of loading history becomes quite big), nice solution for this is to make history file per buffer (like view files, which unfortunately don't have option to store local buffer variables)."
@@ -274,7 +306,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* a small fix."
@@ -290,7 +322,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* <New Feature> Highlight for notification message (that TeX is processing the file) in status line (see :h atp-news).\n* Some fixes."
@@ -306,7 +338,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* Some fixes in the new history feature. Read :h atp-news for changes."
@@ -322,7 +354,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": " :Labels, map \\L supports project files.\n* :TOC works in project files (but only if the toc lines are not inside a included file, make this better this is in my plans)\n* Completion for labels matches labels without pretended '^' in the beginning of the pattern.\n* Added a section in doc with tips: ':h atp-tips' You are cordially invited to contribute to this section! \n* <NEW FEATURE> history file wich cache some variables, which makes a better support for project files (among other variables b:atp_MainFile is remebered)\n* doc file show highlight color for atp syntax groups, see :h atp-highlight\n* ToggleNn command (toggles if vim normal commands are vim or from atp. In the second case :S command is used. This is (by default) on in project files.\n* :ShowOptions[!] [pattern] \twithout bang it shows all values of local variables matching [pattern], with bang also global variables set by atp are shown. This helps to find a variable. For more details see :h atp-:ShowOptions\n* BibSearch[!] [pattern] [flag]\tbang added, with it it regenerates the tree of files (only important in some situtation in project files). Secondly, it removes ligatures before the pattern is matched.\n* vip, vap and related maps see :h atp-news and :h atp-tips.\n* :Viewer, :DebugMode, :Compiler commands, see :h atp-news \n* menu key has changed from L to X (press Ctrl-x to see the menu). Menu now shows your compiler and current viewer."
@@ -338,7 +370,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* The command :EditInputFile == :GotoFile and they both work in the same way as nmap gf (with small difference that they do not look what is under the cursor)\n* Small fixes."
@@ -354,7 +386,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": " <NEW FEATURE> sync okular viewer with tex source, read :h atp-viewers-okular.\n * b:atp_ViewerOption removed, read: :h atp-Viewer_Option\n * and some bug fixes and small changes (especially in editing LaTeX project files)\n * Note: some tools for editing TeX project files might not work that fast: for example the ':S' command, which relied on making tree of input files, in TeX there is no method of distiguishing between input packages and input parts of the book. Packages are can have its own dependencies so scanning them all might take some time. As for know there is no solution for that.\n"
@@ -370,7 +402,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": " <NEW FEATURE> nmap gf, see ':h atp-news'.\n <NEW FEATURE> read ':h atp-viewers-okular' and learn how to sync gvim with okular.\n* Some changes in :S command, see ':h atp-S'.\n* Speed up of :Labels command, some work done to support projects. \n* Labels by number completion support one more layout of aux file.\n* Several bug fixes.\n"
@@ -386,7 +418,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* <New Feature> MakeLatex[!] to make latex documents (bibliographies, index, table of contents, lists of: tables, figures, theorems [using ntheorem package]. See :h atp-news.\n* <New Feature> :S command to search in project files, which works like / command to search patterns. Supports almost all searching flags of the search() function, for example b (backward), wW (wrap/nowrap around the end of file), c (match at the cursor position). This allows for finding next '\\input{' phrase in the source tree.\n* Delete[!] Bang [!] added, with bang delets also the output file (pdf or dvi)\n* HihglightMatchingPair functionn supports '\\big' commands (and friends). Also highlights \\begin{env_name} when the cursor is on the env_name.\n* Some changes in the list of labels (take a try with \\L).\n* FontSearch[!], FontPreview[!] bang [!] added, with bang mathes the full path of fd file against the supplied pattern, without just the name.\n* The file is not process also in Insert mode but with different value of 'updatetime' vim option, you can configure it with g:atp_insert_updatetime (if it is set to 0 the file will not be processed while vim is in the Insert mode). The default value is 2sec.\n* Default value of updatetime is 800 (set only if when you have not changed the default value, if you want to use the default just set it to 4001) (This means that after 800milisec after CursorHold the file will be processed by LaTeX).\n* Some other fixes.\n"
@@ -402,7 +434,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* <New Feature> ToC allows to remove, paste section see ':h atp-news' for further info. \n* <New Feature> Completion of labels by numbers (from output file) added (see ':h atp-news') how to use it. The compiler is copying the aux file to the b:atp_OutDir iff the compilation was without errors /it is better this way for the completion/ Supported classes: article, amsart, book, report, memoir (probably also others), if you run into problems, just send an email with the class name. \n* <New Feature> Closing environemnts supports $$:$$ pairs (if filetype==\"plaintex\" or b:atp_TexFlavour==\"plaintex\")\n* <New Feature> Input() function which inserts text depending on math/text mode: there are now only maps:\n  imap \\rm\tto insert \\textrm{ or \\mathrm accordingly\t\n  \t\talso other maps defined in this way:\n  imap \\it\t\\textit:\\mathit\n  imap \\sf\t\\textsf:\\mathsf\n  imap \\tt\t\\texttt:\\mathtt     \n  imap \\no\t\\textnormal:\\mathnormal\t\t\n* Furhter changes in imaps:  \n  imap ]I\tinserts itemize, \n  imap ]E\tinserts enumerate,\n  imap ]i\tinserts \\item,\n  imap ]T\tinserts tikzpicture environment,\n  imap ]L\tinserts lemma environment\n  imap \\cal\tinserts \\mathcal{\n  vmap \\un\twrap with \\underline{:}\n* vim, vam mappings inseted of vi$, va$ (to mark the inside/auther math evnironments)\n\n* atprc.vim file can be also placed under the path: ftplugin/ATP_Files/atprc.vim \n* syntax file for log messages + changes in coots-beauty color file.\n* \\lpr mapping removed (you can use the command :SshPrint, \\lpr was interfering with \\l)\n* added some bracket sizes to closing of brackets\n* \\ne, \\pe maps to search for next/previous environment (search pattern is added to the search history: thus the commands allows for 'n', and 'N' normal vim maps (alos after '/' the pattern will be present in the search history).\n* NextSection, PreviousSection commands and maps works in visual and operator pending modes.\n* variable change g:atp_math_opened -> g:atp_MathOpened with default value 1.\n* indent key added \"O\" (':h indentkeys') \n* some changes in doc (colorful titles :)\n"
@@ -418,7 +450,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* ':ShowErrors o' opens log file. I wrote a nice syntax file for the log so that it is easier to read it.\n* Some changes in visual maps:\n   vie, vae     mark environment (but not mathematics) \\begin:\\end\n   vi$, va$     mark math modes: $:$, \\(:\\), \\[:\\], $$:$$ (only if b:atp_TexFlavour = \"plaintex\" which is done automatically if the filetype is set to plaintex)\n   vi), va)      mark brackets: (:), {:}, [:]\n   vI), vA)     mark brackets (as above) the inner and auter pair of the most auter bracket (in the nesting sence)\n   vis, vas (experimental)  mark by syntax, i - inner, a - outer but with a slightly different meening than above (inner for the most top syntax in the synstack, and outer for the most bottom syntax item) they exclude texDocZone and texSectionZones as they are not always synchronized (some times might be large)\n\n* \":InteligentWrapSelection\" command: now \\rm (in visual mode) will wrap with \\textrm{...} in text and \\mathrm{...} in math (also other wrapping maps defined in this way, read \":h atp-command-InteligentWrapSelection\"\n* ':TeXdoc 'command by default opens g:atp_TeXdocDefault (which by deafault is equal \"-a lshort\", you can set it to \"-a lshort faq\" or \"-a faq\" ...) \n* Some minor bugs fixed.\n* Enjoy :)"
@@ -434,7 +466,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* ShowErrors o "
@@ -450,7 +482,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* A small bug fix."
@@ -466,7 +498,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "Please READ release notes for version 7.0\n* revisions in TabCompletion function \n* revisions in CloseLastEnvironment function    /they both use faster code/\n* g:atp_MathVimOptions variable: it is a dictionary with entries: vim_option_name : [ value_in_math_mode, value_in_non_math ] for example { 'textwidth' : [0, 78], 'linebreak' : [ 'nolinebreak', 'linebreak'] }\nFunction which sets the values is set using autocommands with groups: InsertLeave, InsertEnter, CursorMovedI, using CursorMoved seems to slow down vim to much."
@@ -482,7 +514,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* THE PLUGIN HAS A NEW LAYOUT (under your .vim directory! If you DO NOT WAN'T TO MESS YOUR .VIMRC directory, first use the old vimball file AutomaticTexPlugin.vba /version =< 6.7/ and the command RmVimball and then install the new version).\n* with the new version you can use $HOME/.atprc.vim file to set the variables (useful for the local-buffer variables).\n* TeXdoc command, mapped to <F1> with nice completion (which is using texdoc configuration files (texdoc.cnf)), you can also pass command line options to texdoc (for example ':TeXDoc -l -A lshort'), if run without any options prints the info message of texdoc (like texdoc or texdoc -h in the command line).\n* t:atp_DebugMode and g:atp_DefaultDebugMode variables with possible values: 'silent', 'debug', 'verbose'. \n* Changes in ShowError (new flag 'all' and some other things ... )\n* NEnv, PEnv commands set the last pattern, if you want to search further (forward or backward) you can use 'n' and 'N' vim keys.\n* When the cursor is positioned on \\begin:\\end, \\left:\\right, $:$ the mathing pairs are highlighted like the matching pairs of brackets (with the same highlight group) (by D. Munger).\n* Hihglighting of \\begin:\\end, $:$, \\[:\\], \\(:\\) and if filetype is 'plaintex' (or the variable b:atp_TexFlavour = 'plaintex') also $$:$$ (based on function written by D. Munger)\n* Select environment with \"vie\" \"vae\" /or \"ie\" \"ae\" in visual mode/ (by D. Munger)\n* Select inline math environments ($:$, \\(:\\) and \\[:\\]) with \"vi$\" and \"va$\" (by D. Munger)\n* Simplifications of SshPrint command\n* g:atp_ToggleMathTextWidth - if set to 1 ( the default is 1 if textwidth != 0 and 0 other wise ) vim textwidth option will be set to 0 if the cursor stands in math environment (currently works only for $:$, \\(:\\), \\[:\\], and $$:$$ ). \n"
@@ -498,7 +530,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* new CALL BACK mechanism as suggest by D.Munger (many thanks!) \n* CALL BACK and status line notification are now on by default - if (pdf)latex is working (pdf)latex is written in the status line together with number of insatnces (the value of b:atp_running variable). \n* local buffer variable names (:help b:) are chenged. If atp detects an old variable set by you it will ask you to change its name (and copy its value to the new variable!). "
@@ -514,7 +546,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* a bug fixed in intedation file\n* tikz keyword completion adds unclosed bracket to the popup menu"
@@ -530,7 +562,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "see the DOCUMENTATION for more on new features:\n* FontPreview and FontSearch commands allow for previewing many font defition files at once.\n* new WrapSelection function, vmaps: \\bf, \\it, etc, but also some of \\begin{}:\\end{} pairs  \n* \\s adds a star to an environment\n* <F4> cycles through environment names of the current environment  (if g:atp_toggle_labels = 1 it also changes the prefix of a label, for example from 'thm:' -> 'lem:' ).\n* color completion for the \\textcolor{}{} command (it finds defined colors in tex file and in input files as well)\n* smart completion for all arguments of \\usefont{}{}{}{} command, and for commands \\fontencoding{}, \\fontfamily{}, \\fontseries{}, \\fontshape{} and \\DecalreFixedFont.\n* More nice features from David Munger (LatexBox plugin): % operates also on \\begin{}:\\end{} paris, some changes in omnicompletion. \n* motion maps: <LocalLeader>NS, <LocalLeader>PS, <LocalLeader>NC, <LocalLeader>PC, <LocalLeader>NP, <LocalLeader>PP  - N/P next previous S/C/P - section/chapter/part\n* g:atp_imap_first_leader=\"#\" g:atp_imap_second_leader=\"##\", g:atp_imap_third_leader=\"]\", g:atp_imap_fourth_leader=\"[\",  variables which let you configure the leaders for imaps. There are also leaders for vmaps: g:atp_vmap_text_font_leader = \"<LocalLeader>\", g:atp_vmap_math_font_leader = \"<LocalLeader>m\", g:atp_vmap_environment_leader = \"\" (empty),g:atp_vmap_bracket_leader =\"<LocalLeader>\" and g:atp_vmap_big_bracket_leader\t= \"<LocalLeader>b\".\n"
@@ -546,7 +578,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* OmniCompletion for \\ref and \\eqref: you can complete either part of the label or the number of the environment/equation in your output file! by D.Munger (LatexBox plugin).\n* some other small changes in OmniCompletion by D.Munger.\n* small correction in main compiler function: if called by ViewOutput, when the output file did not exists, it will load the file regardless there were errors during compilation.\n* some nice changes in completion (both usual and omni) for \\cite command. Now the output of both looks the same: in the popup menu you will see the one abbreviation letter (a - article, B - book, b - booklet, etc...), author (authors) year, and the title.\n* \\cite{<vim-pattern><Tab> !!! for example '.*author1\\&.*author2' (a feature taken from LatexBox by D.Munger)\n* I renamed the variables g:texextensions to g:atp_tex_extensions.\n* g:atp_delete_output if equal 1 Delete function (mapped to <F6>d) will remove also output file (pdf or dvi according to b:atp_texcompiler variable).\n* g:atp_package_list is now generated according to the list of available packages in your tex distribution (used by tab completion for \\usepackage).\n* ]m  imaps to \\(:\\) and ]M imaps to \\[:\\]\n* FontPreview command (see :] atp-FontPreview).\n* b:autex is set to 0 for files under any tex directory as returned by 'kpsewhich -show-path tex' (except the current dir) otherwise b:autex=1 (b:autex toggles on/off the automatic tex processing)."
@@ -562,7 +594,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* Two new completion methods: for \\documentclass and for \\bibliographystyle.  They found all the files (classes, bib styles files) accessible in your tex distribution.  \n* OmniCompletion written by D.Munger (the author of Latex-Box plugin) (omnicompletion for \\cite{} works smoothly in gvim! is fast even with big bib data bases. In the popup menu shows the author and the title entries)\n* imap: ]e puts \\end{} ]u puts \\begin{enumerate}\n* CloseLastBracket() - a function integrated into tab completion: closes brackets (:), \\{:\\} and \\[:\\] presrves the size commands: \\left:\\right, \\bigl:\\bigr, etc...  , and preserves nested brackets (but do not checks if the bracket is put in the right place, like CloseLastEnv() function).\n* Tab_Completion is now much much faster !!!\n* TOC map \\t : doesn't regenerate the toc data base (unless if it doesn't exist), while :TOC command does. This makes the TOC work faster.\n* TOC some corections and a great speed up. \n* Some fixes in the algorithm which closes environments.\n* atplib.vim -- some function are now in the library atplib.vim, atp loads faster!\n"
@@ -578,7 +610,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* LocalCommands and DefiSearch functions both by default search for '\\def' and '\\newcommands' only up to first appearance of \\begin{document}. A bug fixed in search function which makes both function work twice as fast. \n* BibSearch: If there are no flags given but only keyword flags BibSearch uses the default g:defaultbibflags.\n* BibSearch: speed up: search function is up to 5 times faster, when no arguments are supplied (which for example when completing '\\cite{'). The function which shows results is now 3 times faster. For a file which has ~1700 bib fields it takes ~10 seconds to show all results. \n* BibSearch: a flag 'k' added for lines 'key = {...}' in a bib file.\n* IMAPs are CHANGED!, there are no imaps with [, only with ], which makes it more convenient to write latex optional arguments. If you want to use old maps put: \"let g:atp_env_maps_old=1\" in your vimrc file. See \":h atp-mappings-environments\".\n* Small Changes in the menu. (Toggle function works better).\n* Completion supports comment lines (i.e. now, it is not closing opened environments which start in a comment line)"
@@ -594,7 +626,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* Fix of printing command ':SshPrint'."
@@ -610,7 +642,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* Completion for keywords of tikz package added. \n* b:atp_local_completion=0 -- do not search for locally defined commands and environments, =1 search for them after first completion (default), =2 search at starup.\n* LocaCommands -- commands to update locally defined commands and environments.  \n* Do not close environments which are opened in the lines \\def, \\newcommand, \\renewcommand."
@@ -626,7 +658,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* NEW FEATURE: FontSearch: finds fd files in your system and lists them, press <Enter> to open the fd file, <Tab> to list the fonts defined, p to PREVIEW the fonts, P to preview the fonts and open buffer with the tex source (useful to see errors using ShowErrors command), in all 3 kinds of windows (fd list,fd file, tex source) q deletes the buffer (so that your lists of buffers doesn't become too long, if you want the buffer to remain in the list use ':q'. Some might not work, but this is on the tex side (usually because lack of some other kings of files: encoding, font metrics, etc...). You can search CTAN archive to find them.\n* Final changes to completion (check the description of the algorithm of closing environments :h atp-completion-env)\n* Now the doc file appears in local additions (:h local-additions). \n"
@@ -642,7 +674,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* Change in the compilation algorithm: now it uses temporary directories rather than temporary files, what allows for externalisation in tikz (thanks to D.Munger for reporting). The jobname switch of tex is now not used (only -output-directory).\n* Tab completion supports CLOSING ENVIRONMENTS: \\\\begin{}\\\\end{} and mathematical ones: \\\\(:\\\\), \\\\[:\\\\] !!! Environments may be NESTED. See &#039:h atp-completion&#039. There are two modes of completion: expert mode (mapped to <Tab>) and non expert mode (mapped to  <Shift>+<Tab>), the first with fewer matches of commands, the second if you are searching for some command.  Completion of commands checks if you are in math mode (only if entire document is written without $:$ and $$:$$ math modes, as it is hard to implement such a feature for this opening/closing pairs.). You can switch it on/off in the menu. Completion supports: commands, inline_math (automatically closes &#039\\\\(&#039), displayed_math (closes &#039\\\\[&#039), package names, tikz libraries (for the tikz package), environment names, close, labels, bibitems (for \\\\cite and \\\\nocite commands), environments, names of input files (searches for file names under b:outdir and g:texmfdir), bibfiles.\n* Wrap selection due to D. Munger (thanks!).\nThe following are yet in the help file:\n* The status line notification that tex is working (you need to set g:atp_status_notification=1 and g:atp_callback=1), by default is off (this changes mode from input to normal when tex ends). \n* Debug mode: you can set g:atp_show_errors=1 (and g:atp_callback=1) by default is off. You can open the log file (using :copen), and after tex ends the log file will be reread and the log will be updates. (As with status line notification: call back mechanism switches the mode from input to normal). \n"
@@ -658,7 +690,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* Tab completion supports \\bibitems (even if there are bibliographies across different input files)."
@@ -674,7 +706,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* Tab -- intelligent completion for environments, commands, package names, labels and citations (still not in doc). If you want to use tab for its usual role put 'let g:atp_no_tab_maps = 1', into your vimrc file. Then the completion is mapped to F7. Also completes \\begin{env} adding \\end{env} in next line.\n* If you use amsmath package then the completion supports extra commands and environments defined in this package. In case you use a document class which silently loads the package you can set the variable g:atp_amsmath = 1 in your vimrc file.\n* If you have your own commands for which you want to add completion you can easily add them.\n* special space map for command line searching under F2 (still not in doc)\n* Menu (still not in doc)\n* EditInputFile allows to switch between input files and the main file.\n* and other small changes and bug fixes.\n"
@@ -690,7 +722,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* Files which name have white spaces are properly handled.\n* nice colors for diff mode in gui in terminal versions.\n* DefiSearch returns 'Definition not found' if it is not found. \n* NextSection, PrevSection function and corresponding commands to move between parts, chapters and sections.\n"
@@ -706,7 +738,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* Corrections in Inverse/Reverse Searching for dvi. \n   See the doc ':h atp-viewers-xdvi' for the functions.\n* ShowErrors works better (warning messages about references, \n  citations and fonts), new flags fi,p and F to show font info messages, \n  which packages are loaded, and which files are loaded by tex. \n  See the doc ':h atp-ShowErrors'\n* and some other small corrections."
@@ -722,7 +754,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "two small fixes, thanks to a user :) ."
@@ -738,7 +770,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* another small fixes"
@@ -754,7 +786,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* small fixes"
@@ -770,7 +802,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* NEnv, PEnv - moving to next/previous environment (which is supplied as a command agrument [completion])\n* support for projects: when edditing an input file the g:mainfile will be processed by tex compiler, the value of g:mainfile is set automatically, but you have to first open the main project file.\n* EditInputFile has completion for the first argument which an imput file to open, the second argument is now the command for opening a buffer ('edit','split','vsplit', the default is 'edit') and the third one is the buffer name (default = current buffer) \n* EditInputFile allows to open bibfiles  \n* $TEXMFOUTPUT variable integrated (if it is set then it its used to set  b:outdir variable)\n* $BIBINPUTS variable integrated\n* ShowErrors fixed, custom completion added  \n* SShPrint prints over ssh \n\t\tg:atp_printer_options\n\t\tg:atp_ssh\n  it has a custom complition set which help to choose the printer\t\n* b:ViewerOptions \n* g:{b:Viewer}Options\n* SetXdvi - sets all the option for xdvi viewer (including inverse/reversesearching)\n* SetXpdv - sets the options for xpdf viewer (inverse/reverse searching is not supported yet)"
@@ -786,7 +818,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "* TOC shows the short name of sections if it is non empty.\n* TOC, Labels, and BibSearch uses split/vsplit (instead of new/vnew) what increase the spead.\n* new commands: ShowErrors and SetErrors (see ':h atp-ShowErrors')\n* map 2\\l :2TEX\n* imap [i \\item  'now without spaces after \\item'\n* CTOC value appears in the status line\n* CTOC is using t:toc if it exists \n* a small change in syntax file bibsearch_atp.vim\n* change of a map: TOC is now mapped to \\t (not T, which is a useful vim map)\n* g:toc_window_width, g:labels_window_width\n* t:buflist stores now full path, t:bufname is a full path \n* some changes in status line\n* a nice status line of ToC, Labels and Bibsearch windows\n* some language corrections in doc file\n* Labels window: setl nospell\n* Input files appear corectly in ToC\n* b:auruns variable (see :h atp-auruns)"
@@ -802,7 +834,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "Two new functions:\n    FindInputFiles\n    EditInputFile\ncolor scheme supports gui version. "
@@ -818,7 +850,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "ToC (table of contents) supports multiple opened files. And allows to switch between buffers or windows."
@@ -834,7 +866,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "This version has several fixes, plus several new features:\n\n1) BibSearch opens now a new window, a syntax file for the results is provided, which is based on syntax file for bib files (see :h atp-bibsearch-highlight)\n2) TOC command, which displays in seperate window interactive table of contents (wich the same numbering as in the output file), \n     I also provide a syntax file for TOC files\n3) Lables command which dispalys in a seprate interactiv window lables found in your file\n\nWindows openned by TOC and Labels commands have functions which make it easy to copy the label (of chapter or of the label) to a registar or directly to you file, or to move to the label, or to echo the line with the label and to split the window of your tex file and one of them move to the label, to see its contens.\n\nIf you open table of contents or the list of labels cursor position is set to the chapter (label) which you are currently editing.\n\nsee :h atp-TOC() and :h atp-Labels()\n\nBest regards and happy texing :)\nMarcin Szamotulski\n4) I provide a color file, called coot-beauty-256 (it needs support for 256 colors).\n4) Status line now shows the current chapter/section of the edited tex file."
@@ -850,7 +882,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "a small fix: the option g:vertical is now working as desired."
@@ -866,7 +898,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "I added a powerful functions to search in bibliographic files (*.bib) for entries which match a vim regexp. One choose which entries are shown (articles,books, etc..., but also author,title,etc...). The function can easily copy the bibfield key to a register or directly to the tex source file. \n\nI also supply a syntax file for output of this search function which is a small modification of the standard syntax file for bib files. "
@@ -882,7 +914,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "GetLatestScript support added."
@@ -898,7 +930,7 @@
         "user_name": "coot",
         "first_name": "Marcin",
         "last_name": "Szamotulski",
-        "email": "mszamot at gmail.com",
+        "email": "mszamot@gmail.com",
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "Initial upload"

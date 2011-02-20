@@ -5,8 +5,24 @@
   "name": "LustyJuggler",
   "script_type": "utility",
   "description": "LustyJuggler is a high speed buffer juggler.  Having to consciously think about which buffer you need to switch to sucks, so use this instead.\n\nSomeone made a screen cast showing it in action (jump to 6:20):\n\n      http://lococast.net/archives/185\n\n      Some older stuff:\n      http://viewglob.sourceforge.net/lusty-juggler-animated.gif\n      http://viewglob.sourceforge.net/lusty-juggler-annotated.png\n\nLaunch the juggler with this key combo:\n\n      <Leader>lj\n\nThe command bar at bottom is replaced with a new bar showing the names of your currently opened buffers in most-recently-used order.\n\nThe buffer names are mapped to these keys:\n\n      1st --> a or 1\n      2nd --> s or 2\n      3rd --> d or 3\n      4th --> f or 4\n      5th --> g or 5\n      6th --> h or 6\n      7th --> j or 7\n      8th --> k or 8\n      9th --> l or 9\n      10th --> ; or 0\n\nSo if you type \"f\" or \"4\", the fourth buffer name will be highlighted and the bar will shift to center it as necessary (and show more of the buffer names on the right).\n\nIf you want to switch to that buffer, press \"f\" or \"4\" again or press \"<ENTER>\".  Alternatively, press one of the other mapped keys to highlight another buffer.\n\nIf you changed your mind, cancel the juggler with any of \"q\", \"<ESC>\", \"<C-c\", \"<BS>\", \"<Del>\", or \"<C-h>\".\n\nIf you like LustyJuggler, you may also like LustyExplorer: vimscript #1890\n\nDevelopment repository: http://github.com/sjbach/lusty",
-  "install_details": "Copy the script into your $HOME/.vim/plugin directory so that it will be sourced on startup.\n\nNOTE: This plugin requires Vim be compiled with Ruby interpretation.  If you do not currently have this functionality, see the \"Install Details:\" section of the script for directions on adding it.  It's not too tough.",
+  "install_details": "Copy the script into your $HOME/.vim/plugin directory so that it will be sourced on startup.\n\nNOTE: This plugin requires Vim be compiled with Ruby interpretation.  If you do not currently have this functionality, see the \"Install Details:\" section of the script for directions on adding it.  It's not too tough.\n\nAlso: because of a bug in Vim's maparg() call, this plugin can interact poorly with plugins that remap common normal mode keys such as \"d\" (for dd, dw, etc.) and \"<ENTER>\".  These include YankRing and SuperTab.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14536",
+      "filename": "lusty-juggler.vim",
+      "script_version": "1.2",
+      "date": "2010-12-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12358",
+        "user_name": "sjbach",
+        "first_name": "Stephen",
+        "last_name": "Bach",
+        "email": "lusty@sjbach.com",
+        "homepage": ""
+      },
+      "release_notes": "- Don't show unlisted buffers. (Thanks to Johannes Holzfuß)\n- New Alt-Tab mode to emulate window manager switching.  See g:LustyJugglerAltTabMode in documentation. (Thanks to Martin Wache)\n- Save and restore keymappings. (Thanks to Vincent Driessen)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13094",
       "filename": "lusty-juggler.vim",
@@ -18,7 +34,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- don't error if ENTER is pressed before selection\n- avoid a \"Press ENTER to continue\" message.  (Thanks to Bartosz Leper)\n- don't error when the QuickFix buffer is open.  (Thanks to Marco Barberis)"
@@ -34,7 +50,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Fix portability with the updated Vim->Ruby data type conversion in devhead Vim.\n- Fix portability with Ruby 1.9."
@@ -50,7 +66,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Fix ENTER key to select the active buffer.  Thanks to Bartosz Leper."
@@ -66,7 +82,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Fix a startup bug in OS X and Windows.  Thanks to Bartosz Leper."
@@ -82,7 +98,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Substantially shorten displayed buffer names; usually only the basename is shown.  Thanks to Matt Tolton for the idea.\n- Add GetLatestVimScripts compatibility."
@@ -98,7 +114,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "The g:LustyJugglerShowKeys option should not be required to be set."
@@ -114,7 +130,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Added g:LustyJugglerShowKeys for prefixing buffer names.  Thanks to Juan Frias for the original patch."
@@ -130,7 +146,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Colouring for path elements.\n- Added :JugglePrevious, a smarter version of the :b# command.\n- Refactoring."
@@ -146,7 +162,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Fixed the layout algorithm so as not to veer right.\n- Disabled showmode when juggler is active."
@@ -162,7 +178,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

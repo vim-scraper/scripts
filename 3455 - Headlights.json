@@ -1,0 +1,27 @@
+{
+  "script_id": "3455",
+  "display_name": "Headlights",
+  "summary": "A Vim plugin that provides a TextMate-like 'Bundles' menu.",
+  "name": "Headlights",
+  "script_type": "utility",
+  "description": "Headlights is a Vim plugin that helps you manage your plugins (bundles). It shows you the plugins you have installed, and reveals their associated commands, mappings, and script files.\n\nHeadlights works by scraping Vim's internal commands and using Python to generate the fancy menus. (Tip: you need a version of Vim compiled with Python support.)\n\nhttps://github.com/mbadran/headlights",
+  "install_details": "- Download the source archive.\n\n- Expand the source archive in your .vim dir (I trust you use Pathogen).\n\n- Add the following line to your .vimrc:\n\nexecute \"HeadlightsTurnOn\"\n\n(This step is necessary to allow all plugins to load before inspecting them.)\n\n- Restart Vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15032",
+      "filename": "headlights.zip",
+      "script_version": "1.0",
+      "date": "2011-02-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "26833",
+        "user_name": "mbadran",
+        "first_name": "Mohammed",
+        "last_name": "Badran",
+        "email": "mebadran@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

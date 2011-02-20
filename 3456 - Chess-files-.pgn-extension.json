@@ -1,0 +1,27 @@
+{
+  "script_id": "3456",
+  "display_name": "Chess files (.pgn extension)",
+  "summary": "Chess files: syntax, ftplugin and snippets",
+  "name": "Chess-files-.pgn-extension",
+  "script_type": "syntax",
+  "description": "* Syntax highlighting for .pgn files\n* Abbreviations and mappings:\niabbrev oo  O-O\niabbrev OO  O-O\niabbrev 00  O-O\niabbrev ooo O-O-O\niabbrev OOO O-O-O\niabbrev 000 O-O-O\ninoremap <buffer> > 1-0\ninoremap <buffer> < 0-1\nimap <buffer> \\pw ♙\nimap <buffer> \\pb ♟\nimap <buffer> \\rw ♖\nimap <buffer> \\rb ♜\nimap <buffer> \\nw ♘\nimap <buffer> \\nb ♞\nimap <buffer> \\bw ♗\nimap <buffer> \\bb ♝\nimap <buffer> \\qw ♕\nimap <buffer> \\qb ♛\nimap <buffer> \\kw ♔\nimap <buffer> \\kb ♚\n* Commands:\nChessBoardEcho\nChessBoardPrint\nChessNormalize (1. e4 e5 2. -- -- 3. -- -- TO one move per line)\n* snipMate snippets:\nskel\nskeleton\n= -> 1/2-1/2\n== -> 1/2-1/2\n1/2 -> ½\n12 -> ½\n* Bonus:\nIf you write one move per line,\nthe plugin will automatically add the correct number for the following move",
+  "install_details": ":h add-plugin\nor\nuse pathogen (recommended)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15034",
+      "filename": "chess.zip",
+      "script_version": "1.0",
+      "date": "2011-02-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14686",
+        "user_name": "Mitko",
+        "first_name": "Dimitar",
+        "last_name": "Dimitrov",
+        "email": "mitkofr@yahoo.fr",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

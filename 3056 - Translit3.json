@@ -8,20 +8,132 @@
   "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"translit3\"]) and add ``call scriptmanager#Activate([\"translit3\"])'' to your .vimrc, then reload vim. Vim-addon-manager will install all dependencies for you). You can also use archives attached to this page, they contain plugin with all dependencies, so you do not need to fetch them yourself. First version present on this page needs no dependencies.\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.",
   "versions": [
     {
-      "url": "http://www.vim.org/scripts/download_script.php?src_id=14443",
-      "filename": "translit3-2.2.8.tar.gz",
-      "script_version": "2.2.8",
-      "date": "2010-12-05",
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14885",
+      "filename": "translit3-2.2.15.tar.gz",
+      "script_version": "2.2.15",
+      "date": "2011-01-27",
       "vim_version": "7.3",
       "author": {
         "user_id": "18939",
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
-      "release_notes": "Fixed integration with ConqueTerm plugin"
+      "release_notes": "Added `TransliterateMotion' actionAdded box drawing symbolsImproved handling of transliteration tables from buffer variablesImproved replace actionSome Tr3Command fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14756",
+      "filename": "translit3-2.2.14.tar.gz",
+      "script_version": "2.2.14",
+      "date": "2011-01-15",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Made plugin use new vimpluginloader features, some fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14641",
+      "filename": "translit3-2.2.13.tar.gz",
+      "script_version": "2.2.13",
+      "date": "2010-12-28",
+      "vim_version": "9999",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Reposting bundle due to core plugins update"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14639",
+      "filename": "translit3-2.2.13.tar.gz",
+      "script_version": "2.2.13",
+      "date": "2010-12-28",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Fixed session support"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14621",
+      "filename": "translit3-2.2.12.tar.gz",
+      "script_version": "2.2.12",
+      "date": "2010-12-26",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added support for empty NoTransWord, EscSeq, BrkSeq and StopTrSymbs options"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14599",
+      "filename": "translit3-2.2.11.tar.gz",
+      "script_version": "2.2.11",
+      "date": "2010-12-21",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Added BreakFunc optionMade conque_w function use new documented conque API (note that it is incompatible with old versions of conque)Some bug fixes"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14566",
+      "filename": "translit3-2.2.10.tar.gz",
+      "script_version": "2.2.10",
+      "date": "2010-12-18",
+      "vim_version": "9999",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Reposting bundle due to core plugins update"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14492",
+      "filename": "translit3-2.2.10.tar.gz",
+      "script_version": "2.2.10",
+      "date": "2010-12-12",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Fixed conque write function"
     },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14362",
@@ -34,7 +146,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added support for multicharacter strings for \\tr, \\tt, \\tT, \\tf and \\tF commands"
@@ -50,7 +162,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Reposting bundle due to core plugins update"
@@ -66,7 +178,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Removed <Nop> mappings detection for <vim-7.3.32Fixed esc consuming after inputting multiple characters transliteration sequences"
@@ -82,7 +194,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added support for vim-7.3.32 patch. Note that format of the `exmaps' key of tof buffer dictionary changed"
@@ -98,7 +210,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added replacements for r, t, T, f and F normal mode commands: so now if you want to replace character under cursor with ÃÂ«, you will need to type \\tr<< in normal mode (works only for single character replacements)."
@@ -114,7 +226,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Fixed bug with multicharacter source strings (like ÃÂ«ch Ã¢ÂÂ ÃÂÃÂ»)"
@@ -130,7 +242,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added WriteFunc option (allows to override method used to send strings to buffer), added Conque Shell plugin support, fixed behavior when backspace option is not set"
@@ -146,7 +258,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added ConfigDir option, added tests, some bug fixes"
@@ -162,7 +274,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Made `Transliterate' mapping (it shows prompt and transliterates user input) use stuf/cinput function (so that this prompts now have their own history) and new completion"
@@ -178,7 +290,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Translated messages to Russian"
@@ -194,7 +306,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Some fixes to tof/notransword plugin"
@@ -210,7 +322,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Updated russian documentation"
@@ -226,7 +338,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "This is the first version published here that contains translit3 splitted into 6 plugins"
@@ -242,7 +354,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "This is the first version published here that contains translit3 splitted into 6 plugins"
@@ -258,7 +370,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Initial upload"

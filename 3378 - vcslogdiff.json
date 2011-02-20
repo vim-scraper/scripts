@@ -1,0 +1,27 @@
+{
+  "script_id": "3378",
+  "display_name": "vcslogdiff",
+  "summary": "Plugin to vcscommand.vim to allow easy diffing in log window",
+  "name": "vcslogdiff",
+  "script_type": "utility",
+  "description": "Vim script for enhancing the vcscommand.vim script. You can easily diff between two\nrevisions in the log window. It also add coloring to the log buffer too. Right now it supports svn and hg.\n\nUSAGE:\n- Call VCSLog\n- Go to revision a, press 's'\n- Go to revision b, press 's'\n- Press 'd' to launch GUI diff",
+  "install_details": "Note: currently only works on Linux\n\nRequires: \n- diffuse\n- vim compiled with +sign\n\nTo install, simply drop it in ~/.vim/plugin.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14612",
+      "filename": "vcslogdiff.vim",
+      "script_version": "0.1",
+      "date": "2010-12-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "3397",
+        "user_name": "lang2",
+        "first_name": "Wenzhi",
+        "last_name": "Liang",
+        "email": "wenzhi.liang@gmail.com",
+        "homepage": "http://vimcdoc.sf.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

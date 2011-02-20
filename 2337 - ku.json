@@ -18,7 +18,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "Bug fixes:- |ku-file|: Fix a serious bug which was mixed in ku source file version 0.1.3.  See |ku-file-changelog-0.1.4| for the details."
@@ -34,7 +34,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "Feature enhancements:- |ku-file|: Support to deal with files in archives.  See also |ku-file-changelog-0.1.3| for the details.Misc. improvements:- |filetype-ku|: Modify the default initialization on |the-ku-buffer|.  Old versions don't override existing key mappings.  New versions now override existing key mappings.  It is convenient for starters to use ku without any configuration.  For example, many people customize <Tab> to complete something in  Insert mode.  In such cases, old versions don't override <Tab> to  |<Plug>(ku-choose-an-action)|, but it's very inconvenient to use ku.  All key mappings defined by |ku#default_key_mappings()| are local to  a buffer, so that it's not necessary to avoid overriding.  Thanks to rphillips and other persons for reporting this problem.Bug fixes:- |ku#restart()|: Fix a bug that is caused by a change in the previous version.  As ku#restart() is called, the prompt character will be inserted many times."
@@ -50,7 +50,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "Feature enhancements:- Add |g:ku_personal_runtime| to customize where information such as |ku-input-history| to be saved.- Add |:KuReload| and |ku#reload()| to reload the whole system of ku.Misc. improvements:- Improve an error message.- Add tests, not perfect yet.- |ku-input-history|: Change the directory to save input history.  Use the first directory in the default value of 'runtimepath', instead of the current value of 'runtimepath'.  Because some users customize 'runtimepath', and the first directory in such values may not refer a directory for personal settings.Bug fixes:- Fix a bug that ku list the same sources many times if there are 2 or more source scripts which filenames are the same in 'runtimepath'.- Fix bugs that ku may be confuse if typeahead buffer is not empty at the beginning of a |ku-session|.- |ku#set_the_current_input_pattern()|:  - Fix a wrong description in the document.  - Fix a bug on the treatment of a given string.  If a given string starts with the same character as the prompt, that character is treated as the prompt and not a part of the given string, so it's not easy to set such strings.  - Fix a bug on the automatic completion.  The cursor position may be altered in several cases.See also:- |ku-source-changelog-0.1.2|"
@@ -66,7 +66,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "Bug fixes:- Fix an assumption that the separator for pathes is \"/\".  This assumption causes unexpected behavior on some environments such as Microsoft Windows.- Fix a wrong condition to use 'shellslash'.Feature enhancements:- Add API functions to deal with pathes.  See also:  - |ku#make_path()|  - |ku#path_separator()|See also:- |ku-file-changelog-0.1.2|"
@@ -82,7 +82,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "Bug fixes:- |<Plug>(ku-choose-action)|: Fix a bug that an error message is displayed unexpectedly, whenever a key which is not associated with any action is pressed.- Fix a bug that the current source name in |the-ku-buffer| is not highlighted correctly in some cases.- Document: Fix a wrong description on the default value of |g:ku_history_reloading_style|.  It is \"idle\", not \"once\".- |ku__source|: Fix a bug that it doesn't exist for items which are not completed by ku.- |ku-action-left| and other actions: Fix a bug that they don't close a window or a tab page created by them even if |ku-action-default| is failed.Incompatible changes:- Change the behavior not to take any action if an input pattern is empty and there is no item, because there is nothing to do in such case.- Change the specification on |ku-action|.  Now the function corresponding to an action must return 0 if it succeeds, or a string which represents an error message if it fails.  Old versions don't touch on return values.Misc.:- Refactor the core."
@@ -98,7 +98,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "- Add |ku__source|.- Fix a few assumptions on path separator.- Improve the performance to complete items.  Now it is 10 times faster than old versions.- Modify the sorting order of items.  If an item contains any character of |g:ku_component_separators|, it is prior to other items which don't contain that characters.  For example, if there are two items \"foo/bar\" and \"foo-bar\", new versions put \"foo/bar\" before \"foo-bar\", while old versions put \"foo-bar\" before \"foo/bar\".  This change is to avoid selecting unexpected item with |ku-auto-component-completion|.- |ku-auto-component-completion|:  - Improve the conditions to activate.  Now it is not unexpectedly activated for some cases.  - Improve how many components to be completed.- |g:ku_acc_style|: New.Incompatible changes:- Change many points about |ku-sources| and |ku-action|.  - Sources for 0.1.x are not compatible with 0.2.x.  - |ku#{source}#gather_items()|:    - Change the naming rules about additional entries for each item: Old versions use \"_{source}_...\" and \"_ku_...\".  New versions use \"ku_{source}_...\" and \"ku__...\" instead.    - Add several rules on return values.  - |ku#{source}#gather_items()|: New API to implement.  - |ku#{source}#acc_valid_p()|: Change the default value if it is not defined.  Old versions always return true.  New versions always return false.  - |ku-special-sources|: Delete this concept.  Now all source scripts may provide more than one sources.  - |ku#{source}#available_sources()|: New function to implement.  - |ku-source-api|: Most of functions must take an additional argument about source name.  - |ku#{source}#event_handler()|: Delete.  This function is now split into the following functions:    - |ku#{source}#on_before_action()|    - |ku#{source}#on_source_enter()|    - |ku#{source}#on_source_leave()|- |ku-pattern|:  - Change the definition of \"word\" pattern.  Old versions use spaces and slashes as wildcards.  New versions use only spaces as wildcards.  - Add an assumption - see |ku-pattern-prefix-assumption|."
@@ -114,7 +114,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "- Add |g:ku_history_reloading_style|.- Change the default timings to reload and to save |ku-input-history|.  See also \"idle\" on |g:ku_history_reloading_style|.  Old versions use \"each\", but \"idle\" is used instead from now on."
@@ -130,7 +130,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "- Add |g:ku_choosing_actions_sorting_style|.- Change the sorting style of |<Plug>(ku-choose-an-action)|.  See also |g:ku_choosing_actions_sorting_style|.- Fix some bugs - see |ku-buffer-changelog| and |ku-file-changelog|."
@@ -146,7 +146,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "- Include new source |ku-source|.- Change the default value of |g:ku_history_added_p|.  Now it also omits patterns for source |ku-source|.- Add |<Plug>(ku-choose-source)| and the default key mapping for it (see |ku#default_key_mappings()|).- Add |ku#get_the_current_input_pattern()|.- Add |ku#set_the_current_input_pattern()|.- Fix typos in this document.- Revise the internal stuffs.- Change |ku#restart()| to use the last inputted pattern and the last active source.  Old versions don't use ones if a selection is canceled by |<Plug>(ku-cancel)|.- Add |ku-action-selection| and the entry for it in |ku-default-key-table|.- Show an additional message while choosing an action for |<Plug>(ku-do-persistent-action)|.  In older versions, it cannot be distinct from a message either |<Plug>(ku-do-persistent-action)| or |<Plug>(choose-an-action)| is used.Incompatible changes:- Remove |ku-action-persistent|; use |<Plug>(ku-do-persistent-action)| instead.- Change |ku-action-cancel| - now it cannot be overridden, though it should not be overridden from the beginning.- Don't add the current input pattern into |ku-input-history| if the action to be taken is |ku-action-cancel|.  Old versions do add, but it seems to be unexpected behabior."
@@ -162,7 +162,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "- Add |ku#switch_source()|.- Add |ku-action-persistent|, |<Plug>(ku-do-persistent-action)| and the default key mapping for it (see |ku#default_key_mappings()|).- Include new source |ku-history|.- Add |ku#available_source_p()|.- Change the default value of |g:ku_history_added_p|.  Now it also omits patterns for source |ku-history|.Incompatible changes:- Change the behavior of |:Ku| and |ku#start()| if ku is already active.  Old ones change the current source to the specified source.  New ones don't nothing.  Use |ku#switch_source()| to change the current source.- Change the specification of |g:ku_history_added_p|.  It took a single argument, but now, it takes 2 arguments."
@@ -178,7 +178,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "- Show the information about |ku-input-history| in |the-ku-buffer|.- |ku#custom_action()|: Accept \"common\" for {source2} to specify an  action from the default action table for all sources.  For example:>  call ku#custom_action('buffer', 'xyzzy', 'common', 'tab-Right')<- Modify |ku-action-right| and other actions to refer \"default\" action  from the default action table of the current source.  Because they  may fall into infinite loop if user-defined \"default\" action refers  \"default\" action.- Add |g:ku_history_size|.- Add |<Plug>(ku-older-history-and-source)| and  |<Plug>(ku-newer-history-and-source)|.- Add |<Plug>(ku-history-source)|.Incompatible changes:- Change the format of value returned by |ku#input_history()|.  Now it is a list of dictionaries, not a list of strings."
@@ -194,7 +194,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "- Add |ku#{source}#acc_valid_p()| to filter items for  |ku-auto-component-completion|.- Add |g:ku_history_added_p|.- Fix an error when input history becomes larger than its maximum  size.- Add a way to disable a specific action.  See |ku-disable-action|.- Set 'filetype' of |the-ku-buffer| to \"ku\".- Add syntax highlighting for |the-ku-buffer| and messages by  |<Plug>(ku-choose-an-action)|.- Refactor on minor stuffs.Incompatible changes:- Don't publish \"User plugin-ku-buffer-initialized\".  Use \"FileType ku\" and/or filetype plugin instead."
@@ -210,7 +210,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "- Inconpatible change:  - For |ku-special-sources|, |ku-source-api| takes the name of the    current source as the 1st argument.  - |ku-SourceEnter| and |ku-SourceLeave| don't take extra argument.- |ku#custom_action()|: Add new way to specify {function}.- |ku#start()|: Add {initial-pattern}.- Show some information on the selected item while choosing action.- Add |ku-input-history|.- Add |ku#restart()|.- Add source-specific priority on sorting items.  See  |_ku_sort_priority| for the detail."
@@ -226,7 +226,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "- Fix a bug in |ku-prefix-expansion| - it didn't expand proper prefix if there are 2 or more prefixes which have the same head part.  For example, if there are prefixes \"ab\", \"abc\", \"abcd\" and so forth, it is not possible to predict which prefix will be expanded for user input \"abcd/efgh\".  It should expand \"abcd\", but it may use \"abc\" or \"ab\" instead.\n- Add |ku-assumptions|.\n- Change the name of the ku buffer for Microsoft Windows to avoid unexpected behavior (see |g:ku_buffer_name| for the detail).\n- Add |g:ku_buffer_name|.\n- Improve |ku-auto-directory-completion|.  Now the feature is called as |ku-auto-component-completion|.\n- Fix a bug in |ku-auto-directory-completion|.  It may raise an error if user input contains a special character.\n- Add |ku-prefix-expansion|.\n- Fix |:KuDoAction| to check whether ku is active or not.\n- Improve the performance of |ku#available_sources()|.\n- Add priorities for |ku-sources-list|.\n"
@@ -242,7 +242,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "- Add |ku-special-sources|.\n- Remove the feature to provide |metarw-schemes| as |ku-sources|.\n  This feature is implemented as a special source and it is included\n  in |metarw| 0.0.1 or later.\n- Fix requirements - ku uses |fnameescape()| which is added since Vim\n  7.1.299.  (thanks to id:thinca)"
@@ -258,7 +258,7 @@
         "user_name": "kana",
         "first_name": "Kana",
         "last_name": "Natsuno",
-        "email": "whileimautomaton+vim at gmail.com",
+        "email": "whileimautomaton+vim@gmail.com",
         "homepage": "http://whileimautomaton.net/"
       },
       "release_notes": "Initial upload."

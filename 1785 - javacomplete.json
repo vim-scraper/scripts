@@ -8,6 +8,22 @@
   "install_details": "1. Unzip javacomplete.zip to a directory of 'runtimepath', e.g.\n$HOME/.vim (unix/linux), $VIM/vimfiles (windows).\n\t> unzip javacomplete.zip -d ~/.vim\n\n    To update Vim help tags, run vim and run command: \n\t:helptags $HOME/.vim/doc\n    or\n\t:helptags $VIM/vimfiles/doc\n\nNOTE: javacomplete.vim, java_parser.vim and Reflection.java should be in one\nautoload directory of 'runtimepath'.\njavacomplete.txt should be in one doc directory of 'runtimepath'.\n\n2. Set 'omnifunc' option. e.g.\n        :setlocal omnifunc=javacomplete#Complete\n  Or, use autocmd: \n        :\" Only do this part when compiled with support for autocommands.\n        :if has(\"autocmd\")\n        :  autocmd Filetype java setlocal omnifunc=javacomplete#Complete\n        :endif\n  You can add this command to your .vimrc or _vimrc.\n\n3. Set 'completefunc' option to show parameters information IF YOU LIKE. e.g.\n\t:setlocal completefunc=javacomplete#CompleteParamsInfo\nYou can map as follows for better display:\n\t:inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P>\n\t:inoremap <buffer> <C-S-Space> <C-X><C-U><C-P>\n\n4. Reflection.java will be automatcally compiled and placed to $HOME when you\nuse first time. Assure that Reflection.java is in the same directory with\njavacomplete.vim to be searched in autoload subdirectory of &rtp. \nIf no Reflection.class is generated, check that you have the write permission\nin $HOME directory.\nIf a previous Reflection.java is not compatible with the new version\njavacomplete.vim, please compile Reflection.java manually.\n",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14914",
+      "filename": "javacomplete0.77.1.2.zip",
+      "script_version": "0.77.1.2",
+      "date": "2011-01-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11701",
+        "user_name": "fangcheng",
+        "first_name": "fang",
+        "last_name": "cheng",
+        "email": "fangread@yahoo.com.cn",
+        "homepage": ""
+      },
+      "release_notes": "Fixed the bug caused by that globpath() (vim version < 7.2) does not support the 3rd parameter.\nThanks to Sam Lidder's patch."
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14244",
       "filename": "javacomplete.zip",
       "script_version": "0.77.1.1",
@@ -18,7 +34,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "Fixed to ignore the 'suffixes' and 'wildignore' options.\nReflection.class can not be found if :set wildignore=*.class"
@@ -34,7 +50,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "+ Supported showing method parameters information in any place between parenthesises."
@@ -50,7 +66,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "+ Supported new contexts \"jav|\", \"var|\", just after an incomplete word.\n+ Supported accessible static imported members, add new context \"abs(|)\".\n+ Supported accessible inherited members.\n- [Reflection.java]Improved getting paths of all system jar files for different JDKs in different platforms.\n- Rewrote some core functions."
@@ -66,7 +82,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "- Improved support of JSP: appending automatically jar or classpath under WEB-INF.\n- Supported local and anonymous classes.\n- Improved searching type or symbol name."
@@ -82,7 +98,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "- Improved process of type arguments of generic type and method parameters.\n- Reorganize codes in javacomplete#Complete()\n- Fixed case of \"new java.util.zip.ZipFile().|\""
@@ -98,7 +114,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "- Improved recognizing methods, ctors, and variable declarators declared in most common form.\n- Optimized code and fixed bugs."
@@ -114,7 +130,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "- Optimized code: s:modeAndEXPR(), formalParameter(), and others.\n- Added quick recognizing fields or methods declared in most common form.\n- Fixed bug: \"foo().|\", \"getFoo().foo().|\", \"for (Enumeration entries = ; entries.|; )\".\n- Supported input contexts: \"((Object)o).|\", \"((Object)o).getClass().|\", \"new ZipFile(path).|\", \"(new String().)|\"."
@@ -130,7 +146,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "- Made a major improvement of Reflection. REMEMBER to DELETE the old Reflection.class.\n- Support accessible nested classes from reflection.\n- Support import static members and import accessible nested classes.\n- Improved input contexts: \"int.class.toString().|\", \"list.toArray().|\".\n- Fixed recognition of \"this(|)\", \"method1(|)\"\n- Added the 'kind' letter to distinguish between classes and packages.\n- Fixed a bug when Reflection.java is in the path which contains space.\n- Better support for JSP."
@@ -146,7 +162,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "- Make an improvement for JSP file.\n- Add an option 'searchdecl' set by javacomplete#SetSearchdeclMethod().\n- Clear cache when set options affecting classpath.\n- Improved DoGetPackageList() and s:GenerateImports().\n- Replace codes searching list of string with index().\n- Removed the unclear s:tokens and s:modifier_keywords in java_parser.\n- Add java_parser#GetSnapshot() and java_parser#Restore().\n- Fixed a bug when no top level class defined"
@@ -162,7 +178,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "- Add inherited fields and methods to local class.\n- Combine members of local packages and loadable packages.\n- Add quick recognition of package or import. \n- Fix failing to list members of nested class.\n- Improved java_parser.\n- [Reflection] Return a modifier value as a string because it more than 32bit."
@@ -178,7 +194,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "- Support new language features in JAVA 5 and above.\n- The embedded JAVA parser is full-featured now, adding supports for parsing statement, block or expression.\n- Java_parser.vim is an autoload script now.\n- Support JDK1.1.\n- Improve for 'this' or 'super'.\n- Support searching toplevel class in current directory, same package or in sourcepath.\n- Supports input context: \"StringLiteral\".|, \"int.|\", \"void.|\"\n- Add java compiler option, default 'javac'\n- Add JVM launcher option, default 'java'\n- Automatcally compile Reflection.java and place it to $HOME.\n- Easier to install and use."
@@ -194,7 +210,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "\" \tAdd java_parser.vim.\n\" \tAdd b:sourcepath option.\n\" \tImprove recognition of classes defined in current buffer or in source path.\n\" \tSupport generating class information from tags instead of returning list directly."
@@ -210,7 +226,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "Support jre1.2 (and above).\nSupport input context like \"boolean.class.|\"\nHandle java primitive types such as 'int'."
@@ -226,7 +242,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "Fix bug that CLASSPATH not used when b:classpath or g:java_classpath not set.\nFix bug that call filter() without making a copy for incomplete.\nImprove recognition of declaration of this class"
@@ -242,7 +258,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "Fix bugs in nested expression:\n\"System.out.println( str.| )\"\n\"System.out.println(str.charAt(| )\"\n\"for (int i = 0; i < str.|; i++)\""
@@ -258,7 +274,7 @@
         "user_name": "fangcheng",
         "first_name": "fang",
         "last_name": "cheng",
-        "email": "fangread at yahoo.com.cn",
+        "email": "fangread@yahoo.com.cn",
         "homepage": ""
       },
       "release_notes": "Initial upload"

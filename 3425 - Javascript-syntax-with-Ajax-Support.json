@@ -1,0 +1,27 @@
+{
+  "script_id": "3425",
+  "display_name": "Javascript syntax with Ajax Support",
+  "summary": "Update from Yi Zhao's ",
+  "name": "Javascript-syntax-with-Ajax-Support",
+  "script_type": "syntax",
+  "description": "I use this customized version of Yi Zhao's Javascript syntax file to enhance the readibility of my files.\n\nAjax methods and properties, Browser and DOM objects.\n\nAs this being my first attempt to contribute with the community, I'll take any suggestions to make it better.\n\nHere is the link of github where minor and major changes can be followed.\nhttps://github.com/jelera/dotfiles\n\nHere are some screenshots http://twitpic.com/3ulapw http://twitpic.com/3ula28\nFor the colorscheme, I use Nazca (also tweaked by myself). I find it perfect for Web Development http://ir.pe/3tku\n\nAdd these following lines to your favorite colorscheme and choose the colors you like the most\n\n\"\" Special for Javascript\n\" TODO:  - Add colors to the cterm\nhi javaScriptBrowserObjects       guifg=#DBB6D2 ctermfg=182   gui=italic\n\nhi javaScriptDOMObjects           guifg=#DBB6D2 gui=BOLD\nhi javaScriptDOMMethods           guifg=#D4FA9B ctermfg=192\nhi link javaScriptDOMProperties   Keyword\n\nhi javaScriptAjaxObjects          guifg=#5d91d3 gui=underline\nhi javaScriptAjaxMethods          guifg=#6699CC ctermfg=68\nhi javaScriptAjaxProperties       guifg=#FF9494 ctermfg=210\n\nhi javaScriptFuncName             guifg=#B5E4F7 ctermfg=153\nhi javaScriptHtmlElemProperties   guifg=#FF9494 ctermfg=210\nhi javaScriptEventListenerKeyword guifg=#6699CC ctermfg=68\n\n\n",
+  "install_details": "just copy this file in your ~/.vim/syntax\n\nDon't forget to rate, download and try to make it even better.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14901",
+      "filename": "javascript.vim",
+      "script_version": "0.2",
+      "date": "2011-01-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "21011",
+        "user_name": "jelera",
+        "first_name": "Jose",
+        "last_name": "Elera Campana",
+        "email": "jelera@gmail.com",
+        "homepage": "http://www.twitter.com/jelera"
+      },
+      "release_notes": "Renamed several Syntax Keyword to less \"cryptic\" names, making sure that I doesn't break the core functionality."
+    }
+  ]
+}

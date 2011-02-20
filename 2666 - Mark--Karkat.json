@@ -8,6 +8,22 @@
   "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim mark.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.1 with \"matchadd()\", or Vim 7.2 or higher. \n\nCONFIGURATION\nYou may define your own colors or more than the default 6 highlightings in\nyour vimrc file (or anywhere before this plugin is sourced), in the following\nform (where N = 1..): \n    highlight MarkWordN ctermbg=Cyan ctermfg=Black guibg=#8CCBEA guifg=Black\n\nThe search type highlighting (in the search message) can be changed via: \n    highlight link SearchSpecialSearchType MoreMsg\n\nBy default, any marked words are also added to the search (/) and input (@)\nhistory; if you don't want that, remove the corresponding symbols from: \n    let g:mwHistAdd = \"/@\"\n\nYou can use different mappings by mapping to the <Plug>Mark... mappings before\nthis plugin is sourced. To remove the default overriding of * and #, use: \n    nmap <Plug>IgnoreMarkSearchNext <Plug>MarkSearchNext\n    nmap <Plug>IgnoreMarkSearchPrev <Plug>MarkSearchPrev",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14741",
+      "filename": "mark.vba.gz",
+      "script_version": "2.4.1",
+      "date": "2011-01-13",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo@karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- FIX: Using a named register for capturing the visual selection on {Visual}<Leader>m and {Visual}<Leader>r clobbered the unnamed register. Now using the unnamed register. "
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13424",
       "filename": "mark.vba.gz",
       "script_version": "2.4.0",
@@ -18,7 +34,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "ENH: The MarkSearch mappings (<Leader>[*#/?]) add the original cursor position to the jump list, like the built-in [/?*#nN] commands. This allows to use the regular jump commands for mark matches, like with regular search matches. "
@@ -34,7 +50,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "- BUG: Clearing of an accidental zero-width match (e.g. via :Mark \\zs) results in endless loop. Thanks to Andy Wokula for the patch. "
@@ -50,7 +66,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "BUG: Creation of literal pattern via '\\V' in {Visual}<Leader>m mapping collided with individual escaping done in <Leader>m mapping so that an escaped '\\*' would be interpreted as a multi item when both modes are used for marking. Thanks to Andy Wokula for the patch. "
@@ -66,7 +82,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "- Now working correctly when 'smartcase' is set. All mappings and the :Mark command use 'ignorecase', but not 'smartcase'. "
@@ -82,7 +98,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "- All jump commands now take an optional [count], so you can quickly skip over some marks, as with the built-in */# and n/N commands. For this, the entire core search algorithm has been rewritten. The script's logic has been simplified through the use of Vim 7 features like Lists. \n- Now also printing a Vim-alike search error message when 'nowrapscan' is set. "
@@ -98,7 +114,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "- Split off functions into autoload script. \n- Initialization of global variables and autocommands is now done lazily on\n  the first use, not during loading of the plugin. This reduces Vim startup\n  time and footprint as long as the functionality isn't yet used. \n- Split off documentation into separate help file. Now packaging as VimBall."
@@ -114,7 +130,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "THIS VERSION REQUIRES VIM 7.2 / 7.1 with patches, BUT IT'S WORTH UPDATING! \n- Replaced highlighting via :syntax with matchadd() / matchdelete(). This\n  requires Vim 7.2 / 7.1 with patches. This method is faster, there are no\n  more clashes with syntax highlighting (:match always has preference), and\n  the background highlighting does not disappear under 'cursorline'. \n- Using winrestcmd() to fix effects of :windo: By entering a window, its\n  height is potentially increased from 0 to 1. \n- Handling multiple tabs by calling s:UpdateScope() on the TabEnter event. "
@@ -130,7 +146,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "THIS VERSION REQUIRES VIM 7.0! \n- Now using Vim List for g:mwWord and thus requiring Vim 7. g:mwCycle is now zero-based, but the syntax groups \"MarkWordx\" are still one-based. \n- Factored :syntax operations out of s:DoMark() and s:UpdateMark() so that they can all be done in a single :windo. \n- Normal mode <Plug>MarkSet now has the same semantics as its visual mode cousin: If the cursor is on an existing mark, the mark is removed. Beforehand, one could only remove a visually selected mark via again selecting it. Now, one simply can invoke the mapping when on such a mark. "
@@ -146,7 +162,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Initial upload"

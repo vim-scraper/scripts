@@ -18,7 +18,7 @@
         "user_name": "khopesh",
         "first_name": "Adam",
         "last_name": "Katz",
-        "email": "vim at khopis.com",
+        "email": "vim@khopis.com",
         "homepage": "http://khopesh.com/"
       },
       "release_notes": "Fixed saFunction (it needs to be in a cluster after all, I was previously highlighting /anything/ that looked like a function).  Added support for new 'reuse' option."
@@ -34,7 +34,7 @@
         "user_name": "khopesh",
         "first_name": "Adam",
         "last_name": "Katz",
-        "email": "vim at khopis.com",
+        "email": "vim@khopis.com",
         "homepage": "http://khopesh.com/"
       },
       "release_notes": "Extensive use of syn-cluster makes this more easily abstracted for additional plugins.  Plugin section broken into how it ships; enabled, disabled, not (third-party).  Each plugin section is fully independent and therefore can easily be deactivated or used as a model for a new plugin.  Rewrapped to wider view since lines were way over the 80-col size anyway.  Things are more properly contained now as well.  Removed abstraction for highlighting due to increased version dependency.  Added support for sa3.3 plugins and the remaining missing shipped plugins, plus iXhash.  Fixed regex detection (m// and friends were broken in 3.0)."
@@ -50,7 +50,7 @@
         "user_name": "khopesh",
         "first_name": "Adam",
         "last_name": "Katz",
-        "email": "vim at khopis.com",
+        "email": "vim@khopis.com",
         "homepage": "http://khopesh.com/"
       },
       "release_notes": "MAJOR efficiency increase.  This is now usable on large files.  \n\nRemoved most \\%(inefficient zero-width lookbehind\\)\\@<= portions in favor of using nextgroup since \\%(this zero-width lookbehind can't contain ANY highlighting\\)\\zs  also fixed several outstanding minor bugs and added a few new highlighted areas (specifically for meta rules).  \n\nNow that I've tested this with a genuine vim 5.8, I'm pretty sure it never worked.  Required vim version bumped to 6.0.  \n\nOffline edits put this at 2.8 before 3.0, though 2.6+ were all very minor and I tend to err on the side of bumping up the version when my systems are out of sync."
@@ -66,7 +66,7 @@
         "user_name": "khopesh",
         "first_name": "Adam",
         "last_name": "Katz",
-        "email": "vim at khopis.com",
+        "email": "vim@khopis.com",
         "homepage": "http://khopesh.com/"
       },
       "release_notes": "Cleanup; no longer taking perl.vim wholesale (by require), now importing only the regexp matcher.  Also made other regexp tweaks.  Version bump to a .0-release to indicate pseudo-independence from perl syntax garbage (no more dependency and version mismatches), also indicating the parts newly implemented from scratch rather than free from perl.vim."
@@ -82,7 +82,7 @@
         "user_name": "khopesh",
         "first_name": "Adam",
         "last_name": "Katz",
-        "email": "vim at khopis.com",
+        "email": "vim@khopis.com",
         "homepage": "http://khopesh.com/"
       },
       "release_notes": "Fixed syntax clearing bug found in 7.0 (but not 6.x or 7.1+)"
@@ -98,7 +98,7 @@
         "user_name": "khopesh",
         "first_name": "Adam",
         "last_name": "Katz",
-        "email": "vim at khopis.com",
+        "email": "vim@khopis.com",
         "homepage": "http://khopesh.com/"
       },
       "release_notes": "fix bug introduced in 1.9 (header regexps using just // weren't colored)"
@@ -114,7 +114,7 @@
         "user_name": "khopesh",
         "first_name": "Adam",
         "last_name": "Katz",
-        "email": "vim at khopis.com",
+        "email": "vim@khopis.com",
         "homepage": "http://khopesh.com/"
       },
       "release_notes": "Updates include fixed alt regexp handling, support for :name and the like, if-unset, SA pseudo-headers, better handling of exists and eval."
@@ -130,7 +130,7 @@
         "user_name": "khopesh",
         "first_name": "Adam",
         "last_name": "Katz",
-        "email": "vim at khopis.com",
+        "email": "vim@khopis.com",
         "homepage": "http://khopesh.com/"
       },
       "release_notes": "Faster regexs using \\%(query\\) notation (equiv to perl's (?:query) notation) and other extremely minor tweaks like 'exists' no longer accepting functions.  I haven't touched this since 5/4/9, as reflected in internal release date, but I (wrongly) figured I'd tweak it more before another release.  It's pretty much done now, so I don't expect more releases.  There are two remaining TODO items:  one for reorganization (code cleanup) which is mostly unnecessary, and one assuming there is more perl highlighting to disable/tweak (though I haven't seen any evidence recently).  One more TODO is the recognition of regexs using alternate bounding characters like apostrophe instead of slash."
@@ -146,7 +146,7 @@
         "user_name": "khopesh",
         "first_name": "Adam",
         "last_name": "Katz",
-        "email": "vim at khopis.com",
+        "email": "vim@khopis.com",
         "homepage": "http://khopesh.com/"
       },
       "release_notes": "Oops, there were some things unique to vim6+ and 7+ in there (removed perl syntax groups).  I've cleaned that up.  This has been tested with vim7.1, vim7.0, vim6.0, and vim6.0 with the perl.vim syntax from vim5.5."
@@ -162,7 +162,7 @@
         "user_name": "khopesh",
         "first_name": "Adam",
         "last_name": "Katz",
-        "email": "vim at khopis.com",
+        "email": "vim@khopis.com",
         "homepage": "http://khopesh.com/"
       },
       "release_notes": "Fixed remaining known bugs.  Template Tags are now contained in the header-modifying portions only.  Functions are now colored properly, with known common ones showing a different color (but do we care?).  Arguments to functions are better handled.  Parentheses are now colored.  Operators in meta lines are now colored.  URIBL types are recognized."
@@ -178,7 +178,7 @@
         "user_name": "khopesh",
         "first_name": "Adam",
         "last_name": "Katz",
-        "email": "vim at khopis.com",
+        "email": "vim@khopis.com",
         "homepage": "http://khopesh.com/"
       },
       "release_notes": "Added the missing two plugins, better clearing of unwanted perl bits, fixed path and IP address recognizing, better handling of spelling on overflowed describe lines, and support for 3rd-party plugins URICountry (thanks Stefan Luetje) and SAGrey."
@@ -194,7 +194,7 @@
         "user_name": "khopesh",
         "first_name": "Adam",
         "last_name": "Katz",
-        "email": "vim at khopis.com",
+        "email": "vim@khopis.com",
         "homepage": "http://khopesh.com/"
       },
       "release_notes": "Initial upload"

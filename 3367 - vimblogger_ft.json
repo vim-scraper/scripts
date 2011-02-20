@@ -1,0 +1,43 @@
+{
+  "script_id": "3367",
+  "display_name": "vimblogger_ft",
+  "summary": "reStructuredText to Blogger Interface",
+  "name": "vimblogger_ft",
+  "script_type": "ftplugin",
+  "description": "vimblogger_ft is a simple reStructuredText to Blogger Interface through VIm.\n\nAs the name suggest it is a filetype plugin, which helps to create blog articles in rsST format and send them to blog site. It also provides commands for preview in browser and delete articles.\n\nModule for communication was written in Python. So, VIm has to be compiled with +python.\n\nOther requirements:\n  - Python (tested with version 2.6, should also work with other versions prior 3.0)\n  - gdata http://code.google.com/p/gdata-python-client\n  - docutils http://docutils.sourceforge.net\n  - pygments http://pygments.org (optional)\n\nSee documentation for detailed description.",
+  "install_details": "In order to install the vba, open the vba file in VIM and type:\n    :so %\n\nIt is also available via bitbucket:\n    http://bitbucket.org/gryf/vimblogger_ft",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14619",
+      "filename": "vimblogger_ft.vba",
+      "script_version": "0.2",
+      "date": "2010-12-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19659",
+        "user_name": "gryf",
+        "first_name": "Roman",
+        "last_name": "Dobosz",
+        "email": "gryf73@gmail.com",
+        "homepage": "http://rdobosz.blogspot.com/"
+      },
+      "release_notes": "Pygments sourcecode directive improvements"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14499",
+      "filename": "vimblogger_ft.vba",
+      "script_version": "0.1",
+      "date": "2010-12-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19659",
+        "user_name": "gryf",
+        "first_name": "Roman",
+        "last_name": "Dobosz",
+        "email": "gryf73@gmail.com",
+        "homepage": "http://rdobosz.blogspot.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

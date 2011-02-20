@@ -18,7 +18,7 @@
         "user_name": "Pablos544",
         "first_name": "Paul",
         "last_name": "Contreras",
-        "email": "pablo at ezrider.co.uk",
+        "email": "pablo@ezrider.co.uk",
         "homepage": "http://www.paulcontreras.co.uk"
       },
       "release_notes": "Made improvements to scroll till cursor is on top and cursor is at bottom cases.  These work very reliably when in folded mode.  The center case is not quite stable but kind of works, there are still some glitches in folded mode and when the buffer is scrolled near the bottom."
@@ -34,7 +34,7 @@
         "user_name": "Pablos544",
         "first_name": "Paul",
         "last_name": "Contreras",
-        "email": "pablo at ezrider.co.uk",
+        "email": "pablo@ezrider.co.uk",
         "homepage": "http://www.paulcontreras.co.uk"
       },
       "release_notes": "Had a slight glitch that happened but not always when you did Shift-ESC, the scrolling would just continue. Not sure why but fixed it and checked it so that this does not happen.  Had a bug that caused the continuing of scrolling when line wrapping was on. This gave incorrect readings for the window height so that scrolling would continue.  Fixed this by putting in a check that warns you if wrap is on, and doesn't scroll."
@@ -50,7 +50,7 @@
         "user_name": "Pablos544",
         "first_name": "Paul",
         "last_name": "Contreras",
-        "email": "pablo at ezrider.co.uk",
+        "email": "pablo@ezrider.co.uk",
         "homepage": "http://www.paulcontreras.co.uk"
       },
       "release_notes": "Sorted out some funky messy logic where 'zb' equivalent in normal vim in Smooth Center did not work, if the cursor was parked on the last line. (S-ESC).  Nothing happened.  Obviously fixed it now so that it does."
@@ -66,7 +66,7 @@
         "user_name": "Pablos544",
         "first_name": "Paul",
         "last_name": "Contreras",
-        "email": "pablo at ezrider.co.uk",
+        "email": "pablo@ezrider.co.uk",
         "homepage": "http://www.paulcontreras.co.uk"
       },
       "release_notes": "Fixed a subtle bug that meant that if scrolloff>0 the display would keep on centering but not immediately. If you were at the top of bottom having done S-ESC or S-F1 with scrolloff>0 then the display would stop scrolling then, but then later on when you moved off that line the display would keep on trying to scroll. This was to do with where I had attempted to account for the 'scrolloff' value in the centering bit of my code.  Made the command line clear so that you don't see a silly 'call StartSmoothCentering()' at the bottom of the screen each time."
@@ -82,7 +82,7 @@
         "user_name": "Pablos544",
         "first_name": "Paul",
         "last_name": "Contreras",
-        "email": "pablo at ezrider.co.uk",
+        "email": "pablo@ezrider.co.uk",
         "homepage": "http://www.paulcontreras.co.uk"
       },
       "release_notes": "Fixed the glitch where if you had a scrolloff>0 set it would carry on scrolling if you were at the top and bottom and you did a S-ESC or S-F1.  Now correctly identifies the scrolloff setting and accounts for this value, not just the cursors position within the current window.  Changed key mappings to be a more natural-feeling S-ESC gets you 'out of the code', in other words lets you see where you are by scrolling the file down, whereas S-F1 scrolls up and hence further deep into the file."
@@ -98,7 +98,7 @@
         "user_name": "Pablos544",
         "first_name": "Paul",
         "last_name": "Contreras",
-        "email": "pablo at ezrider.co.uk",
+        "email": "pablo@ezrider.co.uk",
         "homepage": "http://www.paulcontreras.co.uk"
       },
       "release_notes": "Had a bug where the end cases were not being detected properly, the top of the file and the end of the file respectively. I got them confused, so it looked like the scrolling wouldn't start if the first line was showing when you press S-Esc."
@@ -114,7 +114,7 @@
         "user_name": "Pablos544",
         "first_name": "Paul",
         "last_name": "Contreras",
-        "email": "pablo at ezrider.co.uk",
+        "email": "pablo@ezrider.co.uk",
         "homepage": "http://www.paulcontreras.co.uk"
       },
       "release_notes": "Cured the glitch that the centering is not centering when the end of the file is not as far as the bottom of the window.  Added a couple of new modes, these act just like zt and zb in normal mode. They are shift-ESC and shift-F1 respectively.  So now you've got all zz, zt & zb as smooth-equivalents: ESC, S-ESC and S-F1 respectively."
@@ -130,7 +130,7 @@
         "user_name": "Pablos544",
         "first_name": "Paul",
         "last_name": "Contreras",
-        "email": "pablo at ezrider.co.uk",
+        "email": "pablo@ezrider.co.uk",
         "homepage": "http://www.paulcontreras.co.uk"
       },
       "release_notes": "Initial upload"

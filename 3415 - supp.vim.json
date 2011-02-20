@@ -1,0 +1,43 @@
+{
+  "script_id": "3415",
+  "display_name": "supp.vim",
+  "summary": "Syntax highlighting for Valgrind suppression files",
+  "name": "supp.vim",
+  "script_type": "syntax",
+  "description": "The script provides syntax highlighting for Valgrind suppression files, usually bearing the extension .supp.",
+  "install_details": "Put it to ~/.vim/syntax/.  Add\n\nau BufNewFile,BufRead *.supp set ft=supp\n\nto your ~/.vimrc.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14962",
+      "filename": "supp.vim",
+      "script_version": "20110206",
+      "date": "2011-02-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti@physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "The placeholder insert-a-suppression-name-here is highlighted as TODO."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14823",
+      "filename": "supp.vim",
+      "script_version": "20110121",
+      "date": "2011-01-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1138",
+        "user_name": "yeti",
+        "first_name": "David",
+        "last_name": "Necas",
+        "email": "yeti@physics.muni.cz",
+        "homepage": "http://physics.muni.cz/~yeti/vim/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

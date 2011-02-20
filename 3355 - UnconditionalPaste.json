@@ -1,0 +1,43 @@
+{
+  "script_id": "3355",
+  "display_name": "UnconditionalPaste",
+  "summary": "Force character-/line-/block-wise paste, regardless of how it was yanked. ",
+  "name": "UnconditionalPaste",
+  "script_type": "utility",
+  "description": "DESCRIPTION\nIf you're like me, you occasionally do a linewise yank, and then want to\ninsert that yanked text in the middle of some other line (or vice versa).\nThe mappings defined by this plugin will allow you to do a character-, line-,\nor block-wise paste no matter how you yanked the text.\n\nSOURCE\nBased on vimtip #1199 by cory, \n    http://vim.wikia.com/wiki/Unconditional_linewise_or_characterwise_paste\n\nUSAGE\n[\"x]gcp\t\t\tPaste characterwise (newline characters are flattened\n[\"x]gcP\t\t\tto spaces) [count] times. \n[\"x]glp\t\t\tPaste linewise (even if yanked text is not a complete\n[\"x]glP\t\t\tline) [count] times. \n[\"x]gbp\t\t\tPaste blockwise (inserting multiple lines in-place,\n[\"x]gbP\t\t\tpushing existing text further to the right) [count]\n\t\t\ttimes. ",
+  "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim UnconditionalPaste.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.0 or higher. \n\nCONFIGURATION\nIf you want to use different mappings (e.g. starting with <Leader>), map your\nkeys to the <Plug>UnconditionalPaste... mapping targets _before_ sourcing this\nscript (e.g. in your vimrc): \n    nmap <silent> <Leader>Pc <Plug>UnconditionalPasteCharBefore\n    nmap <silent> <Leader>pc <Plug>UnconditionalPasteCharAfter\n    nmap <silent> <Leader>Pl <Plug>UnconditionalPasteLineBefore\n    nmap <silent> <Leader>pl <Plug>UnconditionalPasteLineAfter\n    nmap <silent> <Leader>Pb <Plug>UnconditionalPasteBlockBefore\n    nmap <silent> <Leader>pb <Plug>UnconditionalPasteBlockAfter",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14740",
+      "filename": "UnconditionalPaste.vba.gz",
+      "script_version": "1.10",
+      "date": "2011-01-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo@karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Incorporated suggestions by Peter Rincker (thanks for the patch!): \n- Made mappings configurable via the customary <Plug> mappings. \n- Added mappings gbp, gbP for blockwise pasting. \n- Now requires Vim version 7.0 or higher. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14465",
+      "filename": "UnconditionalPaste.vba.gz",
+      "script_version": "1.00",
+      "date": "2010-12-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo@karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

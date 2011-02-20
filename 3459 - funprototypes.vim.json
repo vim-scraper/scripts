@@ -1,0 +1,27 @@
+{
+  "script_id": "3459",
+  "display_name": "funprototypes.vim",
+  "summary": "automatic insert function prototypes in your code ",
+  "name": "funprototypes.vim",
+  "script_type": "utility",
+  "description": " Introdution:\n   This script is only for C language. You just press the key which you mapped\n   can automatic insert/replace the all funtions' prototypes in your source code.\n Preview:\n\n    #include<stdio.h>\n\n   // The  four lines below are automatic added by funprototypes.vim!\n    /******************************************************\"    \n    **               funtion prototypes                 ***\"             \n    *******************************************************/\"        \n    void fun_1();                                              \n    \n    void\n    fun_1(){\n        printf(\"Hello, VIM!\\n\");\n    }\n    \n    int main()\n    {\n       fun_1();\n       return 0;\n    }\n\nConfigure:\n   1. let g:fun_prototypes_static_first = 0\n\n      if g:fun_prototypes_static_first is 0, then the static functions will\n      insert before the global funtions. <default is 0>\n\n   2. let g:fun_prototypes_skip_fun_list=[\"main\"]\n\n      This list contains the functions which you don't want funprototypes.vim to add. \n      eg:\n         int main(){}  //skip\n         int _main(){} //doesn't skip\n       \n   3. let g:fun_prototypes_static_fun_start_list=[\"static\"]\n\n      This list contains the functions which are defined as static/LOCAL functions.\n\n   4. let g:fun_prototypes_header = /******************************************************\"\n      let g:fun_prototypes_body   = \"**               funtion prototypes                 ***\"\n      let g:fun_prototypes_footer = *******************************************************/\"\n\n      These three lines will insert before first function define. If you only\n      want single line, should define like below:\n      eg:\n      let g:fun_prototypes_header = \"\"\n      let g:fun_prototypes_body   = \"/***************funtion prototypes*******************/\"\n      let g:fun_prototypes_footer = \"\"\n      Attention:If these three lines have already inserted in source code, the functions' prototypes will insert after these three lines!\n Usage:\n    Copy this file to ~/.vim/plugin or to /vimfiles/plugins/ (on win32)\n    \n    Add the key map (default is <leader>fd) in your .vimrc or _vimrc (on win32)\n    default:\n      nnoremap <silent> <leader>fd :call FunProto()<CR>",
+  "install_details": "copy funprototypes.vim to ~/.vim/plugin/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15050",
+      "filename": "funprototypes.vim",
+      "script_version": "1.0",
+      "date": "2011-02-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "26937",
+        "user_name": "wuhong",
+        "first_name": "Hong",
+        "last_name": "Wu",
+        "email": "wuhong400@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

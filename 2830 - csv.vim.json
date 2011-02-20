@@ -8,6 +8,70 @@
   "install_details": "Open csv.vim in Vim and source the file: \n\n:so % \n\nThis will install the plugin into your $HOME/.vim/ftplugin directory and the documentation into your $HOME/.vim/doc directory. \n\nSee also the help for installing Vimball-Archives (:h vimball-intro) \n\nTake a look at :h ft_csv.txt for the documenation \n and read :h csv-installation to have vim automatically detect csv-files.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15045",
+      "filename": "csv-0.9.vba",
+      "script_version": "9",
+      "date": "2011-02-19",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb@256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "-use conceal char depending on encoding-Map normal mode keys also for visual/select and operator pending mode(automatically uploaded)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15037",
+      "filename": "csv-0.8.vba",
+      "script_version": "8",
+      "date": "2011-02-17",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb@256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "-Better Error handling-HiColumn! removes highlighting-Enable NrColumns, that was deactivated in v.0.7-a ColorScheme autocommand makes sure, that the syntax highlighting is reapplied, after changing the colorscheme.-small performance improvements for |ArrangeColumn_CSV|-Syntax Highlighting conceales delimiter-A lot more documentation-SearchInColumn now searches in the current column, if no column has been specified(automatically uploaded)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15031",
+      "filename": "csv-0.7.vba",
+      "script_version": "7",
+      "date": "2011-02-16",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb@256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "-Make the motion commands 'W' and 'E' work more reliable-Document how to setup filetype plugins-Make |WhatColumn_CSV| work more reliable (report from http://vim.wikia.com/Script:3280)-DeleteColumn deletes current column, if no argument given-|ArrangeColumn_CSV| handles errors better-Code cleanup-Syntax highlighting-'H' and 'L' move forward/backwards between csv fields-'K' and 'J' move upwards/downwards within the same column-|Sort_CSV| to sort on a certain column-|csv-tips| on how to colorize the statusline(automatically uploaded)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15021",
+      "filename": "csv-0.6.vba",
+      "script_version": "6",
+      "date": "2011-02-15",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb@256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "-Make |ArrangeColumn| work more reliable (had problems with multibyte chars before)-Add |Header| function-'W' and 'E' move forward/backwards between csv fields(automatically uploaded)"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12877",
       "filename": "csv.vba",
       "script_version": "0.5",
@@ -18,7 +82,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "enabled GLVS (see :h GLVS),\nput cvs.vim on a public repository available at http://github.com/chrisbra/csv.vim"
@@ -34,7 +98,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "fixed documentation"
@@ -50,7 +114,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "Better error handling\nadded :InitCSV to reinitialize the plugin\n:HiColumn now by default the current column, if no argument is given"
@@ -66,7 +130,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "Initial upload"

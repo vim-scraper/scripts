@@ -8,6 +8,22 @@
   "install_details": "Just put \"pydoc.vim\" into your ~/.vim/plugin directory or source it whenever you want to.\n\nIf the pydoc-command is not in your PATH, you can put a line like let g:pydoc_cmd = \"/usr/bin/pydoc\"  in your .vimrc to get it working. The script will highlight the search-term by default. To disable this behaviour put \"let g:pydoc_highlight=0\" in your .vimrc.\n\nNote: You do not need a python enabled version of vim to use pydoc.vim, everything is done with plain vim scripting and should work on any version >6.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14691",
+      "filename": "pydoc.vim",
+      "script_version": "1.3.6",
+      "date": "2011-01-06",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "1047",
+        "user_name": "fs111",
+        "first_name": "André",
+        "last_name": "Kelpe",
+        "email": "fs111@web.de",
+        "homepage": "http://meinblag.blogspot.com"
+      },
+      "release_notes": "included fix by Thomas Vander Stichele for 'K' handling: https://github.com/fs111/pydoc.vim/commit/14ffe6cdd74e086271e4eb07ba94fe4bd5b94e26"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14349",
       "filename": "pydoc.vim",
       "script_version": "1.3.5",
@@ -18,7 +34,7 @@
         "user_name": "fs111",
         "first_name": "André",
         "last_name": "Kelpe",
-        "email": "fs111 at web.de",
+        "email": "fs111@web.de",
         "homepage": "http://meinblag.blogspot.com"
       },
       "release_notes": " disabled call to \"syn on\" in Highlight, since that seems to interfere with NERDTree and also avoid using global variables, as suggested by Jason Mills"
@@ -34,7 +50,7 @@
         "user_name": "fs111",
         "first_name": "André",
         "last_name": "Kelpe",
-        "email": "fs111 at web.de",
+        "email": "fs111@web.de",
         "homepage": "http://meinblag.blogspot.com"
       },
       "release_notes": "small bugfix: when pydoc.vim is an ftplugin, it gives a warning of redefining a command. From now on it uses command! to avoid this. Thanks to Jason Mills for the patch."
@@ -50,7 +66,7 @@
         "user_name": "fs111",
         "first_name": "André",
         "last_name": "Kelpe",
-        "email": "fs111 at web.de",
+        "email": "fs111@web.de",
         "homepage": "http://meinblag.blogspot.com"
       },
       "release_notes": "filter colons out of the search term so that you can use <leader>pW on constructs that end in a colon like \"if xxx in sys.modules:\" Thanks to Jonathan Hartley for making me aware of that problem."
@@ -66,7 +82,7 @@
         "user_name": "fs111",
         "first_name": "André",
         "last_name": "Kelpe",
-        "email": "fs111 at web.de",
+        "email": "fs111@web.de",
         "homepage": "http://meinblag.blogspot.com"
       },
       "release_notes": "new option ('g:pydoc_wh') to control the window height of the pydoc window implemented by Matthias Vogelgesang"
@@ -82,7 +98,7 @@
         "user_name": "fs111",
         "first_name": "André",
         "last_name": "Kelpe",
-        "email": "fs111 at web.de",
+        "email": "fs111@web.de",
         "homepage": "http://meinblag.blogspot.com"
       },
       "release_notes": "Lots of changes from Romain Chossart, thanks for that!\n\n- The buffer is not displayed (actually, it is displayed then deleted\nquickly) when \"no Python doc found\". If the buffer was already\ndisplayed, it does a \"u\" to go back to the last pydoc. A message is\ndisplayed if no corresponding doc is found.\nI did that because otherwise, it forces the user to close (or to type\n\"u\") for \"uninteresting results\".\n(implementation is not very pretty, but it does the job).\n- The mappings are only set for \"python\" and \"man\" filetypes (the\nlatter being useful for pydoc search inside pydoc)\n- Added two mappings : <leader>pk (for pydoc -k word) and <leader>pK\n(for pydoc -k WORD)"
@@ -98,7 +114,7 @@
         "user_name": "fs111",
         "first_name": "André",
         "last_name": "Kelpe",
-        "email": "fs111 at web.de",
+        "email": "fs111@web.de",
         "homepage": "http://meinblag.blogspot.com"
       },
       "release_notes": "The highlighting of the search-term is now optional and can be disabled.\nSet in  this in your .vimrc to disable the highlighting:\n\nlet g:pydoc_highlight=0\n\n"
@@ -114,7 +130,7 @@
         "user_name": "fs111",
         "first_name": "André",
         "last_name": "Kelpe",
-        "email": "fs111 at web.de",
+        "email": "fs111@web.de",
         "homepage": "http://meinblag.blogspot.com"
       },
       "release_notes": "This updates adds a simple highlighting to pydoc.vim. All occurrences of your search-term will be highlighted. It uses gui=reverse to be color-scheme independent. "
@@ -130,7 +146,7 @@
         "user_name": "fs111",
         "first_name": "André",
         "last_name": "Kelpe",
-        "email": "fs111 at web.de",
+        "email": "fs111@web.de",
         "homepage": "http://meinblag.blogspot.com"
       },
       "release_notes": "Version 1.0.5 contains some debug code (call to \"input\" twice), this versions removes it. Sorry for that."
@@ -146,7 +162,7 @@
         "user_name": "fs111",
         "first_name": "André",
         "last_name": "Kelpe",
-        "email": "fs111 at web.de",
+        "email": "fs111@web.de",
         "homepage": "http://meinblag.blogspot.com"
       },
       "release_notes": "Changed the defaut mappings, because many other scripts are using the Function-keys. New mappings are <leader>pw for the current word and <leader>pW for the current Word.\n "
@@ -162,7 +178,7 @@
         "user_name": "fs111",
         "first_name": "André",
         "last_name": "Kelpe",
-        "email": "fs111 at web.de",
+        "email": "fs111@web.de",
         "homepage": "http://meinblag.blogspot.com"
       },
       "release_notes": "another small bugfix, I hope the last for today!!"
@@ -178,7 +194,7 @@
         "user_name": "fs111",
         "first_name": "André",
         "last_name": "Kelpe",
-        "email": "fs111 at web.de",
+        "email": "fs111@web.de",
         "homepage": "http://meinblag.blogspot.com"
       },
       "release_notes": "missing blank in \"pydoc -k\" fixed"
@@ -194,7 +210,7 @@
         "user_name": "fs111",
         "first_name": "André",
         "last_name": "Kelpe",
-        "email": "fs111 at web.de",
+        "email": "fs111@web.de",
         "homepage": "http://meinblag.blogspot.com"
       },
       "release_notes": "This version uses the g:pydoc_cmd variable which makes the script usable if the pydoc command is not in  your PATH. This may also work an Windows, but I can't test that. Feedback welcome. Just put a line like \n\nlet g:pydoc_cmd = \"/usr/bin/pydoc\"\n\ninto your .vimrc and the scritp will use the specified command.\n"
@@ -210,7 +226,7 @@
         "user_name": "fs111",
         "first_name": "André",
         "last_name": "Kelpe",
-        "email": "fs111 at web.de",
+        "email": "fs111@web.de",
         "homepage": "http://meinblag.blogspot.com"
       },
       "release_notes": "Initial upload"

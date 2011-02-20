@@ -1,12 +1,60 @@
 {
   "script_id": "3340",
   "display_name": "zenesque.vim",
-  "summary": "Minimalistic light scheme (w. screenshot)",
+  "summary": "Minimalistic scheme with light / dark background options",
   "name": "zenesque.vim",
   "script_type": "color scheme",
-  "description": "Almost colorless(shades of grey), light minimalistic color scheme.  Designed for reading for long periods. Inspired by Mini.\n\nScreenshot:\nhttp://www.flickr.com/photos/28853165@N05/5210097763/\n\nwith color highlighting:\nhttp://www.flickr.com/photos/28853165@N05/5223309987/\n\nNote: GUI only version (for now)",
-  "install_details": "drop in your vim/colors directory\n\nIf you prefer some color highlighting then add the following in your vimrc (ensure 'colorscheme zenesque' is called after the below statement)\nlet g:zenesque_colors=1\n\n",
+  "description": "Almost colorless(shades of grey), light minimalistic color scheme.  Designed for reading for long periods. Inspired by Mini.\n\nNow includes options for color highlighting and dark backgrounds.\n\nScreenshots:\n\nLIGHT GROUP:\nno colors (default):\nhttp://www.flickr.com/photos/28853165@N05/5246095508/\n\nwith colors:\nhttp://www.flickr.com/photos/28853165@N05/5246095888/\n\nDARK GROUP:\n\nno colors:\nhttp://www.flickr.com/photos/28853165@N05/5246096772/\n\nwith colors:\nhttp://www.flickr.com/photos/28853165@N05/5246089194/\nNote: GUI only version (for now)",
+  "install_details": "drop in your vim/colors directory\n\nFor other highlighting options, add the following in your vimrc (ensure 'colorscheme zenesque' is called after the below statement)\n\nlight with colors:\nlet g:zenesque_colors=1\n\ndark without colors:\nlet g:zenesque_colors=2\n\ndark with colors:\nlet g:zenesque_colors=3\n\nif you want to revert back to the default then set: g:zenesque_colors=0\n",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14642",
+      "filename": "zenesque.vim",
+      "script_version": "1.8",
+      "date": "2010-12-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19193",
+        "user_name": "pfylim",
+        "first_name": "Paul",
+        "last_name": "L",
+        "email": "pfylim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Folded and FoldColumn hexcode corrections, thanks to M. Soyka."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14627",
+      "filename": "zenesque.vim",
+      "script_version": "1.7",
+      "date": "2010-12-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19193",
+        "user_name": "pfylim",
+        "first_name": "Paul",
+        "last_name": "L",
+        "email": "pfylim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "added CursorColumn highlighting, thanks to Vincent Berthoux."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14463",
+      "filename": "zenesque.vim",
+      "script_version": "1.6",
+      "date": "2010-12-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19193",
+        "user_name": "pfylim",
+        "first_name": "Paul",
+        "last_name": "L",
+        "email": "pfylim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "now supporting dark backgrounds"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14448",
       "filename": "zenesque.vim",
@@ -18,7 +66,7 @@
         "user_name": "pfylim",
         "first_name": "Paul",
         "last_name": "L",
-        "email": "pfylim at gmail.com",
+        "email": "pfylim@gmail.com",
         "homepage": ""
       },
       "release_notes": "improved highlighting for grep / copen - thanks to Ismo P"
@@ -34,7 +82,7 @@
         "user_name": "pfylim",
         "first_name": "Paul",
         "last_name": "L",
-        "email": "pfylim at gmail.com",
+        "email": "pfylim@gmail.com",
         "homepage": ""
       },
       "release_notes": "some minor readability/color tweaks"
@@ -50,7 +98,7 @@
         "user_name": "pfylim",
         "first_name": "Paul",
         "last_name": "L",
-        "email": "pfylim at gmail.com",
+        "email": "pfylim@gmail.com",
         "homepage": ""
       },
       "release_notes": "option for color highlighting"
@@ -66,7 +114,7 @@
         "user_name": "pfylim",
         "first_name": "Paul",
         "last_name": "L",
-        "email": "pfylim at gmail.com",
+        "email": "pfylim@gmail.com",
         "homepage": ""
       },
       "release_notes": "better language support and general tweaks"
@@ -82,7 +130,7 @@
         "user_name": "pfylim",
         "first_name": "Paul",
         "last_name": "L",
-        "email": "pfylim at gmail.com",
+        "email": "pfylim@gmail.com",
         "homepage": ""
       },
       "release_notes": "more emphasis on function names & clearer Pmenu"
@@ -98,7 +146,7 @@
         "user_name": "pfylim",
         "first_name": "Paul",
         "last_name": "L",
-        "email": "pfylim at gmail.com",
+        "email": "pfylim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

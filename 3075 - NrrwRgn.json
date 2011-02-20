@@ -8,6 +8,22 @@
   "install_details": "as usual. Open the file in vim, and source it (:so %)",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14474",
+      "filename": "NrrwRgn-0.18.vba",
+      "script_version": "18",
+      "date": "2010-12-11",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17599",
+        "user_name": "chrisbra",
+        "first_name": "Christian",
+        "last_name": "Brabandt",
+        "email": "cb@256bit.org",
+        "homepage": "http://blog.256bit.org"
+      },
+      "release_notes": "Experimental version:- experimental feature: Allow to Narrow several different regions at once using :g/pattern/NRP and afterwards calling :NRM (This only works linewise. Should that be made possible for any reagion?)- disable folds, before writing changes back, otherwise chances are, you'll lose more data then wanted- code cleanup(automatically uploaded)"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14408",
       "filename": "NrrwRgn-0.17.vba",
       "script_version": "17",
@@ -18,7 +34,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- cache the options, that will be set (instead of parsing  $VIMRUNTIME/doc/options.txt everytime) in the Narrowed Window- getting the options didn't work, when using an autocommand like this:  autocmd BufEnter * cd %:p:h  (reported by Hong Xu, Thanks!)- :q didn't clean up the Narrowed Buffer correctly. Fix this- some code cleanup (automatically uploaded)"
@@ -34,7 +50,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- Bugfix: copy all local options to the narrowed window (reported by Xu Hong, Thanks)- Make :q quit the narrowed window correctly(automatically uploaded)"
@@ -50,7 +66,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "-minor documentation update (reported by Hong Xu, Thanks!)"
@@ -66,7 +82,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- Bugfix: :only in the original buffer resulted in errors (reported by Adam  Monsen)"
@@ -82,7 +98,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "This adds the experimental feature of using the command :NUD to view a chunk of a unified diff in diff-mode"
@@ -98,7 +114,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "The Vimball for Version 0.11 contained some garbage that causes various errors.. So this Version is a new packaged version and should work now. Not sure how that happened.\n(Thanks Dennis Hostetler!)"
@@ -114,7 +130,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "Don't set 'winfixwidth' and 'winfixheight'"
@@ -130,7 +146,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- Restore Cursorposition using winrestview() and winsaveview()\n- fix a bug, that prevented the use of visual narrowing\n- Make sure when closing the narrowed buffer, the content will be written to\n  the right original region\n- use topleft for opening the Narrowed window\n- check, that the original buffer is still available\n- If you Narrow the complete buffer using :NRV and write the changes back, an\n  additional trailing line is inserted. Remove that line.\n- When writing the changes back, update the highlighting."
@@ -146,7 +162,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- It is now possible to Narrow a window recursively. This allows to have\n  several narrowed windows, and allows for example to only diff certain\n  regions (as was suggested in a recent thread at the vim_use mailinglist:\n  http://groups.google.com/group/vim_use/msg/05d7fd9bd1556f0e) therefore, the\n  use for the g:nrrw_rgn_sepwin variable isn't necessary anymore.\n- Small documentation updates"
@@ -162,7 +178,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- the g:nrrw_rgn_sepwin variable can be used to force seperate Narrowed Windows, so you could easily diff those windows.\n- make the separating of several windows a little bit safer (look at the bufnr(), so it should work without problems for several buffers)\n- switch from script local variables to buffer local variables, so narrowing for several buffers should work.\n- set 'winfixheight' for narrowed window \n- Added command :NRV (suggested by Charles Campbell, thanks!)\n- added error handling, in case :NRV is called, without a selected region\n- take care of beeps, when calling :NRV\n- output WarningMsg"
@@ -178,7 +194,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- really use the black hole register for deleting the old buffer contents in the narrowed buffer (suggestion by esquifit in http://groups.google.com/group/comp.editors/msg/3eb3e3a7c68597db)\n- make autocommand nesting, so the highlighting will be removed when writing the buffer contents.\n- Use g:nrrw_rgn_nohl variable to disable highlighting (as this can be disturbing)."
@@ -194,7 +210,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "Version 0.6:\n- the previous version had problems restoring the orig buffer, this version fixes it (highlighting and setl ma did not work correctly)\nVersion 0.5 (unreleased): \n- The mapping that allows for narrowing a visually selected range, did not work.  (Fixed!)\n- Make :WidenRegion work as expected (close the widened window)"
@@ -210,7 +226,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "- Highlight narrowed region in the original buffer\n- Save and Restore search-register\n- Provide shortcut commands |:NR|\n- Provide command |:NW| and |:NarrowWindow|\n- Make plugin autoloadable\n- Enable GLVS (see |:GLVS|)\n- Provide Documenation (:h NarrowRegion)\n- Distribute Plugin as vimball |pi_vimball.txt|"
@@ -226,7 +242,7 @@
         "user_name": "chrisbra",
         "first_name": "Christian",
         "last_name": "Brabandt",
-        "email": "cb at 256bit.org",
+        "email": "cb@256bit.org",
         "homepage": "http://blog.256bit.org"
       },
       "release_notes": "Initial upload"

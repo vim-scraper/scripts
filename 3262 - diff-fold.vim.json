@@ -4,9 +4,57 @@
   "summary": "Folds changesets, files, and hunks in Mercurial diff output",
   "name": "diff-fold.vim",
   "script_type": "ftplugin",
-  "description": "View patches or pipe various Mercurial diff output to vim and see changesets, files, and hunks folded nicely together.\n\nSome examples:\n       hg in --patch | vim - -c \"setlocal ft=diff\"\n       hg diff | gvim -\n       hg diff -r 12 -r 13 | vim -\n\nRight now, this pretty much just works with Mercurial diff output.  Because Hg can use Git style patches, it does work with some Git output but it is not 100% reliable or useful.\n\nEventually, I hope to make this work with more version control systems and just about anything that can produce unified diff output.\n\nThe script can also be found on my bitbucket repo: https://bitbucket.org/thetoast/vimstuff",
-  "install_details": "Drop it in your ~/.vim/ftplugin folder.",
+  "description": "Pipe various Mercurial diff output to vim and see changesets, files, and\nhunks folded nicely together.  In addition to providing folding of diff\ntext, diff_fold also provides a navigation pane which you can use to more\neasily navigate large diffs.\n\nSome examples:\n    hg in --patch | vim -\n    hg diff | vim -\n    hg diff -r 12 -r 13 | vim -\n    hg export -r 12: | vim -\n    hg log --patch src\\somefile.cpp | vim -\n\nNavigation pane usage:\n       \n    The keybinding <Leader>nav will bring up the navigation pane.  You can\n    use the 'Enter' or 'v' keys to either go to, or view whole changsets\n    or files in the Diff View\n\n    If you don't like the default mapping, you can map a new one as\n    follows:\n        map {newmap} <Plug>DiffFoldNav\n\nRight now, this pretty much just works with Mercurial diff output.  Because Hg can use Git style patches, it does work with some Git output but it is not 100% reliable or useful.\n\nEventually, I hope to make this work with more version control systems and just about anything that can produce unified diff output.\n\nThis plugin has also been made into a pathogen bundle and can be installed with an 'hg clone https://bitbucket.org/thetoast/diff-fold' in your pathogen bundle folder.\nIn the future, the pathogen bundle may be more up-to-date, but any major updates will be made available here.",
+  "install_details": "Unzip into your ~/.vim or vimfiles folder.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15000",
+      "filename": "diff-fold.zip",
+      "script_version": "0.4",
+      "date": "2011-02-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "21650",
+        "user_name": "thetoast",
+        "first_name": "Ryan",
+        "last_name": "Mechelke",
+        "email": "rfmechelke@gmail.com",
+        "homepage": "http://blog.thetoast.net"
+      },
+      "release_notes": "* Added syntax highlighting to changeset details\n* Added a navigation pane for navigating large diffs"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14730",
+      "filename": "diff-fold.zip",
+      "script_version": "0.3.1",
+      "date": "2011-01-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "21650",
+        "user_name": "thetoast",
+        "first_name": "Ryan",
+        "last_name": "Mechelke",
+        "email": "rfmechelke@gmail.com",
+        "homepage": "http://blog.thetoast.net"
+      },
+      "release_notes": "* Fixed a bug with 'hg export' style changsets\n* Added foldtext for 'hg export' style changesets\n* Made global commands silent"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14693",
+      "filename": "diff-fold.zip",
+      "script_version": "0.3",
+      "date": "2011-01-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "21650",
+        "user_name": "thetoast",
+        "first_name": "Ryan",
+        "last_name": "Mechelke",
+        "email": "rfmechelke@gmail.com",
+        "homepage": "http://blog.thetoast.net"
+      },
+      "release_notes": "* Adding an ftdetect script so that hg output is recognized automatically. '-c \"setlocal ft=diff\"' no longer required\n* Adding support for folding changesets produced by 'hg export' command\n* More error handling"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13966",
       "filename": "diff_fold.vim",
@@ -18,7 +66,7 @@
         "user_name": "thetoast",
         "first_name": "Ryan",
         "last_name": "Mechelke",
-        "email": "rfmechelke at gmail.com",
+        "email": "rfmechelke@gmail.com",
         "homepage": "http://blog.thetoast.net"
       },
       "release_notes": "* changed all \"exec normal\" calls to \"normal!\"\n* checking for existence of final hunks/diffs/changesets to avoid double-folding in some cases\n* foldtext now being set with \"setlocal\"\n\nThanks, Ingo, for the patch!\n"
@@ -34,7 +82,7 @@
         "user_name": "thetoast",
         "first_name": "Ryan",
         "last_name": "Mechelke",
-        "email": "rfmechelke at gmail.com",
+        "email": "rfmechelke@gmail.com",
         "homepage": "http://blog.thetoast.net"
       },
       "release_notes": "Initial upload"

@@ -1,0 +1,59 @@
+{
+  "script_id": "3391",
+  "display_name": "line-based_jump_memory.vim",
+  "summary": "Allows to quickly return to the original position after a jump on the line",
+  "name": "line-based_jump_memory.vim",
+  "script_type": "utility",
+  "description": "It marks the current cursor position just before a line-based jump command is pressed (e.g. $, w, f, ;, <Home>, etc.). Hitting CTRL-O (or `' or ``) will put the cursor back to its original position. It works for both normal and insert mode line-based commands.",
+  "install_details": "Copy the line-based_jump_memory.vim file into Vim's plug-in directory (usually $HOME/.vim/plugin/ or something like that).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14698",
+      "filename": "line-based_jump_memory.vim",
+      "script_version": "0.2.1",
+      "date": "2011-01-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20174",
+        "user_name": "daaugusto",
+        "first_name": "Douglas",
+        "last_name": "Augusto",
+        "email": "daaugusto@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixes the proper handling of the double-quote char (\") argument in the commands f,t,F,T."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14695",
+      "filename": "line-based_jump_memory.vim",
+      "script_version": "0.2.0",
+      "date": "2011-01-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20174",
+        "user_name": "daaugusto",
+        "first_name": "Douglas",
+        "last_name": "Augusto",
+        "email": "daaugusto@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Fixed the plug-in file name.\n- Added two user-configurable variables: (i) The minimum character motion (distance) needed to produce a mark; (ii) Whether a jump that exits the current line is going to be marked or not.\n- Support for mouse click jumps.\n- Code reorganization, improvements and clean up."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14686",
+      "filename": "line-based_jump_list.vim",
+      "script_version": "0.1.0",
+      "date": "2011-01-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20174",
+        "user_name": "daaugusto",
+        "first_name": "Douglas",
+        "last_name": "Augusto",
+        "email": "daaugusto@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

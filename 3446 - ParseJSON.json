@@ -1,0 +1,27 @@
+{
+  "script_id": "3446",
+  "display_name": "ParseJSON",
+  "summary": "Simple JSON Parser ",
+  "name": "ParseJSON",
+  "script_type": "utility",
+  "description": "This plugin does not do anything by itself. This is a recursive-descent\nJSON parser intended to be called from other Vim plugins or scripts.\nAlthough it is possible to parse JSON in Vim using eval(), that is\ndangerous if the JSON is from an untrusted source.\n\nNote: true, false, and null are parsed to 1, 0, and {} respectively because\nthere are no equivalents to those values in Vim script.\n\nUsage:\n    let result = ParseJSON(json_str)\n\nExample:\n    :echo ParseJSON('{ \"hello\" : { \"a list\" : [ 1, 2, \"world\", true ] }}')\n    {'hello': {'a list': [1, 2, 'world', 1]}}\n",
+  "install_details": "Add parsejson.vim to your Vim plugins folder.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14988",
+      "filename": "parsejson.vim",
+      "script_version": "0.0.1",
+      "date": "2011-02-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8120",
+        "user_name": "pcheah",
+        "first_name": "Po Shan",
+        "last_name": "Cheah",
+        "email": "morton@mortonfox.com",
+        "homepage": "http://mortonfox.livejournal.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

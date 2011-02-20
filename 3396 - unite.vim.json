@@ -1,0 +1,27 @@
+{
+  "script_id": "3396",
+  "display_name": "unite.vim",
+  "summary": "Unite all sources",
+  "name": "unite.vim",
+  "script_type": "utility",
+  "description": "==============================================================================\nINTRODUCTION\t\t\t\t\t*unite-introduction*\n\n*unite* or *unite.vim* searches and displays information from arbitrary sources like files,\nbuffers, recently used files or registers. You can run one of defined action\non a target displayed.\n\nThe differences between |unite| and similar plugins like |fuzzyfinder| or |ku|\nare that |unite| doesn't use the built-in completion interface of Vim, and\nintegrates sources at the same time.\n\n==============================================================================\nUSAGE\t\t\t\t\t\t*unite-usage*\n\n\tIn case when you run with files and buffers as the source\n\n\t:Unite file buffer\n\n\n\tIn case when you run with the initial input value foo\n\n\t:Unite -input=foo file\n\n\nThe unite you started splits the window horizontally as default, opening on\nthe top of the Vim.  For example,\n\n\t:Unite file\n\nlists up the files of the current directory.  You may choose one of the\ncandidates by moving j or k, and typing Enter opens the candidate in a new\nbuffer.  That's the default action for candidates of which kind is file.  You\nmay also select an action with <Tab> on a candidate.  See also |unite-action|\nabout the actions.\n\nYou can narrow down the candidates with a keyword.  After opening a unite\nwindow, the cursor goes on the right side of > in the 2nd line by typing i.\nThen you can input a keyword to narrow down the candidates.  Each single\ncharacters you type narrows down the candidates.  You also can use a wild\ncard * as an arbitrary character sequence.  For example\n\n\t*hisa\n\nmatches hisa, ujihisa, or ujihisahisa.  Furthermore, two consequence wild cards\nmatches directory recursively.  For example\n\n\t**/foo\n\nmatches bar/foo or buzz/bar/foo.  Note that you should consider using\n|file_rec| that will be described bellow in most cases.\n\nYou may specify multiple keywords to narrow down, separating by spaces.\n\n\tfoo bar\n\nThat matches candidates that match both foo and bar.\n\nYou may specify negative conditions with !.\n\n\tfoo !bar\n\nThat matches foo but candidates that match bar will be rejected.\n\n\tYou may add wild cards automatically with / if you specify files on\n\t-buffer-name option.  That's handy in case you select file with unite.\n\n\t:Unite -buffer-name=files file\n\nSee also |unite_default_key_mappings| for other actions.\n\nScreencast is available. Thanks ujihisa!\nhttp://www.ustream.tv/recorded/11240673",
+  "install_details": "Install the distributed files into Vim script directory which is usually\n~/.vim/, or $HOME/vimfiles on Windows.\n\nIn future VimJolts the Vim plugin package manager will support unite, you can\ninstall unite just by `jolt install unite`.\n\nYou may run unite with |:Unite| command with source as parameters if you\nsucceeded in installing unite.  However, it's pain in ass to run the command\nexplicitly every time, so I recommend you to set a key mapping for the\ncommand.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14711",
+      "filename": "unite-1.0.vba",
+      "script_version": "1.0",
+      "date": "2011-01-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17200",
+        "user_name": "Shougo",
+        "first_name": "Shougo",
+        "last_name": "Matsushita",
+        "email": "Shougo.Matsu@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

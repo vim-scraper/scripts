@@ -18,7 +18,7 @@
         "user_name": "godlygeek",
         "first_name": "Matt",
         "last_name": "Wozniski",
-        "email": "mjw452 at drexel.edu",
+        "email": "mjw452@drexel.edu",
         "homepage": ""
       },
       "release_notes": "Fix a major regression that prevented the Eterm and Konsole colors from being correctly snapshotted\n\nFix a related bug causing incorrect terminal colors after calling :CSApproxSnapshot\n\nFix a bug causing black to be used instead of dark grey\n\nHave snapshots calculate g:colors_name programmatically\n\nIntroduce many tweaks for better speed\n\nClarify some things at :help csapprox-terminal-example\n\nDefault to using our own list of rgb.txt colors rather than searching, for performance.  Add a new variable, g:CSApprox_use_showrgb, which forces us to try finding the colors using the \"showrgb\" program instead, and fall back on our own list if it isn't available\n\nRemove g:CSApprox_extra_rgb_txt_dirs - not needed in light of the above change"
@@ -34,7 +34,7 @@
         "user_name": "godlygeek",
         "first_name": "Matt",
         "last_name": "Wozniski",
-        "email": "mjw452 at drexel.edu",
+        "email": "mjw452@drexel.edu",
         "homepage": ""
       },
       "release_notes": "Fix a harmless \"Undefined variable\" error in :CSApproxSnapshot\n\nFix a behavioral bug when dumping out colors defined external to the scheme."
@@ -50,7 +50,7 @@
         "user_name": "godlygeek",
         "first_name": "Matt",
         "last_name": "Wozniski",
-        "email": "mjw452 at drexel.edu",
+        "email": "mjw452@drexel.edu",
         "homepage": ""
       },
       "release_notes": "Update the docs for better info on :CSApproxSnapshot\n\nAllow snapshotted schemes to work on Vim 6, and work properly in Konsole and Eterm (thanks David Majnemer!)\n\nFix a bug causing a syntax error when using GVim while CSApprox was loaded.  (thanks again, David Majnemer!)"
@@ -66,7 +66,7 @@
         "user_name": "godlygeek",
         "first_name": "Matt",
         "last_name": "Wozniski",
-        "email": "mjw452 at drexel.edu",
+        "email": "mjw452@drexel.edu",
         "homepage": ""
       },
       "release_notes": "Add a hooks system, allowing users to specify a command to run, either before or after the approximation algorithm is run, for all schemes or one specific one.\n\nAlso rewrite :CSApproxSnapshot to be more maintainable and less of a hack, and fix several bugs that it contained.\n"
@@ -82,7 +82,7 @@
         "user_name": "godlygeek",
         "first_name": "Matt",
         "last_name": "Wozniski",
-        "email": "mjw452 at drexel.edu",
+        "email": "mjw452@drexel.edu",
         "homepage": ""
       },
       "release_notes": "Add :CSApproxSnapshot for writing out a colorscheme file representing the current colors that will work in gvim, 88 color vim, or 256 color vim, even without +gui.  See :help :CSApproxSnapshot"
@@ -98,7 +98,7 @@
         "user_name": "godlygeek",
         "first_name": "Matt",
         "last_name": "Wozniski",
-        "email": "mjw452 at drexel.edu",
+        "email": "mjw452@drexel.edu",
         "homepage": ""
       },
       "release_notes": "Distribute an rgb.txt along with CSApprox, so that CSApprox can still be used on distributions where no rgb.txt is provided with the X server (like Ubuntu Intrepid Ibex).  Thanks to Penn Su for finding this!"
@@ -114,7 +114,7 @@
         "user_name": "godlygeek",
         "first_name": "Matt",
         "last_name": "Wozniski",
-        "email": "mjw452 at drexel.edu",
+        "email": "mjw452@drexel.edu",
         "homepage": ""
       },
       "release_notes": "Initial upload"

@@ -4,9 +4,25 @@
   "summary": "Plugin for WOIM outliner (a system for describing any state or transition)",
   "name": "WOIM.vim",
   "script_type": "ftplugin",
-  "description": "WOIM is a methodology to describe anything - any state, item(s), pattern, action, process, transition, program, instruction set etc. So, you can use it as an outliner, a ToDo list handler, a process design tool, a data modeler, or any other way you want to describe something.\n\nThis plugin does both highlighting and various automatic handling of WOIM lists, like collapsing lists or parts of lists in a sophisticated way.\n\nFor information on WOIM, read the WOIM description in full:\n\n http://isene.com/woim.pdf",
+  "description": "WOIM is a methodology to describe anything - any state, item(s), pattern, action, process, transition, program, instruction set etc. So, you can use it as an outliner, a ToDo list handler, a process design tool, a data modeler, or any other way you want to describe something.\n\nThis plugin does both highlighting and various automatic handling of WOIM lists, like collapsing lists or parts of lists in a sophisticated way.\n\nFor information on WOIM, read the WOIM description in full:\n\n http://isene.com/woim.pdf\n\nINSTRUCTIONS\n\nUse tabs/shifts or * for indentations\n\nUse <SPACE> to toggle one fold\nUse \\0 to \\9, \\a, \\b, \\c, \\d, \\e, \\f to show up to 15 levels expanded\n\nUse <leader>s to remove underlining of States (prefixed with S:)\nUse <leader>S to add underlining of States (prefixed with S:)\nUse <leader>t to remove underlining of Transitions (prefixed with T:)\nUse <leader>T to add underlining of Transitions (prefixed with T:)\n\nUse <leader><SPACE> to go to the next open template element\n(A template element is a WOIM item ending in an equal sign)\n\nSyntax updated at start and every time you leave Insert mode\n",
   "install_details": "Drop the file in the syntax directory. Add the following to your .vimrc file or create a file named woim.vim with the following and drop that file in the ftdetect directory:\n\nau BufRead,BufNewFile *.woim set filetype=woim",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14516",
+      "filename": "woim.vim",
+      "script_version": "0.9.8",
+      "date": "2010-12-14",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g@isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Feature: States (S:) is underlined by default.  <leader>s removes the underlining, while <leader>S turns on underlining of States.  Transitions are not underlined by default.  <leader>T turns on underlining, while <leader>t removes the underlining of Transitions.\nFix: Removed unnecessary \"contained\" to make lists syntax marked even within stub lists.\nFix: Small fixes in grouping and containing of elements.\n"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14425",
       "filename": "woim.vim",
@@ -18,7 +34,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "Feature: Added \"*\" as possible indentation\nFix:         Changed Multiline indicator from \"*\" to \"+\"\n\nNow compatible with WOIM v. 1.2\n"
@@ -34,7 +50,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "Christian Bryn caught an important bug/lacking setting. The syntax file now sets noexpandtab."
@@ -50,7 +66,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "A few needed minor fixes."
@@ -66,7 +82,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "New_feature:\nAdded highlighting of item motions:\n<<          means \"delete this item\" (put at the end of a line)\n>>#1.1. means \"move this item to after item 1.1.\"\n->           means \"indent item right\"\n<-<-       means \"indent item two left\"\n>>#1.-> means \"move item to after item 1. and indent right\"\n\n"
@@ -82,7 +98,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "New_feature: Accommodated for the use of subroutine calls (##ref)\nFix: Cleaned up syntax variable names to fit modern WOIM\nFix: Multi-lines have consecutive lines start with a <space>\nFix: Quotes or Comment can now span several lines\nFix: Comments allowed in Operators\nFix: Comments and references allowed inside Qualifiers\nFix: Identifier must end in a period and then a space\nBug_fix: Allowing a period to be part of a tag\nBug_fix: Fixed wrong markup for astrices not used for multi-line"
@@ -98,7 +114,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "Bug fix: Corrected attributes ending in capitals that was treated as a WOIMkey\nBug fix: Fixed references containing a hyphen\n"
@@ -114,7 +130,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "New feature: Expanded Attributes to include relative times and greater/smaller than.\nNew feature: References with spaces are now accommodated for by putting it in quotes.\nNew feature: Made references in attributes possible.\nBug fix: Fixed references that includes ampersands (\"&\").\n"
@@ -130,7 +146,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "Bug fix: Fixed highlighting of attributes with a colon (like time stamps)"
@@ -146,7 +162,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "New feature: Expanded folding to a maximum of 15 levels with folding levels set with <leader>a to <leader>f for levels 10 to 15.\nImprovement: Better syntax highlighting for indexes\nBug fix: Fixed syntax syncing when entering the document in the first place"
@@ -162,7 +178,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "Better syntax highlighting for references.\nAdded unobtrusive highlighting of vim bottom set-lines."
@@ -178,7 +194,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "Bug fix: Fixed an error in syntax highlighting properties containing a \"-\" (like ISO dates)."
@@ -194,7 +210,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "Added macro to jump to next point in a template and fill in the value. A template item is an item that ends in an equal sign and where the value after the equal sign is to be filled out. Example:\n\nExampleTask\n   Task name = \n   Responsible person =\n   Deadline = "
@@ -210,7 +226,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "Some minor adjustments, but a needed upgrade if you are a WOIM user.\n(WOIM = task list, descriptive system, process description, state description... it can describe anything,)"
@@ -226,7 +242,7 @@
         "user_name": "isene",
         "first_name": "Geir",
         "last_name": "Isene",
-        "email": "g at isene.com",
+        "email": "g@isene.com",
         "homepage": "http://www.geir.isene.com"
       },
       "release_notes": "Initial upload"

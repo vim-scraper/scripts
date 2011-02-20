@@ -4,9 +4,25 @@
   "summary": "Reload a VIM script during script development.",
   "name": "ReloadScript",
   "script_type": "utility",
-  "description": "DESCRIPTION:\n  Re-sources a VIM script. The script may use a multiple inclusion guard\n  variable g:loaded_{scriptname} (with {scriptname} having either the same\n  case as specified or all lowercase.) \n  If you specify the bare scriptname (without .vim extension), the script must\n  reside in $VIMRUNTIME/plugin/{scriptname}.vim. Otherwise, the passed\n  filespec is interpreted as the file system location of a VIM script and\n  sourced as-is. \n  If you execute :ReloadScript without passing a scriptname, the current\n  buffer is re-sourced. \n\nUSAGE:\n  :ReloadScript Re-sources the current buffer. \n  :ReloadScript {scriptname} Re-sources the passed plugin script. \n  :ReloadScript {path/to/script.vim} Re-sources the passed file. \n\nASSUMPTIONS:\n  Not every script supports reloading. There may be error messages like\n  \"function already exists\". To support reloading, the script should use the\n  bang (!) variants of :function! and :command!, which will automatically\n  override already existing elements. \n\n  Ensure that the script uses a multiple inclusion guard variable that\n  conforms to the conventions mentioned above. The :ReloadScript command will\n  issue a warning if it cannot find the inclusion guard variable. ",
-  "install_details": "INSTALLATION:\n  Put the script into your user or system VIM plugin directory (e.g.\n  ~/.vim/plugin). \n\nDEPENDENCIES:\n  - Requires VIM 7.0 or higher. ",
+  "description": "DESCRIPTION\nRe-sources a Vim script. The script may use a multiple inclusion guard\nvariable g:loaded_{scriptname} (with {scriptname} having either the same case\nas specified or all lowercase.) \nIf you specify the bare scriptname (without .vim extension), the script must\nreside in $VIMRUNTIME/plugin/{scriptname}.vim. Otherwise, the passed filespec\nis interpreted as the file system location of a Vim script and sourced as-is. \nIf you execute :ReloadScript without passing a scriptname, the current buffer\nis re-sourced. \n\nUSAGE\nReloadScript\t\t\t\tRe-sources the current buffer. \nReloadScript {scriptname}\t\tRe-sources the passed plugin script. \nReloadScript {path/to/script.vim}\tRe-sources the passed file. \n\nASSUMPTIONS\nNot every script supports reloading. There may be error messages like\n\"function already exists\". To support reloading, the script should use the\nbang (!) variants of :function! and :command!, which will automatically\noverride already existing elements. \n\nEnsure that the script uses a multiple inclusion guard variable that conforms\nto the conventions mentioned above. The :ReloadScript command will issue a\nwarning if it cannot find the inclusion guard variable. ",
+  "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim ReloadScript.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.0 or higher.  ",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14715",
+      "filename": "ReloadScript.vba.gz",
+      "script_version": "1.20",
+      "date": "2011-01-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo@karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- BUG: Avoiding \"E471: Argument required\" error on empty buffer name. \n- ENH: Explicitly checking for the existence of the file, as we don't want to put the :source command inside try...catch (it would stop showing all resulting errors and show only the first), and because :runtime doesn't complain at all. \n- Added separate help file and packaging the plugin as a vimball. "
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=9038",
       "filename": "ReloadScript.vim",
@@ -18,7 +34,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Combined missing inclusion guard warning with reload message to avoid the \"Hit ENTER\" prompt. \nNo missing inclusion guard warning for scripts that do not need one (e.g. after-directory, autoload, ftplugin, indent, syntax, ...)"
@@ -34,7 +50,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "A scriptname argument with path and/or extension is sourced as-is. This allows a third usage: :ReloadScript path/to/script.vim"
@@ -50,7 +66,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Initial upload"

@@ -18,7 +18,7 @@
         "user_name": "Greek0",
         "first_name": "Christian",
         "last_name": "Aichinger",
-        "email": "Greek0 at gmx.net",
+        "email": "Greek0@gmx.net",
         "homepage": ""
       },
       "release_notes": "I've changed the default UDM_DatePattern a bit, to better match different date -u outputs. \nIt does now match the date part less strictly, but the time part more exactly. I hope this solves the \"it works once but not thereafter\" problem for most people."
@@ -34,7 +34,7 @@
         "user_name": "Greek0",
         "first_name": "Christian",
         "last_name": "Aichinger",
-        "email": "Greek0 at gmx.net",
+        "email": "Greek0@gmx.net",
         "homepage": ""
       },
       "release_notes": "The script now starts to search for the DateToken from the very top of the file, and it will only update the first occurance.\n\nI changed the script so that the values for DateToken, DatePattern, DateCommand aren't hardcoded any more.\nYou can now define UMD_DateToken, UMD_DatePattern and UMD_DateCommand in your vimrc.\n\nThe default values are:\nlet s:UMD_DateToken = '%DATE_TAG%'\nlet s:UMD_DatePattern = '\\w\\{3\\}\\s\\w\\{3\\}\\s\\+\\d\\+\\s\\+\\d\\+:\\d\\+:\\d\\+\\s\\+UTC\\s\\+\\d\\+'\nlet UMD_DateCommand = 'date -u | tr -d \"\\n\"'\n"

@@ -4,9 +4,41 @@
   "summary": "vimscript for gist",
   "name": "Gist.vim",
   "script_type": "utility",
-  "description": "This is vimscript for gist (http://gist.github.com)\n\nUsage:\n\n  :Gist\n    post whole text to gist.\n\n  :'<,'>Gist\n    post selected text to gist.\n\n  :Gist -p\n    post whole text to gist with private.\n    if you got empty gist list, try :Gist --abandon \n\n  :Gist -a\n    post whole text to gist with anonymous.\n\n  :Gist -m\n    post multi buffer to gist.\n\n  :Gist -e\n    edit the gist. (shoud be work on gist buffer)\n    you can update the gist with :w command on gist buffer.\n\n  :Gist -e foo.js\n    edit the gist with name 'foo.js'. (shoud be work on gist buffer)\n\n  :Gist -d\n    delete the gist. (should be work on gist buffer)\n    password authentication is needed.\n\n  :Gist -f\n    fork the gist. (should be work on gist buffer)\n    password authentication is needed.\n\n  :Gist XXXXX\n    get gist XXXXX.\n\n  :Gist -c XXXXX.\n    get gist XXXXX and put to clipboard.\n\n  :Gist -l\n    list gists from mine.\n\n  :Gist -la\n    list gists from all.\n\nTips:\n  if set g:gist_clip_command, gist.vim will copy the gist code\n    with option '-c'.\n\n    # mac\n    let g:gist_clip_command = 'pbcopy'\n\n    # linux\n    let g:gist_clip_command = 'xclip -selection clipboard'\n\n    # others(cygwin?)\n    let g:gist_clip_command = 'putclip'\n\n  if you want to detect filetype from filename...\n\n    let g:gist_detect_filetype = 1\n\n  if you want to open browser after the post...\n\n    let g:gist_open_browser_after_post = 1\n\n  if you want to change the browser...\n\n    let g:gist_browser_command = 'w3m %URL%'\n\n      or\n\n    let g:gist_browser_command = 'opera %URL% &'\n\n    on windows, should work with your setting.\n\nRequire:\n  curl command (http://curl.haxx.se/)\n  and if you want to use profile of git, it require git command.\n",
-  "install_details": "copy it to your plugin directory.gist.vim leave cookie-jar file into runtimepath.rtp:  plugin/gist.vim  cookies/githubif you want to uninstall gist.vim, you have better to remove 'cookies/github'.",
+  "description": "This is vimscript for gist (http://gist.github.com)\n\nUsage:\n\n  :Gist\n    post whole text to gist.\n\n  :'<,'>Gist\n    post selected text to gist.\n\n  :Gist -p\n    post whole text to gist with private.\n    if you got empty gist list, try :Gist --abandon \n\n  :Gist -a\n    post whole text to gist with anonymous.\n\n  :Gist -m\n    post multi buffer to gist.\n\n  :Gist -e\n    edit the gist. (shoud be work on gist buffer)\n    you can update the gist with :w command on gist buffer.\n\n  :Gist -e foo.js\n    edit the gist with name 'foo.js'. (shoud be work on gist buffer)\n\n  :Gist -d\n    delete the gist. (should be work on gist buffer)\n    password authentication is needed.\n\n  :Gist -f\n    fork the gist. (should be work on gist buffer)\n    password authentication is needed.\n\n  :Gist XXXXX\n    get gist XXXXX.\n\n  :Gist -c XXXXX.\n    get gist XXXXX and put to clipboard.\n\n  :Gist -l\n    list gists from mine.\n\n  :Gist -la\n    list gists from all.\n\nTips:\n  if set g:gist_clip_command, gist.vim will copy the gist code\n    with option '-c'.\n\n    # mac\n    let g:gist_clip_command = 'pbcopy'\n\n    # linux\n    let g:gist_clip_command = 'xclip -selection clipboard'\n\n    # others(cygwin?)\n    let g:gist_clip_command = 'putclip'\n\n  if you want to detect filetype from filename...\n\n    let g:gist_detect_filetype = 1\n\n  if you want to open browser after the post...\n\n    let g:gist_open_browser_after_post = 1\n\n  if you want to change the browser...\n\n    let g:gist_browser_command = 'w3m %URL%'\n\n      or\n\n    let g:gist_browser_command = 'opera %URL% &'\n\n    on windows, should work with original setting.\n\nRequire:\n  curl command (http://curl.haxx.se/)\n  and if you want to use profile of git, it require git command.\n",
+  "install_details": "copy it to your plugin directory.gist.vim leave cookie-jar file into runtimepath.rtp:  plugin/gist.vim  cookies/githubif you want to uninstall gist.vim, you have better to remove 'cookies/github'.for using gist.vim, you should install git. or set g:github_user and g:github_token into your vimrc. note that g:github_token is NOT a your password.how get your token.  1. login to github.  2. click \"Account Settings\"  3. click \"Account Admin\"  4. you'll see it at following of 'API Token'.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14679",
+      "filename": "gist.vim",
+      "script_version": "4.7",
+      "date": "2011-01-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "103",
+        "user_name": "mattn",
+        "first_name": "Yasuhiro",
+        "last_name": "Matsumoto",
+        "email": "mattn.jp@gmail.com",
+        "homepage": "http://mattn.kaoriya.net/"
+      },
+      "release_notes": "This is an upgrade for Gist.vim: fixed: filetype detection."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14497",
+      "filename": "gist.vim",
+      "script_version": "4.6",
+      "date": "2010-12-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "103",
+        "user_name": "mattn",
+        "first_name": "Yasuhiro",
+        "last_name": "Matsumoto",
+        "email": "mattn.jp@gmail.com",
+        "homepage": "http://mattn.kaoriya.net/"
+      },
+      "release_notes": "This is an upgrade for Gist.vim: fixed: strange cookies folder."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14204",
       "filename": "gist.vim",
@@ -18,7 +50,7 @@
         "user_name": "mattn",
         "first_name": "Yasuhiro",
         "last_name": "Matsumoto",
-        "email": "mattn.jp at gmail.com",
+        "email": "mattn.jp@gmail.com",
         "homepage": "http://mattn.kaoriya.net/"
       },
       "release_notes": "This is an upgrade for Gist.vim: fixed: use gist_clip_command for copying URL to clipboard. this fix strange behavior on Mac OSX."
@@ -34,7 +66,7 @@
         "user_name": "mattn",
         "first_name": "Yasuhiro",
         "last_name": "Matsumoto",
-        "email": "mattn.jp at gmail.com",
+        "email": "mattn.jp@gmail.com",
         "homepage": "http://mattn.kaoriya.net/"
       },
       "release_notes": "This is an upgrade for Gist.vim: fixed: gist is now only using https."
@@ -50,7 +82,7 @@
         "user_name": "mattn",
         "first_name": "Yasuhiro",
         "last_name": "Matsumoto",
-        "email": "mattn.jp at gmail.com",
+        "email": "mattn.jp@gmail.com",
         "homepage": "http://mattn.kaoriya.net/"
       },
       "release_notes": "This is an upgrade for Gist.vim: add new option '-f' for fork."
@@ -66,7 +98,7 @@
         "user_name": "mattn",
         "first_name": "Yasuhiro",
         "last_name": "Matsumoto",
-        "email": "mattn.jp at gmail.com",
+        "email": "mattn.jp@gmail.com",
         "homepage": "http://mattn.kaoriya.net/"
       },
       "release_notes": "This is an upgrade for Gist.vim: fixed code for login."
@@ -82,7 +114,7 @@
         "user_name": "mattn",
         "first_name": "Yasuhiro",
         "last_name": "Matsumoto",
-        "email": "mattn.jp at gmail.com",
+        "email": "mattn.jp@gmail.com",
         "homepage": "http://mattn.kaoriya.net/"
       },
       "release_notes": "This is an upgrade for Gist.vim: fixed code cleanup."
@@ -98,7 +130,7 @@
         "user_name": "mattn",
         "first_name": "Yasuhiro",
         "last_name": "Matsumoto",
-        "email": "mattn.jp at gmail.com",
+        "email": "mattn.jp@gmail.com",
         "homepage": "http://mattn.kaoriya.net/"
       },
       "release_notes": "This is an upgrade for Gist.vim: fixed deleting gist, listing privates."
@@ -114,7 +146,7 @@
         "user_name": "mattn",
         "first_name": "Yasuhiro",
         "last_name": "Matsumoto",
-        "email": "mattn.jp at gmail.com",
+        "email": "mattn.jp@gmail.com",
         "homepage": "http://mattn.kaoriya.net/"
       },
       "release_notes": "This is an upgrade for Gist.vim: fixed :w handler in gist buffer."
@@ -130,7 +162,7 @@
         "user_name": "mattn",
         "first_name": "Yasuhiro",
         "last_name": "Matsumoto",
-        "email": "mattn.jp at gmail.com",
+        "email": "mattn.jp@gmail.com",
         "homepage": "http://mattn.kaoriya.net/"
       },
       "release_notes": "This is an upgrade for Gist.vim: 'more...' on gist list."
@@ -146,7 +178,7 @@
         "user_name": "mattn",
         "first_name": "Yasuhiro",
         "last_name": "Matsumoto",
-        "email": "mattn.jp at gmail.com",
+        "email": "mattn.jp@gmail.com",
         "homepage": "http://mattn.kaoriya.net/"
       },
       "release_notes": "This is an upgrade for Gist.vim: fix problem that break \"gist list\" window at twice."
@@ -162,7 +194,7 @@
         "user_name": "mattn",
         "first_name": "Yasuhiro",
         "last_name": "Matsumoto",
-        "email": "mattn.jp at gmail.com",
+        "email": "mattn.jp@gmail.com",
         "homepage": "http://mattn.kaoriya.net/"
       },
       "release_notes": "This is an upgrade for Gist.vim: fix filetype detection for 'vimscript'."
@@ -178,7 +210,7 @@
         "user_name": "mattn",
         "first_name": "Yasuhiro",
         "last_name": "Matsumoto",
-        "email": "mattn.jp at gmail.com",
+        "email": "mattn.jp@gmail.com",
         "homepage": "http://mattn.kaoriya.net/"
       },
       "release_notes": "This is an upgrade for Gist.vim: fix filetype detection."

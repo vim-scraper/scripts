@@ -5,7 +5,7 @@
   "name": "if_v8",
   "script_type": "game",
   "description": "V8 is Google's open source JavaScript engine.\n\nRequirements:\n  linux or windows.\n  Vim executable file with some exported symbol that if_v8 requires.\n    On linux:\n      Compile with gcc's -rdynamic option.\n    On windows (msvc):\n      Use vim_export.def and add linker flag \"/DEF:vim_export.def\".\n      nmake -f Make_mvc.mak linkdebug=/DEF:vim_export.def\n\nUsage:\n  :source /path/to/if_v8/init.vim\n  :V8 print('hello, world')\n  => hello, world\n  :V8 3 + 4\n  => 7\n  :V8 vim.execute('version')\n  => ... version message\n  :V8 var tw = vim.eval('&tw')\n  :V8 tw\n  => 78\n  :V8 vim.let('&tw', '40')\n  :echo &tw\n  => 40\n  :V8 load('foo.js')",
-  "install_details": "",
+  "install_details": "Latest source: svn checkout http://vim-soko.googlecode.com/svn/trunk/if_v8",
   "versions": [
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13343",
@@ -18,8 +18,8 @@
         "user_name": "yukihiro",
         "first_name": "Yukihiro",
         "last_name": "Nakadaira",
-        "email": "yukihiro.nakadaira at gmail.com",
-        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+        "email": "yukihiro.nakadaira@gmail.com",
+        "homepage": "http://sites.google.com/site/yukihironakadaira/"
       },
       "release_notes": "maintenance release"
     },
@@ -34,8 +34,8 @@
         "user_name": "yukihiro",
         "first_name": "Yukihiro",
         "last_name": "Nakadaira",
-        "email": "yukihiro.nakadaira at gmail.com",
-        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+        "email": "yukihiro.nakadaira@gmail.com",
+        "homepage": "http://sites.google.com/site/yukihironakadaira/"
       },
       "release_notes": "Added gc()"
     },
@@ -50,8 +50,8 @@
         "user_name": "yukihiro",
         "first_name": "Yukihiro",
         "last_name": "Nakadaira",
-        "email": "yukihiro.nakadaira at gmail.com",
-        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+        "email": "yukihiro.nakadaira@gmail.com",
+        "homepage": "http://sites.google.com/site/yukihironakadaira/"
       },
       "release_notes": "Added Funcref."
     },
@@ -66,8 +66,8 @@
         "user_name": "yukihiro",
         "first_name": "Yukihiro",
         "last_name": "Nakadaira",
-        "email": "yukihiro.nakadaira at gmail.com",
-        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+        "email": "yukihiro.nakadaira@gmail.com",
+        "homepage": "http://sites.google.com/site/yukihironakadaira/"
       },
       "release_notes": "bug fix"
     },
@@ -82,8 +82,8 @@
         "user_name": "yukihiro",
         "first_name": "Yukihiro",
         "last_name": "Nakadaira",
-        "email": "yukihiro.nakadaira at gmail.com",
-        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+        "email": "yukihiro.nakadaira@gmail.com",
+        "homepage": "http://sites.google.com/site/yukihironakadaira/"
       },
       "release_notes": "Added Vim's builtin functions.\nAdded VimList/VimDict class to provide direct access to VimL variable."
     },
@@ -98,8 +98,8 @@
         "user_name": "yukihiro",
         "first_name": "Yukihiro",
         "last_name": "Nakadaira",
-        "email": "yukihiro.nakadaira at gmail.com",
-        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+        "email": "yukihiro.nakadaira@gmail.com",
+        "homepage": "http://sites.google.com/site/yukihironakadaira/"
       },
       "release_notes": "Added windows support."
     },
@@ -114,8 +114,8 @@
         "user_name": "yukihiro",
         "first_name": "Yukihiro",
         "last_name": "Nakadaira",
-        "email": "yukihiro.nakadaira at gmail.com",
-        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+        "email": "yukihiro.nakadaira@gmail.com",
+        "homepage": "http://sites.google.com/site/yukihironakadaira/"
       },
       "release_notes": "Removed FEAT_PYTHON dependency."
     },
@@ -130,8 +130,8 @@
         "user_name": "yukihiro",
         "first_name": "Yukihiro",
         "last_name": "Nakadaira",
-        "email": "yukihiro.nakadaira at gmail.com",
-        "homepage": "http://yukihiro.nakadaira.googlepages.com/"
+        "email": "yukihiro.nakadaira@gmail.com",
+        "homepage": "http://sites.google.com/site/yukihironakadaira/"
       },
       "release_notes": "Initial upload"
     }

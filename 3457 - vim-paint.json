@@ -1,0 +1,27 @@
+{
+  "script_id": "3457",
+  "display_name": "vim-paint",
+  "summary": "vim-paint",
+  "name": "vim-paint",
+  "script_type": "utility",
+  "description": "Example:\n  let canvas = paint#canvas#new(128, 128)\n  call canvas.draw_line([0, 0], [63, 63], [0, 0, 0], 1)\n  call canvas.draw_line([0, 63], [63, 0], [0, 0, 0], 2)\n  call canvas.draw_rect([0, 64], [63, 127], [255, 0, 0], -1)\n  call canvas.draw_rect([32, 64], [63, 95], [0, 255, 0], 1)\n  call canvas.draw_ellipse([64, 0], [127, 63], [0, 0, 255], -1)\n  call canvas.draw_ellipse([64, 32], [95, 63], [255, 255, 0], 2)\n  for x in range(64)\n    for y in range(64)\n      call canvas.set_pixel(x + 64, y + 64, [x * 256 / 64, y * 256 / 64, 0])\n    endfor\n  endfor\n  let font = paint#bdf#loadfile(globpath(&rtp, 'font/mplus/mplus_f12r.bdf'))\n  call canvas.draw_text(\"Hello, Vim\", [64, 76], font, [255, 255, 255])\n  call canvas.save('example.bmp')\n\n  result: http://ynkdir.github.com/vim-paint/example.bmp\n",
+  "install_details": "set runtimepath+=/path/to/vim-paint\n\nLatest source: https://github.com/ynkdir/vim-paint",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15046",
+      "filename": "vim-paint.zip",
+      "script_version": "1.0",
+      "date": "2011-02-19",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "11226",
+        "user_name": "yukihiro",
+        "first_name": "Yukihiro",
+        "last_name": "Nakadaira",
+        "email": "yukihiro.nakadaira@gmail.com",
+        "homepage": "http://sites.google.com/site/yukihironakadaira/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

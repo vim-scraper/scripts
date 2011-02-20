@@ -1,12 +1,28 @@
 {
   "script_id": "663",
   "display_name": "VimDebug",
-  "summary": "integrated debugger for perl, ruby, python (updated 01/2008)",
+  "summary": "Visual debugger for Perl, Ruby, and Python (updated 01/2011)",
   "name": "VimDebug",
   "script_type": "utility",
-  "description": "VimDebug is designed to integrate your favorite debugger with Vim.  Currently supported debuggers are Perl, Ruby, and Python.  There is untested support for gdb as well in this release.  There are plans to support more languages.  This is a much more mature version than previous releases, but it is still beta.  \n\nThis release includes a solid debug console.\n\nPlease email me about any problems you may have.\n\n\nRequirements\n\nunix/linux\nperl\nIPC::Run perl module (http://search.cpan.org/~rsod/IPC-Run-0.80/lib/IPC/Run.pm)\nvim with +signs compiled in.\n\n\nUsage\n\n\nSet/reset these in your .vimrc if you want:\n\n<F12>      starts the debugger\n<Leader>s/ starts the debugger with command line arguments that you type in\n<F10>      restart debugger.  break points are always saved (for all dbgrs)\n<F11>      exit the debugger\n\n<F2>       show console\n<F6>       next\n<F7>       step\n<F8>       continue\n\n<Leader>b  set break point on the current line\n<Leader>c  clear break point on the current line\n\n<Leader>v  print the value of variable under the cursor\n<Leader>v/ print the value of an expression that you type in\n\n<Leader>/  type in a command for the debugger to execute, and echo the result.\n           (note that its not hard to make everything crash horribly with this\n           command if you do something like change the debugger prompt.)\n\n\nlet g:DBGRconsoleHeight   = 7\nlet g:DBGRlineNumbers      = 1",
-  "install_details": "$ tar xvzf VimDebug*tar.gz\n$ perl Makefile.PL\n$ make\n$ make install\n$ make installvim # or copy vim/plugin/*vim to your plugins directory",
+  "description": "VimDebug gives developers the ability to visually step through their code and set breakpoints.  Currently supported debuggers are Perl, Ruby, and Python.  \n\nThis plugin is still in beta.  Bug reports are needed.  Code is available on github: https://github.com/kablamo/VimDebug\n\n\nRequirements\n\nUbuntu/OSX/Unix\nPerl\nA small number of Perl modules\nVim with +signs compiled in.\n\n\nUsage\n\nSet/reset these in your .vimrc if you want:\n\n<F12>      Start the debugger\n<Leader>s/ Start the debugger with command line arguments\n<F10>      Restart debugger.  Break points are saved.\n<F11>      Exit the debugger\n\n<F2>       Show console\n<F6>       Next\n<F7>       Step\n<F8>       Continue\n\n<Leader>b  Set break point on the current line\n<Leader>c  Clear break point on the current line\n\n<Leader>v  Show the value of variable under the cursor\n<Leader>v/ Show the value of any expression\n\n<Leader>/  Enter a command for the debugger to execute, and echo the result.\n\nlet g:DBGRconsoleHeight   = 7\nlet g:DBGRlineNumbers      = 1",
+  "install_details": "$ tar xvzf VimDebug*tar.gz\n$ cd VimDebug*\n$ perl Makefile.PL\n$ make\n$ sudo make install\n$ cp -r vim/*vim $VIMHOME/",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14872",
+      "filename": "VimDebug-0.5.tar.gz",
+      "script_version": "0.5",
+      "date": "2011-01-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "2372",
+        "user_name": "johnsoer",
+        "first_name": "eric",
+        "last_name": "johnson",
+        "email": "vim@iijo.org",
+        "homepage": "http://iijo.org"
+      },
+      "release_notes": "Warns if you don't have IO::Pty installed; fixed newline problems for a number of people; fixed tab problems for people who use SuperTab plugin"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=8131",
       "filename": "VimDebug-0.4.tar.gz",
@@ -18,7 +34,7 @@
         "user_name": "johnsoer",
         "first_name": "eric",
         "last_name": "johnson",
-        "email": "vim at iijo.org",
+        "email": "vim@iijo.org",
         "homepage": "http://iijo.org"
       },
       "release_notes": "Dramatically improved debug console.  New underlying API makes adding support for new languages simpler.  Added support for Gdb, but this module is not yet tested.  This project is still in beta."
@@ -34,7 +50,7 @@
         "user_name": "johnsoer",
         "first_name": "eric",
         "last_name": "johnson",
-        "email": "vim at iijo.org",
+        "email": "vim@iijo.org",
         "homepage": "http://iijo.org"
       },
       "release_notes": "added Python, a very basic debug console, and some other gui improvements; still beta"
@@ -50,7 +66,7 @@
         "user_name": "johnsoer",
         "first_name": "eric",
         "last_name": "johnson",
-        "email": "vim at iijo.org",
+        "email": "vim@iijo.org",
         "homepage": "http://iijo.org"
       },
       "release_notes": "complete rewrite.  much more mature.  this version only supports perl and ruby."
@@ -66,7 +82,7 @@
         "user_name": "johnsoer",
         "first_name": "eric",
         "last_name": "johnson",
-        "email": "vim at iijo.org",
+        "email": "vim@iijo.org",
         "homepage": "http://iijo.org"
       },
       "release_notes": "fixed some problems with the install process (added multvals.vim)\nscript now works with perl v.5.6+ (instead of v.5.8+)\nfixed a bug involving arrays and eval() in the perl debugger module"
@@ -82,7 +98,7 @@
         "user_name": "johnsoer",
         "first_name": "eric",
         "last_name": "johnson",
-        "email": "vim at iijo.org",
+        "email": "vim@iijo.org",
         "homepage": "http://iijo.org"
       },
       "release_notes": "Initial upload"

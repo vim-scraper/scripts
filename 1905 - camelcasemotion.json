@@ -18,7 +18,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "- Do not create mappings for select mode; according to|Select-mode|, printable\n  character commands should delete the selection and insert the typed\n  characters. Now using :xmap to only target visual mode. \n- Moved functions from plugin to separate autoload script. \n- Split off documentation into separate help file. Now packaging as VimBall. "
@@ -34,7 +34,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "BF: Now using :normal! to be independent from any user mappings. Thanks to Neil Walker for the patch."
@@ -50,7 +50,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "BF: Wrong forward motion stop at the second digit if a word starts with multiple numbers (e.g. 1234.56789). Thanks to Wasim Ahmed for reporting this. "
@@ -66,7 +66,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "ENH: Added inner \"word\" text objects 'i,w' etc. that work analoguous to the built-in 'iw' text object. Thanks to David Kotchan for this suggestion. "
@@ -82,7 +82,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "The motions now also stop at non-keyword boundaries, just like the regular motions. This has no effect inside a CamelCaseWord or inside underscore_notation, but it makes the motions behave like the regular motions (which is important if you replace the default motions). Thanks to Mun Johl for reporting this. "
@@ -98,7 +98,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Allowing users to use mappings different than ,w ,b ,e by defining <Plug>CamelCaseMotion_? target mappings. This can even be used to replace the default 'w', 'b' and 'e' mappings, as suggested by Mun Johl. \nNow requires VIM 7.0 or higher. "
@@ -114,7 +114,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "BF: Corrected motions through mixed CamelCase_and_UnderScore words by re-ordering and narrowing the search patterns.  "
@@ -130,7 +130,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Thanks again to Joseph Barker for discussing the complicated visual mode mapping on the vim-dev mailing list and coming up with a great simplification. "
@@ -146,7 +146,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "ENH: The visual mode motions now also (mostly) work with the (default) setting 'set selection=inclusive' / 'behave xterm', instead of selecting one character too much. So far, you had to 'set selection=exclusive' / 'behave mswin'. "
@@ -162,7 +162,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Incorporated major improvements and simplifications done by Joseph Barker:\nOperator-pending and visual mode motions now accept [count] of more than 9. \nVisual selections can now be extended from either end. \nInstead of misusing the :[range], the special variable v:count1 is used. Custom commands are not needed anymore. \nOperator-pending and visual mode mappings are now generic: There's only a single mapping for ,w that can be repeated, rather than having a separate mapping for 1,w 2,w 3,w ...\nBF: The operator-pending and visual mode ,e mapping doesn't work properly when it reaches the end of line; the final character of the moved-over \"word\" remains. Fixed this problem unless the \"word\" is at the very end of the buffer. \nBF: Degenerate CamelCaseWords that consist of only a single uppercase letter (e.g. \"P\" in \"MapPRoblem\") are skipped by all motions. Thanks to Joseph Barker for reporting this. \nBF: In CamelCaseWords that consist of uppercase letters followed by decimals (e.g. \"MyUPPER123Problem\", the uppercase \"word\" is skipped by all motions. "
@@ -178,7 +178,7 @@
         "user_name": "inkarkat",
         "first_name": "Ingo",
         "last_name": "Karkat",
-        "email": "ingo at karkat.de",
+        "email": "ingo@karkat.de",
         "homepage": "http://ingo-karkat.de/"
       },
       "release_notes": "Initial upload"

@@ -1,0 +1,27 @@
+{
+  "script_id": "3451",
+  "display_name": "lexc/twolc Syntax Highlighter",
+  "summary": "A syntax highlighter for lexc and twolc files.",
+  "name": "lexctwolc-Syntax-Highlighter",
+  "script_type": "syntax",
+  "description": "Anyone who has ever worked with lexc or twolc would know what a hellishly eye-destructive experience it can be. Syntax highlighting helps, a lot. Especially with flag diacritics.",
+  "install_details": "mkdir ~/.vim/syntax, and put the file there.\nopen ~/.vimrc and add:\n\nau BufRead,BufNewFile *.lexc set filetype=lexc\nau BufRead,BufNewFile *.twol set filetype=lexc\nau! Syntax lexc source $HOME/.vim/syntax/lexc.vim\nsyntax on\n\nNow when you open a .lexc or .twol file, it will automatically use the syntax.\nAlternatively, type :set syntax=lexc to use it with any file.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15009",
+      "filename": "lexc.vim",
+      "script_version": "0.9",
+      "date": "2011-02-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "26711",
+        "user_name": "bbqsrc",
+        "first_name": "Brendan",
+        "last_name": "Molloy",
+        "email": "brendan@bbqsrc.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

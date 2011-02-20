@@ -1,0 +1,75 @@
+{
+  "script_id": "3394",
+  "display_name": "BOOKMARKS: Mark & Highlight Full Lines",
+  "summary": "Easily Highlight Lines with Marks, and Add/Remove Marks",
+  "name": "BOOKMARKS--Mark-and-Highlight-Full-Lines",
+  "script_type": "utility",
+  "description": "Inspired by Kate 'bookmarks' and other scripts in this site, I devised a new way to mark full lines and highlight them.\n\nThe idea is to mark lines and then jump from one to the other, in an easier way than the one Vim provides.\n\nLines with markers are highlighted, which is convenient to visually spot where the mark is.\n\nOne does not need to remember which markers are already in use and which are free anymore, just add marks and remove marks, and the script will manage where to store them or free them.\n\nUSAGE:\n<F1>            Turn on/update highlighting for all lines with markers\n<F2>            Turn off highlighting for lines with markers\n<SHIFT-F2> Erase all markers [a-z]\n<F5>             Add a mark on the current line (and highlight)\n<SHIFT-F5> Remove the mark on the current line\n\nThen, just jump from one mark to the next using the classic [' and ]' jumps\n\nTry it! it's nice!\n\nNOTE:\nOf course, the highlight group I define (\"Marks\") should be tweaked to one's taste, and the same applies to the keyboard mappings.\n\nNOTE-UPDATE:\nThe classic marking method (ie. typing 'ma', 'mb', 'mc'...) can be used in combination with this one, but one has to be careful not to overwrite an existing mark. Check with the :marks command. HINT: the code marks from the 'a' to the 'z', so if there are not too many marks, one can safely assume that the last ones ('z 'x 'y 'w ...) are safe to use.\n\nEnjoy...",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14918",
+      "filename": "markHL.vim",
+      "script_version": "2.02",
+      "date": "2011-01-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25038",
+        "user_name": "nachoparker",
+        "first_name": "Ignacio",
+        "last_name": "Nunez",
+        "email": "pkbrister@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added <silent> mode for the mappings"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14783",
+      "filename": "markHL.vim",
+      "script_version": "2.01",
+      "date": "2011-01-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25038",
+        "user_name": "nachoparker",
+        "first_name": "Ignacio",
+        "last_name": "Nunez",
+        "email": "pkbrister@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added color highlighting for GUI"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14713",
+      "filename": "markHL.vim",
+      "script_version": "2",
+      "date": "2011-01-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25038",
+        "user_name": "nachoparker",
+        "first_name": "Ignacio",
+        "last_name": "Nunez",
+        "email": "pkbrister@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Now, the code can handle normal marking and my own method simultaneously."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14709",
+      "filename": "markHL.vim",
+      "script_version": "1",
+      "date": "2011-01-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25038",
+        "user_name": "nachoparker",
+        "first_name": "Ignacio",
+        "last_name": "Nunez",
+        "email": "pkbrister@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

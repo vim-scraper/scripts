@@ -5,8 +5,56 @@
   "name": "slimv.vim",
   "script_type": "utility",
   "description": "Slimv tries to mimic a subset of SLIME's (Superior Lisp Interaction Mode for Emacs) functionality inside Vim on Linux, Windows and Mac OS X. The script defines functions and keybindings to send s-expressions to a console mode Lisp or Clojure REPL (Read-Eval-Print Loop). Slimv runs its own REPL or connects to a running REPL started by a previous Slimv session, the connection is established when the first Slimv command is executed (e.g. an s-expression is evaluated).\n\nThe Lisp REPL buffer can also be opened inside Vim as a Vim buffer with syntax highlighting and autoindenting, Lisp commands may be entered in the command line, just as in a regular REPL. The script also has a basic support for Clojure REPL.\n\nSlimv supports the same profiling tool that comes with SLIME. The script also has a Common Lisp Hyperspec lookup feature and it is able to lookup symbols in the Clojure API, as well as in JavaDoc. Symbol name completion is supported via Vim's omni-completion based on the hyperspec symbol database.\n\nSlimv comes with Paredit Mode, which is similar to the functionality of paredit.el in Emacs. Paredit Mode tries to maintain the balanced state of matched characters (parenthesis marks, square brackets, double quotes). Matched characters are inserted and removed in pairs, also when working with a block of text (well, mostly). Slimv also implements many paredit.el s-expression handling functions, like Split/Join/Wrap/Splice. Slurpage and Barfage known from Emacs is also possible but in a different fashion: you don't move the list element in or out of the list, rather you move the opening or closing parenthesis over the element or sub-list.\n\nCheck out the screenshot of Slimv having a clisp REPL buffer:\nhttp://img6.imageshack.us/img6/5104/slimvscreenshotx.png\n\nAnother screenshot of Slimv running the Clojure Ants demo:\nhttp://img21.imageshack.us/img21/3949/slimvants.png\n\nAnd this is the symbol name completion in action (no, the pink background is not done by Slimv, this is Vim's default):\nhttp://img18.imageshack.us/img18/5859/slimvcompl.png\n\nHere follows a list of Slimv commands, any similarity with SLIME's menu is not coincidental. :)\nFor a more complete description with keybindings see the included documentation.\n\nEdit commands:\n    *  Close Form\n    *  Complete Symbol\n    *  Paredit Toggle\n\nEvaluation commands:\n    *  Eval Defun\n    *  Eval Last Expression\n    *  Pprint Eval Last Expression\n    *  Eval Region\n    *  Eval Buffer\n    *  Interactive Eval\n    *  Undefine Function\n\nDebug commands:\n    *  Macroexpand-1\n    *  Macroexpand\n    *  Trace\n    *  Untrace\n    *  Disassemble\n    *  Inspect\n\nCompile commands:\n    *  Compile Defun\n    *  Compile and Load File\n    *  Compile File\n    *  Compile Region\n\nProfile commands:\n    *  Load Profiler\n    *  Profile\n    *  Unprofile\n    *  Unprofile All\n    *  Show Profiled\n    *  Profile Report\n    *  Profile Reset\n\nDocumentation commands:\n    *  Describe Symbol\n    *  Apropos\n    *  Hyperspec\n    *  Generate Tags\n\nREPL commands:\n    *  Connect to Server\n    *  Send Input\n    *  Interrupt Lisp Process\n    *  Close and Send Input\n    *  Previous Input\n    *  Next Input\n\nMany Slimv commands operate on s-expressions or symbols, just like in SLIME. Place the cursor at any location inside the s-expression or on the symbol's name then invoke the command. This builds a command specific form and sends it to the running REPL for evaluation.\n\nFor more information see the documentation coupled with the script, please refer to section \"External Utilities\" for other useful Lisp editing tips not covered by Slimv.",
-  "install_details": "Note for users of pre-0.5.0 versions: Slimv is now a Lisp+Clojure filetype plugin, which means that it went through a major reorganization. Please delete the old version before installing the new one. See details in the documentation.\n\nExtract the zip archive into your vimfiles or runtime directory. The archive contains the following files:\n    *  doc/slimv.txt\n    *  ftdetect/clojure.vim\n    *  ftplugin/metering.lisp\n    *  ftplugin/slimv.py\n    *  ftplugin/slimv.vim\n    *  ftplugin/slimv-clhs.vim\n    *  ftplugin/slimv-cljapi.vim\n    *  ftplugin/slimv-javadoc.vim\n    *  ftplugin/clojure/slimv-clojure.vim\n    *  ftplugin/lisp/slimv-lisp.vim\n    *  indent/clojure.vim\n    *  plugin/paredit.vim\n    *  syntax/clojure/slimv-syntax-clojure.vim\n\nSlimv works on Windows, Linux and Mac OS X (via Terminal.app), Cygwin is not supported. The script requires the following programs installed on your system:\n    *  Lisp (any console Common Lisp should be OK) or Clojure\n    *  Python 2.4 or later\n    *  Pywin32 is recommended on Windows\nSlimv tries to autodetect your Lisp/Clojure and Python installation directories. If it fails to determine the correct directories, then you need to enter path definitions into your vimrc file:\n    let g:slimv_python = 'C:/MyPythonDir/python.exe'\n    let g:slimv_lisp = 'C:/MyLispDir/mylisp.exe'\n\nShould the autodetection for Clojure fail, set the Lisp path to the complete Clojure REPL startup command, something like:\n    let g:slimv_lisp = '\"java -cp /myclojuredir/clojure.jar clojure.main\"'\n\nLinux users using terminal emulator other than xterm should define the complete command to run the Slimv client + server. Here follows an example with konsole and clisp:\n    let g:slimv_client = 'python ~/.vim/plugin/slimv.py -r \"konsole -T Slimv -e @p @s -l clisp -s\"'\n\nSee the included documentation for more complete installation and customization instructions.",
+  "install_details": "For the latest development version please visit the Slimv repository:\nhttp://bitbucket.org/kovisoft/slimv/\n\nExtract the zip archive into your vimfiles or runtime directory. The archive contains the following files:\n    *  doc/slimv.txt\n    *  ftdetect/clojure.vim\n    *  ftplugin/metering.lisp\n    *  ftplugin/slimv.py\n    *  ftplugin/slimv.vim\n    *  ftplugin/slimv-clhs.vim\n    *  ftplugin/slimv-cljapi.vim\n    *  ftplugin/slimv-javadoc.vim\n    *  ftplugin/clojure/slimv-clojure.vim\n    *  ftplugin/lisp/slimv-lisp.vim\n    *  indent/clojure.vim\n    *  plugin/paredit.vim\n    *  syntax/clojure/slimv-syntax-clojure.vim\n\nSlimv works on Windows, Linux and Mac OS X (via Terminal.app), Cygwin is supported (but needs the Windows Python). The script requires the following programs installed on your system:\n    *  Lisp (any console Common Lisp should be OK) or Clojure\n    *  Python 2.4 or later\n    *  Pywin32 is recommended on Windows\nSlimv tries to autodetect your Lisp/Clojure and Python installation directories. If it fails to determine the correct directories, then you need to enter path definitions into your vimrc file:\n    let g:slimv_python = 'C:/MyPythonDir/python.exe'\n    let g:slimv_lisp = 'C:/MyLispDir/mylisp.exe'\n\nShould the autodetection for Clojure fail, set the Lisp path to the complete Clojure REPL startup command, something like:\n    let g:slimv_lisp = '\"java -cp /myclojuredir/clojure.jar clojure.main\"'\n\nLinux users using terminal emulator other than xterm should define the complete command to run the Slimv client + server. Here follows an example with konsole and clisp:\n    let g:slimv_client = 'python ~/.vim/plugin/slimv.py -r \"konsole -T Slimv -e @p @s -l clisp -s\"'\n\nSee the included documentation for more complete installation and customization instructions.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14848",
+      "filename": "Slimv076.zip",
+      "script_version": "0.7.6",
+      "date": "2011-01-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16470",
+        "user_name": "kovisoft",
+        "first_name": "Tamas",
+        "last_name": "Kovacs",
+        "email": "kovisoft@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Cursor position is kept during evaluation, most Slimv commands made silent, bugfixes: find defun start when cursor is on a comment, keep newlines in Compile-Region, infinite loop when selecting form in empty buffer, error when opening REPL buffer with g:slimv_repl_split=0, REPL blinking in insert mode when visualbell is on, added the comma to the list of macro prefix characters (thanks to John Obbele), long/short Windows filename problem for REPL buffer."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14687",
+      "filename": "Slimv075.zip",
+      "script_version": "0.7.5",
+      "date": "2011-01-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16470",
+        "user_name": "kovisoft",
+        "first_name": "Tamas",
+        "last_name": "Kovacs",
+        "email": "kovisoft@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added Cygwin compatibility using the Windows Python (thanks to Jerome Baum), display client error message when eval was not successful, form is passed to client via stdin instead of temp file, bugfixes: automatic reconnection when server closed and reopened, delete and yank also via named registers in paredit.vim, handle double quotes in Compile-Defun and Compile-Region."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14527",
+      "filename": "Slimv074.zip",
+      "script_version": "0.7.4",
+      "date": "2010-12-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16470",
+        "user_name": "kovisoft",
+        "first_name": "Tamas",
+        "last_name": "Kovacs",
+        "email": "kovisoft@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added autodetection for simple 'clojure' command on Linux, removed duplicates from history of commands entered in REPL buffer (those recallable with <Up>), bugfixes: infinite loop during eval when 'in-package' or 'in-ns' was in comment, Lisp prompt identification problems in REPL buffer, input line duplication in SBCL on Linux (assigned \"*debug-io*\" to stdin), Eval Defun sometimes missed last \")\"."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14445",
       "filename": "Slimv073.zip",
@@ -18,7 +66,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added compatibility with Python 3.x, bugfixes: input lines for REPL were doubled on Linux (thanks to Andrew Hills), however not yet fixed for SBCL, enclose Slimv path in double quotes if contains space, select form when standing on prefix character (e.g. ' or `)."
@@ -34,7 +82,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added autodetection for /usr/local/bin/clojure on Linux, added special characters to Lisp keyword selection (iskeyword), run Vim's original ftplugin/lisp.vim for Clojure filetype, bugfixes: PareditWrap error when g:paredit_shortmaps=1 (thanks to Jon Thacker), buffer selection problems in case of three of more buffers (thanks to Philipp Marek), conflicting keybindings for SlimvGenerateTags, unmap error messages when g:paredit_mode=0."
@@ -50,7 +98,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added option g:slimv_browser_cmd for opening hyperspec in a custom webbrowser (on behalf of Andreas Salwasser), added paredit handling for d<motion>, c<motion>, p and P commands: keep paren balance when deleting and pasting text, Paredit Toggle function removes and re-adds paredit keybindings, bugfix: D and C deleted till beginning of line if () or [] found, handle escaped \\\" characters inside string."
@@ -66,7 +114,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added package/namespace support, new way of refreshing the REPL buffer via autocommands, removed 'RUNNING' mode, cursor stays in the current buffer at evaluation, added option g:slimv_updatetime, removed options related to the old way of refreshing (g:slimv_repl_return and g:slimv_repl_wait), removed debug logging, updated Clojure API to version 1.2, extended keyword definition when selecting symbols, bugfix: defmacro detection problem (again)."
@@ -82,7 +130,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added option to return cursor to the editor window from REPL buffer after evaluating an s-expression, Wrap: if standing on a paren then wrap the whole s-expression, Wrap selection: exit visual mode after command, Bugfixes: inserting double quotes in paredit mode (like \"\\\"\"), dd in paredit mode when unbalanced form is inside comment, reopen REPL buffer after closing it via \":q\", comment and string detection error with noignorecase setting, wrong positioning when moving parenthesis to the right, defmacro detection problem, paredit wrap selection missed last character when 'selection' was not \"exclusive\"."
@@ -98,7 +146,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added support for Mac OS X via Terminal.app (on behalf of Vlad Hanciuta), added string \"clj\" as a detector for Clojure (by Vlad Hanciuta), bugfixes: paredit wrap function missed last character when 'selection' was not \"exclusive\" (thanks to Marcin Fatyga), input was stuck inside SBCL debugger (on behalf of Philipp Marek and Dmitry Petukhov), occasional error messages during REPL buffer update, REPL menu was sometimes missing, occasional command line color problems."
@@ -114,7 +162,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added Split/Join/Wrap/Splice functions to Paredit Mode. Bugfixes: delete commands put erased characters into yank buffer, D does not delete whole line."
@@ -130,7 +178,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added paredit mode, set wrap for REPL buffer."
@@ -146,7 +194,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Improved REPL buffer response time, added debug log flushing frequency, bugfix: early exit of REPL refresh mode on some machines."
@@ -162,7 +210,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Updated Clojure API to 1.1, expand tilde-prefix to home directory on Linux, autodetect Clojure in the user home directory on Linux."
@@ -178,7 +226,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added autodetection for clojure-contrib.jar and Clozure CL, applied lisp_rainbow to Clojure's [], renamed Clojure indent plugin to clojure.vim, switched on lisp indentation for Clojure files."
@@ -194,7 +242,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added Interrupt-Lisp-Process command, added mapping for the REPL menu, added special forms to Clojre API lookup, bugfixes: put cursor after the last character in insert mode when refreshing REPL buffer, fixed some Ctrl-C handling problems."
@@ -210,7 +258,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Adapted Clojure API lookup and JAR autodetection to version 1.0, Complete-Symbol moved to separate Edit submenu, added Close-Form command."
@@ -226,7 +274,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added symbol name completion based on the Hyperspec database."
@@ -242,7 +290,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Major project reorganization: Slimv is now a Lisp and Clojure filetype plugin; added Common Lisp Hyperspec, Clojure API and JavaDoc lookup; separate menu for REPL buffer; menu items work in every Vim mode; fixed mark 's usage bug."
@@ -258,7 +306,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added profiler support for SBCL, new commands: Show Profiled/Send Input/Close and Send Input/Previous Input/Next Input, highlight error messages."
@@ -274,7 +322,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added SLIME's profiling tool with support from Slimv, added command to generate tags file, fixed eval problems of large buffers, fixed Compile And Load filename problems with '&#039 on Windows, recycle old REPL temporary file at next server startup."
@@ -290,7 +338,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "REPL buffer enhancements: added syntax highlighting and automatic indentation, it is possible to enter a multi-line command, Ctrl-C is working; server REPL window performance enhancement on Linux."
@@ -306,7 +354,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed REPL input and output mix-up problems, evaluation performance enhancement, corrected some more macroexpand problems."
@@ -322,7 +370,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added basic Clojure support, fixed some macroexpand and REPL refresh problems."
@@ -338,7 +386,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Major update: Lisp REPL inside a Vim buffer"
@@ -354,7 +402,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Ctrl+C is propagated to Lisp REPL, so it is possible to interrupt a running program. Bugfix: delayed display of last line in REPL window on Linux."
@@ -370,7 +418,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Handle DOS and Unix style line endings on Windows, don't write logfile when debug level not set"
@@ -386,7 +434,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Windows users do not need pywin32 anymore"
@@ -402,7 +450,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Corrected memory fill up problem after a long REPL session."
@@ -418,7 +466,7 @@
         "user_name": "kovisoft",
         "first_name": "Tamas",
         "last_name": "Kovacs",
-        "email": "kovisoft at gmail.com",
+        "email": "kovisoft@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

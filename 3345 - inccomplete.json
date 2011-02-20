@@ -4,9 +4,105 @@
   "summary": "Plugin for C/C++/ObjC/ObjC++ include directive completion.",
   "name": "inccomplete",
   "script_type": "utility",
-  "description": "This is a completion plugin for C/C++/ObjC/ObjC++ preprocessors include directive.\n\nIt can complete both \\\"\\\" and <> forms of #include.\nFor \\\"\\\" it gets all header files in the current directory (so it&#039s assumed that you have something similar to \\\"autocmd BufEnter,BufWinEnter * lcd %:p:h\\\" in your .vimrc).\nAnd for <> it gets all files that have hpp or h extensions or don&#039t have any.\n\nIt uses GNU find utility to find header files.\n\nYou could always find the latest version on github: http://github.com/xaizek/vim-inccomplete \nFeel free to contact me if you have any question or suggestions.",
+  "description": "This is a completion plugin for C/C++/ObjC/ObjC++ preprocessors include directive.\n\nIt can complete both \\\"\\\" and <> forms of #include.\nFor \\\"\\\" it gets all header files in the current directory (so it&#039s assumed that you have something similar to \\\"autocmd BufEnter,BufWinEnter * lcd %:p:h\\\" in your .vimrc).\nAnd for <> it gets all files that have hpp or h extensions or don&#039t have any.\n\nOnly files of include directories are displayed in completion list, but you can complete files in subdirectories of include directories too. All you need is to call completion again after typing subdirectory name and slash (and maybe beginning of file name).\n\nIt uses GNU find utility to find header files.\n\nYou could always find the latest version on github: http://github.com/xaizek/vim-inccomplete \nFeel free to contact me if you have any question or suggestions.",
   "install_details": "Just extract vim-inccomplete.zip into your ~/.vim/ or ~/vimfiles/ (~/.vim/bundle/ or ~/vimfiles/bundle/ if you use Pathogen (vimscript #2332)).\nThis plugin can be used along with clang_complete plugin (vimscript #3302). And maybe with some others completion plugins that I haven&#039t tested (inccomplete should work if it&#039ll be loaded after some other completion plugin).",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14846",
+      "filename": "vim-inccomplete-1.3.10.zip",
+      "script_version": "1.3.10",
+      "date": "2011-01-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23504",
+        "user_name": "x_aizek",
+        "first_name": "x",
+        "last_name": "aizek",
+        "email": "xaizek@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "+Completion of subdirectories.\nBug Fix: '-' symbol in filenames for <> completion is now allowed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14706",
+      "filename": "vim-inccomplete-1.2.9.zip",
+      "script_version": "1.2.9",
+      "date": "2011-01-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23504",
+        "user_name": "x_aizek",
+        "first_name": "x",
+        "last_name": "aizek",
+        "email": "xaizek@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug Fix: invalid parsing of clang_complete options. Another way to add closing bracket. Now cache is global. Code refactoring."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14692",
+      "filename": "vim-inccomplete-1.1.7.zip",
+      "script_version": "1.1.7",
+      "date": "2011-01-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23504",
+        "user_name": "x_aizek",
+        "first_name": "x",
+        "last_name": "aizek",
+        "email": "xaizek@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Now b:clang_user_options and g:clang_user_options are parsed for include directories."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14675",
+      "filename": "vim-inccomplete-1.0.7.zip",
+      "script_version": "1.0.7",
+      "date": "2011-01-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23504",
+        "user_name": "x_aizek",
+        "first_name": "x",
+        "last_name": "aizek",
+        "email": "xaizek@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Automatically add closing brace."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14579",
+      "filename": "vim-inccomplete-1.0.6.zip",
+      "script_version": "1.0.6",
+      "date": "2010-12-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23504",
+        "user_name": "x_aizek",
+        "first_name": "x",
+        "last_name": "aizek",
+        "email": "xaizek@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug Fix: incorrect comparison of paths on Windows."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14514",
+      "filename": "vim-inccomplete-1.0.5.zip",
+      "script_version": "1.0.5",
+      "date": "2010-12-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23504",
+        "user_name": "x_aizek",
+        "first_name": "x",
+        "last_name": "aizek",
+        "email": "xaizek@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Missed old variable names have been fixed!\nUser-completion has been replaced with omni-completion to make it work fine with new versions of clang_complete.\nDon't complete after second \" in the line.\nA little bug in ICComplete with l:user has been fixed."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14440",
       "filename": "vim-inccomplete-1.0.2.zip",
@@ -18,7 +114,7 @@
         "user_name": "x_aizek",
         "first_name": "x",
         "last_name": "aizek",
-        "email": "xaizek at gmail.com",
+        "email": "xaizek@gmail.com",
         "homepage": ""
       },
       "release_notes": "Bug Fix: ignore empty 'path' components."
@@ -34,7 +130,7 @@
         "user_name": "x_aizek",
         "first_name": "x",
         "last_name": "aizek",
-        "email": "xaizek at gmail.com",
+        "email": "xaizek@gmail.com",
         "homepage": ""
       },
       "release_notes": "Bug Fix: Cached <>-include list wasn't updated after changing 'path' option."
@@ -50,7 +146,7 @@
         "user_name": "x_aizek",
         "first_name": "x",
         "last_name": "aizek",
-        "email": "xaizek at gmail.com",
+        "email": "xaizek@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

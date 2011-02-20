@@ -18,7 +18,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- The script is now more aligned to Vim 7.0.\n- It is now autoloaded.\n- Not dependent on multvals anymore.\n- Comes with a Vim style help file.\n- Minor improvements and fixes.\n"
@@ -34,7 +34,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Release 3.2 for vim7 compatibility. Thanks to David Fishburn for\nproviding most of the patches for vim7 and testing it.\n"
@@ -50,7 +50,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Just trying to fix a bad upload for version 3.1\n\n- Now requires Vim 6.3 \n- More documentation. \n- The script now works perfectly well for remote debugging. All the Vim bugs\n  were fixed in 6.3 and I have used the plugin for some real debugging this\n  time, and found it to be quite usable. \n- You can now reload scripts from remote session. \n- Many new useful commands with command-completions. \n  - Runtime: that completes filenames from 'rtp' \n  - Debug: that completes command and function names (with arguments).\n  - Breakadd/Breakdel: that complete function names/script paths \n  - Where: to see the context at the debug prompt. \n- Useful BreakPtsSetupBuf command. A few other global commands. \n- Lots of other misc. and subtle improvements. Read the script header completely\n  for details (you can diff with the old version if you like :)\n"
@@ -66,7 +66,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "See the function header for details.\n- Now BreakPts command can take an option to specify the initial view.\n- New BPOpen command to open a script for editing from the scripts view.\n- Experimental features to debug scripts from a remote vim using the\n  |clientserver| functionality. It is now possible to view the context and execute the :debug\n  mode commands such as >next >cont from the browser, while debugging\n  remotely. CAUTION: This requires installing a patch to vim and sometimes makes Vim crash (see installation section).\n- Two global functions BPBreak() and BPBreakIf() to add breakpoints from\n  with in your script. The BPBreak() can also be used while at the\n  :debug prompt (>) to easily add breakpoints without needing to worry\n  about the function name and line number. This requires a patch to be\n  installed to vim (see installation section).\n- New setting g:brkptsModFuncHeader.\n- New version dependency check on dependent libraries. You now get an\n  error message during the Vim startup if you don't have the right\n  version of multvals and genutils.\n- Remember the line number when the browser is closed and reopened.\n- Fixed a bug in handling function names, such as <SID>Func.\n- Fixed a bug in browser name on unixy vim.\n- Plugin reloading now handles some non-standard naming conventions for\n  the loaded_ variable and works better.\n- Fixed other misc. bugs.\n- The g:loaded_breakpts variable now contains the version number for any dependency checking (see :help v:version for format information)"
@@ -82,7 +82,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Number of improvements, thanks to David Fishburn {fishburn at sybase dot org} for feedback/ideas and help with identifying issues. Note: This version requires Vim 6.2. New features at a glance:\n\n    - View the list of scripts loaded.\n    - View the script listing and set \"file\" breakpoints.\n    - Reload a script after unletting the g:loaded_xxx variable.\n    - Mappins to goto next/previous breakpoint.\n    - Fold the contents so that only breakpoints are visible (with some\n      context).\n    - A command to clear all the breakpoints.\n    - A new :BPBrklist command to get the list of breakpoints. You can\n      press <F9> on them to disable/enable them.\n    - :BPSave command to save the current breakpoints in a specified global\n      variable. You can later exec the variable to reinstate the\n      breakpoints. This allows you to save/restore breakpoints across sessions.\n\nSee description for more information. Please continue to send in your suggestions/bug reports etc.\n"
@@ -98,7 +98,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

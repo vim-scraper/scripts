@@ -4,9 +4,25 @@
   "summary": "Add and remove comments from lines",
   "name": "simple_comments.vim",
   "script_type": "utility",
-  "description": "This is a plugin to comment out or remove comments from\nlines in sourcecode using the comments in the commentsring\nvariable. It is intended to be as simple as possible and can only\nhandle the commenting or removal of comments from whole \nlines.\n\nThere are much more sofisticated comment scripts on vim.org, but I wanted something simple, so this script was created.",
+  "description": "This is a plugin to comment out or remove comments from\nlines in sourcecode using the comments in the commentsring\nvariable. It is intended to be as simple as possible and can only\nhandle the commenting or removal of comments from whole \nlines.\n\nThere are much more sofisticated comment scripts on vim.org, but \nI wanted something simple, so this script was created.\n\ngithub: https://github.com/aklt/vim-simple_comments\n",
   "install_details": "Uznip simple_comments.vba.zip, open the file and source it.  Installation requires the VimBall plugin.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14667",
+      "filename": "simple_comments.vba.gz",
+      "script_version": "1.2",
+      "date": "2010-12-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4354",
+        "user_name": "aklt",
+        "first_name": "Anders",
+        "last_name": "Thøgersen",
+        "email": "anderslt@gmail.com",
+        "homepage": "http://bladre.dk"
+      },
+      "release_notes": "Updated comment text and put script on github"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=10092",
       "filename": "simple_comments.vba.gz",
@@ -18,7 +34,7 @@
         "user_name": "aklt",
         "first_name": "Anders",
         "last_name": "Thøgersen",
-        "email": "anderslt at gmail.com",
+        "email": "anderslt@gmail.com",
         "homepage": "http://bladre.dk"
       },
       "release_notes": "Changed version numbering and added use of GetLatestVimScripts"
@@ -34,7 +50,7 @@
         "user_name": "aklt",
         "first_name": "Anders",
         "last_name": "Thøgersen",
-        "email": "anderslt at gmail.com",
+        "email": "anderslt@gmail.com",
         "homepage": "http://bladre.dk"
       },
       "release_notes": "Added syntax specific commenting.  If a dictionary contains an entry for the current filetype then syntax comments will be used instead. This is useful when editing html or php files that may contain languages requiring more than one type of comment... Script s still simple, though :-)"
@@ -50,7 +66,7 @@
         "user_name": "aklt",
         "first_name": "Anders",
         "last_name": "Thøgersen",
-        "email": "anderslt at gmail.com",
+        "email": "anderslt@gmail.com",
         "homepage": "http://bladre.dk"
       },
       "release_notes": "Bugfix.  Spaces are now handled correctly"

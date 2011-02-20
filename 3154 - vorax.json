@@ -4,9 +4,57 @@
   "summary": "An Oracle IDE for Geeks.",
   "name": "vorax",
   "script_type": "utility",
-  "description": "VoraX aims to be a simple, yet a powerful IDE for Oracle databases. Instead of reinventing the wheel, VoraX relies on the well-known SqlPLUS which is actually used to connect to the database, to execute and to get the results back. However, this interaction is hidden from the user who just uses his/her Vim environment without knowing that, behind, a SqlPLUS process does all the work.\n\nThe big advantage of this approach is that, in VoraX, almost all SqlPLUS commands may be used without any problems. You can format columns, set pagination, autotrace queries etc. Basically, everything you used to type on your SqlPLUS prompt is guaranteed to work in VoraX, except maybe for some exotic cases (e.g. using vim in console mode, having the EDITOR set to a terminal editor and executing the \"ed\" sqlplus command).\n\nAnother advantage is that you'll get an efficient Oracle IDE with a very small footprint. For Oracle DBAs this is huge because they don't need heavy tools with a lot of features they never use. Likewise, the fact that VoraX may be used within a regular console makes it suitable for server environments.\n\nFEATURES\n\n    * 99.9% of the sqlplus commands supported\n    * advanced code completion system\n    * Windows and UNIX systems are supported\n    * a nice results window with highlighting for errors and logging support \n    * a database explorer which may be used to browse the database objects in a hierarchical way\n    * support for editing and compiling PLSQL objects like packages, types etc.\n    * fuzzy search for database items\n    * offline search through the oracle documentation\n\nThis project is hosted on: http://code.google.com/p/vorax/",
+  "description": "VoraX aims to be a simple, yet a powerful IDE for Oracle databases. Instead of reinventing the wheel, VoraX relies on the well-known SqlPLUS which is actually used to connect to the database, to execute and to get the results back. However, this interaction is hidden from the user who just uses his/her Vim environment without knowing that, behind, a SqlPLUS process does all the work.\n\nThe big advantage of this approach is that, in VoraX, almost all SqlPLUS commands may be used without any problems. You can format columns, set pagination, autotrace queries etc. Basically, everything you used to type on your SqlPLUS prompt is guaranteed to work in VoraX, except maybe for some exotic cases (e.g. using vim in console mode, having the EDITOR set to a terminal editor and executing the \"ed\" sqlplus command).\n\nAnother advantage is that you'll get an efficient Oracle IDE with a very small footprint. For Oracle DBAs this is huge because they don't need heavy tools with a lot of features they never use. Likewise, the fact that VoraX may be used within a regular console makes it suitable for server environments.\n\nFEATURES\n\n    * 99.9% of the sqlplus commands supported\n    * advanced code completion system\n    * Windows and UNIX systems are supported\n    * a nice results window with highlighting for errors and logging support \n    * a database explorer which may be used to browse the database objects in a hierarchical way\n    * support for editing and compiling PLSQL objects like packages, types etc.\n    * fuzzy search for database items\n    * offline search through the oracle documentation\n\nThis project is hosted on: http://code.google.com/p/vorax/\nVoraX Blog: http://vorax-ide.blogspot.com/",
   "install_details": "VoraX follows the standard procedure of installing a Vim plugin. However, you need to take care of some dependencies VoraX relies on:\n\n   1. your vim must have ruby support enabled. In order to check this you may execute :version and look for +ruby.\n   2. ruby 1.8 (1.8.7 is the recommended version)\n   3. rubygems (on Debian systems is as simple as: sudo apt-get install rubygems)\n   4. the antlr3 ruby gem. You may install it using: gem install antlr3 -r\n   5. for Windows OS, besides ruby, you'll also need the win32-api gem. You may install it using: gem install win32-api -r\n   6. a working Oracle client with sqlplus, which has to be available in the environment $PATH variable. The instant client with sqlplus should be just fine.\n   7. optionally, if you want to securely store passwords for your Oracle connections then the openssl ruby extension must be available. On Ubuntu/Debian systems you may use the following command to install it: sudo apt-get install libopenssl-ruby1.8 \n\nPlease notice that only ruby 1.8 is supported for the moment therefore be careful not to install ruby 1.9 instead.\n\nOptionally, you may install the following plugins VoraX integrates with:\n\n    * NERDTree: http://www.vim.org/scripts/script.php?script_id=1658\n    * XpTemplate: http://www.vim.org/scripts/script.php?script_id=2611 \n    * TagList: http://www.vim.org/scripts/script.php?script_id=273\n    * FuzzyFinder: http://www.vim.org/scripts/script.php?script_id=1984\n\nAfter the installation is done it is advisable to index the documentation using the following commands:\n\n    * :helptags $VIM/.vim/doc (Unix)\n    * :helptags $VIM/vimfiles/doc (Windows) ",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14847",
+      "filename": "vorax-2.8.zip",
+      "script_version": "2.8",
+      "date": "2011-01-24",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "20487",
+        "user_name": "talek",
+        "first_name": "Alexandru",
+        "last_name": "Tica",
+        "email": "alexandru.tica@gmail.com",
+        "homepage": "http://oracle-cookies.blogspot.com"
+      },
+      "release_notes": "    * Monitor long running statements\n    * A more informative statusline for the result window\n    * OS interface redesign: get the connection info in one roundtrip\n    * bug fix:Detection of the statement under cursor hangs if virtualedit is set\n    * bug fix: VoraxExecVisualSQL can run query not intended (thanks to Shaun Batterton) "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14776",
+      "filename": "vorax-2.7.zip",
+      "script_version": "2.7",
+      "date": "2011-01-17",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "20487",
+        "user_name": "talek",
+        "first_name": "Alexandru",
+        "last_name": "Tica",
+        "email": "alexandru.tica@gmail.com",
+        "homepage": "http://oracle-cookies.blogspot.com"
+      },
+      "release_notes": "    * easy key mappings configuration via global variables in .vimrc\n    * bug fix: the output after an exec with g:vorax_resultwin_clear=0 is not always visible\n    * bug fix: matchit for sql buffers "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14504",
+      "filename": "vorax-2.6.zip",
+      "script_version": "2.6",
+      "date": "2010-12-14",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "20487",
+        "user_name": "talek",
+        "first_name": "Alexandru",
+        "last_name": "Tica",
+        "email": "alexandru.tica@gmail.com",
+        "homepage": "http://oracle-cookies.blogspot.com"
+      },
+      "release_notes": "    * after exec statement hook event (thanks to Spratek)\n    * add geometry to quick fix window (thanks to koelner.r)\n    * bug fix: Omni completion does not work for schema prefixed objects\n    * bug fix: Incorrect order of columns in composite indexes\n    * bug fix: refreshing the results window with g:vorax_restore_focus does not work correctly\n    * bug fix: DBExplorer, ResultWindow and ConnWindow change their buffer # / window buf # after connection. (thanks to koelner.r) "
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14147",
       "filename": "vorax-2.5.zip",
@@ -18,7 +66,7 @@
         "user_name": "talek",
         "first_name": "Alexandru",
         "last_name": "Tica",
-        "email": "alexandru.tica at gmail.com",
+        "email": "alexandru.tica@gmail.com",
         "homepage": "http://oracle-cookies.blogspot.com"
       },
       "release_notes": "    * display the results of a query using a vertical column layout (thanks to Spratek)\n    * the ability to browse materialized views from dbExplorer (thanks to Ingo Olbrich)\n    * the possibility to define whenever or not after executing a statement the focus should return automatically to the originating window (thanks to koelner.r)\n    * command/shortcut to toggle the results window\n    * basic matchit functionality for plsql buffers\n    * bug fix: error when connecting to the default local database (thanks to marcin.wroblewski)\n    * bug fix: plsql packages comments are incorrectly removed\n    * bug fix: Issuing exit in Vorax disconnects from db, but \"hangs\" vorax (thanks to Ingo Olbrich)\n    * bug fix: Providing a complete connection string at \"User: \" prompt does not work\n    * bug fix: invalid behavior of dbms_xplan.display_cursor() (thanks to koelner.r) "
@@ -34,7 +82,7 @@
         "user_name": "talek",
         "first_name": "Alexandru",
         "last_name": "Tica",
-        "email": "alexandru.tica at gmail.com",
+        "email": "alexandru.tica@gmail.com",
         "homepage": "http://oracle-cookies.blogspot.com"
       },
       "release_notes": "    * bug fix: The statement under cursor is not computed correctly when slash is used in an expression.\n    * bug fix: Slow code completion\n    * bug fix: Omni list doesn't show up when alias length is longer than one character\n    * bug fix: VoraxHelpBuildIndex does not work with Windows path style\n    * bug fix: Output of an executed statement goes also into the clipboard.\n    * bug fix: db fuzzy search doesn't work with the last 4.2 version of fuzzyfinder plugin\n    * bug fix: Statement not executed when comments are present at the end "
@@ -50,7 +98,7 @@
         "user_name": "talek",
         "first_name": "Alexandru",
         "last_name": "Tica",
-        "email": "alexandru.tica at gmail.com",
+        "email": "alexandru.tica@gmail.com",
         "homepage": "http://oracle-cookies.blogspot.com"
       },
       "release_notes": "    * explain plan for an sql statement (thanks to Ingo Olbrich)\n    * offline search through the Oracle documentation\n    * the possibility to register your custom key mappings\n    * bug fix: verbose describe and fuzzy search doesn't work under cygwin interface "
@@ -66,7 +114,7 @@
         "user_name": "talek",
         "first_name": "Alexandru",
         "last_name": "Tica",
-        "email": "alexandru.tica at gmail.com",
+        "email": "alexandru.tica@gmail.com",
         "homepage": "http://oracle-cookies.blogspot.com"
       },
       "release_notes": "    * refresh output window\n    * cygwin interface support\n    * bug fix: E121: Undefined variable: s:last_line (reported by Pierre Raimbault)\n    * bug fix: some sqlplus keywords were partially highlighted\n    * bug fix: Completion list for parameters was not computed correctly for some procs/funcs\n    * bug fix: errors when output in a non-modifiable result buffer\n    * bug fix: fuzzy search pattern was not properly escaped (reported by Ingo Olbrich) "
@@ -82,7 +130,7 @@
         "user_name": "talek",
         "first_name": "Alexandru",
         "last_name": "Tica",
-        "email": "alexandru.tica at gmail.com",
+        "email": "alexandru.tica@gmail.com",
         "homepage": "http://oracle-cookies.blogspot.com"
       },
       "release_notes": "    * fuzzy search for database items (needs fuzzyfinder pluging)\n    * you can now describe an object directly from the DbExplorer (thanks to Shaun Batterton)\n    * updated syntax highlighting to reflect more closely the Oracle/sqlplus syntax\n    * added sqlplus keywords to keyword completion\n    * bug fix: DESC for fully qualified tables (reported by Shaun)\n    * bug fix: Empty DB explorer on the second display (reported by Spratek)\n    * bug fix: DB explorer does not work when EZCONNECT is used (reported by Spratek)\n    * bug fix: ORA-00904 in omni completion for package procedures in Oracle XE\n    * bug fix: the $ and # are not considered as word characters into plsql/sql buffers "
@@ -98,7 +146,7 @@
         "user_name": "talek",
         "first_name": "Alexandru",
         "last_name": "Tica",
-        "email": "alexandru.tica at gmail.com",
+        "email": "alexandru.tica@gmail.com",
         "homepage": "http://oracle-cookies.blogspot.com"
       },
       "release_notes": "    * the ability to store passwords for Oracle connection profiles (proposed by Shaun Batterton)\n    * verbose describe for tables and views. The verbose version contains: table/view comments, column comments, constraints, relationships etc. (proposed by Spratek)\n    * the option to automatically open a scratch sql buffer on the first connect (proposed by Shaun Batterton)\n    * the results windows is aware of the \"Describe\" and \"Go To Definition\" key bindings\n    * bug fix: omnifunc for packages may raise errors when invoked in unusual contexts (reported by Spratek)\n    * bug fix: toolkit libs loading problems\n    * bug fix: Packages under the +Users node doesn't have: Spec, Body, Both (reported by Shaun Batterton)\n    * bug fix: The config file with connection profiles should reside within the user's home folder. After upgrade move your /config/vorax_connections file into your home directory. "
@@ -114,7 +162,7 @@
         "user_name": "talek",
         "first_name": "Alexandru",
         "last_name": "Tica",
-        "email": "alexandru.tica at gmail.com",
+        "email": "alexandru.tica@gmail.com",
         "homepage": "http://oracle-cookies.blogspot.com"
       },
       "release_notes": "    * a window with connection profiles added (thanks spratek for this suggestion)\n    * bug fix: the sql delimitator was not added\n    * bug fix: The statement under cursor is not computed correctly when the end delimitator is within quotes.\n    * bug fix: Version 1.8 had the debug flag enabled.\n    * bug fix: Reconnect after cancel statement doesn't work correctly on Windows.\n    * bug fix: The windows interface does not shutdown correctly. "
@@ -130,7 +178,7 @@
         "user_name": "talek",
         "first_name": "Alexandru",
         "last_name": "Tica",
-        "email": "alexandru.tica at gmail.com",
+        "email": "alexandru.tica@gmail.com",
         "homepage": "http://oracle-cookies.blogspot.com"
       },
       "release_notes": "    * integration with taglist plugin\n    * go to definition feature\n    * bug fix: cannot connect using EZCONNECT\n    * bug fix: prompt for values don't work "
@@ -146,7 +194,7 @@
         "user_name": "talek",
         "first_name": "Alexandru",
         "last_name": "Tica",
-        "email": "alexandru.tica at gmail.com",
+        "email": "alexandru.tica@gmail.com",
         "homepage": "http://oracle-cookies.blogspot.com"
       },
       "release_notes": "    * logging support for the result window\n    * support for displaying the executed command. Just execute \"set echo on\" or add this to g:vorax_header variable\n    * bug fix: describe object under cursor does not work\n    * bug fix: Unix interface may not be initialized correctly. "
@@ -162,7 +210,7 @@
         "user_name": "talek",
         "first_name": "Alexandru",
         "last_name": "Tica",
-        "email": "alexandru.tica at gmail.com",
+        "email": "alexandru.tica@gmail.com",
         "homepage": "http://oracle-cookies.blogspot.com"
       },
       "release_notes": "    * code completion for keywords added (thanks Shaun Batterton for this suggestion)\n    * DbExplorer allows browsing database objects which belong to other users (thanks Shaun Batterton for this suggestion)\n    * new mappings defined for DbExplorer: \"o\" for opening a node (to be more closer to NERDTree way of navigating the tree) and \"R\" to refresh a node.\n    * add the possibility to describe a visual selected object\n    * bug fix: irrelevant items may be returned into completion list "
@@ -178,7 +226,7 @@
         "user_name": "talek",
         "first_name": "Alexandru",
         "last_name": "Tica",
-        "email": "alexandru.tica at gmail.com",
+        "email": "alexandru.tica@gmail.com",
         "homepage": "http://oracle-cookies.blogspot.com"
       },
       "release_notes": "* a NERDTree plugin added in order to execute a sql script directly from the file browser;\n* packages, types, procedures, functions and trigger scripts are syntax highlighted as plsql instead of sql;\n* XpTemplate snippets for various sql/plsql blocks;\n* bug fix: the DbExplorer window might not be layed out at the same position after a toggle off/on.\n* bug fix: vorax#UnderCursorStatement not working correctly if filetype=plsql "
@@ -194,7 +242,7 @@
         "user_name": "talek",
         "first_name": "Alexandru",
         "last_name": "Tica",
-        "email": "alexandru.tica at gmail.com",
+        "email": "alexandru.tica@gmail.com",
         "homepage": "http://oracle-cookies.blogspot.com"
       },
       "release_notes": "* code completion for function/procedure parameters\n* set buffer specific mappings to be active just within an sql buffer.\n* when it's not obvious, the db object type is also shown for every item within the completion list. "
@@ -210,7 +258,7 @@
         "user_name": "talek",
         "first_name": "Alexandru",
         "last_name": "Tica",
-        "email": "alexandru.tica at gmail.com",
+        "email": "alexandru.tica@gmail.com",
         "homepage": "http://oracle-cookies.blogspot.com"
       },
       "release_notes": "Initial upload"

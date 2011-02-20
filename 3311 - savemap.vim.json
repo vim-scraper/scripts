@@ -8,6 +8,22 @@
   "install_details": "",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15048",
+      "filename": "savemap.zip",
+      "script_version": "0.2.0",
+      "date": "2011-02-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "- change the specification of |savemap#save_map()|, |savemap#save_abbr()|.\n\t- Even if {lhs} was omitted, Returns |Dictionary| not |List|.\n- fix the bug ignoring a non-<buffer> mapping when a <buffer> mapping exists with same lhs-es.\n- improve |savemap#save_map()| and |savemap#save_abbr()|.\n\t- you can filter mappings you want by following conditions:\n\t\t- lhs (literaly, regexp)\n\t\t- rhs (literaly, regexp)\n\t\t- <silent>\n\t\t- remap\n\t\t- <expr>\n\t\t- <buffer>\n\t\t- modes\n- add some methods of the return value of\n  |savemap#save_map()| and |savemap#save_abbr()|.\n\t- see |savemap-restore-object| for details.\n- change the license."
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14200",
       "filename": "savemap.zip",
       "script_version": "0.0.0",

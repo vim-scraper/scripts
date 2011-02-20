@@ -1,0 +1,139 @@
+{
+  "script_id": "2633",
+  "display_name": "csindent.vim",
+  "summary": "Indent file per project",
+  "name": "csindent.vim",
+  "script_type": "indent",
+  "description": "How to use the plug-in:\n1. Create `~/.vim_csindent.ini' (default value of `g:csindent_ini') with\n   format:\n       '[' <FILETYPE_NAME> [':' <DEFAULT_INDENT_NAME> ] ']'\n       <INDENT_NAME> '=' <PATH>\n\n   <INDENT_NAME> is common indent file without '.vim' suffix.\n   <PATH> is your path of project.\n\n   If exists <DEFAULT_INDENT_NAME>, then <DEFAULT_INDENT_NAME>.vim file is\n   default indent file for this filetype.\n\n   For example:\n       [cpp:shetukhin]\n       google = $HOME/work/pyctpp2\n\n       [c]\n       linux = $HOME/work/kernels/\n       gnu = $HOME/work/hurd\n\n2. Create `~/.vim/csindent/<FILETYPE_NAME>/<INDENT_NAME>.vim'\n   (instead of `~/.vim/csindent` you can use any path from 'runtimepath').\n   For example:\n        ~/.vim/csindent/cpp/shetukhin.vim\n        ~/.vim/csindent/cpp/google.vim\n        ~/.vim/csindent/c/linux.vim\n        ~/.vim/csindent/c/gnu.vim\n\nNote 1: This script is compatible with `filetype indent`.\n        See `:help filetype`.\n\nNote 2: You can use more informative status line using CodingStyleIndent().\n        For example:\n            set statusline=%<%f%h%m%r%=style=%{CodingStyleIndent()}\n            \\ %15(L%l,C%c%V%)\\ %3P",
+  "install_details": "Move csindent.vim to '~/.vim/plugin`.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14936",
+      "filename": "csindent.vim",
+      "script_version": "1.2.0",
+      "date": "2011-02-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14087",
+        "user_name": "pitman",
+        "first_name": "Konstantin",
+        "last_name": "Lepa",
+        "email": "konstantin.lepa@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support of Windows.\nRemoved g:csindent_dir. Used 'runtimepath' instead it.\nAdded support of expanding environment variables in g:csindent_ini."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14774",
+      "filename": "csindent.vim",
+      "script_version": "1.1.2",
+      "date": "2011-01-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14087",
+        "user_name": "pitman",
+        "first_name": "Konstantin",
+        "last_name": "Lepa",
+        "email": "konstantin.lepa@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed syntax errors in SelectCodingStyleIndent()."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14771",
+      "filename": "csindent.vim",
+      "script_version": "1.1.1",
+      "date": "2011-01-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14087",
+        "user_name": "pitman",
+        "first_name": "Konstantin",
+        "last_name": "Lepa",
+        "email": "konstantin.lepa@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed problem of detecting of invalid indent filename."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14761",
+      "filename": "csindent.vim",
+      "script_version": "1.1.0",
+      "date": "2011-01-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14087",
+        "user_name": "pitman",
+        "first_name": "Konstantin",
+        "last_name": "Lepa",
+        "email": "konstantin.lepa@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Renamed script name from coding_style to csindent.\nAdded support of default coding style.\nAdded support of `filetype indent on` by default.\nRenamed g:coding_style_ini to g:csindent_ini (~/.vim_csindent.ini).\nRenamed g:coding_style_dir to g:csindent_dir (~/.vim/csindent).\nChanged indent file path to `g:csindent_dir` + `filetype` + `indent file`.\nChanged comment char from '#' to ';' in g:csindent_ini file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=11753",
+      "filename": "coding_style.vim",
+      "script_version": "1.0.3",
+      "date": "2009-11-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14087",
+        "user_name": "pitman",
+        "first_name": "Konstantin",
+        "last_name": "Lepa",
+        "email": "konstantin.lepa@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support of comments in the g:coding_style_ini file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10619",
+      "filename": "coding_style.vim",
+      "script_version": "1.0.2",
+      "date": "2009-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14087",
+        "user_name": "pitman",
+        "first_name": "Konstantin",
+        "last_name": "Lepa",
+        "email": "konstantin.lepa@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Renamed the folder cs_indent to coding_styles.\nRemoved styles.txt.\nAdded g:coding_style_ini (default ~/.coding_style.ini).\nAdded g:coding_style_dir (default ~/.vim/coding_styles)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10611",
+      "filename": "coding_style.vim",
+      "script_version": "1.0.1",
+      "date": "2009-05-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14087",
+        "user_name": "pitman",
+        "first_name": "Konstantin",
+        "last_name": "Lepa",
+        "email": "konstantin.lepa@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added CodingStyle() for checking of current coding style."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=10605",
+      "filename": "coding_style.vim",
+      "script_version": "1.0.0",
+      "date": "2009-05-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14087",
+        "user_name": "pitman",
+        "first_name": "Konstantin",
+        "last_name": "Lepa",
+        "email": "konstantin.lepa@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

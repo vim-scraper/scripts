@@ -18,7 +18,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- New setting selBufShowRelativePath (Nathan Huizinga\n  (nathan dot huizinga at gmail dot com)).\n- Bug fix: |:SBSettings| is still broken.\nRequires at least version 2.4 of genutils.\n"
@@ -34,7 +34,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Bug fix: |:SBSettings| is broken.\n- Bug fix: syntax highlighting is sometimes broken the first time browser\n  window is open.\n- Bug fix: formatting is sometimes broken with incremental update, when\n  browser is open after certain sequence of buffer changes.\n"
@@ -50,7 +50,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Bug fix: multiselect usage is not conditional in some places.\n- Bug fix: Syntax may not be setup correctly when the first time browser window\n  is opened.\n"
@@ -66,7 +66,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Started using vim7 features, so it is no longer backwards compatible.\n- No longer depends on multvals. The plugin has been reworked to use Vim7 arrays\n  and sort(), so there should be significant improvement in performance\n  everywhere.\n- It is now autoloaded on demand, which means it will help your vim session\n  load faster.\n- Support for multiselect has been enhanced. The selections are a lot more\n  meaningful now, as they move along with the buffers. You can even sort the\n  contents and still not loose your selections.\n- |:SBSettings| is now more flexible and easier to use as it supports arguments\n  and command-line completion.\n- The global variables for the settings are no longer removed, but you should\n  still run |:SBInitialize| for any side effects to take place. Use\n  |:SBSettings| to make this easier.\nIf you want to use multiselect with this plugin, make sure you download the latest version of it."
@@ -82,7 +82,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Release 3.6 for vim7 compatibility. Also includes minor changes. This\nwill probably the last release that will work in Vim 6.3/6.4 version.\n- Restoring search string works again. New setting\n  |selBufRestoreSearchString|.\n- New mark d, see |selectbuf-marks|.\n"
@@ -98,7 +98,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Bug fixes.\n- Refresh now updates the MRU list.\n- Fixed broken \"toggle details\" functionality.\n- \"SBLaunch .\" now correctly launches windows explorer on the current\n  directory as expected.\n- Entering buffer number directly in the browser window now works much\n  better.\n- Misc. bug fixes.\n"
@@ -114,7 +114,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Faster sorting of buffer list.\n- If multiselect is installed, you can use spacebar to toggle selection. See\n  |selectbuf-multiselect|.\n- Fixed a bug in case-insensitive sorting of buffer names.\n- Number keys are now mapped to jump to a buffer by its number. See\n  |selectbuf-buffer-search|.\n- Bug fixes.\n    - If SBExec created a new window, it results in a Vim error.\n    - Toggle buffer numbers is broken.\n    - Other misc. bug fixes.\n\nGet the latest multvals (vimscript #171) and genutils (vimscript #197) plugins."
@@ -130,7 +130,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Now requires Vim 6.3.\n\nMostly a maintenance release.\n\t- Better launcher command for windows. You can now launch applications\n\t  with arguments, and handles spaces well.\n\t- Improved the performance of delete/wipeout when the list of files is\n\t  huge.\n\t- Better performance for toggling indicators,paths etc.\n\t- A fix for incremental update in split paths.\n"
@@ -146,7 +146,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": ":help selectbuf-changes-3.2\n\n- Added a feature to split file paths, instead of the setting\n  selBufHighlightOnlyFilename. See help on |selBufAlwaysShowPaths|. The browser\n  by default now starts with this mode.\n- The display is now more compact by the use of only required number of spaces\n  than using hard tabs.\n- A setting to ignore case while sorting, see |selBufIgnoreCaseInSort|.\n- A new \"selectbuf\" filetype to further customize the syntax highlighting and\n  extend the functionality, see |selectbuf-filetype|. There is now an API\n  available, see |selectbuf-extend|.\n- New command SBExec for selections, see |SBExec|. Extremely useful to execute\n  external commands.\n- Support for multiple selections through multiselect.vim plugin, see\n  |selectbuf-multiselect|.\n- New command (very useful, at least on MS Windows), |SBLaunch|.\n- Improved |SelBufTHiddenKey| and |SelBufTDetailsKey| to avoid doing a full\n  refresh. It should work much faster now.\n"
@@ -162,7 +162,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed many bugs found/reported in version 3.0. The plugin is also much more responsive under WinManager. See :h |selectbuf-changes| for information on what is fixed. Thanks a lot to David Fishburn (fishburn at sybase dot com) for reporting many issues. I also had to fix some more of the WinManager issues, so please download the latest version (with my patches) from the URL mentioned in the installation section. Also download version 1.6 of genutils plugin.\n"
@@ -178,7 +178,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "This is a major improvement over the previous version. One feature for\nwhich I worked very hard is the incremental update of the buffer list.\nThe buffer opens very quickly now irrespective of how many files you\nhave currently open in your current session.  Here is a brief list of\nnew features. For a complete list and their description see the :help\nselectbuf-features\n\n    - Incremental update of the browser for speed. The browser caches the\n      the list of buffers and incrementally changes it as you open new\n      files and delete them.\n    - Hide buffer numbers to save real estate (useful with \"Always on\"\n      mode or with WinManager).\n    - New vim help file with detailed description of features and configuration.\n    - Block operations for buffer deletes now works well.\n    - \"Always On\" mode is now much better.\n    - Marks for a quick access to the next, previous and current buffers\n      has a better meaning.\n    - WinManager integration. This requires patches to WinManager\n      though. Until Srinath is out of his hibernation to validate my\n      patches and make the next release, it can be downloaded from:\n\n\thttp://mywebpage.netscape.com/haridara/vim/winmanager.vim\n\n      With incremental update feature, opening files from WinManager now\n      literally flies. Get the latest versions of multvals and genutils plugins\n      along with this. I would very much appreciate any feedback.\n"
@@ -194,7 +194,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Main improvement is the faster sorting algorithm. The browser sorts much quickly and works flawlessly when there are a lot of files open (order of 200), especially when the MRU is selected. Still more can be done to imrove the sorting speed.\n- When the browser window is opened, a message is generated with the total number of buffers and number of buffers shown.\n- Cleaned up a lot of stuff. Now the impact of the browser on the user environment is much less as it avoids cluttering search history and restores the unnamed register."
@@ -210,7 +210,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed the \"myBufNr\" not defined error reported by Halim Salman.\n"
@@ -226,7 +226,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "I have finally added MRU soring support with the popular demand :) \n\n- Now you can specify the sorting method to be by MRU files. To make mru the default order, place this line in your vimrc: \n\nlet g:selBufDefaultSortOrder = \"mru\" \n\nYou can also use SBBufToHead and SBBufToTail commands with a buffer number argument to move the specified buffer to the starting and ending of the MRU list. \n\n- If you make any changes to the configuration, you can use the new command SBInitialize to reconfigure the internal data of selectbuf.vim. \n\n- Fixed some misc. bugs. \n- FIxed the broken save/restore window settings (after converting to 6.0). Now even the vertically split windows are restored correctly. \n\nNote that you need the new improved script genutils.vim instead of the older bufNwinUtils.vim. Download it from \n\nhttp://vim.sourceforge.net/scripts/script.php?script_id=197 \n\nAlso you need the new improved multvals.vim instead of the older lightWeightArray.vim. Download it from:\n\nhttp://vim.sourceforge.net/scripts/script.php?script_id=171"
@@ -242,7 +242,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- New feature to bulk delete/wipeout multiple buffers by selecting the rows.\n  Very useful when you load a bunch of files by mistake and you just want to\n  delete all the buffers at once. You can also sort by type and select all the\n  buffers of a particular type and delete/wipeout at once.\n- Complete configurability of the key mappings for all the commands. You can\n  define your own key mappings for all the actions, or just for those that you\n  don't like the default key assignment. E.g., I don't like to use \"?\" for\n  showing the help (though it is more intuitive), as it disables my ability to\n  search backwards in the browser window. So I changed the assignment by\n  putting the following line in .vimrc\n\n        noremap <silent> <Plug>SelBufHelpKey <C-H>\n\n  The ? key is now freed and I can use ^H instead to toggle help header.\n"
@@ -258,7 +258,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "I am making this a 2.1 release version after a good amount of usage for the past\nfew weeks. Here is a final summary of all the new features in this release:\n\n    - help header with a status line\n    - open/close browser using the same key (to get a quick glance of the files)\n    - optionally show buffer indicators\n    - show/hide hidden buffers\n    - separate delete and wipeout functionality\n    - refresh browser\n    - show/hide path info\n    - buffer markers for easy navigation\n    - most of the features are configurable\n    - avoid cluttering the global name space with the config variables\n    - sort/reverse sort by \"buffer nubmer\", \"name\", \"path\", \"type\", \"indicators\"\n    - must better syntax highlighting (configurable)\n    - optionally open a vertical window for the browser\n    - three operating modes for the browser\n        - split: standard style, split opens the browser window\n        - switch: reuse the current window (bufexplorer style)\n        - keep: keep browser always open. Very useful when used with the\n                previous option to open a vertically split window.\n\n    Requires 1.0.3 bufNwinUtils.vim.\n\nPlease keep sending bug reports/suggestions/comments etc.\n"
@@ -274,7 +274,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Forgot to mention that you require the latest bufNwinUtils.vim. Download it: http://vim.sourceforge.net/scripts/script.php?script_id=108 \n"
@@ -290,7 +290,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "I have added most of the features that I wanted to, and also fixed all the FIXME's. So the script is now mostly clean and very stable.\n\n- Now sort by name and sort by path are separate.\n- Fixed the bug in remembering the cursor position.\n- More configurability of the script. Fix for avoiding the global config params from cluttering the global namespace.\n- You can specify a default sort order.\n- Syntax coloring in the browser window is much better now.\n- Added P command to show/hide paths.\n- Improved stability.\n\nIt is very close to a release version now."
@@ -306,7 +306,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added some cool new features and fixed some problems.\n\n- Added sorting. You can now sort by \"buffer number\", \"name\", \"type\" or by \"indicators\".\n  - Use s to select the sort type forward.\n  - Use S to select the sort type backward.\n  - Use r to sort in the reverse order.\n  - Since r is more appropriate (and familiar) for reverse sorting, I used R to refresh the browser.\n- I got the solution for the toggling the meaning of activation key, so now you can use the same key that activates the browser to even close it. So provided you have <F3> mapped, you can have a quick look at the browser by pressing <F3> twice in quick succession.\n- I also used some nice 6.0 features to make the browser buffer more friendly.\n- Fixed the spurious nomodifiable problem (happens occassionally). Thanks for reporting this problem.\n"
@@ -322,7 +322,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added the following useful features:\n\n- Optionally hide fileexplorer buffers.\n- Undelete (relist) buffers.\n- show status line with the current settings.\n"
@@ -338,7 +338,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "I got a nice feedback from a few people that mapping cursor movement commands for functionality is asking for trouble. Since w, W, h and H are cursor movement commands, before it is too late, I changed the key mappings as follows:\n\nDelete buffer: d from D\nWipeout buffer: D from W \nToggle hidden: u from H (u for unlisted)\nToggle wrap: p from w\nToggle help: ? from h\n\nNow you shouldn't see many surprises when you follow your natural instincts to move cursor :)\nPlease continue to give feedback. Thank you.\n"
@@ -354,7 +354,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Some nice improvements.\n- help header (can be toggled)\n- buffer indicators on the lines of :ls (can be toggled)\n- show hidden buffers (can be toggled)\n- Separate delete and wipeout functionality for buffers\n- refresh browser (without reopening) .\n- buffer markers to easily navigate.\n- more robust.\n- more configurability.\n\nIt is still beta, but I have done quite a lot of testing and it seems to be stable. I would appreciate any bug reports and feedback. I have more ideas for some good features to come soon, but if you would like to see any features yourself, please let me know.\n\nYou need the 1.0.1 version of bufNwinUtils.vim"
@@ -370,7 +370,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Removed the ^M's."
@@ -386,7 +386,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "While converting the script to 6.0, lost the hack that restores search history when the browser is closed. "
@@ -402,7 +402,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

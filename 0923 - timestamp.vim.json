@@ -18,7 +18,7 @@
         "user_name": "gi1242",
         "first_name": "gi1242",
         "last_name": "gi1242",
-        "email": "gi1242 at gmail.com",
+        "email": "gi1242@gmail.com",
         "homepage": "http://www.math.cmu.edu/~gautam"
       },
       "release_notes": "Add |DisableTimestamp|, |EnableTimestamp| and |b:timestamp_disable| to enable / disable time stamping temporarily."
@@ -34,7 +34,7 @@
         "user_name": "gi1242",
         "first_name": "gi1242",
         "last_name": "gi1242",
-        "email": "gi1242 at gmail.com",
+        "email": "gi1242@gmail.com",
         "homepage": "http://www.math.cmu.edu/~gautam"
       },
       "release_notes": "Optionally ignore missing \"AM/PM\" in default timestamp. Thanks to Fabian Holler for pointing this out."
@@ -50,7 +50,7 @@
         "user_name": "gi1242",
         "first_name": "gi1242",
         "last_name": "gi1242",
-        "email": "gi1242 at gmail.com",
+        "email": "gi1242@gmail.com",
         "homepage": "http://www.math.cmu.edu/~gautam"
       },
       "release_notes": "Better preserves your undo history: Timestamping is not done unless writing the timestamp will cause a change."
@@ -66,7 +66,7 @@
         "user_name": "gi1242",
         "first_name": "gi1242",
         "last_name": "gi1242",
-        "email": "gi1242 at gmail.com",
+        "email": "gi1242@gmail.com",
         "homepage": "http://www.math.cmu.edu/~gautam"
       },
       "release_notes": "Minor bugfix: Timestamping now works with zipped files / netrw. Also your jumplist is preserved. (This version works on vim6.4 and vim7)"
@@ -82,7 +82,7 @@
         "user_name": "gi1242",
         "first_name": "gi1242",
         "last_name": "gi1242",
-        "email": "gi1242 at gmail.com",
+        "email": "gi1242@gmail.com",
         "homepage": "http://www.math.cmu.edu/~gautam"
       },
       "release_notes": "Reduce Vim's initial load time significantly. On my system, Vim with timestamp-1.16 loads in about 1.1 seconds. With timestamp-1.17, it loads in only 0.3 seconds! The system calls to initialise the uid / username were taking time. Calls to these functions have been disabled by default, and further postponed untill the are necessary (and not on Vim startup). These calls can be enabled by setting the variable |timestamp_UseSystemCalls|."
@@ -98,7 +98,7 @@
         "user_name": "gi1242",
         "first_name": "gi1242",
         "last_name": "gi1242",
-        "email": "gi1242 at gmail.com",
+        "email": "gi1242@gmail.com",
         "homepage": "http://www.math.cmu.edu/~gautam"
       },
       "release_notes": "No changes in the script. Updated the documentation to include a note to windows users having trouble with the timezone. Thanks to Shishir Ramam for pointing this out."
@@ -114,7 +114,7 @@
         "user_name": "gi1242",
         "first_name": "gi1242",
         "last_name": "gi1242",
-        "email": "gi1242 at gmail.com",
+        "email": "gi1242@gmail.com",
         "homepage": "http://www.math.cmu.edu/~gautam"
       },
       "release_notes": "Made all g:timestamp_* variables also available as buffer local variables except for g:timestamp_automask. Thanks to Lars Wilke for doing this. Also fixed default values for |timestamp_hostname|, |timestamp_Hostname|, |timestamp_userid| and |timestamp_username|. Thanks again to Lars Wilke for testing on various platforms."
@@ -130,7 +130,7 @@
         "user_name": "gi1242",
         "first_name": "gi1242",
         "last_name": "gi1242",
-        "email": "gi1242 at gmail.com",
+        "email": "gi1242@gmail.com",
         "homepage": "http://www.math.cmu.edu/~gautam"
       },
       "release_notes": "Modified the default timestamp regexp to support timestamps in other languages by default. This only works if the day and month names in your language do not use accented characters. If accented characters are present you should set the default timestamp regexp in your .vimrc. English users should not notice any difference."
@@ -146,7 +146,7 @@
         "user_name": "gi1242",
         "first_name": "gi1242",
         "last_name": "gi1242",
-        "email": "gi1242 at gmail.com",
+        "email": "gi1242@gmail.com",
         "homepage": "http://www.math.cmu.edu/~gautam"
       },
       "release_notes": "Now also works in compatible mode."
@@ -162,7 +162,7 @@
         "user_name": "gi1242",
         "first_name": "gi1242",
         "last_name": "gi1242",
-        "email": "gi1242 at gmail.com",
+        "email": "gi1242@gmail.com",
         "homepage": "http://www.math.cmu.edu/~gautam"
       },
       "release_notes": "A bug caused timestamp.vim to make changes in all lines in the |timestamp_modelines| range. Corrected the code so that now changes are made only when there is a timestamp in a particular line. This makes undoing changes a lot nicer, and keeps timestamp-ing out of your way. Also cleaned up some code :)"
@@ -178,7 +178,7 @@
         "user_name": "gi1242",
         "first_name": "gi1242",
         "last_name": "gi1242",
-        "email": "gi1242 at gmail.com",
+        "email": "gi1242@gmail.com",
         "homepage": "http://www.math.cmu.edu/~gautam"
       },
       "release_notes": "Some Micro$oft machines don't support the timezone ('%Z'). Made the timezone optional in the default settings. The script (with default settings) should now work on both Linux / Window$ machines. Thanks to Krall Ed-P27726 for testing this."
@@ -194,7 +194,7 @@
         "user_name": "gi1242",
         "first_name": "gi1242",
         "last_name": "gi1242",
-        "email": "gi1242 at gmail.com",
+        "email": "gi1242@gmail.com",
         "homepage": "http://www.math.cmu.edu/~gautam"
       },
       "release_notes": "The format of strftime(\"%c\") is not standard among all systems / locales. This caused default timestamps on some systems to fail. Changed the default value of \"timestamp_rep\" to the expanded version of \"%c\", and included a note in the documentation on how to fix this problem."
@@ -210,7 +210,7 @@
         "user_name": "gi1242",
         "first_name": "gi1242",
         "last_name": "gi1242",
-        "email": "gi1242 at gmail.com",
+        "email": "gi1242@gmail.com",
         "homepage": "http://www.math.cmu.edu/~gautam"
       },
       "release_notes": "Does not modify any marks or the search history list. Tries to make timestamping as \"transparent\" as possible."

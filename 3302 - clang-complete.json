@@ -4,9 +4,25 @@
   "summary": "Use of Clang for completing C, C++, Objective-C and Objective-C++",
   "name": "clang-complete",
   "script_type": "utility",
-  "description": "This plugin use clang for accurately completing C, C++, Objective-C and Objective-C++ code.\n\nYou don't need any ctags for it to work! Only clang is needed. Clang version 2.8 or higher is recommended for c++ completion. After a . , -> and :: it is automatically trying to complete the code. If you want to \"force\" the completion, use <C-X><C-U> which is the mapping for user defined completion (It may be changed to omnicomplete mapping in a near future). Because clang is parsing your source file, it can detect errors inside your code, and highlight them! Plus it can open the quickfix window automatically,\n\nIf you've got special flags for a project (especially -I and -D ones), clang may be unable to complete your code. To overcome this limitation put the flags inside the file .clang_complete at the root of your project.\n\nLatest version will always be on github: http://github.com/Rip-Rip/clang_complete\n\nDo not hesitate to report bugs or ask for features.\n\nConfiguration:\n  - g:clang_complete_auto:\n       if equal to 1, automatically complete after '->', '.', '::'\n       Default: 1\n\n  - g:clang_complete_copen:\n       if equal to 1, open quickfix window on error.\n       Default: 0\n\n  - g:clang_hl_errors:\n       if equal to 1, it will highlight the warnings and errors the\n       same way clang does it.\n       Default: 1\n\n  - g:clang_periodic_quickfix:\n       if equal to 1, it will periodically update the quickfix window\n       Note: You could use the g:ClangUpdateQuickFix() to do the same\n             with a mapping.\n       Default: 0\n\n  - g:clang_snippets:\n       if equal to 1, it will do some snippets magic after a '(' or a ','\n       inside function call. Not currently fully working.\n       Default: 0",
+  "description": "This plugin use clang for accurately completing C, C++, Objective-C and Objective-C++ code.\n\nYou don't need any ctags for it to work! Only clang is needed. Clang version 2.8 or higher is recommended for c++ completion. After a . , -> and :: it is automatically trying to complete the code. If you want to \"force\" the completion, use <C-X><C-U> which is the mapping for user defined completion. Because clang is parsing your source file, it can detect errors inside your code, and highlight them! Plus it can open the quickfix window automatically.\n\nSince version 1.4, snippets can be used to complete function arguments. It is triggered after a completion, and you can go to the next argument with the <Tab> key in normal mode.\n\nIf you've got special flags for a project (especially -I and -D ones), clang may be unable to complete your code. To overcome this limitation put the flags inside the file .clang_complete at the root of your project.\n\nLatest version will always be on github: http://github.com/Rip-Rip/clang_complete\n\nDo not hesitate to report bugs or ask for features.\n\nConfiguration:\n  - g:clang_complete_auto:\n       if equal to 1, automatically complete after '->', '.', '::'\n       Default: 1\n\n  - g:clang_complete_copen:\n       if equal to 1, open quickfix window on error.\n       Default: 0\n\n  - g:clang_hl_errors:\n       if equal to 1, it will highlight the warnings and errors the\n       same way clang does it.\n       Default: 1\n\n  - g:clang_periodic_quickfix:\n       if equal to 1, it will periodically update the quickfix window\n       Note: You could use the g:ClangUpdateQuickFix() to do the same\n             with a mapping.\n       Default: 0\n\n  - g:clang_snippets:\n       if equal to 1, it will do some snippets magic by completing function arguments.\n       Default: 0\n\n   - g:clang_conceal_snippets:\n        if equal to 1, vim will use vim 7.3 conceal feature to hide <#\n        and #> which delimit a snippets.\n        Note: See concealcursor and conceallevel for conceal configuration.\n        Default: 1 (0 if conceal not available)\n\n   - g:clang_exec:\n        Name or path of clang executable.\n        Note: Use this if clang has a non-standard name, or isn't in the\n        path.\n        Default: 'clang'\n\n   - g:clang_user_options:\n        Option added at the end of clang command. Useful if you want to\n        filter the result, or if you want to ignore the error code\n        returned by clang: on error, the completion is not shown.\n        Default: ''\n        Example: '|| exit 0' (it will discard clang return value)\n",
   "install_details": "Put clang_complete.vim inside ~/.vim/plugin.\nIf you have installed vimscript #1520, please remove it, as it is confliting with this one.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14558",
+      "filename": "clang_complete.vim",
+      "script_version": "1.4",
+      "date": "2010-12-18",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "14631",
+        "user_name": "Rip-Rip",
+        "first_name": "Xavier",
+        "last_name": "Deguillard",
+        "email": "deguilx@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Improve the snippets engine\n- Bug correction"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14232",
       "filename": "clang_complete.vim",
@@ -18,7 +34,7 @@
         "user_name": "Rip-Rip",
         "first_name": "Xavier",
         "last_name": "Deguillard",
-        "email": "deguilx at gmail.com",
+        "email": "deguilx@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Added Objective-C and Objective-C++ support\n- Correct a lot of bug\n- Highlight of errors/warning when completing\n- Add snippets on function parameters completion (not finished)\n- Drop some system() call\n- Add g:ClangUpdateQuickFix function, to be used on a mapping."
@@ -34,7 +50,7 @@
         "user_name": "Rip-Rip",
         "first_name": "Xavier",
         "last_name": "Deguillard",
-        "email": "deguilx at gmail.com",
+        "email": "deguilx@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

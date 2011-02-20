@@ -18,7 +18,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "Align: save and restore of mod now done with the local version of the option\nAlign: new sanity check for an AlignStyle of just \":\"\nAlignMaps: new maps: \\ts; ts: \\ts< \\ts= \\a(\nAlignMaps: default g:Align_xstrlen often is now 1 for multi-byte support\nAlignMaps: bug fixed for \\ts,\n"
@@ -34,7 +34,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "(AlignMaps) split into plugin/ and autoload/ sections (faster [g]vim startup)\n(AlignMaps) maps use <Plug>s and <script>s: allowing users to invoke the maps how they wish, and preventing user maps from interfering with the internal workings of the maps.\n(Align)     bugfix - using :AlignCtrl before entering any alignment ctrl cmds was causing an error\n"
@@ -50,7 +50,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "* Align now aligns multi-byte characters correctly (see :help align-strlen) -- choose g:Align_xstrlen for the type of codepoint you want handled.\n\n* Align now accepts \\\"...\\\" arguments, so one can pass whitespace to Align as a separator\n\n* AlignMaps&#039 \\\\t= map now avoids comment aligning when the filetype is not *.c or *.cpp"
@@ -66,7 +66,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "The <leader>tt map wasn't working right; Align now uses <q-args> instead of <f-args>, so it does the argument splitting itself, thus allowing patterns containing backslashes to be used without lots of backslash-duplication.  This allows the \\tt map in AlignMaps to work, and to work without a lot of extra backslashes."
@@ -82,7 +82,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "New feature -- one can embed AlignCtrl settings into Align (as a one-shot):\n\n   [range]Align! [AlignCtrl settings] pattern(s)\n\nPlus some small improvements to some of the AlignMaps."
@@ -98,7 +98,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "* \\acom can now work with doxygen style /// comments\n* \\t= and cousins used \"`\"s.  They now use \\xff characters.\n* <char-0xff> used in \\t= \\T= \\w= and \\m= instead of backquotes.\n"
@@ -114,7 +114,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "Align and AlignMaps now use vim 7.0 style autoloading (quicker startup, loads only when used)\ncecutil updated to use keepjumps\nNow being distributed as a vimball - simply :so % it after decompressing it to install\n"
@@ -130,7 +130,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "bugfix: (Align) Align now works around the report option setting.\nbugfix: (Align) AlignCtrl l: wasn't behaving as expected; fixed!\nbugfix: (AlignMap) \\ts, now uses P1 in its AlignCtrl call\n"
@@ -146,7 +146,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "Align v27 : cpo and ignorecase workarounds\nAlignMaps v32: s:WrapperStart() -> AlignWrapperStart(), s:WrapperEnd() -> AlignWrapperEnd()\n These changes let the wrappers be used outside of AlignMaps.vim (customized map support)\n"
@@ -162,7 +162,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "Align: GetLatestVimScripts/AutoInstall supported\nAlignMaps: new map: \\\\adcom (align declaration-style comments), \\\\a, now wors across multiple lines with different types, cecutil.vim now used, more number alignment maps (\\\\aenum, \\\\aunum)\n"

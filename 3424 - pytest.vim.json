@@ -1,0 +1,91 @@
+{
+  "script_id": "3424",
+  "display_name": "pytest.vim",
+  "summary": "Runs your (Python) tests with py.test displaying red/green bars",
+  "name": "pytest.vim",
+  "script_type": "utility",
+  "description": "A simple way of running your tests (with py.test) from within VIM.\n\nTalking with Holger Krekel (original author of py.test and vim user) we thought\nit would be neat to be able to call it from vim and get some immediate results.\n\nThis is especially useful when you are tweaking and do not want to be moving\naround between the terminal and your vim session.\n\nScreencast: http://vimeo.com/19774046\n\n\nScreenshots: \n\nFailing Tests \nhttp://www.flickr.com/photos/aldegaz/5414279071 \n\nPassing Tests \nhttp://www.flickr.com/photos/aldegaz/5395135539 \n\nVerbose Mode \nhttp://www.flickr.com/photos/aldegaz/5414279043 \n\n\nFor the latest documentation and project info go to\nthe project home:\n https://github.com/alfredodeza/pytest.vim",
+  "install_details": "Either drop the plugin/pytest.vim file into your plugin directory or use Pathogen and drop the whole packaged directory in your bundle dir. ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14996",
+      "filename": "pytest.tar.gz",
+      "script_version": "0.0.5",
+      "date": "2011-02-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Adds Syntax Highlighting for saved py.test sessions.\nYou can now edit other files with errors in split buffers.\nSeparate error and exception buffers for better readability.\nBetter error handling and parsing.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14951",
+      "filename": "pytest.tar.gz",
+      "script_version": "0.4",
+      "date": "2011-02-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "A *ton* of changes:\n\n* Adds buffers for last failed errors and full py.test output for last session \n* Adds syntax highlighting for py.test session and failed buffers\n* Makes the above buffers toggable\n* You can now jump to errors! In split buffers! OMG!\n* You can CIRCLE around the next, previous, last or first errors in the same split buffer!\n* You can go the \"end\" file where the error ended (if it is not your current file)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14904",
+      "filename": "pytest.tar.gz",
+      "script_version": "0.3",
+      "date": "2011-01-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Adds support for native py.test errors and provides error messages when the plugin can't match the class or method you are requesting for testing."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14899",
+      "filename": "pytest.tar.gz",
+      "script_version": "0.2",
+      "date": "2011-01-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Getts better information output when tests are failing (Line:  1    ==>> AssertionError) and it introduces a \"verbose\" mode where you can see full results in a split window"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14897",
+      "filename": "pytest.tar.gz",
+      "script_version": "0.1",
+      "date": "2011-01-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

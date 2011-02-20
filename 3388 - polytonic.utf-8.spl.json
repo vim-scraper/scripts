@@ -1,0 +1,27 @@
+{
+  "script_id": "3388",
+  "display_name": "polytonic.utf-8.spl",
+  "summary": "Spell checking for multi accented (polytonic) Greek. ",
+  "name": "polytonic.utf-8.spl",
+  "script_type": "utility",
+  "description": "---------------------------------------------------------------------\nSpell file for multi accented (also known as polytonic) Greek. \n---------------------------------------------------------------------\n\nThis spell file is for checking the spelling of texts typed in multi \naccented (or polytonic) Greek. It is useful to Greek scholars \n(hellenists) as well as native Greek speakers who prefer to write \nin the traditional multi accented script.  \n\nThe word list covers all the ancient and modern Greek vocabulary.\nAbout 1.5 million words all spelled in the traditional polytonic system. \n\nThe ancient Greek word list is derived from several corpora like \nPerseus [2], and TLG [3] and other sources.\n\nThe modern Greek word list is derived from the ispell dictionary el_GR [1]\nbut all the words have been appropriately accentuated. This spell file\nwill flag monotonic spelling as errors (and rightfully so).\n\nThe two lists are combined, cleaned of double entries (there was a large \novelap) and sorted. Last syllable varia (grave accent)  and double oxias \n(as when shifted from the following word) have been replaced by SFX \nrules in the affix file.\n\nIt works quite well with Vim and it is fast, but bear in mind that it is far\nfrom finished. (see bugs below).\n\n----------------\nScreenshot\n----------------\nhttp://img29.imageshack.us/img29/916/vimpolytonicspell.png\n\n----------------\nInstallation.\n----------------\n\nCopy the file polytonic.utf-8.spl to your home .vim spell \ndirectory (~/.vim/spell/). If the directory does not exist, create it. \n\n\n----------------\nUsage\n----------------\n\nTo use it you must set the encodings to utf-8.\n:set encoding=utf-8\n:set fenc=utf-8 \n:set inputenc=utf-8\n\nFor polytonic Greek text entry see: vimscript#2743\n\nTo activate spell cheching:\n:set spelllang=polytonic\n:set spell\n\nFor bilingual spell checking: \n:set spelllang=polytonic,en\n\nTo limit spelling suggestions to 8:\n:set spellsuggest=8\n\n--------------\nKnown bugs\n--------------\n\nHyphenated words are not recognised and are flagged as spelling errors.\n\nIt does not distinguish between medial and final sigma. Suggestions \ndisplay final sigma as medial sigma and :spelldump shows all final sigmas \nas medial ones. A final sigma in the middle of a word passes as correct.\n\nWords written in capital letters, even when are spelled correctly (without accents), are \nflagged as errors.\n\nIf anyone wishes to help, e-mail me and I will forward the .dic and .aff files.\nproteuss AT sdf.lonestar.org\n\n------------\nReferences\n------------\n[1] http://ispell.math.upatras.gr\n[2] http://www.perseus.tufts.edu/hopper/opensource/download\n[3] http://www.tlg.uci.edu/\n",
+  "install_details": "Extract files: tar -jxvf polytonic.utf-8.tar.bz2\n\nCopy the file polytonic.utf-8.spl to your home .vim spell \ndirectory (~/.vim/spell/). If the directory does not exist, create it. ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14664",
+      "filename": "polytonic.utf-8.tar.bz2",
+      "script_version": "0.0.1",
+      "date": "2010-12-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17570",
+        "user_name": "proteuss",
+        "first_name": "Andreas",
+        "last_name": "Proteus",
+        "email": "proteuss@sdf.lonestar.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

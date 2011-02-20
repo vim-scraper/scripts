@@ -4,9 +4,25 @@
   "summary": "This plugin is aimed at generating tags for a whole project.",
   "name": "ProjectTag",
   "script_type": "utility",
-  "description": "This plugin is aimed at generating tags for a whole project. \nExuberant Ctags is required for this plugin:\nhttp://ctags.sourceforge.net/\nThis plugin is quite useful when used with omnicomplete plugins, such as \nOmniCppComplete(vimscript #1520), \npythoncomplete(vimscript #1542), \njavacomplete(vimscript #1785).\nvim must be compiled with python support for this plugin to run. At least\npython 2.4 is required. Python 3.x is not supported currently.\n\nFor C/C++ projects, there's no need to generate a seperate tag file for the\nincluded header files any more! This plugin will also parses the header files\ncited in your source code, so a tag file providing information of all sources\nfiles in your project and header files included in your sources would be\ngenerated. \n\nThis plugin could also generate tags in background by using python \nmultithread library, so your editing work would not be blocked when \ngenerating tag files.\n\n\nThe following is a short tutorial.\n\nFirst, enter your project root directory, for example /home/user/myproject.\nThen create a project file, the file name must be \"project.prom\". Edit this\nfile. Copy the following content to this file:\n=========\n[general]\nsources=source1,source2,...\ninclude_dirs=include_dir1,include_dir2,...\ntagprog=ctags_command\ntagflag=--your-tag-flags\n=========\n\nReplace source1,source2,... with your source file, such as main.c,\nsrc/foo.cpp;\n\nreplace include_dir1,include_dir2,... with your include directories, such as\n/usr/include, /usr/local/include (not required for non C/C++ project, in fact,\neven for C/C++ project, it is also optional);\n\nreplace ctags_command with your ctags command, such as ctags, /usr/bin/ctags;\n\nreplace --your-tag-flags with your tag flags, such as --extra=+q.\n\n\nFor example, for the following source tree:\n\n- src/\n  main.cpp\n  foo.cpp\n  bar.cpp\n- include/\n  foo.h\n  bar.h\n\nThe project file could be like the following:\n=========\n[general]\nsources=src/main.cpp, src/foo.cpp, src/bar.cpp\ninclude_dirs=./include,/usr/include\ntagprog=ctags\ntagflag=--extra=+q --c++-kinds=+p --fields=+iaS \n=========\n              \nThen save the file.\n\nUse vim to open a source file, such as foo.cpp. Use the command\n\":GenProTags\" to generate the tag file(this might be some kind of slow). if\nyou don't want to be blocked when generating the tag file, use \":GenProTagsBg\"\ninstead. This will generate the tag file in background.\n\nMake sure that your project path does not contain spaces, or it wouldn't work.\n\n\nIf you find any bug, please report it to xuhdev@gmail.com, or submit it on the\nissue tracker: http://code.google.com/p/project-tag/issues/list\n\nRepository: http://code.google.com/p/project-tag/source/checkout",
+  "description": "This plugin is aimed at generating tags for a whole project. \nExuberant Ctags is required for this plugin:\nhttp://ctags.sourceforge.net/\nThis plugin is quite useful when used with omnicomplete plugins, such as \nOmniCppComplete(vimscript #1520), \npythoncomplete(vimscript #1542), \njavacomplete(vimscript #1785).\nvim must be compiled with python support for this plugin to run. At least\npython 2.4 is required. Python 3.x is not supported currently.\n\nFor C/C++ projects, there's no need to generate a seperate tag file for the\nincluded header files any more! This plugin will also parses the header files\ncited in your source code, so a tag file providing information of all sources\nfiles in your project and header files included in your sources would be\ngenerated. \n\nThis plugin could also generate tags in background by using python \nmultithread library, so your editing work would not be blocked when \ngenerating tag files.\n\n\nThe following is a short tutorial.\n\nFirst, enter your project root directory, for example /home/user/myproject.\nThen create a project file, the file name must be \"project.prom\". Edit this\nfile. Copy the following content to this file:\n=========\n[general]\nsources=source1,source2,...\ninclude_dirs=include_dir1,include_dir2,...\ntagprog=ctags_command\ntagflag=--your-tag-flags\n=========\n\nReplace source1,source2,... with your source file, such as main.c,\nsrc/foo.cpp;\n\nreplace include_dir1,include_dir2,... with your include directories, such as\n/usr/include, /usr/local/include (not required for non C/C++ project, in fact,\neven for C/C++ project, it is also optional);\n\nreplace ctags_command with your ctags command, such as ctags, /usr/bin/ctags;\n\nreplace --your-tag-flags with your tag flags, such as --extra=+q.\n\n\nFor example, for the following source tree:\n\n- src/\n  main.cpp\n  foo.cpp\n  bar.cpp\n- include/\n  foo.h\n  bar.h\n\nThe project file could be like the following:\n=========\n[general]\nsources=src/main.cpp, src/foo.cpp, src/bar.cpp\ninclude_dirs=./include,/usr/include\ntagprog=ctags\ntagflag=--extra=+q --c++-kinds=+p --fields=+iaS \n=========\n              \nThen save the file.\n\nUse vim to open a source file, such as foo.cpp. Use the command\n\":GenProTags\" to generate the tag file(this might be some kind of slow). if\nyou don't want to be blocked when generating the tag file, use \":GenProTagsBg\"\ninstead. This will generate the tag file in background.\n\nMake sure that your project path does not contain spaces, or it wouldn't work.\n\n\nIf you find any bug, please report it to xuhdev@gmail.com, or submit it on the\nissue tracker: \nhttps://bitbucket.org/xuhdev/projecttag/issues\n\nRepository: \nhttps://bitbucket.org/xuhdev/projecttag\n\nFollow xuhdev on twitter if you are interested in my development:\nhttp://twitter.com/xuhdev",
   "install_details": "Download the ProjectTag.zip file and extract it to your vim runtime\ndirectory(~/.vim on linux and $VIM_INSTALLATION_FOLDER\\vimfiles on\nwindows), you'd better then use helptags command to generate the help\ntag(for example use \":helptags ~/.vim/doc\" on Linux).\n",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14944",
+      "filename": "ProjectTag.zip",
+      "script_version": "0.1.10",
+      "date": "2011-02-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18599",
+        "user_name": "xuphys",
+        "first_name": "H",
+        "last_name": "Xu",
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
+      },
+      "release_notes": "Also handle the situation when ctags doesn't return 0;\nImprove the error messages."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14439",
       "filename": "ProjectTag.zip",
@@ -18,8 +34,8 @@
         "user_name": "xuphys",
         "first_name": "H",
         "last_name": "Xu",
-        "email": "xuhdev at gmail.com",
-        "homepage": ""
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
       },
       "release_notes": "Also recognize this kind of include: \"# include\",\"#\\tinclude\",etc;\nmove ProjectTag.py from ProjectTag/ to plugin/ProjectTag/, so please delete the \"ProjectTag\" directory in the old version if you are upgrading.\n"
     },
@@ -34,8 +50,8 @@
         "user_name": "xuphys",
         "first_name": "H",
         "last_name": "Xu",
-        "email": "xuhdev at gmail.com",
-        "homepage": ""
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
       },
       "release_notes": "Fix a vim 'tags' setting problem. Convert the document file format to unix format."
     },
@@ -50,8 +66,8 @@
         "user_name": "xuphys",
         "first_name": "H",
         "last_name": "Xu",
-        "email": "xuhdev at gmail.com",
-        "homepage": ""
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
       },
       "release_notes": "fix a minor document bug."
     },
@@ -66,8 +82,8 @@
         "user_name": "xuphys",
         "first_name": "H",
         "last_name": "Xu",
-        "email": "xuhdev at gmail.com",
-        "homepage": ""
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
       },
       "release_notes": "Fix a bug when \"sources\" contain some non-exist files."
     },
@@ -82,8 +98,8 @@
         "user_name": "xuphys",
         "first_name": "H",
         "last_name": "Xu",
-        "email": "xuhdev at gmail.com",
-        "homepage": ""
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
       },
       "release_notes": "fix a minor bug: if current working directory is not where current file locates, this plugin would not work properly."
     },
@@ -98,8 +114,8 @@
         "user_name": "xuphys",
         "first_name": "H",
         "last_name": "Xu",
-        "email": "xuhdev at gmail.com",
-        "homepage": ""
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
       },
       "release_notes": "Improve the performance."
     },
@@ -114,8 +130,8 @@
         "user_name": "xuphys",
         "first_name": "H",
         "last_name": "Xu",
-        "email": "xuhdev at gmail.com",
-        "homepage": ""
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
       },
       "release_notes": "Don't enable this plugin when required python packages are not found. Improve the document."
     },
@@ -130,8 +146,8 @@
         "user_name": "xuphys",
         "first_name": "H",
         "last_name": "Xu",
-        "email": "xuhdev at gmail.com",
-        "homepage": ""
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
       },
       "release_notes": "Don't generate tags if project not found, add GetLatestScript support."
     },
@@ -146,8 +162,8 @@
         "user_name": "xuphys",
         "first_name": "H",
         "last_name": "Xu",
-        "email": "xuhdev at gmail.com",
-        "homepage": ""
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
       },
       "release_notes": "When searching for header files, also search for the header files in the same directory with the source file."
     },
@@ -162,8 +178,8 @@
         "user_name": "xuphys",
         "first_name": "H",
         "last_name": "Xu",
-        "email": "xuhdev at gmail.com",
-        "homepage": ""
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
       },
       "release_notes": "Initial upload"
     }

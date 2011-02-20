@@ -1,0 +1,43 @@
+{
+  "script_id": "3398",
+  "display_name": "fokus",
+  "summary": "Light color scheme designed for Ruby programming",
+  "name": "fokus",
+  "script_type": "color scheme",
+  "description": "Colorful scheme with light background, shamelessly edited from 'fruit'. Also includes some custom PHP style because I had to look at php files from time to time.\n\nScreenshot showing a ruby file and NERDTree:\nhttp://img716.imageshack.us/img716/8144/screenshotstreamscontro.png",
+  "install_details": "Place fokus.vim in your colors directory at ~/.vim/colors. Add the following lines to your ~/.vimrc file to use this colorscheme by default on startup:\n\n:syntax on\n:colorscheme fokus \n\nIf you're coding PHP too, you may also have to put this on your .vimrc so the custom style would look as intended:\n\nautocmd FileType php so ~/.vim/colors/fokus.vim\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14986",
+      "filename": "fokus.vim",
+      "script_version": "0.3",
+      "date": "2011-02-08",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "22966",
+        "user_name": "tyok",
+        "first_name": "Mohammad",
+        "last_name": "Satrio",
+        "email": "wolfaeon@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Darker hue for a few foreground colors, updates for directory tree, ruby regex, cucumber, and PHP."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14720",
+      "filename": "fokus.vim",
+      "script_version": "0.2",
+      "date": "2011-01-10",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "22966",
+        "user_name": "tyok",
+        "first_name": "Mohammad",
+        "last_name": "Satrio",
+        "email": "wolfaeon@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

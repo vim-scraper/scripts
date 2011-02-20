@@ -1,0 +1,75 @@
+{
+  "script_id": "3416",
+  "display_name": "w3cvalidator",
+  "summary": "W3cValidate.vim is a plugin that enables buffer/url w3c validation",
+  "name": "w3cvalidator",
+  "script_type": "utility",
+  "description": "W3cValidate.vim is a plugin that enables buffer/url validation using the http://validator.w3.org api\n\n== USAGE ==\n\nCopy w3cvalidate.vim file inside plugin directory, source it or restart Vim. Use \n\n    :W3cValidate to validate the current buffer\n    \n    :W3cValidate \"[url_here]\" to validate a hosted page\n    \n    :W3cValidateDT \"[doctype]\" to validate the buffer using the [doctype] override. Make sure the doctype is a valid doctype\n\nThe validator service url can be changed if you run an instance of it localy by setting  g:w3_validator_url  in .vimrc\n\nThe script has API timeout default to 20 seconds. You can change it by setting  g:w3_apicall_timeout  in .vimrc\n\n== NOTES ==\n\nGithub - https://github.com/dekomote/w3cvalidate.vim\n\nBitbucket - https://bitbucket.org/dekomote/w3cvalidate.vim\n\nNeeds vim compiled with +python option. Works out of the box on Ubuntu and Ubuntu-derivates.\n\nThanks to Yegappan Lakshmanan for Scratch.vim http://www.vim.org/scripts/script.php?script_id=664, I got some ideas for the temporary buffer displaying the errors/warnings from this script.",
+  "install_details": "Copy w3cvalidate.vim file inside plugin directory, source it or restart Vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14845",
+      "filename": "w3cvalidate.vim",
+      "script_version": "0.31",
+      "date": "2011-01-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25672",
+        "user_name": "dekomote",
+        "first_name": "Dejan",
+        "last_name": "Noveski",
+        "email": "dr.mote@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed the json/simplejson bug."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14832",
+      "filename": "w3cvalidate.vim",
+      "script_version": "0.3",
+      "date": "2011-01-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25672",
+        "user_name": "dekomote",
+        "first_name": "Dejan",
+        "last_name": "Noveski",
+        "email": "dr.mote@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added explanation messages to the output, added script documentation, added the ability to override doctype setting for buffer validation using :W3cValidateDT [doctype]"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14830",
+      "filename": "w3cvalidate.vim",
+      "script_version": "0.2",
+      "date": "2011-01-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25672",
+        "user_name": "dekomote",
+        "first_name": "Dejan",
+        "last_name": "Noveski",
+        "email": "dr.mote@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added global settings - g:w3_validator_url which sets validator url if you run an instance localy and g:w3_apicall_timeout which sets API timeout"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14829",
+      "filename": "w3cvalidate.vim",
+      "script_version": "0.1",
+      "date": "2011-01-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25672",
+        "user_name": "dekomote",
+        "first_name": "Dejan",
+        "last_name": "Noveski",
+        "email": "dr.mote@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

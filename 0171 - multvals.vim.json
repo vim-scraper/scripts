@@ -18,7 +18,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- New MvBISortElements() that uses the faster BinInsertSort2() function\n  from genutils.vim plugin.\n"
@@ -34,7 +34,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- MvIterPeek made public. This was left private by accident."
@@ -50,7 +50,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed bugs in the *StrIndex* functions, such that when the element is\nnot found, they always return the contracted -1 (instead of any -ve\nvalue). This will fix problems with a number of other functions that\ndepend on them (such as MvPushToFront reported by Thomas Link).\n"
@@ -66,7 +66,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Maintenance release.\n- Work-around for a bug in MvNumberOfElements().\n- New utility function MvCrUnProtectedCharsPattern()\n"
@@ -82,7 +82,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "CAUTION: This version potentially introduces an incompatibility with that of\nolder versions because of the below change. If your plugin depended on this\nundocumented behavior you will have to update your plugin immediately to work\nwith the new plugin. Even if you didn't know about behavior, it is still better\nto check if your plugin accidentally depended on this. If you need further\nclarifications, please email me with your questions and I will try to answer.\n\n- Now the plugin ignores the 'ignorecase' and 'smartcase' settings, so the\n  results are more consistent. This I think is the right thing to do for a\n  library.\n- Also added a new function MvIterPeek.\n"
@@ -98,7 +98,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- The plugin was not working correctly when there are *'s in the array.\n- New function MvRemovePatternAll\n- g:loaded_multvals now contains the version number for dependency cheking.\n  (see \":help v:version\" for format)\n- Added prototypes for the functions in the header as per the suggestion\n  of Naveen Chandra."
@@ -114,7 +114,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Minor changes, added a new function MvElementLike and improved MvPromptForElement by adding a new companion function MvGetSelectedIndex, to be used when the array can contain empty elements."
@@ -130,7 +130,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "New function MvNumSearchNext. See the function header for details.\n"
@@ -146,7 +146,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Minor changes. Now the MvCreateIter() also accepts sample separator as the last argument when a regular expression is used as a separator. This is consistent with the rest of the functions and makes it easy to iterate over settings like 'tags'.\n\ncall MvIterCreate(&tags, \"\\\\\\@<!\\(\\\\\\\\\\)*\\zs,\", \"Tags\", ',')\n\n"
@@ -162,7 +162,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- All functions can now be used with regular expressions as separators. Most of the functions now accept an optional extra argument as the last argument, which needs to be a plain separator as a sample that matches the regular expression of the separator. If the separator is not a regular expressions, this can be ignored, making it backwardly compatible change.\n- Added new functions MvRemovePattern, MvStrIndexOfPattern, MvStrIndexAfterPattern, MvIndexOfPattern, MvContainsPattern.\n- Fixed a bug in the new implementation of MvPromptForElement. This function now accepts only element index as selection. This makes it cleaner to implement and also makes it possible to have even numbers as values in the array.\n"
@@ -178,7 +178,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Just removed some debug echomsg which I forgot to remove. Sorry about it. I also added some more information on how to use MvQSortElements() method."
@@ -194,7 +194,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- New functions MvQSortElements() and MvSwapElementsAt(). Requires genutils.vim\n  for sorting support.\n- Worked-around a bug in vim that effects MvElementAt() for last element in a\n  large array. \n- A variant of MvPromptForElement to specify the number of columns that you\n  want the elements to be formatted in. The formatting is very nice now.\n"
@@ -210,7 +210,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "GPL'ed it mainly for the use by Creme project (http://cream.sf.net). Added MvRemoveElementAll and MvReplaceElementAt, contributed by Steve Hall <digitect at mindspring.com>"
@@ -226,7 +226,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "More robust iterator, now checks for maximum count. Reimplemented it to use the ElementAt() function and removed NextElement and NextIndex() functions that are not needed."
@@ -242,7 +242,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "New functions MvRotateLeftAt() and MvRotateRight() to be used by the PushPop.vim script."
@@ -258,7 +258,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Enhanced the script to accept any regular expression as a separator pattern, but it works only for read-only operations. Now you can treat the following as an array:\n\naxxbxxxxcxdxxxxxe\n\nand access a, b, c, d and e as array elements.\n\nNow the element is escaped before using in the matches, so you shouldn't have any problem using any random strings to store in to the array.\n\nAlso the script is now made as a plugin, so it works only 6.0"
@@ -274,7 +274,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed bugs in MvStrIndexOfElement(), MvIterHasNext() and MvCmpByPosition(). Now I have been using the script for quite some time and fixed all the bugs that I discovered. It should be quite robust and usable now. I have used the functions from here in selectbuf.vim for implementing MRU listing and also in the remcmd.vim for list selection, so check these scripts for a good usage. Also see the end of the script for test code that gives example usage of the script."
@@ -290,7 +290,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Lots of new functions are added and they are documented well. Now the script has functions to access the elements by element index, just like a real array. Much more usable as an array than previously it was.\n\n However, it is incompatible with the previous version for the following reasons:\n   - Prefixed all the global functions with \"Mv\" to avoid global name\n       conflicts.\n   - The order of arguments for MvIterCreate has been changed for the sake of\n       consistency.\n\nHere is a list of all the functions:\n       MvAddElement\n       MvInsertElementAt\n       MvRemoveElement\n       MvRemoveElementAt\n       MvNumberOfElements\n       MvStrIndexOfElement\n       MvStrIndexOfElementAt\n       MvIndexOfElement\n       MvContainsElement\n       MvElementAt\n       MvLastElement\n       MvPushToFront\n       MvPushToFrontElementAt\n       MvPullToBack\n       MvPullToBackElementAt\n       MvIterCreate\n       MvIterDestroy\n       MvIterHasNext\n       MvIterNext\n       MvCmpByPosition\n       MvPromptForElement\n"
@@ -306,7 +306,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

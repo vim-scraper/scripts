@@ -1,0 +1,27 @@
+{
+  "script_id": "3370",
+  "display_name": "eteSkeleton",
+  "summary": "Yet another skeleton utility",
+  "name": "eteSkeleton",
+  "script_type": "utility",
+  "description": "A simple plugins that would help to manage skeletons(templates) for automate the creation of new files and insert tags (user definible) like <user> , <date>, <askversion>  and so on.\n\nIt let you to use different skeletons for the same filetype, depending on the filename.\nFor exemple you can have in the skeleton folder a file 'python' and a file 'test_python\". That means if you create a new buffer called \"test_myfile.py\" eteSkeleton will match the name and will use the \"test_python\" skeleton, otherwise it will use the simple 'python' skeleton.\nOnce it loaded the skeleton it will check for tags and will replace it with the right value.  (for example it will place <data> with current date).\neteSkeleton is shipped with few silly tags, Anyway  you can add new tags or replace existing ones  by editing eteSkeleton.tags (located in the plugin folder) or by the EteSkelAdd or EteSkelAddTag  commands (this last one uses the word under the cursor to create a tag).\nTagvalues are evaluated so you can expand variables, prompts for a value ... and so on. ",
+  "install_details": "open the file in vim  and use :so % to install it",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14515",
+      "filename": "eteSkeleton.vba",
+      "script_version": "1.0.1",
+      "date": "2010-12-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23835",
+        "user_name": "ellethee",
+        "first_name": "ellethee",
+        "last_name": ".",
+        "email": "ellethee@altervista.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

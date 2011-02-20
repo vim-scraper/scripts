@@ -18,7 +18,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Incompatible changes galore\n- Removed :TAssertToggle, :TAssertBegin & :TAssertEnd etc. that doesn't really belong here.\n- :TAssertType command (requires macros/tassert.vim)\n- Moved Is*() functions to macros/tassert.vim.\n"
@@ -34,7 +34,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- IsA(): Can take a list of types as arguments and it provides a way to \ncheck dictionaries againt prototypes or interface definitions.\n- IsExistent()\n- New log-related commands: TLogOn, TLogOff, TLogBufferOn, TLogBufferOff\n- Use TAssertVal(script, expr) to evaluate an expression (as \nargument to a command) in the script context.\n- TAssertOn implies TLogOn\n- *Comment & *Uncomment commands now take a range as argument (default: \nwhole file).\n- TAssertComment! & TAssertUncomment! (with [!]) also call \nTLog(Un)Comment.\n"
@@ -50,7 +50,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- More convenience functions\n- The convenience functions now display an explanation for a failure\n- Convenience commands weren't loaded when g:TASSERT was off.\n- Logging to a file & via Decho()\n- TAssert! (the one with the bang) doesn't throw an error but simply \ndisplays the failure in the log\n- s:ResolveSIDs() didn't return a string if s:assertFile wasn't set.\n- s:ResolveSIDs() caches scriptnames\n- Moved logging code to 00tLog.vim\n"
@@ -66,7 +66,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

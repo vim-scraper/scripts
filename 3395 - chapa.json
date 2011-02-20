@@ -1,0 +1,203 @@
+{
+  "script_id": "3395",
+  "display_name": "chapa",
+  "summary": "go to, comment or visually select the next/previous function, class or method",
+  "name": "chapa",
+  "script_type": "utility",
+  "description": "Allows you to move to previous/next class, function or method \n\ntoggle comments, fold or visually select the next/previous class, function or method. \n\nCurrently supports Python and JavaScript\n\nWatch the screencast:  http://vimeo.com/19016562\n\n\nProject and documentation lives here:\nhttps://github.com/alfredodeza/chapa.vim ",
+  "install_details": "Copy the chapa.vim file to your ftplugin directory but should work with Pathogen as well.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15007",
+      "filename": "chapa.tar.gz",
+      "script_version": "1.1.2",
+      "date": "2011-02-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Fixes some debug echo's that were left behind."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14958",
+      "filename": "chapa.tar.gz",
+      "script_version": "1.1.0",
+      "date": "2011-02-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Adds Folding Capabilities (just Python for now)\nMakes the repeat mappings optional.\nDrops Ruby support (other plugins already take care of same overlapping functionality)\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14917",
+      "filename": "chapa.tar.gz",
+      "script_version": "1.0.1",
+      "date": "2011-01-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Minor bug fixes that deal with object living at the end of the file. It also fixes weird comment toggling to match exactly what you are asking for and nothing else."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14779",
+      "filename": "chapa.tar.gz",
+      "script_version": "1.0.0",
+      "date": "2011-01-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Adds JavasScript support! same features except only applied to functions (no classes or methods)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14764",
+      "filename": "chapa.tar.gz",
+      "script_version": "0.0.9",
+      "date": "2011-01-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Minor update that fixes better matching of Ruby end blocks."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14760",
+      "filename": "chapa.tar.gz",
+      "script_version": "0.0.8",
+      "date": "2011-01-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Adds better support for Ruby and ending blocks. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14748",
+      "filename": "chapa.tar.gz",
+      "script_version": "0.0.7",
+      "date": "2011-01-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Fixes a problem with moving from/to methods and makes the Repeat calls available as part of the Plugin"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14744",
+      "filename": "chapa.tar.gz",
+      "script_version": "0.0.6",
+      "date": "2011-01-14",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "You can now toggle comments for the N class, method or function and repeat any movement command with <C-h> and <C-l>. \nIt also fixes some issues with defining better being \"inside\" an actual object."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14739",
+      "filename": "chapa.tar.gz",
+      "script_version": "0.0.5",
+      "date": "2011-01-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Adds commenting capabilities for next/previous N method, class, function and default mappings.\nAlso provides more accurate visual selection by avoiding whitespace at the end of blocks."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14727",
+      "filename": "chapa.tar.gz",
+      "script_version": "0.0.4",
+      "date": "2011-01-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Fixes a bug with visual selection and adds count for visual selections (eg. visual select 3rd next method)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14724",
+      "filename": "chapa.tar.gz",
+      "script_version": "0.0.3",
+      "date": "2011-01-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Adds count for movements (e.g. move to 3 previous classes)\nAdd <Plug> before each plugin call in your mappings. Breaks compatibility for earlier versions. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14718",
+      "filename": "chapa.tar.gz",
+      "script_version": "0.0.2",
+      "date": "2011-01-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25040",
+        "user_name": "alfredodeza",
+        "first_name": "Alfredo",
+        "last_name": "Deza",
+        "email": "alfredodeza@gmail.com",
+        "homepage": "http://www.alfredodeza.com"
+      },
+      "release_notes": "Adds 8 public movement and selection calls to the plugin - but breaks compatibility with previous version "
+    }
+  ]
+}

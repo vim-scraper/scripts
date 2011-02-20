@@ -1,0 +1,27 @@
+{
+  "script_id": "3357",
+  "display_name": "NERD_Tree & ack",
+  "summary": "Adding search capability to NERD_Tree with ack",
+  "name": "NERD_Tree-and-ack",
+  "script_type": "utility",
+  "description": "Open NERD_Tree to your project folder, by typing :NERDtree /path/to/project or by using bookmarks. Place the cursor on a folder and type the letter m. In the menu that will pop up you will have the option \"(s)earch directory\". Select it by pressing s and type your pattern. If your search will yield results, you will see a window in the lower part of your screen, with all the results. Navigate with the keys and press <CR> to jump to a result. The file will be opened in the last working window.",
+  "install_details": "Install NERD_Tree first. Then download this module to ~/.vim/plugin/ or the appropriate location on your system and...you're done.\n\nInstall ack (see details at http://betterthangrep.com/ ). Depending on your operating system, you need to type something like \"sudo apt-get install ack-grep\", \"brew install ack\" or other. Most of the installers will add ack to your $PATH, so NERD_Tree_Ack.vim won't require additional configuration. If you're weird and don't want to add ack to your $PATH, just add the following line to your .vimrc file:\n\nlet g:path_to_search_app = \"/full/path/to/ack\"\n\nIt should work.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14469",
+      "filename": "NERD_tree_ACK.vim",
+      "script_version": "1.0",
+      "date": "2010-12-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23924",
+        "user_name": "motanelu",
+        "first_name": "Tudor",
+        "last_name": "Barbu",
+        "email": "miau@motane.lu",
+        "homepage": "http://blog.motane.lu"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

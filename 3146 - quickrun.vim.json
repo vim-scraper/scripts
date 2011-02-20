@@ -4,9 +4,57 @@
   "summary": "Run a command and show its result quickly.",
   "name": "quickrun.vim",
   "script_type": "utility",
-  "description": "*quickrun* is Vim plugin to execute whole/part of editing file and show the result.\nIt provides :QuickRun command for it.\n\nDefault is set in the following languages:\n\n- awk\n- bash\n- c\n- cpp\n- dosbatch\n- eruby\n- go\n- groovy\n- haskell\n- io\n- java\n- javascript\n- llvm\n- lua\n- ocaml\n- perl\n- perl6\n- php\n- python\n- r\n- ruby\n- scala\n- scheme\n- sed\n- sh\n- vim\n- zsh\n\nYou can add settings for other languages and situations.\n\nLatest Version:\nhttp://github.com/thinca/vim-quickrun\n",
+  "description": "*quickrun* is Vim plugin to execute whole/part of editing file and show the result.\nIt provides :QuickRun command for it.\n\nDefault is set in the following languages:\n\n- awk\n- bash\n- c\n- cpp\n- dosbatch\n- erlang\n- eruby\n- go\n- groovy\n- haskell\n- io\n- java\n- javascript\n- llvm\n- lua\n- ocaml\n- perl\n- perl6\n- php\n- python\n- r\n- ruby\n- scala\n- scheme\n- sed\n- sh\n- vim\n- zsh\n\nYou can add settings for other languages and situations.\n\nLatest Version:\nhttps://github.com/thinca/vim-quickrun\n",
   "install_details": "",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14987",
+      "filename": "vim-quickrun-0.4.5.zip",
+      "script_version": "0.4.5",
+      "date": "2011-02-08",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18219",
+        "user_name": "thinca",
+        "first_name": "thinca",
+        "last_name": " ",
+        "email": "thinca+vim@gmail.com",
+        "homepage": "http://d.hatena.ne.jp/thinca/"
+      },
+      "release_notes": "- Improved the default value for go language.\n- Improved the default value for javascript.\n- Do not escape %c symbol if shebang line was used.\n- Fixed the \"shebang\" option always worked."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14729",
+      "filename": "vim-quickrun-0.4.4.zip",
+      "script_version": "0.4.4",
+      "date": "2011-01-11",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18219",
+        "user_name": "thinca",
+        "first_name": "thinca",
+        "last_name": " ",
+        "email": "thinca+vim@gmail.com",
+        "homepage": "http://d.hatena.ne.jp/thinca/"
+      },
+      "release_notes": "- Always expand \"input\" option.\n- Fixed a bug when \"runmode\" option is \"async:python\".\n- Improved behavior in MS Windows.\n- Changed \"%c\" into symbol that specifies file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14508",
+      "filename": "vim-quickrun-0.4.3.zip",
+      "script_version": "0.4.3",
+      "date": "2010-12-14",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18219",
+        "user_name": "thinca",
+        "first_name": "thinca",
+        "last_name": " ",
+        "email": "thinca+vim@gmail.com",
+        "homepage": "http://d.hatena.ne.jp/thinca/"
+      },
+      "release_notes": "- Added the default config for erlang.\n- Added \"cmdopt\" option.\n- Expand \"args\" option.\n- Improved the command line completion.\n- \":to\" of output_encode is omissible.\n- Fixed a bug of infinity loop."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14082",
       "filename": "vim-quickrun-0.4.2.zip",
@@ -18,7 +66,7 @@
         "user_name": "thinca",
         "first_name": "thinca",
         "last_name": " ",
-        "email": "thinca+vim at gmail.com",
+        "email": "thinca+vim@gmail.com",
         "homepage": "http://d.hatena.ne.jp/thinca/"
       },
       "release_notes": "- Added \"_\" to the default type name.\n- Added perl6 support as default.\n- Expand |quickrun-option-output|.\n- Fixed a bug that \"split\" option doesn't work in twice or later.\n- Changed g:quickrun_default_config to g:quickrun#default_config.\n- Added the following values to |quickrun-option-runmode|.\n  - \"async:vimproc\"\n  - \"async:python\"\n  - These are experimental.\n- Check hasmapto() before <Leader>r is defined.\n- Improve the reading and writing of a file."
@@ -34,7 +82,7 @@
         "user_name": "thinca",
         "first_name": "thinca",
         "last_name": " ",
-        "email": "thinca+vim at gmail.com",
+        "email": "thinca+vim@gmail.com",
         "homepage": "http://d.hatena.ne.jp/thinca/"
       },
       "release_notes": "Initial upload"

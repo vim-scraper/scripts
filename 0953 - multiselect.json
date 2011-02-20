@@ -18,7 +18,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Changed public API to not autoload script. It doesn't make sense for\npublic API to load the script if it is not already loaded. This will\nalso cause problems when the plugin is disabled, but other plugins try\nto use it. "
@@ -34,7 +34,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- All the functionality has been rewritten to take advantage of new Vim7\n  features such as Lists. The programmatic API is not backwards compatible.\n- The plugin is now autoloaded, so it will not be (auto)loaded until you execute\n  the first mapping/command. This will help improve the startup time of your Vim\n  session.\n- Misc. bug fixes have been fixed in the ares of |:MSInvert| and |:MSAdd|.\n- The g:multiselTmpMark is no longer required. The plugin now\n  uses getpos() and setpos() to avoid overwriting any user marks.\n- New setting |g:multiselQuickSelAdds|.\n- New commands |:MSMatchAddByDiffHlGroup| and |:MSVMatchAddByDiffHlGroup| to\n  select regions in a |vimdiff| window. "
@@ -50,7 +50,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- New commands MSMatchAddBySynGroup and MSVMatchAddBySynGroup to select\n  lines automatically by their syntax group in a given range. Useful to\n  select all lines in comments (or more specifically perl pod) etc. and\n  do operations such as running a spell check on them.\n- New global function MSAddSelectionsByExpr() for creating new commands\n  such as MSMatchAddBySynGroup and MSMatchAdd by the user.\n"
@@ -66,7 +66,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- MSInvert command now works better."
@@ -82,7 +82,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Full support for mouse in making multiple selections. Works pretty\n  much like in MS word.\n- Improved behavior for MSInvert.\n\nGet the latest multvals.vim and genutils.vim plugins."
@@ -98,7 +98,7 @@
         "user_name": "haridsv",
         "first_name": "Hari Krishna",
         "last_name": "Dara",
-        "email": "hari.vim at gmail.com",
+        "email": "hari.vim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

@@ -1,0 +1,27 @@
+{
+  "script_id": "3366",
+  "display_name": "Shebang",
+  "summary": "Make executable by setting the correct shebang and executable bit",
+  "name": "Shebang",
+  "script_type": "utility",
+  "description": "This script tries to reduce the repetitive work it is to make a file executable. It provides three functions:\n\nSetShebang() which sets the correct shebang (e.g. \"#!/usr/bin/python\"),\nSetExecutableBit() which sets the executable bit, and\nSetExecutable() which calls the two functions above.\n\nThe SetExecutableBit() is simply stolen from http://vim.wikia.com/wiki/Setting_file_attributes_without_reloading_a_buffer . Thanks a lot Max Ischenko!",
+  "install_details": "Put this file in your .vim/plugin folder and map a key to call SetExecutable. For example, in my vimrc, I have\n\nmap <leader>X :call SetExecutable()<CR>",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14496",
+      "filename": "shebang.vim",
+      "script_version": "1.0",
+      "date": "2010-12-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17373",
+        "user_name": "johs",
+        "first_name": "Johannes",
+        "last_name": "Hoff",
+        "email": "johannes@johanneshoff.com",
+        "homepage": "http://johanneshoff.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

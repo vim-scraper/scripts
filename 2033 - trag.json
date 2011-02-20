@@ -18,7 +18,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Moved the definition of some variables from plugin/trag.vim to autoload/trag.vim\n- :TRagcw! (show :cw even if there are no recognized errors)\n- Require tlib 0.37\n"
@@ -34,7 +34,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- trag#QuickList(): Accept a dict as optional argument.\n- trag#Grep(): rx defaults to '\\.{-}'\n- trag#Grep(): use :g (instead of search()) for non-vimgrep mode\n"
@@ -50,7 +50,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- trag#viki#Rename()\n- Generalized trag#rename#Rename()\n- Enabled \"trace cursor\" functionality (mapped to the <c-insert> key).\n- :Traglw\n- TRagGitFiles, trag#SetGitFiles(), g:trag_git"
@@ -66,7 +66,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Update the qfl when running a command on selected lines\n- Enable certain operations for multiple choices\n- Java, Ruby: x ... find subclasses (extends/implements)\n- Experimental rename command for refactoring (general, java)\n- NEW: [bg]:trag_get_files_{&filetype}\n- Traggrep: If the second argument (glob pattern) is missing, the \ndefault file list will be used.\n"
@@ -82,7 +82,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- trag_proj* variables were renamed to trag_project*.\n- Traggrep: Arguments have changed for conformity with grep commands (an implicit .-argument is prepended)\n- Make sure tlib is loaded even if it is installed in a different rtp-directory.\n- Post-process lines (strip whitespace) collected by vimgrep\n- tlib#Edit(): for list input, set pick_last_item=0, show_empty=1\n- Aliases for some commands: Trag, Traggrep ...\n"
@@ -98,7 +98,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Use vimgrep with set ei=all as default search mode (can be configured via g:trag_search_mode); by default trag now is a wrapper around vimgrep that does the handling of project-related file-sets and regexp builing for you.\n- FIX: ruby/f regexp\n"
@@ -114,7 +114,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Quite a few things have changed and I haven't had the time yet to test \nthese changes thorougly. There is a chance that nested patterns thus \ndon't work as described (please report).\n- Enable search for more than one kinds at once (as comma-separated \nlist)\n- Enabled <c-e>: Run ex-command on selected lines (e.g. for refactoring \npurposes)\n- Enabled <c-s>, <c-v>, <c-t>: Open selected lines in (vertically) split \nwindows or tabs.\n- Renamed vV kinds to lL (~ let)\n- New kind: r/R (right hand side argument of an assignment/let, i.e. \nvalue)\n- New kind: fuzzy (typo-tolerant search)\n- INCOMPATIBLE CHANGE: Renamed \"mode\" to \"kind\"\n- TRag now has some idea of negation. E.g., \"TRag !i,w call\" will search \nfor the word \"call\" but ignore matches in comments (if defined for the \n    current filetype)\n- Alternative methods to define project files: g:trag_files, \ng:trag_glob, g:trag_proj.\n- Improved support for ruby, vim\n- TRagKeyword, trag#CWord(): Customize keyword rx.\n- g:trag_get_files\n- [bg]:trag_proj_{&filetype}: Name of the filetype-specific project \nfiles catalog (overrides [bg]:trag_proj if defined)\n- trag#Edit() will now initally select files with the same \"basename \nroot\" (^\\w\\+) as the current buffer (the command is thus slightly more \nuseful and can be used as an ad-hoc alternative file switcher)\n- FIX: Match a line only once\n- FIX: Caching of regexps\n"
@@ -130,7 +130,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

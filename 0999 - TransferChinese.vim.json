@@ -4,8 +4,8 @@
   "summary": "Transfer Chinese to Chinese",
   "name": "TransferChinese.vim",
   "script_type": "utility",
-  "description": "\nTo mimic what gu and gU do for ascii,\nI defined two new maps, gS and gT, to transfer between\nthe simplified Chinese and the traditional Chinese.\n\nFeatures:\n\n(a) \"quick and dirty\" way to transfer Chinese to Chinese\n(b) 20% of efforts for solving 80% of problems\n(c) 2172 Chinese pairs are used for one-to-one map\n(d) cursor position is kept after gS or gT\n(e) [range] for visual mode is supported",
-  "install_details": "      \nThis file should reside in the plugins directory,\nto be automatically sourced. If not, you can manually\nsource this file using ':source TransferChinese.vim'.\n\nUsage:\n\n[range]gS  (transfer from Traditional to Simplified)\n[range]gT  (transfer from Simplified to Traditional)\n\n[range]:ChineseToggle<CR>  (toggle between Chinese, for fun)",
+  "description": "To mimic what gu and gU do for ascii,\nI defined two new maps, gS and gT, to transfer between\nthe simplified Chinese and the traditional Chinese.\n\nFeatures:\n\n(a) \"quick and dirty\" way to transfer Chinese to Chinese\n(b) 20% of efforts for solving 80% of problems\n(c) 2172 Chinese pairs are used for one-to-one map\n(d) cursor position is kept after gS or gT\n(e) [range] for visual mode is supported",
+  "install_details": "      \nThis file should reside in the plugins directory,\nto be automatically sourced. If not, you can manually\nsource this file using ':source TransferChinese.vim'.\n\nUsage:\n\n[range]gS  (transfer from Traditional to Simplified)\n[range]gT  (transfer from Simplified to Traditional)\n\n[range]:ChineseToggle<CR>  (toggle between Chinese, for fun)\n\n\n【安民告示】\nThis tool is obsolete.\nThe same feature can be found in VimIM with less memory consumption.\n\n(1) download:\n    (1.1) http://vimim-data.googlecode.com/svn/trunk/data/vimim.cjk.txt\n    (1.2) http://vimim.googlecode.com/svn/trunk/plugin/vimim.vim\n(2) installation:\n    (2.1) 插上程式文件 vimim.vim\n    (2.2) 插上字库文件 vimim.cjk.txt \n(3) usage:\n    (3.1) 〖简体变繁体〗 :VimIM \n    (3.2) 〖繁体变简体〗 :VimIM ",
   "versions": [
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=3073",
@@ -18,7 +18,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "Initial upload"

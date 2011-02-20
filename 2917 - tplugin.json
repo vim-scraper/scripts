@@ -18,7 +18,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "Please see http://github.com/tomtom/tplugin_vim/commits/master/"
@@ -34,7 +34,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Make helptags of repositories that weren't yet loaded available to the user.\n- Renamed variables: g:tplugin#autoload_exclude, g:tplugin#scan\n- Custom autoload definitions for some 3rd party plugins (PoC)"
@@ -50,7 +50,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Renamed #TPluginInclude to @TPluginInclude\n- Added support for @TPluginMap, @TPluginBefore, @TPluginAfter annotations\n- TPluginMap() restores the proper mode\n- Load after/autoload/* files\n- ..."
@@ -66,7 +66,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Delete commands only when they were defined without a bang; make sure all commands in a file defined without a bang are deleted\n- g:tplugin_scan defaults to 'cfpt'\n- Don't register each autoload function but deduce the repo/plugin from the prefix.\n- g:tplugin_scan defaults to 'cfpta'\n- TPluginCommand and TPluginFunction are functions. Removed the commands with the same name.\n- #TPluginInclude tag\n"
@@ -82,7 +82,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- TPluginScan: try to maintain information about command-line completion (this won't work if a custom script-local completion function is used)\n"
@@ -98,7 +98,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- CHANGE: The root specific autoload files are now called '_tplugin.vim'\n- Provide a poor-man implementation of fnameescape() for users of older versions of vim.\n- If the root name ends with '*', the root is no directory tree but a single directory (actually a plugin repo)\n- s:TPluginComplete(): Hide tplugin autoload files.\n"
@@ -114,7 +114,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Support for ftdetect\n- Support for ftplugins in directories and named {&FT}_{NAME}.vim\n- :TPlugin accepts \"-\" as argument, which means load \"NO PLUGIN\".\n- :TPluginScan: don't use full filenames as arguments for TPluginFiletype()\n- FIX: Concatenation of filetype-related files\n- FIX: Don't add autoload files to the menu.\n- FIX: Don't load any plugins when autoloading an \"autoload function\"\n- FIX: Filetype-related problems\n- FIX: s:ScanLine: Don't create duplicate autoload commands.\n- FIX: s:ScanRoots(): Remove empty entries from filelist\n- g:tplugin_autoload_exclude: Exclude repos from autoloading\n- If g:tplugin_autoload == 2, run |:TPluginScan| after updating tplugin.\n- Moved autoload functions to macros/tplugin.vim -- users have to rescan their repos.\n- Per repo metadata (ROOT/REPO/tplugin.vim)\n- Relaxed the rx for functions\n- Replaced :TPluginMap with a function TPluginMap()\n- Speed up :TPluginScan (s:ScanRoots(): run glob() only once, filter file contents before passing it to s:ScanSource())\n- TPluginMap(): Don't map keys if the key already is mapped (via maparg())\n"
@@ -130,7 +130,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- TPluginBefore, TPluginAfter commands to define inter-repo dependencies\n- Support for autoloading filetypes\n- Support for autoloading <plug> maps\n- Build helptags during :TPluginScan (i.e. support for helptags requires \nautoload to be enabled) - Call delcommand before autoloading a plugin because of an unknown command\n- TPluginScan: Take a root directory as the second optional argument\n- The autoload file was renamed to ROOT/tplugin.vim\n- When adding a repository to &rtp, ROOT/tplugin_REPO.vim is loaded\n"
@@ -146,7 +146,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Experimental autoload for commands and functions (à la AsNeeded)\n- Improved command-line completion for :TPlugin\n- The after path is inserted at the second to last position\n- When autoload is enabled and g:tplugin_menu_prefix is not empty, build a menu with available plugins (NOTE: this is disabled by default)\n"
@@ -162,7 +162,7 @@
         "user_name": "t.link",
         "first_name": "Tom",
         "last_name": "Link",
-        "email": "micathom at gmail.com",
+        "email": "micathom@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

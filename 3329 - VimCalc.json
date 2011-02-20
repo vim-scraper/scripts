@@ -5,8 +5,24 @@
   "name": "VimCalc",
   "script_type": "utility",
   "description": "VimCalc provides a convenient way to access a powerful interactive calculator whilst inside a Vim session. Quickly rattle off a few sums to test an idea. Perform complex calculations using built-in functions to validate answers. Quickly and simply convert from octal to hex to decimal and back again. Setup a bunch of variables to be used in a complex expression. Change variables easily and then simply re-evaluate the expression. Whatever you may need a calculator for, VimCalc is up to the task.\n\nNot only can VimCalc calculate but it uses Vim for input and editing. Quickly and easily perform edits on previous calculations using the power of Vim and then re-evaluate them by simply hitting return. Once you've got the answers yank them into several registers and paste with ease into other buffers. All whilst never leaving your Vim editing session!\n\nSee VimCalc's homepage for screenshots. http://gregsexton.github.com/VimCalc/\n\nHere are some example expressions run in a VimCalc session:\n\n> 5+4\nans = 9.0\n> let x = 4\nx = 4.0\n> 9 * sqrt(4)\nans = 18.0\n> 9**2 - (sqrt(4)+2)\nans = 77.0\n> 0xff + 2\nans = 257.0\n\nHere is an example of calculating the roots of a quadratic equation:\n\n> let a = 2\na = 2.0\n> let b = -1\nb = -1.0\n> let c = -6\nc = -6.0\n> ((b*-1) + sqrt(b**2 - 4*a*c))/(2*a)\nans = 2.0\n> ((b*-1) - sqrt(b**2 - 4*a*c))/(2*a)\nans = -1.5",
-  "install_details": "Requirements\n\nVim 7.0+ with +python.\nPython installed.\n\nIf you're compiling Vim from source, be sure to use the --enable-pythoninterp option. Otherwise check your OS's package distro for a version of Vim with Python support. On OS X the best option is MacVim. VimCalc should work on Windows too, you will need to install the correct python dll for the version of Vim you are using. Please see the web for help with this.\n\nInstallation\n\nDownload the latest source from https://github.com/gregsexton/VimCalc.\n\nExtract (or copy) all of the files into your Vim runtime directory, ensuring that they are placed into the correct subdirectories. Then update your help tags file to enable VimCalc help. See :help add-local-help in Vim for details.",
+  "install_details": "Requirements\n\nVim 7.0+ with +python.\nPython installed.\n\nIf you're compiling Vim from source, be sure to use the --enable-pythoninterp option. Otherwise check your OS's package distro for a version of Vim with Python support. On OS X the best option is MacVim. VimCalc should work on Windows too, you will need to install the correct python dll for the version of Vim you are using. Please see the web for help with this.\n\nInstallation\n\nDownload the latest source from https://github.com/gregsexton/VimCalc.\n\nExtract (or copy) all of the files into your Vim runtime directory, ensuring that they are placed into the correct subdirectories. Then update your help tags file to enable VimCalc help. See :help add-local-help in Vim for details.\n\nIf you like and find VimCalc useful be sure to vote for this script! ",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15044",
+      "filename": "vimcalc-1.1.zip",
+      "script_version": "v1.1",
+      "date": "2011-02-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23036",
+        "user_name": "gregsexton",
+        "first_name": "Greg",
+        "last_name": "Sexton",
+        "email": "gregsexton@gmail.com",
+        "homepage": "http://www.gregsexton.org"
+      },
+      "release_notes": "Added extra configuration options to allow for initial window positioning. Also for entering the buffer in insert mode and leaving the buffer using <C-W> commands whilst in insert mode.\n"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14275",
       "filename": "vimcalc.zip",
@@ -18,8 +34,8 @@
         "user_name": "gregsexton",
         "first_name": "Greg",
         "last_name": "Sexton",
-        "email": "gregsexton at gmail.com",
-        "homepage": ""
+        "email": "gregsexton@gmail.com",
+        "homepage": "http://www.gregsexton.org"
       },
       "release_notes": "Initial upload"
     }

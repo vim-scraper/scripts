@@ -18,7 +18,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Fixed a bug that unloaded buffers weren't covered by FufBufferTagAll."
@@ -34,7 +34,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Improved response of Buffer-Tag mode.\n- Fixed a bug that buffers which had been opened weren't listed in\n  Coverage-File mode\n- Fixed a bug that tag entries including tab characters weren't parsed\n  correctly in Coverage-File mode\n"
@@ -50,7 +50,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- L9 library (vimscript #3252) version 1.1 is required.\n- Added Buffer-Tag mode, inspired by taglist.vim (vimscript #273).\n- Added :FufMruFileInCwd command.\n"
@@ -66,7 +66,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Fixed a bug causing a error in MRU-File mode."
@@ -82,7 +82,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added Bookmark-Dir mode.\n- Added Bookmark-File mode and removed Bookmark mode.\n- Changed the filename to store data of Coverage-File mode, from\n  '~/.vim-fuf-data/coveragefile/items' to\n  '~/.vim-fuf-data/coveragefile/coverages' .\n- Fixed a bug that floating point numbers weren't evaluated correctly and\n  caused errors on some non-English locales.\n- Removed Around-MRU-File mode and integrated its feature to MRU-File mode.\n"
@@ -98,7 +98,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- From this version, L9 library (vimscript #3252) is required.\n- Added Coverage-File mode for users wanting something like TextMate's\n  command-t. (But I've never used it.)\n- Added Around-MRU-File mode. (Too slow. There is room for improvement.)\n- Added new feature which deletes selected buffer with FuzzyFinder and\n  g:fuf_buffer_keyDelete option.\n- Added new feature which allows to set one-time options/variables with\n  fuf#setOneTimeVariables() function.\n- Added g:fuf_dataDir option and removed g:fuf_infoFile,\n  g:g:fuf_tag_cache_dir, g:fuf_taggedfile_cache_dir, and\n  g:fuf_help_cache_dir options.\n- Added :FufEditDataFile command and removed :FufEditInfo command.\n- Added g:fuf_fuzzyRefining option.\n- Added new feature which is auto-preview and g:fuf_autoPreview option.\n- Changed the default value of g:fuf_previewHeight to 0 in order to disable\n  preview feature. There is an unfixable problem which is caused by a Vim's\n  bug.\n- Changed the default value of g:fuf_modesDisable option.\n- Changed the default value of g:fuf_*_switchOrder options.\n- Improved speed of changing buffers.\n- Improved the way to add user-defined mode.\n- Fixed a bug that FuzzyFinder caused reseting window layout.\n- Removed g:fuf_smartBs option. Use <C-w> instead.\n"
@@ -114,7 +114,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "  - Added Line mode.\n  - Added Help mode.\n  - Added key mapping to switch between fuzzy matching and partial matching.\n  - Changed the default values of g:fuf_file_exclude for ignoring \"*.dll\".\n  - Changed Tag mode and Tagged-File mode to cache parsed data to files in \"~/.vim-fuf-cache/\".\n  - Fixed a bug that repeating preview key produced no effect.\n  - Fixed a bug that File mode and Directory mode didn't list items in a directory whose name includes uppercase characters. (Thanks, ryo7000)\n"
@@ -130,7 +130,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added new feature which makes it possible to preview selected completion item.\n- Changed matching rules and added g:fuf_splitPathMatching.\n- Changed sorting rules.\n- Changed the default values of g:fuf_file_exclude and g:fuf_dir_exclude in order to ignore \".hg\", \".git\", and \".bzr\" directories.\n- Changed the default value of g:fuf_mrufile_exclude in order to ignore network files (\\\\*) on Windows and ignore /mnt/* and /media/* on Unix like systems.\n- Fixed a bug that an exclude pattern of File, Dir, and Callback-File mode can't be changed.\n"
@@ -146,7 +146,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added Jump-List mode, Change-List mode, and Quickfix mode which enable\n  jumps with jump list, change list, and quickfix list.\n- Added new feature which deletes selected bookmark with FuzzyFinder and\n  g:fuf_bookmark_keyDelete option.\n- Changed default values of g:fuf_keyPrevPattern.\n- Changed to show error message when incompatible with a installed vim.\n"
@@ -162,7 +162,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added g:fuf_promptHighlight option to integrate such options for each\n  mode.\n- Changed APIs of Given-File, Given-Directory, Given-Command, Callback-File,\n  and Callback-Item modes to be able to set a prompt string.\n- Changed default values of g:fuf_keyPrevPattern and g:fuf_keyNextPattern.\n- Fixed a bug that MRU-File data was not updated When a file was opened with\n  FuzzyFinder.\n- Fixed a bug with scoring matchings for sorting. Thanks to Vincent.\n- Brought back the removed feature which is switching to an other mode in\n  FuzzyFinder.\n"
@@ -178,7 +178,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added new feature to recall patterns which have been entered before from\n  history.\n"
@@ -194,7 +194,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Redesigned the whole plugin for improvements of maintainability and\n  performance. \"fuzzyfinder\" is abbreviated to \"fuf\" in the sorce code and\n  filenames. All commands and options are renamed.\n- Added new feature which is refining pattern.\n- Improved the rules for sorting completion items. Thanks to the suggestion\n  by Nathan, the rule for boundary matching was implemented.\n- Changed to open one line buffer of FuzzyFinder with :topleft command\n  instead of :leftabove. The window will alway appear at the top and occupy\n  the full with of the vim window. Thanks to Jan Christoph.\n- Changed default filename of information file.\n- Changed MRU-File mode and MRU-Command mode to be disabled by default\n  due to performance and side effect issues.\n- Removed the feature which is switching to an other mode in FuzzyFinder.\n- Removed the feature which is temporarily switching 'ignorecase' in\n  FuzzyFinder.\n"
@@ -210,7 +210,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Fixed a bug that Fuzzyfinder could not open files with '$' in the name on\n  Windows."
@@ -226,7 +226,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Changed to consider a length of a date/time string when abbreviates long\n  completion items.\n- Fixed a bug that '**/' pattern did not search for files directly under the\n  current working directory in File mode. Thanks to Martin for reporting.\n"
@@ -242,7 +242,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Fixed a bug that Fuzzyfinder could not expand abbreviations to patterns\n  including '&#039 correctly.\n- Fixed to show item number in Given-File, Given-Directory, and\n  Given-Command mode.\n"
@@ -258,7 +258,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- More improved the abbreviation method for long completion items.\n- Added Given-File mode for third-party script to select a file from a given\n  list and open.\n- Added Given-Directory mode for third-party script to select a directory\n  from a given list and change current working directory to it.\n- Added Given-Command mode for third-party script to select a command from a\n  given list and execute.\n- Changed ways to launch Callback-File mode and Callback-item mode.\n"
@@ -274,7 +274,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Improved a method of trimming long completion items. Thanks to Andy,\n  pyrhockz, and Nathan.\n- Changed not to map command-line <CR> for MRU-Command mode if\n  g:FuzzyFinderOptions.MruCmd.mode_available is set 0 before loading\n  fuzzyfinder.vim.\n- Added Callback-File mode and Callback-Item mode for third-party script to\n  find a file/directory or an item from a given list using Fuzzyfinder.\n- Changed not to append \"..\" to a completion menu in File/Directory mode.\n  Use dot sequence feature.\n- Changed default value of g:FuzzyFinderOptions.File.excluded_path option.\n- Changed default value of g:FuzzyFinderOptions.Dir.excluded_path option.\n- Fixed a bug that couldn't jump to a tag. Thanks to Thinca.\n"
@@ -290,7 +290,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added help files which are doc/fuzzyfinder.txt and doc/fuzzyfinder.jax.\n- Fixed a bug that an error occurs if current directory included spaces.\n  Thanks id:cho45 and id:secondlife.\n- Implemented a feature to reuse a window containing target buffer.\n- Added g:FuzzyFinderOptions.Buffer.reuse_window option.\n- Added g:FuzzyFinderOptions.File.reuse_window option.\n- Added g:FuzzyFinderOptions.MruFile.reuse_window option.\n- Added g:FuzzyFinderOptions.Bookmark.reuse_window option.\n- Added g:FuzzyFinderOptions.TaggedFile.reuse_window option.\n- Changed to use 'omnifunc' instead of 'completefunc'. Now you can use <C-u>\n  to delete all entered characters.\n- Changed default value of g:FuzzyFinderOptions.Base.key_open_tab option.\n- Changed default value of g:FuzzyFinderOptions.Base.key_next_mode option.\n- Changed default value of g:FuzzyFinderOptions.Base.key_prev_mode option.\n- Changed default value of g:FuzzyFinderOptions.Base.key_ignore_case option.\n- Changed to truncate long completion items from the head instead of tail.\n- Added g:FuzzyFinderOptions.Base.max_menu_width option instead of\n  g:FuzzyFinderOptions.Base.trim_length option.\n- Added :FuzzyFinderFileWithFullCwd command.\n- Added :FuzzyFinderFileWithCurrentBufferDir command.\n- Added :FuzzyFinderDirWithFullCwd command.\n- Added :FuzzyFinderDirWithCurrentBufferDir command.\n- Added :FuzzyFinderTagWithCursorWord command.\n- Renamed :FuzzyFinderRemoveCache command to :FuzzyFinderRenewCache.\n"
@@ -306,7 +306,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Changed MRU-File mode that always formats completion items to be\n  relative to the home directory.\n- Fixed a bug that a file was opened in an unintended window with Tag\n  List plugin. Thanks Alexey.\n- Fixed a bug that garbage characters were entered when switched current\n  mode. Thanks id:lugecy.\n"
@@ -322,7 +322,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Improved rules for the sorting of completion items.\n- Changed not to learn a completion if an entered pattern is empty.\n- Fixed a bug that Buffer mode did not work. Thanks ryo7000.\n"
@@ -338,7 +338,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Introduced a learning system for the sorting of completion items.\n- Added g:FuzzyFinderOptions.Base.learning_limit option.\n- Changed the specification of the information file. Please remove your\n  information file for Fuzzyfinder.\n"
@@ -354,7 +354,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Improved response time by caching in MRU-File mode.\n- Fixed a bug in Bookmark mode that Fuzzyfinder did not jump to the\n  Bookmarked line number when Bookmarked pattern was not found.\n"
@@ -370,7 +370,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added Bookmark mode.\n- Removed Favorite-file mode. Use Bookmark mode instead.\n- Fixed not to record a entry of input() in MRU-Command mode.\n"
@@ -386,7 +386,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Changed to show buffer status in Buffer mode.\n- Fixed a bug that an error occurs when nonexistent buffer-name was\n  entered in Buffer mode. Thanks Maxim Kim.\n- Added 'enumerating_limit' option. Thanks id:secondlife.\n- Removed 'matching_limit' option. Use 'enumerating_limit' instead.\n"
@@ -402,7 +402,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Fixed a bug that a directory disappeared when a file in that directroy\n  was being opened in File/Mru-File mode.\n"
@@ -418,7 +418,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Changed to be able to show completion items in the order of recently\n  used in Buffer mode.\n- Added g:FuzzyFinderOptions.Buffer.mru_order option.\n"
@@ -434,7 +434,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Changed that a dot sequence of entered pattern is expanded to parent\n  directroies in File/Dir mode.\n  E.g.: \"foo/...bar\" -> \"foo/../../bar\"\n- Fixed a bug that a prompt string was excessively inserted.\n"
@@ -450,7 +450,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Changed not to show a current buffer in a completion menu.\n- Fixed a bug that a filename to open was not been escaped.\n- Added 'prompt' option.\n- Added 'prompt_highlight' option.\n- Removed g:FuzzyFinderOptions.MruFile.no_special_buffer option.\n"
@@ -466,7 +466,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Enhanced <BS> behavior in Fuzzyfinder and added 'smart_bs' option.\n- Fixed a bug that entered pattern was not been escaped.\n- Fixed not to insert \"zv\" with \"c/pattern<CR>\" command in Normal mode\n- Avoid the slow down problem caused by filereadable() check for the MRU\n  information in BufEnter/BufWritePost.\n"
@@ -482,7 +482,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Fixed a bug caused by the non-escaped buffer name \"[Fuzzyfinder]\".\n- Fixed a command to open in a new tab page in Buffer mode.\n"
@@ -498,7 +498,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added 'trim_length' option.\n- Added 'switch_order' option.\n- Fixed a bug that entered command did not become the newest in the\n  history.\n- Fixed a bug that folds could not open with <CR> in a command-line when\n  searching.\n- Removed 'excluded_indicator' option. Now a completion list in Buffer\n  mode is the same as a result of :buffers.\n"
@@ -514,7 +514,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Changed to find an item whose index is matched with the number\n  suffixed with entered pattern.\n- Fixed the cache bug after changing current directroy in File mode.\n"
@@ -530,7 +530,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Fixed not to miss changes in options when updates the MRU information."
@@ -546,7 +546,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Fixed a bug related to floating-point support.\n- Added support for GetLatestVimScripts.\n"
@@ -562,7 +562,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Revived MRU-command mode. The problem with a command-line abbreviation\n  was solved.\n- Changed the specification of the information file.\n- Added :FuzzyFinderEditInfo command.\n"
@@ -578,7 +578,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Fixed to be able to match \"foo/./bar\" by \"foo/**/bar\" in File mode.\n- Fixed to be able to open a space-containing file in File mode.\n- Fixed to honor the current working directory properly in File mode.\n"
@@ -594,7 +594,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Fixed the bug that a wrong initial text is entered after switching to a\n  next mode.\n- Fixed the bug that it does not return to previous window after leaving\n  Fuzzyfinder one.\n"
@@ -610,7 +610,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Fixed the bug that Fuzzyfinder fails to open a file caused by auto-cd\n  plugin/script.\n"
@@ -626,7 +626,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added a key mapping to open items in a new tab page and\n  g:FuzzyFinderOptions.Base.key_open_tab opton.\n- Changed to show Fuzzyfinder window above last window even if\n  'splitbelow' was set.\n- Changed to set nocursorline and nocursorcolumn in Fuzzyfinder.\n- Fixed not to push up a buffer number unlimitedly.\n"
@@ -642,7 +642,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added new feature, which is the partial matching.\n- Fixed the bug that an error occurs when \"'\" was entered.\n"
@@ -658,7 +658,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Restructured the option system AGAIN. Sorry :p\n- Changed to inherit a typed text when switching a mode without leaving\n  a insert mode.\n- Changed commands which launch explorers to be able to take a argument\n  for initial text.\n- Changed to complete file names by relative path and not full path in\n  the buffer/mru-file/tagged-file mode.\n- Changed to highlight a typed text when the completion item was not\n  found or the completion process was aborted.\n- Changed to create caches for each tag file and not working directory\n  in the tag/tagged-file mode.\n- Fixed the bug that the buffer mode couldn't open a unnamed buffer.\n- Added 'matching_limit' option.\n- Removed 'max_match' option. Use 'matching_limit' option instead.\n- Removed 'initial_text' option. Use command argument instead.\n- Removed the MRU-command mode.\n"
@@ -674,7 +674,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added the tag mode.\n- Added the tagged-file mode.\n- Added :FuzzyFinderRemoveCache command.\n- Restructured the option system. many options are changed names or\n  default values of some options.\n- Changed to hold and reuse caches of completion lists by default.\n- Changed to set filetype 'fuzzyfinder'.\n- Disabled the MRU-command mode by default because there are problems.\n- Removed FuzzyFinderAddMode command."
@@ -690,7 +690,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added the directory mode.\n- Fixed the bug that it caused an error when switch a mode in the\n  insert mode.\n- Changed g:FuzzyFinder_KeySwitchMode type to a list.\n"
@@ -706,7 +706,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Changed the specification of the information file.\n- Added the MRU-commands mode.\n- Renamed :FuzzyFinderAddFavorite command to :FuzzyFinderAddFavFile.\n- Renamed g:FuzzyFinder_MruModeVars option to\n  g:FuzzyFinder_MruFileModeVars.\n- Renamed g:FuzzyFinder_FavoriteModeVars option to\n  g:FuzzyFinder_FavFileModeVars.\n- Changed to show registered time of each item in MRU/favorite mode.\n- Added 'timeFormat' option for MRU/favorite modes. "
@@ -722,7 +722,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Fixed a handling of multi-byte characters."
@@ -738,7 +738,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added support for Migemo. (Migemo is Japanese search method.)\n"
@@ -754,7 +754,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added the favorite mode.\n- Added new features, which are abbreviations and multiple search.\n- Added 'abbrevMap' option for each mode.\n- Added g:FuzzyFinder_MruModeVars['ignoreSpecialBuffers'] option.\n- Fixed the bug that it did not work correctly when a user have mapped\n  <C-p> or <Down>.\n"
@@ -770,7 +770,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added the MRU mode.\n- Added commands to add and use original mode.\n- Improved the sorting algorithm for completion items.\n- Added 'initialInput' option to automatically insert a text at the\n  beginning of a mode.\n- Changed that 'excludedPath' option works for the entire path.\n- Renamed some options. \n- Changed default values of some options. \n- Packed the mode-specific options to dictionaries.\n- Removed some options.\n"
@@ -786,7 +786,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Fixed some bugs."
@@ -802,7 +802,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Improved response by aborting processing too many items.\n- Changed to be able to open a buffer/file not only in previous\n  window but also in new window.\n- Fixed a bug that recursive searching with '**' does not work.\n- Added g:FuzzyFinder_CompletionItemLimit option.\n- Added g:FuzzyFinder_KeyOpen option.\n"
@@ -818,7 +818,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Improved response of the input.\n- Improved the sorting algorithm for completion items. It is based\n  on the matching level. 1st is perfect matching, 2nd is prefix\n  matching, and 3rd is fuzzy matching.\n- Added g:FuzzyFinder_ExcludePattern option.\n- Removed g:FuzzyFinder_WildIgnore option.\n- Removed g:FuzzyFinder_EchoPattern option.\n- Removed g:FuzzyFinder_PathSeparator option.\n- Changed the default value of g:FuzzyFinder_MinLengthFile from 1 to\n  0.\n"
@@ -834,7 +834,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "- Added g:FuzzyFinder_IgnoreCase option.\n- Added g:FuzzyFinder_KeyToggleIgnoreCase option.\n- Added g:FuzzyFinder_EchoPattern option.\n- Changed the open command in a buffer mode from \":edit\" to\n\":buffer\" to avoid being reset cursor position.\n- Changed the default value of g:FuzzyFinder_KeyToggleMode from\n<C-Space> to <F12> because <C-Space> does not work on some CUI\nenvironments.\n- Changed to avoid being loaded by Vim before 7.0.\n- Fixed a bug with making a fuzzy pattern which has '&#039.\n"
@@ -850,7 +850,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "A bug it does not work on Linux is fixed."
@@ -866,7 +866,7 @@
         "user_name": "isskr",
         "first_name": "Takeshi",
         "last_name": "NISHIDA",
-        "email": "ns9tks at DELETE-ME.gmail.com",
+        "email": "ns9tks@DELETE-ME.gmail.com",
         "homepage": "http://bitbucket.org/ns9tks/"
       },
       "release_notes": "Initial upload"

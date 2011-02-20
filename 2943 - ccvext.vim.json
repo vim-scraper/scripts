@@ -4,9 +4,57 @@
   "summary": "more convenice way to use ctags and cscope in vim",
   "name": "ccvext.vim",
   "script_type": "ftplugin",
-  "description": "This is a new version from JumpInCode.vim I don't know why i can't upload a new version to the old JumpInCode page (http://www.vim.org/scripts/script.php?script_id=2770)? So I start this branch\n\n\\\"EN\\\"\nctags and cscope plugin, more convenice way to use ctags and cscope in vim\n\nCommand:\n\\sy   Generate tags and cscope database from current directory\n\\sc   Configure window (Take care of the help info the window below)\n                  \nRequirement:\nUnix:   ctags and cscope\nWin32: ctags.exe and cscope.exe  (win32 ctags and cscope could download from:http://code.google.com/p/easy-vim/downloads/list)\n\n\\\"中文  ZH\\\"\n自动生成并使用ctags和cscope\n\n命令：\n\\sy   从当前目录生成tags和cscope.out\n\\sc   配置窗口 (注意配置窗口底部的帮助信息)\n\n系统要求：\n预安装要求ctags和cscope:\nUnix:    ctags and cscope\nWin32: ctags and cscope  （win32版的ctags和cscope下载地址：http://code.google.com/p/easy-vim/downloads/list&#65289;\n",
+  "description": "This is a new version from JumpInCode.vim I don't know why i can't upload a new version to the old JumpInCode page (http://www.vim.org/scripts/script.php?script_id=2770)? So I start this branch\n\n\\\"EN\\\"\nctags and cscope plugin, more convenice way to use ctags and cscope in vim\n\nCommand:\n\\sy   Generate tags and cscope database from current directory\n\\sc   Configure window (Take care of the help info the window below)\n\n:VTStart  Start virtual tags (a better way to use ctgas)\n:VTStop  Stop virtual tags\n                  \nRequirement:\nUnix:   ctags and cscope\nWin32: ctags.exe and cscope.exe  (win32 ctags and cscope could download from:http://code.google.com/p/easy-vim/downloads/list)\n\n\\\"中文  ZH\\\"\n自动生成并使用ctags和cscope\n\n命令：\n\\sy   从当前目录生成tags和cscope.out\n\\sc   配置窗口 (注意配置窗口底部的帮助信息)\n\n系统要求：\n预安装要求ctags和cscope:\nUnix:    ctags and cscope\nWin32: ctags and cscope  （win32版的ctags和cscope下载地址：http://code.google.com/p/easy-vim/downloads/list&#65289;\n",
   "install_details": "Copy ccvext.vim to  ~/.vim/plugin/",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14606",
+      "filename": "ccvext.vim",
+      "script_version": "3.0.2",
+      "date": "2010-12-23",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16499",
+        "user_name": "zuopeng",
+        "first_name": "zuopeng",
+        "last_name": "chen",
+        "email": "chenzuopeng@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Update comments"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14540",
+      "filename": "ccvext.vim",
+      "script_version": "3.01",
+      "date": "2010-12-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16499",
+        "user_name": "zuopeng",
+        "first_name": "zuopeng",
+        "last_name": "chen",
+        "email": "chenzuopeng@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "fix bug about VTClose command."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14539",
+      "filename": "ccvext.vim",
+      "script_version": "3.0",
+      "date": "2010-12-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16499",
+        "user_name": "zuopeng",
+        "first_name": "zuopeng",
+        "last_name": "chen",
+        "email": "chenzuopeng@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix bugs:\n   - Open and close config (<Leader>sc) window vim not focuses the old window \n         when multi windows are opened.\n    - Fix a bug about the tips.\n\nAdd new feature\n   - Virtual tag is support, a better way to use ctags. CTRL_] is over writen.\n"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12248",
       "filename": "ccvext.vim",
@@ -18,8 +66,8 @@
         "user_name": "zuopeng",
         "first_name": "zuopeng",
         "last_name": "chen",
-        "email": "rlxtime.com at gmail.com",
-        "homepage": "http://www.rlxtime.com"
+        "email": "chenzuopeng@gmail.com",
+        "homepage": ""
       },
       "release_notes": "support windows gvim"
     },
@@ -34,8 +82,8 @@
         "user_name": "zuopeng",
         "first_name": "zuopeng",
         "last_name": "chen",
-        "email": "rlxtime.com at gmail.com",
-        "homepage": "http://www.rlxtime.com"
+        "email": "chenzuopeng@gmail.com",
+        "homepage": ""
       },
       "release_notes": "bug fix: Thanks Michael Zhu"
     },
@@ -50,8 +98,8 @@
         "user_name": "zuopeng",
         "first_name": "zuopeng",
         "last_name": "chen",
-        "email": "rlxtime.com at gmail.com",
-        "homepage": "http://www.rlxtime.com"
+        "email": "chenzuopeng@gmail.com",
+        "homepage": ""
       },
       "release_notes": "bug fix:multi-scope.out added, remove failed "
     },
@@ -66,8 +114,8 @@
         "user_name": "zuopeng",
         "first_name": "zuopeng",
         "last_name": "chen",
-        "email": "rlxtime.com at gmail.com",
-        "homepage": "http://www.rlxtime.com"
+        "email": "chenzuopeng@gmail.com",
+        "homepage": ""
       },
       "release_notes": "Initial upload"
     }

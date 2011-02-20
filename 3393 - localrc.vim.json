@@ -1,0 +1,43 @@
+{
+  "script_id": "3393",
+  "display_name": "localrc.vim",
+  "summary": "Enable configuration file of each directory.",
+  "name": "localrc.vim",
+  "script_type": "utility",
+  "description": "You can put a configuration file for the files below the certain directory.\n\nThe configuration file is a Vim script of a decided file name like .vimrc.\nThe file name is specified by |g:localrc_filename|.\n\nConfiguration file applied only to a specific filetype can be put.  The file\nname is specified by |g:localrc_filetype|.\n\nWhen two or more configuration files exist, it is sequentially loaded from a\nshallow hierarchy.\nFor example:\n\t~/\n\t|- .local.vimrc\t\t(1)\n\t`- project/\n\t   |- .local.vimrc\t(2)\n\t   `- src/\n\t      |- .local.vimrc\t(3)\n\t      `- main.c\nIn this case, when main.c is loaded, the configuration files are loaded in order\nof the number.\n\nLatest Version:\nhttps://github.com/thinca/vim-localrc",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14858",
+      "filename": "vim-localrc-0.1.2.zip",
+      "script_version": "0.1.2",
+      "date": "2011-01-25",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18219",
+        "user_name": "thinca",
+        "first_name": "thinca",
+        "last_name": " ",
+        "email": "thinca+vim@gmail.com",
+        "homepage": "http://d.hatena.ne.jp/thinca/"
+      },
+      "release_notes": "- Improved the default value of |g:localrc_filetype|.\n- Use \"%\" instead of \"<afile>\"."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14702",
+      "filename": "vim-localrc-0.1.0.zip",
+      "script_version": "0.1.0",
+      "date": "2011-01-07",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18219",
+        "user_name": "thinca",
+        "first_name": "thinca",
+        "last_name": " ",
+        "email": "thinca+vim@gmail.com",
+        "homepage": "http://d.hatena.ne.jp/thinca/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

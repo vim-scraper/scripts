@@ -8,6 +8,22 @@
   "install_details": "Just source the file in whenever you wish to observe an approximation of what the ansi-escape sequenced file will look like.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14498",
+      "filename": "AnsiEsc.vba.gz",
+      "script_version": "12",
+      "date": "2010-12-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip@campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "* changed conc -> cole for vim 7.3's built-in conceal mode\n* included some additional escape sequences"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13236",
       "filename": "AnsiEsc.vba.gz",
       "script_version": "11",
@@ -18,7 +34,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "supports several escape sequences such as <esc>[m , <esc>[2J, and <esc>[H."
@@ -34,7 +50,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "AnsiEsc has 1 and 2 Ansi escape code sequences supported by fixed syntax highlighting rules; it now also builds custom syntax highlighting to support 3 and 4 Ansi Escape code sequences based on your current document.  So  \\e[48;5;16m will now cause correct highlighting to follow, for example.\n"
@@ -50,7 +66,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "* AnsiEsc comes in plugin + autoload format: faster vim startup, and AnsiEsc only when you want it.\n* Now provides a :AnsiEsc command totoggle ANSI escape sequence processing.\n\nWorks with Vince Negri's conceal patch (if your vim supports VN's conceal, then the ansi-escape sequences are suppressed except on the line you're editing)."
@@ -66,7 +82,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "Uses vim7.0's undercurl as a substitute for blinking (which Vim doesn't support), contains a small helpfile, and contains directions for getting Vince Negri's conceal patch for vim 7.0."
@@ -82,7 +98,7 @@
         "user_name": "cec",
         "first_name": "Charles",
         "last_name": "Campbell",
-        "email": "drchip at campbellfamily.biz",
+        "email": "drchip@campbellfamily.biz",
         "homepage": "http://mysite.verizon.net/astronaut/index.html"
       },
       "release_notes": "I mistakenly removed AnsiEsc v2 (which is the version which doesn't use Vince Negri's conceal).  This update restores it!\n"

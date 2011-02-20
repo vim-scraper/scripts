@@ -8,6 +8,22 @@
   "install_details": "Edit the vba file in vim and source it with \":so %\".\nTo use background compilation, try <Leader>ll\nTo use omni completion, try <CTRL-X><CTRL-O>\n\nProject Page: https://launchpad.net/vim-latex-box\nBug Tracker: https://bugs.launchpad.net/vim-latex-box/",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14972",
+      "filename": "LatexBox.vba",
+      "script_version": "0.9.4",
+      "date": "2011-02-07",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "20037",
+        "user_name": "mungerd",
+        "first_name": "David",
+        "last_name": "Munger",
+        "email": "mungerd@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "bug fixes"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13673",
       "filename": "LatexBox.vba",
       "script_version": "0.9.3",
@@ -18,7 +34,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "fix TOC bug for unnumbered sections"
@@ -34,7 +50,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "fix TOC bug with amsart"
@@ -50,7 +66,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "Plenty of minor bug fixes."
@@ -66,7 +82,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "- add highlight matching pairs\n- improve pair matching"
@@ -82,7 +98,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added the indent file that was missing in previous versions. I forgot to add it to the vimball in the previous versions."
@@ -98,7 +114,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "- New g:LatexBox_split_width setting\n- Add matching for '$' pairs\n- Add inline math objects"
@@ -114,7 +130,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Load errors automatically when latexmk exits with nonzero status\n- Fixed a stupid bug that would prevent in bibtex completion"
@@ -130,7 +146,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Optimized smart indentation for speed"
@@ -146,7 +162,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Fixed bug in % matching.\n- Support for environment objects (e.g., select with \"vie\" or \"vae\")"
@@ -162,7 +178,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "- Smart indentation \n- Navigation through \\begin/\\end and \\left/\\right pairs with % \n- Change environment, including \\[ \\] \n- Kill all latexmk instances when vim quits \n- Speed optimization \n- Do not complete closing bracket if already present \n- Support \\left/\\right in close last environment"
@@ -178,7 +194,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "minor bug fixes\nfixes by Marcin Szamotulski\ndeprecated templates\nnew mappings <Plug>CloseLastEnv and <Plug>WrapSelection"
@@ -194,7 +210,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added :LatexmkStop command to stop latexmk (thanks to Charlie Tanksley for Mac testing). \nBug fix in the TOC by Marcin Szamotulski. \nNew :LatexmkStatusDetailed command to show process group ID's of running instances of latexmk. \nNew g:LatexBox_cite_pattern and g:LatexBox_ref_pattern options."
@@ -210,7 +226,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed a bug in \\ref completion."
@@ -226,7 +242,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed a bug in brace/bracket motion"
@@ -242,7 +258,7 @@
         "user_name": "mungerd",
         "first_name": "David",
         "last_name": "Munger",
-        "email": "mungerd at gmail.com",
+        "email": "mungerd@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed a but in the TOC."

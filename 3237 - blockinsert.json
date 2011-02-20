@@ -18,7 +18,7 @@
         "user_name": "Mitko",
         "first_name": "Dimitar",
         "last_name": "Dimitrov",
-        "email": "mitkofr at yahoo.fr",
+        "email": "mitkofr@yahoo.fr",
         "homepage": ""
       },
       "release_notes": "A single line is a valid range now"
@@ -34,7 +34,7 @@
         "user_name": "Mitko",
         "first_name": "Dimitar",
         "last_name": "Dimitrov",
-        "email": "mitkofr at yahoo.fr",
+        "email": "mitkofr@yahoo.fr",
         "homepage": ""
       },
       "release_notes": "Deletion:\n    made it work correctly in visual block mode\n    repeating it doesn't require to re-enter empty text anymore\n\nImproved interactive messages\n\nAdded support for right to left editing\n\nDefined g:blockinsert_commands and used it to disable blockinsert commands by\ndefault\n\nWhen repeating actions performed on a visual block selection, blank portions of\ntext in the new area will be correctly skipped.\n\nCorrected the virtualedit mess. Still need to disable it though.\nRenamed the commands to begin with Block... & created Block[Q]BothSame.\nUpdated the help file."
@@ -50,7 +50,7 @@
         "user_name": "Mitko",
         "first_name": "Dimitar",
         "last_name": "Dimitrov",
-        "email": "mitkofr at yahoo.fr",
+        "email": "mitkofr@yahoo.fr",
         "homepage": ""
       },
       "release_notes": "The mappings can now operate on a visual block area defined anywhere.\nThe . (dot) is able to repeat that action now."
@@ -66,7 +66,7 @@
         "user_name": "Mitko",
         "first_name": "Dimitar",
         "last_name": "Dimitrov",
-        "email": "mitkofr at yahoo.fr",
+        "email": "mitkofr@yahoo.fr",
         "homepage": ""
       },
       "release_notes": "Corrected a small regression which made the use of . (dot) impossible."
@@ -82,7 +82,7 @@
         "user_name": "Mitko",
         "first_name": "Dimitar",
         "last_name": "Dimitrov",
-        "email": "mitkofr at yahoo.fr",
+        "email": "mitkofr@yahoo.fr",
         "homepage": ""
       },
       "release_notes": "New feature:\n\nAdded the possibility to define the boundaries of the text acted upon by drawing a visual block selection.\n\nExample: (the <bar>s represent our selection)\n\n    Some text here                |stridx(       |       end of this line\n    Some other text...            |strridx(      |       text after a function\n    Let's start a third line       |strlen(       |       ...finish this line\n    End of paragraph             |substitute(|       end indeed.\n\nNow that a selection has been defined, all you need to do is type:\n\\a followed by )\nand your text will become:\n\n    Some text here                 stridx()           end of this line\n    Some other text...             strridx()          text after a function\n    Let's start a third line        strlen()           ...finish this line\n    End of paragraph              substitute()    end indeed.\n\nEnjoy.\n\ntodo: Add the possibility to repeat this action by typing . (dot)\ntodo: Create \\[[, \\]], \\q[[, \\q]] for cases where we want the same text on both ends."
@@ -98,7 +98,7 @@
         "user_name": "Mitko",
         "first_name": "Dimitar",
         "last_name": "Dimitrov",
-        "email": "mitkofr at yahoo.fr",
+        "email": "mitkofr@yahoo.fr",
         "homepage": ""
       },
       "release_notes": "2 bug fixes:\n\n- If a count was used with \\qi, \\qa or \\q[], it wasn't interpreted correctly.\n- There was also a problem with reseting virtualedit to its original value."
@@ -114,7 +114,7 @@
         "user_name": "Mitko",
         "first_name": "Dimitar",
         "last_name": "Dimitrov",
-        "email": "mitkofr at yahoo.fr",
+        "email": "mitkofr@yahoo.fr",
         "homepage": ""
       },
       "release_notes": "Improved integration with the 'repeat' plugin.\n\nThe inserted / appended text is now remembered,\nyou don't have to re-enter it when repeating."
@@ -130,7 +130,7 @@
         "user_name": "Mitko",
         "first_name": "Dimitar",
         "last_name": "Dimitrov",
-        "email": "mitkofr at yahoo.fr",
+        "email": "mitkofr@yahoo.fr",
         "homepage": ""
       },
       "release_notes": "Integrated blockinsert with Tim Pope's repeat plugin.\nIt is now possible to repeat blockinsert mappings by pressing . (dot)\n\nMore info about repeat:\nhttp://www.vim.org/scripts/script.php?script_id=2136\nhttp://github.com/tpope/vim-repeat"
@@ -146,7 +146,7 @@
         "user_name": "Mitko",
         "first_name": "Dimitar",
         "last_name": "Dimitrov",
-        "email": "mitkofr at yahoo.fr",
+        "email": "mitkofr@yahoo.fr",
         "homepage": ""
       },
       "release_notes": "Initial upload"

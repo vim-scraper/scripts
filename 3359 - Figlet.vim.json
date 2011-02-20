@@ -1,0 +1,43 @@
+{
+  "script_id": "3359",
+  "display_name": "Figlet.vim",
+  "summary": "Finally, the power of Vim + Figlet!",
+  "name": "Figlet.vim",
+  "script_type": "utility",
+  "description": "Use the g@ operator or the :Figlet command to filter your text through figlet, in-place!\n:Figlet has a completion function that will complete on installed font names, too.\n\nPlus, there is a Windows/MS-DOS version of Figlet, so everybody can get in on the fun!\n\nQ: Can't I do this same thing with the :! command?\nA: Basically, sure\n\nQ: What does this plugin give me that Vim's built-in filtering doesn't?\nA1. Convenience - through variables it can remember your defaults\nA2. Completion - so you don't have to memorize all of the commands or font names\nA3. Text-objects - use the g@ operator with text-objects for blazing fast transformations that will knock shoulder-surfer's socks off\nA4. A font sample buffer to help you pick out the perfect font for the occasion\n\nQ: Okay, I'm sold.  But what is this Figlet you speak of?\nA: This:\n  __ _       _      _   \n / _(_) __ _| | ___| |_ \n| |_| |/ _` | |/ _ \\ __|\n|  _| | (_| | |  __/ |_ \n|_| |_|\\__, |_|\\___|\\__|\n       |___/            \n\nEr, that wasn't quite as impressive as I was hoping.  Check out http://www.figlet.org/ to get with the times.",
+  "install_details": "Make sure you've got the figlet program installed on your $PATH\nCopy script into your .vim/plugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14500",
+      "filename": "Figlet.vim",
+      "script_version": "1.1",
+      "date": "2010-12-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add :FigletFontDemo - open a buffer with generated samples of installed fonts\n\nBugfixes; use shellescape() on text sent to figlet; better able to cope with figlet crashes, work around broken DOS build of figlet"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14472",
+      "filename": "Figlet.vim",
+      "script_version": "1.0",
+      "date": "2010-12-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12386",
+        "user_name": "fade-in",
+        "first_name": "erik",
+        "last_name": "falor",
+        "email": "ewfalor@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

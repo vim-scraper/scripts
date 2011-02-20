@@ -18,7 +18,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "- Changed the buffer vars name with the prefix 'gbi' to try to make sure they will not clash with other vars on other scripts. At least now they are declarative to *this* script.\n- Functions are now local to the script.\n- Changed some functions scope\n- Reorganizing functions and moved another one to the public scope.\n- Implemented autogroup"
@@ -34,7 +34,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "Allow for branch names with slashs in them. Thanks to Thomas Adam."
@@ -50,7 +50,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "Fixes bug that prevents git-buffer-info from finding the git-dir. "
@@ -66,7 +66,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "Seems that there were a little bug when loading the file from some other plugin"
@@ -82,7 +82,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "Changed the checking about the original branche while saving a file as a optional - and not default - option."
@@ -98,7 +98,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "Fixed the .git relative path, thanks to rtwo for the patch."
@@ -114,7 +114,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "There were a bug when rebasing. On this situation HEAD just have a hash and not the information about the branches the plugin looks for. Thanks for Joachim Bargsten for warning me about this.\nI made a double check on the HEAD file. If there is not the information the script wants, a message about the condition is returned. If something also \"explodes\" there, there is a try/catch block.\nIf detect this rebase/merge/bisect situation, the file will be always saved without the branch verification."
@@ -130,7 +130,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "Argh, another bug fixed. When trying to write to a file different from the current one, it was not saved. That happened because I was trying to save the file without it's name, presuming if we tell to save to another file with :w the name was correct.It was fixed using expand(\"<afile>\"). Btw, there was another bug when trying to save to an existing file and need to use the bang (!) with write. It was fixed checking if a bang command was used and executing the bang version if needed."
@@ -146,7 +146,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "Found a way of detecting if the file needs to be written. If it's a normal \nbuffer, it is written, if not, the GitBranchInfoWriteCheck() skip it. \nUseful with other scripts that use temporary buffers like VCSCommand."
@@ -162,7 +162,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "Extra check on permissions of the Git directory."
@@ -178,7 +178,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "Removed remote branches on fetch menu, fetch just the remote repository \nreference."
@@ -194,7 +194,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "Some label changes and the fetch remote branches feature. \nAdded some variables to store the current buffer Git dir and the branch where the buffer was loaded.\nAdded autocmd's to fill the variables above.\nAdded an alert when the branch where the file is being saved is different from where it was loaded.\nIf the current buffer is not on the local dir, make a CD to the buffer dir when need to make a checkout or a fetch.\nChanged to ask if we want to save a file loaded from one branch into another branch."
@@ -210,7 +210,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "Added a menu system with some features for branch changing."
@@ -226,7 +226,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "- Changed version number.\n- The previous version performance SUCKED a lot. I removed the system() \ncall to Vim internal file functions and seems that now things are really faster.\n  - Removed the g:git_branch_status_all option and changed to g:git_branch_status_head_current, who just shows the current head branch. This can make things faster because if does not seeks for the other branches and  just show the current branch with GitBranchInfoString.\n- Added the feature to find the remote branches (which we're not using right now but I have some plans) and the option g:git_branch_status_ignore_remotes to avoid this feature if you don't need it.\n- Fixed some errors on the statusline samples using GitBranchInfoTokens.\n- Created the variable to handle the remote list on GitBranchInfoString.\n- Changed the way GitBranchInfoString returns the info string, based on the configuration chosen.\n- GitBranchInfoTokens() was fully rewritten because of the previous poor performance."
@@ -242,7 +242,7 @@
         "user_name": "TaQ",
         "first_name": "Eustaquio",
         "last_name": "Rangel de Oliveira Jr.",
-        "email": "eustaquiorangel at gmail.com",
+        "email": "eustaquiorangel@gmail.com",
         "homepage": "http://eustaquiorangel.com"
       },
       "release_notes": "Initial upload"

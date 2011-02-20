@@ -8,6 +8,22 @@
   "install_details": "See http://nekthuth.com/doc.html#starting\n\nYou can optionally follow it's instructions to get the latest version of this plugin, or just get the latest one here.  However, you will need to install an sbcl component using asdf-install (or manually through just asdf).",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14775",
+      "filename": "nekthuth-vim_0.3.4.tar.gz",
+      "script_version": "0.3.4",
+      "date": "2011-01-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14828",
+        "user_name": "herbie",
+        "first_name": "Frank",
+        "last_name": "Duncan",
+        "email": "frank@kank.net",
+        "homepage": "http://kank.net"
+      },
+      "release_notes": "    * Fixed some bugs in the connection code for NekthuthRemote.\n    * Made it so window splitting is based on how wide your window currently is\n    * Added g:nekthuth_updatetime (default 500) - sets how long vim waits when not moving cursor to check"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=10981",
       "filename": "nekthuth-vim_0.3.2.tar.gz",
       "script_version": "0.3.2",
@@ -18,7 +34,7 @@
         "user_name": "herbie",
         "first_name": "Frank",
         "last_name": "Duncan",
-        "email": "frank at kank.net",
+        "email": "frank@kank.net",
         "homepage": "http://kank.net"
       },
       "release_notes": " * Another bug where mcclim confused vim with syntax additions. Functions with ] or [ in them will no longer show up as highlighted.\n * Install.sh in the vim plugin was using the wrong environment variable"
@@ -34,7 +50,7 @@
         "user_name": "herbie",
         "first_name": "Frank",
         "last_name": "Duncan",
-        "email": "frank at kank.net",
+        "email": "frank@kank.net",
         "homepage": "http://kank.net"
       },
       "release_notes": "* Fixed a bug where loading up packages that defined symboles such as \\ and ' would cause syntax additions to fail\n* Added plugin installation.\n* Fixed how the main thread and repl thread share sender data, which should translate into faster bootup times."
@@ -50,7 +66,7 @@
         "user_name": "herbie",
         "first_name": "Frank",
         "last_name": "Duncan",
-        "email": "frank at kank.net",
+        "email": "frank@kank.net",
         "homepage": "http://kank.net"
       },
       "release_notes": "    * Multiple return value (using values, such as in #'get-decoded-time) prints correctly in buffer\n    * Fixed NekthuthInterrupt (0.2 broke it)\n    * Function coloring and complete added for *package* functions and transitively used packages\n    * Remote connection now checks the version correctly. This may be useful someday.\n    * Added #'nekthuth:stop-remote to shut down the remote listener.\n    * Find and open source locaton of symbol under cursor."
@@ -66,7 +82,7 @@
         "user_name": "herbie",
         "first_name": "Frank",
         "last_name": "Duncan",
-        "email": "frank at kank.net",
+        "email": "frank@kank.net",
         "homepage": "http://kank.net"
       },
       "release_notes": "* Remote execution in an already running sbcl instance. See setup in the manual for more information.\n* Fixed ClHelp not opening a window upon failure"
@@ -82,7 +98,7 @@
         "user_name": "herbie",
         "first_name": "Frank",
         "last_name": "Duncan",
-        "email": "frank at kank.net",
+        "email": "frank@kank.net",
         "homepage": "http://kank.net"
       },
       "release_notes": "Initial upload"

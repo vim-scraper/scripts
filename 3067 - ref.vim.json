@@ -4,9 +4,25 @@
   "summary": "Integrated reference viewer.",
   "name": "ref.vim",
   "script_type": "utility",
-  "description": "*ref* is a Vim plugin to view the reference.  This plugin can be separated to\ncore of viewer and sources of reference.  As a result, various references can\nbe viewed by the same interface.\n\nFollowing sources are included in this plugin:\n- alc (Online English-Japanese/Japanese-English dictionary)\n- man\n- perldoc\n- phpmanual\n- pydoc\n- refe\n\nReference viewer is mere a buffer to view the reference.  This is opened by :Ref\ncommand or K like :help.  If the reference viewer is already opened in current\ntab page, it is used again.\n\nLatest Version:\nhttp://github.com/thinca/vim-ref",
+  "description": "*ref* is a Vim plugin to view the reference.  This plugin can be separated to\ncore of viewer and sources of reference.  As a result, various references can\nbe viewed by the same interface.\n\nFollowing sources are included in this plugin:\n- alc (Online English-Japanese/Japanese-English dictionary)\n- clojure\n- erlang\n- hoogle\n- man\n- perldoc\n- phpmanual\n- pydoc\n- refe\n\nReference viewer is mere a buffer to view the reference.  This is opened by :Ref\ncommand or K like :help.  If the reference viewer is already opened in current\ntab page, it is used again.\n\nThis also includes unite-ref for unite.vim(vimscript #3396).\n\nLatest Version:\nhttps://github.com/thinca/vim-ref",
   "install_details": "",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14809",
+      "filename": "vim-ref-0.4.3.zip",
+      "script_version": "0.4.3",
+      "date": "2011-01-20",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "18219",
+        "user_name": "thinca",
+        "first_name": "thinca",
+        "last_name": " ",
+        "email": "thinca+vim@gmail.com",
+        "homepage": "http://d.hatena.ne.jp/thinca/"
+      },
+      "release_notes": "- Added ref#rmcache().\n- g:ref_detect_filetype accepts a list of sources.\n- A function of g:ref_detect_filetype can return a Funcref.\n- Improved ref#register_detection().\n- ref-source-attr-available() became omitable.\n- Fixed the bug to which {name} including \"/\" can not be taken out by ref#cache().\n- Fixed a bug when a list including empty string is passed to ref#uniq().\n\nThere are a lot of changes from 0.3.1.  See :help ref-changelog ."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12882",
       "filename": "vim-ref-0.3.1.zip",
@@ -18,7 +34,7 @@
         "user_name": "thinca",
         "first_name": "thinca",
         "last_name": " ",
-        "email": "thinca+vim at gmail.com",
+        "email": "thinca+vim@gmail.com",
         "homepage": "http://d.hatena.ne.jp/thinca/"
       },
       "release_notes": "- |g:ref_detect_filetype| accepts a special key _.\n- |g:ref_detect_filetype| accepts |Funcref|.\n- refe\n  - Fixed the collapses page of the method of refe1."
@@ -34,7 +50,7 @@
         "user_name": "thinca",
         "first_name": "thinca",
         "last_name": " ",
-        "email": "thinca+vim at gmail.com",
+        "email": "thinca+vim@gmail.com",
         "homepage": "http://d.hatena.ne.jp/thinca/"
       },
       "release_notes": "Initial upload"

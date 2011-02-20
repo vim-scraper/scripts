@@ -4,7 +4,7 @@
   "summary": "manage and update plugins easily",
   "name": "vim-addon-manager",
   "script_type": "utility",
-  "description": "Note:\nThere is also  http://packages.debian.org/sid/vim-addon-manager\nwhich servers a similar purpose but is Debian specific.\nI chose the same name by accident.\n\nusage example:\n\nset runtimepath+=~/path-to/vim-plugin-manager\ncall scriptmanager#Activate([\"vim-haxe\",\"The_NERD_tree\",\"vim-latex\"])\n\nOn startup you'll be asked for confirmation that vim may install the plugin for you.\n\nHow to quickly install a plugin and see whether it does what you want?\n:ActivateAddons <c-d>vim-latex\n:UninstallNotLoadedAddons vim-latex\n\nThis script should be kept as simple as possible.\n\nIt's main task is to fetch Vim plugins putting each into its own directory.\nThose directories are added to runtimepath for you.\nA plugin can depend on other Vim plugins. Those dependencies are fetched as well.\n\nScripts are updated by running git pull, svn up etc.\n\nI recommend installing this plugin using\ngit clone git://github.com/MarcWeber/vim-addon-manager.git\n(project page): http://github.com/MarcWeber/vim-addon-manager\n\nso that it's easier for you keeping it up to date.\n\nNote: I wrote this plugin to make your and my life easier.\nHelp my improving it by sending feedback!\n\nCredits to Tim Pope who sent first patches!\n\nNote: I setup a cron job which updates the \nvim-plugin-manager-known-repositories once a day automatically.\nEnjoy!\n\nsimilar work:\n=======================\nThis script servers a similar purpose:\nhttp://github.com/c9s/Vimana\n\nvim-addon-manager differs:\n* it installs each plugin into it's own directory.\n   (I'm sure it's easy to patch Vimana to do the same)\n* You can activate / install plugins at runtime as needed using the\n    ActivateAddons command\n   This is nice because plugins can have optional dependencies which\n   are loaded when required only !\n* cause it's written in VimL you only need these dependencies:\n  - curl\n  - git   (recommended)\n  - svn (for vim-latex)\n\nTry both tools. Use whatever serves you best!",
+  "description": "Note:\nThere is also  http://packages.debian.org/sid/vim-addon-manager\nwhich servers a similar purpose but is Debian specific.\nI chose the same name by accident. See doc/*\n\nusage example:\n\nset runtimepath+=~/path-to/vim-plugin-manager\ncall scriptmanager#Activate([\"vim-haxe\",\"The_NERD_tree\",\"vim-latex\"])\n\nOn startup you'll be asked for confirmation that vim may install the plugin for you.\n\nHow to quickly install a plugin and see whether it does what you want?\n:ActivateAddons <c-d>vim-latex\n:UninstallNotLoadedAddons vim-latex\n\nThis script should be kept as simple as possible.\n\nIt's main task is to fetch Vim plugins putting each into its own directory.\nThose directories are added to runtimepath for you.\nA plugin can depend on other Vim plugins. Those dependencies are fetched as well.\n\nScripts are updated by running git pull, svn up etc. Updating .tar.gz based plugins hosted on www.vim.org is supported.\n\nI recommend installing this plugin using\ngit clone git://github.com/MarcWeber/vim-addon-manager.git\n(project page): http://github.com/MarcWeber/vim-addon-manager\n\nSo that it's easier for you keeping it up to date.\n\nNote: I wrote this plugin to make your and my life easier.\nHelp my improving it by sending feedback!\n\nNote: I setup a cron job which updates the \nvim-plugin-manager-known-repositories every couple of days.\n\nNowadays there are different script management tools. See doc/* file.\nHowever vim-addon-manager has\n- a maintained list of packages (vim-addon-manager-known-repositories)\n- allows you to reuse code by specifying dependencies.\n- is VimL only\n- is easiest to use (install plugins by names)\n- its you choosing between stable or dev version ( I personally recommend dev versions because I do not always upload the latest script versions)\nThe doc/* file contains links to all alternatives I know.\n\nI have to thank various people helping me debugging and improving various aspects. See doc/*\n\nTROUBLE ? Contact me or create a ticket (github page).",
   "install_details": "brief: unzip and add to your runtimepath.\n\nDetails: http://github.com/MarcWeber/vim-addon-manager/blob/master/doc/vim-addon-manager.txt",
   "versions": [
     {
@@ -18,7 +18,7 @@
         "user_name": "MarcWeber",
         "first_name": "Marc",
         "last_name": "Weber",
-        "email": "marco-oweber at gmx.de",
+        "email": "marco-oweber@gmx.de",
         "homepage": ""
       },
       "release_notes": "automatic installation of some important windows dependencies such as tar, patch, diff, unzip etc, separate functions for download and unpacking so that they can be reused, comment for gvim usage"
@@ -34,7 +34,7 @@
         "user_name": "MarcWeber",
         "first_name": "Marc",
         "last_name": "Weber",
-        "email": "marco-oweber at gmx.de",
+        "email": "marco-oweber@gmx.de",
         "homepage": ""
       },
       "release_notes": "xcopy patch for Windows"
@@ -50,7 +50,7 @@
         "user_name": "MarcWeber",
         "first_name": "Marc",
         "last_name": "Weber",
-        "email": "marco-oweber at gmx.de",
+        "email": "marco-oweber@gmx.de",
         "homepage": ""
       },
       "release_notes": "fixes by TuxTom"
@@ -66,7 +66,7 @@
         "user_name": "MarcWeber",
         "first_name": "Marc",
         "last_name": "Weber",
-        "email": "marco-oweber at gmx.de",
+        "email": "marco-oweber@gmx.de",
         "homepage": ""
       },
       "release_notes": "fix cd bug on Windows - adding sample .vimrc file. If you have more suggestions I\"ll add them"
@@ -82,7 +82,7 @@
         "user_name": "MarcWeber",
         "first_name": "Marc",
         "last_name": "Weber",
-        "email": "marco-oweber at gmx.de",
+        "email": "marco-oweber@gmx.de",
         "homepage": ""
       },
       "release_notes": "only load code which is always used on startup - when updating include known-repositories"
@@ -98,7 +98,7 @@
         "user_name": "MarcWeber",
         "first_name": "Marc",
         "last_name": "Weber",
-        "email": "marco-oweber at gmx.de",
+        "email": "marco-oweber@gmx.de",
         "homepage": ""
       },
       "release_notes": "addons can be installed by url now - many small enhancements by ZyX"
@@ -114,7 +114,7 @@
         "user_name": "MarcWeber",
         "first_name": "Marc",
         "last_name": "Weber",
-        "email": "marco-oweber at gmx.de",
+        "email": "marco-oweber@gmx.de",
         "homepage": ""
       },
       "release_notes": "run helptags.\nSome windows support (You have to put curl and git etc in PATH)\nsupport runtimepath being subdirectories.\nsupport .tar.gz plugins"
@@ -130,7 +130,7 @@
         "user_name": "MarcWeber",
         "first_name": "Marc",
         "last_name": "Weber",
-        "email": "marco-oweber at gmx.de",
+        "email": "marco-oweber@gmx.de",
         "homepage": ""
       },
       "release_notes": "new command to uninstall a addon\ncompletion for commands"
@@ -146,7 +146,7 @@
         "user_name": "MarcWeber",
         "first_name": "Marc",
         "last_name": "Weber",
-        "email": "marco-oweber at gmx.de",
+        "email": "marco-oweber@gmx.de",
         "homepage": ""
       },
       "release_notes": "supporting installing vimballs from www.vim.org site (tested with library: tlib)"
@@ -162,7 +162,7 @@
         "user_name": "MarcWeber",
         "first_name": "Marc",
         "last_name": "Weber",
-        "email": "marco-oweber at gmx.de",
+        "email": "marco-oweber@gmx.de",
         "homepage": ""
       },
       "release_notes": "fixed handling of plugin/*.vim after/plugin/*.vim files\nSupport downloading .zip files from this site.\n"
@@ -178,7 +178,7 @@
         "user_name": "MarcWeber",
         "first_name": "Marc",
         "last_name": "Weber",
-        "email": "marco-oweber at gmx.de",
+        "email": "marco-oweber@gmx.de",
         "homepage": ""
       },
       "release_notes": "Initial upload"

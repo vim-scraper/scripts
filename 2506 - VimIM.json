@@ -4,9 +4,57 @@
   "summary": "Vim Input Method -- Vim 中文输入法",
   "name": "VimIM",
   "script_type": "utility",
-  "description": "The VimIM is a Vim plugin designed as an independent\nIM (Input Method) to support the input of Chinese at will.\n 　\nVimIM 是一个专门为 vim 玩家开发的嵌入式中文输入法。\n\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n　　　\n不启动输入法，不敲中文，就可以搜索中文。\n不启动输入法，不换模式，也可以输入中文。\n　　　　　\n不用浏览器，不设选项，就可以云输入，包括六种双拼。\n不耗内存/CPU，不依赖外挂程式，也可以使用海量词库。\n　　　　　\n不用鼠标，不用快捷键，不等于不能进入中文输入模式。\n不懂输入法的规矩，不等于不能给自己的输入法定规矩。\n　　　　　\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n　　　　　\n错误报告：http://code.google.com/p/vimim/issues/entry\n民间词库：http://vimim-data.googlecode.com\n自己的云：http://pim-cloud.appspot.com\n新闻论坛：http://groups.google.com/group/vimim\n最新主页：http://vimim.googlecode.com/svn/vimim/vimim.html\n最新程式：http://vimim.googlecode.com/svn/vimim/vimim.vim.html",
-  "install_details": "　　　　　\nVimIM 概述\n\n一个文本文件，就是一个中文输入法的客户端。缺省后端是外挂搜狗云输入。\n同一个文本文件，也是中文输入法的独立后端。支持文件词库和目录词库。\n\n程式文件用的是 Vimscript, 天生跨平台（Windows, Mac, Linux）\n词库文件就是自己的输入法（拼音，無蝦米，倉頡，英文，DIY）\n\n所谓安装，就是把文本文件扔到 vim 的 plugin 目录之下。\n\n插上【拼音】词库，就是vim拼音输入法。包括无菜单搜索：/meng　n　=>　梦\n插上【五笔】词库，就是vim五笔输入法。包括无菜单搜索：/ssqu　 n　=>　梦\n\n〖目录词库〗可以是海量，大小无限制。不占内存，不耗CPU\n【四角号码】可以当作【拼音】动态辅助码，用hjkl敲出〖施氏食狮史〗\n\n不设选项，不换模式，点<C-6>就可以上汉字，是谓〖点石成金〗。\n不用快捷键，也可以自动进入中文输入模式，只要文件后缀名是 vimim\n\n搜索中文，不需要输入中文，不需要启动输入法，不需要中文菜单。\n搜索沿用vi经典正斜杠。先找英文（编码），找不到英文，就找中文。\n 　　　\n所谓卸载，就是删除文本文件。\n\n\nVimIM 构架总结\n\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n前端　　　后端　　　　　关系　　　　　优点　　　　　　缺点\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\nVimIM　〖搜狗云〗　　　外挂　创新前端，六种双拼　　依赖联网\nVimIM　〖自己的云〗　　外挂　自己的云，自己的梦　　需先启动\nVimIM　【内码】　　　　天生　无需词库，无需联网　　记忆量大\nVimIM　【数据库词库】　内挂　词库管理，自成体系　　需SQLite\nVimIM　【文件词库】　　内嵌　即插即用，想删就删　　占内存\nVimIM　【目录词库】　　内嵌　海量词库，不耗内存　　占磁盘\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n　\n　\nVimIM 输入模式总结\n　　　\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n中文输入模式　　　　设置　　缺省键　　　　　　功能\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n【OneKey】　　　　　缺省　　 <C-6>　　〖点石成金〗无模式转化\n【经典动态模式】　　缺省　　<C-\\>　　　输入过程中一直出选择项目\n【经典静态模式】　　static　　<C-\\>　　　输入完后按空格出选择项目\n【OneKeyNonStop】　 onekey　  <C-\\>　　　支持 hjkl　支持连续输入\n【正斜杠/搜索】　　　缺省　　　n　　　  正斜杠无菜单中文搜索\n【点vimim文件】　　　缺省　　　　　　　自动启动中文輸入\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ \n　\n　\n",
+  "description": "The VimIM is a Vim plugin designed as an independent\nIM (Input Method) to support CJK search and CJK input.\n 　\nVimIM 是一个专门为Vim玩家开发的嵌入式中文输入法。\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n不启动中文输入法，不换模式，就可以输入中文。\n不打开弹出式菜单，不敲中文，也可以搜索中文。\n　　　　\n中文输入与英文输入不再相互折腾。\n中文搜索与英文搜索不再分为彼此。\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n　　　　\n标准字库：http://vimim.googlecode.com/svn/trunk/plugin/vimim.cjk.txt\n民间词库：http://vimim-data.googlecode.com\n新闻论坛：http://groups.google.com/group/vimim\n最新主页：http://vimim.googlecode.com/svn/vimim/vimim.html\n最新程式：http://vimim.googlecode.com/svn/vimim/vimim.vim.html\n错误报告：http://code.google.com/p/vimim/issues/list\n　　　　\n【操作示范】\n\n目的：体验 VimIM 点石成金\n\n　(1)　下载 vimim.vim\n　(2)　把下载文件扔到vim的plugin文件夹里面\n　(3)　进入vim，进入insert模式，输入　vimim\n　(4)　按下 ctrl+6, 显示汉字列表\n　(5)　再按 ctrl+6, 输出汉字列表 \n　　　　",
+  "install_details": "　　　　　\nVimIM 概述\n\n一个文本程式文件，就是中文输入法的客户端。缺省后端是外挂搜狗云输入。\n此文件也同时作为中文输入法的独立后端。支持文件词库和目录词库。\n                                                                           \n一个文本字库文件，就可以用来输入unicode全部20902个汉字。输入方式多种多样。\n此文件是精心定制的 VimIM【CJK标准字库】，与程式文件结合，犹如一对天仙配。\n\n程式文件用的是 Vimscript, 天生跨平台（Windows, Mac, Linux）\n词库文件就是自己的输入法（拼音，無蝦米，倉頡，英文，DIY）\n\n所谓安装，就是把文本文件扔到 vim 的 plugin 目录之下。\n\n插上【拼音】词库，就是vim拼音输入法。包括无菜单搜索：/meng　n　=>　梦\n插上【五笔】词库，就是vim五笔输入法。包括无菜单搜索：/ssqu　 n　=>　梦\n\n不设选项，不换模式，按 ctrl+6 就可以连续上汉字，是谓〖点石成金〗。\n不用快捷键，也可以自动进入中文输入模式，只要文件后缀名是 vimim\n\n搜索中文，不需要输入中文，不需要启动输入法，不需要中文菜单。\n搜索沿用vi经典正斜杠。先找英文（编码），找不到英文，就找中文。\n 　　　\n所谓卸载，就是删除文本文件。\n\n\nVimIM 构架\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n前端　　　后端　　　　　关系　　　　　优点　　　　　　缺点\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\nVimIM　〖搜狗云〗　　　外挂　创新前端，六种双拼　　依赖联网\nVimIM　〖自己的云〗　　外挂　自己的云，自己的梦　　需先启动\nVimIM　【内码】　　　　天生　无需词库，无需联网　　记忆量大\nVimIM　【文件词库】　　内嵌　即插即用，想删就删　　占内存\nVimIM　【目录词库】　　内嵌　海量词库，不耗内存　　占磁盘\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n　　\nVimIM 输入模式\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n　　模式　　　　　　　设置　　缺省键　　　　　　功能\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n【点石成金】　　　　 缺省　　ctrl+6　　   传说中的无模式之模式\n【经典动态模式】　　缺省　　ctrl+\\　　　输入过程中一直出选择项目\n【经典静态模式】　　static　　ctrl+\\　　　输入完后按空格出选择项目\n【正斜杠搜索】　　　 缺省　　　n　　　  正斜杠无菜单中文搜索\n【点vimim文件】　　　缺省　　　　　　　自动启动中文輸入\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ \n　\nVimIM 【点石成金】\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n　　按键　　　第一次　　　　　第二次　　　第三次\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n　ctrl+6　　　【点石成金】　　输出列表\n　回车键　　　上英文　　　　　出空格　　   回车\n　空格键　　　上汉字　　　　　退出    　　　出空格　\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n　　\nVimIM　hjkl　　（点石成金，中文菜单弹出之后）\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░　　　　　　　　　\n　- 〖字母标签〗 abcdvfg => 上字\n　- 〖快捷打字〗 qwertyuiop => 1234567890 （字母键替代数字键）\n　- 〖清零重设〗 s　 重设动态辅码（需要安装CJK标准字库）\n　- 〖列表宽窄〗 h　 可切换\n　- 〖列表高低〗 l　  可切换\n　- 〖首拼分字〗 m　可切换（需要安装CJK标准字库）\n　- 〖全拼分字〗 n　 可切换（需要安装CJK标准字库）\n　- 〖输简出繁〗 x　 可切换（需要安装CJK标准字库）\n　- 〖光标上下〗 j　  或　k　（与Vim高度一致）\n　- 〖中文搜索〗 /　  或　?　（与Vim高度一致）\n　- 〖标点上字〗 >　 或　<　（先上字，再上中文逗号或中文句号）\n　- 〖动态模式〗 ABCDEFGHIJKLMNOPQRSTUVWXYZ　（不退出菜单窗口）\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n　　　　　　　　　　　　　　　　　　　　\nVimIM【CJK标准字库】简介\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ \n【名称】vimim.cjk.txt\n【大小】555K\n【格式】一字一行。总计20902行，含ISO10646中全部统一汉字。\n【内容】每个汉字都含拼音、五笔画、四角号码甚至字频、简繁、英文。\n【安装】即插即用，想删就删。既可单独使用，也可作为辅助词库。\n【用法】http://vimim.googlecode.com/svn/vimim/vimim.html#vimim-cjk\n【功能】犹如瑞士军刀：\n　- 〖中文搜索〗 /search　标准标准正斜杠无菜单搜索：　/a12j35 => 埃及\n　- 〖字库查询〗 /grep　　输入的是经典正则表达式，输出的是Vim全能补全提示列表\n　- 〖拼音输入〗 全拼或首拼，以数码或者音调为辅码：　li3 => 李　li123 => 李\n　- 〖数码输入〗 标准五笔画（横、竖、撇、捺、折）。也可设定为四角号码。\n　- 〖快捷打字〗 如无歧义，字母键可以替代数字键：qwertyuiop => 1234567890\n　- 〖四数上屏〗 每四个数字（四角号码或五笔画）开始断字。亦可用imode快捷键\n　- 〖动态辅码〗 用四角号码或者五笔画动态定调，输入施氏食狮史：　sssss\n　- 〖中文盲打〗 用拼音加数码瞎敲：　s41s35s34s35s25 => 施氏食狮史\n　- 〖盲打中文〗 用首拼加四个数字快捷键：　sipuesrqwwstppp => 食狮史\n　- 〖形码辅码〗 形码五笔不变，加数字就是拼音：　li => 遝　li3 => 李\n　- 〖见字找码〗 高亮选择汉字字串后，按ctrl+6, 得四角号码，五笔画和拼音列表\n　- 〖简繁互换〗 :VimIM\n░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ \n　　　\n　　　\nVimIM 【经典操作示范】\n　　\n〖摘要〗妈妈第一次打中文\n〖目的〗实现VimIM当年的梦想，给妈妈做个中文打字机。\n〖背景〗妈妈不懂电脑，不懂全拼，从未听说过Vim和VimIM\n〖前提〗妈妈会看键盘，会猜常用字的首拼，会写横、竖、撇、捺、折。\n〖征求〗创建类似cream-vim项目, 一次下载，一次安装，零设置。\n〖环境〗让我们首先设计一个测试环境：\n　　　\n　(1)　下载 vimim.vim 和 vimim.cjk.txt\n　(2)　把下载文件扔到vim的plugin文件夹里面\n　(3)　设置好Vim环境，让Vim负责打开txt文件\n　(4)　在桌面上创建一个空白文本文件：vimim_mom.txt\n　(5)　如可能，给此文件配上中文打字机的图标\n　　　\n〖测试〗用首拼加五笔画动态辅码，输入我有一个梦五个汉字：\n　　　\n　(1)　鼠标双击桌面上的空白文件\n　(2)　连续（无空间键）按六个键： w　y　y　g　m　<Tab>\n　(3)　按 a 选字，我字上屏\n　(4)　按 a 选字，有字上屏\n　(5)　按 空格键 选字，一字上屏\n　(6)　按 空格键 选字，个字上屏\n　(7)　按 1　2　3　辅码过滤，按 b 选字，梦字上屏\n　(8)　按　<Esc>　退出 insert 模式\n　(9)　按　<Esc>　复制中文到剪贴板\n　　　\n〖反馈〗爸爸也要打中文，但要求使用四角号码。\n　　　\n　(1)　在桌面上创建一个空白文本文件：vimim_dad.txt\n　(2)　操作方式不变，只是数码五笔画改为四角号码\n　　　\n　　\n\nVimIM 1.0 上市前最后测试。欢迎测试，欢迎反馈：\n\n    * 【最新试用版本】 http://vimim.googlecode.com/svn/trunk/plugin/vimim.vim\n    * 【CJK标准字库】  http://vimim.googlecode.com/svn/trunk/plugin/vimim.cjk.txt\n　　\n　　",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14757",
+      "filename": "vimim.vim",
+      "script_version": "0.9.9",
+      "date": "2011-01-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1690",
+        "user_name": "maxiangjiang",
+        "first_name": "Vim",
+        "last_name": "IM",
+        "email": "maxiangjiang@gmail.com",
+        "homepage": "http://code.google.com/p/vimim"
+      },
+      "release_notes": "Happy New Year Of the Rabbit! \nhttp://vimim.googlecode.com/svn/vimim/vimim.html#what-is-new\nhttp://code.google.com/p/vimim/issues/detail?id=113\nNow, \"OneKey\" can do both hit-and-run and OneKeyNonStop using hjkl"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14672",
+      "filename": "vimim.vim",
+      "script_version": "0.9.8",
+      "date": "2011-01-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1690",
+        "user_name": "maxiangjiang",
+        "first_name": "Vim",
+        "last_name": "IM",
+        "email": "maxiangjiang@gmail.com",
+        "homepage": "http://code.google.com/p/vimim"
+      },
+      "release_notes": "fine-tune:  http://code.google.com/p/vimim/issues/detail?id=112"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14494",
+      "filename": "vimim.vim",
+      "script_version": "0.9.7.1",
+      "date": "2010-12-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1690",
+        "user_name": "maxiangjiang",
+        "first_name": "Vim",
+        "last_name": "IM",
+        "email": "maxiangjiang@gmail.com",
+        "homepage": "http://code.google.com/p/vimim"
+      },
+      "release_notes": "bug-fix: http://code.google.com/p/vimim/issues/detail?id=109"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14419",
       "filename": "vimim.vim",
@@ -18,7 +66,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "Welcome to VimIM Chapter 2.\nhttp://vimim.googlecode.com/svn/vimim/vimim.html#what-is-new"
@@ -34,7 +82,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "http://vimim.googlecode.com/svn/vimim/vimim.html#what-is-new"
@@ -50,7 +98,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "VimIM Cloud access is alive again:\nhttp://code.google.com/p/vimim/wiki/ChangeLog\nhttp://code.google.com/p/vimim/wiki/QuickStart"
@@ -66,7 +114,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "Happy New Year Of the Tiger!\nhttp://vimim.googlecode.com/svn/vimim/vimim.html#changes-in-2010\n"
@@ -82,7 +130,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "Happy Anniversary to VimIM!\nhttp://vimim.googlecode.com/svn/vimim/vimim.html#the-highest-realm"
@@ -98,7 +146,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "Merry Christmas to all VimIM fans!"
@@ -114,7 +162,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "Happy Brithday to You, Angelina!\nhttp://vimim.googlecode.com/svn/vimim/vimim.html#cloud\n"
@@ -130,7 +178,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "Support wubi to join the CLOUD party\n"
@@ -146,7 +194,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "CLOUD is colorful now. Happy Thanksgiving!"
@@ -162,7 +210,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "To CLOUD, or not to CLOUD, that is not a question:\nhttp://vimim.googlecode.com/svn/vimim/vimim.html#id36\n"
@@ -178,7 +226,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "CLOUD works by \"plug & play\" under Windows and Linux."
@@ -194,7 +242,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "VimIM is promoting \"CLOUD\" input, along with ShuangPin.\nhttp://maxiangjiang.googlepages.com/vimim.html#id35"
@@ -210,7 +258,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "VimIM is selling dummy \"modeless\" whole sentence input in various \"language\":  http://maxiangjiang.googlepages.com/vimim.html#id45 \n\nAs always, \"what is new\" can be found from the end of manual:  http://maxiangjiang.googlepages.com/vimim.html#what-is-new"
@@ -226,7 +274,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "At last, VimIM has a business model:\nhttp://code.google.com/p/vimim/wiki/VimIM_Business_Model\n"
@@ -242,7 +290,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "On October 1, I found that vimim.vim was downloaded by 1949.\n"
@@ -258,7 +306,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "[what's new]   http://hi.baidu.com/maxiangjiang/blog/item/64f93a0338b11681d53f7c67.html\n"
@@ -274,7 +322,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "(1) ATTENTION: finalized option naming convention\n(2) all: http://maxiangjiang.googlepages.com/vimim.html \n(3) new: http://vimim.blogspot.com/2009/07/vimim_13.html\n"
@@ -290,7 +338,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "Introduced many new features, and doubled the GDP (line of codes).\nNew features:  http://maxiangjiang.googlepages.com/vimim.html\nNew codes:     http://maxiangjiang.googlepages.com/vimim.vim.html\n"
@@ -306,7 +354,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "#1 (new feature) picking up char by word using brackets\n#2 fine tunning: Enter=>English, seamless connection\n#3 [dynamic] fix regression"
@@ -322,7 +370,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "#1 finalize the default [chinese input mode] as [dynamic]\n#2 finalize the default [dynamic] input style\n#3 finalize the default [UI] with better user experiences\n#4 [WuBi] support \"non-stop typing\" and \"chinese punctuation\"\n#5 [ErBi] start to support ErBi using 31 keys"
@@ -338,7 +386,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "#1 finalized \"chinese mode\" toogle key as CTRL-^, to be consistent with Vim\n#2 [OneKey] default becomes CTRL-\\, but can be set as CTRL-^ or <Tab>\n#3 [OneKey][static] support classic vi key (hjkl) navigation in popup window \n#4 [OneKey][static] can \"translate\" English punctuation into Chinese one"
@@ -354,7 +402,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "#1 [static mode] support \"no extra space\" when mixing Chinese and English\n#2 [static mode] Chinese punctuation is ON by default"
@@ -370,7 +418,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "fix regression on selection by number"
@@ -386,7 +434,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "# make \"static mode\" as default; better user experience: <Space> => Chinese; <Tab> => English\n# to enable \"dynamic mode\": :let g:vimim_enable_dynamic_menu=1\n# support \"Double Pinyin (ShangPin) Input Method\" and upload sample datafile, double_pinyin.txt\n# add one more easter egg as tradition: **credits"
@@ -402,7 +450,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "# full support of direct CJK input using Unicode number, integer or hex, as updated at http://zh.wikipedia.org/wiki/Unicode\n# add support \"Phonetic Input Method\", which is auto enabled when datafile has \"phonetic\" like sample datafile, vimim.phonetic.txt \n"
@@ -418,7 +466,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "# add support \"array input method\", including special char like .,;/?\n# it is auto enabled when datafile has \"array\" like sample datafile, vimim.array30.txt\n"
@@ -434,7 +482,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "(1) better user experience for static \"VimIM Chinese Input Mode\" by\nsetting let g:vimim_disable_dynamic_menu=1\n(2) upload a better/cleaner pinyin datafile: vimim.pinyin.txt"
@@ -450,7 +498,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "# make VimIM \"easter egg\" permanent, regardless of encoding and datafile. Four key strokes, \"vim<C-^>\", can guarantee that VimIM is working.\n"
@@ -466,7 +514,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "add visual pleasure: green cursor indicates vimim Chinese Input Mode"
@@ -482,7 +530,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "(1) make dynamic-order-sequence persistent\n(2) add one super option for XingMa, which can be auto set\n(3) build crash-proof logic to get rid of full table scan\n(4) optimize search algorithm: faster with less CPU & memory\n"
@@ -498,7 +546,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "(1) add a new feature: dynamically-adjust-menu-order on past usage frequency\n(2) enable direct email/web addresses input using wildcard prefix\n(3) standardize data file name with \"txt\" as filename extension\n"
@@ -514,7 +562,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "add a dummy English to Chinese translator, showing the potential.\nhttp://maxiangjiang.googlepages.com/vimim_translator.gif"
@@ -530,7 +578,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "enable signature by using wildcard *sign"
@@ -546,7 +594,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "(1) add support for direct CJK input using unicode number\n(2) add option g:enable_pinyin_tone_input for pinyin tone\n"
@@ -562,7 +610,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "(1) add \"easter eggs\"\n(2) add dynamic menu\n(3) add quick English input\n(4) support fuzzy search\n(5) support fuzzy pinyin\n(6) support \"auto spell\"\n(7) enable all common options by default\n(8) all options can be explicitly closed\n"
@@ -578,7 +626,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": " (1) relieve UTF-8 encoding restriction\n (2) support all power wildcard *\n (3) support labeling on menu\n"
@@ -594,7 +642,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "(1) finalized naming: vimim\n(2) made data file format simple and flexible\n(3) offered 5 data files\n(4) fix bugs"
@@ -610,7 +658,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "(1) Made new naming\n(2) Added quick demo\n(3) Showing more information on the popup menu:\n(4) In ChineseIM_InsertMode, made punctuation intelligent\n"
@@ -626,7 +674,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "Improvement performance when searching started with one or two alphabets.\n"
@@ -642,7 +690,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "(1) i_<C-\\>  IME Insert Mode has more default settings\n(2) optional comments can be added at the middle on each line of the data file\n"
@@ -658,7 +706,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "Two cosmetical modification:\n(1) g:ChineseIME_Toggle_InertMode (i_<C-\\> as default)\n(2) g:ChineseIME_Toggle_i_Ctrl6\n"
@@ -674,7 +722,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "g:ChineseIMESpaceToggle:\n  toggle punctuation \n  toggle the use of <Space> to trigger popup\n  toggle cursor color to identify the 'IME mode'\n"
@@ -690,7 +738,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "Performance is boosted.\nNo more cache, no more full table scan, after the data file is sorted first."
@@ -706,7 +754,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": " (1) to speed up performance\n     let g:CacheIMEDataAtStartup=1\n (2) map i_<C-^> to pick up the default right away\n     let g:ChineseIMEMappingCtrl6=1\n (3) map i_<Tab> to make <Space> \"intelligent\"\n     let g:ChineseIMESpaceToggle=1"
@@ -722,7 +770,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "(1) fix completion hanging after starting from non-word characters \n(2) add pumheight=10 to limit the height of popup menu\n(3) add two entries on data file for testing datafile:\n       (3.1) english<C-^> should show Chinese translation for \"English\"\n       (3.2) chinese<C-^> should show Chiense translation for \"Chinese\""
@@ -738,7 +786,7 @@
         "user_name": "maxiangjiang",
         "first_name": "Vim",
         "last_name": "IM",
-        "email": "maxiangjiang at gmail.com",
+        "email": "maxiangjiang@gmail.com",
         "homepage": "http://code.google.com/p/vimim"
       },
       "release_notes": "Initial upload"

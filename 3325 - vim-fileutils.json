@@ -4,9 +4,57 @@
   "summary": "Cross-platform file manipulation library",
   "name": "vim-fileutils",
   "script_type": "utility",
-  "description": "Cross-platform file manipulation library, alpha version.\n\nDocumentation: http://vimpluginloader.sourceforge.net/doc/vim-fileutils.txt\nProject page: http://bitbucket.org/ZyX_I/vim-fileutils/overview",
+  "description": "Cross-platform file manipulation library, alpha version.\n\nDocumentation: http://vimpluginloader.sourceforge.net/doc/vim-fileutils.txt.html\nProject page: http://bitbucket.org/ZyX_I/vim-fileutils/overview",
   "install_details": "You can install this plugin using scriptmanager (vimscript #2905) plugin (install scriptmanager, call scriptmanager#Install([\"vim-fileutils\"]) and add ``call scriptmanager#Activate([\"vim-fileutils\"])'' to your .vimrc, then reload vim.).\n\nGentoo users can use the following mercurial overlay: http://vimpluginloader.hg.sourceforge.net:8000/hgroot/vimpluginloader/pluginloader-overlay.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14553",
+      "filename": "vim-fileutils-0.7.8.tar.gz",
+      "script_version": "0.7.8",
+      "date": "2010-12-17",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Fixed case when directory name contains wild characters"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14552",
+      "filename": "vim-fileutils-0.7.7.tar.gz",
+      "script_version": "0.7.7",
+      "date": "2010-12-17",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Fixed case when directory name contains wild characters"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14547",
+      "filename": "vim-fileutils-0.7.6.tar.gz",
+      "script_version": "0.7.6",
+      "date": "2010-12-17",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18939",
+        "user_name": "ZyX",
+        "first_name": "ZyX",
+        "last_name": "ZyX",
+        "email": "kp-pav@yandex.ru",
+        "homepage": ""
+      },
+      "release_notes": "Fixed case when directory name contains newline on unix and vimscript function is used"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14388",
       "filename": "vim-fileutils-0.7.3.tar.gz",
@@ -18,7 +66,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Fixed contents in documentation"
@@ -34,7 +82,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Made GetDirContents reliably treat empty string as '.'"
@@ -50,7 +98,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Fixed fileutils#GetDirContents('/') and fileutils#GetDirContents('~')"
@@ -66,7 +114,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Made fileutils#GetDirContents return a list of files, not a list of full paths (using python's os.listdir if possible), added more OSs to possible OS list"
@@ -82,7 +130,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added os#JoinPath function"
@@ -98,7 +146,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Added documentation"
@@ -114,7 +162,7 @@
         "user_name": "ZyX",
         "first_name": "ZyX",
         "last_name": "ZyX",
-        "email": "kp-pav at yandex.ru",
+        "email": "kp-pav@yandex.ru",
         "homepage": ""
       },
       "release_notes": "Initial upload"

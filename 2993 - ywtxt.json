@@ -18,7 +18,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1. Greatly improved: speed issue for large document.\n\n2. Major changed: foldmethod changed from 'syntax' to 'marker' in documnet for speed issue, so you need to append '{{{' and '}}} to lines '^% BEGIN.*$' and '^% END.*$' respectively to fold your old format of ywtxt documents. Method:\n:%s/^\\(% BEGIN.*\\)/\\1 {{{/c\n:%s/^\\(% END.*\\)/\\1 }}}/c\nSorry for inconvenience!\n\n3. Fixed: bug in wrong location when inserting nohtml region.\n\n4. Changed: heading creation will prompt you to insert heading text.\n\n5. Improved toc generation speed."
@@ -34,7 +34,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1. Added: In toc window, keymap J, K to move a heading region up/down. D/Y to delete/yank a heading region, and put deleted/yanked content into \"z.\n2. Changed: key map to re-indent heading level in toc window \\> -> L; \\< -> H\n3. Changed: Doesn't fold document's headings for speed issue.\n4. Changed: g:ywtxt_autonumber is on by default, heading creation will set section number.\n5. Improved: g:ywtxt_headings_hl, now you can assign blank value for the default bg/fg color in bold face.\n6. Improved: heading syntax.\n7. Fixed: bug in heading creation.\n8. Fixed: export2html bug in nohtml region"
@@ -50,7 +50,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added support for non_export2html region \"^% BEGIN_NOHTML\", \"^% END_NOHTML\"(keymap: <ctrl-o>%).\n\nImproved the function for switching the types of toc: \"Con(t)ents/(F)igures/Ta(b)les/(A)nchors/(L)inks\"\n\nFixed non-working keymap for <space> in toc window.\n\nFixed reindentation bug with customized headings.\n\nFixed a heading level bug with the customized heading which contains \"#.\".\n"
@@ -66,7 +66,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Changed the reference region format, please see document for details.\n\n2) Abandoned var: g:ywtxt_biblioname.\n\n3) Added operator to create arbitrary heading level(<Ctrl-j> o).\n\n4) Added syntax for title: The first line in document with a trailing space.\n\n5) Added book type to the default bib type.\n[1] Authors. Book name. City: publisher, year.\n\n6) Changed export-to-html routine, now will generate a tmp file firstly(foo.ywtxt -> foo_ywtxt -> foo_ywtxt.html -> rm foo_ywtxt).\n\n7) Added vars: g:ywtxt_2htmlpre_usercmds, g:ywtxt_2htmlpost_usercmds, see doc for details(Section 6.5).\n\n8) Added var: g:ywtxt_bib_nump to set/unset [<number>] in References list when generating references. Default: 1.\n\n9) Added feature '% input file', to include another file when 2html. The feature is very limited, no proper heading syntax supporting.\n\n10) Improved syntax for bold/underlined/italic chars in-between * around the Chinese charactors.\n\n11) Improved the cursor postion in the document after doing operators in toc window.\n\n12) Fixed locating back to the document after finishing exporting to html.\n\n13) Fixed non-working of changing bib keywords to numbers while exporting to html.\n\n14) Fixed a bug of heading recorgnization.\n\n15) Fixed a bug with the function of the bib file finding.\n\n16) Fixed error while hit <tab> on '~'.\n\n17) Fixed error related to <tab> (reference recognization)."
@@ -82,7 +82,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Changed, removed and integrated keymaps for creating headings/reference/snip, works both in normal/insert mode(<Ctrl-j>).\n2) Added var for configuring auto-setting the heading number after creating a heading(set g:ywtxt_autonumber=1). Note it will be slow.\n3) Improved syntax bug for bold/underlined/italic/."
@@ -98,7 +98,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed a bug of location with <space>, thanks Zhang Xin's good catch."
@@ -114,7 +114,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed snip inserting bug which is brought by the last update."
@@ -130,7 +130,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Added syntax for figure/table(figure #-#.; table #-#.)\n2) Fixed comment region bug.\n3) Removed setting to nowrap in toc window.\n4) Removed '[' as a file name charactor, now <C-x><C-f> can complete the file name after '['."
@@ -146,7 +146,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Improved anchor-locating behavior for Chinese and English.\n2) Changed highlight for anchor.\n3) Added keymap for insert mode: _{ _{}"
@@ -162,7 +162,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Added definition for anchor \"[#anchor]\", please see the section cross-references in document. Thanks for Adrien Pied Piérard's suggestion.\n2) Removed keymap in insert mode: _(_{}). Thanks for Adrien Pied Piérard's suggestion.\n3) Added syntax highligh for anchor. Thanks for Adrien Pied Piérard's suggestion.\n4) Removed textwidth setting.\n5) Suppressed new file msg when open toc window."
@@ -178,7 +178,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Added var g:ywtxt_browserapp to support opening html directly after export to html, see section \"Misc vars\" for detail.\n2) Added support for Cross-references(*[file#anchor]). Please see the section \"ywtxt file format\" for details."
@@ -194,7 +194,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Fixed outline/unoutline in toc window.\n2) Suppressed the not pattern found warning when exporting to html."
@@ -210,7 +210,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed toc window not refresh after undo/redo"
@@ -226,7 +226,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Added configurable heading highlighting(g:ywtxt_headings_hl) support. Please see the document for details.\n2) Added encoding declaration in syntax/ywtxt.vim and ftplugin/ywtxt.vim, to prevent encoding issue. thanks zhangxin's report.\n3) Improved italic, bold, and underlined definition to allow blank spaces in between."
@@ -242,7 +242,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Fixed errors caused by operations on toc window title line. Thanks pengo's catching.\n2) Speeded up a little for the toc window opening and jumping.\n3) Added syntax: \"图 #.  \",  \"表 #.  \"."
@@ -258,7 +258,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed bug: operations in toc winodow unworking."
@@ -274,7 +274,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Added feature: Customized heading pattern can be set globally(g:ywtxt_HeadingsPat), please see the advanced features in the document for details.\n2) Improved: The setting for customized heading pattern needn't force user to specify the last pattern to be a ywtxt known pattern.\n3) Improved the handling of the title line in toc window.\n4) Improved uncontinious section support, thanks for zhangxin's catch.\n5) Ignore the unproper user setting for customized section pattern.\n6) Fixed a bug in keymap shift-x: Outline/un-outline."
@@ -290,7 +290,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed a bug in customize section pattern which has spaces in name."
@@ -306,7 +306,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed a bug in bib generation.\nFixed a heading syntax bug."
@@ -322,7 +322,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed bug: toc location uncorrectly.\nFixed reindent bug.\n"
@@ -338,7 +338,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Added feature to customize section number style, please see the advanced features section in document.\n\n2) Improved snip folding and syntax supportings.\n\n3) Improved the displaying of toc.\n\n4) Improved keymap in toc window: Shift-x fold/unfold all.\nThanks for pengo's suggestion.\n\n5) Added warning before trying to generate references region.\nThanks for pengo's suggestion.\n\n6) Improved the uncontinuous headings handling.\nthanks for pengo's catching.\n\n7) Changed: Syntax for figure and table to:\n\"Figure #.  \"\n\"Fig. #.  \"\n\"Table #.  \"\n\n8) Added support on Figure/table of contents. Hit 't' in toc window to toggle\ntoc's type.\n\n9) Added support for the Multiple reference sections. Please see the\nadvanced feature in document."
@@ -354,7 +354,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Fixed non-working toc window.\n2) Fixed references region identification. Thanks for pengo's catching.\n3) Improved toc window intendation. Thanks for pengo's suggestion."
@@ -370,7 +370,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed folding and toc highlighting bugs."
@@ -386,7 +386,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) NOTE! Imcompatible changed!!!: heading format changed again till 0.10: \"1  \", \"#.#  \"(note the following has 2 spaces!)\nHow to upgrade:\n0.10 user: :call Ywtxt_old2new()<CR> This function will be abandoned in next release.\nearlier than 0.10 user: :%s/^\\(\\%(\\%(#\\|\\d\\+\\)\\.\\)*\\)\\(#\\|\\d\\+\\)\\.\\(\\s\\)/\\1\\2\\3 /g\n2) snip support. <Leader>I inserts snip, auto-completion supported. See the document for details.\n3) Added keymaps for toc window: J, K: outline next/previous line.\n4) Abandoned indentation feature.\n5) Fixed html export bugs. Thanks for pengo's great catch.\n6) note and todo strings get highlighted anywhere.\n7) Added done(DONE) syntax.\n8) Optimized the toc display."
@@ -402,7 +402,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "This will be the last 0.10 series verion, please see all 0.10 series's changelog and the updated document to get how to update. Note again! you can use :call Ywtxt_old2new() then ggVG= to reformat the old version, but please care the inproperly reformat!!! Ywtxt_old2new() will be abandoned in next version! You've been warned.\n1) Fixed a heading determination error."
@@ -418,7 +418,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "This will be the last 0.10 series verion, please see all 0.10 series's changelog and the updated document to get how to update. Note again! you can use :call Ywtxt_old2new() then ggVG= to reformat the old version, but please care the inproperly reformat!!! Ywtxt_old2new() will be abandoned in next version! You've been warned.\n1) Improved heading determination\n2) Improved Indentation function"
@@ -434,7 +434,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "Fixed: a serious toc heading bug.\nNote!!! Please see the version *0.10*'s changelog and the updated document for detailed changes, otherwise ywtxt will not work properly with the older format in the new version!"
@@ -450,7 +450,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Uncompatible Changed!: Heading format changed to \"#. \", \"   #.# \", old user can use :call Ywtxt_old2new() to reformat the old format of ywtxt, note that function Ywtxt_old2new() will abandon in next version.\n2) Widened: Comment region definition: Lines starts with optional spaces and % considered as comment.\n3) Changed: Delete comment region when export to html.\n4) Added: Markup for superscript(^{}) and subscript(_{})\n5) Added: imap for _(_{}), ^{(^{}) and ^[(^[])\n6) Added: g:ywtxt_tocwidth for configuration of toc window's width. Thanks for pengo's suggestion.\n7) Improved: Highlight note and todo strings in headings. Add \"注意\" in note syntax. Thanks for pengo's suggestion.\n8) Added: markup of \"[/path/to/local.pic]\" (jpg, png, bmp, gif) can be viewed in exporting html directly.\n9) Changed: bibliography's name to references.\n10) Added: Auto Indent.\n11) Improved: toc window cursorline.\n12) Improved: reindent func."
@@ -466,7 +466,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Added simple html export. Hit <Shift-e> in toc window will export .ywtxt to .html, set the references keyword to number in document.\n2) Added keymap in toc window: <Shift-X> will outline the heading in document.\n3) Changed definition of keymap <space>: open the heading in document without leaving the toc window.\n4) Abandoned the :call Ywtxt_GenBibliography() way to generate bibliography, use <Shift-b> in toc window instead.\n5) Improved reindent function.\n6) Suppressed the no folding found warning of <tab>."
@@ -482,7 +482,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Changed toc window openning from horizotally to vertically.\n2) Added syntax for TODO, NOTE."
@@ -498,7 +498,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Added support and keymaps for bibliography generation and viewing, please see the advancd feature in the document for details.\n2) Improved the header creation funtion.\n3) Added syntax for Figure capture."
@@ -514,7 +514,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Added feature: auto number the section numbers in file according to the toc, and added key maps in toc window(S, w, <leader><tab>, <C-r>, u) and normal file(<leader><tab>). See the document for details.\n2) Added syntax for bold(*b*), underline(_u_) and italic(/i/).\n3) Fixed cursor location of toc window.\n4) Cleaned some unused vars."
@@ -530,7 +530,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1. Improved the toc refresh.\n2. Removed the dangerous saving operation when changing the level of header."
@@ -546,7 +546,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "Added support for auto-generating numbered sections in toc window.\nFixed unprecisely jumping from toc's bug."
@@ -562,7 +562,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Fixed syntax for headers matching bug.\n2) Added feature of changing the level of headers with \\< and \\> in toc window (Warn!: file will get saved!).\n3) Added keymap <enter>, x for toc window, see the document for detail.\n4) Added syntax for [keywords,keywords], figures(Fig. #.<space>) and tables(Table #)."
@@ -578,7 +578,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "1) Added highlight for headers(up to 10 levels).\n2) Fixed toc generation and cursor location bugs.\n3) Remove normal window key maps for toc window.\n4) Changed toc window name to the _<file name root>_TOC_\n5) Added Function for refreshing the toc window(bind it to r in toc window).\n6) Added key map for normal window: \\q      Close the toc window."
@@ -594,7 +594,7 @@
         "user_name": "Wu, Yue",
         "first_name": "Yue",
         "last_name": "Wu",
-        "email": "ywupub at gmail.com",
+        "email": "ywupub@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

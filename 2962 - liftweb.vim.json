@@ -4,9 +4,25 @@
   "summary": "A plugin for vim to ease navigation for projects that use the Lift framework.",
   "name": "liftweb.vim",
   "script_type": "utility",
-  "description": "A plugin for vim to ease navigation for projects that use the Lift Scala web\nframework. Heavily inspired by the awesome that is Tim Pope's rails.vim (at\nhttp://rails.vim.tpope.net/) .\n\nCurrently provides a few commands:\n\n* :Lmodel, Lsnippet, Lactor, Lcomet -- all take a class name and take you to\n  the appropriate associated file\n* :Lview -- takes a class name and takes you to the appropriate view file\n* :Lspec or :Ltest -- when called from a class (e.g., GroupSnip), takes you to\n  the associated test file (GroupSnipTest)\n* :Lclass -- the opposite of Lspec, takes you to the class for the current test\n\nThe github repository for this lives at http://github.com/Shadowfiend/liftweb-vim/ ;\nplease file bugs at http://github.com/Shadowfiend/liftweb-vim/issues .",
-  "install_details": "Just copy the files to the appropriate locations in ~/.vim and open a scala file in your Lift project and you're ready to rock.",
+  "description": "A plugin for vim to ease navigation for projects that use the Lift Scala web \nframework. Heavily inspired by the awesome that is Tim Pope's rails.vim (at \nhttp://rails.vim.tpope.net/) . \n\nCurrently provides a few commands: \n\n* :Lmodel, Lsnippet, Lactor, Lcomet, Llib -- all take a class name and take you to \n  the appropriate associated file \n* :Lview -- takes a class name and takes you to the appropriate view file \n* :Lspec or :Ltest -- when called from a class (e.g., GroupSnip), takes you to \n  the associated test file (GroupSnipTest) \n* :Lclass -- the opposite of Lspec, takes you to the class for the current test \n* :Lboot -- takes you directly to Boot.scala \n* :Lcss, Ljavascript, Lsass -- takes a filename and takes you to the appropriate file \n\nAll commands are properly autocompleted.\n\nThe github repository for this lives at http://github.com/Shadowfiend/liftweb-vim/ ; \nplease file bugs at http://github.com/Shadowfiend/liftweb-vim/issues .",
+  "install_details": "Just copy the files to the appropriate locations in ~/.vim and open a scala file in your Lift project and you're ready to rock. \n\nAlternatively, use Tim Pope's pathogen.vim (http://www.vim.org/scripts/script.php?script_id=2332 ) and put this plugin's files in ~/.vim/bundle/liftweb-vim/ (or extract the tarball directly there).",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14551",
+      "filename": "liftweb-vim.tar.gz",
+      "script_version": "1.2",
+      "date": "2010-12-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18964",
+        "user_name": "lightfiend",
+        "first_name": "Antonio",
+        "last_name": "Salazar Cardozo",
+        "email": "savedfastcool@gmail.com",
+        "homepage": "http://shadowfiend.posterous.com/"
+      },
+      "release_notes": "Added Lboot, Ljavascript, Lcss, and Lsass commands. Also fixed Llib completion and added Llib to list of supported commands."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12319",
       "filename": "liftweb-vim.tar.gz",
@@ -18,7 +34,7 @@
         "user_name": "lightfiend",
         "first_name": "Antonio",
         "last_name": "Salazar Cardozo",
-        "email": "savedfastcool at gmail.com",
+        "email": "savedfastcool@gmail.com",
         "homepage": "http://shadowfiend.posterous.com/"
       },
       "release_notes": "Added correct vim script id for GetLatestVimScripts configuration."
@@ -34,7 +50,7 @@
         "user_name": "lightfiend",
         "first_name": "Antonio",
         "last_name": "Salazar Cardozo",
-        "email": "savedfastcool at gmail.com",
+        "email": "savedfastcool@gmail.com",
         "homepage": "http://shadowfiend.posterous.com/"
       },
       "release_notes": "Initial upload"

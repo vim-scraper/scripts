@@ -1,0 +1,27 @@
+{
+  "script_id": "3383",
+  "display_name": "StatusLineHighlight",
+  "summary": "Change statusline color depending on buffer state. ",
+  "name": "StatusLineHighlight",
+  "script_type": "utility",
+  "description": "DESCRIPTION\nThis plugin indicates the state of the buffer (modified, readonly,\nunmodifiable, special non-file \"scratch\") / window (is preview window) by\nchanging the highlighting of the window's status line. It defines additional\nStatusLine... / StatusLine...NC highlight groups that are customizable and by\ndefault use different colors to differentiate the buffer states. \n\nAn example screenshot can be found at\n    http://ingo-karkat.de/swdev/vim/StatusLineHighlight.png\n\nHOW IT WORKS\nUsing different colors for the status line is trickier than it seems: Though\nthe 'statusline' setting supports inline expressions via %{expr}, the returned\ntext is taken as-is; highlight items %#hlgroup# and #* are not evaluated, only\nprinted as text. Evaluation does happen when one %!expr is used, but the\nexpression seems to be evaluated only once for a complete screen redraw cycle,\nnot for each individual status line, so one cannot use it to set different\nhighlightings for different status lines. \n\nTherefore, this plugin sets up autocmds that continually adapt buffer-local\n'statusline' settings (which prepend the highlight group to the (mostly)\nglobal setting (though local 'statusline' settings set by ftplugins are kept,\ntoo)). \n\nUSAGE\nThis plugin does not introduce any commands or mappings. Just observe the\nchanged status line colors, e.g. when using :view, :pedit, :help, etc. \n\nYou immediately see that a buffer is read-only because its status line is\ngray, not black; unmodifiable buffers are even \"more\" gray. Unsaved, modified\nbuffers are indicated via a dark-red status line. Special windows like the\ncommand and quickfix windows, as well as many \"scratch\" buffers used by\nplugins are shown in dark blue. The preview window is now also easy to find,\nbecause it has a blue status line. ",
+  "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim StatusLineHighlight.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.0 or higher. \n\nCONFIGURATION\nFor a permanent configuration, put the following commands into your vimrc: \n\nYou may override the default highlightings and define your own colors in the\nfollowing form. As with the built-in status line highlighting, there is a\nhl-StatusLine group for the current window and a hl-StatusLineNC for all\nnon-current windows.  \n    highlight StatusLineModified           term=bold,reverse cterm=bold,reverse ctermfg=DarkRed  gui=bold,reverse guifg=DarkRed\n    highlight StatusLineModifiedNC         term=reverse      cterm=reverse      ctermfg=DarkRed  gui=reverse      guifg=DarkRed\n    highlight StatusLinePreview            term=bold,reverse cterm=bold,reverse ctermfg=Blue     gui=bold,reverse guifg=Blue\n    highlight StatusLinePreviewNC          term=reverse      cterm=reverse      ctermfg=Blue     gui=reverse      guifg=Blue\n    highlight StatusLineReadonly           term=bold,reverse cterm=bold,reverse ctermfg=Grey     gui=bold,reverse guifg=DarkGrey\n    highlight StatusLineReadonlyNC         term=reverse      cterm=reverse      ctermfg=Grey     gui=reverse      guifg=DarkGrey\n    highlight StatusLineSpecial            term=bold,reverse cterm=bold,reverse ctermfg=DarkBlue gui=bold,reverse guifg=DarkBlue\n    highlight StatusLineSpecialNC          term=reverse      cterm=reverse      ctermfg=DarkBlue gui=reverse      guifg=DarkBlue\n    highlight StatusLineUnmodifiable       term=bold,reverse cterm=bold,reverse ctermfg=Grey     gui=bold,reverse guifg=Grey\n    highlight StatusLineUnmodifiableNC     term=reverse      cterm=reverse      ctermfg=Grey     gui=reverse      guifg=Grey",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14631",
+      "filename": "StatusLineHighlight.vba.gz",
+      "script_version": "1.00",
+      "date": "2010-12-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo@karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

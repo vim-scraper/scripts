@@ -4,9 +4,41 @@
   "summary": "Allows you to open file:line and it does the right thing :-)",
   "name": "file-line",
   "script_type": "utility",
-  "description": "When you open a file:line, for instance when coping and pasting from an error from your compiler vim tries to open a file with a colon in its name. With this little script in your plugins folder if the stuff after the colon is a number and a file exists with the name especified before the colon vim will open this file and take you to the line you wished in the first place.",
+  "description": "When you open a file:line, for instance when coping and pasting from an error from your compiler vim tries to open a file with a colon in its name. With this little script in your plugins folder if the stuff after the colon is a number and a file exists with the name especified before the colon vim will open this file and take you to the line you wished in the first place.\n\nThis script is licensed with GPLv3 and you can contribute to it on github at https://github.com/bogado/file-line .",
   "install_details": "Just copy the file into your plugins path ($HOME/.vim/plugin under unixes).",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14875",
+      "filename": "file:line.vim",
+      "script_version": "0.6",
+      "date": "2011-01-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14021",
+        "user_name": "bogado",
+        "first_name": "Victor",
+        "last_name": "Bogado da Silva Lins",
+        "email": "victor@bogado.net",
+        "homepage": ""
+      },
+      "release_notes": "Added some changes made by Ingo Karkat that made the whole thing more robust."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14792",
+      "filename": "file:line.vim",
+      "script_version": "0.5",
+      "date": "2011-01-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14021",
+        "user_name": "bogado",
+        "first_name": "Victor",
+        "last_name": "Bogado da Silva Lins",
+        "email": "victor@bogado.net",
+        "homepage": ""
+      },
+      "release_notes": "following Dr. David Alan Gilbert suggestion of allowing file:line:column format."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=9148",
       "filename": "file:line.vim",
@@ -18,7 +50,7 @@
         "user_name": "bogado",
         "first_name": "Victor",
         "last_name": "Bogado da Silva Lins",
-        "email": "victor at bogado.net",
+        "email": "victor@bogado.net",
         "homepage": ""
       },
       "release_notes": "Closes the buffer for the nonexistent file \"file:line\" after it opens the correct file. "
@@ -34,7 +66,7 @@
         "user_name": "bogado",
         "first_name": "Victor",
         "last_name": "Bogado da Silva Lins",
-        "email": "victor at bogado.net",
+        "email": "victor@bogado.net",
         "homepage": ""
       },
       "release_notes": "Opens eventual folds on the desired lines. Changes made by Rodolfo Borges (user barrett9h)"
@@ -50,7 +82,7 @@
         "user_name": "bogado",
         "first_name": "Victor",
         "last_name": "Bogado da Silva Lins",
-        "email": "victor at bogado.net",
+        "email": "victor@bogado.net",
         "homepage": ""
       },
       "release_notes": "This version uses a simpler way to open the desired file and also uses the \"nested\" option so the loaded file can be correctly detected by vim."
@@ -66,7 +98,7 @@
         "user_name": "bogado",
         "first_name": "Victor",
         "last_name": "Bogado da Silva Lins",
-        "email": "victor at bogado.net",
+        "email": "victor@bogado.net",
         "homepage": ""
       },
       "release_notes": "Initial upload"

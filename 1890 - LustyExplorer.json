@@ -8,6 +8,22 @@
   "install_details": "Copy the script into your $HOME/.vim/plugin directory so that it will be sourced on startup.\n\nNOTE: This plugin requires Vim be compiled with Ruby interpretation.  If you do not currently have this functionality, see the \"Install Details:\" section of the script for directions to add it.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=14546",
+      "filename": "lusty-explorer.vim",
+      "script_version": "4.0",
+      "date": "2010-12-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "12358",
+        "user_name": "sjbach",
+        "first_name": "Stephen",
+        "last_name": "Bach",
+        "email": "lusty@sjbach.com",
+        "homepage": ""
+      },
+      "release_notes": "- New and improved fuzzy matching algorithm: Mercury. (Matt Tolton)\n- Buffer Explorer: don't show unlisted buffers. (Thanks to Johannes Holzfuß)\n- Align multi-byte CJK characters correctly in filenames. (Thanks to lilydjwg)\n- Truncate prompt if longer than window width to avoid \"press any key\" message. (Thanks to Martin Wache)\n- Save/restore window config better. (Thanks to robquant)"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13373",
       "filename": "lusty-explorer.vim",
       "script_version": "3.1.1",
@@ -18,7 +34,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Don't throw an error when looking up special non-file buffers.  (Thanks to Ben Boeckel)"
@@ -34,7 +50,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Buffer grep: performance improvement.\n- Buffer explorer: secondary sort by most-recently used."
@@ -50,7 +66,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- New :LustyBufferGrep for searching through open buffers.\n- Filesystem explorer: fixed a directory recursion highlighting bug."
@@ -66,7 +82,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Better matches window layout algorithm.\n- Put code in its own namespace to play nicer with other Ruby plugins.\n- Don't error when run in read-only mode.  (Thanks to Ali Asad Lotia)\n- Don't error if a file is treated as a dir.\n- Don't error when a single-quote is typed."
@@ -82,7 +98,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Cygwin and Windows compatibility fixes.  (Thanks to Brett DiFrischia)\n- Warn if &compatible mode is set.\n- Windows: show matches when at root (i.e. C:/).\n- Cygwin: workaround some missing POSIX stuff.\n- Cygwin: don't freeze when exploring root (weird Ruby bug)."
@@ -98,7 +114,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Buffer explorer: fixed a spurious error message introduced in the previous release.  (Thanks to sowill)"
@@ -114,7 +130,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Performance improvements."
@@ -130,7 +146,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- New keys: C-o -> open in horizontal split, C-v -> open in vertical split.  (Thanks to David Brown)\n- Fix environment variable expansion.\n- Rename launch commands, e.g. BufferExplorer -> LustyBufferExplorer."
@@ -146,7 +162,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Fix an error message on some platforms introduced in the previous release.  (Thanks to sowill)"
@@ -162,7 +178,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Fix performance over NFS.\n- Fix portability with the updated Vim->Ruby data type conversion in devhead Vim.  (Thanks to Björn Winckler)\n- Fix portability with Ruby 1.9."
@@ -178,7 +194,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Open files using relative paths for better readability in e.g. :ls. (Thanks to Bernhard Walle)\n- Warn when fuzzyfinder_textmate is detected -- this plugin interacts poorly with LustyExplorer. (Thanks to Charl Matthee)\n- Fix a minor highlighting bug."
@@ -194,7 +210,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Significant performance increase for directories with many files.\n- Lower memory usage in directory memoization."
@@ -210,7 +226,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "The vast majority of these changes were contributed by Matt Tolton:\n- Flex/fuzzy matching using the LiquidMetal algorithm:\n  <http://github.com/rmm5t/liquidmetal/tree/master&gt;\n- Buffer explorer: paths are hidden except to differentiate buffers of\n  the same basename.\n- New option:\n    g:LustyExplorerAlwaysShowDotFiles\n- Filesystem explorer: directory contents are memoized\n- New keys for the prompt:\n    C-t: open selected entry in new tab\n    C-n: select the next entry\n    C-p: select the previous entry\n    C-w: move one directory upward at prompt\n    C-u: clear the prompt\n- New keys specific to the filesystem explorer:\n    C-r: refresh directory contents\n    C-a: open all files in the current list\n    C-e: create a new file with the given name\n- Cursor will \"hide\" correctly when a filename includes a two-column\n  character.\n- GetLatestVimScripts compatibility.\n- Faster implentation of columnize().  Thanks to Sami Samhuri.\n- Fixed a declaration typo.  Thanks to Simo Salminen."
@@ -226,7 +242,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Definitively fix the bug of overwritten delete registers.\n- Respect the 'wildignore' variable; g:LustyExplorerFileMasks still works, but is deprecated."
@@ -242,7 +258,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Restore the unnamed (default) register after using the explorer.  Thanks to cho45."
@@ -258,7 +274,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- When the explorer is cancelled, reset the previous buffer (b#) to the actual previous buffer.\n- Fixed error when launching the explorer while editing a remote file through netrw.  Thanks to Bernhard Walle."
@@ -274,7 +290,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Filesystem explorer: added g:LustyExplorerFileMasks variable to hide certain types of files.\n- Filesystem explorer: speed up for directories with many files.\n- Added truncation indicator if there are more entries than can be displayed."
@@ -290,7 +306,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Fixed memoization bug for recursing into directories with mixed case names."
@@ -306,7 +322,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Filesystem explorer now does variable ($FOO) expansion.\n- Added some memoization for noticeable speed up on older hardware."
@@ -322,7 +338,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Added compatibility for Windows, finally.  Please let me know if you have any problems."
@@ -338,7 +354,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Now deals correctly with unnamed buffers instead of spitting out an error.  Thanks to Rajendra Badapanda.\n- Buffer explorer will now launch even if only a single buffer is open."
@@ -354,7 +370,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Pressing <TAB> will now open a buffer/file if it is the only entry.\n- If <ENTER> is pressed when there are no matching entries, a new buffer will be created with the given name.\n- <C-g> now behaves like <C-c> and <ESC>."
@@ -370,7 +386,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Added g:LustyExplorerSuppressRubyWarning option for situations where the same Vim configuration is used over multiple machines, not all of which have Ruby installed.  Thanks to Bernhard Walle."
@@ -386,7 +402,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Fixed filename truncation when sidescroll/sidescrolloff have been set.  Thanks to Bernhard Walle."
@@ -402,7 +418,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- <C-h> now interpreted as backspace.  Thanks to Yuichi Tateno.\n- Much improved handling of files/directories with special characters in their names."
@@ -418,7 +434,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Added :FilesystemExplorerFromHere command.  Thanks to Sergey Popov.\n- Added highlighting to the prompt and cursor.\n- Buffer explorer: added [+] indicator to dirty buffers.\n- Many small fixes."
@@ -434,7 +450,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Filesystem explorer now does tilde (~) expansion.\n- Fixed some Vim error messages for special characters in filenames/input.\n- Internal refactoring."
@@ -450,7 +466,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Recursing into directories with capital letters in their names using case-insensitive matching has been fixed.  Thanks to Raimon Grau."
@@ -466,7 +482,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Renamed from DynamicExplorer.\n- Buffer explorer now orders by Most Recently Used.\n- Buffer explorer now matches anywhere in name.\n- Filesystem explorer highlights opened files."
@@ -482,7 +498,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "- Allow opening files with spaces in their names.\n- Fixed listing bug where the whole window width sometimes wasn't being utilized.\n- The cursor is now moved off into a more inconspicuous corner.\n- Syntax highlighting improved for listings with spaces or parens.\n- Internal refactoring."
@@ -498,7 +514,7 @@
         "user_name": "sjbach",
         "first_name": "Stephen",
         "last_name": "Bach",
-        "email": "lusty at sjbach.com",
+        "email": "lusty@sjbach.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"
