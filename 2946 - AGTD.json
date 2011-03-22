@@ -4,9 +4,25 @@
   "summary": "Almighty GTD File for Vim",
   "name": "AGTD",
   "script_type": "utility",
-  "description": "Tired of trying thousand of tools to organize my life, and inspired in the\nidea of ONE BIG TEXT FILE from Danny O'Brien, I decided that the world needed\nyet another GTD tool. The \"Almighty\" part is a reference to the idea of having\nall type of notes about your tasks in one single file.\n\nThe whole idea of this GTD implementation relies in some custom notation\nmarks, the Folding capabilities of VIM and its power to work quickly with\ntext. I wanted something portable to collect, edit, search and structure\nlightning fast my notes. This is the result so far:\n\n    * Organize project tree with notes, links and tasks\n    * Move tasks from the project tree to the TODO list inserting project label\n    * Neatly collect and display all tasks related with a project\n    * Ease project tasks/notes finding\n    * Build a calendar with all the dates in the text file\n\nI strongly recommend the UTL script as a side companion. It will enhance your\nnotes allowing you to open different links with just a short keystroke.\n\nThis script is my idea of how GTD should be done with VIM. Any comments, bug\nreports, patches, fixes and suggestions are welcome.\n\nIf you like it, please, rate it in the Vim website to let me know that out\nthere there are people who find this useful. Otherwise I will consider this\njust an scrapbook to learn Vim scripting. \n\nAny comments in my webpage would be appreciated. There you can request wished features, report bugs or just tell me to go on and that you would like to see more versions:\nhttp://www.digital-lumberjack.com/tools/vim/agtd\n",
-  "install_details": "Install as usual. However notice that the file \"todo-example.txt\" is just an example to play with the script",
+  "description": "Tired of trying thousand of tools to organize my life, and inspired in the\nidea of ONE BIG TEXT FILE from Danny O'Brien, I decided that the world needed\nyet another GTD tool. The \"Almighty\" part is a reference to the idea of having\nall type of notes about your tasks in one single file.\n\nThe whole idea of this GTD implementation relies in some custom notation\nmarks, the Folding capabilities of VIM and its power to work quickly with\ntext. I wanted something portable to collect, edit, search and structure\nlightning fast my notes.\n\nYou can get a longer description and one screenshot at:\n\nhttps://github.com/fgarcia/agtd\n",
+  "install_details": "Open the file and install with\n     :so %\n\nMake sure you have somewhere in your Vimrc file the filetype plugin enabled:\n     :filetype plugin on",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15259",
+      "filename": "agtd.vba",
+      "script_version": "0.3",
+      "date": "2011-03-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18898",
+        "user_name": "FGarcia",
+        "first_name": "Francisco",
+        "last_name": "Garcia",
+        "email": "public@francisco-garcia.net",
+        "homepage": "http://www.francisco-garcia.net"
+      },
+      "release_notes": "Improved online help\nImproved folding rules\nOther minor bugfixes"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12220",
       "filename": "agtd-0.2.zip",
@@ -18,7 +34,7 @@
         "user_name": "FGarcia",
         "first_name": "Francisco",
         "last_name": "Garcia",
-        "email": "contact@francisco-garcia.net",
+        "email": "public@francisco-garcia.net",
         "homepage": "http://www.francisco-garcia.net"
       },
       "release_notes": "Bug fixing and clutter clean-up \nCalendar displays colors \nVariable naming matches better plug-in name \nTask insertions works when there is an http:// address \nCommon environment values pushed into a ftplugin \nUTL Schema prototype for ssh links "

@@ -1,0 +1,27 @@
+{
+  "script_id": "3476",
+  "display_name": "bitly.vim",
+  "summary": "utility for bit.ly",
+  "name": "bitly.vim",
+  "script_type": "utility",
+  "description": "\nlastest version is https://github.com/basyura/bitly.vim\n\n==============================================================================\n\nCONTENTS\t\t\t\t\t*bitly-contents*\n\nIntroduction\t\t|bitly-introduction|\nInstall\t\t\t|bitly-install|\nVariables\t\t|bitly-variables|\nUsage\t\t\t|bitly-usage|\n\n==============================================================================\nINTRODUCTION\t\t\t\t\t*bitly-introduction*\n\nbitly.vim is a library of bit.ly.\nsupport API version 3.0\n\n  bit.ly is a utility that allows users to shorten a long URL, share it, \n  and then track the resulting usage. (http://bit.ly/)\n\n  bit.ly exposes its data via an Application Programming Interface (API),\n  so developers can interact in a programmatic way with the bit.ly website.\n  (http://code.google.com/p/bitly-api/wiki/ApiDocumentation)\n\nbitly.vim bundles webapi-vim.\n(https://github.com/mattn/webapi-vim/)\n\n==============================================================================\nINSTALL\t\t\t\t\t\t*bitly-install*\n\nInstall the distributed files into Vim script directory which is usually\n~/.vim/, or $HOME/vimfiles on Windows.\n\n==============================================================================\nVARIABLES\t\t\t\t\t*bitly-variables*\n\ng:bitly_login\t\t\t\t\t*g:bitly_login*\n\t\tbit.ly login id.\n\t\tif you want to use your login id , set this.\n\ng:bitly_api_key\t\t\t\t\t*g:bitly_api_key*\n\t\tbit.ly api key.\n\t\tif you want to use your api key , set this.\n\n==============================================================================\nUSAGE\t\t\t\t\t\t*bitly-usage*\n\t\nshorten\n\n\tthis method returns a short one.\n\treturn is a dict that converted from xml.\n\txml format is written in api document.\n>\n\tlet info = bitly#shorten('http://google.com')\n\techo info.status_code \"=> 200\n\techo info.status_txt  \"=> OK\n\techo info.url         \"=> http://bit.ly/gzJQrA\n\techo info.global_hash \"=> zzzzzzz\n\techo info.long_url    \"=> http://google.com\n\techo info.new_hash    \"=> 1\n<\nexpand\n\t\n\tthis method returns back the target url.\n\tthis method returns dict or list that converted from xml.\n\txml format is written in api document.\n>\n\tlet expand = bitly#expand('http://bit.ly/fHgr3a')\n\tcall expand.status_code \"=> 200\n\tcall expand.long_url    \"=> http://basyura.org\n\tcall expand.short_url   \"=> http://bit.ly/fHgr3a\n\t\n\tlet expands = bitly#expand(\n\t\t\\ ['http://bit.ly/fHgr3a' , 'http://bit.ly/g2n8tN'])\n\tcall expands[0].status_code \"=> 200\n\tcall expands[0].long_url    \"=> http://basyura.org\n\tcall expands[0].short_url   \"=> http://bit.ly/fHgr3a\n\tcall expands[1].status_code \"=> 200\n\tcall expands[1].long_url    \"=> http://google.com\n\tcall expands[1].short_url   \"=> http://bit.ly/g2n8tN\n<\nclicks\n\n\tthis method returns statistics list about the clicks on that link. \n\treturn is converted from xml.\n\txml format is written in api document.\n>\n\tlet clicks = bitly#clicks('http://bit.ly/fHgr3a')\n<\nreferrers\n\n\tthis method returns a list of referring sites\n\tfor a specified bit.ly short link, \n\tand the number of clicks per referrer. \n\treturn is converted from xml.\n\txml format is written in api document.\n>\n\tlet referrers = bitly#referrers('http://bit.ly/djZ9g4')\n\tfor v in referrers\n\t  if has_key(v , 'referrer')\n\t    echo v.referrer . ' ' . v.clicks\n\t  else\n\t    echo v.referrer_app . ' ' . v.clicks\n\t  endif\n\tendfor\n\n\tfor v in bitly#countries('http://bit.ly/djZ9g4')\n\t  echo v.country . ' ' . v.clicks\n\tendfor\n<\n\n\n\n",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15140",
+      "filename": "bitly.vim.zip",
+      "script_version": "1.0",
+      "date": "2011-03-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23916",
+        "user_name": "basyura",
+        "first_name": "basyura",
+        "last_name": " ",
+        "email": "basyura@gmail.com",
+        "homepage": "http://basyura.org http://twitter.com/basyura"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

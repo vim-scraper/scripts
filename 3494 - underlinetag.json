@@ -1,0 +1,27 @@
+{
+  "script_id": "3494",
+  "display_name": "underlinetag",
+  "summary": "underline tagged word to know the word hyperlinked.",
+  "name": "underlinetag",
+  "script_type": "utility",
+  "description": "What is this?\n==================================\nWhile I'm reading source code , I use tags and tagjump facility.\nBut to know what word I could jump is not possible at a glance.\n\nThis mini-plugin provide facility to underline tagged keyword.\n\nHow to use?\n================================\nUnderline\n----------------------\n    :UnderlineTagOn\n\nCrear\n----------------------\n    :UnderlineTagOff\n\nToggle\n----------------------\n    :UnderlineTagToggle\n\nMapping\n----------------------\n\n    nnoremap <Space>] :<C-u>UnderlineTagToggle<CR>\n\nRegister to autocmd Hook\n-------------------------\nIf you whan to tag underlined automatically as default.\nSet following snippet to your .vimrc\n\n    augroup UnderlineTag\n      autocmd!\n      autocmd BufEnter *.py UnderlineTagOn\n    augroup END\n\nCustomize\n-------------------------\n### syntax\n\n    let g:underlinetag_syntax = 'syntax keyword UnderlineTag %s containedin=ALLBUT,.*String.*,.*Comment.*,cIncluded,.*Function.*'\n\n### highlight\n\n    let g:underlinetag_highlight = 'highlight UnderlineTag gui=underline cterm=underline term=underline'\n\n",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15196",
+      "filename": "underlinetag.zip",
+      "script_version": "0.5",
+      "date": "2011-03-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27773",
+        "user_name": "t9md",
+        "first_name": "t9",
+        "last_name": "md",
+        "email": "taqumd@gmail.com",
+        "homepage": "http://github.com/t9md"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -8,6 +8,22 @@
   "install_details": "Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is \"~/.vim\" on UNIX and \"%USERPROFILE%\\vimfiles\" on Windows), restart Vim and execute the command \":helptags ~/.vim/doc\" (use \":helptags ~\\vimfiles\\doc\" instead on Windows). Now try it out: Edit any file type supported by Exuberant Ctags and within ten seconds the plug-in should create/update your tags file (\"~/.vimtags\" on UNIX, \"~/_vimtags\" on Windows) with the tags defined in the file you just edited! This means that whatever file you're editing in Vim (as long as its on the local file system), tags will always be available by the time you need them!\n\nAdditionally if the file you just opened is a C, C++, Objective-C, Java, Lua, Python, PHP or Vim source file you should also notice that the function and type names defined in the file have been syntax highlighted.\n\nIf the plug-in warns you that ctags isn't installed you can download it from its homepage http://ctags.sourceforge.net/ or if you're running Debian/Ubuntu you can install it by executing the following shell command:\n\n    sudo apt-get install exuberant-ctags\n\nNote that on Windows a command prompt window pops up whenever Exuberant Ctags is run as an external process. If this bothers you then you can install my shell.vim plug-in (see vimscript #3123) which includes a DLL that works around this issue. Once youve installed both plug-ins it should work out of the box!",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15110",
+      "filename": "easytags.zip",
+      "script_version": "2.2",
+      "date": "2011-02-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter@peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Bug fix for alias handling:\n   https://github.com/xolox/vim-easytags/commit/3b4db424731f952050b9\n\n  Don't highlight PHP functions not followed by `(':\n   https://github.com/xolox/vim-easytags/commit/d8a8c5ef9d2d9c48767b\n\n  Highlight C# classes, structs and methods (thanks to feedback from Aleksey Baibarin):\n   https://github.com/xolox/vim-easytags/commit/98780b1904c066a510ba\n\n  Added caveat about Cygwin (thanks to feedback from Alex Zuroff!), updated to-do list:\n   https://github.com/xolox/vim-easytags/commit/d8a8c5ef9d2d9c48767b"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14437",
       "filename": "easytags.zip",
       "script_version": "2.1.9",

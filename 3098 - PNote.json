@@ -4,9 +4,25 @@
   "summary": "Power Notes",
   "name": "PNote",
   "script_type": "utility",
-  "description": "Syntax, Folding function and clipboard yank with reformat function for my personal notes\n\nNo documentation! It is simple enough as to understand just by looking at the little code. \n \nAn example of my notes:\n\n# Install\n    ; Bootstrap if doing this not in NetBSD\n        Check platform notes <url:http://www.netbsd.org/docs/pkgsrc/platforms.html&gt;\n        $ cd pkgsrc/bootstrap\n        ; The parameters for OSX -> case and non root user\n        $ ./bootstrap --ignore-case-check --unprivileged\n",
-  "install_details": "Install as usual\n:so %\n",
+  "description": "This tiny script provides the syntax, folding function and other minor functionality that I need for my notes.\n\nI try to keep al my notes in simple plain ASCII text files. However I admit that some formating and folding is nice. Hence I came up with a very simple syntax based on some markers and indentation rules, wrap all that together into this Vim script and Voilà! Now I can keep my text notes within a compressed style and smart folding along the power of Vim to ease the access to my notes.\n\nYou can get a longer description and one screenshot at: \n\nhttps://github.com/fgarcia/pnote\n",
+  "install_details": "Install as usual. Download the latest version, open with vim and...\n     :so %\n\nMake sure you have somewhere in your Vimrc file the filetype plugin enabled: \n     :filetype plugin on",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15258",
+      "filename": "pnote.vba",
+      "script_version": "0.2",
+      "date": "2011-03-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18898",
+        "user_name": "FGarcia",
+        "first_name": "Francisco",
+        "last_name": "Garcia",
+        "email": "public@francisco-garcia.net",
+        "homepage": "http://www.francisco-garcia.net"
+      },
+      "release_notes": "Syntax for bibliography nodes \nSyntax for command line instructions \nEasy copy to command line instructions to the system clipboard \nMinor bugfixes"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13047",
       "filename": "pnote.vba",
@@ -18,7 +34,7 @@
         "user_name": "FGarcia",
         "first_name": "Francisco",
         "last_name": "Garcia",
-        "email": "contact@francisco-garcia.net",
+        "email": "public@francisco-garcia.net",
         "homepage": "http://www.francisco-garcia.net"
       },
       "release_notes": "Initial upload"

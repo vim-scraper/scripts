@@ -1,0 +1,27 @@
+{
+  "script_id": "3469",
+  "display_name": "csc.snippets",
+  "summary": "Essbase script snippet file",
+  "name": "csc.snippets",
+  "script_type": "utility",
+  "description": "Essbase script snippet file should be up-to-date with all features of Essbase 9.  \n\nyou can insert into your code using a trigger word followed by a <tab>.\n\nFor instance, in a csc file, if you type \"FIX<tab>\" in insert mode, it will expand a typical for FIX: \n\nFIX (fixMbrs)\n        commands;\nENDFIX\n\nTo go to the next item in the loop, simply <tab> over to it; if there is repeated code, such as the \"i\" variable in this example, you can simply start typing once it's highlighted and all the matches specified in the snippet will be updated. To go in reverse, use <shift-tab>.\n\nIf anything is missing, broken, not working well on your setup, or an inconvenience for you, please let me know, all feedback is welcome: <yyq123 at gmail.com>.\n\nEnhancements:\n-------------\n* case sensitive\n\nScreenshots:\n-------------\n* For statem with single srgument\n  http://www.flickr.com/photos/yyq123/5454484247/\n\n* For statem with multipule argumets\n  http://www.flickr.com/photos/yyq123/5454484239/\n\n* For statem list\n  http://www.flickr.com/photos/yyq123/5454484241/",
+  "install_details": "Prerequisite\n-------------\n* Install snipMate plugin (http://www.vim.org/scripts/script.php?script_id=2540)\n\nInstallation\n-------------\n* Copy csc.snippets to ~/.vim/snippets/csc.snippets or c:\\program files\\vim\\vimfiles\\snippets\\csc.snippets",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15108",
+      "filename": "csc.snippets",
+      "script_version": "0.1",
+      "date": "2011-02-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "24594",
+        "user_name": "yyq123",
+        "first_name": "Anthony",
+        "last_name": "Yuan",
+        "email": "yyq123@gmail.com",
+        "homepage": "http://yyq123.blogspot.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

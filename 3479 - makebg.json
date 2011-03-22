@@ -1,0 +1,27 @@
+{
+  "script_id": "3479",
+  "display_name": "makebg",
+  "summary": "Shell script to perform make in the background.",
+  "name": "makebg",
+  "script_type": "utility",
+  "description": "Use: makebg VIMSERVER MAKEPRG MAKEEF\nInside Vim, use this mapping for Fn12:\nmap <F12> :exec \"!makebg\" v:servername \"'\" . &makeprg . \"'\" &makeef<CR><CR>\n                                                                             \nExecute make in the background. Vim will automatically open the quickfix error window and jump to the first error when make is done. The mapping enables you to use your custom makeprg and makeef options, otherwise default values are used. Errors from the current run of make are prepended to the previous errors.  To clear previous errors, use this mapping for Shift + Fn12:\nmap <S-F12> :exec \"!rm \" &makeef \"; makebg\" v:servername \"'\" . &makeprg . \"'\"  &makeef<CR><CR>\nAdd these mappings to your vimrc for convenience.\n\nThis is Unix only (GNU/Linux, *BSD, Solaris, Mac OSX, Cygwin)\n",
+  "install_details": "Put the script somewhere in your path (eg: /usr/local/bin or ~/bin) and make it executable:\nchmod +x makebg",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15149",
+      "filename": "makebg",
+      "script_version": "1",
+      "date": "2011-03-02",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11690",
+        "user_name": "sameer0s",
+        "first_name": "Sameer",
+        "last_name": "Sheorey",
+        "email": "ssameer@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

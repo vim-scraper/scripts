@@ -1,0 +1,43 @@
+{
+  "script_id": "3507",
+  "display_name": "scrnpipe.vim",
+  "summary": "Pipe lines from your buffer to a screen window",
+  "name": "scrnpipe.vim",
+  "script_type": "utility",
+  "description": "This plugin allows you to send a range of lines from a buffer to another screen window. This could be used for all sorts of things but my motivation was to be able to edit SQL statements in a file and then send them to a open mysql client session in another window. You could also send ruby code to a running erb or bash commands to a bash prompt, etc. You could even use this as a quick way to paste between 2 vim sessions running in different windows (or even different screen sessions).\n\nThe plugin creates some mapping by default. \n\nIn normal mode || sends the current line to another screen window. In visual modes use |.\n\nIf you have a mapleader set you'll need to type that first for both mapings. See :help mapleader for more info on that.\n\nYou can create you own mappings to override these. For the normal mode do this:\n\nnmap <whatever> <Plug>ScreenPipeSend\n\nFor visual modes do this:\n\nvmap <whatever> <Plug>ScreenPipeOpSend\n\nJust replace <whatever> with what you want to map of course.\n\nFinally, this plugin also provides a :ScreenPipe command to do the same thing.\n\nThe code is available on git here:\n\nhttps://github.com/bundacia/ScreenPipe\n\nKNOWN BUGS:\n1. The window list doesn't show up on the mac (but choosing the right number still works)\n\nTODO:\n1. Implement an operator.",
+  "install_details": "Just drop scrnpipe.vim in your plugins directory. ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15236",
+      "filename": "scrnpipe.vim",
+      "script_version": "0.2",
+      "date": "2011-03-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28283",
+        "user_name": "bundacia",
+        "first_name": "Trevor",
+        "last_name": "Little",
+        "email": "TrevorMG19@gmail.com",
+        "homepage": "http://www.tjlittle.com"
+      },
+      "release_notes": "Better support for visual mode selection. Better shell escaping so that if you try to send text that has special shel chars in it the whole thing doesn't break. Normal mode mapping is now || by default."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15233",
+      "filename": "scrnpipe.vim",
+      "script_version": "0.1",
+      "date": "2011-03-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28283",
+        "user_name": "bundacia",
+        "first_name": "Trevor",
+        "last_name": "Little",
+        "email": "TrevorMG19@gmail.com",
+        "homepage": "http://www.tjlittle.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "script_id": "3508",
+  "display_name": "TeX_9",
+  "summary": "A semi-automatc LaTeX ftplugin with lots of firepower!",
+  "name": "TeX_9",
+  "script_type": "ftplugin",
+  "description": "    TeX_9                                  \n                     \n\n    Author:  Elias Toivanen\n    License: Public domain\n    Version: 1.0\n\n    TeX_9 is a ftplugin that enhances significantly the writing experience of\n    high quality documents with LaTeX and Vim. The scope of TeX_9 is to rely\n    first and foremost on features that are already available in Vim and try\n    to keep things as simple and snappy as possible. Indeed, TeX_9's codebase\n    is only about 500 SLOC.\n    \n    Most of TeX_9 is implemented in Python (2.6) and therefore a Vim\n    installation with Python support is required.  In addition, TeX_9 depends\n    on the matchit plugin (>= 1.13.2) by Benji Fisher.  Matchit is shipped with\n    the standard installation of Vim but it is also bundled with TeX_9 for\n    convenience.\n\n    TeX_9's main features are\n        * Compile, debug and view documents from within Vim \n        * Insert LaTeX code snippets with ease\n        * Select-objects for inline maths and math environments\n        * Omni-completion of BibTeX database entries and label references.\n        * Filetype specific indentation (courtesy of Johannes Tanzler)\n        * LaTeX2e manual (ported to Vim by Mikolaj Machowski)\n        * No-hassle settings, relatively few mappings\n        \n        See GIF's here:\n        http://www.picamatic.com/show/2011/03/19/08/53/7427382_820x880.gif\n        http://www.picamatic.com/show/2011/03/19/08/53/7427384_820x880.gif\n\n\n\n    TODOs in descending priority\n        * Formatexpr for TeX\n        * Keyword completion to support maths\n        * Use Vimballs for distribution\n        * SyncTeX support & Evince\n        * Test portability\n\n    Shoutouts\n        * Carl Mueller, this ftplugin was inspired by his `auctex.vim' script\n        * Vim-LaTeX people Srinath Avadhanula, Mikolaj Machowski and Benji Fisher\n        * Johannes Tanzler\n\n    Why create a new LaTeX ftplugin?\n        * For fun of course! :-)\n        * I wanted to have something more low-key than the venerable Vim-LaTeX and something more Vimish than  \n          AucTeX.vim\n",
+  "install_details": "        * Unzip the tarball to your local Vim tree (usually ~/.vim)\n        * Update helptags (:helptags ~/.vim/doc/)\n        * Read the help on TeX_9 (:help tex_nine)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15238",
+      "filename": "tex_nine-1.0.tar.gz",
+      "script_version": "1.0",
+      "date": "2011-03-17",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "28301",
+        "user_name": "tex_nine",
+        "first_name": "Elias",
+        "last_name": "Toivanen",
+        "email": "elias.toivanen@helsinki.fi",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

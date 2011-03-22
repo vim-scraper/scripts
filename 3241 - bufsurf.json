@@ -4,9 +4,25 @@
   "summary": "Plugin for navigating buffers webbrowser style.",
   "name": "bufsurf",
   "script_type": "utility",
-  "description": "This script has been deprecated, have a look at: http://www.vim.org/scripts/script.php?script_id=1147\n\nThe script offers more functionality and does not require Ruby support.",
+  "description": "When editing multiple files oftentimes it would be nice to be able to go back\nand forth between the last edited files, just like a web browser allows the\nuser to navigate web pages forward and backward in history. The standard\n:bn(ext) and :bp(revious) Vim commands allow to switch between next and\nprevious buffers respectively, but they do no take the history of the last\nused files into account. Instead, they use the order in which the files were\nopened, which can cause confusion in case the user expects to navigate forward\nand backwards in history.  For example, in case the user opened the files A,\nB, and C in the order:\n\nA, B, C\n\nand the navigation history would be\n\nA, B, C, B\n\nthen :bp(revious) in the last buffer (B) would open up buffer A, where C is\npreferable. This buffer supplies the user with the commands :BufSurfForward\nand :BufSurfBack to navigate buffers forwards and backwards according to the\nnavigation history.\n\nThe latest version of this plugin is available at:\n\n  http://github.com/ton/vim-bufsurf\n\nBugs can be reported there as well.",
   "install_details": "",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15252",
+      "filename": "bufsurf.tar.gz",
+      "script_version": "0.2",
+      "date": "2011-03-19",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "5382",
+        "user_name": "blukske",
+        "first_name": "Ton",
+        "last_name": "van den Heuvel",
+        "email": "blukske@hotmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Rewritten in vimscript (drop Ruby dependency).\n- Allow ignoring specific buffer names from showing up in the navigation history."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13847",
       "filename": "bufsurf.tar.gz",

@@ -1,0 +1,75 @@
+{
+  "script_id": "3465",
+  "display_name": "Tagbar",
+  "summary": "Display tags of the current file ordered by scope",
+  "name": "Tagbar",
+  "script_type": "utility",
+  "description": "Tagbar displays the tags of the current file in a sidebar, similar to vimscript #273. But it has the advantage that it will display them ordered by their scope -- for example, methods and members in languages like C++, Python or Java will be listed under their correct class instead of just under the general categories 'functions' or 'variables'. This gives a more helpful overview of the file.\n\nAdditionally the Tagbar window can be used to quickly jump to tags.\n\nTagbar requires Exuberant ctags (http://ctags.sourceforge.net/) in at least version 5.5 to work.\n\nPlugin homepage with screenshots:\nhttp://majutsushi.github.com/tagbar/\n\nCode repository:\nhttps://github.com/majutsushi/tagbar",
+  "install_details": "Use the normal Vimball installation method to install Tagbar:\n\n    vim tagbar.vba\n    :so %\n    :q\n\nIf ctags is not installed in one of the directories in your $PATH environment variable you have to set the option g:tagbar_ctags_bin, see the documentation for exact instructions.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15165",
+      "filename": "tagbar.vba",
+      "script_version": "1.5",
+      "date": "2011-03-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27049",
+        "user_name": "majutsushi",
+        "first_name": "Jan",
+        "last_name": "Larres",
+        "email": "jan@majutsushi.net",
+        "homepage": ""
+      },
+      "release_notes": "- Type definitions can now include a path to a file with the ctags definition. This is especially useful for ftplugins that can now ship with a complete ctags and Tagbar configuration without requiring user intervention. Thanks to Jan Christoph Ebersbach for the suggestion.\n\n- Added autofocus setting by Taybin Rutkin. This will put the cursor in the Tagbar window when it is opened.\n\n- The \"scopes\" field is no longer needed in type definitions, the information is already there in \"scope2kind\". Existing definitions will be ignored.\n\n- Some fixes and improvements related to redrawing and window switching."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15133",
+      "filename": "tagbar.vba",
+      "script_version": "1.2",
+      "date": "2011-02-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27049",
+        "user_name": "majutsushi",
+        "first_name": "Jan",
+        "last_name": "Larres",
+        "email": "jan@majutsushi.net",
+        "homepage": ""
+      },
+      "release_notes": "- Fix typo in Ruby definition\n\nThanks to Mishail for reporting."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15121",
+      "filename": "tagbar.vba",
+      "script_version": "1.1",
+      "date": "2011-02-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27049",
+        "user_name": "majutsushi",
+        "first_name": "Jan",
+        "last_name": "Larres",
+        "email": "jan@majutsushi.net",
+        "homepage": ""
+      },
+      "release_notes": "- Don't lose syntax highlighting when ':syntax enable' is called\n\n- Allow expanding the Vim window when Tagbar is opened\n\nThanks to Hansi for reporting."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15092",
+      "filename": "tagbar.vba",
+      "script_version": "1.0",
+      "date": "2011-02-23",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27049",
+        "user_name": "majutsushi",
+        "first_name": "Jan",
+        "last_name": "Larres",
+        "email": "jan@majutsushi.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

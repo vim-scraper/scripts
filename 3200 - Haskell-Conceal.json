@@ -4,9 +4,25 @@
   "summary": "Add some conceal operation to haskell's syntax",
   "name": "Haskell-Conceal",
   "script_type": "syntax",
-  "description": "Use some unicode operators in haskell file without changing it.\n\nRequire : Vim 7.3 or Vim compiled with the conceal patch\n  \n",
-  "install_details": "open HaksellConceal.vba in vim and type\n:so %\n\nnow you can just open any haskell file.",
+  "description": "Use Vim 7.3 Conceal feature to display unicode operator\nin Haskell without changing the underlying file.\n\nGitHub: https://github.com/Twinside/vim-haskellConceal\n",
+  "install_details": "Decompress in your ~/vimfiles or ~/.vim, if you're using\npathogen (you should), put it in ~/.vim/bundle/haskellConceal\nfolder",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15105",
+      "filename": "haskellConceal.zip",
+      "script_version": "1.1",
+      "date": "2011-02-24",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "17242",
+        "user_name": "Vincent B",
+        "first_name": "Vincent",
+        "last_name": "B",
+        "email": "twinside@free.fr",
+        "homepage": ""
+      },
+      "release_notes": "Fixing conceal level to be local (thx Erlend Hamberg)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13575",
       "filename": "HaskellConceal.vba",

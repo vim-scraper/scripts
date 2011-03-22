@@ -1,0 +1,27 @@
+{
+  "script_id": "3467",
+  "display_name": "align -- Ahmad",
+  "summary": "Align the right ends of statements together.",
+  "name": "align--Ahmad",
+  "script_type": "utility",
+  "description": "I wrote this script to help write verilog files that were compatible with my \ncompany's coding standard.\n\nThis script shifts the character under the cursor to a defined point. It can\nthus be used to align the *right* side of code to beautify or to confirm to\ncoding standards.\n\nSpaces are inserted before the current cursor position. The number of spaces\ninserted aligns the text to the lines above it. For example, if you have the\nfollowing chunk of code.\n\nreg [13:0] resultant  ;\nreg  [7:0] bytea;\n\nIf you load the script and press ';;' while on the semicolon on the second line,\nthe text will become like so.\n\nreg [13:0] resultant  ;\nreg  [7:0] bytea      ;\n\nNOTE: There has to be a previous aligned line for the script to make a match\nfrom.\n\nThis can also be used as part of a recorded macro. For example, to align the\nfollowing lines of code, to the top line.\n\n1   PORT_00       (port_00a       ),// Comment 1\n2   PORT_01(port_01aa),// Comment 2\n3   PORT_02(port_02aaa),// Comment 3\n4   PORT_03(port_03aaaa),// Comment 4\n5   PORT_04(port_04a),// Comment 5\n6\n7   PORT_T_00(port_t_00a),// Comment 6\n8   PORT_T_01(port_t_01aa),// Comment 7\n9   PORT_T_02(port_t_02aaa),// Comment 8\n10  PORT_T_03(port_t_03aaaa),// Comment 9\n\nWe can record a macro. Place your cursor on the first char of line 2 (the digit\n2) and press 'qzf(;;j^q'\n  q   - start recording\n  z   - record in register z\n  f(  - go to first occurrence of (\n  ;;  - align\n  j   - move down\n  ^   - go to start of line\n  q   - end recording.\n\nNow pressing @z on the start of line 3 will cause it to align. And the same for\nall the other lines. The same can be done for the closing brackets to get the\nfollowing.\n\n1   PORT_00       (port_00a       ), // Comment 1\n2   PORT_01       (port_01aa      ), // Comment 2\n3   PORT_02       (port_02aaa     ), // Comment 3\n4   PORT_03       (port_03aaaa    ), // Comment 4\n5   PORT_04       (port_04a       ), // Comment 5\n6\n7   PORT_T_00     (port_t_00a     ), // Comment 6\n8   PORT_T_01     (port_t_01aa    ), // Comment 7\n9   PORT_T_02     (port_t_02aaa   ), // Comment 8\n10  PORT_T_03     (port_t_03aaaa  ), // Comment 9\n",
+  "install_details": "Put the script in some folder (lets say $ALIGN)\nadd this to your ~/.vimrc\n\nsource $ALIGN/align.vim\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15104",
+      "filename": "align.tar.gz",
+      "script_version": "1.0",
+      "date": "2011-02-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27211",
+        "user_name": "coldmug",
+        "first_name": "Zohair",
+        "last_name": "Ahmad",
+        "email": "zohair.ahmad@gmail.com",
+        "homepage": "http://fpgabytes.blogspot.com/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

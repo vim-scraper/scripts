@@ -1,0 +1,27 @@
+{
+  "script_id": "3514",
+  "display_name": "vim activator",
+  "summary": "A tool for reusing vim in xterm",
+  "name": "vim-activator",
+  "script_type": "utility",
+  "description": "There's a script that comes with vim distribution for editing with existing\nvim in Windows.  However, this feature doesn't work in Linux xterm\nenvironment.  There's a beast called Vim Shell by Thomas Wana, but it's not\nofficially endorsed by vim.  When you exit vim to shell by pressing <ctrl-z>\nwhich suspends the vim, this nifty little gadget allows you edit subsequent\nfiles by reusing the existing vim.  It's kind of emulates a vim shell from the\nview point of a normal user.  This tool requires client-server option to be\nenabled in vim.",
+  "install_details": "1.  Put .bash_profile into your home directory.  If there's already existing\none, then you can rename the untar file to a different name, and source\nit from the existing .bash_profile.\n\n2.  Change the path to vimactivator in .bash_profile line 2 according your\ncurrent setting.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15251",
+      "filename": "activator.tar.gz",
+      "script_version": "1.0",
+      "date": "2011-03-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1076",
+        "user_name": "yiuwing",
+        "first_name": "Yiu Wing",
+        "last_name": "Yip",
+        "email": "yiuwingyip@virgin.net",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

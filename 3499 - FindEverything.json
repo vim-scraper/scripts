@@ -1,0 +1,27 @@
+{
+  "script_id": "3499",
+  "display_name": "FindEverything",
+  "summary": "Find everyting in your drives.",
+  "name": "FindEverything",
+  "script_type": "utility",
+  "description": "Only for windows.\n\nAs a vimer, I wish to use vim to locate and open file more easier and faster.\nOne day, I found a free software named Everything, it can locates files and folders by filename instantly for Windows.\nThis plugin provides a interface with Everything command-line tools(es.exe).\nInvoke FindEverything, type the file name you wish to find, and then it will return results in a buffer window.\n\nHow fast it can be?\nI type '*', which means find all files in all of my drives, and it return 160,000+ results in less than 5 seconds.\nI believe that if you type more character, it will show the results instantly.\n\nUsage:\n1. Download Everything gui and command-line(es.exe) tools\n    from the website: http://www.voidtools.com/download.php\n2. Start everything.exe and keep it running in background.\n3. Put this plugin into your vim runtime/plugin directory.\n4. Define g:fe_es_exe in your vimrc file. \n     Notice: it should pointer to the everything command-line interface(es.exe)\n     e.g. let g:fe_es_exe = 'd:\\Everything\\es.exe'\n5. Open vim and run command :FE\n\nCommand(all capital)\n:FE  find files using everything.\n:FER toggle the buffer to see the last search result.\n\nSome map_keys:\n<CR>     Open file under the cursor by default association.\n<C-CR>   Open file under the cursor using current vim session.\n<ESC>    Quit the result buffer.\n\nSome options:\n1. Always open these file types in current vim session.\n   let g:fe_openfile_filter = ['txt', 'vim']\n2. Define es.exe option.\n   let g:fe_es_option = '-s'\n\nKnown issues:\n1. Don't set g:fe_es_exe to any path include whitespace.\n2. es.exe support regular search, but seems that it can't work as well as its gui tools.\n   So, I suggest not using its -r option. You can use vim regular for further searching.\n",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15207",
+      "filename": "FindEverything.vim",
+      "script_version": "1.0",
+      "date": "2011-03-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28048",
+        "user_name": "wchao",
+        "first_name": "chao",
+        "last_name": "wang",
+        "email": "szwchao@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

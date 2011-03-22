@@ -1,0 +1,27 @@
+{
+  "script_id": "3510",
+  "display_name": "VimRepress",
+  "summary": "Plugin for managing wordpress blog from Vim.",
+  "name": "VimRepress",
+  "script_type": "utility",
+  "description": "VimRepress is a plugin for managing wordpress blog from Vim,  a rewritten  of vimscript #1953 , which is broken for years.\n\nUsage is simple, add commands listed:\n\n :BlogList [<count>]\n :BlogNew\n :BlogOpen <id>\n :BlogSave <draft|publish>\n :BlogPreview <draft|publish>\n :BlogUpload <file>\n :BlogCode [<code type>]\n :MarkdownPreview\n :MarkdownNewPost\n\nMore detailed about this commands, type :help vimpress while you have vimrepress installed.\n\nRelease Note:  http://apt-blog.net/manage-multiple-wordpresses-with-new-vimpress\nSVN Version:  svn checkout http://ptcoding.googlecode.com/svn/trunk/vimpress\n\n",
+  "install_details": "*INSTALL*\n\nDownload vimpress-1.x.x.zip, extract it in your .vim directory:\n\n  cd ~/.vim\n  unzip /where/you/downlaod/vimpress-1.x.x.zip\n\n*CONFIGURE*\n\nEdit ~/.vimrc , add a variable name VIMPRESS. Multiple blogs Config are supported, written as array list.\n\nlet VIMPRESS=[{'username':'user',\n               \\&#039password':'pass',\n               \\&#039blog_url':'http://your-first-blog.com/'\n               \\},\n               \\{'username':'user',\n               \\&#039password':'pass',\n               \\&#039blog_url':'http://your-second-blog.com/'\n               \\}]\n\nThen save and quit, reopen a vim, you may use commands list in |USING|.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15241",
+      "filename": "vimpress_1.2.5-r55.zip",
+      "script_version": "1.2.5",
+      "date": "2011-03-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20352",
+        "user_name": "BOYPT",
+        "first_name": "Preston",
+        "last_name": "Ma",
+        "email": "pentie@gmail.com",
+        "homepage": "http://apt-blog.net"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

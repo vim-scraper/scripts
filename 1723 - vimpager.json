@@ -5,8 +5,56 @@
   "name": "vimpager",
   "script_type": "utility",
   "description": "A slightly more sophisticated replacement for less.sh that also supports being set as the PAGER environment variable.\nDisplays man pages, perldocs and python documentation properly.\nDefinitely works on Linux, Solaris, OSX and Cygwin. Should work in most other places, if it detects your \"ps\" correctly.\n\nOn github:\nhttp://github.com/rkitover/vimpager",
-  "install_details": "mkdir ~/bin\ncp vimpager ~/bin\nchmod +x ~/bin/vimpager\n\n# put these in your ~/.bashrc or ~/.zshrc\nexport PAGER=~/bin/vimpager\nalias less=$PAGER",
+  "install_details": "mkdir ~/bin\ncp vimpager ~/bin\nchmod +x ~/bin/vimpager\n\n# put these in your ~/.bashrc or ~/.zshrc\nexport PAGER=~/bin/vimpager\nalias less=$PAGER\n\nPut the following into your ~/.vimrc if you want to use gvim as your pager window:\n\nlet vimpager_use_gvim = 1",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15268",
+      "filename": "vimpager",
+      "script_version": "1.4.4",
+      "date": "2011-03-21",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11267",
+        "user_name": "Caelum",
+        "first_name": "Rafael",
+        "last_name": "Kitover",
+        "email": "rkitover@io.com",
+        "homepage": ""
+      },
+      "release_notes": "* .vimrc option let vimpager_use_gvim = 1 to use gvim as the pager window"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15255",
+      "filename": "vimpager",
+      "script_version": "1.4.3",
+      "date": "2011-03-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11267",
+        "user_name": "Caelum",
+        "first_name": "Rafael",
+        "last_name": "Kitover",
+        "email": "rkitover@io.com",
+        "homepage": ""
+      },
+      "release_notes": "* Support for .Z and .gz files"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15253",
+      "filename": "vimpager",
+      "script_version": "1.4.2",
+      "date": "2011-03-20",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11267",
+        "user_name": "Caelum",
+        "first_name": "Rafael",
+        "last_name": "Kitover",
+        "email": "rkitover@io.com",
+        "homepage": ""
+      },
+      "release_notes": "* Extensive rewrite using awk for real Solaris compatibility by Wout Mertens.\n* Filter ANSI color codes and backspaces for all pager invocations (github issue #2)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14694",
       "filename": "vimpager",

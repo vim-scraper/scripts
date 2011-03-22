@@ -8,6 +8,22 @@
   "install_details": "(1) Copy the zip archive  doxygen-support.zip to $HOME/.vim/ or $VIM/vimfiles\n    (on the Windows platforms) and run\n\n      unzip doxygen-support.zip\n\n    If you have already an older version of doxygen-support and you have modified\n    the template files you may want to save your templates first or copy the \n    files from the archive by hand.\n\n(2) Loading of plugin files must be enabled. If not use\n      :filetype plugin on\n    This is the minimal content of the file '$HOME/.vimrc'. Create one if there\n    is none. \n\n(3) Set at least some personal details in the main file \n    'doxygen-support/templates/doxygen.templates'. \n\n(4) Restart gVim/Vim generate the help tags \n\n      :helptags ~/.vim/doc\n\n    and look at the doxygensupport help with\n\n      :h doxygensupport\n\n  For a system-wide installation please see the help file 'doc/doxygensupport.txt'.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15161",
+      "filename": "doxygen-support.zip",
+      "script_version": "2.2",
+      "date": "2011-03-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "169",
+        "user_name": "mehner",
+        "first_name": "Fritz",
+        "last_name": "Mehner",
+        "email": "mehner@fh-swf.de",
+        "homepage": ""
+      },
+      "release_notes": "- New main menu iten: \"help (Doxygen-Support)\"\n- Bugfix: detection of a systemwide installation can fail."
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13297",
       "filename": "doxygen-support.zip",
       "script_version": "2.1",

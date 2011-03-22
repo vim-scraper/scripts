@@ -8,6 +8,22 @@
   "install_details": "REQUIREMENT: SKK-JISYO.[SML]\nSet two global variables if necessary.\n  let skk_jisyo = \"path to private dictionary\"\n  let skk_large_jisyo = \"path to SKK-JISYO.[SML]\"\n:so skk.vim or put this script into your plugin directory.\nTo start SKK-mode, press <C-j> in Insert-mode or Commandline-mode. ",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15190",
+      "filename": "skk.zip",
+      "script_version": "0.27.0",
+      "date": "2011-03-10",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "- Apply the changes of Anyakichi repository. thanks Anyakichi.\n-- Add g:skk_external_prog_encoding option.\n-- Improve text-wrapping behavior.\n-- Add <C-c> as cancel key for word-registration.\n-- Fix \";hass;uru\" conversion problem when using sticky shift.\n-- Do \":redraw\" before showing conversion candidates.\n- Move syntax/skkdict.vim to https://github.com/tyru/skkdict.vim\n-- Bundle syntax/skkdict.vim and ftdetect/skkdict.vim\ninto zip file uploaded to www.vim.org"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13747",
       "filename": "skk.zip",
       "script_version": "0.26.2",

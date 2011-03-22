@@ -1,0 +1,91 @@
+{
+  "script_id": "3475",
+  "display_name": "Vim Blog",
+  "summary": "An updated plugin to allow you to post from VIM to Wordpress",
+  "name": "Vim-Blog",
+  "script_type": "utility",
+  "description": " took the popular vimpress plugin and added the ability to upload images and set a post status type (draft or published). \n\n\nCommands :\n\":BlogList [count]\"\n  Lists the last x articles in the blog - if left blank 10 are returned\n\":BlogNew\"\n  Opens page to write new article\n\":BlogOpen <id>\"\n  Opens the article <id> for edition\n\":BlogDel <id>\" \n  Del the article <id>\n\":BlogSend\"\n  Saves the article to the blog if the Post Status is draft. Posts the\n  article to the blog if the Post Status is publish\n\":BlogUp <image name>\"\n  Uploads an image to the blog and inserts the image url. It will use the\n  img_template var to fill in a whole img tag if wanted. Use %s where you'd\n  like the actual url to be.\n\"<leader>c\"\n  Must be in insert mode.\n  Displays an auto-complete list of available blog categories. Currently\n  only supported after :BlogNew\n  You can remap this on line 69",
+  "install_details": "Place in your vim/plugin/ directory.\n\nEdit the settings starting on line 82\n\nThis plugin does require that python be compiled into vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15191",
+      "filename": "blog.vim",
+      "script_version": "1.6",
+      "date": "2011-03-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27480",
+        "user_name": "jkenzer",
+        "first_name": "Josh",
+        "last_name": "Kenzer",
+        "email": "jkenzer@gmail.com",
+        "homepage": "http://www.radicalbehavior.com"
+      },
+      "release_notes": "Added one new feature: When you use :BlogSend, your default browser will open either the preview URL or the actual URL in your default browser (I have not tested this in Windows). If it is a published post, it will use the \"?p=id\" URL format. Note that this doesn't affect how you have your wordpress default URL slug setup.\n\nYou can configure the plugin to not open a browser window by changing the enable_preview setting to 0. Currently, it will open a new window/tab everytime you do :BlogSend. I hope to modify this to only do it once per post in the future.\n\nI also now show the appropriate url in the Preview line based on whether it is a draft or published post."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15171",
+      "filename": "blog.vim",
+      "script_version": "1.5",
+      "date": "2011-03-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27480",
+        "user_name": "jkenzer",
+        "first_name": "Josh",
+        "last_name": "Kenzer",
+        "email": "jkenzer@gmail.com",
+        "homepage": "http://www.radicalbehavior.com"
+      },
+      "release_notes": "I added the capability to auto-complete categories. The command, while in insert mode, is <leader>c. This is the same as <ctrl>x <ctrl>u for a user defined auto-complete list.\n\nI also added some plugin checks to make sure it wasn't previously loaded."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15148",
+      "filename": "blog.vim",
+      "script_version": "1.2",
+      "date": "2011-03-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27480",
+        "user_name": "jkenzer",
+        "first_name": "Josh",
+        "last_name": "Kenzer",
+        "email": "jkenzer@gmail.com",
+        "homepage": "http://www.radicalbehavior.com"
+      },
+      "release_notes": "Bug Fix.\nAdded the ability to define an image template to use. This template is inserted into the buffer after the :BlogUp has uploaded your image. %s is replaced with the img url. This should speed up time for inserting images into your posts."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15142",
+      "filename": "blog.vim",
+      "script_version": "1.1",
+      "date": "2011-03-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27480",
+        "user_name": "jkenzer",
+        "first_name": "Josh",
+        "last_name": "Kenzer",
+        "email": "jkenzer@gmail.com",
+        "homepage": "http://www.radicalbehavior.com"
+      },
+      "release_notes": "Added BlogDel and revised BlogList to return a specified number of posts (default is 10). Thanks to http://wiki.yepn.net/vimpress for the code. Thanks to Carson for the tip."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15139",
+      "filename": "blog.vim",
+      "script_version": "1.0",
+      "date": "2011-02-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27480",
+        "user_name": "jkenzer",
+        "first_name": "Josh",
+        "last_name": "Kenzer",
+        "email": "jkenzer@gmail.com",
+        "homepage": "http://www.radicalbehavior.com"
+      },
+      "release_notes": "Fixed documentation"
+    }
+  ]
+}

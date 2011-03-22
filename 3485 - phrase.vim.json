@@ -1,0 +1,43 @@
+{
+  "script_id": "3485",
+  "display_name": "phrase.vim",
+  "summary": "gather useful phrase, refer it whenever you want.",
+  "name": "phrase.vim",
+  "script_type": "utility",
+  "description": "** Currently I only tested Linux and Mac OS X environment, so Windows is not supported ***\n\nWhat is this?\n==================================\nphrase.vim is utility for\n\n  * gather userful phrase to consolidated file\n  * recall by viewing useful phrase\n\nI mainly use this plugin for gather useful phrase for several programming languages.\nAnd intending to share several programming idiom with co-worker.\n\nTry\n================================\n\nCreate phrase directory.\nCopy phrase example file to that directory.\n\n      $ mkdir $HOME/.vim/phrase/$USER\n      $ copy phrase_example/* $HOME/.vim/phrase/$USER\n\nShow phrase then enter to jump to that title\n\n      :Phraselist vim\n\nVisually select text in buffer then create phrase from that text.\n\n      :'<,'>PhraseCreate<CR>\n\n\nShare your phrase with others\n==============================\nSCENARIO\n-----------------------\nAssume TARO and HANAKO share their phrase each other.\n\n      # TARO's setting\n      let g:phrase_author = \"taro\"\n\n      # HANAKO's setting\n      let g:phrase_author = \"hanako\"\n\n* Taro pushes his phrase directory into git.\n* Hanako pushes his phrase directory into git.\n* Taro love Ruby and want to learn Python.\n* Hanako love Python and want to learn Ruby.\n* Taro pull Hanako's Python phrase from git, Hanako pull Taro's Ruby phrase from git,\n  helps learning new language more easily.\n\nDROPBOX\n------------------------------------------------------------------------------\nShareing phrase folder with Dropbox is another practical use case.\n\nIf you dont't want to .swp files be synced every time your collaborator\nview your phrase, disable making swap file in among all collaborators.\n\n      au BufNewFile,BufRead */phrase/*/phrase.* setlocal noswapfile\n\nGITHUB\n------------------------------------------------------------------------------\nPublish your phrase to github helps other.\nMy proposal about this type of repository name is ..\n\n#### Repository Name:\n  phrase-{your id}\n\n#### Layout:\n  put your phrases under 'phrase/{your id}/' sub directory.\n\n      phrase-t9md/phrase/t9md\n      phrase-t9md/phrase/t9md/phrase.vim\n      phrase-t9md/phrase/t9md/phrase.rb\n\n#### Example repository:\n  https://github.com/t9md/phrase-t9md\n\nKeymap Example\n-----------------------------------------------------------------\n\n        \" mapleader default is '&#039, I use ',' instead.\n        let mapleader = \",\"\n        nnoremap <silent> <Leader>pl  :PhraseList<CR>\n        nnoremap <silent> <Leader>pe  :PhraseEdit<CR>\n        vnoremap <silent> <Leader>pe  :PhraseEdit<CR>\n        vnoremap <silent> <Leader>pc  :PhraseCreate<CR>\n        vnoremap <silent> <Leader>pl  :<C-u>PhraseList<CR>\n\n        \" If you use Unite plugin\n        nnoremap <silent> <Space>p  :<C-u>Unite phrase -start-insert<CR>\n\nUsage\n-----------------------------------------------------------------\n\n        \" show Ruby's phrase list\n        :PhaseList ruby\n\n        \" show Ruby's phrase list(by specifying extension)\n        :PhaseList rb\n\n        \" show phrase list of current &filetype\n        :PhaseList\n\n        \" Edit Ruby's phrase\n        :PhaseEdit ruby\n\n        \" Edit Perl's phrase(by specifying extension)\n        :PhaseEdit pl\n\n        \" Edit phrase of current &filetype\n        :PhaseEdit\n\n        \" Create phrase from selected text(=range)\n        :'<,'>PhraseCreate<CR>\n\nLatest Version\n----------------------------------\nhttp://github.com/t9md/vim-phrase",
+  "install_details": "unzip it to $HOME/.vim/",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15182",
+      "filename": "phrase.zip",
+      "script_version": "0.2",
+      "date": "2011-03-09",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "27773",
+        "user_name": "t9md",
+        "first_name": "t9",
+        "last_name": "md",
+        "email": "taqumd@gmail.com",
+        "homepage": "http://github.com/t9md"
+      },
+      "release_notes": "0.2\t2011-03-10\n\t- Support multiple languages\n\t- Change configuration variables.\n          g:phrase_dir is no longer used.\n          Use g:phrase_auther and g:phrase_basedir\n          Use g:phrase_ft_tbl to customise filetype extension map and comment\n          string.\n\t- Eliminate comment string when creating PhraseList.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15167",
+      "filename": "phrase.zip",
+      "script_version": "0.1.1",
+      "date": "2011-03-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27773",
+        "user_name": "t9md",
+        "first_name": "t9",
+        "last_name": "md",
+        "email": "taqumd@gmail.com",
+        "homepage": "http://github.com/t9md"
+      },
+      "release_notes": "fix help's url"
+    }
+  ]
+}

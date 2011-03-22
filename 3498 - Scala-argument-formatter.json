@@ -1,0 +1,43 @@
+{
+  "script_id": "3498",
+  "display_name": "Scala argument formatter",
+  "summary": "Format method arguments",
+  "name": "Scala-argument-formatter",
+  "script_type": "utility",
+  "description": "Place the cursor on any character in the method name or on the\nmethods left paren, '(', and then invoke this script. If you\nuse the binding above, you would enter <Leader>f.\n\nThe script finds the first non-white-space character after the\nmethod's left paren and uses that as the character position for\naligning all arguments (note: in the following, the indent spacing may\nnot be correct - but it will be correct in your editor).\n\nExamples of method calls:\n\n   m1(thisIsArgOne, thisIsArgTwo, thisIsArgThree(), thisIsArgFour): Sometype = {\n     ....\n   }\n\nbecomes\n\n   m1(thisIsArgOne,\n      thisIsArgTwo,\n      thisIsArgThree(),\n      thisIsArgFour): Sometype = {\n     ....\n   }\n\nand the following (note first argument position):\n\n   aVeryLongMethodNameAsAnExampleUsage(\n                           thisIsArgOne, thisIsArgTwo, thisIsArgThree, thisIsArgFour): Sometype = {\n     ....\n   }\n\nbecomes\n\n   aVeryLongMethodNameAsAnExampleUsage(\n                           thisIsArgOne,\n                           thisIsArgTwo,\n                           thisIsArgThree,\n                           thisIsArgFour): Sometype = {\n     ....\n   }\n\nbecomes (with s:formatargs_extra_arg_offset = 2)\n\n   aVeryLongMethodNameAsAnExampleUsage(\n                           thisIsArgOne,\n                             thisIsArgTwo,\n                             thisIsArgThree,\n                             thisIsArgFour): Sometype = {\n     ....\n   }\n\nGenerally, in this case you can change the location of the first\nmethod argument and reformat and it works (the rest of the arguments\nare aligned under the first argument).\n\nExamples of method calls with string arguments:\n\n   m1(thisIsArgOne, \"this is\" + somestring + \"a \\\"foo()\\\" test\", thisIsArgThree): Sometype = {\n     ....\n   }\n\nbecomes (with let s:formatargs_extra_string_arg_offset = 0)\n\n   m1(thisIsArgOne,\n      \"this is\" +\n      somestring +\n      \"a \\\"foo()\\\" test\",\n      thisIsArgThree): Sometype = {\n     ....\n   }\n\nor becomes (with let s:formatargs_extra_string_arg_offset = 2)\n\n   m1(thisIsArgOne,\n      \"this is\" +\n        somestring +\n        \"a \\\"foo()\\\" test\",\n      thisIsArgThree): Sometype = {\n     ....\n   }\n\nYea, it can actually do this.\n\nOne more example of a method where an argument is itself a method call:\n\n   m1(thisIsArgOne, thisIsArgTwo(innerOne, innerTwo), thisIsArgThree()): Sometype = {\n     ....\n   }\n\nplacing cursor on \"m1(\" and invoking this script becomes\n\n   m1(thisIsArgOne,\n      thisIsArgTwo(innerOne, innerTwo),\n      thisIsArgThree()): Sometype = {\n     ....\n   }\n\nthen placing cursor on \"thisIsArgTwo(\" and invoking this script becomes\n\n   m1(thisIsArgOne,\n      thisIsArgTwo(innerOne,\n                   innerTwo),\n      thisIsArgThree()): Sometype = {\n     ....\n   }\n\n\n\nExamples of method definitions:\n\n   def m1(thisIsArgOne: String, thisIsArgTwo: Int, thisIsArgThree: Float): Sometype = {\n     ....\n   }\n\nbecomes\n\n   def m1(thisIsArgOne: String,\n          thisIsArgTwo: Int,\n          thisIsArgThree: Float): Sometype = {\n     ....\n   }\n\nand the following (note first argument position):\n\n   def aVeryLongMethodNameAsAnExampleUsage(\n                           thisIsArgOne: String, thisIsArgTwo: Int, thisIsArgThree: Float): Sometype = {\n     ....\n   }\n\nbecomes\n\n   def aVeryLongMethodNameAsAnExampleUsage(\n                           thisIsArgOne: String,\n                           thisIsArgTwo: Int,\n                           thisIsArgThree: Float): Sometype = {\n     ....\n   }\n\nArray definition:\nAs an unplanned extra, this can be used to format the arguments to an\narray:\n\n   val a = Array[Int] ( 1, 3, 4, 5, 4)\n\nbecomes\n\n   val a = Array[Int] ( 1,\n                        3,\n                        4,\n                        5,\n                        4)\nand\n\n   val a = Array[Int] (\n             1, 3, 4, 5, 4)\n\nbecomes\n\n   val a = Array[Int] (\n             1,\n             3,\n             4,\n             5,\n             4)\n\nOk, so formating an array does not do too much.\n",
+  "install_details": "1. Edit the configuration section. It is commented, so I won't explain the\n   options here.\n\n2. Put something like this in your .vimrc file:\n\n     source $HOME/.vim/formatargs.vim\n     autocmd FileType scala map <Leader>f :call FormatArgs()<CR>\n     autocmd FileType scala map <Leader>c :call FormatMethodChain()<CR>\n     autocmd FileType scala map <Leader>s :call FormatString()<CR>\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15247",
+      "filename": "formatargs.vim",
+      "script_version": "1.1",
+      "date": "2011-03-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6544",
+        "user_name": "rme",
+        "first_name": "richard",
+        "last_name": "emberson",
+        "email": "richard.n.emberson@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Maximum number of arguments is now a parameter with default value 10 (the original value). This can now be modified to allow for the formating of more than 10 arguments.\nMaximum number of lines to search for the first non-white space character is now a parameter with default value 2 (the original value). One is not likely to ever need to increase this value."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15205",
+      "filename": "formatargs.vim",
+      "script_version": "1.0",
+      "date": "2011-03-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6544",
+        "user_name": "rme",
+        "first_name": "richard",
+        "last_name": "emberson",
+        "email": "richard.n.emberson@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

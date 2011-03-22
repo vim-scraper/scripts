@@ -8,6 +8,22 @@
   "install_details": "Install in ~/.vim/autoload (~\\vimfiles\\autoload on Windows).  The API is\ndocumented inline.  Use foldmethod=marker for maximum ease of reading.\n\nNote that you need to invoke the pathogen functions before invoking \"filetype plugin indent on\" if you want it to load ftdetect files. On Debian (and probably other distros), the system vimrc does this early on, so you actually need to \"filetype off\" before \"filetype plugin indent on\" to force reloading.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15192",
+      "filename": "pathogen.vim",
+      "script_version": "1.3",
+      "date": "2011-03-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9012",
+        "user_name": "tpope",
+        "first_name": "Tim",
+        "last_name": "Pope",
+        "email": "vimNOSPAM@tpope.org",
+        "homepage": "http://tpo.pe/"
+      },
+      "release_notes": "Allow disabling bundles with g:pathogen_disabled.\nFix appending \"after\" directories on Windows."
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12116",
       "filename": "pathogen.vim",
       "script_version": "1.2",

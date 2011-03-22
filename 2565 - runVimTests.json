@@ -8,6 +8,22 @@
   "install_details": "INSTALLATION\nThis framework is packaged as a ZIP archive. You can unpack it directly into\nyour runtime directory (~/.vim), but you can also install the script executables\nsomewhere else. \n\nThe script executables are in the bin/ subdirectory: \n    bin/runVimTests.cmd\n    bin/runVimTests.sh\n    bin/runVimMsgFilter.vim\nThey can be put anywhere (preferably somewhere in $PATH for easy invokation).\nrunVimMsgFilter.vim must be in the same directory as the shell script. \n\nThe doc/ subdirectory contains the documentation. Put the files into\n~/.vim/doc and execute :helptags ~/.vim/doc to re-generate the help tags. \n\nThe autoload/ subdirectory contains optional convenience and helper functions.\nTheir use is not required, but they simplify the writing of tests. \n\nThe VimTAP plugin (vimscript #2213) needs to be installed separately. \n\nThe test/ subdirectory contains example test suites and a self-test of the\ntest framework. For a simple sanity check, execute: \n    $ runVimTests test/runVimTests/successful.suite\nwhich should print something like:\n    9 files with 19 tests; 0 skipped, 19 run: 19 OK, 0 failures, 0 errors.\nIf this is the case, you can start exploring the example tests (in the\ntest/example/ subdirectory) or just start writing your own\nrunVimTests-testscripts! \n\nDEPENDENCIES\n- Requires Vim 7.2 or higher as the default Vim found in $PATH (which is\n  always used for the matching of Vim message output against the captured\n  messages). You can use a different Vim version to execute the tests, but at\n  least Vim 7.0 is required to use captured messages (as this depends on the\n  'verbosefile' option) and TAP unit tests (vimtap.vim is an autoload script).\n\nThe Windows version requires (* = optional) these ported Unix tools:\n- grep, sed, diff, sort(*), uniq(*)\nWindows binaries can be downloaded from the GnuWin32 project: \n    http://gnuwin32.sourceforge.net/",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15135",
+      "filename": "runVimTests.zip",
+      "script_version": "1.16",
+      "date": "2011-02-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo@karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- Minor bugfixes and tweaks to the self-test. \n- Renamed directory that the tests reside in from \"test/\" to \"tests/\". This is just a personal preference, you can still put the tests into whatever directory structure. \n- ENH: Added vimtest#ErrorAndQuit() for convenience. \n- bugfix and enhancement to the vimtest#System() function. "
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=10702",
       "filename": "runVimTests.zip",
       "script_version": "1.13",

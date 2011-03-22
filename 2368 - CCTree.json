@@ -1,12 +1,76 @@
 {
   "script_id": "2368",
   "display_name": "CCTree",
-  "summary": "C Call-Tree Explorer - Source-code analysis, real-time display of code flow",
+  "summary": "C Call-Tree Explorer - Source-code browser, code flow analysis tool for C",
   "name": "CCTree",
   "script_type": "ftplugin",
-  "description": "Project details/Screenshots:\n                 http://sites.google.com/site/vimcctree/\n \n  Description:\n       Plugin generates call-trees for any function or macro in real-time inside  Vim. (Functionality similar to that seen in other IDEs like\nKscope, Source navigator, Eclipse)\n\n  Requirements: 1) Cscope          2) Vim 7.xx \n\n \n ",
+  "description": "Description:\n       Plugin generates call trees (aka function call dependencies) for any function or macro in real-time inside Vim using Cscope database. (Functionality similar to that of tools like CBrowser, Kscope, Source navigator, Eclipse, Source Insight). Currently supported language: C.\n\n  Requirements: 1) Cscope          2) Vim 7.xx \n\nProject details/Screenshots:\n                 http://sites.google.com/site/vimcctree/ \n ",
   "install_details": "Install details\n  Installation:\n               Copy this file to ~/.vim/plugins/\n               or to /vimfiles/plugins/  (on Win32 platforms)\n\n               It might also be possible to load it as a filetype plugin\n               ~/.vim/ftplugin/c/\n\n               Need to set :filetype plugin on\n          \n\n",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15272",
+      "filename": "cctree.vim",
+      "script_version": "1.21",
+      "date": "2011-03-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Support serialization of loaded cscope databases (for faster loading)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15185",
+      "filename": "cctree.vim",
+      "script_version": "1.07",
+      "date": "2011-03-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": " 1. Fix new keymaps incorrectly applied to buffer\n 2. CCTreeOptsToggle command for toggling options\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15170",
+      "filename": "cctree.vim",
+      "script_version": "1.04",
+      "date": "2011-03-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Customization for key mappings\n2. Dynamic configuration of UI variables\n3. Folding long call-trees to show current path dynamically"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15155",
+      "filename": "cctree.vim",
+      "script_version": "1.00",
+      "date": "2011-03-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "1. Staging release for upcoming features\n          - Complete refactoring of code to take advantage of VimScript's OO features\n2. Faster decompression of symbols\n3. Display related changes\n          - Use of unicode symbols for tree\n4. Bugfixes related to multi-database loading"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15043",
       "filename": "cctree.vim",

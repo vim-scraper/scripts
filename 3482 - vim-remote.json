@@ -1,0 +1,43 @@
+{
+  "script_id": "3482",
+  "display_name": "vim-remote",
+  "summary": "Vim clientserver protocol library",
+  "name": "vim-remote",
+  "script_type": "utility",
+  "description": "Vim clientserver protocol library\n\nLicense: VIM LICENSE (see :help license)\n\nsupported:\n  serverlist()\n  remote_expr()\n\nnot supported:\n  remote_foreground()\n  remote_peek()\n  remote_read()\n  remote_send()\n  server2client()\n\n\nExample:\n\nCompile vim-remote library.\n\n  Linux:\n    $ make -f Makefile.x11\n\n  Windows (VC++):\n    > nmake -f Makefile.msvc\n\n  Windows (MinGW):\n    > make -f Makefile.mingw\n\nStart the sample python server.\n\n  $ python main.py --servername py --server\n\nYou can evaluate Python expression with remote_expr().\nStart Vim and execute the following command.\n\n  :echo remote_expr('py', 'print(\"This is Python expression\")')\n  None\n\n\"None\" is result of Python expression.\nAnd the message will be displayed on the console.\n\nAlso, it is possible to call client function from server.\n\n  :function! F()\n  :  echo \"This is Vim expression\"\n  :  return \"And this is result from Vim\"\n  :endfunction\n  :let pyexpr = printf('remote_expr(\"%s\", \"F()\")', v:servername)\n  :let result = remote_expr('py', pyexpr)\n  This is Vim expression\n  :echo result\n  And this is result from Vim\n\n\nLatest source: https://github.com/ynkdir/vim-remote",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15162",
+      "filename": "vim-remote.zip",
+      "script_version": "1.1",
+      "date": "2011-03-05",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "11226",
+        "user_name": "yukihiro",
+        "first_name": "Yukihiro",
+        "last_name": "Nakadaira",
+        "email": "yukihiro.nakadaira@gmail.com",
+        "homepage": "http://sites.google.com/site/yukihironakadaira/"
+      },
+      "release_notes": "Changed API\nAdded sample ruby server"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15157",
+      "filename": "vim-remote.zip",
+      "script_version": "1.0",
+      "date": "2011-03-04",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "11226",
+        "user_name": "yukihiro",
+        "first_name": "Yukihiro",
+        "last_name": "Nakadaira",
+        "email": "yukihiro.nakadaira@gmail.com",
+        "homepage": "http://sites.google.com/site/yukihironakadaira/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

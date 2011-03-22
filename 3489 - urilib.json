@@ -1,0 +1,27 @@
+{
+  "script_id": "3489",
+  "display_name": "urilib",
+  "summary": "URI library in vim script inspired by URI.pm",
+  "name": "urilib",
+  "script_type": "utility",
+  "description": "    let uri = urilib#new('http://twitter.com/tyru')\n\n\t\" \"http\"\n    echo uri.scheme()\n\n\t\" \"twitter.com\"\n    echo uri.host()\n\n\t\" \"/tyru\"\n    echo uri.path()\n\n\t\" \"//twitter.com/tyru\"\n    echo uri.opaque()\n\n\t\" \"\"\n    echo uri.fragment()\n\n\n    let uri = urilib#new('http://d.hatena.ne.jp/tyru/20100619/git_push_vim_plugins_to_github#c')\n\n\t\" \"http\"\n    echo uri.scheme()\n\n\t\" \"d.hatena.ne.jp\"\n    echo uri.host()\n\n\t\" \"/tyru/20100619/git_push_vim_plugins_to_github\"\n    echo uri.path()\n\n\t\" \"//d.hatena.ne.jp/tyru/20100619/git_push_vim_plugins_to_github\"\n    echo uri.opaque()\n\n\t\" \"c\"\n    echo uri.fragment()\n\n\n\nRepository: http://github.com/tyru/urilib.vim",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15179",
+      "filename": "urilib.zip",
+      "script_version": "0.0.0",
+      "date": "2011-03-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

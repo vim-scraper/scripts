@@ -1,0 +1,27 @@
+{
+  "script_id": "3515",
+  "display_name": "VimOutliner",
+  "summary": "Outline processor designed for lighting fast authoring",
+  "name": "VimOutliner",
+  "script_type": "utility",
+  "description": "* What is VimOutliner?\n\nVimOutliner is an outline processor with many of the same features as Grandview, More, Thinktank, Ecco, etc. Features include tree expand/collapse, tree promotion/demotion, level sensitive colors, interoutline linking, and body text.\n\nWhat sets VimOutliner apart from the rest is that it&#039s been constructed from the ground up for fast and easy authoring.  Keystrokes are quick and easy, especially for someone knowing the Vim editor. The mouse is completely unnecessary (but is supported to the extent that Vim supports the mouse). Many of the VimOutliner commands start with a double comma because that&#039s very quick to type.\n\nMany outliners are prettier than VimOutliner. Most other outliners are more intuitive for the newbie not knowing Vim. Many outliners are more featureful than VimOutliner (although VimOutliner gains features monthly and is already very powerful).  Some outliners are faster on lookup than VimOutliner. But as far as we know, NO outliner is faster at getting information out of your mind and into an outline than VimOutliner.\n\nVimOutliner will always give you lightning fast authoring. That&#039s our basic, underlying philosophy, and will never change, no matter what features are added.\n\n* Usage\n\nVimOutliner has been reported to help with the following tasks:\n  - Project managment.\n  - Password wallet => http://img71.imageshack.us/my.php?image=vimpasswordwalletpngvi4.png\n  - To-do lists.\n  - Account and cash book.\n  - &#039Plot device&#039 for writing novels.\n  - Inventory control.\n  - Hierarchical database.\n  - Web site managment.\n\n* Characteristics\n\n  - Fast.\n  - Extensible through plugins.\n  - Many post-processing scripts allow exporting to multiple formats.\n  - Extensive documentation.",
+  "install_details": "\nTo install from the zip file in this page do the following:\n $ unzip vimoutliner-0.3.x.zip\n $ cd vimoutliner-0.3.x\n $ sh install.sh\n\ngzip and vimball archives are available here:\n\nhttps://github.com/vimoutliner/vimoutliner/downloads\n\nTo install from the gzip archive follow these steps:\n\n $ tar -xzvf vimoutliner-0.3.x.tgz\n $ cd vimoutliner-0.3.5\n $ sh install.sh\n\nInstalling from the vimball archive does not require of external utilities, just open vioutliner-0.3.5.vba with Vim and type the following command to install in your home vim folder:\n\n:so %\n\nIf you want to install it in other folder use the following command:\n\n:UseVimball path/to/folder\n\nNOTE: If you install from a vimball archive you need to set the executable permissions for the scripts in ~/vim/vimoutliner/script (like chmod +x <script> in Linux/Mac OS X). ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15267",
+      "filename": "vimoutliner-0.3.5.zip",
+      "script_version": "0.3.5",
+      "date": "2011-03-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28449",
+        "user_name": "vimoutliner",
+        "first_name": "Vim",
+        "last_name": "Outliner",
+        "email": "vimoutliner@vimoutliner.org",
+        "homepage": "http://lists.vimoutliner.org/mailman/listinfo/vimoutliner"
+      },
+      "release_notes": "* Additions/Changes:\n- Moved all files inside $HOME/.vim.\n- Added a cheat sheet to the documentation.\n- Added smart-paste plugin.\n- Added and updated post-processor scripts:\n\t· fs2otl\n\t· Node.pm\n\t· otl2aft.awk\n\t· otl2docbook.pl\n\t· otl2html.py\n\t· otl2lyx.awk\n\t· otl2ooimpress.py\n\t· otl2table.py\n\t· otl2tags.py\n\t· otlgrep.py\n\t· otlhead.sh\n\t· otlsplit.py\n\t· otltail.sh\n\t· otl_handler\n\t· outline_calendar\n\t· outline_freemind\n\t· vo_maketags.pl\n- Added syntax support for _ilink_.\n- Hoist plugin disabled by default.\n- Layout of vo_readme.txt made more similar to Vim help.\n\n* Bug fixes:\n- ,,S did not work. Fixed"
+    }
+  ]
+}

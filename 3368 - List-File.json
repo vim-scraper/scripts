@@ -4,9 +4,41 @@
   "summary": "Nested, folded lists",
   "name": "List-File",
   "script_type": "utility",
-  "description": "Plugin provides simple and efficient tools for managing a plain-text file of nested lists.\n\nScreenshot: http://lucasoman.com/images/listfile.png\nDetailed documentation: http://lucasoman.blogspot.com/2010/12/list-file-plugin-for-vim.html\n\nNOTE: I greatly appreciate any feedback. Feature suggestions, bug reports and other comments are encouraged. I'm eager to improve this plugin!\n\nFeature highlights:\n\n- Prioritizing\n- Sorting\n- Searching\n- Tagging\n- Unlimited nesting\n- Timestamping\n- Flexibility without complexity\n- Efficient and convenient mappings",
+  "description": "Plugin provides simple and efficient tools for managing a plain-text file of nested lists.\n\nScreenshot: http://lucasoman.com/images/listfile.png\nDetailed documentation: http://lucasoman.blogspot.com/2010/12/list-file-plugin-for-vim.html\n\nNOTE: I greatly appreciate any feedback. Feature suggestions, bug reports and other comments are encouraged. I'm eager to improve this plugin!\n\nFeature highlights:\n\n- Prioritizing\n- Sorting\n- Setting due dates\n- Searching\n- Tagging\n- Unlimited nesting\n- Timestamping\n- Flexibility without complexity\n- Efficient and convenient mappings",
   "install_details": "Untar in your .vim dir. Adds only two files: the plugin itself and a syntax file.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15228",
+      "filename": "listfile-1.2.0.tar.gz",
+      "script_version": "1.2.0",
+      "date": "2011-03-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15263",
+        "user_name": "LucasOman",
+        "first_name": "Lucas",
+        "last_name": "Oman",
+        "email": "me@lucasoman.com",
+        "homepage": "http://lucasoman.com"
+      },
+      "release_notes": "Added the following:\nDue Dates: set a due date for an item and search for items by due date. Date format is very flexible, allowing ranges of days or weeks. See docs.\nDefault mark: optionally configure the default mark for new items."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15156",
+      "filename": "listfile-1.1.0.tar.gz",
+      "script_version": "1.1.0",
+      "date": "2011-03-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15263",
+        "user_name": "LucasOman",
+        "first_name": "Lucas",
+        "last_name": "Oman",
+        "email": "me@lucasoman.com",
+        "homepage": "http://lucasoman.com"
+      },
+      "release_notes": "Greatly improved the intelligence of new item creation. New items use the mark from the item above them. They also will be created below the sub-items of the item above them. Before, the sub-items would be \"adopted\" by the new item."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14545",
       "filename": "listfile-1.0.4.tar.gz",

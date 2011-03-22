@@ -1,0 +1,27 @@
+{
+  "script_id": "3502",
+  "display_name": "To Upper case (case changer)",
+  "summary": "change the keywords to upper case.",
+  "name": "To-Upper-case-case-changer",
+  "script_type": "utility",
+  "description": "\n User manual: \n For use this script on VB.\n First , add the following line to your vimrc:\n\n let g:case_basic_source='IF;ELSE;THEN;DO;WHILE;FOR;CALL;'\n\n Second , add the folloing line to your vimrc\n We use .vb as the language extension name.\n\n let g:case_changer_pat=\"*.vb\"\n\n Now , while your input if in your .vb file , I will change it to IF ...\n\n Use this script for other language .\n First , add source\n\n\" let g:case_{&ft}_source='WHILE;UNTIL;UNLESS...'\n\n let g:case_ruby_source='WHILE;UNTIL;UNLESS...'\n let g:case_sql_source='SELECT;INSERT;VALUES...'\n\n Second , add file extension:\n\n let g:case_changer_pat=\"*.vb;*.rb;*.py\"\n",
+  "install_details": "put casechanger.vim to you $VIM/vimfiles/plugin",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15224",
+      "filename": "casechanger.vim",
+      "script_version": "1.0",
+      "date": "2011-03-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "6912",
+        "user_name": "wangfc",
+        "first_name": "JiuTian",
+        "last_name": "Zhang",
+        "email": "zhang9tian@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

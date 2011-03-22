@@ -1,0 +1,27 @@
+{
+  "script_id": "3512",
+  "display_name": "Scala Java Edit",
+  "summary": "Jump to source file associated with class name",
+  "name": "Scala-Java-Edit",
+  "script_type": "utility",
+  "description": "Then press ,g while cursor is on a class name word and\nthe file should open (you'll need the\nsource files and the path to have been set already).\n\nPlace cursor over a word and attempt to find a scala file with the give name.\n\nThe following matches are attempted:\n 1) Is the cursor over a full package classname (e.g., scala.collection.Map)\n    If so is it over the classname (Map)\n      If so open it.\n    Or it is over on of the package names (collection)\n      If so open the directory (scala/collection).\n 2) Is there a local file with the name <cword>.scala\n    If so open it.\n 3) Is there an import statement with that file identified explicitly\n    (e.g., scala.collection.Map for Map).\n    If so open it.\n    If \"locate\" is enabled, search for file scala/collection/Map.scala (in this\n    example). If found, open it.\n 4) Is it a file located in \"$JAVA_HOME/src/scala/lang/\" directory\n    If so open it.\n 5) Is there an import statement with that file identified implicitly.\n    (e.g., scala.collection.* for Map).\n    If so open it. \n    If \"locate\" is enabled, search for file scala/collection/Map.scala (in this\n    example). If found, open it.\n 6) Its possible we are in a junit directory or is some parallel directory\n    structure so that our current file has the same package statement\n    value as some source files in a different directory. This attempt takes\n    the package statement value, creates a directory plus scala file from\n    it and first looks through the scala path and if not found there,\n    does a \"locate\" searching for the file.\n\nAlso, can be configured to work with Java files (or with both Scala\nand Java source files).\n",
+  "install_details": "Suggested stuff to add to your ~.vimrc:\n---------\n\n\" Set my Leader character\nlet mapleader = \",\"\n\n\" use locate command\nlet g:javae_locate_cmd = \"locate\"\nsource $HOME/vim/scalajavaedit.vim\n\n\" Java Stuff\nlet JAVASOURCEPATH = \"$JAVA_HOME/src\" .\n   \\\",$HOME/java/xerces/xerces/src\" .\n   \\\",$HOME/java/xerces/xalan/src\" .\n   \\\",$HOME/java/jboss/jboss\" .\n   \\\",$HOME/java/jakarta/commons-lang/src/java\" .\n   \\\",$HOME/java/jakarta/commons-collections/src/java\" .\n   \\\",$HOME/java/jakarta/jakarta-tomcat/jakarta-servletapi-5/jsr154/src/share/\"\n\" Note that for Java, only search for files with the 'java' suffix\n\" goto\nautocmd FileType java map <Leader>g :call EditSource('e',['java'],=,JAVASOURCEPATH)<CR>\n\" horizontal\nautocmd FileType java map <Leader>h :call EditSource('sp',['java'],=,JAVASOURCEPATH)<CR>\n\" vertical\nautocmd FileType java map <Leader>v :call EditSource('vsp',['java'],=,JAVASOURCEPATH)<CR>\n\n\" if you want to debug, comment out above line and uncomment below line\n\"map <Leader>g :debug:call EditSource('e',JAVASOURCEPATH)<CR>\n\n\" Scala Stuff\nlet SCALASOURCEPATH = \"$SCALA_HOME/src\" .\n   \\\",$SVN_HOME/project1/src/main/scala\" .\n   \\\",$SVN_HOME/project1/src/test/scala\" .\n   \\\",$SVN_HOME/project2/src/main/scala\" .\n   \\\",$SVN_HOME/project2/src/test/scala\" .\n   \\\",$JAVA_HOME/src\"\n\n\" Note that for Scala, search for files with the 'scala' and\n\"    then 'java' suffixes\n\" goto\nautocmd FileType scala map <Leader>g :call EditSource('e',['scala', 'java'],SCALASOURCEPATH)<CR>\n\" horizontal\nautocmd FileType scala map <Leader>h :call EditSource('sp',['scala', 'java'],SCALASOURCEPATH)<CR>\n\" vertical\nautocmd FileType scala map <Leader>v :call EditSource('vsp',['scala', 'java'],SCALASOURCEPATH)<CR>\n\n---------\nEnd Suggested stuff to add to your ~.vimrc:\n\nOne can of course, define more than one SOURCEPATH search variable and\nhave different mappings to envoke the different search paths.\nWhen porting Java code to Scala (and keeping the same package names for\nthe classes), I define a second search path and key map bindings\nallowing me to jump from the ported Scala source file to\nthe Java source file which was the basis of the port.\n\n\nYour java source path, of course, be different.\n\nMany java src tar files untar into directories with include not only\nthe component name, but also a version number (e.g., xerces has source\ndirectory xerces-2_6_2) - make symbolic link,\nln -s xerces-2_6_2 xerces\nand your vimrc will not have to be changed everytime you get a new\nversion.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15248",
+      "filename": "scalajavaedit.vim",
+      "script_version": "1.6",
+      "date": "2011-03-18",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "6544",
+        "user_name": "rme",
+        "first_name": "richard",
+        "last_name": "emberson",
+        "email": "richard.n.emberson@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

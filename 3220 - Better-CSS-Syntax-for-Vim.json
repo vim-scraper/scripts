@@ -4,9 +4,25 @@
   "summary": "Make CSS more readable.",
   "name": "Better-CSS-Syntax-for-Vim",
   "script_type": "syntax",
-  "description": "GIT: http://github.com/ChrisYs/Better-CSS-Syntax-for-Vim\n\nWhat's differences with built-in CSS syntax in Vim:\n    1. Support most of HTML & CSS properties, including HTML5 & CSS3.\n    2. Different highlight colors for properties, value, units and so on.\n\nNOTICE:\n    DO NOT support CSS color plugin yet, I'll fix it when I have time.\n\nhttp://www.vim.org/scripts/script.php?script_id=3183 this script is dumped and I will continue to update this syntax.",
-  "install_details": "Copy css.vim to your ~/.vim/Syntax.\nRecommeneded:\n        I wrote this script under Windows and different OS has different file formats, so do as following:\n        Create a new empty css.vim file in syntax folder, and copy this code to the new one.\n",
+  "description": "GIT: https://github.com/ChrisYip/Better-CSS-Syntax-for-Vim\n\nWhat's differences with built-in CSS syntax in Vim:\n    1. Support most of HTML & CSS properties, including HTML5 & CSS3.\n    2. Different highlight colors for properties, value, units and so on.\n\nSorry for providing incorrect files on previous versions.\nThanks for Keith Pickett to this feedback.",
+  "install_details": "Copy css.vim to your ~/.vim/Syntax.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15146",
+      "filename": "css.vim.zip",
+      "script_version": "20110302",
+      "date": "2011-03-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20686",
+        "user_name": "chris_ys",
+        "first_name": "Chris",
+        "last_name": "Yip",
+        "email": "yesu326@gmail.com",
+        "homepage": "http://kuroc.at/"
+      },
+      "release_notes": "1. Improved @import, @media, rotate(), rgba() highlights; \n2. Bug fixing."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13684",
       "filename": "css.vim",

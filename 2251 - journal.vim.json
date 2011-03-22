@@ -4,9 +4,25 @@
   "summary": "Encrypted journal based on calendar.vim and gnupg.vim",
   "name": "journal.vim",
   "script_type": "utility",
-  "description": "An encrypted journal with calendar view.\n\nCOMMANDS\nJournalToggle -- Toggles the journal calendar view.\n\nMAPPINGS (<leader> is set to '\\&#039, by default)\n<leader>jj -- JournalToggle\n\nYou can override the default mappings by creating mappings like this:\n\nnmap <F6> <Plug>JournalToggle\n\nOPTIONS\ng:journal_directory -- The directory that stores the journal files (default: ~/journal).",
-  "install_details": "Place script in ~/.vim/plugin and start vim.\n\nRequires the following plugins:\ngnupg.vim: http://www.vim.org/scripts/script.php?script_id=661\ncalendar.vim: http://www.vim.org/scripts/script.php?script_id=52\n\n",
+  "description": "An encrypted journal with calendar view.",
+  "install_details": "Extract to ~/.vim",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15174",
+      "filename": "jmcantrell-vim-journal-f760392.zip",
+      "script_version": "0.2",
+      "date": "2011-03-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11888",
+        "user_name": "jmcantrell",
+        "first_name": "Jeremy",
+        "last_name": "Cantrell",
+        "email": "jmcantrell@gmail.com",
+        "homepage": "http://jmcantrell.me"
+      },
+      "release_notes": "Turn encryption off by default"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=8723",
       "filename": "journal.vim",

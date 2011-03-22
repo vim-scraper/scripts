@@ -8,6 +8,22 @@
   "install_details": "unzip zip file, and move them to ~/.vim or ~/vimfiles (Windows).",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15180",
+      "filename": "openbrowser.zip",
+      "script_version": "0.0.3",
+      "date": "2011-03-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "- Implement g:openbrowser_default_search.\n- Implement g:openbrowser_search_engines.\n- Implement g:openbrowser_open_filepath_in_vim.\n- Implement g:openbrowser_open_vim_command.\n- Separate plugin/openbrowser.vim to autoload/openbrowser.vim to save the memory.\n- Bundle urilib.vim (autoload/urilib.vim)\n- Fix bug: openbrowser should open URI which has no scheme\n  (e.g.: example.com)"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13256",
       "filename": "openbrowser.zip",
       "script_version": "0.0.2",
