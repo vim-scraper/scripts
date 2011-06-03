@@ -1,0 +1,43 @@
+{
+  "script_id": "3542",
+  "display_name": "Sesiones.vim",
+  "summary": "Plugin for managing sesions the easy way",
+  "name": "Sesiones.vim",
+  "script_type": "utility",
+  "description": "Small function to save, load, overwrite and delete vim sessions.\n:mkview and related commands are not difficult to manage but where to save the sessions and  with what name is sometimes tricky.\n\nThis plugin use a dedicate folder ($VIM/vimfiles/session/) to save all sessions, using as name the full path-name to the associated file. This way you don't have to worry about where have you saved your sesion; just you only have to remember what file is associated to the session, open it and press <Shift-F3>\nThe functions can be accessed both in the \"plugin -> Sessions\" tab or with the keyboard.\n\nUsage\n---------\nManage it from the menu in plugins or with the keyboard:\n<F3> to save a session\n<Shift-F3> to load a session\n<Crtl-Shift-F3> to overwrite an existing session\nd<F3> to delete an existing session",
+  "install_details": "Copy the Sesiones.vim script to the $HOME/.vim/plugin or the $HOME/vimfiles/plugin or the $VIM/vimfiles directory.\nRefer to the ':help add-plugin', ':help add-global-plugin' and ':help runtimepath' topics for more details about Vim plugins.\n\nConfiguration\n-------------------\nIn .vimrc or _vimrc, add the lines:\n\t\"Sesiones Plugin\n\t\"let g:sesiones_path=\"C:\\Documents and Settiing\\yourUserName\\someFolder\"\nIf not, the default loaction will be \"~/.vimSessions\" or \"$VIM\\_vimSessions\" or \"$USERPROFILE\\_vimSessions\" depending of the operating system and rw permissions.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15443",
+      "filename": "Sesiones.vim",
+      "script_version": "0.2",
+      "date": "2011-04-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4898",
+        "user_name": "chinopicaza",
+        "first_name": "J. Manuel",
+        "last_name": "Picaza",
+        "email": "jmpicaza@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Now you can choose what folder to use for keepeng the sessions!"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15398",
+      "filename": "Sesiones.vim",
+      "script_version": "0.1",
+      "date": "2011-04-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4898",
+        "user_name": "chinopicaza",
+        "first_name": "J. Manuel",
+        "last_name": "Picaza",
+        "email": "jmpicaza@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

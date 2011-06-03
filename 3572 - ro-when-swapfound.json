@@ -1,0 +1,43 @@
+{
+  "script_id": "3572",
+  "display_name": "ro-when-swapfound",
+  "summary": "Open Vim in read-only mode when swapfile is found.",
+  "name": "ro-when-swapfound",
+  "script_type": "utility",
+  "description": "Open Vim in read-only mode when swapfile is found.\n\nINTRODUCTION\nAvoid to display attention dialog,\nand open Vim in read-only mode when swapfile is found.\n\nIf you want to fix swapfile, and want to display attention dialog,\nyou do this.\n\n    :ToggleSwapCheck\n    :e\n\nSee also\nOpen same file read-only in second Vim\nhttp://vim.wikia.com/wiki/Open_same_file_read-only_in_second_Vim\n",
+  "install_details": "1. copy files to your .vim or vimfiles direcory.\n2. helptags to your .vim/doc or vimfiles/doc direcory.\n\n    :helptags $HOME/.vim/doc\n\n    or\n\n    :helptags $HOME/vimfiles/doc\n\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15562",
+      "filename": "vim-ro-when-swapfound.zip",
+      "script_version": "1.0.1",
+      "date": "2011-05-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9013",
+        "user_name": "advweb",
+        "first_name": "omi",
+        "last_name": "taku",
+        "email": "mail@nanasi.jp",
+        "homepage": "http://nanasi.jp/"
+      },
+      "release_notes": "add vim help.\nadd ToggleSwapCheck command."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15561",
+      "filename": "vim-ro-when-swapfound.zip",
+      "script_version": "1.0",
+      "date": "2011-05-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9013",
+        "user_name": "advweb",
+        "first_name": "omi",
+        "last_name": "taku",
+        "email": "mail@nanasi.jp",
+        "homepage": "http://nanasi.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

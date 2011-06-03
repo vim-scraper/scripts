@@ -4,9 +4,57 @@
   "summary": "Vim Input Method -- Vim 中文输入法",
   "name": "VimIM",
   "script_type": "utility",
-  "description": "The VimIM is a Vim plugin designed as an independent\nIM (Input Method) to support CJK search and CJK input.\n 　\nVimIM是一个基于Vim的嵌入式中文输入法。\n\n不启动中文输入法，不换模式，就可以输入中文。\n不打开弹出式菜单，不敲中文，也可以搜索中文。\n　　　　\n中文输入与英文输入不再相互折腾。\n中文搜索与英文搜索不再分为彼此。\n　　　　\n标准字库：http://vimim.googlecode.com/svn/trunk/plugin/vimim.cjk.txt\n民间词库：http://vimim-data.googlecode.com\n新闻论坛：http://groups.google.com/group/vimim\n最新主页：http://vimim.googlecode.com/svn/vimim/vimim.html\n最新程式：http://vimim.googlecode.com/svn/vimim/vimim.vim.html\n错误报告：http://code.google.com/p/vimim/issues/list",
-  "install_details": "　　　　\n【操作示范】\n　　　\n体验点石成金\n　　　　\n　安装：\n　　　　(1)　下载插件　vimim.vim\n　　　　(2)　把插件扔到vim的plugin文件夹里面\n　使用：\n　　　　(1)　进入vim, 进入insert模式\n　　　　(2)　输入彩蛋　vimim\n　　　　(3)　按 ctrl+6，显示汉字列表　\n　　　　(4)　按 h，切换显示列表标签　\n　　　　(5)　按 j，光标下移　\n　　　　(6)　按 k，光标上移　\n　　　　(7)　按 l，切换显示列表长短　\n　　　　(8)　按 ctrl+6，输出汉字列表　\n　　　　\n测试搜狗云\n　　　　　　　　\n　安装：\n　　　　(1)　下载插件　vimim.vim\n　　　　(2)　下载插件　libvimim.dll （Windows版本）\n　　　　(3)　把插件扔到vim的plugin文件夹里面\n　　　　(4)　进入vim\n　搜索：\n　　　　(1)　按六个键：/dscj 回车\n　　　　(2)　按 n\n　　　　(3)　点石成金四个字会被搜索\n　输入：\n　　　　(1)　进入insert模式\n　　　　(2)　按 ctrl+\\，进入云输入\n　　　　(3)　按 ctrl+\\，退出云输入 \n　　　　　　\n切换五笔，拼音和搜狗云输入\n　　　　　\n　安装：\n　　　　(1)　下载插件　vimim.vim\n　　　　(2)　下载一个五笔词库，例如　vimim.wubi.txt\n　　　　(3)　下载一个拼音词库，例如　vimim.pinyin.txt\n　　　　(4)　创建一个空白文件： vimim.sogou.txt\n　　　　(5)　把上述文件扔到vim的plugin文件夹里面\n　使用：\n　　　　(1)　进入vim, 进入insert模式\n　　　　(2)　按 ctrl+\\，进入五笔输入\n　　　　(3)　按 ctrl+\\，进入拼音输入\n　　　　(4)　按 ctrl+\\，进入搜狗云输入\n　　　　(5)　按 ctrl+\\，退出中文输入\n　　　　　\n　　　　　　　　　　\n【入门示范】\n　　　　\n目的：给妈妈做个中文打字机\n背景：妈妈不懂电脑，不懂拼音，从未听说过Vim和VimIM\n前提：妈妈会看键盘，会猜常用字的首拼，会写横、竖、撇、捺、折。\n安装：让我们首先设计一个测试环境\n　　　\n　(1)　下载插件　vimim.vim\n　(2)　下载字库　vimim.cjk.txt\n　(3)　把下载文件扔到vim的plugin文件夹里面\n　(4)　设置好Vim环境，让Vim负责打开txt文件\n　(5)　在桌面上创建一个空白文本文件：vimim.mom.txt\n　　　\n测试：用首拼加五笔画辅码，输入我有一个梦五个汉字：\n　　　\n　(1)　鼠标双击桌面上的空白文件\n　(2)　按六个键： wyygm空格\n　(3)　按 a 选字，我字上屏\n　(4)　按 a 选字，有字上屏\n　(5)　按 空格键 选字，一字上屏\n　(6)　按 空格键 选字，个字上屏\n　(7)　按 1　2　3　辅码过滤，按 b 选字，梦字上屏\n　(8)　按<Esc>退出 insert 模式\n　(9)　按<Esc>复制中文到剪贴板\n　　　　　　　　　\n游戏：旋转诗歌　  http://vimim.googlecode.com/svn/vimim/vimimpoem.png\n　　　　\n　(1)　进入vim，进入insert模式　\n　(2)　输入彩蛋　vimimpoem　\n　(3)　按 ctrl+6，显示诗歌　\n　(4)　按 m，顺时针旋转90度　\n　(5)　按 m，顺时针旋转180度　\n　(6)　按 m，顺时针旋转270度　\n　(7)　按 m，顺时针旋转360度\n　(8)　按 ctrl+6，输出诗歌　　\n　　　　　　　　　　　　　　　\n　　　　　　　　　　　　　　\nVimIM 1.0.0 上市前最后测试。欢迎测试，欢迎反馈：\n\n    *  试用版本       http://vimim.googlecode.com/svn/trunk/plugin/vimim.vim\n    *  cjk标准字库  http://vimim.googlecode.com/svn/trunk/plugin/vimim.cjk.txt\n　　\n　　",
+  "description": "The VimIM is a Vim plugin designed as an independent\nIM (Input Method) to support CJK search and CJK input.\n 　\nVimIM是一个基于Vim的嵌入式中文输入法。\n\n不启动中文输入法，不换模式，就可以输入中文。\n不打开弹出式菜单，不敲中文，也可以搜索中文。\n　　　　\n中文输入与英文输入不再相互折腾。\n中文搜索与英文搜索不再分为彼此。\n　　　　\n最新程式： http://vimim.googlecode.com/svn/vimim/vimim.vim.html\n错误报告： http://code.google.com/p/vimim/issues/list\n标准字库： http://vimim.googlecode.com/svn/trunk/plugin/vimim.cjk.txt\n民间词库： http://vimim-data.googlecode.com\n最新主页： http://vimim.googlecode.com/svn/vimim/vimim.html\n新闻论坛： http://groups.google.com/group/vimim\n论坛邮箱： vimim+subscribe@googlegroups.com  ",
+  "install_details": "　　　　\n【操作示范】\n　　　\n体验点石成金（英文字母为石，中文汉字为金）\n　　　　\n　安装：\n　　　　(1)　下载插件　vimim.vim\n　　　　(2)　把插件扔到vim的plugin文件夹里面\n　使用：\n　　　　(1)　进入vim, 进入insert模式\n　　　　(2)　输入彩蛋　vimimenv\n　　　　(3)　按 ctrl+6，显示菜单列表　\n　　　　(4)　按 h，切换显示列表标签　\n　　　　(5)　按 j， 下移光标　\n　　　　(6)　按 k，上移光标　\n　　　　(7)　按 l， 切换列表左右排列　\n　　　　(8)　按 n，切换列表上下排列　\n　　　　(9)　按 ctrl+6，输出菜单列表　\n　　　　\n切换五笔和拼音输入\n　　　　　\n　安装：\n　　　　(1)　下载插件　vimim.vim\n　　　　(2)　下载一个五笔词库，例如　vimim.wubi.txt\n　　　　(3)　下载一个拼音词库，例如　vimim.pinyin.txt\n　　　　(4)　把上述文件扔到vim的plugin文件夹里面\n　使用：\n　　　　(1)　进入vim, 进入insert模式\n　　　　(2)　按住ctrl，先按 x 再按 \\ 进入英文输入\n　　　　(3)　按住ctrl，先按 x 再按 \\ 进入五笔输入\n　　　　(4)　按住ctrl，先按 x 再按 \\ 进入拼音输入\n　　　　　\n测试搜狗云输入\n　　　　　　　　\n　安装：\n　　　　(1)　下载插件　vimim.vim\n　　　　(2)　下载插件　libvimim.dll （Windows版本）\n　　　　(3)　把插件扔到vim的plugin文件夹里面\n　　　　(4)　进入vim\n　搜索：\n　　　　(1)　按六个键：/dscj 回车\n　　　　(2)　按 n\n　　　　(3)　点石成金四个字会被搜索\n　输入：\n　　　　(1)　进入insert模式\n　　　　(2)　按 ctrl+\\　进入云输入\n　　　　(3)　按 ctrl+\\　退出云输入 \n　　　　　　\n　　　　　　　　　　　　　　　　　　　　　\n【文字游戏】　旋转诗歌　play with poem\n　　　　\n　(1)　进入vim，进入insert模式　\n　(2)　输入彩蛋　vimimpoem　\n　(3)　按 ctrl+6，显示诗歌　\n　(4)　按 m，顺时针旋转90度　\n　(5)　按 m，顺时针旋转180度　\n　(6)　按 m，顺时针旋转270度　\n　(7)　按 m，顺时针旋转360度\n　(8)　按 ctrl+6，输出诗歌　　\n　　　　　　　　　　",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15604",
+      "filename": "vimim.vim",
+      "script_version": "0.9.9.7",
+      "date": "2011-05-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1690",
+        "user_name": "maxiangjiang",
+        "first_name": "Vim",
+        "last_name": "IM",
+        "email": "maxiangjiang@gmail.com",
+        "homepage": "http://code.google.com/p/vimim"
+      },
+      "release_notes": "tiny bug fixes (issues 132 to 137)\nhttp://vimim.googlecode.com/svn/vimim/vimim.html#what-is-new "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15496",
+      "filename": "vimim.vim",
+      "script_version": "0.9.9.6",
+      "date": "2011-04-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1690",
+        "user_name": "maxiangjiang",
+        "first_name": "Vim",
+        "last_name": "IM",
+        "email": "maxiangjiang@gmail.com",
+        "homepage": "http://code.google.com/p/vimim"
+      },
+      "release_notes": "tiny bug fixes (issues 124 to 131)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15397",
+      "filename": "vimim.vim",
+      "script_version": "0.9.9.5",
+      "date": "2011-04-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "1690",
+        "user_name": "maxiangjiang",
+        "first_name": "Vim",
+        "last_name": "IM",
+        "email": "maxiangjiang@gmail.com",
+        "homepage": "http://code.google.com/p/vimim"
+      },
+      "release_notes": "http://vimim.googlecode.com/svn/vimim/vimim.html#what-is-new\nhttp://vimim.googlecode.com/svn/vimim/vimim.html#game"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14757",
       "filename": "vimim.vim",

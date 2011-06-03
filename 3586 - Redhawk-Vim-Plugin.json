@@ -1,0 +1,27 @@
+{
+  "script_id": "3586",
+  "display_name": "Redhawk Vim Plugin",
+  "summary": "A plugin for redhawk: query and replace",
+  "name": "Redhawk-Vim-Plugin",
+  "script_type": "utility",
+  "description": "Redhawk Vim: A Vim plugin for Redhawk (http://pypi.python.org/pypi/redhawk)\n\n\nCurrently, only redhawk query and replace are supported.\n\n  :Redhawk query <query> [FILE]s\n\nruns the Redhawk query on each of the FILEs, and populates the quickfix\nwindow.\n\n  :Redhawk replace <query> [FILE]s\n\nruns the Redhawk query on each of the FILEs, and creates an editable quickfix\nwindow (similar to :GReplace).\n\n\nEXAMPLE USAGE:\n\n1. Query for '**/DefineFunction' in each FILE:\n  Redhawk query '**/DefineFunction' [FILE]\n\n2. Replace all '**/DefineFunction' in each FILE:\n  Redhawk replace '**/DefineFunction' [FILE]\n\n3. Query parallely for '**/DefineFunction' in each FILE:\n  Redhawk query '**/DefineFunction' [FILE] -p\n\n4. Replace all results for '**/DefineFunction' in buffers:\n  RedhawkBuf replace '**/DefineFunction'\n\n\nList of Commands:\nRedhawk:        Query and replace from within Vim.\nRedhawkAdd:     Add to quick fix list.\nRedhawkArgs:    Add args as files to redhawk command.\nRedhawkBuf:     Add files in buffers to redhawk command.\nRedhawkArgsAdd: (similar)\nRedhawkBufAdd:  (similar)\n\nIf you do not have redhawk installed on your path, you could set it to\n/path/to/redhawk by setting the g:redhawk_program variable. Optional arguments\nthat you might always want to use are set in g:redhawk_args. If you find that\nthe default behaviour of the quickfix list popping up irritating, you can set\ng:redhawk_open_resultlist to 0 in your .vimrc\n\n\nNote:\n\n1. Redhawk MUST be installed in PATH, or the g:redhawk_program variable must be\nset.\n\n2. Redhawk can be installed via PyPi: \n    $ pip install redhawk\n\nThe project hompage is here: http://pypi.python.org/pypi/redhawk\nRedhawk is currently under heavy development. The latest development release\ncan be found at http://www.github.com/spranesh/Redhawk\n",
+  "install_details": "Extract the tar.gz into your .vim directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15649",
+      "filename": "redhawk-vim.tar.gz",
+      "script_version": "0.1",
+      "date": "2011-05-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15176",
+        "user_name": "spranesh",
+        "first_name": "Pranesh",
+        "last_name": "Srinivasan",
+        "email": "spranesh@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

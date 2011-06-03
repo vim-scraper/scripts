@@ -4,9 +4,25 @@
   "summary": "All 256 xterm colors with their RGB equivalents, right in Vim!",
   "name": "xterm-color-table.vim",
   "script_type": "utility",
-  "description": "GITHUB\n\nhttp://github.com/guns/xterm-color-table.vim\n\n\nNOTES\n\n * Provides command :XtermColorTable\n * Xterm numbers on the left, equivalent RGB values embedded on the right\n * Press `t` to toggle RGB text visibility\n * Press `f` while on a color to set the RGB text to that color\n * Buffer behavior similar to Scratch.vim\n\n\nSCREENSHOTS\n\nhttp://guns.github.com/xterm-color-table.vim/images/xterm-color-table.png\nhttp://guns.github.com/xterm-color-table.vim/images/xterm-color-table-with-visible-rgb.png\n\n\nINSPIRED BY\n\n * http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html\n * http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim\n * http://www.vim.org/scripts/script.php?script_id=664\n",
+  "description": "GITHUB\n\nhttp://github.com/guns/xterm-color-table.vim\n\n\nNOTES\n\n * Provides command :XtermColorTable, as well as variants for different splits\n * Xterm numbers on the left, equivalent RGB values on the right\n * Press `#` to yank current color (shortcut for yiw)\n * Press `t` to toggle RGB text visibility\n * Press `f` to set RGB text to current color\n * Buffer behavior similar to Scratch.vim\n\n\nSCREENSHOTS\n\nhttp://guns.github.com/xterm-color-table.vim/images/xterm-color-table.png\nhttp://guns.github.com/xterm-color-table.vim/images/xterm-color-table-with-visible-rgb.png\n\n\nINSPIRED BY\n\n * http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html\n * http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim\n * http://www.vim.org/scripts/script.php?script_id=664\n",
   "install_details": "",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15556",
+      "filename": "xterm-color-table.vim.tar.gz",
+      "script_version": "1.6",
+      "date": "2011-05-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "25524",
+        "user_name": "sungpae",
+        "first_name": "Sung",
+        "last_name": "Pae",
+        "email": "sung@metablu.com",
+        "homepage": "http://github.com/guns"
+      },
+      "release_notes": "New features:\n\n* New alternate opening commands: VXtermColorTable for vsplit, TXtermColorTable for tabnew, etc\n* Better handling of ColorScheme events (existing windows stay open and reapply buffer highlight rules)\n* New convenience buffer mapping <#> (alias of yiw)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14994",
       "filename": "xterm-color-table.vim.tar.gz",

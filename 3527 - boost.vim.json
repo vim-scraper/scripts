@@ -1,0 +1,27 @@
+{
+  "script_id": "3527",
+  "display_name": "boost.vim",
+  "summary": "Load templates for new files",
+  "name": "boost.vim",
+  "script_type": "utility",
+  "description": "Vim plugin for creating new files from templates.\nBased on Aristotle Pagaltzis <pagaltis@gmz.de> template script.\nhttp://www.vim.org/scripts/script.php?script_id=1172\n\nModified to use .tpl extensions and a filetype definition at the top of the template. The script is no longer automatically executed for a new buffer. \n\nIn order to tell Vim to use the correct filetype for editing, you must place the following text on the first line of the template:\n\n# filetype: xhtml\n\nThis will cause the vim filetype to be set to whatever filetype is specified after the colon (xhtml in this case). The filetype definition will then be removed from the newly created buffer.\n\nYou can still set the initial curser position in the template as per Aristotle's original script.\n \nTo load a template use the 'Boost' command followed by the template name (without the .tpl suffix).\n\nFor example:\n:Boost html (loads the html.tpl template into the current buffer)\n:Boost html-strict (loads the html-strict.tpl template into the current buffer)\n:Boost bash (loads the bash.tpl template into the current buffer)\n:Boost mytemplate (loads the mytemplate.tpl template into the current buffer)",
+  "install_details": "Place boost.vim in your Vim plugins directory.\n\nThen create a 'templates' directory in your .vim directory and place your .tpl templates here. For example a bash.tpl template, or a css.tpl, or any file that you would like to load as a template - as long as it ends in .tpl.\n \nThere are sample templates included in the zip file.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15315",
+      "filename": "boost.zip",
+      "script_version": "1.0.1",
+      "date": "2011-03-28",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "28847",
+        "user_name": "abouch",
+        "first_name": "Anthony",
+        "last_name": "Bouch",
+        "email": "tony@58bits.com",
+        "homepage": "http://www.58bits.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

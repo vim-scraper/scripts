@@ -4,9 +4,25 @@
   "summary": "HTML/XHTML editing macros and menus",
   "name": "HTML.zip",
   "script_type": "utility",
-  "description": "This is a set of HTML/XHTML mappings and menus for Vim 7 or later. The mappings will be local to the buffer so they won't interfere if you edit other files in the same Vim session.\n\nThe macros are automatically insert a tag and position the cursor at the logical insert point.  For example, in insert the mapping \";ah\" inserts <A HREF=\"\"></A> and leaves the cursor between the double quotes.  If you were to visually highlight some text then type \";ah\" it would wrap the tag around the text.  For example:\n        some text\nBecomes:\n        <A HREF=\"\">some text</A>\nWith the cursor positioned between the double quotes in insert mode. Or if you used \";aH\" instead:\n        <A HREF=\"some text\"></A>\nWith the cursor positioned between the > and the < in insert mode.\n\nThere are many other features, such as a configurable template inserted with the \";html\" normal mode macro, browser remote control mappings, etc.\n\nSee http://christianrobinson.name/vim/HTML/faq.shtml for frequently asked questions.\n\nSee http://christianrobinson.name/vim/HTML/HTML.html to preview the help file.",
+  "description": "This is a set of HTML/XHTML mappings and menus for Vim 7 or later. The mappings will be local to the buffer so they won't interfere if you edit other files in the same Vim session.\n\nThe macros automatically insert a tag and position the cursor at the logical insert point.  For example, in insert the mapping \";ah\" inserts <A HREF=\"\"></A> and leaves the cursor between the double quotes.  If you were to visually highlight some text then type \";ah\" it would wrap the tag around the text.  For example:\n        some text\nBecomes:\n        <A HREF=\"\">some text</A>\nWith the cursor positioned between the double quotes in insert mode. Or if you used \";aH\" instead:\n        <A HREF=\"some text\"></A>\nWith the cursor positioned between the > and the < in insert mode.\n\nThere are many other features, such as a configurable template inserted with the \";html\" normal mode macro, browser remote control mappings, etc.\n\nSee http://christianrobinson.name/vim/HTML/faq.shtml for frequently asked questions.\n\nSee http://christianrobinson.name/vim/HTML/HTML.html to preview the help file.",
   "install_details": "Put \":filetype plugin on\" in your vimrc, then extract HTML.zip in your runtime directory (~/.vim for Unix; see \":help 'runtimepath'\"). Then run \":helptags <directory>/doc\" within vim. \n\nSee http://christianrobinson.name/vim/HTML/ for more information, other archive formats, newer versions, and extra files.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15498",
+      "filename": "HTML.zip",
+      "script_version": "0.37.1",
+      "date": "2011-04-21",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "59",
+        "user_name": "Heptite",
+        "first_name": "Christian J.",
+        "last_name": "Robinson",
+        "email": "heptite () gmail ! com",
+        "homepage": "http://christianrobinson.name/vim/"
+      },
+      "release_notes": "- Determining the Firefox remote command wasn't working properly (Fr. Robert Bower)\n- Fr. Robert Bower added support for Google Chrome on Unix/Linux\n\n(This script _might_ run okay on Vim 7.0/7.1, but it has not been tested -- 7.3 is preferred.)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13517",
       "filename": "HTML.zip",

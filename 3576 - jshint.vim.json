@@ -1,0 +1,43 @@
+{
+  "script_id": "3576",
+  "display_name": "jshint.vim",
+  "summary": "A plugin that integrates JSHint with Vim",
+  "name": "jshint.vim",
+  "script_type": "utility",
+  "description": "This plugin is a front for the jshint NodeJS cli module.\nThis plugin will allow you to run jshint from vim, and shows the results in a split window.\n\n\nUsage\n\n    :JSHint {file}\n\nIt default to current file.\n\n\nKeyboard Shortcuts\n\nIn the quickfix window, you can use:\n\n    o to open in new window\n    go to preview file (open but maintain focus on jshint results)\n    q to close the quickfix window",
+  "install_details": "You need jshint (http://jshint.org/) in you path of course.\n\nInstall on a system with npm:\n\n    npm install jshint\n\nUse pathogen.vim (https://github.com/vim-scripts/pathogen.vim) it's easy.\n\n\nOr fork your own at https://github.com/walm/jshint.vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15655",
+      "filename": "jshint.tgz",
+      "script_version": "0.2",
+      "date": "2011-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "30317",
+        "user_name": "walming",
+        "first_name": "Andreas",
+        "last_name": "Wålm",
+        "email": "andreas+vim@walm.net",
+        "homepage": "http://andreas.walm.se"
+      },
+      "release_notes": "Close quickfix when no errors"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15582",
+      "filename": "jshint.tgz",
+      "script_version": "0.1",
+      "date": "2011-05-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "30317",
+        "user_name": "walming",
+        "first_name": "Andreas",
+        "last_name": "Wålm",
+        "email": "andreas+vim@walm.net",
+        "homepage": "http://andreas.walm.se"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

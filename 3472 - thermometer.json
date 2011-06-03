@@ -4,9 +4,25 @@
   "summary": "work with mercurial",
   "name": "thermometer",
   "script_type": "utility",
-  "description": "Thermometer is a vim plugin for mercurial users. Right now is in alpha state. Available commands are:\n\n- Hgst to open a quickfix window with changes to the repository\n- Hgdiff to diff the current buffer with its last version on the repository\n- g:HgStatusForFile() to be used in status lines to get the status of the buffer\n- Hgstreload to reset status data used in g:HgStatusForFile()\n\nFollow it's development in https://github.com/dgsuarez/thermometer",
+  "description": "Thermometer is a vim plugin for mercurial users.\n\nAvailable commands are:\n\n* :Hgst to open a quickfix window with changes to the repository\n* :Hgstreload to reset status data used in statusline function\n* :Hgdiff to diff the current buffer with its last version on the repository, or with a particular revision if a revision number is provided\n* :Hgdiffoff to diffoff the current diff\n* :Hglog to show the repository's log, can receive an optional parameter to limit the number of revisions shown\n\nAlso there is g:HgStatusForFile() to be used in statuslines",
   "install_details": "",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15472",
+      "filename": "thermometer.tar.gz",
+      "script_version": "0.2",
+      "date": "2011-04-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27408",
+        "user_name": "dgsuarez",
+        "first_name": "Diego",
+        "last_name": "Guerra",
+        "email": "diego.guerra.suarez@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* Hgdiff to different versions\n* Hgdiffoff to turn off diffs"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15130",
       "filename": "thermometer.zip",

@@ -1,0 +1,59 @@
+{
+  "script_id": "3608",
+  "display_name": "nautilus-py-vim",
+  "summary": "A nautilus python extension which adds several menu items to nautilus for gvim",
+  "name": "nautilus-py-vim",
+  "script_type": "utility",
+  "description": "Homepage and screenshot: http://xuhdev.github.com/nautilus-py-vim\n\n\nnautilus-py-vim is a nautilus extension written in python, which adds several\nmenu items in the nautilus context menu for gvim, which would popup when right\nclicking on the file in nautilus file manager, just like gVim on Windows.\n\nTo install this extension, first make sure that you have installed the\nnautilus python extension(http://projects.gnome.org/nautilus-python):\nOn Fedora:          # yum install nautilus-python\nOn Debian/Ubuntu:   # apt-get install python-nautilus\n\nAfter that, just run \"install.sh\":\n\n$ ./install.sh\n\nThe above command would make this extension available to you only, not other\nusers. If you want every user on the machine could use this extension, run the\ninstall.sh with root privilege:\n\n# ./install.sh\n\nIf you encounter any problem when executing the command above, try to\nexecute \"bash install.sh\" or \"ksh install.sh\".\n\nThen restart nautilus(execute \"nautilus -q\") and try to right click on the\nfile(s) you want to edit, you will see the changes in the context menu(\"Edit\nwith gVim\" when only one file is selected, and \"Diff with gVim\", \"Edit with\nMulti gVim\", \"Edit with a Single gVim\" are present when several files are\nselected), just like what it is like on Windows.\n\n\nRepository: https://github.com/xuhdev/nautilus-py-vim\n\nIf you find any bug, please send an email to xuhdev@gmail.com or submit the \nbug on the issue tracker:\nhttps://github.com/xuhdev/nautilus-py-vim/issues",
+  "install_details": "See above.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15793",
+      "filename": "nautilus-py-vim.tar.gz",
+      "script_version": "0.2.1",
+      "date": "2011-06-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20373",
+        "user_name": "xuhdev",
+        "first_name": "H",
+        "last_name": "Xu",
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
+      },
+      "release_notes": "Fix some problem of the install script."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15790",
+      "filename": "nautilus-py-vim.tar.gz",
+      "script_version": "0.2",
+      "date": "2011-06-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20373",
+        "user_name": "xuhdev",
+        "first_name": "H",
+        "last_name": "Xu",
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
+      },
+      "release_notes": "Add an install script."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15765",
+      "filename": "nautilus-py-vim.tar.gz",
+      "script_version": "0.1",
+      "date": "2011-05-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20373",
+        "user_name": "xuhdev",
+        "first_name": "H",
+        "last_name": "Xu",
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

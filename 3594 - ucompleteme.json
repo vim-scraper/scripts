@@ -1,0 +1,43 @@
+{
+  "script_id": "3594",
+  "display_name": "ucompleteme",
+  "summary": "better code completion for vim",
+  "name": "ucompleteme",
+  "script_type": "utility",
+  "description": "Overview\n--------\n\nOn Github: https://github.com/aaronj1335/ucompleteme\n\n`ucompleteme` is a Vim plugin for insert-mode completion.  It combines the\nresults of omni-completion with its own \"proximity\" completion function.\n\n`ucompleteme` attempts to provide completion options intelligently, so the user\ndoesn't have to think about what kind of code completion to use\n([omni-completion](http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-X_CTRL-O),\n[current file completion](http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-X_CTRL-N),\netc.).  Plugins like\n[SuperTab](http://www.vim.org/scripts/script.php?script_id=1643) provide a\nmeans to easily switch between different completion methods, but they aren't as\nopinionated about building the list of matches for the user.\n\nThe philosophy behind `ucompleteme` is that instead of having to think about\nwhich completion type is best, the completion funciton should make an educated\nguess by first running the omni-completion function (where available), then\nfinding matches within the current buffer, then other buffers of the same\nfiletype, and finally the remaining buffers.\n\n\nDetails\n-------\n\n`ucompleteme` provides a [user-defined completion function](http://vimdoc.sourceforge.net/htmldoc/insert.html#i_CTRL-X_CTRL-U).\nBy default it re-maps `<tab>` in insert mode to use this function.  If an\nomnifuc is defined, `ucompletme` starts by populating the list with those\nresults first and giving the user a chance to interact.  After that it will run\nits own \"proximity\" completion function that searches each line of a buffer\nprogressively further from the cursor.  The proximity search is run on the\ncurrent buffer, and then the other buffers of the same filetype, and finally\nthe remaining open buffers.\n\n\nOptions\n-------\n\n - **g:ucompleteme\\_map\\_tab**: if this is set to 1, `ucompleteme` will re-map\n   `<tab>` in insert mode\n\n - **g:max\\_lines\\_for\\_omnifunc**: omni-completion functions can be slow for\n   large files.  this determines how large a file can be before `ucompleteme`\n   will not skip using omni-completion and just use keyword completion.\n\n\n\n",
+  "install_details": "Installation\n------------\n\nPut the \"ucompleteme.vim\" file in your [Vim Runtimepath][1]'s autoload\ndirecory:\n\n - On Linux/Mac OS X: `~/.vim/autoload`\n\n - On Windows: `$HOME/vimfiles/autoload`\n\nIf you're using a Vim package manager like [Tim Pope][3]'s [pathogen][4], then\nyou should be able to just clone this repository into the \"bundles\" directory.\n\nFinally, add the following to your [.vimrc][2]:\n\n\tcall ucompleteme#Setup()\n\n\n[1]: http://vimdoc.sourceforge.net/htmldoc/options.html#'runtimepath' \"Vim Runtimepath\"\n[2]: http://vimdoc.sourceforge.net/htmldoc/starting.html#.vimrc \".vimrc\"\n[3]: http://tpo.pe/ \"Tim Pope\"\n[4]: http://www.vim.org/scripts/script.php?script_id=2332 \"pathogen\"",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15741",
+      "filename": "ucompleteme.tar.gz",
+      "script_version": "0.1.1",
+      "date": "2011-05-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "30907",
+        "user_name": "aaronj1335",
+        "first_name": "Aaron",
+        "last_name": "Stacy",
+        "email": "aaron.r.stacy@gmail.com",
+        "homepage": "http://aaronstacy.com"
+      },
+      "release_notes": "Search across all buffers"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15682",
+      "filename": "ucompleteme.tar.gz",
+      "script_version": "0.1",
+      "date": "2011-05-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "30907",
+        "user_name": "aaronj1335",
+        "first_name": "Aaron",
+        "last_name": "Stacy",
+        "email": "aaron.r.stacy@gmail.com",
+        "homepage": "http://aaronstacy.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

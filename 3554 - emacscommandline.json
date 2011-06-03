@@ -1,0 +1,27 @@
+{
+  "script_id": "3554",
+  "display_name": "emacscommandline",
+  "summary": "makes command-line mode behave more like the Unix command line",
+  "name": "emacscommandline",
+  "script_type": "utility",
+  "description": "This plugin makes the command-line mode behave more like the Unix command\nline, by adding Emacs-style mappings (like in the Bash shell).  Some of the\nmappings just map existing vim commands, but the rest implement functionality\nthat is not available natively.\n\nRepository: https://github.com/houtsnip/vim-emacscommandline\n\nMOVEMENT\n\nCTRL-A         move cursor to beginning of line\nCTRL-E         move cursor to end of line (i.e the native vim behaviour:\n                 see c_CTRL-E).  Not actually a re-mapping, but noted here\n                 anyway for completeness.\nCTRL-B         move cursor one character backwards\nCTRL-F         move cursor one character forwards (overwrites c_CTRL-F)\nMETA-B         move cursor one word backwards\nMETA-F         move cursor one word forwards\n\nDELETION\n\nCTRL-D         delete character under cursor\nCTRL-K         kill line (delete from character under cursor to end of line)\n                 (overwrites insert digraph: see c_CTRL-K.  This is a shame,\n                 but personally I don't use this much in command-line mode.)\nCTRL-U         backwards kill line (delete backwards to beginning of line)\n                 (i.e. the same behaviour as in Bash: unix-line-discard)\nMETA-D         delete word under cursor\nMETA-Backspace delete word backwards\nCTRL-W         delete backwards to previous white-space character\n                 (i.e. the same behaviour as in Bash: unix-word-rubout)\n\nHISTORY\n\nCTRL-P         previous line in history (same as <Up>)\nCTRL-N         next line in history (same as <Down>)\nMETA-R         search history backwards\n                 (It would be nice to use the mapping CTRL-R, but this is\n                 already used for insert register: see c_CTRL-R.)\n\nOTHER\n\nCTRL-Y         paste (yank) last deleted text (overwrites c_CTRL-Y).\n                 Note that in Emacs, 'yank' means 'paste', whereas in vim it\n                 means 'copy'.  The same text is also available in the\n                 registry 'c'.\nCTRL-_         undo last change (overwrites c_CTRL-_)\nCTRL-X_CTRL-U   \"    \"    \"\nCTRL-Z         toggle command-line as external command (overwrites suspend\n                 vim in the terminal)\n\nOLD KEYS\n\nThe old functions are all mapped to the same combination prefixed by CTRL-O.\nSo for example, to open the command-line window (see c_CTRL-F), press\ninstead CTRL-O_CTRL-F. \n\nWARNING\n\nThis plugin buggers up the expression register (i.e. c_CTRL-R_=).  This is\na limitation of vim.  I don't know how to switch these mappings off in the\nexpression register and I don't think it's possible. However I never use the\nexpression register except in mappings, so it doesn't affect me.\n\n",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15468",
+      "filename": "emacscommandline.tar.gz",
+      "script_version": "1.0",
+      "date": "2011-04-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29650",
+        "user_name": "houtsnip",
+        "first_name": "Houtsnip",
+        "last_name": "-",
+        "email": "straighttreeditch-vim@yahoo.co.uk",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

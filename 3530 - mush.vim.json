@@ -1,0 +1,27 @@
+{
+  "script_id": "3530",
+  "display_name": "mush.vim",
+  "summary": "syntax file for MUSH and MUX Code",
+  "name": "mush.vim",
+  "script_type": "syntax",
+  "description": "This syntax file MUSHCode andd MUXCode.   Instructions for making it work are in the file.\n\nThis syntax file is more or less a more updated version of the mush.vim syntax file I last contributed in 2005.",
+  "install_details": "Install mush.vim in your syntax vimruntime directory.  \n\nEdit filetype.vim in your vim runtime directory and add\nau BufNewFile,BufRead *.mush,*.mux                    setf mush\n\nIf you have the previous version of mush.vim which you most likely do.  All you need to do after replacing the mush.vim in the syntax directory is updating the \nline in filetype.vim to include *.mux as well.  *.mux is a common suffix to MUSHCode files just as *.mush is.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15333",
+      "filename": "mush.vim",
+      "script_version": "1.0",
+      "date": "2011-03-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28880",
+        "user_name": "nveid",
+        "first_name": "Rick",
+        "last_name": "Bird",
+        "email": "nveid@yahoo.com",
+        "homepage": "http://cobramush.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

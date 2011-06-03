@@ -8,6 +8,38 @@
   "install_details": "Use the normal Vimball installation method to install Tagbar:\n\n    vim tagbar.vba\n    :so %\n    :q\n\nIf ctags is not installed in one of the directories in your $PATH environment variable you have to set the option g:tagbar_ctags_bin, see the documentation for exact instructions.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15532",
+      "filename": "tagbar.vba",
+      "script_version": "2.0.1",
+      "date": "2011-04-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27049",
+        "user_name": "majutsushi",
+        "first_name": "Jan",
+        "last_name": "Larres",
+        "email": "jan@majutsushi.net",
+        "homepage": ""
+      },
+      "release_notes": "- Fixed sorting bug when 'ignorecase' is set"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15529",
+      "filename": "tagbar.vba",
+      "script_version": "2.0",
+      "date": "2011-04-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27049",
+        "user_name": "majutsushi",
+        "first_name": "Jan",
+        "last_name": "Larres",
+        "email": "jan@majutsushi.net",
+        "homepage": ""
+      },
+      "release_notes": "- Folding now works correctly. Folds will be preserved when leaving the Tagbar window and when switching between files. Also tag types can be configured to be folded by default, which is useful for things like includes and imports.\n\n- DoctorJS/jsctags and other compatible programs are now supported.\n\n- All of the highlight groups can now be overridden.\n\n- Added keybinding to quickly jump to next/previous top-level tag.\n\n- Added Taglist's \"p\" keybinding for jumping to a tag without leaving the Tagbar window.\n\n- Several bugfixes and other small improvements."
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15165",
       "filename": "tagbar.vba",
       "script_version": "1.5",

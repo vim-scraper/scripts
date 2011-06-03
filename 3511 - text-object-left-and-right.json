@@ -4,9 +4,25 @@
   "summary": "text oject for left and right of a statement",
   "name": "text-object-left-and-right",
   "script_type": "utility",
-  "description": "This simple script create text object for left and right of a statement. e.g\n\nstri|ng = \"Hello World\"\n\n\n| is where your cursor is, in command mode\ntype ciL (change inner and L for the right hand sided)\n\nthe line will become\n\nstring = |\n\nsimilarily\n\nciH, diH, yiH etc will change, delete, yank the left hand side of the statement\n\nthis also works for ==, => as well\n",
+  "description": "This simple script create text object for left and right of a statement. e.g\n\nstri|ng = \"Hello World\"\n\n\n| is where your cursor is, in command mode\ntype ciL (change inner and L for the right hand sided)\n\nthe line will become\n\nstring = |\n\nsimilarily\n\nciH, diH, yiH etc will change, delete, yank the left hand side of the statement\n\nthis also works for ==, => as well\n\nNote if the line end with ',' or ';' it will be the boundary of the right hand side\nIf there is a space before the separator (=, ==, =>) or after, they are so the the boundary\n",
   "install_details": "",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15328",
+      "filename": "left_right_text_object.vim",
+      "script_version": "1.2",
+      "date": "2011-03-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "21776",
+        "user_name": "vinhtiensinh",
+        "first_name": "Vinh",
+        "last_name": "Tran",
+        "email": "qvinh.tran@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Previous version contain a use of one of my other plugin. This remove that part"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15244",
       "filename": "left_right_text_object.vim",

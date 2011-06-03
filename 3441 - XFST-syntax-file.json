@@ -5,8 +5,24 @@
   "name": "XFST-syntax-file",
   "script_type": "syntax",
   "description": "Provides basic syntax highlighting for Xerox Finite-State Tools (XFST) grammars (http://www.fsmbook.com/).",
-  "install_details": "Copy this file in the syntax/ subdirectory in your ~/.vim/ or vimfiles/ directory. The highlighting is then triggered with the \":set syntax=xfst\" command.\n\nIf you want all files with the extension \".xfst\" to be recognized automatically, put a filetype.vim file with the following contents in your ~/.vim/ or vimfiles/ directory:\n\naugroup filetypedetect\nau BufNewFile,BufRead *.wiki setf Wikipedia\nau BufNewFile,BufRead *.xfst setf xfst\naugroup END",
+  "install_details": "Copy this file in the syntax/ subdirectory in your ~/.vim/ or vimfiles/ directory. The highlighting is then triggered with the \":set syntax=xfst\" command.\n\nIf you want all files with the extension \".xfst\" to be recognized automatically, put a filetype.vim file with the following contents in your ~/.vim/ or vimfiles/ directory:\n\naugroup filetypedetect\nau BufNewFile,BufRead *.xfst setf xfst\naugroup END",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15587",
+      "filename": "xfst.vim",
+      "script_version": "0.1.1",
+      "date": "2011-05-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "26371",
+        "user_name": "tuetschek",
+        "first_name": "Ondrej",
+        "last_name": "Dusek",
+        "email": "dusek.ondrej@seznam.cz",
+        "homepage": "http://tuetschek.wz.cz"
+      },
+      "release_notes": "Corrected line endings for Unix (LF instead of CR/LF)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14959",
       "filename": "xfst.vim",

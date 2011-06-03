@@ -1,0 +1,59 @@
+{
+  "script_id": "3588",
+  "display_name": "Find XML Tags",
+  "summary": "Locate tags with out of order attributes",
+  "name": "Find-XML-Tags",
+  "script_type": "utility",
+  "description": "I was editing an HTML file written by several developers over the course of a\nfew years. They contained tags like (yes, literally!)\n        <table cellpadding=0 cellspacing=\"0\" border='0'>\n        <table cellspacing=\"0\" cellpadding=0 border='0'>\n        <table cellspacing=0 cellpadding=0 border=0>\n\nThey're all basically the same table definition, but the attributes are\nswitched around and the attribute values are formatted differently each time.\n(Thank the multiple developers, each with their own style.) Running HTML Tidy\nwasn't an option because I didn't want to create a huge diff in version\ncontrol that indicated a lot of changes where I didn't actually change\nanything. Thus, this plugin.\n\nThe commands and functions defined in this script will match any XML/HTML\nelement/tag with the specified attributes and values.\n",
+  "install_details": "Source the Vimball and try :help Findxmltag.\n\nUse :help FindXmlTag_History to find out what's changed.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15713",
+      "filename": "FindXmlTag.vba",
+      "script_version": "2.0",
+      "date": "2011-05-24",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fixes, mostly (thanks entirely to Ingo Karkat). Also, renamed the commands to camel-case: FindXmlTagExact and FindXmlTagFlexible.\n\nUploaded again; had accidentally left out an enhancement to highlight search results if 'hlsearch' is set."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15662",
+      "filename": "FindXmlTag.vba",
+      "script_version": "1.5",
+      "date": "2011-05-17",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added options to easily add attributes with any value or no value."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15654",
+      "filename": "FindXmlTag.vba",
+      "script_version": "1.0",
+      "date": "2011-05-17",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

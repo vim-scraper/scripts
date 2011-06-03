@@ -4,9 +4,137 @@
   "summary": "This is filetype plugin for vim scripts.",
   "name": "FTPDEV",
   "script_type": "ftplugin",
-  "description": "This file type plugin provides some additional tools which makes the life easier when writing plugins which are big projects with many functions, commands and maps across different files which share a common root directory. It provides commands for\n    - finding functions, commands, variable definitions and maps which name matches a pattern\n    - searching a function which wrap around the end of function\n    - Pgrep command which uses vimgrep to grep inside the plugin directory.\n\nThere is a help file which explains all the details.",
+  "description": "This file type plugin provides some additional tools which makes the life easier when writing plugins which are big projects with many functions, commands and maps across different files which share a common root directory. It provides commands for\n    - finding functions, commands, variable definitions and maps which name matches a pattern\n    - searching a function which wrap around the end of function\n    - Pgrep command which uses vimgrep to grep inside the plugin directory.\n    - Edit/Split/VSplit/Diffsplit commands with a handy completion for file names (support ++opt and +cmd options of vim edit command)\n\nThere is a help file which explains all the details (:help ftpdev-news).",
   "install_details": "Open the vimball file and type ':so % <Enter>'",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15598",
+      "filename": "FTPDEV_5.3.vba",
+      "script_version": "5.3",
+      "date": "2011-05-06",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "See the help file :help ftpdev-news"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15520",
+      "filename": "FTPDEV_5.2.vba",
+      "script_version": "5.2",
+      "date": "2011-04-25",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "See :help ftpdev-news."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15490",
+      "filename": "FTPDEV_5.vba",
+      "script_version": "5",
+      "date": "2011-04-20",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "See :help ftpdev-news for changes and enhancements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15466",
+      "filename": "FTPDEV_4.2.vba",
+      "script_version": "4.3",
+      "date": "2011-04-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "See :help ftpdev-news"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15455",
+      "filename": "FTPDEV_4.1.vba",
+      "script_version": "4.1",
+      "date": "2011-04-15",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "Change of maps in, iN to Gn, GN."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15442",
+      "filename": "FTPDEV_3.vba",
+      "script_version": "4",
+      "date": "2011-04-13",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "See :help ftpdev-news (for version 4)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15420",
+      "filename": "FTPDEV_3.vba",
+      "script_version": "3",
+      "date": "2011-04-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "Completion for command and function names (:Commands and :Functions) added.\nSee :help ftpdev-news ."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15367",
+      "filename": "FTPDEV_2.vba",
+      "script_version": "2",
+      "date": "2011-04-03",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "see :h ftpdev-news (the helptags has changed from vimvim to ftpdev).\nGetLatestVimScript support added."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14250",
       "filename": "FTPDEV_1.vba",

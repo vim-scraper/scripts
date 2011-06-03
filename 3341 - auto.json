@@ -1,12 +1,44 @@
 {
   "script_id": "3341",
   "display_name": "auto ",
-  "summary": "Programming automation  for c/c++/python/shell/perl/...",
+  "summary": "Coding automation  for c/c++/python/shell/perl/...",
   "name": "auto",
   "script_type": "utility",
-  "description": "auto.vim  Only for linux \n1.Normal mode\n    ;;      Exit without saving\n    ,,      Save and exit\n2.Insert mode\n    ;;      return Normal mode\n    ,,      return Normal mode\n    mm      return Normal mode\n    <Alt-j>  Down\n    <Alt-k> Up\n    <Alt-h> Left\n    <Alt-l>  Right\n3.When writing c, cpp ,... code, the code is automatically formatted\n    For example:   If you input a==3;\n    auto.vim                             a  ==  3;\n4.Both c, cpp, or python,shell,perl code, F2 key or \"mm\" to compile and debug",
+  "description": "Both c, cpp, or python,shell,perl code, F2 key or \"mm\" to compile and debug\n1.Normal mode\n    ;;      Exit without saving\n    ,,      Save and exit\n2.Insert mode\n    ;;      return Normal mode\n    ,,      return Normal mode\n    mm      return Normal mode\n    <Alt-j>  Down\n    <Alt-k> Up\n    <Alt-h> Left\n    <Alt-l>  Right\n3.When writing c, cpp ,... code, the code is automatically formatted\n    For example:   If you input a==3;\n    auto.vim                             a  ==  3;\n\nNOTE:auto.vim  only for GNU/Linux;VERSION 1.5 has some errors,Sorry I neglected to mention that before. ",
   "install_details": "Simply drop this file into your $HOME/.vim/plugin directory.\n\n ",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15434",
+      "filename": "auto.vim",
+      "script_version": "2.0",
+      "date": "2011-04-12",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "22381",
+        "user_name": "ywgx",
+        "first_name": "宇文",
+        "last_name": "高下",
+        "email": "ywgx.ch@gmail.com",
+        "homepage": "http://weibo.com/wbywgx"
+      },
+      "release_notes": "更新了shell的调用\nUpdated shell call"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15323",
+      "filename": "auto.vim",
+      "script_version": "1.9",
+      "date": "2011-03-29",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "22381",
+        "user_name": "ywgx",
+        "first_name": "宇文",
+        "last_name": "高下",
+        "email": "ywgx.ch@gmail.com",
+        "homepage": "http://weibo.com/wbywgx"
+      },
+      "release_notes": "修复了在桌面终端下调试perl的bug\nFixed a bug when debugging perl on desktop terminal"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15220",
       "filename": "auto.vim",
@@ -19,7 +51,7 @@
         "first_name": "宇文",
         "last_name": "高下",
         "email": "ywgx.ch@gmail.com",
-        "homepage": ""
+        "homepage": "http://weibo.com/wbywgx"
       },
       "release_notes": "添加了HTML支持，方面调试javascript\nAdded support for HTML,Easy to  debug javascript"
     },
@@ -35,7 +67,7 @@
         "first_name": "宇文",
         "last_name": "高下",
         "email": "ywgx.ch@gmail.com",
-        "homepage": ""
+        "homepage": "http://weibo.com/wbywgx"
       },
       "release_notes": "简洁,适当的取舍是unix的思想之一\nSimple,appropriate trade-off is a idea of unix\n"
     },
@@ -51,7 +83,7 @@
         "first_name": "宇文",
         "last_name": "高下",
         "email": "ywgx.ch@gmail.com",
-        "homepage": ""
+        "homepage": "http://weibo.com/wbywgx"
       },
       "release_notes": "修复了在文本终端的执行时的bug,加入了ruby支持；脚本很简洁，您可以根据您的习惯，重新映射\nFixed a bug when on the text terminal ,Added ruby support；The script is very simple, you can based on your habits, re-mapping"
     }

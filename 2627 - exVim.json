@@ -4,8 +4,8 @@
   "summary": "IDE all in vim. ",
   "name": "exVim",
   "script_type": "utility",
-  "description": "= Sites =\n\nexVim official site:       http://www.ex-dev.com/projects/exvim/wiki\nexVim github:             http://github.com/jwu/exvim/\nexVim google code:    http://code.google.com/p/exvim/\n\n= Downloads =\n\nGoogle Download Page: http://code.google.com/p/exvim/downloads/list\n\nexVim 8.05_b2 Installer (windows): http://exvim.googlecode.com/files/exvim_installer-8.05_b2.exe\nexVim 8.05_b2 zip Package (windows): http://exvim.googlecode.com/files/full_package-win-8.05_b2.zip\nexVim 8.05_b2 zip Package (unix): http://exvim.googlecode.com/files/full_package-unix-8.05_b2.zip\n\n= Overview =\n\nhttp://www.ex-dev.com/projects/exvim/wiki/Overview\n\n= Introduction =\n\n-- What is exVim ? --\n\nexVim is a package intgerate ex-vim-plugins, 3rd-vim-plugins and external-tools for developing.\nBy solving the complex communication problem among plugins, external tools, the exVim make\nthe vim as an IDE like environment all in vimscript.\n\n-- What can exVim do ? --\n\nWith exVim you can:\n\n* use one single file ``your_project.vimentry`` to access your project.\n* update tags, IDs and other things you used in your project in one command.\n* browse project files in project window.\n* search files, tags, and words in source code by the builtin method.\n* a powful way to filter search result.\n* trace your code by jump stack.\n* reading code easily by word highlight and macro highlight.\n* view classes hierarchy pictures.\n* compile project in vc/gcc and get error results from them directly through vim.\n* enhanced quick-fix window.\n* communicate with visual studio --- get build errors, open files, add break point and send command make vs.net \ncompiling current file.\n\n-- Usage --\n\nThe exVim use ``your_project.vimentry`` file as the entry of a project. When you put this\nfile in the root directory of the project, and open it by vim, ex-vim-plugins will awared\nand do the rest of the work to help you generate tags, symbols, IDs and other things\ncould be used in your project.\n\nWhen edit a project, exVim provides several method to help you locate the code, get global\nseach results, also an easy and powerful way to filter the search result!\n\n-- Compatible --\n\nexVim is compatible with your original vim. The exVim is nothing but several vim-plugins,\nthere are not too much reasons make it unable to work in your vim.\n\n-- Small, Fast and Stable --\n\nThe principle for solving problem in exVim are:\n\n# try to interact with user dynamically.\n# if the dynamic interactive sufferred performance issue, go for static method.\n# try the best to fulfill a demand in vimscript.\n# if it can't, try the best to fulfill the demand by external tools.\n# if it still can't, try the best to preprocess the result and return to rule No.1\n\nexVim is designed to follow this principle which make it small, fast and stable.\n\n",
-  "install_details": "quick start:\n     \n    http://www.ex-dev.com/projects/exvim/wiki/Quick_start\n\ncheck the install document on:\n\n    http://www.ex-dev.com/projects/exvim/wiki/Install\n",
+  "description": "= Sites =\n\nexVim official site:         http://www.ex-dev.com/exvim\nexVim documentation: http://www.ex-dev.com/exvim/wiki \nexVim github:                http://github.com/jwu/exvim/\nexVim google code:     http://code.google.com/p/exvim/\n\n= Downloads =\n\nGoogle Download Page: http://code.google.com/p/exvim/downloads/list\n\nexVim 8.05_b2 Installer (windows): http://exvim.googlecode.com/files/exvim_installer-8.05_b2.exe\nexVim 8.05_b2 zip Package (windows): http://exvim.googlecode.com/files/full_package-win-8.05_b2.zip\nexVim 8.05_b2 zip Package (unix): http://exvim.googlecode.com/files/full_package-unix-8.05_b2.zip\n\n= Overview =\n\nhttp://www.ex-dev.com/exvim/wiki/index.php?title=Overview\n\n= Introduction =\n\n-- What is exVim ? --\n\nexVim is a package intgerate ex-vim-plugins, 3rd-vim-plugins and external-tools for developing.\nBy solving the complex communication problem among plugins, external tools, the exVim make\nthe vim as an IDE like environment all in vimscript.\n\n-- What can exVim do ? --\n\nWith exVim you can:\n\n* use one single file ``your_project.vimentry`` to access your project.\n* update tags, IDs and other things you used in your project in one command.\n* browse project files in project window.\n* search files, tags, and words in source code by the builtin method.\n* a powful way to filter search result.\n* trace your code by jump stack.\n* reading code easily by word highlight and macro highlight.\n* view classes hierarchy pictures.\n* compile project in vc/gcc and get error results from them directly through vim.\n* enhanced quick-fix window.\n* communicate with visual studio --- get build errors, open files, add break point and send command make vs.net \ncompiling current file.\n\n-- Usage --\n\nThe exVim use ``your_project.vimentry`` file as the entry of a project. When you put this\nfile in the root directory of the project, and open it by vim, ex-vim-plugins will awared\nand do the rest of the work to help you generate tags, symbols, IDs and other things\ncould be used in your project.\n\nWhen edit a project, exVim provides several method to help you locate the code, get global\nseach results, also an easy and powerful way to filter the search result!\n\n-- Compatible --\n\nexVim is compatible with your original vim. The exVim is nothing but several vim-plugins,\nthere are not too much reasons make it unable to work in your vim.\n\n-- Small, Fast and Stable --\n\nThe principle for solving problem in exVim are:\n\n# try to interact with user dynamically.\n# if the dynamic interactive sufferred performance issue, go for static method.\n# try the best to fulfill a demand in vimscript.\n# if it can't, try the best to fulfill the demand by external tools.\n# if it still can't, try the best to preprocess the result and return to rule No.1\n\nexVim is designed to follow this principle which make it small, fast and stable.\n\n",
+  "install_details": "quick start:\n     \n    http://www.ex-dev.com/exvim/wiki/index.php?title=Quick_start\n\ncheck the install document on:\n\n    http://www.ex-dev.com/exvim/wiki/index.php?title=Install\n",
   "versions": [
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14684",
@@ -19,7 +19,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "The package is used in unix, linux, mac-osx"
     },
@@ -35,7 +35,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "* New features\n** upgrade vim from 7.2 to 7.3\n** add javascript indent plugin. http://www.vim.org/scripts/script.php?script_id=1936\n** add AutoComplPop-2.14.1 plugin. http://www.vim.org/scripts/script.php?script_id=1879 &nbsp;\n** add EXTC command for easy writting extern \"C\" { } code block in c/cpp files. \n* Changes\n** update .vimentry version from '24' to '25'.\n** disable auto-comment in javascript.\n** make vimwiki as an option plugin for user.\n** update zencoding to 0.43.\n** remove django syntax (not too much use).\n** update surround to 1.90.\n** set default encoding to utf-8.\n* Bug fix\n** fix visual studio unicode encoding error.\n** fix GSF,GSFW result can't jump.\n** fix acp conflict with lookupfile.\n** fix tag select can't parse lua function with white space\n** fix vimentryRefs not working in linux and mac OS."
     },
@@ -51,7 +51,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "\n * New features\n\n   * support swig error format.\n   * add swig syntax highlight.\n   * add csharp syntax highlight for special mark labels.\n   * add zencoding plugin.\n   * add matchit plugin.\n   * add django syntax highlight.\n   * add sphinx document compile support.\n\n * Changes\n\n   * update vimwiki to 1.0.0.\n   * update cscope to 15.7a.\n   * refine gcc makefiles.\n   * let EnhancedCommentify support swig.\n   * disable auto-comment for c# language.\n   * always show status-line.\n   * change comment mathod for c in EnhancedCommentify, instead of using ``/**/`` we use ``//`` like cpp. \n   * change guifont in win32 to Bitstream_Vera_Sans_Mono:h10.\n   * Not allow exGlobalSearch running in stand-alone mode, this prevent exGlobalSearch show error message.\n   * let exQuickFix support cs error format. \n   * change ``_vimfiles`` folder to .vimfiles\n   * change ``_vimfiles/_hierarchies`` folder to .vimfiles/.hierarchies\n   * change ``_vimfiles/_temp`` folder to .vimfiles/.temp\n   * change vimwiki _doc folder to wiki_src\n   * let exProject ignore checking .vimfiles folders when browsing.\n   * generate header.tpl use dest file's encoding.\n   * update gvim.exe link with python26.dll in windows.\n   * add ex_try, ex_catch, ex_catch_exp, ex_throw, ex_safe_delete, ex_safe_free... syntax highlight.\n   * add my method to judge if it is objc or mathlab files.\n   * add key-world TEST, PATCH, FIXME, BUG, TIPS, HINT\n   * add ``<leader>sub`` for quick substitue word_highlight_1 to word_highlight_2\n   * add signal, slots, emit qt keywords for highlighting\n   * disable maximize window when openning vim.\n\n * Bug fix\n\n   * fix exQuickFix open a file another programme already editing issue.\n   * fix exTagSelect show tags error when read preview from a file that already not exists.\n"
     },
@@ -67,7 +67,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": " * New features\n    * let make syntax support external comments.\n    * refine install method for unix/linux.\n    * support Mac OS X.\n * Changes\n    * support matlab/octave language\n    * support maxscript language\n    * move data/backup and data/swap directory to $HOME/.data/backup $HOME/.data/swap\n    * change default toolkit_path to $HOME/.toolkit/ for unix\n    * enlarge the font size, re-adjust default windows width increment\n    * update cTags to 5.8\n    * update SyntaxHighliter to 2.1.364\n    * update vimwiki to 0.9.6\n    * update NERD_tree to 4.1.0\n    * update genutils to 2.5\n * Bug fix\n    * fix the filter format shows wrong syntax in dialog\n    * fix bracket \"()\" in directory name does not work.\n    * fix gcc_rule can't compile source file have same name but in different directory.\n    * fix PutHeader will show time in local encoding. Force to set it in English.\n    * fix exQuickFix can't jump msvc error message when use single core cpu. ( those message don't have \"1>\" at the beginning )\n    * fix exQuickfix can't select multi-core and single-core jump in msvc2005\n    * fix quick_gen_project.sh file_filter syntax error in unix/linux.\n    * add protection for ImageViewer and WebBrowser\n"
     },
@@ -83,7 +83,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "    * New features\n    * Changes\n          o let title show vimentry name first, so that you can select project with a clear name in task bar.\n          o add qt language map ( qt: qrc, pro, pri ) \n    * Bug fix\n          o fix exJumpStack jump error when we do tg word1, gg word2 then tg word1 again.\n          o fix inherit image can't show when path have white-space.\n          o fix exQuickFix loose fix when we load another quickfix list, and try to use the exQuickFix again.\n          o fix multiple gcc project makefile clean-deps error.\n          o fix lookupfile re-open deleted buffer will not show in the minibufexpl. (thanks vxzhong)\n          o fix minibufexpl mouse click open will not open in edit-buffer. (thanks ozgezer) "
     },
@@ -99,7 +99,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "    * New features\n          o Temp highlight words under current cursor when cursor holds. \n    * Changes\n          o let exQuickFix can jump template sub-errors in msvc. \n    * Bug fix\n          o fix quick gen project can't generate cscope database. (thanks ozgezer)\n          o fix exBufExplorer save list buffers in bookmarks if we don't have a bookmarks file.\n          o fix quick_gen_project.sh filenamelist generation errors in unix like system. (thanks oz"
     },
@@ -115,7 +115,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "    * New features\n          o add exBufExplorer.\n          o add bookmarks in exBufExplorer.\n          o When cursor hold in exProject window, it will echo the full path in the cursor line.\n          o add ex_toolkit_path so user can install toolkit folder in a specific path.\n          o user delete bookmark directly in exBufExplorer. \n    * Changes\n          o change gf function to use lookupfile plugin.\n          o add SS command for filtering symbol table search result \n    * Bug fix\n          o fix quickgen bash script if statement syntax error.\n          o fix fail to run quick_gen_project script in csh shell.\n          o fix !FreeBSD ctags can't be detected correctly.\n          o fix buffer delete mess the window layout when there have several window opened.\n          o fix \\ff,\\fd search error, new method can even use smart case for search.\n          o fix ctrl-left/right will go to the next buffer in plugin window, mess-up the window layout.\n          o fix exCscope syntax file name syntax highlight beyond the range.\n          o fix restore buffer never execute auto-command in last edit-buffer.\n          o only do search jump when current line not matched with the pattern in exJumpStack "
     },
@@ -131,7 +131,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "    * New features\n          o let exProject support file with no-suffix (NULL filetype).\n          o let cscope can parse by specific language type.\n          o add DirDiff and snipMate plugin.\n          o add pythoncomplete plugin.\n          o add exBufExplorer (exProject quick-view window) for exploring and editing opened buffers. \n    * Changes\n          o add backspace navigate and alt+left/right navigate for exJumpStack.\n          o let EnhComment support snippet file.\n          o change ex_plugin_list to ex_plugin_registered_bufnames,ex_plugin_registered_filetypes to enhance the register-plugin.\n          o let exProject and NERDtree can switch.\n          o remove _vimfiles* folders when list project tree in exProject window. \n    * Bug fix\n          o fix Mark Text can't be lower case.\n          o fix lots of exCscope problem.\n          o fix cscope syntax highlight.\n          o fix showmarks conflict with snipMate plugin,\n          o fix color scheme will be dark when there is no colorscheme set in _vimrc.\n          o fix taglist,NERD_tree,minibufexpl opens window not take the position when there already have ex-plugin window.\n          o let exJumpStack can recognize all registered plugin window.\n          o fix findfile in g:exES_CWD reports wrong result when directory name have space\n          o remove hard code in detecting ctags and cscope support.\n          o fix cursor can't move to the edit-buffer when use restore buffer. "
     },
@@ -147,7 +147,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "    * New features\n          o let quick_gen_project can update filenametags\n          o let exCscope support find g method \n    * Changes\n          o make exSearchComplete disable in unix/linux terminal.\n          o let lookupfile, taglist use the same key map settings as ex-plugins have.\n          o use pattern instead of preview for exJumpStack, the preview will be generate dynamically.\n          o use pattern locate the jump result, so that even you changes some of the line between the jump result, it still have chance to locate to the exact position.\n          o add quick_gen_project_pre_custom and quick_gen_project_post_custom when update project.\n          o when doing stack jump, use keepjumps.\n          o Add protect codes for moving project files.\n          o add cscope file name highlight \n    * Bug fix\n          o fix the EX_DEV been overwritten in linux.\n          o fix highlight error of key word \"class::define\" in exJumpStack.\n          o fix exJumpStack when poping up stack, reset wrong tag index.\n          o fix EX_DEV setting error in windows, when there is no EX_DEV environment variable.\n          o fix cscope filter search error.\n          o fix EX_DEV setting error in windows, when there is no EX_DEV environment variable.\n          o fix exJumpStack can't locate empty line or line with only space, tab problem "
     },
@@ -163,7 +163,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "    * New features\n          o add ex_lightgray color scheme.\n          o Support search result sorting for exGlobalSearch.\n                + add g:exGS_auto_sort, g:exGS_lines_for_autosort settings\n                + add \\sr operations for force sort search result. \n          o Support general key map settings for ex-plugin.\n          o add exJumpStack \n    * Changes\n          o add errorformat support for exGlobalSearch result. (People may copy the exGlobaSearch result from global search window to quickfix window)\n          o in old version, exQF_PasteQuickFixResult? can only use \\p. now you can use p or \\p to accomplish the task.\n          o add warnning when use visual p,\\p to paste a result to quickfix window, it will switch to normal p,\\p operation.\n          o add EX_DEV environment support in unix/linux.\n          o let taglist support hlsl language.\n          o let root directory dialog only show up in exProject standalone version.\n          o add compile error support for hlsl in exQuickFix.\n          o remove tag stack in exTagSelect, use exJumpStack instead. \n    * Bug fix\n          o fix cscope can't parse file name with space.\n          o fix switch window can't keep the same window size problem.\n          o fix macro highlight ignore case for macro\n          o fix arrow key can't be used in terminal version of unix/linux\n          o fix macro highlight highlight error when the macro #if is not at the beginning of the line. "
     },
@@ -179,7 +179,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "\n    * New features\n          o add \\ve to quick edit current vimentry file.\n          o add vimentry name check when open vimentry file. if vimentry name is not the same with the value VimEntryName in vimentry file, it will lead to a vimentry re-write.\n          o add paste quickfix result from register '*'.\n          o add exUtility#CloseAllExpluginWindow() function\n          o add s:ex_lang_map for exVim. you can use exUtility#RestLangMap and exUtility#AddLangMap function to create your own language maps.\n                + remove g:exPJ_default_filter variable. use g:ex_default_langs instead.\n                + add ExpjUpdateFilters command\n                + add g:exES_LangType? set project filter process in exEnvironment\n                + let exUtility#GetLangType and exUtility#GetCtagsOption support s:ex_lang_map \n          o add darkscheme support \n    * Changes\n          o change the id language custom map from id-lang.map to id-lang-custom.map.\n          o disable move/del command shows information in quick_gen_project.bat by add > nul\n          o change g:exES_vimfile_dir to g:exES_vimfiles_dirname.\n          o change exProject filetype from ft_exproject to ex_filetype\n          o change g:exUT_plugin_list to g:ex_plugin_list \n    * Bug fix\n          o fix \\fc can't work outside edit window.\n          o fix \"<args>\" can't accept win32 path problem. by replace all \"<args>\" to '<args>'\n          o use :e xxx.vimentry when you already in another vimentry, the project settings will not be switch.\n                + fix :EXProject <filename> will not close old project file when the <filename> is not the same.\n                + fix exSymbolTable and exMacroHighlight can't load new file when they already load one. \n          o fix \\cf error.\n          o fix toggle window can't let the cursor focus on it. "
     },
@@ -195,7 +195,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": " * New features\n    * Support more than one \".vimentry\" in same directory. \n    * add \"!VimEntryName\" and \"!VimfilesDirName\" in `.vimentry` file.\n * Changes\n    * add \"autogen settings (DO NOT MODIFY)\" comments in the vimentry file.\n    * `.vimentry` version number update to 21. ( you will loose your old .vimentry file settings when open an old project ) \n    * disable move/del command shows information in quick_gen_project.bat by add `> nul`\n    * change g:exPJ_defualt_filter to g:exPJ_default_filter.\n    * remove g:exES_default_vimfiles, now the vimfiles dirname will be generate automatically by the vimentry name.\n * Bug fix\n    * fix exEnvironment use getcwd as g:exES_CWD bug. Instead, we use the folder path of `.vimentry` file \n    * fix exGlobalSearch <c-left>, <c-right> will go to edit buffer \n    * fix visual studio.py can't load unicode solution name\n    * fix open `.vimentry` failed from vim in different path than the path of `.vimentry`\n"
     },
@@ -211,7 +211,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "    * New features\n          o Restore last edit buffer.\n          o Update project depends on project files ( file_filter and dir_filter ).\n                + add filenamelist generate script in quick_gen_project.bat/sh.\n                + update ctags use option -L filenamelist instead of -R.\n                + update cscope use filenamelist instead of dir /s /b whole directory.\n                + add trace log for quick_gen_project script. \n          o Support multi-language type for project.\n          o Support choose language type automatically. (depends on your file_filter input) \n    * Changes\n          o change exProject file filter and dir filter syntax\n                + file filter = type1,type2,type3,...,\n                + dir filter = dir1,dir2,dir3,...,\n                + NOTE: you need to remove the original *.exproject files for this change, or you will meet unwanted errors during refresh project and update project. \n          o Automatically generate quick_gen_project-auto.bat/sh instead of copying one from toolkit/quickgen.\n          o Remove quick_gen_project_xxx_only.bat/sh scripts. (since we use quick_gen_project-auto and -custom)\n          o .vimentry version number update to 17. ( you will loose your old .vimentry file settings when open an old project ) \n    * Bug fix\n          o Fix exMacroHighlight syntax highlight disappear when no any c-like file loaded. "
     },
@@ -227,7 +227,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "the patched third part plugins"
     },
@@ -243,7 +243,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "fix some bugs"
     },
@@ -259,7 +259,7 @@
         "first_name": "Jie",
         "last_name": "Wu",
         "email": "karasaya@gmail.com",
-        "homepage": "http://code.google.com/p/exvim"
+        "homepage": "http://www.ex-dev.com"
       },
       "release_notes": "Initial upload"
     }

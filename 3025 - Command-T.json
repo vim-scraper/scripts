@@ -8,6 +8,70 @@
   "install_details": "To install open the vimball archive in Vim:\n\n  vim command-t.vba\n\nThen source it:\n\n  :so %\n\nThe C extension must also be then compiled; for instance, if Vimball installs your plugin files in ~/.vim, then you would do this:\n\n  cd ~/.vim/ruby/command-t\n  ruby extconf.rb\n  make\n\nNote that Command-T requires a version of VIM with Ruby support enabled, and it must be compiled using the same version of Ruby that Vim itself links against. For more details see the documentation:\n\n  http://git.wincent.com/command-t.git/blob_plain/HEAD:/README.txt",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15560",
+      "filename": "command-t-1.2.1.vba",
+      "script_version": "1.2.1",
+      "date": "2011-05-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win@wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- Remove duplicate copy of the documentation that was causing \"Duplicate tag\"  errors- Mitigate issue with distracting blinking cursor in non-GUI versions of Vim  (patch from Steven Moazami)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15549",
+      "filename": "command-t-1.2.vba",
+      "script_version": "1.2",
+      "date": "2011-04-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win@wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- added |g:CommandTMatchWindowReverse| option, to reverse the order of items  in the match listing (patch from Steven Moazami)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15305",
+      "filename": "command-t-1.1b2.vba",
+      "script_version": "1.1b2",
+      "date": "2011-03-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win@wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- fix a glitch in the release process; the plugin itself is unchanged since 1.1b"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15304",
+      "filename": "command-t-1.1b.vba",
+      "script_version": "1.1b",
+      "date": "2011-03-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19251",
+        "user_name": "wincent",
+        "first_name": "Wincent",
+        "last_name": "Colaiuta",
+        "email": "win@wincent.com",
+        "homepage": "http://wincent.com"
+      },
+      "release_notes": "- add |:CommandTBuffer| command for quickly selecting among open buffers"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14688",
       "filename": "command-t-1.0.1.vba",
       "script_version": "1.0.1",

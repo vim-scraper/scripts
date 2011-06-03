@@ -4,9 +4,41 @@
   "summary": "Replace text with the contents of a register. ",
   "name": "ReplaceWithRegister",
   "script_type": "utility",
-  "description": "DESCRIPTION\nReplacing an existing text with the contents of a register is a very common\ntask during editing. One typically first deletes the existing text via the\nd, D or dd commands, then pastes the register with p or P. Most of\nthe time, the unnamed register is involved, with the following pitfall: If you\nforget to delete into the black-hole register (\"_), the replacement text is\noverwritten! \n\nThis plugin offers a two-in-one command that replaces text covered by a\n{motion}, entire line(s) or the current selection with the contents of a\nregister; the old text is deleted into the black-hole register, i.e. it's\ngone. (But of course, the command can be easily undone.) \n\nThe replacement mode (characters or entire lines) is determined by the\nreplacement command / selection, not by the register contents. This avoids\nsurprises like when the replacement text was a linewise yank, but the\nreplacement is characterwise: In this case, no additional newline is inserted. \n\nRELATED WORKS\n- regreplop.vim (vimscript #2702) provides an alternative implementation of\n  the same idea. \n\nUSAGE\n[\"x][count]gr{motion}\n\t\t\tReplace {motion} text with the contents of register x. \n\t\t\tEspecially when using the unnamed register, this is\n\t\t\tquicker than \"_d{motion}P or \"_c{motion}<C-R>\"\n[\"x][count]grr\n\t\t\tReplace [count] lines with the contents of register x. \n\t\t\tTo replace from the cursor position to the end of the\n\t\t\tline use [\"x]gr$ \n{Visual}[\"x]gr\t\tReplace the selection with the contents of register x. ",
-  "install_details": "INSTALLATION:\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim ReplaceWithRegister.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES:\n- Requires Vim 7.0 or higher. \n- repeat.vim (vimscript #2136) autoload script (optional). \n\nCONFIGURATION:\nThe default mappings override the (rarely used, but somewhat related) gr\ncommand (replace virtual characters under the cursor with {char}). \nIf you want to use different mappings, map your keys to the\n<Plug>ReplaceWithRegister... mapping targets _before_ sourcing this script\n(e.g. in your vimrc): \n\tnmap <silent> <Leader>r <Plug>ReplaceWithRegisterOperator\n\tnmap <silent> <Leader>rr <Plug>ReplaceWithRegisterLine\n\tvmap <silent> <Leader>r <Plug>ReplaceWithRegisterOperator",
+  "description": "DESCRIPTION\nReplacing an existing text with the contents of a register is a very common\ntask during editing. One typically first deletes the existing text via the\nd, D or dd commands, then pastes the register with p or P. Most of\nthe time, the unnamed register is involved, with the following pitfall: If you\nforget to delete into the black-hole register (\"_), the replacement text is\noverwritten! \n\nThis plugin offers a two-in-one command that replaces text covered by a\n{motion}, entire line(s) or the current selection with the contents of a\nregister; the old text is deleted into the black-hole register, i.e. it's\ngone. (But of course, the command can be easily undone.) \n\nThe replacement mode (characters or entire lines) is determined by the\nreplacement command / selection, not by the register contents. This avoids\nsurprises like when the replacement text was a linewise yank, but the\nreplacement is characterwise: In this case, no additional newline is inserted. \n\nRELATED WORKS\n- regreplop.vim (vimscript #2702) provides an alternative implementation of\n  the same idea. \n- operator-replace (vimscript #2782) provides replacement of {motion} only,\n  depends on another library of the author, and does not have a default\n  mapping. \n\nUSAGE\n[\"x][count]gr{motion}\n\t\t\tReplace {motion} text with the contents of register x. \n\t\t\tEspecially when using the unnamed register, this is\n\t\t\tquicker than \"_d{motion}P or \"_c{motion}<C-R>\"\n[\"x][count]grr\n\t\t\tReplace [count] lines with the contents of register x. \n\t\t\tTo replace from the cursor position to the end of the\n\t\t\tline use [\"x]gr$ \n{Visual}[\"x]gr\t\tReplace the selection with the contents of register x. ",
+  "install_details": "INSTALLATION:\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim ReplaceWithRegister.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES:\n- Requires Vim 7.0 or higher. \n- repeat.vim (vimscript #2136) autoload script (optional). \n\nCONFIGURATION:\nThe default mappings override the (rarely used, but somewhat related) gr\ncommand (replace virtual characters under the cursor with {char}). \nIf you want to use different mappings, map your keys to the\n<Plug>ReplaceWithRegister... mapping targets _before_ sourcing this script\n(e.g. in your vimrc): \n    nmap <silent> <Leader>r  <Plug>ReplaceWithRegisterOperator\n    nmap <silent> <Leader>rr <Plug>ReplaceWithRegisterLine\n    vmap <silent> <Leader>r  <Plug>ReplaceWithRegisterVisual",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15541",
+      "filename": "ReplaceWithRegister.vba.gz",
+      "script_version": "1.20",
+      "date": "2011-04-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo@karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- BUG: ReplaceWithRegisterOperator didn't work correctly with linewise motions (like \"+\"); need to use a linewise visual selection in this case. \n- BUG: Text duplicated from yanked previous lines is inserted on a replacement of a visual blockwise selection. Switch replacement mechanism to a put in visual mode in combination with a save and restore of the unnamed register. This should handle all cases and doesn't require the autoindent workaround, neither. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15497",
+      "filename": "ReplaceWithRegister.vba.gz",
+      "script_version": "1.10",
+      "date": "2011-04-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo@karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- The operator-pending mapping now also handles 'nomodifiable' and 'readonly' buffers without function errors. \n- Add experimental support for repeating the replacement also in visual mode through visualrepeat.vim. Renamed vmap <Plug>ReplaceWithRegisterOperator toPlug>ReplaceWithRegisterVisual for that. *** PLEASE UPDATE YOUR CUSTOM MAPPINGS *** "
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14716",
       "filename": "ReplaceWithRegister.vba.gz",

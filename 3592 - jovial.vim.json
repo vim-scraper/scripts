@@ -1,0 +1,27 @@
+{
+  "script_id": "3592",
+  "display_name": "jovial.vim",
+  "summary": "syntax for JOVIAL (J73) programming language",
+  "name": "jovial.vim",
+  "script_type": "syntax",
+  "description": "Supported file suffixes: *.j73, *.jov, *.jovial\n\nThis archive contains Vim syntax highlighting for the JOVIAL programming language.\n\nIt's designed for the J73 dialect (MIL-STD-1589C), but works with other versions. A simple piece of JOVIAL code can be found in the file sample.j73. After installation, you should be able to open that file with Vim and get color syntax highlighting.\n\nFor more information about JOVIAL, please see:\nhttp://en.wikipedia.org/wiki/JOVIAL\n\nI have uploaded a copy of MIL-STD-1589C to:\nhttp://www.scribd.com/doc/44512382/JOVIAL-J73-Computer-Programming-Language-1984-MIL-STD-1589C\n",
+  "install_details": "This archive contains two directories, ftdetect and syntax. Each directory has a file called jovial.vim. Copy both directories into ~/.vim, where ~ is your home directory.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15770",
+      "filename": "jovial_syntax-1.1.tgz",
+      "script_version": "1.1",
+      "date": "2011-05-31",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "30899",
+        "user_name": "paulmcg",
+        "first_name": "Paul",
+        "last_name": "McGinnis",
+        "email": "paulmcg@aol.com",
+        "homepage": ""
+      },
+      "release_notes": "* Fixed code to allow ' characters in variable names. This'is'crazy is a legitimate JOVIAL variable name!\n* Added support for floating point data types.\n* Added support for binary \"bead\" data types.\n* Added standard TODO, FIXME, and XXX tags in comments, as in other syntaxes.\n* Changed code to allow for generic directives instead of specific values such as !COMPOOL.\n* Added optional rounding parameters R T and Z to integer and floating types.\n* Split machine specific parameters into constants and functions. For example, BITSINBYTE is a\nconstant, but BYTEPOS() is a function.\n"
+    }
+  ]
+}

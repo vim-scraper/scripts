@@ -1,0 +1,27 @@
+{
+  "script_id": "3607",
+  "display_name": "vim_django",
+  "summary": "Simplifies opening related files in Django projects",
+  "name": "vim_django",
+  "script_type": "utility",
+  "description": "This script simplifies opening of related files in Django projects.\n\nIf you are editing a file in a Django application, say \"myproject/myapp\", vim_django will find your settings.py, get the template directory, and return <template_directory>/<myapp>.\n\nThis is particularly useful in combination with the Command-T plugin: vimscript #3025\n\nWatch a demo on Viemo: http://vimeo.com/24394421 (1:24)\n\n\nSuggested mapping:\nmap <Leader>dt :VimDjangoCommandTTemplate<CR>\n\nIf you put that line in your .vimrc, hitting \"<Leader>dt\" while working on a Django application will start CommandT in the template directory corresponding to the application. (\"<Leader>\" is usually mapped as \"\\\" or \",\" so try \"\\dt\" or \",dt\".)",
+  "install_details": "Unpack in your .vim directory:\n\ncd ~/.vim\ntar zxf vim_django-<version>.tgz",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15757",
+      "filename": "vim_django-0.1.tgz",
+      "script_version": "0.1",
+      "date": "2011-05-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10364",
+        "user_name": "knatten",
+        "first_name": "Anders Schau",
+        "last_name": "Knatten",
+        "email": "anders@knatten.org",
+        "homepage": "http://knatten.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

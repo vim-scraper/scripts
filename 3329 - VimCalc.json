@@ -8,6 +8,22 @@
   "install_details": "Requirements\n\nVim 7.0+ with +python.\nPython installed.\n\nIf you're compiling Vim from source, be sure to use the --enable-pythoninterp option. Otherwise check your OS's package distro for a version of Vim with Python support. On OS X the best option is MacVim. VimCalc should work on Windows too, you will need to install the correct python dll for the version of Vim you are using. Please see the web for help with this.\n\nInstallation\n\nDownload the latest source from https://github.com/gregsexton/VimCalc.\n\nExtract (or copy) all of the files into your Vim runtime directory, ensuring that they are placed into the correct subdirectories. Then update your help tags file to enable VimCalc help. See :help add-local-help in Vim for details.\n\nIf you like and find VimCalc useful be sure to vote for this script! ",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15317",
+      "filename": "vimcalc-v1.3.zip",
+      "script_version": "1.3",
+      "date": "2011-03-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "23036",
+        "user_name": "gregsexton",
+        "first_name": "Greg",
+        "last_name": "Sexton",
+        "email": "gregsexton@gmail.com",
+        "homepage": "http://www.gregsexton.org"
+      },
+      "release_notes": "Added :int and :float directives.\nAdded :status directive and improved directive highlighting.\nAdded :vars directive.\nAdded :q directive.\nMade 'let' optional during assignment.\nEverything is now unit tested with python code seperated."
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15083",
       "filename": "vimcalc-v1.2.zip",
       "script_version": "1.2",

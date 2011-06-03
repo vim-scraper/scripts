@@ -1,0 +1,27 @@
+{
+  "script_id": "3612",
+  "display_name": "browsereload-mac.vim",
+  "summary": "vim plugin to reflesh your browser. his plugin works only MacOS.",
+  "name": "browsereload-mac.vim",
+  "script_type": "utility",
+  "description": "========================\nbrowsereload-mac.vim\n========================\n\nDescription\n--------------------\n\nvim plugin to reflesh your browser. \nthis plugin works only MacOS.\n\nRequired\n--------------------\n\nosascript(AppleScript command)\n\nInstallation\n--------------------\n\n::\n\n wget https://github.com/tell-k/vim-browsereload-mac.vim/tarball/master -O browsereload-mac-vim.tar.gz\n tar xvzf browsereload-mac-vim.tar.gz\n mv tell-k-vim-browsereload-mac.vim-* browsereload-mac-vim\n cp -pr ./browsereload-mac-vim/plugin/browsereload-mac.vim ~/.vim/plugin/ \n\nsee install.sh\n\nUsage\n--------------------\n\nbrowser reload::\n\n :Cr  //reload \"Google Chrome\"\n :Fr  //reload \"Firefox\"\n :Sr  //reload \"Safari\"\n :Or  //reload \"Opera\"\n :Ar  //reload ubove all browser\n\nstart auto reload::\n\n :CrStart  \n :FrStart  \n :SrStart  \n :OrStart  \n :ArStart  \n\nstop auto reload::\n\n :CrStop\n :FrStop\n :SrStop\n :OrStop\n :ArStop\n\n\nSettings\n--------------------\n\nafter reflesh browser. forcus \"Terminal\" apps.\n\nif you wan to change fourcus application, \nchange variables \"g:returnApps\" to your appliation.\n\n::\n\n \"change this variables\n let g:returnApp = \"Terminal\" ",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15789",
+      "filename": "browsereload-mac-v1.0.0.zip",
+      "script_version": "1.0.0",
+      "date": "2011-06-01",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "31622",
+        "user_name": "tell-k",
+        "first_name": "tell",
+        "last_name": "k",
+        "email": "ffk2005@gmail.com",
+        "homepage": "http://d.hatena.ne.jp/tell-k/"
+      },
+      "release_notes": "first release"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "script_id": "3581",
+  "display_name": "vim-textobj-quoted",
+  "summary": "A text-object for quoted text",
+  "name": "vim-textobj-quoted",
+  "script_type": "utility",
+  "description": "A custom text object for selecting quoted text. It depends on awesome Kana's https://github.com/kana/vim-textobj-user. \n\n\nvim-textobj-quoted gives you two new text-objects: \n\n* iq\nThat stands for Inner Quoted\n* *_aq_*\nThat stands for Around Quoted\n\nSo, the two text-objects defined will work with the following quoting chars:\n\n* { }\n* \" \"\n* ' '\n* ( )\n\nPlease note that the defined text-objects are single-line oriented. I find them very useful in situations like the following (* indicated cursor position): \n\n* \"some awes*ome text\"\n* (some awes*ome text)\n* {some awes*ome text}\n* 'some awes*ome text'\n\nIn each case you could use commands like viq or ciq and select/cancel all the quoted text. Obviously, you can achive the same results using commands like vi\" or vi{. Indeed, the real benefit you'll get using this plugin is that you will have to remember only the q char.",
+  "install_details": "Copy to your vim folder or use the rake task.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15614",
+      "filename": "vim-textobj-quoted.zip",
+      "script_version": "0.0.1",
+      "date": "2011-05-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9693",
+        "user_name": "LucaPette",
+        "first_name": "Luca",
+        "last_name": "Pette",
+        "email": "lucapette@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

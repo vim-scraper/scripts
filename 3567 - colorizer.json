@@ -1,0 +1,91 @@
+{
+  "script_id": "3567",
+  "display_name": "colorizer",
+  "summary": "Highlight #rrggbb or #rgb color",
+  "name": "colorizer",
+  "script_type": "utility",
+  "description": "A modification of css_color.vim (vimscript #2150). It highlights all color strings in the form of #rrggbb or #rgb, regardless of file types, and unlike css_color.vim, it's able to find all colors in one line. It has support for 256-color terminals. It won't highlight color names.\n\nThis plugin defines three commands:\n\n\tColorHighlight\t- start/update highlighting\n\tColorClear      - clear all highlights\n\tColorToggle     - toggle highlights\n\nBy default, <leader>tc is mapped to ColorToggle. If you want to use another\nkey map, do like this:\n\tnmap ,tc <Plug>Colorizer\n\nIf you want completely not to map it, set the following in your vimrc:\n      let g:colorizer_nomap = 1\n\nTo use solid color highlight, set this in your vimrc (later change won't\nprobably take effect unless you use ':ColorHighlight!' to force update):\n      let g:colorizer_fgcontrast = -1\nset it to 0 or 1 to use a softened foregroud color.\n\nNote: if you modify a color string in normal mode, if the cursor is still on\nthat line, it'll take 'updatetime' seconds to update. You can use\n:ColorHighlight (or your key mapping) again to force update.\n\nPerformace Notice: In terminal, it may take several seconds to highlight 240\ndifferent colors. GUI version is much quicker.\n\nLinks:\n* on github https://github.com/lilydjwg/colorizer\n* 中文介绍（非官方） Chinese introduction (unoffical)\n** http://www.gracecode.com/archives/3071/\n\nSimilar plugin:\n* hexHighlight.vim vimscript #2937\n",
+  "install_details": "put it under ~/.vim/plugin (or for windows, $VIM/vimfiles/plugin)",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15621",
+      "filename": "colorizer.vim",
+      "script_version": "1.3.1",
+      "date": "2011-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15944",
+        "user_name": "lilydjwg",
+        "first_name": "lilydjwg",
+        "last_name": " ",
+        "email": "lilydjwg@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "ColorToggle works again (after 1.3)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15613",
+      "filename": "colorizer.vim",
+      "script_version": "1.3",
+      "date": "2011-05-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15944",
+        "user_name": "lilydjwg",
+        "first_name": "lilydjwg",
+        "last_name": " ",
+        "email": "lilydjwg@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "* remain highlight when colorscheme changed\n* update highlighting when BufRead\n* add g:colorizer_fgcontrast to change foreground color (now it can highlight the color code to a solid block like hexHighlight.vim does)\nThanks to Ingo Karkat and rykka."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15597",
+      "filename": "colorizer.vim",
+      "script_version": "1.2.1",
+      "date": "2011-05-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15944",
+        "user_name": "lilydjwg",
+        "first_name": "lilydjwg",
+        "last_name": " ",
+        "email": "lilydjwg@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "fix variable undefined error."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15580",
+      "filename": "colorizer.vim",
+      "script_version": "1.1",
+      "date": "2011-05-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15944",
+        "user_name": "lilydjwg",
+        "first_name": "lilydjwg",
+        "last_name": " ",
+        "email": "lilydjwg@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Use commands to invoke;\nAdd :ColorClear;\nSupport for #rgb form;\nOther improvements.\nThanks to Ingo Karkat."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15540",
+      "filename": "colorizer.vim",
+      "script_version": "1.0",
+      "date": "2011-04-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15944",
+        "user_name": "lilydjwg",
+        "first_name": "lilydjwg",
+        "last_name": " ",
+        "email": "lilydjwg@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

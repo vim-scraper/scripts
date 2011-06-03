@@ -1,0 +1,27 @@
+{
+  "script_id": "3556",
+  "display_name": "openscad.vim",
+  "summary": "Simple syntax highlighting for the OpenSCAD language",
+  "name": "openscad.vim",
+  "script_type": "syntax",
+  "description": "This is a quick hack at syntax highlighting for the OpenSCAD 3D modeling language -- http://www.openscad.org/\n\nNote that at the moment it doesn&#039t help detect errors such as mismatched blocks and parens.\n\nTODOs include error management and auto filetype setup.\n\nI would appreciate feedback and suggestions for improvement, please use the script wiki link above.",
+  "install_details": "Copy to ../syntax/ directory. Until automatic filetype setup is complete, at the moment you have to manually do:\n\n:set filetype=openscad\n\nwhen editing OpenSCAD files so that syntax highlighting is enabled.\n\nYou can automate this by adding the following autocmd to your vimrc:\n\nau! BufRead,BufNewFile *.scad\t\tset filetype=openscad\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15479",
+      "filename": "openscad.vim",
+      "script_version": "0.2",
+      "date": "2011-04-19",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "29680",
+        "user_name": "taj",
+        "first_name": "Sirtaj",
+        "last_name": "Singh Kang",
+        "email": "sirtaj-vim@sirtaj.net",
+        "homepage": "http://sirtaj.net/"
+      },
+      "release_notes": "Added some missing keywords, better compliance with vim syntax guidelines."
+    }
+  ]
+}

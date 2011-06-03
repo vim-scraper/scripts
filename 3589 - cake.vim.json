@@ -1,0 +1,27 @@
+{
+  "script_id": "3589",
+  "display_name": "cake.vim",
+  "summary": "Utility for CakePHP developpers.",
+  "name": "cake.vim",
+  "script_type": "utility",
+  "description": "cake.vim is for easy jumping between Controller, Model and View files when developing in CakePHP. \n\nRequirements:\n- Vim ver.7.0 or heigher \n- CakePHP ver.1.3 or heigher\n\nEasy to use:\n\nAt the first, specified the root directory of your CakePHP.\n\n:Cakephp /path/to/cakephp_root/\n\n\nWhen you run this command, it will be cached controller and\nmodel name internally.\nIf you write the following key-mappings in your .vimrc, it will\nperform automatically at startup.\n\n    let g:cakephp_auto_set_project = 1\n    let g:cakephp_root = \"/path/to/cakephp_root/\"\n\n\nEdit the specified or current controller.\n:Ccontroller hogehoges\n\n\nEdit the specified controller's view.\nwhen current buffer is controller.\n:Cview index\n\n\nEdit the specified or current view( and use theme name).\n:Cview index mytheme\n\n\nEdit the specified or current model.\n:Cmodel hogehoge",
+  "install_details": "1: Extract the file and Put files in your Vim directory\n   (usually ~/.vim/). \n2: Execute |:Cakephp| <Space> |/path/to/cakephp_root/| command or\nlet g:cakephp_auto_set_project = 1 \nlet g:cakephp_root = \"/path/to/cakephp_root/\"\nin your .vimrc. \n\nAnd if you would like to use divided view themed such as \"front\" and \"admin\",\nlet g:cakephp_use_theme = \"admin\"\nadd the comment in your .vimrc. \n\n\nSorry, this plugin will not work well for windows at this time.\n\n\nMore comfortable to use cake.vim, if you write key-mappings in your .vimrc. \nHere is recommended key-mappings.\n\n    \" Recommended  key-mappings.\n    nnoremap <Space>cc :Ccontroller \n    nnoremap <Space>cm :Cmodel \n    nnoremap <Space>cv :Cview ",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15660",
+      "filename": "cake.tar.gz",
+      "script_version": "1.1.0",
+      "date": "2011-05-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "30440",
+        "user_name": "Yuhei Kagaya",
+        "first_name": "Yuhei",
+        "last_name": "Kagaya",
+        "email": "yuhei.kagaya@gmail.com",
+        "homepage": "http://d.hatena.ne.jp/yuhei_kagaya/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

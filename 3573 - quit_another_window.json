@@ -1,0 +1,27 @@
+{
+  "script_id": "3573",
+  "display_name": "quit_another_window",
+  "summary": "Plugin for quick closing another window and keeping working in current window",
+  "name": "quit_another_window",
+  "script_type": "utility",
+  "description": "Often i need to close some other window and keep working in current window.\nFor example, if i read some help in upper window, and i edit code in lower\nwindow. In the definite moment i decide to close help window. To do it,\ni have to press \"Ctrl_W k :q\".\n\nNot very short. And this is not the worse variant.\nOther variant:\n\n+-----------------+-----------------+\n|      help           |                        |\n|     window      |                        |\n|                         |     current      |\n+-----------------+     window     |\n|                         |                        |\n|                         | <cursor>       |\n|                         |                        |\n|                         |                        |\n+-----------------+-----------------+\n\nFocus is in the 'current window', cursor is on the <cursor> sign. \nI want to close 'help window' and keep working in current window.\n\nThat's what i need to do: \n\nCtrl_W h Ctrl_W k :q Ctrl_W l\n\nThis is very long!\nSo, i wrote this plugin to make it easy.\n\nIt provides 5 commands.\n\nFirstly, four commands for most-frequently actions:\n\n      :Qh means \"close left window and go back\"\n      :Qj means \"close lower window and go back\"\n      :Qk means \"close upper window and go back\"\n      :Ql means \"close right window and go back\"\n\nAnd one universal command:\n      :Q <args>, where <args> is movement commands to needed window.\n      \n      For example, \":Q hk\" means \"Go to the left window, then go to upper window,\n                                  close it and go back to source window\"\n\n      So, this long long command \"Ctrl_W h Ctrl_W k :q Ctrl_W l\"\n      is truncated to short expression: \":Q hk\"\n\nThere's one optional dependency: CmdAlias plugin (vimscript #746).\n\nIf CmdAlias is installed, then lowercased aliases of commands will be available:   :qh, :qj, :qk, :ql, :q <args>.\nI found it useful.\n\n\nPlease NOTE: \n\n1) if :Q without arguments is passed, then current window becomes closed.\n   (to provide compatibility of lowercased command :q)\n\n2) If argument is passed, but target window is the same as current window, then\n   no window will be closed.\n",
+  "install_details": "Use pathogen.\n\nOr just unpack contents of the package in your .vim directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15568",
+      "filename": "quit-another-window-1.01.tar.gz",
+      "script_version": "1.02",
+      "date": "2011-05-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20962",
+        "user_name": "dimonomid",
+        "first_name": "Dmitry",
+        "last_name": "Frank",
+        "email": "dimon.frank at gmail.com",
+        "homepage": "http://dfrank.ru/en.html"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -4,9 +4,41 @@
   "summary": "Adds property getters and setters",
   "name": "javabean.vim",
   "script_type": "utility",
-  "description": "Given a number of Java properties in a basic format, this will generate the getters and setters for them; for example, given:\n\nString myString\nint myInt\n\nyou will get:\n\nprotected String m_myString;\nprotected int m_myInt;\n\npublic void setMyString( String val )\n{\n  m_myString = val;\n}\n\npublic String getMyString()\n{\n  return m_myString;\n}\n\npublic void setMyInt( int val )\n{\n  m_myInt = val;\n}\n\npublic int getMyInt()\n{\n  return m_myInt;\n}\n\n",
+  "description": "Given a number of Java properties in a basic format, this will generate the getters and setters for them; for example, given:\n\nString myString\nint myInt\n\nyou will get:\n\nprotected String m_myString;\nprotected int m_myInt;\n\npublic void setMyString( String val )\n{\n  m_myString = val;\n}\n\npublic String getMyString()\n{\n  return m_myString;\n}\n\npublic void setMyInt( int val )\n{\n  m_myInt = val;\n}\n\npublic int getMyInt()\n{\n  return m_myInt;\n}\n\nVersion 2.0:\n\nAdded getters and setters for array variables; for example:\n\nString[] names\n\nresults in:\n\nprotected String[] m_names;\n\npublic void setNames( String[] val )\n{\n    m_names = val;\n}\n\npublic String[] getNames()\n{\n    return m_names;\n}\n\npublic void setNames( String val, int index )\n{\n    m_names[ index ] = val;\n}\n\npublic String getNames( int index )\n{\n    return m_names[ index ];\n}\n\nVersion 2.5:\n\nAdded a new variable (g:javabean_generateArrayAccessors--defaults to 1) to control whether or not to generate array index-based getters and setters.\n\nAllowed the specification of the three configuration variables in the Vimrc instead of having to modify this file; the variables and their default values, again, are:\n\ng:javabean_scope = \"protected\"\n\ng:javabean_beanPrefix = \"m_\"\n\ng:javabean_generateArrayAccessors = 1\n",
   "install_details": "Just pop it into your plugin directory.  Can set g:javabean_scope or b:javabean_scope if \\\\&#039protected\\\\&#039 isn\\\\&#039t what you use.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15474",
+      "filename": "javabean.vim",
+      "script_version": "2.5",
+      "date": "2011-04-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a new variable (g:javabean_generateArrayAccessors--defaults to 1) to control whether or not to generate array index-based getters and setters.\n\nAllowed the specification of the three configuration variables in the Vimrc instead of having to modify this file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15460",
+      "filename": "javabean.vim",
+      "script_version": "2.0",
+      "date": "2011-04-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added support for array variables to get them by index."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=51",
       "filename": "javabean.vim",
@@ -18,7 +50,7 @@
         "user_name": "hemlock8",
         "first_name": "Salman",
         "last_name": "Halim",
-        "email": "salmanhalim@hotmail.com",
+        "email": "salmanhalim@gmail.com",
         "homepage": ""
       },
       "release_notes": "Initial upload"

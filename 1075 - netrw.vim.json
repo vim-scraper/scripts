@@ -8,6 +8,22 @@
   "install_details": "netrw is now distributed as a vimball!  (see :help vimball)\nYou'll need a vimball plugin v18 or later (see vimscript#1502).\n(if you have vim 7.1a or later, you probably can skip this step)\n\n(if you're updating from the vim 7.0 distribution, please remove all runtime plugin/netrw*.vim and autoload/netrw*.vim first)\n\nvim netrw.vba.gz\n:so %\n:q\n\nand that's it!",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15352",
+      "filename": "netrw.vba.gz",
+      "script_version": "141",
+      "date": "2011-04-01",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip@campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "included -s:... support for Windows ftp\nrestored 2-leftmouse for :Rex-like return\nadded balloon help for items in banner\ng:netrw_cursor (g:netrw_cursorcolumn is deprecated) supports additional argument values for cursorline and cursorcolumn control in netrw directory listings.\n:Texplore starts from netrw's idea of the current directory rather than pwd's\n"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=11979",
       "filename": "netrw.vba.gz",
       "script_version": "136",

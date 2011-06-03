@@ -4,9 +4,57 @@
   "summary": "Syntax highlight colors change gradually based on minutes of hour",
   "name": "Changing-color-script",
   "script_type": "color scheme",
-  "description": "Tested and works well with Java, Javascript, HTML, CSS, PHP, ActionScript (with 'actionscript.vim', available elsewhere in Vim.org), AutoIt and AutoHotKey.  Gradually changes changing syntax colours over the hour.\n\nBenefits:\n+ reduces user 'freezing' symptoms\n+ improves space/time-awareness\n+ recruits right side of brain brain cells\n\nDisadvantages:\n- Under Windows GUI resources are wasted over time due to how VIM changes colors\n- Off-putting flicker occurs when color changes\n\nOnly affects GVIM. Nothing happens in VIM.\n\n",
+  "description": "Tested and works well with Java, Javascript, HTML, CSS, PHP, ActionScript (with 'actionscript.vim', available elsewhere in Vim.org), AutoIt and AutoHotKey.  Gradually changes changing syntax colours over the hour.\n\nBenefits:\n+ reduces user 'freezing' symptoms\n+ improves space/time-awareness\n+ recruits right side of brain\n+ easy to install/uninstall\n\nDisadvantages:\n- Unfortunately some Windows GUI resources are wasted over time\n- Some off-putting flicker\n\nAffects only GVIM. Nothing happens in VIM.\n\nCursor may blink irregular but simply play with UPDATETIME to correct this.  On my system, default 4000 looks horrible, but 3550 works ok.  Just put set ut=3550 in your _vimrc file.",
   "install_details": "Open changingColor.vba in VIM, and type :so % and press RETURN.  Re-start VIM.  Chaging color will start working.  Remove it: simply type :RmVimball changingColor.vba and press RETURN.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15528",
+      "filename": "changingColor.vba",
+      "script_version": "16.9",
+      "date": "2011-04-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17391",
+        "user_name": "Pablos544",
+        "first_name": "Paul",
+        "last_name": "Contreras",
+        "email": "pablo@ezrider.co.uk",
+        "homepage": "http://www.paulcontreras.co.uk"
+      },
+      "release_notes": "Brightened up Special an Identifier under low light"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15519",
+      "filename": "changingColor.vba",
+      "script_version": "16.8",
+      "date": "2011-04-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17391",
+        "user_name": "Pablos544",
+        "first_name": "Paul",
+        "last_name": "Contreras",
+        "email": "pablo@ezrider.co.uk",
+        "homepage": "http://www.paulcontreras.co.uk"
+      },
+      "release_notes": "Unconfused mixup with fg and bg for Search and Visual, i got fg and bg wrong way.  Fixed and seems ok now."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15515",
+      "filename": "changingColor.vba",
+      "script_version": "16.7",
+      "date": "2011-04-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17391",
+        "user_name": "Pablos544",
+        "first_name": "Paul",
+        "last_name": "Contreras",
+        "email": "pablo@ezrider.co.uk",
+        "homepage": "http://www.paulcontreras.co.uk"
+      },
+      "release_notes": "Collated temporary variables into one single variable and used this.  Tweaked poor contrast of Search and Visual syntax elements.  Made code formatting more normal."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14795",
       "filename": "changingColor.vba",

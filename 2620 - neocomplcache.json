@@ -8,6 +8,22 @@
   "install_details": "1: Edit downloaded neocomplcache-*.vba file by Vim and execute \":so %\" command.\n2: Execute :NeoComplCacheEnable command or \nlet g:neocomplcache_enable_at_startup = 1\nin your .vimrc.\n",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15559",
+      "filename": "neocomplcache-6.0.vba",
+      "script_version": "6.0",
+      "date": "2011-05-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "17200",
+        "user_name": "Shougo",
+        "first_name": "Shougo",
+        "last_name": "Matsushita",
+        "email": "Shougo.Matsu@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Added <Plug>(neocomplcache_snippets_force_expand) keymapping.\n- Added <Plug>(neocomplcache_snippets_force_jump) keymapping.\n- Added <Plug>(neocomplcache_start_unite_complete) mapping.\n- Added English snippet manual.\n- Added README.\n- Added file_include source.\n- Added ftplugin.\n- Added g:neocomplcache_disable_caching_file_path_pattern option.\n- Added neco-ruby description.\n- Added neocomplcache asyncronous description.\n- Added neocomplcache snippet source.\n- Added neocomplcache#get_next_keyword().\n- Added neocomplcache#is_buffer_complete_enabled().\n- Added tex same filetype.\n- Added unite source(experimental).\n- Call neocomplcache completion when eskk is ascii mode.\n- Changed <Plug>(neocomplcache_snippets_expand) behavior.\n- Changed <Plug>(neocomplcache_snippets_jump) keymapping.\n- Changed neocomplcache#sources#snippets_complete#expandable().\n- Check unite.vim version.\n- Deleted :NeoComplCachePrintSnippets command.\n- Deleted g:neocomplcache_disable_caching_buffer_name_pattern option.\n- Deleted register snippets.\n- Fixed async_cache.\n- Fixed asynchronous caching encoding bug.\n- Fixed buffer_complete error when keyword complete is disabled.\n- Fixed buffer_complete error.\n- Fixed caching bug.\n- Fixed comment typo.\n- Fixed completefunc issue.\n- Fixed completeopt bug.\n- Fixed dictionary_complete bug.\n- Fixed expand snippet error.\n- Fixed expand snippet.\n- Fixed filename_complete bugs.\n- Fixed include_complete error.\n- Fixed indent file.\n- Fixed javascript snippet.\n- Fixed manual completion error.\n- Fixed preview window problem.\n- Fixed quick match bugs.\n- Fixed snippet documentation.\n- Fixed snippet jump bug.\n- Fixed snippets expand pattern.\n- Fixed snippets_complete error.\n- Fixed tags.\n- Fixed unite completion source.\n- Ignore caching command line window.\n- Implemented alternative buffer completion in cmdwin.\n- Implemented async_cache.vim(testing).\n- Implemented asyncronous caching in buffer_complete.\n- Implemented include path complete in filename_complete.\n- Improved Japanese snippet manual.\n- Improved async_cache debug support.\n- Improved buffer_name.\n- Improved cache.\n- Improved caching event.\n- Improved check dup.\n- Improved close popup.\n- Improved compare ranks.\n- Improved compare_rank().\n- Improved completion length.\n- Improved context filetype.\n- Improved default completeopt set.\n- Improved detect completefunc.\n- Improved detect paste.\n- Improved error messages.\n- Improved examples.\n- Improved expand snippet.\n- Improved feedkeys().\n- Improved filename_complete.\n- Improved filetype completion.\n- Improved g:neocomplcache_ctags_arguments_list option.\n- Improved g:neocomplcache_omni_patterns examples.\n- Improved get_cur_text().\n- Improved hash function.\n- Improved include_complete behavior for echodoc.\n- Improved neocomplcache#cache#async_load_from_file().\n- Improved neocomplcache#get_keyword_pattern().\n- Improved neocomplcache#is_eskk_enabled().\n- Improved omni_complete.\n- Improved snippets_complete.\n- Improved tags_complete.\n- Improved tex keyword pattern.\n- Improved unite source.\n- Improved unite-neocomplcache source.\n- Improved vim_complete check.\n- Improved vimshell include filetype setting.\n- Open fold when expand snippet.\n- Optimized cache load routine.\n- Refactored.\n- Refactoringed caching routine.\n- Refctoringed snippets_complete.\n- Set cpoptions.\n- Supported cobol.\n- Supported g:eskk#start_completion_length.\n- Supported unite.vim."
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14464",
       "filename": "neocomplcache-5.3.vba",
       "script_version": "5.3",

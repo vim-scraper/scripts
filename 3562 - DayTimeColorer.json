@@ -1,0 +1,43 @@
+{
+  "script_id": "3562",
+  "display_name": "DayTimeColorer",
+  "summary": "Change color scheme according to position of the sun.",
+  "name": "DayTimeColorer",
+  "script_type": "color scheme",
+  "description": "This plugin calculates dawn, dusk, sunrise and sunset times and sets one of the four user defined color schemes according to sun position.\nYour vim must be compiled with +float feature.\nPlugin uses algorithm from \"Almanac for Computers, 1990\"\nWhich description has been found at:\nhttp://williams.best.vwh.net/sunrise_sunset_algorithm.htm\nIdea of plugin is taken from:\nhttp://allaboutvim.blogspot.com/2011/01/blog-post.html\n...and turned into overkill =)\nAutomatic refresh code is taken from: vimscript #2658",
+  "install_details": "Put the daytimecolorer.vim into .vim/plugin/\nAnd add following lines into your .vimrc:\n\n\" Define color schemes\nlet g:dtcDayScheme = \"pyte\"\nlet g:dtcNightScheme = \"wombat256\"\n\" Those are optional\nlet g:dtcDawnScheme = \"zenburn\"\nlet g:dtcDuskScheme = \"zenburn\"\n\n\" Set coordinates of your place\nlet g:dtcLatitude = 59.935\nlet g:dtcLongitude = 30.325\n\n\" Set your timezone\nlet g:dtcTimeOffset = 4\n\n\" Enable automatic color refresh (updates color scheme without restarting vim, but may use some extra resources)\nlet g:dtcAutoRefresh = 1\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15518",
+      "filename": "daytimecolorer.vim",
+      "script_version": "0.1.1",
+      "date": "2011-04-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29885",
+        "user_name": "RedRampage",
+        "first_name": "red",
+        "last_name": "rampage",
+        "email": "redrampage@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed screen flicker and unnecessary color scheme reloading"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15514",
+      "filename": "daytimecolorer.vim",
+      "script_version": "0.1",
+      "date": "2011-04-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29885",
+        "user_name": "RedRampage",
+        "first_name": "red",
+        "last_name": "rampage",
+        "email": "redrampage@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "script_id": "3552",
+  "display_name": "Message Formatter",
+  "summary": "An plugin to ease typing of repetitive of code",
+  "name": "Message-Formatter",
+  "script_type": "utility",
+  "description": "This plugin allows the simplification of repetitive code fragments, allowing\nmuch faster entry; for example, this text\n        getset  List<String>  names\n\ngets converted to\n        public List<String> getNames()\n        {\n                return m_names;\n        }\n\n        public void setNames( List<String> val )\n        {\n                m_names = val;\n        }\n\nMore importantly, it figures out when you're defining a boolean variable and\nreplaces the \"get\" with \"is\"; thus,\n        getset  boolean  old enough\n\nbecomes\n        public boolean isOldEnough()\n        {\n                return m_oldEnough;\n        }\n\n        public void setOldEnough( boolean val )\n        {\n                m_oldEnough = val;\n        }\n\nObserve how \"old enough\" was automatically camel-cased to \"oldEnough\", and,\nwhen used with \"get\" or \"is\", was also capitalized. The same variable can be\nused over and over again, each time with (if desired) different formatting\ndirectives; for example, this template pattern\n        My name is {john::f_fName} and my full name is {{fName} smith::uq_fullName}.\n\ngets expanded to\n        My name is John and my full name is \"JOHN SMITH\".\n\nObserve, also, how the \"fullName\" directive recursively contained and expanded\nthe fName directive.",
+  "install_details": "Unzip into a directory in your &runtimepath.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15612",
+      "filename": "MessageFormatter.vba",
+      "script_version": "7.0",
+      "date": "2011-05-09",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New option: g:MessageFormatter_moveArgumentsToStart; if 1 (the default), input arguments are moved to the front for easier expansion. See :help\ng:MessageFormatter_moveArgumentsToStart for details.\n\nMore new options: g:MessageFormatter_highlightDirectives and g:MessageFormatter_highlightDirectivesLink; control the highlighting of directives in text to\nmake them stand out.\n\nNew command: Setcolordirectives: toggles the directive highlighting feature.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15600",
+      "filename": "MessageFormatter.vba",
+      "script_version": "6.5",
+      "date": "2011-05-07",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New modifier:\n\no: if the value is non-empty, prepends a \", \" (a comma and a space); otherwise, leaves it empty\nP: Just like 'p', but ignores empty strings\nQ: Just like 'q', but ignores empty strings\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15589",
+      "filename": "MessageFormatter.vba",
+      "script_version": "6.0",
+      "date": "2011-05-05",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added an option: g:MessageFormatter_autoAddJumpToEnd; if this is 1 (the default) and if a parameter contains !jump! directives, another !jump! is added to the end to allow the user to quickly continue typing beyond the template. See :help g:MessageFormatter_autoAddJumpToEnd.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15581",
+      "filename": "MessageFormatter.vba",
+      "script_version": "5.5",
+      "date": "2011-05-04",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug in default processing.\n\nImproved help and added examples to help (:help MessageFormatter_Examples).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15576",
+      "filename": "MessageFormatter.vba",
+      "script_version": "5.0",
+      "date": "2011-05-03",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a default value mechanism: if a template variable is defined like this:\n\n{def John::firstName}\n\nthen, during expansion, if an empty value is passed in for firstName, \"John\" will be used instead. This value can be recursive and may contain other\nparameters, as before. (Including other \"def\" expansions.)\n\nAlso, parameters with default values may be left out to have their default value used; see :help MessageFormatter_def for more details.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15566",
+      "filename": "MessageFormatter.vba",
+      "script_version": "4.5",
+      "date": "2011-05-02",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Bug fixes, mostly, though added one more option:\n\ng:MessageFormatter_formatCurrentLineAsFallback (default 1): if attempting to format a template via the <Plug>FormatCurrentTemplate mapping when not actually\nin a template, will fall back to formatting just the current line as an ad-hoc template if this is 1. If 0, will give an error message instead.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15548",
+      "filename": "MessageFormatter.vba",
+      "script_version": "4.0",
+      "date": "2011-04-30",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a proper help file; no actual functionality changes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15543",
+      "filename": "MessageFormatter.vba",
+      "script_version": "4.0",
+      "date": "2011-04-29",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Templates can be expanded inline while typing, allowing for macro expansion."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15484",
+      "filename": "MessageFormatter.zip",
+      "script_version": "3.5",
+      "date": "2011-04-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a command version of FormatContainedMessage called Formatcontainedmessage that passes everything on the command-line as-is to the function and echoes\nthe result.\n\nAdded a new default value type:\n\nIf the default value for for a parameter (passed to FormatContainedMessage) is \"ask\", it defaults to asking the user (via an input). If the value is anything\nfollowed by \"ask\", it will use that as the default value for the input.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15481",
+      "filename": "MessageFormatter.zip",
+      "script_version": "3.0",
+      "date": "2011-04-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fairly big changes. RELIES UPON MY GetVar.vim (http://vim.sourceforge.net/scripts/script.php?script_id=353) script now.\n\nNew formatting parameter:\n\nn: non-displayed value. The return value is suppressed--useful for adding a value to the cache to be used later.\n\nNew function:\n\nFormatContainedMessage: Works like MessageFormatter#FormatMessage except that it's always recursive and that its original text string can contain default\nvalues for the parameters (so the second parameter is optional); for example,\n\nSome new commands, also."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15440",
+      "filename": "MessageFormatter.vim",
+      "script_version": "2.0",
+      "date": "2011-04-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added new formatting modifier:\n\ne: Escapes out quotation marks (\") and backslashes, leaving the value suitable for placing in quotes. For example, {e_fName} where fName is Jo\\nhn results in\nJo\\\\nhn.\n\nIf an expansion parameter starts with \"eval \", the rest of the value is evaluated and the return value used as the actual parameter value. If recursion is on,\nthat value may contain further parameters.\n\nExample:\n\necho MessageFormatter#FormatMessage('public static final {type} {C_variable} = {value};', {'type':'eval input(\"Type for {variable}: \", \"String\")', 'variable':'eval input(\"Variable name: \")', 'value':'eval input(\"Value: \", \"\\\"{C_variable}\\\"\")'}, 1)\n\nBear in mind that 'type' and 'value' both use the parameter 'variable'. If 'variable' were to refer to either of these, you'd have circular recursion. There\nis no check in place for that; you'd just end up with a stack overflow.\n\nNote, also, that the expression is evaluated only once. After that, its value is stored on the cache--this allows eval parameters to refer to other eval\nparameters (only useful if recursion is on).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15430",
+      "filename": "MessageFormatter.vim",
+      "script_version": "1.5",
+      "date": "2011-04-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a cache so repeated expansions of the same variable can be looked up rather than computed (potentially much faster, especially when recursion is on)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15428",
+      "filename": "MessageFormatter.vim",
+      "script_version": "1.0",
+      "date": "2011-04-11",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "script_id": "3564",
+  "display_name": "hier",
+  "summary": "Highlight quickfix errors and location list entries",
+  "name": "hier",
+  "script_type": "utility",
+  "description": "DESCRIPTION                                               *hier-description*\n\nHighlight quickfix errors and location list entries in buffer. This\nplugin was designed to support the editqf vim script (vimscript#3557)\nbut it also works very well stand alone.\n\nThis script can be downloaded from vimscript#3564. The latest\ndevelopment version is available at https://github.com/jceb/vim-hier.\n\n==========================================================================\nUSAGE                                                           *hier-usage*\n\nThe following commands are provided:\n\t:HierStart\t\t\" enable hier highlighting\n\t:HierStop\t\t\" disable hier highlighting\n\t:HierUpdate\t\t\" update error highlighting for current buffer\n\t:HierClear\t\t\" remove highlighting - it will be displayed again when :HierUpdate is called\n\n==========================================================================\nCUSTOMIZATION                                           *hier-customization*\n\nThe highlight group can be customized by setting the following variables.\nSetting a variable to the string \"NONE\" will disable highlighting of that\ngroup. Every type can be highlighted differently (error, warning, info):\n\tlet g:hier_highlight_group_qf   = 'SpellBad'\n\tlet g:hier_highlight_group_qfw  = 'SpellLocal'\n\tlet g:hier_highlight_group_qfi  = 'SpellRare'\n\n\tlet g:hier_highlight_group_loc  = 'SpellBad'\n\tlet g:hier_highlight_group_locw = 'SpellLocal'\n\tlet g:hier_highlight_group_loci = 'SpellRare'\n\nEnable/disable highlighting highlighting by default:\n\tlet g:hier_enabled              = 1",
+  "install_details": "1. Download hier.vba\n2. Open file in vim and run :so % to install plugin \n3. Restart vim",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15624",
+      "filename": "hier.vba",
+      "script_version": "1.2",
+      "date": "2011-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9552",
+        "user_name": "jceb",
+        "first_name": "Jan Christoph",
+        "last_name": "Ebersbach",
+        "email": "jceb@e-jc.de",
+        "homepage": "http://www.e-jc.de/"
+      },
+      "release_notes": "- add highlighting groups for warning and info entries\n- make clearing of highlighting behave more graceful towards other\n  plugins\n- add function s:Getlist to remove duplicated code"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15523",
+      "filename": "hier.vba.gz",
+      "script_version": "1.1",
+      "date": "2011-04-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9552",
+        "user_name": "jceb",
+        "first_name": "Jan Christoph",
+        "last_name": "Ebersbach",
+        "email": "jceb@e-jc.de",
+        "homepage": "http://www.e-jc.de/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "script_id": "3528",
+  "display_name": "ciscoacl.vim",
+  "summary": "Cisco ACL syntax highlighting",
+  "name": "ciscoacl.vim",
+  "script_type": "syntax",
+  "description": "This syntax highlighting script it is based on http://www.vim.org/scripts/script.php?script_id=1141 by Vladimir Kotal.\nI've added many more keywords and ipv6 support.",
+  "install_details": "copy ciscoacl.vim to your ~/.vim/syntax directory and add following lines to your ~/.vimrc file:\n\naugroup filetype\n        au! BufRead,BufNewFile *.crules     set filetype=ciscoacl\n        au! BufRead,BufNewFile *.acl        set filetype=ciscoacl\naugroup END",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15316",
+      "filename": "ciscoacl.vim",
+      "script_version": "0.2",
+      "date": "2011-03-28",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "27653",
+        "user_name": "marcosmanoni",
+        "first_name": "Marcos",
+        "last_name": "Manoni",
+        "email": "marcosmanoni@gmail.com",
+        "homepage": "http://www.ccc.uba.ar/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

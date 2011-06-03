@@ -1,0 +1,27 @@
+{
+  "script_id": "3535",
+  "display_name": "vim-task",
+  "summary": "vim task plugin, help people practice GTD in their favorite editor",
+  "name": "vim-task",
+  "script_type": "ftplugin",
+  "description": "Basically, this is the TextMate Tasks Bundle port for Vim.\n\nPlease see details at:\nhttps://github.com/samsonw/vim-task",
+  "install_details": "Normal installation steps follow the vim tradition: download the zip/tar archive then copy all the directories/files to ~/.vim directory. You can download vim-task zip/tar archive by clicking the Download Source button in github.\n\nYou can also check out the latest code if you have git installed:\n\n$ git clone git://github.com/samsonw/vim-task.git\n$ cd vim-task\n$ rm README.mkd\n$ cp -rv * ~/.vim\n\nFor those guys who use pathogen, the installation should be as simple as a git clone:\n\n$ cd ~/.vim/bundle\n$ git clone git://github.com/samsonw/vim-task.git\n\nunfortunately ftdetect directory seems not take effect in pathogen, Im still wondering about why, but anyway here is a temporary workaround for now:\n\n$ mkdir -p ~/.vim/ftdetect\n$ cd ~/.vim/ftdetect\n$ ln -s ../bundle/vim-task/ftdetect/task.vim task.vim\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15360",
+      "filename": "vim-task.tar.gz",
+      "script_version": "1.0",
+      "date": "2011-04-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29048",
+        "user_name": "samsonw",
+        "first_name": "Samson",
+        "last_name": "Wu",
+        "email": "samson959@gmail.com",
+        "homepage": "http://samsonw.info"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

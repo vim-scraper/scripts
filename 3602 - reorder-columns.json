@@ -1,0 +1,27 @@
+{
+  "script_id": "3602",
+  "display_name": "reorder-columns",
+  "summary": "reorder columns.",
+  "name": "reorder-columns",
+  "script_type": "utility",
+  "description": "reorder columns.\nhttps://github.com/taku-o/vim-reorder-columns\n\ncommand format.\n    :[range]ReOrder {split_pattern} {order} [{delimiter}]\n\n        {split_pattern}         split line with {split_pattern}.\n        {order}                 column order.\n        {delimiter}             string for join column. if none, use {split_pattern} instead.\n\ncommand example.\n    :%ReOrder , 32451 |\n        split line with ','\n        order columns, column[3] column[2] column[4] column[5] column[1]\n        join columns with delimiter '|'\n\n        example\n            text data.\n                one,two,three,four,five\n                six,seven,eight,nine,ten\n                eleven,twelve,thirteen,fourteen,fifteen\n\n            command\n                :%ReOrder , 32451 |\n\n            result\n                three|two|five|four|one\n                eight|seven|ten|nine|six\n                thirteen|twelve|fifteen|fourteen|eleven\n\nusage example.\n    --------------------------------------------\n    example text data 1.\n        one,two,three,four,five\n        six,seven,eight,nine,ten\n        eleven,twelve,thirteen,fourteen,fifteen\n\n    usage example 1. re order columns.\n        :%ReOrder , 32451\n\n        three,two,four,five,one\n        eight,seven,nine,ten,six\n        thirteen,twelve,fourteen,fifteen,eleven\n\n    usage example 2. remove some columns.\n        :%ReOrder , 32\n\n        three,two\n        eight,seven\n        thirteen,twelve\n\n    usage example 3. repeat some columns.\n        :%ReOrder , 3233\n\n        three,two,three,three\n        eight,seven,eight,eight\n        thirteen,twelve,thirteen,thirteen\n\n    --------------------------------------------\n    example text data 2.\n        one two three four five\n        six seven eight nine ten\n        eleven twelve thirteen fourteen fifteen\n\n    usage example 4. split with whitespace. sorry, join with whitespace is not supported.\n        :%ReOrder \\s\\+ 32451 ,\n\n        three,two,four,five,one\n        eight,seven,nine,ten,six\n        thirteen,twelve,fourteen,fifteen,eleven\n",
+  "install_details": "copy reorder-columns.vim into your plugin directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15719",
+      "filename": "vim-reorder-columns.zip",
+      "script_version": "0.1",
+      "date": "2011-05-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9013",
+        "user_name": "advweb",
+        "first_name": "omi",
+        "last_name": "taku",
+        "email": "mail@nanasi.jp",
+        "homepage": "http://nanasi.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

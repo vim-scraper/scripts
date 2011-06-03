@@ -1,0 +1,59 @@
+{
+  "script_id": "3557",
+  "display_name": "editqf",
+  "summary": "Make quickfix entries editable",
+  "name": "editqf",
+  "script_type": "utility",
+  "description": "DESCRIPTION                                             *editqf-description*\n\nThis script is a reimplementation and continuation of the QuickFixNotes\nscript (vimscript#2216). Besides the original functionality of capturing\nnotes and storing them in a file, this script provides commands for easily\nloading the stored data, also for location lists.\n\nThough the main functionality of this script is to make editing of quickfix\nentries easy.\n\nThis script can be downloaded from vimscript#3557. The latest development\nversion is available at https://github.com/jceb/vim-editqf.\n\n==========================================================================\nUSAGE                                                         *editqf-usage*\n\nCreate entries in the quickfix list by either running special a command\nlike :make or :grep or add a note by pressing <leader>n. Then bring up the\nquickfix window by running the command :cw.\n\nWhen you are in the quickfix window navigate to the entry you want to\nchange. Just press any key that would bring in into insert mode or change\nthe text like \"i\".  Automatically a new window will be opened containing\nall entries of the quickfix window.\n\nYou can use the regular editing commands for editing the entries. Once\nyou're done, just save the buffer and leave or close the window. I\nrecommend using :x, because this command does both with just one command.\nAfter that you are brought back to the error you initially started editing\nin the quickfix window.\n\nAdditionally the plugin provides the following commands that support\nstoring and restoring quickfix and location lists:\n\t:QFSave <FILENAME>\n\t:QFLoad <FILENAME>  \" default is to append to the current quickfix list\n\t:QFLoad! <FILENAME> \" replace quickfix list with the contents of file\n\t:QFAddNote [NOTE]   \" add quickfix entry with message NOTE\n\t:QFAddNote! [NOTE]  \" like :QFAddNote but start a new quickfix list\n\t:QFAddNotePattern[!] [NOTE] \" add quickfix entry matching the pattern of the current line\n\n\t:LocSave <FILENAME>\n\t:LocLoad <FILENAME>  \" default is to append to the current location list\n\t:LocLoad! <FILENAME> \" replace location list with the contents of file\n\t:LocAddNote [NOTE]   \" add location entry with message NOTE\n\t:LocAddNote! [NOTE]  \" like :LocAddNote but start a new location list\n\t:LocAddNotePattern[!] [NOTE] \" add location entry matching the pattern of the current line\n\nEditqf has integrated support for the hier script (vimscript#3564) which highlights\nquickfix errors to make them more visible.\n\n==========================================================================\nCUSTOMIZATION                                         *editqf-customization*\n\nThe default filename for storing and loading quickfix and location lists is\ncustomizable by setting the following variables in your vimrc:\n\tlet g:editqf_saveqf_filename  = \"quickfix.list\"\n\tlet g:editqf_saveloc_filename = \"location.list\"\n\nJump to the edited error when editing finished:\n\tlet g:editqf_jump_to_error = 1\n\nStore absolute filename when adding a new note\n\tlet g:editqf_store_absolute_filename = 1\n\nThe default keybinding <leader>n for adding a quickfix note can be\ncustomized by defining a mapping in your vimrc:\n\tnmap <leader>n <Plug>QFAddNote\n\tnmap <leader>N <Plug>QFAddNotePattern\n\tnmap <leader>l <Plug>LocAddNote\n\tnmap <leader>L <Plug>LocAddNotePattern\n",
+  "install_details": "1. Download editqf.vba\n2 Open file in vim and run :so % to install plugin\n3. Restart vim\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15623",
+      "filename": "editqf.vba",
+      "script_version": "1.2",
+      "date": "2011-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9552",
+        "user_name": "jceb",
+        "first_name": "Jan Christoph",
+        "last_name": "Ebersbach",
+        "email": "jceb@e-jc.de",
+        "homepage": "http://www.e-jc.de/"
+      },
+      "release_notes": "- fix issue when editing entries without a type by setting the default\n  type to error\n- make commands overwrite commands with the same name\n- clear autocommand groups at definition time\n- change note type from error to info"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15522",
+      "filename": "editqf.vba.gz",
+      "script_version": "1.1",
+      "date": "2011-04-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9552",
+        "user_name": "jceb",
+        "first_name": "Jan Christoph",
+        "last_name": "Ebersbach",
+        "email": "jceb@e-jc.de",
+        "homepage": "http://www.e-jc.de/"
+      },
+      "release_notes": "- add support for hier script for highlighting quickfix and location entries\n- add variable g:editqf_jump_to_error to make jumping to the last selected\n  error optional\n- add variable g:editqf_store_absolute_filename to let the user decide\n  whether filenames are stored with an absolute or relative path\n- prefix global variables with the plugin's name\n- move all functionality from Edit to Read function to allow editing of\n  qf:list and loc:list directly through vim commands (:e, :sp ...)\n- add support for patterns matching\n- add description of quickfix/location fields to the editing buffer\n- allow deleting all entries from quickfix/location list\n- change command and <Plug> names to start with prefix QF or Loc\n- general refactoring and cleanup"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15491",
+      "filename": "editqf.vim",
+      "script_version": "1.0",
+      "date": "2011-04-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "9552",
+        "user_name": "jceb",
+        "first_name": "Jan Christoph",
+        "last_name": "Ebersbach",
+        "email": "jceb@e-jc.de",
+        "homepage": "http://www.e-jc.de/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

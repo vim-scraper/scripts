@@ -1,0 +1,27 @@
+{
+  "script_id": "3591",
+  "display_name": "browserprint",
+  "summary": "Prints text files to the browser",
+  "name": "browserprint",
+  "script_type": "utility",
+  "description": "Usage\n=====\n\nAdds a new command, `:BrowserPrint`, which will send the contents of the current\nbuffer to a new browser window (or tab) in HTML, preserving the current font,\nformatting, and encoding.\n\nJust run `:BrowserPrint`, and watch the magic.\n\nWhy?\n====\n\nPrinting from MacVim opens a PDF in Preview, with monospace font and the\nencoding completely lost. Other GUI vims may have similar problems. This is a\nworkaround that relies on HTML and a decent web browser to preserve the\nformatting nicely.\n\nThe idea is to send it to the browser, then use the browser's built-in print\nfunctionality.\n\nLimitations\n===========\n- Requires Python support in Vim\n- Should work on Windows/Linux but not tested (yet!)\n- HTML content in the file will screw up the output as it isn't escaped\n",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15674",
+      "filename": "browserprint.zip",
+      "script_version": "0.1",
+      "date": "2011-05-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "30851",
+        "user_name": "robbles",
+        "first_name": "Rob",
+        "last_name": "O'Dwyer",
+        "email": "odwyerrob@gmail.com",
+        "homepage": "http://blog.doteight.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

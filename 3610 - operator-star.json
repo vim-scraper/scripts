@@ -1,0 +1,27 @@
+{
+  "script_id": "3610",
+  "display_name": "operator-star",
+  "summary": "This plugin provides the operator versions of |star|, |gstar|, |#|, |g#|.",
+  "name": "operator-star",
+  "script_type": "utility",
+  "description": "\nINTRODUCTION\n\nThis plugin provides the operator versions\nof *, g*, #, g#. star is * (:help star).\n\nNo default keymappings, so please map to\nyour favorite keymappings like the followings:\n\n    nmap <Leader>*  <Plug>(operator-*)\n    nmap <Leader>g* <Plug>(operator-g*)\n    nmap <Leader>#  <Plug>(operator-#)\n    nmap <Leader>g# <Plug>(operator-g#)\n\n\nThis plugin has two dependency plugins.\n\n- visualstar (vimscript#2944)\n- operator-user (vimscript#2692)\n\n\nUSAGE EXAMPLE\n\n- <Leader>*iw or viw<Leader>* is the same as *. it's no use in this case :(\n- <Leader>*<Leader>* to search the same line as the cursor line.\n- <Leader>*iW to search the WORD under the cursor.\n- or you can even combine with another useful text-object plugins like these:\nhttp://www.google.com/cse?cx=partner-pub-3005259998294962%3Abvyni59kjr1&ie=ISO-8859-1&q=textobj&sa=Search&siteurl=www.vim.org%2F\n\n* is almost the same as /<C-r>=expand('<cword>')<CR> .\n/ is very handy moving command.\n* is also handy shortcut for / command.\noperator-star strongly helps you to move around quickly in the source code, text, etc.",
+  "install_details": "",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15772",
+      "filename": "operator-star.zip",
+      "script_version": "0.0.0",
+      "date": "2011-05-31",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16618",
+        "user_name": "0tyru0",
+        "first_name": "tyru",
+        "last_name": " ",
+        "email": "tyru.exe (at) gmail.com",
+        "homepage": "http://tyru.sakura.ne.jp/"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "script_id": "3532",
+  "display_name": "UltraBlog",
+  "summary": "Ultimate Vim blogging plugin",
+  "name": "UltraBlog",
+  "script_type": "utility",
+  "description": "The biggest difference between UltraBlog.vim and other Vim blogging scripts is that UltraBlog.vim supplies two modes: the first one is editor mode, in which users can manage posts and pages in their blogs, just like other Vim blogging scripts; the second is client mode, in which posts and pages are stored in a local SQLite database, in this way, it does not only OPERATE on posts/pages in blogs but also MANAGE them locally. So UltraBlog.vim is an integrated blogging client more than just a blog editor.\n\nYou will find UltraBlog.vim very useful when you write posts in some light weight markup languages, such as Markdown, LaTeX, reStructuredText and Textile. With posts/pages stored locally, you can edit them in any light weight markup language at any time even after a long time when they were published, and update the online copies in HTML syntax. \n\nThis is the exact original intention for which I wrote UltraBlog.vim. After years of blogging, I've formed the habbit that writing posts in Markdown syntax to save time, and I think it is good to always keep my posts updated, rather than post it and forget it. But I found it hard to update the posted copies after modifying the local Markdown source files with other Vim blogging plugins. \n\nThough it is packaged as a vimball and with a filename as UltraBlog.vba, I prefer UltraBlog.vim as the plugins name for that .vim looks very hacker.\n\nHere is a post written in Chinese describing the motion for which I wrote UltraBlog.vim:\n\nhttp://sinolog.it/?p=1976\n\nRefer to the plugin's page for detail information:\n\nhttp://sinolog.it/?p=1894\n\n*Commands:*\n\n:UBList [local|remote]\n:UBNew [markdown|html|rst|textile|latex]\n:UBOpen [local|remote] [id]\n:UBSave\n:UBSend [draft|publish|private|pending]\n:UBPageList [local|remote]\n:UBPageNew [markdown|html|rst|textile|latex]\n:UBPageOpen {id} [local|remote]\n:UBPageSave\n:UBPageSend [draft|publish|private|pending]\n:UBUpload {file_path}\n:UBDel {id} [local|remote]\n:UBPreview\n:UBThis [markdown|html|rst|textile|latex]\n:UBPageThis [markdown|html|rst|textile|latex]\n:UBConv {to_syntax} [from_syntax]",
+  "install_details": "1. Make sure your Vim has support for Python.\n2. Install sqlalchemy, pandoc, python-markdown or python-markdown2 for python\n3. Add the following configurations to your vimrc:\n\nlet ub_blog = {'login_name':'admin',\n            &#039password':'pass2011',\n            &#039xmlrpc':'http://www.sample.com/xmlrpc.php',\n            &#039db':'$VIM/UltraBlog.db'\n            \\}",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15457",
+      "filename": "UltraBlog.vba",
+      "script_version": "2.0",
+      "date": "2011-04-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "  * Feature: Add editor mode.\n  * Feature: Add more syntaxes: LaTeX, reStructuredText and Textile.\n  * Feature: Add command *:UBConv* to convert a post/page from one syntax to another.\n  * Feature: Add options *ub_converter_command*, *ub_converter_options*, *ub_converter_option_from*, *ub_converter_option_to* to specify a custom extenal command in place of pandoc as the converter.\n  * Feature: Add option *ub_save_after_opened* to control whether to save posts/pages to database right after they are fetched from blogs.\n  * Feature: Add option *ub_save_after_sent* to control whether to save posts/pages to database right after they are sent to blogs.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15435",
+      "filename": "UltraBlog.vba",
+      "script_version": "1.4",
+      "date": "2011-04-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "Feature: Add commands :UBThis and :UBPageThis to create a new post or page with content in the current buffer."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15419",
+      "filename": "UltraBlog.vba",
+      "script_version": "1.3",
+      "date": "2011-04-09",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "* Feature: Record post statuses, post them in their recorded statuses when omit parameters for :UBSend and :UBPageSend. \n* Feature: Display post/page status in post/page list, add an option ub_list_col3_width to set its width. \n* Feature: Extend statuses to support private, pending and draft. \n* Feature: Change the status 'public' to 'publish'. \n* Feature: Check prerequesites in every top level functions. \n* Bugfix: Do not raise an error on startup when sqlalchemy is not installed."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15409",
+      "filename": "UltraBlog.vba",
+      "script_version": "1.2",
+      "date": "2011-04-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "* Feature: Column widths can be set to custom values, which keep post or page lists tidy. Two options added: ub_list_col1_width and ub_list_col2_width."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15383",
+      "filename": "UltraBlog.vba",
+      "script_version": "1.1",
+      "date": "2011-04-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "* Feature: Page management.\n* Feature: Add option ub_append_promotion_link to control whether to append a promotion link of UltraBlog.vim.\n* Bugfix: Wrong order for parameters of commands :UBOpen and :UBDel in documentation."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15377",
+      "filename": "UltraBlog.vba",
+      "script_version": "1.0.5",
+      "date": "2011-04-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "* Feature: Add documentation.\n* Feature: Use Vimball as the default distribution format.\n* Feature: Add two options - |ub_local_pagesize| and |ub_remote_pagesize|."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15368",
+      "filename": "UltraBlog.vim",
+      "script_version": "1.0.4",
+      "date": "2011-04-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "* Fix the problem that an unexpected type exception is raised when UBList is given some numbers as parameters."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15358",
+      "filename": "UltraBlog.vim",
+      "script_version": "1.0.3",
+      "date": "2011-04-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "* Add a column in remote post list the same as the one in local post list, which is used to display ids of local copies of corresponding posts.\n* Fix the problem that buffers can be reverted to what the previous views contain throught the undo action.\n* Fix the minor problem that text won't wrap automatically in views opened by the command :UBNew."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15356",
+      "filename": "UltraBlog.vim",
+      "script_version": "1.0.2",
+      "date": "2011-04-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "* Fix the problem that Post.post_id won't be updated in database after a new post is sent to blog.\n* Fix the problem that it prompts for confirmation to delete the remote copy when deleting a post whose post_id is 0 from local post list."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15351",
+      "filename": "UltraBlog.vim",
+      "script_version": "1.0.1",
+      "date": "2011-04-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "Do not pop up an exception alert for the first time when Vim starts with UltraBlog.vim installed and no configurations added to the vimrc file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15349",
+      "filename": "UltraBlog.vim",
+      "script_version": "1.0",
+      "date": "2011-04-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "script_id": "3536",
+  "display_name": "Tab Manager",
+  "summary": "Rearranges buffers into tabs",
+  "name": "Tab-Manager",
+  "script_type": "utility",
+  "description": "Sorts and rearranges all open buffers across tabs based on built-in or user-specified criteria.\n\nConfiguration: The variable g:TabManager_maxFilesInTab (defaults to 5) is used to determine how many buffers to open in each tab.\n\nGeneral usage:\n\nAll of these commands optionally take a number which determines how many buffers to open per tab (new tabs get created as necessary); 0 means to lump all\nbuffers of any given typeinto one tab.\n\nFor the following examples, assume these buffers are open (doesn't matter how many tabs they currently take):\n\n/progs/com/test/Abcd.java\n/progs/com/test/ProgramRunner.java\n/progs/com/abc/Test.java\n/vim/plugin/TabManager.vim\n\nRearrangetabsbyfirstletter: Quick alphabetization of buffers where all buffers with the same starting letter are put together. Only the file name is\nconsidered, not the path. So, at the end, you get three tabs:\n\nTab 1: Abcd.java\nTab 2: ProgramRunner.java\nTab 3: TabManager.vim and Test.java\n\n(The tabs are sorted as are the results within each tab.)\n\nRearrangetabsbyextension: Arranges by extension (.java or .vim, for example):\n\nTab 1: Abcd.java, ProgramRunner.java and Test.java\nTab 2: TabManager.vim\n\nRearrangetabsbypath: Arranges by absolute file path (not taking filename into consideration):\n\nTab 1: /progs/com/abc: Test.java\nTab 2: /progs/com/test: Abcd.java and ProgramRunner.java\nTab 3: /vim/plugin: TabManager.vim\n\nTiletabs: Quick way to alphabetize the list of buffers (case sensitive) into regularly-sized (by number of buffers) tabs. Doesn't make sense to use this with\n0 (all buffers in one tab), unless that's the effect you want.\n\nRearrangetabs: The workhorse. All other other commands are defined through this. Takes the actual pattern criteria against which to match each buffer.\n\nVersion 1.1:\n\nAdded two new commands:\n\nRearrangetabsbytype: If it's a Java file, returns the last word that's not a part of the extension. For example, CopyAction.java returns Action and\nCopyForm.java returns Form. This should probably be reworked to allow the setting of the extension upon which to filter or to not look at extensions at all.\n\nRearrangetabsbyroot: Groups files with similarly named roots together. For example, CopyAction.java, CopyForm.java and CopyResults.jsp will end up together\nbecause they all have \"Copy\" as the root.\n\nVersion 1.2:\n\nNew variable: g:TabManager_fileTypeExtension (defaults to \"java\") to use when determining the Rearrangetabsbytype; can be passed to the command on the\ncommand-line as an override.\n\nRearrangetabsbytype now takes an extension (other than the default \"java\" or g:TabManager_fileTypeExtension) to use when sorting the files. If only one\nparameter is passed, it may be either a number or the extension. If both are specified, the number must be first.\n\nVersion 1.3:\n\nRearrangetabsbyfirstletter renamed to Rearrangetabsbyfirstletters: If called with no parameters, considers the first character of the file name, as before. If\ncalled with one parameter, the specified number of characters is considered. For example, with no parameters, \"Test.java\" and \"Touring.java\" would be placed\ntogether because both start with a T. With 2 as the parameter value, they would be separated (\"Te\" vs. \"To\").\n\nIf called with 2 parameters, the first parameter is the number of windows to place in one tab, as always (0 meaning to throw them all together).\n\nVersion 1.35:\n\nTakes 'ignorecase' into consideration for matching extensions, first letters and complete file paths (but not for matching roots and \"types\").\n\nVersion 1.4:\n\nAdded new command:\n\nMovetotab: moves the current file to the specified tab; understands absolute numbers (1 for the first tab, for example) as well as:\n\n- n: next tab\n- p: previous tab\n- $: last tab\n\nVersion 1.45:\n\nAdded new command:\n\nCopytotab: copies the current file to the specified tab (just like Movetotab except that the original tab also contains the file).\n\nVersion 1.5:\n\nAdded the ability to set custom \"keys\" to be used when rearranging files into tabs. For example, given the following list of files:\n\n/progs/com/test/Abcd.java\n/progs/com/test/ProgramRunner.java\n/progs/com/abc/Test.java\n/vim/plugin/TabManager.vim\n/webFiles/root/test.html\n/webFiles/root/css/styles.css\n\nThe default behaviour, when arranging by path, extension or first letters, is to always place test.html and styles.css in separate tabs. (Unless calling\nTiletabs, which just tiles all windows blindly.) However, if both these files have a manually set key of, say, \"web\", then any other criteria will be ignored\nand these two files will always be placed together because they have the same key. This allows grouping some windows by functionality while continuing to\ngroup others by whatever rearrange command is actually called.\n\nOf course, different sets of windows may have different keys and they will all be grouped together accordingly.\n\nAll of the standard Rearrange* commands now take an optional bang (!)--for example, Rearrangetabsbyextension!--that will, for just this rearrangement, IGNORE\nany local keys and treat all windows as if there were no keys.\n\nIf you have multiple windows where you're editing the same buffer, they will almost always end up together after any rearrangement (unless they are split\nacross tabs that become full). You can avoid this by setting different window-level local keys for the buffers.\n\nAdded four new commands--the set and remove key commands can be combined with windo and tabdo to set or remove the same key for more than one window at a time:\n\nSettabmanagerwindowkey <key>: Sets the window-level local key for the current window to <key>.\n\nSettabmanagerbufferkey <key>: Sets the buffer-level local key for the current buffer to <key>.\n\nRemovetabmanagerkey: Removes the currently set key for the current window; will remove BOTH buffer and window level keys. (Doesn't take any arguments.)\n\nRedorearrangetabs: Redoes the last tab rearrangement command (by extension, simple tiling, by first letters, etc.). Useful for incorporating new windows into\nthe currenty \"scheme\". If local keys have changed, the layout may end up being different. If new windows have been added, the layout may be different, also,\nbut that may be what you want. By default, it obeys local keys (even if the last command was called with a bang and did not). Accepts a bang (!) to ignore\nlocal keys.\n\nIf you call this before you've run any actual rearrangement commands, you will most likely (deservedly) get an error.\n\nVersion 1.55:\n\nRearrangetabsbypath now also takes a second parameter which determines how many components from the path to consider. For example, given the following set of\nfiles:\n\n/progs/com/test/Abcd.java\n/progs/com/test/ProgramRunner.java\n/progs/com/abc/Test.java\n\nThe default behaviour would be to create two tabs, one with Abcd.java and ProgramRunner.java; and the other with Test.java. However, if called with a\nparameter of 2, it will only consider the first two path components (/progs/com) and put all the files in the same tab. A value of 0 (the default) means to\ncheck the entire path, as before. New command format:\n\nRearrangetabsbypath [number of files per tab] [number of path components to consider]\nOr\nRearrangetabsbypath [number of path components to consider]\n\n\nVersion 1.6\n\nAdded a new command:\n\nRearrangetabsbypackage: Works just like Rearrangetabsbypath, except uses the package the files are in. Only useful for files that specify a package in this format:\n\npackage some.package.name;\n\n(The semicolon is optional.) Files that don't have a package will fall back to the entire file path (no path component specification; the ENTIRE path will be considered.)\n\nTakes either one or two arguments:\n\nRearrangetabsbypackage [number of files per tab] [number of path components to consider]\nOr\nRearrangetabsbypackage [number of path components to consider]\n",
+  "install_details": "Drop into the plugin directory; creates a few commands, but no mappings.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15601",
+      "filename": "TabManager.vba",
+      "script_version": "1.8",
+      "date": "2011-05-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "No change in functionality. Just added a proper help file."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15588",
+      "filename": "TabManager.vim",
+      "script_version": "1.7",
+      "date": "2011-05-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "No real change; has a dependency upon my GetVar autoload script which I had forgotten to mention before. Sorry if this caused problems.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15471",
+      "filename": "TabManager.vim",
+      "script_version": "1.6",
+      "date": "2011-04-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added a new command: Rearrangetabsbypackage: Works just like Rearrangetabsbypath, except uses the package the files are in. Only useful for files that specify a package (falls back to the entire file path otherwise)."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15456",
+      "filename": "TabManager.vim",
+      "script_version": "1.55",
+      "date": "2011-04-16",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Rearrangetabsbypath now also takes a second parameter which determines how many components from the path to consider."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15447",
+      "filename": "TabManager.vim",
+      "script_version": "1.5",
+      "date": "2011-04-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added the ability to set custom \"keys\" to be used when rearranging files into tabs. For example, given the following list of files:\n\n/progs/com/test/Abcd.java\n/progs/com/test/ProgramRunner.java\n/progs/com/abc/Test.java\n/vim/plugin/TabManager.vim\n/webFiles/root/test.html\n/webFiles/root/css/styles.css\n\nThe default behaviour, when arranging by path, extension or first letters, is to always place test.html and styles.css in separate tabs. (Unless calling\nTiletabs, which just tiles all windows blindly.) However, if both these files have a manually set key of, say, \"web\", then any other criteria will be ignored\nand these two files will always be placed together because they have the same key. This allows grouping some windows by functionality while continuing to\ngroup others by whatever rearrange command is actually called.\n\nOf course, different sets of windows may have different keys and they will all be grouped together accordingly.\n\nAll of the standard Rearrange* commands now take an optional bang (!)--for example, Rearrangetabsbyextension!--that will, for just this rearrangement, IGNORE\nany local keys and treat all windows as if there were no keys.\n\nIf you have multiple windows where you're editing the same buffer, they will almost always end up together after any rearrangement (unless they are split\nacross tabs that become full). You can avoid this by setting different window-level local keys for the buffers.\n\nAdded four new commands--the set and remove key commands can be combined with windo and tabdo to set or remove the same key for more than one window at a time:\n\nSettabmanagerwindowkey <key>: Sets the window-level local key for the current window to <key>.\n\nSettabmanagerbufferkey <key>: Sets the buffer-level local key for the current buffer to <key>.\n\nRemovetabmanagerkey: Removes the currently set key for the current window; will remove BOTH buffer and window level keys. (Doesn't take any arguments.)\n\nRedorearrangetabs: Redoes the last tab rearrangement command (by extension, simple tiling, by first letters, etc.). Useful for incorporating new windows into\nthe currenty \"scheme\". If local keys have changed, the layout may end up being different. If new windows have been added, the layout may be different, also,\nbut that may be what you want. By default, it obeys local keys (even if the last command was called with a bang and did not). Accepts a bang (!) to ignore\nlocal keys.\n\nIf you call this before you've run any actual rearrangement commands, you will most likely (deservedly) get an error.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15410",
+      "filename": "TabManager.vim",
+      "script_version": "1.45",
+      "date": "2011-04-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added new command:\n\nCopytotab: copies the current file to the specified tab (just like Movetotab except that the original tab also contains the file).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15408",
+      "filename": "TabManager.vim",
+      "script_version": "1.4",
+      "date": "2011-04-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added new command:\n\nMovetotab: moves the current file to the specified tab; understands absolute numbers (1 for the first tab, for example) as well as:\n\n- n: next tab\n- p: previous tab\n- $: last tab\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15389",
+      "filename": "TabManager.vim",
+      "script_version": "1.37",
+      "date": "2011-04-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed a problem where newly created tabs always had an empty window at the bottom. (Executes an :e the first time in a new tab instead of an :sp.)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15387",
+      "filename": "TabManager.vim",
+      "script_version": "1.36",
+      "date": "2011-04-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed typo; thank you, Christophe."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15382",
+      "filename": "TabManager.vim",
+      "script_version": "1.35",
+      "date": "2011-04-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Version 1.35:\n\nTakes 'ignorecase' into consideration for matching extensions, first letters and complete file paths (but not for matching roots and \"types\").\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15380",
+      "filename": "TabManager.vim",
+      "script_version": "1.3",
+      "date": "2011-04-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Version 1.3:\n\nRearrangetabsbyfirstletter renamed to Rearrangetabsbyfirstletters: If called with no parameters, considers the first character of the file name, as before. If\ncalled with one parameter, the specified number of characters is considered. For example, with no parameters, \"Test.java\" and \"Touring.java\" would be placed\ntogether because both start with a T. With 2 as the parameter value, they would be separated (\"Te\" vs. \"To\").\n\nIf called with 2 parameters, the first parameter is the number of windows to place in one tab, as always (0 meaning to throw them all together).\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15379",
+      "filename": "TabManager.vim",
+      "script_version": "1.25",
+      "date": "2011-04-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Removed debug statements left in by mistake and fixed a conversion error."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15374",
+      "filename": "TabManager.vim",
+      "script_version": "1.2",
+      "date": "2011-04-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Version 1.2:\n\nNew variable: g:TabManager_fileTypeExtension (defaults to \"java\") to use when determining the Rearrangetabsbytype; can be passed to the command on the\ncommand-line as an override.\n\nRearrangetabsbytype now takes an extension (other than the default \"java\" or g:TabManager_fileTypeExtension) to use when sorting the files.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15373",
+      "filename": "TabManager.vim",
+      "script_version": "1.1",
+      "date": "2011-04-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added two new commands:\n\nRearrangetabsbytype: If it's a Java file, returns the last word that's not a part of the extension. For example, CopyAction.java returns Action and\nCopyForm.java returns Form. This should probably be reworked to allow the setting of the extension upon which to filter or to not look at extensions at all.\n\nRearrangetabsbyroot: Groups files with similarly named roots together. For example, CopyAction.java, CopyForm.java and CopyResults.jsp will end up together\nbecause they all have \"Copy\" as the root.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15363",
+      "filename": "TabManager.vim",
+      "script_version": "1.0",
+      "date": "2011-04-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,12 +1,28 @@
 {
   "script_id": "3437",
   "display_name": "PreciseJump",
-  "summary": "Precise jump - script to ease motion within a line.",
+  "summary": "PreciseJump - script to ease on-screen motion.",
   "name": "PreciseJump",
   "script_type": "utility",
-  "description": "PreciseJump aka '[count] motion' on drugs\n\nI find\n    <number>line-motion\nnot very practical for bigger <numbers>.\n\nI usually don't know exactly how many times I want the motion to be repeated - I just see place on the screen where I want to jump to.\n\nThis script is addressing this inconvenience.\n\nWhen the motion key is pressed, possible jump targets are highlighted. You just have to type character that appeared on desired place.\n\ni.e: If you press new '_fx' you get all 'x' characters in the line highlighted and changed to\nsome unique chars. Pressing the highlighted char will take the cursor to place you want.\n\nFor little demo you can see:\nhttp://i258.photobucket.com/albums/hh246/otokan/WATCH_ME.gif\n\nPlugin definines following mapping:  _f ,  _w ,  _e ,  _t . \n\nThis script is usable right now, but keep in mind that it still is being developed. \nI would appreciate any comments.\n",
-  "install_details": "Drop PreciseJump.vim to your plugin directory\nYou can edit some mappings at the bottom of the file.",
+  "description": "PreciseJump - script to ease on-screen motion\n\nI find\n    <number>motion\nnot very practical for bigger <numbers>.\n\nI usually don't know exactly how many times I want the motion to be repeated - I just see place on the screen where I want to jump to.\n\nThis script is addressing this inconvenience.\n\nWhen the motion key is pressed, possible jump targets are highlighted. You just have to type character that appeared on desired place.\n\ni.e: If you press '_fx' you get all 'x' characters that are visible in current window highlighted and changed to some unique chars. Pressing the highlighted char will quickly take the cursor to place you want.\n\nFor little demo you can see:\n http://i258.photobucket.com/albums/hh246/otokan/PJ_animation.gif\n\nPlugin definines following mappings:  \n_f - jump to given char in whole window  \n_F - jump to given char in a line\n\nThis script is usable right now, but keep in mind that it still is being developed. \n\nIf you have any comments, have found bugs, know how to make something better\n - let me know.\n\nSpecial thanks to: Filip, Adam, Sergey, John, Jim\n",
+  "install_details": "Unpack archive and copy PreciseJump.vim to your plugin directory and PreciseJump.txt to your documentation directory.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15295",
+      "filename": "PreciseJump-0.49.zip",
+      "script_version": "0.49",
+      "date": "2011-03-26",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "13874",
+        "user_name": "otokan",
+        "first_name": "Bartlomiej",
+        "last_name": "P.",
+        "email": "bartlomiej@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Many fixes. PJ works now in 2D (whole visible window, not only current line)."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14939",
       "filename": "PreciseJump.vim",

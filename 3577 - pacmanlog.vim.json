@@ -1,0 +1,27 @@
+{
+  "script_id": "3577",
+  "display_name": "pacmanlog.vim",
+  "summary": "highlight pacman's log file",
+  "name": "pacmanlog.vim",
+  "script_type": "syntax",
+  "description": "Make the time, different actions and warnings/errors in pacman's log file highlighted.",
+  "install_details": "Put the pacmanlog.vim in ~/.vim/syntax (on Windows, $VIM/vimfiles/syntax).\nAdd the following to filetype.vim (or your vimrc, or wherever it'll load automatically)\n  au BufRead\t\tpacman.log\t\t\tsetf pacmanlog",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15592",
+      "filename": "pacmanlog.vim",
+      "script_version": "1.0",
+      "date": "2011-05-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "15944",
+        "user_name": "lilydjwg",
+        "first_name": "lilydjwg",
+        "last_name": " ",
+        "email": "lilydjwg@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

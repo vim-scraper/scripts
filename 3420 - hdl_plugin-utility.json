@@ -5,8 +5,24 @@
   "name": "hdl_plugin-utility",
   "script_type": "utility",
   "description": "\"    hdl_plugin is a plugin that enables you to fast instant and generate a testbench file. \n\"    it can help you to compile by modelsim convenient. \n\" \n\n\"    main function: \n\"    Add a menu for vim: \n\"    create a library \n\"    Compile file \n\"    Add File Header \n\"    Add Content \n\"    Process \n\"    Module/Entity \n\"    Vhdl Component:Creat a window to display the Component information,and add these to clipboard \n\"    Verilog Instant : Fast instant for verilog.Also add to clipboard \n\"    Vhdl Testbench :Generate a vhdl testbench file \n\"    Verilog Testbench :Generate a verilog testbench file \n    Format Vhdl File: it can help you to finishing the code. \n\"                              Set \":,=>\" in the same position. \n\"                              Support the \"component\",\"signal\",\"instant\"and \"entity\" part. \n\"    Use <leader>, to fast define signal. \n\n\"    view details:http://www.cnblogs.com/ifys/archive/2010/11/20/1882673.html# \n\"    e-mail: ifys0325@163.com \n\"    Welcome to post your suggestions to me. \n  \n",
-  "install_details": "Copy the hdl_plugin to $VIM/vimfiles/plugin/ (on the Windows platforms). ",
+  "install_details": "Copy the hdl_plugin to $VIM/vimfiles/plugin/ (on Windows platforms). ",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15337",
+      "filename": "hdl_plugin.vim",
+      "script_version": "v2.5",
+      "date": "2011-03-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "24110",
+        "user_name": "achillowy",
+        "first_name": "陈",
+        "last_name": "勇",
+        "email": "achillowy@sina.com",
+        "homepage": "http://www.cnblogs.com/ifys/"
+      },
+      "release_notes": "Fixed a bug in function HDL_Signal_Dec_Vhdl(); \nAdd a function HDL_Generic_For_Debussy(),which can used with debussy."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14870",
       "filename": "hdl_plugin.vim",

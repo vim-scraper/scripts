@@ -1,0 +1,59 @@
+{
+  "script_id": "3537",
+  "display_name": "XPath Search",
+  "summary": "Allows XPath searches to be performed on XML files",
+  "name": "XPath-Search",
+  "script_type": "utility",
+  "description": "-Binds an input command for XML files to launch a search prompt.\n-Start typing your XPath with the aid of context-sensitive tab completion, then hit enter to see the results pop up in a new window. \n-Jump to the line of a result by hitting enter in the results window\n-Also displays XML validation errors in the results window, and allows you to jump to the problematic line easily.\n\nFor more information and a demo video visit http://www.actionshrimp.com/2011/04/vim-xpath-plugin/\n\nAlso see github: https://github.com/actionshrimp/vim-xpath",
+  "install_details": "Requires:\n-Python support enabled on vim (look for +python under :version)\n-lxml library installed for Python (ideally 2.7 or higher)\n\nDownload the xpath.vba vimball and source it to install (see :help vimball for more information). Then navigate to the doc directory and run :helptags to install the help file.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15394",
+      "filename": "xpath.vba",
+      "script_version": "1.10",
+      "date": "2011-04-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29068",
+        "user_name": "actionshrimp",
+        "first_name": "Dave",
+        "last_name": "Aitken",
+        "email": "dave.aitken@gmail.com",
+        "homepage": "http://actionshrimp.com"
+      },
+      "release_notes": "Updated to handle unnamed buffers and to search on the last searched buffer if the current window is the results window."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15381",
+      "filename": "xpath.vba",
+      "script_version": "1.05",
+      "date": "2011-04-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29068",
+        "user_name": "actionshrimp",
+        "first_name": "Dave",
+        "last_name": "Aitken",
+        "email": "dave.aitken@gmail.com",
+        "homepage": "http://actionshrimp.com"
+      },
+      "release_notes": "Fixed minor bugs and encoding issues."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15364",
+      "filename": "xpath.vba",
+      "script_version": "1.0",
+      "date": "2011-04-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29068",
+        "user_name": "actionshrimp",
+        "first_name": "Dave",
+        "last_name": "Aitken",
+        "email": "dave.aitken@gmail.com",
+        "homepage": "http://actionshrimp.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "script_id": "3568",
+  "display_name": "Tabs only for indentation",
+  "summary": "Using tabs only for indentation while editing",
+  "name": "Tabs-only-for-indentation",
+  "script_type": "indent",
+  "description": "This plugin allows you to insert tabs only for indentation.\nIf left part of the cursor position in current line has only tabs or spaces,\nthen they will be replaced by tabs and one more tab will be added. \nIn other cases, only spaces will be added. That's all.\nI think, it will helpful because tabs not used for code alignment.\nBut, if you really need to insert tab, you can use <S-Tab> for this.\n\nPS: Sorry, another plugin doing the same can be found here:\nhttp://www.vim.org/scripts/script.php?script_id=2308\nI didn't search at all.",
+  "install_details": "Only two things:\n1) Put this file to the plugin directory;\n2) Add the folowing line to your ~/.vimrc config:\n    imap <Tab> <Plug>AXEIndentTabs\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15622",
+      "filename": "AXETabsOnlyForIndent.vim",
+      "script_version": "1.1",
+      "date": "2011-05-10",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19111",
+        "user_name": "makoto",
+        "first_name": "Makoto",
+        "last_name": "Nokata",
+        "email": "nokatamakoto@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed bug with wrong number of spaces. So, if tabsize = 4, then\nA<tab>\nin the beginning of line inserts 3 spaces, not 2\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15544",
+      "filename": "AXETabsOnlyForIndent.vim",
+      "script_version": "1.0",
+      "date": "2011-04-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19111",
+        "user_name": "makoto",
+        "first_name": "Makoto",
+        "last_name": "Nokata",
+        "email": "nokatamakoto@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

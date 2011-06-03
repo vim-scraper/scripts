@@ -4,9 +4,105 @@
   "summary": "Use ViM as PAGER",
   "name": "vimpager",
   "script_type": "utility",
-  "description": "A slightly more sophisticated replacement for less.sh that also supports being set as the PAGER environment variable.\nDisplays man pages, perldocs and python documentation properly.\nDefinitely works on Linux, Solaris, OSX and Cygwin. Should work in most other places, if it detects your \"ps\" correctly.\n\nOn github:\nhttp://github.com/rkitover/vimpager",
-  "install_details": "mkdir ~/bin\ncp vimpager ~/bin\nchmod +x ~/bin/vimpager\n\n# put these in your ~/.bashrc or ~/.zshrc\nexport PAGER=~/bin/vimpager\nalias less=$PAGER\n\nPut the following into your ~/.vimrc if you want to use gvim as your pager window:\n\nlet vimpager_use_gvim = 1",
+  "description": "A slightly more sophisticated replacement for less.sh that also supports being set as the PAGER environment variable.\nDisplays man pages, perldocs and python documentation properly.\nWorks on Linux, Solaris, FreeBSD, OSX, Cygwin and msys. Should work on most other systems as well.\n\nOn github:\nhttp://github.com/rkitover/vimpager",
+  "install_details": "mkdir ~/bin\ncp vimpager ~/bin\nchmod +x ~/bin/vimpager\n\n# put these in your ~/.bashrc or ~/.zshrc\nexport PAGER=~/bin/vimpager\nalias less=$PAGER\nalias zless=$PAGER\n\nPut the following into your ~/.vimrc if you want to use gvim/MacVim as your pager window:\n\nlet vimpager_use_gvim = 1\n\nCygwin notes:\n\nThe Cygwin gvim is very buggy, vimpager works correctly with the native\nWindows gvim, just put it in your PATH.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15602",
+      "filename": "vimpager",
+      "script_version": "1.5.0",
+      "date": "2011-05-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11267",
+        "user_name": "Caelum",
+        "first_name": "Rafael",
+        "last_name": "Kitover",
+        "email": "rkitover@io.com",
+        "homepage": ""
+      },
+      "release_notes": "* set scrolloff-5"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15564",
+      "filename": "vimpager",
+      "script_version": "1.4.9",
+      "date": "2011-05-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11267",
+        "user_name": "Caelum",
+        "first_name": "Rafael",
+        "last_name": "Kitover",
+        "email": "rkitover@io.com",
+        "homepage": ""
+      },
+      "release_notes": "* trap more signals for temp file removal\n* clear terminal on OSX only for terminal vim"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15504",
+      "filename": "vimpager",
+      "script_version": "1.4.8",
+      "date": "2011-04-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11267",
+        "user_name": "Caelum",
+        "first_name": "Rafael",
+        "last_name": "Kitover",
+        "email": "rkitover@io.com",
+        "homepage": ""
+      },
+      "release_notes": "* fix compatibility with Cygwin\n* fix compatibility with Windows gvim in Cygwin and msys\n* detect ssh session on OSX and Cygwin\n* remove \"Input not from a terminal\" warning entirely\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15453",
+      "filename": "vimpager",
+      "script_version": "1.4.7",
+      "date": "2011-04-15",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11267",
+        "user_name": "Caelum",
+        "first_name": "Rafael",
+        "last_name": "Kitover",
+        "email": "rkitover@io.com",
+        "homepage": ""
+      },
+      "release_notes": "* fix some \"input not from terminal\" warnings\n* fix for invocations on files not in current directory"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15429",
+      "filename": "vimpager",
+      "script_version": "1.4.6",
+      "date": "2011-04-11",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11267",
+        "user_name": "Caelum",
+        "first_name": "Rafael",
+        "last_name": "Kitover",
+        "email": "rkitover@io.com",
+        "homepage": ""
+      },
+      "release_notes": "* MacVim support\n* override GUI colors from .gvimrc\n* fix syntax highlighting for files opened directly\n* reset terminal on completion"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15413",
+      "filename": "vimpager",
+      "script_version": "1.4.5",
+      "date": "2011-04-08",
+      "vim_version": "6.0",
+      "author": {
+        "user_id": "11267",
+        "user_name": "Caelum",
+        "first_name": "Rafael",
+        "last_name": "Kitover",
+        "email": "rkitover@io.com",
+        "homepage": ""
+      },
+      "release_notes": "* fixes for Mac OSX\n* -X option to speed up startup (jdevera)"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15268",
       "filename": "vimpager",

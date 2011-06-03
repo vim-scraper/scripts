@@ -1,0 +1,27 @@
+{
+  "script_id": "3533",
+  "display_name": "GetFilePlus",
+  "summary": "a gf tweak for python webapp developers",
+  "name": "GetFilePlus",
+  "script_type": "utility",
+  "description": "Usage: place plugin/gf.vim in your ~/.vim/plugin directory\nRepo: https://github.com/mjbrownie/GetFilePlus\n\nGetFilePlus is a simple enhancement on the gf mappings it does the following\n\n1. standard 'find file/path.ext' first as normal gf would.\n\n2. does a 'find ./file/path.ext'. check\n\n    This is for when a file path starts with a / (often js and css references).\n\n    eg: /js/some_file.js that actually  resides in media/js/some_file.js\n\n    Note for this to be useful you need to set up your :set path to refer to\n    the directories you want. (Eg. I have :set path+=media/ in my .vimrc)\n\n3. does a python path check eg.\n\n    from django.contrib.admin.views import foobar\n\n    would open /yourvirtualenv/lib/site-packages/django/contrib/admin/views.py\n\n    Note for this to work you need the python path to set eg in your .vimrc\n    python import sys;sys.path = sys.path + ['yourvirtualenv/lib/site-packages/']\n\nAlso as a bonus There is a command included to make it easier to open python\nfiles from the command line.\n\n    :Ppath django.contrib.admin.views<cr>\n\n    would open /yourvirtualenv/lib/site-packages/django/contrib/admin/views.py\n\nNote as is the script will send any import errors to screen. If this is the\ncase then it's just sys.path not configured properly\n\nThis script needs vim python support",
+  "install_details": "place gf.vim in your plugin directory",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15357",
+      "filename": "mjbrownie-GetFilePlus-67345e4.tar.gz",
+      "script_version": "0.1",
+      "date": "2011-04-02",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "13886",
+        "user_name": "mjbrownie",
+        "first_name": "Michael",
+        "last_name": "Brown",
+        "email": "mjbrownie@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

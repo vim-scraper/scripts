@@ -1,0 +1,43 @@
+{
+  "script_id": "3600",
+  "display_name": "octave.vim -- ***",
+  "summary": "Syntax highlighting file for GNU Octave (v3.4.0) language",
+  "name": "octave.vim--",
+  "script_type": "syntax",
+  "description": "This file provides syntax highlighting for the GNU Octave programming language.\n\nFeatures\n* Highlights entire Octave grammar (endwhile, endfor, etc.) not just Matlab keywords\n* Updated to highlight all core Octave functions as of version 3.4.0\n* Highlights user functions from within the .m file being edited\n* Use-dependent highlighting of Octave system variables\n   When querying system variables, keyword is highlighted as a constant.  For example, var = true, highlights 'true' as a constant.\n   When setting variables or otherwise invoking keyword as function, keyword is highlighted as function.  For example, var = true (2,4), highlights 'true' as function.\n* Support for multi-line strings with line continuation characters as well as escaped quotes (\\\" or &#039) within string.\n* Support for new multi-line block comments\n* Error highlighting for bad number syntax, bad structure variable names, bad block comments, bad line continuations.\n* Optional support for highlighting operators (+, -, *, etc.), user variables, or tabs\n\nErrata\n* Occasionally user variables, with the same name as a core function, are highlighted when on the LHS of an assignment.\n  For example, '[type, info] = xxx' will highlight both keywords type and info.  The predominant use case, 'type = xxx' WILL be correctly treated as a user variable.\n\nAddenda\n\nThis script owes some debt to the two existing Octave syntax scripts:\nhttp://www.vim.org/scripts/script.php?script_id=1241\nhttp://www.vim.org/scripts/script.php?script_id=1591\n\nHowever, it has been thoroughly rewritten and expanded considerably.",
+  "install_details": "On a UNIX-like system\n\n1) mkdir -p ~/.vim/syntax\n2) cp octave.vim ~/.vim/syntax/\n3) Add the following lines to your ~/.vimrc to get ViM to use the file\n\n----- SNIP -----\n\" Octave syntax\naugroup filetypedetect\n  au! BufRead,BufNewFile *.m,*.oct setfiletype octave\naugroup END\n----- SNIP -----\n\nOptional highlighting of operators (+, -, *, etc.), user variables, or tabs can be had by uncommenting the appropriately tagged lines in octave.vim.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15780",
+      "filename": "octave.vim",
+      "script_version": "3.4.0b",
+      "date": "2011-05-31",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "31150",
+        "user_name": "vimrik",
+        "first_name": "Rik",
+        "last_name": "***",
+        "email": "rik@octave.org",
+        "homepage": ""
+      },
+      "release_notes": "Correct occasional non-highlighting of nested () within function calls"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15714",
+      "filename": "octave.vim",
+      "script_version": "3.4.0",
+      "date": "2011-05-24",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "31150",
+        "user_name": "vimrik",
+        "first_name": "Rik",
+        "last_name": "***",
+        "email": "rik@octave.org",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

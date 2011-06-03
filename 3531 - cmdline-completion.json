@@ -1,0 +1,43 @@
+{
+  "script_id": "3531",
+  "display_name": "cmdline completion",
+  "summary": "cmdline completion like insert mode",
+  "name": "cmdline-completion",
+  "script_type": "utility",
+  "description": "This script let you can use CTRL-P/N to complete word in cmdline mode just like in insert mode.\nit also works fine with large file.\n\nyou can map other keys instead of <C-P/N> like this in your vimrc: \n               cmap <C-J> <Plug>CmdlineCompletionBackward\n               cmap <C-K> <Plug>CmdlineCompletionForward\n\n",
+  "install_details": "Drag this file into vim plugin directory.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15454",
+      "filename": "cmdline_completion.vim",
+      "script_version": "0.02",
+      "date": "2011-04-15",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18312",
+        "user_name": "KingTiger",
+        "first_name": "KT",
+        "last_name": "lu",
+        "email": "ljh575@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "change s:vars to b:vars to avoid dead loop when continue searching in another  buffer  , and dos2unix ."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15340",
+      "filename": "cmdline_completion.vim",
+      "script_version": "0.01",
+      "date": "2011-03-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18312",
+        "user_name": "KingTiger",
+        "first_name": "KT",
+        "last_name": "lu",
+        "email": "ljh575@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

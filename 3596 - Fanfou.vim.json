@@ -1,0 +1,75 @@
+{
+  "script_id": "3596",
+  "display_name": "Fanfou.vim",
+  "summary": "This is a Vim plugin for Fanfou (饭否)",
+  "name": "Fanfou.vim",
+  "script_type": "utility",
+  "description": "The fanfou.vim plugin is a simple UNOFFICIAL client for Fanfou.com (饭否), it allows you\nto check timeline and update status via Vim.\n\nNOTE: It requires Vim to be compiled with Python bindings.\n\n\nThis plugin defines four commands:\n\n    FanTimeline - View latest timeline from Fanfou in preview window\n    FanUpdate - Update status in command line\n    FanUpline - Send the line which is cursor on\n    FanRT - Retweet the line which is cursor on\n\nDefault key mappings:\n\n    <leader>fft is mapped to FanTimeline,\n    <leader>ffu is mapped to FanUpdate,\n    <leader>ffs is mapped to FanUpline.\n    <leader>ffr is mapped to FanRT.\n\nSee more help information in source code.\n\n\nLinks:\n\n    * Github https://github.com/Vayn/Fanfou\n",
+  "install_details": "Extract the zipfile and place the file as follows:\n\n>\n    <your runtime directory>/plugin/fanfou.vim\n    ...\n<\n\nIn order to communicate with Fanfou you have to set your Fanfou account,\nyou can set them using: \n\n    let g:fanfou_login = \"Username:Password\"\n\nor add this into your ~/.vimrc\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15750",
+      "filename": "fanfou_0.42.zip",
+      "script_version": "0.42",
+      "date": "2011-05-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "31087",
+        "user_name": "vayn",
+        "first_name": "Vincent",
+        "last_name": "T.",
+        "email": "vayn@vayn.de",
+        "homepage": "http://elnode.com"
+      },
+      "release_notes": "* New feature - RT a message \n* Keyword highlight \n* Press enter to copy link in the message"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15738",
+      "filename": "fanfou_0.3.1.zip",
+      "script_version": "0.3.1",
+      "date": "2011-05-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "31087",
+        "user_name": "vayn",
+        "first_name": "Vincent",
+        "last_name": "T.",
+        "email": "vayn@vayn.de",
+        "homepage": "http://elnode.com"
+      },
+      "release_notes": "* Use Python module urllib2 instead of cURL\n* Minor code optimization"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15721",
+      "filename": "fanfou_0.2.0.zip",
+      "script_version": "0.2.0",
+      "date": "2011-05-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "31087",
+        "user_name": "vayn",
+        "first_name": "Vincent",
+        "last_name": "T.",
+        "email": "vayn@vayn.de",
+        "homepage": "http://elnode.com"
+      },
+      "release_notes": "Added \"timeline window automatically closes\" and \"auto update\""
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15707",
+      "filename": "fanfou_0.1.1.zip",
+      "script_version": "0.1.1",
+      "date": "2011-05-24",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "31087",
+        "user_name": "vayn",
+        "first_name": "Vincent",
+        "last_name": "T.",
+        "email": "vayn@vayn.de",
+        "homepage": "http://elnode.com"
+      },
+      "release_notes": "add source as app name in fanfou"
+    }
+  ]
+}

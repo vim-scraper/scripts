@@ -1,0 +1,27 @@
+{
+  "script_id": "3545",
+  "display_name": "Google Translate ",
+  "summary": "Google Translate for Vim",
+  "name": "Google-Translate",
+  "script_type": "utility",
+  "description": "Example of using: \n\n:Translate Hello World",
+  "install_details": "Dependencies: \nRuby and Rubygems;\n\nsudo gem install google-translate;\n\nPut plugin in Vim plugin directory (.vim/plugin) \n\nAdd in your .vimrc, string (For translation to Russian)\n let g:langpair=\"ru\" \n\nAlso, you can use translator in visual-mode for code blocks. Just put shortcut for a key bind\n let g:vtranslate=\"T\"\nNow you can select the text, and by pressing Shift-T Google Translate will process the block.\nIf you wish, you can change the color results by using of command :echohl",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15411",
+      "filename": "gtranslate.vim",
+      "script_version": "0.1",
+      "date": "2011-04-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29256",
+        "user_name": "Rudkovsky",
+        "first_name": "Slava",
+        "last_name": "Rudy",
+        "email": "rudkovsky@ymail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -4,9 +4,41 @@
   "summary": "Minimalistic buffer tabs saving screen space",
   "name": "buftabs",
   "script_type": "utility",
-  "description": "[Screeshot available at  http://zevv.nl/play/code/vimscripts/]\n\n\nIntroduction\n------------\nThis is a simple script that shows a tabs-like list of buffers in the bottom\nof the window. The biggest advantage of this script over various others is\nthat it does not take any lines away from your terminal, leaving more space\nfor the document you're editing. The tabs are only visible when you need\nthem - when you are switchin between buffers.\n\nUsage\n-----\nThis script draws buffer tabs on vim startup, when a new buffer is created\nand when switching between buffers.\n\nIt might be handy to create a few maps for easy switching of buffers in your\n.vimrc file. For example, using F1 and F2 keys:\n\n  noremap <f1> :bprev<CR> \n  noremap <f2> :bnext<CR>\n\nor using control-left and control-right keys:\n\n  :noremap <C-left> :bprev<CR>\n  :noremap <C-right> :bnext<CR>\n\n\nSome configuration options are available for styling and layout, check the top of the plugin file for instructions.\n",
+  "description": "[Screeshot available at  http://zevv.nl/play/code/vimscripts/]\n\n\nIntroduction\n------------\nThis is a simple script that shows a tabs-like list of buffers in the bottom\nof the window. The biggest advantage of this script over various others is\nthat it does not take any lines away from your terminal, leaving more space\nfor the document you're editing. The tabs are only visible when you need\nthem - when you are switching between buffers.\n\nUsage\n-----\nThis script draws buffer tabs on vim startup, when a new buffer is created\nand when switching between buffers.\n\nIt might be handy to create a few maps for easy switching of buffers in your\n.vimrc file. For example, using F1 and F2 keys:\n\n  noremap <f1> :bprev<CR> \n  noremap <f2> :bnext<CR>\n\nor using control-left and control-right keys:\n\n  :noremap <C-left> :bprev<CR>\n  :noremap <C-right> :bnext<CR>\n\n\nSome configuration options are available for styling and layout, check the top of the plugin file for instructions.\n",
   "install_details": "Copy the script into your plugin directory, and optionally define configuration items for styling the buftabs layout.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15439",
+      "filename": "buftabs.vim",
+      "script_version": "0.18",
+      "date": "2011-04-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10887",
+        "user_name": "Zevv",
+        "first_name": "Ico",
+        "last_name": "-",
+        "email": "vim@zevv.nl",
+        "homepage": ""
+      },
+      "release_notes": "Added marker for denoting modified buffers, provide function for including buftabs into status line descriptor instead of buftabs having to edit the status line directly.\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15426",
+      "filename": "buftabs.vim",
+      "script_version": "0.17",
+      "date": "2011-04-11",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "10887",
+        "user_name": "Zevv",
+        "first_name": "Ico",
+        "last_name": "-",
+        "email": "vim@zevv.nl",
+        "homepage": ""
+      },
+      "release_notes": "Changed persistent echo function to restore 'updatetime', leading to better behaviour when showing buftabs in the status line."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=12520",
       "filename": "buftabs.vim",

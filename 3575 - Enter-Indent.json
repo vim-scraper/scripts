@@ -1,0 +1,59 @@
+{
+  "script_id": "3575",
+  "display_name": "Enter Indent",
+  "summary": "By pressing enter between two tags, the cursor is repositioned <esc> O",
+  "name": "Enter-Indent",
+  "script_type": "utility",
+  "description": "|  - represents the cursor\n\n# body { | }\n\nIn the above situation, pressing enter, the result is as follows\n\n# body {\n        |\n}\n\nOther examples\n\n<tr>|</tr>\n\n<tr>\n        |\n</tr>\n\n\n{if} | {/if}\n\n{if}\n        |\n{/if}\n\nI recommend that you use this plugin in conjunction\n    http://www.vim.org/scripts/script.php?script_id=2754\n\nDownload a zipped archive, leave bug reports and feature request here:\n    http://github.com/acustodioo/vim-enter-indent\n\nPS: Sorry if the text is poorly written, I am learning English",
+  "install_details": "Save to .vim/plugin",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15590",
+      "filename": "enter-indent.vim",
+      "script_version": "0.0.2",
+      "date": "2011-05-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "24568",
+        "user_name": "acustodioo",
+        "first_name": "Anderson",
+        "last_name": "Custódio de Oliveira",
+        "email": "acustodioo@gmail.com",
+        "homepage": "http://acustodioo.blogspot.com"
+      },
+      "release_notes": "Ao pressionar esc em dois colchetes vazios, era gerado um colchete inútil, o problema foi resolvido com a mudança da seqüência de comandos do \"feedkeys\".\n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15578",
+      "filename": "enter-indent.vim",
+      "script_version": "0.0.1",
+      "date": "2011-05-04",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "24568",
+        "user_name": "acustodioo",
+        "first_name": "Anderson",
+        "last_name": "Custódio de Oliveira",
+        "email": "acustodioo@gmail.com",
+        "homepage": "http://acustodioo.blogspot.com"
+      },
+      "release_notes": "Avoiding Unnecessary processes and fix tags {if}, {elseif} and get the other smarty."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15574",
+      "filename": "enter-indent.vim",
+      "script_version": "0.0.0",
+      "date": "2011-05-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "24568",
+        "user_name": "acustodioo",
+        "first_name": "Anderson",
+        "last_name": "Custódio de Oliveira",
+        "email": "acustodioo@gmail.com",
+        "homepage": "http://acustodioo.blogspot.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "script_id": "3555",
+  "display_name": "fso",
+  "summary": "file system operations under cursor and more",
+  "name": "fso",
+  "script_type": "utility",
+  "description": "Enable vim user to do some operating action on file on which cursor is passing over\n\no Usage\n\n\tJust type \n           :REN to rename  file under cursor       \n           :DEL to delete file under cursor       \n           :INF to display informations of file under cursor       \n           :BROZ to browse filepath of file under cursor       \n\n           :LSD to access to those features from popupmenu\n\n\no Filenames/Filepaths recognition\n\n  1.Check that filename under cursor exists and is in an opened NERDTree buffer\n  2.Check that filename under cursor is readable\n  3.Check that path of opend buffer concated with filepath under cursor is readable\n  4.Check the current opened buffer exists and ask user to modify it.",
+  "install_details": "1. Just put this vimscript into $home/vimfiles/plugin\n2. Type :FSOHLP\nthis will generate help file, and then you can consult itby typing :h fso\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15551",
+      "filename": "fso.vim",
+      "script_version": "1.6",
+      "date": "2011-04-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29669",
+        "user_name": "niva",
+        "first_name": "niva",
+        "last_name": "niva",
+        "email": "nivaemail@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add the vimscript documentation"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15539",
+      "filename": "fso.vim",
+      "script_version": "1.5",
+      "date": "2011-04-27",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29669",
+        "user_name": "niva",
+        "first_name": "niva",
+        "last_name": "niva",
+        "email": "nivaemail@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add PopUp Menu Feature and browse filepath in windows explorer\nRename script because of added features "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15499",
+      "filename": "ren.vim",
+      "script_version": "1.4",
+      "date": "2011-04-21",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29669",
+        "user_name": "niva",
+        "first_name": "niva",
+        "last_name": "niva",
+        "email": "nivaemail@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fix bug with whitespace into NERDTree (using native vim func to rename or del files)                                    \nExtend features'script to include files (such as webdeveloppers files (html,css,xhtml)) \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15485",
+      "filename": "ren.vim",
+      "script_version": "1.3",
+      "date": "2011-04-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29669",
+        "user_name": "niva",
+        "first_name": "niva",
+        "last_name": "niva",
+        "email": "nivaemail@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add Dictionaries to store commands                               \nEnable delete files in NERDTree that have spaces inside filename \n"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15480",
+      "filename": "ren.vim",
+      "script_version": "1.2",
+      "date": "2011-04-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29669",
+        "user_name": "niva",
+        "first_name": "niva",
+        "last_name": "niva",
+        "email": "nivaemail@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Add new rename feature when cursor is over filepath\nAdd Delete feature"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15476",
+      "filename": "ren.vim",
+      "script_version": "1.1",
+      "date": "2011-04-19",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29669",
+        "user_name": "niva",
+        "first_name": "niva",
+        "last_name": "niva",
+        "email": "nivaemail@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "add unix/win32 compatibility to rename files under both OS"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15475",
+      "filename": "ren.vim",
+      "script_version": "1.0",
+      "date": "2011-04-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29669",
+        "user_name": "niva",
+        "first_name": "niva",
+        "last_name": "niva",
+        "email": "nivaemail@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "script_id": "3593",
+  "display_name": "pdub",
+  "summary": "dead simple vim-based password managment",
+  "name": "pdub",
+  "script_type": "utility",
+  "description": "Overview\n--------\n\nOn Github: https://github.com/aaronj1335/pdub\n\nIt's dead simple.  Run `pdub`, and you get a blank buffer in vim.  Enter your\npasswords and personal info.  Type \":wq\", and `pdub` encrypts the buffer and\nstores it in your home directory where only you can get to it.  Next time you\nrun it, `pdub` will decrypt the file, throw that into a buffer for your, and\nyou're back in business.\n\n`pdub` is a small Python script.  That's good because it keeps things simple,\nand no one wants complications when it comes to personal data.\n\n`pdub` doesn't save your decryption passphrase or plain text passwords to any\ntemporary files.  It doesn't use `gpg`'s \"--passphrase\" option.  It uses pipes\nlike a good plumber so your passwords don't get spilled all over the place.\n\nNeed to recover your passwords without `pdub`?  Just run the following:\n\n\t$ gpg -d ~/.pdub/pdubs.json.gpg\n\n\nRequirements\n------------\n\n - a POSIX system\n - Python >= 2.6 (RHEL5 be dammned)\n - vim compiled with Pyton support\n - [GnuPG](http://www.gnupg.org/)\n\n\nDetails\n-------\n\n`pdub` uses `gpg` with the --symmetric flag for encryption.  The file is stored\nin the `~/.pdub` directory.  If this isn't there it creates it for you.  The\ndirectory must have 700 permissions and the actual file is stored with 600\npermissions.\n\n\nThings That Still Need Work\n---------------------------\n\n`pdub` assumes that you're storing your passwords in JSON.  Most people\nprobably don't want that.  There should be some configuration file where users\ncan specify file types and other preferences (like a .pdubrc).\n\nIt would also be cool if `pdub` integrated with Dropbox.  Don't get me wrong,\nI'd never put my passwords out there like that, but since it's an encrypted\nfile there's probably people who would feel safe doing so.",
+  "install_details": "Put it anywhere in your $PATH.  Don't remove the *.py extension",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15679",
+      "filename": "pdub.py",
+      "script_version": "0.1",
+      "date": "2011-05-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "30907",
+        "user_name": "aaronj1335",
+        "first_name": "Aaron",
+        "last_name": "Stacy",
+        "email": "aaron.r.stacy@gmail.com",
+        "homepage": "http://aaronstacy.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

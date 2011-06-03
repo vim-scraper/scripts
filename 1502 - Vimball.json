@@ -8,6 +8,22 @@
   "install_details": "For vim 7.0, otherwise skip to step 2:\n1. Remove all vestiges of any older version of vimball.  Typically, that means:\n    cd /usr/local/share/vim/vim70\n    rm plugin/vimball*.vim\n    rm autoload/vimball*.vim\n\n   Under Windows, the vim70 install point may vary.\n\n2. I've decided that the vimball plugin itself should not expect that vimball is available to extract it.\n    Hence, it is now being distributed as vimball.tar.gz.  To unravel that:\n   * change directory to the directory holding the plugin/ and autoload/ directories where you want to install vimball.\n      It is probably best to install the new vimball in the distribution directory.\n   * gunzip vimball.tar.gz\n   * tar -oxvf vimball.tar\n   * (unix) chmod a+r autoload/vimball.vim doc/pi_vimball.txt plugin/vimballPlugin.vim\n\nVersion 26 and later use fnameescape() for security reasons -- which in turn requires vim 7.1 with patch 299.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15362",
+      "filename": "vimball.tar.gz",
+      "script_version": "33",
+      "date": "2011-04-02",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip@campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "Added support for xz compression.  Supports *.vmb as well as *.vba for extraction; creates *.vmb files.  Bugfixes: zero-length file handling, a problem with fenc.\n"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=11981",
       "filename": "vimball.tar.gz",
       "script_version": "30",

@@ -1,0 +1,59 @@
+{
+  "script_id": "3558",
+  "display_name": "visual-increment",
+  "summary": "Use CTRL+A/X to create increasing sequence of numbers or letters via visual mode",
+  "name": "visual-increment",
+  "script_type": "utility",
+  "description": "This plugin adds a simple functionality that creates increasing and decreasing number or letter sequences on multiple lines via visual mode.\n\nSimply select the desired columns via visual mode and use standard vim mapping for adding or subtracting.\n\nFollow repository on GitHub: https://github.com/triglav/vim-visual-increment\n\n\nUsage:\n\n\n1. For example, we have an array of 5 items and we would like to define them:\n\n        example[0] = 'e';\n        example[0] = 'e';\n        example[0] = 'e';\n        example[0] = 'e';\n        example[0] = 'e';\n\n2. Press <C-V> at the first index and select all the index columns on multiple lines, press <C-A>:\n\n        example[0] = 'e';\n        example[1] = 'e';\n        example[2] = 'e';\n        example[3] = 'e';\n        example[4] = 'e';\n\n\nIncrement steps:\n\n\nYou can use [count] to define the \"increment step\" between each line. For example, by pressing 5<C-A> at the index column, you will get:\n\n        example[5] = 'e';\n        example[10] = 'e';\n        example[15] = 'e';\n        example[20] = 'e';\n        example[25] = 'e';\n\n\nLetter sequence:\n\n\nYou need to add the following line to your .vimrc file:\n\n        set nrformats=alpha\n\nThe letter sequence is then created via <C-X> as expected:\n\n        example[0] = 'e';\n        example[1] = 'd';\n        example[2] = 'c';\n        example[3] = 'b';\n        example[4] = 'a';\n\n\nOctal & Hex sequences:\n\n\nTo create octal or hexadecimal sequences, simply add the respective option to the nrformats:\n\n        set nrformats=aplha,octal,hex\n\nOctal numbers start with a zero:\n\n        example[0] = 01;\n        example[1] = 06;\n        example[2] = 013;\n        example[3] = 020;\n        example[4] = 025;\n\nHexadecimal numbers start with 0x or 0X:\n\n        example[0] = 0x1;\n        example[1] = 0x6;\n        example[2] = 0xb;\n        example[3] = 0x10;\n        example[4] = 0x15;\n",
+  "install_details": "Extract in ~/.vim or ~\\vimfiles respectively.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15567",
+      "filename": "visual-increment 1.0.2.7z",
+      "script_version": "1.0.2",
+      "date": "2011-05-02",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "5859",
+        "user_name": "triglav",
+        "first_name": "Matej",
+        "last_name": "Svec",
+        "email": "trojhlav@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added some additional notes to the documentation"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15495",
+      "filename": "visual-increment 1.0.1.7z",
+      "script_version": "1.0.1",
+      "date": "2011-04-21",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "5859",
+        "user_name": "triglav",
+        "first_name": "Matej",
+        "last_name": "Svec",
+        "email": "trojhlav@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed an issue when user has rebound <C-A> or <C-X> to other action"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15493",
+      "filename": "visual-increment.7z",
+      "script_version": "1.0",
+      "date": "2011-04-21",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "5859",
+        "user_name": "triglav",
+        "first_name": "Matej",
+        "last_name": "Svec",
+        "email": "trojhlav@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

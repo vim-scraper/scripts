@@ -1,0 +1,107 @@
+{
+  "script_id": "3526",
+  "display_name": "EasyMotion",
+  "summary": "Vim motions on speed!",
+  "name": "EasyMotion",
+  "script_type": "utility",
+  "description": "EasyMotion provides a much simpler way to use some motions in vim. It takes the <number> out of <number>w or <number>f{char} by highlighting all possible choices and allowing you to press one key to jump directly to the target.\n\nWhen one of the available motions is triggered, all visible text preceding or following the cursor is faded, and motion targets are highlighted.\n\n* Animated demo: http://oi54.tinypic.com/2yysefm.jpg\n* Video tutorial on Nettuts+: http://net.tutsplus.com/tutorials/other/vim-essential-plugin-easymotion/\n\n\nUSAGE EXAMPLE\n\nType <Leader>w to trigger the word motion \"w\". When the motion is triggered, the text is updated (no braces are actually added, the text is highlighted in red by default):\n\n    <cursor>Lorem {a}psum {b}olor {c}it {d}met.\n\nPress \"c\" to jump to the beginning of the word \"sit\":\n\n    Lorem ipsum dolor <cursor>sit amet.\n\n\nIMPORTANT NOTES ABOUT THE DEFAULT BINDINGS\n\nThe default bindings may conflict with other plugins you have installed, e.g. Command-T. Please read the docs about the default bindings, it's easy to rebind the EasyMotion keys or rebind the leader key in order to \"namespace\" the plugin.\n\nYou can rebind the leader key in your vimrc:\n\n    let g:EasyMotion_leader_key = '<Leader>m'\n\nAll the motions will now be triggered with <Leader>m first, e.g. <Leader>mt, <Leader>mgE. You can also remap single motions:\n\n    let g:EasyMotion_mapping_t  = '_t'\n    let g:EasyMotion_mapping_gE = '_gE'\n\n\n* Check out the GitHub repo for the latest updates: https://github.com/Lokaltog/vim-easymotion\n* Please report any issues here: https://github.com/Lokaltog/vim-easymotion/issues",
+  "install_details": "Extract and move contents to your .vim folder.\n\nPathogen users: Clone the GitHub repo to your bundle folder.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15369",
+      "filename": "Lokaltog-vim-easymotion-1.2-0-gdfb8079.zip",
+      "script_version": "1.2",
+      "date": "2011-04-03",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "28835",
+        "user_name": "Lokaltog",
+        "first_name": "Kim",
+        "last_name": "Silkebækken",
+        "email": "kim.silkebaekken+vim@gmail.com",
+        "homepage": "http://github.com/Lokaltog"
+      },
+      "release_notes": "WORD motions. Customizable key mappings. Configurable leader key. Improved default grouping algorithm. Easier to apply custom highlighting. No more jumping on j/k motions. Various bug fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15345",
+      "filename": "Lokaltog-vim-easymotion-1.1.0.1-0-g7c6cff7.zip",
+      "script_version": "1.1.0.1",
+      "date": "2011-03-31",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "28835",
+        "user_name": "Lokaltog",
+        "first_name": "Kim",
+        "last_name": "Silkebækken",
+        "email": "kim.silkebaekken+vim@gmail.com",
+        "homepage": "http://github.com/Lokaltog"
+      },
+      "release_notes": "EasyMotion now works in operator-pending mode as well. Summary of features: Normal, visual and operator-pending mode mappings for the following motions: f - F - t - T - w - b - e - ge - j - k."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15343",
+      "filename": "Lokaltog-vim-easymotion-1.0.12.1-0-gce13b9a.zip",
+      "script_version": "1.0.12.1",
+      "date": "2011-03-31",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "28835",
+        "user_name": "Lokaltog",
+        "first_name": "Kim",
+        "last_name": "Silkebækken",
+        "email": "kim.silkebaekken+vim@gmail.com",
+        "homepage": "http://github.com/Lokaltog"
+      },
+      "release_notes": "Updated docs. Fixed missing target/shade highlighting issue. Fixed GUI bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15341",
+      "filename": "Lokaltog-vim-easymotion-1.0.10-0-g5809794.zip",
+      "script_version": "1.0.10",
+      "date": "2011-03-30",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "28835",
+        "user_name": "Lokaltog",
+        "first_name": "Kim",
+        "last_name": "Silkebækken",
+        "email": "kim.silkebaekken+vim@gmail.com",
+        "homepage": "http://github.com/Lokaltog"
+      },
+      "release_notes": "New motions: ge, j, k."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15339",
+      "filename": "Lokaltog-vim-easymotion-1.0.8-0-g24c9f6c.zip",
+      "script_version": "1.0.8",
+      "date": "2011-03-30",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "28835",
+        "user_name": "Lokaltog",
+        "first_name": "Kim",
+        "last_name": "Silkebækken",
+        "email": "kim.silkebaekken+vim@gmail.com",
+        "homepage": "http://github.com/Lokaltog"
+      },
+      "release_notes": "Various code improvements."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15324",
+      "filename": "Lokaltog-vim-easymotion-1.0.6-0-gc58f0b7.zip",
+      "script_version": "1.0.6",
+      "date": "2011-03-29",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "28835",
+        "user_name": "Lokaltog",
+        "first_name": "Kim",
+        "last_name": "Silkebækken",
+        "email": "kim.silkebaekken+vim@gmail.com",
+        "homepage": "http://github.com/Lokaltog"
+      },
+      "release_notes": "Code improvements. Various bug fixes. Updated source location."
+    }
+  ]
+}

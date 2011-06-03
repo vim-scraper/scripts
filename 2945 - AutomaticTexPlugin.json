@@ -4,9 +4,137 @@
   "summary": "Background compilation, completion, bib serch, toc and other nice features.",
   "name": "AutomaticTexPlugin",
   "script_type": "ftplugin",
-  "description": "This is a BIG plugin with lots of tools to make editing of TeX/LaTeX file easier. It's main features include: background compilation, extended completion, AMSRef equry for bibliography references, font preview, support for projects with multiple tex files, and much more. For a detailed list of features see: \nhttps://sourceforge.net/apps/mediawiki/atp-vim/index.php?title=Main_Page \nAfter looking there you can read the complete documentation in vim (:help automatic-tex-plugin.txt) \n\nYou can DONATE for this project  (on the project web page: http://sourceforge.net/projects/atp-vim/) \n(see :h atp-donate). \n\nThe project is developed under GPL v3 or higher. \n\nYou can subscribe to the mailing list: \nhttps://lists.sourceforge.net/lists/listinfo/atp-vim-list \nIts for all kind of purposes: help, bug reports, feature request, comments but also for ANNOUCES (of new releases!) so you can stay up to date. \n\nProject News: https://sourceforge.net/news/?group_id=513143\n\nThis plugin includes: vimscript#3109  (LatexBox by David Munger). \n\nBUG tracker: send a mail to the mailing list: https://lists.sourceforge.net/lists/listinfo/atp-vim-list \nPROJECT site: http://sourceforge.net/projects/atp-vim/",
+  "description": "\nThis is a complete plugin with lots of tools to make editing of TeX/LaTeX file more friendly. Its main features include: background compilation, forward and inverse search for both dvi and pdf (okular), extended completion, AMSRef query for bibliography references, font preview, support for projects with multiple tex files, and much much more. For a detailed list of features see: \n    https://sourceforge.net/apps/mediawiki/atp-vim/index.php?title=Main_Page\nAfter looking there you can read the complete documentation in vim (:help atp) \n\nLATEST SNAPSHOTS\n    You can get the latest snapshots (stable/unstable releases) on \n        http://sourceforge.net/projects/atp-vim/files/snapshots/ \n    or if you have ATP version 9.2 or higher using :UpdateATP command \n    inside vim (check out :help atp-:UpdateATP)\n\nDONATE\n    You can SUPPORT this project using PayPal (see :help atp-donate)\n        https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3NMU7FEEPVG7Q\n\nLICENCE\n    The project is developed under GPL v3 or higher. \n\nMAILING LIST\n    You can subscribe to the mailing list: \n        https://lists.sourceforge.net/lists/listinfo/atp-vim-list \n    Its for all kind of purposes: help, bug reports, feature request, comments.\n\nPROJECT NEWS\n    You can follow the project on SourceForge to get project news \n        https://sourceforge.net/news/?group_id=513143\n    (using watch SourceForge feature, i.e. you need to have a SourceForge account) \n\nLATEX BOX\n    This plugin includes: vimscript#3109  (LatexBox by David Munger). \n\nBUGS \n    Send an email to the mailing list: \n        https://lists.sourceforge.net/lists/listinfo/atp-vim-list\n\nPROJECT SITE\n        http://sourceforge.net/projects/atp-vim/",
   "install_details": "To install open the vimball file and source it ':so %' or ':source %'. You can use $HOME/.atp.vim configuration file to set the atp variables, which is handy for local-buffer settings.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15619",
+      "filename": "AutomaticTexPlugin_9.4.3.vba",
+      "script_version": "9.4.3",
+      "date": "2011-05-10",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "Patches for 9.4 release."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15610",
+      "filename": "AutomaticTexPlugin_9.4.2.vba",
+      "script_version": "9.4.2",
+      "date": "2011-05-08",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "Fixes for 9.4 release."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15607",
+      "filename": "AutomaticTexPlugin_9.4.1.vba",
+      "script_version": "9.4.1",
+      "date": "2011-05-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "Small fixes for 9.4 release."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15606",
+      "filename": "AutomaticTexPlugin_9.4.vba",
+      "script_version": "9.4",
+      "date": "2011-05-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "See :help atp-news"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15503",
+      "filename": "AutomaticTexPlugin_9.3.5.vba",
+      "script_version": "9.3.5",
+      "date": "2011-04-22",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "see :help atp-news"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15464",
+      "filename": "AutomaticTexPlugin_9.3.vba",
+      "script_version": "9.3",
+      "date": "2011-04-17",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "see :help atp-news for changes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15448",
+      "filename": "AutomaticTexPlugin_9.2.7.vba",
+      "script_version": "9.2.7",
+      "date": "2011-04-13",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "- This update contains several small changes and one important fix (for those who do not use bibtex). See :help atp-news."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15417",
+      "filename": "AutomaticTexPlugin_9.2.vba",
+      "script_version": "9.2",
+      "date": "2011-04-09",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "18896",
+        "user_name": "coot",
+        "first_name": "Marcin",
+        "last_name": "Szamotulski",
+        "email": "mszamot@gmail.com",
+        "homepage": "http://www.math.ist.utl.pt/~mszamo"
+      },
+      "release_notes": "* This release is a major step forward ;) see long list of changes :help atp-news, thanks for Ivo Lopez for the help!\nMajor news:\n- new compelation using python script\n- progress bar for compelation\n- UpdateATP[!]    = to get new Stable/Unstable release directly from SourceForge project hosting site."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15269",
       "filename": "AutomaticTexPlugin_9.1.1.vba",
@@ -38,134 +166,6 @@
         "homepage": "http://www.math.ist.utl.pt/~mszamo"
       },
       "release_notes": "See :h atp-news for changes [ there are some NEW features :), and many fixes! ]\n"
-    },
-    {
-      "url": "http://www.vim.org/scripts/download_script.php?src_id=15163",
-      "filename": "AutomaticTexPlugin_8.7.vba",
-      "script_version": "8.7",
-      "date": "2011-03-05",
-      "vim_version": "7.0",
-      "author": {
-        "user_id": "18896",
-        "user_name": "coot",
-        "first_name": "Marcin",
-        "last_name": "Szamotulski",
-        "email": "mszamot@gmail.com",
-        "homepage": "http://www.math.ist.utl.pt/~mszamo"
-      },
-      "release_notes": "* for the changes see :h atp-news. Probably the most important is that completion supports beamer commands and environments."
-    },
-    {
-      "url": "http://www.vim.org/scripts/download_script.php?src_id=14840",
-      "filename": "AutomaticTexPlugin_8.6.vba",
-      "script_version": "8.6",
-      "date": "2011-01-23",
-      "vim_version": "7.0",
-      "author": {
-        "user_id": "18896",
-        "user_name": "coot",
-        "first_name": "Marcin",
-        "last_name": "Szamotulski",
-        "email": "mszamot@gmail.com",
-        "homepage": "http://www.math.ist.utl.pt/~mszamo"
-      },
-      "release_notes": "See the help file for changes."
-    },
-    {
-      "url": "http://www.vim.org/scripts/download_script.php?src_id=14503",
-      "filename": "AutomaticTexPlugin_8.5.vba",
-      "script_version": "8.5",
-      "date": "2010-12-14",
-      "vim_version": "7.0",
-      "author": {
-        "user_id": "18896",
-        "user_name": "coot",
-        "first_name": "Marcin",
-        "last_name": "Szamotulski",
-        "email": "mszamot@gmail.com",
-        "homepage": "http://www.math.ist.utl.pt/~mszamo"
-      },
-      "release_notes": "* AMSRef : bang has opposite meaning now.\n* Many small fixes. \n"
-    },
-    {
-      "url": "http://www.vim.org/scripts/download_script.php?src_id=14338",
-      "filename": "AutomaticTexPlugin_8.4.vba",
-      "script_version": "8.4",
-      "date": "2010-11-21",
-      "vim_version": "7.0",
-      "author": {
-        "user_id": "18896",
-        "user_name": "coot",
-        "first_name": "Marcin",
-        "last_name": "Szamotulski",
-        "email": "mszamot@gmail.com",
-        "homepage": "http://www.math.ist.utl.pt/~mszamo"
-      },
-      "release_notes": "* Small fixes."
-    },
-    {
-      "url": "http://www.vim.org/scripts/download_script.php?src_id=14223",
-      "filename": "AutomaticTexPlugin_8.3.vba",
-      "script_version": "8.3",
-      "date": "2010-11-10",
-      "vim_version": "7.0",
-      "author": {
-        "user_id": "18896",
-        "user_name": "coot",
-        "first_name": "Marcin",
-        "last_name": "Szamotulski",
-        "email": "mszamot@gmail.com",
-        "homepage": "http://www.math.ist.utl.pt/~mszamo"
-      },
-      "release_notes": "* Abbreviations (see :h atp-news) and fixes of vip."
-    },
-    {
-      "url": "http://www.vim.org/scripts/download_script.php?src_id=14177",
-      "filename": "AutomaticTexPlugin_8.2.vba",
-      "script_version": "8.2",
-      "date": "2010-11-04",
-      "vim_version": "7.0",
-      "author": {
-        "user_id": "18896",
-        "user_name": "coot",
-        "first_name": "Marcin",
-        "last_name": "Szamotulski",
-        "email": "mszamot@gmail.com",
-        "homepage": "http://www.math.ist.utl.pt/~mszamo"
-      },
-      "release_notes": " * Some fixes. As usual, check :h atp-news"
-    },
-    {
-      "url": "http://www.vim.org/scripts/download_script.php?src_id=14123",
-      "filename": "AutomaticTexPlugin_8.1.vba",
-      "script_version": "8.1",
-      "date": "2010-10-26",
-      "vim_version": "7.0",
-      "author": {
-        "user_id": "18896",
-        "user_name": "coot",
-        "first_name": "Marcin",
-        "last_name": "Szamotulski",
-        "email": "mszamot@gmail.com",
-        "homepage": "http://www.math.ist.utl.pt/~mszamo"
-      },
-      "release_notes": "Some fixes in the new command AMSRef, completion for :GotoFile, :EditIntpuFile commands."
-    },
-    {
-      "url": "http://www.vim.org/scripts/download_script.php?src_id=14107",
-      "filename": "AutomaticTexPlugin_8.vba",
-      "script_version": "8",
-      "date": "2010-10-24",
-      "vim_version": "7.0",
-      "author": {
-        "user_id": "18896",
-        "user_name": "coot",
-        "first_name": "Marcin",
-        "last_name": "Szamotulski",
-        "email": "mszamot@gmail.com",
-        "homepage": "http://www.math.ist.utl.pt/~mszamo"
-      },
-      "release_notes": "Filetype plugin for bib files added.\nCommand to obtain bib data from amsref web page interface (for both bib files and bibliography environments)\nFor lots of other new stuff read :h atp-news"
     }
   ]
 }
