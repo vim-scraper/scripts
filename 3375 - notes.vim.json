@@ -8,6 +8,22 @@
   "install_details": "Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is \"~/.vim\" on UNIX and \"%USERPROFILE%\\vimfiles\" on Windows), restart Vim and execute the command \":helptags ~/.vim/doc\" (use \":helptags ~\\vimfiles\\doc\" instead on Windows). To get started execute \":Note\" or \":edit note:\", this will start a new note that contains instructions on how to continue from there (and how to use the plug-in in general).",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15698",
+      "filename": "notes.zip",
+      "script_version": "0.8.7",
+      "date": "2011-05-22",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter@peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Call the correct Python interpreter on Python 3 systems:\n   https://github.com/xolox/vim-notes/commit/a721bc2\n\n  Bug fix: Make <Tab> work on empty lines (reported by Ulrik Sverdrup):\n   https://github.com/xolox/vim-notes/commit/c4f231e\n\n  Bug fix for completion after typing several words (reported by Ulrik Sverdrup):\n   https://github.com/xolox/vim-notes/commit/d5a11a8\n\n  Bug fix: Windows compatibility for automatic command patterns:\n   https://github.com/xolox/vim-notes/commit/28514cb\n\n  Support for non-Unicode encodings (requested by SteP):\n   https://github.com/xolox/vim-notes/commit/6b7566e"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14703",
       "filename": "notes.zip",
       "script_version": "0.8.2",

@@ -8,6 +8,22 @@
   "install_details": "Extract the zip archive into your vimfiles or runtime directory.\n\nSlimv works on Windows, Linux and Mac OS X (via Terminal.app), Cygwin is supported. The script requires the following programs installed on your system:\n    *  Vim with Python feature enabled\n    *  Python (must be the same Python version that was Vim compiled against)\n    *  Lisp (any Common Lisp with SLIME support) or Clojure or MIT Scheme (Linux only)\n\nVim's Python version can be identified with the :ver command, look for the -DDYNAMIC_PYTHON_DLL=\\\"pythonXX\\\" string.\n\nSlimv tries to autodetect your Lisp/Clojure/Python/Slime installation directories. If it fails to determine the correct directories, then you need to enter the command to start the SWANK server into your vimrc file.\n\nLinux example:\n    let g:slimv_swank_cmd = '! xterm -e sbcl --load /usr/share/common-lisp/source/slime/start-swank.lisp &'\n\nWindows example:\n    let g:slimv_swank_cmd = '!start \"c:/Program Files/Lisp Cabinet/bin/ccl/wx86cl.exe\" -l \"c:/Program Files/Lisp Cabinet/site/lisp/slime/start-swank.lisp\"'\n\nFor Clojure use the g:slimv_swank_clojure option, e.g.:\n    let g:slimv_swank_clojure = '! xterm -e lein swank &' \n\n\nImportant notice to pre-0.8.0 users:\nIf you want the old functionality, please set g:slimv_swank to 0 in your vimrc file. Please note however, that the development focuses on the SWANK client.\n\nSee the included documentation for more complete installation and customization instructions.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15665",
+      "filename": "slimv083.zip",
+      "script_version": "0.8.3",
+      "date": "2011-05-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "16470",
+        "user_name": "kovisoft",
+        "first_name": "Tamas",
+        "last_name": "Kovacs",
+        "email": "kovisoft@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added top/bottom/left/right directions to g:slimv_repl_split, added :Lisp (and an equivalent :Eval) command with completion, added g:slimv_leader and g:paredit_leader options, added g:slimv_echolines to echo only the first few lines of the form being evaluated, added fuzzy completion and option g:slimv_simple_compl (by Philipp Marek), indent macros with &body argument by two spaces when connected to swank (thanks to Philipp Marek and Andreas Fredriksson), special indentation for flet, labels and macrolet, default for Set-Package is current package (thanks to Philipp Marek), bugfixes: REPL output ordering problems, problem with inserting Space into visual block, blinking when g:slimv_repl_syntax is on, entering incomplete form in REPL command line, close form when inside comment, string, or with mixed ([."
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15563",
       "filename": "slimv082.zip",
       "script_version": "0.8.2",

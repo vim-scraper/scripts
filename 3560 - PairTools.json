@@ -1,12 +1,60 @@
 {
   "script_id": "3560",
   "display_name": "PairTools",
-  "summary": "Auto close pairs and more",
+  "summary": "Auto close pairs and tags",
   "name": "PairTools",
   "script_type": "utility",
-  "description": "This is yet another auto-closing pair tools. All configurations are handled per filetype using a 'filetype'.vim file inside the user ftplugin directory.\n\nSee the accompanying help file for more details and examples.",
-  "install_details": "Simply drop pairtools.vim inside the user plugin directory and pairtools.txt into the user doc directory. Then use helptags to install pairtools as a help file.",
+  "description": "The PairTools plugin can be seen as a \"bundle\" of tools to handle various\n\"pair\" operations. It also offers a flexible way to set pairs and options per\nfiletypes. Therefore, it is possible to have pairs and options set for editing \nC++ files while also editing XML files with other pairs and options inside the\nsame window.\n\nThe plugin is modular, i.e. related features are grouped inside a module, and \nother related features inside others groups. In the current version, there are \nthree modules: pairclamp.vim, tagwrench.vim and jigsaw.vim.\n\nThe PairClamp module works with single characters pairs such as (,). The\nTagWrench module works with angle brackets <,> and tags <tagname>. The Jigsaw\nmodule coordinates some key maps between PairClamp and TagWrench, such as when\npressing backspace and calling the right hook function. The pairtools.vim file \ndefines autocmds, mappings and options to make all the modules work.\n\nSee details at: https://github.com/MartinLafreniere/vim-PairTools\n",
+  "install_details": "Use the vimball: vim pairtools.vba followed by :so % and :quit.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15756",
+      "filename": "pairtools.vba",
+      "script_version": "1.5.2",
+      "date": "2011-05-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29856",
+        "user_name": "MartinLafreniere",
+        "first_name": "Martin",
+        "last_name": "Lafreniere",
+        "email": "martin.lafreniere@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Added TagWrench support for namespace and to use the hyphen inside a tag name\nFix various minor bugs."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15687",
+      "filename": "pairtools.vba",
+      "script_version": "1.5.1",
+      "date": "2011-05-20",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29856",
+        "user_name": "MartinLafreniere",
+        "first_name": "Martin",
+        "last_name": "Lafreniere",
+        "email": "martin.lafreniere@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Fixed case sensitiveness with autoload function call for case sensitive filesystem such as linux ext*.\nA few minor bug fixes."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15672",
+      "filename": "pairtools.vba",
+      "script_version": "1.5",
+      "date": "2011-05-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "29856",
+        "user_name": "MartinLafreniere",
+        "first_name": "Martin",
+        "last_name": "Lafreniere",
+        "email": "martin.lafreniere@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Major plugin rework, see accompanying help file."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15511",
       "filename": "pairtools.zip",

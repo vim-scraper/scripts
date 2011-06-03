@@ -5,8 +5,24 @@
   "name": "CCTree",
   "script_type": "ftplugin",
   "description": "Description:\n       Plugin generates symbol dependency tree (aka call tree, call graph) in real-time inside Vim using a Cscope database. Basic support for functions and macros; global variables, enums, typedefs can be cross-reference with additional processing. Functionality similar to that of tools and IDE's like CBrowser, Kscope, Source navigator, Eclipse, Source Insight. \n\nCurrently supported language: C. \nRequirements: Cscope, Vim 7.xx \n\nProject details/Screenshots:  http://sites.google.com/site/vimcctree/ \n\n[NEW]: Check out  http://sourceforge.net/projects/ccglue/ for an external tool that can produce cross-reference files from cscope [and ctags] databases that CCTree can load directly from disk.\n\n ",
-  "install_details": "Install details\n  Installation:\n               Copy this file to ~/.vim/plugins/\n               or to /vimfiles/plugins/  (on Win32 platforms)\n\n               It might also be possible to load it as a filetype plugin\n               ~/.vim/ftplugin/c/\n\n               Need to set :filetype plugin on\n          \n\n",
+  "install_details": "Install details\n  Installation:\n               Copy this file to ~/.vim/plugins/\n               or to /vimfiles/plugins/  (on Win32 platforms)\n\n               It might also be possible to load it as a filetype plugin\n               ~/.vim/ftplugin/c/\n\n               Need to set :filetype plugin on\n          \nA help file is now available here: http://sites.google.com/site/vimcctree/cctree.txt . Refer to help on building help tags.\n\n",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15668",
+      "filename": "cctree.vim",
+      "script_version": "1.51",
+      "date": "2011-05-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14692",
+        "user_name": "hari_r",
+        "first_name": "Hari",
+        "last_name": "Rangarajan",
+        "email": "hari.rangarajan@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Robust error reporting when external utils (split/cat) fail."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15625",
       "filename": "cctree.vim",

@@ -8,6 +8,22 @@
   "install_details": "When installing tlib for the first time, it might be necessary that you create the directory ~/.vim/autoload/tlib before sourcing the vimball. If you have difficulties to install this plugin, please make sure to use the current version of vimball (vimscript #1502). The vimball that comes with vim 7.0 is most likely not recent enough.\n\nOpen the file and type\n\n    :so %\n\nsee :help vimball for details.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15732",
+      "filename": "tlib.vba",
+      "script_version": "0.42",
+      "date": "2011-05-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- tlib#input#List: <s-space> inserts a *-like wildcard (represented as \"__\")- Check if a cache file cannot be created because a directory of the same name exists (display a message if so)- tlib#cache#Filename: Removed check if a directory of the same name exists (due to inconsistent use)- Minor improvements related to buffer handling (scratch_split)- .gitignore- docs (thanks to blueyed)- There is no \"edit\" answer possibility.- Fix first purge: do nothing if no timestamp file.- g:tlib_pick_single_item- Removed pick_single_item. Changed the default behavour when a list has only 1 item. See doc for g:tlib_pick_last_item.- Updated help for tlib#input#List(); help_extra attribute- EXPERIMENTAL: cache_var, restore_from_cache, on_leave properties; #Initialize(), #Leave()- added tlib#cmd#BrowseOutputWithCallback function and :TBrowseScriptnames command- tlib#cmd#BrowseOutputWithCallback function and :TBrowseScriptnames command documentation- s:prototype.Initialize(): unlet self.cache_var after restoring values- tlib#input#List: filter-specific help- Removed the seq filter (use cnfd or fuzzy instead)- tlib#input#List: temp_prompt (for help message)MD5 checksum: aa8b5a4602235cc1a5bc9ee45d801b81"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14245",
       "filename": "tlib.vba",
       "script_version": "0.41",

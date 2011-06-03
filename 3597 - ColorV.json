@@ -4,9 +4,25 @@
   "summary": "a Color Viewer and Color Picker for Vim. ",
   "name": "ColorV",
   "script_type": "utility",
-  "description": "NEW! 1.2.0  colorname support (W3C standard)\n\n    *ColorV* or *ColorV.vim* is a Color Viewer and Color Picker of Vim.\n\n    Open a ColorV window.\n        <leader>cv\n\n    Open a ColorV window by word under cursor.\n        #ff9744 or rgb(33,44,155) or orangered 'cadetblue'\n    Put cursor on above words \n        <leader>cw\n\n    Change the word under cursor with chosing color after quit the ColorV window.\n        <leader>cg\n\n    Copy the color in the ColorV window\n        yy\n\n    Use GTK eyedropper to pick colors in screen.\n    If '+python' compiled and pygtk2.0 included.\n        <leader>cd\n\n    There are several configs and commands to define ColorV. \n    See detail in help docs.\n\n    Have a closer look at it. \n    http://flic.kr/p/9LuPxG\n    or \n    http://i55.tinypic.com/330ryhl.jpg\n\n    If useful, please rate it\n    http://www.vim.org/scripts/script.php?script_id=3597\n\n    If have any advice ,patches or bug reports.\n    Submit it at github\n    https://github.com/rykka/colorv\n",
-  "install_details": "    Using vim.org:\n    http://www.vim.org/scripts/script.php?script_id=3597\n    Download the latest version of tar.gz file, \n    extract it into your VIMFILE folder.\n    (\"~/.vim\" for linux. \"$HOME/vimfiles\" for windows)\n\n    Then use help tag to generate tags.\n\n    :helptags ~/.vim/doc\n\n    Using git:\n    git clone\n\n    git clone git://github.com/rykka/ColorV.git ~/.vim/bundle/ColorV\n\n    then add &runtimepath to your vimrc\n    (NOT necessary if pathogen.vim installed) \n\n    set rtp+=~/.vim/bundle/ColorV/\n\n    run helptags\n\n    :helptags ~/.vim/bundle/ColorV/doc\n   \n\n    Using Vundle:\n    First, install the script [Vundle.vim](https://github.com/gmarik/vundle)\n    then put this line in your vimrc\n\n    Bundle 'rykka/colorv'\n\n    and use this to install it.\n\n    :BundleInstall\n",
+  "description": "- NEW!(1.4.0)  'mid' mode by default. Tips now echo in CmdLine.\n- NEW!(1.3.0)  Color name (X11 Standard) Support.\n- NEW!(1.2.0)  Color name (W3C Standard) Support.\n\n    *ColorV* or *ColorV.vim* is a Color Viewer and Color Picker of Vim.\n\n    Open a ColorV window.\n        <leader>cv\n\n    Open a ColorV window by word under cursor.\n        #ff9744 or rgb(33,44,155) or orangered 'cadetblue'\n    Put cursor on above words \n        <leader>cw\n\n    Change the word under cursor with chosing color after quit the ColorV window.\n        <leader>cg\n\n    Copy the color in the ColorV window\n        yy\n\n    Use GTK eyedropper to pick colors in screen.\n    If '+python' compiled and pygtk2.0 included.\n        <leader>cd\n\n    There are several configs and commands to define ColorV. \n    See detail in help docs.\n\n    Have a closer look at it. http://flic.kr/p/9PVEE3\n    Or http://i52.tinypic.com/119qz3d.jpg\n\n    If useful, please rate it\n    http://www.vim.org/scripts/script.php?script_id=3597\n\n    If have any advice ,patches or bug reports.\n    Submit it at github\n    https://github.com/rykka/colorv\n",
+  "install_details": "Using vim.org:\n    Download the latest version of tar.gz file, \n    extract it into your VIMFILE folder.\n    (\"~/.vim\" for linux. \"$HOME/vimfiles\" for windows)\n    Then use help tag to generate tags.\n        :helptags ~/.vim/doc\n\nUsing git:\n    open terminal and input\n        git clone git://github.com/rykka/ColorV.git ~/.vim/bundle/ColorV\n    then add &runtimepath to your vimrc; then run helptags\n    (NOT necessary if pathogen.vim installed) \n        set rtp+=~/.vim/bundle/ColorV/\n        :helptags ~/.vim/bundle/ColorV/doc\n\nUsing Vundle:\n    Install script [Vundle.vim](https://github.com/gmarik/vundle)\n    then put this line in your vimrc\n        Bundle 'rykka/colorv'\n    and use this command to install it.\n        :BundleInstall\n",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15798",
+      "filename": "ColorV.tar.gz",
+      "script_version": "1.4.0",
+      "date": "2011-06-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "31124",
+        "user_name": "Rykka.Krin",
+        "first_name": "Rykka",
+        "last_name": "Krin",
+        "email": "rykka.krin@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "\" 1.4.0 'mid' mode \n\" DONE: 110602  fix the pallet. no black line and white column now. \n\" DONE: 110602  add max/mid/min mode. default is mid mode\n\" DONE: 110602  tips only shows in cmdline now\n\" DONE: 110602  change arrow_ptn color to reverse.\n......\n"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15791",
       "filename": "ColorV.tar.gz",

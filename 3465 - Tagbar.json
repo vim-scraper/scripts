@@ -8,6 +8,22 @@
   "install_details": "Use the normal Vimball installation method to install Tagbar:\n\n    vim tagbar.vba\n    :so %\n    :q\n\nIf ctags is not installed in one of the directories in your $PATH environment variable you have to set the option g:tagbar_ctags_bin, see the documentation for exact instructions.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15751",
+      "filename": "tagbar.vba",
+      "script_version": "2.1",
+      "date": "2011-05-29",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27049",
+        "user_name": "majutsushi",
+        "first_name": "Jan",
+        "last_name": "Larres",
+        "email": "jan@majutsushi.net",
+        "homepage": ""
+      },
+      "release_notes": "This is mostly a bug-fix release.\n\n- Make Tagbar work in (hopefully) all cases under Windows\n\n- Handle cases where 'encoding' is different from system encoding, for example on a Chinese Windows with 'encoding' set to \"utf-8\" (see manual for details in case it doesn't work out-of-the-box)\n\n- Fixed a bug with the handling of subtypes like \"python.django\"\n\n- If a session got saved with Tagbar open it now gets restored properly\n\n- Locally reset foldmethod/foldexpr in case foldexpr got set to something expensive globally\n\n- Tagbar now tries hard to go to the correct window when jumping to a tag\n\n- Explain some possible issues with the current jsctags version in the manual\n\n- Explicitly check for some possible configuration problems to be able to give better feedback\n\n- A few other small fixes"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15532",
       "filename": "tagbar.vba",
       "script_version": "2.0.1",

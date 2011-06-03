@@ -8,6 +8,70 @@
   "install_details": "Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is \"~/.vim\" on UNIX and \"%USERPROFILE%\\vimfiles\" on Windows), restart Vim and execute the command \":helptags ~/.vim/doc\" (use \":helptags ~\\vimfiles\\doc\" instead on Windows). Now try it out: Open some tab pages and/or split windows, change your color scheme, etc. then save your session using the \":SaveSession my-first-session\" command. You can now restore this session at any time by executing the \":OpenSession my-first-session\" command.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15792",
+      "filename": "session.zip",
+      "script_version": "1.4.5",
+      "date": "2011-06-01",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter@peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Make it possible to disable automatic loading/saving (suggested by Tommi Kivelä):\n   http://github.com/xolox/vim-session/commit/28a1eaf"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15740",
+      "filename": "session.zip",
+      "script_version": "1.4.4",
+      "date": "2011-05-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter@peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Restore NERDTree buffer after :CloseSession (thanks to Brandon Martin for bug report / feature request :-):\n   http://github.com/xolox/vim-session/commit/e6a4ff2"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15739",
+      "filename": "session.zip",
+      "script_version": "1.4.3",
+      "date": "2011-05-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter@peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Enable opening last used session when starting Vim (thanks to James Cox for suggestion):\n   http://github.com/xolox/vim-session/commit/6855a81\n\n  Remember the 'background' setting:\n   http://github.com/xolox/vim-session/commit/3635adb"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15630",
+      "filename": "session.zip",
+      "script_version": "1.4",
+      "date": "2011-05-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter@peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Make :OpenSession and :CloseSession preserve working directory:\n   https://github.com/xolox/vim-session/commit/ae7ba3a9e99db2f52c7a\n\n  Make :CloseSession close buffers (or they'll keep piling up):\n   https://github.com/xolox/vim-session/commit/cab03c308b5dabaa6cd8\n\nThanks to Brandon Martin for reporting both issues!"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14614",
       "filename": "session.zip",
       "script_version": "1.3.8",

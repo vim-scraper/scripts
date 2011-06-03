@@ -8,6 +8,22 @@
   "install_details": "Edit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0, \nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n\nGetting started:\n\n    1. Add this to your vimrc file:\n\n        runtime macros/tplugin.vim\n        \" Only necessary if you use a non-standard root directory\n        TPluginRoot /home/x/src/repos\n\n    2. Install your plugins/repos in the root directory.\n\n    3. After restarting vim, type :TPluginScan!\n\nAlso available as git repository:\nhttp://github.com/tomtom/tplugin_vim",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15733",
+      "filename": "tplugin.vba",
+      "script_version": "0.12",
+      "date": "2011-05-26",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Run helptags with silent!- vcsdo: Finalize the name of the log buffer as script-local variable- Experimental support for <VIMPLUGIN> tags used in vx* plugins.- .gitignore- Experimental support for parsing *-addon-info.txt and simpler dependency management- s:AutoloadFunction(): Properly support autoload funcs in subdirectories- &rtp wasn't properly updated in certain situations- Experimental: Scan sources for VimEnter autocommands- autoload/tplugin/vcscommand: Adapt to new arguments- FIX: scanning of autocmds: Don't use \\k- autoload/tplugin/fugitive: Don't call #fugitive_utility#VimEnter- SetRoot(): Use inputdialog() to display \"Rescanning roots: Please be patient\" message- TPluginRequire: Remove check for s:done[rootrepo] (over-optimization)- s:TPluginComplete(): show all known repos as completion candidatesMD5 checksum: 8ff9f5f7c97d3e306bb543a60cf16271"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14160",
       "filename": "tplugin.vba",
       "script_version": "0.11",

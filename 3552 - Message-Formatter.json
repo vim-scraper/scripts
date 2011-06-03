@@ -4,9 +4,25 @@
   "summary": "An plugin to ease typing of repetitive of code",
   "name": "Message-Formatter",
   "script_type": "utility",
-  "description": "This plugin allows the simplification of repetitive code fragments, allowing\nmuch faster entry; for example, this text\n        getset  List<String>  names\n\ngets converted to\n        public List<String> getNames()\n        {\n                return m_names;\n        }\n\n        public void setNames( List<String> val )\n        {\n                m_names = val;\n        }\n\nMore importantly, it figures out when you're defining a boolean variable and\nreplaces the \"get\" with \"is\"; thus,\n        getset  boolean  old enough\n\nbecomes\n        public boolean isOldEnough()\n        {\n                return m_oldEnough;\n        }\n\n        public void setOldEnough( boolean val )\n        {\n                m_oldEnough = val;\n        }\n\nObserve how \"old enough\" was automatically camel-cased to \"oldEnough\", and,\nwhen used with \"get\" or \"is\", was also capitalized. The same variable can be\nused over and over again, each time with (if desired) different formatting\ndirectives; for example, this template pattern\n        My name is {john::f_fName} and my full name is {{fName} smith::uq_fullName}.\n\ngets expanded to\n        My name is John and my full name is \"JOHN SMITH\".\n\nObserve, also, how the \"fullName\" directive recursively contained and expanded\nthe fName directive.",
-  "install_details": "Unzip into a directory in your &runtimepath.",
+  "description": "This plugin allows the simplification of repetitive code fragments, allowing\nmuch faster entry; for example, this text\n        getset  List<String>  names\n\ngets converted to\n        public List<String> getNames()\n        {\n                return m_names;\n        }\n\n        public void setNames( List<String> val )\n        {\n                m_names = val;\n        }\n\nMore importantly, it figures out when you're defining a boolean variable and\nreplaces the \"get\" with \"is\"; thus,\n        getset  boolean  old enough\n\nbecomes\n        public boolean isOldEnough()\n        {\n                return m_oldEnough;\n        }\n\n        public void setOldEnough( boolean val )\n        {\n                m_oldEnough = val;\n        }\n\nObserve how \"old enough\" was automatically camel-cased to \"oldEnough\", and,\nwhen used with \"get\" or \"is\", was also capitalized. The same variable can be\nused over and over again, each time with (if desired) different formatting\ndirectives; for example, this template pattern\n        My name is {john::f_fName} and my full name is {{fName} smith::uq_fullName}.\n\ngets expanded to\n        My name is John and my full name is \"JOHN SMITH\".\n\nObserve, also, how the \"fullName\" directive recursively contained and expanded\nthe fName directive.\n\nIn the \"getset\" example, the \"get\" is defined as:\n\nAddlocaltemplate get public {::type} {eval '{type}' ==? 'boolean' ? 'is' : 'get'::get}{::cf_property}()\\n{\\nreturn m_{c_property};\\n}\n\nThe \"set\" is defined as:\n\nAddlocaltemplate set public void set{::cf_property}( {::type} val )\\n{\\nm_{c_property} = val;\\n}\n\nAnd the \"getset\" is defined simply as:\n\nAddlocaltemplate getset {tem get::getTem}\\n\\n{tem set::setTem}\n\nThis allows \"get\" and \"set\" to be used independently (for read-only or write-only properties, for example) and doesn't require duplication of code to define a separate \"getset\".",
+  "install_details": "Source the Vimball archive.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15627",
+      "filename": "MessageFormatter.vba",
+      "script_version": "7.5",
+      "date": "2011-05-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "64",
+        "user_name": "hemlock8",
+        "first_name": "Salman",
+        "last_name": "Halim",
+        "email": "salmanhalim@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New special value: \"tem\" to include other template definitions inline; see :help MessageFormatter_tem.\n"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15612",
       "filename": "MessageFormatter.vba",

@@ -8,6 +8,22 @@
   "install_details": "\t(you will need an up-to-date install of vimball, vimscript#1502, although vim 7.1a or later's vimball is probably ok)\n\n1. vim getscript.vba.gz\n   :so %\n   :q\n2. a) Unix:\n      cd ~/.vim/GetLatest\n   b) Windows:\n      cd ..wherever..\\vimfiles\\GetLatest\n3. mv GetLatestVimScripts.dist GetLatestVimScripts.dat\n4. Edit GetLatestVimScripts.dat to install the plugins in which you're interested.  To the extent that plugin authors have included lines such as\n\n     \" GetLatestVimScripts: [scriptid] 1 [:AutoInstall:] PluginName.vim\n\n   in their plugins, GetLatestVimScripts will be able to construct the GetLatestVimScripts.dat file itself.\n",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15781",
+      "filename": "getscript.vba.gz",
+      "script_version": "33",
+      "date": "2011-05-31",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "96",
+        "user_name": "cec",
+        "first_name": "Charles",
+        "last_name": "Campbell",
+        "email": "drchip@campbellfamily.biz",
+        "homepage": "http://mysite.verizon.net/astronaut/index.html"
+      },
+      "release_notes": "*.xz compression supported\nBug fixes: acd option bypass, fnameescape used instead of escape(), hls problem fixed\n"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=8136",
       "filename": "getscript.vba.gz",
       "script_version": "29",

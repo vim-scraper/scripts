@@ -8,6 +8,22 @@
   "install_details": "Unzip the most recent ZIP archive file (see below) inside your Vim profile directory (usually this is \"~/.vim\" on UNIX and \"%USERPROFILE%\\vimfiles\" on Windows), restart Vim and execute the command \":helptags ~/.vim/doc\" (use \":helptags ~\\vimfiles\\doc\" instead on Windows). Now try it out: Edit a Lua file and within a few seconds semantic highlighting should be enabled automatically!\n\nNote that on Windows a command prompt window pops up whenever LuaInspect is run as an external process. If this bothers you then you can install my shell.vim plug-in (see vimscript #3123) which includes a DLL that works around this issue. Once youve installed both plug-ins it should work out of the box!",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15725",
+      "filename": "luainspect.zip",
+      "script_version": "0.4.10",
+      "date": "2011-05-25",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "14483",
+        "user_name": "xolox",
+        "first_name": "Peter",
+        "last_name": "Odding",
+        "email": "peter@peterodding.com",
+        "homepage": "http://peterodding.com/"
+      },
+      "release_notes": "  Added example to showcase semantic highlighting:\n   http://github.com/xolox/vim-lua-inspect/commit/0249104\n\n  Make g:lua_inspect_path default compatible with Pathogen:\n   http://github.com/xolox/vim-lua-inspect/commit/26e6f35\n\n  Bug fix: Only enable tooltips when supported: (thanks Micheal for the bug report!)\n   http://github.com/xolox/vim-lua-inspect/commit/987eda1"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14034",
       "filename": "luainspect.zip",
       "script_version": "0.4.7",

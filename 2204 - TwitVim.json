@@ -8,6 +8,22 @@
   "install_details": "===========================================================\nFor newer versions that are packaged as Vimball archives, open the vba file and then source it. \n\n    vim twitvim.vba\n    :source %\n\nThen see :help TwitVim-install for further instructions.\n===========================================================\n\nThe instructions below are for older non-vba versions:\n\nFirst, you need to install cURL if it isn't already installed. Download cURL from here: http://curl.haxx.se/\n\nNext, add the script to your Vim plugins directory. The location is platform-dependent. See :help add-plugin for details.\n\nNext, add the following to your .vimrc or _vimrc:\n\n      let twitvim_login = \"USER:PASS\"\n\nReplace USER and PASS with your Twitter username and password.\n\nIf you access the web through a HTTP proxy, add the following line:\n\n      let twitvim_proxy = \"proxyhost:proxyport\"\n\nReplace proxyhost and proxyport with your HTTP proxy address and port number.\n",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15633",
+      "filename": "twitvim-0.6.3.vba",
+      "script_version": "0.6.3",
+      "date": "2011-05-13",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "8120",
+        "user_name": "pcheah",
+        "first_name": "Po Shan",
+        "last_name": "Cheah",
+        "email": "morton@mortonfox.com",
+        "homepage": "http://mortonfox.livejournal.com"
+      },
+      "release_notes": "Auto-expand t.co URLs in timeline displays.\nAdded timeline filtering. \n"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15353",
       "filename": "twitvim-0.6.2.vba",
       "script_version": "0.6.2",

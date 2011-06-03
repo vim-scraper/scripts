@@ -4,9 +4,105 @@
   "summary": "Plugin for WOIM outliner (a system for describing any state or transition)",
   "name": "WOIM.vim",
   "script_type": "ftplugin",
-  "description": "WOIM is a methodology to describe anything - any state, item(s), pattern, action, process, transition, program, instruction set etc. So, you can use it as an outliner, a ToDo list handler, a process design tool, a data modeler, or any other way you want to describe something.\n\nThis plugin does both highlighting and various automatic handling of WOIM lists, like collapsing lists or parts of lists in a sophisticated way.\n\nFor information on WOIM, read the WOIM description in full:\n\n http://isene.com/woim.pdf\n\nINSTRUCTIONS\n\nUse tabs/shifts or * for indentations\n\nUse <SPACE> to toggle one fold\nUse \\0 to \\9, \\a, \\b, \\c, \\d, \\e, \\f to show up to 15 levels expanded\n\nUse <leader>s to remove underlining of States (prefixed with S:)\nUse <leader>S to add underlining of States (prefixed with S:)\nUse <leader>t to remove underlining of Transitions (prefixed with T:)\nUse <leader>T to add underlining of Transitions (prefixed with T:)\n\nUse <leader><SPACE> to go to the next open template element\n(A template element is a WOIM item ending in an equal sign)\n\nSyntax updated at start and every time you leave Insert mode\n",
-  "install_details": "Drop the file in the syntax directory. Add the following to your .vimrc file or create a file named woim.vim with the following and drop that file in the ftdetect directory:\n\nau BufRead,BufNewFile *.woim set filetype=woim",
+  "description": "It's an Outliner, a TODO-list solution, a project management tool, a Business Process Management aid, a data modeler, a Use Case facilitator, a way to describe the human DNA or the history of the universe ;)\n\nWOIM is a methodology to describe anything - any state, item(s), pattern, action, process, transition, program, instruction set etc.\n\nThis plugin does both highlighting and various automatic handling of WOIM lists, like collapsing lists or parts of lists in a sophisticated way.\n\nFor information on WOIM, read the WOIM description in full:\n\n http://isene.com/woim.pdf\n\nINSTRUCTIONS\n\nUse tabs/shifts or * for indentations\n\nUse <SPACE> to toggle one fold\nUse \\0 to \\9, \\a, \\b, \\c, \\d, \\e, \\f to show up to 15 levels expanded\n\nUse <leader>s to remove underlining of States (prefixed with S:)\nUse <leader>S to add underlining of States (prefixed with S:)\nUse <leader>t to remove underlining of Transitions (prefixed with T:)\nUse <leader>T to add underlining of Transitions (prefixed with T:)\n\nUse <leader>v to add a checkbox at start of item or to toggle a checkbox\nUse <leader>V to add/toggle a checkbox with a date stamp for completion\n\nUse \"gr\" (without the quotation marks, signifies \"Goto Ref\") while the cursor is on a WOIM reference to jump to that destination in a WOIM list. Use \"n\" after a \"gr\" to verify that the reference destination is unique.\n\nUse <leader><SPACE> to go to the next open template element\n(A template element is a WOIM item ending in an equal sign)\n\nSyntax updated at start and every time you leave Insert mode\n",
+  "install_details": "Download woim.vba. Then do:\n\nvim woim.vba\n:so %\n:q\n\nThen read the file README_WOIM that appears in your .vim directory.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15796",
+      "filename": "woim.vba",
+      "script_version": "1.4.7",
+      "date": "2011-06-02",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g@isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Changes:\n Modified the GotoRef function (fixed a bug and included feed back)\n Better syntax highlighting for folding in gvim\n Updating the README_WOIM and documentation files + other cosmetic changes\n Added the possibility of disabling/overriding the WOIM plugin key mapping\n Added an ftdetect file into woim.vba\n (Thanks to Sergey Khorev for the last two improvements)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15787",
+      "filename": "woim.vba",
+      "script_version": "1,4,6",
+      "date": "2011-05-31",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g@isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Perfection:   Minor fixes due to a bout of perfectionism.\n\nAt this point I have nothing on the todo list - no fixes to be done and no features I want to implement.\nSo, I am looking for your input as inspiration to take this even further :)"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15768",
+      "filename": "woim.vba",
+      "script_version": "1.4.5",
+      "date": "2011-05-30",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g@isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Major Update; \n\nOverhaul:\n\nCreated the documentation, includin the whole WOIM definition to make it\neasily accessible within VIM.  Added the INSTALL and README files.\n\nCreated a Vimball file (\"woim.vba\") for easy install. Simply do:\n\nvim woim.vba\n:so %\n:q"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15758",
+      "filename": "woim.vim",
+      "script_version": "1.4.2",
+      "date": "2011-05-29",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g@isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "Fixes in 1.4.2:\n\nFixed \"gr\" (Goto Ref) for references with single quotes ('')\n\nAdded the search pattern from \"gr\" to the search register (\"/) so that \"n\" can successively be used to test if the referenced destination is unique (which it should be). "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15743",
+      "filename": "woim.vim",
+      "script_version": "1.4.1",
+      "date": "2011-05-27",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g@isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "New feature: \n\nGoto Reference: With the cursor at a WOIM reference, press \"gr\" to jump to that reference in the WOIM list.\n\nNow you can navigate more easily in WOIM lists."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15699",
+      "filename": "woim.vim",
+      "script_version": "1.4",
+      "date": "2011-05-23",
+      "vim_version": "5.7",
+      "author": {
+        "user_id": "8378",
+        "user_name": "isene",
+        "first_name": "Geir",
+        "last_name": "Isene",
+        "email": "g@isene.com",
+        "homepage": "http://www.geir.isene.com"
+      },
+      "release_notes": "This could have been the long awaited version 1.0 - but instead I decided to synchronize the version numbering of this VIM plugin and the WOIM description itself. From now on the releases will be synchronized, with minor fixes in the VIM plugin released as minor releases (i.e. a fix to 1.4 would be 1.4.1 and would still be on par with the WOIM definition version 1.4). The version 1.4 of the WOIM definition adds time repetition as well as \"checking\" of todo-list items.\n\nThis release:\n\nNew feature: Added the option of checkboxes for items (Thanks to Christopher Truett (VIM script #3584). You can now easily add a checkbox in front of any item by <leader>v and subsequently toggle that checkbox via the same (<leader>v) or <leader>V if you want to add a time stamp to a box that you \"check\" (this also toggles the timestamp if you \"uncheck\" the item).\n\nFixes: Some minor cleanup."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15465",
       "filename": "woim.vim",

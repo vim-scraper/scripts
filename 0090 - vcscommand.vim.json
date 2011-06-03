@@ -8,6 +8,22 @@
   "install_details": "If you are upgrading from the cvscommand.vim script, remove the cvscommand.vim plugin and the cvscommand.txt help file from your system before installing this version.  Also, read the CHANGES.txt file to learn about changes since cvscommand.vim.\n\nFor Vim 7:\n\n  Unzip the installation file.\n  Move the vcscommand.vim, vcscvs.vim, vcssvn.vim, vcssvk.vim, and vcsgit.vim scripts into your plugin directory.\n  Move the vcscommand.txt file into your doc directory and use the ':helptags' command to add it to your help directory (:help add-local-help).\n\nOptionally, you can move the syntax scripts into your syntax directory to get syntax highlighting of annotate result buffers.\n\nFor vim 6.x:\n\nUse a previous version of the script (1.76 of cvscommand.zip).  This only supports CVS.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15797",
+      "filename": "vcscommand-1.99.43.zip",
+      "script_version": "1.99.43",
+      "date": "2011-06-02",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "241",
+        "user_name": "carcajou",
+        "first_name": "Bob",
+        "last_name": "Hiestand",
+        "email": "bob.hiestand@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Important:  Don't try to escape executable names for shell execution. This means you'll need to make sure you've escaped special executable names for your particular system correctly.\nRespect 'no_plugin_maps'.\nfix escaping in VCSCommandChdir\nAccount for space used by 'number' option when performing split annotate.\nRestore cursorbind as part of vimdiff restore.\nHandle a difference between &enc and &tenc\nAlways use [bang] after :normal to avoid user remaps.\nAdded VCSCommandSetVCSType()\n\n"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=13751",
       "filename": "vcscommand-1.99.42.zip",
       "script_version": "1.99.42",

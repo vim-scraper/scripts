@@ -4,9 +4,57 @@
   "summary": "Ultimate Vim blogging plugin",
   "name": "UltraBlog",
   "script_type": "utility",
-  "description": "The biggest difference between UltraBlog.vim and other Vim blogging scripts is that UltraBlog.vim supplies two modes: the first one is editor mode, in which users can manage posts and pages in their blogs, just like other Vim blogging scripts; the second is client mode, in which posts and pages are stored in a local SQLite database, in this way, it does not only OPERATE on posts/pages in blogs but also MANAGE them locally. So UltraBlog.vim is an integrated blogging client more than just a blog editor.\n\nYou will find UltraBlog.vim very useful when you write posts in some light weight markup languages, such as Markdown, LaTeX, reStructuredText and Textile. With posts/pages stored locally, you can edit them in any light weight markup language at any time even after a long time when they were published, and update the online copies in HTML syntax. \n\nThis is the exact original intention for which I wrote UltraBlog.vim. After years of blogging, I've formed the habbit that writing posts in Markdown syntax to save time, and I think it is good to always keep my posts updated, rather than post it and forget it. But I found it hard to update the posted copies after modifying the local Markdown source files with other Vim blogging plugins. \n\nThough it is packaged as a vimball and with a filename as UltraBlog.vba, I prefer UltraBlog.vim as the plugins name for that .vim looks very hacker.\n\nHere is a post written in Chinese describing the motion for which I wrote UltraBlog.vim:\n\nhttp://sinolog.it/?p=1976\n\nRefer to the plugin's page for detail information:\n\nhttp://sinolog.it/?p=1894\n\n*Commands:*\n\n:UBList [local|remote]\n:UBNew [markdown|html|rst|textile|latex]\n:UBOpen [local|remote] [id]\n:UBSave\n:UBSend [draft|publish|private|pending]\n:UBPageList [local|remote]\n:UBPageNew [markdown|html|rst|textile|latex]\n:UBPageOpen {id} [local|remote]\n:UBPageSave\n:UBPageSend [draft|publish|private|pending]\n:UBUpload {file_path}\n:UBDel {id} [local|remote]\n:UBPreview\n:UBThis [markdown|html|rst|textile|latex]\n:UBPageThis [markdown|html|rst|textile|latex]\n:UBConv {to_syntax} [from_syntax]",
+  "description": "The biggest difference between UltraBlog.vim and other Vim blogging scripts is that UltraBlog.vim supplies two modes: the first one is editor mode, in which users can manage posts and pages in their blogs, just like other Vim blogging scripts; the second is client mode, in which posts and pages are stored in a local SQLite database, in this way, it does not only OPERATE on posts/pages in blogs but also MANAGE them locally. So UltraBlog.vim is an integrated blogging client more than just a blog editor.\n\nYou will find UltraBlog.vim very useful when you write posts in some light weight markup languages, such as Markdown, LaTeX, reStructuredText and Textile. With posts/pages stored locally, you can edit them in any light weight markup language at any time even after a long time when they were published, and update the online copies in HTML syntax. \n\nThis is the exact original intention for which I wrote UltraBlog.vim. After years of blogging, I've formed the habbit that writing posts in Markdown syntax to save time, and I think it is good to always keep my posts updated, rather than post it and forget it. But I found it hard to update the posted copies after modifying the local Markdown source files with other Vim blogging plugins. \n\nThough it is packaged as a vimball and with a filename as UltraBlog.vba, I prefer UltraBlog.vim as the plugins name for that .vim looks very hacker.\n\nHere is a post written in Chinese describing the motion for which I wrote UltraBlog.vim:\n\nhttp://sinolog.it/?p=1976\n\nRefer to the plugin's page for detail information:\n\nhttp://sinolog.it/?p=1894\n\n*Commands:*\n\n:UBList [local|remote]\n:UBNew [markdown|html|rst|textile|latex]\n:UBOpen [local|remote] [id]\n:UBSave\n:UBSend [draft|publish|private|pending]\n:UBPageList [local|remote]\n:UBPageNew [markdown|html|rst|textile|latex]\n:UBPageOpen {id} [local|remote]\n:UBUpload {file_path}\n:UBDel {id} [local|remote]\n:UBPreview\n:UBThis [markdown|html|rst|textile|latex]\n:UBPageThis [markdown|html|rst|textile|latex]\n:UBConv {to_syntax} [from_syntax]",
   "install_details": "1. Make sure your Vim has support for Python.\n2. Install sqlalchemy, pandoc, python-markdown or python-markdown2 for python\n3. Add the following configurations to your vimrc:\n\nlet ub_blog = {'login_name':'admin',\n            &#039password':'pass2011',\n            &#039xmlrpc':'http://www.sample.com/xmlrpc.php',\n            &#039db':'$VIM/UltraBlog.db'\n            \\}",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15767",
+      "filename": "UltraBlog.vba",
+      "script_version": "2.2.0",
+      "date": "2011-05-30",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "* Change: Merge :UBSave and :UBPageSave to :UBSave, merge :UBSend and :UBPageSend to :UBSend.\n* Feature: Add an option ub_tmpl_img_url to customize a link template string for the image uploaded by :UBUpload."
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15747",
+      "filename": "UltraBlog.vba",
+      "script_version": "2.1.0",
+      "date": "2011-05-28",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "* Change: Increase the requirement to SQLAlchemy to version 0.7 or newer.\n* Feature: Now posts/pages can be opened in a new tab or splitted window.\n* Feature: Add options to let users customize hotkeys:\n    * ub_hotkey_open_item_in_current_view\n    * ub_hotkey_open_item_in_splitted_view\n    * ub_hotkey_open_item_in_tabbed_view\n    * ub_hotkey_delete_item"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15628",
+      "filename": "UltraBlog.vba",
+      "script_version": "2.0.1",
+      "date": "2011-05-12",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "28991",
+        "user_name": "lenin",
+        "first_name": "lenin",
+        "last_name": "lee",
+        "email": "lenin.lee@gmail.com",
+        "homepage": "http://sinolog.it"
+      },
+      "release_notes": "* Bugfix:  Uploading media files may fail on Windows.\n* Bugfix:  An exception may be raised when Vim starts with no proper configuration for UltraBlog.vim or some prerequisites are not met."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15457",
       "filename": "UltraBlog.vba",

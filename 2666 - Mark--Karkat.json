@@ -8,6 +8,22 @@
   "install_details": "INSTALLATION\nThis script is packaged as a vimball. If you have the \"gunzip\" decompressor\nin your PATH, simply edit the *.vba.gz package in Vim; otherwise, decompress\nthe archive first, e.g. using WinZip. Inside Vim, install by sourcing the\nvimball or via the :UseVimball command. \n    vim mark.vba.gz\n    :so %\nTo uninstall, use the :RmVimball command. \n\nDEPENDENCIES\n- Requires Vim 7.1 with \"matchadd()\", or Vim 7.2 or higher. \n\nCONFIGURATION\nYou may define your own colors or more than the default 6 highlightings in\nyour vimrc file (or anywhere before this plugin is sourced), in the following\nform (where N = 1..): \n    highlight MarkWordN ctermbg=Cyan ctermfg=Black guibg=#8CCBEA guifg=Black\nHigher numbers always take precedence and are displayed above lower ones. \n\nThe search type highlighting (in the search message) can be changed via: \n    highlight link SearchSpecialSearchType MoreMsg\n\nBy default, any marked words are also added to the search (/) and input (@)\nhistory; if you don't want that, remove the corresponding symbols from: \n    let g:mwHistAdd = '/@'\nTo enable the automatic restore of marks from a previous Vim session:\n    let g:mwAutoLoadMarks = 1\nTo turn off the automatic persistence of marks across Vim sessions: \n    let g:mwAutoSaveMarks = 0\nYou can still explicitly save marks via :MarkSave. \n\nYou can use different mappings by mapping to the <Plug>Mark... mappings (use\n\":map <Plug>Mark\" to list them all) before this plugin is sourced. \n\nThere are no default mappings for toggling all marks and for the :MarkClear\ncommand, but you can define some yourself: \n    nmap <Leader>M <Plug>MarkToggle\n    nmap <Leader>N <Plug>MarkAllClear\n\nTo remove the default overriding of * and #, use: \n    nmap <Plug>IgnoreMarkSearchNext <Plug>MarkSearchNext\n    nmap <Plug>IgnoreMarkSearchPrev <Plug>MarkSearchPrev",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15663",
+      "filename": "mark.vba.gz",
+      "script_version": "2.5.1",
+      "date": "2011-05-17",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "9713",
+        "user_name": "inkarkat",
+        "first_name": "Ingo",
+        "last_name": "Karkat",
+        "email": "ingo@karkat.de",
+        "homepage": "http://ingo-karkat.de/"
+      },
+      "release_notes": "- FIX: == comparison in s:DoMark() leads to wrong regexp (\\A vs. \\a) being cleared when 'ignorecase' is set. Use case-sensitive comparison ==# instead. \n- Refine :MarkLoad messages \n- Add whitespace-indifferent visual mark configuration example. Thanks to Greg Klein for the suggestion. "
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15603",
       "filename": "mark.vba.gz",
       "script_version": "2.5.0",

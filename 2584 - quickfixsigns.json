@@ -4,9 +4,25 @@
   "summary": "Mark quickfix & location list items with signs",
   "name": "quickfixsigns",
   "script_type": "utility",
-  "description": "http://github.com/tomtom/quickfixsigns_vim\n\nMark intersting lines with signs:\n\n    - items in the quickfix and location lists (e.g. compilation errors)\n    - marks a-zA-Z\n    - relative line numbers\n    - changes (with respect to the version in the VCS)\n\nOther lists can be configured via the |g:quickfixsigns_lists| variable.\n\nThe attached text is displayed in a balloon when hovering with the mouse \nover the sign.\n",
+  "description": "http://github.com/tomtom/quickfixsigns_vim\n\nMark intersting lines with signs:\n\n    - items in the quickfix and location lists (e.g. compilation errors)\n    - marks a-zA-Z\n    - relative line numbers (remove marks after the cursor moved)\n    - changes (with respect to the version in the VCS: git, mercurial, subversion)\n\nOther lists can be configured via the |g:quickfixsigns_lists| variable.\n\nThe attached text is displayed in a balloon when hovering with the mouse \nover the sign.\n",
   "install_details": "Requirements: has('signs')\n\nEdit the vba file and type: >\n\n    :so %\n\nSee :help vimball for details. If you have difficulties or use vim 7.0,\nplease make sure, you have the current version of vimball\n(vimscript #1502) installed or update your runtime.\n",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15669",
+      "filename": "quickfixsigns.vba",
+      "script_version": "0.14",
+      "date": "2011-05-18",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "4037",
+        "user_name": "t.link",
+        "first_name": "Tom",
+        "last_name": "Link",
+        "email": "micathom@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- Take more care to run autocommands on the right buffer- vcsdiff: always run the vcs command in the buffer's directory- make last_run buffer-local- make last_run buffer-local- QuickfixsignsBalloon: Error after recent change- .gitignore- Merge branch 'master' of github.com:tomtom/quickfixsigns_vim- Support for git combined diff format- Don't run vcsdiff#GetList() in special buffers (reported by rememberthemer)- Doc review- Do not change directory to current buffer's.- Included the doc fixes by blueyed into the doc template.- Merge git://github.com/blueyed/quickfixsigns_vim- quickfixsigns#vcsdiff#GetList(): Ignore files that are not readable- s:PlaceSign(): E706: Variable type mismatch for: item https://github.com/tomtom/quickfixsigns_vim/issues/#issue/7- s:SetItemId() returns {} if item.bufnr == -1 (fix issue #7?)- quickfixsigns#RelNumbersOnce(): temporarily enable &cul and &cuc- s:ClearBuffer(): Check bufnr(def.bufnr) != -1 (issue #9)- quickfixsigns#RelNumbersOnce(): Remove highlighting also on TabLeave and WinLeave events- Clear*(): duplicate code- always_new: avoid wrong optimizations for certain sign classes (e.g. vcsdiff), fixes #10MD5 checksum: 542b6deeb5a0505f5bd6cfcaaeca9c57"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=14643",
       "filename": "quickfixsigns.vba",
