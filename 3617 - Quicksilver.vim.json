@@ -1,0 +1,59 @@
+{
+  "script_id": "3617",
+  "display_name": "Quicksilver.vim",
+  "summary": "Quickly open files from inside VIM.",
+  "name": "Quicksilver.vim",
+  "script_type": "utility",
+  "description": "Quicksilver is a VIM plugin whose purpose is to quicken the process of\nopening files from inside VIM.\n\n# Preview\n\nVideo: http://www.youtube.com/watch?v=RDsey4YqpHs\nScreenshot: http://farm4.static.flickr.com/3383/5804126014_072806d823_z.jpg\n\n# Usage\n\nBy default, `\\q` will activate the Quicksilver buffer and switch to\ninsert mode. Typing any key will update the list of suggestions and\npressing `CR` will open the first item in the suggestion list. Use `C-c`\nto quickly close the buffer.\n\nYou may cycle through the suggestion list using `Tab` and `S-Tab`. `CR`\nwill open the current suggestion (first item in the list).\n\nPressing `CR` when there is no pattern will go up a directory.\n\n`C-w` clears the entire pattern. If there is no pattern, it will go up a\ndirectory.\n\n`C-t` toggles between if pattern and filename case should be ignored or\nnot.\n\n`C-f` turns on `fuzzy matching`. Fuzzy matching will match any filename\nthat contains every character in the given pattern, no matter the order\nof the characters. For example: the pattern `foo` will match `foo`, as\nwell as `oof`, `ofo` and `foob`.\n\n`C-n` turns on `normal matching`. Normal matching will match any\nfilename that contains the exact phrase within it. For example: the\npattern `foo` will match `foo` and `foob` but not `ofo` or `oof`.\n\nIf you prefer fuzzy matching and would like Quicksilver to default to it\ninstead of normal matching then you can add `let g:QSMatchFn = 'fuzzy'`\nto your `.vimrc`.\n\nIf a file with the given pattern does not exist then it will be opened\nfor editing. If a pattern ends in `/`, quicksilver will create a\nnew folder, change its CWD to that folder and remain in insert mode\nexpecting a file name.\n\nPatterns that start or end in a wildcard (`*`) are treated as glob\npatterns. For example, the pattern `*.md` will open all the files that\nhave the extension `.md` in the CWD.\n\n# Requirements\n\n* VIM 7.0+ compiled with +python\n* Python 2.6+\n\n[1]: http://github.com/tpope/vim-pathogen\n",
+  "install_details": "Use pathogen (http://github.com/tpope/vim-pathogen) and clone \nthe github repository (https://github.com/Bogdanp/quicksilver.vim) \ninto your ~/.vim/bundle directory or download quicksilver.vim to\nyour ~/.vim/plugin/ directory.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15838",
+      "filename": "quicksilver.vim",
+      "script_version": "0.3.0",
+      "date": "2011-06-08",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27766",
+        "user_name": "bogdanp",
+        "first_name": "Bogdan",
+        "last_name": "Popa",
+        "email": "popa.bogdanp@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "New in version 0.3.0:\n\n* Allow the user to set a default match function in their .vimrc\n* Suggestions can now be cycled through"
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15826",
+      "filename": "quicksilver.vim",
+      "script_version": "0.2.7",
+      "date": "2011-06-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27766",
+        "user_name": "bogdanp",
+        "first_name": "Bogdan",
+        "last_name": "Popa",
+        "email": "popa.bogdanp@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Version 0.2.7:\n\n* Allow the user to set a default match function in their vimrc. "
+    },
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15822",
+      "filename": "quicksilver.vim",
+      "script_version": "0.2.6",
+      "date": "2011-06-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "27766",
+        "user_name": "bogdanp",
+        "first_name": "Bogdan",
+        "last_name": "Popa",
+        "email": "popa.bogdanp@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

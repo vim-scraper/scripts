@@ -1,0 +1,27 @@
+{
+  "script_id": "3619",
+  "display_name": "Buffergator",
+  "summary": "Buffer listing, selection, and navigation utility",
+  "name": "Buffergator",
+  "script_type": "utility",
+  "description": "Buffergator is a plugin for listing, navigating between, and selecting buffers\nto edit. Upon invocation, a \"catalog\" of listed buffers are displayed in a\nseparate new window split (vertical or horizontal, based on user options;\ndefault = vertical).  From this \"buffer catalog\", a buffer can be selected and\nopened in an existing window, a new window split (vertical or horizontal), or a\nnew tab page.\n\nSelected buffers can be \"previewed\", i.e. opened in a window or tab page, but\nwith focus remaining in the buffer catalog. Even better, you can \"walk\" up and\ndown the list of buffers shown in the catalog by using <C-N> (or <SPACE>) /\n<C-P> (or <C-SPACE>). These keys select the next/previous buffer in succession,\nrespectively, opening it for preview without leaving the buffer catalog\nviewer.\n\nBy default, Buffergator provides global key maps that invoke its main\ncommands: \"<Leader>b\" to open, \"<Leader>B\" to close. If you prefer to map\nother keys, or do not want any keys mapped at all, set\n\"g:buffergator_suppress_keymaps\" to 1 in your $VIMRUNTIME.\n\nDetailed usage description given in the help file, which can be viewed on-line\nhere:\n\n    http://github.com/jeetsukumaran/vim-buffergator/blob/master/doc/buffergator.txt\n\nSource code repository can be found here:\n\n    http://github.com/jeetsukumaran/vim-buffergator\n\nNOTE: There are many other plugins that provide similar functionality. This\nplugin is very much in the \"BufExplorer\" and \"SelectBuf\" vein, in that it\nprovides a full-window buffer \"view\" of the buffers. I wanted a plugin that (a)\nlisted the loaded buffers in a (optionally-)persistant \"drawer\", (b) allowed me\nto preview buffers without leaving the drawer, and (c) allowed me to walk up\nand down the list of buffers, previewing them, but without leaving the drawer.\nNone of the existing plugins did this (as far as I know), and hence I rolled\nout this one. The other plugins provide more functionality with respect to\nother operations (e.g., buffer management), that I did not have an immediate\nneed for, so I did not incorporate it into this plugin. \n\n",
+  "install_details": "If Pathogen is installed, you can install Buffergator by unpacking the source\narchive in $VIMRUNTIME/bundle.  Otherwise, unpack the source archive and copy\n\"buffergator.vim\" to $VIMRUNTIME/plugin and \"buffergator.txt\" to\n$VIMRUNTIME/doc.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15827",
+      "filename": "vim-buffergator-v1.0.0-1-g4a7a85e.tar.gz",
+      "script_version": "1.0.0",
+      "date": "2011-06-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19500",
+        "user_name": "jeetsukumaran",
+        "first_name": "Jeet",
+        "last_name": "Sukumaran",
+        "email": "jeetsukumaran@gmail.com",
+        "homepage": "http://jeetworks.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

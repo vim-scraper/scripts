@@ -8,6 +8,22 @@
   "install_details": "mkdir ~/bin\ncp vimpager ~/bin\nchmod +x ~/bin/vimpager\n\n# put these in your ~/.bashrc or ~/.zshrc\nexport PAGER=~/bin/vimpager\nalias less=$PAGER\nalias zless=$PAGER\n\nPut the following into your ~/.vimrc if you want to use gvim/MacVim as your pager window:\n\nlet vimpager_use_gvim = 1\n\nCygwin notes:\n\nThe Cygwin gvim is very buggy, vimpager works correctly with the native\nWindows gvim, just put it in your PATH.",
   "versions": [
     {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15811",
+      "filename": "vimpager",
+      "script_version": "1.5.2",
+      "date": "2011-06-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "11267",
+        "user_name": "Caelum",
+        "first_name": "Rafael",
+        "last_name": "Kitover",
+        "email": "rkitover@io.com",
+        "homepage": ""
+      },
+      "release_notes": "* turn off terminal reset on OSX"
+    },
+    {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15696",
       "filename": "vimpager",
       "script_version": "1.5.1",

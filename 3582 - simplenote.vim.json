@@ -4,9 +4,25 @@
   "summary": "plugin to interact with the simplenote web service",
   "name": "simplenote.vim",
   "script_type": "utility",
-  "description": "# simplenote.vim\nA vim plugin to interact with the [simplenote][1] API.\nNow you can take simple notes directly from your favourite editor.\n\n## Installation\nJust copy `simplenote.vim` into your plugin folder. But you really want to use\n[pathogen][5] for your plugin management.\n\nYour credentials have to be stored in your `vimrc`:\n\n    let g:SimpleNoteUserName = \"your simplenote username\"\n    let g:SimpleNotePassword = \"your simplenote password\"\n\n## Usage\nThe plugin provides the following commands to interact with Simplenote:\n\n    SimpleNote -l\n\nLists all the notes in your account, together with its first line.\n\n    SimpleNote -d\n\nDeletes the note in your current buffer.\n\n    SimpleNote -u\n\nUpdates the note in the current buffer with its content.\n\n## Dependencies\nVersion 2 of the SimpleNote API relies heavily on JSON. As JSON and VimL don't\nreally play nice together, basic parts of this plugin are implemented in\npython. Therefore your vim has to be compiled with python support in order to\nuse this plugin.\n\n## Development\n- [Planned features](http://www.pivotaltracker.com/projects/288621)\n- [Bugs and issue tracker](https://github.com/mrtazz/simplenote.vim/issues)\n\n## Contribute\n- Fork the project\n- Make your additions/fixes/improvements (Bonus points for topic branches)\n- Send a pull request\n\n## Thanks\n[mattn][2], [Tim Pope][3] and [Scrooloose][4] who write awesome vim plugins\nwhich I took as a basis to learn how to write vim plugins.\n\n[1]: http://simplenoteapp.com/\n[2]: http://github.com/mattn\n[3]: http://github.com/tpope\n[4]: http://github.com/scrooloose\n[5]: http://github.com/tpope/vim-pathogen",
+  "description": "# simplenote.vim\nA vim plugin to interact with the [simplenote][1] API. You can create an\naccount [here](https://simple-note.appspot.com/create) if you don't already\nhave one.\nNow you can take simple notes directly from your favourite editor.\n\n## Installation\nJust copy `simplenote.vim` into your plugin folder. But you really want to use\n[pathogen][5] for your plugin management.\n\nYour credentials have to be stored in your `vimrc`:\n\n    let g:SimplenoteUsername = \"your simplenote username\"\n    let g:SimplenotePassword = \"your simplenote password\"\n\nIf you don't want to have the credentials in your `vimrc` (if you manage it\nwith git for example), you can just set the variables in a different file (like\n`~/.simplenoterc`) and source it with `source ~/.simplenoterc` in your `vimrc`.\n\n## Usage\nThe plugin provides several commands to interact with your Simplenote account.\nIn order to retrieve a list of your notes execute\n\n    :Simplenote -l\n\nThis opens a new scratch buffer with a line-wise listing of your notes. You can\nnavigate through these with the arrow keys and enter a note on hitting\n`Return`. Now that you see the content of the note, you can interact with this\nspecific note:\n\n    :Simplenote -u\n\nupdates the content of the current note with the content of the current buffer.\nIf you want to delete the note, execute\n\n    :Simplenote -d\n\nThis moves the current note to the trash.\n\n## Dependencies\nVersion 2 of the SimpleNote API relies heavily on JSON. As JSON and VimL don't\nreally play nice together, basic parts of this plugin are implemented in\npython. Therefore your vim has to be compiled with python support in order to\nuse this plugin.\n\n## Development\n- [Planned features](http://www.pivotaltracker.com/projects/288621)\n- [Bugs and issue tracker](https://github.com/mrtazz/simplenote.vim/issues)\n\n## Contribute\n- Fork the project\n- Branch off develop\n- Make your additions/fixes/improvements\n- Send a pull request\n\n## Thanks\n[mattn][2], [Tim Pope][3] and [Scrooloose][4] who write awesome vim plugins\nwhich I took as a basis to learn how to write vim plugins.\n\n[1]: http://simplenoteapp.com/\n[2]: http://github.com/mattn\n[3]: http://github.com/tpope\n[4]: http://github.com/scrooloose\n[5]: http://github.com/tpope/vim-pathogen\n",
   "install_details": "copy simplenote.vim into your plugin folder. You need vim to be compiled with +python.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15835",
+      "filename": "simplenote.vim",
+      "script_version": "0.2.0",
+      "date": "2011-06-07",
+      "vim_version": "7.3",
+      "author": {
+        "user_id": "30509",
+        "user_name": "mrtazz",
+        "first_name": "Daniel",
+        "last_name": "Schauenberg",
+        "email": "d@unwiredcouch.com",
+        "homepage": "http://unwiredcouch.com"
+      },
+      "release_notes": "UI changes and several general improvements"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15620",
       "filename": "simplenote.vim",

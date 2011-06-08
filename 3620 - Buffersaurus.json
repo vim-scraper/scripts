@@ -1,0 +1,27 @@
+{
+  "script_id": "3620",
+  "display_name": "Buffersaurus",
+  "summary": "A Vim Plugin for Searching and Indexing Across Buffers (with Context!)",
+  "name": "Buffersaurus",
+  "script_type": "utility",
+  "description": "Buffersaurus is a plugin for searching and indexing the contents of buffers\nfor regular expression patterns or collections of regular expression patterns.\nResults are displayed in separate buffer, and can be (optionally) viewed with\nuser-specifiable lines of context (i.e., a number of lines before and/or after\nthe line matching the search pattern) or filtered for specific patterns.\n\nGlobal commands provided include (among others):\n\n  :Bsgrep[!] {pattern}\n\n    Search all buffers (or just current buffer if \"!\" given) for regular\n    expression pattern, {pattern}.\n\n  :Bstoc[!]\n\n    Construct a \"table-of-contents\" consisting of filetype-dependent\n    \"important\" patterns (e.g. class and method/function definitions).\n\nOther commands include those for filtering results, jumping to next/previous\nmatching line without opening the catalog, searching for special user-defined\nterms (\"Bsterm\") etc.\n\nThe results list can be browsed/navigated using all the usual Vim movement\ncommands. Selected lines can be opened in the previous window, a new window\nsplit (vertical or horizontal), or a new tab page. Context can be toggled (i.e.\nshow a user-specified number of lines before or after the matching line).\nResults are grouped and sorted by filename, and then by line number, but can\nalso be ungrouped and sorted lexically.\n\nDetailed usage description is given in the help file, which can be viewed\non-line here:\n\n    http://github.com/jeetsukumaran/vim-buffersaurus/blob/master/doc/buffersaurus.txt\n\nSource code repository can be found here:\n\n    http://github.com/jeetsukumaran/vim-buffersaurus\n\n",
+  "install_details": "If Pathogen is installed, you can install Buffersaurus by unpacking the source\narchive in $VIMRUNTIME/bundle.  Otherwise, unpack the source archive and copy\n\"buffersaurus.vim\" to $VIMRUNTIME/plugin and \"buffersaurus.txt\" to\n$VIMRUNTIME/doc.\n",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15828",
+      "filename": "vim-buffersaurus-v1.0.0.tar.gz",
+      "script_version": "1.0.0",
+      "date": "2011-06-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "19500",
+        "user_name": "jeetsukumaran",
+        "first_name": "Jeet",
+        "last_name": "Sukumaran",
+        "email": "jeetsukumaran@gmail.com",
+        "homepage": "http://jeetworks.org"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

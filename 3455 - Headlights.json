@@ -4,9 +4,25 @@
   "summary": "A Vim plugin that provides a TextMate-like 'Bundles' menu.",
   "name": "Headlights",
   "script_type": "utility",
-  "description": "Headlights is a Vim plugin that helps you manage your plugins (bundles). It shows you the plugins you have installed, and reveals their associated commands, mappings, and script files.\n\nHeadlights works by scraping Vim's internal commands and using Python to generate the fancy menus. (Tip: you need a version of Vim compiled with Python support.)\n\nhttps://github.com/mbadran/headlights",
-  "install_details": "- Download the source archive.\n\n- Expand the source archive in your .vim dir (I trust you use Pathogen).\n\n- Add the following line to your .vimrc:\n\nexecute \"HeadlightsTurnOn\"\n\n(This step is necessary to allow all plugins to load before inspecting them.)\n\n- Restart Vim.",
+  "description": "Headlights is a Vim plugin that creates a TextMate like Bundles menu.\n\nHeadlights sheds light on what plugins are installed and how to use them. It creates a menu for each plugin, scraping together docs, commands, mappings, abbreviations, functions, and script files.\n\nCombined with a powerful bundle manager like Vundle, Headlights will improve your Vim user experience.\n\nHere, have a screenshot: https://github.com/mbadran/headlights/raw/master/headlights_ss.png\n\nSee the GitHub repository for more details: https://github.com/mbadran/headlights",
+  "install_details": "NOTE: Headlights requires a graphical version of Vim with Python support.\n\n# The Vundle Way:\n\n1. Add the following line to the Vundle section in your .vimrc:\n\nBundle 'Headlights'\n\n2. Run the following Vim command:\n\nBundleInstall\n\n# The Manual Way:\n\n1. Download the source archive.\n\n2. Expand the contents of the Headlights plugin directory into your .vim/plugin/ directory.\n\n3. Launch Vim.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15808",
+      "filename": "headlights_1.1.zip",
+      "script_version": "1.1",
+      "date": "2011-06-05",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "26833",
+        "user_name": "mbadran",
+        "first_name": "Mohammed",
+        "last_name": "Badran",
+        "email": "mebadran@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "- streamlined the menu layout\n- fixed the debug mode feature\n- added a debug menu for debug mode\n- added an 'occurrences' help option (:helpgrep)\n- moved vim plugins/bundles to their own menu (runtime)\n- fixed several minor issues\n- refactored and cleaned up code"
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15032",
       "filename": "headlights.zip",

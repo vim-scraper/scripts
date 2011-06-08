@@ -4,9 +4,25 @@
   "summary": "vim plugin to reflesh your browser. his plugin works only MacOS.",
   "name": "browsereload-mac.vim",
   "script_type": "utility",
-  "description": "========================\nbrowsereload-mac.vim\n========================\n\nDescription\n--------------------\n\nvim plugin to reflesh your browser. \nthis plugin works only MacOS.\n\nRequired\n--------------------\n\nosascript(AppleScript command)\n\nInstallation\n--------------------\n\n::\n\n wget https://github.com/tell-k/vim-browsereload-mac.vim/tarball/master -O browsereload-mac-vim.tar.gz\n tar xvzf browsereload-mac-vim.tar.gz\n mv tell-k-vim-browsereload-mac.vim-* browsereload-mac-vim\n cp -pr ./browsereload-mac-vim/plugin/browsereload-mac.vim ~/.vim/plugin/ \n\nsee install.sh\n\nUsage\n--------------------\n\nbrowser reload::\n\n :Cr  //reload \"Google Chrome\"\n :Fr  //reload \"Firefox\"\n :Sr  //reload \"Safari\"\n :Or  //reload \"Opera\"\n :Ar  //reload ubove all browser\n\nstart auto reload::\n\n :CrStart  \n :FrStart  \n :SrStart  \n :OrStart  \n :ArStart  \n\nstop auto reload::\n\n :CrStop\n :FrStop\n :SrStop\n :OrStop\n :ArStop\n\n\nSettings\n--------------------\n\nafter reflesh browser. forcus \"Terminal\" apps.\n\nif you wan to change fourcus application, \nchange variables \"g:returnApps\" to your appliation.\n\n::\n\n \"change this variables\n let g:returnApp = \"Terminal\" ",
+  "description": "========================\nbrowsereload-mac.vim\n========================\n\nDescription\n--------------------\n\nvim plugin to reflesh your browser. \nthis plugin works only MacOS.\n\nRequired\n--------------------\n\nosascript(AppleScript command)\n\nInstallation\n--------------------\n\n::\n\n wget https://github.com/tell-k/vim-browsereload-mac/tarball/master -O browsereload-mac-vim.tar.gz\n tar xvzf browsereload-mac-vim.tar.gz\n mv tell-k-vim-browsereload-mac-* browsereload-mac-vim\n cp -pr ./browsereload-mac-vim/plugin/browsereload-mac.vim ~/.vim/plugin/ \n\nsee also install.sh\n\nUsage\n--------------------\n\nbrowser reload::\n\n :ChromeReload      //reload \"Google Chrome\"\n :FirefoxReload     //reload \"Firefox\"\n :SafariReload      //reload \"Safari\"\n :OperaReload       //reload \"Opera\"\n :AllBrowserReload  //reload all browser\n\nstart auto reload::\n\n :ChromeReloadStart  \n :FirefoxReloadStart  \n :SafariReloadStart  \n :OperaReloadStart  \n :AllBrowserReloadStart  \n\nstop auto reload::\n\n :ChromeReloadStop\n :FirefoxReloadStop\n :SafariReloadStop\n :OperaReloadStop\n :AllBrowserReloadStart\n\n\nSettings\n--------------------\n\nafter reload browser. forcus \"Terminal\" apps.\n\nif you want to change fourcus application, \nchange variables \"g:returnApps\" to your appliation.\n\n::\n\n \"change this variables\n let g:returnApp = \"Terminal\" \n\nif you want to stop returnApp, \nchange variables \"g:returnAppFlag\" to 0\n\n::\n\n \"default is 1\n let g:returnAppFlag = 1\n\nif you want old style commad, \nwrite this setting in your .vimrc\n\n::\n\n \"reload\n command! -bar Cr silent ChromeReload\n command! -bar Fr silent FirefoxReload\n command! -bar Sr silent SafariReload\n command! -bar Or silent OperaReload\n command! -bar Ar silent AllBrowserReload\n \"auto reload start\n command! -bar CrStart silent ChromeReloadStart\n command! -bar FrStart silent FirefoxReloadStart\n command! -bar SrStart silent SafariReloadStart\n command! -bar OrStart silent OperaReloadStart\n command! -bar ArStart silent AllBrowserReloadStart\n \"auto reload stop\n command! -bar CrStop silent ChromeReloadStop\n command! -bar FrStop silent FirefoxReloadStop\n command! -bar SrStop silent SafariReloadStop\n command! -bar OrStop silent OperaReloadStop\n command! -bar ArStop silent AllBrowserReloadStop\n",
   "install_details": "",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15800",
+      "filename": "browsereload-mac-v1.0.1.zip",
+      "script_version": "1.0.1",
+      "date": "2011-06-03",
+      "vim_version": "7.2",
+      "author": {
+        "user_id": "31622",
+        "user_name": "tell-k",
+        "first_name": "tell",
+        "last_name": "k",
+        "email": "ffk2005@gmail.com",
+        "homepage": "http://d.hatena.ne.jp/tell-k/"
+      },
+      "release_notes": "change reload command name. and add optional setting \"returnAppFlag\""
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15789",
       "filename": "browsereload-mac-v1.0.0.zip",

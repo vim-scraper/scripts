@@ -4,9 +4,25 @@
   "summary": "A nautilus python extension which adds several menu items to nautilus for gvim",
   "name": "nautilus-py-vim",
   "script_type": "utility",
-  "description": "Homepage and screenshot: http://xuhdev.github.com/nautilus-py-vim\n\n\nnautilus-py-vim is a nautilus extension written in python, which adds several\nmenu items in the nautilus context menu for gvim, which would popup when right\nclicking on the file in nautilus file manager, just like gVim on Windows.\n\nTo install this extension, first make sure that you have installed the\nnautilus python extension(http://projects.gnome.org/nautilus-python):\nOn Fedora:          # yum install nautilus-python\nOn Debian/Ubuntu:   # apt-get install python-nautilus\n\nAfter that, just run \"install.sh\":\n\n$ ./install.sh\n\nThe above command would make this extension available to you only, not other\nusers. If you want every user on the machine could use this extension, run the\ninstall.sh with root privilege:\n\n# ./install.sh\n\nIf you encounter any problem when executing the command above, try to\nexecute \"bash install.sh\" or \"ksh install.sh\".\n\nThen restart nautilus(execute \"nautilus -q\") and try to right click on the\nfile(s) you want to edit, you will see the changes in the context menu(\"Edit\nwith gVim\" when only one file is selected, and \"Diff with gVim\", \"Edit with\nMulti gVim\", \"Edit with a Single gVim\" are present when several files are\nselected), just like what it is like on Windows.\n\n\nRepository: https://github.com/xuhdev/nautilus-py-vim\n\nIf you find any bug, please send an email to xuhdev@gmail.com or submit the \nbug on the issue tracker:\nhttps://github.com/xuhdev/nautilus-py-vim/issues",
+  "description": "Homepage and screenshot: http://xuhdev.github.com/nautilus-py-vim\n\n\n1. Overview\n\nnautilus-py-vim is an extension for nautilus, the GNOME file manager, and is\nwritten in python. This extension adds several menu items in the nautilus\nright-click context menu for gvim, just like gVim on Windows.\n\n2. Install\n\nTo install this extension, first make sure that you have installed the\nnautilus python extension(http://projects.gnome.org/nautilus-python):\nOn Fedora:          # yum install nautilus-python\nOn Debian/Ubuntu:   # apt-get install python-nautilus\n\nIf you want to enable the \"Edit with gVim as Root\" menu item, you should\ninstall gksu(http://www.nongnu.org/gksu),\nbeesu(http://honeybeenet.altervista.org/beesu) or\nkdesu(http://techbase.kde.org/Projects/kdesu):\n\nOn Fedora:          # yum install beesu\nOn Debian/Ubuntu:   # apt-get install gksu\n\nAfter that, just run \"install.sh\":\n\n$ ./install.sh\n\nThe above command would make this extension available to you only, not other\nusers. If you want every user on the machine could use this extension, run the\ninstall.sh with root privilege:\n\n# ./install.sh\n\nIf you encounter any problem when executing the command above, try to execute\n\"bash install.sh\" or \"ksh install.sh\".\n\nThen restart nautilus(execute \"nautilus -q\") and try to right click on the\nfile(s) you want to edit, you will see the changes in the context menu(\"Edit\nwith gVim\" when only one file is selected, and \"Diff with gVim\", \"Edit with\nMulti gVim\", \"Edit with a Single gVim\" are present when several files are\nselected), just like what it is like on Windows.\n\n3. Configuration\n\nTo configure the extension, you could write a config file. nautilus-py-vim\nwill search the config file in the order of the following files:\n\n~/.nautilusvim.conf\n~/.nautilus/nautilusvim.conf\n/etc/nautilusvim.conf\n\nFor the content of the config file, you could take a look at the\n\"example.conf\".\n\nIf none of the configuration files are found, nautilus-py-vim will use default\nvalues.\n\n4. Uninstall\n\nRun the uninstall shell script.\n\n\nRepository: https://github.com/xuhdev/nautilus-py-vim\n",
   "install_details": "See above.",
   "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15818",
+      "filename": "nautilus-py-vim-0.3.tar.gz",
+      "script_version": "0.3",
+      "date": "2011-06-06",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "20373",
+        "user_name": "xuhdev",
+        "first_name": "H",
+        "last_name": "Xu",
+        "email": "xuhdev@gmail.com",
+        "homepage": "http://bitbucket.org/xuhdev"
+      },
+      "release_notes": "Now \"gvim\" and \"gvimdiff\" commands can be customized;\n\"Edit as root\" is now available;\nmenu items now can be put into one submenu."
+    },
     {
       "url": "http://www.vim.org/scripts/download_script.php?src_id=15793",
       "filename": "nautilus-py-vim.tar.gz",

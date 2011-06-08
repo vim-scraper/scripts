@@ -1,0 +1,27 @@
+{
+  "script_id": "3621",
+  "display_name": "ri-viewer",
+  "summary": "ri-viewer.vim",
+  "name": "ri-viewer",
+  "script_type": "utility",
+  "description": "ri-viewer.vim looks up ruby document directories with a keyword such like class name or method.\n\nYou can retrieve details of class Object with bellow command:\n\n:Ri Object\n\nand a method detail\n\n:Ri Object#help\n:Ri Object.help\n\nIf you want to look up documents included in specified dirs such like rubygems, home, try to bellow sub command:\n\n:RiCore\n:RiGem\n:RiHome\n\nRiCore retrieves ri documents included from /rubylib/system and /rubylib/site.\nRiGem retrieves from rubygems and RiHome does it from your home dir(~/.ri).\n\nYou can also get all classes and modules list:\n\n:RiList\n\nAlso documents directories:\n\n:RiDirs",
+  "install_details": "Copy plugin/ri-viewer.vim to your runtimepath/plugin.",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15831",
+      "filename": "ri-viewer.tar.gz",
+      "script_version": "1.0",
+      "date": "2011-06-07",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "31966",
+        "user_name": "lateau",
+        "first_name": "Daehyub",
+        "last_name": "Kim",
+        "email": "lateau@gmail.com",
+        "homepage": ""
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}

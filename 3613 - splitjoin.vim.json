@@ -1,0 +1,27 @@
+{
+  "script_id": "3613",
+  "display_name": "splitjoin.vim",
+  "summary": "A plugin that helps with switching between single-line and multiline code",
+  "name": "splitjoin.vim",
+  "script_type": "utility",
+  "description": "Github repo is at https://github.com/AndrewRadev/splitjoin.vim\n\nThis plugin is meant to simplify a task I've found too common in my workflow: switching between a single-line statement and a multi-line one.\n\nI usually work with ruby and a lot of expressions can be written very concisely on a single line. A good example is the \"if\" statement:\n\n    puts \"foo\" if bar?\n\nThis is a great feature of the language, but when you need to add more statements to the body of the \"if\", you need to rewrite it:\n\n    if bar?\n      puts \"foo\"\n      puts \"baz\"\n    end\n\nThe idea of this plugin is to introduce a single key binding for transforming a line like this:\n\n    <div id=\"foo\">bar</div>\n\nInto this:\n\n    <div id=\"foo\">\n      bar\n    </div>\n\nAnd another binding for the opposite transformation. This currently works for various constructs in ruby and erb, and for tags in html/xml.\n\nFor more information, try :help splitjoin, or take a look at the help file online at https://github.com/AndrewRadev/splitjoin.vim/blob/master/doc/splitjoin.txt\n\nFor more examples and corner cases, you can explore the \"examples\" directory here: https://github.com/AndrewRadev/splitjoin.vim/tree/master/examples. It's not present in the downloadable zip file to avoid cluttering your vimfiles with useless stuff.\n\nIf you encounter any bugs, the issue tracker is on github, at https://github.com/AndrewRadev/splitjoin.vim/issues.\n\nThis is my first vim plugin so it's certain that I've made mistakes here and there. I'd love to hear any of your comments and suggestions, so feel free to contact me by email.",
+  "install_details": "Download splitjoin.zip.\n\nIf you're using pathogen (vimscript #2332), extract it to a directory in your bundles or just clone the git repository at https://github.com/AndrewRadev/splitjoin.vim\n\nAlternatively, extract it to your vimfiles root (~/.vim on *nix, ~/vimfiles on Windows).",
+  "versions": [
+    {
+      "url": "http://www.vim.org/scripts/download_script.php?src_id=15801",
+      "filename": "splitjoin.zip",
+      "script_version": "0.1.1",
+      "date": "2011-06-03",
+      "vim_version": "7.0",
+      "author": {
+        "user_id": "31799",
+        "user_name": "andrewradev",
+        "first_name": "Andrew",
+        "last_name": "Radev",
+        "email": "andrey.radev@gmail.com",
+        "homepage": "http://andrewradev.com"
+      },
+      "release_notes": "Initial upload"
+    }
+  ]
+}
